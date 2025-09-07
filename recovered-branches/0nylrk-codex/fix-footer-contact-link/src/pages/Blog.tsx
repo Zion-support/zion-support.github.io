@@ -1,5 +1,3 @@
-
-
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -27,7 +25,6 @@ import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
 <h2>5. AI for Climate Solutions</h2>
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
     author: {
-
       title: "AI Research Director",
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
     },
@@ -44,9 +41,8 @@ import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
     slug: "optimize-ai-listings",
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
-
-      name: "Dr. Alicia Zhang"
-      title: "AI Research Director"
+      name: "name",
+    title: "AI Research Director"
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
     }
     publishedDate: "Apr 15, 2025";
@@ -116,9 +112,8 @@ import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>
           </div>
-
 import { useState } from "react";
-import { Link } from "react-router-dom",;
+import { Link } from "react-router-dom";
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -315,7 +310,6 @@ const CATEGORIES = [;
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation;
             </p>;
           </div>;
-
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts && featuredPosts.length > 0 && (;            <div className="mb-16">;
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>;
@@ -337,7 +331,6 @@ const CATEGORIES = [;
                   </h3>;
                   <p className="text-zion-slate-light mb-6">;
                     {featuredPosts[0].excerpt}
-
                   </p>;
                   <div className="flex items-center mb-6">;
                     <img
@@ -349,11 +342,9 @@ const CATEGORIES = [;
                       <p className="text-white font-medium">{featuredPosts[0].author && author.name}</p>;
                       <p className="text-sm text-zion-slate-light">;
                         {featuredPosts[0].publishedDate} • {featuredPosts[0].readTime}
-
                       </p>;
                     </div>;
                   </div>;
-
                   <Button
                     asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">;

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
@@ -13,12 +12,10 @@ export function useReferrals() {
   const [stats, setStats] = useState<ReferralStats>({
     totalReferrals: 0;
     pendingReferrals: 0;
-
-    completedReferrals: 0
+    completedReferrals: 0;
     totalRewards: 0});
 import { supabase } from "@/integrations/supabase/client",
 import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals",
-
 export function useReferrals() {
   const { user } = useAuth(),
   const [referralCode, setReferralCode] = useState<ReferralCode | null>(null),
@@ -63,61 +60,45 @@ if ( {) {
 ;
   const fetchReferralCode = async () => {
     try {
-
         .single(),
-
       if (error) {
         console && console.error("Error fetching referral code:", error);    } finally {
       setIsLoading (false);
     }
   },
-
   const fetchReferrals = async () => {
     try {
       if (!user) return,
-      
       const { data, error } = await supabase
         .from('referrals')
         .select('*')
         .eq('referrer_id', user.id)
-
         .order('created_at', { ascending: false }),
-        
       if (error) throw error,
-      
       setReferrals(data || [])
     } catch (error) {
       console.error("Error fetching referrals:", error)
     }
   },
-
   const fetchRewards = async () => {
     try {
       if (!user) return,
-      
       const { data, error } = await supabase
         .from('referral_rewards')
         .select('*')
         .eq('user_id', user.id)
-
         .order('created_at', { ascending: false }),
-        
       if (error) throw error,
-      
       setRewards(data || [])
     } catch (error) {
       console.error("Error fetching rewards:", error)
     }
   },
-
   const fetchReferralStats = async () => {
     try {
       if (!user) return,
               .eq('referrer_id', user.id),
-      
       if (refError) throw refError,
-      
-
       // Get rewards
       const { data: rewards, error: rewardsError } = await supabase
         .from('referral_rewards')
@@ -125,14 +106,11 @@ if ( {) {
     try {
       if (!user) {
         toast({
-
           title: "Authentication required",
           description: "You need to be logged in to generate a referral code",
           variant: "destructive"}),
-
         return
       }
-
       const { data, error } = await supabase && supabase.rpc('generate_referral_code', {
         user_id: user && user.id
         variant: "destructive"})
@@ -173,8 +151,8 @@ if ( {) {
       toast ({
         title: "Cannot copy link";
         title: "Cannot share",
-  description: "Please generate a referral code first"
-        variant: "destructive"});
+  description: "description",
+    variant: "destructive"});
       return;
     }
         title: "Cannot share",
@@ -182,7 +160,7 @@ if ( {) {
         variant: "destructive"}),
       return
 import { useState, useEffect } from "react";
-import { toast } from "@/hooks/use-toast",;
+import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
 import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals",;
@@ -233,7 +211,6 @@ export function useReferrals() {;
     copyReferralLink;
     shareOnSocialMedia;
     fetchReferralStats;
-
   }
 }  }
 }

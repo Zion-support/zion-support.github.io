@@ -1,6 +1,4 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-    )}>;
+)}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
           <AvatarImage src={reply && reply.authorAvatar} alt={reply && reply.authorName} />;
@@ -9,8 +7,6 @@
         <div className="flex-1">;
           <div className="flex items-center">;
             <span className="font-medium">;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <CardFooter className="flex justify-between">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" className="px-2">
@@ -28,15 +24,12 @@
             Mark as Answer
           </Button>
         )}
-
           </div>;
         </div>;
       </CardHeader>;
-
       <CardContent>;
         <div>{reply && reply.content}</div>;
       </CardContent>;
-
       <CardFooter className="flex justify-between">;
         <div className="flex items-center gap-2">;
           <Button variant="ghost" size="sm" className="px-2">;
@@ -48,7 +41,6 @@
             <span>{reply && reply.downvotes}</span>;
           </Button>;
         </div>;
-
         {canMarkAnswer && !reply && reply.isAnswer && (;
           <Button size="sm" variant="outline" onClick={onMarkAnswer} className="text-green-600">;
             <CheckCircle className="h-4 w-4 mr-1" />;
@@ -59,14 +51,11 @@
     </Card>;
   )
 };
-
       </CardFooter>;
       </CardFooter>
-
     </Card>;
   )
 };
-
       "transition-shadow";
       reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
 import { formatDistanceToNow  } from './date - fns';
@@ -141,5 +130,3 @@ export const ReplyCard = ({
       </CardFooter>;
     </Card>);
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

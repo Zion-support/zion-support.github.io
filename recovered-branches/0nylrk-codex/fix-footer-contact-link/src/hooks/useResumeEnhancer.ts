@@ -1,11 +1,7 @@
-
-
 export function useResumeEnhancer() {;
-
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
-
 export function useResumeEnhancer() {;          context
         }
       });
@@ -17,7 +13,6 @@ export function useResumeEnhancer() {;          context
   return {
     enhanceContent;
     isEnhancing;
-
     error          context;
         }
       });
@@ -42,12 +37,10 @@ if ( {) {
     enhance_content;
     is_enhancing;
     error;
-
   }
 }
-
 import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client',;
+import { supabase } from '@/integrations/supabase/client';
 ;
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',;
 ;
@@ -95,7 +88,6 @@ export function useResumeEnhancer() {;
   setIsEnhancing (true);
 setError (null);
 try {
-  
 }
           context;
         }

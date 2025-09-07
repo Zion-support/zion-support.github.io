@@ -19,32 +19,23 @@ export { textAnalysisService } from './textAnalysisService';
   CreateShortUrlRequest;
 } from './urlShortenerService';
 export type {
-
 export type {;
 export type {
   PasswordOptions;
   PasswordStrength;
   GeneratedPassword;
 } from './passwordGeneratorService';
-
 export type {;
-
 export type {;
 export type {
-
 export type {;
-
 export type {;
 export type {
-
 export type {;
-
 export type {
-
 export type {;
 export type {  url_shortener: {
     name: 'URL Shortener',
-
     name: 'URL Shortener',,
   description: 'Create short, trackable URLs with analytics';
     icon: '🔗';
@@ -76,9 +67,8 @@ export const getServiceStats = () => {
   return {
     totalUsers: 15420;
     totalRequests: 2847500;
-    averageResponseTime: 125
+    averageResponseTime: 125;
     services: {
-
     pricing: 'Free (Basic) / $19.99 / month (Pro)',
     api_endpoint: '/api / text - analysis';      urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 }
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 }
@@ -260,7 +250,6 @@ fileConverter: {
 textAnalysis: {
   users: 3890, requests: 11500, avgResponse: 178 
 }
-
     }
   }
 }
@@ -344,7 +333,6 @@ export const getServiceStatus = () =>: any {
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 },;
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 },;
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },;
-
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
     }
   }

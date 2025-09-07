@@ -1,10 +1,7 @@
-
 import {useState} from 'react';
-
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
-
 const categories: GrantCategory[] = [
   'Ecosystem Tools',
   'Talent Development',
@@ -12,8 +9,6 @@ const categories: GrantCategory[] = [
   'Research Grants',
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 export default function ApplyGrantPage() {
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
@@ -22,25 +17,19 @@ const categories: GrantCategory[] = [;
   'Research Grants',;
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
 export default function ApplyGrantPage() {;
-
   const router = useRouter();
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
   const [teamInfo, setTeamInfo] = useState('');
   const [proposalSummary, setProposalSummary] = useState('');
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
-
   const [supportingLinks, setSupportingLinks] = useState<string>('');
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const save = async (submit: boolean) => {;
     try {;
       setLoading(true);
@@ -73,7 +62,6 @@ export default function ApplyGrantPage() {;
       setError(e && e.message);
     } finally {;
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
-
           budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n');
@@ -87,7 +75,6 @@ export default function ApplyGrantPage() {;
             .filter (Boolean);
           pitchDeckUrl;
           region;
-
           sector: (sector as any) || undefined,;
           submit})});
       const data = await resp && resp.json();
@@ -97,11 +84,8 @@ export default function ApplyGrantPage() {;
       setError(e && e.message);
     } finally {;
       setLoading(false);
-
     }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
-
           <textarea
             className='mt-1 w-full border rounded p-2'
             rows={3}
@@ -118,7 +102,6 @@ export default function ApplyGrantPage() {;
             className='mt-1 w-full border rounded p-2'
             rows={3}
             value={supportingLinks}
-
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
             onChange={e => setSupportingLinks(e && e.target.value)}
@@ -139,17 +122,11 @@ export default function ApplyGrantPage() {;
           <button
             disabled={loading}
             onClick={() => save(true)}
-
   }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
-
   };
-
   return (
-
         {error && <div className='text-sm text-red-600'>{error}</div>}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className='flex gap-3'>
           <button
             disabled={loading}
@@ -168,7 +145,6 @@ export default function ApplyGrantPage() {;
       </div>
     </EnhancedLayout>
   );
-
               <option value="USDC">USDC</option>;
               <option value="ZION$">ZION$</option>;
             </select>;
@@ -183,11 +159,7 @@ export default function ApplyGrantPage() {;
         <label className="text-sm">Pitch Deck URL;
           <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;
         </label>;
-
   );
-
 );
 }
   );
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

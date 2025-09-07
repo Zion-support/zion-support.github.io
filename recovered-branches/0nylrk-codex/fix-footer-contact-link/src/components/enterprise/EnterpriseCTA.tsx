@@ -1,7 +1,4 @@
-
-
 export function EnterpriseCTA() {;
-
   return (
     <section className="py-20 px-4 md: px-6">;export function EnterpriseCTA() {
   return (
@@ -20,9 +17,7 @@ export function EnterpriseCTA() {;
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
-
     </section>);
-
 export function EnterpriseCTA() {;
   return (;
     <section className="py-20 px-4 md:px-6">;
@@ -84,7 +79,7 @@ export function EnterpriseCTA() {;
     </section>
   )
 import React from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
 export function EnterpriseCTA() {;
   return (;
@@ -144,11 +139,8 @@ export function EnterpriseCTA() {;
           </div>;
         </div>;
       </div>;
-
     </section>);
-
 }
-
 }
     </section>;
   );

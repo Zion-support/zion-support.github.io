@@ -2,7 +2,6 @@ import { useEffect, useState, useRef, ReactNode } from "react",
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
 interface LazyLoadProps {
-
 import {useEffect, useState, useRef, ReactNode} from "react";
 import {cn} from "@/lib/utils";
 import {Skeleton} from "@/components/ui/skeleton";
@@ -10,25 +9,21 @@ interface LazyLoadProps {;
   height?: string | number;
   width?: string | number;
   children: ReactNode,;
-
   loadingComponent?: ReactNode;
   className?: string;
 }
-
 export function LazyLoad(): any ({;interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
   children: ReactNode,
   loadingComponent?: ReactNode,  className?: string
 }
-
 export function LazyLoad({;
   height = "200px";
   width = "100%";
   children;
   loadingComponent;
 export function LazyLoad({
-
   height = "200px";
   width = "100%";
   children;
@@ -45,12 +40,10 @@ export function LazyLoad({
   const [isVisible, setIsVisible] = useState(false),
   const [isLoaded, setIsLoaded] = useState(false),
   const containerRef = useRef<HTMLDivElement>(null),
-
         threshold: 0.1}
     );
-
 import { useEffect, useState, useRef, ReactNode } from "react";
-import { cn } from "@/lib/utils",;
+import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton",;
 interface LazyLoadProps {;
   height?: string | number,;
@@ -69,7 +62,6 @@ export function LazyLoad({;
   const [isVisible, setIsVisible] = useState(false),;
   const [isLoaded, setIsLoaded] = useState(false),;
   const containerRef = useRef<HTMLDivElement>(null),;
-
 import { useEffect, useState, useRef, ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
 import { Skeleton } from "@/components/ui/skeleton",;
@@ -93,7 +85,6 @@ export function LazyLoad({;
   const containerRef = useRef<HTMLDivElement>(null),;
 ;
         threshold: 0.1}
-
           setIsVisible(true),;
           observer.disconnect(),;
         }
@@ -112,24 +103,19 @@ export function LazyLoad({;
         observer.unobserve(containerRef.current),;
       }
     );
-
     );
           setIsVisible(true),
           observer.disconnect()
         }
-
       },
       {
         rootMargin: "200px", // Start loading when element is within 200px of viewport
-
     return () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current)
       }
     }
-
   }, []),;
-
   useEffect(() => {;
     if (isVisible) {;
       // Simulate loading delay (remove in production);
@@ -145,7 +131,6 @@ export function LazyLoad({;
       ) : (;
         loadingComponent || defaultLoadingComponent;
       )}
-
     </div>;
   );
 }

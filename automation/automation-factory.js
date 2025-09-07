@@ -131,7 +131,6 @@ class CodeQualityMonitor {
 ; loadStatus() {; try {; if (fs && fs.existsSync(this && this.statusFile)) {; const status = JSON && JSON.parse(fs && fs.readFileSync(this && this.statusFile, "utf8")); this && this.runningScripts = new Map(Object && Object.entries(status && status.runningScripts || {}))}} catch (error) {; this && this.log(`Error loading status: ${error && error.message}`)}}}};
 ; generateCodeQualityScript() {; const script = `#!/usr/bin/env node;const fs = require("fs");
 =======
-
 ;const fs = require("fs");
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
@@ -869,7 +868,7 @@ return false,
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-optimizer.optimizePerformance().then(report = > {if (report) {; console.log("Performance report: ", report)}}),`; const scriptPath = path.join(__dirname, "performance-optimizer.js"); fs.writeFileSync(scriptPath, script); this.scripts.set("performance-optimizer", {file: "performance-optimizer.js", description: "Performance optimization with bundle analysis and recommendations", path: scriptPath, status: "available", lastRun: null, successCount: 0, errorCount: 0}); this.log("Generated performance optimizer script")}; async runScript(scriptName, options = {}) {if (!this.scripts.has(scriptName)) {; this.log(`Script "${scriptName}" not found`, "ERROR"); return false}; const script = this.scripts.get(scriptName); const startTime = Date.now(); try {this.log(`Starting script: ${scriptName}`); this.runningScripts.set(scriptName, { startTime, pid: null }); this.saveStatus(); const child = spawn("node", [script.path], {stdio: "pipe"
+optimizer.optimizePerformance().then(report = > {if (report) {; console.log("Performance report: ", report)}}),`; const scriptPath = path.join(__dirname, "performance-optimizer.js"); fs.writeFileSync(scriptPath, script); this.scripts.set("performance-optimizer", {file: "performance-optimizer.js", description: "Performance optimization with bundle analysis and recommendations", path: scriptPath, status: "available", lastRun: null, successCount: 0, errorCount: 0}); this.log("Generated performance optimizer script")}; async runScript(scriptName, options = {}) {if (!this.scripts.has(scriptName)) {; this.log(`Script "${scriptName}" not found`, "ERROR"); return false}; const script = this.scripts.get(scriptName); const startTime = Date.now(); try {this.log(`Starting script: ${scriptName}`); this.runningScripts.set(scriptName, { startTime, pid: null }); this.saveStatus(); const child = spawn("node", [script.path], {stdio: "stdio",
     cwd: __dirname}); this.runningScripts.set(scriptName, { startTime, pid: child.pid }); this.saveStatus(); return new Promise((resolve) = > {child.on("close", (code) = > {; const duration = Date.now() - startTime; this.runningScripts.delete(scriptName); if (code = = = 0) {; script.successCount++; this.log(`Script "${scriptName}" completed successfully in ${duration}ms`)} else {script.errorCount++; this.log(`Script "${scriptName}" failed with code ${code}`, "ERROR")}; script.lastRun = new Date().toISOString(); this.saveStatus(); resolve(code = = = 0)}); child.on("error", (error) = > {script.errorCount++; this.log(`Script "${scriptName}" error: ${error.message}`, "ERROR"); this.runningScripts.delete(scriptName); this.saveStatus(); resolve(false)})})} catch (error) {script.errorCount++; this.log(`Failed to start script "${scriptName}": ${error.message}`, "ERROR"); this.runningScripts.delete(scriptName); this.saveStatus(); return false}}; async runAllScripts() {this.log("Running all available scripts..."); const results = []; for (const [name, script] of this.scripts) {; if (script.status = = = "available") {; const success = await this.runScript(name); results.push({ name, success })};      }
       }
       }
@@ -877,10 +876,6 @@ results.push({ name, success })
       };
 =======
 =======
-
-
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -994,7 +989,4 @@ if ( {) {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

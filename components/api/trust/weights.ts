@@ -4,15 +4,14 @@ import {
   setTrustWeights,
   getDefaultWeights,;
 } from '../../../utils/trust/weights';
-
 import {
   getTrustWeights
   setTrustWeights
   getDefaultWeights;
 } from '../../../utils/trust/weights';
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
 ) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const current = await getTrustWeights();

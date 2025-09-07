@@ -1,6 +1,4 @@
-
-    <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+<div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
       <div className="flex items-center">
         <div className="w-12 h-12 bg-zion-cyan rounded-lg mr-3 flex-shrink-0"></div>
         <div className="flex-1">
@@ -24,9 +22,7 @@
         </div>
       </div>
     </div>
-
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="flex items-center">;
         <div className="w-12 h-12 bg-zion-cyan rounded-lg mr-3 flex-shrink-0"></div>;
         <div className="flex-1">;
@@ -34,8 +30,6 @@
           <p className="text-xs text-gray-300">Get the full experience on our app</p>;
         </div>;
         <div className="flex items-center gap-3">;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <X className="h-5 w-5" />;
           </button>;
         </div>;
@@ -45,7 +39,6 @@
 };
 '"},
 };
-
   // Only render on mobile devices;
   // Check condition
 if (return null) {
@@ -79,5 +72,3 @@ if (return null) {
 }
 '"},
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

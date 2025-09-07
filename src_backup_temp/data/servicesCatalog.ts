@@ -6,8 +6,8 @@ export type ServiceItem = {
 	title: string,
   description: string;
 	category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems';';
-	price: string; // average market starting price
-	billing: 'month' | 'project' | 'hour
+	price: string; // average market starting price;
+    billing: 'month' | 'project' | 'hour
 	features: string[];
 	ctaLabel: string;
 	href: string; // internal path or external URL

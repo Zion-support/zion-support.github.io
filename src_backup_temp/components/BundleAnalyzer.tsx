@@ -19,8 +19,8 @@ const BundleAnalyzer: React.FC = () => {
     const analyzeBundle = () => {
       // In a real implementation, this would analyze the actual bundle
       setBundleInfo({
-        totalSize: 1024 * 1024, // 1MB
-        jsSize: 800 * 1024,      // 800KB
+        totalSize: 1024 * 1024, // 1MB;
+    jsSize: 800 * 1024,      // 800KB
         cssSize: 200 * 1024,     // 200KB
         imageSize: 24 * 1024     // 24KB
       }

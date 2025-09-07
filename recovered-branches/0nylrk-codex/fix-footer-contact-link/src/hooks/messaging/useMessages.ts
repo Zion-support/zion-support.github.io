@@ -1,9 +1,7 @@
-
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
-
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle message operations
@@ -15,14 +13,12 @@ type UserWithProfile = UserProfile | UserDetails | null;
   set_conversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
   setUnreadCount: (updater: (prev: number) => number) => void;
   setIsLoading: (loading: boolean) => void;
-
-      
       if (unreadMessages && unreadMessages.length > 0) {
         await markAsRead(conversationId)
       }
     } catch (error) {
       console && console.error('Error fetching messages:', error)import { UserProfile, UserDetails } from '@/types/auth';
-import { supabase } from '@/integrations/supabase/client',;
+import { supabase } from '@/integrations/supabase/client';
 import { Message, Conversation } from '@/types/messaging',;
 import { toast } from '@/hooks/use-toast',;
 // Allow either UserProfile or UserDetails;
@@ -62,16 +58,13 @@ export function useMessages(;
       ),;
       if (unreadMessages.length > 0) {;
         await markAsRead(conversationId);
-
       }
     } catch (error) {
       console.error('Error fetching messages:', error)
     } finally {
       setIsLoading(false)
     }
-
   };
-
       if (!conversation) {
         throw new Error('Conversation not found')
       }
@@ -202,7 +195,6 @@ if (throw error) {
     load_messages;
     send_message;
     markAsRead;
-
   }
 }
 }

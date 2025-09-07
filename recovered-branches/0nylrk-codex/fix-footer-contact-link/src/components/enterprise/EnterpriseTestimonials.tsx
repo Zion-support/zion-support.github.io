@@ -1,15 +1,11 @@
-
-
 import React from "react";
 import { Quote } from "lucide-react";
-
   Carousel,;
   CarouselContent,;
   CarouselItem,;
   CarouselNext,;
   CarouselPrevious,;
 } from "@/components/ui/carousel";
-
 const testimonials = [;
   {;
     quote:;
@@ -35,14 +31,12 @@ const testimonials = [;
     company: "FutureTech Systems",;
     image: "/placeholder && placeholder.svg",;
   },;
-
 ];  Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,;
 } from "@/components/ui/carousel";
-
   Carousel
   CarouselContent
   CarouselItem
@@ -53,7 +47,7 @@ const testimonials = [
   {
     quote:
       "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing."
-    author: "Sarah Johnson"
+    author: "author",
     title: "VP of Talent Acquisition"
     company: "TechGlobal Inc."
     image: "/placeholder.svg"
@@ -81,7 +75,7 @@ export function EnterpriseTestimonials() {;
                         alt={testimonial && testimonial.author}
                         className="h-full w-full object-cover"
 import React from "react";
-import { Quote } from "lucide-react",;
+import { Quote } from "lucide-react";
 import {;
   Carousel,;
   CarouselContent,;

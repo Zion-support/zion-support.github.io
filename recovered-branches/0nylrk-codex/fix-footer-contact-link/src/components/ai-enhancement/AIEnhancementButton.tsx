@@ -1,26 +1,21 @@
-
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';
 import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIContentEnhancer';
 import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
-
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
 import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
 import {toast} from '@/hooks/use-toast';
-
-  options: AIEnhancementOptions
-  onEnhanced: (enhancedContent: string) => void
-
+  options: AIEnhancementOptions;
+    onEnhanced: (enhancedContent: string) => void
   buttonText?: string;
   className?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";  options;
   onEnhanced;
-
   buttonText = "Enhance with AI";
   className;
   variant = "ghost";
@@ -49,7 +44,6 @@ export function AIEnhancementButton({;
 export function AIEnhancementButton({
   options;
   onEnhanced;
-
   buttonText = "Enhance with AI";
   className;
   variant = "ghost";
@@ -75,12 +69,7 @@ export function AIEnhancementButton({
       setGeneratedContent(enhancedContent);
       setShowActions(true);
     }
-
   },
-
-  
-
-  
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent);
@@ -100,16 +89,13 @@ export function AIEnhancementButton({
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
-        title: "Content applied"
-        description: "AI-enhanced content has been applied."})
+        title: "title",
+    description: "AI-enhanced content has been applied."})
     }
     return (  },
-  
   const handleRegenerate = async () => {
     await handleEnhance()
   },
-  
-
   const handleCancel = () => {
     setShowActions(false);
     setGeneratedContent(null)  if (showActions) {
@@ -156,7 +142,6 @@ export function AIEnhancementButton({
   return (
     <Button
       type="button"
-
   },;
   const handleAccept = () => {;
     if (generatedContent) {;
@@ -168,16 +153,13 @@ export function AIEnhancementButton({
   description: "AI-enhanced content has been applied."});
     }
   };
-
   const handleRegenerate = async () => {;
     await handleEnhance()
 };
-
   const handleCancel = () => {;
     setShowActions(false);
     setGeneratedContent(null)
 };
-
   if (showActions) {;
     <Button;
       type="button";

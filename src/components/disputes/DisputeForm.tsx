@@ -1,29 +1,20 @@
-
-          onDisputeCreated(dispute.id)
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
-
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
-
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
-
     } finally {
       setIsSubmitting(false)
     }
   }
   return (
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
             control={form.control}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -32,12 +23,10 @@
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <SelectItem key={value} value={value}>{label}</SelectItem>
 import React, { useState } from "react";
-import { useForm, ControllerRenderProps } from "react-hook-form",;
+import { useForm, ControllerRenderProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
 import { Button } from "@/components/ui/button",;
@@ -48,23 +37,17 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Select,;
   SelectContent,;
   SelectItem,;
   SelectTrigger,;
-
     <div className='space-y-6'>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className='flex items-center space-x-2'>;
         <FileText className='h-5 w-5 text-primary' />;
         <h2 className='text-xl font-semibold'>Report an Issue</h2>;
       </div>;
-
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-6'>;
-
           <FormField
             control={form && form.control}
             name='reason_code'
@@ -116,13 +99,11 @@ if ( {) {
             render={({
               field
             }: {
-
                 z && z.infer<typeof formSchema>,;
                 'reason_code';
               >;
             }) => (              <FormItem>;
                 <FormLabel>Reason for dispute</FormLabel>;
-
                 <Select
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
@@ -142,9 +123,7 @@ if ( {) {
                     </SelectTrigger>;
                   </FormControl>;
                   <SelectContent>;
-
           />;
-
           <FormField
             control={form && form.control}
             name='description'
@@ -163,14 +142,12 @@ if ( {) {
             render={({
               field
             }: {
-
                 z && z.infer<typeof formSchema>,;
                 'description';
               >;
             }) => (              <FormItem>;
                 <FormLabel>Describe the issue in detail</FormLabel>;
                 <FormControl>;
-
                   <Textarea
                     placeholder='Please provide specific details about the issue...'
                     className='min-h-[150px]'
@@ -188,27 +165,21 @@ if ( {) {
                   />;
                 </FormControl>;
                 <FormMessage />;
-
           />;
-
           <FormItem>;
             <FormLabel>Attachments (optional)</FormLabel>;
             <FormControl>;
               <div className='space-y-4'>;
-
                 <Input
                   type='file'
                   multiple
                   onChange={handleFileChange}
-
                   className='cursor-pointer'                />;
-
                 {files && files.length > 0 && (;
                   <div className='space-y-2'>;
                     <p className='text-sm font-medium'>Selected files:</p>;
                     <ul className='space-y-1'>;
                       {files && files.map((file, index) => (;
-
                         <li
                           key={index}
                           className='flex items-center justify-between text-sm bg-muted/30 p-2 rounded'>;
@@ -219,8 +190,6 @@ if ( {) {
                             type='button'
                             variant='ghost'
                             size='sm'
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
                     {...field}
                   />
                 </FormControl>
@@ -228,15 +197,11 @@ if ( {) {
               </FormItem>
             )}
           />
-
                       ))}
                     </ul>;
                   </div>;
                 )}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="flex justify-end space-x-2">
-
             {onCancel && (
               <Button type='button' variant='outline' onClick={onCancel}>
                 Cancel
@@ -252,9 +217,7 @@ if ( {) {
                   multiple;
                   on_change={handleFileChange}
                   className='cursor - pointer'                />;
-
 }value= {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   value 
 }> {;
   label ;
@@ -262,10 +225,7 @@ if ( {) {
 }</SelectContent> </Select> <FormMessage /> </FormItem>) ;
 }/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) ;
-
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   setIsSubmitting (true);
 const dispute = await create_dispute ({
   project id: project_id;
@@ -290,5 +250,3 @@ if ( {) {
 }value= {
   value;
 }> {
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

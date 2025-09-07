@@ -1,15 +1,10 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 const ResizablePanelGroup = ({
   className
   ...props
 }: React.ComponentProps<typeof ResizablePrimitive.PanelGroup>) => (
   <ResizablePrimitive.PanelGroup
     className={cn(
-
       className
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )}
     {...props}
   />
@@ -24,8 +19,6 @@ const ResizableHandle = ({
 }) => (
   <ResizablePrimitive.PanelResizeHandle
     className={cn(
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -37,20 +30,15 @@ const ResizableHandle = ({
     )}
   </ResizablePrimitive.PanelResizeHandle>;
 );
-
 import { GripVertical } from 'lucide-react';
 import * as ResizablePrimitive from &quot;react - resizable - panels & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
-
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 ;
-
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
-
 ;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const ResizablePanelGroup = ({
   class_name,
   ...props;
@@ -80,5 +68,3 @@ const ResizableHandle = ({
         <GripVertical className=&quot;h - 2.5 w - 2.5 & quot; />;
       </div>)}
   </ResizablePrimitive.PanelResizeHandle>);
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

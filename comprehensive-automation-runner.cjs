@@ -1,24 +1,5 @@
 #!/usr/bin/env node
 =======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-<<<<<<< HEAD
-/**
- * Comprehensive Automation Runner
- * Runs all automation scripts and provides comprehensive testing and improvement
- */
-<<<<<<< HEAD
-const { execSync, spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 class ComprehensiveAutomationRunner {
   constructor() {
     this.logDir = path.join(__dirname, 'automation', 'logs');
@@ -32,13 +13,11 @@ class ComprehensiveAutomationRunner {
       errors: []
     };
   }
-
   ensureLogDir() {
     if (!fs.existsSync(this.logDir)) {
       fs.mkdirSync(this.logDir, { recursive: true });
     }
   }
-
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
     const prefix = {
@@ -50,7 +29,6 @@ class ComprehensiveAutomationRunner {
     }[type] || 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
-
   async runCommand(command, description, timeout = 30000) {
     this.log(`Running: ${description}`, 'PROGRESS');
     try {
@@ -71,7 +49,6 @@ class ComprehensiveAutomationRunner {
       return { success: false, error: error.message };
     }
   }
-
   async runSyntaxFixes() {
     this.log('🔧 Starting comprehensive syntax error fixing...');
     const syntaxTasks = [
@@ -79,7 +56,6 @@ class ComprehensiveAutomationRunner {
       { command: 'npm run format', description: 'Prettier Code Formatting' },
       { command: 'npm run type-check', description: 'TypeScript Type Checking' }
     ];
-
     let fixes = 0;
     for (const task of syntaxTasks) {
       const result = await this.runCommand(task.command, task.description);
@@ -90,14 +66,12 @@ class ComprehensiveAutomationRunner {
     this.results.syntaxFixes = fixes;
     return fixes;
   }
-
   async runBuildProcess() {
     this.log('🏗️ Starting build process...');
     const buildTasks = [
       { command: 'npm run clean', description: 'Clean Previous Builds' },
       { command: 'npm run build', description: 'Application Build' }
     ];
-
     let buildSuccess = true;
     for (const task of buildTasks) {
       const result = await this.runCommand(task.command, task.description);
@@ -108,14 +82,12 @@ class ComprehensiveAutomationRunner {
     this.results.buildSuccess = buildSuccess;
     return buildSuccess;
   }
-
   async runTests() {
     this.log('🧪 Running comprehensive tests...');
     const testTasks = [
       { command: 'npm run test:smoke', description: 'Smoke Tests' },
       { command: 'npm test -- --passWithNoTests', description: 'Jest Tests' }
     ];
-
     let testsPassed = 0;
     for (const task of testTasks) {
       const result = await this.runCommand(task.command, task.description);
@@ -126,10 +98,8 @@ class ComprehensiveAutomationRunner {
     this.results.testsPassed = testsPassed;
     return testsPassed;
   }
-
   async runAllAutomations() {
     this.log('🚀 Starting comprehensive automation...', 'PROGRESS');
-    
     try {
 =======
 <<<<<<< HEAD
@@ -142,7 +112,6 @@ class ComprehensiveAutomationRunner {
       process.exit(1);
     }
   }
-
   generateFinalReport() {
     const duration = Date.now() - this.startTime;
     const report = {
@@ -156,10 +125,8 @@ class ComprehensiveAutomationRunner {
         totalErrors: this.results.errors.length,
       },
     };
-
     const reportPath = path.join(process.cwd(), 'comprehensive-automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
     this.log('📊 Final Report Generated', 'SUCCESS');
     this.log(`✅ Syntax Fixes: ${report.summary.syntaxFixes}`);
     this.log(`🏗️ Build Success: ${report.summary.buildSuccess}`);
@@ -167,11 +134,9 @@ class ComprehensiveAutomationRunner {
     this.log(`❌ Total Errors: ${report.summary.totalErrors}`);
   }
 }
-
 // Run if called directly
 if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
 runner.run().catch(console.error);
 }
-
 module.exports = ComprehensiveAutomationRunner;

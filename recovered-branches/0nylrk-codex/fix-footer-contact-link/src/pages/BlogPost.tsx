@@ -40,7 +40,6 @@ export default function BlogPost() {
     useEffect(() => {
     // Find the current post by slug
     const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
-
     if (currentPost) {
       // Find related posts (same category, excluding current post)
       const related = BLOG_POSTS.filter(p =>
@@ -51,11 +50,9 @@ export default function BlogPost() {
       // Post not found
       navigate("/blog", { replace: true });
     }
-
     // Scroll to top when post changes
     window.scrollTo(0, 0)    return (
     return (
-
       <AppLayout>
         <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
           <div className="animate-pulse">Loading article...</div>
@@ -65,9 +62,8 @@ export default function BlogPost() {
   }
   }
 };
-
 import { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom",;
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO",;
 import { Button } from "@/components/ui/button",;
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react",;
@@ -141,7 +137,6 @@ export default function BlogPost() {;
               </Link>
             </Button>
           </div>
-
           {/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
@@ -151,7 +146,6 @@ export default function BlogPost() {;
               {post.title}
             </h1>
             <p className="text-xl text-zion-slate-light mb-8">{post.excerpt}</p>
-
             {/* Author and metadata */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
               <div className="flex items-center mb-4 sm:mb-0">
@@ -184,7 +178,6 @@ export default function BlogPost() {;
                     <Share2 className="h-4 w-4 mr-1" />;
                     <span className="text-sm">Share</span>;
                   </Button>;
-
                   {showShareMenu && (;
                     <div className="absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10">;
                       <a
@@ -213,17 +206,14 @@ export default function BlogPost() {;
                         <span>LinkedIn</span>;
                       </a>;
                     </div>;
-
                   )}
                 </div>
               </div>
             </div>
           </div>
-
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
-
                 className="object-cover w-full h-full"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
@@ -253,9 +243,7 @@ export default function BlogPost() {;
                   #{tag}
                 </span>;
               ))}            </div>;
-
             <Separator className="my-12 bg-zion-blue-light" />;
-
             {/* Related articles */}
             {relatedPosts && relatedPosts.length > 0 && (;
               <div className="mt-12">;
@@ -307,7 +295,6 @@ if (!post) {
 }`;
 case 'twitter': 
 }
-
 };
 return (<AppLayout> <SEO <Button variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" asChild > <Link to="/blog" > <ArrowLeft className="mr-2 h-4 w-4" /> Back to all articles </Link> </Button> </div> 
 }

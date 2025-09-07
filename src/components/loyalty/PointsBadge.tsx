@@ -1,8 +1,7 @@
-
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints';
-import { useAuth } from '@/hooks/useAuth',;
-import Link from 'next/link',;
+import { useAuth } from '@/hooks/useAuth';
+import Link from "Link";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
 import { LoginModal } from '@/components/auth/LoginModal',;
 import { Button } from '@/components/ui/button',;
@@ -39,21 +38,18 @@ export function PointsBadge() {;
       logErrorToProduction('Failed to refresh points:', { data: error });
     } finally {;
       setIsRefreshing(false);
-
   return (
     <TooltipProvider>
       <div className="flex items-center gap-1">
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
-
               href={isAuthenticated ? "/points" : "#"}
               onClick={handleClick}
               title={isAuthenticated ? "View points" : "Earn points by participating"}
               className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
             >
               <Gift className="h-4 w-4" aria-hidden="true" />
-
               <span>{`${points} pts`}</span>
             </Link>
           </TooltipTrigger>
@@ -79,25 +75,21 @@ export function PointsBadge() {;
               <>;
                 <p className='text-sm font-medium'>Zion Rewards Program</p>;
                 <p className='text-xs mt-1 text-muted-foreground'>;
-
                   <br />;
                   • First purchase: 100 pts;
                   <br />;
                   • Community posts: 25 pts each;
                   <br />• Refer friends: 200 pts each;
                 </p>;
-
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
           </TooltipContent>;
         </Tooltip>;
-
         {isAuthenticated && (;
           <Tooltip>;
             <TooltipTrigger asChild>;
               <Button
-
                 variant="ghost"
                 size="sm"
                 onClick={handleRefresh}
@@ -105,7 +97,6 @@ export function PointsBadge() {;
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
                 aria-label="Refresh points"
               >
-
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
@@ -117,9 +108,7 @@ export function PointsBadge() {;
             </TooltipContent>
           </Tooltip>
         )}
-
 ;
-
       </div>;
       {!isAuthenticated && (;
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
@@ -127,4 +116,3 @@ export function PointsBadge() {;
     </TooltipProvider>;
   );
 }
-

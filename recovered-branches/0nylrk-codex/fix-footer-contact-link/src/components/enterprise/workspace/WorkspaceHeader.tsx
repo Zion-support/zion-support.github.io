@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { type Company } from "./CompanyDashboard",
@@ -55,18 +53,14 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
       </div>
     </div>
   )
-
 };
-
 }
-
 import { Button } from "@/components/ui/button";
-import { type Company } from "./CompanyDashboard",;
+import { type Company } from "./CompanyDashboard";
 import { Bell, Users, Settings } from "lucide-react";
 interface WorkspaceHeaderProps {;
   company: Company
 };
-
   );}
  interface WorkspaceHeaderProps {
   company: Company 

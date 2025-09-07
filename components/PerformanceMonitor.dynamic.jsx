@@ -1,5 +1,4 @@
 import React from 'react';
-
 ;
 const PerformanceMonitor.dynamic = () => {
   return (
@@ -8,6 +7,4 @@ const PerformanceMonitor.dynamic = () => {
     </div>);
 }
 ;
-
 export default PerformanceMonitor.dynamic;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

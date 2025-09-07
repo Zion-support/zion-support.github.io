@@ -1,7 +1,5 @@
-
 export const real2026Q2Additions = [
   {
-
       'Jira',
       'ServiceNow',
       'Slack',
@@ -13,10 +11,9 @@ export const real2026Q2Additions = [
     competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
     price: '$2, 500',
     period: '/month',
-
 export const real2026Q2Additions = [
   {
-    id: 'ai-governance-compliance-hub'
+    id: "id",
     name: 'AI Governance & Compliance Hub'
     category: 'AI & Data'
     tagline:
@@ -48,7 +45,7 @@ export const real2026Q2Additions = [
     competitors: ['Monitaur', 'CalypsoAI', 'Credo AI']
     price: '$2,500'
     period: '/month'
-    trialDays: 14
+    trialDays: 14;
     setupTime: 'Fast'
     marketPosition: 'Strong enterprise traction with compliance-led buyers'
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%'
@@ -63,13 +60,10 @@ export const real2026Q2Additions = [
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors: ['Atera', 'NinjaOne'],
     price: '$4',
-
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
   },;
-
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
-
 =======    ];
     use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];
@@ -285,7 +279,6 @@ export const real2026Q2Additions = [;
     marketPosition: 'Cost-effective RMM for partners and IT teams',;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
-
   }
 ];
 ;export const real2026Q2Additions = [;
@@ -494,7 +487,6 @@ export const real2026Q2Additions = [;
 ];
   }
 ];
-
     period: '/device/month';
     trialDays: 14;
     setupTime: 'Fast';

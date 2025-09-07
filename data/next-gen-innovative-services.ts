@@ -1,10 +1,8 @@
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   // Quantum AI & Advanced Computing
   {
-
     id: 'quantum-ai-brain-computer-interface',
     name: 'Quantum AI Brain-Computer Interface',
-
     period: '/month',
     description:;
       'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.',
@@ -18,7 +16,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Advanced analytics dashboard',
       'API for research integration',
       'Compliance with medical standards',
-
 =======    period: '/month',
     description: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.',
     features: [;
@@ -27,22 +24,18 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     ],
     popular: true,
     icon: '🧠',
-
       'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
     target_audience:;
       'Research institutions, Medical centers, Defense contractors, Tech companies, Universities',    trial_days: 30,
     setup_time: '2 - 4 weeks',
     category: 'Quantum AI & Neuroscience',
-
     link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface',
     marketPosition: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
-
     targetAudience: 'Research institutions, Medical centers, Defense contractors, Tech companies, Universities',
     trialDays: 30,
     setupTime: '2-4 weeks',
     category: 'Quantum AI & Neuroscience',
     realService: true,
-
       'Quantum Computing',
       'Neural Networks',
       'Brain - Computer Interface',
@@ -63,14 +56,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Defense applications',
     ],
     roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
-
     technology: ['Quantum ComputingNeural NetworksBrain-Computer InterfaceAI/MLQuantum Encryption'],
-
     integrations: ['Research APIsMedical devicesCloud platformsData analysis tools'],
     useCases: ['Medical researchCognitive enhancementNeural rehabilitationAI developmentDefense applications'],
     roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
     competitors: ['Neuralink ($10,000+/month)Kernel ($50,000+/month)'],
-
     growthRate: '300% annual growth',
     variant: 'quantum-ai-futuristic',
     contactInfo: {
@@ -85,7 +75,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
     realImplementation: true,
     implementationDetails: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.',
     launchDate: '2024-12-01',
@@ -107,7 +96,6 @@ export interface NextGenInnovativeService {;
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
   customers: number;
@@ -150,8 +138,7 @@ export interface NextGenInnovativeService {;
   rating: number,;
   reviews: number;
 }
-
-  reviews: number;    mobile: string
+  reviews: number;    mobile: string;
     email: string
     address: string
     website: string
@@ -161,11 +148,9 @@ export interface NextGenInnovativeService {;
   launchDate: string
   customers: number
   rating: number
-
   reviews: number
 }export const nextGenInnovativeServices: NextGenInnovativeService[] = [
-
-    id: 'quantum-ai-brain-computer-interface'
+    id: "id",
     name: 'Quantum AI Brain-Computer Interface'
     tagline: "World's first quantum-enhanced AI with human-like reasoning"
     price: '$2,999'
@@ -256,10 +241,8 @@ export interface NextGenInnovativeService {;
     tagline: 'World\'s first quantum-enhanced AI with human-like reasoning',export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   // Quantum AI & Advanced Computing
   {
-
     id: 'quantum-ai-brain-computer-interface',
     name: 'Quantum AI Brain-Computer Interface',
-
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.',
@@ -286,7 +269,6 @@ export interface NextGenInnovativeService {;
     category: 'Quantum AI & Neuroscience',
     realService: true,      website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
     },
     realImplementation: true,
     implementationDetails: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.',
@@ -295,7 +277,6 @@ export interface NextGenInnovativeService {;
     rating: 4.9,
     reviews: 8
   },
-
     reviews: 8
   }
   // Space Technology Platform
@@ -523,7 +504,6 @@ export interface NextGenInnovativeService {;
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
     },
     realImplementation: true,
     implementationDetails: 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.',
@@ -532,7 +512,6 @@ export interface NextGenInnovativeService {;
     rating: 4.8,
     reviews: 12
   },
-
     reviews: 12
   }
   // Biotech AI Platform
@@ -740,7 +719,6 @@ export interface NextGenInnovativeService {;
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
     },
     realImplementation: true,
     implementationDetails: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.',
@@ -749,7 +727,6 @@ export interface NextGenInnovativeService {;
     rating: 4.7,
     reviews: 18
   },
-
     reviews: 18
   }
   // Quantum Financial Trading Platform
@@ -967,7 +944,6 @@ export interface NextGenInnovativeService {;
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
     },
     realImplementation: true,
     implementationDetails: 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.',
@@ -976,7 +952,6 @@ export interface NextGenInnovativeService {;
     rating: 4.9,
     reviews: 15
   },
-
     reviews: 15
   }
   // Autonomous Vehicle AI Platform
@@ -1185,7 +1160,6 @@ export interface NextGenInnovativeService {;
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
     },
     realImplementation: true,
     implementationDetails: 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.',
@@ -1194,7 +1168,6 @@ export interface NextGenInnovativeService {;
     rating: 4.8,
     reviews: 22
   },
-
     reviews: 22
   }
   // Quantum Cybersecurity Platform
@@ -1407,7 +1380,6 @@ export interface NextGenInnovativeService {;
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
     },
     realImplementation: true,
     implementationDetails: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.',
@@ -1416,7 +1388,6 @@ export interface NextGenInnovativeService {;
     rating: 4.9,
     reviews: 28
   },
-
     reviews: 28
   }
   // Metaverse AI Development Platform
@@ -1623,7 +1594,6 @@ export interface NextGenInnovativeService {;
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
     },
     realImplementation: true,
     implementationDetails: 'Complete metaverse AI platform with content generation, world building, and social interaction features.',
@@ -1632,7 +1602,6 @@ export interface NextGenInnovativeService {;
     rating: 4.7,
     reviews: 32
   },
-
     reviews: 32
   }
   // Quantum Internet Security Platform
@@ -1841,7 +1810,6 @@ export interface NextGenInnovativeService {;
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
     },
     realImplementation: true,
     implementationDetails: 'Complete quantum internet security platform with encryption, monitoring, and protection features.',
@@ -1850,7 +1818,6 @@ export interface NextGenInnovativeService {;
     rating: 4.8,
     reviews: 19
   },
-
     reviews: 19
   }
   // AI-Powered Legal Contract Analyzer
@@ -2058,7 +2025,6 @@ export interface NextGenInnovativeService {;
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
     },
     realImplementation: true,
     implementationDetails: 'Complete AI legal platform with document analysis, risk assessment, and compliance features.',
@@ -2067,7 +2033,6 @@ export interface NextGenInnovativeService {;
     rating: 4.6,
     reviews: 45
   },
-
     reviews: 45
   }
   // Quantum IoT Platform
@@ -2142,21 +2107,17 @@ export interface NextGenInnovativeService {;
       'Security systems',
     ],
     roi: '600% ROI through security improvements and operational efficiency',
-
     link: 'https://ziontechgroup.com/quantum-iot-platform',
     marketPosition: 'First quantum IoT platform. 100x more secure than traditional solutions.',    link: 'https://ziontechgroup.com/quantum-iot-platform',
-
     targetAudience: 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Quantum IoT & Edge Computing',
     realService: true,
-
     integrations: ['IoT devicesCloud platformsSecurity toolsAnalytics platforms'],
     useCases: ['Smart citiesIndustrial IoTHealthcare monitoringConsumer devicesSecurity systems'],
     roi: '600% ROI through security improvements and operational efficiency',
     competitors: ['AWS IoT ($5/month)Microsoft Azure IoT ($25/month)'],
-
     growthRate: '250% annual growth',
     variant: 'quantum-iot-futuristic',
     contactInfo: {
@@ -2171,18 +2132,14 @@ export interface NextGenInnovativeService {;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
     },
     real_implementation: true,
     implementation_details: 'Complete quantum IoT platform with security, edge computing, and device management features.',
     launch_date: '2024 - 03 - 01',
     customers: 38,
-
 ],
-
     rating: 4.7,
     reviews: 26;
   }
@@ -2195,7 +2152,6 @@ export interface NextGenInnovativeService {;
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
     },
     realImplementation: true,
     implementationDetails: 'Complete quantum IoT platform with security, edge computing, and device management features.',
@@ -2719,4 +2675,3 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
 ],
   }
 ];
-

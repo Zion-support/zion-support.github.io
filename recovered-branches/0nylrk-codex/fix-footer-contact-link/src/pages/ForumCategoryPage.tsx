@@ -1,5 +1,3 @@
-
-
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -11,20 +9,16 @@ import {ForumPost, ForumCategoryInfo} from "@/types/community";
 import {Badge} from "@/components/ui/badge";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
-
-    adminOnly: false
-
+    adminOnly: false;
     icon: "Briefcase"
   }    adminOnly: false,
     icon: "Briefcase"
   },
   "project-help": {
-
-    id: "project-help"
+    id: "id",
     name: "Project Help"
     description: "Get help with your ongoing projects and collaboration."
     adminOnly: false
-
     icon: "MessageSquare"    }
     {
       id: "6"
@@ -58,13 +52,11 @@ import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/com
       updatedAt: "2025-04-07T11:30:00Z",
       upvotes: 19,
       downvotes: 2,
-
       replyCount: 6
     }
   ];
   "project - help": [;
     {
-
       id: "7",
       title: "Comparing different vector embedding models",
       content: "I've been experimenting with these different embedding models and here are my findings...",
@@ -76,7 +68,6 @@ import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/com
       updated_at: "2025 - 04 - 05T16:40:00Z",
       upvotes: 31,
       downvotes: 0,
-
       replyCount: 9    {
       id: "8",
       title: "Suggestion for improving the jobs matching algorithm",
@@ -89,7 +80,6 @@ import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/com
       updated_at: "2025 - 04 - 04T08:10:00Z",
       upvotes: 17,
       downvotes: 3,
-
       replyCount: 5  "Briefcase": Briefcase;
   "MessageSquare": MessageSquare;
   "Code": Code;

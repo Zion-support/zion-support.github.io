@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -31,17 +31,15 @@
   variant?: ServiceVariant;
   customers?: number;
   rating?: number;
-
 const contact = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',}
 export const realServicesQ32025: Q3Service[] = [
   {  reviews?: number
 }
 const contact = {
-
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -59,7 +57,6 @@ export const realServicesQ32025: Q3Service[] = [
 const contact = {
   mobile: '+1 302 464 0950'
 };
-
 export const realServicesQ32025: Q3Service[] = [
   {
     tagline:
@@ -69,10 +66,8 @@ export const realServicesQ32025: Q3Service[] = [
     description:
       'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.'
     features: [
-
 export const realServicesQ32025: Q3Service[] = [
   {
-
       'Churn and retention analysis',
       'Cohort and funnel dashboards',
       'Price testing and packaging experiments',
@@ -126,7 +121,7 @@ export const realServicesQ32025: Q3Service[] = [
     market_size: '$30B+ subscription economy tooling';
     growth_rate: '30% YoY';
     variant: 'ai - futuristic';
-    customers: 24;    // @ts-expect-error augment common shape for UI components that expect contactInfo
+    customers: 24;    // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact
   }
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams'
@@ -163,7 +158,6 @@ export const realServicesQ32025: Q3Service[] = [
     ],
     icon: '⭐',
     features: [
-
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
   },];    contactInfo: contact
@@ -253,13 +247,10 @@ export const realServicesQ32025: Q3Service[] = [
     rating: 4.8,
     reviews: 12,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-
 ];
 ;
-
 }
 };
-
 export const realServicesQ32025: Q3Service[] = [
   {
     id: 'subscription-analytics-revenue-optimization',

@@ -1,4 +1,3 @@
-
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {useNotificationOperations} from './useNotificationOperations';
@@ -18,12 +17,11 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
 import {useAuth} from '@/hooks/useAuth';
 import {useNotificationOperations} from './useNotificationOperations';
 import {NotificationContextType} from './types';
-
 export const useNotifications = (): NotificationContextType => {;
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider')import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-import { supabase } from '@/integrations/supabase/client',;
+import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth',;
 import { useNotificationOperations } from './useNotificationOperations',;
 import { NotificationContextType } from './types',;
@@ -43,15 +41,14 @@ const defaultContext: NotificationContextType = {;
   fetchNotifications: async () => {}},;export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
   const { user } = useAuth(),
   const notificationOps = useNotificationOperations(user?.id),
-  
   // Load notifications when user changes
   useEffect(() => {    if (user) {
       const channel = supabase
         .channel('notifications-changes')
         .on('postgres_changes'
           {
-            event: '*'
-            schema: 'public'
+            event: "event",
+    schema: 'public'
             table: 'notifications'
             filter: `user_id=eq.${user.id}`    // Set up real-time subscription for new notifications;
     if (user) {;

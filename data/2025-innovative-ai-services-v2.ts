@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string,
   description: string;
@@ -7,7 +7,6 @@
     monthly: number;
     yearly: number;
     currency: string;
-
   features: string[];
   benefits: string[];
   target_audience: string[];
@@ -29,8 +28,7 @@
   customers: number;
   rating: number;
   reviews: number;
-    implementationDetails:
-      'Sophisticated AI platform with emotional intelligence, real-time processing, and multi-modal analysis. Includes mobile SDK and comprehensive API.'
+    implementationDetails: "implementationDetails",
     roi: 'Average customer sees 350% ROI within 8 months through improved customer satisfaction and engagement.'
     useCases: [
       'Customer service automation'
@@ -72,7 +70,6 @@
       'Quantum hardware, Classical computing, Cloud platforms, Scientific software, Business applications'
     ]
     support:];      'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement'
-
     ];
     benefits: [
       'Improve customer satisfaction by 40%Enhance user engagement by 60%Reduce customer service escalationsCreate more personalized experiencesBuild stronger emotional connections'
@@ -224,8 +221,6 @@ export interface InnovativeAIService {;
   }
 ];
 ;
-
 export interface InnovativeAIService {;
-
   }
 ];

@@ -1,20 +1,11 @@
-
-
 }
 </pre> </div>)
-
 export default function SecurityAudit({ report }: Props) {
 };
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 </pre> </div>)
- 
 };
 </pre> </div>) 
-
 export default function SecurityAudit({ report }: Props) {
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-4">
       <header className="space-y-1">
@@ -25,24 +16,17 @@ export default function SecurityAudit({ report }: Props) {
       {report.generatedAt && (
         <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
       )}
-
     </div>;
-
 );
 }
-
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 {JSON && JSON.stringify(report, null, 2)}
       </pre>;
     </div>;
   );
 }
-
   );
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 </pre> </div>);
 export default /**
@@ -63,5 +47,3 @@ function SecurityAudit() {
       </pre>;
     </div>);
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,4 +1,4 @@
-  authenticateRequest
+authenticateRequest
   listApiKeys
   saveApiKeys;
   authenticateRequest,
@@ -6,10 +6,9 @@
   saveApiKeys,;
 } from '../../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
-
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
 ) {
   if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
@@ -25,7 +24,6 @@ export default async function handler(
   // Create new key
   const now = new Date().toISOString();
   const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";

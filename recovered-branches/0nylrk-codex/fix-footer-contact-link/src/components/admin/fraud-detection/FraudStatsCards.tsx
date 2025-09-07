@@ -1,17 +1,13 @@
-
-
 import {;
   Card,;
   CardHeader,;
   CardTitle,;
   CardDescription,;
-
 } from "@/components/ui/card";
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {;
   stats: FraudStats;      
-
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -47,8 +43,6 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
             <CardDescription > Pending Review</CardDescription>;
           </div>;
           {stats.pending_flags > 0 && (
-
-      
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -65,7 +59,6 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
-
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">
@@ -84,7 +77,7 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
   )
 },
 import React from "react";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",;
 import { FraudStats } from "@/types/fraud",;
 interface FraudStatsCardsProps {;
@@ -94,9 +87,7 @@ interface FraudStatsCardsProps {;
         </CardHeader>;
       </Card>
 };
-
 export default FraudStatsCards;
-
   ),;
 },; interface FraudStatsCardsProps {
   stats: FraudStats 
@@ -148,9 +139,7 @@ export default FraudStatsCards;
     </div>);
 }
 ;
-
     </div>
-
       ;
       <Card>;
         <CardHeader className="pb-2">;
@@ -159,16 +148,12 @@ export default FraudStatsCards;
         </CardHeader>;
       </Card>;
     </div>;
-
     </div>
-
     </div>;
 );
   )
 };
-
 export default FraudStatsCards;
-
   ),;
 },; interface FraudStatsCardsProps {
   stats: FraudStats 
@@ -188,6 +173,4 @@ export default FraudStatsCards;
     </div>;
 )
 };
-
 export default FraudStatsCards;
-

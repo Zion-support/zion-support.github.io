@@ -1,4 +1,4 @@
-  children?: React.ReactNode;
+children?: React.ReactNode;
 }
 export default function InteractiveCard({title;
   description;
@@ -10,7 +10,7 @@ export default function InteractiveCard({title;
 }: InteractiveCardProps) {const [isHovered, setIsHovered] = useState(false);
 'use client',;
 import React, { useState } from 'react';
-import Link from 'next/link',;
+import Link from 'next/link';
 interface InteractiveCardProps {;
   title: string,,
   description: string,;
@@ -49,9 +49,7 @@ export default function InteractiveCard({;
             {description}
           </p>;
           {/* Custom children or default arrow */}
-
 {children || (
-
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
           {children || (
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">              <span>Learn More</span>
@@ -86,8 +84,6 @@ export default function InteractiveCard({;
 }
 <div className=&quot;text-4xl mb-4&quot;>💬</div>
       <div className="text-4xl mb-4">💬</div>
-      
-
       {/* Rating */}
       <div className="flex mb-4">
         {Array.from({ length: rating }).map((_, i) => (

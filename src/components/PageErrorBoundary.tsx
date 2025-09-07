@@ -1,7 +1,4 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-  return (
+return (
     <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
       <div className='max-w-2xl w-full'>;
         {/* Main Error Card */}
@@ -17,36 +14,27 @@
               {isAuthConfigError;
                 ? 'This page cannot load due to missing authentication configuration';
                 : 'An unexpected error occurred while loading this page'}
-
             <details className="bg-gray-50 rounded-lg p-4 mb-6">
               <summary className="cursor-pointer text-gray-700 font-medium">
                 Technical Details
               </summary>
-
             <Link 
               href="/"
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
-
             >
               <Home className="w-4 h-4 mr-2" />
               Go Home
             </Link>
           </div>
-
     ((props: FallbackProps) => (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <PageErrorFallback {...props} pageName={pageName} />
     ))
       onReset={() => {        // Reset any application state if needed
-
               href='mailto:support@zion && zion.tech'
               className='text-blue-400 hover:underline'>;
               support@zion && zion.tech;
-
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
-
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <button;
               onClick={handleRefresh}
               className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors";
@@ -90,30 +78,22 @@
               className="text-blue-400 hover:underline";
             >;
               support@zion.tech;
-
               Service Status;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </Link>;
           </div>;
         </div>;
       </div>;
     </div>;
   );
-
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
-
       }}
-
 } ;
 } ;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 }
-
     </ErrorBoundary>;
   );
 } ;
-
   const FallbackComponent =;
     fallback ||;
     ((props: FallbackProps) => (
@@ -124,5 +104,3 @@
     >;
       {children}
     </ErrorBoundary>);
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

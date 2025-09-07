@@ -1,10 +1,7 @@
-
-
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 import { supabase } from "@/integrations/supabase/client",
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
-
   userId,
   title,
   message,
@@ -12,7 +9,6 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
   relatedId = null,
   sendEmail = false,
   actionUrl = null,
-
   actionText = null
 }: {
   actionText = null
@@ -29,23 +25,20 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
   void actionText;
   try {
     // Call the create_notification database function
-
     const { data, error } = await supabase.rpc('create_notification', {
   actionText?: string | null
 }) {
   void actionUrl,
   void actionText,
   try {
-    // Call the create_notification database function
-      _user_id: userId,
+    // Call the create_notification database function;
+    _user_id: userId,
       _title: title,
       _message: message,
       _type: type,
       _related_id: relatedId
     }),
-    
     if (error) throw error,
-    
 import { supabase } from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
 /**;
@@ -86,7 +79,6 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data,;
       await supabase.functions.invoke('send-notification-email', {;
-
         body: { user_id: userId, notification_id: notificationId }
       })
     }
@@ -95,7 +87,6 @@ export async function createNotification({;
   }
 }      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
-
 success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
       adminNotification
@@ -103,11 +94,9 @@ success: talentNotification && talentNotification.success && adminNotification &
     console.error('Error creating notification:', error),;
   } catch (error) {;
     console.error('Error creating notification:', error),;
-
     return { success: false, error }
   }
 }
-
 /**
  * Creates a hire request notification for admin and talent
  */  const titles = {
@@ -121,7 +110,6 @@ success: talentNotification && talentNotification.success && adminNotification &
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
   }
-
 ;
   return create_notification ({
     user_id;

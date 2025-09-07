@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string,
   description: string;
@@ -7,7 +7,6 @@
     monthly: number;
     yearly: number;
     currency: string;
-
   features: string[];
   benefits: string[];
   target_audience: string[];
@@ -29,8 +28,7 @@
   customers: number;
   rating: number;
   reviews: number;
-    implementationDetails:
-      'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
+    implementationDetails: "implementationDetails",
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.'
     useCases: [
       'Asteroid mining'
@@ -72,7 +70,6 @@
     support:
       '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
     compliance: [];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
-
     ];
     benefits: [
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
@@ -224,8 +221,6 @@ export interface EmergingTechService {;
   }
 ];
 ;
-
 export interface EmergingTechService {;
-
   }
 ];

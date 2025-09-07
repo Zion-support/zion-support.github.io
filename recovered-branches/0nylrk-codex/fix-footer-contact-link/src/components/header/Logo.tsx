@@ -1,32 +1,25 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { useWhitelabel } from "@/context/WhitelabelContext";
 interface LogoProps {;
-
   customLogo?: string;
   customColor?: string
 }
-
 export function Logo(): any ({ customLogo, customColor }: LogoProps) {;
   const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel();
-
   // Use the white-label logo if available and no specific customLogo is provided;
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
   // Use the white-label color if available and no specific customColor is provided;
   const colorToUse = customColor || (isWhitelabel ? primaryColor : undefined);
-
   if (logoToUse) {;  customColor?: string;
 }
-
 import React from 'react';
-import { Link } from 'react-router-dom',;
+import { Link } from 'react-router-dom';
 import { useWhitelabel } from '@/context/WhitelabelContext',;
 interface LogoProps {;
   customLogo?: string,;
   customColor?: string;
 }
-
 export function Logo({ customLogo, customColor }: LogoProps) {
   const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel(),
       return (
@@ -42,7 +35,6 @@ export function Logo({ customLogo, customColor }: LogoProps) {
       </div>
     </Link>
   )
-
 =======  return (
     <Link to="/" className="flex items-center">;
       <div
@@ -89,8 +81,7 @@ interface LogoProps {
   custom_logo?: string;
   custom_color?: string;}
 }
-
-import React from 'react',;
+import React from "React";
 import { Link } from 'react-router-dom',;
 import { useWhitelabel } from '@/context/WhitelabelContext',;
 ;

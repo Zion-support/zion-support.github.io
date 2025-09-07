@@ -1,4 +1,3 @@
-
 import {
   Dialog;
   DialogContent;
@@ -17,30 +16,25 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Textarea } from "@/components/ui/textarea",
 import { useMessaging } from "@/context/MessagingContext",
 import { TalentProfile } from "@/types/talent",
-
   jobTitle
 }: MessageTalentModalProps) {
-
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
-
 }: MessageTalentModalProps) {
   const { createConversation } = useMessaging();
-
   const navigate = useNavigate();
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),  const handleSendMessage = async () => {
     if (!message.trim()) {
       toast({
-        title: "Message required"
-        description: "Please enter a message before sending."
+        title: "title",
+    description: "Please enter a message before sending."
         variant: "destructive"      });
       return;
     }
       });
       return;
     }
-
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
@@ -80,7 +74,6 @@ function MessageTalentModal() {
     }
     try {
       setIsSubmitting(true),
-      
       // Create context data for the conversation
       const contextData = {
         title: jobTitle || `Discussion with ${talent.full_name}`,
@@ -91,17 +84,14 @@ function MessageTalentModal() {
       // Create conversation with this talent;
       await create_conversation (
         talent.user_id;
-
     try {;
       setIsSubmitting(true);
-
       // Create context data for the conversation;
       const contextData = {;
         title: jobTitle || `Discussion with ${talent && talent.full_name}`,,
   description: talent && talent.bio || talent && talent.professional_title || "",;
         image_url: talent && talent.profile_picture_url || ""
 };
-
       // Create conversation with this talent;
       await createConversation(;
         talent && talent.user_id;
@@ -111,10 +101,8 @@ function MessageTalentModal() {
       setIsSubmitting(false);
     }
   }
-
   return (    }
   }
-
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20">;
@@ -134,7 +122,6 @@ function MessageTalentModal() {
             />;
           </div>;
         </div>;
-
         <DialogFooter className="gap - 2 sm:gap-0">;
           <Button;
             type="button";
@@ -202,7 +189,6 @@ contextData);
 }finally {
   setIsSubmitting (false) 
 }
-
 };
 return (<Dialog open= {
   isOpen 

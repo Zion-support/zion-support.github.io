@@ -1,6 +1,5 @@
-
 import { useState } from 'react';
-import { Button } from '@/components/ui/button',;
+import { Button } from '@/components/ui/button';
 import { Loader2, Sparkles } from 'lucide-react',;
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
 import { useResume } from '@/hooks/useResume',;
@@ -97,7 +96,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
   //Parse the JSON response //Add the categorized skills for (const [category, skillsList] of Object.entries (categorizedSkills) ) {
   if (Array.isArray (skillsList) ) {
   for (const skillName of skillsList as string[]) {
-  
 }
 }
 }//Reset the form and bulk input setBulkSkills ('');

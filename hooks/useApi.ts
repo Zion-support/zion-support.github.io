@@ -1,16 +1,13 @@
 import { useState, useEffect, useCallback } from 'react';
-
 interface UseApiOptions {
   immediate?: boolean;
 }
-
 interface UseApiResult<T> {
   data: T | null;
   loading: boolean;
   error: Error | null;
   execute: () => Promise<void>;
 }
-
 export const useApi = <T>(
   apiFunction: () => Promise<T>,
   options: UseApiOptions = {}
@@ -18,7 +15,6 @@ export const useApi = <T>(
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
-
   const execute = useCallback(async () => {
     setLoading(true);
     setError(null);
@@ -31,16 +27,13 @@ export const useApi = <T>(
       setLoading(false);
     }
   }, [apiFunction]);
-
   useEffect(() => {
     if (options.immediate) {
       execute();
     }
   }, [execute, options.immediate]);
-
   return { data, loading, error, execute }
 };      setLoading(false)};
-
   return { data, loading, error, execute }}
 };
 }
@@ -55,7 +48,7 @@ export const useApi = <T>(
   loading: boolean;
   error: string | null;
 }
-    loading: true
+    loading: true;
     error: null
     data: null,
     loading: true,
@@ -66,11 +59,9 @@ export const useApi = <T>(
     data: null,
     loading: true,
     error: null,
-
     data: null,
     loading: true,
     error: null,;
-
   });
 ;
   useEffect (() => {
@@ -120,7 +111,6 @@ import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions 
   const [error, set_error] = useState < any>(null);
   const execute = useCallback (async (...args: any[]) => {
     try {
-
       set_loading (true);
       set_error (null);
       const result = await api_function (...args);
@@ -131,23 +121,18 @@ import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions 
       const error = err instanceof Error ? err : new Error (String (err));
       set_error (error);
       options.on_error?.(error);
-
       throw error;
       set_loading (false);
     }
-
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
-
 interface ApiState<T> {
   data: T | null;
   loading: boolean;
   error: string | null;
 }
-
 interface UseApiOptions {
   immediate?: boolean;
 }
-
 export function useApi<T>(
   apiCall: () => Promise<T>,
   options: UseApiOptions = {}
@@ -155,11 +140,9 @@ export function useApi<T>(
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   const fetchData = async () => {
     setLoading(true);
     setError(null);
-    
     try {
       const result = await apiCall();
       setData(result);
@@ -169,7 +152,6 @@ export function useApi<T>(
       setLoading(false);
     }
   };
-
   useEffect(() => {
     if (options.immediate) {
       execute()}
@@ -188,7 +170,6 @@ interface ApiState<T> {
   data: T | null, loading: boolean,
   error: string | null,
 origin/automation-improvements-final
-
 interface ApiState<T> {
   data: T | null, loading: boolean,
   error: string | null,
@@ -201,7 +182,6 @@ export function useApi<T>(
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
     try {
     const result = await apiCall(),
     setData(result)
@@ -216,7 +196,6 @@ export function useApi<T>(
       fetchData();
     }
   }, [fetchData, options.immediate]);
-
 }
   }, [api_function, options]);
   useEffect (() => {

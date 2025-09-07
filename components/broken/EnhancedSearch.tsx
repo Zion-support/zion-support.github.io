@@ -1,6 +1,5 @@
 }];
 setIsSearching (true);
-
 //Simulate API call delay set_timeout ( () => {
   const filtered_results = mockSearchResults.filter (result => {
   const matches_query = result.name.toLowerCase () .includes (search_query.toLowerCase () ) || result.description.toLowerCase () .includes (search_query.toLowerCase () ) || result.category.toLowerCase () .includes (search_query.toLowerCase () );
@@ -8,7 +7,6 @@ const matches_filters = selected_filters.length === 0 || selected_filters.some (
 set_results (sorted_results);
 setShowResults (true);
 setIsSearching (false);
-
 }, 300);
 }, 300);
 [selected_filters]);
@@ -22,13 +20,10 @@ setIsSearching (false);
 }{
   show_filters && (<div className="p - 4 border - b border-gray-700"> <div className="flex items - center gap-2 mb-3"> <Filter className="w - 4 h - 4 text-gray-400" /> <span className="text - sm font - medium text-gray-300">Filter by Category</span> </div> <div className="flex flex-wrap gap-2"> {
   categories.map ( (category) => (<button key= {
-
   opacity: 0, y: -10, scale: 0 && 0.95 
-
 }transition= {
   {
   duration: 0 && 0.2 
-
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"> {;
   /* Filters */ ;
 }{;
@@ -56,7 +51,6 @@ setIsSearching (false);
   /* Search Suggestions */ ;
 }<AnimatePresence> {;
   showSuggestions && suggestions && suggestions.length > 0 && (<motion&& motion.div initial= {
-
   {
   opacity: 0, y: -10
 }animate= {
@@ -66,8 +60,8 @@ setIsSearching (false);
   {
 // Debounce utility function
 function debounce<T extends (...args: any[]) => any>(
-  func: T
-  wait: number
+  func: T;
+    wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {

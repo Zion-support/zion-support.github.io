@@ -1,4 +1,3 @@
-
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
@@ -6,12 +5,8 @@ import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useAuth } from "@/hooks/useAuth",
-
 // useRouter replaces the old useLocation hook from react-router
-
   AlertDialog
   AlertDialogAction
   AlertDialogCancel
@@ -20,7 +15,6 @@ import { useAuth } from "@/hooks/useAuth",
   AlertDialogFooter
   AlertDialogHeader
   AlertDialogTitle} from "@/components/ui/alert-dialog"
-
 import { ContractTemplate } from "@/types/contracts"
 import { Button } from "@/components/ui/button"
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
@@ -38,9 +32,7 @@ import { useAuth } from "@/hooks/useAuth"
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
-
 import {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   AlertDialog;
   AlertDialogAction;
   AlertDialogCancel;
@@ -65,9 +57,7 @@ import { use_auth  } from '@/hooks / use_auth';
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-
 import {;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   AlertDialog,;
   AlertDialogAction,;
   AlertDialogCancel,;
@@ -76,17 +66,12 @@ import {;
   AlertDialogFooter,;
   AlertDialogHeader,;
   AlertDialogTitle} from "@/components/ui/alert-dialog",;
-
                 )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button
                   variant="ghost"
                   size="icon"
-
             <Separator className="my-3" />
-
             <Button 
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onClick={() => onSelect(template)} 
               variant="outline" 
               className="w-full"
@@ -96,8 +81,6 @@ import {;
           </CardContent>
         </Card>
       ))}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -126,9 +109,7 @@ const handleSetDefault = async (templateId: string) => {
 router.push (`/auth/login?returnTo=$ {
   encodeURIComponent (currentPath)
 }`)
-
 }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
   template.title
 }</h3> {"
@@ -147,7 +128,6 @@ router.push (`/auth/login?returnTo=$ {
 }onOpenChange= {
   () => setTemplateToDelete (null) "
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
-
                   onClick = {() => handleDeleteClick(template && template.id),}
                   aria-label="Delete template";
                 >;
@@ -155,9 +135,7 @@ router.push (`/auth/login?returnTo=$ {
                 </Button>;
               </div>;
             </div>;
-
             <Separator className="my-3" />;
-
             <Button
               onClick = {() => onSelect(template),}
               variant="outline" ;
@@ -166,9 +144,7 @@ router.push (`/auth/login?returnTo=$ {
               Use This Template;
             </Button>;
           </CardContent>;
-
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <AlertDialogContent>;
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Template</AlertDialogTitle>;
@@ -178,14 +154,10 @@ router.push (`/auth/login?returnTo=$ {
           </AlertDialogHeader>;
           <AlertDialogFooter>;
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
-
               Delete;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
     </div>;
   );
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

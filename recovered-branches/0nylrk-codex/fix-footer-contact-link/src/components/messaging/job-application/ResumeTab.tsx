@@ -1,4 +1,3 @@
-
 import { ResumeSelector, ResumeOption } from "../resume-selector";
 import { Button } from "@/components/ui/button";
 export interface ResumeTabProps {;
@@ -8,7 +7,6 @@ export interface ResumeTabProps {;
   onApply?: () => Promise<void>;
   isSubmitting?: boolean
 }
-
 export function ResumeTab({
   selectedResumeId
   onSelectResume
@@ -24,20 +22,16 @@ export function ResumeTab({
       onSelectResume(resume.id);
     }
   }
-
   return (
     <div className="space-y-4">
       <ResumeSelector onResumeSelected={handleResumeSelected} />
-
 import React from './react';
 import { ResumeSelector, ResumeOption  } from '../resume - selector';
 import { Button  } from '@/components / ui / button';
 export interface ResumeTabProps {
-
   selectedResumeId?: string | null;
   onSelectResume?: (resume_id: string) => void;
   onResumeSelected?: (resume: ResumeOption) => void;
-
 export function ResumeTab(): any ({;
   selectedResumeId,;
   onSelectResume,;
@@ -49,11 +43,9 @@ export function ResumeTab(): any ({;
           <Button
             onClick={onApply}
             disabled={!selectedResumeId |isSubmitting}
-
 import React from 'react',
 import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { Button } from "@/components/ui/button",
-
 import React from './react';
 import { ResumeSelector, ResumeOption  } from '../resume - selector';
 import { Button  } from '@/components / ui / button';
@@ -64,7 +56,7 @@ export interface ResumeTabProps {
   onApply?: () => Promise<void>,
   isSubmitting?: boolean
 import React from 'react';
-import { ResumeSelector, ResumeOption } from "../resume-selector",;
+import { ResumeSelector, ResumeOption } from "../resume-selector";
 import { Button } from "@/components/ui/button",;
 export interface ResumeTabProps {;
   selectedResumeId?: string | null,;
@@ -79,7 +71,6 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
     if (onResumeSelected) {;
       onResumeSelected(resume);
     }
-
     if (onSelectResume) {;
       onSelectResume(resume && resume.id);      {onApply && (
         <div className="mt-6">

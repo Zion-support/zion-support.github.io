@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-
 import {
-
   TrendingUp,
   Brain,
   Shield,
@@ -22,7 +20,6 @@ import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
   TrendingUp, Brain, Shield, Zap, Target, ;
-
   TrendingUp,
   Brain,
   Shield,
@@ -42,14 +39,12 @@ import Layout from '../components/layout/Layout';import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
   TrendingUp, Brain, Shield, Zap, Target, ;
-
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
@@ -68,7 +63,7 @@ const features = [
 const pricingPlans = [
   {
     name: 'Starter'
-    price: 29
+    price: 29;
     period: 'month'
     features: [
       'Basic DeFi tools'
@@ -116,27 +111,22 @@ const pricingPlans = [
   },];    features: ['Custom DeFi solutionsWhite-label platformAPI accessPriority supportCustom integrations']
     popular: false
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
 import Head from 'next / head';
 import { motion } from 'framer-motion';
-
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin;
 } from 'lucide-react';
@@ -255,14 +245,12 @@ export default function DeFiNexusPlatform() {;
           content='https://ziontechgroup && ziontechgroup.com/defi-nexus-platform'
         />;
       </Head>;
-
         {/* Background Elements */}
         <div className='absolute inset-0 overflow-hidden pointer-events-none'>;
           <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse'></div>;
           <div className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
           <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>;
         </div>;
-
           >
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -297,7 +285,6 @@ export default function DeFiNexusPlatform() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary DeFi Technology
@@ -344,7 +331,6 @@ export default function DeFiNexusPlatform() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
               >
                 <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4'>
                   <CheckCircle className='w-6 h-6 text-white' />
@@ -366,14 +352,12 @@ export default function DeFiNexusPlatform() {;
           </div>
         </div>
       </section>
-
             ))}
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="pricing" className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-
           </div>
         </div>
       </section>
@@ -381,12 +365,10 @@ export default function DeFiNexusPlatform() {;
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Choose Your Plan
@@ -450,13 +432,10 @@ export default function DeFiNexusPlatform() {;
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-
                       {feature}
-
                     </li>
                   ))}
                 </ul>
-
                 <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
                   Get Started
                 </button>
@@ -466,7 +445,6 @@ export default function DeFiNexusPlatform() {;
         </div>
       </section>
                 </ul>;
-
                 <button className='w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300'>                  Get Started                <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">;
                   Get Started;
                 </button>;
@@ -475,7 +453,6 @@ export default function DeFiNexusPlatform() {;
           </div>;
         </div>;
       </section>;
-
       {/* Contact Section */}
       <section
         id='contact'
@@ -484,7 +461,6 @@ export default function DeFiNexusPlatform() {;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-
       {/* Contact Section */}
       <section
         id='contact'
@@ -496,7 +472,6 @@ export default function DeFiNexusPlatform() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform DeFi?
@@ -535,12 +510,10 @@ export default function DeFiNexusPlatform() {;
               Contact our team to learn more about how DeFi Nexus Platform can revolutionize your decentralized finance experience.;
             </p>;
           </motion && motion.div>;
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
               viewport={{ once: true }}
-
             >
               <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Phone className='w-8 h-8 text-white' />
@@ -572,7 +545,6 @@ export default function DeFiNexusPlatform() {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
-
             >
               <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
@@ -604,7 +576,6 @@ export default function DeFiNexusPlatform() {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
               viewport={{ once: true }}
-
             >
               <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <MapPin className='w-8 h-8 text-white' />
@@ -759,7 +730,5 @@ export default function DeFiNexusPlatform() {;
       </section>;
     </Layout>);
 }
-
   );
-
 }

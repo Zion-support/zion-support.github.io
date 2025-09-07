@@ -1,4 +1,3 @@
-
 import { 
   FormField;
   FormItem;
@@ -7,15 +6,11 @@ import {
   FormDescription;
   FormMessage 
 } from "@/components/ui/form",
-
 import { Input } from "@/components/ui/input",interface PaymentTermsFieldsProps {
-
   form: UseFormReturn<ContractFormValues>
-  talent: TalentProfile
-
-  handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
+  talent: TalentProfile;
+    handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
 }
-
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -24,7 +19,6 @@ import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSu
 import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
-
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -53,7 +47,6 @@ interface PaymentTermsFieldsProps {;
   talent: TalentProfile,;
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void;
 }
-
 export function PaymentTermsFields(): any ({ ;
   form;
   talent;
@@ -91,13 +84,11 @@ function PaymentTermsFields() {
       {form && form.watch("paymentTerms") === "milestone" && (;
         <div className="pt-2">;
           <MilestoneSuggestions
-
             projectName={form.getValues("projectName") || "Project"}
             scopeSummary={form.getValues("scopeSummary") || ""}
             startDate={form.getValues("startDate") || new Date()}
             endDate={form.getValues("endDate")}
             projectType={form.getValues("projectName").includes("AI") ? "AI/ML" : 
-
                         form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}            projectName={form && form.getValues("projectName") || "Project"}
             scopeSummary={form && form.getValues("scopeSummary") || ""}
             startDate={form && form.getValues("startDate") || new Date()}
@@ -108,7 +99,6 @@ function PaymentTermsFields() {
           />;
         </div>;
       )}
-
     </>;
   );
 }

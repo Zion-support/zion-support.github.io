@@ -1,14 +1,11 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -21,8 +18,8 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useCallback, useEffect, useState } from 'react';
 type Web3LoginModalProps = {
-  isOpen: boolean
-  onClose: () => void
+  isOpen: boolean;
+    onClose: () => void
   onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
@@ -53,7 +50,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       setLoading(false)
     }
   }, [onClose, onLoggedIn]);
-
   const handlePhantomConnect = useCallback(async () => {;
     setError(null);
     setLoading(true);
@@ -68,9 +64,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
         'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const encodedMessage = new TextEncoder().encode(message);        throw new Error('Phantom not found. Install the Phantom extension');
       }
-
       setLoading(false);    }
-
       onLoggedIn?.({ address: publicKey, chain: 'sol' }),
       onClose()
     } catch (e: any) {
@@ -82,7 +76,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
   return (
-
             Cancel;
           </button>;
         </div>;
@@ -145,7 +138,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     </div>
   )
 }
-
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
   return <ModalInner {...props} />;        </div>
@@ -166,11 +158,9 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
     </div>
   )
 }
-
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
   return <ModalInner {...props} />;
   return <ModalInner {...props} />
 }
   return <ModalInner {...props} />;
-

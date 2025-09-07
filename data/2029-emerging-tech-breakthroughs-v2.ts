@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -45,8 +45,8 @@
       useCases: [
         'Assistive technology, Gaming control, Research studies, Healthcare monitoring, Accessibility solutions, Neurological research'
       ]
-      roi: 'Research institutions see 1000% ROI through breakthrough discoveries. Healthcare organizations improve patient outcomes by 200%.'
-      competitors: [
+      roi: "roi",
+    competitors: [
         'Neuralink, CTRL-labs, Kernel, Traditional assistive technology'
       ]
       marketSize: '$5B market'
@@ -247,8 +247,8 @@
       contactInfo: {
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.'
       launchDate: '2025-06-01'
-      customers: 3
-      rating: 5.0
+      customers: 3;
+    rating: 5.0
       reviews: 2
     }
         mobile: '+1 302 464 0950',
@@ -279,11 +279,9 @@ export interface EmergingTechBreakthroughServiceV2 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
     },    ];
     popular: true, icon: '🧠',
     color: 'from-purple-600 via-pink-600 to-rose-600', textColor: 'text-purple-400',
@@ -299,7 +297,6 @@ export interface EmergingTechBreakthroughServiceV2 {
     marketSize: '$5B market', growthRate: '800% annual growth',
     variant: 'space-futuristic',
     contactInfo: {
-      
   ];    features: [;
       'Quantum consciousness algorithms_neural network consciousness_self - awareness development_emotional intelligence creation_consciousness testing and validation_ethical AI development_research collaboration tools_integration with AI systems';
       'Advanced consciousness analytics_expert consultation and support';
@@ -318,7 +315,6 @@ export interface EmergingTechBreakthroughServiceV2 {
     market_size: '$8B market', growth_rate: '900% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
-
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -635,7 +631,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     launchDate: '2025-06-01',;
     customers: 3,;
     rating: 5.0;
-
     real_implementation: true,
     implementation_details: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
     launch_date: '2025 - 06 - 01', customers: 3,

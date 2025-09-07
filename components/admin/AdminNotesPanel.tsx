@@ -1,5 +1,3 @@
-
-
 export type AdminNotesPanelProps = {;
   targetType: string; // e && e.g., 'user' | 'listing';
   targetId: string; // unique identifier for the target
@@ -21,20 +19,16 @@ type Note = {
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true)
 };
-
 type Note = {
-  id: string
-  targetType: string
+  id: string;
+    targetType: string
   targetId: string
   text: string
   authorId: string
   createdAt: number
-
 }
 };
-
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
-
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -47,7 +41,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         setNotes([]);
         return;
       }
-
         method: 'POST',
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
@@ -59,8 +52,8 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     setAdding(true);
     try {
       const res = await fetch('/api/admin/notes', {
-        method: 'POST'
-        headers: {
+        method: "method",
+    headers: {
           'Content-Type': 'application/json'
           'X-Admin': isAdmin ? 'true' : 'false'
           'X-Admin-User': adminId
@@ -73,13 +66,10 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       }
       setText('');
       setAdding(false);    }
-
     }
   }
-
     }
   }
-
   if (!isAdmin) {
     return (
       <div className='rounded border p-3'>
@@ -116,15 +106,11 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
           rows={3}
           placeholder='Write a private note (abuse, spam, special support)'
           value={text}
-
       </div>;
     </div>;
   );
-
   );
-
 }
-
 }
   );
 }
@@ -248,7 +234,6 @@ if ( {) {
       </div>
     )
   }
-
   return (
     <div className=&quot;rounded border p-4 space-y-3&quot;>
       <div className=&quot;flex items-center justify-between&quot;>
@@ -261,12 +246,10 @@ if ( {) {
           <input className=&quot;border rounded px-2 py-1&quot; value={adminId} onChange={(e) => setAdminId(e.target.value)} placeholder=&quot;Admin ID&quot; />
         </div>
       </div>
-
       <div className=&quot;space-y-2&quot;>
         <textarea className=&quot;w-full border rounded-md px-3 py-2&quot; rows={3} placeholder=&quot;Write a private note (abuse, spam, special support)&quot; value={text} onChange={(e) => setText(e.target.value)} />
         <button disabled={!text.trim() || adding} onClick={addNote} className=&quot;px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50&quot;>{adding ? 'Adding…' : 'Add Note'}</button>
       </div>
-
       <div className=&quot;border-t pt-3&quot;>
         <div className=&quot;text-sm opacity-70 mb-2&quot;>Notes are private, time-stamped, and include author ID.</div>
         {loading ? (
@@ -318,11 +301,9 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
@@ -343,7 +324,6 @@ type Note = {
 }
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
 };
-
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
@@ -382,11 +362,9 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setLoading(false);
     }
   }
-
   useEffect(() => {;
     if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes();
   }, [isAdmin, targetType, targetId]);
-
   async function addNote() {;
     if (!text && text.trim()) return;
     setAdding(true);
@@ -414,7 +392,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setText('');
     }
   }
-
   if (!isAdmin) {;
     return (
       <div className='rounded border p-3'>;
@@ -460,7 +437,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
               </li>
         </button>;
       </div>;
-
       <div className='border-t pt-3'>;
         <div className='text-sm opacity-70 mb-2'>;
           Notes are private, time-stamped, and include author ID.;

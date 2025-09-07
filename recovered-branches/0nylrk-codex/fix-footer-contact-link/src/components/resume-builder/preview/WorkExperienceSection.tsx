@@ -1,10 +1,7 @@
-
 import {WorkExperience} from '@/types / resume';
 import {format} from 'date - fns';
-
 import {WorkExperience} from '@/types/resume';
 import {format} from 'date-fns';
-
 import { WorkExperience  } from '@/types/resume';
 import { format } from 'date-fns';
 import {WorkExperience} from '@/types/resume';
@@ -17,7 +14,6 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
 interface WorkExperienceSectionProps {
   work_experience: WorkExperience[];
 }
-
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
@@ -28,7 +24,7 @@ interface WorkExperienceSectionProps {
     if (!date) return ''
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')import { WorkExperience } from '@/types/resume';
-import { format } from 'date-fns',;
+import { format } from 'date-fns';
 interface WorkExperienceSectionProps {;
   workExperience: WorkExperience[];
 }

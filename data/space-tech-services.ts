@@ -29,11 +29,10 @@ export interface SpaceTechService {
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
-    trialDays: 30
-    setupTime: '2 weeks'
+    trialDays: 30;
+    setupTime: "setupTime",
     category: 'Space Technology'
     realService: true
     technology: [
@@ -344,7 +343,6 @@ export interface SpaceTechService {
     launchDate: '2024-03-10';
     customers: 500;
     rating: 4.9
-
     reviews: 250
   }
 ];  id: string,;
@@ -430,7 +428,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     customers: 500;
     rating: 4.9,
     reviews: 250;
-
   }
 ;  }
 ];

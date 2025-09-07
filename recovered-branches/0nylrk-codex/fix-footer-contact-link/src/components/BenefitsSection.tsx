@@ -1,4 +1,3 @@
-
 import {GradientHeading} from "./GradientHeading";
 import {FeatureCard} from "./FeatureCard";
 import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
@@ -11,11 +10,9 @@ const benefits = [;
     title: "AI - Powered Matchmaking",
     description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.";
     icon: <Bot className="w - 8 h-8" />},
-
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
-
 const benefits = [
   {
     title: "AI-Powered Matchmaking",
@@ -30,9 +27,8 @@ export function BenefitsSection() {;
             <FeatureCard}
 }
 };
-
 import { GradientHeading } from "./GradientHeading";
-import { FeatureCard } from "./FeatureCard",;
+import { FeatureCard } from "./FeatureCard";
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;
 const benefits = [;
   {;
@@ -53,7 +49,6 @@ const benefits = [;
     icon: <TrendingDown className="w-8 h-8" />}];
 export function BenefitsSection() {;
   return (;
-
     <section className="py-20 bg-zion-blue-light">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;

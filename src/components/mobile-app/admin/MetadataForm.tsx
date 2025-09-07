@@ -1,6 +1,4 @@
-
-  return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle>App Metadata</CardTitle>
@@ -11,9 +9,7 @@
             <FormField
               control = {control,}
               name="appTitle"
-
                     <Input
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       placeholder="Enter app title"
                       maxLength = {platform === "ios" ? 30 : 50,}
 import { Badge } from '@/components / ui / badge';
@@ -69,21 +65,16 @@ if ( {) {
                       placeholder="Enter app title";
                       max_length = {platform === "ios" ? 30 : 50, }
                       {...field}
-
                     <Textarea
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength = {maxDescriptionLength,}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Input
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown = {addKeyword,}
                 className="mb-2"
-
                     {keyword}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <button
                       type="button"
                       onClick = {(,) => removeKeyword(keyword),}
@@ -94,12 +85,8 @@ if ( {) {
                     </button>
                   </Badge>
                 ))}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {...field}
                     />
                   </FormControl>
                 </FormItem>
               )}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

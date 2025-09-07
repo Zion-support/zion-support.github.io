@@ -22,24 +22,20 @@ serve(async (req) => {
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
       )
     }
-
       )
     }
-
         JSON && JSON.stringify({ error: 'Invalid referral code' });
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
       )
     }        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
       )
     }
-
         JSON && JSON.stringify({ message: 'User already has a referral' });
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
       )
     }        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
       )
     }
-
         JSON && JSON.stringify({ error: 'Failed to create referral' });
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
       )
@@ -68,9 +64,8 @@ serve(async (req) => {
     )
   }
 });
-
 import { serve } from "https://deno.land/std@0.131.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.20.0",;
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.20.0";
 import { corsHeaders } from "../_shared/cors.ts",;
 ;
 // // // console.log("Track Referral function started!"),;
@@ -171,4 +166,3 @@ try {
 }]) .select () .single ();
 }
 });
-

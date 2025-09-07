@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge";
@@ -37,7 +35,7 @@ import { Button } from "@/components/ui/button",
                 {talent.skills.map((skill, index) => (
                   <Badge key={index} variant="secondary" className="text-xs">
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 export function TalentPool() {;
@@ -66,7 +64,6 @@ export function TalentPool() {;
       match: 88;
     }
   ];
-
   const getStatusBadge = (status: string) => {;
     switch (status) {;
       case "available": return <Badge className="bg-green-500">Available</Badge>;
@@ -134,7 +131,6 @@ default: return <Badge variant="outline"> {
   status 
 }</Badge> 
 }
-
 };
 return (<Card> <CardHeader> <div className="flex items-center justify-between" > <div> <CardTitle>Dedicated Talent Pool</CardTitle> <CardDescription>Candidates matched to your company</CardDescription> </div> <Button size="sm" >View All</Button> </div> </CardHeader> </Badge>) ) 
 }</div> <div className="mt-3 flex gap-2" > <Button size="sm" variant="outline" >View Profile</Button> <Button size="sm" >Contact</Button> </div> </div>) ) 

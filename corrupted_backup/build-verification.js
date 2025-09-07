@@ -1,10 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/build-verification.js
-console.log(' Starting build verification...');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-console.log('🔍 Starting build verification...');
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:corrupted_backup/build-verification.js
 try {
   console.log(' Testing component imports...');
   const React = require('react');

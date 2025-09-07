@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -18,12 +17,10 @@ import {FileText} from "lucide-react";
     .min(20, { message: "Description must be at least 20 characters" })
   attachments: z.array(z.any()).optional()})
 type DisputeFormProps = {
-
   milestoneId?: string,
   onDisputeCreated?: (disputeId: string) => void,
   onCancel?: () => void
 },
-
 export function DisputeForm({ 
   projectId, 
   milestoneId, 
@@ -33,8 +30,8 @@ export function DisputeForm({
     try {
       setIsSubmitting(true)
       const dispute = await createDispute({
-        project_id: projectId
-        milestone_id: milestoneId
+        project_id: projectId;
+    milestone_id: milestoneId
         reason_code: values.reason_code
         description: values.description})
       if (dispute && dispute.id) {
@@ -43,33 +40,27 @@ export function DisputeForm({
         if (files.length > 0) {
           console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }  };
-
   const removeFile = (index: number) => {;
     const newFiles = [...files],;
     newFiles && newFiles.splice(index, 1);
     setFiles(newFiles);
     form && form.setValue("attachments", newFiles)
 };
-
   async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
     try {;
       setIsSubmitting(true),;
-
       const dispute = await createDispute({;
         project_id: projectId,;
         milestone_id: milestoneId,;
         reason_code: values && values.reason_code,,
   description: values && values.description}),;
-
       if (dispute && dispute.id) {;
         // Future enhancement: Upload attachments;
         // For now we just log the files that would be uploaded;
         if (files && files.length > 0) {;
           console && console.log(`Would upload ${files && files.length} files for dispute ${dispute.id}`);
         }
-
         toast && toast.success("Your dispute has been submitted");
-
         if (onDisputeCreated) {;
           onDisputeCreated(dispute.id);
         }
@@ -204,9 +195,7 @@ if ( {) {
                 <FormMessage />;
               </FormItem>;
             )}
-
           />;
-
           <FormField
             control={form && form.control}
             name="description"
@@ -239,7 +228,6 @@ if ( {) {
                   />;
                 </FormControl>;
                 <FormMessage />;
-
           />;
           <FormItem>;
             <FormLabel>Attachments (optional)</FormLabel>;
@@ -250,7 +238,6 @@ if ( {) {
                   multiple 
                   onChange={handleFileChange}
                   className="cursor-pointer"                />;
-
                 {files && files.length > 0 && (;
                   <div className="space-y-2">;
                     <p className="text-sm font-medium">Selected files:</p>;
@@ -266,9 +253,7 @@ if ( {) {
           </div>;
         </form>;
       </Form>;
-
     </div>);
-
 }            </Button>
           </div>
         </form>

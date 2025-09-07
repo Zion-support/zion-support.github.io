@@ -81,7 +81,7 @@ class BuildOptimizer {;
       // Add optimized build scripts;
       const optimizedScripts = {',
       '"build": optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',
-      '"build": analyze': 'ANALYZE=true npm run buil
+      '"build": analyze': 'ANALYZE=true npm run buil;
     d:optimized',
       '"build": production': 'NODE_ENV=production npm run buil
     d:optimized',
@@ -157,7 +157,6 @@ const optimizer = new BuildOptimizer();
       "recommendations": [';Use npm run build:optimized for production builds', ';Enable SWC minification for faster builds', ';Use incremental TypeScript compilation', ';Consider using Next.js Image optimization', ';Implement code splitting for better performance']}
     fs.writeFileSync('build-optimization-report.json', JSON.stringify(report, null, 2));
     this.optimizations.push('Generated performance report')}
-
 // Run the optimizer;
 const optimizer = new BuildOptimizer();
 optimizer.optimize().catch(console.error);

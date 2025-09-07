@@ -11,15 +11,11 @@ export interface BlockchainWeb3Service {;
     currency: string;
     trialDays: number;
     setupTime: string;
-
   {
-
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
     ],
     realImplementation: true,
-
-    implementationDetails:
-      'Production-ready DeFi optimization platform with real-time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.'
+    implementationDetails: "implementationDetails",
     roi: 'Users achieve 200-400% ROI through optimized yields and reduced risks compared to manual DeFi strategies.'
     useCases: [
       'Yield farming optimization'
@@ -35,7 +31,6 @@ export interface BlockchainWeb3Service {;
     support:
       '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.'
     compliance: [];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
-
       'Community support, developer documentation, custom development services, and enterprise solutions.',    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
     id: 'web3 - social - media - platform',

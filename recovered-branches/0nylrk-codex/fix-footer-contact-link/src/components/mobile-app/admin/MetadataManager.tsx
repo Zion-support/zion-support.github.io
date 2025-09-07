@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -12,8 +10,8 @@ import {toast} from "sonner";
 export type AppPlatform = "ios" | "android";
 }
 const defaultValues: AppMetadataValues = {
-  appTitle: "Zion AI Marketplace"
-  shortDescription: "Hire top AI talent or find global IT jobs on the go."
+  appTitle: "appTitle",
+    shortDescription: "Hire top AI talent or find global IT jobs on the go."
   longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.",
   keywords: ["AI freelancer", "tech jobs", "hire developers", "IT marketplace", "artificial intelligence jobs"];
   version: "1.0.0"
@@ -27,7 +25,6 @@ export const MetadataManager: React.FC = () => {
   const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } })
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm;
 },
-
 const defaultValues: AppMetadataValues = {
   appTitle: "Zion AI Marketplace",
   shortDescription: "Hire top AI talent or find global IT jobs on the go.",
@@ -36,20 +33,16 @@ const defaultValues: AppMetadataValues = {
   version: "1.0.0",
   platform: "ios"
 },
-
 export const MetadataManager: React.FC = () => {;
   const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
   const [isSaving, setIsSaving] = useState(false);
 export const MetadataManager: React.FC = () => {
   const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios"),
   const [isSaving, setIsSaving] = useState(false),
-  
   // Separate form instances for each platform
   const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } }),
   const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } }),
-  
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm,
-  
     setIsSaving(true)
     try {
       // This would be implemented with actual API calls in production    <div className="bg-zion-blue-dark rounded-lg p-6">
@@ -63,7 +56,6 @@ export const MetadataManager: React.FC = () => {
               Google Play (Android)
             </TabsTrigger>
           </TabsList>
-
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
           >
@@ -97,10 +89,9 @@ export const MetadataManager: React.FC = () => {
       </Tabs>
     </div>
   )
-
 },
 import React, { useState } from "react";
-import { useForm } from "react-hook-form",;
+import { useForm } from "react-hook-form";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { MetadataForm } from "./MetadataForm",;
 import { ScreenshotManager } from "./ScreenshotManager",;
@@ -112,7 +103,6 @@ export type AppPlatform = "ios" | "android",;    } finally {;
       setIsSaving(false);
     }
   };
-
   return (    <div className="bg-zion-blue-dark rounded-lg p-6">;
       <Tabs defaultValue="ios" className="w-full">;
         <div className="flex justify-between items-center mb-6">;
@@ -142,7 +132,6 @@ export type AppPlatform = "ios" | "android",;    } finally {;
 };
     </div>);
 }
-
 };
     </div>);
 }

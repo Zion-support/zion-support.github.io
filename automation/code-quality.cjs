@@ -24,12 +24,9 @@ const qualityChecks = [{
   {
     "name": 'ESLint Code Analysis',
     "action": () => {
-      
       try {
         execSync('npx eslint . --ext .ts,.tsx,.js,.jsx', { "stdio": 'pipe' });
-        
       } catch (error) {
-        
       }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -39,42 +36,25 @@ const qualityChecks = [{
   {
     "name": 'Prettier Code Formatting',
     "action": () => {
-      
       try {
         execSync('npx prettier --check .', { "stdio": 'pipe' });
-        
       } catch (error) {
-        
       }
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }},
   {
     "name": 'Code Complexity Analysis',
     "action": () => {
-      
       const pagesDir = path.join(process.cwd(), 'pages');
       const componentsDir = path.join(process.cwd(), 'components');
-
       let totalLines = 0;
       let totalFiles = 0;
-
       [pagesDir, componentsDir].forEach(dir => {
         if (fs.existsSync(dir)) {
           const files = fs
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             .readdirSync(dir, { "recursive": true })
             .filter(file => file.endsWith('.tsx') || file.endsWith('.ts'));
-
           files.forEach(file => {
             const filePath = path.join(dir, file);
             const content = fs.readFileSync(filePath, 'utf8');
@@ -84,30 +64,17 @@ const qualityChecks = [{
           });
         }
       });
-
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
 =======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      console.log(`Average lines per file: ${avgLinesPerFile}`);
-      console.log(`Total files analyzed: ${totalFiles}`);
-    },
-  },
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
-      
-      
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }},
   {
     "name": 'Import/Export Analysis',
     "action": () => {
-      
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
         const pages = fs
@@ -115,28 +82,14 @@ const qualityChecks = [{
           .filter(file => file.endsWith('.tsx'));
         let importCount = 0;
         let exportCount = 0;
-
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           importCount += (content.match(/^import\s+/gm) || []).length;
           exportCount += (content.match(/^export\s+/gm) || []).length;
         });
 =======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        console.log(`Total imports: ${importCount}`);
-        console.log(`Total exports: ${exportCount}`);
-      }
-    },
-  },
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
-
-        
-        
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
@@ -144,19 +97,16 @@ const qualityChecks = [{
   {
     "name": 'Dead Code Detection',
     "action": () => {
-      
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
         const pages = fs
           .readdirSync(pagesDir)
           .filter(file => file.endsWith('.tsx'));
         let unusedImports = 0;
-
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           const imports =
             content.match(/^import\s+.*from\s+['"][^'"]+['"]/gm) || [];
-
           imports.forEach(importLine => {
             const importName = importLine.match(/import\s+{([^}]+)}/);
             if (importName) {
@@ -173,72 +123,34 @@ const qualityChecks = [{
           });
         });
 =======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        console.log(`Potential unused imports: ${unusedImports}`);
-      }
-    },
-  },
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
-
-        
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }},
 ];
-
 // Run quality checks
 let successCount = 0;
 let totalCount = qualityChecks.length;
-
 for (const check of qualityChecks) {
   try {
-    
     check.action();
-    
     successCount++;
   } catch (error) {
-    
   }
 }
-
-
-
-
 // Generate quality report
 const report = {
   "timestamp": new Date().toISOString(),
   "checks": qualityChecks.map(check => ({
     name: check.name,
 =======
-<<<<<<< HEAD
-    status: 'completed',
-  })),
-  summary: {
-    total: totalCount,
-    successful: successCount,
-    failed: totalCount - successCount,
-  },
-};
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
-
-
-
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -246,18 +158,9 @@ const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
 }
-
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node;
 const fs = require('fs')

@@ -1,7 +1,4 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-      id: 'post - job',
+id: 'post - job',
       label: 'Post New Job',
       icon: <FileText className='h - 5 w - 5 mr - 2' />,
       description: 'Create a new job posting',
@@ -38,7 +35,6 @@
         <div className='grid grid - cols - 1 sm:grid - cols - 2 gap - 4'>;
           {actions.map (action => (
             <Button;
-
               key={action.id}
               variant='outline'              className={`h - auto justify - start p - 4 ${action.color}`}
             >;
@@ -47,10 +43,8 @@
                   {action.icon}
                   <span>{action.label}</span>;
                 </div>;
-
                 <span className='mt - 1 text - xs text - muted - foreground'>;
                   {action.description}
-
   return (
     <Card>
       <CardHeader>
@@ -58,29 +52,24 @@
         <CardDescription>Fast access to common tasks</CardDescription>
       </CardHeader>
       <CardContent>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {actions.map(action => (
-
             <Button 
               key={action.id}
               variant="outline" 
               className={`h-auto justify-start p-4 ${action.color}`}
-
             >
               <div className="flex flex-col items-start text-left">
                 <div className="flex items-center">
                   {action.icon}
                   <span>{action.label}</span>
                 </div>
-
             <Button 
-
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { FileText, Plus, Search, Calendar } from 'lucide-react';
 export function QuickActions() {;
@@ -124,12 +113,10 @@ export function QuickActions() {;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
           {actions.map(action => (;
             <Button;
-
               key={action.id}
               variant="outline"
               className={`h-auto justify-start p-4 ${action.color}`}
             >
-
               key={action && action.id}
               variant='outline'              className={`h-auto justify-start p-4 ${action && action.color}`}>;
               <div className='flex flex-col items-start text-left'>;
@@ -137,7 +124,6 @@ export function QuickActions() {;
                   {action && action.icon}
                   <span>{action && action.label}</span>;
                 </div>;
-
                 <span className='mt-1 text-xs text-muted-foreground'>;
                   {action && action.description}
                 </span>              </div>;
@@ -155,7 +141,6 @@ export function QuickActions() {;
                 <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
               </div>;
             </Button>;
-
               <div className='flex flex-col items-start text-left'>
                 <div className='flex items-center'>
                   {action.icon}
@@ -164,9 +149,7 @@ export function QuickActions() {;
                 <span className='mt-1 text-xs text-muted-foreground'>
                   {action.description}
                 </span>              </div>
-
               </div>
-
             </Button>
           ))}
         </div>;
@@ -174,10 +157,8 @@ export function QuickActions() {;
     </Card>;
   );
 }
-
   );
 }
-
                 </span>              </div>;
                 <span className="mt - 1 text - xs text - muted-foreground">{action.description}</span>;
           {actions.map (action => (
@@ -198,5 +179,3 @@ export function QuickActions() {;
       </CardContent>;
     </Card>);
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

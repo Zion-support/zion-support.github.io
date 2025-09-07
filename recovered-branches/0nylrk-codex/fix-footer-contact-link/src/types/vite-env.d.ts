@@ -1,4 +1,4 @@
-  readonly VITE_APP_TITLE: string,;
+readonly VITE_APP_TITLE: string,;
   readonly VITE_SUPABASE_URL: string,;
   readonly VITE_SUPABASE_ANON_KEY: string,;
   // add more env variables as needed;
@@ -26,8 +26,7 @@ declare module 'path' {;
 }
 ;
 declare module 'lovable-tagger' {;
-  import { Plugin } from 'vite',;
-
+  import { Plugin } from 'vite';
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals

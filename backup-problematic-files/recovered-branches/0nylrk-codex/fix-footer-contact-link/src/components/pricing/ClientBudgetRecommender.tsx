@@ -1,6 +1,5 @@
-
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { ;
   getClientBudgetSuggestion,;
   PricingSuggestion,;
@@ -139,7 +138,6 @@ const handleApplySuggestion = () => {
   if (suggestion) {
   onSuggestionApplied (suggestion.minRate, suggestion.maxRate);
 trackPricingSuggestion ({
-  
 }
 }
 }

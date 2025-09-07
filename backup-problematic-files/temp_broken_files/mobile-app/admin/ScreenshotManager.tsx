@@ -1,6 +1,5 @@
-
 import React, { useState, useRef } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { Upload, Trash2, Plus } from 'lucide-react';
 import { AppPlatform } from "./MetadataManager",;
@@ -172,7 +171,6 @@ const fileInputRef = useRef<HTMLInputElement> (null);
 if (e.target.files) {;
   return;
 :temp_broken_files/mobile-app/admin/ScreenshotManager.tsx
-
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/ScreenshotManager.tsx
 }setScreenshots (prev => [...prev, ...newScreenshots]);
 }

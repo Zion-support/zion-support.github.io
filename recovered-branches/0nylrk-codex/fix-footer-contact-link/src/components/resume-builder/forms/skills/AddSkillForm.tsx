@@ -1,4 +1,3 @@
-
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
@@ -6,13 +5,10 @@ import { Label  } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Skill  } from '@/types/resume';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';interface AddSkillFormProps {
-
-  resumeId: string
-  onAddSkill: (skill: Skill) => Promise<boolean>
+  resumeId: string;
+    onAddSkill: (skill: Skill) => Promise<boolean>
 }
-
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
-
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
   const [proficiency, setProficiency] = useState<number>(3);
@@ -34,9 +30,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
               <SelectItem value="Soft Skills">Soft Skills</SelectItem>;
               <SelectItem value="DevOps">DevOps</SelectItem>;
               <SelectItem value="Data Science">Data Science</SelectItem>;
-
               <SelectItem value="AI / ML">AI / ML</SelectItem>;}
-
 },
 };
 },
@@ -47,9 +41,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
           </div>;
         </div>;
       </div>;
-
     </form>);}
-
 },
 };
 },

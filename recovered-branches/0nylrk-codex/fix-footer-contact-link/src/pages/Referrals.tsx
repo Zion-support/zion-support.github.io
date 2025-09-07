@@ -28,7 +28,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import {Button} from '@/components / ui / button';
 import {toast} from '@/hooks / use - toast';
 import {Share, Users} from 'lucide-react';
-
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
   const {;
@@ -43,7 +42,6 @@ function ReferralsPage() {
   const {
     is_loading;
     referral_code;
-
 import { useAuth  } from '@/hooks/useAuth';
 import { useReferrals  } from '@/hooks/useReferrals';
 import { ReferralStats  } from '@/components/referrals/ReferralStats';
@@ -59,7 +57,6 @@ import { toast  } from '@/hooks/use-toast';
 import { Share, Users  } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 export default function ReferralsPage() {
-
 import {useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {useReferrals} from '@/hooks / useReferrals';
@@ -74,7 +71,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import {Button} from '@/components / ui / button';
 import {toast} from '@/hooks / use - toast';
 import {Share, Users} from 'lucide-react';
-
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
   const {;
@@ -85,7 +81,6 @@ import {Share, Users} from 'lucide-react';
     stats;
     getReferralLink;
     copyReferralLink;
-
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -112,7 +107,6 @@ export default function ReferralsPage() {
     getReferralLink,
     copyReferralLink,
     shareOnSocialMedia} = useReferrals(),
-
   useEffect(() => {;
     if (!isAuthenticated) {;
       toast({;
@@ -121,13 +115,10 @@ export default function ReferralsPage() {
         variant: "destructive"}),;
       navigate("/login");
     }
-
   }, [isAuthenticated, navigate]),
-
   const referralLink = getReferralLink(),
-
 import { useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth',;
+import { useAuth } from '@/hooks/useAuth';
 import { useReferrals } from '@/hooks/useReferrals',;
 import { ReferralStats } from '@/components/referrals/ReferralStats',;
 import { ReferralLink } from '@/components/referrals/ReferralLink',;
@@ -178,9 +169,7 @@ export default function ReferralsPage() {;
           Share Referral Link;
         </Button>;
       </div>;
-
       <ReferralStats stats={stats} isLoading={isLoading} />;
-
       <div className="grid gap-6 mt-6 lg:grid-cols-3">;
         <div className="lg:col-span-2 space-y-6">;
           <ReferralLink
@@ -207,7 +196,6 @@ export default function ReferralsPage() {;
             </TabsContent>;
           </Tabs>;
         </div>;
-
         <div className="space-y-6">;;
         <div className="space-y-6">;
         <div className="space-y-6">;

@@ -4,7 +4,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const { userId, reviewerId, type, note } = req.body || {};
   if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
     return res.status(400).json({ error: 'Missing or invalid fields' })
-
   }
   try {
     await supabase && supabase.from('trust_peer_reviews').insert(review);
@@ -15,8 +14,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     note,
     created_at: new Date ().toISOString (),
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
 ) {
   }
   const review: TrustPeerReview = {
@@ -40,15 +39,12 @@ export default async function handler(
     reviewer_id;
     type;
     note;
-
     res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method not allowed' })
 ;
   const { userId, reviewerId, type, note } = req.body || {};
   const { userId, reviewerId, type, note } = req.body || {};
   if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
-
 }
 }
   if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
-

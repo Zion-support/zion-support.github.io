@@ -1,5 +1,3 @@
-
-
 import {;
   Dialog,;
   DialogContent,;
@@ -16,7 +14,6 @@ import {
   DialogHeader
   DialogTitle
 import React, { useState } from "react";
-
 import {;
   Dialog,;
   DialogContent,;
@@ -24,23 +21,19 @@ import {;
   DialogFooter,;
   DialogHeader,;
   DialogTitle,;
-
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";    // In a real application, this would revoke the OAuth token;
     toast && toast.info(`Disconnected from ${integration && integration.name}`);
     onClose()
 };
-
   const handleSaveSettings = () => {;
     // In a real application, this would save the sync settings;
     toast && toast.success("Integration settings saved");
-
     onClose();
   }
   const handleConnectOAuth = () => {
@@ -64,7 +57,6 @@ import { toast } from "sonner";    // In a real application, this would revoke t
     toast.success("Integration settings saved");
     onClose();
   }
-
 import React, { useState } from "react",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -81,7 +73,7 @@ interface Integration {
   status: "connected" | "warning" | "disconnected",
   lastSync?: string
 import React, { useState } from "react";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;
@@ -102,43 +94,35 @@ interface IntegrationConnectionModalProps {;
   onClose: () => void,;
   integration: Integration;
 }
-
 export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {
   const [isConnecting, setIsConnecting] = useState(false),
-
   const [syncSettings, setSyncSettings] = useState({
     autoCreateContacts: true,
     pushNotes: false,
     syncJobDetails: true,
     syncApplicantData: true
   }),
-  
   const handleConnectOAuth = () => {
     setIsConnecting(true),
-    
     // Simulate OAuth flow 
     setTimeout(() => {
       setIsConnecting(false),
       toast.success(`Connected to ${integration.name} successfully`),
       onClose()
     }, 2000),
-    
     // In a real application, this would open a popup for OAuth authentication
     // window.open(`/api/oauth/${integration.id}`, 'oauthwidth=600,height=600')
   },
-  
   const handleDisconnect = () => {
     // In a real application, this would revoke the OAuth token
     toast.info(`Disconnected from ${integration.name}`),
     onClose()
   },
-  
   const handleSaveSettings = () => {
     // In a real application, this would save the sync settings
     toast.success("Integration settings saved"),
     onClose()
   },
-  
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md">;
@@ -152,13 +136,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             }}            </DialogDescription>
           </div>
         </DialogHeader>
-
         {integration.status === "connected" ||
-
         integration.status === "warning" ? (
-
         {(integration.status === "connected" || integration.status === "warning") ? (
-
         {(integration.status === "connected" || integration.status === "warning") ? (
           <>
             <div className="grid gap-4 py-4">
@@ -390,5 +370,4 @@ function IntegrationConnectionModal() {
           </>)}
       </DialogContent>;
     </Dialog>);
-
 }

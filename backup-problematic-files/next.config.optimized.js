@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true
-  swcMinify: true
+  reactStrictMode: true;
+    swcMinify: true
   compress: true
   poweredByHeader: false
   eslint: { ignoreDuringBuilds: false }
@@ -20,8 +20,8 @@ const nextConfig = {
   // Security headers
   async headers() {
     return [{
-        source: '/(.*)'
-        headers: [
+        source: "source",
+    headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' }
           { key: 'X-Frame-Options', value: 'DENY' }
           { key: 'X-XSS-Protection', value: '1; mode=block' }
@@ -175,5 +175,4 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.e
     return config;
   },
 });
-
 }

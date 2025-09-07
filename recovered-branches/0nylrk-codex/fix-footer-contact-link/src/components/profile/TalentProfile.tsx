@@ -1,10 +1,7 @@
 interface TalentProfileProps {
-
-  profile: TalentProfileType
-  onRequestHire: () => void
-
+  profile: TalentProfileType;
+    onRequestHire: () => void
   onMessageTalent?: () => void
-
 import React from "react";
 import {Handshake, MessageSquare, Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -24,7 +21,6 @@ interface TalentProfileProps {;
   onRequestHire: () => void,;
   onMessageTalent?: () => void;
 }
-
 export function TalentProfile(): any ({ ;
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
@@ -39,10 +35,8 @@ import { ProfileContact } from "./ProfileContact",
 import { ProfileRatings } from "./ProfileRatings",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 interface TalentProfileProps {
-
   profile: TalentProfileType
   onRequestHire: () => void
-
   onMessageTalent?: () => void
 }
 export function TalentProfile({
@@ -60,11 +54,9 @@ export function TalentProfile({
         title={profile && profile.professional_title}
         avatarUrl={profile && profile.profile_picture_url}
         profileType="talent"
-
         rating={profile && profile.average_rating}
         reviewCount={profile && profile.rating_count}
       />;
-
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
         {/* Left Column - Skills & Info */}
@@ -77,7 +69,6 @@ export function TalentProfile({
             profileType="talent"
           />;
         </div>;
-
         {/* Right Column - Bio & Projects */}
         <div className="lg:col-span-2 space-y-8">;          {/* Bio Section */}
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
@@ -86,10 +77,6 @@ export function TalentProfile({
               <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>
             </div>
           </div>
-
-          
-
-          
           import React from './react';
 import { Handshake, MessageSquare, Star } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -193,7 +180,6 @@ function TalentProfile() {
               </div>;
             </div>;
           )}
-
         </div>;
       </div>;
     </div>;

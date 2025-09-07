@@ -1,5 +1,3 @@
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 import React from "react",
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card",
@@ -11,7 +9,6 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
-
 interface QuotesFilterProps {
   searchQuery: string;
   setSearchQuery: (value: string) => void;
@@ -21,9 +18,7 @@ interface QuotesFilterProps {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
-
   return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>;
       <CardContent className='p-6'>;
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 items-end'>;
@@ -32,8 +27,6 @@ interface QuotesFilterProps {
               placeholder='Search quotes...'
               className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <SelectItem value='all'>All Statuses</SelectItem>;
                 <SelectItem value='new'>New</SelectItem>;
                 <SelectItem value='in_review'>In Review</SelectItem>;
@@ -43,7 +36,6 @@ interface QuotesFilterProps {
               </SelectContent>;
             </Select>;
           </div>;
-
           <div>;
             <p className='text - zion - slate - light text - sm mb - 2'>Archive</p>;
             <Select;
@@ -53,14 +45,12 @@ interface QuotesFilterProps {
               <SelectTrigger className='bg - zion - blue border - zion - blue - light text - white'>;
                 <SelectValue placeholder='Archive Status' />              </SelectTrigger>;
               <SelectContent className='bg - zion - blue - dark border - zion - blue - light text - white'>;
-
                 <SelectItem value='active'>Active Only</SelectItem>;
                 <SelectItem value='archived'>Archived Only</SelectItem>;
                 <SelectItem value='all'>All Quotes</SelectItem>;
               </SelectContent>;
             </Select>;
           </div>;
-
 import React from "react";
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card";
@@ -83,10 +73,7 @@ interface QuotesFilterProps {
   setDateRange: (range: DateRange | undefined) => void,
   onReset: () => void
 }
-
 }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 };
           <div>;
             <p className='text - zion - slate - light text - sm mb - 2'>Date Range</p>;
@@ -149,5 +136,3 @@ interface QuotesFilterProps {
       </CardContent>;
     </Card>);
 }  );
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

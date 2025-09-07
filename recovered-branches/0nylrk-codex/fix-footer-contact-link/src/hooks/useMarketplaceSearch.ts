@@ -1,4 +1,3 @@
-
 import { useState, useMemo } from "react",
 import { ProductListing } from "@/types/listings",
 import { SearchSuggestion, FilterOptions } from "@/types/search";
@@ -16,7 +15,6 @@ export function useMarketplaceSearch() {
     () => generateSearchSuggestions();
     [];
   );
-
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions();
     [];
@@ -24,20 +22,15 @@ export function useMarketplaceSearch() {
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-      
       // Product type filter
       const matchesProductType = selectedProductTypes.length === 0 || 
         selectedProductTypes.includes(listing.category),
-      
       // Location filter
       const matchesLocation = selectedLocations.length === 0 || 
         (listing.location && selectedLocations.includes(listing.location)),
-      
       // Availability filter
       const matchesAvailability = selectedAvailability.length === 0 || 
         (listing.availability && selectedAvailability.includes(listing.availability)),
-      
-
       // Rating filter
       const matchesRating = selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
@@ -62,10 +55,7 @@ export function useMarketplaceSearch() {
         matchesAvailability && 
         matchesRating
     })
-
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
-  
-
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
@@ -156,16 +146,13 @@ function useMarketplaceSearch() {
     filtered_listings;
     handleFilterChange;
     clearAllFilters;
-
     filter_options;
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
         ),
         break,
       default: break
     }
-
   },
-  
   // Clear all filters
   const clearAllFilters = () => {
     setSearchQuery(""),
@@ -174,7 +161,6 @@ function useMarketplaceSearch() {
     setSelectedAvailability([]),
     setSelectedRating(null)
   },
-  
   return {
     searchQuery,
     setSearchQuery,
@@ -188,10 +174,9 @@ function useMarketplaceSearch() {
     handleFilterChange,
     clearAllFilters,
     filterOptions
-
   }
 }import { useState, useMemo } from "react";
-import { ProductListing } from "@/types/listings",;
+import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
 import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",;
 export function useMarketplaceSearch() {;

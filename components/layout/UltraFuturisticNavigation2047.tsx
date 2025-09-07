@@ -55,7 +55,6 @@ import {
   Linkedin,
   Twitter,
   Github,
-
 import {
   Menu,
   ChevronDown,
@@ -116,7 +115,6 @@ import {
   Youtube,;
   MapPin,;
 } from 'lucide-react';
-
 import {
   Menu
   ChevronDown
@@ -179,33 +177,27 @@ import {
 } from 'lucide-react';
 interface NavigationItem {
   name: string;
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import {
   Menu,
   ChevronDown,
@@ -266,7 +258,6 @@ import {
   Youtube,;
   MapPin,;
 } from 'lucide-react';
-
 import {
   Menu,
   ChevronDown,
@@ -330,11 +321,8 @@ import {
 interface NavigationItem {
   name: string;
   href: string;  icon?: React.ReactNode;import {
-
   href: string;  icon?: React.ReactNode;import { ;
-
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
-
   Brain, Rocket, Target, Atom, Shield;
   DollarSign, BarChart3, Globe, Grid, Heart, Database;
   Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor;
@@ -353,11 +341,9 @@ interface NavigationItem {
   color?: string;  color?: string
 }
   color?: string;
-
 const navigationItems: NavigationItem[] = [
   {
-
-    name: 'Home & Core'
+    name: "name",
     href: '/'
     icon: <Home className='w-5 h-5' />,    description: 'Main pages and core information'
     category: 'core'
@@ -422,17 +408,14 @@ const navigation_items: NavigationItem[] = [;
     color: 'from-blue-500 to-cyan-500',
     children: [
       {
-
     description: 'Cutting-edge technology solutions',
     category: 'solutions',
     color: 'from-blue-500 to-cyan-500',
     children: [
-
     description: 'Knowledge base and insights',
     category: 'resources',
     color: 'from-orange-500 to-red-500',
     children: [
-
     description: 'Company information and support',
     category: 'company',
     color: 'from-gray-500 to-slate-500',
@@ -503,7 +486,6 @@ const navigation_items: NavigationItem[] = [;
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false)
 };
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -542,7 +524,6 @@ const navigation_items: NavigationItem[] = [;
             {navigationItems && navigationItems.map(item => (;
               <div key={item && item.name} className='relative group'>;
                 <button
-
                     >
                       <div className='space-y-4'>
                         {item.children?.map(child => (
@@ -557,7 +538,6 @@ const navigation_items: NavigationItem[] = [;
                                 {child.description}
                               </p>                              <p className="text-sm text-gray-400 mt-1">{child.description}</p>
                             </div>
-
                           </Link>
                         ))}
                       </div>;
@@ -570,7 +550,6 @@ const navigation_items: NavigationItem[] = [;
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>;
             <div className='flex items-center space-x-4 text-sm text-gray-400'>;
               <a
-
                 href={`tel:${contactInfo.mobile}`}
                 className='flex items-center space-x-1 hover:text-white transition-colors'
               >
@@ -581,7 +560,6 @@ const navigation_items: NavigationItem[] = [;
             <div className="flex items-center space-x-4 text-sm text-gray-400">
               <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
-
               </a>
             </div>
             <Link
@@ -591,7 +569,6 @@ const navigation_items: NavigationItem[] = [;
             </div>
             <Link
               href="/contact"
-
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
             >
               Get Started
@@ -605,7 +582,6 @@ const navigation_items: NavigationItem[] = [;
           </div>
         </div>
       </div>
-
             </button>;
           </div>;
         </div>;
@@ -617,7 +593,6 @@ const navigation_items: NavigationItem[] = [;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-
           >
             <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigationItems.map(item => (
@@ -664,10 +639,8 @@ const navigation_items: NavigationItem[] = [;
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-
                         transition={{ duration: 0.2 }}
                         className='ml-4 mt-2 space-y-1'
-
                           <Link
                             key={child.name}
                             href={child.href}
@@ -781,7 +754,6 @@ const navigation_items: NavigationItem[] = [;
                 </div>;
               </div>;
             </div>;
-
 export default UltraFuturisticNavigation2047;
           </motion.div>)}
       </AnimatePresence>;
@@ -797,5 +769,4 @@ export default UltraFuturisticNavigation2047;
 export default UltraFuturisticNavigation2047;  )
 }
 export default UltraFuturisticNavigation2047;
-
 export default UltraFuturisticNavigation2047;

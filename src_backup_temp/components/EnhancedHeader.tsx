@@ -36,7 +36,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
 };';
 ';';
     window.addEventListener('scroll', handleScroll);';';
-
 };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
@@ -1162,8 +1161,8 @@ export: const EnhancedHeader: React.FC: = () => {,
   const [mobileOpen, setMobileOpen] = useState()
 }
   const navLinks = []
-  // comment
-      title: "AI & Machine Learning",
+  // comment;
+    title: "AI & Machine Learning",
 icon: Brai n,"
 color: "from-blue-500 to-indigo-500","
 services: [{ name: "AI Autonomous Business Manager", href: "/services/ai-autonomous-business-manager", description: "Fully autonomous business operations" }, { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", description: "Advanced analytics & ML insights" }, { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant", description: "Automated regulatory compliance" }, { name: "AI Sales Copilot", href: "/services/ai-sales-copilot", description: "Intelligent sales optimization" }, { name: "AI-Powered SEO", href: "/services/ai-powered-seo", description: "Machine learning SEO optimization" }, { name: "AI Content Marketing Suite", href: "/services/ai-content-marketing-suite", description: "AI-powered content creation & optimization" }, { name: "AI Customer Support", href: "/services/ai-customer-support-automation", description: "Intelligent support automation" }, { name: "AI Project Management", href: "/services/ai-project-management", description: "AI-driven project optimization" }, { name: "AI Financial Analytics", href: "/services/ai-financial-analytics", description: "Intelligent financial insights" }]}, {"

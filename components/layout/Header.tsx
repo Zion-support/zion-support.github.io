@@ -1,10 +1,5 @@
-
-
-    { name: 'Contact', href: '/contact', icon: Phone }
-
+{ name: 'Contact', href: '/contact', icon: Phone }
   ];
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const service_categories = [;
     {
       name: 'Micro SaaS',
@@ -22,8 +17,6 @@
       name: 'AI Services',
       href: '/services / ai - services',
       description: 'Cutting - edge AI & machine learning',
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     { ;
       name: 'Micro SaaS',;
       href: '/services/micro-saas',,
@@ -62,8 +55,6 @@
     { name: 'Partners', href: '/partners' },;
     { name: 'Team', href: '/team' },;
     { name: 'Careers', href: '/careers' },;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     { name: 'Blog', href: '/blog' },;
     { name: 'Case Studies', href: '/case-studies' },;
     { name: 'Webinars', href: '/webinars' },;
@@ -77,16 +68,13 @@
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' 
         : 'bg-transparent'
-
       popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
 }
   ];
   ];
   const isActive = (path: string) => location && location.pathname === path;
   const resourceCategories = [;
-
   const service_categories = [;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     { name: 'AI Solutions', href: '/services / ai - solutions' },
     { name: 'Cloud & DevOps', href: '/services / cloud' },
     { name: 'Cybersecurity', href: '/services / cybersecurity' },
@@ -125,14 +113,11 @@
       <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
         <div className="flex items - center justify-between h-16">;
           {/* Logo */}
-
           <div className="flex-shrink-0">;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Link href="/" className="text-2xl font-bold text-blue-600">;
               Zion Tech Group;
             </Link>;
           </div>;
-
           {/* Desktop Navigation */}
           <div className="hidden md:block">;
             <div className="ml-10 flex items-baseline space-x-4">;
@@ -144,17 +129,13 @@
                   {item && item.name}
                 </Link>;
               ))}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Mobile menu button */}
           <div className="md:hidden">;
             <button              onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-blue-600 p-2";
             >;
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-
         {/* Mobile Navigation */}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <AnimatePresence>;
           {isMenuOpen && (;
             <motion&& motion.div
@@ -180,10 +161,8 @@
       </nav>;
     </header>;
   );
-
           <div className="flex - shrink - 0">;
             <Link href="/" className="text - 2xl font - bold text - blue - 600">;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Zion Tech Group;
             </Link>;
           </div>;
@@ -234,21 +213,17 @@
       </nav>;
     </header>);
 }
-
             >
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
-
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-
               className="lg:hidden border-t border-gray-200"
             >
               <div className="py-4 space-y-4">
@@ -285,7 +260,6 @@
                     )}
                   </div>
                 ))}
-                
                 <div className="pt-4 border-t border-gray-200">
                   <Link
                     href="/contact"
@@ -294,22 +268,15 @@
                     Get Started
                   </Link>
                 </div>
-
               </div>
             </motion.div>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           )}
         </AnimatePresence>
       </nav>
     </header>
   );
-
 }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default Header;
 import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 0)}; window.addEventListener('scroll',handleScroll); return () => window.removeEventListener('scroll',handleScroll)},[]); const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' },]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems.map((item) => ( <Link key={item.name} href={item.href} className="text-gray-300 hover:text-white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
 export default Header;
-
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

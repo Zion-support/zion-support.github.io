@@ -1,7 +1,6 @@
-
 }
   {
-    title: "Comprehensive Services"
+    title: "title",
     link: "/comprehensive - services"
 }
   {
@@ -9,17 +8,13 @@
     link: "/services - comparison"
 }
 // Default static categories with translation keys
-
   {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: "services"
     name: t('categories.services')
     description: t('categories.services_desc')
-    iconName: "Briefcase", // Corresponds to lucide icon name
+    iconName: "Briefcase", // Corresponds to lucide icon name;
     link: "/services"
     color: "from-purple-500 to-indigo-600", // Keep color for styling
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     id: "talents"
     name: t('categories.talents')
@@ -35,8 +30,6 @@
     link: "/equipment"
     color: "from-amber-500 to-orange-600"}
   {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
     ? fetchedCategories.map(cat => ({
@@ -48,10 +41,8 @@
         // Assign a default color or implement logic to assign colors
         color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
-
         title: cat.name,
         icon: getIcon(cat.iconName)})),
-
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
     return (
@@ -63,7 +54,6 @@
           </p>
           <p className="text-zion-slate-light text-md">
             {t('home.no_categories_support')}
-
 import React from 'react';
         color: defaultCategories && defaultCategories.find(dc => dc && dc.id === cat && cat.id)?.color || "from-gray-500 to-gray-600"}));
     : defaultCategories && defaultCategories.map(cat => ({;
@@ -88,7 +78,6 @@ interface CategoryType {;
  * @returns {*} Function return value;
  */;
 function CategoriesSection(): any ({ showTitle = true }: CategoriesSectionProps) {;
-
 const categories = [{;
     title: "AI Services",;
     description: "Cutting - edge AI solutions, chatbots, and machine learning",;
@@ -130,7 +119,6 @@ const specialServices = [{;
     title: "Services Comparison",;
     link: "/services - comparison";
 }
-
 // Default static categories with translation keys;
 const getDefaultCategories = (t: any,) => [;
   {;
@@ -172,14 +160,12 @@ const getIcon = (iconName?: string,) => {;
     default: return <HelpCircle className="w-10 h-10" />, // Default icon;
   }
 };
-
 const getSpecialServices = (t: any,) => [;
   {;
     title: t('categories && categories.it_onsite_services'),;
     link: "/it-onsite-services";
   }
 ];
-
 interface CategoriesSectionProps {;
   showTitle?: boolean;
   className?: string;
@@ -194,7 +180,6 @@ export function CategoriesSection(): any ({;
 }: CategoriesSectionProps) {;
   const { t } = useTranslation();
   const defaultCategories = getDefaultCategories(t);
-
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories;
   const displayCategories = fetchedCategories && fetchedCategories.length > 0;
     ? fetchedCategories && fetchedCategories.map(cat => ({;
@@ -219,12 +204,10 @@ export function CategoriesSection(): any ({;
             {t('home && home.no_categories_desc')}
           </p>;
           <p className="text-zion-slate-light text-md">;
-
           </p>;
         </div>;
       </section>;
     );
-
   }
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
@@ -237,7 +220,6 @@ export function CategoriesSection(): any ({;
             </p>;
           </div>;
         )}
-
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
@@ -251,25 +233,20 @@ export function CategoriesSection(): any ({;
               </div>
             </Link>
           ))}
-
         {/* Special services section with translations */}
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
           <div className="flex flex-wrap justify-center gap-4">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
         <div className="mt-12 flex justify-center">
           <Link
             href="/categories/all"
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
             {t('home.view_all_categories')}
-
   t ;
 }= useTranslation ();
 const defaultCategories = getDefaultCategories (t);
 //Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
-
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description |"No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
@@ -296,5 +273,3 @@ icon: getIcon (cat.iconName)
   t ('home.view all categories')
 }</Link> </div> </div> </section>)
 }'"}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

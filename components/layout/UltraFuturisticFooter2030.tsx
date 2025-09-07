@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-
   Phone
   Mail
   MapPin
@@ -54,8 +53,8 @@ import { motion } from 'framer-motion';
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle
 const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
@@ -181,26 +180,21 @@ const serviceCategories = [
   },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' }
       { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' }
       { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' }
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -236,14 +230,12 @@ import {;
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
-
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com'
 };
-
 const serviceCategories = [;
   {;
     title: '🚀 AI & Consciousness',;
@@ -380,7 +372,6 @@ const serviceCategories = [;
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
 ];
-
 const quickLinks = [;
   { name: 'Home', href: '/' },;
   { name: 'Services', href: '/services' },;
@@ -443,9 +434,7 @@ const socialLinks = [;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {/* Company Info */}
-
                     {contactInfo.website.replace('https://', '')}
-
                   </a>
                 </div>
               </div>
@@ -485,7 +474,6 @@ const socialLinks = [;
                   </div>;
                 ))}
             {/* Quick Links */}
-
                 ))}
                   <Link
                     key={index}
@@ -504,7 +492,6 @@ const socialLinks = [;
               </h4>
               </div>;
             </div>;
-
             {/* Social & Certifications */}
             <div className='space-y-6'>;
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>;
@@ -547,7 +534,6 @@ const socialLinks = [;
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
                   <Award className='w-4 h-4' />
-
                   <span>Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2'>
@@ -588,7 +574,6 @@ const socialLinks = [;
             </div>
           </div>
         </div>
-
                       target='_blank';
                       rel='noopener noreferrer';
                       className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40';
@@ -620,7 +605,6 @@ const socialLinks = [;
                       <CheckCircle className="w - 3 h - 3 text-green-400" />;
                       <span>{cert}</span>;
                     </div>))}
-
                 </div>;
               </div>;
             </div>;

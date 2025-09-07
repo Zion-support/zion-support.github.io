@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -12,11 +10,9 @@ import { useAuth } from "@/hooks/useAuth";
 import { ForumPost, ForumCategory } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
 interface PostFormValues {
-
-  title: string
-  content: string
+  title: string;
+    content: string
   categoryId: ForumCategory
-
   tags: string
 }
 // Mock post data
@@ -26,7 +22,6 @@ export default function EditPostPage() {;
   const { user } = useAuth();
   const [post, setPost] = useState<ForumPost | null>(mockPost);
   const [isLoading, setIsLoading] = useState(true);  if (isLoading) {
-
   useEffect(() => {;
     // In a real app, we would fetch the post data here;
     // For now, we'll just use the mock data;
@@ -70,8 +65,8 @@ export default function EditPostPage() {;
       // Here we would normally update the post in the database
       // For now, we'll just simulate a successful update
       toast({
-        title: "Post updated"
-        description: "Your post has been updated successfully"      // Redirect back to the post
+        title: "title",
+    description: "Your post has been updated successfully"      // Redirect back to the post
       navigate(`/community/post/${postId}`)
     } catch (error) {
       toast({
@@ -79,24 +74,20 @@ export default function EditPostPage() {;
         description: "There was a problem updating your post"
         variant: "destructive"
       })
-
   return (  const initialValues: Partial<PostFormValues> = {;
     title: post && post.title,;
     content: post && post.content,;
     categoryId: post && post.categoryId as ForumCategory,;
     tags: post && post.tags.join(", ")
 };
-
   const handleSubmit = async (values: PostFormValues) => {;
     try {;
       // Here we would normally update the post in the database;
       // For now, we'll just simulate a successful update;
-
       toast({;
         title: "Post updated",,
   description: "Your post has been updated successfully";
       });
-
       // Redirect back to the post;
       navigate(`/community/post/${postId}`);
     } catch (error) {;
@@ -105,29 +96,22 @@ export default function EditPostPage() {;
   description: "There was a problem updating your post",;
         variant: "destructive";
       });
-
     }
   }    }
-
   },
-
   return (
-
     <AppLayout>;
-
   return (
     <AppLayout>;
     }
   }
   },
-
   return (
     <AppLayout>
       <SEO
         title="Edit Post | Community Forum | Zion AI Marketplace"
         description="Edit your discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, edit post"
-
         <PostForm
           initialValues={initialValues}
           onSubmit={handleSubmit}
@@ -135,11 +119,11 @@ export default function EditPostPage() {;
       </div>
     </AppLayout>
   )import { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom",;
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { Button } from "@/components/ui/button",;
-import PostForm from "@/components/community/PostForm",;
+import PostForm from "PostForm";
 import { useToast } from "@/hooks/use-toast",;
 import { ForumPost, ForumCategory } from "@/types/community",;
 import { useAuth } from "@/hooks/useAuth",;

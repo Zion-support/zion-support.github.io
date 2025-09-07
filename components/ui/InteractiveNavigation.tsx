@@ -1,21 +1,14 @@
 ;
-
-
-
-
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
 =======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> 
 }
-
 interface InteractiveNavigationProps {
   items: NavItem[];
   className?: string;
 }
-
 interface NavigationItem {;
   name: string, href: string,;
   submenu?: NavigationItem[];
@@ -45,12 +38,9 @@ interface NavigationItem {;
       </ul>;
     </nav>;
   );
-
 };
-
 export default InteractiveNavigation;};
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
-
 }
 export default InteractiveNavigation;}
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
@@ -138,10 +128,8 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href="/services" className="text - gray - 600 hover:text - gray - 900: transition - colors">Services</Link>", ",
             <Link: href = "/about" className="text - gray - 600 hover:text - gray - 900: transition - colors">About</Link>", ";
             <Link: href="/contact" className="text - gray - 600 hover:text - gray - 900: transition - colors">Contact</Link>", ';
-
 export default Component}
 ;
-
 export default Component}
 =======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>>

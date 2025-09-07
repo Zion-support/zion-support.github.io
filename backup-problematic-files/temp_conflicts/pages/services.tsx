@@ -1,14 +1,14 @@
 import React from 'react';
-import Head from 'next/head',;
+import Head from 'next/head';
 import { motion } from 'framer-motion',;
-import Link from 'next/link',;
+import Link from "Link";
 import { ;
   Brain, Shield, Rocket, Cpu, Database, Atom, ;
   Users, Target, Star, Zap, Globe, TrendingUp,;
   CheckCircle, ArrowRight, ExternalLink, Sparkles;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
+import EnhancedNavigation from "EnhancedNavigation";
+import EnhancedFooter from "EnhancedFooter";
 ;
 export default function ServicesPage() {;
   const mainServices = [;

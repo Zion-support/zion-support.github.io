@@ -1,19 +1,13 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-      method
-      headers: {
-
+method;
+    headers: {
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
       // Add timeout to prevent hanging
-
       try {
         options.body = JSON.stringify (JSON.parse (body));
       } catch {
-
     set_loading (true);
     set_response (null);
-
     try {
       const res = await fetch (url, options);
       const content_type = res.headers.get ('content - type');
@@ -30,11 +24,9 @@
       } else {
         response_text = await res.text ();
       }
-
       // Format the response with status information;
       const status_info = `HTTP ${res.status} ${res.status_text}\n\n`;
       set_response (status_info + response_text);
-
     } catch (err: any) {
       let error_message = 'Request failed';
       // Check condition
@@ -48,32 +40,23 @@ if ( {) {
         error_message =;
           'Network error - check CORS configuration or API endpoint';
       } else {
-
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
-
   return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className='space-y-4'>;
       <Input
         value={apiKey}
-
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
-
       />
       {params.map(p => (
         <Input
-
           value={paramValues[p.name] || ''}
-
           onChange={e => handleParamChange(p.name, e.target.value)}        />
-
       ))}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {method !== 'GET' && method !== 'DELETE' && (;
         <Textarea
           value={body}
@@ -84,7 +67,6 @@ import CodeBlock from './CodeBlock';
         {loading ? 'Sending...' : 'Send Request'}
       </Button>;
       {response && <CodeBlock code={response} language='json' />}
-
         error_message = err.message || 'Unknown error occurred';
       }
       set_response (
@@ -142,15 +124,12 @@ set_response (null);
 let response_text: string;
 if () {) {
   $2
-
 }
   try {
   /> {
   params.map ( (p) => (<Input key= {
-
     </div>;
   );
-
 export default ApiPlayground;
   const val = paramValues[p && p.name];
 if (val) searchParams && searchParams.append (p && p.name, val) ;
@@ -178,7 +157,6 @@ if (contentType?.includes ('application/json') ) {;
   p && p.name 
 }</div>) ;
 }export default ApiPlayground;
-
   p.name;
 }</div>);
 }export default ApiPlayground;
@@ -188,7 +166,6 @@ if (contentType?.includes ('application/json') ) {;
 }export default ApiPlayground;
 '";
 }
-
           value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;
@@ -208,5 +185,3 @@ if (contentType?.includes ('application/json') ) {;
   )
 }
 ;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

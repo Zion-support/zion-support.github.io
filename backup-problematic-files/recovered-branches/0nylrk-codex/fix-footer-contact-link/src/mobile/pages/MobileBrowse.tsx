@@ -1,6 +1,5 @@
-
 import React, { useState } from "react";
-import { MobileHeader } from "../components/common/MobileHeader",;
+import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { BrowseFilters } from "../components/browse/BrowseFilters",;
 import { BrowseCards } from "../components/browse/BrowseCards",;

@@ -1,6 +1,4 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-      key: 'ai_talent_matching',
+key: 'ai_talent_matching',
       descriptionKey: 'ai_talent_matching_desc',
       detailsKey: 'ai_talent_matching_details',
       icon: <Search className = "h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
@@ -80,45 +78,33 @@
       link: '/zion-hire-ai',
       badge: 'premium'
     }
-
   return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <section
       className={cn(
         "py-16 bg-gradient-to-b from-background to-background/90"
-
         className
       )}
-
                 )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </CardHeader>
               <CardContent>
                 {feature.detailsKey && (
-
                   <p className="text-sm text-muted-foreground">
                     {t(`features.${feature.detailsKey}`)}
                   </p>;
-
                 )}
               </CardContent>
               <CardFooter>
                 <Button asChild className="w-full gap-1">
-
                   <Link
                     href={feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
-
                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
               </CardFooter>
             </Card>
           ))}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ArrowRight,
   Users,
   Zap,
@@ -385,5 +371,3 @@ function FeatureCTAs() {
       </div>;
     </section>));
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,10 +1,4 @@
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node
 const fs = require('fs');
@@ -56,7 +50,6 @@ class AdvancedAutomationSuite {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    
   }
 // Function to create deployment automation
 function createDeploymentAutomation() {
@@ -128,10 +121,8 @@ class AutomatedTestFramework {
       try {
         await test.testFn();
         this.results.passed++;
-        
       } catch (error) {
         this.results.failed++;
-        
       }
     }
     this.results.total = this.tests.length;
@@ -166,12 +157,10 @@ class PerformanceOptimizer {
     this.optimizations = [];
   }
   async optimizeImages() {
-    
     // Image optimization logic would go here
     this.optimizations.push('Images optimized');
   }
   async optimizeCode() {
-    
     // Code optimization logic would go here
     this.optimizations.push('Code optimized');
   }
@@ -202,12 +191,10 @@ class SecurityEnhancer {
     this.securityChecks = [];
   }
   async checkDependencies() {
-    
     // Dependency check logic would go here
     this.securityChecks.push('Dependencies checked');
   }
   async checkCodeSecurity() {
-    
     // Code security check logic would go here
     this.securityChecks.push('Code security checked');
   }
@@ -238,12 +225,10 @@ class SEOEnhancer {
     this.seoChecks = [];
   }
   async checkMetaTags() {
-    
     // Meta tag check logic would go here
     this.seoChecks.push('Meta tags checked');
   }
   async checkStructuredData() {
-    
     // Structured data check logic would go here
     this.seoChecks.push('Structured data checked');
   }
@@ -287,8 +272,8 @@ echo "✅ Deployment completed successfully!";";
 // Function to create CI/CD pipeline
 function createCICDPipeline() {
   console.log('\n🔄 Creating CI/CD Pipeline...');
-  const githubActions = `"name": CI/CD Pipeline
-on:
+  const githubActions = `"name": CI/CD Pipeline;
+    on:
   push:
     branches: [main, develop ]
   "pull_request": branches: [main ]
@@ -300,8 +285,8 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'
-        cache: 'npm'
+        node-version: "version",
+    cache: 'npm'
     - name: Install dependencies
       run: npm ci
     - name: Run linting

@@ -1,10 +1,6 @@
-
-
-  GrantCategory,;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
-
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
   'Talent Development',;
@@ -18,7 +14,6 @@ const statuses: GrantStatus[] = [;
   'Approved',;
   'Rejected',;
 ];
-
 export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
     sector?: string;
@@ -26,9 +21,7 @@ export default function GrantsPage() {;
     region?: string;
     program?: string;
   }>({});
-
   useEffect(() => {
-
     const params = new URLSearchParams();
     if (filters.sector) params.set('sector', filters.sector);
     if (filters.status) params.set('status', filters.status);
@@ -40,7 +33,6 @@ const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;
 export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
-
   useEffect(() => {;
     const params = new URLSearchParams();
     if (filters && filters.sector) params && params.set('sector', filters && filters.sector);
@@ -53,7 +45,6 @@ export default function GrantsPage() {;
       .catch(() => setItems([]));  }, [filters]);
   return (
       .catch(() => setItems([]))
-
     <EnhancedLayout>      .then((r) => r && r.json());
       .then((d) => setItems(d && d.items || []));
       .catch(() => setItems([]));
@@ -77,7 +68,6 @@ export default function GrantsPage() {;
           value={filters.sector |''}
           onChange={e =>
             setFilters(f => ({ ...f, sector: e.target.value |undefined }))
-
           }
         >
           <option value=''>All Stages</option>
@@ -90,12 +80,10 @@ export default function GrantsPage() {;
         <input
           className='border rounded p-2'
           placeholder='Region'
-
           }
         />
         <select
           className='border rounded p-2'
-
           }
         >;
           <option value=''>All Sectors</option>;
@@ -121,13 +109,11 @@ export default function GrantsPage() {;
           placeholder='Region'
           }
         />;
-
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
               </div>;
               <div className='flex gap - 2 items - center'>;
                 {g.program === 'incubator' && (
-
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
         <div className="flex gap-2">
@@ -135,9 +121,7 @@ export default function GrantsPage() {;
           <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>
         </div>
       </div>
-
       <div className='grid gap-4'>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {items && items.map(g => (;
           <div
             key={g && g.id}
@@ -158,8 +142,6 @@ export default function GrantsPage() {;
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 )}
                 {g && g.status === 'Approved' && (;
                   <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
@@ -182,7 +164,4 @@ export default function GrantsPage() {;
         {items && items.length === 0 && (;
           <div className='text-sm text-gray-600'>No grants found.</div>;
         )}
-
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

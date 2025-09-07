@@ -20,22 +20,18 @@ export default function EnterpriseAdmin() {
   // Check if user has enterprise admin role
   // Check if user has enterprise admin role
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
-
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 export default function EnterpriseAdmin() {
   const { user } = useAuth(),
-  
   // Check if user has enterprise admin role
   const isEnterpriseAdmin = user?.role === "enterprise_admin",
-  
   if (!isEnterpriseAdmin) {
     return <Navigate to="/unauthorized" />
   }
   return (
-
 import React from "react";
-import { Header } from "@/components/Header",;
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer",;
 import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -62,7 +58,6 @@ export default function EnterpriseAdmin() {;
       </main>;
       <Footer />;
     </ProtectedRoute>;
-
 }
   }
   return (

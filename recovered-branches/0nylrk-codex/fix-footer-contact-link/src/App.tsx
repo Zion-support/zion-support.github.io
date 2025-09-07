@@ -3,30 +3,24 @@ import { Routes, Route  } from 'react-router-dom';
 import './App.css',
 import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App ;
@@ -44,7 +38,6 @@ import {
   EnterpriseRoutes
   CommunityRoutes
   DeveloperRoutes
-
 import {;
   AuthRoutes,;
   DashboardRoutes,;
@@ -75,7 +68,6 @@ const ITOnsiteServicesPage = React && React.lazy(;
 );
 const OpenAppRedirect = React && React.lazy(() => import("./pages/OpenAppRedirect"));
 const ContactPage = React && React.lazy(() => import("./pages/Contact"));
-
 const baseRoutes = [;
   { path: "/", element: <Home /> },;
   { path: "/match", element: <AIMatcherPage /> },;
@@ -100,9 +92,7 @@ import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
-
 const App = () => {;
-
   return (
     <WhitelabelProvider>;
       <ThemeProvider defaultTheme="dark">;
@@ -193,7 +183,7 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
 const ContactPage = React.lazy(() => import('./pages/Contact')),
 export default App,
 import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom',;
+import { Routes, Route } from 'react-router-dom';
 import './App.css',;
 import { ThemeProvider } from "./components/ThemeProvider",;
 import { WhitelabelProvider } from "./context/WhitelabelContext",;
@@ -295,11 +285,8 @@ const App = () =>: any {
           </Routes>;
         </Suspense>;
         <Toaster />;
-
 export default App;  )
 },
-
 export default App;
-
 =======export default App;
 export default App;

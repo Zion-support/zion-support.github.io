@@ -1,16 +1,14 @@
-  Star
+Star
   Quote
   Users
   Award
   TrendingUp
   CheckCircle;
-
   Star,
   Quote,
   Users,
   Award,
 } from 'lucide-react';
-
 interface Testimonial {;
   id: string;
   name: string;
@@ -19,8 +17,8 @@ interface Testimonial {;
   content: string;
   rating: number;
   avatar: string;
-  category: string;  id: string
-  name: string
+  category: string;  id: string;
+    name: string
   title: string
   company: string
   content: string
@@ -82,17 +80,13 @@ interface Testimonial {;
                     <div className="text-sm text-white/70">{testimonial.title}</div>
                     <div className="text-xs text-blue-400">{testimonial.company}</div>
                   </div>
-
                 </div>
                 {/* Category Badge */}
-
                 <div className="mt-4">
-
                   <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
                     {testimonial.category}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {testimonials.map(testimonial => (
-
             <div
               key={testimonial.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -109,14 +103,10 @@ interface Testimonial {;
                 {/* Testimonial Text */}
                 <p className='text-white/80 text-sm leading-relaxed mb-6'>                  "{testimonial.content}"
                 </p>
-
                 {/* Author Info */}
-
                   {renderStars(testimonial.rating)}
                 </div>
-
                 {/* Testimonial Text */}
-
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
@@ -147,9 +137,7 @@ interface Testimonial {;
                   <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                <div className="mt-4">
                   <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
                     {testimonial.category}
-
                     {testimonial.category}
-
                   </span>
                 </div>
               </div>
@@ -201,10 +189,8 @@ interface Testimonial {;
               innovation journey.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-
           ))}
         </div>
-
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
@@ -247,7 +233,6 @@ interface Testimonial {;
           </div>;
         </div>;
       </div>;
-
 export default EnhancedTestimonialsSection;
     </section>);
 }
@@ -261,5 +246,4 @@ export default EnhancedTestimonialsSection;
 export default EnhancedTestimonialsSection;  )
 }
 export default EnhancedTestimonialsSection;
-
 export default EnhancedTestimonialsSection;

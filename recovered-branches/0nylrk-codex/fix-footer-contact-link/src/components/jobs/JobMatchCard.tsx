@@ -7,9 +7,8 @@ import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",
 import { formatDistanceToNow } from "date-fns";
 import { JobMatch } from "@/types/jobs";
 interface JobMatchProps {
-
-  matchId: string
-  talentId: string
+  matchId: string;
+    talentId: string
   name: string
   title: string
   company: string
@@ -20,12 +19,10 @@ interface JobMatchProps {
   skills: string[]
   onApply?: (matchId: string) => void
   onViewDetails?: (matchId: string) => void
-
   onInvite?: (matchId: string) => void
 }
 export function JobMatchCard({
   matchId;
-
   talentId
   name
   title
@@ -56,7 +53,6 @@ export function JobMatchCard({
   }
   // Generate a formatted date for display
   const postedDate = new Date();
-
 import { formatDistanceToNow } from "date-fns",
 import { JobMatch } from "@/types/jobs",
 interface JobMatchProps {
@@ -79,4 +75,3 @@ interface JobMatchProps {
       </CardContent>;
     </Card>;
   );
-

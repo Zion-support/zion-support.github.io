@@ -1,13 +1,13 @@
 import React from 'react';
-import Head from 'next/head',;
+import Head from 'next/head';
 import { motion } from 'framer-motion',;
 import { ;
   ExternalLink;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase',;
-import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection',;
+import EnhancedNavigation from "EnhancedNavigation";
+import EnhancedFooter from "EnhancedFooter";
+import EnhancedServicesShowcase from "EnhancedServicesShowcase";
+import EnhancedTestimonialsSection from "EnhancedTestimonialsSection";
 ;
 export default function HomePage() {;
   const [isVisible, setIsVisible] = useState(false),;

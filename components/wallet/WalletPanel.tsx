@@ -1,5 +1,3 @@
-
-
 type Tx = {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -33,15 +31,13 @@ type Tx = {
   const generated = 'demo-user';
   window && window.localStorage.setItem('zion_user_id', generated);
   return generated;
-
 export default function WalletPanel() {;
-
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
   );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {
-  id: string
-  type: "earn" | "burn" | "issue" | "revoke" | "redeem"
+  id: string;
+    type: "earn" | "burn" | "issue" | "revoke" | "redeem"
   amount: number
   reason: string
   id: string,
@@ -59,7 +55,6 @@ export default function WalletPanel() {;
   reason: string,;
   createdAt: string
 };
-
 type Summary = {;
   wallet: { userId: string, balance: number },;
   transactions: Tx[],;
@@ -88,8 +83,8 @@ type Summary = {;
   async function redeem(amount: number) {
     if (!amount |amount <= 0) return;
     const res = await fetch('/api/wallet/redeem', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
+      method: "method",
+    headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, amount })
     try {;
       const accounts = await eth && eth.request({ method: "eth_requestAccounts" }),;
@@ -314,7 +309,6 @@ if ( {) {
     }
   }
 }
-
   );
 }
             <div className='text - xs text - gray - 500'>;
@@ -324,14 +318,11 @@ if ( {) {
       </div>;
     </div>);
 }
-
           </div>
-
         )}
       </div>
     </div>
 );
 }
-
 }
 }

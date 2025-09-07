@@ -1,38 +1,21 @@
+import { NextApiRequest, NextApiResponse } from 'next';
 
-  return res.status(200).json(fake);
-};
-
-    id
-
-    note: 'This is a stub export. Connect to persistence to return real deployment state.'}
-  res.setHeader('Content-Typeapplication/json')
-  return res.status(200).json(fake);
-};
-
-export default async function handler(req, res) {
-  try {
-  res.status(200).json({ message: 'Export endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req, res) {
-  try {
-  const { id } = req.query;
-  if (!id || typeof id !== 'string') {;
-    return res.status(400).json({ error: 'Missing id' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-}
-    note: 'This is a stub export. Connect to persistence to return real deployment state.'};
-  res.setHeader('Content-Typeapplication/json');
-  return res.status(200).json(fake)
-}
+
+  try {
+    // Placeholder for deployment export logic
+    const fake = {
+      id: 'stub-export',
+      note: 'This is a stub export. Connect to persistence to return real deployment state.'
+    };
+
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(fake);
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Deployment export error:', error);
+    res.status(500).json({ error: 'Failed to export deployment' });
   }
 }
-

@@ -1,4 +1,3 @@
-
 import React from 'react';import {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -28,7 +27,6 @@ import {toast} from "@/hooks/use-toast";  min: number,;
   const [view, setView] = useState<ListingView>("grid"),
   const [isLoading, setIsLoading] = useState(false),
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice),
-
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
       listing.price <= currentPriceFilter[1]
     );
@@ -44,18 +42,17 @@ import {toast} from "@/hooks/use-toast";  min: number,;
       setIsLoading(false)
       if (listing) {
         toast({
-          title: "Quote Requested"
-          description: `Your quote request for ${listing.title} has been sent.`
+          title: "title",
+    description: `Your quote request for ${listing.title} has been sent.`
         });
         navigate("/request-quote", {
           state: {
-            serviceType: categorySlug
-            specificItem: {
+            serviceType: categorySlug;
+    specificItem: {
               id: listing.id
               title: listing.title
               category: listing.category
               image: listing.images?.[0]
-
   const navigate = useNavigate(),;
   const [searchQuery, setSearchQuery] = useState(""),;
   const [selectedCategory, setSelectedCategory] = useState("all"),;
@@ -70,7 +67,6 @@ import {toast} from "@/hooks/use-toast";  min: number,;
           title: "Quote Requested",,
   description: `Your quote request for ${listing && listing.title} has been sent.`;
         });
-
         navigate("/request-quote", {;
           state: { ;
             serviceType: categorySlug, ;
@@ -78,7 +74,6 @@ import {toast} from "@/hooks/use-toast";  min: number,;
               title: listing.title,;
               category: listing.category,;
               image: listing.images?.[0];
-
             }
           }
         });
@@ -98,14 +93,12 @@ import {toast} from "@/hooks/use-toast";  min: number,;
                     {categoryFilters.map((filter) => (
                       <SelectItem key={filter.value} value={filter.value} className="text-white">          </p>;
         </div>;
-
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
           <div className="lg:col-span-1">;
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">;
               <h3 className="text-lg font-medium text-white mb-4 flex items-center">;
                 <Filter className="mr-2 h-5 w-5" /> Filters;
               </h3>;
-
               <div className="mb-6">;
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">;
                   Category;
@@ -127,7 +120,6 @@ import {toast} from "@/hooks/use-toast";  min: number,;
                   </div>
                 </div>
               </div>
-              
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Minimum Rating
@@ -147,7 +139,6 @@ import {toast} from "@/hooks/use-toast";  min: number,;
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
                 </div>
-
   useEffect_(() => {
     const listingsWithPrice = allListings.filter(l => l.price !== null);
     if (listingsWithPrice.length > 0) {
@@ -156,12 +147,10 @@ import {toast} from "@/hooks/use-toast";  min: number,;
       setPriceRange({ min, max})
     }
   }, [allListings]),
-
   const [currentPriceFilter, setCurrentPriceFilter] = useState<[number, number]>([
     initialPrice.min,
     initialPrice.max
   ]),
-
   const handleSliderChange = (values: number[]) => {
     setCurrentPriceFilter([values[0], values[1]])
   },
@@ -169,28 +158,20 @@ import {toast} from "@/hooks/use-toast";  min: number,;
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
       listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
-    
     const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory,      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())));
-    
     const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;
-    
     const matchesPrice = listing.price === null || (
       listing.price >= currentPriceFilter[0] && 
       listing.price <= currentPriceFilter[1]
     ),
-    
     const matchesRating = 
       selectedRating === null || 
       (listing.rating !== undefined && listing.rating >= selectedRating),
-    
     return matchesSearch && matchesCategory && matchesPrice && matchesRating
   }),
-
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true),
-    
     const listing = allListings.find(item => item.id === listingId),
-    
     setTimeout(() => {
       setIsLoading(false),
       if (listing) {
@@ -198,7 +179,6 @@ import {toast} from "@/hooks/use-toast";  min: number,;
           title: &quot;Quote Requested&quot;,
           description: `Your quote request for ${listing.title} has been sent.`
         }),
-        
         navigate(&quot;/request-quote", {
           state: { 
             serviceType: categorySlug,
@@ -212,7 +192,6 @@ import {toast} from "@/hooks/use-toast";  min: number,;
       }
     }, 500)
   },
-
   return (_<div className="min-h-screen bg-zion-blue py-12 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-12">
@@ -221,14 +200,12 @@ import {toast} from "@/hooks/use-toast";  min: number,;
             {description}
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="lg:col-span-1">
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">
               <h3 className="text-lg font-medium text-white mb-4 flex items-center">
                 <Filter className="mr-2 h-5 w-5" /> Filters
               </h3>
-              
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2&quot;>
                   Category
@@ -240,7 +217,6 @@ value={selectedCategory}
                     setSelectedCategory(value)                  }}
                   value={selectedCategory} 
                   onValueChange={_(value: string) => {
-                    
                     setSelectedCategory(value)}}
                 >
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white&quot;>
@@ -258,7 +234,6 @@ value={selectedCategory}
                         selectedRating === rating ;
                           ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
                           : "border-zion-blue-light text-zion-slate-light";
-
                     <Button;
                       key={rating === null ? 'any' :rating}
                       variant="outline";
@@ -292,13 +267,10 @@ value={selectedCategory}
                           ))}
                           <span className="ml-1">& Up</span>;
                         </div>;
-
                       )}                    </Button>;
                   ))}
-
                 </div>;
               </div>;
-
               <Button
                 variant="outline" 
                       )}
@@ -313,10 +285,8 @@ value={selectedCategory}
                 onClick={() => {;
                   console && console.log("Resetting filters");
                   setSearchQuery("");
-
               <Button 
                 variant="outline" 
-
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
                 onClick={() => {
@@ -358,7 +328,6 @@ value={selectedCategory}
                   <ProductListingCard
                     key={listing && listing.id}
                   <ProductListingCard 
-
                     key={listing.id}
                     listing={listing}
                     view={view}
@@ -380,7 +349,6 @@ value={selectedCategory}
                     setSearchQuery("");
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
-
                     setSelectedRating(null)              </div>;
             ) : (;
               <div className="text-center py-20">;
@@ -422,7 +390,6 @@ value={selectedCategory}
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
                     setSelectedRating(null);
-
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
                 >;

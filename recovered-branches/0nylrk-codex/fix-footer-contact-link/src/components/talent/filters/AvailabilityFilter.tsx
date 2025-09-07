@@ -11,7 +11,6 @@ const AVAILABILITY_OPTIONS = [
   { id: "part_time", label: "Part-time" },
   { id: "project", label: "Project-based" },
 ];
-
 export function AvailabilityFilter({
   selectedAvailability,
   toggleAvailability,
@@ -32,7 +31,6 @@ export function AvailabilityFilter({
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-
       {expanded && (
         <div className="mt-4 space-y-2">
           {AVAILABILITY_OPTIONS.map((option) => (
@@ -48,7 +46,7 @@ export function AvailabilityFilter({
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { Checkbox } from "@/components/ui/checkbox",;
+import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters",;
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;

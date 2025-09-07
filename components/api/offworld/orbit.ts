@@ -5,7 +5,6 @@ import {
   recordVote,
   editConstitution,;
 } from '@/utils/offworld/orbitdb';
-
 import {
   connectOrbit
   appendChatMessage
@@ -18,8 +17,8 @@ export default async function handler(
   res: NextApiResponse;
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
@@ -29,7 +28,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (action === 'chat' && req && req.method === 'POST') {
       await appendChatMessage(stores, body);
       return res && res.status(200).json({ ok: true });
-
   try {
     if (action === 'chat' && req.method === 'POST') {
       await appendChatMessage(stores, body);

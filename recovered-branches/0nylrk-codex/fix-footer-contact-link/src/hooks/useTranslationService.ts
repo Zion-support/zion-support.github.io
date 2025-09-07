@@ -1,5 +1,3 @@
-
-
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
@@ -21,8 +19,8 @@ type ContentType = 'job' | 'profile' | 'service' | 'general';
         const initialTranslations: Record<SupportedLanguage, string> = {
           en: content;
           es: '';
-          pt: ''
-          ar: ''
+          pt: "pt",
+    ar: ''
         }
         initialTranslations[sourceLanguage] = content;      const initialTranslations: Record<SupportedLanguage, string> = {
         en: content;
@@ -31,12 +29,10 @@ type ContentType = 'job' | 'profile' | 'service' | 'general';
         ar: ''
       }
       initialTranslations[sourceLanguage] = content;
-
             }
     }
   }
   const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = '') => {
-
     if (!translations) return fallback,
     return translations[currentLanguage] || translations && translations.en || fallback
   };
@@ -76,7 +72,6 @@ type ContentType = 'job' | 'profile' | 'service' | 'general';
     translateContent;
     isTranslating;
     getTranslation;
-
 ;
   const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {
     // Check condition

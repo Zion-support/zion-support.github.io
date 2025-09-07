@@ -1,14 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   });
   res && res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
     target: '$10,000,000';
     valuationCap: '$80,000,000';
-
     leadInvestor: 'TBD'});
-
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -39,7 +35,4 @@ function handler() {
     discount: '20%',
     lead_investor: 'TBD'});
   res.status (200).json (terms);
-
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

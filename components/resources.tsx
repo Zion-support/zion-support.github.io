@@ -4,37 +4,31 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import Link from 'next/link';
 export default function ResourcesPage() {
   return (
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
   return (
             {
-              name: 'Support Center'
-              href: '/support'
+              name: "name",
+    href: '/support'
               blurb: 'Help, FAQs, and contact options.'
             }
             {
@@ -58,9 +52,7 @@ import Link from 'next/link';
     </UltraFuturisticBackground>;
   );  )
 };
-
 export default ResourcesPage;
-
               name: 'Market Pricing',
               href: '/market - pricing',
               blurb: 'Vendor links and typical budgets.',

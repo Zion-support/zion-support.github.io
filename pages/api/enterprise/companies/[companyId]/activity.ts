@@ -1,55 +1,21 @@
+import { NextApiRequest, NextApiResponse } from 'next';
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import { store } from "../../../../../utils/data/enterpriseStore";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { companyId } = req.query;
-
+  if (!companyId || typeof companyId !== 'string') {
+    return res.status(400).json({ error: 'Invalid company ID' });
   }
-  const company = store && store.getCompanyById(companyId);
-  if (!company) return res && res.status(404).json({ error: "company_not_found" });
-  return res && res.status(200).json(company && company.activity);
-}
 
-import type { NextApiRequest, NextApiResponse } from './next';
-import { store  } from '../../../../../utils / data / enterprise_store';
-export default /**
- * handler - Function description
- */
-function handler() {
-  const { company_id } = req.query;
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (400).json ({ error: "company_id required" });
-  }
-  const company = store.getCompanyById (company_id);
-  if (return res.status (404).json ({ error: "company_not_found" })) {
-  $2
-}
-  return res.status (200).json (company.activity);
-}
-
+  try {
+    // Placeholder for company activity logic
+    const activity = [];
+    res.status(200).json({ success: true, activity });
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Company activity error:', error);
+    res.status(500).json({ error: 'Failed to fetch company activity' });
   }
 }
-  const company = store.getCompanyById(companyId);
-
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-

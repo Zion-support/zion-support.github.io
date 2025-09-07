@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head',;
-import Link from 'next/link',;
+import Head from 'next/head';
+import Link from "Link";
 import { motion } from 'framer-motion',;
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,;
@@ -8,8 +8,8 @@ import {;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,;
   Building, Factory, Camera, Video, Music, Gamepad2;
 } from 'lucide-react',;
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',;
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',;
+import UltraFuturisticNavigation2028 from "UltraFuturisticNavigation2028";
+import UltraFuturisticFooter2028 from "UltraFuturisticFooter2028";
 import { futuristic2028Services } from '../data/2028-futuristic-innovations',;
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services',;
 const contactInfo = {;
@@ -95,7 +95,6 @@ export default function ServicesShowcase2028() {;
               <Sparkles className="w-4 h-4" />
               <span>2028 Future Technology</span>
             </div>
-
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
                 Futuristic
@@ -103,12 +102,10 @@ export default function ServicesShowcase2028() {;
               <br />
               <span className="text-white">Services</span>
             </h1>
-
             <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed">
               Experience the future of technology with our cutting-edge 2028 services. 
               From AI consciousness to quantum internet, we're building tomorrow's solutions today.
             </p>
-
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
                 href="/contact"
@@ -125,7 +122,6 @@ export default function ServicesShowcase2028() {;
                 <DollarSign className="w-5 h-5" />
               </a>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-16">;
               <div className="text-center">;
@@ -345,7 +341,6 @@ export default function ServicesShowcase2028() {;
               Join hundreds of forward-thinking companies already leveraging our futuristic services 
               to gain competitive advantages and drive innovation.
             </p>
-
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
                 href="/contact"
@@ -362,7 +357,6 @@ export default function ServicesShowcase2028() {;
                 <TrendingUp className="w-5 h-5" />
               </a>
             </div>
-
             <div className="flex items-center justify-center space-x-8 text-purple-300">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
@@ -380,7 +374,6 @@ export default function ServicesShowcase2028() {;
           </motion.div>
         </div>
       </section>
-
       <UltraFuturisticFooter2028 />
     </>
   )

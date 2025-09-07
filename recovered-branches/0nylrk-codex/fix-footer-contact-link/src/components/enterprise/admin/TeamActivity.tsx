@@ -1,4 +1,3 @@
-
 import {;
   Table,;
   TableBody,;
@@ -6,10 +5,8 @@ import {;
   TableHead,;
   TableHeader,;
   TableRow,;
-
 import React from "react";
 import {
-
 =======  Table
   TableBody
   TableCell
@@ -19,17 +16,14 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
   },
-
   const getCategoryBadge = (category: string) => {
     const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {
       jobs: { variant: "default" },
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
-
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
   },
-
   return (  return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -48,7 +42,7 @@ import {;
   TableHead,;
   TableHeader,;
   TableRow} from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -192,9 +186,7 @@ export function TeamActivity() {;
                 <TableCell>;
                   <span className="font-medium">{activity.target}</span>;
                 </TableCell>;
-
     </div>);
-
 }                  {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>

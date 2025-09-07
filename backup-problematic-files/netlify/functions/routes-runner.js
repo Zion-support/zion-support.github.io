@@ -1,18 +1,16 @@
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
-
   const abs = path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe'
+    stdio: "stdio",
     encoding: 'utf8'
   });
   return {
-    status: res.status |0
+    status: res.status |0;
     stdout: res.stdout |''
     stderr: res.stderr |''
   }
-
 exports.handler = async () => {
   const logs = [];
   function logStep(name, fn) {
@@ -21,7 +19,6 @@ exports.handler = async () => {
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
-
     return status;
   }
   logStep('routes:generate', () =>

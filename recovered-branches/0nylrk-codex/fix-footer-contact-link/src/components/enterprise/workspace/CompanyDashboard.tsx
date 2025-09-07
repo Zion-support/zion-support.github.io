@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { WorkspaceHeader } from "./WorkspaceHeader",
 import { SharedInbox } from "./SharedInbox",
@@ -18,7 +16,7 @@ import { TalentPool } from "./TalentPool",    primaryColor: string,
   billingCycle: string,
   workspaceUrl: string
 import React from "react";
-import { WorkspaceHeader } from "./WorkspaceHeader",;
+import { WorkspaceHeader } from "./WorkspaceHeader";
 import { SharedInbox } from "./SharedInbox",;
 import { TeamStats } from "./TeamStats",;
 import { QuickActions } from "./QuickActions",;
@@ -31,16 +29,13 @@ export interface Company {;
   theme?: {;
     primaryColor: string;
     backgroundColor: string;
-
     textColor: string;  teamLimit: number;
   billingCycle: string;
   workspaceUrl: string
 }
-
 interface CompanyDashboardProps {
 ;
 interface CompanyDashboardProps {;
-
   company: Company;
 }
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
@@ -53,22 +48,18 @@ interface CompanyDashboardProps {;
           <SharedInbox />
         </div>
       </div>
-
   );
 }
   )
 ;
 export function CompanyDashboard({ company }: CompanyDashboardProps) {;
   return (;
-
   company: Company;
 }
-
 export function CompanyDashboard(): any ({ company }: CompanyDashboardProps) {;
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">;
       <WorkspaceHeader company={company} />;
-
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">;
         <div className="lg:col-span-2 space-y-6">;
 import { WorkspaceHeader  } from './WorkspaceHeader';

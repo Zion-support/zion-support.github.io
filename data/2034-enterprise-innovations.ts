@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string,
   description: string;
   category: string;
@@ -22,7 +22,6 @@
   scalability: string;
   uptime: string;
   contact: string;
-
   {
       'Advanced AI algorithms',
       'Machine learning systems',
@@ -103,12 +102,11 @@
       'Security compliance'
     ]
     security: ['AI-powered security', 'Physical security', 'Access controls']
-    scalability: 'Unlimited data center management'
+    scalability: "scalability",
     uptime: '99.999% data center platform availability'
     contact: '+1 302 464 0950'
     website: 'https://ziontechgroup.com/ai-autonomous-data-center'
   }
-
     id: 'ai - autonomous - data - center',
     name: 'AI Autonomous Data Center Platform',
     description:;
@@ -142,7 +140,6 @@
       'Financial institutions',
     ],
     technology: [;
-
       'Advanced AI algorithms',
       'IoT sensors',
       'Machine learning systems',
@@ -156,7 +153,7 @@
     roi: '350-550% within 24 months'
     support: '24/7 data center specialists'
     documentation: 'Comprehensive data center management guides'
-    api: true
+    api: true;
     sdk: true
     integrations: [
       'VMware'
@@ -171,9 +168,7 @@
       'Energy efficiency',
       'Security compliance',
     ],  }
-
 ];
-
   id: string,;
   name: string,,
   description: string,;
@@ -201,7 +196,6 @@
   website: string;
 }
 ;
-
 export interface EnterpriseService2034 {;
   id: string,;
   name: string,,
@@ -236,8 +230,6 @@ export interface EnterpriseService2034 {;
     website: 'https://ziontechgroup.com / ai - autonomous - data - center';
   }
 ;
-
 export interface EnterpriseService2034 {;
-
   }
 ];

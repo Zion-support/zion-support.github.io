@@ -1,11 +1,8 @@
-
-  DialogContent,
+DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-
     return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="py-10 text-center">
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>
         <p className="text-muted-foreground">
@@ -13,20 +10,15 @@
         </p>
       </div>
     )
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     )}
                   </div>;
                 </div>;
               </TableCell>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           onClick={() =>;
                             updateReviewStatus({;
                               reviewId: review && review.id,;
                               status: 'rejected',;
                             });
-
                           }
                         >;
                           Mark as rejected;
@@ -34,13 +26,11 @@
                       )}
                       {review && review.status === 'rejected' && (;
                         <DropdownMenuItem
-
                           onClick={() =>;
                             updateReviewStatus({;
                               reviewId: review && review.id,;
                               status: 'approved',;
                             });
-
                           }
                         >                          Mark as approved;
                         </DropdownMenuItem>;
@@ -54,16 +44,12 @@
           </TableRow>;
         </TableHeader>;
         <TableBody>;
-
               </TableCell>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <TableCell className="text-right">
                 <div className="flex justify-end gap-2">
                   {review.status === "pending" && (
                     <>
                       <Button
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </Button>
                     </>
                   )}
@@ -81,9 +67,7 @@
                       <DropdownMenuItem onClick={() => handleViewDetails(review)}>
                         View details
                       </DropdownMenuItem>
-
                       {review.status === "approved" && (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
                           Mark as rejected
                         </DropdownMenuItem>
@@ -92,7 +76,6 @@
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>
                           Mark as approved
                         </DropdownMenuItem>
-
                       )}
                     </DropdownMenuContent>
                   </DropdownMenu>
@@ -100,18 +83,14 @@
               </TableCell>
             </TableRow>
           ))}
-
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
-
                     ) : (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <AvatarFallback>
                         {selectedReview.reviewer_profile?.display_name ? (
                           getInitials(
@@ -119,59 +98,45 @@
                           )
                         ) : (
                           <User className='h-4 w-4' />
-
                     )}
-
                     </div>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <Badge variant='outline'>{selectedReview.status}</Badge>
                   </div>
                 </div>
                 <div>{renderStars(selectedReview.rating)}</div>
               </div>
-
                   {selectedReview.communication_rating && (
                     <Badge variant='outline'>
                       Communication: {selectedReview.communication_rating}/5
                     </Badge>
-
                   Mark as Rejected;
                 </Button>;
               )}
               {selectedReview && selectedReview.status === 'rejected' && (;
                 <Button
-
                   onClick={() =>;
                     updateReviewStatus({;
                       reviewId: selectedReview && selectedReview.id,;
                       status: 'approved',;
                     });
-
                   }
                   disabled={isPending}                >;
                   Mark as Approved;
                 </Button>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       )}
-
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
   star ;
 }/>) ) ;
 }</div>) ;
-
   reviews.map ( (review) => (<TableRow key= {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   review.id ";
 }> <TableCell> <div className="flex items - center gap-2"> <Avatar className="h - 8 w-8"> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
-
 }</Avatar> <div> </Badge> </div> </div> <div> {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   renderStars (selectedReview.rating) "
 }</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {
   selectedReview.review text "
@@ -200,5 +165,3 @@
 }</DialogFooter> </DialogContent> </Dialog>)
 }</>)
 }"}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

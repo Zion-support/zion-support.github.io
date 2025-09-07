@@ -1,5 +1,4 @@
 import React from 'react';
-
 ;
 const PerformanceEnhancer.dynamic = () => {
   return (
@@ -8,6 +7,4 @@ const PerformanceEnhancer.dynamic = () => {
     </div>);
 }
 ;
-
 export default PerformanceEnhancer.dynamic;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

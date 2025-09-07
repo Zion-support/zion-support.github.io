@@ -1,7 +1,4 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ProductGalleryProps {
-
 const ReactPlayer = React && React.lazy(() => import('react-player'));
 const ModelViewer = React && React.lazy(async () => {;
   await import('@google/model-viewer');
@@ -13,7 +10,6 @@ interface ProductGalleryProps {;
   images: string[];
   videoUrl?: string;
   modelUrl?: string;
-
 export function ProductGallery(): any ({;
   images,;
   videoUrl,;
@@ -23,11 +19,9 @@ export function ProductGallery(): any ({;
   const [zoomOpen, setZoomOpen] = useState(false);
   const [zoomed, setZoomed] = useState(false);
   const poster = images[0];
-
       onOpenChange={o => {;
         setZoomOpen(o);
         if (!o) setZoomed(false);
-
       }}
     >;
       <Tabs defaultValue='images' className='w-full'>;
@@ -63,13 +57,10 @@ export function ProductGallery(): any ({;
               ))}
             </div>;
           )}
-
         </TabsContent>;
-
         {videoUrl && (;
           <TabsContent value='video' className='pt-4'>;
             <AspectRatio ratio={16 / 9}>;
-
               <Suspense
                 fallback={
                   <img
@@ -90,11 +81,9 @@ export function ProductGallery(): any ({;
             </AspectRatio>;
           </TabsContent>;
         )}
-
         {modelUrl && (;
           <TabsContent value='model' className='pt-4'>;
             <AspectRatio ratio={16 / 9}>;
-
               <Suspense
                 fallback={
                   <img
@@ -109,8 +98,6 @@ export function ProductGallery(): any ({;
                   src={modelUrl}
                   alt='3d model'
                   camera-controls
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <img
               src={images[selected] |images[0] |''}
               alt='Zoomed view'
@@ -118,21 +105,18 @@ export function ProductGallery(): any ({;
             />          </div>;
         </DialogContent>;
       )}
-
     </Dialog>;
   );
-
     </Dialog>;
   )
 };
 };
-
 import React, { useState, Suspense } from 'react';
 import {;
   Dialog,;
   DialogContent,;
   DialogTrigger} from '@/components/ui/dialog',;
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { AspectRatio } from '@/components/ui/aspect-ratio',;
 const ReactPlayer = React.lazy(() => import('react-player')),;
 const ModelViewer = React.lazy(async () => {;
@@ -146,9 +130,7 @@ interface ProductGalleryProps {;
   images: string[],;
   videoUrl?: string,;
   modelUrl?: string;
-
           </TabsContent>)}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </Tabs>;
       {images.length > 0 && (
         <DialogContent className='max - w-3xl p - 0'>;
@@ -164,5 +146,3 @@ interface ProductGalleryProps {;
         </DialogContent>)}
     </Dialog>);
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

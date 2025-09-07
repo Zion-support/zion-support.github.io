@@ -1,69 +1,48 @@
-export function getConfig() {
-  return {
-    tokenName: 'Zion Token',
-    tokenSymbol: 'ZION',
-    decimals: 18,
-    totalSupply: 1000000
-  };
-export interface TokenTransaction {;  id: string;
-  userId: string;
-
-  id: string;
-  user_id: string;
-export interface TokenTransaction {
-  id: string;
-  user_id: string;
-  amount: number;
-  type: "issue" | "redeem" | "transfer";
-  reason: string;
-  timestamp: number;
-
-}
-// Mock data storage - replace with actual database;
-let transactions: TokenTransaction[] = [];    type: 'redeem',
-    reason,
-    timestamp: Date.now(),
-  };
-  transactions.push(transaction);
-  return transaction;
-
-  transactions.push(transaction);
-  return transaction;
-    id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
-    userId,
-    amount,
-    reason,
-    timestamp: Date && Date.now()
-    timestamp: Date.now()
-};
-// Token service utilities
 export interface TokenConfig {
-  id: string;
   name: string;
   symbol: string;
   decimals: number;
-  totalSupply: string;
-  contractAddress?: string;
-  network: string;
-  isActive: boolean;
-  createdAt: Date;
-  updatedAt: Date;
+  totalSupply: number;
 }
 
-  partial: Partial<ReturnType<typeof getConfig>>,
-): void {
-  const current = getConfig();
-  // Update the configuration
-  Object.assign(current, partial);
-=======  transactions.push(transaction);
-  return transaction;
+export const defaultTokenConfig: TokenConfig = {
+  name: 'Zion Token',
+  symbol: 'ZION',
+  decimals: 18,
+  totalSupply: 1000000
+};
+
+export interface TokenTransaction {
+  id: string;
+  userId: string;
+  amount: number;
+  type: 'mint' | 'burn' | 'transfer';
+  status: 'pending' | 'completed' | 'failed';
+  createdAt: number;
+  metadata?: Record<string, any>;
 }
 
-  const current = tokenStore && tokenStore.getConfig();
-  tokenStore && tokenStore.setConfig({ ...current, ...partial });
-export function set_config (
-  partial: Partial < ReturnType < typeof get_config>>): void {
-  const current = get_config ();
-  // Update the configuration;
-  Object.assign (current, partial);
+export function createTokenTransaction(
+  userId: string,
+  amount: number,
+  type: TokenTransaction['type'],
+  metadata?: Record<string, any>
+): TokenTransaction {
+  return {
+    id: `tx_${Date.now()}_${Math.random().toString(36).slice(2)}`,
+    userId,
+    amount,
+    type,
+    status: 'pending',
+    createdAt: Date.now(),
+    metadata
+  };
+}
+
+export function processTokenTransaction(transaction: TokenTransaction): TokenTransaction {
+  // Placeholder for token transaction processing
+  return {
+    ...transaction,
+    status: 'completed'
+  };
 }

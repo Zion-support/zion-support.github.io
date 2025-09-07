@@ -7,18 +7,14 @@ interface ProfileBadgeProps {;
   className?: string;  type: BadgeType,;
   className?: string;
 }
-
 interface ProfileBadgeProps {
   type: BadgeType,
-
   className?: string
 }
-
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
     verified: {
       icon: BadgeCheck,
-
       icon: Star,
       text: "Featured",
       colors: "bg-yellow-500/20 text-yellow-400"},
@@ -28,12 +24,9 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       colors: "bg-green-500/20 text-green-400"},
     "top-rated": {
       icon: Award,
-
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
-
       <span>{text}</span>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>);
   type, class_name;
 }: ProfileBadgeProps) {

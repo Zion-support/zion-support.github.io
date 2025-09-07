@@ -1,24 +1,18 @@
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -46,15 +40,12 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-        method: "POST"
-        headers: {
-
+        method: "method",
+    headers: {
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
-      
-
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
@@ -109,11 +100,9 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
                     required                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
-
                 </Button>;
               </form>;
             </div>;
-
             <div>;
               <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>;
               <div className="grid grid-cols-1 gap-6">;
@@ -144,7 +133,6 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
               </div>;
             </div>;
           </div>;
-
           <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text-center">;
             <h2 className="text - 3xl font - bold text - white mb-6">Need immediate assistance?</h2>;
             <p className="text - zion - slate - light text - lg mb - 8 max - w-3xl mx-auto">;
@@ -167,7 +155,6 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
         <ChatAssistant
           isOpen={isChatOpen}
           onClose={() => setIsChatOpen(false)}
-
           recipient={{;
             id: 'ai-assistant',;
             name: 'AI Assistant',;

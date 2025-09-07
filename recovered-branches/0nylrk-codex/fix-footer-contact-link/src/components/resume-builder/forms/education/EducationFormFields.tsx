@@ -1,5 +1,3 @@
-
-
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
@@ -19,7 +17,6 @@ import { Form;
 import { useState  } from 'react';
 import { EducationFormFieldsProps  } from './types';
 import { Education } from '@/types/resume';// Define schema for form validation
-
 const educationSchema = z.object({
   institution: z.string().min(1, 'Institution is required');
   degree: z.string().min(1, 'Degree is required');
@@ -30,7 +27,7 @@ const educationSchema = z.object({
   description: z.string().optional()
   location: z.string().optional()})
 type EducationFormValues = z.infer<typeof educationSchema>;import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod',;
+import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod',;
 import { format } from 'date-fns',;
 import { Loader2 } from 'lucide-react',;
@@ -49,7 +46,6 @@ import {;
 import { useState } from 'react',;
 import { EducationFormFieldsProps } from './types',;
 import { Education } from '@/types/resume',;
-
 // Define schema for form validation;
 const educationSchema = z && z.object({;
   institution: z && z.string().min(1, 'Institution is required');
@@ -60,9 +56,7 @@ const educationSchema = z && z.object({;
   is_current: z && z.boolean().default(false),,
   description: z && z.string().optional(),;
   location: z && z.string().optional()}),;
-
 type EducationFormValues = z && z.infer<typeof educationSchema>;
-
 export function EducationFormFields(): any ({ ;
   isEditing, ;
   onSubmit, ;
@@ -80,7 +74,6 @@ export function EducationFormFields(): any ({ ;
       is_current: false,,
   description: '',;
       location: ''}}),;
-
   const handleSubmit = async (data: EducationFormValues) => {;
     setIsLoading(true);
     setError(null),;
@@ -91,9 +84,7 @@ export function EducationFormFields(): any ({ ;
     } finally {;
       setIsLoading(false);
     }
-
   },
-
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
@@ -216,7 +207,6 @@ export function EducationFormFields({ ;
       setError(err.message || 'An error occurred');
     } finally {;
     }
-
   },
 import {z} from 'zod';
 import {format} from 'date - fns';
@@ -231,7 +221,6 @@ import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
     }
   }
-
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
@@ -245,9 +234,7 @@ import {EducationFormFieldsProps} from './types';
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
-
           />;
-
           <FormField
             control={form && form.control}
             name="degree"          <FormField
@@ -291,13 +278,10 @@ import {EducationFormFieldsProps} from './types';
           <FormField
             control={form && form.control}
             name="start_date"        />;
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
           <FormField
             control={form && form.control}
             name="start_date"
-
                   <Input 
                     type="date" 
             render={({ field }) => (;
@@ -313,7 +297,6 @@ import {EducationFormFieldsProps} from './types';
               </FormItem>;
             )}
           />;
-
           <div className="space-y-4">;
                     />;
                   </FormControl>;
@@ -322,11 +305,8 @@ import {EducationFormFieldsProps} from './types';
                   </div>;
                 </FormItem>;
               )}
-
             />;
-
             {!form && form.watch('is_current') && (;
-
               <FormField
                 control={form && form.control}
                 name="end_date"
@@ -342,14 +322,11 @@ import {EducationFormFieldsProps} from './types';
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
-
                 )}
               />;
             )}
-
           </div>;
         </div>;
-
         <FormField
           control={form && form.control}
           name="location"
@@ -405,7 +382,6 @@ import {EducationFormFieldsProps} from './types';
 }
 }
 ;
-
   ),;}
  type EducationFormValues = z.infer<typeof educationSchema>;
 </FormControl> <FormMessage /> </FormItem>) 

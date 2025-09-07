@@ -1,4 +1,3 @@
-
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import { ;
   innovativeRealMicroSaasServices2025 ;
 } from '../data/2025-innovative-real-micro-saas-services';
@@ -47,7 +46,6 @@ import {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
   const scrollToSection = (sectionId: string) => {;
     const element = document && document.getElementById(sectionId),;
     if (element) {;
@@ -55,15 +53,11 @@ import {
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false);    }
   };
-
   const allServices = [      element && element.scrollIntoView({ behavior: 'smooth' }),;
-
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false);
     }
-
   };
-
   const allServices = [;
     ...innovativeRealMicroSaasServices2025,;
     ...innovativeAIServicesEnhanced2025,;
@@ -75,12 +69,9 @@ import {
     ...specializedITSolutions2026,;
     ...emergingTechServices2026,;
   ];
-
   const featuredServices = allServices;
     .filter(service => service && service.popular);
-
     .slice(0, 12);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -121,14 +112,11 @@ import {
   Cpu,
   Lock,
 } from 'lucide-react';
-
 interface Homepage2025Props {;
   showInternalNav?: boolean;
-
 const Homepage2025: React.FC<Homepage2025Props> = ({;
   showInternalNav = true,;
 }) => {  const [activeSection, setActiveSection] = useState('hero');} from 'lucide-react';
-
 interface Homepage2025Props { showInternalNav?: boolean }
 ;
   const scrollToSection = (section_id: string) =>: any {
@@ -175,8 +163,8 @@ if ( {) {
       icon: Brain
     }
     {
-      title: 'Quantum Computing'
-      description:
+      title: "title",
+    description:
         'Next-generation quantum solutions for complex problem-solving and advanced cryptography'
       icon: Atom
     }
@@ -210,7 +198,6 @@ if ( {) {
                 <motion&& motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-
                 {/* Desktop Navigation */}
                 <div className='hidden lg:flex space-x-8'>;
                   {navigationSections && navigationSections.map(section => (                    <button}
@@ -229,9 +216,7 @@ if ( {) {
                 <div className="hidden lg:flex space-x-8">;
                   {navigation_sections.map ((section) => (
                     <button;
-
                   {navigationSections.map(section => (                    <button  };
-
   return (
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
       {showInternalNav && (
@@ -253,11 +238,8 @@ if ( {) {
                   {navigationSections.map((section) => (
                     <button
                   {navigationSections.map(section => (                    <button
-
                     <button
-
                     <button
-
                       key={section.id}
                       on_click={() => scrollToSection (section.id)}
                       className={`flex items - center space - x-2 text - sm font - medium transition - all duration - 300 ${
@@ -290,7 +272,6 @@ if ( {) {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />;
                 </button>;
               </div>;
-
               {/* Mobile Navigation Menu */}
               <AnimatePresence>;
                 {isMobileMenuOpen && (;
@@ -327,7 +308,6 @@ if ( {) {
             <motion&& motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -462,7 +442,6 @@ if ( {) {
               {/* Enhanced CTA Section */}
               <motion&& motion.div
                 variants={itemVariants}
-
       <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center z-10 max-w-6xl mx-auto">
           <motion.div
@@ -478,7 +457,6 @@ if ( {) {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-
               {/* Enhanced CTA Section */}
               <motion.div
                 variants={itemVariants}
@@ -538,7 +516,6 @@ if ( {) {
                   </button>
                 </Link>
               </motion.div>
-
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -551,7 +528,6 @@ if ( {) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Comprehensive Technology Solutions
@@ -616,15 +592,12 @@ if ( {) {
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 40 }}
-
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <motion.div
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}
-
             initial={{ opacity: 0, y: 40 }}
-
             whileInView={{ opacity: 1, y: 0 }}
                 key={index}
                 className='group relative overflow - hidden rounded - 2xl bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 10 cursor - pointer'                initial={{ opacity: 0, coordinate_y: 40 }}
@@ -761,10 +734,8 @@ if ( {) {
           {/* Call to Action for Services Showcase */}
           <motion.div
             className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
-
             ))}
           </div>
-
           {/* Call to Action for Services Showcase */}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -801,7 +772,6 @@ if ( {) {
             </div>
           </div>
           <motion.div
-
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -844,8 +814,8 @@ if ( {) {
         </div>
       </section>
             <p className="mt-2">
-              Address: 364 E Main St STE 1008 Middletown DE 19709
-              Phone: +1 302 464 0950
+              Address: 364 E Main St STE 1008 Middletown DE 19709;
+    Phone: +1 302 464 0950
               Email: kleber@ziontechgroup.com
             </p>
           </div>
@@ -869,10 +839,8 @@ if ( {) {
         </div>;
       </footer>;
 export default Homepage2025;
-
 export default Homepage2025
 };
-
 export default Homepage2025;
     </UltraFuturisticBackground2026>);
 }

@@ -174,8 +174,8 @@ console.log(' Improved Automation Orchestrator Started')';class ImprovedAutomati
         console.log("  Critical script failed, stopping orchestration");
         "throw": error}
         "duration": duration,
-        "output": result.output
-        error: null,
+        "output": result.output;
+    error: null,
         "critical": script.critical}
 ;
       this.results.scripts.push(scriptResult);
@@ -186,8 +186,8 @@ console.log(' Improved Automation Orchestrator Started')';class ImprovedAutomati
         "name": script.name
         script: script.script
         description: script.description
-        status: "failed"
-        duration: duration,
+        status: "status",
+    duration: duration,
         "output": null,
         "error": error.message
         critical: script.critical }

@@ -1,7 +1,5 @@
-
-  {
-
-    id: 'ai-consciousness-evolution-2030'
+{
+    id: "id",
     name: 'AI Consciousness Evolution 2030'
     tagline: 'Next-generation AI consciousness development'
     price: '$39,999'
@@ -19,7 +17,7 @@
       'Quantum AI consciousness'
       'Quantum AI evolution'
     ]
-    popular: true
+    popular: true;
     marketPosition:
       'Leading quantum AI computing platform for 2030. Revolutionary technology combination.'
     targetAudience:

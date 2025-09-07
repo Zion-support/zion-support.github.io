@@ -1,5 +1,3 @@
-
-
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
@@ -10,7 +8,6 @@ import {Loader2} from "lucide-react";
 import {useNavigate} from "react-router-dom";  amount;
   serviceId;
   providerId;
-
   buttonText = "Purchase";
   className;
   onPaymentInitiated;
@@ -18,11 +15,9 @@ import {useNavigate} from "react-router-dom";  amount;
   const [isProcessing, setIsProcessing] = useState(false);
   const { isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
-
-  amount: number
-  serviceId: string
+  amount: number;
+    serviceId: string
   providerId: string
-      
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
@@ -45,9 +40,7 @@ import {useNavigate} from "react-router-dom";  amount;
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]";
-
 ;
-
       // Call the create-checkout edge function;
       const { data, error } = await supabase && supabase.functions.invoke("create-checkout", {;
         body: {;
@@ -57,7 +50,6 @@ import {useNavigate} from "react-router-dom";  amount;
           userId: user?.id,;
           successUrl: redirectUrl || window && window.location.href,;
           cancelUrl: window && window.location.href}}),;
-
       if (error) {;
         throw error;
       }      toast({;
@@ -69,13 +61,10 @@ import {useNavigate} from "react-router-dom";  amount;
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]",
-
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
-
         "relative min-w-[120px]"
-
     <Button
       onClick={handlePaymentClick}
       disabled={isProcessing}
@@ -87,10 +76,8 @@ import {useNavigate} from "react-router-dom";  amount;
   );
 }
 }
-
     </Button>;
   );
-
     </Button>;
   );
     </Button>;

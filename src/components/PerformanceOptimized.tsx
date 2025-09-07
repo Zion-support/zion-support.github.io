@@ -1,12 +1,8 @@
 }
 }
 }
-
 }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 import React from 'react';
-
 export default function PerformanceOptimized() {
   return (
     <div className="performance-optimized">
@@ -98,7 +94,6 @@ export const: OptimizedImage: React.FC<{,
         </div>)},
     </div>,
   )
-
       },;
       { threshold, rootMargin },;
     ),;
@@ -162,7 +157,6 @@ export const: OptimizedImage: React.FC<{,;
         </div>)},;
     </div>,;
   );
-
 }
 }
 }
@@ -173,13 +167,9 @@ export const useDebouncedSearch = (value: string, delay: number = 300) => {
     const handler = setTimeout(() => {
       setDebouncedValue(value)
     }, delay)
-
     return () => {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       clear_timeout (handler);
 }
   }, [value, delay]);
   return debounced_value;
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

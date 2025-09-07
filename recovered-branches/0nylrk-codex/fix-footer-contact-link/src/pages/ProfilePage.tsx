@@ -21,7 +21,6 @@ import {
   Linkedin,
   CheckCircle2,
 } from "lucide-react";
-
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -34,13 +33,11 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {HireNowCTA} from "@/components/profile/HireNowCTA";
 import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2} from "lucide-react";
-
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   useEffect(() => {
     const fetchProfile = async () => {
-
       setIsLoading(true),
       setIsError(false),
       try {
@@ -52,13 +49,13 @@ import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, Chec
         console.error("Error fetching profile:", error),
         setIsError(true),
         toast({
-          title: "Error"
-          description: "Failed to load profile. Please try again later."
+          title: "title",
+    description: "Failed to load profile. Please try again later."
           variant: "destructive"})
       } finally {
         setIsLoading(false)
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom",;
+import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/components/ui/use-toast",;
 import { SEO } from "@/components/SEO",;
@@ -78,7 +75,6 @@ import {;
   Linkedin,;
   CheckCircle2;
 } from "lucide-react",;
-
 export default function ProfilePage() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
@@ -86,7 +82,6 @@ export default function ProfilePage() {;
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-
   useEffect(() => {;
     const fetchProfile = async () => {;
       setIsLoading(true);
@@ -103,10 +98,8 @@ export default function ProfilePage() {;
       </div>
     );
   }
-
   if (isError || !profileData) {;    <>;
       <SEO
-
         title={`${profileData.full_name} | Talent Profile`}
         description={
           profileData.bio || "View the profile of this talented individual."
@@ -134,7 +127,6 @@ export default function ProfilePage() {;
                     </div>
                     {/* Add Save/Unsave Button Here */}
                   </div>
-
                   </div>;
                   {/* Location & Availability */}
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">;
@@ -153,7 +145,6 @@ export default function ProfilePage() {;
                   </div>
                 </div>
               </div>
-
               {/* Skills */}
               {profileData.skills && profileData.skills.length > 0 && (
                 <div className="mt-4">
@@ -193,7 +184,6 @@ export default function ProfilePage() {;
                 )}
               </div>
             </div>
-
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
@@ -201,7 +191,6 @@ export default function ProfilePage() {;
                 {profileData.experience || "No experience provided."}
               </p>
             </div>
-
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
@@ -210,7 +199,6 @@ export default function ProfilePage() {;
                     href={profileData && profileData.github_link}
                     target="_blank"
                     rel="noopener noreferrer"
-
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Github className="h-6 w-6" />
@@ -230,12 +218,10 @@ export default function ProfilePage() {;
                     target="_blank"
                     rel="noopener noreferrer"
                   </Link>
-
                 )}
               </div>
             </div>
           </div>
-
                     <Linkedin className="h-6 w-6" />;
                   </a>;
                 )}
@@ -243,4 +229,3 @@ export default function ProfilePage() {;
             </div>;
           </div>;
 ;
-

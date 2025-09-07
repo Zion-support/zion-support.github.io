@@ -156,8 +156,8 @@ class ErrorReportAggregator {
     const summary = await this.aggregateReports();
     if (!summary) return;
     const dashboard = `
-# Project Health Dashboard
-Generated: ${summary.timestamp}
+# Project Health Dashboard;
+    Generated: ${summary.timestamp}
 ## Overall Health Score: ${summary.overallHealth.overallScore}/100
 ### Component Scores:
 -   Build Health: ${summary.overallHealth.buildHealth}/100

@@ -1,9 +1,7 @@
-
 import React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
-
 interface MainLayoutProps {
   title: string,
   description: string;
@@ -11,7 +9,6 @@ interface MainLayoutProps {
   keywords?: string;
   canonical?: string;
 }
-
 export default function MainLayout({ 
   title, 
   description, 
@@ -24,13 +21,10 @@ export default function MainLayout({
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">

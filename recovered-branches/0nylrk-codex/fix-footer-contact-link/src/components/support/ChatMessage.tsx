@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils",
@@ -7,9 +5,7 @@ import { format } from "date-fns";
 import { useTheme } from "@/hooks/useTheme";
 import { format } from "date-fns",
 import { useTheme } from "@/hooks/useTheme",
-
   return (
-
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
       <Avatar className="h-8 w-8">
         {isUser ? (
@@ -32,9 +28,7 @@ import { useTheme } from "@/hooks/useTheme",
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
-
       </Avatar>;
-
       <divclassName={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm"
         isUser 
@@ -48,16 +42,14 @@ import { useTheme } from "@/hooks/useTheme",
           "text-xs mt-1"
           isUser 
             ? "text-white/70" 
-
           "text-xs mt-1",
           isUser 
             ? "text-white/70" 
-
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"        )}>;
           {format(timestamp, "h:mm a")}import React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils",;
 import { format } from "date-fns",;
 import { useTheme } from "@/hooks/useTheme",;
@@ -111,7 +103,6 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
   );
 }
 ;
-
 }
 import React from './react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';

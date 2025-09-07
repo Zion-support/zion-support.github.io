@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -27,9 +25,7 @@ import {
 import { Zap, ChevronLeft, ChevronRight } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
 import { Card, CardContent } from "@/components/ui/card",
-
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
-
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 export function MobileJobPost() {
@@ -42,7 +38,6 @@ export function MobileJobPost() {
     } else if (currentStep === "budget") {
       setCurrentStep("preview");
     }
-
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
       setCurrentStep("details");
@@ -72,7 +67,7 @@ function RequirementsStep() {
           id="description" 
           placeholder="Describe the job role and responsibilities" 
 import React, { useState } from "react";
-import { MobileHeader } from "../components/common/MobileHeader",;
+import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -89,10 +84,8 @@ import { Zap, ChevronLeft, ChevronRight } from "lucide-react",;
 import { Badge } from "@/components/ui/badge",;
 import { Card, CardContent } from "@/components/ui/card",;
 type JobPostStep = "details" | "requirements" | "budget" | "preview",;
-
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
-
   const goToNextStep = () => {;
     if (currentStep === "details") {;
       setCurrentStep("requirements");
@@ -101,7 +94,6 @@ export function MobileJobPost() {;
     } else if (currentStep === "budget") {;
       setCurrentStep("preview");
     }
-
   const goToPrevStep = () => {;
     if (currentStep === "requirements") {;
       setCurrentStep("details");
@@ -111,7 +103,6 @@ export function MobileJobPost() {;
       setCurrentStep("budget");
     }
   };
-
   const renderStepContent = () => {;
     switch (currentStep) {;
       case "details": return <DetailsStep />;
@@ -124,7 +115,6 @@ export function MobileJobPost() {;
         return <DetailsStep />;
     }
   };
-
   return (
     <div className="min-h-screen flex flex-col">;
       <MobileHeader
@@ -140,7 +130,6 @@ export function MobileJobPost() {;
     </div>;
   );
 }
-
     }
   }
 ;
@@ -222,9 +211,7 @@ if ( {) {
  */
 function DetailsStep() {
   return (
-
   },
-  
   const removeSkill = (skill: string) => {
     setSkills(skills.filter(s => s !== skill))
   },
@@ -235,22 +222,18 @@ function DetailsStep() {
     "Node.js",
   ]);
   const [newSkill, setNewSkill] = useState("");
-
   const addSkill = () => {
     if (newSkill && !skills.includes(newSkill)) {
       setSkills([...skills, newSkill]);
       setNewSkill("");
     }
   };
-
   const removeSkill = (skill: string) => {
     setSkills(skills.filter((s) => s !== skill))
 };
-
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
-
       <div className="space-y-2">
         <Label htmlFor="experience">Experience Level</Label>
         <Select>
@@ -265,7 +248,6 @@ function DetailsStep() {
           </SelectContent>
         </Select>
       </div>
-
       <div className="space-y-2">
         <Label htmlFor="education">Education</Label>
         <Select>
@@ -282,7 +264,6 @@ function DetailsStep() {
           </SelectContent>
         </Select>
       </div>
-
       <div className="space-y-2">
         <Label>Required Skills</Label>
         <div className="flex flex-wrap gap-2 mb-3">
@@ -301,15 +282,12 @@ function RequirementsStep() {;
       setNewSkill("");
     }
   };
-
   const removeSkill = (skill: string) => {;
     setSkills(skills && skills.filter(s => s !== skill))
 };
-
   return (
     <div className="space-y-4">;
       <h2 className="text-lg font-medium">Job Requirements</h2>;
-
       <div className="space-y-2">;
         <Label htmlFor="experience">Experience Level</Label>;
         <Select>;
@@ -324,7 +302,6 @@ function RequirementsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
-
       <div className="space-y-2">;
         <Label htmlFor="education">Education</Label>;
         <Select>;
@@ -341,14 +318,12 @@ function RequirementsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
-
       <div className="space-y-2">;
         <Label>Required Skills</Label>;
         <div className="flex flex-wrap gap-2 mb-3">;
           {skills && skills.map((skill) => (;
             <Badge
               key={skill} 
-
 function RequirementsStep() {
   const [skills, set_skills] = useState < string[]>([;
     "React", "TypeScript", "Node.js";
@@ -364,40 +339,33 @@ function RequirementsStep() {
     </div>
   );
 }
-
 function PreviewStep() {
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium mb-2">Job Preview</h2>
-
       <Card>
         <CardContent className="p-4">
           <h3 className="font-bold text-lg">Senior React Developer</h3>
           <p className="text-muted-foreground">
             TechCorp Inc. • Remote • Full-time
           </p>
-
           <div className="flex gap-2 my-3">
             <Badge variant="outline">React</Badge>
             <Badge variant="outline">TypeScript</Badge>
             <Badge variant="outline">Node.js</Badge>
           </div>
-
           <div className="space-y-1 text-sm mt-4">
             <p className="font-medium">Salary Range:</p>
             <p>$80,000 - $120,000 USD / year</p>
           </div>
-
           <div className="space-y-1 text-sm mt-3">
             <p className="font-medium">Experience Level:</p>
             <p>Senior</p>
           </div>
-
           <div className="space-y-1 text-sm mt-3">
             <p className="font-medium">Application Deadline:</p>
             <p>December 15, 2023</p>
           </div>
-
           <div className="mt-4 pt-3 border-t border-border">
             <h4 className="font-medium mb-2">Description</h4>
             <p className="text-sm">
@@ -409,7 +377,6 @@ function PreviewStep() {
           </div>
         </CardContent>
       </Card>
-
       <Button variant="outline" className="w-full">
         Edit Job Post
       </Button>

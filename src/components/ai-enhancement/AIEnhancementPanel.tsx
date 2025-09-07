@@ -1,26 +1,18 @@
-
-  title: string;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+title: string;
   defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
-
   title,;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   defaultOptions,;
   onApply,;
   onClose,;
   showInstructions = true,;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
@@ -34,7 +26,6 @@
         <div className="space-y-2">
           <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
-
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options.content}
@@ -51,7 +42,6 @@
             onChange={(e) => handleInputChange(e, 'context')}
           />;
         </div>;
-
         {/* Instructions input (optional) */}
         {showInstructions && (;
           <div className='space-y-2'>;
@@ -59,19 +49,14 @@
               Special instructions (optional);
             </label>;
             <Input
-
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
-
           disabled={isEnhancing || (!options.content && !options.context)}        >
-
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
         )}
-
         {/* Generate button */}
-
           {isEnhancing ? (
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
@@ -84,7 +69,6 @@
             </>
           )}
         </Button>
-
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
@@ -95,25 +79,19 @@
             <div className='relative'>;
               <Textarea
                 value={generatedContent}
-
                 onChange={(e) => setGeneratedContent(e.target.value)}
                 className="min-h-[200px]"
               />
-
             </div>
           </div>
         )}
-
       {generatedContent && (
         <CardFooter className='flex justify-between'>
           {onClose && (
             <Button variant='outline' onClick={onClose}>
               Cancel
             </Button>
-
 }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
     <Card className='w - full max - w-2xl mx - auto'>;
       <CardHeader>;
         <CardTitle className='flex items - center gap - 2'>;
@@ -203,12 +181,10 @@
         </CardFooter>)}
     </Card>);
 }
-
       )};
     </Card>;
   )
 };
-
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
@@ -217,5 +193,3 @@
     </Card>;
   );
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

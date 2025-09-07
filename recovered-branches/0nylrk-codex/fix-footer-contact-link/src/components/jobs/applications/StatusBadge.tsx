@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 interface StatusBadgeProps {;
   status: ApplicationStatus;
 }
-
 export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
   switch (status) {;interface StatusBadgeProps {
   status: ApplicationStatus;
@@ -14,13 +13,11 @@ export function StatusBadge({ status }: StatusBadgeProps) {
     default:      return <Badge variant="outline">{status}</Badge>;
   }
 }
-
 import { ApplicationStatus } from "@/types/jobs",
 import { Badge } from "@/components/ui/badge",
 interface StatusBadgeProps {
   status: ApplicationStatus
 }
-
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
     case "viewed":
@@ -36,7 +33,7 @@ export function StatusBadge({ status }: StatusBadgeProps) {
     default:
       return <Badge variant="outline">{status}</Badge>
 import { ApplicationStatus } from "@/types/jobs";
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from "@/components/ui/badge";
 interface StatusBadgeProps {;
   status: ApplicationStatus;
 }
@@ -63,12 +60,10 @@ export function StatusBadge({ status }: StatusBadgeProps) {;
     case "viewed":;
       return <Badge variant="outline">Viewed</Badge>;
     case "shortlisted":;
-
 import { ApplicationStatus } from "@/types/jobs",
 import { Badge } from "@/components/ui/badge",
 interface StatusBadgeProps {
   status: ApplicationStatus
 }
-
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {

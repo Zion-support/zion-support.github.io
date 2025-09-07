@@ -1,7 +1,4 @@
-
-
 export function MobileOnboarding() {;
-
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
 import React, { useState } from "react",
@@ -11,17 +8,12 @@ import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSel
 import { RolePicker } from "../components/onboarding/RolePicker",
 import { SignUpForm } from "../components/onboarding/SignUpForm",
 type OnboardingStep = "language" | "role" | "signup",
-
 export function MobileOnboarding() {
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),
   const navigate = useNavigate(),
-  
-
 export function MobileOnboarding() {;
-
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
-
   const goToNextStep = () => {
     if (currentStep === "language") {
       setCurrentStep("role");
@@ -31,18 +23,16 @@ export function MobileOnboarding() {;
       navigate("/mobile");
     }
   };
-
   const handleRoleSelect = () => {
     setCurrentStep("signup")
 };
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom",;
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button",;
 import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",;
 import { RolePicker } from "../components/onboarding/RolePicker",;
 import { SignUpForm } from "../components/onboarding/SignUpForm",;
 type OnboardingStep = "language" | "role" | "signup",;
-
 export function MobileOnboarding() {;
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
@@ -55,11 +45,9 @@ export function MobileOnboarding() {;
       navigate("/mobile");
     }
   };
-
   const handleRoleSelect = () => {;
     setCurrentStep("signup")
 };
-
   return (    <div className="min-h-screen flex flex-col">;
       <div className="flex-1 py-8">;
         {currentStep === "language" && (;
@@ -68,9 +56,7 @@ export function MobileOnboarding() {;
               <h1 className="text-3xl font-bold mb-2">Welcome to Zion</h1>;
               <p className="text-muted-foreground">Let's set up your experience</p>;
             </div>;
-
             <LanguageThemeSelector />;
-
             <div className="px-4 mt-8">;
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;
                 Continue;

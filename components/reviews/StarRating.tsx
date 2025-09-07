@@ -1,24 +1,18 @@
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -26,38 +20,29 @@ class ErrorBoundary extends React.Component {
 }) ;
 }</div>) 
 };
-
 type Props = {;
   value: number,;
   onChange: (val: number) => void,;
   size?: number;
   readOnly?: boolean
 };
-
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {;
-
   const stars = [1, 2, 3, 4, 5];
   return (
-
           <button
             key={star}
             type="button"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
-
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
           >;
             <svg
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               width={size}
               height={size}
               viewBox='0 0 24 24';
               fill={active ? 'gold' : 'none'}
-
 export default StarRating;
-
               xmlns="http://www.w3.org/2000/svg"
               width={size}
               stroke={active ? 'gold' : 'current_color'}
@@ -91,5 +76,3 @@ export default StarRating;              width={size}
 }
 ;
 export default StarRating;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,12 +1,9 @@
-
-
 }
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {;
   children: React && React.ReactNode;
 }
-
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
@@ -158,8 +155,8 @@ if ( {) {
             ]
           }}
           transition={{
-            duration: 8
-            repeat: Infinity
+            duration: 8;
+    repeat: Infinity
             ease: 'easeInOut'
           }}
         {/* Holographic grid effect */}
@@ -180,17 +177,12 @@ if ( {) {
               linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
-
         {/* Canvas for animated particles */}
         <canvas
           ref={canvasRef}
-
           className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
-
           style={{ filter: 'blur(0.5px)' }}
-
         />
-
         {/* Floating neon orbs */}
           animate={{
             rotate: [0, 180, 360],          }}
@@ -211,15 +203,11 @@ if ( {) {
             rotate: [360, 180, 0]
           }}
           transition={{
-
             duration: 8
             repeat: Infinity
-
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
-
         />;
-
         {/* Quantum energy waves */}
         <div className='absolute inset-0 overflow-hidden'>;
           <motion&& motion.div
@@ -235,10 +223,8 @@ if ( {) {
             transition={{
               duration: 4,
               repeat: Infinity,
-
             duration: 8,
             repeat: Infinity,
-
             }}
             transition={{
               duration: 4
@@ -259,7 +245,6 @@ if ( {) {
               duration: 6
               repeat: Infinity
               ease: 'easeInOut',              ease: 'easeInOut'
-
             }}
           />
         </div>

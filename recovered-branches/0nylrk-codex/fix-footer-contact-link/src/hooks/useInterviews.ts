@@ -1,4 +1,3 @@
-
 import { useState  } from 'react';
 import { useAuth } from "@/hooks/useAuth";
 import { supabase  } from '@/integrations/supabase/client';
@@ -19,7 +18,7 @@ export function useInterviews() {
       console && console.error("Error in requestInterview:", err);
       setError(err && err.message);
       return null    } finally {import { useState } from 'react';
-import { useAuth } from "@/hooks/useAuth",;
+import { useAuth } from "@/hooks/useAuth";
 import { supabase } from '@/integrations/supabase/client',;
 import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview',;
 import { toast } from '@/components/ui/use-toast',;
@@ -47,7 +46,6 @@ if ( {) {
       set_interviews ([]);
       return [];
     }
-
 ;
     setIsLoading(true),;
     setError(null),;
@@ -98,7 +96,6 @@ if ( {) {
     }
     setIsLoading(true),
     setError(null),
-
       setIsLoading (false);
     }
   }    setIsLoading (true);
@@ -113,7 +110,6 @@ if ( {) {
         .from ('interviews');
         .select (`;
           *;
-
         .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)      if (fetchError) {
         console && console.error("Error fetching interviews:", fetchError);
         setError(fetchError && fetchError.message);
@@ -135,8 +131,8 @@ if ( {) {
         interview_type: interview.interview_type;
         client_name: interview.clients?.display_name;
         talent_name: interview.talents?.full_name;
-        client_avatar: interview.clients?.avatar_url
-        talent_avatar: interview.talents?.profile_picture_url}));
+        client_avatar: interview.clients?.avatar_url;
+    talent_avatar: interview.talents?.profile_picture_url}));
       setInterviews(formattedInterviews);
       const formattedInterviews = data.map((interview: any): Interview => ({
   // Respond to an interview request (as talent)
@@ -147,11 +143,9 @@ if ( {) {
     if (!user?.id) {
       toast({        title: "Authentication required",
         description: "You must be logged in to respond to interviews",
-
         variant: "destructive"
     setIsLoading(true),
     setError(null),
-
     try {
       // Update the interview status
       const { error: updateError } = await supabase
@@ -285,11 +279,9 @@ if ( {) {
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id
         : interview.client_id;
-
       const notifyUserId = interview && interview.client_id === user && user.id
         ? interview && interview.talent_id
         : interview && interview.client_id;
-
 ;
       // Check if user is part of this interview;
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {;
@@ -309,7 +301,6 @@ if ( {) {
         setError(updateError.message),;
         return false;
       }
-
       // Determine who to notify
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id

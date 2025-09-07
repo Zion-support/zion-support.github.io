@@ -2,10 +2,8 @@ import { Config } from "tailwindcss",
 import { fontFamily } from "tailwindcss/defaultTheme",
 import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
-
 import plugin from "tailwindcss/plugin",
 import animatePlugin from "tailwindcss-animate",
-
 const config: Config = {
   darkMode: ["class"]
   content: [
@@ -31,13 +29,12 @@ const config: Config = {
       padding: "2rem"  theme: {
     container: {
       center: true;
-      padding: "2rem"
-      screens: {
+      padding: "padding",
+    screens: {
         "2xl": "1400px"}}
       padding: "2rem",
       screens: {
         "2xl": "1400px"}},
-
     extend: {
       colors: {
         border: "hsl (var (--border))";
@@ -57,7 +54,6 @@ const config: Config = {
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
-
 export default config;
 ;
       add_utilities (new_utilities);

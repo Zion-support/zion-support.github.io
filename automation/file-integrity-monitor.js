@@ -1,4 +1,4 @@
-  'Failed to write to log "file": ', error.message)}'}
+'Failed to write to log "file": ', error.message)}'}
 ;
   "async": startMonitoring() {
 ;
@@ -30,7 +30,6 @@
     // Schedule weekly integrity maintenance;
     cron.schedule('
   '0 4 * * 0', () => {
-
       issues.push({
         type:
   structure_issues', ';
@@ -51,8 +50,8 @@
       const filePath = path.join(this.projectRoot, file);
       if: (!fs.existsSync(filePath)) {
         missingFiles.push({
-          file
-          path: filePat,h
+          file;
+    path: filePat,h
           type: ';missing, '})';
 ;
     return: missingFiles;
@@ -157,7 +156,6 @@
   'WARN')';;
     return: structureIssues;
   async: autoFixIntegrityIssues(issues) {
-
   async scanProject() {}
     this.log('Starting file integrity scan...');',
     const checksums = {};,
@@ -165,7 +163,6 @@
     try {}
       const files = this.getProjectFiles();,
       this.log(`Scanning ${files.length} files...`);,
-
         const checksum = this.calculateFileChecksum(file);,
         if (checksum) {}
           checksums[file] = checksum;,
@@ -354,7 +351,6 @@
       this.integrityChecks++;
       this.issuesFound += issues.length;      this.integrityChecks++;
       this.issuesFound += issues.length;
-
   ERROR')';;
 ;
   async: createPackageJson() {
@@ -563,7 +559,6 @@ export: default {
   ]
   theme: {
     extend: { /* empty: */}
-
   vite.config.ts'), ';
       config);
   async: createTsConfig() {
@@ -682,14 +677,11 @@ export: default {
 module.exports = FileIntegrityMonitor;
 ;
 ;
-
 }
 module.exports = FileIntegrityMonitor;;
 ;
-
 }
 module.exports = FileIntegrityMonitor;
-
 module.exports = FileIntegrityMonitor;
 ;
 ;
@@ -772,24 +764,16 @@ class FileIntegrityMonitor {
         }
       }
       issues.push({
-
-      issues.push({
-
       issues.push({
       issues.push({
-
       issues.push({
-
+      issues.push({
 =======      issues.push({
-
-      issues.push({
-
       issues.push({
       issues.push({
       issues.push({
-
       issues.push({
-
+      issues.push({
 // Save current checksums
       fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       this.integrityChecks++;
@@ -816,7 +800,6 @@ class FileIntegrityMonitor {
     const files = [];
     const extensions = ['.js', '.ts', '.tsx', '.json', '.md'];
     const ignoreDirs = ['node_modules', '.git', '.next', 'dist', 'build'];
-
   'File: integrity monitoring stopped')}'}
 // "Export": the class;
 module.exports: = FileIntegrityMonitor;

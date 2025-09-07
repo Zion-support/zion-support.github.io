@@ -3,28 +3,22 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-
 import React from 'react';
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
-
 export default function BrowserAutomationCloudPage() {
   const features = [
     'Parallel Playwright/Puppeteer execution',
@@ -33,8 +27,6 @@ export default function BrowserAutomationCloudPage() {
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API',;
   ];
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   const features = [
     'Parallel Playwright/Puppeteer execution'
     'Queued jobs with retries and rate limits'
@@ -91,7 +83,6 @@ export default function BrowserAutomationCloudPage() {
               rel='noreferrer'
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
-
 export default /**
  * BrowserAutomationCloudPage - Function description
  */
@@ -161,9 +152,7 @@ function BrowserAutomationCloudPage() {
           </div>;
         </section>;
       </main>;
-
     </>);	return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;
   <main id="main" className="container mx - auto px-4 py-24">;
@@ -191,8 +180,5 @@ function BrowserAutomationCloudPage() {
   </main>;
   </>),
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 	),
 }
-

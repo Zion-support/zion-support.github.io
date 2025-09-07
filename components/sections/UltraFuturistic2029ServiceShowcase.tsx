@@ -1,4 +1,4 @@
-  ChevronDown
+ChevronDown
   Star
   TrendingUp
   Zap
@@ -13,7 +13,6 @@
   Eye
   Timer
   Sparkles;
-
 } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
@@ -72,7 +71,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<
   subtitle = 'Experience the future of technology with our revolutionary services'
   maxServices = 12
 }) => {
-
 const categoryColors: { [key: string]: string } = {;
   'AI & Consciousness': 'from-purple-600 to-pink-600',;
   'Quantum & Neuroscience': 'from-indigo-600 to-purple-600',;
@@ -84,7 +82,6 @@ const categoryColors: { [key: string]: string } = {;
   'Quantum & Time': 'from-green-600 to-emerald-600',;
   'AI & Augmented Reality': 'from-orange-600 to-red-600',
 };
-
 const categoryIcons: { [key: string]: any } = {;
   'AI & Consciousness': Brain,;
   'Quantum & Neuroscience': Cpu,;
@@ -96,7 +93,6 @@ const categoryIcons: { [key: string]: any } = {;
   'Quantum & Time': Timer,;
   'AI & Augmented Reality': Eye,
 };
-
 const UltraFuturistic2029ServiceShowcase: React.FC<;
   UltraFuturistic2029ServiceShowcaseProps;
 > = ({;
@@ -114,13 +110,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC<;
   );
 interface UltraFuturistic2029ServiceShowcaseProps {
   services: Service[]
-
   // Get unique categories;
   const categories = [;
     'all',;
     ...Array && Array.from(new Set(services && services.map(service => service && service.category))),;
   ];
-
   // Filter and sort services;
   const filteredServices = services;
     .filter(;
@@ -129,7 +123,6 @@ interface UltraFuturistic2029ServiceShowcaseProps {
     )    .sort((a, b) => {import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
 type Service = CuttingEdgeInnovation2029 | any;
-
 interface UltraFuturistic2029ServiceShowcaseProps {;
   services: Service[],;
   title?: string;
@@ -163,8 +156,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           const aLevel = (a as any).innovationLevel |'Advanced';
           const bLevel = (b as any).innovationLevel |'Advanced';
           const innovationOrder = {
-            Revolutionary: 4
-            Breakthrough: 3
+            Revolutionary: 4;
+    Breakthrough: 3
             Advanced: 2
             Emerging: 1
           }
@@ -180,7 +173,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
     <section className="py-20 relative overflow-hidden">;
       {/* Background Elements */}
         {/* Header */}
-
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background Elements */}
@@ -192,16 +184,13 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
-
         {/* Header */}
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className='text-center mb-16'        >          className="text-center mb-16"
           className='text-center mb-16'        >
-
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -227,13 +216,10 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           </motion.p>
         </motion.div>
             className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >
-
           >
-
             {subtitle}
           </motion.p>
         </motion.div>
-
             {subtitle}
         {/* Filters and Controls */}
         <motion&& motion.div
@@ -271,19 +257,15 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
               <option value='innovation'>Innovation Level</option>
               <option value='price'>Price</option>
               <option value='rating'>Rating</option>            </select>
-
             </select>
-
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
-
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          initial="hidden";
           whileInView="visible";
           viewport={{ once: true }}
@@ -306,7 +288,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-
         >
           <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -352,8 +333,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
               {
-                label: 'Revolutionary Services'
-                value: services.filter(
+                label: "label",
+    value: services.filter(
                   s => s.innovationLevel === 'Revolutionary'
                 ).length
                 icon: Rocket
@@ -455,7 +436,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 value: (
                   services.reduce((sum, s) => sum + s.rating, 0) /
                   services.length
-
               <motion.div
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
             {[;
@@ -496,10 +476,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-
 export default UltraFuturistic2029ServiceShowcase;  )
 };
-
               >
                 <div
                   className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}
@@ -516,7 +494,6 @@ export default UltraFuturistic2029ServiceShowcase;  )
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400">{stat.label}</div>
               </motion.div>
-
             ))}
           </div>
         </motion.div>
@@ -526,11 +503,9 @@ export default UltraFuturistic2029ServiceShowcase;  )
 export default UltraFuturistic2029ServiceShowcase;  )
 }
 export default UltraFuturistic2029ServiceShowcase;
-
 export default UltraFuturistic2029ServiceShowcase;
 export default UltraFuturistic2029ServiceShowcase
 };
-
 export default UltraFuturistic2029ServiceShowcase;
                   services.reduce ((sum, s) => sum + s.rating, 0) /;
                   services.length).to_fixed (1),

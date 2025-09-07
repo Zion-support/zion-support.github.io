@@ -1,4 +1,4 @@
-    const existing_user = await prisma.user.find_unique ({
+const existing_user = await prisma.user.find_unique ({
       where: { email }}),
     // Check condition
 if ( {) {
@@ -6,7 +6,7 @@ if ( {) {
 }
       return NextResponse.json (
 import { NextRequest, NextResponse } from "next/server";
-import bcrypt from "bcryptjs",;
+import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/prisma",;
 import { z } from "zod",;
 const registerSchema = z.object({;

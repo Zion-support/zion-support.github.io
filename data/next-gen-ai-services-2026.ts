@@ -1,7 +1,5 @@
-
 import { ServiceVariant } from '../types/service-variants';
 export interface NextGenAIService2026 {
-
   name: string;
   tagline: string;
   price: string;
@@ -27,7 +25,6 @@ export interface NextGenAIService2026 {
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-
     website: string;
   }
   customers: number;
@@ -58,22 +55,18 @@ export interface NextGenAIService2026 {
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
-
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-
-  reviews: number;    mobile: string
+  reviews: number;    mobile: string;
     email: string
     address: string
     mobile: string,
@@ -100,11 +93,9 @@ export interface NextGenAIService2026 {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-};  website: 'https://ziontechgroup.com'
-  website: 'https://ziontechgroup.com'
-
+};  website: "website",
+    website: 'https://ziontechgroup.com'
 },
-
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   {
     description:
@@ -335,9 +326,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4 && 4.7,
     reviews: 445
   }
-
 ],
-
 ];    implementation_details: 'Production - ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',
     launch_date: '2025 - 01 - 25',
     customers: 203,
@@ -349,7 +338,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 },
-
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   {
     id: 'ai-emotional-intelligence-platform',

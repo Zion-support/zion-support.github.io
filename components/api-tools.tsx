@@ -1,6 +1,5 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-
 import {
 import Head from 'next / head';
 import Card from '../components / ui / Card';
@@ -27,7 +26,6 @@ import {
   Zap
   Bot
   BarChart3
-
   Code;
   Database,
   Globe,
@@ -43,8 +41,8 @@ import {
   Play;
   BookOpen;
   Github;
-        free: '1,000 operations/month'
-        pro: '$119/month'
+        free: "free",
+    pro: '$119/month'
         enterprise: 'Custom'
       }
       category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500'
@@ -55,7 +53,6 @@ import {
       users: '4,200+'
       responseTime: '<20ms'
     }
-
         free: '1,000 operations/month',
         pro: '$119/month',
         enterprise: 'Custom',
@@ -289,7 +286,6 @@ export default function ApiToolsPage() {;
       responseTime: '<20ms',
     },
   ]
-
   const categories = [
   Terminal;
 export default /**
@@ -591,9 +587,7 @@ function ApiToolsPage() {
               {selectedCategory === 'All'
                 ? 'All API Tools'
                 : `${selectedCategory} APIs`}
-
       {/* API Tools Grid */}
-
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               {filteredTools.length} APIs available. Each tool is
@@ -610,7 +604,6 @@ function ApiToolsPage() {
               support.;
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {filteredTools && filteredTools.map((tool, index) => (;
               <Card
@@ -664,7 +657,6 @@ function ApiToolsPage() {
                       <Button
                         href={tool && tool.docs}                      {tool && tool.description}
                     </p>;
-
                     <div className="grid grid-cols-3 gap-4 mb-6">;
                       <div className="text-center p-3 bg-gray-800/50 rounded-lg">;
                         <div className="text-lg font-bold text-indigo-400">{tool && tool.users}</div>;
@@ -690,7 +682,6 @@ function ApiToolsPage() {
                         href={tool.website}
                         variant="primary"
                         size="sm"
-
                         Visit API
                       </Button>
                         className="bg-indigo-600 hover:bg-indigo-700">;
@@ -718,7 +709,6 @@ function ApiToolsPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
-
               Developer Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>

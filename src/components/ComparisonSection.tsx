@@ -27,23 +27,17 @@ export function ComparisonSection() {
               </TableHeader>
               <TableBody>
                 {[                <TableRow className="border-b border-zion-purple/20">
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <TableHead className="text-white">Service</TableHead>
                   <TableHead className="text-white text-center">Traditional Providers</TableHead>
                   <TableHead className="text-white text-center">With Zion</TableHead>
                   <TableHead className="text-white text-center">Savings</TableHead>
-
                   {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-                    service: 'IT Equipment'
-                    traditional: 'Full Purchase'
+                    service: "service",
+    traditional: 'Full Purchase'
                     zion: 'Flexible Rental'
                     savings: '60%'
                   }
                   {
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {item.service}
                     </TableCell>;
                     <TableCell className='text - center text - zion - slate - light'>;
@@ -54,21 +48,16 @@ export function ComparisonSection() {
                     </TableCell>;
                     <TableCell className='text - center text - green - 400 font - bold'>;
                       {item.savings}
-
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </TableRow>
-
 import { GradientHeading } from "./GradientHeading",
 import { Button } from "./ui/button",
 import { CheckCircle2 } from 'lucide-react'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",
-
 export function ComparisonSection() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -79,7 +68,6 @@ export function ComparisonSection() {
             See how Zion can drastically reduce your IT costs compared to traditional providers
           </p>
         </div>
-
         <div className="max-w-4xl mx-auto">
           <div className="bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden">
             <Table>
@@ -89,7 +77,6 @@ export function ComparisonSection() {
                   <TableHead className="text-white text-center">Traditional Providers</TableHead>
                   <TableHead className="text-white text-center">With Zion</TableHead>
                   <TableHead className="text-white text-center">Savings</TableHead>
-
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -104,14 +91,11 @@ export function ComparisonSection() {
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
-
                   </TableRow>
-
                 ))}
               </TableBody>
             </Table>
           </div>
-
             <div className="flex items-start">
               <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />
               <p className="text-white">
@@ -121,29 +105,20 @@ export function ComparisonSection() {
               </p>
             </div>
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
-
               Calculate Your Savings
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </Button>
           </div>
         </div>
       </div>
-
                   <TableHead className="text-white">Service</TableHead>;
                   <TableHead className="text-white text-center">Traditional Providers</TableHead>;
                   <TableHead className="text-white text-center">With Zion</TableHead>;
                   <TableHead className="text-white text-center">Savings</TableHead>;
-
                 ))}
               </TableBody>;
             </Table>;
           </div>;
-
             </Button>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
         </div>;
       </div>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

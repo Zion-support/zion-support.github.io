@@ -12,7 +12,6 @@ import {toast} from '@/hooks / use - toast';
 type UserWithProfile = UserProfile | UserDetails | null;
 ;
 export function useMessagingRealtime (
-
 import {useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {UserProfile, UserDetails} from '@/types/auth';
@@ -36,7 +35,6 @@ import {toast} from '@/hooks/use-toast';
         }
       )
       .subscribe();
-
     return () => {
     }
   }, [user, activeConversation, fetchConversations, setActiveMessages])    // Subscribe to new messages;
@@ -76,9 +74,8 @@ if ( {) {
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);
 }}
 }
-
 import { useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client',;
+import { supabase } from '@/integrations/supabase/client';
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { Message, Conversation } from '@/types/messaging',;
 import { toast } from '@/hooks/use-toast',;

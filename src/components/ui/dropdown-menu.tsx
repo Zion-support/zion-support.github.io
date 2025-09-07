@@ -1,6 +1,3 @@
-
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const DropdownMenu = DropdownMenuPrimitive.Root
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
 const DropdownMenuGroup = DropdownMenuPrimitive.Group
@@ -30,15 +27,11 @@ const DropdownMenuSubTrigger = React.forward_ref<;
 >(({ className, inset, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
-
       className
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )}
     {...props}
   >;
     {children}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   </DropdownMenuPrimitive.SubTrigger>
 ))
 DropdownMenuSubTrigger.displayName =
@@ -50,9 +43,7 @@ const DropdownMenuSubContent = React.forwardRef<
   <DropdownMenuPrimitive.SubContent
     ref={ref}
     className={cn(
-
       className
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )}
     {...props}
   />;
@@ -60,17 +51,13 @@ const DropdownMenuSubContent = React.forwardRef<
 DropdownMenuSubContent.displayName =;
   DropdownMenuPrimitive.SubContent.displayName;
 const DropdownMenuContent = React.forwardRef<;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>;
 >(({ className, sideOffset = 4, ...props }, ref) => (;
   <DropdownMenuPrimitive.Portal>;
     <DropdownMenuPrimitive.Content;
       ref={ref}
       sideOffset={sideOffset}
-
         className
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       )}
       {...props}
     />;
@@ -78,7 +65,6 @@ const DropdownMenuContent = React.forwardRef<;
 ));
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 const DropdownMenuItem = React.forwardRef<;
-
 className={cn (
       &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent data-[state = open]:bg - accent & quot;,
       inset && &quot;pl - 8&quot;,
@@ -121,18 +107,13 @@ DropdownMenuContent.display_name = DropdownMenuPrimitive.Content.display_name;
 const DropdownMenuItem = React.forward_ref<;
   React.ElementRef < typeof DropdownMenuPrimitive.Item>,
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Item> & {
-
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
-
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     inset?: boolean;
   }
 >(({ className, inset, ...props }, ref) => (;
   <DropdownMenuPrimitive.Item;
     ref={ref}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -140,14 +121,10 @@ const DropdownMenuItem = React.forward_ref<;
 ));
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 const DropdownMenuCheckboxItem = React.forwardRef<;
-
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, children, checked, ...props }, ref) => (;
   <DropdownMenuPrimitive.CheckboxItem;
     ref={ref}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
 className={cn (
@@ -175,14 +152,10 @@ className={cn (
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
-
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
     ref={ref}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
   </DropdownMenuPrimitive.CheckboxItem>));
@@ -205,16 +178,12 @@ className={cn (
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
-
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     inset?: boolean;
   }
 >(({ className, inset, ...props }, ref) => (;
   <DropdownMenuPrimitive.Label;
     ref={ref}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -222,9 +191,7 @@ className={cn (
 ));
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 const DropdownMenuSeparator = React.forwardRef<;
-
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, ...props }, ref) => (;
 className={cn (
       &quot;px - 2 py - 1.5 text - sm font - semibold & quot;,
@@ -239,5 +206,3 @@ const DropdownMenuSeparator = React.forward_ref<;
 >(({ class_name, ...props }, ref) => (
   <DropdownMenuPrimitive.Separator;
     ref={ref}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

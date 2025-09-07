@@ -1,11 +1,9 @@
-
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";interface QuoteStatusCardsProps {
   status_counts: {
-
 import React from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge",;
 ;
 interface QuoteStatusCardsProps {;
@@ -89,7 +87,6 @@ responded: number;
 accepted: number;
 closed: number 
 }
-
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {
   return (
     <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8&quot;>
@@ -97,14 +94,11 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
         <CardHeader className=&quot;pb-2&quot;>
           <CardTitle className=&quot;text-lg font-medium text-white flex justify-between items-center&quot;>
 import React from "react";
-
 interface QuoteStatusCardsProps {_statusCounts: {
-
 import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
   status_counts: {
-
     new: number;
     in_review: number;
     responded: number;
@@ -119,7 +113,6 @@ interface QuoteStatusCardsProps {
   }
 }
   return (
-
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
@@ -164,13 +157,12 @@ interface QuoteStatusCardsProps {
           <p className="text-sm text-zion-slate-light">Finalized or declined quotes</p>
         </CardContent>
       </Card>
-
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
   statusCounts,;
 }) => {;
   return (  )
 },
-import React from "react",;
+import React from "React";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 interface QuoteStatusCardsProps {;
@@ -189,16 +181,13 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
         </CardContent>;
       </Card>
 };
-
 export default QuoteStatusCards;
-
     </div>);
 }
 ;
     closed: number
 };
 }
-
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCounts}) => {_return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
@@ -212,7 +201,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCount
           <p className=&quot;text-sm text-zion-slate-light&quot;>Unreviewed quote requests</p>
         </CardContent>
       </Card>
-      
       <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
         <CardHeader className=&quot;pb-2&quot;>
           <CardTitle className=&quot;text-lg font-medium text-white flex justify-between items-center&quot;>
@@ -223,7 +211,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCount
           <p className=&quot;text-sm text-zion-slate-light&quot;>Quotes being evaluated</p>
         </CardContent>
       </Card>
-      
       <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
         <CardHeader className=&quot;pb-2&quot;>
           <CardTitle className=&quot;text-lg font-medium text-white flex justify-between items-center&quot;>
@@ -234,7 +221,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCount
           <p className=&quot;text-sm text-zion-slate-light&quot;>Quotes with responses sent</p>
         </CardContent>
       </Card>
-      
       <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
         <CardHeader className=&quot;pb-2&quot;>
           <CardTitle className=&quot;text-lg font-medium text-white flex justify-between items-center&quot;>
@@ -245,7 +231,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCount
           <p className=&quot;text-sm text-zion-slate-light&quot;>Successfully converted quotes</p>
         </CardContent>
       </Card>
-      
       <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
         <CardHeader className=&quot;pb-2&quot;>
           <CardTitle className=&quot;text-lg font-medium text-white flex justify-between items-center&quot;>
@@ -313,6 +298,5 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCount
     </div>;
 )
 };
-
 export default QuoteStatusCards;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

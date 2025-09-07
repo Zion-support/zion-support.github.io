@@ -1,15 +1,10 @@
-
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.total_flags}</CardTitle>
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -19,9 +14,7 @@
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
-
       <Card>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
             <CardTitle className="text-2xl font-bold text-amber-500">{stats.suspicious_count}</CardTitle>
@@ -30,8 +23,6 @@
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -41,16 +32,12 @@
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
-
       <Card>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
@@ -58,8 +45,6 @@
         </CardHeader>
       </Card>
     </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) => {
   return (
     <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 4 mb-8">;
@@ -111,5 +96,3 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
     </div>);
 }
 ";
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,17 +9,15 @@ import { Badge } from "@/components/ui/badge",      id: "act-1",
       timestamp: "1h ago",      type: "job"
     }
     },
-
     {
-      id: "act-4"
-      user: "Emily Davis"
+      id: "id",
+    user: "Emily Davis"
       action: "added comments to"
       target: "Frontend Developer application"
       timestamp: "2d ago"
       type: "comment"
     }
 }
-
   const getBadgeForType = (type: string) => {
     switch (type) {
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,
@@ -34,12 +30,9 @@ import { Badge } from "@/components/ui/badge",      id: "act-1",
       default:
         return <Badge variant="outline">Activity</Badge>
     }
-
   },
-
   }
   },
-
   return (
     <Card>
       <CardHeader>
@@ -77,9 +70,8 @@ import { Badge } from "@/components/ui/badge",      id: "act-1",
       </CardContent>
     </Card>
   )
-
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge",;
     {;
       id: "act-2",;
@@ -100,7 +92,6 @@ import { Badge } from "@/components/ui/badge",;
         return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;
     }
   }
-
   return (          {activities && activities.map((activity) => (;
             <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
               <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
@@ -109,15 +100,12 @@ import { Badge } from "@/components/ui/badge",;
               </div>;
             </div>;
           ))}
-
         </div>;
-
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View All Activity;
           </button>;
         </div>;
       </CardContent>;
-
 }
 ;
     </Card>);

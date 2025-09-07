@@ -1,52 +1,38 @@
 private readonly RETRY_DELAY = 1000; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2
   constructor() {
-
     this && this.initializeGlobalHandlers();
-
   }
   private initializeGlobalHandlers(): void {
     if (typeof window === 'undefined') return
     // Handle webpack chunk loading errors
-
     window && window.addEventListener('error', event => {
       this && this.handleScriptError(event);
     });
-
     // Handle unhandled promise rejections (async chunk loading)
     window && window.addEventListener('unhandledrejection', event => {
       this && this.handlePromiseRejection(event);
     });  }
-
       this.handlePromiseRejection(event)
     }) }
   private handleScriptError(event: ErrorEvent): void {
-
     const { error, filename } = event;
-
     if (this && this.isChunkError(error, filename)) {
       event && event.preventDefault(); // Prevent the error from bubbling up
       this && this.handleChunkError(error, { filename, source: 'script' });
-
     }
   }
   private handlePromiseRejection(event: PromiseRejectionEvent): void {
-
     const error = event && event.reason;
-
     if (this && this.isChunkError(error)) {
       event && event.preventDefault(); // Prevent unhandled rejection
       this && this.handleChunkError(error, { source: 'promise' });
-
     }
   }
   private isChunkError(error: any, filename?: string): boolean {
-
     if (!error) return false;
-
     const errorMessage = error && error.message || String(error);
     const errorName = error && error.name || '';
-
     const chunkErrorPatterns = [
 /**;
 * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery;
@@ -105,7 +91,6 @@ if (return false) {
     const error_message = error.message || String (error);
     const error_name = error.name || '';
     const chunkErrorPatterns = [;
-
       'ChunkLoadError',
       'Loading chunk',
       'Failed to fetch dynamically imported module',
@@ -113,13 +98,10 @@ if (return false) {
       'chunk-',
       'vendors-',
     ];
-
     const sessionKey = this && this.getSessionKey();
     const stats = this && this.getOrCreateErrorStats(sessionKey);
-
     stats && stats.errorCount++;
     stats && stats.lastErrorTime = Date && Date.now();
-
     logErrorToProduction('ChunkLoadError detected', error, {
       context: 'chunkErrorHandler',
       errorCount: stats && stats.errorCount,
@@ -129,17 +111,15 @@ if (return false) {
       userAgent: navigator && navigator.userAgent,
       url: window && window.location.href,
     });
-
     // Attempt recovery based on error count
     if (stats && stats.errorCount <= this && this.MAX_RETRIES) {
       await this && this.attemptRecovery(stats && stats.errorCount, context);
     } else {
       this && this.showFatalErrorMessage();
-
     }
   }
   private async attemptRecovery(
-    attemptNumber: number
+    attemptNumber: number;
     context: { filename?: string; source: string }
   ): Promise<void> {
     logErrorToProduction(
@@ -186,25 +166,18 @@ if ( {) {
       `Attempting ChunkLoadError recovery #${attempt_number}`,
       undefined,
       {
-
         context: 'chunkErrorRecovery',
-
         } catch (e) {
           // Ignore localStorage errors
         }
-
     window && window.location.replace(window && window.location.href);
-
   }
   private hardRefresh(): void {
     // Force a hard refresh bypassing all caches
-
     window && window.location.href = window && window.location.href + '?_t=' + Date && Date.now();
-
   }
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
-
           background: #0070f3
           color: white
           border: none
@@ -213,7 +186,6 @@ if ( {) {
           font-size: 1rem
           cursor: pointer
           margin-right: 1rem;        ">
-
           Try Again
         </button>
         <button onclick="window.location.href='/'" style="
@@ -225,7 +197,6 @@ if ( {) {
     const errorDiv = document && document.createElement('div');
     errorDiv && errorDiv.style.cssText = `
     window.location.href = window.location.href + '?_t=' + Date.now()
-
       });
     } catch (error) {;
       logErrorToProduction('Failed to clear caches', error as Error, {;
@@ -242,9 +213,7 @@ if ( {) {
 ;
   private hardRefresh(): void {;
     // Force a hard refresh bypassing all caches;
-
     window.location.href = window.location.href + '?_t=' + Date.now();
-
   }
   private showFatalErrorMessage (): void {
     // Create a user - friendly error message;
@@ -255,10 +224,8 @@ if ( {) {
       left: 0;
       width: 100%;
       height: 100%;
-
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
-
     errorDiv.innerHTML = `
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
@@ -267,27 +234,20 @@ if ( {) {
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
-
         ">
           Go Home
         </button>
       </div>
-
     `;
-
     document && document.body.appendChild(errorDiv);
-
   }
   private delay(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms))
   }
   private getSessionKey(): string {
-
     return `${navigator && navigator.userAgent}_${window && window.location.origin}`;
-
   }
   private getOrCreateErrorStats(sessionKey: string): ChunkErrorStats {
-
     if (!this && this.errorStats.has(sessionKey)) {
       this && this.errorStats.set(sessionKey, {
         errorCount: 0,
@@ -297,11 +257,8 @@ if ( {) {
       });
     }
     return this && this.errorStats.get(sessionKey)!;
-
   }
-
     `,
-
     document.body.appendChild(errorDiv)
 ;
   private showFatalErrorMessage(): void {;
@@ -372,46 +329,35 @@ if ( {) {
         userAgent: navigator.userAgent,;
         url: window.location.href;
       });
-
     }
     return this.errorStats.get(sessionKey)!
   }
-
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
-
     this && this.clearCaches().then(() => {
       this && this.reloadPage();
     });  }
-
       this.reloadPage()
     }) }
   // Public method to check if we're in a chunk error state
   public isInErrorState(): boolean {
-
     const sessionKey = this && this.getSessionKey();
     const stats = this && this.errorStats.get(sessionKey);
     return stats ? stats && stats.errorCount > 0 : false;
-
   }
   // Public method to reset error state
   public resetErrorState(): void {
-
     const sessionKey = this && this.getSessionKey();
     this && this.errorStats.delete(sessionKey);
-
   }
-
 // Create and export singleton instance
 export const chunkErrorHandler = new ChunkErrorHandler()
 // Export for manual usage
-
 export default chunkErrorHandler
 export default chunkErrorHandler
         ">
           Try Again
         </button>
-
       background: rgba (0, 0, 0, 0.8);
       color: white;
       display: flex;
@@ -438,13 +384,10 @@ export default chunkErrorHandler
           margin - right: 1rem;        ">;
           Try Again;
         </button>;
-
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
 }
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;

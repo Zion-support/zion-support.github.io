@@ -1,5 +1,4 @@
 import React from 'react';
-
 ;
 const MainLayout.dynamic = () => {
   return (
@@ -8,6 +7,4 @@ const MainLayout.dynamic = () => {
     </div>);
 }
 ;
-
 export default MainLayout.dynamic;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

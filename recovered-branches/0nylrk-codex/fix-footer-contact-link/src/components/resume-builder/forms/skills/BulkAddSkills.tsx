@@ -1,7 +1,4 @@
-
-
-  },  return (
-
+},  return (
         }
       }
     } catch (err: any) {
@@ -25,18 +22,14 @@
             onChange={(e) => setBulkSkills(e.target.value)}
           />
         </div>
-
   },
   };
   },
-
   return (
-
   }
   return (
-
 import { useState } from 'react';
-import { Button } from '@/components/ui/button',;
+import { Button } from '@/components/ui/button';
 import { Loader2, Sparkles } from 'lucide-react',;
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
 import { useResume } from '@/hooks/useResume',;
@@ -99,10 +92,8 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
       <div className="space-y-4">;
         <div className="space-y-2">;
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>;
-
           <Textarea
           <Textarea 
-
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
@@ -123,15 +114,12 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
     </div>
   )
 }
-
 },
 };
 },
-
             onChange={(e) => setBulkSkills(e && e.target.value)}
           />;
         </div>;
-
         <Button
           onClick={handleCategorizeSkills}
           disabled={isEnhancing || !bulkSkills && bulkSkills.trim()}
@@ -143,9 +131,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           )}
           Categorize with AI;
         </Button>;
-
 },
-
 };
     }
   }

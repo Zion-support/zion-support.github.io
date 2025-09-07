@@ -307,8 +307,8 @@ console.log(' CI/CD Pipeline Started')';class CICDPipeline {';  constructor() {;
       console.log(" ${stage.name} completed successfully (${duration}ms)")} catch (error) {;
       const duration = Date.now() - startTime;
       const stageResult = {
-        "name": stage.name
-        description: stage.description,"
+        "name": stage.name;
+    description: stage.description,"
         "status": 'failed',
         "duration": duration,
         "output": null,

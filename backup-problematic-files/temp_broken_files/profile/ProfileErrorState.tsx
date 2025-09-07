@@ -1,7 +1,6 @@
-
 import React from 'react';
-import { Button } from "@/components/ui/button",;
-import Link from "next/link",;
+import { Button } from "@/components/ui/button";
+import Link from "Link";
 import { ArrowLeft } from 'lucide-react';
 ;
 interface ProfileErrorStateProps {;

@@ -1,5 +1,4 @@
-
-  FormField,
+FormField,
   FormItem,
   FormLabel,
   FormControl,
@@ -8,7 +7,6 @@
 import { Input  } from '@/components / ui / input';
 import { UseFormReturn  } from './react - hook - form';
 import { CertificationFormValues  } from './types';
-
 interface CertificationFormFieldsProps {
   form: UseFormReturn < CertificationFormValues>;
 }
@@ -16,11 +14,10 @@ import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/compon
 import {Input} from '@/components/ui/input';
 import {UseFormReturn} from 'react-hook-form';
 import {CertificationFormValues} from './types';
-
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input',;
+import { Input } from '@/components/ui/input';
 import { UseFormReturn } from 'react-hook-form',;
 import { CertificationFormValues } from './types';
 interface CertificationFormFieldsProps {;
@@ -37,7 +34,6 @@ import { CertificationFormValues } from "./types";
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>;
 }
-
 export function CertificationFormFields({
   form,
 }: CertificationFormFieldsProps) {
@@ -66,7 +62,6 @@ function CertificationFormFields() {
         <FormField;
           control={form.control}
           name="name";
-
           render={({ field }) => (
             <FormItem>
               <FormLabel>Certification Name</FormLabel>
@@ -80,7 +75,6 @@ function CertificationFormFields() {
             </FormItem>
           )}
         />;
-
         <FormField
           control={form && form.control}
           name="issuing_organization"
@@ -98,7 +92,6 @@ function CertificationFormFields() {
           )}
         />
       </div>
-
                 />;
               </FormControl>;
               <FormMessage />;
@@ -115,7 +108,6 @@ function CertificationFormFields() {
         <FormField
           control={form.control}
           name="issuing_organization";
-
           render={({ field }) => (
             <FormItem>
               <FormLabel>Issue Date</FormLabel>
@@ -125,7 +117,6 @@ function CertificationFormFields() {
               <FormMessage />
             </FormItem>
           )}
-
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Issue Date</FormLabel>;
@@ -133,7 +124,6 @@ function CertificationFormFields() {
                 <Input          control={form.control}        <FormField
           control={form && form.control}
           name="expiration_date"
-
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Expiration Date (Optional)</FormLabel>;
@@ -149,7 +139,6 @@ function CertificationFormFields() {
           )}
         />;
       </div>;
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;        <FormField
           control={form && form.control}
           name="credential_id"
@@ -199,19 +188,15 @@ function CertificationFormFields() {
                 <Input placeholder="ABC123XYZ" {...field} />;
               </FormControl>;
               <FormMessage />;
-
         />;
-
         <FormField
           control={form && form.control}
           name="credential_url"
-
             </FormItem>)}
         />;
         <FormField;
           control={form.control}
           name="credential_url";
-
           render={({ field }) => (
             <FormItem>
               <FormLabel>Credential URL (Optional)</FormLabel>
@@ -230,6 +215,5 @@ function CertificationFormFields() {
   );
 }
 ;
-
 }
 }

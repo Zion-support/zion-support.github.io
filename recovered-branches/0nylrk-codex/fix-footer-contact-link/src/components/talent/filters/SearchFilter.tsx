@@ -17,7 +17,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           placeholder="Search talents..."
           value={searchTerm}
 import { Input } from "@/components/ui/input";
-import { SearchIcon } from "lucide-react",;
+import { SearchIcon } from "lucide-react";
 import { SearchFilterProps } from "@/types/filters";
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {;
   return (;
@@ -55,7 +55,6 @@ function SearchFilter() {
     </div>);
 }
   )
-
   ),;}
  export function SearchFilter ({
   searchTerm, setSearchTerm 
@@ -68,6 +67,5 @@ function SearchFilter() {
 }
 }
 ;
-
 }
 }

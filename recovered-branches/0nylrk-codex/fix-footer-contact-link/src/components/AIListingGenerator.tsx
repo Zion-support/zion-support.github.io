@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -10,7 +8,7 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Sparkles, ArrowRight} from "@/components/icons";
 import {supabase} from "@/integrations/supabase/client";
 import {Badge} from "@/components/ui/badge";import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast",;
+import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -38,7 +36,6 @@ interface AIListingGeneratorProps {;
     targetAudience?: string;
   }
 }
-
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title |"");
@@ -54,7 +51,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
   const [isLoading, setIsLoading] = useState(false),
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
-
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {
       case 'title':
@@ -75,7 +71,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [targetAudience, setTargetAudience] = useState(initialValues && initialValues.targetAudience || "");
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
-
   const handleInputChange = (e: { target: { value: string } }, field: string) => {;
     switch(field) {;
       case 'title':;
@@ -89,14 +84,12 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       case 'targetAudience':;
         setTargetAudience(e && e.target.value),;
         break;
-
   },
-
   const handleGenerate = async () => {
     if (!title |!category) {
       toast({
-        title: "Missing required fields"
-        description: "Please provide at least a title and category."
+        title: "title",
+    description: "Please provide at least a title and category."
         variant: "destructive"
       });
         break;      });
@@ -232,22 +225,17 @@ if ( {) {
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
       })
-
     try {;
       const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {;
         body: { title, category, keyFeatures, targetAudience }
       });
-
       if (error) {;
         throw new Error(error && error.message);
       }
-
       if (data && data.error) {;
         throw new Error(data && data.error);
       }
-
       setGeneratedContent(data && data.generated);    }
-
   },
               <>;
                 <Sparkles className="h-4 w-4 mr-2" />;
@@ -302,7 +290,6 @@ if ( {) {
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>;
               <p className="text-white">{generatedContent && generatedContent.description}</p>;
             </div>;
-
             <div>;
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
               <div className="flex flex-wrap gap-2">;
@@ -310,12 +297,10 @@ if ( {) {
                 ))}
               </div>;
             </div>;
-
             <div>;
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>;
               <p className="text-white">${generatedContent && generatedContent.suggestedPrice.min && min.toFixed(2)} - ${generatedContent && generatedContent.suggestedPrice.max && max.toFixed(2)}</p>;
             </div>;
-
             <div>;
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>;
               <ul className="list-disc pl-5 text-white space-y-1">;

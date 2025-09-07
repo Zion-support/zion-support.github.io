@@ -1,4 +1,4 @@
-      'Alternative data analysis',
+'Alternative data analysis',
       'Machine learning models',
       'Real - time scoring',
       'Risk prediction',
@@ -10,7 +10,7 @@
       'Regulatory compliance',
     ],
     popular: true,
-    id: 'regtech-compliance-automation-platform'
+    id: "id",
     name: 'RegTech Compliance Automation Platform'
     tagline: 'Automated regulatory compliance and reporting'
     price: '$699'
@@ -29,7 +29,7 @@
       'Real-time updates'
       'Performance analytics'
     ]
-    popular: false
+    popular: false;
     icon: '📋'
     color: 'from-gray-600 via-slate-600 to-zinc-600'
     textColor: 'text-gray-400'
@@ -90,7 +90,6 @@
     growth_rate: '25% annual growth',
     variant: 'ai - finance - enterprise',
     contact_info: {
-
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -108,7 +107,6 @@
     implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';
     launchDate: '2025-02-12';
     customers: 89;
-
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedFintechSolution2025 {;
   id: string,;

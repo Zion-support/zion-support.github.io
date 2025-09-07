@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
       supabase
         .from('profile_views')
         .select('id, talent_id')
@@ -28,20 +27,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         { label: 'node', value: 1 }
         { label: 'ai', value: 1 }
       ]
-
     });
-
   }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
-
 }
-
 }
-
 import { createServerClient } from '../../../utils / supabase / server';
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export default async /**
  * handler - Function description
@@ -128,5 +119,3 @@ function handler() {
   }
 }
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

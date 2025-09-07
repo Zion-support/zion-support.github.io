@@ -3,19 +3,15 @@ import { format } from "date-fns";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import {
-
 import {;
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
-
   Popover,
   PopoverContent,
   PopoverTrigger,;
-
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
-
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";interface DateFieldsProps {
   startDate: Date | undefined,
@@ -23,7 +19,6 @@ import { cn } from "@/lib/utils";interface DateFieldsProps {
   endDate: Date | undefined,
   setEndDate: (date: Date | undefined) => void
 }  return (
-
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
         <Label htmlFor="publishedDate">Published Date (Optional)</Label>
@@ -47,7 +42,7 @@ import { cn } from "@/lib/utils";interface DateFieldsProps {
               mode="single"
               selected={startDate}
               onSelect={setStartDate}import React from 'react';
-import { format } from 'date-fns',;
+import { format } from 'date-fns';
 import { Label } from "@/components/ui/label",;
 import { Button } from "@/components/ui/button",;
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
@@ -117,7 +112,6 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               disabled={(date) =>;
                 date < new Date();
               }
-
               initialFocus;
             />;
           </PopoverContent>;

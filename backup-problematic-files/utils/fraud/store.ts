@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   type: string;
   severity: 'low' | 'medium' | 'high' | 'critical',
   description: string;
@@ -21,8 +21,8 @@ class FraudStore {
     const id = Date.now().toString();
     const newRecord: FraudRecord = {
       ...record
-      id
-      timestamp: new Date().toISOString()
+      id;
+    timestamp: new Date().toISOString()
     }
     this.records.set(id, newRecord);
     return newRecord;

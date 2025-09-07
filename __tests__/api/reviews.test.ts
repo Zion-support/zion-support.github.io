@@ -19,7 +19,6 @@ import { supabase } from '@/integrations/supabase/client'
 import { describe, it, expect, beforeEach, vi } from 'vitest'jest.mock('@prisma/client'
           this.name = 'PrismaClientKnownRequestError'
 jest.mock('@/integrations/supabase/client'
-
 import productReviewsHandler from '@/pages/api/reviews/[productId]'; // Handler for GET /api/reviews/[productId]
 import {
   PrismaClient,
@@ -217,8 +216,8 @@ describe('/api/reviews API Endpoint', () => {
       const { req, res } = createMocks({
         "method": 'POST' as RequestMethod,
         "body": {
-          productId: 'prod1'
-          rating: 'five-stars'
+          productId: "productId",
+    rating: 'five-stars'
           comment: 'Text rating!'
         }
       })
@@ -240,8 +239,8 @@ describe('/api/reviews API Endpoint', () => {
         "method": 'POST' as RequestMethod,
         "body": {
           productId: 'prod1'
-          rating: 5
-          comment: 'Trying to review without login'
+          rating: 5;
+    comment: 'Trying to review without login'
         }
       })
       await reviewsHandler(

@@ -1,4 +1,4 @@
-  FaRocket
+FaRocket
   FaBrain
   FaCloud
   FaShieldAlt
@@ -24,12 +24,9 @@ import {
   SiAws
   SiGooglecloud
   SiMicrosoftazure;
-
 } from 'react-icons/si';
-
 interface Service {;
 } from 'react-icons/si';
-
 interface Service {;
   FaRocket,
   FaBrain,
@@ -55,43 +52,34 @@ import {
   SiDocker,
   SiKubernetes,
   SiAws,
-
   SiGooglecloud,;
   SiMicrosoftazure,;
-
 } from 'react-icons/si';
-
 interface Service {
   id: string;
   title: string,
   description: string;
     starter: number;
     professional: number;
-
     enterprise: number;
   }
   technologies: string[];
   benefits: string[];
-
-  color: string;  id: string
-  name: string
+  color: string;  id: string;
+    name: string
   description: string
   icon: React.ReactNode
-
   color: string
 }
-
   color: string;  id: string,
   name: string,
   description: string,
   icon: React.ReactNode,
   color: string
 }
-
 const serviceCategories: ServiceCategory[] = [
   {
-
-    id: 'ai-ml'
+    id: "id",
     name: 'AI & Machine Learning'
     description:
       'Cutting-edge artificial intelligence and machine learning solutions'
@@ -181,7 +169,6 @@ const serviceCategories: ServiceCategory[] = [
       'Comprehensive automation platform leveraging artificial intelligence for business process optimization'
     icon: <FaRobot className='w-6 h-6' />
     features: [
-
   {
     id: 'security',
     name: 'Cybersecurity',
@@ -201,24 +188,19 @@ const serviceCategories: ServiceCategory[] = [
       starter: 299,
       professional: 799,
       enterprise: 1999
-    
     },
       starter: 999,
       professional: 2499,
       enterprise: 4999
-    
     },
       starter: 399,
       professional: 999,
       enterprise: 2499
-    
     },
       starter: 299,
       professional: 799,
       enterprise: 1999
-    
     },
-
     technologies: [;
       'Apache Kafka',
       'Apache Spark',
@@ -241,12 +223,10 @@ const serviceCategories: ServiceCategory[] = [
     description: 'Modern cloud-native development and deployment platform',
   }
   {
-
   {
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
     description: 'Modern cloud-native development and deployment platform',
-
 ];
 const services: Service[] = [;
   {;
@@ -448,7 +428,6 @@ const services: Service[] = [;
   },];      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability';
     ];
   }
-
 ];
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -516,7 +495,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             <div className='relative flex-1 max-w-md'>
@@ -608,16 +586,13 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
             <button
-
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
                 selectedCategory === 'all';
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg';
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
               }`}
-
               <button
-
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -641,7 +616,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           {filteredServices.map((service, index) => (
             <motion.div
@@ -673,11 +647,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   </p>;
                 </div>;
               </div>;
-
               <p className='text-gray-300 mb-4 line-clamp-3'>;
                 {service && service.description}
               </p>;
-
               <div className='flex flex-wrap gap-2 mb-4'>;
                 {service && service.technologies.slice(0, 3).map(tech => (;
                   <span
@@ -721,7 +693,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </motion && motion.div>;
           ))}
         </motion && motion.div>;
-
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
@@ -738,14 +709,12 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}
-
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={e => e.stopPropagation()}
-
             >
               <div className='flex items-start justify-between mb-6'>
                 <div className='flex items-center gap-4'>
@@ -798,7 +767,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                     ))}
                 {/* Benefits */}
                 <div>;
@@ -834,18 +802,13 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                       key={tech}
                       className="px-3 py-2 bg-white/10 rounded-lg text-gray-300"
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >
-
                     >
-
                       {tech}
                     </span>;
                   ))}
-
                 </div>;
               </div>;
-
               {/* Pricing */}
-
               </div>
             </motion.div>
           </motion.div>
@@ -904,11 +867,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           </motion && motion.div>;
         )}
 };
-
 export default EnhancedServicesShowcase2025;  );
   )
 };
-
 export default EnhancedServicesShowcase2025;
               while_hover={{ coordinate_y: -5, scale: 1.02 }}
               className='bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - xl p - 6 cursor - pointer hover:bg - white / 20 transition - all duration - 300';
@@ -1165,7 +1126,6 @@ export default EnhancedServicesShowcase2025);
 }
 ;
 export default EnhancedServicesShowcase2025;
-
 export default EnhancedServicesShowcase2025
 }
 }

@@ -1,4 +1,3 @@
-
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
 import {SEO} from '@/components / SEO';
@@ -11,7 +10,6 @@ import {Separator} from '@/components / ui / separator';
 import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
-
 import { useState, useEffect  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -44,7 +42,6 @@ export default function AccountSettings() {;
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   useEffect(() => {;
     try {;
       const saved = localStorage && localStorage.getItem('account_settings');
@@ -54,7 +51,7 @@ export default function AccountSettings() {;
         setDidHandle(parsed && parsed.didHandle || '');
         setEnableBackup(!!parsed && parsed.enableBackup);
 import { useState, useEffect } from 'react';
-import { Header } from '@/components/Header',;
+import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer',;
 import { SEO } from '@/components/SEO',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -87,7 +84,6 @@ export default function AccountSettings() {;
   }, []),
   }, []),  }, []),
   }, []),
-
   const handleSave = () => {
     setIsSubmitting(true),
           'account_settings';
@@ -114,15 +110,12 @@ export default function AccountSettings() {;
   },
   };
   },
-
   return (
-
     <>;
       <SEO title="Account Settings" description="Manage your account" />;
       <Header />;
       <main className="container mx-auto py-8 px-4">;
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>;
-
         <div className="grid gap-6 md:grid-cols-2">;
           <Card>;
             <CardHeader>;
@@ -139,7 +132,6 @@ export default function AccountSettings() {;
                   Link your decentralized identity to display on your profile;
                 </p>;
               </div>;
-
               <div className="flex items-center justify-between">;
                 <div className="space-y-0 && 0.5">;
                   <Label htmlFor="displayWeb3">Display Web3 Identity</Label>;
@@ -155,6 +147,5 @@ export default function AccountSettings() {;
         </div>;
       </main>;
       <Footer />;
-
     </>);
 }

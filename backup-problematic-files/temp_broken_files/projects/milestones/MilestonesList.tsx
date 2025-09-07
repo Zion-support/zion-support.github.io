@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
+import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
 import { useAuth } from '@/hooks/useAuth',;
 import { MilestoneCard } from './MilestoneCard',;
 import { AddMilestoneForm } from './AddMilestoneForm',;

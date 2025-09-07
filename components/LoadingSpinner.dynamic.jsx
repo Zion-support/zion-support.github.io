@@ -1,5 +1,4 @@
 import React from 'react';
-
 ;
 const LoadingSpinner.dynamic = () => {
   return (
@@ -8,6 +7,4 @@ const LoadingSpinner.dynamic = () => {
     </div>);
 }
 ;
-
 export default LoadingSpinner.dynamic;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

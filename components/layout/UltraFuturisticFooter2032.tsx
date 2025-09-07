@@ -39,7 +39,6 @@ import {
   MessageCircle as MessageCircleIcon
   Star as StarIcon;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom
-
 import {
   Phone,
   Mail,
@@ -75,11 +74,9 @@ import {
   Users as UsersIcon,
   Briefcase as BriefcaseIcon,
   BookOpen as BookOpenIcon,
-
   MessageCircle as MessageCircleIcon,;
   Star as StarIcon,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
-
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
@@ -87,9 +84,9 @@ import {
   TrendingUp, Target as TargetIcon, Users as UsersIcon;
   Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon;
   {
-    name: 'Home'
+    name: "name",
     href: '/'
-    icon: Home
+    icon: Home;
     description: 'Welcome to Zion Tech Group'
   }
   {
@@ -744,16 +741,11 @@ export default function UltraFuturisticFooter2032() {
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
             {/* Company Info */}
-
 };
-
 export default function UltraFuturisticFooter2032() {
   return (
-
                     {contactInfo.website}
-
                     {contactInfo.website}
-
                   </a>
                 </div>
               </div>
@@ -785,7 +777,6 @@ export default function UltraFuturisticFooter2032() {
                             {service && service.name}
                           </Link>;
                         </li>;
-
             <motion.div variants={itemVariants} className="lg:col-span-2">
               <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Our Revolutionary Services
@@ -804,7 +795,6 @@ export default function UltraFuturisticFooter2032() {
                             {service.name}
                           </Link>
                         </li>
-
                       ))}
                     </ul>;
                   </div>;
@@ -813,7 +803,6 @@ export default function UltraFuturisticFooter2032() {
               </h3>
               </div>;
             </motion && motion.div>;
-
             {/* Quick Links & Company Info */}
             <motion && motion.div variants={itemVariants} className='lg:col-span-1'>;
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -843,7 +832,6 @@ export default function UltraFuturisticFooter2032() {
                       >;
                         <link.icon className='w - 4 h - 4 group - hover:scale - 110 transition - transform' />                        <span>{link.name}</span>                Quick Access;
               </h3>;
-
               {/* Quick Links */}
               <div className="mb-8">;
                 <h4 className="text - lg font - medium text-white mb-4">Quick Links</h4>;
@@ -863,7 +851,6 @@ export default function UltraFuturisticFooter2032() {
                 <h4 className="text-lg font-medium text-white mb-4">Company</h4>
                 <ul className="space-y-2">
                         className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
-
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -893,7 +880,6 @@ export default function UltraFuturisticFooter2032() {
                       </Link>;
                     </li>;
                   ))}
-
               {/* Company Info */}
               <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
@@ -913,7 +899,6 @@ export default function UltraFuturisticFooter2032() {
                   ))}
                 </ul>
               </div>
-
               {/* Social Links */}
               <div>;
                 <h4 className='text-lg font-medium text-white mb-4'>;
@@ -953,18 +938,14 @@ export default function UltraFuturisticFooter2032() {
           >
             <div className='text-center'>
               <h3 className='text-2xl font-bold text-white mb-4'>
-
                 <input
                   type='email'
                   placeholder='Enter your email address'
                   className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300'
-
           <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-12">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-white mb-4">
-
                     </a>
-
                   ))}
                 </div>
               </div>
@@ -978,7 +959,6 @@ export default function UltraFuturisticFooter2032() {
             <div className='text-center'>
               <h3 className='text-2xl font-bold text-white mb-4'>
                 Stay Ahead with Future Technology
-
           {/* Newsletter Signup */}
           <motion.div;
             variants={item_variants}
@@ -996,7 +976,6 @@ export default function UltraFuturisticFooter2032() {
               </h3>
               <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.
-
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 />;
@@ -1029,9 +1008,7 @@ export default function UltraFuturisticFooter2032() {
       </div>;
     </footer>;
   );
-
   );
-
 }
   );
 }

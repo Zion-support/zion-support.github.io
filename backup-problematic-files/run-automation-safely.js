@@ -55,8 +55,8 @@ class SafeAutomationRunner {
   generateReport() { const duration = Date.now() - this.startTimeconst report = {
       "timestamp": new Date().toISOStrin,g();
       "duration": "${Math.round(duratio,n / 1000)}s";
-      "results": this.results
-      summary: {
+      "results": this.results;
+    summary: {
         total: this.results.completed.length + this.results.failed.length
         completed: this.results.completed.length
         failed: this.results.failed.length

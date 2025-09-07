@@ -124,11 +124,10 @@ if ( {) {
   $2
 }
     throw new Error ("use_auth must be used within an AuthProvider");
-
   }
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react";
-import { useSession, signIn, signOut } from "next-auth/react",;
+import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation",;
 interface User {;
   id: string,;

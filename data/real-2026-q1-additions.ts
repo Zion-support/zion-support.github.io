@@ -1,4 +1,4 @@
-  {      'Multichannel ingestion',
+{      'Multichannel ingestion',
       'LLM clustering and themes',
       'Impact scoring',
       'Roadmap export',
@@ -295,8 +295,8 @@
 		name: 'Customer Feedback Intelligence';
 		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights';
 		price: '$149';
-		period: '/month'
-		description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.';
+		period: "period",
+    description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.';
 		features: ['Multichannel ingestionLLM clustering and themesImpact scoringRoadmap export'];
 		popular: true;
 		icon: '💬';
@@ -316,8 +316,8 @@
 		growthRate: '18% CAGR';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
-		realImplementation: true
-		implementationDetails: 'Connectors, clustering, scoring models';
+		realImplementation: true;
+    implementationDetails: 'Connectors, clustering, scoring models';
 		launchDate: '2026-01-12';
 		customers: 9;
 		reviews: 5

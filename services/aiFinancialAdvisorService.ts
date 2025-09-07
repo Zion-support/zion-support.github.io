@@ -10,13 +10,11 @@ export interface InvestmentPortfolio {;
   performance: PortfolioPerformance;
 }
   riskTolerance: 'conservative' | 'moderate' | 'aggressive'
-
   assets: PortfolioAsset[];
   last_rebalanced: Date;
   performance: PortfolioPerformance;
 }
 export interface PortfolioAsset {
-
 export interface PortfolioAsset {;
   id: string;
   symbol: string;
@@ -25,24 +23,19 @@ export interface PortfolioAsset {;
   quantity: number;  id: string;
   user_id: string;
   currentPrice: number;
-
-  marketValue: number
-
-  allocation: number, // percentage of portfolio
+  marketValue: number;
+    allocation: number, // percentage of portfolio
   purchasePrice: number;
   purchaseDate: Date;
   performance: {
     dailyReturn: number;
     weeklyReturn: number;
     monthlyReturn: number;
-
     yearlyReturn: number
-
     totalReturn: number
   }
 }
 export interface PortfolioPerformance {
-
 export interface PortfolioPerformance {;
   totalReturn: number;
   annualizedReturn: number;
@@ -52,13 +45,10 @@ export interface PortfolioPerformance {;
   beta: number;
   alpha: number;
   trackingError: number;
-
   informationRatio: number
-
   sortinoRatio: number
 }
 export interface InvestmentRecommendation {
-
 export interface InvestmentRecommendation {;
   id: string;
   userId: string;
@@ -68,7 +58,6 @@ export interface InvestmentRecommendation {;
     life: boolean;
     health: boolean;
     disability: boolean;
-
     property: boolean,
     recommendations: string[];
   }
@@ -105,20 +94,16 @@ export interface InvestmentRecommendation {;
   updated_at: Date;
 }
   userId: string;
-
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
-
   preferences?: Record<string, any>
 }export interface FinancialRequest {
   user_id: string;
   request_type: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
   parameters: Record < string, any>;
   preferences?: Record < string, any>;
-
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
-
   preferences?: Record<string, any>
 }  }
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
@@ -135,27 +120,22 @@ export interface InvestmentRecommendation {;
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
         body: JSON && JSON.stringify({ userId, riskTolerance, investmentHorizon })});
-
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
-
       const data = await response && response.json();
       return data && data.recommendations || []
-
     } catch (error) {
       console && console.error('Error getting investment recommendations:', error);      if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
-
       const data = await response && response.json();
       return data && data.recommendations || []
-
     } catch (error) {
       console && console.error('Error getting investment recommendations:', error);
       const response = await fetch(`${this.baseUrl}/api/financial/recommendations`, {
-        method: 'POST'
-        headers: {
+        method: "method",
+    headers: {
           'Authorization': `Bearer ${this.apiKey}`;
           'Content-Type': 'application/json'}
         body: JSON.stringify({ userId, riskTolerance, investmentHorizon })});
@@ -179,7 +159,6 @@ export interface InvestmentRecommendation {;
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {
         headers: {
-
           'Authorization': `Bearer ${this && this.apiKey}`}});    } catch (error) {
       console && console.error('Error tracking financial goals:', error);
       throw error
@@ -188,16 +167,12 @@ export interface InvestmentRecommendation {;
   async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {        headers: {
-
           'Authorization': `Bearer ${this && this.apiKey}`}});
-
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
-
       const data = await response && response.json();
       return data && data.analysis
-
     } catch (error) {
       console && console.error('Error getting market analysis:', error);    } catch (error) {
       console && console.error('Error getting market analysis:', error);
@@ -218,7 +193,6 @@ export interface InvestmentRecommendation {;
     expectedImpact: string
   }> {
     try {
-
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
         method: 'POST',
         headers: {

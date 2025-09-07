@@ -412,7 +412,7 @@ class AutomationManager {;
   restart                  - Restart all automation processes;
   restart <process>        - Restart specific process;
   delete                   - Delete all automation processes;
-🔍 Health & Report
+🔍 Health & Report;
     s:;
   health                   - Generate health report;
   performance              - Generate performance report;

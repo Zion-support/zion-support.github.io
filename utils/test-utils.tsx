@@ -3,11 +3,11 @@ import React from 'react';
     <ThemeProvider attribute="class" default_theme="light">;
       {children}
   }
-  isFallback: false
-  isLocale: false
+  isFallback: false;
+    isLocale: false
   isReady: true
-  defaultLocale: 'en'
-  domainLocales: []
+  defaultLocale: "defaultLocale",
+    domainLocales: []
   isPreview: false
     on: jest.fn (),
     off: jest.fn (),
@@ -19,7 +19,6 @@ import React from 'react';
   default_locale: 'en',
   domain_locales: [],
   is_preview: false;
-
   },
   isFallback: false,
   isLocale: false,
@@ -27,10 +26,8 @@ import React from 'react';
   defaultLocale: 'en',
   domainLocales: [],
   isPreview: false;
-
 });
 export const createMockProps = (overrides = {}) => ({
-
     </ThemeProvider>;
   );
 },;
@@ -59,5 +56,4 @@ export const mockNextRouter = () => ({;
   isPreview: false;
 });
 export const createMockProps = (overrides = {}) => ({;
-
 });

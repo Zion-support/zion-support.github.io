@@ -1,14 +1,10 @@
-
-        <div className="flex min-h-screen items-center justify-center p-4">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+<div className="flex min-h-screen items-center justify-center p-4">
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
               <div className="flex items-center gap-2">
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -23,13 +19,10 @@
                 )}
               </AlertDescription>
             </Alert>
-
                 onClick={this.handleRetry}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
-
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -41,9 +34,7 @@
                     Try Again
                   </>
                 )}
-
                 Reload Page
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </Button>
             </div>
             {!this.state.isOnline && (
@@ -52,31 +43,23 @@
                 <span>Offline</span>
               </div>
             )}
-
               <details className="mt-4 rounded border p-2 text-xs">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
-
 }, ;
   return { handleApiError };
-
           </div>;
         </div>;
       );
     }
-
     return this && this.props.children;
   }
-
 // Hook for accessing query client in function components;
 export const useApiErrorHandler = () => {;
   const handleApiError = (error: Error) => {;
@@ -86,5 +69,3 @@ export const useApiErrorHandler = () => {;
       Sentry && Sentry.captureException(error);
     })
 };
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

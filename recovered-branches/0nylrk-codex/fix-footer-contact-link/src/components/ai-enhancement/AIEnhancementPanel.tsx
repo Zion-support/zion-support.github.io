@@ -1,23 +1,17 @@
-
-
 export function AIEnhancementPanel({;
-
 import React, { useState } from 'react';
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
 }
-
 export function AIEnhancementPanel({;    const result = await enhanceContent(options);
     if (result) {
       setGeneratedContent(result)
     }
-
   }
 };
-
 import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -46,19 +40,15 @@ export function AIEnhancementPanel({;
   const [generatedContent, setGeneratedContent] = useState<string>(''),;
   const [copied, setCopied] = useState(false),;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
-
   const handleGenerate = async () => {;
     const result = await enhanceContent(options);
     if (result) {;
       setGeneratedContent(result);
     }
-
   },
-
     if (result) {;
       setGeneratedContent(result);
     }
-
   return (      <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <Sparkles className="h-5 w-5 text-primary" />;
@@ -77,7 +67,6 @@ export function AIEnhancementPanel({;
             className="min-h-[60px]"
             value={options && options.context}
             onChange={(e) => handleInputChange(e, 'context')}
-
           />;
         </div>;
         >
@@ -117,7 +106,6 @@ export function AIEnhancementPanel({;
             </div>;
           </div>;
         )}
-
       </CardContent>;
       {generatedContent && (;
         <CardFooter className="flex justify-between">;
@@ -125,13 +113,11 @@ export function AIEnhancementPanel({;
             <Button variant="outline" onClick={onClose}>;
               Cancel;
             </Button>;
-
           )}          <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
         </CardFooter>;
       )}
-
     </Card>;
   );
 }

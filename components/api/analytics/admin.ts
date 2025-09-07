@@ -59,7 +59,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
-
     const totalUsers = usersData && usersData.length;
     const totalTalents = usersData && usersData.filter(u => u && u.role === 'talent').length;
     const totalClients = usersData && usersData.filter(u => u && u.role === 'client').length;
@@ -72,7 +71,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         (geoCounts[u.country |'Unknown'] |0) + 1;
     });
   } catch (e: any) {
-
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
     const geoCounts: Record<string, number> = {};
@@ -84,9 +82,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }));
       referralConversions;
       topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
-      referralConversions: 2
-
-      geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
+      referralConversions: 2;
+    geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
     });
   } catch (e: any) {
@@ -113,4 +110,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       ],
     });
   }}
-

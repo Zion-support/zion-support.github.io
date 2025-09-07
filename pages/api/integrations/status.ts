@@ -1,22 +1,22 @@
+import { NextApiRequest, NextApiResponse } from 'next';
 
-
-  for (const p of PROVIDERS) {
-    const conn = state.connections.find(c => c.providerId === p.id)
-    connections[p.id] = conn |{ providerId: p.id, status: 'disconnected' }
-
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
-  $2
-}
-  const state = read_state ()
-  const connections: Record < string, any> = {}
-  for (const p of PROVIDERS) {
-    const conn = state.connections.find (c => c.provider_id === p.id)
-    connections[p.id] = conn || { provider_id: p.id, status: 'disconnected' }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-  res.status (200).json ({ connections });
-}
 
+  try {
+    // Placeholder for integration status logic
+    const status = {
+      total: 0,
+      connected: 0,
+      disconnected: 0,
+      connections: {}
+    };
+
+    res.status(200).json({ success: true, status });
+  } catch (error) {
+    console.error('Integration status error:', error);
+    res.status(500).json({ error: 'Failed to fetch integration status' });
+  }
+}

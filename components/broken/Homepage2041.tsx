@@ -1,6 +1,5 @@
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
-
 import {
   ArrowRight;
   Star, ;
@@ -23,14 +22,12 @@ import {
   Sparkles,
   Target,
   Users,
-
   ArrowRight;
   Star,
   Award,;
   Clock,;} from 'lucide-react';import { ;
   ArrowRight;
   Star
-
   Search;
   Shield;
   Globe;
@@ -66,7 +63,6 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
         "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago."
       avatar: '👩‍💼'
     }
-
       name: 'Dr. Sarah Chen',
       role: 'Chief AI Officer, FutureTech Inc.',
       company: 'FutureTech Inc.',
@@ -80,7 +76,6 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
       company: 'QuantumCorp',
       content:;
         "Their quantum bio - computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.",
-
       rating: 5,
       avatar: "👩‍💼"
     };
@@ -102,8 +97,8 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
                   animate={{
                     opacity: [0, 0.7, 0];
                     scale: [0.5, 1, 0.5]}}
-                    duration: 5 + i * 0.3
-                    repeat: Infinity
+                    duration: 5 + i * 0.3;
+    repeat: Infinity
                     delay: i * 0.2
                     ease: 'easeInOut'
                   }}
@@ -118,7 +113,6 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
               ))}
             </div>;
           </div>;
-
           {/* Hero Content */}
           <div className='text-center max-w-7xl mx-auto relative z-10'>            <motion && motion.div          <div className="text-center max-w-7xl mx-auto relative z-10">;
             <motion&& motion.div
@@ -131,7 +125,6 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
               <motion&& motion.div
                 className='max-w-3xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-
                 />
               ))}
             </div>
@@ -147,13 +140,10 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
           </div>
           {/* Hero Content */}
           <div className='text-center max-w-7xl mx-auto relative z-10'>            <motion.div          <div className="text-center max-w-7xl mx-auto relative z-10">
-
                 />
-
               ))}
             </div>
           </div>
-
           {/* Hero Content */}
           <div className="text-center max-w-7xl mx-auto relative z-10">
             <motion.div
@@ -212,11 +202,8 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                 <Link
-
               initial={{ opacity: 0, y: 30 }}
-
               whileInView={{ opacity: 1, y: 0 }}
-
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >;
@@ -232,19 +219,13 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
             </motion.div>
           </div>
         </section>
-
               ))}
-
         {/* Featured Services Section */}
-
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50">
-
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-
               initial={{ opacity: 0, y: 30 }}
-
               ))}
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -262,7 +243,6 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
             </motion && motion.div>;
           </div>;
         </section>;
-
         {/* Featured Services Section */}
         <section className='py-20 px-4 bg-gradient-to-b from-black to-gray-900/50'>;
           <div className='max-w-7xl mx-auto'>;
@@ -291,10 +271,8 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
               </p>;
             </motion && motion.div>;
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-
             <motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -309,23 +287,17 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
                   <UltraFuturisticServiceCard2026 service={service} />;
                 </motion && motion.div>;
               ))}
-
             </motion && motion.div>;
             <motion&& motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion && motion.div 
-
               className="text-center mt-12"
-
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
-
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div 
               className="text-center mt-12"
-
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
-
               className="text-center mt-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -353,7 +325,6 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
             </motion && motion.div>;
           </div>;
         </section>;
-
         {/* Testimonials Section */}
         <section className='py-20 px-4'>;
           <div className='max-w-7xl mx-auto'>;
@@ -381,10 +352,8 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
               </p>;
             </motion && motion.div>;
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
-
             <motion.div
               className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -395,7 +364,6 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
                   key={testimonial.name}
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -423,13 +391,9 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
             </motion.div>
           </div>
         </section>
-
               ))}
-
         {/* CTA Section */}
-
         <section className="py-20 px-4">
-
                   </div>;
                   <div className='font-semibold text-white'>;
                     {testimonial && testimonial.name}
@@ -457,7 +421,6 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
             </motion && motion.div>;
           </div>;
         </section>;
-
         {/* CTA Section */}
         <section className='py-20 px-4'>;
           <div className='max-w-4xl mx-auto text-center'>;
@@ -466,7 +429,6 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div 
               className="bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm"
-
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -495,7 +457,6 @@ top: `$ {
 }%`
 }/>) )
 }</div> </div> <motion.div initial= {
-
   {
   opacity: 0, y: 50
 }animate= {
@@ -512,7 +473,6 @@ top: `$ {
 }transition= {
   {
 };
-
 export default Homepage2041;
 }%`;
 top: `$ {
@@ -562,8 +522,6 @@ top: `$ {
 };
 export default Homepage2041;  )
 };
-
 export default Homepage2041;
 export default Homepage2041;
-
 ;

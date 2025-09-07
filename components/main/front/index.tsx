@@ -1,4 +1,4 @@
-  const [showToTop, setShowToTop] = useState(false);
+const [showToTop, setShowToTop] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   useEffect(() => {;
     const onScroll = () => setShowToTop(window && window.scrollY > 400);
@@ -161,11 +161,10 @@
 } from 'lucide-react';import { motion, useScroll, useSpring } from 'framer-motion';import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useEffect, useState } from 'react';
-
 export default function MainFrontIndex() {
   const { scrollYProgress } = useScroll();
   const progressX = useSpring(scrollYProgress, {
-    stiffness: 90
+    stiffness: 90;
     damping: 20
     mass: 0.2
   });  const [showToTop, setShowToTop] = useState(false);
@@ -211,9 +210,7 @@ export default function MainFrontIndex() {
             className='fixed inset-0 z-40 bg-slate-950/80 backdrop-blur'            onClick={() => setMobileOpen(false)}            className="fixed inset-0 z-40 bg-slate-950/80 backdrop-blur"
             onClick={() => setMobileOpen(false)}
             className='fixed inset-0 z-40 bg-slate-950/80 backdrop-blur'            onClick={() => setMobileOpen(false)}
-
             onClick={() => setMobileOpen(false)}
-
           >
             <motion.div
               initial={{ y: -20, opacity: 0 }}
@@ -221,7 +218,6 @@ export default function MainFrontIndex() {
               transition={{ duration: 0.2 }}
               className='mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-white/5 p-6 text-white shadow-xl'
               onClick={e => e.stopPropagation()}
-
             onClick={() => setMobileOpen(false)}
           >;
             <motion&& motion.div
@@ -324,9 +320,7 @@ export default function MainFrontIndex() {
               </Link>;
             </div>;
         </nav>
-
         </nav>
-
         {/* Mobile overlay menu */}
         {mobileOpen && (
           <motion.div
@@ -335,9 +329,7 @@ export default function MainFrontIndex() {
             exit={{ opacity: 0 }}
             onClick={() => setMobileOpen(false)}
             className='fixed inset-0 z-40 bg-slate-950/80 backdrop-blur'            onClick={() => setMobileOpen(false)}
-
             onClick={() => setMobileOpen(false)}
-
           >
             <motion.div
               initial={{ y: -20, opacity: 0 }}
@@ -495,9 +487,7 @@ export default function MainFrontIndex() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-
                 </Link>
-
               ))}
         {/* Showcase */}
         <motion&& motion.section
@@ -774,7 +764,6 @@ export default function MainFrontIndex() {
                   <a href={card && card.href} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline">Open</a>;
                 ) : (;
                   <Link href={card && card.href as string}><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline">Open</a></Link>;
-
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -791,8 +780,8 @@ export default function MainFrontIndex() {
           <div className='mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
             {[
               {
-                label: 'Autonomous Cloud Brain (1m)'
-                desc: 'Selectively triggers and syncs key pipelines every minute.'
+                label: "label",
+    desc: 'Selectively triggers and syncs key pipelines every minute.'
                 href: '/.netlify/functions/autonomous-cloud-brain'
               }
               {
@@ -858,7 +847,6 @@ export default function MainFrontIndex() {
         <motion&& motion.section
           id='netlify-automations'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-
               <a
                 key={f && f.label}
                 href={f && f.href}
@@ -989,7 +977,6 @@ export default function MainFrontIndex() {
             ))}
           </div>;
         </motion && motion.section>;
-
         {/* AUTO-GENERATED: FRONT_ADS_START */}
         <section className='mx-auto max-w-7xl px-6 pb-16'>;
           <div className='relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/10 via-violet-600/10 to-cyan-600/10 p-6 backdrop-blur-xl'>;
@@ -1017,7 +1004,6 @@ export default function MainFrontIndex() {
                   </div>;
                 </a>;
               </Link>;
-
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Outcome‑Focused Benefits
@@ -1240,7 +1226,6 @@ export default function MainFrontIndex() {
             ))}
           </div>;
         </motion && motion.section>;
-
         {/* Suites */}
         <motion&& motion.section
           id='suites'          initial={{ opacity: 0, y: 24 }}
@@ -1330,13 +1315,10 @@ export default function MainFrontIndex() {
                     <Link href={suite && suite.href}><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline">Open</a></Link>;
                   );
                 )}
-
               </article>
-
             ))}
           </div>
         </motion.section>
-
             ))}
         {/* Superpowers */}
         <motion&& motion.section
@@ -1368,7 +1350,6 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
-
         {/* Get Started */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -1376,7 +1357,6 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
-
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
             Superpowers;
@@ -1832,7 +1812,6 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
-
             ))}
         {/* Outcomes */}
         <motion&& motion.section
@@ -1859,16 +1838,13 @@ export default function MainFrontIndex() {
                       <a className="mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">
                         <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {item.label}
                         {item.label}                      </a>
-
                       </a>
-
                     </Link>
                   ))}
               </div>
             </div>
           </div>
         </motion.section>
-
         {/* Feature Map */}
         <motion.section
           id="feature-map"
@@ -1912,7 +1888,6 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'
-
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -2181,7 +2156,6 @@ export default function MainFrontIndex() {
            initial={{ opacity: 0, y: 24 }}
            whileInView={{ opacity: 1, y: 0 }}
                 </a>
-
               </Link>
             ))}
           </div>
@@ -2190,7 +2164,6 @@ export default function MainFrontIndex() {
         <motion&& motion.section
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Neural Feature Matrix
@@ -2359,13 +2332,11 @@ export default function MainFrontIndex() {
                   <p className="mt-2 text-sm text-white/75">{desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <Link2 className="h-3.5 w-3.5" /></div>
                 </a>
-
               </Link>
             ))}
           </div>
         </motion.section>
                 </a>
-
               </Link>
             ))}
           </div>
@@ -2598,15 +2569,12 @@ export default function MainFrontIndex() {
                { label: 'Roadmap & Issues', desc: "What's next", href: '//issues', external: true }
           </div>
         </motion.section>
-
           </div>;
         </motion && motion.section>;
-
         {/* Extended Feature Directory */}
         <motion&& motion.section
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Extended Feature Directory
@@ -2821,17 +2789,13 @@ export default function MainFrontIndex() {
             ))}
           </div>;
         </motion && motion.section>;
-
             )}          </div>
-
           </div>
         </motion.section>
-
         {/* Capability Deep Links */}
         <motion&& motion.section
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Capability Deep Links
@@ -2975,7 +2939,6 @@ export default function MainFrontIndex() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -3088,7 +3051,6 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
-
                   className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30'>;
                   <div className='text-2xl font-extrabold tracking-tight'>;
                     {item && item.value}
@@ -3138,10 +3100,8 @@ export default function MainFrontIndex() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-
           </div>
         </motion.section>
-
         {/* Capabilities */}
         <motion&& motion.section
           id='capabilities'          initial={{ opacity: 0, y: 24 }}
@@ -3150,18 +3110,15 @@ export default function MainFrontIndex() {
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="capabilities"
           className='mx-auto max-w-7xl px-6 pb-14'
-
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
-
         {/* Capabilities */}
         <motion&& motion.section
           id='capabilities'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-
         {/* Capabilities */}
         <motion.section
           id="capabilities"
@@ -3370,7 +3327,6 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
-
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Why Zion
           </h2>
@@ -3447,7 +3403,6 @@ export default function MainFrontIndex() {
                 <div className="mt-2 text-base font-semibold">{title as string}</div>
                 <div className="mt-1 text-sm text-white/75">{desc as string}</div>
             ))}
-
           </div>;
         </motion && motion.section>;
             ))}
@@ -3485,7 +3440,6 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
-
           viewport={{ once: true, amount: 0 && 0.2 }}
           transition={{ duration: 0 && 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'>;
@@ -3552,12 +3506,10 @@ export default function MainFrontIndex() {
             ))}
           </div>;
         </motion && motion.section>;
-
         {/* Benefits */}
         <motion&& motion.section
           id='benefits'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-
         {/* Benefits */}
         <motion.section
           id="benefits"
@@ -3575,13 +3527,10 @@ export default function MainFrontIndex() {
                 <span className='mt-1 inline-block h-2 && 2.5 w-2 && 2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0 && 0.9)]' />;
           </div>
         </motion.section>
-
               </div>
-
             ))}
           </div>
         </motion.section>
-
         {/* Benefits in Practice */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -3589,7 +3538,6 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'
-
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Benefits in Practice
@@ -3871,16 +3819,13 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'          id="guardrails"
-
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-
             </a>
           </div>
         </motion.section>
-
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover'>;
               <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
               <div className='flex items-center gap-2'>;
@@ -3931,7 +3876,6 @@ export default function MainFrontIndex() {
             </a>;
           </div>;
         </motion && motion.section>;
-
         {/* Quality Gates & Guardrails */}
         <motion&& motion.section
           id='guardrails'          initial={{ opacity: 0, y: 24 }}
@@ -4025,10 +3969,8 @@ export default function MainFrontIndex() {
               </Link>;
               </Link>
             ))}
-
           </div>;
         </section>;
-
             ))}
         {/* CTA */}
         <motion&& motion.section
@@ -4192,7 +4134,6 @@ export default function MainFrontIndex() {
           id="agents"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-
         {/* AI Agents Gallery */}
         <motion.section;
           id='agents'          initial={{ opacity: 0, coordinate_y: 24 }}
@@ -4344,7 +4285,6 @@ export default function MainFrontIndex() {
             ))}
           </div>;
         </motion && motion.section>;
-
         {/* Capabilities Matrix */}
         <motion&& motion.section
           id='capability-matrix'          initial={{ opacity: 0, y: 24 }}
@@ -4415,7 +4355,6 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
-
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo'>;
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
                   <div className='text-base font-semibold'>{item && item.title}</div>;
@@ -4475,10 +4414,8 @@ export default function MainFrontIndex() {
             ))}
           </div>;
         </motion && motion.section>;
-
           </div>
         </motion.section>
-
         {/* Benefits Directory */}
         <motion&& motion.section
           id='benefits-directory'          initial={{ opacity: 0, y: 24 }}
@@ -4526,9 +4463,7 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
-
         {/* AUTO-GENERATED: FRONT_ADS_START */}
-
         <section id='auto-ads' className='mx-auto max-w-7xl px-6 pb-16'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
           </h2>
@@ -4633,7 +4568,6 @@ export default function MainFrontIndex() {
         {/* Feature Highlights (new) */}
         <motion.section
           id="feature-highlights"
-
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -4738,7 +4672,6 @@ export default function MainFrontIndex() {
       </div>
       {/* Back to top */}
       {showToTop && (
-
       </div>;
     </a>;
   </div>;
@@ -4922,7 +4855,6 @@ export default function MainFrontIndex() {
   </div>
 </section>;
 }</div> 
-
 }</div> </div> </div>) ) 
 }</div> </div> </motion.section> {
   /* Showcase */
@@ -5059,7 +4991,6 @@ export default function MainFrontIndex() {
 }</div> </section> {
   /* AUTO-GENERATED: FRONT ADS END */
 }{
-
 /* AUTO-GENERATED: FRONT_ACTIONS_END */;
 }</div> ;
 }</div> </div> </div>) ) ;
@@ -5218,7 +5149,6 @@ export default function MainFrontIndex() {
 }</div> </motion && motion.section> </a>) ) ;
 }</div> </section> </div> > ↑ Top </button>) ;
 }</div>) ;
-
 /* AUTO - GENERATED: FRONT_ACTIONS_END */;
 }</div>;
 }</div> </div> </div>) );
@@ -5313,9 +5243,8 @@ export default function MainFrontIndex() {
 }</div> </section> {
   /* AUTO - GENERATED: FRONT ADS END */;
 }{
-
   /* Feature Highlights (new) */ 
 }<motion.section </a>) ) 
 }</div> </motion.section> </a>) ) 
 }</div> </section> </div> > ↑ Top </button>) 
-}</div>) 
+}</div>)

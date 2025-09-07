@@ -1,12 +1,9 @@
-
-
 import React, { useRef } from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react",
 import { Button } from "@/components/ui/button",
 // These would be replaced with actual screenshots
-
 const mockScreenshots = [
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" }
   { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" }
@@ -43,7 +40,7 @@ export const AppScreenshots: React.FC = () => {
     </section>
   )},
 import React, { useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react",;
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button",;
 // These would be replaced with actual screenshots;
 const mockScreenshots = [;
@@ -66,7 +63,6 @@ export const AppScreenshots: React.FC = () => {;
                 />;
               </div>;
             ))}
-
           </div>;
           <Button
             variant="ghost" 
@@ -152,6 +148,5 @@ if ( {) {
       </div>;
     </section>);
 }
-
 }
 }

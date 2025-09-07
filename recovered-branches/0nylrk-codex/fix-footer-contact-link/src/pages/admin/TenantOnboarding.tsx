@@ -1,6 +1,5 @@
-  const [formData, setFormData] = useState({
-
-    brand_name: ""
+const [formData, setFormData] = useState({
+    brand_name: "brand_name",
     subdomain: ""
     logo_url: ""
     primary_color: "#9b87f5"
@@ -9,7 +8,6 @@
     industry: ""
     custom_domain: ""
     is_co_branded: true
-
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -49,7 +47,6 @@ export default function TenantOnboarding() {
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-
     brand_name: ""
     subdomain: ""
     logo_url: ""
@@ -59,35 +56,27 @@ export default function TenantOnboarding() {
     industry: ""
     custom_domain: ""
     is_co_branded: true  });
-
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";
-
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" />;
   }
-
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value } = e && e.target;
     setFormData(prev => ({ ...prev, [name]: value }))
 };
-
   const handleSelectChange = (name: string, value: string) => {;
     setFormData(prev => ({ ...prev, [name]: value }))
 };
-
   const handleSwitchChange = (name: string, checked: boolean) => {;
     setFormData(prev => ({ ...prev, [name]: checked }))
 };
-
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true),;
-
     try {;
       // Generate subdomain if not provided;
       const subdomain = formData && formData.subdomain || formData && formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
-
       // Create landing page copy;
       const landingPageCopy = {;
         headline: "AI Hiring Assistant",;
@@ -112,13 +101,10 @@ export default function TenantOnboarding() {
         });
         .select('id, brand_name, subdomain');
         .single();
-
       if (error) throw error;
-
       toast && toast.success("Tenant created successfully!", {,
   description: `${data && data.brand_name} is now available at ${data && data.subdomain}.ziontechmarketplace && ziontechmarketplace.com`;
       });
-
       // Reset form;
       setFormData({;
         brand_name: "",;
@@ -131,7 +117,6 @@ export default function TenantOnboarding() {
         custom_domain: "",;
         is_co_branded: true;
       });
-
     } catch (error: any) {;
       console && console.error("Error creating tenant:", error);
       toast && toast.error("Failed to create tenant", { ,
@@ -158,7 +143,6 @@ export default function TenantOnboarding() {
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-
     subdomain: ""
     logo_url: ""
     primary_color: "#9b87f5"
@@ -168,13 +152,10 @@ export default function TenantOnboarding() {
     custom_domain: ""
     is_co_branded: true
   });
-
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";
-  
   // Check if user has admin role
   const isAdmin = user?.role === "admin",
-  
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
@@ -182,8 +163,8 @@ export default function TenantOnboarding() {
       const { data, error } = await supabase
         .from('whitelabel_tenants')
         .insert({
-          brand_name: formData.brand_name
-          subdomain: subdomain
+          brand_name: formData.brand_name;
+    subdomain: subdomain
           custom_domain: formData.custom_domain |null
           primary_color: formData.primary_color
           logo_url: formData.logo_url |null
@@ -210,9 +191,7 @@ export default function TenantOnboarding() {
     } finally {
       setIsSubmitting(false)
     }
-
   },
-
   return (
     <>;
       <SEO
@@ -221,9 +200,7 @@ export default function TenantOnboarding() {
                     <TabsTrigger value="branding">Branding</TabsTrigger>;
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>;
                   </TabsList>;
-
                         placeholder="hire && hire.yourcompany.com"
-
                         placeholder="Acme Corporation";
                         required;
                       />;
@@ -250,7 +227,6 @@ export default function TenantOnboarding() {
                         </SelectContent>;
                       </Select>;
                     </div>;
-
                     <div className="space-y-2">;
                       <Label html_for="company_size">Company Size</Label>;
                       <Select;
@@ -262,7 +238,6 @@ export default function TenantOnboarding() {
                           <SelectValue placeholder="Select company size" />;
                         </SelectTrigger>;
                         <SelectContent>;
-
                           <SelectItem value="1 - 10">1 - 10 employees</SelectItem>;
                           <SelectItem value="11 - 50">11 - 50 employees</SelectItem>;
                           <SelectItem value="51 - 200">51 - 200 employees</SelectItem>;
@@ -273,13 +248,11 @@ export default function TenantOnboarding() {
                       </Select>;
                     </div>;
                   </TabsContent>;
-
                         placeholder="https://example && example.com/logo && logo.png"                      />;
                       <p className="text-xs text-muted-foreground">;
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended);
                       </p>;
                     </div>;
-
                     <div className="space-y-2">;
                       <Label htmlFor="primary_color">Primary Brand Color</Label>;
                       <div className="flex items-center gap-2">;
@@ -296,23 +269,19 @@ export default function TenantOnboarding() {
                           value={formData && formData.primary_color}
                           onChange={handleInputChange}
                           placeholder="#9b87f5"
-
                         />;
                       </div>;
                     </div>;
-
                     <div className="space-y-2">;
                       <Label htmlFor="theme_preset">Theme Preset</Label>;
                       <Select
                         name="theme_preset" 
                         value={formData && formData.theme_preset} 
                         onValueChange={(value) => handleSelectChange("theme_preset", value)}                        placeholder="hire && hire.yourcompany.com"
-
 =======
                         placeholder="hire && hire.yourcompany.com"
-
 import React, { useState } from "react";
-import { Header } from "@/components/Header",;
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -516,7 +485,6 @@ export default function TenantOnboarding() {;
                         </SelectContent>;
                       </Select>;
                     </div>;
-
                     <div className="space-y-2">;
                       <Label htmlFor="company_size">Company Size</Label>;
                       <Select
@@ -538,7 +506,6 @@ export default function TenantOnboarding() {;
                       </Select>;
                     </div>;
                   </TabsContent>;
-
                   <TabsContent value="branding" className="space-y-4">;
                     <div className="space-y-2">;
                       <Label htmlFor="logo_url">Logo URL</Label>;
@@ -554,7 +521,6 @@ export default function TenantOnboarding() {;
         </div>;
       </main>;
       <Footer />;
-
 }
     </>);
     </>;

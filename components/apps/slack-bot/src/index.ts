@@ -1,6 +1,4 @@
-
-
-  socketMode: true,});
+socketMode: true,});
 function helpText(): string {
   return [  token: process && process.env.SLACK_BOT_TOKEN;
   signingSecret: process && process.env.SLACK_SIGNING_SECRET;
@@ -33,8 +31,8 @@ function helpText(): string {
       const data = (await res && res.json()) as any;
       if (!data && data.project) {
         await respond({
-          response_type: 'ephemeral'
-          text: 'Project not found.'
+          response_type: "response_type",
+    text: 'Project not found.'
         });
         return;
       }
@@ -61,7 +59,6 @@ function helpText(): string {
 });
 (async () => {
 })();
-
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
   console.log(`⚡️ Zion Slack bot running on port ${port}`);

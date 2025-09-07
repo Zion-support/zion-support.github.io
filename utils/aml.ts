@@ -3,18 +3,15 @@ interface AmlMatch {
   name: string;
   score: number;
 }
-
 interface AmlResult {
   status: 'review' | 'clear';
   matches: AmlMatch[];
   checkedAt: string;
   provider: string;
 }
-
 interface AmlProvider {
   checkBusiness(businessName: string): Promise<AmlResult>;
 }
-
 class MockAmlProvider implements AmlProvider {
   async checkBusiness(businessName: string): Promise<AmlResult> {
     const isSanction = businessName.toLowerCase().includes('sanction');
@@ -30,27 +27,22 @@ class MockAmlProvider implements AmlProvider {
     };
   }
 }
-
 let provider: AmlProvider = new MockAmlProvider();
-
 export type { AmlProvider, AmlResult, AmlMatch };
 export { provider };export type WatchlistMatch = {
   list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
-
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
-
   score: number; // 0 - 1 match confidence;
   reference_id?: string;
   details_url?: string;
 }
 ;
-
 export type AmlCheckResult = {
   status: "clear" | "match" | "review" | "unknown";  status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
-  checkedAt: string; // ISO
-  provider: "mock" | "remote"
+  checkedAt: string; // ISO;
+    provider: "mock" | "remote"
 };
 export interface AmlProvider {
   checkPerson(params: {
@@ -70,7 +62,6 @@ export interface AmlProvider {
 class MockAmlProvider implements AmlProvider {    }
     return { status: "clear" };
   }
-
   async checkBusiness(params: {
     businessName: string;
     country: string;
@@ -90,7 +81,6 @@ export function getAmlProvider(): AmlProvider {
   return provider;
   return new MockAmlProvider();
 =======}
-
 export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
 =======}

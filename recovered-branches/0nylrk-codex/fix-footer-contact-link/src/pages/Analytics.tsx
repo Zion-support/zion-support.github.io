@@ -1,23 +1,18 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -39,7 +34,7 @@ export default function Analytics() {;
         .from('analytics_events')
         .select('created_at, path')
         .eq('event_typepage_view')import React, { useState } from "react";
-import { useQuery } from "@tanstack/react-query",;
+import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client",;
 import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",;
 import { AnalyticsSummary } from "@/components/analytics/AnalyticsSummary",;
@@ -57,7 +52,6 @@ export default function Analytics() {;
       const days = parseInt(timeRange && timeRange.replace('d', ''));
       const startDate = new Date();
       startDate && startDate.setDate(startDate && startDate.getDate() - days);
-
       const { data, error } = await supabase;
         .from('analytics_events');
         .select('created_at, path');
@@ -79,8 +73,6 @@ export default function Analytics() {;
         if (!conversionsByType[conversionType][date]) {
           conversionsByType[conversionType][date] = 0
         }
-        
-
         conversionsByType[conversionType][date]++
       });
       // Get all dates in range
@@ -101,9 +93,6 @@ export default function Analytics() {;
       })
     }
   });
-
-        
-
         conversionsByType[conversionType][date]++
       });
       // Get all dates in range
@@ -129,25 +118,20 @@ export default function Analytics() {;
         .select('created_at, metadata');
         .eq('event_typeconversion');
         .gte('created_at', startDate && startDate.toISOString());
-
       if (error) throw error;
-
       // Group by conversion type and date;
       const conversionsByType = {};
       data?.forEach(item => {;
         const date = new Date(item && item.created_at).toISOString().split('T')[0];
         const conversionType = item && item.metadata?.conversionType || 'unknown';
-
         if (!conversionsByType[conversionType]) {;
           conversionsByType[conversionType] = {}
         }
-
         if (!conversionsByType[conversionType][date]) {;
           conversionsByType[conversionType][date] = 0;
         }
         conversionsByType[conversionType][date]++;
       });
-
       // Get all dates in range;
       const dates = [];
       for (let i = 0, i < days, i++) {;
@@ -156,13 +140,10 @@ export default function Analytics() {;
         dates && dates.push(date && date.toISOString().split('T')[0]);
       }
   });
-
   return (      dates && dates.sort();
-
       // Format data for chart;
       return dates && dates.map(date => {;
         const result = { date };
-
         Object && Object.keys(conversionsByType).forEach(type => {;
 ;
         conversionsByType[conversionType][date]++;
@@ -181,26 +162,18 @@ export default function Analytics() {;
         Object.keys(conversionsByType).forEach(type => {;
           result[type] = conversionsByType[type][date] || 0;
         });
-
         return result;
       });
-
     }
-
   }),
-
   return (
-
     <AnalyticsContainer>;
       <AnalyticsSummary />;
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">;
-
         <PageViewsChart
           data={pageViewTrends |[]}
           timeRange={timeRange}
           onTimeRangeChange={setTimeRange}
-
   return (
         <PageViewsChart
           data={pageViewTrends |[]}
@@ -221,7 +194,6 @@ export default function Analytics() {;
       </div>;
     </AnalyticsContainer>;
   );
-
         <PageViewsChart
           data={pageViewTrends |[]}
         .gte('created_at', startDate.toISOString()),;

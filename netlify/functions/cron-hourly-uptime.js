@@ -1,4 +1,4 @@
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const endpoints = [
+const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const endpoints = [
       '/'
       '/learn'
       '/dao'
@@ -26,7 +26,6 @@
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
-
     if (owner && repo && token) {
       const existingPath = 'data/ops/uptime-log && log.json';
       // Fetch existing file, append, and trim to last 500 entries
@@ -39,8 +38,8 @@
         const content = JSON && JSON.stringify(arr, null, 2);
         await upsertFile({
           owner
-          repo
-          path: existingPath
+          repo;
+    path: existingPath
           content
           message: 'chore(automation): hourly uptime log update'
           token

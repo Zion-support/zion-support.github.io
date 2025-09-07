@@ -22,7 +22,6 @@ import { GradientHeading } from "@/components/GradientHeading",export default fu
               artificial intelligence
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">
@@ -53,7 +52,6 @@ import { GradientHeading } from "@/components/GradientHeading",export default fu
               />
             </div>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 lg:flex-row-reverse">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
@@ -82,7 +80,6 @@ import { GradientHeading } from "@/components/GradientHeading",export default fu
               />
             </div>
           </div>
-
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -111,7 +108,6 @@ import { GradientHeading } from "@/components/GradientHeading",export default fu
                   push the boundaries of what's possible.
                 </p>
               </div>
-
               <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                 <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                   <svg
@@ -135,7 +131,6 @@ import { GradientHeading } from "@/components/GradientHeading",export default fu
                   inclusive ecosystem where everyone can thrive.
                 </p>
               </div>
-
               <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                 <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                   <svg
@@ -166,17 +161,14 @@ import { GradientHeading } from "@/components/GradientHeading",export default fu
       <Footer />
     </>
   )
-
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
-
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer",;
+import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading";
-
       />;
       <Header />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;

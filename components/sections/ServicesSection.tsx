@@ -1,4 +1,4 @@
-  Brain
+Brain
   Cloud
   RefreshCw
   Wifi
@@ -49,7 +49,6 @@ const ServicesSection: React.FC = () => {
     }
   const container_variants = {
     hidden: { opacity: 0 },
-
 import {;
   Brain,;
   Cloud,;
@@ -208,9 +207,7 @@ const ServicesSection: React.FC = () => {;
   return (
     <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>;
       {/* Background Elements */}
-
       <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
-
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">;
       {/* Background Elements */}
@@ -224,38 +221,30 @@ const ServicesSection: React.FC = () => {;
     visible: { opacity: 1, coordinate_y: 0 },
   }
   };
-
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
-
   return (
     <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden'>;
       {/* Background Elements */}
-
   return (
     <section className="py - 20 bg - gradient - to - b from - gray - 900 to-black relative overflow-hidden">;
       {/* Background Elements */}
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
-
   };
-
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
-
         {/* Section Header */}
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
-
         >
-          <motion.div
-        stagger_children: 0.1,
+          <motion.div;
+    stagger_children: 0.1,
       },
     },  }
 ;
@@ -272,16 +261,13 @@ const ServicesSection: React.FC = () => {;
   }
     hidden: { opacity: 0, y: 20 },
   };
-
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
-
   return (
     <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden'>;
       {/* Background Elements */}
-
   return (
     <section className="py - 20 bg - gradient - to - b from - gray - 900 to-black relative overflow-hidden">;
       {/* Background Elements */}
@@ -330,7 +316,6 @@ const ServicesSection: React.FC = () => {;
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth ;
             for businesses across all industries.;
         </motion && motion.div>;
-
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -373,7 +358,6 @@ const ServicesSection: React.FC = () => {;
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 </ul>;
-
                 {/* CTA */}
                 <Link
                   href={service && service.href}
@@ -385,7 +369,6 @@ const ServicesSection: React.FC = () => {;
             </motion.div>
           ))}
         </motion.div>
-
                 <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />;
               </div>;
             </motion && motion.div>;
@@ -396,7 +379,6 @@ const ServicesSection: React.FC = () => {;
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           viewport={{ once: true }}
-
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -430,10 +412,8 @@ const ServicesSection: React.FC = () => {;
     </section>;
   )
 };
-
 export default ServicesSection;  )
 };
-
 export default ServicesSection;
                   className='inline - flex items - center space - x-2 text - blue - 400 hover:text - blue - 300 transition - colors duration - 300 group - hover:translate - x-1';
                 >;
@@ -496,7 +476,6 @@ export default ServicesSection);
 }
 ;
 export default ServicesSection;
-
 export default ServicesSection;
   )
 }

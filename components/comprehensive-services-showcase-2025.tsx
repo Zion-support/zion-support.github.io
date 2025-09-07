@@ -1,19 +1,14 @@
 import Layout from '../components/layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import {
-
 // Import service data;
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
-
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon;
-
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
-
   Search,
   Filter,
   Grid3X3,
@@ -74,7 +69,7 @@ import { emergingTechServicesEnhanced2025 } from '../data / emerging - tech - se
 ];
 const categories = [
   {
-    name: 'All Services'
+    name: "name",
     icon: <Globe className='w-5 h-5' />
     count: allServices.length
   }
@@ -102,12 +97,9 @@ const categories = [
   { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5" />, count: innovativeAIServicesEnhanced2025.length }
   { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025.length }
   { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025.length }
-
 ];
 const sortOptions = [
-
   icon?: React && React.ReactNode;
-
 ];
 const sortOptions = [
   icon?: React && React.ReactNode;
@@ -137,7 +129,6 @@ const allServices: Service[] = [;
   { label: 'Newest', value: 'newest' },
   { label: 'Price: Low to High', value: 'price-low' },
   { label: 'Price: High to Low', value: 'price-high' }
-
 ];
 const categories = [;
   {;
@@ -183,9 +174,7 @@ const sortOptions = [;
   { label: 'Price: Low to High', value: 'price-low' },;
   { label: 'Price: High to Low', value: 'price-high' },];  { label: 'Price: High to Low', value: 'price-high' }
 ];
-
 export default function ComprehensiveServicesShowcase2025() {;
-
 export default function ComprehensiveServicesShowcase2025() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Services');
@@ -247,20 +236,15 @@ export default function ComprehensiveServicesShowcase2025() {;
         default: return 0
       }
     });
-
     setFilteredServices(filtered)
     switch (category) {
-
     setFilteredServices(filtered);  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
   const getCategoryColor = (category: string) => {
-
     switch (category) {
-
     setFilteredServices(filtered)
   }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
   const getCategoryColor = (category: string) => {
     switch (category) {
-
   const getCategoryColor = (category: string) => {;
     switch (category) {        case 'price-low':;
           return parseFloat(a && a.price.replace(/[^0-9.]/g, '')) - parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
@@ -274,7 +258,6 @@ export default function ComprehensiveServicesShowcase2025() {;
   const getCategoryColor = (category: string) => {;
     switch (category) {;
       case 'Micro SAAS':;
-
         return 'from-blue-500 to-cyan-500';
       case 'AI & Consciousness':;
         return 'from-purple-500 to-pink-500';
@@ -297,11 +280,9 @@ export default function ComprehensiveServicesShowcase2025() {;
         return <Globe className='w-5 h-5' />;    }      case 'Micro SAAS': return <Rocket className="w-5 h-5" />;
       case 'AI & Consciousness': return <Brain className="w-5 h-5" />;
       case 'Enterprise IT': return <Shield className="w-5 h-5" />;
-
       case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5" />,;
       default: return <Globe className="w-5 h-5" />
 };
-
   return (
     <Layout>;
       <Head>;
@@ -320,9 +301,7 @@ export default function ComprehensiveServicesShowcase2025() {;
               key={i}
               className='absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20'
               animate={{
-
   };
-
           ))}
         </div>
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion.div                top: `${Math.random() * 100}%`}}
@@ -332,7 +311,6 @@ export default function ComprehensiveServicesShowcase2025() {;
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
     }
   };
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Micro SAAS': return <Rocket className="w-5 h-5" />;
@@ -424,12 +402,9 @@ export default function ComprehensiveServicesShowcase2025() {;
                     {stat.value}
                   </div>
                   <div className='text-sm text-cyan-300'>{stat.label}</div>                </motion.div>
-
                 </motion.div>
-
               ))}
             </div>
-
             {/* Search Bar */}
             <div className='max-w-2xl mx-auto'>
               <div className='relative'>
@@ -480,16 +455,12 @@ export default function ComprehensiveServicesShowcase2025() {;
                 </button>
               ))}
             </div>
-
             {/* Price and Sort Controls */}
             <div className='flex flex-wrap items-center space-x-4'>
-
               {/* Price Range Filter */}
               <select;
                 value={selectedPriceRange}
-
               </select>;
-
                 onChange={e => setSelectedPriceRange(e.target.value)}
                 className='px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50'
               >
@@ -505,20 +476,16 @@ export default function ComprehensiveServicesShowcase2025() {;
                   </option>
                 ))}
               </select>
-
               {/* Sort Options */}
               <select
                 value={sortBy}
-
                 ))}
               </select>
               {/* View Mode Toggle */}
                 <button
                 <button
-
               {/* View Mode Toggle */}
               <div className='flex items-center space-x-1 bg-white/10 rounded-lg p-1'>                <button
-
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-200 ${
@@ -548,15 +515,12 @@ export default function ComprehensiveServicesShowcase2025() {;
                 key={service && service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
-
               >
                 {/* Category Badge */}
                 <div className='absolute top-4 right-4'>
                   <span
-
                 {/* Service Icon */}
                 <div className='mb-4'>;
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>                    {service && service.icon}              >;
@@ -568,7 +532,6 @@ export default function ComprehensiveServicesShowcase2025() {;
                 </div>
                 {/* Service Info */}
                 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
-
       {/* Services Grid / List */}
       <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12'>;
         {/* Results Count */}
@@ -616,7 +579,6 @@ export default function ComprehensiveServicesShowcase2025() {;
                 </div>;
                 {/* Service Info */}
                 <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 300 transition - colors duration - 200'>;
-
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
@@ -701,7 +663,6 @@ export default function ComprehensiveServicesShowcase2025() {;
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'
-
               >
                 <div className="flex items-start space-x-6">
                   {/* Service Icon */}
@@ -744,7 +705,6 @@ export default function ComprehensiveServicesShowcase2025() {;
                         </div>
                         <div className='text-gray-500 text-sm'>/month</div>
                         <span
-
                   {/* Service Details */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between mb-3">
@@ -1049,7 +1009,6 @@ export default function ComprehensiveServicesShowcase2025() {;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center'>          <motion.div      <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <motion.div
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1112,9 +1071,7 @@ top: `$ {
   {
   once: true 
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion && motion.div> </div> </div> </Layout>)   );
-
   once: true 
-
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   )
 }
       <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border - cyan - 500 / 20'>;
@@ -1240,7 +1197,5 @@ top: `$ {
   duration: 0.8;
 }viewport= {
   {
-
   once: true 
-
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)

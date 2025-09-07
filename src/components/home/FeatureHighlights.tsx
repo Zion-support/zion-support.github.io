@@ -1,7 +1,4 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-  const highlightsData = [
-
+const highlightsData = [
     {
       title: 'For Talent Seekers',
       features: [;
@@ -25,10 +22,8 @@
       ],
     },
     {
-
       title: "For Enterprise Clients",
       features: [
-
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -38,12 +33,9 @@
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
           </p>
         </div>
-
 ;
 '"`;
 );
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {highlightsData.map((category, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
@@ -55,9 +47,8 @@
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
-
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card",;
+import { Card, CardContent } from "@/components/ui/card";
 import { Check } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 interface FeatureHighlightsProps {;
@@ -121,11 +112,8 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />;
                       <span className="text-zion-slate-light">{feature}</span>;
                     </li>;
-
                   ))}
                 </ul>;
               </CardContent>;
             </Card>;
           ))}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

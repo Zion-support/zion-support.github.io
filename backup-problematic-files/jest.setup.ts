@@ -1,7 +1,7 @@
-    matches: false,
+matches: false,
     media: query,
     onchange: null,
-    addListener: jest && jest.fn(), // deprecated
+    addListener: jest && jest.fn(), // deprecated;
     removeListener: jest && jest.fn(), // deprecated
     addEventListener: jest && jest.fn(),
     removeEventListener: jest && jest.fn(),

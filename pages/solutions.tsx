@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -15,10 +14,9 @@ import {
 } from 'lucide-react'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
-
 import React from 'react';
-import Layout from '../components/layout/Layout',;
-import SEO from '../components/SEO',;
+import Layout from '../components/layout/Layout';
+import SEO from "SEO";
 import { motion } from 'framer-motion',;
 import { 
   Target, Brain, Rocket, Shield, Zap, Atom, Cpu, 
@@ -28,7 +26,6 @@ import {
   Video, Headphones, Code, Database, Network, Server, 
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
-
 import React from 'react',
 import Layout from '../components / layout / Layout',
 import SEO from '../components / SEO',
@@ -47,9 +44,8 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
 } from 'lucide-react',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+import UltraAdvancedFuturisticBackground from "UltraAdvancedFuturisticBackground";
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
-
       id: 'healthcare',
       name: 'Healthcare Solutions',
       description: 'AI - powered healthcare technology solutions',
@@ -59,14 +55,14 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
       icon: <Heart className="w-8 h-8" />
     }
     {
-      id: 'financial'
-      name: 'Financial Solutions'
+      id: "id",
+    name: 'Financial Solutions'
       description: 'Advanced financial technology and services'
       features: ['Risk ManagementFraud DetectionTrading SystemsCompliance Automation']
       price: '$2,999'
       period: 'month'
-      popular: false
-      icon: <TrendingUp className="w-8 h-8" />
+      popular: false;
+    icon: <TrendingUp className="w-8 h-8" />
     }
     {
       id: 'manufacturing'
@@ -232,10 +228,8 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                 </Link>
                 <a
                   href="/contact"
-
                 <a
                   href="/contact"
-
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -433,18 +427,14 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                 </Link>
                 <a
                   href="/contact"
-
                 <a
                   href="/contact"
-
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
-
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-

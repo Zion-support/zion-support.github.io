@@ -1,12 +1,11 @@
-
-  return (
+return (
     <>;
       <SEO
         title='RAG Evaluation Lab'
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
               {
-                title: 'Grounding & Faithfulness'
-                desc: 'Measure factual consistency, citation quality, and hallucination rate.'
+                title: "title",
+    desc: 'Measure factual consistency, citation quality, and hallucination rate.'
               }
               {
               <div

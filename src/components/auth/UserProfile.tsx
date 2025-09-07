@@ -1,6 +1,4 @@
-
-    return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+return (
       <Card className='w-full max-w-sm'>;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
@@ -9,8 +7,6 @@
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Sign In;
           </Button>;
         </CardContent>;
@@ -18,24 +14,19 @@
     );
   }
   return (
-
           Sign Out
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>;
       </CardContent>;
     </Card>;
   );
 }
 }
-
         <Button onClick={handleSignOut} variant="outline" className="w-full">
           <LogOut className="h-4 w-4 mr-2" />
-
           Sign Out
         </Button>
       </CardContent>
     </Card>
-
     <Card className='w-full max-w-sm'>;
       <CardHeader>;
         <CardTitle className='flex items-center gap-2'>;
@@ -62,7 +53,6 @@
             </span>;
           </div>;
         </div>;
-
         <Button onClick={handleSignOut} variant='outline' className='w-full'>;
           <LogOut className='h-4 w-4 mr-2' />;
           Sign Out;
@@ -70,10 +60,8 @@
       </CardContent>;
     </Card>;
   );
-
   )
 } 
-
   // Check condition
 if ( {) {
   $2
@@ -126,5 +114,3 @@ if ( {) {
           Sign Out;
         </Button>;
       </CardContent>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

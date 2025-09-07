@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-
 import {
   Star,
   TrendingUp,
@@ -15,42 +14,34 @@ import {
   ArrowRight,
   Phone,
   Mail,
-
   MapPin,;
   ExternalLink,;} from 'lucide-react';import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
 import Head from 'next / head';
 import { motion } from 'framer-motion';
-
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
-
   Star,
   TrendingUp,
   Zap,
@@ -73,25 +64,22 @@ import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-service
 import { nextGenAIServices } from '../data/next-gen-ai-services';
 export default function InnovativeServicesShowcase() {
   const contactInfo = {
-
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
-
   const contactInfo = {
-    mobile: '+1 302 464 0950'
+    mobile: "mobile",
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
-
   }
 ;
   const container_variants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1
-      transition: {
+      opacity: 1;
+    transition: {
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
     visible: {
@@ -115,13 +103,11 @@ export default function InnovativeServicesShowcase() {
       ]
       link: 'https://ziontechgroup.com/quantum-internet-security-platform'
     }
-
   return (
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>      color: 'from-indigo-600 to-purple-700'
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
         stagger_children: 0.1,
@@ -152,7 +138,6 @@ export default function InnovativeServicesShowcase() {;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',    website: 'https://ziontechgroup && ziontechgroup.com'
 };
-
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -165,7 +150,6 @@ export default function InnovativeServicesShowcase() {;
       }
     }
   };
-
   const itemVariants = {;
     hidden: { opacity: 0, y: 30 },;
     visible: {;
@@ -179,7 +163,6 @@ export default function InnovativeServicesShowcase() {;
       }
     }
   };
-
   const featuredServices = [;
     {;
       title: '🔐 Quantum Internet Security Platform',,
@@ -360,7 +343,6 @@ export default function InnovativeServicesShowcase() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-
   return (
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>
@@ -445,14 +427,10 @@ export default function InnovativeServicesShowcase() {;
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-
   ];
-
   return (
     <UltraAdvancedFuturisticBackground>
-
               initial={{ opacity: 0, y: 30 }}
-
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -479,7 +457,6 @@ export default function InnovativeServicesShowcase() {;
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                   viewport={{ once: true }}
-
                 >
                   <div className='mb-6'>
                     <h3 className='text-2xl font-bold text-white mb-4'>
@@ -649,7 +626,6 @@ export default function InnovativeServicesShowcase() {;
             </div>
           </div>
         </section>
-
         {/* Emerging Tech Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>;
@@ -663,9 +639,7 @@ export default function InnovativeServicesShowcase() {;
           <div className='max-w-7xl mx-auto'>
             <motion.div
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}
-
               initial={{ opacity: 0, y: 30 }}
-
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -681,7 +655,6 @@ export default function InnovativeServicesShowcase() {;
                 <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
                   Emerging;
                 </span>{' '}
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {emergingTechServicesEnhanced2025
                 .slice(0, 6)
@@ -752,16 +725,12 @@ export default function InnovativeServicesShowcase() {;
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
-
             </div>;
             <motion&& motion.div
-
               className="text-center mt-16"
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -769,7 +738,6 @@ export default function InnovativeServicesShowcase() {;
                 <span className='bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent'>;
                   ArrowRight-Generation;
                 </span>{' '}
-
         {/* ArrowRight-Gen AI Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -785,7 +753,6 @@ export default function InnovativeServicesShowcase() {;
 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
                   ArrowRight-Generation
-
                 </span> AI Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1100,7 +1067,6 @@ export default function InnovativeServicesShowcase() {;
     </UltraAdvancedFuturisticBackground>
   );
 }
-
   );
 }
             >;

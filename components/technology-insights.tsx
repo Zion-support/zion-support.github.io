@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
 export default function TechnologyInsightsPage() {
-
   const technologyTrends = [
     {
-      id: 'quantum-computing'
-      title: 'Quantum Computing in 2025'
+      id: "id",
+    title: 'Quantum Computing in 2025'
       description:
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
@@ -29,7 +28,6 @@ export default function TechnologyInsightsPage() {
     },      featured: false
     }
   ];
-
   const researchAreas = [;
     {;
       title: 'Autonomous Systems Research',,
@@ -93,7 +91,6 @@ export default function TechnologyInsightsPage() {
               Technology Insights;
             </h1>;
             <p className='text - xl text - white / 80 max - w-3xl mx - auto'>;
-
               Research insights, technology trends, and thought leadership in;
               AI, automation, and emerging technologies;
             </p>;
@@ -102,11 +99,9 @@ export default function TechnologyInsightsPage() {
                 ))}
               </div>
             </div>
-
                       href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
                       Read More <span className='ml-1'>→</span>                    </Link>      </Head>;
-
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
         <main className="container mx-auto px-6 py-12">;
           <section className="text-center mb-16">;
@@ -171,12 +166,9 @@ export default function TechnologyInsightsPage() {
                     </ul>;
                   </div>;
                 ))}
-
               </div>;
             </div>;
-
             {/* Whitepapers */}
-
             {/* Whitepapers */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -215,14 +207,11 @@ export default function TechnologyInsightsPage() {
                       Download PDF <span className="ml-1">→</span>
                     </Link>
                       Download PDF <span className='ml-1'>→</span>                    </Link>
-
                     </Link>
-
                   </div>
                 ))}
               </div>
             </div>
-
             {/* Innovation Lab */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -230,7 +219,6 @@ export default function TechnologyInsightsPage() {
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
-
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
                       Cutting-Edge Research

@@ -1,12 +1,10 @@
 import fs from 'fs';
 import path from 'path';
-
-  content: string | null
-  generatedAt: string | null
+  content: string | null;
+    generatedAt: string | null
 }
 export default function ChangelogPage({ content, generatedAt }: Props) {
   return (
-
 type Props = {;
   content: string | null;
   content: string | null,
@@ -23,7 +21,6 @@ function ChangelogPage() {
       {generatedAt && (
         <p className='mt-2 text-sm text-gray-600'>Generated: {generatedAt}</p>
       )}
-
     <main className='mx - auto max - w-4xl px - 4 py - 12'>;
       <h1 className='text - 2xl font - bold text - gray - 900'>Changelog</h1>;
       {generated_at && (
@@ -34,7 +31,6 @@ function ChangelogPage() {
         </pre>) : (
         <div className='mt - 6 rounded - xl border border - gray - 200 bg - white p - 6 text - gray - 600'>          No changelog generated yet.      {generated_at && (
         <p className="mt - 2 text - sm text-gray-600">Generated: {generated_at}</p>)}
-
       {content ? (
         <pre className="mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray-800 shadow-sm">;
 {content}
@@ -44,13 +40,10 @@ function ChangelogPage() {
           No changelog generated yet.
         </div>
       )}
-
 export default function ChangelogPage({ content, generatedAt }: Props) {
   return (
     </main>;
-
           No changelog generated yet.
-
         </div>
       )}
     </main>
@@ -83,9 +76,7 @@ export default function ChangelogPage(): any ({ content, generatedAt }: Props) {
 }
   } catch {
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
-
   } catch {
-
 export async function getStaticProps() {;
   try {;
     const file = path && path.join(process && process.cwd(), 'CHANGELOG && CHANGELOG.md');
@@ -98,10 +89,8 @@ export async function getStaticProps() {;
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
   } catch {;
-
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
-
 export async /**
  * getStaticProps - Function description
  */
@@ -115,13 +104,11 @@ function getStaticProps() {
     }
   } catch {
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
-
   } catch {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
 }
 }
   } catch {
-
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }

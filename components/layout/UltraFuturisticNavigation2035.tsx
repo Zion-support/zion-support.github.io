@@ -57,7 +57,6 @@ import {
   Building,;
   MessageCircle,;
 } from 'lucide-react';
-
 import {
   Menu
   ChevronDown
@@ -119,9 +118,7 @@ import {
 } from 'lucide-react';
 interface NavigationItem {
   name: string;
-
   href: string;  icon?: React.ReactNode;import { ;
-
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles
@@ -216,15 +213,12 @@ interface NavigationItem {
   featured?: boolean;  featured?: boolean
 }
   featured?: boolean;
-
 const contactInfo = {
-
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const navigationItems: NavigationItem[] = [
   {
     name: 'Pricing',
@@ -472,9 +466,7 @@ const navigation_items: NavigationItem[] = [;
   {
   }
   {
-
     name: 'AI & Consciousness',
-
   const closeMobileMenu = () => {
     setIsOpen(false);
     closeDropdowns();    }
@@ -727,7 +719,7 @@ const navigation_items: NavigationItem[] = [;
   {
     ]
   }
-    name: 'Industry Solutions'
+    name: "name",
     href: '/industry-solutions'
     icon: <Building className='w-5 h-5' />
     description: 'Industry-specific technology solutions'
@@ -916,16 +908,12 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   }
   const closeDropdowns = () => {
     setActiveDropdown(null)
-
   };
-
   const closeMobileMenu = () => {
     setIsOpen(false);
     closeDropdowns()
   };
-
             {/* Desktop Navigation */}  };
-
   return (
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled
@@ -986,14 +974,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                         item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :
                         item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
                         item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
-
                   >
                     {item.icon}
                     <span>{item.name}</span>
                     {item.badge && (
-
                   </button>
-
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -1003,7 +988,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -1013,7 +997,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
                     {activeDropdown === item && item.name && (;
@@ -1107,7 +1090,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   <span className="hidden xl:inline">{contactInfo && contactInfo.email}</span>;
               </div>;
             </div>;
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -1124,7 +1106,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </div>
         </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -1143,7 +1124,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
         </div>
           </div>;
         </div>;
-
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -1206,9 +1186,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
             <div className='hidden lg:flex items-center gap-4'>
               {/* Quick Actions */}
               <div className='flex items-center gap-2'>
-
                   <Link
-
                     key={action.name}
                     href={action.href}
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
@@ -1265,11 +1243,9 @@ const UltraFuturisticNavigation2035: React.FC = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-
                             </span>
                           )}
                         </div>
@@ -1281,12 +1257,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                           activeDropdown === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
-
                         />                      </button>                        <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
                           activeDropdown === item && item.name ? 'rotate-180' : ''
                         }`} />;
                       </button>;
-
                       {/* Mobile Dropdown */}
                       <AnimatePresence>;
                         {activeDropdown === item && item.name && (;
@@ -1306,7 +1280,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 {child && child.description && (;
                                   <div className="text-sm opacity-75 mt-1">{child && child.description}</div>;
                                 )}
-
                               </Link>
                               </Link>;
                             ))}
@@ -1315,7 +1288,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                       </AnimatePresence>;
                     </div>;
                   ))}
-
                           key={action.name}
                           href={action.href}
                         <Link
@@ -1454,9 +1426,7 @@ export default UltraFuturisticNavigation2035);
 }
 ;
 export default UltraFuturisticNavigation2035;
-
 export default UltraFuturisticNavigation2035;  )
 };
-
 export default UltraFuturisticNavigation2035;
 export default UltraFuturisticNavigation2035;

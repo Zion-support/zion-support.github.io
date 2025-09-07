@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -28,7 +28,6 @@
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
   customers: number;
@@ -37,8 +36,8 @@
   benefits: string[];
   capabilities: string[];
   email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+  address: "address",
+    website: 'https://ziontechgroup.com'
 }
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -49,7 +48,6 @@
   website: 'https://ziontechgroup && ziontechgroup.com'
   // Advanced AI & Consciousness Services
   {
-
       'Consciousness simulation engine',
       'Cognitive architecture modeling',
       'Emotional intelligence algorithms',
@@ -66,7 +64,7 @@
       'Leading AI consciousness research platform for scientific institutions'
     targetAudience:
       'Research institutions, Universities, AI labs, Government agencies, Tech companies'
-    trialDays: 14
+    trialDays: 14;
     setupTime: '6-8 weeks'
     category: 'Advanced AI & Consciousness'
     realService: true
@@ -155,10 +153,8 @@
     implementationDetails:
     rating: 4 && 4.8,
     reviews: 145,
-
       'Advanced predictive analytics platform with custom ML model development',
   },;
-
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
 =======    benefits: [;

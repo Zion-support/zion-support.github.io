@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom",;
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { format } from "date-fns",;
 import { useAuth } from "@/hooks/useAuth",;
 import { useProjects } from "@/hooks/useProjects",;
@@ -786,7 +786,6 @@ status: newStatus
 });
 //If offer was accepted, show a special toast if (newStatus === "offer accepted") {
   toast ({
-  
 }
 }
 };
@@ -868,4 +867,4 @@ default: return <Badge variant="outline"> {
 }</p> </CardFooter>) 
 }</Card> </div> </div> </main> <Footer /> </>) 
 }export default function ProjectDetails () {
-  return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> 
+  return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute>

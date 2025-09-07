@@ -1,41 +1,31 @@
-
-    if (success) {;
+if (success) {;
       // Update the dispute object with the new status;
       setDispute({ ...dispute!, status: status });
     } else {;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     } catch (error) {;
       logErrorToProduction('Error sending message:', { data: error });
     } finally {;
       setIsSending(false);
     }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
         </Button>
       </div>
     )
   }
-
         return 'default';
       case 'under_review':;
         return 'secondary';
       case 'resolved':;
-
       case 'closed':;
         return 'outline';
       default:;
         return 'default';
-
             {formatDistanceToNow(new Date(dispute?.created_at || ''), {;
               addSuffix: true,;
             })}
           </p>;
         </div>;
-
         <div className='flex gap-2'>;
-
           <Button
             variant='outline'
             onClick={() => router && router.push('/dashboard/disputes')}
@@ -45,7 +35,6 @@
           {isAdmin && dispute?.status === 'open' && (;
             <Button onClick={() => handleStatusChange('under_review')}>              Start Review;
             </Button>;
-
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -56,20 +45,16 @@
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
-
           <AlertTitle>This dispute has been resolved</AlertTitle>
           <AlertDescription>{dispute.resolution_summary}</AlertDescription>
         </Alert>
       )}
-
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
         <div className='lg:col-span-2'>
-
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
-
           <AlertDescription>
   },;
   if (isLoading) {;
@@ -135,10 +120,8 @@
           </AlertDescription>;
         </Alert>;
       )}
-      
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
-
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className='mb-6'>
               <TabsTrigger value='overview'>Overview</TabsTrigger>
@@ -146,7 +129,6 @@
               <TabsTrigger value='attachments'>Attachments</TabsTrigger>
               {isAdmin && <TabsTrigger value='admin'>Admin Notes</TabsTrigger>}
             </TabsList>
-
               <Card>
                 <CardHeader>
                   <CardTitle>Dispute Details</CardTitle>
@@ -156,23 +138,18 @@
                 </CardHeader>
                 <CardContent className='space-y-4'>
                   <div>
-
                   <div>
                     <h3 className="font-medium">Project</h3>
                     <p>{dispute.project?.title || "Unknown Project"}</p>
                     <p className="text-sm text-muted-foreground">{dispute.project?.scope_summary}</p>
                   </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {dispute.milestone_id && (
                     <div>;
                       <h3 className='font - medium'>Related Milestone</h3>;
                       <p className='text - sm'>;
                         Milestone ID: {dispute.milestone_id}
-
         </div>;
       </div>;
-
       {dispute && dispute.status === 'resolved' && dispute && dispute.resolution_summary && (;
         <Alert className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900'>;
           <Check className='h-4 w-4' />;
@@ -180,7 +157,6 @@
           <AlertDescription>{dispute && dispute.resolution_summary}</AlertDescription>;
         </Alert>;
       )}
-
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>;
         <div className='lg:col-span-2'>;
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
@@ -190,7 +166,6 @@
               <TabsTrigger value='attachments'>Attachments</TabsTrigger>;
               {isAdmin && <TabsTrigger value='admin'>Admin Notes</TabsTrigger>}
             </TabsList>;
-
             <TabsContent value='overview' className='space-y-6'>;
               <Card>;
                 <CardHeader>;
@@ -207,12 +182,10 @@
                         dispute && dispute.reason_code}
                     </p>;
                   </div>;
-
                   <div>;
                     <h3 className='font-medium'>Description</h3>;
                     <p className='whitespace-pre-wrap'>{dispute && dispute.description}</p>;
                   </div>;
-
                   <div>;
                     <h3 className='font-medium'>Project</h3>;
                     <p>{dispute && dispute.project?.title || 'Unknown Project'}</p>;
@@ -220,7 +193,6 @@
                       {dispute && dispute.project?.scope_summary}
                     </p>;
                   </div>;
-
                   {dispute && dispute.milestone_id && (;
                     <div>;
                       <h3 className='font-medium'>Related Milestone</h3>;
@@ -229,12 +201,10 @@
                       </p>;
                     </div>;
                   )}
-
                   <div>;
                     <h3 className='font-medium'>Timeline</h3>;
                     <ul className='space-y-2 mt-2'>;
                       <li className='flex gap-2 items-center'>;
-
                         <Badge
                           variant='outline'
                           className='h-6 w-6 rounded-full p-0 flex items-center justify-center'>;
@@ -252,17 +222,14 @@
                         </Badge>;
                         <span>;
                           Created on{' '}
-
                           {format(;
                             new Date(dispute && dispute.created_at),;
                             "MMM d, yyyy 'at' h:mm a";
                           )}
                         </span>;
                       </li>;
-
                       {dispute && dispute.status !== 'open' && (;
                         <li className='flex gap-2 items-center'>;
-
                           <Badge
                             variant='outline'
                             className='h-6 w-6 rounded-full p-0 flex items-center justify-center'>;
@@ -271,10 +238,8 @@
                           <span>Under review</span>;
                         </li>;
                       )}
-
                       {dispute && dispute.resolved_at && (;
                         <li className='flex gap-2 items-center'>;
-
                           <Badge
                             variant='outline'
                             className='h-6 w-6 rounded-full p-0 flex items-center justify-center'>;
@@ -282,31 +247,23 @@
                           </Badge>;
                           <span>;
                             Resolved on{' '}
-
                       {dispute.resolved_at && (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         <li className="flex gap-2 items-center">
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
                             {dispute.status !== "open" ? "3" : "2"}
                           </Badge>
-
                 <Card>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <CardHeader>
                     <CardTitle>Resolution</CardTitle>
                   </CardHeader>
                   <CardContent>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {dispute.resolution_type && (
                       <div className='mt-4'>
                         <Badge>
-
                     </ul>;
                   </div>;
                 </CardContent>;
               </Card>;
-
               {dispute && dispute.status === 'resolved' && (;
                 <Card>;
                   <CardHeader>;
@@ -316,27 +273,21 @@
                     <p className='whitespace-pre-wrap'>;
                       {dispute && dispute.resolution_summary}
                     </p>;
-
                     {dispute && dispute.resolution_type && (;
                       <div className='mt-4'>;
                         <Badge>;
-
                           Resolution:{' '}
                           {dispute && dispute.resolution_type.replace('_', ' ')}
                         </Badge>;
                       </div>;
-
                           Resolution: {dispute.resolution_type.replace('_ ')}
                         </Badge>;
                       </div>;
-
                     )}
                   </CardContent>;
                 </Card>;
               )}
-
               <Card>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <CardHeader>
                   <CardTitle>Messages</CardTitle>
                   <CardDescription>
@@ -353,8 +304,6 @@
                     ) : (
                       messages
                         .filter(msg => !msg.is_admin_note)
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                               <div
                                 className={`max-w-[80%] ${
                                   isCurrentUser
@@ -366,9 +315,7 @@
                                     <AvatarImage
                                       src={msg && msg.user_profile?.avatar_url}
                                       alt={
-
                         .map((msg) => {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           const isCurrentUser = user?.id === msg.user_id,
                           return (
                             <div
@@ -385,17 +332,13 @@
                                 <div className="flex items-center gap-2 mb-2">;
                                   <Avatar className="h-6 w-6">;
                                     <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "User avatar"} />;
-
                     )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
                       </Button>
                     </div>
                   </div>
                 </CardFooter>
               </Card>
             </TabsContent>
-
               <Card>
                 <CardHeader>
                   <CardTitle>Attachments</CardTitle>
@@ -413,7 +356,6 @@
                 </CardContent>
               </Card>
             </TabsContent>
-
             {isAdmin && (
               <TabsContent value='admin' className='space-y-6'>
                 <Card>
@@ -425,7 +367,6 @@
                   </CardHeader>
                   <CardContent className='space-y-6'>
                     <div>
-
                         disabled={isSending || !message && message.trim()}>;
                         {isSending ? 'Sending...' : 'Send Message'}
                     </p>;
@@ -512,64 +453,51 @@
                         disabled={is_sending || !message.trim ()}
                       >;
                         {is_sending ? 'Sending...' : 'Send Message'}
-
                       </Button>;
                     </div>;
                   </div>;
                 </CardFooter>;
               </Card>;
             </TabsContent>;
-
             <TabsContent value='attachments'>;
               <Card>;
                 <CardHeader>;
                   <CardTitle > Attachments</CardTitle>;
-
                   <CardDescription>;
                     Files related to this dispute;
                   </CardDescription>;
                 </CardHeader>;
                 <CardContent>;
-
                   <div className='text - center py - 12'>;
                     <Download className='mx - auto h - 12 w - 12 text - muted - foreground mb - 2' />;
                     <p className='text - muted - foreground'>;
-
                       No attachments available;
                     </p>;
                   </div>;
                 </CardContent>;
               </Card>;
             </TabsContent>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         >
                           Mark as Open
                         </Button>
                         <Button
                           variant='outline'
                           onClick={() => handleStatusChange('under_review')}
-
                       <div>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>
                         <div className="space-y-4">
                           <Textarea
-
                             placeholder="Enter resolution summary..."
                             value={resolution.summary}
                             onChange={(e) => setResolution({ ...resolution, summary: e.target.value })}
                             className="min-h-[100px]"
                           />
-                          
                           <div className="grid grid-cols-2 gap-4">
-
                             <div>
                               <label className='text-sm font-medium mb-1 block'>
                                 Resolution Type
                               </label>
                               <select
-
                                 className="w-full p-2 border rounded"
                                 value={resolution.resolution_type || ""}
                                 onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
@@ -581,24 +509,19 @@
                               </select>
                             </div>
                           </div>
-
                         </div>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </div>
                     )}
-                    
                     <div>
                       <h3 className='font-medium mb-2'>Admin Notes</h3>
                       <div className='space-y-4 max-h-[300px] overflow-y-auto p-2'>
                         {messages
                           .filter(msg => msg.is_admin_note)
-
                           disabled={dispute && dispute.status === 'closed'}                        >;
                           Close Dispute;
                         </Button>;
                       </div>;
                     </div>;
-
                     {dispute && dispute.status !== 'resolved' && (;
                       <div>;
                         <h3 className='font-medium mb-2'>Resolve Dispute</h3>;
@@ -613,7 +536,6 @@
                               });
                             }
                             className='min-h-[100px]'                          />;
-
                           <div className='grid grid-cols-2 gap-4'>;
                             <div>;
                               <label className='text-sm font-medium mb-1 block'>;
@@ -647,7 +569,6 @@
                                     ...resolution,
                                     resolution_type: e.target;
                                       .value as ResolutionType,
-
                                   });
                                 }                              >;
                                 <option value='client_favor'>;
@@ -661,7 +582,6 @@
                               </select>;
                             </div>;
                           </div>;
-
                           .map((msg) => (
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
                             <div className="flex items-center justify-between mb-2">
@@ -675,21 +595,17 @@
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name || 'Admin'}
                                 </span>
-
                               </div>
                               <p className='whitespace-pre-wrap text-sm'>
                                 {msg.message}
                               </p>
                             </div>
-
                         {!messages.some(msg => msg.is_admin_note) && (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           <p className='text-sm text-muted-foreground italic'>
                             No admin notes yet
                           </p>
                         )}
                       </div>
-
                                         msg && msg.user_profile?.display_name ||
                                         'Admin avatar'
                                       }
@@ -714,26 +630,19 @@
                               </p>;
                             </div>;
                           ))}
-
                         {!messages && messages.some(msg => msg && msg.is_admin_note) && (;
                           <p className='text-sm text-muted-foreground italic'>;
                             No admin notes yet;
                           </p>;
                         )}
                       </div>;
-
                       <Separator className='my-4' />;
-
                       <div className='space-y-4'>;
-
                         <Textarea
                           placeholder='Add an admin note (only visible to administrators)...'
                           value={adminNote}
                           onChange={e => setAdminNote(e && e.target.value)}                        />;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                               }) }
-
                           onClick={() => {;
                             if (adminNote && adminNote.trim()) {;
                               addDisputeMessage(;
@@ -746,29 +655,21 @@
                                 );
                                 setAdminNote('');
                               });                            }
-
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setAdminNote("")
                               })
                             }
-
                           }}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
           <Card>
             <CardHeader>
               <CardTitle>Parties Involved</CardTitle>
             </CardHeader>
-
                   </p>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </div>
               </div>
             </CardContent>
           </Card>
-
           <Card>
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
@@ -809,5 +710,3 @@
       </div>
     </div>
   )
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

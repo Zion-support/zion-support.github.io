@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-import { Link, Navigate } from "react-router-dom",;
+import { Link, Navigate } from "react-router-dom";
 import { useForm, type UseFormReturn } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
@@ -331,9 +330,7 @@ FormField;
 FormItem;
 FormLabel;
   if (isSubmitting) return, //Prevent multiple submissions try {
-  
 }//Redirect to onboarding if user is authenticated but hasn't completed profile if (isAuthenticated && !user?.profileComplete) {
-  
 }flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24"> <div className=" mx-auto w-full max-w-sm lg:w-96"> <div className=" text-center mb-10"> <h2 className=" text-3xl font-bold tracking-tight text-white"> Create your account </h2> Sign in </Link> </p> </div> <FormItem> <FormLabel className=" text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className=" relative"> <Input /> <User className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) 
 }/> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Email address</FormLabel> <FormControl> <div className=" relative"> <Input /> <Mail className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) 
 }/> <FormField <FormControl> <div className=" relative"> <Input /> <Lock className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Button) : (<Eye className=" h-4 w-4"/>) 

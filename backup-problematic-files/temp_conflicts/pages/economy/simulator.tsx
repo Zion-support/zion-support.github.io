@@ -1,8 +1,8 @@
 import React, { useMemo, useRef, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-import SimulatorForm from '../../components/economy/SimulatorForm',;
-import SimulatorCharts from '../../components/economy/SimulatorCharts',;
-import SimulatorExports from '../../components/economy/SimulatorExports',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import SimulatorForm from "SimulatorForm";
+import SimulatorCharts from "SimulatorCharts";
+import SimulatorExports from "SimulatorExports";
 import {;
   SimulatorInputs,;
   simulateEconomy,;

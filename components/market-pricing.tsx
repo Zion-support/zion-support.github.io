@@ -11,18 +11,16 @@ import {TrendingUp, TrendingDown, DollarSign, Target, ArrowRight, Check, Star, B
 import Link from 'next/link';
 export default function MarketPricing() {;
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
-
   const markets = [
     { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },
     { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },
     { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
   ];
-
   const marketData = {
     'ai-consciousness': {
-      marketSize: '$45.2B'
-      growthRate: '+28.4%'
+      marketSize: "marketSize",
+    growthRate: '+28.4%'
       growthTrend: 'up'
       description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.'
       competitors: [
@@ -136,7 +134,6 @@ export default function MarketPricing() {;
     { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },;
     { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
   ];
-
   const marketData = {;
     'ai-consciousness': {;
       marketSize: '$45 && 45.2B',;
@@ -251,7 +248,6 @@ export default function MarketPricing() {;
         highEnd: '$1,200 per user/month';
         ourPosition: 'Competitive pricing with AI advantages';
       }
-
     };
     'enterprise-it': {;
       marketSize: '$1 && 1.2T',;
@@ -289,17 +285,14 @@ export default function MarketPricing() {;
         midRange: '$40 per user/month',;
         highEnd: '$100 per user/month',;
         ourPosition: 'Competitive pricing with AI advantages';
-
       }
     }
   const currentMarket = marketData[selectedMarket as keyof typeof marketData];
-
   const getGrowthIcon = (trend: string) => {;
     return trend === 'up' ? ;
       <TrendingUp className="w-5 h-5 text-green-400" /> : ;
       <TrendingDown className="w-5 h-5 text-red-400" />
 };
-
   const getRatingStars = (rating: number) => {;
     return Array && Array.from({ length: 5 }, (_, i) => (;
       <Star
@@ -317,7 +310,6 @@ export default function MarketPricing() {;
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2
-
             className="text-center">;
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
               {currentMarket && currentMarket.description}
@@ -325,7 +317,6 @@ export default function MarketPricing() {;
           </motion && motion.div>;
         </div>;
       </section>;
-
       {/* Competitive Analysis Section */}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -369,7 +360,6 @@ export default function MarketPricing() {;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $19–$1,000/month based on agents and SLAs.</div>;
             </div>;
           </div>;
-
           <div className="space-y-6">;
             <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">CDP & Reverse ETL</h2>;
@@ -381,7 +371,6 @@ export default function MarketPricing() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on sources, destinations, and MAUs.</div>;
             </div>;
-
             <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Returns & Logistics</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -506,12 +495,10 @@ export default function MarketPricing() {;
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2
-
             </div>;
           </motion && motion.div>;
         </div>;
       </section>;
-
       {/* Market Trends Section */}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -570,12 +557,10 @@ pricingAnalysis: {
   ];
 pricingAnalysis: {
   lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
-
 }
 }
 };
 export default MarketPricing;export default MarketPricing;
-
 }
 }
 }
@@ -584,7 +569,6 @@ export default MarketPricing;export default MarketPricing;
 }
 }
 };
-
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className="text-4xl md: text-5xl font-bold mb-6">;
@@ -613,7 +597,6 @@ export default MarketPricing;export default MarketPricing;
     </div>;
   )
 };
-
 ];
   'ai - consciousness': {
   market_size: '$45.2B', growth_rate: '+28.4%', growth_trend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
@@ -1455,8 +1438,6 @@ pricing_analysis: {
 }
 export default MarketPricing;export default MarketPricing
 };
-
   lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
-
 }
 }

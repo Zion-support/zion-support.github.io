@@ -1,11 +1,7 @@
-
-
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   Menu
   X
   ChevronDown
@@ -29,7 +25,6 @@ import {
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-
 export default function Navigation() {
 export default function Navigation() {;
 export default function Navigation() {;
@@ -40,8 +35,8 @@ export default function Navigation() {;
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
     {
-      name: "Blockchain"
-      href: "/blockchain"
+      name: "name",
+    href: "/blockchain"
       description: "Smart Contracts, DeFi, NFTs"
       icon: Building
     }
@@ -315,17 +310,14 @@ export default function Navigation() {;
                       </div>;
                     </motion && motion.div>;
                   )}
-
                 </AnimatePresence>;
               </div>;
-
               <Link
                 href="/pricing"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Pricing;
               </Link>;
             </div>;
-
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
@@ -725,5 +717,3 @@ export default function Navigation() {;
       />;
     </>);
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

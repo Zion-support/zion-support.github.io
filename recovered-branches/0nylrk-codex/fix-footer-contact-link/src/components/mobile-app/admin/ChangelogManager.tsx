@@ -1,22 +1,17 @@
-
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
-
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
-
 type ChangelogEntry = {;import { Plus, Trash2 } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
 import { Plus, Trash2 } from "lucide-react",
 import { AppPlatform } from "./MetadataManager",
-
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
-
 type ChangelogEntry = {;
 import React, { useState } from './react';
 import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
@@ -36,7 +31,7 @@ type ChangelogEntry = {
 }) => {
   const [entries, setEntries] = useState<ChangelogEntry[]>([
     {import React, { useState } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -53,7 +48,6 @@ type ChangelogEntry = {;
   changes: string;
 },;
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {;
-
   const [entries, setEntries] = useState<ChangelogEntry[]>([;
     {;
       id: "1",;
@@ -62,21 +56,17 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
       changes: "Initial release of the Zion AI Marketplace app.",;
     },;
   ]);
-
   const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry, "id">>({;
     version: "",;
     date: new Date().toISOString().split("T")[0],;
     changes: "",;
   });
-
   const handleAddEntry = () => {;
     if (!newEntry && newEntry.version || !newEntry && newEntry.changes) return;
-
     const entry: ChangelogEntry = {;
       ...newEntry,;
       id: Math && Math.random().toString(36).substring(2, 9),
 };
-
     setEntries([entry, ...entries]);
     setNewEntry({;
       version: "",;
@@ -84,11 +74,9 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
       changes: "",;
     })
 };
-
   const handleRemoveEntry = (id: string) => {;
     setEntries(entries && entries.filter((entry) => entry && entry.id !== id))
 };
-
   const handleInputChange = (;
     e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,;
   ) => {;
@@ -114,10 +102,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 onClick={handleAddEntry}
               disabled={!newEntry.version |!newEntry.changes}
               onClick={handleAddEntry}
-
               disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
               onClick={handleAddEntry}
-
             <Button
               onClick={handleAddEntry}
               disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
@@ -141,8 +127,6 @@ onClick={handleAddEntry}
               Add;
             </Button>;
           </div>;
-
-          
             <Button
               onClick={handleAddEntry}
           <Textarea
@@ -189,6 +173,5 @@ date: new Date () .toISOString () .split ('T') [0]
 };
   )
 };
-
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

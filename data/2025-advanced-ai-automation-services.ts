@@ -1,13 +1,11 @@
-  contactInfo: {    },
+contactInfo: {    },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -17,9 +15,8 @@
     rating: 4.8,
     reviews: 38
 };
-    realImplementation: true
-    implementationDetails:
-      'Enterprise-grade DevOps automation platform with AI-powered optimization, multi-cloud support, and advanced monitoring capabilities.'
+    realImplementation: true;
+    implementationDetails: "implementationDetails",
     launchDate: '2024-09-20'
     customers: 45
     rating: 4.8
@@ -216,6 +213,5 @@
     launchDate: '2024-10-01';
     customers: 89;
     rating: 4.8
-
     reviews: 38  }
 ];

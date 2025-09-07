@@ -1,4 +1,4 @@
-  const handleChange = (values: number[]) => {
+const handleChange = (values: number[]) => {
     setPriceRange([values[0], values[1]])
 };
 import { ChevronDown, ChevronUp } from "lucide-react",
@@ -8,7 +8,6 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   const handleChange = (values: number[]) => {
     setPriceRange([values[0], values[1]])
   },
-
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -29,13 +28,12 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             <span>${priceRange[1]}/hr</span>
           </div>
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { Slider } from "@/components/ui/slider",;
+import { Slider } from "@/components/ui/slider";
 import { PriceFilterProps } from "@/types/filters",;
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
   const handleChange = (values: number[]) => {;
     setPriceRange([values[0], values[1]])
 };
-
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button

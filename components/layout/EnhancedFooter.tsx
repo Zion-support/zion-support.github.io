@@ -1,8 +1,5 @@
-
-
 const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear();
-
   const company = null;
   ];
   const resources = null;
@@ -18,8 +15,8 @@ import {
   Star, Users, TrendingUp, Zap
 } from 'lucide-react'
 const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
@@ -37,7 +34,6 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
@@ -72,12 +68,9 @@ class ErrorBoundary extends React.Component {
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github }
   ];
-
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
   return (
-
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -176,7 +169,6 @@ const company_links = [;
   { name: 'Resources', href: '/resources' }
 ],
 const support_links = [;
-
 const _serviceCategories = [
   {_title: 'Next-Generation AI', _services: [
       { name: 'AI Multimodal Fusion', _href: '/ai-multimodal-fusion-platform'},
@@ -200,7 +192,6 @@ const _serviceCategories = [
     ]
   }
 ],
-
 const companyLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
@@ -209,9 +200,7 @@ const companyLinks = [
   { name: 'Blog', href: '/blog' },
   { name: 'Resources', href: '/resources' }
 ],
-
 const supportLinks = [
-
   { name: 'Contact Support', href: '/contact' },
   { name: 'Documentation', href: '/docs' },
   { name: 'API Reference', href: '/api' },

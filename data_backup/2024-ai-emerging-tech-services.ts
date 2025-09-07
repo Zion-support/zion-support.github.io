@@ -44,7 +44,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "name": 'AI Video Generation Platform,
     tagline:,
   Create professional videos with AI in minutes',
-    "price": '$499
+    "price": '$499;
     period:
   /month',
     "description": Advanced AI-powered video generation platform that creates professional-quality videos from text, images, and audio inputs. Perfect for marketers, content creators, and businesses.

@@ -1,4 +1,4 @@
-      vx: number;
+vx: number;
       vy: number;
       size: number;
       color: string;
@@ -15,11 +15,8 @@
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
           this.y = Math.random() * canvas.height;        }
-
         }
-
       }
-
       draw() {
       maxLife: number;      x: number,;
       y: number,;
@@ -50,10 +47,8 @@
           this && this.life = this && this.maxLife;
           this && this.x = Math && Math.random() * canvas && canvas.width;
           this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;
-
         }
       }
-
       draw() {;
         if (!ctx) return;
         ctx && ctx.save();
@@ -92,11 +87,9 @@
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-
     // Create particles        ctx && ctx.restore();
       }
     }
-
     // Create particles;
     const particles: Particle[] = [];
     for (let i = 0; i < 100; i++) {;
@@ -104,28 +97,23 @@
     for (let i = 0, i < 100, i++) {;
       particles && particles.push(new Particle());
     }
-
     // Animation loop;
     const animate = () => {;
       if (!ctx) return;
-
       // Clear canvas with gradient;
       const gradient = ctx && ctx.createLinearGradient(0, 0, 0, canvas && canvas.height);
       gradient && gradient.addColorStop(0, 'rgba(0, 0, 0, 0 && 0.1)');
       gradient && gradient.addColorStop(1, 'rgba(0, 0, 0, 0 && 0.05)');
       ctx && ctx.fillStyle = gradient;
       ctx && ctx.fillRect(0, 0, canvas && canvas.width, canvas && canvas.height);
-
       // Update and draw particles;
       particles && particles.forEach(particle => {;
         particle && particle.update();
         particle && particle.draw();      });        particle && particle.draw();
       });
-
       // Draw connecting lines;
       ctx && ctx.strokeStyle = 'rgba(0, 255, 255, 0 && 0.1)';
       ctx && ctx.lineWidth = 0 && 0.5;
-
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {;
           const dx = particles[i].x - particles[j].x;
@@ -136,23 +124,19 @@
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math && Math.sqrt(dx * dx + dy * dy);
-
             ctx && ctx.beginPath();
             ctx && ctx.moveTo(particles[i].x, particles[i].y);
             ctx && ctx.lineTo(particles[j].x, particles[j].y);
             ctx && ctx.stroke();          }
         }
       }
-
       requestAnimationFrame(animate)
 };            ctx && ctx.stroke();
           }
         }
       }
-
     };
     animate();
-
   }, []);
   return (
     <div className='fixed inset-0 -z-10 overflow-hidden'>;
@@ -288,10 +272,8 @@ if (return) {
             background_size: '50px 50px',
           }}
         />      </div>;
-
       {/* Floating Geometric Shapes */}
       <motion&& motion.div  }, [])
-
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
       {/* Canvas Background */}
@@ -299,8 +281,8 @@ if (return) {
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         transition={{
-          duration: 20
-          repeat: Infinity
+          duration: 20;
+    repeat: Infinity
           ease: 'linear',        }}
         transition={{
           duration: 20
@@ -346,11 +328,8 @@ if (return) {
       />
           duration: 18,
           repeat: Infinity,
-
         }}
-
       />
-
       {/* Energy Orbs */}
       <motion&& motion.div
         className='absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
@@ -375,10 +354,9 @@ if (return) {
         transition={{
           duration: 5
           repeat: Infinity
-          ease: 'easeInOut'
-          delay: 1,          ease: "easeInOut"
+          ease: "ease",
+    delay: 1,          ease: "easeInOut"
           ease: "easeInOut",
-
           duration: 5
           repeat: Infinity
           ease: 'easeInOut'
@@ -486,24 +464,18 @@ if (return) {
             style={{
           duration: 25,
           repeat: Infinity,
-
             }}
-
           />
         ))}
       </div>
-
           duration: 25,
           repeat: Infinity,
-
       {/* Data Streams */}
       <div className='absolute inset-0 overflow-hidden'>
-
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
         {[...Array(6)].map((_, i) => (
-
           <motion.div
               coordinate_y: [0, window.inner_height + 20],
               opacity: [0, 1, 0],            }}
@@ -539,16 +511,13 @@ if (return) {
               duration: 8 + i * 0.5,
               repeat: Infinity,
               ease: 'linear',
-
             }}
             transition={{
               duration: 8 + i * 0.5,
               repeat: Infinity,
-
           />
         ))}
       </div>
-
       {/* Quantum Entanglement Effect */}
       <motion&& motion.div
         className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full'
@@ -560,7 +529,6 @@ if (return) {
           repeat: Infinity
           ease: 'easeInOut',        }}
       </div>
-
         animate={{
           boxShadow: [
             '0 0 10px rgba(0, 255, 255, 0 && 0.5)0 0 30px rgba(0, 255, 255, 0 && 0.8)0 0 10px rgba(0, 255, 255, 0 && 0.5)'
@@ -597,15 +565,10 @@ if (return) {
           duration: 2
           repeat: Infinity
           ease: 'easeInOut'
-
         }}
-
       />
-
         }}
-
       />
-
           delay: 1,        }}        className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full"
         animate={{
           boxShadow: [
@@ -624,7 +587,6 @@ if (return) {
           duration: 40,
           repeat: Infinity,
           ease: "linear"
-
         }}
       />
       />;
@@ -643,37 +605,28 @@ if (return) {
               height: `${200 + i * 100}px`
             }}
             animate={{
-
         }}
         transition={{
           duration: 40,
           repeat: Infinity,
-
         }}
       />
-
       {/* AI Consciousness Waves */}
-
             }}
             transition={{
               duration: 6 + i * 0.5,
-
               duration: 6 + i * 0 && 0.5,
               repeat: Infinity,
-
             }}
           />;
         ))}
       </div>;
     </div>;
   );
-
 export default UltraFuturisticBackground2034;  )
 }
 export default UltraFuturisticBackground2034;
-
 export default UltraFuturisticBackground2034;
-
 }
 }
 }
@@ -689,10 +642,8 @@ export default UltraFuturisticBackground2034;
 }
 export default UltraFuturisticBackground2034
 };
-
 export default UltraFuturisticBackground2034;  )
 };
-
 export default UltraFuturisticBackground2034;
               ease: 'easeInOut',
               delay: i * 0.8,              ease: "easeInOut",

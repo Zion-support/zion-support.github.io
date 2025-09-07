@@ -1,5 +1,4 @@
 module.exports = {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   env: {
     node: true,
     es2021: true,
@@ -8,7 +7,6 @@ module.exports = {
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   rules: {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
@@ -19,4 +17,3 @@ module.exports = {
     "react/no-unescaped-entities": "warn"
   }
 };
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

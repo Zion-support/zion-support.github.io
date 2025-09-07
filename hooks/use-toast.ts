@@ -1,6 +1,6 @@
 import * as React from "react"
-  variant?: any
-      type: ActionType["ADD_TOAST"
+  variant?: any;
+    type: ActionType["ADD_TOAST"
       type: ActionType["UPDATE_TOAST"
       type: ActionType["DISMISS_TOAST"
       toastId?: ToasterToast["id"

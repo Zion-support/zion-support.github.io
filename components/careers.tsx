@@ -1,6 +1,4 @@
-
 };export default CareersPage;import React, { useState } from 'react';
-
 const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
  const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
 > <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
@@ -30,14 +28,11 @@ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.fi
 }<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
 };export default CareersPage;import React, { useState } from 'react';
 import React, { useState } from 'react';
-
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
 import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckCircle, Briefcase} from 'lucide-react';
-
 export default function Careers() {;
-
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = [
     { id: 'all', name: 'All Departments' }
@@ -51,9 +46,9 @@ export default function Careers() {;
   ];
   const jobOpenings = [
     {
-      id: 1
-      title: 'Senior AI Engineer'
-      department: 'ai-research'
+      id: 1;
+    title: "title",
+    department: 'ai-research'
       location: 'Remote / Middletown, DE';
       type: 'Full-time'
       experience: '5+ years'
@@ -114,7 +109,6 @@ export default function Careers() {;
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
         </Head>
-
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div 
@@ -130,10 +124,8 @@ export default function Careers() {;
             Be part of a team that's revolutionizing technology through AI, quantum computing, and space technology. Help us build the future.
           </p>
         </motion.div>
-
 export default function Careers() {;
   const [selectedDepartment, setSelectedDepartment] = useState('all');
-
   const departments = [;
     { id: 'all', name: 'All Departments' },;
     { id: 'engineering', name: 'Engineering' },;
@@ -144,7 +136,6 @@ export default function Careers() {;
     { id: 'marketing', name: 'Marketing' },;
     { id: 'operations', name: 'Operations' }
   ];
-
   const jobOpenings = [;
     {;
       id: 1,;
@@ -207,7 +198,6 @@ export default function Careers() {;
       ];
     }
   ];
-
   const companyValues = [;
     {;
       icon: <Brain className="w-8 h-8" />,;
@@ -230,15 +220,12 @@ export default function Careers() {;
   description: 'We strive for the highest quality in everything we do.';
     }
   ];
-
   const benefits = [;
     'Competitive salary and equity packagesComprehensive health, dental, and vision insuranceFlexible work arrangements and remote work optionsProfessional development and training programsGenerous paid time off and holidays401(k) with company matchingModern technology and equipmentCollaborative and inclusive work environment';
   ];
-
   const filteredJobs = selectedDepartment === 'all' ;
     ? jobOpenings ;
     : jobOpenings && jobOpenings.filter(job => job && job.department === selectedDepartment);
-
   return (
     <UltraFuturisticBackground>;
       <div className="min-h-screen">;
@@ -246,7 +233,6 @@ export default function Careers() {;
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>;
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />;
         </Head>;
-
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">;
         {/* Hero Section */}
         <motion&& motion.div 
@@ -277,7 +263,6 @@ export default function Careers() {;
                 <p className="text-gray-300 text-sm">{value && value.description}</p>;
               </div>;
             ))}
-
         {/* Benefits */}
         <motion&& motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -293,7 +278,6 @@ export default function Careers() {;
                   <span className="text-gray-300">{benefit}</span>;
                 </div>;
               ))}
-
         {/* Job Openings */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -344,7 +328,6 @@ export default function Careers() {;
                     </div>;
                   </div>;
                   <a
-
         {/* General Application */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

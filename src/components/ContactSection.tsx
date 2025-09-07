@@ -1,9 +1,5 @@
-
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,37 +7,31 @@ const ContactSection: React.FC = () => {
     company: '',
     message: '',
   });
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
   };
-
 fetch("/api/contact", {
-      method: "POST"
-      headers: { "Content-Type": "application/json" }
+      method: "method",
+    headers: { "Content-Type": "application/json" }
       body: JSON.stringify(formData)})
       .then(async (res) => {
-
           const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
         setIsSubmitting(false),
         if (!res.ok) {
           const data = await res.json().catch(() => ({})),
           throw new Error(data.error || "Failed to send message")
-
         }
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
-
         setIsSubmitting(false),
         if (!res.ok) {
           const data = await res.json().catch(() => ({})),
@@ -50,7 +40,6 @@ fetch("/api/contact", {
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
-
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
         setFormData({ name: "", email: "", subject: "", message: "" })
@@ -58,13 +47,10 @@ fetch("/api/contact", {
       .catch((err) => {
         setIsSubmitting(false),
         toast({
-
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
       })
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <section className="py-16 px-4 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
@@ -75,7 +61,6 @@ fetch("/api/contact", {
             Let's discuss how we can help you achieve your goals.
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
@@ -91,7 +76,6 @@ fetch("/api/contact", {
                     <p className="text-gray-600">contact@ziontechgroup.com</p>
                   </div>
                 </div>
-                
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
                     <Phone className="w-6 h-6 text-white" />
@@ -101,7 +85,6 @@ fetch("/api/contact", {
                     <p className="text-gray-600">+1 (555) 123-4567</p>
                   </div>
                 </div>
-                
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-white" />
@@ -113,7 +96,6 @@ fetch("/api/contact", {
                 </div>
               </div>
             </div>
-
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <h4 className="text-lg font-semibold mb-4">Why Choose Us?</h4>
               <ul className="space-y-2 text-gray-600">
@@ -125,7 +107,6 @@ fetch("/api/contact", {
               </ul>
             </div>
           </div>
-
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-xl shadow-lg">
             <h3 className="text-2xl font-semibold mb-6">Send us a Message</h3>
@@ -146,13 +127,10 @@ fetch("/api/contact", {
                     placeholder="Your full name"
                   />
                 </div>
-                
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address
                   </label>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company
@@ -167,8 +145,6 @@ fetch("/api/contact", {
                   placeholder="Your company name"
                 />
               </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
@@ -184,7 +160,6 @@ fetch("/api/contact", {
                   placeholder="Tell us about your project..."
                 />
               </div>
-              
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
@@ -199,20 +174,17 @@ fetch("/api/contact", {
     </section>
   );
 };
-
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
                   )}
-
                 </div>;
               </form>;
             </div>;
           </div>;
         </div>;
       </div>;
-
     </section>);
 }set_errors (field_errors);
 toast ({
@@ -237,5 +209,3 @@ description: err.message;
 }'"}
 }
 ;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

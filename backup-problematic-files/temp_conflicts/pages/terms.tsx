@@ -1,12 +1,12 @@
 import React from 'react';
-import Head from 'next/head',;
+import Head from 'next/head';
 import { motion } from 'framer-motion',;
 import { ;
   FileText, CheckCircle, AlertTriangle, Shield, Users, ;
   Globe, Lock, Database, Info, AlertCircle;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
+import EnhancedNavigation from "EnhancedNavigation";
+import EnhancedFooter from "EnhancedFooter";
 ;
 export default function TermsPage() {;
   const lastUpdated = 'January 15, 2025',;

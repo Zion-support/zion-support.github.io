@@ -1,9 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
@@ -306,7 +300,3 @@ improvements.runImprovements().then(() => {;
   }).catch(error => {;
   console.error('Improvements "failed": ', error.message);
   process.exit(1)})
-<<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
-  process.exit(1)})
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:scripts/simple-app-improvements.cjs

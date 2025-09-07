@@ -1,23 +1,20 @@
-  customers: number;
+customers: number;
   rating: number;
   reviews: number;  mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
-
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
-
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }
 ;
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
-
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+  address: "address",
+    website: 'https://ziontechgroup.com'
 }
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -34,7 +31,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     realService: true,
     technology: ['AI/ML, Static Analysis, Security Scanning'],
     integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
-
     useCases: [
       'Code quality improvement, Security compliance, Team productivity'
     ]
@@ -43,7 +39,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     marketSize: '$8B code quality tools'
     growthRate: '35% YoY'
     variant: 'ai-futuristic'
-    contactInfo: contact
+    contactInfo: contact;
     realImplementation: true
     implementationDetails:
   {      'Automated incident classification',
@@ -81,7 +77,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: true,
     icon: '🤖',
-
       'AI-powered orchestration engine with autonomous decision-making and self-healing capabilities.',
     launchDate: '2025-02-10',
     color: 'from - green - 600 to - emerald - 700',
@@ -109,7 +104,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'AI - powered orchestration engine with autonomous decision - making and self - healing capabilities.',
     launch_date: '2025 - 02 - 10',
-
     customers: 134,
     rating: 4 && 4.8,
     reviews: 92,
@@ -145,7 +139,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: false,
     icon: '⛓️',
-
       'Multi-chain governance engine with automated compliance and risk management.',
     launchDate: '2025-02-05',
     color: 'from - orange - 600 to - red - 700',
@@ -171,7 +164,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'Multi - chain governance engine with automated compliance and risk management.',
     launch_date: '2025 - 02 - 05',
-
     customers: 45,
     rating: 4 && 4.7,
     reviews: 33,
@@ -188,7 +180,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: true,
     icon: '🎯',
-
       'AI-powered predictive analytics engine with automated engagement workflows.',
     launchDate: '2025-01-30',
     color: 'from - emerald - 600 to - teal - 700',
@@ -214,7 +205,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'AI - powered predictive analytics engine with automated engagement workflows.',
     launch_date: '2025 - 01 - 30',
-
     customers: 178,
     rating: 4 && 4.8,
     reviews: 124,
@@ -231,7 +221,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: false,
     icon: '⚛️',
-
       'Quantum algorithm library with hybrid classical-quantum optimization capabilities.',
     launchDate: '2025-02-15',
     color: 'from - violet - 600 to - purple - 700',
@@ -258,7 +247,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'Quantum algorithm library with hybrid classical - quantum optimization capabilities.',
     launch_date: '2025 - 02 - 15',
-
     customers: 28,
     rating: 4 && 4.9,
     reviews: 22,
@@ -275,7 +263,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: true,
     icon: '📦',
-
       'AI-powered optimization engine with real-time monitoring and predictive analytics.',
     launchDate: '2025-02-20',
     color: 'from - blue - 600 to - cyan - 700',
@@ -301,7 +288,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'AI - powered optimization engine with real - time monitoring and predictive analytics.',
     launch_date: '2025 - 02 - 20',
-
     customers: 89,
     rating: 4 && 4.7,
     reviews: 67,
@@ -317,7 +303,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: true,
     icon: '🛡️',
-
       'AI-powered threat detection engine with automated response and intelligence sharing.',
     launchDate: '2025-02-25',
     color: 'from - red - 600 to - orange - 700',
@@ -343,7 +328,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'AI - powered threat detection engine with automated response and intelligence sharing.',
     launch_date: '2025 - 02 - 25',
-
     customers: 156,
     rating: 4 && 4.8,
     reviews: 118,
@@ -360,7 +344,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: true,
     icon: '✍️',
-
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / ai - content - creation - suite',
@@ -369,7 +352,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     target_audience: 'Marketing teams, Content creators, Small businesses',
     trial_days: 7,
     setup_time: '1 day',
-
     category: 'Content & Marketing',
     real_service: true,
     technology: ['AI / ML, NLP, Content Generation'],
@@ -392,7 +374,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: false,
     icon: '📊',
-
       'AI-powered data quality engine with automated compliance and governance workflows.',
     launchDate: '2025-03-05',
     color: 'from - teal - 600 to - cyan - 700',
@@ -418,7 +399,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'AI - powered data quality engine with automated compliance and governance workflows.',
     launch_date: '2025 - 03 - 05',
-
     customers: 78,
     rating: 4 && 4.6,
     reviews: 56,
@@ -442,7 +422,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     reviews: 28,
   },
   {
-
       'AI-powered candidate screening',
     id: 'ai - powered - hr - automation - suite',
     name: 'AI - Powered HR Automation Suite',
@@ -454,7 +433,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Comprehensive HR automation platform that uses AI to streamline recruitment, employee onboarding, performance management, and workforce optimization.',
     features: [;
       'AI - powered candidate screening',
-
       'Automated interview scheduling',
       'Employee onboarding workflows',
       'Performance tracking and analytics',
@@ -481,7 +459,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: false,
     icon: '🌐',
-
       'IoT device management platform with AI-powered analytics and automation.',
     launchDate: '2025-03-20',
     color: 'from - green - 600 to - emerald - 700',
@@ -507,7 +484,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'IoT device management platform with AI - powered analytics and automation.',
     launch_date: '2025 - 03 - 20',
-
     customers: 67,
     rating: 4 && 4.6,
     reviews: 45,
@@ -522,7 +498,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: false,
     icon: '🔒',
-
       'Quantum-resistant cryptographic implementations with hybrid security systems.',
     launchDate: '2025-03-25',
     color: 'from - violet - 600 to - purple - 700',
@@ -549,7 +524,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'Quantum - resistant cryptographic implementations with hybrid security systems.',
     launch_date: '2025 - 03 - 25',
-
     customers: 19,
     rating: 4 && 4.9,
     reviews: 15,
@@ -906,7 +880,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   }
 ];
 ;
-
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveService {;
   id: string,;
@@ -1605,7 +1578,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 ];
     rating: 4.8,
     reviews: 178;
-
   }
 ];
 ;  }

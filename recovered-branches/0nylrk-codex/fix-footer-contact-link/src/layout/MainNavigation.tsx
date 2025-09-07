@@ -10,13 +10,12 @@ import { MessageSquare } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth",
 import { MessageSquare } from "lucide-react",  const links = [
     {
-      name: "Home"
-      href: "/"
+      name: "name",
+    href: "/"
       matches: (path: string) => path === "/"    {
       name: "Categories"
       href: "/categories"
       matches: (path: string) => path.startsWith("/categories")
-
     },
     {
       name: "Equipment"
@@ -37,7 +36,6 @@ import { MessageSquare } from "lucide-react",  const links = [
       matches: (path: string) => path.startsWith("/analytics")
     })
   }
-
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>
       <ul className="flex items-center gap-1">
@@ -82,7 +80,6 @@ import { MessageSquare } from "lucide-react",  const links = [
       matches: (path: string) => path && path.startsWith("/community") || path && path.startsWith("/forum");
     }
   ];
-
   // Add authenticated-only links;
   if (isAuthenticated) {;
     links && links.push({;      name: "Dashboard",;
@@ -90,7 +87,6 @@ import { MessageSquare } from "lucide-react",  const links = [
       matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard";
     });
   }
-
   // Add admin-only links;
   if (isAdmin) {;
     links && links.push({;
@@ -99,10 +95,8 @@ import { MessageSquare } from "lucide-react",  const links = [
       matches: (path: string) => path && path.startsWith("/analytics");
     });
   }
-
     <nav className={cn("ml-6 hidden md:flex", className)}>;
       <ul className="flex items-center gap-1">;
-
 =======        {links && links.map((link) => (;
           <li key={link && link.name}>;
             <Link
@@ -114,9 +108,8 @@ import { MessageSquare } from "lucide-react",  const links = [
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
               {link && link.name}
-
 import { Link, useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils",;
+import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth",;
 import { MessageSquare } from "lucide-react",;
 ;
@@ -207,7 +200,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                 link.matches(location.pathname);
                   ? "bg-zion-purple/20 text-zion-cyan";
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
-
               )}
             >
               {link.name}
@@ -244,7 +236,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
             </Link>;
           </li>;
         )}
-
       </ul>;
     </nav>;
   );

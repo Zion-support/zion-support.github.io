@@ -1,6 +1,5 @@
-
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { ;
   getTalentRateSuggestion,;
   PricingSuggestion,;
@@ -109,7 +108,6 @@ location?: string;
 if (suggestion) {
   //We'll use the middle of the range as the suggested rate //Track this suggestion application if (user) {
   trackPricingSuggestion ({
-  
 }
 }
 }

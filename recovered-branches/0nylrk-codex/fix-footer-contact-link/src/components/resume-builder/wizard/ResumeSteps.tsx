@@ -5,7 +5,6 @@ interface ResumeStepsProps {
   activeTab: string;
   onChange: (value: string) => void;
 }
-
 export const ResumeSteps = ({
   steps,
   activeTab,
@@ -17,7 +16,6 @@ export const ResumeSteps = ({
         <TabsTrigger key={step.id} value={step.id}>
   )
 };
-
   active_tab,
   on_change,
 }: ResumeStepsProps) =>: any {
@@ -30,9 +28,8 @@ export const ResumeSteps = ({
     </TabsList>);
 }
 ;
-
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { StepProps } from "./types",;
+import { StepProps } from "./types";
 ;
 interface ResumeStepsProps {;
   steps:StepProps[],;
@@ -53,13 +50,10 @@ export const ResumeSteps = ({ steps, activeTab, onChange } ResumeStepsProps) => 
         </TabsTrigger>
       ))}
     </TabsList>
-
   );
 }
-
   )
 };
-
   )
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

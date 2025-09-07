@@ -1,5 +1,3 @@
-
-
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -10,7 +8,6 @@ import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
-
   const hasScore = typeof application.match_score === 'number';
   // Format the date when the application was scored
   const scoredDate = application.scored_at
@@ -30,18 +27,14 @@ interface ApplicationScoreCardProps {;
   application: JobApplication,;
   onScoreUpdated?: (updatedApplication: JobApplication) => void;
 }
-
 export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
   const [isScoring, setIsScoring] = useState(false);
-
   // Determine if application has been scored;
   const hasScore = typeof application && application.match_score === 'number';
-
   // Format the date when the application was scored;
   const scoredDate = application && application.scored_at ;
     ? new Date(application && application.scored_at).toLocaleDateString() ;
     : null;
-
   // Get suggestion color;
   const getSuggestionColor = (suggestion: string | undefined) => {;
     switch (suggestion) {;
@@ -49,7 +42,7 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800";
 import { useState } from "react";
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button",;
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -142,7 +135,6 @@ function ApplicationScoreCard() {
 ;
       // Call the trigger_resume_scoring function;
       const { error } = await supabase.rpc (
-
         'trigger_resume_scoring';
         { application_id: application && application.id }
       );
@@ -159,7 +151,6 @@ function ApplicationScoreCard() {
         'trigger_resume_scoring',;
         { application_id: application.id }
       ),
-      
       if (error) throw error,        const { data, error } = await supabase
           .from("job_applications")
           .select("*")
@@ -167,38 +158,28 @@ function ApplicationScoreCard() {
   }
   };
           .single(),
-          
-
         if (error) {
-
       if (error) throw error;
-
         'trigger_resume_scoring';
         { application_id: application && application.id }
       );
       if (error) throw error;
       toast && toast.success("Resume scoring has been initiated");
-
       // Poll for results every 3 seconds for up to 30 seconds;
       let attempts = 0;
       const maxAttempts = 10;
-
       const checkScore = async () => {;
         attempts++;
-
         const { data, error } = await supabase;
           .from("job_applications");
           .select("*");
           .eq("id", application && application.id);
           .single();
-
         if (error) {;
           setIsScoring(false);
           return toast && toast.error("Failed to check scoring status");
         }
-
         if (data && data.scored_at) {;
-
         if (data && data.scored_at) {;
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
@@ -241,7 +222,6 @@ function ApplicationScoreCard() {
     }
   },
   }
-
   // Render the score result or button to score;
   return (
         if (attempts < maxAttempts) {;
@@ -257,7 +237,6 @@ function ApplicationScoreCard() {
       toast && toast.error(`Failed to score resume: ${error && error.message}`);
     }
   }
-
   // Render the score result or button to score;
   return (
     }
@@ -333,7 +312,6 @@ function ApplicationScoreCard() {
                 <div className="font-semibold text-xl">{application && application.match_score}/100</div>;
               </div>;
             </div>;
-
             {/* Summary */}
             <div className="flex items-start mb-4">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;                <BarChart2 className="h-5 w-5 text-primary" />;
@@ -343,7 +321,6 @@ function ApplicationScoreCard() {
                 <div className="font-medium">{application && application.match_summary}</div>;
               </div>;
             </div>;
-
             {/* Suggestion */}
             <div className="flex items-start">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;                <Lightbulb className="h-5 w-5 text-primary" />;
@@ -357,10 +334,8 @@ function ApplicationScoreCard() {
                     Scored on {scoredDate}
                   </div>;
                 )}
-
               </div>;
             </div>;
-
           <Badge variant={hasScore ? "default" : "outline"} className="ml-2">;
             {hasScore ? "SCORED" : "NOT SCORED"}
             {/* Breakdown (Collapsible) */}
@@ -380,18 +355,13 @@ function ApplicationScoreCard() {
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
-
                       </div>;                    )}
-
                     )}
-
                   </div>;
                 </details>;
               </div>;
             )}            )}
-
             )}
-
             )}
           </div>;
         ) : (;
@@ -421,7 +391,6 @@ function ApplicationScoreCard() {
 }
 ;
 ;;
-
 ;
       // Check condition
 if (throw error) {
@@ -650,7 +619,6 @@ onScoreUpdated?: (updatedApplication: JobApplication) => void
 //Determine if application has been scored const hasScore = typeof application.match score === 'number';
 //Get suggestion color const getSuggestionColor = (suggestion: string | undefined) => {
   switch (suggestion) {
-  
 }
 };
 //Trigger the scoring process const handleScore = async () => {

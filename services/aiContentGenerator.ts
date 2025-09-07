@@ -14,13 +14,11 @@ export interface ContentGenerationResponse {
     title: string;
   metadata: {
     title: string,
-  description: string
-
+  description: string;
     tags: string[]
   }
 }
 export interface ContentTemplate {
-
 export interface ContentTemplate {;
   id: string;
   name: string,
@@ -75,22 +73,17 @@ export const AI_CONTENT_PRICING = {
     features: [;
       '100 content generations per month_basic templatesSEO analysis_email support_standard quality';
     ];
-
   }
   enterprise: {
     name: 'Enterprise';
     price: 299;
-
     period: '/month',
     period: '/month',
-
     features: [;
       'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee';
     ];
-
   },
 };
-
   }
 }
 }

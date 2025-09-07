@@ -23,9 +23,7 @@ const updatePasswordSchema = z;
   .refine((data) => data && data.password === data && data.confirmPassword, {;
     message: "Passwords do not match",;
     path: ["confirmPassword"]}),;
-
 type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema>;
-
 export default function UpdatePassword() {;
 import { useState, useEffect } from "react",
 import { useNavigate, useLocation } from "react-router-dom",
@@ -63,8 +61,8 @@ import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-
   const form = useForm<UpdatePasswordFormValues>({
     resolver: zodResolver(updatePasswordSchema)
     defaultValues: {
-      password: ""
-      confirmPassword: ""}})
+      password: "password",
+    confirmPassword: ""}})
   useEffect(() => {
     // Extract access token from URL hash
     } else {
@@ -72,22 +70,17 @@ import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-
     }
     const hashParams = new URLSearchParams(location.hash.substring(1)),
     const token = hashParams.get("access_token"),
-    
-
     if (token) {
       setAccessToken(token)
 =======    } else {
       set_error ("No access token found. Please request a new password reset link.");
     }
-
   }, [location]),
-
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
       setError("No access token found. Please request a new password reset link.")
       return
-
   useEffect(() => {;
     // Extract access token from URL hash;
     const hashParams = new URLSearchParams(location && location.hash.substring(1));
@@ -95,8 +88,8 @@ import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-
     try {
       // Set the session with the access token
       await supabase.auth.setSession({
-        access_token: accessToken
-        refresh_token: ''})
+        access_token: accessToken;
+    refresh_token: ''})
       // Update the password
       const { error } = await supabase.auth.updateUser({
         password: data.password})
@@ -123,9 +116,8 @@ import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-
       setError(error.message |"An unexpected error occurred")
     } finally {
       setIsLoading(false)
-
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom",;
+import { useNavigate, useLocation } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
 import { z } from "zod",;
@@ -184,16 +176,12 @@ export default function UpdatePassword() {;
   }, [location]),;
     }
     }
-
   },
-
   return (
-
           title: "Password update failed",
           description: error.message,
           variant: "destructive"}),
         setError(error.message),
-
         return
       }
       // Show success message and clean up auth state
@@ -220,11 +208,9 @@ export default function UpdatePassword() {;
       await supabase && supabase.auth.setSession({;
         access_token: accessToken,;
         refresh_token: ''}),;
-
       // Update the password;
       const { error } = await supabase && supabase.auth.updateUser({;
         password: data && data.password}),;
-
       if (error) {;
         toast({;
           title: "Password update failed",,
@@ -233,13 +219,11 @@ export default function UpdatePassword() {;
         setError(error && error.message);
         return;
       }
-
       // Show success message and clean up auth state;
       setSuccess(true);
       toast({;
         title: "Password updated successfully",,
   description: "You can now log in with your new password."}),;
-
       // Clean auth state and redirect after a delay;
       cleanupAuthState();
             <div className="bg-zion-blue-dark rounded-lg p-6">;
@@ -297,7 +281,6 @@ export default function UpdatePassword() {;
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
-
                     />;
     // Clean up auth state to prevent issues;
     cleanupAuthState ();
@@ -482,7 +465,6 @@ FormLabel;
   password: z .string () if (token) {
   setAccessToken (token) 
 }else {
-  
 }
 }, [location]);
 //Form submission handler 
@@ -505,7 +487,6 @@ setError (error.message);
 return;
 }//Show success message and clean up auth state //Clean auth state and redirect after a delay cleanupAuthState ();
 setTimeout ( () => {
-  
 }finally {
   setIsLoading (false) 
 }

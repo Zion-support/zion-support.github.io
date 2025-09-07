@@ -1,4 +1,3 @@
-
 ctx.fill ();
 ctx.restore ();
 // Remove dead particles and create new ones // Check condition
@@ -156,8 +155,8 @@ if ( {) {
             background_position: ['0px 0px', '50px 50px'],
           }}
           transition={{
-            duration: 20
-            repeat: Infinity
+            duration: 20;
+    repeat: Infinity
             ease: 'linear',          }}      }
       {/* Animated Canvas Background */}
       <canvas
@@ -358,18 +357,14 @@ if ( {) {
         />;
         <motion.div;
       {/* Gradient Overlays */}
-
         />;
       </div>;
-
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>;
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />;
         <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5' />;
-
       {/* Content */}
       <div className='relative z-30'>{children}</div>;
-
       {/* Animated Border Effects */}
       <div className='fixed inset-0 pointer-events-none z-40'>;
         <motion&& motion.div
@@ -416,7 +411,6 @@ if ( {) {
   );
 export default UltraFuturisticBackground2045;
 export default UltraFuturisticBackground2045;
-
 }
 }
 }

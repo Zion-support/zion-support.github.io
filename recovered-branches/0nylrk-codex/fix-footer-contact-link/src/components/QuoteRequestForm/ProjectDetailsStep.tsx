@@ -6,7 +6,6 @@ interface ProjectDetailsStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
-
 export function ProjectDetailsStep({
   formData,
   updateFormData,
@@ -30,7 +29,6 @@ export function ProjectDetailsStep({
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
-
           <div>
             <Label
               htmlFor="projectDescription"
@@ -50,7 +48,6 @@ export function ProjectDetailsStep({
           </div>
         </div>
       </div>
-
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">
           Contact Information
@@ -64,7 +61,7 @@ export function ProjectDetailsStep({
               id="name"
               placeholder="Your name"
 import { QuoteFormData } from "@/types/quotes";
-import { Input } from "@/components/ui/input",;
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label",;
 import { Textarea } from "@/components/ui/textarea",;
 interface ProjectDetailsStepProps {;
@@ -127,7 +124,6 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
-
           <div>
             <Label htmlFor="email" className="text-zion-slate-light">
               Email
@@ -249,12 +245,9 @@ interface ProjectDetailsStepProps {
                 });
               }
               className="bg - zion - blue border border - zion - blue - light focus: border - zion - purple text-white";
-
             />;
           </div>;
         </div>;
       </div>;
-
     </div>);}
-
   )

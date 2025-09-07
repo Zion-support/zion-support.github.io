@@ -1,9 +1,6 @@
 // Get region flag based on country name (for demo purposes)
-
   const getRegionEmoji = (countryName: string | undefined): string => {
-
     if (!countryName) return "🌐",
-    
     const emojiMap: Record<string string> = {
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
@@ -22,17 +19,13 @@
       // Default if no flag is found
       "default": "🌐"
     },
-    
     return emojiMap[countryName] || "🌐"
   },
-  
   // Get response time estimate based on country
   const getResponseTime = (countryName: string | undefined): string => {
     if (!countryName) return "8-24 hours",
-    
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
-    
     if (tier1.includes(countryName)) {
       return "4 hours"
     } else if (tier2.includes(countryName)) {
@@ -41,7 +34,6 @@
       return "8-24 hours"
     }
   },
-  
   return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular 
@@ -53,9 +45,7 @@
           <div className="flex items-center space-x-2">
             <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
-
     if (!countryName) return "🌐",
-    
     const emojiMap: Record<string string> = {
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
@@ -74,17 +64,13 @@
       // Default if no flag is found
       "default": "🌐"
     },
-    
     return emojiMap[countryName] || "🌐"
   },
-  
   // Get response time estimate based on country
   const getResponseTime = (countryName: string | undefined): string => {
     if (!countryName) return "8-24 hours",
-    
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
-    
     if (tier1.includes(countryName)) {
       return "4 hours"
     } else if (tier2.includes(countryName)) {
@@ -93,7 +79,6 @@
       return "8-24 hours"
     }
   },
-  
   return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular 
@@ -117,13 +102,10 @@
         <p className='text-3xl font-bold text-zion-cyan mb-4'>
           ${country.pricePerIncident.toFixed(2)}
         </p>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-2 text-zion-slate-light">
           <div className="flex items-start">
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />
             <span>Typical response time: {getResponseTime(country.country)}</span>
-
           </div>
           <div className='flex items-start'>
             <MapPin className='h-4 w-4 mr-2 text-zion-purple mt-1' />
@@ -139,7 +121,6 @@
           </div>
         </div>
       </CardContent>
-
 import {;
   Card,;
   CardContent,;
@@ -150,9 +131,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
-
             <span>First hour included</span>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
         </div>;
       </CardContent>;
@@ -216,7 +195,6 @@ import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
         >;
           Select Service;
         </Button>;
-
           className='w-full text-zion-cyan hover:text-zion-purple'>;
           <Link href='/contact'>Contact Sales</Link>;
         </Button>;
@@ -224,7 +202,6 @@ import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
     </Card>;
   );
 }
-
         <Button;
           variant='outline';
           className='w - full border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
@@ -253,12 +230,10 @@ import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
           Select Service
         </Button>
         <Button
-
           variant="outline"
           className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           onClick={() => onQuote?.(country)}
         >
-
           Get Quote
         </Button>
         <Button
@@ -268,7 +243,6 @@ import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
         >
           <Link href="/contact">Contact Sales</Link>
         </Button>
-
       </CardFooter>
     </Card>
   )

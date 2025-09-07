@@ -4,8 +4,8 @@ interface CacheItem<T> {
   createdAt: number;'
 }
 interface CacheConfig {
-  "defaultTTL": number; // Time to live in milliseconds
-  maxSize: number;
+  "defaultTTL": number; // Time to live in milliseconds;
+    maxSize: number;
   cleanupInterval: number;'
 }
 class CacheManager<T = any> {

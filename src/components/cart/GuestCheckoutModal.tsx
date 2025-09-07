@@ -1,6 +1,4 @@
-
 import {;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Dialog,;
   DialogContent,;
   DialogDescription,;
@@ -10,7 +8,6 @@ import {;
 } from '@/components/ui/dialog';
 import { User, Mail, MapPin, CreditCard } from 'lucide-react';
 import { isProdDomain } from '@/utils/getStripe';
-
 interface GuestCheckoutModalProps {;
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -23,27 +20,21 @@ export default function GuestCheckoutModal(): any ({;
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     if (!email || !address) {;
       alert('Please fill in all required fields');
       return;
     }
-
     setIsSubmitting(true);
     try {;
       onSubmit({ email, address });
     } finally {;
       setIsSubmitting(false);
-
     }
   },
-
   return (
-
               htmlFor='guest-email'
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className='text-white flex items-center gap-2'>;
               <Mail className='h-4 w-4 text-zion-cyan' />;
               Email Address;
@@ -51,9 +42,7 @@ export default function GuestCheckoutModal(): any ({;
             <Input
               id='guest-email'
               type='email'
-
               {isSubmitting ? (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 'Processing...'
               ) : (
                 <>
@@ -61,7 +50,6 @@ export default function GuestCheckoutModal(): any ({;
                   Continue to Payment
                 </>
               )}
-
               disabled={isSubmitting || !email || !address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
               {isSubmitting ? (;
@@ -72,13 +60,9 @@ export default function GuestCheckoutModal(): any ({;
                   Continue to Payment;
                 </>;
               )}
-
 };
 };
-
             </Button>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

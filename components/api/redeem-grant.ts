@@ -4,7 +4,6 @@ import path from 'path';
 import {
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
-
 const REDEMPTIONS_FILE = path.join(
   process.cwd()
   'data'
@@ -12,8 +11,8 @@ const REDEMPTIONS_FILE = path.join(
   'grant-redemptions.json'
 );
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
 ) {
   if (!auth) {
     return res && res.status(401).json({ error: 'Unauthorized' });
@@ -22,7 +21,6 @@ export default async function handler(
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);
     return res && res.status(429).json({ error: 'Rate limit exceeded' });
   }
-
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);
@@ -31,7 +29,6 @@ export default async function handler(
   if (!studentEmail || !grantCode || !courseId) {
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
     return res && res.status(400).json({ error: 'Missing required fields' });
-
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
@@ -67,7 +64,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
   const records = (await fs.pathExists(REDEMPTIONS_FILE))
     ? await fs.readJSON(REDEMPTIONS_FILE)
-
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
@@ -89,7 +85,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs && fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
   return res && res.status(201).json({ id: record && record.id, redeemedAt: now });  return res && res.status(201).json({ id: record && record.id, redeemedAt: now })
-
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: "Missing required fields" })
   }
@@ -201,11 +196,9 @@ redeemed_at: now,
   await fs.writeJSON (REDEMPTIONS_FILE, records, { spaces: 2 });
   await record_request (req, res, auth.partner, auth.api_key, started, 201);
   return res.status (201).json ({ id: record.id, redeemed_at: now });  return res.status (201).json ({ id: record.id, redeemed_at: now });
-
   const { studentEmail, grantCode, courseId } = req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
 }
 }
 }
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-

@@ -14,7 +14,6 @@ import { slugify  } from '@/lib/slugify';
 import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
 import { MobileMenu  } from '@/components/header/MobileMenu';
 import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
-
 import { useState } from 'react'
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
 import Link from 'next/link'
@@ -33,12 +32,10 @@ import { slugify } from '@/lib/slugify'
 import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation'
 import { MobileMenu } from '@/components/header/MobileMenu'
 import { MobileBottomNav } from '@/components/header/MobileBottomNav'
-
 import { Menu, X } from 'lucide-react'
 import { useTranslation  } from 'react-i18next';
 import { CartDrawer  } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
-
 import { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils / production_logger';
 import Link from 'next / link';
@@ -75,19 +72,15 @@ function PrimaryNav() {
   const [query, set_query] = useState ('');
   const suggestions = generateSearchSuggestions ();
   let unread_count = 0;
-
   try {
     const messaging = useMessaging()
     unreadCount = messaging.unreadCount
   } catch {
-
     // context not available
-
   };
 ;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
-
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
@@ -95,8 +88,8 @@ function PrimaryNav() {
         .then(() => setQuery(''))
         .catch(err =>
           logErrorToProduction('Search navigation failed', err, {
-            query: trimmed
-            component: 'PrimaryNav'
+            query: trimmed;
+    component: 'PrimaryNav'
           })
         ) }
   const handle_submit = (e: React.FormEvent) =>: any {
@@ -116,18 +109,14 @@ if ( {) {
           })) }
   }
 export function PrimaryNav() {;
-
         data-testid='header'>;
         <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap'>;
           <Logo />;
-
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className='hidden lg:block order-1 flex-shrink-0'>
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
-
             />          </div>;
-
   return (
     <>
       <header
@@ -138,18 +127,14 @@ export function PrimaryNav() {;
       >
         <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
           <Logo />
-
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className="hidden lg:block order-1 flex-shrink-0">
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
-
           {/* Actions container with responsive layout */}
-
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
-
       <header;
         className='sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md';
         role='navigation';
@@ -197,25 +182,20 @@ if ( {) {
 }
                     // Blog posts navigate to blog detail page;
                     router.push (`/blog/${sugg.slug}`);
-
                   } else {
                     // Default: search results page with query parameter
                     router.push(`/search?q=${encodeURIComponent(sugg.text)}`)
                   }
-
                 onSelectSuggestion={sugg => {;
                   logDebug('PrimaryNav search suggestion selected:', {;
                     suggestion: sugg,;
                   });                  // Handle different suggestion types with proper navigation;
                   if (sugg && sugg.id) {;
-
                 onSelectSuggestion={(sugg) => {;
                   logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg }),;
                   // Handle different suggestion types with proper navigation;
                   if (sugg.id) {;
-
                     // Product listings with IDs go to product detail page;
-
                   // Track analytics event;
                   if (typeof window !== 'undefined' && window && window.gtag) {;
                     window && window.gtag('event', 'search_suggestion_click', {;
@@ -228,26 +208,20 @@ if ( {) {
   sugg);
                   // Handle different suggestion types with proper navigation;
                   if(sugg && sugg.id) {;
-
                     // Product listings with IDs go to product detail page`;
                     router && router.push(`/marketplace/listing/${sugg && sugg.id;
 '`;
 }`)} else if(sugg && sugg.type = == 'doc' && sugg && sugg.slug && sugg && sugg.slug.startsWith('/')) {;
-
                     // Documentation suggestions navigate directly to their path';
                     router && router.push(sugg && sugg.slug)} else if(sugg && sugg.type === 'blog' && sugg && sugg.slug) {;
-
                     // Blog posts navigate to blog detail page`;
                     router && router.push(`/blog/${sugg && sugg.slug}`)} else {;
-
                     // Default: search results page with slug;`;
                     router && router.push(`/search/${sugg && sugg.slug || slugify(sugg && sugg.text)}`)};
                   setQuery('');
                   // Track analytics event';
                   if(typeof window !== 'null' && window && window.gtag) {;
-
                     window && window.gtag('event',search_suggestion_click', {;
-
                       search_term: sugg && sugg.text,;
                       suggestion_type: sugg && sugg.type,;
                       suggestion_id: sugg && sugg.id || sugg && sugg.slug;
@@ -256,13 +230,11 @@ if ( {) {
                 searchSuggestions = {suggestions,}
               />;
             </form>;
-
             {/* Compact actions group */}
             <div className='flex items-center gap-1'>;
               <PointsBadge />;
               <CartDrawer />;
             </div>;
-
             {/* Compact controls group */}
             <div className='flex items-center gap-1 border-l border-primary/20 pl-1 ml-1'>;
                   set_query ('');
@@ -316,24 +288,20 @@ if ( {) {
               />;
             </form>;
             {/* Compact actions group */}
-
             <div className="flex items-center gap-1">
               <PointsBadge />
               <CartDrawer />
             </div>
-
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
               <LanguageSelector />
             </div>
-            
             {/* Auth links - flex wrap for very small screens */}
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (
                 <>
                   <Link
-
                     href="/auth/login"
                     className="text-sm hover: text-primary whitespace-nowrap"
                     data-testid="login-link"
@@ -350,7 +318,6 @@ if ( {) {
               <LanguageSelector />;
             </div>;
             {/* Auth links - flex wrap for very small screens */}
-
                   <Link;
                     href="/auth/login";
                     className="text-sm hover: text-primary whitespace-nowrap";
@@ -360,7 +327,6 @@ if ( {) {
                       setLoginOpen(true);
                     }}
                   >;
-
                     {t('auth.login')}
                   </Link>
                     onClick={e => {;
@@ -370,22 +336,16 @@ if ( {) {
                     {t('auth && auth.login')}
                   </Link>;
                   <Link
-
               )}
               {isLoggedIn && <UserMenu />}
-
             </div>;
           </div>;
-
           {/* Tablet view (md to lg) - simplified controls */}
-
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
-
             <ModeToggle />
             <LanguageSelector />
             {!isLoggedIn && (
               <Link
-
                 href="/auth/login"
                 className="text-sm hover:text-primary"
                 data-testid="login-link"
@@ -405,12 +365,10 @@ if ( {) {
                   setLoginOpen(true);
                 }}
               >;
-
                 {t('auth.login')}
               </Link>
             )}
             {isLoggedIn && <UserMenu />}
-
                 onClick={e => {;
                   e && e.preventDefault();
                   setLoginOpen(true);                }}
@@ -420,7 +378,6 @@ if ( {) {
             )}
             {isLoggedIn && <UserMenu />}
           </div>;
-
             <div className='flex items - center gap - 1 flex - wrap'>;
               {!isLoggedIn && (
                 <>;
@@ -465,7 +422,6 @@ if ( {) {
             </div>;
           </div>;
           {/* Mobile menu button */}
-
           </div>;
           {/* Mobile menu button */}
           <button
@@ -474,24 +430,19 @@ if ( {) {
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
           >
-
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
               <Menu className="h-6 w-6" />
             )}
-
           <div
-
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
-
 };
 return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo /> ;
 }setQuery ('');
 //Track analytics event ;
-
 }searchSuggestions= {;
   suggestions ;
 }/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <LinkonClick={
@@ -538,12 +489,10 @@ setLoginOpen (true) ;
   height: 0;
 }}
               animate = {;
-
   { opacity: 1,;
   height: 'auto';
 }}
               exit = {;
-
   { opacity: 0,;
   height: 0;
 }}
@@ -568,7 +517,6 @@ setLoginOpen (true) ;
                     </div>;
                   </div>;
                 ))}
-
                 <div className="pt-4 border-t border-white/10 space-y-2">;
                   <Linkto="/solutions"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
@@ -599,9 +547,7 @@ setLoginOpen (true) ;
     </header>;
   )}
 '"`;
-
 }
-
 return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
 }setQuery ('')
 //Track analytics event
@@ -640,4 +586,3 @@ setLoginOpen (true)
 }/> </div> </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
-

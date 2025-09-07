@@ -3,8 +3,8 @@ interface CacheItem<T> {
   expiresAt: number;
   createdAt: number;'
 interface CacheConfig {
-  "defaultTTL": number; // Time to live in milliseconds
-  maxSize: number;
+  "defaultTTL": number; // Time to live in milliseconds;
+    maxSize: number;
   cleanupInterval: number;'
   constructor(config: Partial<CacheConfig> = {}) {
     this && this.config = {

@@ -31,11 +31,9 @@ export default function SavedTalentsPage() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const navigate = useNavigate(),
-
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {;
     const fetchSavedTalents = async () => {;
   const { user } = useAuth();
@@ -48,20 +46,17 @@ export default function SavedTalentsPage() {
           return;
         }
             talent_profile (
-
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
   const [isLoading, setIsLoading] = useState(true);        if (data) {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
             item => item.talent_profile as unknown as TalentProfile
-
               is_verified;
             );
           `;
           );
           .eq("user_id", user && user.id);
-
         if (error) {;
           throw error;
               is_verified);
@@ -75,13 +70,11 @@ if ( {) {
           throw error;
         }
       } catch (error) {
-
         console.error ("Error fetching saved talents:", error);
         toast ({
           title: "Error",
           description: "Failed to load saved talents. Please try again later.",
           variant: "destructive"});
-
         // Check condition
 if ( {) {
   $2
@@ -91,39 +84,31 @@ if ( {) {
             item => item.talent_profile as unknown as TalentProfile);
           setSavedTalents (talent_profiles);
         }
-
       } catch (error) {
         console.error ("Error fetching saved talents:", error);
         toast ({
           title: "Error",
           description: "Failed to load saved talents. Please try again later.",
           variant: "destructive"});
-
       } finally {
         setIsLoading (false);
       }
-
     fetchSavedTalents()
   }, [user]);
   const handleViewProfile = (talentId: string) => {
     navigate(`/talent/${talentId}`)
   }
     },
-
     fetchSavedTalents()
   }, [user]),
-
   const handleViewProfile = (talentId: string) => {
     navigate(`/talent/${talentId}`)
   },
-
   const handleRequestHire = (talent: TalentProfile) => {
     console.log("Request to hire:", talent);    toast({
-      title: "Hire Request Sent"
-      description: `A hire request has been sent to ${talent.full_name}.`})
-
+      title: "title",
+    description: `A hire request has been sent to ${talent.full_name}.`})
   },
-
       } catch (error) {;
         console.error("Error fetching saved talents:", error),;
         toast({;
@@ -163,7 +148,6 @@ if ( {) {
           throw error;        setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         );        }
-  
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         ),          toast({
@@ -185,7 +169,6 @@ if ( {) {
         title: "Error"
         description: "Failed to update saved talents. Please try again later."
         variant: "destructive"})
-
   return (
     <>;
       <SEO
@@ -308,7 +291,6 @@ if ( {) {
                 onRequestHire={handleRequestHire}
                 is_saved={true}
                 onToggleSave={handleToggleSave}
-
                 is_authenticated={!!user}
               />))}
           </div>)}
@@ -330,7 +312,6 @@ useEffect ( () => {
   setIsLoading (true);
 try {
   if (!user) {
-  
 }const {
   data, error 
 }= await supabase .from ("saved talents") user id;
@@ -349,13 +330,11 @@ is verified) `) if (data) {
 }finally {
   setIsLoading (false) 
 }
-
 };
 }, [user])
 };
   try {
   if (!user) {
-  
 }//Remove from saved talents const {
   error 
 }= await supabase .from ('saved talents') .delete () .eq ('user id', user.id) .eq ('talent id', talentId);

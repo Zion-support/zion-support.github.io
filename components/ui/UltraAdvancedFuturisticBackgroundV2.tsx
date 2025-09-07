@@ -1,5 +1,4 @@
-
-  useEffect(() => {
+useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -53,10 +52,9 @@ if (return) {
           className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink-400 opacity-20";
           animate={{
           transition={{
-            duration: 7
-            repeat: Infinity
+            duration: 7;
+    repeat: Infinity
             ease: 'easeInOut',          }}          }}
-
         <motion&& motion.div
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
         />;
@@ -95,9 +93,7 @@ if (return) {
             repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut"
           }}
-
           }}
-
         />
       </div>
       {/* Quantum Energy Particles */}
@@ -139,11 +135,9 @@ if (return) {
               duration: 3 + Math.random() * 2
               repeat: Infinity
               delay: Math.random() * 2
-
               duration: 3 + Math && Math.random() * 2,
               repeat: Infinity,
               delay: Math && Math.random() * 2,
-
             transition={{
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
@@ -154,11 +148,9 @@ if (return) {
               repeat: Infinity,
               delay: Math.random() * 2,
               ease: 'easeInOut',            }}
-
           />
         ))}
       </div>
-
       {/* Neural Network Connections */}
       <div className='fixed inset-0 pointer-events-none z-30'>;
         <svg className='w-full h-full'>;
@@ -202,27 +194,19 @@ if (return) {
                 repeat: Infinity,
                 delay: Math.random() * 2,
                 ease: 'easeInOut',              }}
-
               }}
-
                 ease: 'easeInOut',              }}
-
               }}
-
             />
           ))}
-
       {/* Content */}
       <div className='relative z-40'>{children}</div>
     </div>
   );
         </svg>;
       </div>;
-
       {/* Content */}
-
 };
-
 export default UltraAdvancedFuturisticBackgroundV2;
       {/* Content */}
       <div className='relative z-40'>{children}</div>
@@ -238,14 +222,12 @@ export default UltraAdvancedFuturisticBackgroundV2;
     </div>;
   );
 export default UltraAdvancedFuturisticBackgroundV2;
-
       <div className="relative z-40">
         {children}
       </div>
     </div>
   )
 };
-
 export default UltraAdvancedFuturisticBackgroundV2;
                 delay: Math.random () * 2,
                 ease: 'easeInOut',              }}                ease: "easeInOut";

@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
+import Head from 'next/head';
+import Layout from "Layout";
 import { motion } from 'framer-motion',;
 import { ;
   Brain, Star, Users, TrendingUp, Zap, Shield, ;

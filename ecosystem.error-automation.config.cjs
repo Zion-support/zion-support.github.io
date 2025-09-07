@@ -1,9 +1,4 @@
 =======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service

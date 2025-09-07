@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string,
   description: string;
   category: string[];
@@ -64,8 +64,8 @@
         'Quantum standards'
         'Publication guidelines'
       ]
-      scalability: 'Quantum-grade, global research network'
-      roi: '600% within 24 months'
+      scalability: "scalability",
+    roi: '600% within 24 months'
       deployment: 'Quantum infrastructure, research platform'
       maintenance: 'Quantum optimization, research updates'
       training: 'Quantum training, research certification'
@@ -242,7 +242,6 @@
       },
     },
   ];    features: [
-
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
   ];    features: [;
       'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management';
@@ -252,7 +251,6 @@
     ];
     useCases: [
       'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies'
-
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
   ];    features: [;
       'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management';
@@ -590,7 +588,6 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
-
 ];
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }

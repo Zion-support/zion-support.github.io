@@ -1,5 +1,3 @@
-
-
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -30,9 +28,7 @@ import {
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 // Form validation schema
-
 const forgotPasswordSchema = z.object({
-
 const forgotPasswordSchema = z.object({
   email: z.string().email("Please enter a valid email")})
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
@@ -84,18 +80,14 @@ export default function ForgotPassword() {
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
-
                     />;
-
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                       disabled={isLoading}>;
                       {isLoading ? "Sending..." : "Reset Password"}
                     </Button>;
-
                     <div className="text-center">;
-
                       <Link
                         to="/login"                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
                       >
@@ -104,13 +96,10 @@ export default function ForgotPassword() {
                     </div>
                   </form>
                 </Form>
-
 ;
-
 ;
-
 import { useState } from "react";
-import { Link } from "react-router-dom",;
+import { Link } from "react-router-dom";
 import { useForm, type UseFormReturn } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;

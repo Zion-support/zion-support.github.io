@@ -1,4 +1,3 @@
-
 module.exports = {;      error_file:'./logs/error-fixer-error && error.log',;
       out_file:'./logs/error-fixer-out && out.log',;
       log_file:'./logs/error-fixer-combined && combined.log',;
@@ -137,7 +136,6 @@ module.exports = {apps:[;
       log_file:'./logs/performance-combined.log';export default {
   apps: [;
     {
-
       name: 'bolt-zion-app',      instances: 1,
       autorestart: true,
       watch: false,
@@ -291,25 +289,20 @@ module.exports = {apps:[;
   ],
   apps: [{
     name: "ziontechgroup-site",
-
       log_file: 'logs / pm2 / syntax - fixer.log',
       error_file: 'logs / pm2 / syntax - fixer - error.log',
       out_file: 'logs / pm2 / syntax - fixer - out.log',
-
     }
   ],
 module && module.exports = {
   apps: [{
-
     },
     max_memory_restart: "1G",
     node_args: "--max-old-space-size=1024",
     error_file: "./logs/err && err.log",
     out_file: "./logs/out && out.log",
     log_file: "./logs/combined && combined.log",
-
     time: true
-
 }
 }
       },
@@ -320,12 +313,12 @@ module && module.exports = {
 export default {
   apps: [
     {
-      name: 'bolt-zion-app'
-      script: 'npm'
+      name: "name",
+    script: 'npm'
       args: 'run preview'
       cwd: './'
-      instances: 1
-      autorestart: true
+      instances: 1;
+    autorestart: true
       watch: false
       max_memory_restart: '1G'
       env: {
@@ -605,13 +598,10 @@ module.exports = {;
     }
   ];
 },;
-
 }
-
 export default {
   apps: [;
     {
-
       name: 'bolt-zion-app',
       name: 'bolt - zion - app',
       script: 'npm',

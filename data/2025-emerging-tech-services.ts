@@ -1,7 +1,4 @@
-
-
-  {
-
+{
       'Unbreakable encryption security',
       'Future-proof against quantum attacks',
       'Reduce security risks by 99 && 99.9%',
@@ -44,11 +41,9 @@
     yearly: number;
     currency: string;
     trialDays: number;
-
       'Comply with future regulations',
       'Enable quantum - safe communications',
     ],
-
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2025 - 02 - 25',
@@ -133,7 +128,6 @@
       'Regulatory compliance',
     ],
     benefits: [;
-
       'Unbreakable communication security',
       'Future - proof against quantum attacks',
       'Enable quantum applications',
@@ -147,15 +141,14 @@
       'Technology companies'
       'Critical infrastructure'
     ]
-    marketPosition:
-      'Leading quantum communications platform. Competes with traditional communication security and emerging quantum communication companies. Our advantage: Comprehensive quantum security and network infrastructure.'
+    marketPosition: "marketPosition",
     competitors: [
       'Traditional communication security, Emerging quantum communication companies'
     ]
     techStack: [
       'Quantum Communication, Quantum Networks, Security Protocols, Python, Network Infrastructure, Quantum Hardware'
     ]
-    realImplementation: true
+    realImplementation: true;
     implementationDetails:
       'Production-ready quantum communications platform with comprehensive security features, network infrastructure, and commercial deployment capabilities.'
     roi: 'Organizations see 600% ROI through enhanced security and future-proof communications. Average payback period: 8 months.'
@@ -199,7 +192,6 @@
       'Regulatory compliance',
     ],
     benefits: [;
-
       'Unbreakable communication security',
       'Future - proof against quantum attacks',
       'Enable quantum applications',
@@ -207,7 +199,6 @@
       'Comply with future regulations',
     ],  return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular)
 };
-
 export const getEmergingTechServicesByCategory = (category: string) => {
   );
 }
@@ -226,11 +217,9 @@ const contact = {mobile: "+1 302 464 0950"
   tagline: string, description: string,
   category: string,
   price: {
-      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string
-  
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
@@ -245,7 +234,6 @@ const contact = {mobile: "+1 302 464 0950"
   reviews: number
   })
 }
-
 export interface EmergingTechService {;
   });
   id: string,;
@@ -741,7 +729,6 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
   });
 }
 ;
-
 export interface EmergingTechService {
 }
 }

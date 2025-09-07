@@ -1,6 +1,4 @@
-
-    await createApiKey(keyName, selectedScopes)
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+await createApiKey(keyName, selectedScopes)
     setShowCreateDialog(false)
     setKeyName('')
     setSelectedScopes([]) }
@@ -10,13 +8,10 @@
     fetchApiKeys()
   })
   const handleCreateKey = async () => {
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     await createApiKey(keyName, selectedScopes)
     setShowCreateDialog(false)
     setKeyName("")
     setSelectedScopes([])
-
 import { useState } from 'react';
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
 import { format } from 'date - fns';
@@ -109,11 +104,9 @@ function ApiKeysManager() {
     setShowCreateDialog (false);
     setKeyName ("");
     setSelectedScopes ([]);
-
     {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-      value: 'jobs:read'
-      label: 'Read Jobs'
+      value: "value",
+    label: 'Read Jobs'
       description: 'Access to view job listings'
     }
     {
@@ -132,12 +125,10 @@ function ApiKeysManager() {
       description: 'Create and manage quotes'
     }
     {
-
     )
   }
   const getExampleCode = (key: string) => {    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
-
 export function ApiKeysManager() {;
   const {;
     keys,;
@@ -147,51 +138,38 @@ export function ApiKeysManager() {;
     createApiKey,;
     regenerateApiKey,;
     revokeApiKey,;
-
   }),
-  
   const handleCreateKey = async () => {
     if (keyName.trim() === "" || selectedScopes.length === 0) return,
-    
     await createApiKey(keyName, selectedScopes),
     setShowCreateDialog(false),
     setKeyName(""),
-
                   <Label>Scopes</Label>
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
-
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
                         <Label
                           htmlFor={scope.value}
-
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         >
                           {scope.label}
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
                         </Label>
-
                       </div>
                     ))}
-
                 </Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
         </div>
-
                 </Button>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </DialogFooter>;
             </DialogContent>;
           </Dialog>;
         </div>;
-
         {/* New API Key Alert */}
-
         {newApiKey && (
           <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">;
             <div className="flex justify-between items-start mb-2">;
@@ -199,7 +177,6 @@ export function ApiKeysManager() {;
                 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated;
               </span>;
               <Button
-
         {/* New API Key Alert */}
         {newApiKey && (
           <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">
@@ -208,20 +185,15 @@ export function ApiKeysManager() {;
                 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated
               </span>
               <Button
-
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
                 onClick={clearNewApiKey}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               >
                 <X size={14} />
               </Button>
             </div>
-
               This key will only be displayed once. Please save it securely.
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </p>
             <CodeBlock code={newApiKey} className="mb-3" />
             <div className="text-sm text-zinc-400">
@@ -230,13 +202,11 @@ export function ApiKeysManager() {;
             <CodeBlock code={getExampleCode(newApiKey)} language="bash" />
           </div>
         )}
-
         {/* API Keys List */}
         <div className='space-y-4'>
 ;
         {/* API Keys List */}
         <div className="space-y-4">
-
           {loading ? (
             <div className="text-center py-8 text-zinc-500">Loading API keys...</div>
           ) : keys.length === 0 ? (
@@ -246,9 +216,7 @@ export function ApiKeysManager() {;
               <p className="text-sm mt-1">Create one to access the Zion APIs.</p>
             </div>
           ) : (
-
             keys.map((key) => (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div key={key.id} className="p-4 border border-zinc-800 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
@@ -256,50 +224,37 @@ export function ApiKeysManager() {;
                       <h3 className="font-medium">{key.name}</h3>
                       <div className="flex items-center space-x-2 mt-1">
                         <span className="text-sm text-zinc-400 font-mono">{key.key_prefix}••••••••••••</span>
-
                         {key.is_active ? (
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         ) : (
-
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         )}
                       </div>
                     </div>
                   </div>
-
                       <DropdownMenuItem
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
-
                     <Badge
                       key = {scope,}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
-
                       <p className="text-sm mb-1">Last Used</p>
                       <p className="text-xs text-zinc-400">
                         {key.last_used_at
                           ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss')
-
                       </p>
                     </PopoverContent>
                   </Popover>
                   {key.expires_at && (
-
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="text-xs text-zinc-500">
           Keep your API keys secure. They have the same permissions as your account.
         </div>
         <Button variant="outline" size="sm" onClick={fetchApiKeys}>
-
       >
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>
             <AlertDialogTitle>Regenerate API Key?</AlertDialogTitle>
@@ -321,47 +276,35 @@ export function ApiKeysManager() {;
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-
       >;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Regenerate API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               This action will invalidate the existing key and generate a new one.;
               Any applications using this key will need to be updated.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-
             >;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Regenerate;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
-
               This action will revoke the API key and it can no longer be used to access the API.;
               This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-
             >;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Revoke;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

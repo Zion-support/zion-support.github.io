@@ -9,23 +9,18 @@ import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, Di
 import {Label} from "@/components/ui/label";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
   const [customParam, setCustomParam] = useState<string>("");  const handleCopyLink = (link: string) => {
     navigator.clipboard.writeText(link)
     toast({
-      title: "Link copied!"
-      description: "The referral link has been copied to your clipboard"
+      title: "title",
+    description: "The referral link has been copied to your clipboard"
       variant: "default"
     })
-
   },
-  
   const handleGenerateLink = () => {
     if (baseLink) {
       const url = new URL(baseLink),
-      
-
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
         url.searchParams.append("campaign", selectedCampaign)
@@ -49,11 +44,9 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
             <Button
               variant="outline" 
               size="sm" 
-
             <Button 
               variant="outline" 
               size="sm" 
-
               onClick={handleDownloadLinks}
               className="flex items-center gap-2">;      "Name,Link";
       ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
@@ -84,7 +77,6 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
                   </SelectContent>;
                 </Select>;
               </div>;
-
               <div className="grid gap-2">;
                 <Label html_for="custom">Custom Parameter (Optional)</Label>;
                 <Input;

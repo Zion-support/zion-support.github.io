@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 import {
   ArrowRight,
   Star,
@@ -23,26 +22,21 @@ import {
   CheckCircle,;
   Sparkles,;} from 'lucide-react';import {
   ArrowRight, Star, Users, Award, Clock, ;
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -51,23 +45,18 @@ import Layout from './layout / Layout';
 import UltraFuturisticServiceCard2026 from './ui / UltraFuturisticServiceCard2026';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
   CheckCircle,;
   Sparkles,;} from 'lucide-react';import { ;
   ArrowRight, Star, Users, Award, Clock, ;
-
 import { 
   ArrowRight, Star, Users, Award, Clock, 
-
   Brain, Atom, Shield, Rocket, Zap;
   TrendingUp, Globe, Cpu, Database, Cloud;
   Lock, Palette, Target, CheckCircle, Sparkles;
-
 // Import new service data
 import { realMicroSaasServices2025  } from '../data/real-micro-saas-services-2025';
 import { realITServices2025  } from '../data/real-it-services-2025';
 import { realAIServices2025 } from '../data/real-ai-services-2025';
-
         <section className="min-h-screen flex items-center justify-center px-4 relative">
           {/* Animated background elements */}
           <div className="absolute inset-0 overflow-hidden">
@@ -82,7 +71,6 @@ import { realAIServices2025 } from '../data/real-ai-services-2025';
             <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
             <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>;
           </div>;
-
           <div className='text-center max-w-5xl mx-auto relative z-10'>            <motion && motion.div        {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 relative">;
           {/* Animated background elements */}
@@ -91,14 +79,12 @@ import { realAIServices2025 } from '../data/real-ai-services-2025';
             <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>;
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>;
           </div>;
-
           <div className="text-center max-w-5xl mx-auto relative z-10">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}>;
               {/* Main heading with enhanced typography */}
-
                   Zion Tech Group
                 </h1>
                 <div className='text-2xl md:text-3xl text-gray-300 mb-4 font-light'>
@@ -161,7 +147,6 @@ import { realAIServices2025 } from '../data/real-ai-services-2025';
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                 Trusted by Industry Leaders
@@ -198,12 +183,10 @@ import { realAIServices2025 } from '../data/real-ai-services-2025';
                 Our innovative solutions are powering the future of technology across industries;
               </p>;
             </motion && motion.div>;
-
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
-
               >
                 <div className='text-5xl font-bold text-cyan-400 mb-3'>50+</div>
                 <div className='text-gray-300 text-lg'>AI Services</div>
@@ -230,7 +213,6 @@ import { realAIServices2025 } from '../data/real-ai-services-2025';
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
-
               >
                 <div className='text-5xl font-bold text-blue-400 mb-3'>
                   100+
@@ -261,7 +243,6 @@ import { realAIServices2025 } from '../data/real-ai-services-2025';
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
                 viewport={{ once: true }}
-
               >
                 <div className='text-5xl font-bold text-purple-400 mb-3'>
                   24/7
@@ -309,7 +290,6 @@ import { realAIServices2025 } from '../data/real-ai-services-2025';
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
             >
               <div className='flex items-center justify-center space-x-3 mb-6'>
                 <Brain className='w-8 h-8 text-cyan-400' />
@@ -439,7 +419,6 @@ const Homepage2037: React.FC = () => {
           </div>
           <div className="text-center max-w-5xl mx-auto relative z-10">
             <motion.div
-
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
@@ -515,13 +494,11 @@ const Homepage2037: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/40 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
             <motion.div
-
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-16'
-
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                 Trusted by Industry Leaders
@@ -541,13 +518,11 @@ const Homepage2037: React.FC = () => {
             </motion.div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <motion.div
-
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
                 className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300'
-
               >
                 <div className='text-5xl font-bold text-cyan-400 mb-3'>50+</div>
                 <div className='text-gray-300 text-lg'>AI Services</div>
@@ -565,7 +540,6 @@ const Homepage2037: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
                 className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300'
-
               >
                 <div className='text-5xl font-bold text-blue-400 mb-3'>
                   100+
@@ -585,7 +559,6 @@ const Homepage2037: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
                 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300'
-
               >
                 <div className='text-5xl font-bold text-purple-400 mb-3'>
                   24/7
@@ -627,13 +600,11 @@ const Homepage2037: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-16'
-
             >
               <div className='flex items-center justify-center space-x-3 mb-6'>
                 <Brain className='w-8 h-8 text-cyan-400' />
@@ -671,12 +642,10 @@ const Homepage2037: React.FC = () => {
                     }}
                     variant="ai"
             </div>
-
                       icon: service.icon
                     }}
                     variant="ai"
             </div>
-
                       id: service && service.id,
                       name: service && service.name,
                       tagline: service && service.tagline,
@@ -705,7 +674,6 @@ const Homepage2037: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
-
             >
               <Link href='/ai-services'>
                 <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-cyan-500/25'>
@@ -741,7 +709,6 @@ const Homepage2037: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4 bg-black/20">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
-
         {/* Featured Enterprise IT Services */}
         <section className="py-24 px-4 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -750,7 +717,6 @@ const Homepage2037: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
             >
               <div className='flex items-center justify-center space-x-3 mb-6'>
                 <Shield className='w-8 h-8 text-blue-400' />
@@ -811,8 +777,8 @@ const Homepage2037: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}>;
-                  <UltraFuturisticServiceCard2026
-                      features: service.features.slice (0, 5),
+                  <UltraFuturisticServiceCard2026;
+    features: service.features.slice (0, 5),
                       popular: service.popular,
                       category: service.category,
                       icon: service.icon,
@@ -830,15 +796,12 @@ const Homepage2037: React.FC = () => {
                     }}
                     variant="enterprise"
             </div>
-
                   />
                 </motion.div>
               ))}
             </div>
-            
             <motion.div
             </div>;
-
             <motion&& motion.div
                     }}
                     variant="enterprise";
@@ -849,7 +812,6 @@ const Homepage2037: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
-
             >
               <Link href='/it-services'>
                 <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-blue-500/25'>
@@ -885,7 +847,6 @@ const Homepage2037: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
-
         {/* Featured Micro SAAS Services */}
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
@@ -894,7 +855,6 @@ const Homepage2037: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
             >
               <div className='flex items-center justify-center space-x-3 mb-6'>
                 <Rocket className='w-8 h-8 text-green-400' />
@@ -974,15 +934,12 @@ const Homepage2037: React.FC = () => {
                     }}
                     variant="automation"
             </div>
-
                   />
                 </motion.div>
               ))}
             </div>
-            
             <motion.div
             </div>;
-
             <motion&& motion.div
                     }}
                     variant="automation";
@@ -993,7 +950,6 @@ const Homepage2037: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
-
             >
               <Link href='/micro-saas'>
                 <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-green-500/25'>
@@ -1029,7 +985,6 @@ const Homepage2037: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4 bg-black/30">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
-
         {/* Enhanced Why Choose Us Section */}
         <section className="py-24 px-4 bg-black/30">
           <div className="max-w-7xl mx-auto">
@@ -1038,7 +993,6 @@ const Homepage2037: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
                 Why Choose Zion Tech Group?
@@ -1077,12 +1031,10 @@ const Homepage2037: React.FC = () => {
                 We combine cutting-edge technology with proven expertise to deliver exceptional results;
               </p>;
             </motion && motion.div>;
-
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
-
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
                   <Brain className='w-10 h-10 text-white' />
@@ -1125,7 +1077,6 @@ const Homepage2037: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
-
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
                   <Atom className='w-10 h-10 text-white' />
@@ -1168,7 +1119,6 @@ const Homepage2037: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
                 viewport={{ once: true }}
-
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
                   <Shield className='w-10 h-10 text-white' />
@@ -1211,7 +1161,6 @@ const Homepage2037: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 viewport={{ once: true }}
-
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
                   <Zap className='w-10 h-10 text-white' />
@@ -1242,7 +1191,6 @@ const Homepage2037: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
             >
               {/* Background decoration */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl blur-3xl"></div>
@@ -1284,7 +1232,6 @@ const Homepage2037: React.FC = () => {
       </main>
     </Layout>
 };
-
 export default Homepage2037;
                       features: service.features.slice (0, 5),
                       popular: service.popular,
@@ -1544,7 +1491,6 @@ export default Homepage2037);
 }
 ;
 export default Homepage2037;
-
 export default Homepage2037
 }
 }

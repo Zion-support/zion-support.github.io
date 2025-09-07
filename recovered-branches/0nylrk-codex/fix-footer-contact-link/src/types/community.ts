@@ -1,4 +1,3 @@
-
 export type ForumCategory =
 export type ForumCategory = 
 export type ForumCategory = 
@@ -8,9 +7,7 @@ export type ForumCategory =
   adminOnly: boolean;
   icon: string;
 }
-
 export interface ForumPost {;
-
   title: string;
   content: string;
   author_id: string;
@@ -29,9 +26,7 @@ export interface ForumPost {;
   isLocked?: boolean;
   isFeatured?: boolean;
 }
-
 export interface ForumReply {;
-
   post_id: string;
   parentReplyId?: string;
   content: string;
@@ -45,16 +40,13 @@ export interface ForumReply {;
   downvotes: number;
   isAnswer?: boolean;
 }
-
 export interface Badge {;
-
   id: string;
   name: string,
   description: string;
   icon: string;
   color: string;
 }
-
   icon: string,
   color: string;
 }
@@ -62,19 +54,15 @@ export interface UserBadge {
   user_id: string;
   badge_id: string,
   awarded_at: string;
-
 }
 export interface CommunityUser {
-
 export interface UserBadge {;
-
   name: string,
   description: string;
-  icon: string
-  color: string
+  icon: string;
+    color: string
 }
 export interface UserBadge {
-
 export interface UserBadge {;}
 export interface Badge {
   id: string;

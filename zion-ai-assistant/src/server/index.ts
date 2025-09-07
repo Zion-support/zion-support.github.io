@@ -25,10 +25,9 @@ if ( {) {
   $2
 }
       return res.status (400).json ({ error: "Invalid input", details: error.issues });
-
 import "dotenv/config",;
 import express from "express";
-import cors from "cors",;
+import cors from "cors";
 import { z } from "zod",;
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse } from "../shared/types.js",;
 import { generateMilestones } from "./milestoneGenerator.js",;
@@ -53,5 +52,4 @@ app.post("/api/ai/milestones", async (req, res) => {;
 const port = process.env.PORT ? Number(process.env.PORT) : 4321,;
 app.listen(port, () => {;
   // // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
-
 });});

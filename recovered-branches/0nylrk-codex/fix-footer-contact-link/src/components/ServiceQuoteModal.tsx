@@ -1,4 +1,3 @@
-
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -11,9 +10,8 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
-
-  open: boolean
-  onOpenChange: (open: boolean) => void
+  open: boolean;
+    onOpenChange: (open: boolean) => void
   service: ProductListing | null
 }
 const BUDGET_RANGES = [
@@ -29,7 +27,6 @@ const TIMELINE_OPTIONS = [
   { label: "6+ months", value: "6+months" }]
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({
-
 import {useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -51,20 +48,17 @@ interface ServiceQuoteModalProps {;
   onOpenChange: (open: boolean) => void,;
   service: ProductListing | null;
 }
-
 const BUDGET_RANGES = [;
   { label: "Less than $5,000", value: "0-5000" },;
   { label: "$5,000 - $10,000", value: "5000-10000" },;
   { label: "$10,000 - $25,000", value: "10000-25000" },;
   { label: "$25,000 - $50,000", value: "25000-50000" },;
   { label: "$50,000+", value: "50000+" }],;
-
 const TIMELINE_OPTIONS = [;
   { label: "Less than 1 month", value: "lt-1month" },;
   { label: "1-3 months", value: "1-3months" },;
   { label: "3-6 months", value: "3-6months" },;
   { label: "6+ months", value: "6+months" }],;
-
 export function ServiceQuoteModal(): any ({ open, onOpenChange, service }: ServiceQuoteModalProps) {;
   const [formData, setFormData] = useState({,
   description: '',;
@@ -76,8 +70,8 @@ export function ServiceQuoteModal(): any ({ open, onOpenChange, service }: Servi
         body: {
           service: service ? {      // Show success message
       toast({
-        title: "Quote Request Submitted!"
-        description: "We've sent your request to the service provider. They will contact you soon."})
+        title: "title",
+    description: "We've sent your request to the service provider. They will contact you soon."})
       // Close the modal and reset form      toast({
         title: "Error"
         description: "There was an error submitting your quote request. Please try again."
@@ -119,21 +113,15 @@ if (throw error) {
     } finally {
       setIsSubmitting (false);
     }
-
   },
-
   const nextStep = () => {
     if (currentStep === 'details') setCurrentStep('timeline');
     else if (currentStep === 'timeline') setCurrentStep('contact')
-
   },
-
   const prevStep = () => {
     if (currentStep === 'timeline') setCurrentStep('details');
     else if (currentStep === 'contact') setCurrentStep('timeline')
-
   },
-
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -178,7 +166,6 @@ if (throw error) {
       toast({;
         title: "Quote Request Submitted!",,
   description: "We've sent your request to the service provider. They will contact you soon."}),;
-
       // Close the modal and reset form;
       onOpenChange(false);      setFormData({,
   description: '',;
@@ -197,17 +184,14 @@ if (throw error) {
       setIsSubmitting(false);
     }
   };
-
   const nextStep = () => {;
     if (currentStep === 'details') setCurrentStep('timeline');
     else if (currentStep === 'timeline') setCurrentStep('contact')
 };
-
   const prevStep = () => {;
     if (currentStep === 'timeline') setCurrentStep('details');
     else if (currentStep === 'contact') setCurrentStep('timeline')
 };
-
   return (    <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">;
         <DialogHeader>;
@@ -224,7 +208,6 @@ if (throw error) {
                 <p className="text-white text-lg">{service?.title || "Custom Service"}</p>;
                 <p className="text-zion-slate-light text-sm mt-1">{service?.category}</p>;
               </div>;
-
               <div className="space-y-2">;
                 <Label htmlFor="description" className="text-white">Project Description</Label>;
                   id="description"
@@ -257,7 +240,6 @@ if (throw error) {
                 </div>;
               </div>;
             </div>;
-
           )}
           {/* Step 3: Contact */}                        selected={endDate}
                         onSelect={setEndDate}
@@ -273,7 +255,6 @@ if (throw error) {
                   type="email"
                   {endDate && (              </div>;
             </div>;
-
 =======              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">;
                 <h3 className="font-medium text-zion-cyan mb-2">Quote Summary</h3>;
                 <div className="space-y-2 text-sm">;
@@ -294,7 +275,6 @@ if (throw error) {
                     <span className="text-white">{TIMELINE_OPTIONS.find(t => t.value === formData.timeframe)?.label}</span>;
               </div>;
             </div>;
-
           )}
                 <Button
                   type="submit"

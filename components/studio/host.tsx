@@ -1,13 +1,11 @@
-    voice: 'Visionary'
+voice: "voice",
     language: 'English'
     voice: 'Visionary',
     language: 'English',;
-
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
-
 export default function StudioHostPage() {;
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
   const [inviteeName, setInviteeName] = useState('');
@@ -24,11 +22,9 @@ export default function StudioHostPage() {;
     } finally {
       set_generating (false);
     }
-
   return (
     <div className='space-y-8'>;
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
-
       <section className='space-y-3'>;
         <h2 className='text-xl font-semibold'>AI Persona</h2>;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
@@ -270,11 +266,8 @@ export default function StudioHostPage() {;
     </div>
   );
 }
-
 ;
-
             {episode.audio && (
-
                 {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>

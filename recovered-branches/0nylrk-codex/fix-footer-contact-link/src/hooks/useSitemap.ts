@@ -1,10 +1,7 @@
-
 import {useAuth} from './useAuth';
 import {getAccessibleRoutes} from '@/config/sitemap';
-
 import type { SitemapItem } from '@/config/sitemap';
 // Define the allowed user types
-
 type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
 export function useSitemap() {
 export function useSitemap() {;  const { user, isAuthenticated } = useAuth();
@@ -21,7 +18,6 @@ export function useSitemap() {;  const { user, isAuthenticated } = useAuth();
   return {
     accessibleRoutes;
     findRouteByPath;
-
     canAccessRouteimport {use_auth} from './use_auth';
 import {getAccessibleRoutes} from '@/config / sitemap';
 import type { SitemapItem } from '@/config / sitemap';// Define the allowed user types;
@@ -79,7 +75,6 @@ if (return false) {
     accessible_routes;
     findRouteByPath;
     canAccessRoute;
-
   }
 }
   ;
@@ -96,10 +91,9 @@ if (!route) return false;
 };
 // Helper function to check if userType is valid 
 }
-
     canAccessRoute
 import { useAuth } from './useAuth';
-import { getAccessibleRoutes } from '@/config/sitemap',;
+import { getAccessibleRoutes } from '@/config/sitemap';
 import type { SitemapItem } from '@/config/sitemap',;
 // Define the allowed user types;
 type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin',;

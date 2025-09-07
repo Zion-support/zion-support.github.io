@@ -1,7 +1,6 @@
 interface SuggestedJobsProps {
   talent_id?: string;
 }
-
 export /**
  * SuggestedJobs - Function description
  */
@@ -19,31 +18,26 @@ function SuggestedJobs() {
   } = useJobSuggestions (currentTalentId);
   const handle_apply = (match_id: string, job_id: string) =>: any {
     updateJobMatchStatus (match_id, 'applied');    // In a real app, this might redirect to application form or open a modal;
-
   }
   const handle_decline = (match_id: string) =>: any {
     updateJobMatchStatus (match_id, 'declined');
   }
-
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
   const { user } = useAuth()
   const currentTalentId = talentId || user?.id
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
-
   const { 
     isLoading,
     updateJobMatchStatus, 
     categorizedMatches: { 
-
   if (isLoading) {
   // Check condition
 if ( {) {
   $2
 }
     return (
-
     updateJobMatchStatus, ;
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
@@ -54,17 +48,15 @@ import { NoJobsCard } from "./NoJobsCard";
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
-
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2 } from 'lucide-react';
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from "@/components/ui/badge";
 import { useJobSuggestions } from "@/hooks/useJobSuggestions",;
 import { JobMatchesCard } from "./JobMatchesCard",;
 import { NoJobsCard } from "./NoJobsCard",;
 interface SuggestedJobsProps {;
   talentId?: string;
 }
-
 export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
   const { user } = useAuth();
   const currentTalentId = talentId || user?.id;
@@ -77,11 +69,9 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
       appliedMatches ;
     } ;
   } = useJobSuggestions(currentTalentId);
-
   const handleApply = (matchId: string, jobId: string) => {;
     updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal
 };
-
   const handleDecline = (matchId: string) => {;
     updateJobMatchStatus(matchId, 'declined')
 };
@@ -92,16 +82,12 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
       </div>;
     );
   }
-
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
     return <NoJobsCard />;
-
   }
-
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}
-
       {newMatches && newMatches.length > 0 && (;
         <div className="space-y-4">;
           <div className="flex items-center justify-between">;
@@ -110,18 +96,14 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
               {newMatches && newMatches.length} New;
             </Badge>;
           </div>;
-
           <div className="grid gap-4 md:grid-cols-2">;
             {newMatches && newMatches.map(match => (;
               <JobMatchesCard
                 key = {match && match.id,}
-
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
               />;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -134,33 +116,26 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-
       {/* Previously Viewed Section */}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {viewedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
-
       {/* Previously Viewed Section */}
       {viewedMatches && viewedMatches.length > 0 && (;
         <div className="space-y-4">;
           <div className="flex items-center justify-between">;
             <h3 className="text-lg font-medium">Previously Viewed</h3>;
           </div>;
-
           <div className="grid gap-4 md:grid-cols-2">;
             {viewedMatches && viewedMatches.map(match => (;
               <JobMatchesCard
                 key = {match && match.id,}
-
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
               />;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -173,34 +148,25 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-
       {/* Applied Jobs Section */}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Applied Jobs</h3>
           </div>
-
               <JobMatchesCard 
-
                 key = {match.id,}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
                 showApplied = {true,}
               />;
-
             ))}
           </div>;
         </div>;
       )}
-
     </div>;
   );
-
   // Check condition
 if ( {) {
   $2
@@ -321,5 +287,3 @@ if ( {) {
 }</div>);
 }'"}
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

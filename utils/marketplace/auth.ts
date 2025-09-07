@@ -1,20 +1,18 @@
-      name: 'Test User'
+name: 'Test User'
     }
   }
   return null;
 }
 export function assertTalentOrClientForOffer(
-  req: NextApiRequest
-  offer: { clientId: string; talentSlug: string }
+  req: NextApiRequest;
+    offer: { clientId: string; talentSlug: string }
   req: NextApiRequest,;
   offer: { clientId: string; talentSlug: string },
-
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
   if (u && u.role === 'client' && u && u.id === offer && offer.clientId) return u;
   if (
-
 export function getUserFromRequest (req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session;
   const auth_header = req.headers.authorization;

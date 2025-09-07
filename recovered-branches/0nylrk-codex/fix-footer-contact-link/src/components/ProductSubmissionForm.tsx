@@ -18,15 +18,12 @@ const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-
     setIsSubmitting(true),
-    
-
     try {
       // Create the product listing
       const productData = {
-        title: values.title
-        description: values.description
+        title: values.title;
+    description: values.description
         price: parseFloat(values.price)
         category: values.category
         currency: "USD", // Default currency
@@ -39,14 +36,12 @@ const productSchema = z.object({
         .from('product_listings')
         .insert([productData])
         .select('id')
-
         }
       }
-      
       // Show success message
       toast({
-        title: "Product Published!"
-        description: "Your product has been successfully published on Zion."})
+        title: "title",
+    description: "Your product has been successfully published on Zion."})
       // Redirect to product page
       navigate(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
@@ -56,7 +51,6 @@ const productSchema = z.object({
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)
-
     try {;
       // Create the product listing;
       const productData = {;
@@ -70,33 +64,27 @@ const productSchema = z.object({
           name: user && user.displayName || "Anonymous Creator",;
           id: user && user.id},;
         createdAt: new Date().toISOString()},;
-
       const { data: productRecord, error: productError } = await supabase;
         .from('product_listings');
         .insert([productData]);
         .select('id');
         .single();
-
       if (productError) {;
         throw new Error(productError && productError.message);
       }
-
       // If we have an image, upload it;
       if (values && values.image) {;
         const imagePath = `product_images/${productRecord && productRecord.id}/${values && values.image.name}`;
         const { error: uploadError } = await supabase && supabase.storage;
           .from('products');
           .upload(imagePath, values && values.image);
-
         if (uploadError) {;
           throw new Error(uploadError && uploadError.message);
         }
-
         // Get the public URL for the image;
         const { data: publicUrlData } = supabase && supabase.storage;
           .from('products');
           .getPublicUrl(imagePath);
-
         // Update the product with the image URL;
         const { error: updateError } = await supabase;
           .from('product_listings');
@@ -104,17 +92,14 @@ const productSchema = z.object({
             images: [publicUrlData && publicUrlData.publicUrl];
           });
           .eq('id', productRecord && productRecord.id);
-
         if (updateError) {;
           throw new Error(updateError && updateError.message);
         }
       }
-
       // Show success message;
       toast({;
         title: "Product Published!",,
   description: "Your product has been successfully published on Zion."}),;
-
       // Redirect to product page;
       navigate(`/marketplace/listing/${productRecord && productRecord.id}`);
     } catch (error) {;
@@ -124,12 +109,9 @@ const productSchema = z.object({
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
-
     }
   }    }
-
   },
-
   return (    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
       <TabsList className="grid grid-cols-2 mb-6">;
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
@@ -160,15 +142,11 @@ const productSchema = z.object({
                     Create a compelling title that describes your product;
                   </FormDescription>;
                   <FormMessage />;
-
                 </FormItem>;
-
             />;
-
             <FormField
               control={form && form.control}
               name="description"
-
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Description</FormLabel>;
@@ -196,9 +174,7 @@ const productSchema = z.object({
                     <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
                   <FormDescription>;
-
             />;
-
             <FormField
               control={form && form.control}
               name="image"
@@ -217,7 +193,6 @@ const productSchema = z.object({
                     Upload a high-quality image of your product (recommended size: 1200x800px);
                   </FormDescription>;
                   <FormMessage />;
-
                   {imagePreview && (;
                     <div className="mt-2 w-full max-w-md border rounded overflow-hidden">;
                       <AspectRatio ratio={3/2}>;

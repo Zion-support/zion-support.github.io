@@ -1,6 +1,4 @@
-
 import React from './react';
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Head from './next / head';
 ;
 interface SEOProps {
@@ -10,7 +8,6 @@ interface SEOProps {;
   keywords?: string;
 }
 }) => {
-
 const SEO: React.FC<SEOProps> = ({;
   title = "Zion Tech Group - Technology Solutions",;
   description = "Leading provider of AI services, IT solutions, and micro SaaS development.",;
@@ -21,7 +18,6 @@ const SEO: React.FC<SEOProps> = ({;
   image?: string;
   url?: string;
   type?: string;
-
 export default function SEO({
   title = "Zion Tech Group - Advanced AI Solutions",
   description = "Leading provider of AI-powered automation, blockchain solutions, and enterprise software development.",
@@ -35,5 +31,3 @@ export default function SEO({
 export default SEO;
 }
 export default SEO;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

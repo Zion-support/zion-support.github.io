@@ -1,4 +1,3 @@
-
 import {GradientHeading} from "./GradientHeading";
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
@@ -7,14 +6,13 @@ import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/
 import { Button } from "./ui/button",import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
 import { Button } from "./ui/button",
-
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
 import { Button } from "./ui/button",
   {
-    title: "Servers"
+    title: "title",
     description: "Enterprise-grade servers for any workload with 24/7 maintenance and support"
     icon: <Server className="h-10 w-10" />}
   {
@@ -34,11 +32,9 @@ const services = [;
     description: "Scalable storage solutions from SSDs to large - scale enterprise storage systems",
     icon: <HardDrive className="h - 10 w-10" />},
   {
-
     title: "Networking",
     description: "Connectivity solutions including switches, routers, and network security devices",
     icon: <Network className="h-10 w-10" />},
-
   {
   {
     title: "24x7x365 Support"
@@ -76,11 +72,10 @@ const services = [;
     title: "Equipment Rentals",,
   description: "Flexible rental options for temporary projects and scaling requirements",;
     icon: <Truck className="h-10 w-10" />}],;
-
 export function GlobalServiceSection() {;
   return (
 import { GradientHeading } from "./GradientHeading";
-import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons";
 import { Button } from "./ui/button",;
 const services = [;
   {;
@@ -109,7 +104,6 @@ const services = [;
     icon: <Truck className="h-10 w-10" />}];
 export function GlobalServiceSection() {;
   return (;
-
     <section className="py-20 bg-zion-blue" id="global-services">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-16">;

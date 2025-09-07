@@ -1,12 +1,11 @@
 import React from 'react';
-import { Milestone } from '@/hooks/useMilestones',;
+import { Milestone } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { CreditCard } from 'lucide-react',;
 interface PaymentSummaryProps {;
   milestones: Milestone[],;
   paymentTerms: string | null;
 }
-
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
   const totalPayment = milestones.reduce(
     (sum, m) => sum + parseFloat(m.amount.toString()), 
@@ -14,7 +13,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
     .filter((m) => m.status === "paid")
     .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
     .toFixed(2);
-
   return (
     <Card className="mb-8 bg-muted/30">
       <CardHeader className="pb-3">
@@ -28,14 +26,12 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
             <p className="text-sm text-muted-foreground mb-1">Total Payment</p>
             <p className="text-2xl font-semibold">${totalPayment}</p>
           </div>
-
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
             <p className="font-medium capitalize">
               {paymentTerms |"Not specified"}
             </p>
           </div>
-
 import {Milestone} from '@/hooks/useMilestones';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
 import {CreditCard} from 'lucide-react';
@@ -43,7 +39,6 @@ interface PaymentSummaryProps {;
   milestones: Milestone[],;
   paymentTerms: string | null;
 }
-
             <p className="font-medium">
               ${paidAmount}          </div>
         </div>
@@ -107,8 +102,7 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({
     </Card>);
 }
 ;
-
-import React from 'react',;
+import React from "React";
 import { Milestone } from '@/hooks/useMilestones',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { CreditCard } from 'lucide-react',;
@@ -169,6 +163,5 @@ export const PaymentSummary:React.FC<PaymentSummaryProps> = ({ milestones, payme
 }</p> </div> <div> </p> </div> <div> </p> </div> </div> </CardContent> </Card>) 
 }
 };
-
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

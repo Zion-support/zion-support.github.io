@@ -9,7 +9,6 @@ import { MatchResult } from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-
   const handleMatchSelect = (match: MatchResult) => {
     // Get the item type from the category
     let itemType = "service";
@@ -21,12 +20,10 @@ import { MatchResult } from "@/lib/ai-matchmaking",
 export default function AIMatcherPage() {
   const navigate = useNavigate(),
   const [selectedCategory, setSelectedCategory] = useState<string>("all"),
-  
   const handleMatchSelect = (match: MatchResult) => {
     // Get the item type from the category
     let itemType = "service",
     const category = match.item.category.toLowerCase(),
-    
     if (category.includes("talent") || category === "engineering" || 
         category === "data science" || category === "development") {
       itemType = "talent"
@@ -34,13 +31,13 @@ export default function AIMatcherPage() {
       itemType = "equipment"
     }
     toast({
-      title: "Match Selected"
-      description: `You've selected ${match.item.title}`})
+      title: "title",
+    description: `You've selected ${match.item.title}`})
     // Navigate to the quote request page with the selected item
     navigate("/request-quote", {
       state: {
-        serviceType: itemType
-        specificItem: match.item
+        serviceType: itemType;
+    specificItem: match.item
       }
     })  return (
     <>
@@ -54,7 +51,6 @@ export default function AIMatcherPage() {
               services, talents, or equipment.
             </p>
           </div>
-
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
@@ -83,7 +79,6 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
-
             <AIMatchmaker
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}

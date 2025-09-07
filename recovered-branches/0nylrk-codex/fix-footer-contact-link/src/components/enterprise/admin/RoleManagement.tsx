@@ -1,6 +1,4 @@
-
-
-  const teamMembers = [
+const teamMembers = [
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -16,9 +14,9 @@ function RoleManagement() {
   // Mock team members data;
   const team_members = [;
     {
-      id: 1
-      name: "Alex Johnson"
-      email: "alex@example.com"
+      id: 1;
+    name: "name",
+    email: "alex@example.com"
       role: "Admin"
       permissions: {    {
       id: 2
@@ -32,7 +30,6 @@ function RoleManagement() {
       email: "taylor@example.com"
       role: "Viewer"
       permissions: {
-
       title: "Permission updated",
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
   },
@@ -44,13 +41,11 @@ function RoleManagement() {
     "Manager": "Can view candidates and create jobs";
     "Viewer": "Read-only access to candidates"}
   },
-
   const roleDescriptions: Record<string string> = {
     "Admin": "Full access to all features and settings",
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"},
-
                   <Switch
                     checked={member.permissions.viewCandidates}
                   <Switch 
@@ -107,7 +102,7 @@ import {;
   TableHead,;
   TableHeader,;
   TableRow} from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch",;
 import { toast } from "@/hooks/use-toast",;
 import { InfoIcon } from "lucide-react",;
@@ -119,12 +114,9 @@ import {;
                   />;
                 </TableCell>;
               </TableRow>;
-
                   <Switch 
                     checked={member.permissions.viewBilling} 
-
             ))}
-
         </Table>;
       </div>;
     </div>;

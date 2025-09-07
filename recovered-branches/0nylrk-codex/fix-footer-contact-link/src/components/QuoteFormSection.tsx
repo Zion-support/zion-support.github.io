@@ -10,22 +10,17 @@ import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
-
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true);
-
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
-    
     // Simulate form submission
     setTimeout(() => {
-
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,14 +76,12 @@ export function QuoteFormSection() {
                   >
                     Name
                   </label>
-
     // Simulate form submission;
     setTimeout(() => {;
       setIsSubmitting(false),;
       setIsSubmitted(true);
     }, 1000)
 };
-
   return (    <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -144,7 +137,7 @@ export function QuoteFormSection() {
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button";
-import { Input } from "./ui/input",;
+import { Input } from "./ui/input";
 import { GradientHeading } from "./GradientHeading",;
 import { useState } from "react",;
 export function QuoteFormSection() {;
@@ -231,7 +224,6 @@ export function QuoteFormSection() {;
                     id="phone";
                     type="tel";
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
-
                   />;
                 </div>;
               </div>;
@@ -247,7 +239,6 @@ export function QuoteFormSection() {;
                   ))}
                 </div>
               </div>
-
               <div className="mt-6">
                 <label
                   htmlFor="message"
@@ -261,7 +252,6 @@ export function QuoteFormSection() {;
                   className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                 ></textarea>
               </div>
-
               <div className="mt-6">
                 <Button
                   type="submit"
@@ -280,7 +270,6 @@ export function QuoteFormSection() {;
     </section>
   );
 }
-
 import { Button  } from './ui / button';
 import { Input  } from './ui / input';
 import { GradientHeading  } from './GradientHeading';

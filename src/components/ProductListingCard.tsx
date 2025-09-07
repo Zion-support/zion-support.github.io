@@ -3,20 +3,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -33,7 +29,6 @@ import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
-
 import React, { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils / production_logger';
 import { use_router } from 'next / router';
@@ -54,7 +49,6 @@ interface ProductListingCardProps {
   onRequestQuote?: (id: string) => void;
   detailBasePath?: string;
 import Image from 'next/image'; // Import next/image
-
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
@@ -62,9 +56,7 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
-
 import { RatingStars } from "@/components/RatingStars",
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
 import type { AppDispatch } from '@/store',
@@ -72,59 +64,43 @@ import { addItem } from '@/store/cartSlice',
 import { toast } from '@/hooks/use-toast',
 import { useCurrency } from '@/hooks/useCurrency',
 import Image from 'next/image', // Import next/image
-
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list',
   onRequestQuote?: (id: string) => void,
   detailBasePath?: string
 }
-
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
-
     // Check condition
 if ( {) {
   $2
 }
-
 const ProductListingCardComponent = ({;
   listing,;
   view = 'grid',;
   onRequestQuote,;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
-
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
-
           handleViewListing () }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }}
       {/* Image */}
       <div'
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-
         onKeyDown={(e) => {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
-
               {listing.category}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </Badge>
             {listing.rating && (
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Tags */}
           {listing && listing.tags && listing && listing.tags.length > 0 && (;
             <div className='flex flex-wrap gap-1 mb-4'>;
@@ -132,13 +108,10 @@ const ProductListingCardComponent = ({;
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'>;
-
                 {listing.uspHeadline}
               </p>
             )}
-
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {listing.title}
             </h3>
           </div>
@@ -153,19 +126,14 @@ const ProductListingCardComponent = ({;
                   key={idx} 
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
-
                   {tag}
                 </span>;
               ))}
             </div>;
           )}
-
         </div>;
-
         {/* Footer with price and button */}
-
           </div>;
-
           <div className='flex gap-2'>;
             <Button
               size='sm'
@@ -173,7 +141,6 @@ const ProductListingCardComponent = ({;
               onClick={e => {;
                 e && e.stopPropagation(); // Prevent card click event;
                 addToCart();              }}
-
               disabled = {loading,}
             >;
               {loading ? (;
@@ -200,28 +167,22 @@ const ProductListingCardComponent = ({;
               ) : (;
                 'Add to Cart';
               )}
-
             </Button>;
-
             <Button
               size='sm'
               variant='default'
               className='bg-green-600 hover:bg-green-700 text-white'
-
             {listing.price !== null ? (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
                 {getPrice()}
               </div>
             ) : (
-
               <span className="text-foreground/80">
                 {getPrice()}
               </span>;
             )}
           </div>
-          
           <div className="flex gap-2">
             <Button
               size="sm"
@@ -231,7 +192,6 @@ const ProductListingCardComponent = ({;
                 addToCart()
               }}
               disabled={loading}
-
             >
               {loading ? (
                 <>
@@ -245,7 +205,6 @@ const ProductListingCardComponent = ({;
                 "Add to Cart"
               )}
             </Button>
-
             <Button
               size="sm"
               variant="default"
@@ -256,24 +215,19 @@ const ProductListingCardComponent = ({;
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
-
                 router.push('/checkout')
               }}
               disabled = {loading,}
             >
               Buy Now
             </Button>
-
               <Button
                 size='sm'
                 variant='outline'
                 onClick={handleRequestQuote}
-
                 Request Quote;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </Button>;
             )}
-
           </p>;
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
@@ -432,18 +386,14 @@ router.push ('/checkout');
   handleRequestQuote ";
 }className="border - primary text - primary hover:bg - primary / 10 hover:text - primary-foreground" > Request Quote </Button>);
 }</div> </div> </div> </div>);
-
 }
 '";
 export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
                 Request Quote;
               </Button>) }
-
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {onRequestQuote && (
               <Button 
                 size="sm"
@@ -502,12 +452,8 @@ ProductListingCard.displayName = 'ProductListingCard';
                 Request Quote;
               </Button>;
             )}
-
           </div>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </div>;
     </div>;
   );
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

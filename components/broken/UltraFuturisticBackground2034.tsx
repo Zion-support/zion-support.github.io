@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,10 +31,8 @@ const UltraFuturisticBackground2034: React.FC<;
     const resizeCanvas = () => {
       canvas.width = window.innerWidth
 };
-
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
-
     type ParticleType = 'quantum' | 'neural' | 'holographic';
 resize_canvas ();
 window.addEventListener ('resize', resize_canvas);
@@ -103,8 +100,8 @@ if (return) {
       y2: number,
       strength: number,
         neuralNodes.push({
-          x: Math.random() * canvas.width
-          y: Math.random() * canvas.height
+          x: Math.random() * canvas.width;
+    y: Math.random() * canvas.height
           connections: []
           activation: Math.random()
         });          activation: Math.random()
@@ -410,7 +407,6 @@ if ( {) {
           y1;
           x2;
           y2;
-
   // Mouse move handler for interactive effects
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -420,13 +416,11 @@ if ( {) {
     return () => window.removeEventListener('mousemove', handleMouseMove);
       window && window.removeEventListener('resize', resizeCanvas);
     }
-
   // Mouse move handler for interactive effects;
   useEffect(() => {;
     const handleMouseMove = (e: MouseEvent) => {;
       setMousePosition({ x: e && e.clientX, y: e && e.clientY })
 };
-
     window && window.addEventListener('mousemove', handleMouseMove);
     return () => window && window.removeEventListener('mousemove', handleMouseMove);
   }, []);
@@ -526,22 +520,16 @@ if ( {) {
           transition={{
             rotate: [0, 180, 360];
             opacity: [0.2, 0.5, 0.2];
-
           }}
           transition={{
             duration: 12,
             repeat: -1,
-
           }}
-
         />;
       </div>;
-
       {/* Energy waves */}
-
             duration: 6,
             repeat: -1,
-
           }}
         />
       </div>
@@ -556,14 +544,11 @@ if ( {) {
             x: ['-100%100%']
           }}
           transition={{
-
           animate={{
             coordinate_x: ['-100%', '100%'],          }}
           transition={{
-
             duration: 15,
             repeat: -1,
-
           className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
             ease: 'linear',        <motion.div;
           className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan-500 / 10 to-transparent";
@@ -577,7 +562,6 @@ if ( {) {
             duration: 20
             repeat: -1
             ease: 'linear',          }}          }}
-
             duration: 15,
             repeat: -1,
             ease: "linear"
@@ -586,10 +570,8 @@ if ( {) {
             coordinate_y: ['-100%100%'];
           }}
           transition={{
-
             duration: 20,
             repeat: -1,
-
         />
         <motion.div
         />;
@@ -607,7 +589,6 @@ if ( {) {
       </div>
         />;
       </div>;
-
       {/* Holographic matrix effect */}
             key={i}
             className='absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 20 to - transparent';
@@ -617,12 +598,10 @@ if ( {) {
             className="absolute w - px h - full bg - gradient - to - b from - transparent via - cyan-400 / 20 to-transparent";
             style={{ left: `${(i * 5) % 100}%` }}
             animate={{
-
             transition={{
               duration: 3
               delay: i * 0.1
               repeat: -1
-
             transition={{
               duration: 3,
               delay: i * 0.1,
@@ -634,9 +613,7 @@ if ( {) {
       </div>
       {/* Cyberpunk grid */}
       <div className='absolute inset-0'>
-
             transition={{
-
               duration: 3,
               delay: i * 0 && 0.1,
               repeat: -1,
@@ -647,13 +624,11 @@ if ( {) {
       </div>
       {/* Cyberpunk grid */}
       <div className='absolute inset-0'>
-
             transition={{
               duration: 3,
               delay: i * 0.1,
               repeat: -1,
               ease: 'easeInOut',            }}
-
             }}
           />;
         ))}
@@ -691,14 +666,11 @@ export default UltraFuturisticBackground2034;        <motion.div;
             background_size: '50px 50px';
           }}
           animate={{
-
 };
-
 export default UltraFuturisticBackground2034;        <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
 export default UltraFuturisticBackground2034;        <motion&& motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]"
-
           style={{
             backgroundSize: '50px 50px'
           }}
@@ -706,11 +678,9 @@ export default UltraFuturisticBackground2034;        <motion&& motion.div
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
           }}
           transition={{
-
             duration: 4
             repeat: -1
 export default UltraFuturisticBackground2034;
-
           }}
           transition={{
             duration: 4,
@@ -722,21 +692,17 @@ export default UltraFuturisticBackground2034;
     </div>;
   )
 };
-
           }}
           transition={{
             duration: 4,
             repeat: -1,
-
           }}
         />
       </div>
     </div>
 };
-
 export default UltraFuturisticBackground2034;  )
 };
-
 export default UltraFuturisticBackground2034;
             ease: 'easeInOut',            ease: "easeInOut";
           }}

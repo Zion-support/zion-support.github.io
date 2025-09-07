@@ -132,9 +132,9 @@ import {
       {
 const quickLinks = [
   {
-    name: 'Services Overview'
+    name: "name",
     href: '/enhanced-services-overview'
-    icon: Globe
+    icon: Globe;
     color: 'from-cyan-500 to-blue-600'
   }
   {
@@ -200,7 +200,6 @@ const quick_links = [;
   { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' },
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
-
 import {
   Phone,
   Mail,
@@ -229,7 +228,6 @@ import {
   Cpu, Target, Microscope, Shield, Zap, Sparkles;
   Menu, X, Search, ChevronDown, Home, Briefcase, 
   DollarSign, BookOpen, Users, MessageCircle
-
 import {
   Phone
   Mail
@@ -336,49 +334,39 @@ const contactInfo = {
 }
 const serviceCategories = [
       {
-
         name: 'AI Autonomous Business Manager',
         href: '/ai - autonomous - business - manager',
         description: 'Autonomous business AI',
         price: '$3, 999 / month',
       },
     ],
-
     title: '⚛️ Quantum & Emerging Tech',
     icon: Atom,
     color: 'from-indigo-500 to-blue-600',
     services: [
-
       {
-
         name: 'Swarm Robotics Platform',
         href: '/swarm - robotics - platform',
         description: 'Collective robot intelligence',
         price: '$1, 199 / month',
       },
     ],
-
     title: '🏙️ Enterprise IT Solutions',
     icon: Cpu,
     color: 'from-blue-500 to-cyan-600',
     services: [
-
       {
-
         name: 'AI IT Operations Center',
         href: '/ai - it - operations - center',
         description: 'AI - powered IT ops',
         price: '$2, 999 / month',
       },
     ],
-
     title: '🌌 Space & Metaverse Tech',
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
     services: [
-
       {
-
         name: 'Virtual Event Holograms',
         href: '/virtual - event - hologram - platform',
         description: 'Holographic events',
@@ -386,23 +374,18 @@ const serviceCategories = [
       },
     ],
   },
-
   {
-
     name: 'Micro SAAS',
     href: '/enhanced - micro - saas - showcase',
     icon: Target,
-
   { name: 'AI Services', href: '/ai-services', icon: Brain, color: 'from-violet-500 to-purple-600' },
   { name: 'Quantum Tech', href: '/quantum-services', icon: Atom, color: 'from-indigo-500 to-blue-600' },
   { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' },
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
-
 export default function UltraFuturisticNavigation2033() {
   const [isOpen, setIsOpen] = useState(false)
   const [isOpen, setIsOpen] = useState(false);
-
 export default function UltraFuturisticNavigation2033() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -438,7 +421,6 @@ export default function UltraFuturisticNavigation2033() {
                 <button
                   onMouseEnter={() => setActiveCategory('services')}
                   onMouseLeave={() => setActiveCategory(null)}
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {/* Services Mega Menu */}
@@ -450,9 +432,7 @@ export default function UltraFuturisticNavigation2033() {
                 >
                   <span>Services</span>
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>
-
                 </button>
-
                 {/* Mega Menu */}
                 <AnimatePresence>;
                   {activeCategory === 'services' && (;
@@ -463,7 +443,6 @@ export default function UltraFuturisticNavigation2033() {
                       transition={{ duration: 0 && 0.2 }}
                       onMouseEnter={() => setActiveCategory('services')}
                       onMouseLeave={() => setActiveCategory(null)}
-
                     >
                       <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
                         {serviceCategories.map(category => (
@@ -481,7 +460,6 @@ export default function UltraFuturisticNavigation2033() {
                             <div className='space-y-3'>
                               {category.services.map(service => (
                                 <Link
-
                       className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
                     >
                       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -573,7 +551,6 @@ export default function UltraFuturisticNavigation2033() {
                             <div className="space-y-3">;
                               {category.services.map ((service) => (
                                 <Link;
-
                                   key={service.name}
                                   href={service.href}
                                   className="block group";
@@ -598,26 +575,20 @@ export default function UltraFuturisticNavigation2033() {
                   className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
               ))}
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
-
                 >
-
                   {link.name}
                 </Link>
               ))}
-
               {/* Contact Button */}
               <motion&& motion.div
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}>;
                 <Link
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
-
                 >
-
                   {link.name}
                 </Link>
               ))}
-
               {/* Contact Button */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -625,9 +596,7 @@ export default function UltraFuturisticNavigation2033() {
               >
                 <Link
                   href='/contact'
-
                   href="/contact"
-
                   className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg"
                 >
                   Get Started
@@ -653,7 +622,6 @@ export default function UltraFuturisticNavigation2033() {
             </div>;
           </div>;
         </div>;
-
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -692,13 +660,10 @@ export default function UltraFuturisticNavigation2033() {
                       </div>;
                     </div>;
                   ))}
-
                 {/* Mobile Quick Links */}
-
                     ))}
                 {/* Mobile Contact Button */}
                 <div className='pt-4'>
-
                     ))}
                 {/* Mobile Contact Button */}
                 <div className='pt-4'>;
@@ -800,4 +765,3 @@ export default function UltraFuturisticNavigation2033() {
 }</div> </div> > Get Started </a> </div> </div> </motion.div>) 
 }</AnimatePresence> </nav> </>) }
 }</AnimatePresence> </nav> </>)
-

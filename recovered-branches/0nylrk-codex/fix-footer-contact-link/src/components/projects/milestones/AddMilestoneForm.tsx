@@ -1,4 +1,3 @@
-
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
 import {z} from 'zod';
@@ -20,9 +19,8 @@ import {AIMilestoneGenerator} from './AIMilestoneGenerator';  projectScope?: str
   projectEndDate = null;
       });
       return
-
 =======import React from 'react';
-import { useForm } from 'react-hook-form',;
+import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
 import { CalendarIcon, Loader2 } from 'lucide-react',;
@@ -86,7 +84,6 @@ export function AddMilestoneForm({;
           onAddMilestones={handleAddMilestones}
           onAddMilestone={handleAddMilestone}      <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
-
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
           <FormField
@@ -212,10 +209,8 @@ if ( {) {
                     />;
                   </FormControl>;
                   <FormMessage />;
-
             />;
           </div>;
-
           <div className="flex justify-end space-x-2 pt-4">;
             {onCancel && (;                Cancel;
               </Button>;

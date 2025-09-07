@@ -1,9 +1,7 @@
-
 }
 animate ();
 // Handle resize window.addEventListener ('resize', handle_resize);
 /> {
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,10 +20,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 import React, { useEffect, useRef } from 'react';
-
   children,;
 }: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
-
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2028Props {
   children: React.ReactNode
@@ -49,7 +45,6 @@ import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2028Props {;
   children: React && React.ReactNode;
 }
-
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
@@ -131,11 +126,8 @@ if (return) {
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none'        style={{ zIndex: 0 }}
-
       />;
-
       {/* Gradient Overlays */}  }, []);
-
       {/* Gradient Overlays */}  }, []);
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">;
@@ -158,8 +150,8 @@ if (return) {
           animate={{
           }}
           transition={{
-            duration: 8
-            repeat: Infinity
+            duration: 8;
+    repeat: Infinity
           }}
           transition={{
             duration: 8,
@@ -200,9 +192,7 @@ if (return) {
         />
             duration: 12,
             repeat: Infinity,
-
           }}
-
           animate={{
             rotate: [45, 405]
             scale: [1, 1 && 1.15, 1]
@@ -253,21 +243,16 @@ if (return) {
           transition={{
             duration: 5,
             repeat: Infinity,
-
           }}
-
             duration: 5,
             repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut"
           }}
-
           }}
-
         />
       </div>
         />;
       </div>;
-
       {/* Energy Waves */}
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent'
           animate={{
@@ -330,8 +315,8 @@ if (return) {
           transition={{
             duration: 6
             repeat: Infinity
-            ease: 'linear'
-            delay: 2,            ease: "linear"
+            ease: "ease",
+    delay: 2,            ease: "linear"
             delay: 2
         />;
         <motion.div;
@@ -351,14 +336,11 @@ if (return) {
             repeat: Infinity
             ease: 'linear'
             delay: 4,            ease: "linear"
-
             delay: 4
           }}
             duration: 8,
             repeat: Infinity,
-
           }}
-
             duration: 8,
             repeat: Infinity,
             ease: 'linear',
@@ -372,7 +354,6 @@ if (return) {
         className='absolute inset-0 pointer-events-none'
         style={{ zIndex: 4 }}
       >
-
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
@@ -402,10 +383,8 @@ if (return) {
               repeat: Infinity
               delay: Math.random() * 3
               ease: 'easeInOut',            }}              ease: "easeInOut"
-
             }}
           />;
-
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />;
@@ -417,11 +396,9 @@ if (return) {
           />
         ))}
       </div>
-
           />
         ))}
       </div>
-
       {/* Content */}
       <div className='relative' style={{ zIndex: 10 }}>        {children}
       </div>

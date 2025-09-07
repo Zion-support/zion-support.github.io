@@ -1,4 +1,4 @@
-  id: string, name: string,
+id: string, name: string,
   tagline: string, description: string,
   category: string, price: string,    link: 'https://ziontechgroup.com / services / ai - business - intelligence - platform - pro',
     launch_date: '2036 - 01 - 20',
@@ -234,7 +234,6 @@
     price: '$699',
     period: '/month',
     features: [;
-
       'Inventory optimization',
       'Route optimization',
       'Supplier management',
@@ -249,7 +248,7 @@
 export const real2036InnovativeServices: Real2036InnovativeService[] = [
   // AI-Powered Business Intelligence
   {
-    id: 'ai-business-intelligence-platform-pro'
+    id: "id",
     name: 'AI Business Intelligence Platform Pro'
     tagline: 'Transform raw data into actionable business insights with AI'
     description:
@@ -268,7 +267,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     ]
     link: 'https://ziontechgroup.com/services/ai-business-intelligence-platform-pro'
     launchDate: '2036-01-20'
-    rating: 4.8
+    rating: 4.8;
     marketSize: '$25.6B'
     targetAudience: 'Enterprise businesses, Data analysts, C-suite executives'
     competitiveAdvantage:
@@ -873,7 +872,6 @@ export type Real2036InnovativeService = {;
       '24 / 7 quantum network monitoring',
       'Custom deployment options',
     ],
-
       'AI-powered incident detection',
     link: 'https://ziontechgroup.com / services / quantum - secure - communication - enterprise',
     launch_date: '2036 - 01 - 25',

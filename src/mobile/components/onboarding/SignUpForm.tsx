@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useAuth } from "@/context/auth/AuthProvider";
@@ -10,8 +9,6 @@ import { AlertCircle } from 'lucide-react';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 ;
 import { use_router } from 'next / router';
 import Link from 'next/link';
@@ -42,7 +39,6 @@ function SignUpForm() {
     } else if (!strongPasswordRegex.test(formData.password)) {
       errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
     }
-
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
       setIsLoading(false)
@@ -65,12 +61,9 @@ function SignUpForm() {
     try {;
       setShowVerificationMessage(false), // Reset verification message;
       if (signupMode) {;
-
         if (result?.error) {;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           throw new Error(result.error as any), // Cast to any if type is AuthError;
         }
-
         if (result?.emailVerificationRequired) {
           setShowVerificationMessage(true)
         } else {
@@ -81,12 +74,9 @@ function SignUpForm() {
           setShowVerificationMessage(true);
         } else {;
           // Only navigate if email verification is not required;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (error) {;
           throw new Error(error);
         }
-        
         router.push("/mobile")
 ;
         router.push("/mobile");
@@ -98,19 +88,13 @@ function SignUpForm() {
       setIsLoading(false)
     }
   };
-
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
-
     }
-
   },
-
   return (
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="space-y-2">
         <Button
           variant="outline"
@@ -125,10 +109,8 @@ function SignUpForm() {
           </svg>
           Continue with Google
         </Button>
-
         <Button 
           variant="outline" 
-
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -142,9 +124,7 @@ function SignUpForm() {
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
       </div>
-
       </h2>;
-
       <div className="space-y-2">;
         <Button
           variant="outline" 
@@ -158,7 +138,6 @@ function SignUpForm() {
           </svg>;
           Continue with Google;
         </Button>;
-
         <Button
           variant="outline" 
           className="w-full py-6 relative">;
@@ -188,13 +167,10 @@ function SignUpForm() {
         >;
           <svg viewBox="0 0 24 24" className="h - 5 w - 5 mr-2" xmlns="http://www.w3.org / 2000 / svg">;
             <path d="M24 12.073c0 - 5.8 - 4.85 - 10.5 - 10.826 - 10.5 - 6.02 0 - 10.93 4.7 - 10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v - 7.318h - 2.696v - 3.041h2.696V9.898c0 - 2.586 1.581 - 4.016 4.003 - 4.016 1.159 0 2.37.204 2.37.204v2.543h - 1.334c - 1.316 0 - 1.727.8 - 1.727 1.622v1.95h2.938l-.47 3.04h - 2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" />;
-
           </svg>;
           Continue with Facebook;
         </Button>;
       </div>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -202,14 +178,11 @@ function SignUpForm() {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
-
       )}
-
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
-
       <form onSubmit={handleSubmit} className="space-y-4">;
         {signupMode && (;
           <div className="space-y-2">;
@@ -217,12 +190,10 @@ function SignUpForm() {
             <Input
               id="name"
               name="name"
-
               value={formData.name}
               onChange={handleInputChange}
               required;
               aria-invalid={!!fieldErrors.name}
-
               placeholder="Enter your full name"
             />
             {fieldErrors.name && (
@@ -230,53 +201,41 @@ function SignUpForm() {
             )}
           </div>
         )}
-
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
-
         <div className="space-y-2">;
           <Label htmlFor="email">Email address</Label>;
           <Input
             id="email"
             name="email"
             type="email"
-
             value={formData.email}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.email}
-
             placeholder="Enter your email"
           />;
           {fieldErrors && fieldErrors.email && (;
             <p className="text-red-500 text-sm">{fieldErrors && fieldErrors.email}</p>;
           )}
-
         </div>;
-
         <div className="space-y-2">;
           <Label htmlFor="password">Password</Label>;
-
           <Input
             id="password"
             name="password"
             type="password"
-
             value={formData.password}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.password}
-
             placeholder="Create a password"
           />;
           <PasswordStrengthMeter password={formData && formData.password} />;
           {fieldErrors && fieldErrors.password && (;
             <p className="text-red-500 text-sm">{fieldErrors && fieldErrors.password}</p>;
           )}
-
         </div>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button
           type="submit"
           className="w-full py-6"
@@ -289,8 +248,6 @@ function SignUpForm() {
           ) : (;
             signupMode ? "Create Account" : "Sign In";
           )}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "
@@ -379,10 +336,8 @@ function SignUpForm() {
           ? "Already have an account? ";
           : "Don't have an account? ";
         }
-
         </Button>;
       </form>;
-
       <p className="text-center text-sm">;
         {signupMode;
           ? "Already have an account? ";
@@ -391,18 +346,15 @@ function SignUpForm() {
         <Link
           href="/login"
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer">;
-
         <Link;
           href="/login";
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer";
         >;
-
           Sign In;
         </Link>;
       </p>;
     </div>;
   );
-
   error;
 }= await login (form_data.email, form_data.password);
 // Check condition

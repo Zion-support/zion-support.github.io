@@ -1,9 +1,9 @@
 import React from 'react';
-import Head from 'next/head',;
+import Head from 'next/head';
 import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
+import UltraAdvancedFuturisticBackground from "UltraAdvancedFuturisticBackground";
+import Card from "Card";
+import Button from "Button";
 ;
 export default function AIGuardrailsPage() {;
 	const contactInfo = {;

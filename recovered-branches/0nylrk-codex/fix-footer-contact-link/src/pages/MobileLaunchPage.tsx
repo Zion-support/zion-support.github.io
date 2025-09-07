@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import {SEO} from "@/components/SEO";
 import {AppLayout} from "@/layout/AppLayout";
@@ -28,10 +26,9 @@ import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",const Mo
         keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app"
         canonical="/mobile-launch"
 export default MobileLaunchPage;
-
 export default MobileLaunchPage,
 import React from "react";
-import { SEO } from "@/components/SEO",;
+import { SEO } from "@/components/SEO";
 import { AppLayout } from "@/layout/AppLayout",;
 import { MobileLaunchHero } from "@/components/mobile-app/MobileLaunchHero",;
 import { MobileFeatureShowcase } from "@/components/mobile-app/MobileFeatureShowcase",;

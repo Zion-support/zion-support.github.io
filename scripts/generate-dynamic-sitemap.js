@@ -1,10 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 // Service data structure
 const services = {
   microSaaS: [
@@ -23,7 +21,6 @@ const services = {
     'quantum-computing', 'edge-computing'
   ]
 };
-
 // Static pages
 const staticPages = [
   { url: '/', priority: '1.0', changefreq: 'weekly' },
@@ -38,14 +35,11 @@ const staticPages = [
   { url: '/privacy', priority: '0.4', changefreq: 'yearly' },
   { url: '/terms', priority: '0.4', changefreq: 'yearly' }
 ];
-
 function generateSitemap() {
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString().split('T')[0];
-  
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
-
   // Add static pages
   staticPages.forEach(page => {
     sitemap += `
@@ -56,7 +50,6 @@ function generateSitemap() {
     <priority>${page.priority}</priority>
   </url>`;
   });
-
   // Add service pages
   Object.entries(services).forEach(([category, serviceList]) => {
     serviceList.forEach(service => {
@@ -69,48 +62,37 @@ function generateSitemap() {
   </url>`;
     });
   });
-
   sitemap += `
 </urlset>`;
-
   // Write sitemap to public directory
   const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
   fs.writeFileSync(sitemapPath, sitemap);
-  
   console.log('✅ Dynamic sitemap generated successfully');
   console.log(`📄 Sitemap saved to: ${sitemapPath}`);
   console.log(`🔗 Total URLs: ${staticPages.length + Object.values(services).flat().length}`);
 }
-
 // Generate robots.txt
 function generateRobotsTxt() {
   const robotsTxt = `User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
+# Sitemap;
+    Sitemap: https://ziontechgroup.com/sitemap.xml
 # Crawl-delay
 Crawl-delay: 1
-
 # Disallow admin areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
-
 # Allow important pages
 Allow: /services/
 Allow: /micro-saas/
 Allow: /ai-services/
 Allow: /it-services/`;
-
   const robotsPath = path.join(__dirname, '..', 'public', 'robots.txt');
   fs.writeFileSync(robotsPath, robotsTxt);
-  
   console.log('✅ Robots.txt generated successfully');
 }
-
 // Generate structured data
 function generateStructuredData() {
   const structuredData = {
@@ -159,20 +141,16 @@ function generateStructuredData() {
       ]
     }
   };
-
   const structuredDataPath = path.join(__dirname, '..', 'public', 'structured-data.json');
   fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
-  
   console.log('✅ Structured data generated successfully');
 }
-
 // Run all generators
 console.log('🚀 Generating SEO files...');
 generateSitemap();
 generateRobotsTxt();
 generateStructuredData();
 console.log('✨ All SEO files generated successfully!');
-
 export {
   generateSitemap,
   generateRobotsTxt,

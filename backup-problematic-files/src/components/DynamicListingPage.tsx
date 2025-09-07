@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useRouter } from 'next/router',;
+import { useRouter } from 'next/router';
 import { GradientHeading } from "@/components/GradientHeading",;
 import { ProductListingCard } from "@/components/ProductListingCard",;
 import { Button } from "@/components/ui/button",;
@@ -12,7 +12,7 @@ import {;
   SelectContent,;
   SelectItem} from "@/components/ui/select",;
 import { Checkbox } from "@/components/ui/checkbox",;
-import Skeleton from "react-loading-skeleton",;
+import Skeleton from "Skeleton";
 import "react-loading-skeleton/dist/skeleton.css",;
 import { Slider } from "@/components/ui/slider",;
 import { ProductListing, ListingView } from "@/types/listings",;

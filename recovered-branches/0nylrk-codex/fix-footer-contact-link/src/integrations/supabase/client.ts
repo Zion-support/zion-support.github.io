@@ -3,9 +3,7 @@ export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 if (!supabaseUrl |!supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables')
-
 import {createClient} from '@supabase/supabase-js';
-
 import { createClient } from '@supabase/supabase-js';
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
@@ -16,11 +14,9 @@ if (!supabaseUrl || !supabaseAnonKey) {;
 import { createClient } from '@supabase/supabase-js';
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
 if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error("Missing Supabase environment variables");
 }
-
 // Utility to detect network connectivity. navigator && navigator.onLine is not reliable in
 }
 // Utility to detect network connectivity. navigator.onLine is not reliable in
@@ -29,9 +25,7 @@ export const checkOnline = async (): Promise<boolean> => {
   if (typeof navigator !== "undefined" && !navigator.onLine) {
     return false;
   }
-
   try {;
-
     const controller = new AbortController();
     const id = setTimeout(() => controller.abort(), 3000);
     await fetch("https://clients3.google.com/generate_204", {
@@ -56,7 +50,6 @@ if ( {) {
     return false;
   }
   try {
-
 ;
 // Custom fetch wrapper to provide clearer errors when network requests fail;
 export const safe_fetch: typeof fetch = async (input, init) => {
@@ -72,8 +65,7 @@ export const safeFetch: typeof fetch = async (input, init) => {
   try {
     return await fetch (input, init);
   } catch (err) {
-
-import { createClient } from '@supabase/supabase-js',;
+import { createClient } from '@supabase/supabase-js';
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
 if (!supabaseUrl || !supabaseAnonKey) {;

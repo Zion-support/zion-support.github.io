@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AutomationInsightsPage() {
-
   const automationTrends = [
     {
-      id: 'ai-automation-2025'
-      title: 'AI Automation Trends 2025'
+      id: "id",
+    title: 'AI Automation Trends 2025'
       description:
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
       readTime: '8 min read',
@@ -40,7 +39,6 @@ export default function AutomationInsightsPage() {;
     },      featured: false
     }
   ];
-
   const automationTools = [;
     {;
       id: 'automation-framework',;
@@ -79,7 +77,6 @@ export default function AutomationInsightsPage() {;
     },  ];      complexity: 'Beginner';
     }
   ];
-
   const successMetrics = [;
     {;
       metric: '227',;
@@ -167,7 +164,6 @@ export default function AutomationInsightsPage() {;
         <title>;
           Automation Insights | Zion Tech Group - AI Automation Expertise;
         </title>;
-
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
         <main className='container mx-auto px-6 py-12'>;
           <section className='text-center mb-16'>;
@@ -182,9 +178,7 @@ export default function AutomationInsightsPage() {;
                 ))}
               </div>;
             </div>;
-
             {/* Automation Trends */}
-
             {/* Automation Trends */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -229,14 +223,11 @@ export default function AutomationInsightsPage() {;
                       Read More <span className="ml-1">→</span>
                     </Link>
                       Read More <span className='ml-1'>→</span>                    </Link>
-
                     </Link>
-
                   </div>
                 ))}
               </div>
             </div>
-
             {/* Automation Tools & Frameworks */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -270,7 +261,6 @@ export default function AutomationInsightsPage() {;
                 ))}
               </div>
             </div>
-
                       href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
                       Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends && automationTrends.map((trend, index) => (;
@@ -290,7 +280,6 @@ export default function AutomationInsightsPage() {;
                 ))}
               </div>;
             </div>;
-
             {/* Automation Tools & Frameworks */}
             <div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>;

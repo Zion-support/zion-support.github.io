@@ -1,25 +1,18 @@
 import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from 'lucide-react'
-
 import { cn } from "@/lib/utils"
-
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>
   React.ComponentPropsWithoutRef<typeof OTPInput>
-
       containerClassName
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )}
     className={cn("disabled:cursor-not-allowed", className)}
     {...props}
-
   />;
 ));
 InputOTP && InputOTP.displayName = 'InputOTP';
-
 InputOTP.displayName = "InputOTP"
-
 const InputOTPGroup = React && React.forwardRef<;
   React && React.ElementRef<'div'>,;
   React && React.ComponentPropsWithoutRef<'div'>;
@@ -27,26 +20,19 @@ const InputOTPGroup = React && React.forwardRef<;
   <div ref={ref} className={cn('flex items-center', className)} {...props} />;
 ));
 InputOTPGroup && InputOTPGroup.displayName = 'InputOTPGroup';
-
 const InputOTPGroup = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
 >(({ className, ...props }, ref) => (
-
 const InputOTPSlot = React.forwardRef<
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div"> & { index: number }
 >(({ index, className, ...props }, ref) => {
   const inputOTPContext = React.useContext(OTPInputContext) as any
   const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
-
 InputOTPSlot.displayName = "InputOTPSlot"
-
 InputOTPSlot.displayName = "InputOTPSlot"
-
 const InputOTPSeparator = React.forwardRef<
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
 >(({ ...props }, ref) => (
@@ -54,12 +40,10 @@ const InputOTPSeparator = React.forwardRef<
     <Dot />
   </div>
 ))
-
     </div>;
   );
 });
 InputOTPSlot && InputOTPSlot.displayName = 'InputOTPSlot';
-
 const InputOTPSeparator = React && React.forwardRef<;
   React && React.ElementRef<'div'>,;
   React && React.ComponentPropsWithoutRef<'div'>;
@@ -69,9 +53,7 @@ const InputOTPSeparator = React && React.forwardRef<;
   </div>;
 ));
 InputOTPSeparator && InputOTPSeparator.displayName = 'InputOTPSeparator';
-
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
-
 import * as React from 'react';
 import {OTPInput, OTPInputContext} from 'input - otp';
 import {Dot} from 'lucide-react';
@@ -119,8 +101,5 @@ const InputOTPSeparator = React.forward_ref<;
   </div>));
 InputOTPSeparator.display_name = 'InputOTPSeparator';
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
-
 InputOTPSeparator.displayName = 'InputOTPSeparator';
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

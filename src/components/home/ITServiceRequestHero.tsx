@@ -10,12 +10,10 @@ import { Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { logErrorToProduction } from '@/utils/productionLogger';export function ITServiceRequestHero() {;
 ;export function ITServiceRequestHero(): any (...args[]):  {;
-
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = async e: React && React.FormEvent {;    e && e.preventDefault();
     if(location && location.trim()) {;
-
       setIsSubmitting(true);
       // Simulate API call;
       setTimeout(: unknown {;
@@ -64,7 +62,6 @@ export function ITServiceRequestHero() {;
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>";
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>;
       </div>;
-
 export function ITServiceRequestHero() {;
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -75,7 +72,6 @@ export function ITServiceRequestHero() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const { t } = useTranslation();
-
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     if (!name || !email || !location) {;
@@ -86,7 +82,6 @@ export function ITServiceRequestHero() {;
       });
       return;
     }
-
 import React, { useState } from 'react';
 import Image from 'next / image';
 import { GradientHeading } from '@/components / GradientHeading';
@@ -185,7 +180,6 @@ if ( {) {
     }
     setIsSubmitting (true);
     setIsSubmitting(true),
-
     try {
       const res = await axios.post ('/api / onsite - request', {
         name,
@@ -193,23 +187,18 @@ if ( {) {
         phone,
         company,
         location,
-
       }
     } catch (err: any) {
       logErrorToProduction(err)
       toast({
-
         title: 'Submission Failed',
         description: 'There was an error submitting your request.',
         variant: 'destructive',
-
       })
-
     } finally {
       setIsSubmitting (false);
     }
   }
-
   return (
     <section
       className="py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]"
@@ -226,7 +215,6 @@ if ( {) {
         <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto">
           <div className="flex flex-col md:flex-row items-center gap-4">
             <Image
-
               src="/logos/zion-logo.png"
               alt="Zion logo"
               width={200}
@@ -239,13 +227,11 @@ if ( {) {
                 onChange={(e) => setName(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
-
               />
               <p className='text-xs text-zion-slate-light'>
                 {t(
                   'onsite_form.name_helper'
                   'Enter the main contact for this request.'
-
                 onChange={e => setName(e && e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required;
               />;
@@ -253,36 +239,29 @@ if ( {) {
                 {t(;
                   'onsite_form && onsite_form.name_helper',;
                   'Enter the main contact for this request.';
-
                 )}
               </p>;
               <Input
                 type='email'
                 value={email}
-
                 )}
               </p>
               <Input
-
               />
               <p className='text-xs text-zion-slate-light'>
                 {t(
                   'onsite_form.email_helper'
                   "We'll confirm your request here."
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 )}
               </p>;
               <Input
                 value={phone}
-
                 onChange={e => setPhone(e && e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'              />;
               <p className='text-xs text-zion-slate-light'>;
                 {t(;
                   'onsite_form && onsite_form.phone_helper',;
                   'Include a direct line for urgent updates.';
-
                 )}
               </p>;
               <Input
@@ -294,7 +273,6 @@ if ( {) {
               </p>;
               <Input
                 value={location}
-
                 onChange={e => setLocation(e && e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required;
               />;
@@ -302,19 +280,16 @@ if ( {) {
                 {t(;
                   'onsite_form && onsite_form.location_helper',;
                   'Where do you need on-site support?';
-
                 )}
               </p>;
               <Textarea
                 value={details}
-
                 onChange={e => setDetails(e && e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]'              />;
               <p className='text-xs text-zion-slate-light'>;
                 {t(;
                   'onsite_form && onsite_form.details_helper',;
                   'Share any important context for our technicians.';
-
                 )}
               </p>;
               <Button
@@ -324,30 +299,24 @@ if ( {) {
                 {isSubmitting && (;
                   <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
                 )}
-
               />
               <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helperWhere do you need on-site support?')}</p>
               <Textarea
                 value={details}
-
                 {isSubmitting && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 )}
-
                 Request Service
               </Button>
             </form>
           </div>
-
           <p className="text-xs text-center text-zion-slate-light mt-3">
             {t('onsite_form.privacy_noticeRest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.')}
-
           </p>
         </div>
       </div>
     </section>
   )
-
     <section className='py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient (#0f172a, _#020617)]'>;
       <div className='container mx - auto px - 4 grid grid - cols - 1 md:grid - cols - 2 gap - 12 items - center'>;
         <div className='md:h - full md:flex md:flex - col md:items - center md:justify - center'>;
@@ -441,16 +410,12 @@ if ( {) {
         </div>;
       </div>;
     </section>);
-
 }catch (err: any) {
   logErrorToProduction (err);
 toast ({
 }finally {
-
 }finally {;
   setIsSubmitting (false) ;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };"
 py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center" > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className="mb-6 text-4xl md:text-5xl text-center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto" > <div className="flex flex-col md:flex-row items-center gap-4" > <Image <Input type="email" value= {
   email
@@ -480,19 +445,16 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
   isSubmitting && (<Loader2 className="mr-2 h-4 w-4 animate-spin" />
 }Request Service </Button> </form> </div>
 }'"
-
 }
 }
-
 import React, { useState } from "react";
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-import Image from "next/image",;
+import Image from "next/image";
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { useToast } from "@/hooks/use-toast",;
-import axios from "axios",;
+import axios from "axios";
 import { Loader2 } from 'lucide-react';
 import { useTranslation } from "react-i18next",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -617,7 +579,6 @@ export function ITServiceRequestHero() {;
                 {isSubmitting && (;
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                 )}
-
                 Request Service;
               </Button>;
             </form>;
@@ -632,11 +593,9 @@ export function ITServiceRequestHero() {;
       </div>;
     </section>;
   );
-
 }catch (err: any) {;
   logErrorToProduction (err);
 toast ({;
-
 }finally {;
   setIsSubmitting (false) 
 };";
@@ -669,5 +628,3 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }Request Service </Button> </form> </div> ;
 }'";
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

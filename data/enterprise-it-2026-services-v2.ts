@@ -1,8 +1,6 @@
 export interface EnterpriseIt2026ServiceV2 {
 export interface EnterpriseIt2026ServiceV2 {
-
 export interface EnterpriseIt2026ServiceV2 {;
-
 export interface EnterpriseIt2026ServiceV2 {
   id: string;
   name: string;
@@ -35,8 +33,8 @@ export interface EnterpriseIt2026ServiceV2 {
     email: string;
     address: string;}
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
-    launchDate: '2026-05-01'
-    customers: 280
+    launchDate: "launchDate",
+    customers: 280;
     rating: 4.9
     reviews: 180
   }
@@ -56,14 +54,11 @@ export interface EnterpriseIt2026ServiceV2 {
     launchDate: '2026-05-01';
     customers: 280;
     rating: 4.9
-
     reviews: 180
   }
-
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture
   {
-
     id: 'zero-trust-network-architecture-pro', name: 'Zero Trust Network Architecture Pro',
     tagline: 'Never trust, always verify - comprehensive zero trust security',
     price: '$1,199',
@@ -85,9 +80,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper'], marketSize: '$67.8B market',
     growthRate: '220% annual growth', variant: 'security-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 180
       website: 'https://ziontechgroup.com';

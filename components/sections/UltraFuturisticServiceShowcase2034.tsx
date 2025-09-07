@@ -1,4 +1,4 @@
-  Star
+Star
   CheckCircle
   ArrowRight
   TrendingUp
@@ -27,7 +27,6 @@
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
   Star, CheckCircle, ArrowRight, TrendingUp, Users
-
   Star,
   CheckCircle,
   ArrowRight,
@@ -63,8 +62,8 @@ import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-service
  } from 'lucide-react';
 import { realMarketServices  } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
@@ -89,7 +88,7 @@ const serviceCategories = [
     id: 'ai-services'
     title: '🧠 Revolutionary AI Services'
     description: 'Next-generation AI consciousness and creativity'
-    icon: Brain
+    icon: Brain;
     color: 'from-violet-500 to-purple-500'
     services: aiEmergingTechServices.filter(s => s.category.includes('AI'))
     gradient: 'from-violet-500/20 to-indigo-500/20'
@@ -167,7 +166,6 @@ const serviceCategories = [
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
 ];
-
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const allServices = [...realMarketServices, ...aiEmergingTechServices];
@@ -191,7 +189,6 @@ const serviceCategories = [
       }
     },  }
   const itemVariants = {
-
 import {;
   Star,;
   CheckCircle,;
@@ -228,7 +225,6 @@ import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-service
 } from 'lucide-react';
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
-
 const serviceCategories = [
   Star,
   CheckCircle,
@@ -297,7 +293,6 @@ const service_categories = [;
     visible: {
       opacity: 1
       transition: {
-
     const matchesCategory =;
       selectedCategory === 'all' ||;
       serviceCategories && serviceCategories.some(cat => cat && cat.services.includes(service));
@@ -336,30 +331,22 @@ const service_categories = [;
   return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;
       {/* Animated Background */}
-
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
-
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">;
       {/* Animated Background */}
         {/* Header */}
-
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
-
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-
         {/* Header */}
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
-
         >
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
             Revolutionary Technology Services
@@ -385,16 +372,13 @@ const service_categories = [;
     visible: { opacity: 1, coordinate_y: 0 },
   }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
-
   return (
     <section className='py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden'>;
       {/* Animated Background */}
-
   return (
     <section className="py - 20 bg - gradient - to - br from - black via - gray - 900 to-black relative overflow-hidden">;
       {/* Animated Background */}
@@ -407,14 +391,10 @@ const service_categories = [;
         {/* Header */}
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
-
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-
         {/* Header */}
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -477,10 +457,8 @@ const service_categories = [;
               { label: 'Happy Customers', value: '50K+', icon: Users },;
               { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },;
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
-
             ].map((stat, index) => (
               <motion.div
-
             ].map((stat, index) => (;
               <motion&& motion.div
                 key={stat && stat.label}
@@ -504,10 +482,8 @@ const service_categories = [;
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
             ))}
-
           </div>;
         </motion && motion.div>;
-
             ))}
         {/* Search and Filter */}
         <motion&& motion.div
@@ -515,7 +491,6 @@ const service_categories = [;
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
           viewport={{ once: true }}
-
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             {/* Search */}
@@ -581,20 +556,15 @@ const service_categories = [;
                 </div>
               )}
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular
-
                 </div>
               )}
-
           </div>;
         </motion && motion.div>;
-
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
-
               )}
               {/* Service Icon */}
-
                 className='text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300';
               >;
                 <stat.icon className='w - 8 h - 8 text - cyan - 400 mx - auto mb - 2' />;
@@ -649,14 +619,10 @@ const service_categories = [;
             >
               {/* Popular Badge */}
               {service.popular && (
-
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular
-
                   Popular
-
                 </div>
               )}
-
               {/* Service Icon */}
                   {service.icon}
                 </div>;
@@ -723,19 +689,15 @@ const service_categories = [;
               </div>
                 )}
               </div>
-
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                 <div className='flex items-center space-x-2 text-gray-400'>
                   <Clock className='w-4 h-4' />
                   <span>{service.setupTime}</span>
                 </div>                  <span>{service.setupTime}</span>
-
                 {service.description}
               </p>
-
               {/* Features */}
-
                     <span>{feature}</span>
                   </div>
                 ))}
@@ -754,7 +716,6 @@ const service_categories = [;
                   </div>
                 )}
               </div>
-
               {/* Service Meta */}
                 </div>
                 <div className="flex items-center space-x-2 text-gray-400">
@@ -832,15 +793,11 @@ const service_categories = [;
                   {service && service.roi}
                 </div>;
               </div>;
-
               {/* Action Buttons */}
               <div className='flex space-x-3'>
-
                 <a
                 <a
-
                 <a
-
                   href={service.link}
                   className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group"
                 >
@@ -864,16 +821,13 @@ const service_categories = [;
               </div>;
             </motion && motion.div>;
           ))}
-
         </motion && motion.div>;
-
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
           viewport={{ once: true }}
-
         >
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>

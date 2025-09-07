@@ -1,18 +1,17 @@
 import React, { useMemo, useState } from 'react';
-
 import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react';
 import { buildPrintableHtml } from '../../utils/export/buildHtml';
 import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
 import { defaultChapters } from '../../utils/book/defaultOutline';
 const initialProject: BookProject = {
   meta: {
-    title: 'Zion OS: Building the Civilization Protocol'
+    title: "title",
     subtitle: 'AI. Talent. Trust.'
     author: 'Founder Name'
     isbn: ''
     publisher: 'Zion Tech Solutions'}
-  chapters: defaultChapters
-  visuals: {
+  chapters: defaultChapters;
+    visuals: {
     timelineImages: []
     daoVoteCharts: []
     uiScreens: []

@@ -1,14 +1,10 @@
 interface ApplicationProgressProps {
-
   status: ApplicationStatus
-
   className?: string
 }
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
   // Define the progress value based on status
-
   const getProgressValue = () => {
-
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -36,10 +32,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 }
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
-
   const statusRank_ = statusRank[status],
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   if (currentRank < statusRank_) {
     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -47,10 +40,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     // This is the current step
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
-
 interface ApplicationProgressProps {;
   status: ApplicationStatus,;
   className?: string;
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Progress } from "@/components/ui/progress";
@@ -13,7 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
       percentage: 32
     }
     },import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 export function UsageOverview() {;
@@ -74,9 +72,7 @@ export function UsageOverview() {;
               <p className="mt-1">Usage resets at the beginning of each billing period.</p>;
             </div>;
           </TabsContent>;
-
           <TabsContent value="historical">;
             <div className="py-10 text-center text-muted-foreground">;    }
   }
-
   return (

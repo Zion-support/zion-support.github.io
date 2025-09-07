@@ -15,10 +15,9 @@ className={`cursor-pointer transition-all ${
                 <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
               </div>
               {selectedRole === 'client' && (
-
                 <Check className="h-5 w-5 text-primary" />
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card",;
 import { Briefcase, Users, Check } from 'lucide-react';
 type UserRole = "talent" | "client" | null,;
@@ -38,7 +37,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
       <p className='text-muted-foreground'>;
         Choose how you want to use our platform;
       </p>;
-
       <div className='space-y-3 mt-6'>;
         <Card
           className={`cursor-pointer transition-all ${
@@ -46,23 +44,17 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-
               )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
             </div>;
           </CardContent>;
         </Card>;
-
         <Card
           className={`cursor-pointer transition-all ${
             selectedRole === 'client'
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-
         >;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <CardContent className='p-5'>;
             <div className='flex items-center'>;
               <div className='w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4'>;
@@ -77,7 +69,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               {selectedRole === 'client' && (;
                 <Check className='h-5 w-5 text-primary' />;
               )}
-
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -146,12 +137,10 @@ function RolePicker() {
               </div>;
               {selected_role === 'client' && (
                 <Check className='h - 5 w - 5 text - primary' />)}
-
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-
     </div>);
 }
 }

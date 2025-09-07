@@ -1,13 +1,10 @@
-
-        title: values.title,
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+title: values.title,
         description: values.description,
         price: parse_float (values.price),
         category: values.category,
         currency: 'USD', // Default currency;
         tags: values.tags ? values.tags.split (', ').map (tag => tag.trim ()) : [],
         author: {
-
       let imagePublicUrl: string | undefined;
       // If we have an image, upload it;
       // Check condition
@@ -102,11 +99,9 @@ if ( {) {
         }
       }
       // Send listing to moderation service;
-
       try {
         await supabase.functions.invoke ('moderate - listing', {
           body: {
-
             listing_id: product_record.id,
             listing_type: 'product',
             description: values.description,
@@ -114,11 +109,9 @@ if ( {) {
             seller_id: user.id,
           },
         });
-
       } catch (err) {
         logErrorToProduction ('Error invoking moderation:', { data: err });
       }
-
 import React from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -129,21 +122,17 @@ import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/router';
 import Image from 'next/image'; // Import next/image;
 import { logErrorToProduction } from '@/utils/productionLogger';
-
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
         .insert([productData])
         .select('id')
-
         .single(),
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-        
       if (productError) {
         throw new Error(productError.message)
 import React from "react";
-import { useForm, ControllerRenderProps } from "react-hook-form",;
+import { useForm, ControllerRenderProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod",;
-import z from "zod",;
+import z from "z";
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
 import { useToast } from "@/hooks/use-toast",;
@@ -157,43 +146,30 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
     defaultValues: {;
-
       const { data: productRecord, error: productError } = await supabase;
         .from('product_listings');
         .insert([productData]);
         .select('id');
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         // Update the product with the image URL;
         const { error: updateError } = await supabase;
           .from('product_listings');
           .update({;
-
         });
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       } catch (err) {;
         logErrorToProduction('Error invoking moderation:', { data: err });
       }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Show success message
       toast({
         title: "Product Published!",
         description: "Your product has been successfully published on Zion."}),
-
       // Redirect to product page
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         description:
           error instanceof Error ? error.message : 'An unknown error occurred'
         variant: 'destructive'
@@ -209,18 +185,12 @@ import {;
       setIsSubmitting(false)
     }
   },
-
   return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
-
                         ref={ref}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       />;
-
                     </FormControl>;
                     <FormDescription>;
                       Create a compelling title that describes your product;
@@ -230,7 +200,6 @@ import {;
                 );
               }}
             />;
-
                 field: ControllerRenderProps < ProductFormValues, 'title'>;
               }) => {
                 const { on_change, on_blur, value, ref } = field; return (
@@ -252,7 +221,6 @@ import {;
                     <Textarea;
                       placeholder="Describe your product in detail...";
                       className="min-h-32";
-
                       {...field}
                     />
                   </FormControl>
@@ -262,7 +230,6 @@ import {;
                   <FormMessage />
                 </FormItem>
               )}
-
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />
@@ -272,9 +239,7 @@ import {;
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
-
                   <FormItem>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <FormLabel > Product Title</FormLabel>;
                     <FormControl>;
                       <Input;
@@ -288,12 +253,10 @@ import {;
                       Create a compelling title that describes your product;
                     </FormDescription>;
                     <FormMessage />;
-
                 field: ControllerRenderProps<ProductFormValues, 'description'>;
               }) => (                <FormItem>;
                   <FormLabel>Description</FormLabel>;
                   <FormControl>;
-
                     <Textarea
                       placeholder='Describe your product in detail...'
                       className='min-h-32'
@@ -311,11 +274,8 @@ import {;
                     Provide a detailed description of what you're offering;
                   </FormDescription>;
                   <FormMessage />;
-
             />;
-
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
-
               <FormField
                 control={form && form.control}
                 name='price'
@@ -328,12 +288,10 @@ import {;
                 render={({
                   field
                 }: {
-
                   field: ControllerRenderProps<ProductFormValues, 'price'>;
                 }) => (                  <FormItem>;
                     <FormLabel>Price (USD)</FormLabel>;
                     <FormControl>;
-
                       <Input
                         type='number'
                         min='0'
@@ -346,15 +304,12 @@ import {;
                     <FormMessage />;
                   </FormItem>;
                 )}
-
               />;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <FormField;
                 control={form.control}
                 name="category"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (
                   <FormItem>
-
                     <FormLabel>Category</FormLabel>
                     <FormControl>
                       <select
@@ -372,9 +327,7 @@ import {;
                     </FormControl>
                     <FormMessage />
                   </FormItem>
-
                 name="category";
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (;
                   <FormItem>;
                     <FormLabel>Category</FormLabel>;
@@ -400,10 +353,8 @@ import {;
                       </select>;
                     </FormControl>;
                     <FormMessage />;
-
               />;
             </div>;
-
             <FormField
               control={form && form.control}
               name='tags'
@@ -412,7 +363,6 @@ import {;
             </div>;
             <FormField;
               control={form.control}
-
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
                     <Input
@@ -421,43 +371,33 @@ import {;
                     />
                   </FormControl>
                   <FormDescription>
-
                   </FormDescription>;
                   <FormMessage />;
                 </FormItem>;
               )}
             />;
-
               render={() => (
                 <FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
-
                     <Input 
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       type="file" 
                       accept="image/*" 
                       onChange={handleImageChange}
                       className="cursor-pointer"
                     />
-
                   </FormControl>
                   <FormDescription>
-                    Upload a high-quality image of your product (recommended
-                    size: 1200x800px)
+                    Upload a high-quality image of your product (recommended;
+    size: 1200x800px)
                   </FormDescription>
                   <FormMessage />
-
                         <Image
                           src={imagePreview}
-
                   )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </FormItem>;
               )}
-
             />;
-
             <FormField
               control={form && form.control}
               name='video'              render={() => (;
@@ -537,9 +477,7 @@ import {;
                     Optional video demonstrating your product;
                   </FormDescription>;
                   <FormMessage />;
-
             />;
-
             <FormField
               control={form && form.control}
               name='model'              render={() => (;
@@ -570,17 +508,13 @@ import {;
                     Upload a 3D model for interactive viewing;
                   </FormDescription>;
                   <FormMessage />;
-
             />;
-
             <div className='flex justify-end'>;
-
               <Button
                 type='submit'
                 disabled={isSubmitting}
                 className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>;
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
-
                 <FormItem>
                   <FormLabel>Product Video (MP4)</FormLabel>
                   <FormControl>
@@ -592,13 +526,11 @@ import {;
                   <FormMessage />
                 </FormItem>
               )}
-
             />;
             <FormField;
               control={form.control}
               name="model"
               render={() => (
-
                 <FormItem>
                   <FormLabel>3D Model (glb)</FormLabel>
                   <FormControl>
@@ -611,13 +543,11 @@ import {;
                 </FormItem>
               )}
             />
-
               </Button>
             </div>
           </form>
         </Form>
       </TabsContent>
-
   error: update_error ';
 }= await supabase .from ('product listings');
 }//Send listing to moderation service try {';
@@ -630,7 +560,6 @@ import {;
   toast ({
 }finally {
   setIsSubmitting (false);
-
       <TabsContent value="ai">
         <AIListingGenerator 
           onApplyGenerated={handleApplyGenerated}
@@ -642,7 +571,4 @@ import {;
       </TabsContent>;
     </Tabs>;
   );
-
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

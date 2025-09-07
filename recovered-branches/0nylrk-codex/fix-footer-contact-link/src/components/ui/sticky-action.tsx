@@ -1,17 +1,12 @@
 interface StickyActionProps {
-
 interface StickyActionProps {
-
 import React, { useEffect, useState } from "react";
 import {cn} from "@/lib/utils";
 import {motion, AnimatePresence} from "framer-motion";
-
 interface StickyActionProps {;
   className?: string;
   children: React && React.ReactNode,;
-
   showAfterScroll?: number;  children;
-
   showAfterScroll = 300;
   position = "bottom";
 }: StickyActionProps) {;
@@ -22,10 +17,9 @@ interface StickyActionProps {;
     <AnimatePresence>
       {isVisible && (
         <motion.div
-
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 import React, { useEffect, useState } from "react";
-import { cn } from "@/lib/utils",;
+import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion",;
 interface StickyActionProps {;
   className?: string,;

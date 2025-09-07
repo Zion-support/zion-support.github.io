@@ -1,5 +1,3 @@
-
-
 'use client';
 'use client';
 ;
@@ -31,11 +29,10 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
           animate={{
           }}
           transition={{
-            duration: 8
-            repeat: Infinity
+            duration: 8;
+    repeat: Infinity
             ease: 'easeInOut'
           }}
-
         {/* Grid Pattern */}
         <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0 && 0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0 && 0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />;
       </div>;
@@ -72,7 +69,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
           {/* Badge */}
           <motion&& motion.div
             initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -92,7 +88,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
           transition={{ duration: 0.8 }}
           className='max-w-6xl mx-auto'        >          className="max-w-6xl mx-auto"
         >
-
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -108,9 +103,7 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
             <Star className="w-5 h-5 text-yellow-400 fill-current" />
             <span className="text-white font-medium">Leading Technology Solutions Provider</span>
             </span>          </motion.div>
-
           </motion.div>
-
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
             className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8'>;
             <Star className='w-5 h-5 text-yellow-400 fill-current' />;
@@ -120,7 +113,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
           >;
             <Star className="w-5 h-5 text-yellow-400 fill-current" />;
             <span className="text-white font-medium">Leading Technology Solutions Provider</span>;
-
           {/* Main Heading */}
           <motion&& motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -134,25 +126,20 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
             </span>;
           </motion && motion.h1>;
-
           {/* Subtitle */}
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-
           {/* CTA Buttons */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-
           >
             <Link
               href='/contact'
-
             transition={{ duration: 0.8, delay: 0.5 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
-
             <Link
               href="/contact"
               className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
@@ -189,7 +176,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
               <span className="text-lg font-medium">Watch Demo</span>;
             </button>;
           </motion && motion.div>;
-
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -246,13 +232,11 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
           >
             {stats.map((stat, index) => (
               <motion.div
-
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
                 className='text-center group'
-
               >
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">
                   <stat.icon className="w-8 h-8 text-blue-400" />
@@ -260,16 +244,13 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
               </motion.div>
-
             ))}
           </motion.div>
         </motion.div>
       </div>
-
           </motion && motion.div>;
         </motion && motion.div>;
       </div>;
-
             ))}
       {/* Scroll Indicator */}
       <motion&& motion.div
@@ -278,7 +259,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
         transition={{ duration: 1, delay: 1 }}
 export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
 export default HeroSection;
-
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}

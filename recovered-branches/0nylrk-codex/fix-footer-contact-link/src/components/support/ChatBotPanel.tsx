@@ -1,5 +1,3 @@
-
-
 import React, { useState, useRef, useEffect } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -14,14 +12,13 @@ import { useTheme } from "@/hooks/useTheme";
 import { Send, Loader2 } from "lucide-react",
 import { useTheme } from "@/hooks/useTheme",
 // Define suggested quick replies
-
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" }
   { id: "match", text: "How do I get matched?" }
   { id: "billing", text: "Billing help" }]
 type Message = {
-  id: string
-  content: string
+  id: string;
+    content: string
   sender: "user" | "bot"
   timestamp: Date  const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -40,8 +37,8 @@ type Message = {
     const userMessage: Message = {
       id: `user-${Date.now()}`
       content: text
-      sender: "user"
-      timestamp: new Date()}
+      sender: "sender",
+    timestamp: new Date()}
     setMessages((prev) => [...prev, userMessage]);
     setInputValue("");
     setIsLoading(true);
@@ -57,7 +54,6 @@ type Message = {
       // Check if the request was successful
       if (!response.success) {
         setFailedAttempts((prev) => prev + 1);
-
         // After 3 failed attempts, suggest escalation;
         if (failedAttempts >= 2) {;
           suggestEscalation();
@@ -128,11 +124,9 @@ if ( {) {
           suggest_escalation ();        variant: "destructive",
         title: "Communication Error",
         description: "We're having trouble connecting to our support service."}),
-      
       setFailedAttempts((prev) => prev + 1),
       if (failedAttempts >= 2) {
         suggestEscalation()
-
     } catch (error) {;
       console.error("Error in AI chat:", error),;
       toast({;
@@ -145,21 +139,16 @@ if ( {) {
         variant: "destructive",
         title: "Communication Error",
         description: "We're having trouble connecting to our support service."}),
-      
       setFailedAttempts((prev) => prev + 1),
       if (failedAttempts >= 2) {
         suggestEscalation()
-
   };
   },
-
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
-      
-
       const data = await response.json();
       return {
         success: true
@@ -170,9 +159,7 @@ if ( {) {
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
       sender: "bot",
       timestamp: new Date()},
-    
     setMessages((prev) => [...prev, escalationMessage]),
-    
     // Log this interaction for the support team
     logSupportEscalation()
   },
@@ -182,7 +169,6 @@ if ( {) {
           timestamp: m.timestamp
         }))
       })
-
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later.";      }
     }
@@ -230,7 +216,6 @@ if ( {) {
         content: "I'd like to email support"
         sender: "user"
         timestamp: new Date()
-
       },
   return (
     <div className="flex flex-col h-full">
@@ -253,11 +238,9 @@ if ( {) {
       console && console.error("Failed to log support escalation:", error);
     }
   };
-
   const handleQuickReply = (text: string) => {;
     handleSendMessage(text)
 };
-
   const handleEscalateToLiveAgent = () => {;
     setMessages((prev) => [;
       ...prev, ;
@@ -273,13 +256,11 @@ if ( {) {
         timestamp: new Date();
       }
     ]);
-
     // In a real implementation, this would trigger a live chat request;
     toast({;
       title: "Support request submitted",,
   description: "A support agent will be with you shortly."})
 };
-
   const handleEmailSupport = () => {;
     setMessages((prev) => [;
       ...prev, ;
@@ -297,7 +278,6 @@ if ( {) {
       }
     ])
 };
-
     <div className="flex flex-col h-full">;
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
         <div className="flex flex-col gap-4">;              key={message.id}
@@ -331,7 +311,6 @@ if ( {) {
             >
               Chat with Live Agent
             </Button>
-
       {failedAttempts >= 3 && (;
         <div className="px-4 py-3 border-t border-zion-purple/10">;
           <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>;
@@ -367,17 +346,14 @@ if ( {) {
       </div>
     </div>
   )
-
               theme === "dark" ;
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
-
             <Send className="h-4 w-4" />;
           </Button>;
         </form>;
       </div>;
     </div>;
   );
-
 }
             onChange={(e) => setInputValue(e && e.target.value)}
             placeholder="Type your question...";
@@ -425,7 +401,6 @@ headers: {
   "Content-Type" : "application/json" 
 };
 body: JSON.stringify ({
-  
 }) 
 });
 }const data = await response.json ();
@@ -434,7 +409,6 @@ return {
 message: data.message 
 }
 }catch (error) {
-  
 }
 };
 const suggestEscalation = () => {
@@ -453,7 +427,6 @@ timestamp: m.timestamp
 }) ) 
 }) 
 }catch (error) {
-  
 }
 };
 const handleQuickReply = (text: string) => {

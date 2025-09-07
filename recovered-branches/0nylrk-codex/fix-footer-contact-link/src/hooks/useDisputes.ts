@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -22,12 +20,9 @@ export function useDisputes() {
         client_profile: dispute && dispute.client_profile?.client_profile;
         talent_profile: dispute && dispute.talent_profile?.talent_profile;
         project: {
-
           ...dispute && dispute.project,
           title: dispute && dispute.project?.job?.title || 'Untitled Project'
-
         }
-
       console && console.error("Error fetching disputes:", err);
       setError("Failed to fetch disputes: " + err && err.message),
       toast && toast.error("Failed to fetch disputes")
@@ -35,7 +30,6 @@ export function useDisputes() {
       setIsLoading (false);
     }
   }
-
 ;
   const getDisputeById = async (dispute_id: string): Promise < Dispute | null> => {
         }
@@ -55,7 +49,6 @@ export function useDisputes() {
             client_id;
             talent_id;
       })),
-      
       setDisputes(transformedData as Dispute[]),
       setError(null)
     } catch (err: any) {
@@ -79,10 +72,7 @@ export function useDisputes() {
         `)
         .eq("id", disputeId)
         .single(),
-      
       if (error) throw error,
-      
-
       return {
         ...data;
         client_profile: data && data.client_profile?.client_profile;
@@ -93,21 +83,15 @@ export function useDisputes() {
     } catch (err: any) {
           ...data && data.project,
           title: data && data.project?.job?.title || 'Untitled Project'
-
 =======          ...data.project,
           title: data.project?.job?.title || 'Untitled Project';
         }
       } as Dispute;
     } catch (err: any) {
-      
       toast && toast.success("Dispute submitted successfully");
-
         .single(),
-
       if (error) throw error,
-      
       toast.success("Dispute submitted successfully"),
-
       fetchDisputes(), // Refresh the list
       return data as Dispute
     } catch (err: any) {
@@ -200,8 +184,8 @@ export function useDisputes() {
         .update({
           status: 'resolved';
           resolved_at: new Date().toISOString();
-          resolution_summary: resolution.summary
-          resolution_type: resolution.resolution_type
+          resolution_summary: resolution.summary;
+    resolution_type: resolution.resolution_type
         .eq("id", disputeId);
       if (error) throw error;
       // Update local state      return true
@@ -219,17 +203,13 @@ export function useDisputes() {
           user_profile:profiles!dispute_messages_user_id_fkey(display_name, avatar_url)
         `)
         .eq("dispute_id", disputeId)
-
   },
-
   const getDisputeMessages = async (disputeId: string): Promise<DisputeMessage[]> => {    try {
       const { data, error } = await supabase;
         .from ("dispute_messages");
         .select (`;
           *;
-
   },
-
   const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {
     if (!user) {
       toast && toast.error("You must be logged in to send a message");

@@ -1,19 +1,12 @@
-
-      const scrollAmount = 300
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount
-        behavior: "smooth"})
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+        left: direction === "left" ? -scrollAmount : scrollAmount;
+    behavior: "smooth"})
     }
   }
     }
-
   },
-
   return (
-
     <section className="py-16 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -22,20 +15,16 @@
             Take a visual tour through the Zion app's intuitive interface.;
           </p>;
         </div>;
-
         <div className="relative">;
-
         <div className="relative">
           <Button
             variant="ghost"
             size="icon"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
-
             aria-label="Scroll left"
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
-
           <div
             ref = {scrollContainerRef,}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -44,7 +33,6 @@
               <div
                 key = {screenshot && screenshot.id,}
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">;
-
                 <img
                   src={screenshot.src}
                   alt={screenshot.alt}
@@ -53,7 +41,6 @@
                 />
               </div>
             ))}
-
           <div 
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -73,23 +60,18 @@
               </div>
             ))}
           </div>
-
           <Button
             variant="ghost"
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
-
             aria-label="Scroll right"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           >
             <ChevronRight className="h-6 w-6" />
           </Button>
         </div>
       </div>
     </section>
-
             aria-label="Scroll right";
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           >;
             <ChevronRight className="h-6 w-6" />;
           </Button>;
@@ -100,7 +82,6 @@
 };
 '"},
 };
-
 ;
 }
 import React, { useRef } from './react';
@@ -178,5 +159,3 @@ if ( {) {
 }
 '"},
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

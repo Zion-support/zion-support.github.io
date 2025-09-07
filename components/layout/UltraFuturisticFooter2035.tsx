@@ -1,4 +1,4 @@
-  Zap
+Zap
   Globe
   Phone
   Mail
@@ -51,7 +51,6 @@
   Video
   Headphones;} from 'lucide-react';import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight
-
   Zap,
   Globe,
   Phone,
@@ -108,7 +107,6 @@
   Video,
   Headphones,;} from 'lucide-react';import { 
   Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
-
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
@@ -117,7 +115,6 @@
     ]
   }
 ];
-
   return (
     <footer className="relative bg-black text-white overflow-hidden">
       {/* Background Effects */}
@@ -138,7 +135,6 @@
             {/* Company Info */}
   }
   };
-
   const scrollToTop = () =>: any {
     window.scroll_to ({ top: 0, behavior: 'smooth' });
   }
@@ -163,10 +159,9 @@
             backgroundPosition: ['0px 0px', '200px 200px']
           }}
           transition={{
-            duration: 20
-            repeat: Infinity
+            duration: 20;
+    repeat: Infinity
             ease: 'linear',          }}
-
         />
       </div>
       <div className='relative z-10'>            ease: 'linear'
@@ -233,21 +228,18 @@
                     <span className="text-sm">{contactInfo && contactInfo.address}</span>;
                   </div>;
                 </div>;
-
                     <a
                       key={social && social.name}
                       href={social && social.href}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
-
                       {social.icon}
                     </a>
                   ))}
                 </div>
               </motion.div>
             </div>
-
                   ))}
             {/* Footer Sections */}
             {footerSections && footerSections.map((section, index) => (;
@@ -255,7 +247,6 @@
                 key={section && section.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-
               >
                 <div className='flex items-center gap-4'>
                   {socialLinks.map(social => (
@@ -272,11 +263,8 @@
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
-
                 {/* Social Links */}
-
                     >
-
                       {social.icon}
                     </a>
                   ))}
@@ -331,11 +319,9 @@
                           link && link.featured
                             ? 'text-cyan-400 hover:text-cyan-300'                          link && link.featured 
                             ? 'text-cyan-400 hover:text-cyan-300' 
-
                           link.featured 
                             ? 'text-cyan-400 hover:text-cyan-300' 
                             : 'text-gray-400 hover:text-white'
-
                         }`}
                       >
                         {link.name}
@@ -354,7 +340,6 @@
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-
           >
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
               <div className='text-sm text-gray-400'>
@@ -414,7 +399,6 @@
                 onClick={scrollToTop}
 /* Animated grid */ 
   /* Animated grid */ 
-
 }<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
   social.icon
 }</a>) )

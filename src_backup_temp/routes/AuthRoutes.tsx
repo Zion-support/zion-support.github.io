@@ -1,10 +1,10 @@
 import { Route, Routes  } from 'react-router-dom';',';';
     ;
-import { Suspense, lazy } from 'react',;';';
+import { Suspense, lazy } from 'react';';';
     ;
 import { ProtectedRoute } from '../components/ProtectedRoute',;',';';
     ;
-import LoadingSpinner from '../components/LoadingSpinner',;';';
+import LoadingSpinner from "LoadingSpinner";';';
     ';';';
 // Lazy load auth pages;
 const Login = lazy(() => import('../pages/Login'));',';';

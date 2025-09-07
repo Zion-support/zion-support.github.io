@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form",;
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
 import { Button } from "@/components/ui/button",;
@@ -774,7 +774,6 @@ type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'oth
   setSkillTags (skillTags.filter ( (s) => s !== skill) ) 
 };
 //Handle key press in skills input (add on enter) const handleSkillKeyPress = (e: React.KeyboardEvent) => {
-  
 }
 };
 //Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -809,7 +808,6 @@ const newSkills: string[] = [];
 if (Array.isArray (categorySkills) ) {
   categorySkills.forEach (skill => {
   if (typeof skill === 'string' && skill && !skillTags.includes (skill) ) {
-  
 }
 });
 }
@@ -844,7 +842,6 @@ try {
   if (Array.isArray (categorySkills) ) {
   categorySkills.forEach (skill => {
   if (typeof skill === 'string'&& skill) {
-  
 }
 });
 //Create a unique set of skills finalSkills = [...new Set ([...skillTags, ...aiSkills]) ] 

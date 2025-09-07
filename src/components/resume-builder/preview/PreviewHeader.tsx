@@ -2,70 +2,51 @@ import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
-
           position: absolute;
           left: 0;
           top: 0;
           width: 100%;
-
         }
-
           display: none !important }
       }
-
         }
-
         }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
         .print-section {;
           position: absolute,;
           left: 0,;
           top: 0,;
           width: 100%;
-
         }
-
     `;
     document && document.head.appendChild(style);
-
     window && window.print();
-
     // Remove the temporary style element after printing;
     setTimeout(() => {;
       document && document.head.removeChild(style);
       setIsPrinting(false);
     }, 1000);
   };
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
     >;
       <Button variant='outline' onClick={onBack} className='gap-2 no-print'>;
         <ArrowLeft className='h-4 w-4' />        Back;
       </Button>;
-
       </Button>
       <div
-
         className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>;
         <PdfExportButton resume={resume} />;
-
         <Button
           variant='outline'
           onClick={handleBrowserPrint}
           disabled={isPrinting}
-
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
           Add to Profile
         </Button>
       </div>
-
           className='gap-2'>;
           <FileText className='h-4 w-4' />;
           Print;
         </Button>;
-
         <Button variant='outline' className='gap-2'>;
           <Link className='h-4 w-4' />          Add to Profile        ;
         <Button variant="outline" className="gap-2">;
@@ -122,6 +103,5 @@ import { useIsMobile } from '@/hooks/use-mobile';
       </div>;
     </div>);
 }
-
     </div>
   )

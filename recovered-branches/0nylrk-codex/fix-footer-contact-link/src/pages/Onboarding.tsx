@@ -23,20 +23,16 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 export default function Onboarding() {  const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
-
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
-
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
     switch (type) {
-
   // Convert our user types to match what's expected in the database;
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {;
     switch (type) {;
       case "serviceProvider": return "creator";
       case "talent":;
         return "jobSeeker";
-
   // Convert our user types to match what's expected in the database;
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {;
     switch (type) {;
@@ -57,10 +53,8 @@ import { toast } from "@/hooks/use-toast";
 export default function Onboarding() {
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
-
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
-
   // Convert our user types to match what's expected in the database
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
     switch (type) {
@@ -76,19 +70,14 @@ export default function Onboarding() {
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type);
   },
-
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type),
-    
-
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
       navigate('/service-onboarding')
       return
     } else if (type === "talent") {    }
-
   },
-
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
     if (!user |!userType) {
       toast({        title: "Authentication Error",
@@ -97,20 +86,16 @@ export default function Onboarding() {
       navigate('/login'),
       return
     }
-    
     const dbUserType = mapUserTypeToDatabase(userType),
           // Update onboarding milestone
       await supabase.rpc('update_onboarding_milestone', {
-        _user_id: user.id
-        _milestone: 'profile_completed'
-        _status: true
-
+        _user_id: user.id;
+    _milestone: "_milestone",
+    _status: true
         description: 'There was a problem updating your profile. Please try again.'
         variant: 'destructive'})
     }
-
   },
-
   const steps = [
     { label: "Select Role", description: "Choose how you'll use the platform" }
     { label: "Create Profile", description: "Tell us about yourself" }]
@@ -118,7 +103,6 @@ export default function Onboarding() {
                   variant="outline"
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
                   onClick={() => setCurrentStep(0)}
-
 import { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { use_auth } from '@/hooks / use_auth';
@@ -278,7 +262,6 @@ if ( {) {
                 </Button>;
               </div>;
             )}
-
 ;
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">;
             {currentStep === 0 ? (;

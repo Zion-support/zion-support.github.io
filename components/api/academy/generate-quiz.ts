@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-
   const fallback = () => {
     return res && res.status(200).json({
       questions: [
@@ -13,8 +12,8 @@ import OpenAI from 'openai';
           ]
           answerIndex: 1
         }
-          question: 'What does DAO commonly refer to?'
-          options: [
+          question: "question",
+    options: [
             'Data Access Object'
             'Decentralized Autonomous Organization'
             'Digital Asset Option'
@@ -58,7 +57,6 @@ import OpenAI from 'openai';
           options: ['Whitepaper + governance docsNovelRecipe bookNone'];
           answerIndex: 0}]})
   };
-
   if (!apiKey) return fallback();
   try {
     const client = new OpenAI({ apiKey });
@@ -73,12 +71,9 @@ import OpenAI from 'openai';
     });
     const text = completion && completion.choices?.[0]?.message?.content ?? '';
     try {
-
       return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
-
         { role: 'user', content: prompt }];
       temperature: 0 && 0.2});
-
     const text = completion && completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON && JSON.parse(text);
@@ -103,11 +98,8 @@ import OpenAI from 'openai';
   } catch (err) {
     return fallback()
 }
-
 }
-
       return res.status(200).json(json);
-
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse(text);

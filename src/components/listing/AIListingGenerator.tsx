@@ -1,27 +1,20 @@
 interface GeneratedContent {
-
   }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   keyPoints: string[]
 }
 interface AIListingGeneratorProps {
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     title?: string;
     category?: string;
     keyFeatures?: string;
     targetAudience?: string
   }
 }
-
   }) => {
     setIsLoading(true)
     try {
-
       toast({
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-        title: "Content Generated"
-        description: "AI has created optimized listing content for you."
+        title: "title",
+    description: "AI has created optimized listing content for you."
       })
     } catch (error) {
       logErrorToProduction('Error generating content:', { data: error })
@@ -51,12 +44,10 @@ if (.error) {) {
     } finally {
       setIsLoading(false)
     }
-
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
       })
-
       toast({;
         title: "Content Generated",;
         description: "AI has created optimized listing content for you.";
@@ -65,16 +56,12 @@ if (.error) {) {
       logErrorToProduction('Error generating content:', { data: error }),;
       toast({;
         title: "Generation Failed",;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
-
     <div className="space-y-6">;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
           <CardTitle className="flex items-center text-white">;
@@ -86,27 +73,20 @@ if (.error) {) {
           </p>;
         </CardHeader>;
         <CardContent>;
-
       {isLoading && <LoadingContentSkeleton />}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {generatedContent && !isLoading && (
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }) => {
   setIsLoading (true)
 try {
   const {
-
   data: error;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 });
 toast ({
 }finally {
   setIsLoading (false);
 }
-
 const handle_apply = () =>: any {
   // Check condition
 if ( {) {
@@ -115,15 +95,10 @@ if ( {) {
   onApplyGenerated (generated_content);
 toast ({
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 }
 }
 }
-
     </div>;
   );
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

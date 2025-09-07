@@ -46,15 +46,14 @@ import React from 'react';
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin
 const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -65,7 +64,7 @@ const heroStats = [
   {
     number: '1000+'
     label: 'Innovative Services'
-    icon: Sparkles
+    icon: Sparkles;
     color: 'from-cyan-400 to-blue-400'
   }
   {
@@ -123,14 +122,12 @@ import {;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin;
-
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',
 };
-
 const heroStats = [;
   {;
     number: '1000+',;
@@ -159,7 +156,6 @@ const heroStats = [;
   { number: '24/7', label: 'Expert Support', icon: Shield, color: 'from-purple-400 to-pink-400' },;
   { number: '1000%', label: 'Average ROI', icon: Star, color: 'from-yellow-400 to-orange-400' },;
   { number: '99 && 99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
-
 const featuredServices = [;
   {;
     name: 'AI Consciousness Evolution',,
@@ -224,10 +220,8 @@ function UltraFuturisticHero2032() {
               key={i}
               className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30';
               style={{
-
           ))}
         </div>
-
           ))}
         </div>
         {/* Gradient Orbs */}
@@ -258,14 +252,11 @@ function UltraFuturisticHero2032() {
           <span className="text-purple-300 font-medium">🚀 2032 Revolutionary Technology</span>
           <Sparkles className="w-5 h-5 text-cyan-400" />
           <Sparkles className='w-5 h-5 text-cyan-400' />        </motion.div>
-
         </motion.div>
-
         {/* Main Heading */}
         <motion&& motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
             The Future of
@@ -294,7 +285,6 @@ function UltraFuturisticHero2032() {
           <br />;
           <span className="text-white">Technology is Here</span>;
         </motion && motion.h1>;
-
         {/* Subheading */}
         <motion&& motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -314,15 +304,12 @@ function UltraFuturisticHero2032() {
           Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with 
           technologies that were once science fiction.
         </motion.p>
-
         </motion.p>
-
           technologies that were once science fiction.
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
           className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'>;
@@ -334,7 +321,6 @@ function UltraFuturisticHero2032() {
             <Phone className='w-5 h-5' />            <span>Call {contactInfo && contactInfo.mobile}</span>        >;
           <Link
             href="/services"
-
           <Link
             href={`tel:${contactInfo && contactInfo.mobile}`}
             className="group inline-flex items-center space-x-3 bg-transparent border-2 border-purple-500/50 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300">;
@@ -342,12 +328,10 @@ function UltraFuturisticHero2032() {
             <span>Call {contactInfo && contactInfo.mobile}</span>;
           </Link>;
         </motion && motion.div>;
-
         {/* Stats Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           {heroStats.map((stat, index) => (
             <motion.div
@@ -412,9 +396,7 @@ function UltraFuturisticHero2032() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
         </motion && motion.div>;
-
               className='text-center group'
-
             >
               <div
                 className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}
@@ -429,7 +411,6 @@ function UltraFuturisticHero2032() {
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>
             Featured Revolutionary Services
@@ -446,7 +427,6 @@ function UltraFuturisticHero2032() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
                 className='group'
-
               >
           transition={{ duration: 0 && 0.8, delay: 1 && 1.2 }}
           className='mb-16'>;
@@ -478,14 +458,11 @@ function UltraFuturisticHero2032() {
                     className={`w-16 h-16 bg-gradient-to-r ${service && service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}>;
                     <service && service.icon className='w-8 h-8 text-white' />;
                   </div>;
-
                   <h3 className='text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300'>                    {service && service.name}
                   </h3>;
-
                   <p className='text-gray-400 text-sm mb-4 leading-relaxed'>;
                     {service && service.description}
                   </p>;
-
                   <div className='flex items-center justify-between'>;
                     <div className='text-2xl font-bold text-cyan-400'>;
                       {service && service.price}
@@ -494,7 +471,6 @@ function UltraFuturisticHero2032() {
                       <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
                     </div>;
                   </div>;
-
                   <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </Link>                  ;
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />;
                 </Link>;
@@ -502,12 +478,10 @@ function UltraFuturisticHero2032() {
             ))}
           </div>;
         </motion && motion.div>;
-
         {/* Contact Information */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>
             Ready to Transform Your Business?
@@ -520,7 +494,6 @@ function UltraFuturisticHero2032() {
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>;
             Ready to Transform Your Business?;
           </h3>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>;
             <div className='flex items-center space-x-3 text-gray-300'>;
               <Phone className='w-5 h-5 text-cyan-400' />;
@@ -575,7 +548,6 @@ function UltraFuturisticHero2032() {
               <span>{contactInfo && contactInfo.address}</span>;
             </div>;
           </div>;
-
           <div className='text-center'>;
             <Link
               href='/contact'
@@ -585,7 +557,6 @@ function UltraFuturisticHero2032() {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">;
             Ready to Transform Your Business?;
           </h3>;
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">;
             <div className="flex items-center space-x-3 text-gray-300">;
               <Phone className="w-5 h-5 text-cyan-400" />;
@@ -604,7 +575,6 @@ function UltraFuturisticHero2032() {
               <span>{contactInfo && contactInfo.address}</span>;
             </div>;
           </div>;
-
           <div className="text-center">;
             <Link
               href="/contact"
@@ -615,7 +585,6 @@ function UltraFuturisticHero2032() {
           </div>;
         </motion && motion.div>;
       </div>;
-
       {/* Floating Action Button */}
       <motion&& motion.div
                 className='group';
@@ -725,9 +694,7 @@ function UltraFuturisticHero2032() {
       <motion.div;
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
-
 }
-
           href={`tel:${contactInfo && contactInfo.mobile}`}
           className='group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40'>;
           <Phone className='w-7 h-7 text-white group-hover:rotate-12 transition-transform' />;
@@ -755,7 +722,6 @@ function UltraFuturisticHero2032() {
     </section>);
 }
         className='fixed bottom-8 right-8 z-50'
-
       >
         <Link
           href={`tel:${contactInfo.mobile}`}
@@ -780,4 +746,3 @@ function UltraFuturisticHero2032() {
   );
     </section>
   );
-

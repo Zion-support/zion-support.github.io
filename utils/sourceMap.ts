@@ -2,11 +2,10 @@
 export interface DeployTemplateResult {}
 export function getGitStatus() {
   return {
-    connected: false
+    connected: false;
     branch: 'main'
   }
 }
-
 function buildZionSourceMap(): SourceNode[] {
   return [
     {
@@ -41,7 +40,6 @@ function buildZionSourceMap(): SourceNode[] {
     }
   ];
 }
-
 function markExistenceRecursive(node: SourceNode): SourceNode {
   const exists = fs.existsSync(node.path);
   return {
@@ -50,7 +48,6 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
     children: node.children?.map(markExistenceRecursive)
   };
 }
-
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
@@ -60,12 +57,10 @@ export interface DeployTemplateResult {
     branch: 'main'
 };
 }
-
 export function getSourceMapWithExistence(): SourceNode[] {;
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
-
 export interface DeployTemplateResult {;
   createdPaths: string[];
   skippedPaths: string[];  createdPaths: string[];
@@ -74,7 +69,6 @@ export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
   }
-
 export function deployBasicTemplateForPath(
   repoRelativePath: string
 ): DeployTemplateResult {;
@@ -87,12 +81,9 @@ export function deployBasicTemplateForPath(
   }  } else {
     skippedPaths.push(readmeFile);
   }
-
   return { createdPaths, skippedPaths };
-
 }
   return { createdPaths, skippedPaths }
-
   created_paths: string[];
   skipped_paths: string[];
 ;

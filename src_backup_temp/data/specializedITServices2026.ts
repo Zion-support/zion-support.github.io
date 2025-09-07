@@ -39,7 +39,7 @@ export interface SpecializedITService { "id": string; title: string,
    location: string;
    availability: string;
    author: {  name: string;
-   i
+   i;
     d: string;
    avatarUrl?: string;
    verified: boolean  } images: string[] createdAt: string useCases: string[] integrations: string[] compliance: string[] support: string[] deploymentOptions: string[] scalability: string[] } export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [ { id: 'cloud-native-application-platform', ''; title: 'Cloud-Native Application Platform', '',

@@ -1,10 +1,7 @@
-
-
 import {MilestonesList} from '../MilestonesList';
 import {PaymentSummary} from '../PaymentSummary';
-
-=======  projectId: string
-  milestones: Milestone[]
+=======  projectId: string;
+    milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
   isLoading: boolean
   isClient: boolean
@@ -15,7 +12,6 @@ import {PaymentSummary} from '../PaymentSummary';
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
   onDeleteMilestone: (id: string) => Promise<boolean>
   onUploadDeliverable: (id: string, file: File) => Promise<any>
-
 import {MilestonesList} from '../MilestonesList';
 import {PaymentSummary} from '../PaymentSummary';interface MilestoneManagerProps {
   projectId: string,
@@ -62,10 +58,9 @@ export function MilestoneManager({
       console.error("Error approving milestone:", error),
       toast.error("Failed to approve milestone")
     }
-
   },
   import React from 'react';
-import { MilestonesList } from '../MilestonesList',;
+import { MilestonesList } from '../MilestonesList';
 import { PaymentSummary } from '../PaymentSummary',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { toast } from "sonner",;
@@ -166,13 +161,10 @@ refetch: () => Promise<void>
 }: MilestoneManagerProps) {
   const handleMilestoneApproved = async (milestoneId: string) => {
   try {
-  
 }
-
 };
 const handleMilestoneRejected = async (milestoneId: string) => {
   try {
-  
 }
 };
 grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className=" lg:col-span-2" > <MilestonesList milestones= {

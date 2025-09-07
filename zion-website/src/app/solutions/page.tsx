@@ -1,6 +1,6 @@
 import {
   {
-    step: '01'
+    step: "step",
     title: 'Discovery & Assessment'
     description: 'We analyze your current systems, identify opportunities, and develop a comprehensive AI strategy.'
     icon: LightBulbIcon}
@@ -264,5 +264,4 @@ import {
     </div>
   )
 };
-
 export default Page;

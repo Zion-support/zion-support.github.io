@@ -1,10 +1,8 @@
 import Link from 'next/link';
-
 export const metadata = {
 title: "AI Customer Insights | Zion Tech Group",
   description: "Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.",
 };
-
 export default function AICustomerInsightsPage() {
   return (
     <div className="animate-fade-in">
@@ -17,7 +15,6 @@ Transform customer data into actionable insights with AI-powered analytics.
           Understand customer behavior, preferences, and trends to drive business growth.
         </p>
       </div>
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
 <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
@@ -54,7 +51,6 @@ Transform customer data into actionable insights with AI-powered analytics.
             />
           </div>
         </div>
-
         <div>
 <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
           <div className="space-y-6">
@@ -105,7 +101,6 @@ plan="Enterprise"
           </div>
         </div>
       </div>
-
 <div className="bg-gray-50 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">How It Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -126,7 +121,6 @@ plan="Enterprise"
           />
         </div>
       </div>
-
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         <div className="bg-white border border-gray-200 rounded-xl p-6">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Data Sources We Analyze</h3>
@@ -157,7 +151,6 @@ plan="Enterprise"
             </li>
           </ul>
         </div>
-
         <div className="bg-white border border-gray-200 rounded-xl p-6">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Business Impact</h3>
           <ul className="space-y-3">
@@ -184,7 +177,6 @@ plan="Enterprise"
           </ul>
         </div>
       </div>
-
       <div className="bg-purple-50 border border-purple-200 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">AI-Powered Insights</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -205,7 +197,6 @@ plan="Enterprise"
           </div>
         </div>
       </div>
-
       <div className="text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Ready to Unlock Customer Insights?</h2>
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -232,7 +223,6 @@ plan="Enterprise"
     </div>
   );
 }
-
 function FeatureItem({ icon, title, description }: { icon: string; title: string; description: string }) {
   return (
     <div className="flex items-start space-x-4">
@@ -244,7 +234,6 @@ function FeatureItem({ icon, title, description }: { icon: string; title: string
     </div>
   );
 }
-
 function PricingCard({ plan, price, period, description, features, popular }: {
   plan: string;
   price: string;
@@ -277,7 +266,6 @@ function PricingCard({ plan, price, period, description, features, popular }: {
     </div>
   );
 }
-
 function StepCard({ step, title, description }: { step: string; title: string; description: string }) {
   return (
     <div className="text-center">
@@ -289,83 +277,3 @@ function StepCard({ step, title, description }: { step: string; title: string; d
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-
-function BenefitCard({
-  icon,
-  title,
-  description,
-}: {
-  icon: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center p-6 border border-gray-200 rounded-lg hover:border-teal-300 transition-colors">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function DataSourceCard({ name, icon }: { name: string; icon: string }) {
-  return (
-    <div className="text-center p-4 border border-gray-200 rounded-lg hover:border-teal-300 transition-colors">
-      <div className="text-3xl mb-2">{icon}</div>
-      <div className="text-sm font-medium text-gray-700">{name}</div>
-    </div>
-  );
-}
-
-function UseCaseCard({
-  icon,
-  title,
-  description,
-}: {
-  icon: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="p-6 border border-gray-200 rounded-lg hover:border-teal-300 transition-colors">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function CTA() {
-  return (
-    <div className="bg-gradient-to-r from-teal-50 to-blue-50 border border-teal-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Unlock Customer Insights?
-      </h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Start your free trial today and discover the power of AI-driven customer
-        analytics. Analyze your first 1,000 customers for free.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
-      </div>
-      <div className="mt-4 text-sm text-gray-500">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-      </div>
-    </div>
-  );
-}
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

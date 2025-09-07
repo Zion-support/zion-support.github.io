@@ -1,4 +1,3 @@
-
 {
   /* Robots Meta */
 }{
@@ -102,7 +101,6 @@ import React from 'react';
   /* Structured Data */
 }<script
 }] 
-
 const SEO: React.FC<SEOProps> = ({;
   title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',;
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.',;
@@ -280,15 +278,14 @@ const SEO: React.FC<SEOProps> = ({
         content='black - translucent';
       />;
       <meta name='apple - mobile - web - app - title' content='Zion Tech Group' />;
-
       {/* Structured Data */}
       <script;
         type='application / ld + json';
         dangerouslySetInnerHTML={{
             contactPoint: {
               '@type': 'ContactPoint'
-              telephone: '+1-800-ZION-TECH'
-              contactType: 'customer service'
+              telephone: "telephone",
+    contactType: 'customer service'
               availableLanguage: 'English'
             }
             address: {
@@ -335,7 +332,6 @@ const SEO: React.FC<SEOProps> = ({
             }
           })
         }}
-
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
       <link
@@ -376,7 +372,6 @@ const SEO: React.FC<SEOProps> = ({
     </Head>;
   )
 };
-
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
           }}
         />;
@@ -384,10 +379,8 @@ export default SEO;            __html: JSON && JSON.stringify(structuredData);
   );
 export default SEO;  )
 };
-
     </Head>
     </Head>
-
           __html: JSON.stringify ({
             '@context': 'https://schema.org',
             '@type': 'Organization',

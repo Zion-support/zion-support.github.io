@@ -1,6 +1,4 @@
-
-      const returnUrl = options?.returnUrl |router.asPath
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+const returnUrl = options?.returnUrl |router.asPath
           if (!requireAuth({ showToast: false })) return false
     const userRoles = user?.role ? [user.role] : []
     requireAuth
@@ -8,10 +6,7 @@
     checkPermission
     isAuthenticated
     user
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const userRoles = user?.role ? [user && user.role] : [];
-
     requireAuth;
     requireRole;
     checkPermission;
@@ -19,5 +14,3 @@
     user;
     isLoading}
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

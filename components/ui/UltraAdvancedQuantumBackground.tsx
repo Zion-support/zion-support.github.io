@@ -1,4 +1,3 @@
-
 let animationFrameId: number;
 let particles: Particle[] = [];
 let quantumFields: QuantumField[] = [];
@@ -100,18 +99,13 @@ if (return) {
           this && this.life = this && this.maxLife;
           this && this.x = Math && Math.random() * canvas && canvas.width;
           this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;
-
         }
       }
-
       draw() {;
-
           this.y = Math.random() * canvas.height;        }
-
         }
       }
         if (!ctx) return;
-
         if (!ctx) return;
         ctx && ctx.save();
         ctx && ctx.globalAlpha = this && this.life / this && this.maxLife;
@@ -193,8 +187,8 @@ if (return) {
               const prevLayerStart = nodeIndex - layers[layerIndex - 1];
               for (let j = 0, j < layers[layerIndex - 1], j++) {
                 this.connections.push({
-                  from: prevLayerStart + j
-                  to: nodeIndex
+                  from: prevLayerStart + j;
+    to: nodeIndex
                   weight: Math.random()
                 })
               }
@@ -240,11 +234,9 @@ if (return) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-
           }
         }
       }
-
       ctx && ctx.restore();
       animationFrameId = requestAnimationFrame(animate)
 };      animationFrameId = requestAnimationFrame(animate);
@@ -290,8 +282,8 @@ if (return) {
         transition={{
           duration: 5
           repeat: Infinity
-          ease: "easeInOut"
-          delay: 1
+          ease: "ease",
+    delay: 1
         }}
         transition={{
           duration: 6
@@ -322,7 +314,6 @@ if (return) {
         className='absolute inset-0 w-full h-full opacity-60'        style={{ zIndex: 1 }}
       />
       />;
-
       {/* Content Layer */}
       <div className='relative z-10'>{children}</div>        className="absolute inset-0 w-full h-full opacity-60";
         style={{ zIndex: 1 }}
@@ -370,13 +361,10 @@ export default UltraAdvancedQuantumBackground;  )
 }
 export default UltraAdvancedQuantumBackground
 };
-
 export default UltraAdvancedQuantumBackground;  )
 };
-
 export default UltraAdvancedQuantumBackground
 };
-
 export default UltraAdvancedQuantumBackground;            ease: "linear",;
             delay: 2;
           }}
@@ -420,6 +408,4 @@ export default UltraAdvancedQuantumBackground);
         />
       </div>
     </div>
-
       {/* Content Layer */}
-

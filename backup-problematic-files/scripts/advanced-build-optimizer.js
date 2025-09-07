@@ -81,7 +81,7 @@ class BuildOptimizer {;
       // Add optimized build scripts;
       const optimizedScripts = {',
       '"build": optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',
-      '"build": analyze': 'ANALYZE=true npm run buil
+      '"build": analyze': 'ANALYZE=true npm run buil;
     d:optimized',
       '"build": production': 'NODE_ENV=production npm run buil
     d:optimized',

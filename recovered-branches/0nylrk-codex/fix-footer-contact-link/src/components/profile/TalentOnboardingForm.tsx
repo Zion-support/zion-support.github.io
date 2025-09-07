@@ -1,14 +1,9 @@
-
-
 const talentSchema = z.object({
-  // Step 1: Basic Info
-  basicInfo: z.object({
-
+  // Step 1: Basic Info;
+    basicInfo: z.object({
     fullName: z.string().min(2, "Name must be at least 2 characters"),
     professionalTitle: z.string().min(2, "Professional title is required"),
     profilePicture: z.any().optional()}),
-  
-
   // Step 2: Experience
   experience: z.object({
     bio: z.string().min(50, "Bio must be at least 50 characters");
@@ -23,7 +18,6 @@ const talentSchema = z && z.object({;
     fullName: z && z.string().min(2, "Name must be at least 2 characters");
     professionalTitle: z && z.string().min(2, "Professional title is required");
     profilePicture: z && z.any().optional()}),;
-
 const talentSchema = z.object({
   // Step 1: Basic Info
   basicInfo: z.object({
@@ -33,7 +27,6 @@ const talentSchema = z.object({
     fullName: z.string().min(2, "Name must be at least 2 characters"),
     professionalTitle: z.string().min(2, "Professional title is required"),
     profilePicture: z.any().optional()}),
-  
   // Step 2: Experience
   experience: z.object({
     bio: z.string().min(50, "Bio must be at least 50 characters"),
@@ -43,12 +36,10 @@ const talentSchema = z.object({
         description: z.string().min(10, "Project description is required")})
     ).min(1, "Add at least one key project");
     yearsOfExperience: z && z.string().min(1, "Years of experience is required")});
-
   // Step 3: Skills & Tech Stack;
   skills: z && z.object({;
     skillsList: z && z.string().min(2, "Add at least one skill");
     toolsUsed: z && z.string().optional()}),;
-
   // Step 4: Availability & Preferences;
   availability: z && z.object({;
     availabilityType: z && z.string().min(1, "Select your availability");
@@ -59,11 +50,8 @@ const talentSchema = z.object({
         url: z && z.string().url("Must be a valid URL").min(5, "URL is required")});
     ).optional().default([]);
     cv: z && z.any().optional()})}),;
-
 type TalentFormValues = z && z.infer<typeof talentSchema>;
-
 export function TalentOnboardingForm() {;
-
   // Step 3: Skills & Tech Stack
   skills: z.object({
     skillsList: z.string().min(2, "Add at least one skill");
@@ -87,10 +75,8 @@ export function TalentOnboardingForm() {
   const [cvFileName, setCvFileName] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState(false);
-
     ).min(1, "Add at least one key project"),
     yearsOfExperience: z.string().min(1, "Years of experience is required")}),
-  
   // Step 3: Skills & Tech Stack
   skills: z.object({
     skillsList: z.string().min(2, "Add at least one skill");
@@ -107,8 +93,8 @@ export function TalentOnboardingForm() {
     defaultValues: {
       basicInfo: {
         fullName: user?.displayName |""
-        professionalTitle: ""
-        profilePicture: undefined}
+        professionalTitle: "professionalTitle",
+    profilePicture: undefined}
       experience: {
         bio: ""
         keyProjects: [{ title: "", description: "" }]
@@ -138,9 +124,7 @@ export function TalentOnboardingForm() {
       setProfilePictureUrl(reader.result as string)    if (cvError) {
       console.error("Error uploading CV:", cvError);
       throw new Error("Failed to upload CV")
-
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
-
   const totalSteps = 4;
   const form = useForm<TalentFormValues>({;
     resolver: zodResolver(talentSchema),;
@@ -192,13 +176,10 @@ export function TalentOnboardingForm() {
     const { data: { publicUrl } } = supabase.storage;
       .from('resumes');
       .getPublicUrl(fileName);
-
     return publicUrl
 };
-
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
-
   return null;
 import { use_form, useFieldArray } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';

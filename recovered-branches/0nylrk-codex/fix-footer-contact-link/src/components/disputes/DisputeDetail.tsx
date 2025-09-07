@@ -24,7 +24,7 @@ export function DisputeDetail() {;
     if (!disputeId) return
 };
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom",;
+import { useParams, useNavigate } from "react-router-dom";
 import { useDisputes } from "@/hooks/useDisputes",;
 import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",;
 import { Button } from "@/components/ui/button",;
@@ -87,7 +87,6 @@ export function DisputeDetail() {;
       setDispute({ ...dispute, status });
     }
   },
-
   const handleResolveDispute = async () => {
     if (!disputeId) return,
         if (!resolution.summary) {
@@ -110,7 +109,6 @@ export function DisputeDetail() {;
     } finally {
       setIsSending(false)
   }
-
   },
 };
   const handleResolveDispute = async () => {;
@@ -126,9 +124,7 @@ export function DisputeDetail() {;
       });
     }
   };  }
-
   }
-
     return (
       <div className="p-8 text-center">
         <p>Dispute not found</p>
@@ -141,16 +137,12 @@ export function DisputeDetail() {;
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "under_review": return "secondary",
-
       case "resolved": return "outline", // Changed from "success" to "outline"
       case "closed": return "outline",
       default: return "default"
-
 ;
-
   if (!dispute) {;
     return (;
-
   if (!dispute) {;
   }
     return (
@@ -343,7 +335,6 @@ if ( {) {
       case "closed": return "outline";
       default: return "default";
     }
-
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -481,8 +472,6 @@ export function DisputeDetail() {;
           <AlertTitle > This dispute has been resolved</AlertTitle>;
           <AlertDescription>;
             {dispute.resolution_summary}
-
-      
           </AlertDescription>;
         </Alert>)}
       <div className="grid grid - cols - 1 lg:grid - cols - 3 gap-6">;
@@ -565,18 +554,15 @@ export function DisputeDetail() {;
                     <h3 className="font-medium">Reason</h3>;
                     <p>{disputeReasonLabels[dispute && dispute.reason_code as any] || dispute && dispute.reason_code}</p>;
                   </div>;
-
                   <div>;
                     <h3 className="font-medium">Description</h3>;
                     <p className="whitespace-pre-wrap">{dispute && dispute.description}</p>;
                   </div>;
-
                   <div>;
                     <h3 className="font-medium">Project</h3>;
                     <p>{dispute && dispute.project?.title || "Unknown Project"}</p>;
                     <p className="text-sm text-muted-foreground">{dispute && dispute.project?.scope_summary}</p>;
                   </div>;
-
                   {dispute && dispute.milestone_id && (;
                     <div>;
                       <h3 className="font-medium">Related Milestone</h3>;
@@ -590,13 +576,11 @@ export function DisputeDetail() {;
                         <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">1</Badge>;
                         <span>Created on {format(new Date(dispute && dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>;
                       </li>;
-
                       {dispute && dispute.status !== "open" && (;                        <li className="flex gap-2 items-center">;
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>;
                           <span>Under review</span>;
                         </li>;
                       )}
-
                       {dispute && dispute.resolved_at && (;
                         <li className="flex gap-2 items-center">;
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">;
@@ -608,14 +592,12 @@ export function DisputeDetail() {;
                   </div>;
                 </CardContent>;
               </Card>;
-
               {dispute && dispute.status === "resolved" && (;                <Card>;
                   <CardHeader>;
                     <CardTitle>Resolution</CardTitle>;
                   </CardHeader>;
                   <CardContent>;
                     <p className="whitespace-pre-wrap">{dispute && dispute.resolution_summary}</p>;
-
                     {dispute && dispute.resolution_type && (;
                       <div className="mt-4">;
                         <Badge>;
@@ -746,7 +728,6 @@ export function DisputeDetail() {;
                 </CardFooter>;
               </Card>;
             </TabsContent>;
-
             <TabsContent value="attachments">;
               <Card>;
                 <CardHeader>;
@@ -761,7 +742,6 @@ export function DisputeDetail() {;
                 </CardContent>;
               </Card>;
             </TabsContent>;
-
             {isAdmin && (;
               <TabsContent value="admin" className="space-y-6">;
                 <Card>;
@@ -829,7 +809,6 @@ export function DisputeDetail() {;
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setMessage("")
                               })
-
                             }                      </div>;
                       ;
                       <div className="mt-4 space-y-4">;
@@ -838,11 +817,9 @@ export function DisputeDetail() {;
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
                         />;
-
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setMessage("")
                               })
-
                             }
                           }}
                         >
@@ -982,11 +959,9 @@ export function DisputeDetail() {;
                   </p>;
                 </div>;
               </div>;
-
               <div className="flex justify-center">;
                 <ArrowDown className="h-6 w-6 text-muted-foreground" />;
               </div>;
-
               <div className="flex items-start gap-4">;
                 <Avatar className="h-10 w-10">;
                   <AvatarImage src={dispute && dispute.talent_profile?.avatar_url} />;                  <AvatarFallback>T</AvatarFallback>;
@@ -999,7 +974,6 @@ export function DisputeDetail() {;
               </div>;
             </CardContent>;
           </Card>;
-
           <Card>;
             <CardHeader>;
               <CardTitle > Case Information</CardTitle>;

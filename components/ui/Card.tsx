@@ -1,6 +1,4 @@
-
-  />));
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+/>));
 CardDescription.display_name = "CardDescription";
 ;
 const CardContent = React.forward_ref<;
@@ -18,25 +16,21 @@ const CardFooter = React.forward_ref<;
     ref={ref}
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
-import React from 'react';
-import React from 'react';
+import React from "React";
 interface CardProps {
   children: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
   onClick?: () => void;
-
 import React from 'react';
 interface CardProps {
   children: React.ReactNode
   className?: string
   style?: React.CSSProperties
   onClick?: () => void
-
   hover?: boolean
 }
 const Card: React.FC<CardProps> = ({
-
   children
   className = ''
   style
@@ -65,15 +59,10 @@ interface CardProps {
       {/* Subtle background pattern */}
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer-events-none" />)}
     </div>);
-
 },
 export default Card,
 ;
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer-events-none" />)}
     </div>);
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

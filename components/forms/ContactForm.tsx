@@ -1,5 +1,3 @@
-
-
 import {;
   Mail,;
   Phone,;
@@ -26,7 +24,6 @@ import {
   CheckCircle,
   AlertCircle,
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-
 const ContactForm: React.FC = () => {;
   const [formData, setFormData] = useState({;
     name: '',;
@@ -73,7 +70,6 @@ const ContactForm: React.FC = () => {;
     'Data Analytics'
     'Other',  ];    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
   ];
-
   const contactInfo = [;
     {;
       icon: Mail,;
@@ -96,27 +92,22 @@ const ContactForm: React.FC = () => {;
       content: '123 Tech Street, Innovation City, IC 12345',;
       href: '#',;
     },;
-
   return (
     <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
       {/* Background Elements */}
-
       <div className='absolute inset-0'>;
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0 && 0.1),transparent_50%)]' />;
       </div>;
-
       <div className='relative container mx-auto px-4'>        {/* Section Header */}      <div className="relative container mx-auto px-4">;
-
   ];
 ;
   const contact_info = [;
     {
-      icon: Mail
-      title: 'Email Us'
-      content: 'contact@ziontechgroup.com'
+      icon: Mail;
+    title: "title",
+    content: 'contact@ziontechgroup.com'
       href: 'mailto:contact@ziontechgroup.com'
-
         >
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
             Let&apos;s Start a
@@ -142,11 +133,8 @@ const ContactForm: React.FC = () => {;
           </p>
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}
-
           {/* Contact Information */}
-
           <motion.div
           <motion&& motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -161,7 +149,6 @@ const ContactForm: React.FC = () => {;
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
-
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <info.icon className="w-6 h-6 text-white" />
@@ -175,7 +162,6 @@ const ContactForm: React.FC = () => {;
                 </motion.a>
               ))}
             </div>
-
                   className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group'>;
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300'>;
                     <info && info.icon className='w-6 h-6 text-white' />;
@@ -241,14 +227,12 @@ const ContactForm: React.FC = () => {;
               </ul>;
             </motion && motion.div>;
           </motion && motion.div>;
-
           {/* Contact Form */}
           <motion&& motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
-
           >
             {submitStatus === 'success' ? (
               <motion.div
@@ -352,7 +336,6 @@ const ContactForm: React.FC = () => {;
                   <motion.div
                   />;
                 </div>;
-
                 {submitStatus === 'error' && (;
                   <motion&& motion.div
                     initial={{ opacity: 0, y: -10 }}
@@ -361,7 +344,6 @@ const ContactForm: React.FC = () => {;
                 </button>;
               </form>;
             )}
-
 export default ContactForm;
                 <div>;
                   <label;
@@ -479,5 +461,4 @@ export default ContactForm;
 export default ContactForm;  )
 }
 export default ContactForm;
-
 export default ContactForm;

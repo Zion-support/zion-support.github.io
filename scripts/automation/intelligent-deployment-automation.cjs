@@ -4,7 +4,6 @@
  * Advanced deployment system with blue-green, canary, and rollback capabilities;
  * Features: Automated testing, health checks, gradual rollouts, intelligent rollbacks;
  */
-
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -18,8 +17,8 @@ const http = require('http')
       autoDeploy: process.env.AUTO_DEPLOY === 'true'
       rollbackEnabled: process.env.ROLLBACK_ENABLED === 'true'
           url: process.env.PROD_URL || 'http://localhost:3000'
-          healthEndpoint: '/api/health'
-          url: process.env.STAGING_URL || 'http://localhost:3001'
+          healthEndpoint: "healthEndpoint",
+    url: process.env.STAGING_URL || 'http://localhost:3001'
           healthEndpoint: '/api/health'
       await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')

@@ -1,4 +1,3 @@
-
 useEffect ( () => {
   const updateDimensions = () => {
   setDimensions ({
@@ -17,7 +16,6 @@ life: number;
   animationSpeed = 1.5
   className = ''
 }: UltraQuantumHolographicBackgroundProps) {
-
   children,
   intensity = 'high',
   colorScheme = 'quantum',
@@ -59,17 +57,13 @@ export default function UltraQuantumHolographicBackground(): any ({;
           if (this.y > dimensions.height) {
             this.y = -10;
             this.vy = Math.random() * 2 + 1
-
           }
         }
       }
-
             this.vy = Math.random() * 2 + 1;          }
-
           }
         }
       }
-
       draw() {
         if (this.life <= 0) return;
         const alpha = this.life / this.maxLife;
@@ -117,11 +111,9 @@ export default function UltraQuantumHolographicBackground(): any ({;
             ctx.font = `${this.size * 2}px monospace`;
             ctx.fillText('01', this.x, this.y);
             ctx.stroke();          }
-
           }
         }
       }
-
       // Draw holographic grid
       ctx.strokeStyle = colors.secondary;
       ctx.lineWidth = 0.3;
@@ -160,28 +152,19 @@ export default function UltraQuantumHolographicBackground(): any ({;
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
-
       {/* Holographic Overlay Effects */}
-
           }}
         />
-
         {/* Holographic Scan Lines */}
-
           }}
-
         />
       </div>
-
       {/* Content Layer */}
       <div className='relative z-20'>{children}</div>
-
       {/* Quantum Noise Effect */}
       <div className='fixed inset-0 z-30 pointer-events-none opacity-5'>
-
       {/* Holographic Overlay Effects */}
       <div className='fixed inset-0 z-10 pointer-events-none'>
-
       {/* Holographic Overlay Effects */}
       <div className='fixed inset-0 z-10 pointer-events-none'>
         <motion.div
@@ -192,11 +175,10 @@ export default function UltraQuantumHolographicBackground(): any ({;
               `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`
               `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
-
             ],          }}
           transition={{
-            duration: 8
-            repeat: Infinity
+            duration: 8;
+    repeat: Infinity
             ease: 'easeInOut',          }}
               `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`;
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`;
@@ -260,13 +242,10 @@ export default function UltraQuantumHolographicBackground(): any ({;
               `inset 0 0 200px ${colors.secondary}20`;
               `inset 0 0 150px ${colors.tertiary}20`;
             ]
-
                 duration: 2,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
-
           }}
-
         />
       </div>
         />;
@@ -294,7 +273,6 @@ export default function UltraQuantumHolographicBackground(): any ({;
             ]
           }}
           transition={{
-
           }}
         />
       </div>
@@ -302,4 +280,3 @@ export default function UltraQuantumHolographicBackground(): any ({;
 );  )
 }
     </div>
-

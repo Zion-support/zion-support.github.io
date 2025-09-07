@@ -1,5 +1,4 @@
-
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+<h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
       <div className="mt-auto flex items-center justify-between">;
@@ -10,7 +9,6 @@ interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
   href: string, image?: string
-
 interface MarketplaceCardProps {
   title: string;
   description: string;
@@ -20,5 +18,3 @@ interface MarketplaceCardProps {
   onAddToCart?: () => void;
   onFavorite?: () => void;
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

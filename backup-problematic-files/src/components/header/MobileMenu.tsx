@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router',;
+import { useRouter } from 'next/router';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react';
 import { cn } from '@/lib/utils',;
 import { useAuth } from '@/hooks/useAuth',;

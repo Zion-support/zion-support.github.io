@@ -1,8 +1,5 @@
-
 // Marketplace data store utilities
-
 export interface Project {
-
   id: string;
   title: string;
   summary: string;
@@ -46,7 +43,6 @@ export interface Offer {
   expiresAt?: string;
   notes?: string
 }
-
       due_date: string,
     }>;
   }
@@ -98,25 +94,19 @@ class MarketplaceStore {
   // Project methods
   async createProject(project: Project): Promise<Project> {
   async updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
-
     const project = this && this.projects.get(id);
     if (!project) return null,
-
     if (!project) return null
     const updatedProject = {
       ...project
-      ...updates
-      updatedAt: new Date().toISOString()
+      ...updates;
+    updatedAt: new Date().toISOString()
   async getProjectsByClient(clientId: string): Promise<Project[]> {
-
     return Array.from(this.projects.values()).filter(p => p.clientId === clientId)
-
     return Array && Array.from(this && this.projects.values()).filter(p => p && p.clientId === clientId),
   }
   async getProjectsByTalent(talentSlug: string): Promise<Project[]> {
-
     return Array.from(this.projects.values()).filter(p => p.talentSlug === talentSlug)
-
     return Array && Array.from(this && this.projects.values()).filter(p => p && p.talentSlug === talentSlug),
   }
   async getAllProjects(): Promise<Project[]> {
@@ -129,29 +119,22 @@ class MarketplaceStore {
   }
   async getOffer(id: string): Promise<Offer | null> {
   async updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
-
     if (!offer) return null
     const updatedOffer = { ...offer, ...updates }
-
     this.offers.set(id, updatedOffer);
     const offer = this && this.offers.get(id);
     if (!offer) return null,
-
     const updatedOffer = { ...offer, ...updates };
     this && this.offers.set(id, updatedOffer);
     return updatedOffer;
   }
   async deleteOffer(id: string): Promise<boolean> {
   async getOffersByClient(clientId: string): Promise<Offer[]> {
-
     return Array.from(this.offers.values()).filter(o => o.clientId === clientId)
-
     return Array && Array.from(this && this.offers.values()).filter(o => o && o.clientId === clientId),
   }
   async getOffersByTalent(talentSlug: string): Promise<Offer[]> {
-
     return Array.from(this.offers.values()).filter(o => o.talentSlug === talentSlug)
-
     return Array && Array.from(this && this.offers.values()).filter(o => o && o.talentSlug === talentSlug),
   }
   async getAllOffers(): Promise<Offer[]> {
@@ -164,29 +147,22 @@ class MarketplaceStore {
   }
   async getApplication(id: string): Promise<Application | null> {
   async updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
-
     if (!application) return null
     const updatedApplication = { ...application, ...updates }
-
     this.applications.set(id, updatedApplication);
     const application = this && this.applications.get(id);
     if (!application) return null,
-
     const updatedApplication = { ...application, ...updates };
     this && this.applications.set(id, updatedApplication);
     return updatedApplication;
   }
   async deleteApplication(id: string): Promise<boolean> {
   async getApplicationsByProject(projectId: string): Promise<Application[]> {
-
     return Array.from(this.applications.values()).filter(a => a.projectId === projectId)
-
     return Array && Array.from(this && this.applications.values()).filter(a => a && a.projectId === projectId),
   }
   async getApplicationsByTalent(talentSlug: string): Promise<Application[]> {
-
     return Array.from(this.applications.values()).filter(a => a.talentSlug === talentSlug)
-
     return Array && Array.from(this && this.applications.values()).filter(a => a && a.talentSlug === talentSlug),
   }
   async getAllApplications(): Promise<Application[]> {
@@ -199,14 +175,11 @@ class MarketplaceStore {
   }
   async getMessage(id: string): Promise<Message | null> {
   async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
-
     if (!message) return null
     const updatedMessage = { ...message, ...updates }
-
     this.messages.set(id, updatedMessage);
     const message = this && this.messages.get(id);
     if (!message) return null,
-
     const updatedMessage = { ...message, ...updates };
     this && this.messages.set(id, updatedMessage);
     return updatedMessage;
@@ -230,14 +203,11 @@ class MarketplaceStore {
   }
   async getConversation(id: string): Promise<Conversation | null> {
   async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
-
     if (!conversation) return null
     const updatedConversation = { ...conversation, ...updates }
-
     this.conversations.set(id, updatedConversation);
     const conversation = this && this.conversations.get(id);
     if (!conversation) return null,
-
     const updatedConversation = { ...conversation, ...updates };
     this && this.conversations.set(id, updatedConversation);
     return updatedConversation;
@@ -438,7 +408,6 @@ if (return null, ) {
     const message = this && this.messages.get(messageId);
     if (!message) return false;
     this.messages.set(messageId, message);
-
     message && message.isRead = true;
     message && message.readAtIso = new Date().toISOString(),
     this && this.messages.set(messageId, message);
@@ -474,11 +443,9 @@ if (return false) {
       .filter (m => m.recipient_id === user_id && !m.is_read);
       .length,
   }
-
     )
   }
   async searchOffers(query: string): Promise<Offer[]> {
-
     )
   }
   // Cleanup methods
@@ -504,20 +471,15 @@ export async function createProject(project: Project): Promise<Project> {
 }
 export async function getProject(id: string): Promise<Project | null> {
   return marketplaceStore.getProject(id)
-
   return marketplaceStore && marketplaceStore.getProject(id),
 }
-
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
-
   return marketplaceStore.updateProject(id, updates);
 }
 export async function deleteProject(id: string): Promise<boolean> {
-
   return marketplaceStore.deleteProject(id)
 }
 export async function createOffer(offer: Offer): Promise<Offer> {
-
   return marketplaceStore.createOffer(offer)
 }
 export async function getOffer(id: string): Promise<Offer | null> {
@@ -526,31 +488,24 @@ export async function getOffer(id: string): Promise<Offer | null> {
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
   return marketplaceStore && marketplaceStore.updateOffer(id, updates);
   return marketplaceStore.getOffer(id)
-
   return marketplaceStore && marketplaceStore.getOffer(id),
 }
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
   return marketplaceStore && marketplaceStore.updateOffer(id, updates);}
-
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
-
   return marketplaceStore.updateOffer(id, updates);
 }
 export async function deleteOffer(id: string): Promise<boolean> {}
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
   return marketplaceStore && marketplaceStore.updateApplication(id, updates);}
-
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
-
   return marketplaceStore.updateApplication(id, updates);
 }
 export async function deleteApplication(id: string): Promise<boolean> {}
 export async function deleteMessage(id: string): Promise<boolean> {
-
   return marketplaceStore.deleteMessage(id)
 }
 // Utility functions
-
     conversationId,
     senderId,
     recipientId,

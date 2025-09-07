@@ -1,21 +1,17 @@
-    ok: true,
+ok: true,
     text: `Mock ${request.type} for ${request.companyName} on ${request.date}`
 };
-
   };
 }
-
   }
-
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
-      path: ''
-      filename: 'legal/jurisdictional-disclosures.md'
+      path: "path",
+    filename: 'legal/jurisdictional-disclosures.md'
       type: 'text'
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
     }
-
   const base: MediaAsset[] = [
     {
   type: PressReleaseType
@@ -55,16 +51,12 @@ export function buildPressRelease (
     }
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
   ];
-
 function titleCase(s: string) {
   return s.replace(
     /\w\S*/g
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
-
 function titleCase(s: string) {
-
 function titleCase(s: string) {
-
 }
     return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces a seed round of ${params.raise_amount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\n_quotes:\n- CEO: "We are thrilled..."\n\n_about ${params.company_name}:\n${boilerplate}`;
   }

@@ -1,23 +1,20 @@
-  customers: number;
+customers: number;
   rating: number;
   reviews: number;  mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
-
 export const realMarketServices: RealMarketService[] = [;
-
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }
 ;
 export const realMarketServices: RealMarketService[] = [;
-
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+  address: "address",
+    website: 'https://ziontechgroup.com'
 }
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -29,7 +26,7 @@ export const realMarketServices: RealMarketService[] = [;
       'Latency and cost tuning'
       'Sample RAG app integration'
     ]
-    popular: false
+    popular: false;
     icon: '🧭'
     color: 'from-sky-600 to-indigo-700'
     textColor: 'text-sky-400'
@@ -56,7 +53,6 @@ export const realMarketServices: RealMarketService[] = [;
     ],
     popular: false,
     icon: '🧭',
-
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-400',
     link: 'https://ziontechgroup.com/vector-search-starter',
@@ -144,7 +140,6 @@ export const realMarketServices: RealMarketService[] = [;
     variant: 'integration-futuristic',
     contactInfo: contact,
     realImplementation: true,
-
     implementationDetails:
       'Replay-safe pullers, checksum compare, and reconciliation dashboards.'
     launchDate: '2025-08-22'
@@ -206,7 +201,6 @@ export const realMarketServices: RealMarketService[] = [;
     description:;
       'Define and monitor data SLAs for freshness and quality. Receive alerts, create tickets, and visualize lineage impacts for downstream consumers.',
     features: [;
-
       'Freshness and volume checks',
       'Null / outlier thresholds',
       'Schema drift detection',
@@ -670,7 +664,6 @@ export const realMarketServices: RealMarketService[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
 import { ServiceVariant } from '../types/service-variants';
 export interface RealMarketService {;
   id: string,;
@@ -830,7 +823,6 @@ export const realMarketServices: RealMarketService[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
   }
 ];
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -844,7 +836,7 @@ export const realMarketServices: RealMarketService[] = [;
     reviews: 36
   }
 ];
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface RealMarketService {;
   id: string,;
   name: string,;

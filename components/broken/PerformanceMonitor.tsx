@@ -1,28 +1,20 @@
-
-
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
-
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
 })
-
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
   return new Promise ( (resolve) => {;
   if (typeof window !== 'undefined' && 'performance' in window) {;
   //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;
-
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
 if (newMetrics && newMetrics.loadTime > 3000) {;
   const formatTime = (ms: number) : string => {;
   if (ms === 0) return 'N/A';
-
 };
-
 //Get device icon const getDeviceIcon = (deviceType: string) => {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   switch (deviceType) {
   case 'mobile': return Smartphone;
 case 'tablet': return Tablet;
@@ -33,11 +25,8 @@ const getPerformanceScore = () => {
 let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   totalMetrics++;
-
 else score += 25 
-
 };
-
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
@@ -63,7 +52,6 @@ if (score >= 50) return 'Needs Improvement';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
 }
-
 export default PerformanceMonitor;
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
   return new Promise ( (resolve) => {
@@ -212,5 +200,3 @@ if (return 'Needs Improvement') {
 ;
 export default PerformanceMonitor;
 ;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

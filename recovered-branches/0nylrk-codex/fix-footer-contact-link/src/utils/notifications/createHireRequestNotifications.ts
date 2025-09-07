@@ -1,4 +1,3 @@
-
 import { createNotification  } from './createNotification';
 import { HireRequestNotificationParams } from './types';
 import { createNotification } from './createNotification',
@@ -6,10 +5,8 @@ import { HireRequestNotificationParams } from './types',/**
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
-
   adminId,
   requesterName,
-
       success: talentNotification.success && adminNotification.success;
       talentNotification
       adminNotification
@@ -23,11 +20,9 @@ export async function createHireRequestNotifications({
   const projectInfo = projectType 
     ? `${projectType} project` 
     : "project",
-  
   const summaryText = projectSummary 
     ? `: "${projectSummary}"` 
     : "",
-  
   // Create notification for talent
   const talentNotification = await createNotification({
     userId: talentId,
@@ -39,7 +34,6 @@ export async function createHireRequestNotifications({
     actionUrl: '/dashboard',
     actionText: 'View Request'
   }),
-  
   // Create notification for admin if admin ID is provided
   if (adminId) {
     const adminNotification = await createNotification({
@@ -52,13 +46,12 @@ export async function createHireRequestNotifications({
       actionUrl: '/admin/hire-requests',
       actionText: 'Review Request'
     }),
-    
     return {
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
 import { createNotification } from './createNotification';
-import { HireRequestNotificationParams } from './types',;
+import { HireRequestNotificationParams } from './types';
 /**;
  * Creates a hire request notification for admin and talent;
  */;

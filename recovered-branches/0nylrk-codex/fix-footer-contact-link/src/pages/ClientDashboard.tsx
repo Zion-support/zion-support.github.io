@@ -34,7 +34,6 @@ import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingIntervie
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
-
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
@@ -44,20 +43,16 @@ function ClientDashboardContent() {
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
   const isMobile = useIsMobile(),
-
   // Set the first job as selected when jobs are loaded (if any)
   useEffect(() => {
     if (jobs.length > 0 && !selectedJobId) {
       setSelectedJobId(jobs[0].id),
       setSelectedJobTitle(jobs[0].title)
     }
-
   }, [jobs, selectedJobId]),
-
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     (setSelectedJobId(jobId), setSelectedJobTitle(jobTitle))
 };
-
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId)
     setSelectedJobTitle(jobTitle)
@@ -137,7 +132,6 @@ function ClientDashboardContent() {
                   Closed
                 </TabsTrigger>
               </TabsList>
-
               <TabsContent value="all" className="mt-0">
                 <JobsList onSelectJob={handleJobSelect} />
               </TabsContent>
@@ -155,22 +149,18 @@ function ClientDashboardContent() {
               </TabsContent>
             </Tabs>
           </div>
-
           <div>
             <div className="sticky top-4 space-y-6">
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
-
               {/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />;
-
               {/* AI Talent Suggestions */}
               <div>;
                 <h2 className="text-xl font-semibold mb-4 flex items-center">;
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />;
                   AI Talent Suggestions;
                 </h2>;
-
                 {selectedJobId ? (;
                   <SuggestedTalents jobId={selectedJobId} />;
                 ) : (;
@@ -245,7 +235,7 @@ if ( {) {
             <Button as_child className={is_mobile ? 'w - full justify - center' : ''}>;
               <Link to="/post - job">;
                 <PlusCircle className="h - 4 w - 4 mr-2" /> Post New Job;import { useState, useEffect } from "react";
-import { AppHeader } from "@/layout/AppHeader",;
+import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer",;
 import { JobsList } from "@/components/jobs/JobsList",;
 import { Button } from "@/components/ui/button",;

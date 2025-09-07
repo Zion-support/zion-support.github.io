@@ -1,23 +1,15 @@
-
-
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { ApplicationCard } from "./ApplicationCard";
 import { LoadingState } from "./LoadingState";
 import { EmptyState } from "./EmptyState";
 import { ErrorState } from "./ErrorState";
-
 import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
-
 export function ApplicationsTracker() {
-
   const { applications, isLoading, error } = useJobApplications();
-
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
     "all",;
-
   );
-
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { ApplicationCard } from "./ApplicationCard",
@@ -29,11 +21,10 @@ import { ApplicationStatus } from "@/types/jobs",
 export function ApplicationsTracker() {
   const { applications, isLoading, error } = useJobApplications(),
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
-  
   if (isLoading) {
     return <LoadingState />
 import { useState } from "react";
-import { useJobApplications } from "@/hooks/useJobApplications",;
+import { useJobApplications } from "@/hooks/useJobApplications";
 import { ApplicationCard } from "./ApplicationCard",;
 import { LoadingState } from "./LoadingState",;
 import { EmptyState } from "./EmptyState",;
@@ -47,18 +38,15 @@ export function ApplicationsTracker() {;
     return <LoadingState />;
   }
 ;
-
   if (error) {;
     return <ErrorState error={error} />;
   }
-
   if (applications && applications.length === 0) {;
     return <EmptyState />;
   }  
   const filteredApplications = statusFilter === 'all' 
     ? applications
     : applications.filter(app => app.status === statusFilter),
-  
   const filteredApplications =;
     statusFilter === "all";
       ? applications;
@@ -111,9 +99,6 @@ export function ApplicationsTracker() {;
         <Button
           size="sm"
           onClick={() => setStatusFilter("rejected")}
-
-      
-
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
@@ -124,7 +109,6 @@ export function ApplicationsTracker() {;
             No applications with this status.
           </p>
         </div>
-
 import { useState  } from './react';
 import { useJobApplications  } from '@/hooks / useJobApplications';
 import { ApplicationCard  } from './ApplicationCard';
@@ -140,7 +124,6 @@ function ApplicationsTracker() {
   const { applications, is_loading, error } = useJobApplications ();
   const [status_filter, setStatusFilter] = useState < ApplicationStatus | "all">(
     "all",
-
   );
 ;
   // Check condition

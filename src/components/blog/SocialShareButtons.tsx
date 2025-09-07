@@ -1,11 +1,7 @@
-
-    window.open(
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const copy_link = () =>: any {
     // Check condition
 if (return) {
@@ -18,38 +14,32 @@ if (return) {
   }
   const buttons = [;
     {
-
 interface SocialShareButtonsProps {;
   title: string;
-
 export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {;
   const shareUrl =;
     typeof window !== 'undefined';
       ? encodeURIComponent(window && window.location.href);
       : '';
   const shareText = encodeURIComponent(title);
-
   const shareToTwitter = () => {;
     window && window.open(;
       `https://twitter && twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`,;
       '_blank';
     )
 };
-
   const shareToFacebook = () => {;
     window && window.open(;
       `https://www && www.facebook.com/sharer/sharer && sharer.php?u=${shareUrl}`,;
       '_blank';
     )
 };
-
   const shareToLinkedIn = () => {;
     window && window.open(;
       `https://www && www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,;
       '_blank';
     )
 };
-
   const copyLink = () => {;
     if (typeof window === 'undefined') return;
     navigator && navigator.clipboard;
@@ -79,7 +69,6 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
       onClick: copyLink,;
     },;
   ];
-
   return (
     <div className='mt-12 flex flex-wrap gap-2'>;
       {buttons && buttons.map(btn => (;
@@ -92,9 +81,7 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
           <span>{btn && btn.label}</span>;
         </Button>;
       ))}
-
       icon: <Twitter className='h - 4 w - 4' />,
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       label: 'Twitter',
       on_click: shareToTwitter,
     },
@@ -129,39 +116,29 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     </div>);
 }
 }
-
   },
-
   const shareToFacebook = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, '_blank')
   },
-
   const shareToLinkedIn = () => {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank')
   },
-
   const copyLink = () => {
     if (typeof window === 'undefined') return,
-
     navigator.clipboard
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
-
     </div>;
   )
 };
 };
-
   },
-
   const buttons = [
     { icon: <Twitter className="h-4 w-4" />, label: 'Twitter', onClick: shareToTwitter },
     { icon: <Facebook className="h-4 w-4" />, label: 'Facebook', onClick: shareToFacebook },
     { icon: <Linkedin className="h-4 w-4" />, label: 'LinkedIn', onClick: shareToLinkedIn },
     { icon: <LinkIcon className="h-4 w-4" />, label: 'Copy Link', onClick: copyLink }],
-
   return (
     <div className="mt-12 flex flex-wrap gap-2">
       {buttons.map((btn) => (
@@ -206,5 +183,3 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
     </div>;
   );
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

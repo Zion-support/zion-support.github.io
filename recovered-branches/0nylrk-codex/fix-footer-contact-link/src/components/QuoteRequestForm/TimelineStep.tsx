@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
 import {useState} from "react";
@@ -10,7 +9,6 @@ import {CalendarIcon} from "@/components/icons";
 import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
 import {cn} from "@/lib/utils";
 import {QuoteFormData} from "@/types/quotes";
-
 import {useState} from "react";
 import {format} from "date-fns";
 import {Calendar} from "@/components/ui/calendar";
@@ -20,7 +18,6 @@ import {CalendarIcon} from "@/components/icons";
 import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
 import {cn} from "@/lib/utils";
 import {QuoteFormData} from "@/types/quotes";
-
 import { useState } from "react",
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
@@ -44,7 +41,6 @@ import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4
                 I have specific start and end dates
               </p>
             </div>
-
             <div
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "flexible"
@@ -59,7 +55,6 @@ import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4
               </p>
             </div>
           </div>
-
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mt-6">          {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
@@ -91,7 +86,7 @@ import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4
                       initialFocus
                       className="p-3 pointer-events-auto"
 import { useState } from "react";
-import { format } from "date-fns",;
+import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar",;
 import { Button } from "@/components/ui/button",;
 import { Label } from "@/components/ui/label",;

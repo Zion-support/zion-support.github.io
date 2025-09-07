@@ -1,5 +1,3 @@
-
-
 import {;
   Card,;
   CardContent,;
@@ -7,7 +5,6 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -110,10 +107,9 @@ import { Badge } from "@/components/ui/badge";
         </div>
       </Tabs>
     </div>
-
   )
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { IntegrationCards } from "./IntegrationCards",;
@@ -157,16 +153,13 @@ export function IntegrationsHub() {;
               </li>;
             </ul>;
           </CardContent>;
-
           <CardFooter className="pt-4">;
             <Button variant="outline" className="w-full">;
-
               View All Activity;
             </Button>;
           </CardFooter>;
         </Card>;
       </div>;
-
       <Tabs value={active_tab} onValueChange={setActiveTab} className="w-full">;
         <TabsList className="grid grid - cols-3 md: w-[400px]">;                </CardDescription>;
               </CardHeader>;

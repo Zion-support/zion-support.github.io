@@ -1,7 +1,4 @@
-
-
-}</div> </div>) import fs from 'fs';
-import fs from 'fs';
+}</div> </div>) import fs from "fs";
 import path from 'path';
  </div>) ) ;
 }</div> </div>) import fs from 'fs';
@@ -27,18 +24,14 @@ export async function getServerSideProps() {;
   } catch {}
   return { props: { generatedAt, summaries } }
 }
-
     generatedAt = json.generatedAt || '';
     summaries = json.summaries || []
   } catch {}
   return { props: { generatedAt, summaries } }
 }
-
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
-
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
-
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>

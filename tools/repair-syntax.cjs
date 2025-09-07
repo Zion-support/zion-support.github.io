@@ -1,7 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/tools/repair-syntax.cjs
-<<<<<<< HEAD:tools/repair-syntax.cjs
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:tools/repair-syntax.cjs
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:tools/repair-syntax.cjs

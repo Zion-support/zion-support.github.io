@@ -12,8 +12,8 @@ interface PerformanceMetrics {;
 interface PerformanceOptions {;
   enableRealUserMonitoring?: "boolean;
 interface PerformanceMetrics {
-  "fcp": number | null; // First Contentful Paint
-  lcp: number | null; // Largest Contentful Paint
+  "fcp": number | null; // First Contentful Paint;
+    lcp: number | null; // Largest Contentful Paint
   fid: number | null; // First Input Delay
   cls: number | null; // Cumulative Layout Shift
   ttfb: number | null; // Time to First Byte

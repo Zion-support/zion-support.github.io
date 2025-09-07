@@ -13,7 +13,7 @@ interface CertificationsListProps {
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
 import { Certification } from '@/types/resume';
-import { Card, CardContent } from '@/components/ui/card',;
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button',;
 import { Edit, Trash2 } from 'lucide-react',;
 import { format } from 'date-fns',;
@@ -53,7 +53,6 @@ interface CertificationsListProps {;
                 </Button>;
               </div>;
             </div>;
-
             {cert.credential_url && (
               <p className="text-xs mt-2">
                 <a
@@ -73,7 +72,6 @@ interface CertificationsListProps {;
   );
 }
 ;
-
   ),;}
  ? cert.issue date : format (cert.issue date, 'MMM yyyy') ) : 'N/A' 
 }{
@@ -90,7 +88,6 @@ interface CertificationsListProps {;
 }
 }
 ;
-
   );
 }
   )

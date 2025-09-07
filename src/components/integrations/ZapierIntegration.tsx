@@ -1,6 +1,5 @@
 import { Check, Copy, ExternalLink } from 'lucide-react'
 export function ZapierIntegration() {
-
 import React, { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -17,27 +16,22 @@ export function ZapierIntegration() {;
   const [copied, setCopied] = useState(false);
   const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R');
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
-
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap } from 'lucide-react';
-
 export function ZapierIntegration() {;
   const [copied, setCopied] = useState(false);
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
-
   const handleCopyApiKey = () => {;
     navigator && navigator.clipboard.writeText(apiKey);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
     toast && toast.success('API key copied to clipboard');
-
     navigator && navigator.clipboard.writeText(apiKey),;
     setCopied(true),;
     setTimeout((,) => setCopied(false), 2000),;
     toast && toast.success("API key copied to clipboard");
   },;
-
   return (
     <div className='space-y-6'>;
       <div className='grid md:grid-cols-3 gap-6'>;
@@ -82,7 +76,6 @@ function ZapierIntegration() {
     set_copied (true),
     set_timeout ((, ) => set_copied (false), 2000),
     toast.success ("API key copied to clipboard");
-
   },
   return (
     <div className='space - y-6'>;
@@ -97,14 +90,12 @@ function ZapierIntegration() {
             </div>;
           </CardHeader>;
           <CardContent>;
-
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                   </Button>
                 </div>
               </div>
             </div>
           </CardContent>
-
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
               <ExternalLink className="h-4 w-4" />
@@ -112,8 +103,6 @@ function ZapierIntegration() {
             </Button>
           </CardFooter>
         </Card>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card>
           <CardHeader>
             <h3 className="text-lg font-semibold">Popular Zaps</h3>
@@ -122,24 +111,18 @@ function ZapierIntegration() {
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-green-500" />
-
                 <span>Create calendar events for interviews</span>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </li>
             </ul>
           </CardContent>
           <CardFooter>
-
             <Button variant="outline" className="w-full gap-1">
-
               <ExternalLink className="h-4 w-4" />
               <span>Explore Zion Zaps</span>
             </Button>
           </CardFooter>
         </Card>
       </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardHeader>
           <h3 className='text-lg font-semibold'>Zapier Webhook Triggers</h3>
@@ -149,7 +132,6 @@ function ZapierIntegration() {
             Use these webhook triggers to start Zaps when events happen in your
             Zion account.
           </p>
-
       <Card>
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
@@ -158,8 +140,6 @@ function ZapierIntegration() {
           <p className="text-sm text-muted-foreground mb-4">
             Use these webhook triggers to start Zaps when events happen in your Zion account.
           </p>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Job Posted</h4>
@@ -168,16 +148,13 @@ function ZapierIntegration() {
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
-            
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
-
                 Triggers when a talent applies to your job.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
-
             </div>
           </div>
         </CardContent>
@@ -186,27 +163,22 @@ function ZapierIntegration() {
   )
 };
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
               <p className="text-xs text-muted-foreground mb-3">
                 Triggers when a contract is signed by all parties.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
-
             </div>
           </div>
         </CardContent>
       </Card>
     </div>
-
             <p className='text - sm text - muted - foreground mb - 4'>;
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
               to set up integrations.;
-
 import React, { useState } from "react";
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;
@@ -234,14 +206,11 @@ export function ZapierIntegration() {;
           <CardContent>;
             <p className="text-sm text-muted-foreground mb-4">;
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;
-
                   </Button>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </div>;
               </div>;
             </div>;
           </CardContent>;
-
           <CardFooter className='flex flex - col items - start'>;
             <Button variant='outline' className='gap - 2'>;
               <ExternalLink className='h - 4 w - 4' />              Open Zapier Dashboard;
@@ -251,36 +220,29 @@ export function ZapierIntegration() {;
           <CardFooter className="flex flex - col items-start">;
             <Button variant="outline" className="gap-2">;
               <ExternalLink className="h - 4 w-4" />;
-
               Open Zapier Dashboard;
             </Button>;
           </CardFooter>;
         </Card>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </li>;
             </ul>;
           </CardContent>;
           <CardFooter>;
-
             </Button>;
           </CardFooter>;
         </Card>;
       </div>;
-
                 Triggers when a new job is published on your account.;
               </p>;
               <Button size='sm' variant='outline'>;
                 Set Up Trigger;
               </Button>            </div>;
-
                 Triggers when a talent applies to your job.;
               </p>;
               <Button size='sm' variant='outline'>;
                 Set Up Trigger;
               </Button>;
             </div>;
-
                 Triggers when a contract is signed by all parties.;
               </p>;
               <Button size='sm' variant='outline'>;
@@ -290,5 +252,3 @@ export function ZapierIntegration() {;
           </div>;
         </CardContent>;
       </Card>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

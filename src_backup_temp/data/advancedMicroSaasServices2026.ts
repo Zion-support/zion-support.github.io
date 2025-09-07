@@ -39,7 +39,7 @@ export interface AdvancedMicroSaasService { "id": string; title: string,
    location: string;
    availability: string;
    author: {  name: string;
-   i
+   i;
     d: string;
    avatarUrl?: string;
    verified: boolean  } images: string[] createdAt: string useCases: string[] integrations: string[] compliance: string[] support: string[] } export const ADVANCED_MICRO_SAAS_SERVICES_2026: AdvancedMicroSaasService[] = [ { id: 'ai-powered-customer-churn-prediction', ''; title: 'AI-Powered Customer Churn Prediction Platform', '',

@@ -23,7 +23,6 @@ export function OnChainExport() {
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
   const { toast } = useToast();
   const { user } = useAuth();
-
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available;
@@ -31,8 +30,8 @@ export function OnChainExport() {
       // Sign message to verify ownership
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`
       await ethereum.request({
-        method: 'personal_sign'
-        params: [address, message]
+        method: "method",
+    params: [address, message]
       toast({
         title: "Wallet connected"
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})
@@ -78,12 +77,10 @@ export function OnChainExport() {
               Connect Wallet
             </Button>
           </div>
-
 };
 ;
-
 import React, { useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react",;
 import {;
@@ -163,7 +160,6 @@ export function OnChainExport() {;
           ) : (;
             <Wallet className="h-5 w-5" />;
           )}
-
           On-chain Export;
           <TooltipProvider>;
             <Tooltip>;

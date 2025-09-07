@@ -1,16 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
   const appeal: TrustAppeal = {
     userId;
     message;
     contactEmail;
     createdAt: new Date().toISOString()}
-
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal)
   } catch {}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { TrustAppeal } from '../../../utils / types / trust';
 import { supabase } from '../../../utils / supabase / client';
 ;
@@ -62,5 +58,3 @@ if ( {) {
   } catch {}
 return res.status (200).json ({ ok: true, appeal });
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

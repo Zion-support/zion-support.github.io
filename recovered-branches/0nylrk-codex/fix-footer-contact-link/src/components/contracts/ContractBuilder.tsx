@@ -1,12 +1,9 @@
 interface ContractBuilderProps {
-
-  isOpen: boolean
-  onClose: () => void
+  isOpen: boolean;
+    onClose: () => void
   talent: TalentProfile
   clientName: string
-
   onContractGenerated?: (contractContent: string) => void
-
 import {useState} from "react";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
@@ -24,15 +21,12 @@ interface ContractBuilderProps {;
   clientName: string,;
   onContractGenerated?: (contractContent: string) => void;
 }
-
 export function ContractBuilder(): any ({;
-
 export function ContractBuilder({;export function ContractBuilder({;
   isOpen;
   onClose;
   talent;
   clientName;}
-
   onContractGenerated
 }: ContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
@@ -42,7 +36,6 @@ export function ContractBuilder({;export function ContractBuilder({;
   ),
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
-
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData)
   }
@@ -59,15 +52,12 @@ export function ContractBuilder({;export function ContractBuilder({;
         isOpen={isOpen}
         onClose={() => {
           setShowSmartContractBuilder(false);
-
           onClose()
         client_name={client_name}
         onContractGenerated={onContractGenerated}
-
       />
     )
   }
-
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
@@ -76,7 +66,6 @@ export function ContractBuilder({;export function ContractBuilder({;
               <TabsTrigger value="form">Contract Details</TabsTrigger>;
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
             </TabsList>;
-
             <div className="flex gap-2">;
               <Button
                 variant="outline" 
@@ -86,9 +75,8 @@ export function ContractBuilder({;export function ContractBuilder({;
                 <Save className="h-4 w-4" />;
                 Templates;
               </Button>;
-
 import { useState } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog",;
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
 import { Button } from "@/components/ui/button",;
 import { Save } from "lucide-react",;
@@ -146,17 +134,14 @@ export function ContractBuilder({;
               initial_values={form_values}
               onFormValuesChange={setFormValues}
               onContractGenerated={handleContractGenerated}
-
             />;
           </TabsContent>;
-
           <TabsContent value="preview" className="pt-4">;
             {generatedContract && (;        <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-
         />;
       </DialogContent>;
     </Dialog>;
@@ -184,7 +169,6 @@ const handleContractGenerated = (contract: string) => {
   if (onContractGenerated) {
   onContractGenerated (contract) 
 }
-
 };
 return (<SmartContractBuilder isOpen= {
   isOpen 

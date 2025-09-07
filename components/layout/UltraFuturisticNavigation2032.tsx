@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import {
   Menu
   X
@@ -82,7 +81,6 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
-
 import {
   Menu,
   X,
@@ -159,7 +157,6 @@ import {
   BrainIcon,
   AtomIcon,
   MenuIcon,
-
   CloseIcon,;
   ChevronRightIcon,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
@@ -174,20 +171,17 @@ import {
   Network, Server, HardDrive, Monitor;
 const serviceCategories = [
   {
-    title: '🧠 AI & Consciousness 2030'
-    icon: BrainIcon
+    title: "title",
+    icon: BrainIcon;
     color: 'from-violet-600 via-purple-600 to-indigo-600'
     description: 'Next-generation AI consciousness and emotional intelligence'
     services: [
-
 ];
-
 ];
     title: '⚛️ Quantum & Emerging Tech 2030',
     icon: AtomIcon,
     color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
     description: 'Quantum computing and beyond',
-
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -206,7 +200,6 @@ const mainNavigation = [
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-
 const mainNavigation = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'Services', href: '/services', icon: Briefcase },;
@@ -217,7 +210,6 @@ const mainNavigation = [;
   { name: 'Blog', href: '/blog', icon: MessageCircle },;
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-
 const companyLinks = [;
   { name: 'About Us', href: '/about' },;
   { name: 'Careers', href: '/careers' },;
@@ -240,7 +232,6 @@ const companyLinks = [;
     return () => window && window.removeEventListener('scroll', handleScroll);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-
   return (
     <>;
       {/* Top Contact Bar */}
@@ -267,16 +258,13 @@ const companyLinks = [;
                   2030 Future Technology;
                 </div>              </div>;
             </Link>;
-
               {/* Services Dropdown */}
-
               <div className='relative group'>;
                 <button className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'>;
                   <Briefcase className='w-4 h-4 group-hover:scale-110 transition-transform' />;
                   <span>Services</span>;
                   <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform' />;
                 </button>;
-
                 {/* Mega Menu */}
                 <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4'>;
                   <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20'>;
@@ -541,7 +529,6 @@ const companyLinks = [;
                 </button>;
               </Link>;
             </div>;
-
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -579,7 +566,6 @@ const companyLinks = [;
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-
           >
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-xl'
@@ -668,7 +654,6 @@ const companyLinks = [;
                         className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`}
                       />;
                     </button>;
-
                     {activeCategory === 0 && (;
                       <div className='pl-8 space-y-2'>;
                         {serviceCategories && serviceCategories.map((category, index) => (;
@@ -701,9 +686,7 @@ const companyLinks = [;
                       </div>;
                     )}
                   {/* Company Links */}
-
                       ))}
-
                   {/* Contact Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='text-sm font-medium text-gray-400 mb-3'>
@@ -712,7 +695,6 @@ const companyLinks = [;
                     <div className='space-y-2 text-sm text-gray-400'>
                       <div className='flex items-center space-x-2'>
                         <Phone className='w-4 h-4 text-cyan-400' />
-
                         <span>{contactInfo.mobile}</span>
                       </div>
                       <div className='flex items-center space-x-2'>
@@ -722,7 +704,6 @@ const companyLinks = [;
                       <div className='flex items-center space-x-2'>
                         <MapPin className='w-4 h-4 text-pink-400' />
                         <span className='text-xs'>{contactInfo.address}</span>                      </div>                        <span>{contactInfo.mobile}</span>
-
                         <span>{contactInfo.mobile}</span>
                       ))}
                       </div>
@@ -911,4 +892,3 @@ const companyLinks = [;
     </>);      <div className="h-20" />;
     </>);
 }
-

@@ -31,9 +31,7 @@ import { format } from "date-fns",interface QuoteDetailsProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 import {format} from "date-fns";
-
   const formatDate = (dateString?: string) => {
     if (!dateString) return "Not specified";
     try {
@@ -42,9 +40,7 @@ import {format} from "date-fns";
       return dateString;
     }
   };
-
 }
-
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
   const formatDate = (dateString?: string) => {
@@ -57,7 +53,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
   }
   };
 import {format} from "date-fns";
-
   const formatDate = (dateString?: string) => {
     if (!dateString) return "Not specified";
     try {
@@ -66,7 +61,6 @@ import {format} from "date-fns";
       return dateString;
     }
   };
-
 import React from "react";
 import {;
   Dialog,;
@@ -75,7 +69,7 @@ import {;
   DialogTitle,;
   DialogDescription;
 } from "@/components/ui/dialog",;
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Separator } from "@/components/ui/separator",;
@@ -87,10 +81,8 @@ interface QuoteDetailsProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
-
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
-
 import React from './react';
 import {
   Dialog,
@@ -121,11 +113,9 @@ if (return null) {
 if (return "Not specified") {
   $2
 }
-
     try {
       return format (new Date (date_string), "PPP");
     } catch (e) {
-
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -138,9 +128,7 @@ if (return "Not specified") {
             Quote request submitted on {formatDate(quote.created_at)}
           </DialogDescription>
         </DialogHeader>
-
         <Separator className="my-4" />
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card>
             <CardContent className="pt-6">
@@ -159,7 +147,6 @@ if (return "Not specified") {
               </div>
             </CardContent>
           </Card>
-
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
@@ -176,19 +163,16 @@ if (return "Not specified") {
             </CardContent>
           </Card>
         </div>
-
         <Card className="mt-6">
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
             <p className="mb-4">{quote.project_summary}</p>
-
             {quote.project_description && (
               <>
                 <h4 className="font-medium mt-4">Additional Details</h4>
                 <p>{quote.project_description}</p>
               </>
             )}
-
             <div className="mt-6 flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-gray-500" />
               <span className="font-medium">Budget: </span>
@@ -201,7 +185,6 @@ if (return "Not specified") {
             </div>
           </CardContent>
         </Card>
-
         <div className="mt-6 flex justify-end">
           <Button onClick={onClose}>Close</Button>
         </div>
@@ -209,7 +192,6 @@ if (return "Not specified") {
     </Dialog>
   )
 };
-
       return date_string;
     }
   }
@@ -289,6 +271,4 @@ if (return "Not specified") {
     </Dialog>);
 }
 ;
-
   )
-

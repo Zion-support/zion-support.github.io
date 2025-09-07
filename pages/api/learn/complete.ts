@@ -1,45 +1,21 @@
+import { NextApiRequest, NextApiResponse } from 'next';
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import fs from 'fs',;
-import path from 'path',;
-
-const usersPath = path.join(process.cwd(), 'datalearnusers.json')
-const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
-function readJson(p: string) {
-  return JSON.parse(fs.readFileSync(p, 'utf-8'))
-}
-function writeJson(p: string, data: any) {
-  fs.writeFileSync(p, JSON.stringify(data, null, 2))
-}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST')
-    return res.status(405).end('Method Not Allowed')
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-  const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
-  if (!courseId) return res.status(400).json({ error: 'courseId required' })
+
   try {
+    const { userId, courseId, lessonId } = req.body || {};
+    
+    if (!userId || !courseId || !lessonId) {
+      return res.status(400).json({ error: 'User ID, course ID, and lesson ID are required' });
+    }
 
-/**
- * read_json - Function description
- */
-function read_json() {
-  return JSON.parse (fs.readFileSync (p, 'utf - 8'));
+    // Placeholder for lesson completion logic
+    res.status(200).json({ success: true, message: 'Lesson completed' });
+  } catch (error) {
+    console.error('Lesson completion error:', error);
+    res.status(500).json({ error: 'Failed to complete lesson' });
+  }
 }
-
-/**
- * write_json - Function description
- */
-function write_json() {
-  fs.writeFileSync (p, JSON.stringify (data, null, 2));
-}
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-

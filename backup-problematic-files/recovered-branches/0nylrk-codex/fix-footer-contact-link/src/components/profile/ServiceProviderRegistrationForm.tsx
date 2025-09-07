@@ -1,6 +1,5 @@
-
 import React, { useState } from "react";
-import { useForm } from "react-hook-form",;
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
 import { Button } from "@/components/ui/button",;
@@ -734,7 +733,6 @@ FormLabel;
   setServiceTags (serviceTags.filter ( (s) => s !== service) ) 
 };
 //Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) => {
-  
 }
 };
 //Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -765,7 +763,6 @@ reader.readAsDataURL (file)
   if (generatedContent) {
   const newServices = generatedContent.services.filter (service => typeof service === 'string' && service && !serviceTags.includes (service) );
 if (newServices.length > 0) {
-  
 }
 }
 };
@@ -776,7 +773,6 @@ if (newServices.length > 0) {
 }setIsSubmitting (true);
 try {
   //For actual implementation with Supabase if (!user?.id) {
-  
 }//Enhance profile if not already done let finalSummary = values.bio;
 let finalServices = serviceTags;
 try {
@@ -814,7 +810,6 @@ if (error) throw error;
 }//Continue with submission even if email fails 
 }
 }toast ({
-  
 }finally {
   setIsSubmitting (false) 
 }

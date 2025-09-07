@@ -1,5 +1,3 @@
-
-
 import {;
   Card,;
   CardContent,;
@@ -7,14 +5,11 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
-
 } from "@/components/ui/card";
-
 import { Button  } from '@/components / ui / button';
 import {
 import { Button } from "@/components/ui/button";
 import {
-
 export function ContractTypeCards({
   onStandardClick
   onSmartClick
@@ -43,7 +38,6 @@ export function ContractTypeCards({
           </ul>
         </CardContent>
         <CardFooter>
-
 export function ContractTypeCards(): any ({;
   onStandardClick,;
   onSmartClick,;
@@ -63,7 +57,6 @@ export function ContractTypeCards(): any ({;
           </Button>;
         </CardFooter>;
       </Card>;
-
       <Card>;
         <CardHeader className="bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded-t-lg">;
           <div className="flex justify - between items-center">;
@@ -74,17 +67,14 @@ export function ContractTypeCards(): any ({;
             <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded-full">;          </ul>;
         </CardContent>;
         <CardFooter>;
-          <Button;
-          >;          >;
+          <Button>;          >;
             Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
 }    </div>);
-
 }
 }
-
     </div>);
 }
     </div>;

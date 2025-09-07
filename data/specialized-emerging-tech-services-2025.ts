@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -45,12 +45,10 @@
     ];
     technology: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms'];
     integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms'];
-    useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities'
+    useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: "roi",
     competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];  }
 ];
 ;    ];
-
     popular: true, icon: '🧠',
-
   }
 ];

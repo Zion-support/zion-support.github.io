@@ -1,5 +1,3 @@
-
-
 import {
   Table
   TableBody
@@ -25,7 +23,6 @@ import {
               </TableHeader>
               <TableBody>
                 {[
-
 import { GradientHeading  } from './GradientHeading';
 import { Button  } from './ui / button';
 import { CheckCircle2  } from './lucide-react';
@@ -85,9 +82,6 @@ function ComparisonSection() {
                     </TableCell>;
                     <TableCell className="text - center text - green - 400 font-bold">;
                       {item.savings}
-
-            
-
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
             </Button>
@@ -97,7 +91,7 @@ function ComparisonSection() {
 }
   )
 import { GradientHeading } from "./GradientHeading";
-import { Button } from "./ui/button",;
+import { Button } from "./ui/button";
 import { CheckCircle2 } from "lucide-react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;        <div className="max-w-4xl mx-auto">;
           <div className="bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden">;
@@ -132,7 +126,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
 }
 ;
     </section>
-
     </section>;
   );
     </section>);

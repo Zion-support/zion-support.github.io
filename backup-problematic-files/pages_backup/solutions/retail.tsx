@@ -56,7 +56,7 @@ const features = [;
   {
     icon: ArrowRight,
     title: 'Omnichannel',
-    description: 'Seamless integration across all sales channels'
+    description: "description",
     title: 'E-commerce Platform',,
   description: 'Complete online shopping experience with advanced features';
   },;
@@ -355,7 +355,6 @@ export default function RetailSolutions() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -467,7 +466,6 @@ export default function RetailSolutions() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

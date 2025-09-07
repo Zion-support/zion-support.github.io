@@ -1,5 +1,3 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {
   Table,
   TableBody,
@@ -23,7 +21,6 @@ function RoleManagement() {
   // Mock team members data;
   const team_members = [;
     {
-
         view_candidates: true,
         edit_candidates: true,
         create_jobs: true,
@@ -32,13 +29,10 @@ function RoleManagement() {
         manage_billing: true,
       },
     },
-
   return (
     <div className="space-y-6">
       <div>
-
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           {Object.entries(roleDescriptions).map(([role, description]) => (
             <div key={role} className="bg-card rounded-lg p-4 border border-border">
@@ -46,8 +40,6 @@ function RoleManagement() {
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Table>
           <TableHeader>
             <TableRow>
@@ -131,7 +123,6 @@ function RoleManagement() {
             </TableRow>
           </TableHeader>
           <TableBody>
-
                 <TableCell>
                   <div className='font-medium'>{member.name}</div>
                   <div className='text-sm text-muted-foreground'>
@@ -139,7 +130,6 @@ function RoleManagement() {
                   </div>
                 </TableCell>
                 <TableCell>
-
                   <select 
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     defaultValue={member.role}
@@ -148,15 +138,11 @@ function RoleManagement() {
                     <option value="Recruiter">Recruiter</option>
                     <option value="Manager">Manager</option>
                     <option value="Viewer">Viewer</option>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch
-
                     aria-label="View candidates"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewCandidates", checked)
@@ -204,7 +190,7 @@ import {;
   TableHead,;
   TableHeader,;
   TableRow} from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch",;
 import { toast } from "@/hooks/use-toast",;
 import { InfoIcon } from 'lucide-react';
@@ -290,22 +276,17 @@ export function RoleManagement() {;
           ))}
         </div>;
       </div>;
-
       <div className='rounded-md border'>;
         <Table>;
           <TableHeader>;
             <TableRow>;
               <TableHead>Team Member</TableHead>;
               <TableHead>Role</TableHead>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   View Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-
                       </TooltipTrigger>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <TooltipContent>;
                         Can view candidate profiles and applications;
                       </TooltipContent>;
@@ -313,15 +294,11 @@ export function RoleManagement() {;
                   </TooltipProvider>;
                 </div>;
               </TableHead>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Edit Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-
                       </TooltipTrigger>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <TooltipContent>;
                         Can edit candidate information and status;
                       </TooltipContent>;
@@ -329,15 +306,11 @@ export function RoleManagement() {;
                   </TooltipProvider>;
                 </div>;
               </TableHead>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Create Jobs;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-
                       </TooltipTrigger>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <TooltipContent>;
                         Can create and publish job listings;
                       </TooltipContent>;
@@ -345,15 +318,11 @@ export function RoleManagement() {;
                   </TooltipProvider>;
                 </div>;
               </TableHead>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Manage Team;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-
                       </TooltipTrigger>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <TooltipContent>;
                         Can add, edit, and remove team members;
                       </TooltipContent>;
@@ -361,15 +330,11 @@ export function RoleManagement() {;
                   </TooltipProvider>;
                 </div>;
               </TableHead>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Billing Access;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-
                       </TooltipTrigger>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <TooltipContent>;
                         Can view and manage billing information;
                       </TooltipContent>;
@@ -509,11 +474,9 @@ export function RoleManagement() {;
                     <option value='Viewer'>Viewer</option>;
                   </select>;
                 </TableCell>;
-
                 <TableCell className="text-center">;
                   <Switch;
                     aria-label="View candidates";
-
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>
                       handlePermissionChange(
@@ -536,13 +499,10 @@ export function RoleManagement() {;
                     }                  />
                 </TableCell>
                 <TableCell className='text-center'>
-
       </div>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>;
   )
 };
-
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
                     }
@@ -550,5 +510,3 @@ export function RoleManagement() {;
                 </TableCell>;
               </TableRow>;
             ))}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

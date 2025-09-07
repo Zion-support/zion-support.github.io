@@ -1,5 +1,4 @@
 interface SearchResult {
-
 interface SearchResult {;
   title: string,
   description: string;
@@ -11,7 +10,7 @@ interface SearchModalProps {
   on_close: () => void;
 }
   {
-    title: "Cybersecurity"
+    title: "title",
     description: "Security audits, penetration testing, and compliance"
     url: "/cybersecurity"
     category: "Services"
@@ -48,9 +47,7 @@ interface SearchModalProps {
     category: "Company"
   }
 ];
-
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
-
 interface SearchModalProps {;
   isOpen: boolean;
   onClose: () => void;

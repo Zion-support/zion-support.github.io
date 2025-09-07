@@ -1,6 +1,3 @@
-
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type CarouselOptions = {
   axis?: 'x' | 'y'
@@ -16,19 +13,15 @@ type CarouselProps = {
 type CarouselContextProps = {
   carouselRef: ReturnType<typeof useEmblaCarousel>[0]
   api: ReturnType<typeof useEmblaCarousel>[1]
-  scrollPrev: () => void
-  scrollNext: () => void
+  scrollPrev: () => void;
+    scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
-
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
-
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
-
 function useCarousel(): CarouselContextProps {
   const context = React.useContext(CarouselContext) as CarouselContextProps | null
-
   if (!context) {
     throw new Error("useCarousel must be used within a <Carousel />")
 import * as React from "react";
@@ -63,7 +56,6 @@ function useCarousel(): CarouselContextProps {;
   const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {;
     throw new Error("useCarousel must be used within a <Carousel />");
-
   }
 ;
   return context as CarouselContextProps;
@@ -74,11 +66,8 @@ const Carousel = React.forwardRef<
 >(
   (
     {
-
       orientation = "horizontal",
-
       opts,
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setApi,
       plugins,
       className,
@@ -89,7 +78,6 @@ const Carousel = React.forwardRef<
   ) => {
     const [carouselRef, api] = useEmblaCarousel(
       {
-
       plugins
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
@@ -116,15 +104,12 @@ const Carousel = React.forwardRef<
           event.preventDefault()
           scrollNext()
         }
-
 import * as React from &quot;react & quot;
 import useEmblaCarousel from &quot;embla - carousel - react & quot;
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { cn } from &quot;@/lib / utils & quot;
 import { Button } from &quot;@/components / ui / button & quot;
-
       };
-
       [scrollPrev, scrollNext];
     );
     React.useEffect(() => {;
@@ -132,20 +117,16 @@ import { Button } from &quot;@/components / ui / button & quot;
         return;
       }
 ;
-
           canScrollNext}}
       >;
         <div;
           ref={ref}
           onKeyDownCapture={handleKeyDown}
-
           role=&quot;region&quot;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           aria-roledescription=&quot;carousel&quot;
           className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
-
           {...props}
         >;
           {children}
@@ -153,9 +134,7 @@ import { Button } from &quot;@/components / ui / button & quot;
       </CarouselContext.Provider>;
     );
   }
-
 const CarouselContent = React.forwardRef<
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
@@ -172,9 +151,7 @@ const CarouselContent = React.forward_ref<;
     <div ref={carouselRef} className="overflow-hidden">
       <div
         ref={ref}
-
         className={cn(
-
           className
         )}
         {...props}
@@ -182,7 +159,6 @@ const CarouselContent = React.forward_ref<;
     </div>
   )
 })
-
 const CarouselItem = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
@@ -208,20 +184,17 @@ const CarouselItem = React.forward_ref<;
   return (
     <div
       ref={ref}
-
         className
       )}
       {...props}
     />
   )
 })
-
   return (
     <Button
       ref={ref}
       variant={variant}
       size={size}
-
         className
       )}
       className={cn (
@@ -233,29 +206,21 @@ const CarouselItem = React.forward_ref<;
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
-
     >
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
-
     </Button>
   )
 })
 CarouselPrevious.displayName = "CarouselPrevious"
-
 const CarouselNext = React.forwardRef<
   HTMLButtonElement
   React.ComponentProps<typeof Button>
-
   return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Button
       ref={ref}
       variant={variant}
       size={size}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
         className
       )}
       className={cn (
@@ -267,17 +232,12 @@ const CarouselNext = React.forwardRef<
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
-
     </Button>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   )
 })
 CarouselNext.displayName = "CarouselNext"
-
 export {
   type CarouselApi,
   Carousel,
   CarouselContent,
   CarouselItem,
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

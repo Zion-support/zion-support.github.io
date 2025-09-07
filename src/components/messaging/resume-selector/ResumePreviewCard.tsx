@@ -1,6 +1,4 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-  return (
+return (
     <Card
       className={`cursor-pointer transition-all duration-200 hover:shadow-md ${
         isSelected
@@ -10,5 +8,3 @@
       onClick={() => onSelect(resume)}
     >
       <CardContent className="p-4">
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

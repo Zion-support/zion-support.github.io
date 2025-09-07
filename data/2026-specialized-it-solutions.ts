@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -50,7 +50,6 @@
     return price >= minPrice && price <= maxPrice;
   })
 };    return price >= minPrice && price <= maxPrice
-
   })
 }
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
@@ -265,7 +264,7 @@
     implementationDetails: 'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
     launchDate: '2024-05-25', customers: 67,
     rating: 4.4,
-    reviews: 33
+    reviews: 33;
     website: string;
   }
   })
@@ -281,7 +280,6 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>: an
   return specializedITSolutions2026.filter (
     solution => solution.category === category);
 }
-
 export interface SpecializedITSolution2026 {;
   id: string,;
   name: string,;
@@ -337,7 +335,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   });
 }
 ;
-
 export interface SpecializedITSolution2026 {
 }
 }

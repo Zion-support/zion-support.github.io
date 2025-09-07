@@ -1,4 +1,3 @@
-
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -20,7 +19,6 @@ interface UseHireRequestFormProps {
   initialJobTitle?: string,
   userDetails?: {  }
 }
-
 export interface FormValues {;
   requesterName: string;
   requesterEmail: string;
@@ -29,9 +27,8 @@ export interface FormValues {;
   budgetMin: number,
   budgetMax: number
 }
-
 import { useState } from "react";
-import { useForm } from "react-hook-form",;
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
 import { useHireRequest } from "@/hooks/useHireRequest",;
@@ -43,10 +40,8 @@ interface UseHireRequestFormProps {;
   userDetails?: {;
     name?: string,;
     email?: string,;
-
     email?: string,
     id?: string;
-
   }
 }    id?: string;
   }
@@ -66,11 +61,9 @@ export interface FormValues {;
     budgetMin: z.number().min(1, "Budget minimum is required"),
     budgetMax: z.number().min(1, "Budget maximum is required")
   }).refine(data => data.budgetMax >= data.budgetMin, {
-    message: "Maximum budget must be greater than or equal to minimum budget"
+    message: "message",
     path: ["budgetMax"]
-
   }),
-
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema);
     defaultValues: {          full_name: talent.full_name,
@@ -113,9 +106,7 @@ if ( {) {
     } catch (error) {
       console.error ("Error submitting hire request:", error);
     } finally {
-
       setIsSubmitting(false)
-
     } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
@@ -129,7 +120,6 @@ if ( {) {
   }
 }
 ;
-
   }
 }
   return {

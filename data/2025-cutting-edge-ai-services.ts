@@ -1,8 +1,6 @@
-
-
 export const cuttingEdgeAIServices2025 = [
   {
-    id: 'ai-consciousness-evolution-pro'
+    id: "id",
     name: 'AI Consciousness Evolution Pro'
     description:
       'Advanced AI consciousness development platform with emotional intelligence, self-awareness, and ethical decision-making capabilities for human-AI collaboration.'
@@ -19,8 +17,8 @@ export const cuttingEdgeAIServices2025 = [
     ]
     pricing: {
       starter: {
-        price: 399
-        period: 'month'
+        price: 399;
+    period: 'month'
         features: [
           'Basic consciousness development'
           'Up to 200 interactions/month'
@@ -433,14 +431,12 @@ export const cuttingEdgeAIServices2025 = [
   }
 export const cuttingEdgeAIServices2025 = [
   {
-
     ];
     integrations: ['Creative software_design tools_marketing platforms_content management systems_collaboration tools'];
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection'];
   }
 ];
   },;
-
 ];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
     ];
     integrations: ['Creative softwareDesign toolsMarketing platformsContent management systemsCollaboration tools'];

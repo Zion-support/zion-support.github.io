@@ -2,7 +2,6 @@
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
-
 import { useState } from 'react';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { use_form } from 'react - hook - form';
@@ -27,13 +26,11 @@ import { Textarea } from '@/components / ui / textarea';
 import { cn } from '@/lib / utils';
 import { Switch } from '@/components / ui / switch';
 import { format } from 'date - fns';
-
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
-
   return (
     <>
       <Form {...form}>
@@ -41,20 +38,17 @@ import { format } from 'date - fns';
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
-
               name="company_name"
               render={({ field }: { field: any }) => (
                 <FormItem>
-
                   <FormLabel>Company Name</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Acme Corporation" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
-
 import { useState } from 'react';
-import { zodResolver } from "@hookform/resolvers/zod",;
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form",;
 import { z } from "zod",;
 import { WorkExperience } from "@/types/resume",;
@@ -131,7 +125,6 @@ function WorkExperienceItemForm() {
     form.setValue('description', content, { shouldDirty: true })
     setIsEnhancementDialogOpen(false)
   }
-
 import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -158,25 +151,20 @@ import { cn } from '@/lib/utils';
 import { Switch } from '@/components/ui/switch';
 import { format } from 'date-fns';
 import { CalendarIcon, Loader2 } from 'lucide-react';
-
   // Set up form;
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
-
     setIsEnhancementDialogOpen(false);
   };
   return (
     <>;
       <Form {...form}>;
-
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
-
             <FormField
               control={form && form.control}
               name='role_title'
@@ -188,12 +176,9 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
           </div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-
             <FormField
               control={form && form.control}
               name='location'
@@ -223,12 +208,10 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
             />;
             <FormField;
               control={form.control}
-
             />;
               name="role_title"
               render={({ field }: { field: any }) => (
                 <FormItem>
-
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Senior Developer" {...field} />
@@ -238,15 +221,12 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
               )}
             />
           </div>
-
             <FormField
-
                 </FormItem>)}
               control={form.control}
               name="location"
               render={({ field }: { field: any }) => (
                 <FormItem>
-
                   <FormLabel>Location</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />
@@ -254,7 +234,6 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                   <FormMessage />
                 </FormItem>
               )}
-
             />;
             <FormField;
               control={form.control}
@@ -265,43 +244,35 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                     <Switch;
                       aria - label='Current position';
                       checked={field.value}
-
                       onCheckedChange={field.onChange}
                       id="current-position"
                     />
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">
-
                       I currently work here
                     </label>
                   </div>
                   <FormMessage />
                 </FormItem>
               )}
-
             />;
           </div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
             <FormField
-
               control={form.control}
               name="start_date"
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-col">
                   <FormLabel>Start Date</FormLabel>
-
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
                         <Button
-
                           variant={"outline"}
                           className={cn(
                             "w-full pl-3 text-left font-normal",
                             !field.value && "text-muted-foreground"
                           )}
                         >
-
                           {field.value ? (
                             format(field.value, 'MMM yyyy')
                           ) : (
@@ -314,7 +285,6 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                           ) : (;
                             <span>Select date</span>;
                           )}
-
                 </FormItem>)}
             />;
           </div>;
@@ -338,19 +308,16 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                           <CalendarIcon;
                             className='ml - auto h - 4 w - 4 opacity - 50';
                             aria - hidden='true';
-
                           />;
                         </Button>;
                       </FormControl>;
                     </PopoverTrigger>;
-
                           <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
                         </Button>
                       </FormControl>
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0" align="start">
                       <Calendar
-
                         mode="single"
                         selected={field.value}
                         onSelect={field.onChange}
@@ -359,17 +326,13 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                         fromYear={1990}
                         toYear={new Date().getFullYear()}
                       />;
-
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
-
             {!watchIsCurrent && (;
-
               <FormField
                 control={form && form.control}
                 name='end_date'
@@ -379,4 +342,3 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                       <PopoverTrigger asChild>;
                         <FormControl>;
                           <Button
-

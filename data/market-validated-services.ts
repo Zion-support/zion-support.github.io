@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string,
@@ -203,17 +203,16 @@
       'Metadata filters'
       'Access controls'
     ]
-    category: 'AI & Search'
+    category: "category",
     link: 'https://ziontechgroup.com/vector-search-starter'
     variant: 'quantum'
-    rating: 4.6
+    rating: 4.6;
     customers: 410
     trialDays: 14
     setupTime: '2 hours'
     contactInfo
   }
 ];import { ServiceVariant  } from "../types/service-variants";
-
 export interface MarketValidatedService {
     id: 'vector - search - starter',
     name: 'Vector Search Starter',

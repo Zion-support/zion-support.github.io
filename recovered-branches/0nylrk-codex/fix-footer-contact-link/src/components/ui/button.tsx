@@ -1,13 +1,9 @@
-
 import * as React from "react"
-
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
-
 import { cn } from "@/lib/utils"
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-        ghost: "hover:bg-accent hover:text-accent-foreground"
+        secondary: "secondary",
+    ghost: "hover:bg-accent hover:text-accent-foreground"
         link: "text-primary underline-offset-4 hover:underline"}
       size: {
         default: "h-10 px-4 py-2"
@@ -18,12 +14,10 @@ import { cn } from "@/lib/utils"
       variant: "default"
       size: "default"}}
 )
-
 export interface ButtonProps;
   extends React.ButtonHTMLAttributes<HTMLButtonElement>;
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>;
-
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
 }
@@ -32,7 +26,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
 }
-
 const Button = React.forwardRef<HTMLButtonElement ButtonProps>(import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -47,7 +40,6 @@ const buttonVariants = cva(;
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",;
         outline:;
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",;
-
         secondary:;
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",;
         ghost: "hover:bg-accent hover:text-accent-foreground",;
@@ -61,7 +53,6 @@ const buttonVariants = cva(;
       variant: "default",;
       size: "default"}}
 );
-
 export interface ButtonProps;
 import * as React from './react';
 import { Slot } from '@radix - ui / react - slot';
@@ -105,13 +96,10 @@ const Button = React.forward_ref < HTMLButtonElement, ButtonProps>(
   }
 )
 Button.displayName = "Button"
-
 );
 Button && Button.displayName = "Button";
-
 export { Button, buttonVariants }
   }
 );
 Button.display_name = "Button";
 export { Button, button_variants }
-

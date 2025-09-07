@@ -5,9 +5,9 @@ import { Shield, Lock, Eye, AlertTriangle, Zap, Cpu;
  } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-      icon: Shield
-      title: "Quantum-Resistant Encryption"
-      description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
+      icon: Shield;
+    title: "title",
+    description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
       color: "from-blue-500 to-cyan-500"
     }
       icon: Shield,
@@ -86,7 +86,6 @@ export default function QuantumCybersecurityPage() {;
       color: "from-indigo-500 to-purple-500";
     }
   ];
-
   const benefits = [;
     "Protect against quantum computing attacks with future-proof encryption";
     "Reduce security incidents by 90% with AI-powered threat detection";
@@ -229,9 +228,7 @@ function QuantumCybersecurityPage() {
         <meta property="og:type" content="website" />;
         <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity" />;
       </Head>;
-
       <EnhancedNavigation />;
-
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -266,7 +263,6 @@ function QuantumCybersecurityPage() {
                 <p className="text-slate-600 leading-relaxed">{feature && feature.description}</p>;
               </motion && motion.div>;
             ))}
-
       {/* Benefits */}
       <section className="py-20 bg-slate-50">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -318,7 +314,6 @@ function QuantumCybersecurityPage() {
           </div>
         </div>
       </section>
-
       {/* Threat Landscape */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -340,7 +335,6 @@ function QuantumCybersecurityPage() {
                 </div>;
               </motion && motion.div>;
             ))}
-
       {/* Compliance */}
       <section className="py-20 bg-slate-900">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -444,7 +438,6 @@ function QuantumCybersecurityPage() {
                   </div>;
                   <p className="text-slate-600">{plan && plan.description}</p>;
                 </div>;
-
                 <ul className="space-y-4 mb-8">;
                   {plan && plan.features.map((feature) => (;
                     <li key={feature} className="flex items-center space-x-3">;
@@ -475,7 +468,6 @@ function QuantumCybersecurityPage() {
                 </a>
               </motion.div>
             ))}
-
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;
         <div className="max-w-4xl mx-auto px-6 text-center">;

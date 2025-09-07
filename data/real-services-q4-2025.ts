@@ -1,4 +1,4 @@
-    id: 'affiliate-analytics-hub'
+id: "id",
     name: 'Affiliate Analytics Hub'
     tagline: 'Track referrals, payouts, and ROI with multi-touch attribution'
     price: '$89'
@@ -13,7 +13,7 @@
       'Fraud and bot detection'
       'Partner portal and reports'
     ]
-    popular: true
+    popular: true;
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/affiliate-analytics-hub'
@@ -42,7 +42,6 @@
       'Link shortener and branded domains',
       'UTM builder and traffic quality scoring',
       'Multi-touch attribution and deduplication',
-
     id: 'affiliate - analytics - hub',
     name: 'Affiliate Analytics Hub',
     tagline: 'Track referrals, payouts, and ROI with multi - touch attribution',
@@ -51,7 +50,6 @@
     description:;
       'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross - device attribution.',
     features: [;
-
       'Link shortener and branded domains',
       'UTM builder and traffic quality scoring',
       'Multi - touch attribution and deduplication',
@@ -86,7 +84,6 @@
     real_implementation: true,
     implementation_details: 'Webhook ingestion, cookie - less heuristics',
     launch_date: '2025 - 11 - 01',
-
   {
       'Portal and RMA workflows',
       'Label generation and tracking',
@@ -260,10 +257,8 @@
 		customers: 9;
 ];
 ;
-
 	}
 ];
-
   id: 'ai - email - responder - pro';
   name: 'AI Email Responder Pro',
   tagline: 'Autonomous replies, triage, and sentiment insights for Gmail / O365';

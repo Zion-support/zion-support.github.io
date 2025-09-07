@@ -28,7 +28,5 @@ if (return []) {
               const counterparty_name = is_client;
                 ? transaction.provider?.display_name || 'Service Provider';
                 : 'Client';
-
   );
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }

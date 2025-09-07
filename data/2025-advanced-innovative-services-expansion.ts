@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -34,8 +34,8 @@
   benefits: string[];
   capabilities: string[];
   email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+  address: "address",
+    website: 'https://ziontechgroup.com'
 }
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -63,7 +63,7 @@
       'Cost optimization and resource management'
       'Multi-cloud deployment orchestration'
     ]
-    popular: true
+    popular: true;
     marketPosition:
       'Next-generation DevOps platform with autonomous operations and AI-driven optimization'
     targetAudience: 'DevOps engineers, Platform teams, Engineering managers'
@@ -562,7 +562,6 @@
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
   }
 ];
-
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
@@ -1079,7 +1078,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
       'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development';
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
-
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
     ];

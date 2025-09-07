@@ -1,45 +1,30 @@
-
-
-export default function DocsPage() {
-	return (
-		<Layout>
-			<Head>
-				<title>Documentation | Zion Tech Group</title>
-				<link rel="canonical" href="https://ziontechgroup.com/docs" />
-			</Head>
-			<section className="container mx-auto px-4 py-24">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
-				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
-			</section>
-		</Layout>
-	)
-
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
 import React from 'react';
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
+import Layout from '../components/layout/MainLayout';
 
 export default function DocsPage() {
-	return (
-		<Layout>
-			<Head>
-				<title>Documentation | Zion Tech Group</title>
-				<link rel="canonical" href="https://ziontechgroup.com/docs" />
-			</Head>
-			<section className="container mx-auto px-4 py-24">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
-				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
-			</section>
-		</Layout>
-	)
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+  return (
+    <Layout
+      title="Documentation - Zion Tech Group"
+      description="Guides, API docs, and best practices."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Documentation</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Guides, API docs, and best practices. Coming soon.
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-md p-8 text-center">
+            <h2 className="text-2xl font-semibold mb-4">Coming Soon</h2>
+            <p className="text-gray-600">
+              We're working on comprehensive documentation for our services and APIs. 
+              Check back soon for detailed guides and best practices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
 }

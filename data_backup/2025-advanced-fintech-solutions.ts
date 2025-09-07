@@ -97,7 +97,7 @@ reviews: number;export const advancedFintechSolutions2025: AdvancedFintechSoluti
   Production-ready AI credit risk platform with advanced ML models and comprehensive compliance features.',
     "launchDate": '2025-01-22,
     "customers": 67,
-    "rating": 4.8
+    "rating": 4.8;
     reviews: 45
   }
   {

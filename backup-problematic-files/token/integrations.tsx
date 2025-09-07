@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import React, { useEffect, useState } from 'react',;
+import React, { useEffect, useState } from 'react';
 import { useWallet } from '../../hooks/useWallet',;
 import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins',;
 import { CHAINS } from '../../utils/chains',;
@@ -31,18 +31,15 @@ export default function TokenIntegrationsPage() {;
     const data = await res.json();
     setSuggestion(data);
   }
-
   return (
     <div className="space-y-8">
       <section className="space-y-2">
         <h1 className="text-2xl font-bold">ZION$ Integrations</h1>
         <p className="text-gray-600 dark:text-gray-300">Omnichain transfers via LayerZero and DePIN rewards.</p>
       </section>
-
       <section className="space-y-4">
         <ClientOnlyBridge />
       </section>
-
       <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">
         <h2 className="text-lg font-semibold">DePIN Hook</h2>
         <p className="text-sm text-gray-600 dark:text-gray-300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>
@@ -61,7 +58,6 @@ export default function TokenIntegrationsPage() {;
           </div>;
         )}
       </section>
-
       <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">
         <h2 className="text-lg font-semibold">Operator AI Actions</h2>
         <p className="text-sm text-gray-600 dark:text-gray-300">Based on your region and stake, we suggest the best chain for ZION$.</p>
@@ -87,7 +83,6 @@ export default function TokenIntegrationsPage() {;
           </div>;
         )}
       </section>
-
       <section className="space-y-2 text-xs text-gray-500">
         <div>Security</div>
         <ul className="list-disc ml-5 space-y-1">

@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-
   GitBranch
   Zap
   Shield
@@ -28,10 +27,9 @@ export default function DevOpsAutomationPage() {
 export default function DevOpsAutomationPage() {
   const features = [
     {
-      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines'
-      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines',,
+      icon: <GitBranch className='w-6 h-6' />,      title: "title",
+    icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines',,
   description: 'Automated build, test, and deployment workflows';
-
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
     }
     {
@@ -45,7 +43,6 @@ export default function DevOpsAutomationPage() {
       title: 'Security Automation'
       description: 'Automated security scanning and compliance checks'
 import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
-
 export default function DevOpsAutomationPage() {
   const features = [
     {
@@ -78,7 +75,6 @@ function DevOpsAutomationPage() {
       description: 'Automated build, test, and deployment workflows';
       color: 'bg - gradient - to - br from - blue - 500 to - cyan - 600';
     }
-
 } from 'lucide-react';
 export default function DevOpsAutomationPage() {;
   const features = [;
@@ -93,8 +89,8 @@ export default function DevOpsAutomationPage() {;
       description: 'Automated security scanning and compliance checks',
   ];
       ];
-      popular: false
-      cta: 'Start Free Trial'
+      popular: false;
+    cta: 'Start Free Trial'
       color: 'border-gray-600 hover:border-blue-500'
     }
       name: 'Professional'
@@ -216,7 +212,6 @@ export default function DevOpsAutomationPage() {;
   ];
   const automationExamples = [
                 Watch Demo
-
       color: 'from - blue - 500 to - cyan - 600',
     },    {
       title: 'Infrastructure Management',
@@ -270,13 +265,10 @@ export default function DevOpsAutomationPage() {;
             </div>
           </div>
         </section>
-
             </div>;
           </div>;
         </section>;
-
         {/* Automation Examples Section */}
-
         {/* Automation Examples Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -331,21 +323,17 @@ export default function DevOpsAutomationPage() {;
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-4 gap-8">;
               {automation_examples.map ((example, index) => (
                 <Card;
-
                   key={index}
                   className="text - center group hover:scale - 105 transition-transform duration-300";
                 >;
                   <div className={`w - 16 h - 16 rounded - 2xl flex items - center justify - center text - 3xl mx - auto mb - 6 bg - gradient - to - br ${example.color}`}>;
                     {example.icon}
-
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}
                   >
                     {example.icon}
                   </div>
                   <p className='text-gray-400'>{example.description}</p>                </Card>
-
                 </Card>
-
               ))}
         {/* Pricing Section */}
         <section id='pricing' className='py-24 bg-gray-900'>;
@@ -405,19 +393,16 @@ export default function DevOpsAutomationPage() {;
                       {plan && plan.features.map((feature, featureIndex) => (;
                         <li key={featureIndex} className="flex items-center text-gray-300">;
                           <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
-
         {/* Pricing Section */}
         <section id="pricing" className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
-
         {/* Pricing Section */}
         <section id='pricing' className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -464,9 +449,7 @@ export default function DevOpsAutomationPage() {;
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                           {feature}
-
                           {feature}
-
                         </li>
                           {feature}
                         </li>;
@@ -524,18 +507,13 @@ export default function DevOpsAutomationPage() {;
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'
                         plan.popular 
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' 
-
                         plan.popular 
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' 
-
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
-
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
-
                       }`}
                     >;
                       {plan.cta}
-
                         plan && plan.popular 
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' 
                       }`}>;
@@ -547,13 +525,11 @@ export default function DevOpsAutomationPage() {;
             </div>
           </div>
         </section>
-
         {/* Market Comparison Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-
         {/* Market Comparison Section */}
         <section className="py-24 bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -651,13 +627,10 @@ export default function DevOpsAutomationPage() {;
             </div>
           </div>
         </section>
-
             </div>;
           </div>;
         </section>;
-
         {/* Testimonials Section */}
-
         {/* Testimonials Section */}
         <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -693,21 +666,17 @@ export default function DevOpsAutomationPage() {;
                     <p className="text-sm text-blue-400">{testimonial.company}</p>
                   </div>
                     </p>                  </div>
-
                   </div>
-
                 </Card>
               ))}
             </div>
           </div>
         </section>
-
                 </Card>
               ))}
             </div>
           </div>
         </section>
-
                 </Card>
               ))}
         {/* CTA Section */}
@@ -944,10 +913,8 @@ export default function DevOpsAutomationPage() {;
           </div>;
         </section>;
       </div>;
-
 }
 ;
               <Button
-
     </>);
 }

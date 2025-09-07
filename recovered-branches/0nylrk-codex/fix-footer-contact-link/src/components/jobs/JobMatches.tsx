@@ -1,16 +1,12 @@
-
-
 import {;
   Card,;
   CardHeader,;
   CardTitle,;
   CardDescription,;
   CardContent,;
-
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
-
 import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
 import React from "react";
@@ -27,18 +23,15 @@ import {
   CardTitle,
   CardDescription,
   CardContent,;
-
 import {;
   Card,;
   CardHeader,;
   CardTitle,;
   CardDescription,;
   CardContent,;
-
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
-
 import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
 import React from "react",
@@ -47,10 +40,7 @@ import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",
 import { useJobMatches } from "@/hooks/useJobMatches",
 import { Skeleton } from "@/components/ui/skeleton",    useJobMatches(jobId);
-
   const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
-  
-
   if (isLoading) {
     return (
       <Card>
@@ -71,18 +61,16 @@ import { Skeleton } from "@/components/ui/skeleton",    useJobMatches(jobId);
                 <Skeleton className="h-4 w-32" />
               </div>
             </div>import React from "react";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
 import { useJobMatches } from "@/hooks/useJobMatches",;
 import { Skeleton } from "@/components/ui/skeleton",;interface JobMatchesProps {;
   jobId: string;
 }
-
 export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
   const { matches, isLoading, isProcessing, triggerAIMatching } =;
     useJobMatches(jobId);
-
   if (isLoading) {;
     return (    return (
       <EmptyMatchesCard
@@ -95,12 +83,10 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
   if (matches.length === 0) {;
     return <EmptyMatchesCard onRefresh={triggerAIMatching} isProcessing={isProcessing} />;
   }
-
   return (
     <div className="space-y-4">;
       {matches && matches.map((match) => (;
         <JobMatchCard
-
           key={match && match.id}
           matchId={match && match.id}
           talentId={match && match.talent_profile?.id || ""}
@@ -182,9 +168,7 @@ if ( {) {
           match_id={match.id}
           talent_id={match.talent_profile?.id || ""}    </div>
     </div>;
-
   );
-
         />))}
     </div>);
 }

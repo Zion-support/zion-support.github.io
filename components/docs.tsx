@@ -1,5 +1,4 @@
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-
+address: '364 E Main St STE 1008 Middletown DE 19709',
         { name: 'Overview', href: '/enhanced-services-showcase' },
         { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
         { name: 'Contact Sales', href: '/contact' }]
@@ -12,10 +11,9 @@ export default function DocsPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   };
-
     {
-      title: 'AI Services Docs'
-      links: [
+      title: "title",
+    links: [
       color: 'text-green-400'
     }
     {
@@ -60,7 +58,6 @@ export default function DocsPage() {;
       default: return 'bg-gray-500/20 text-gray-400'
     }
   };
-
   const sections = [;
     {;
       title: 'Getting Started',;
@@ -147,16 +144,13 @@ export default function DocsPage() {;
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
-
       year: 'numeric',
       month: 'short',
-
       day: 'numeric'
     })
 };      day: 'numeric'
     })
   }
-
   };
   const formatDate = (dateString: string) => {;
     return new Date(dateString).toLocaleDateString('en-US', {;
@@ -167,7 +161,6 @@ export default function DocsPage() {;
 };      day: 'numeric';
     })
 };
-
   return (
               <Card
                 key={s && s.title}
@@ -307,10 +300,8 @@ export default function DocsPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
-
 ;
 }
-
               ))}
             </ul>
           </Card>

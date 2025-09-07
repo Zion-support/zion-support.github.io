@@ -1,5 +1,3 @@
-
-
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress",
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";
@@ -14,10 +12,8 @@ export function ApplicationProgress({
 }: ApplicationProgressProps) {
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",
 import { cn } from "@/lib/utils",  // Define the progress value based on status
-
   const getProgressValue = () => {
     switch (status) {
-
 export function ApplicationProgress(): any ({;
   status,;
   className,;
@@ -73,7 +69,6 @@ function ApplicationProgress() {
     </div>
   );
 }
-
   )
 }
     }
@@ -87,12 +82,11 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     interview: 4,
     hired: 5,
     rejected: 5},
-
   const currentRank = statusRank[current],
   const statusRank_ = statusRank[status],
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
 import { ApplicationStatus } from "@/types/jobs";
-import { Progress } from "@/components/ui/progress",;
+import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 interface ApplicationProgressProps {;
@@ -115,7 +109,6 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   },;
   const progressValue = getProgressValue(),;
   return (;
-
     <div className={cn("w-full space-y-2", className)}>;
       <Progress value={progressValue} className="h-2" />;
       <div className="flex justify-between text-xs text-muted-foreground">;
@@ -143,7 +136,6 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
     </div>;
   );
 }
-
 function StatusIcon(): any ({;
   status,;
   current,;
@@ -159,11 +151,9 @@ function StatusIcon(): any ({;
     hired: 5,;
     rejected: 5,
 };
-
   }
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
-
   if (currentRank < statusRank_) {;
     // This step is complete;
     return <CheckCircle2 className="h-4 w-4 text-green-500" />;

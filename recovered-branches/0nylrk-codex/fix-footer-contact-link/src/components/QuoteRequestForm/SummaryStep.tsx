@@ -24,8 +24,6 @@ import {toast} from "@/hooks/use-toast";  formData: QuoteFormData,;
         `;
         // Get AI matches;
         const results = await findMatches(;
-
-        
 ;
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
   const [isMatching, setIsMatching] = useState(false),;
@@ -44,7 +42,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `,
-        
           formData && formData.serviceType;
           3;
         );
@@ -98,7 +95,6 @@ if (return) {
           title: "Matching Error",
           description: "We couldn't find matches for your request. Please try again.",
           variant: "destructive"});
-
       } finally {
         setIsMatching (false);
       }
@@ -107,30 +103,26 @@ if (return) {
       } catch (error) {
         console.error("Error during AI matching:", error);
         toast({
-          title: "Matching Error"
-          description: "We couldn't find matches for your request. Please try again."
+          title: "title",
+    description: "We couldn't find matches for your request. Please try again."
           variant: "destructive"})
       } finally {
         setIsMatching(false)
       }
     }
     },
-    
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
     // Update the form with the selected match
     updateFormData({
-      specificItem: match.item
-      serviceCategory: match.item.category
+      specificItem: match.item;
+    serviceCategory: match.item.category
     });
     toast({
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
-  
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
-  
-
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -140,11 +132,9 @@ if (return) {
     }
   }
   },
-  
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
-
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -212,7 +202,6 @@ if (return) {
         onSelectMatch={handleItemSelect}
         isLoading={isMatching}
       />;
-
       {/* Service Information */}
       <div>;
         <h4 className="text-lg font-medium text-white mb-2">Service Information</h4>;
@@ -223,7 +212,6 @@ if (return) {
                 <Label className="text-zion-slate-light">Service Type</Label>;
                 <div className="text-white">{formData && formData.serviceType}</div>;
               </div>;
-
               {formData && formData.specificItem && (;
                 <div>;
                   <Label className="text-zion-slate-light">Selected Item</Label>;

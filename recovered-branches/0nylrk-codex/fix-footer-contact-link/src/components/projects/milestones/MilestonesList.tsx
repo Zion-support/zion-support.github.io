@@ -1,5 +1,3 @@
-
-
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
 import { useAuth  } from '@/hooks/useAuth';
 import { MilestoneCard  } from './MilestoneCard';
@@ -10,7 +8,7 @@ import { Card, CardContent  } from '@/components/ui/card';
 import { Plus  } from '@/components/icons';
 import { EmptyState } from '@/components/ui/empty-state';
 interface MilestonesListProps {import React, { useState } from 'react';
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
+import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
 import { useAuth } from '@/hooks/useAuth',;
 import { MilestoneCard } from './MilestoneCard',;
 import { AddMilestoneForm } from './AddMilestoneForm',;
@@ -32,7 +30,6 @@ interface MilestonesListProps {;
   onApprove?: (id: string) => Promise<void>,;
   onReject?: (id: string) => Promise<void>;
 }
-
   milestones;
   activities;
   is_loading;
@@ -58,7 +55,6 @@ interface MilestonesListProps {;
       )}
       <div className="space-y-4">
         {milestones.map((milestone) => (
-
       <div className="space-y-4">;
         {milestones && milestones.map((milestone) => (;
           <MilestoneCard
@@ -85,7 +81,6 @@ interface MilestonesListProps {;
           </CardContent>
         </Card>
       )}
-      
       <div className="space-y-4">
         {milestones.map((milestone) => (
           <MilestoneCard
@@ -96,11 +91,9 @@ interface MilestonesListProps {;
             description={milestone.description}
             amount={parseFloat(milestone.amount.toString())}
             status={milestone.status}
-
       </div>;
     </div>;
   );
-
   is_submitting;
   on_approve,
   on_reject;

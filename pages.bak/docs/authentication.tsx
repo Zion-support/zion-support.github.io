@@ -3,27 +3,22 @@ const Link from "next/link"; import Head from "next/head"; export default functi
 import React from 'react';
 interface AuthenticationProps {
   // Add props here as needed
-
 export default function Authentication({ }: AuthenticationProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -45,10 +40,8 @@ export default function Authentication(): any ({ }: AuthenticationProps) {;
       <h1>Authentication</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );import React from 'react';
-import React from 'react';
+  );import React from "React";
 import * as React from 'react';
-
 interface AuthenticationProps {
   // Add props here as needed
 }

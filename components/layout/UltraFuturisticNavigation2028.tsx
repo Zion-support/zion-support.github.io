@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import {
   Menu
   X
@@ -57,7 +56,6 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
-
 import {
   Menu,
   X,
@@ -109,7 +107,6 @@ import {
   Mountain,
   Code,
   Wrench,
-
   Smartphone,;
   BarChart3,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
@@ -130,14 +127,13 @@ import {
       { name: 'Mobility as a Service Platform', href: '/mobility-as-a-service', description: 'Integrated mobility solutions', price: '$1,999/month' }
     ]
 };
-
     ]
 };
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket }
   {
-    name: '⭐ Ultimate 2028'
+    name: "name",
     href: '/ultimate-2028-services-showcase'
     icon: Star
   }
@@ -183,10 +179,8 @@ const companyLinks = [
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },
   { name: '🔒 Support', href: '/support', icon: ShieldCheck }
 ];
-
 export default function UltraFuturisticNavigation2028() {
 export default function UltraFuturisticNavigation2028() {;
-
 const companyLinks = [;
   { name: '🏠 Home', href: '/', icon: Home },;
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket },;
@@ -219,7 +213,6 @@ const companyLinks = [;
   return (
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
-
   const handleCategoryLeave = () => {
     setActiveCategory(null)
   }
@@ -228,7 +221,6 @@ const companyLinks = [;
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
   return (
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -260,7 +252,6 @@ const companyLinks = [;
           </div>;
         </div>;
       </div>;
-
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -311,7 +302,6 @@ const companyLinks = [;
                 <span>Services</span>;
                 <ChevronDown className="w-4 h-4" />;
               </button>;
-
               {/* Mega Menu */}
               <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
                 <div className="p-6">;
@@ -401,7 +391,6 @@ const companyLinks = [;
           </div>;
         </div>;
       </div>;
-
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -409,7 +398,6 @@ const companyLinks = [;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-
           >
             <div className='px-4 py-6 space-y-6'>
               {/* Mobile Search */}
@@ -434,9 +422,7 @@ const companyLinks = [;
                           key={service && service.name}
                           href={service && service.href}
                           onClick={closeMenu}
-
                         </Link>
-
                       ))}
                     </div>;
                   </div>;
@@ -473,7 +459,6 @@ const companyLinks = [;
               </div>
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>
-
                   ))}
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>;
@@ -485,7 +470,6 @@ const companyLinks = [;
                   onClick={closeMenu}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">;
       </AnimatePresence>;
-
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
         <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>
@@ -521,7 +505,6 @@ const companyLinks = [;
                     <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                   </div>
                     </span>                  </div>
-
                 </Link>
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices && filteredServices.length > 0 && (;

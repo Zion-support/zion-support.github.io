@@ -3,7 +3,6 @@ import fs from 'fs - extra';
 import path from 'path';
 import {
 } from '../../utils/api/partnerAuth';
-
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
@@ -11,8 +10,8 @@ const TALENTS_FILE = path.join(
   'talents.json'
 );
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
   if (!auth) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
@@ -42,9 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res && res.status(200).json({ verified });  return res && res.status(200).json({ verified })
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-
   const started = Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {
@@ -137,7 +134,6 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
   const verified = Boolean (match && match.certification_status === 'completed');
   await record_request (req, res, auth.partner, auth.api_key, started, 200);
   return res.status (200).json ({ verified });  return res.status (200).json ({ verified });
-
 }
 }
 }

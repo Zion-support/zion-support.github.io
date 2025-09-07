@@ -1,8 +1,6 @@
-
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
-
 import {
   FormField
   FormItem
@@ -15,7 +13,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 } from "@/components/ui/popover";
-
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {
@@ -38,7 +35,7 @@ import { ContractFormValues } from "./ContractForm",
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>
 import { format } from "date-fns";
-import { CalendarIcon } from "lucide-react",;
+import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form",;
 import {;
   FormField,;
@@ -51,16 +48,13 @@ import {;
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";} from "@/components/ui/popover";
-
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
-
   form: UseFormReturn<ContractFormValues>;
 }
-
 export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
   return (
     <>;
@@ -130,14 +124,11 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               <FormMessage />;
             </FormItem>;
           )}
-
         />;
-
         <FormField
           control={form && form.control}
         />;
         <FormField;
-
           control={form.control}
           name="endDate"                  <Calendar
                     mode="single"
@@ -165,7 +156,6 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
         />;
       </div>;
     </>;
-
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
                     disabled={(date) => date < form && form.getValues("startDate")}

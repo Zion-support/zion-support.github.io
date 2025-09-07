@@ -1,8 +1,7 @@
 import path from "path";
-
 const DATA_DIR = path.join(process.cwd(), "data");
-=======  read: (path: string) => null
-  write: (path: string, data: any) => null
+=======  read: (path: string) => null;
+    write: (path: string, data: any) => null
   exists: (path: string) => false
   delete: (path: string) => null
   read: (path: string) => null,
@@ -10,27 +9,22 @@ const DATA_DIR = path.join(process.cwd(), "data");
   exists: (path: string) => false,
   delete: (path: string) => null
 };
-
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
   delete: (path: string) => null
 };
-
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
   delete: (path: string) => null
 };
 import path from 'path';
-
 const DATA_DIR = path.join(process.cwd(), 'data');
-
   try {
     const fullPath = path && path.join(DATA_DIR, filePath);
     const data = fs && fs.readFileSync(fullPath, 'utf8');
     return JSON && JSON.parse(data);
-
   try {
     const fullPath = path.join(DATA_DIR, filePath);
     const data = fs.readFileSync(fullPath, "utf8");
@@ -39,7 +33,6 @@ const DATA_DIR = path.join(process.cwd(), 'data');
     return defaultValue;
   }
 }
-
 export function writeJson<T>(filePath: string, data: T): void {
   try {
     const fullPath = path.join(DATA_DIR, filePath);
@@ -50,7 +43,6 @@ export function writeJson<T>(filePath: string, data: T): void {
     console.error("Error writing JSON file:", error);
   }
 }
-
 export async function readJsonAsync<T>(
   filePath: string,
   defaultValue: T,
@@ -63,7 +55,6 @@ export async function readJsonAsync<T>(
     return defaultValue;
   }
 }
-
 export async function writeJsonAsync<T>(
   filePath: string,
   data: T,
@@ -77,7 +68,6 @@ export async function writeJsonAsync<T>(
     console.error("Error writing JSON file:", error);
   }
 }
-
 // File system database utilities;
 export const fs_db = {
   // Add file system database functionality here;
@@ -86,6 +76,4 @@ export const fs_db = {
   exists: (path: string) => false,
   delete: (path: string) => null;
 }
-
 }
-

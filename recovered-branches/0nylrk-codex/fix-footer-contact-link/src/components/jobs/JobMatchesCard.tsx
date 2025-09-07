@@ -1,5 +1,3 @@
-
-
 import {;
   Card,;
   CardContent,;
@@ -26,10 +24,8 @@ import {
   onDecline: (matchId: string) => void;
   showApplied?: boolean
 }
-
   if (!job) return null;export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
-  
   if (!job) return null,
     return (  return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">;
@@ -43,9 +39,8 @@ import {
             <div className="flex flex-wrap gap-1">
               {match.matched_skills.slice(0, 5).map((skill, i) => (
                 <Badge key={i} variant="secondary" className="text-xs">
-
 import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react",;
@@ -86,7 +81,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         </div>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-
         {match.status === 'applied' || showApplied ? (
             <Button
               className="flex-1"
@@ -106,4 +100,3 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         )}
       </CardFooter>;
     </Card>;
-

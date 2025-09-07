@@ -1,10 +1,9 @@
-
-      return <span className="text-gray-500">📣</span>;
+return <span className="text-gray-500">📣</span>;
   }
 }
 interface NotificationItemProps {
-  notification: Notification
-  onMarkAsRead: (id: string,) => Promise<void>
+  notification: Notification;
+    onMarkAsRead: (id: string,) => Promise<void>
   onDismiss: (id: string,) => Promise<void>
 }
 export const NotificationItem: React.FC<NotificationItemProps> = ({
@@ -20,7 +19,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     if (notification.action_url) {
       router.push(notification.action_url), // Changed to router.push
     }
-
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
@@ -36,4 +34,3 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
               <p>Dismiss</p>
             </TooltipContent>
           </Tooltip>
-

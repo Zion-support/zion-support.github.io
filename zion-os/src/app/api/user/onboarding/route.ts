@@ -3,11 +3,9 @@ import { prisma } from "@/lib/prisma";
 export async function POST(request: NextRequest) {
   try {
     const session = await getServerSession();
-
       {
         message: "Onboarding completed successfully",
         user: {
-
 =======          id: updatedUser && updatedUser.id,
           name: updatedUser && updatedUser.name,
           email: updatedUser && updatedUser.email,
@@ -35,13 +33,11 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error ('Onboarding completion error:', error);
     return NextResponse.json (
-
       { error: 'Internal server error' },
-
       { error: 'Internal server error' },
       {
-        message: 'Onboarding completed successfully'
-        user: {
+        message: "message",
+    user: {
       { error: 'Internal server error' },
       { status: 500 }
     );
@@ -49,7 +45,6 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
-
 export async function POST(request: NextRequest) { try {
     const body = await request.json();
     const { userId, preferences  } = body;
@@ -75,7 +70,6 @@ export async function POST(request: NextRequest) { try {
   } catch (_error) {
     return NextResponse.json(
       { error: 'Failed to complete onboarding' },
-
       { status: 500 }
     );
   }

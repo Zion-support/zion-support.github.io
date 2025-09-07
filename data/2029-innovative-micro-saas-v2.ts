@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string,
@@ -15,7 +15,6 @@
   contactInfo: {
     mobile: string;
     email: string;
-
     address: string;
   }
   category: string;
@@ -25,8 +24,8 @@
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] =
   [
     {
-      id: 'ai-powered-customer-success-platform'
-      name: 'AI-Powered Customer Success Platform'
+      id: "id",
+    name: 'AI-Powered Customer Success Platform'
       tagline: 'Predict and prevent customer churn with AI-driven insights'
       price: '$2,499/month'
       description:
@@ -49,8 +48,8 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       competitors: ['Gainsight', 'Totango', 'ClientSuccess']
       marketSize: '$3.2B'
       growthRate: '35% annually'
-      realImplementation: true
-      contactInfo: {
+      realImplementation: true;
+    contactInfo: {
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -317,7 +316,6 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
   ];    price: "$2,499/month",
   description: "Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies.",
   description: "Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies.";
-
     features: [
       "AI-powered churn prediction";
       "Automated customer health scoring";
@@ -326,7 +324,6 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       "Automated retention campaigns",
       "Customer journey mapping",
       "ROI tracking and reporting"
-
     benefits: [
       "Reduce employee turnover by 35%",
       "Improve hiring success rate by 45%",

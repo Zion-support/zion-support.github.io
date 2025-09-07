@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 import {
   Phone,
   Mail,
@@ -26,8 +25,8 @@ import {
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
 const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
@@ -487,7 +486,6 @@ const resource_links = [;
               </div>
             </motion.div>
           </div>
-
               </p>
               {/* Contact Info */}
                   <Globe className="w-4 h-4 mr-3 text-cyan-400" />
@@ -516,7 +514,6 @@ const resource_links = [;
               </div>;
             </motion && motion.div>;
           </div>;
-
           {/* Service Categories */}
           {serviceCategories && serviceCategories.map((category, index) => (;
             <motion&& motion.div
@@ -533,13 +530,10 @@ const resource_links = [;
             </motion && motion.div>;
           ))}
         {/* Additional Links */}
-
           {/* Company Links */}
           <motion&& motion.div
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}
-
           {/* Company Links */}
-
           <motion.div
           {/* Company Links */}
           <motion&& motion.div
@@ -587,11 +581,9 @@ const resource_links = [;
             </div>
           </motion.div>
         </div>
-
             </div>;
           </motion && motion.div>;
         </div>;
-
               ))}
         {/* Newsletter Signup */}
         <motion&& motion.div
@@ -632,7 +624,6 @@ const resource_links = [;
             </div>
           </div>
         </motion.div>
-
                 Subscribe;
               </button>;
             </div>;
@@ -684,7 +675,6 @@ const resource_links = [;
     </footer>;
   );
 }
-
           className='border - t border - gray - 800 pt - 8';
         >;
           <div className='flex flex - col md:flex - row justify - between items - center'>;
@@ -736,9 +726,7 @@ const resource_links = [;
         </motion.div>;
       </div>;
   );
-
     </footer>
   );
 }
-
 }

@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 import {
-
   Brain,
   Heart,
   Eye,
@@ -49,24 +47,22 @@ import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticN
   Smartphone,
   Database,
   Cloud,
-
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
   Smartphone, Database, Cloud, Server, ShieldCheck
  } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-
   const contactInfo = {
-    mobile: '+1 302 464 0950'
+    mobile: "mobile",
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
   const features = [
     {
-      icon: Brain
-      title: 'Real-time Emotion Detection'
+      icon: Brain;
+    title: 'Real-time Emotion Detection'
       description:
         'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time'
       color: 'from-violet-500 to-purple-600'
@@ -274,7 +270,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
     },      color: 'from-teal-500 to-cyan-600';
     }
   ];
-
       ];
       popular: false
     }
@@ -400,12 +395,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               <Brain className="w-4 h-4 mr-2" />;
               🚀 2029 Revolutionary AI Technology;
             </motion && motion.div>;
-
             {/* Main Heading */}
             <motion&& motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-
             >
               <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 AI Emotional Intelligence
@@ -434,7 +427,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               <br />;
               <span className="text-white">Platform</span>;
             </motion && motion.h1>;
-
             {/* Subheading */}
             <motion&& motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -447,16 +439,13 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             >;
               Revolutionary AI platform that reads, understands, and responds to human emotions in real-time across all communication channels. Transform your business with emotional intelligence.;
             </motion && motion.p>;
-
             {/* CTA Buttons */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-
             >
               <Link
                 href='/contact'
-
                 className='group relative px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 hover:from-violet-600 hover:to-purple-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25'>;
                 <span className='flex items-center'>;
                   Get Started Today;
@@ -464,7 +453,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 </span>;
                 <div className='absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-400 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300'></div>;
               </Link>;
-
               <Link
                 href='#pricing'
                 className='group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10'>;
@@ -473,7 +461,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                   <ArrowRight className='ml-2 w-5 h-5' />                </span>            >;
               <Link
                 href="/contact"
-
                 className="group relative px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 hover:from-violet-600 hover:to-purple-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">;
                 <span className="flex items-center">;
                   Get Started Today;
@@ -481,14 +468,12 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 </span>;
                 <div className="absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-400 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>;
               </Link>;
-
               <Link
                 href="#pricing"
             {/* Key Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-
             >
               <div className='text-center'>
                 <div className='text-3xl font-bold text-violet-400 mb-2'>
@@ -546,25 +531,20 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary{' '}
-
             className="text-center mb-16"
           >
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Revolutionary <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">Features</span>
             </h2>
@@ -602,7 +582,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
               >
                 <div className={`flex justify-center mb-6`}>
                   <div
@@ -646,19 +625,16 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{feature.title}</h3>
                 <p className="text-gray-300 text-center leading-relaxed">{feature.description}</p>
               </motion.div>
-
             ))}
           </div>
         </div>
       </section>
-
             ))}
       {/* Benefits Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-
           </div>
         </div>
       </section>
@@ -666,19 +642,15 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Transform Your{' '}
-
             className="text-center mb-16"
           >
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transform Your <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Business</span>
             </h2>
@@ -712,14 +684,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 <span className='text-white text-lg'>{benefit}</span>              </motion.div>
-
               </motion.div>
-
             ))}
           </div>
         </div>
       </section>
-
             ))}
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
@@ -738,14 +707,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Powerful{' '}
-
             className="text-center mb-16"
           >
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powerful <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Use Cases</span>
             </h2>
@@ -782,7 +748,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
               >
                 <div className={`flex justify-center mb-6`}>
                   <div
@@ -826,19 +791,16 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{useCase.title}</h3>
                 <p className="text-gray-300 text-center leading-relaxed">{useCase.description}</p>
               </motion.div>
-
             ))}
           </div>
         </div>
       </section>
-
             ))}
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="pricing" className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-
           </div>
         </div>
       </section>
@@ -846,19 +808,15 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Choose Your{' '}
-
             className="text-center mb-16"
           >
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
             </h2>
@@ -908,12 +866,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
@@ -989,7 +945,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               Platform can revolutionize your customer experience and business;
               outcomes.;
             </p>;
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
@@ -1031,7 +986,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
-
           >
             <Link
               href='/contact'
@@ -1040,7 +994,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 Get Started Today;
                 <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />              </span>          >
 };
-
 export default AIEmotionalIntelligencePlatform2029;
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12'>            <motion.div          >;
@@ -1100,8 +1053,6 @@ export default AIEmotionalIntelligencePlatform2029;
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-
 };
-
 export default AIEmotionalIntelligencePlatform2029;
 ;

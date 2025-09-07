@@ -1,11 +1,9 @@
-  className: string;
+className: string;
   id: string;
   innerHTML: string;
   textContent: string | null;
   style: { [key: string]: string }
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className={cn(badgeVariants({ variant }), className)} {...props} />;
   );
@@ -39,5 +37,3 @@ export interface BadgeProps;
  */
 function Badge() {
   return (
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

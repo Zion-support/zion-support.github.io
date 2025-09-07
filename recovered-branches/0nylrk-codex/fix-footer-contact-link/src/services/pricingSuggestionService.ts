@@ -2,10 +2,8 @@ export interface PricingSuggestion {
 export interface PricingSuggestion {;
   minRate: number;
   maxRate: number;
-
 }
   jobTitle: string;
-
 export interface ClientBudgetParams {
   job_title: string;
   category: string;
@@ -14,7 +12,6 @@ export interface ClientBudgetParams {
     } else if (lowercaseTitle && lowercaseTitle.includes("junior")) {
       minRate -= 10;
       maxRate -= 15;
-
     }
     // Generate explanation
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`;
@@ -42,7 +39,6 @@ export interface ClientBudgetParams {
       max_rate -= 15;
       min_rate = Math.max (min_rate, 15), // Ensure minimum doesn't go too low;
     }
-    
     // Generate explanation
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,
     ;
@@ -55,11 +51,8 @@ export interface ClientBudgetParams {
       minRate -= 10,;
       maxRate -= 15,;
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;
-
-    
     // Generate explanation
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,
-
     }
     // Generate explanation;
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${job_title}", we recommend a budget range of $${min_rate}-$${max_rate}/hour. This aligns with current market trends for similar projects.`;
@@ -77,7 +70,6 @@ export interface ClientBudgetParams {
       explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
     };  }
 }
-
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
   try {;      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
     }
@@ -86,7 +78,6 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     };
   }
 }
-
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
   try {;
     // Simulate API call delay
@@ -95,7 +86,6 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     let baseRate = 25 + (yearsExperience * 5);
     // Adjust for in-demand skills
     const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];
-
     const hasInDemandSkills = skills && skills.some(skill => 
       inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill));
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {;
@@ -127,20 +117,16 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     if (location) {
       explanation += `, considering market rates in ${location}`
     }
-
-    
-
     explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;
     // Return a fallback suggestion;
     return {
-    
     explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;
     return {
       minRate;
       maxRate;
       confidence;
-      explanation
-      min_rate: 30;
+      explanation;
+    min_rate: 30;
       max_rate: 60;
       confidence: "Low",
       explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget.";
@@ -225,7 +211,6 @@ if ( {) {
       max_rate;
       confidence;
       explanation;
-
     }
   } catch (error) {
     console.error("Error generating rate suggestion:", error),
@@ -233,9 +218,7 @@ if ( {) {
   try {
     // In a real implementation, this would save to the database
     // For now, we'll just log it
-
     console && console.error("Error tracking pricing suggestion:", error);
-
 }
 // Function to save pricing analytics data;
 export async /**

@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -26,8 +24,8 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
         throw new Error(data.error)
       }      setGeneratedContent(data.generated);
       toast({
-        title: "Content Generated"
-        description: "AI has created optimized listing content for you."
+        title: "title",
+    description: "AI has created optimized listing content for you."
       })
     } catch (error) {
       console.error("Error generating content:", error);
@@ -50,18 +48,14 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
           <AIListingForm
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
-
           <AIListingForm 
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
-
             initialValues={initialValues}
           />;
         </CardContent>;
       </Card>;
-
       {isLoading && <LoadingContentSkeleton />}
-
       {generatedContent && !isLoading && (;
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
       )}

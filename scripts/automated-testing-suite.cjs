@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 console.log('🧪 Automated Testing Suite');
 console.log('==========================');
-
 async function runTests() {
   const tests = [
     { name: 'Unit Tests', command: 'npm run test:unit' },
@@ -13,9 +9,7 @@ async function runTests() {
     { name: 'Lint Tests', command: 'npm run lint' },
     { name: 'Type Check', command: 'npm run type-check' }
   ];
-
   const results = [];
-  
   for (const test of tests) {
     try {
       console.log(`\n🔍 Running ${test.name}...`);
@@ -27,7 +21,6 @@ async function runTests() {
       results.push({ name: test.name, status: 'failed', error: error.message });
     }
   }
-
   // Generate report
   const report = {
     timestamp: new Date().toISOString(),
@@ -40,14 +33,11 @@ async function runTests() {
   };
 <<<<<<< HEAD
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
-  
   console.log('\n📊 Test Summary:');
   console.log(`Total: ${report.summary.total}`);
   console.log(`Passed: ${report.summary.passed}`);
   console.log(`Failed: ${report.summary.failed}`);
-  
   return report;
 }
 <<<<<<< HEAD
-
 runTests().catch(console.error);

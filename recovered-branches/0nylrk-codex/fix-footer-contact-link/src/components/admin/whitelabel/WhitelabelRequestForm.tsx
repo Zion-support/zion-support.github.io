@@ -1,7 +1,5 @@
-
-
-          headline: values.headline
-          subtitle: values.subtitle
+headline: values.headline;
+    subtitle: values.subtitle
           cta: values.cta}
       }      // Submit to Supabase
       const { data, error } = await supabase
@@ -11,8 +9,8 @@
         .single();
       if (error) throw error;
       toast({
-        title: 'White-label tenant created!'
-        description: `${values.brand_name} has been set up with subdomain ${values.subdomain}`})
+        title: "title",
+    description: `${values.brand_name} has been set up with subdomain ${values.subdomain}`})
       // Reset form
       form.reset()
     } catch (error: any) {
@@ -22,13 +20,10 @@
         description: error.message |'Something went wrong'})
   };
     }
-
   };
-
 =======  };
-
 import React from 'react';
-import { useForm } from 'react-hook-form',;
+import { useForm } from 'react-hook-form';
 import { z } from 'zod',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { Input } from '@/components/ui/input',;
@@ -40,7 +35,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { toast } from '@/hooks/use-toast',;
 import { supabase } from '@/integrations/supabase/client',;
   },
-
   return (
     <Card className="w-full max-w-2xl">
       <CardHeader>
@@ -149,7 +143,6 @@ if (throw error) {
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
-
           <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
             <div className="space-y-4">;
               <FormField;
@@ -198,6 +191,5 @@ if (throw error) {
           DNS verification for custom domains must be completed before they can be used.;
         </p>;
       </CardFooter>;
-
     </Card>);
 }

@@ -1,6 +1,5 @@
-
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom",;
+import { useNavigate, useLocation } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
 import { z } from "zod",;
@@ -247,7 +246,6 @@ FormLabel;
   password: z .string () if (token) {
   setAccessToken (token) 
 }else {
-  
 }
 }, [location]);
 //Form submission handler 
@@ -270,7 +268,6 @@ setError (error.message);
 return;
 }//Show success message and clean up auth state //Clean auth state and redirect after a delay cleanupAuthState ();
 setTimeout ( () => {
-  
 }finally {
   setIsLoading (false) 
 }

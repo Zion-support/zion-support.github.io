@@ -1,22 +1,17 @@
-
-      >
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="recent" id="recent" />
           <Label htmlFor="recent">Use most recent resume</Label>
         </div>
-        
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="select" id="select" />
           <Label htmlFor="select">Select from saved resumes</Label>
         </div>
-        
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
           <Label htmlFor="upload">Upload new resume</Label>
         </div>
       </RadioGroup>
-
       {selectedOption === 'recent' && resume && (
         <div className="space-y-4">
           <ResumePreviewCard
@@ -36,7 +31,6 @@
           />
         </div>
       )}
-
       {selectedOption === 'select' && (
         <SelectResumeSection
           resumes={resumeOptions}
@@ -45,14 +39,12 @@
           isLoading={isLoading}
         />
       )}
-
       {selectedOption === 'upload' && (
         <UploadSection
           onFileUpload={handleFileUpload}
           selectedFile={customFile}
         />
       )}
-
       {selectedResume && (
         <div className="flex justify-center space-x-4 pt-4 border-t">
           <Button
@@ -71,5 +63,3 @@
         </div>
       )}
     </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

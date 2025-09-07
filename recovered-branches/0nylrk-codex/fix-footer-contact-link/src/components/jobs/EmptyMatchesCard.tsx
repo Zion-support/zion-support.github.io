@@ -1,41 +1,29 @@
-
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Sparkles, RefreshCcw } from "lucide-react",
-
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
   isProcessing: booleanimport { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Sparkles, RefreshCcw } from "lucide-react",
-
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
   isProcessing: boolean
-
 export interface EmptyMatchesCardProps {;
-
   onRefresh: () => void;
   isProcessing: boolean
 }
-
   onRefresh,;
   isProcessing,;
 }: EmptyMatchesCardProps) {;
-
   return (import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sparkles, RefreshCcw } from "lucide-react";
-
 }
-
-export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
-
-}
-
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
 }
-
+export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
+}
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
   return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
@@ -61,9 +49,8 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
             <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches
           </>
-
 import { Button } from "@/components/ui/button";
-import { Sparkles, RefreshCcw } from "lucide-react",;
+import { Sparkles, RefreshCcw } from "lucide-react";
 export interface EmptyMatchesCardProps {;
   onRefresh: () => void;
   isProcessing: boolean;
@@ -72,7 +59,6 @@ export interface EmptyMatchesCardProps {;
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {;
   return (;
   return (  return (
-
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Sparkles, RefreshCcw } from "lucide-react",;
@@ -131,10 +117,8 @@ function EmptyMatchesCard() {
           </>)}
       </Button>;
     </Card>);
-
 }
 }
-
 }
   ),;}
  export interface EmptyMatchesCardProps {

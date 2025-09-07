@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import clsx from "clsx";
 export type EnhancedButtonProps =;
@@ -7,7 +5,6 @@ export type EnhancedButtonProps =;
     variant?: "primary" | "secondary" | "ghost";
     size?: "sm" | "md" | "lg";
     fullWidth?: boolean;
-
 const baseStyles =;
   "inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]";
 const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;
@@ -32,7 +29,6 @@ export default function EnhancedButton(): any ({;
   fullWidth,;
   ...props;
 }: EnhancedButtonProps) {;
-
         baseStyles
         sizeStyles[size]
         variantStyles[variant]
@@ -40,5 +36,3 @@ export default function EnhancedButton(): any ({;
         className
       )}
       {...props}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-

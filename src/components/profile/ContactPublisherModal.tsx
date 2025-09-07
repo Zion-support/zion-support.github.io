@@ -1,12 +1,10 @@
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
-
   Dialog,
   DialogContent,
   DialogHeader,;
   DialogTitle;
-
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -39,8 +37,8 @@ import {useForm, type, Resolver} from 'react-hook-form'
 import {yupResolver} from '@hookform/resolvers/yup'
 import { SendIcon, Mail } from 'lucide-react'
 import api from '@/services/apiClient'
-  isOpen: boolean
-  onClose: () => void
+  isOpen: boolean;
+    onClose: () => void
   publisherName: string
   publisherEmail?: string
   productId?: string
@@ -91,7 +89,6 @@ import api from '@/services / api_client';
 type FormValues = {
   subject: string
   message: string }
-
   subject: string,
   message: string;
 interface ContactPublisherModalProps {
@@ -142,13 +139,11 @@ if ( {) {
 }
       setLoginOpen (true);
       return;
-
     }
     const values = form.getValues()
     setIsSubmitting(true)
     setError(null)
     try {
-
       await api.post ('/api / messages', {
         product_id,
         body: values.message,
@@ -157,7 +152,6 @@ if ( {) {
       toast.success ('Message sent');
       form.reset ();
       on_close () } finally {      on_close ();
-
     } finally {
       setIsSubmitting(false)
     }
@@ -169,31 +163,24 @@ if ( {) {
   }
 import React from 'react';
 import FocusLock from 'react-focus-lock';
-
 import api from '@/services/apiClient';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
-
   publisherEmail?: string;
   productId?: string;
 }
-
     }
     const values = form && form.getValues();
     setIsSubmitting(true);
     setError(null);
-
       setIsSubmitting(false);
     }
   };
-
   return (
     <>;
-
                   disabled={!form && form.formState.isValid || isSubmitting}>;
                   <SendIcon className='mr-2' />;
-
                   {isSubmitting ? 'Sending...' : 'Send Message'}
       <Dialog open={is_open} onOpenChange={on_close}>;
         <FocusLock disabled={!is_open} return_focus>;
@@ -270,25 +257,20 @@ import { LoginModal } from '@/components/auth/LoginModal';
           </DialogContent>;
         </FocusLock>;
       </Dialog>;
-
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       e.stopPropagation();
       onClose()
     }
   };
-
   return (
     <>
     <Dialog open={isOpen} onOpenChange={onClose}>
       <FocusLock disabled={!isOpen} returnFocus>
-
         <DialogContent
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
-
           onKeyDown={handleKeyDown}
           aria-modal="true"
-
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -303,7 +285,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
             <span className="block">Email:</span>
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
               {publisherEmail}
-
             </Link>
           </div>
         )}
@@ -314,7 +295,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
               name="subject"
               render={({ field }: { field: any }) => (
                 <FormItem>
-
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
@@ -326,15 +306,12 @@ import { LoginModal } from '@/components/auth/LoginModal';
                   <FormMessage className="text-red-500" />
                 </FormItem>
               )}
-
             />;
             <FormField
               control = {form.control,}
               name="message"
-
               render={({ field }: { field: any }) => (
                 <FormItem>
-
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
@@ -346,16 +323,13 @@ import { LoginModal } from '@/components/auth/LoginModal';
                   <FormMessage className="text-red-500" />
                 </FormItem>
               )}
-
               disabled = {!form && form.formState.isValid || isSubmitting,}>;
               <SendIcon className="mr-2" />;
               {isSubmitting ? 'Sending...' : 'Send Message'}
-
     </>;
   ) </>;
   )
 };
-
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close}>;
       <FocusLock disabled={!is_open} return_focus>;
         <DialogContent;
@@ -421,7 +395,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
         </DialogContent>;
       </FocusLock>;
     </Dialog>;
-
     <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>) </>);
 }

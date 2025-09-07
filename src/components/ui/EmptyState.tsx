@@ -1,6 +1,4 @@
-
-  icon
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+icon
 }: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
@@ -8,15 +6,10 @@
         {icon |<Package className="h-16 w-16" />}
       </div>
       <h3 className="text-xl font-semibold text-white mb-2">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   icon?: React && React.ReactNode;
-
 export function EmptyState(): any ({;
   text = 'No items available',;
-
   description,;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onRetry;
   showRetry = false;
   icon;
@@ -56,23 +49,17 @@ export function EmptyState(): any ({;
           <RefreshCw className='h-4 w-4' />        <p className="text-gray-400 mb-6 max-w-md">;
           {description}
         </p>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           onClick={onRetry}
           variant="outline"
           className="flex items-center gap-2"
         >
           <RefreshCw className="h-4 w-4" />
-
           Try Again
-
         </Button>
       )}
     </div>;
   );
-
 } 
-
         <p className='text - gray - 400 mb - 6 max - w-md'>{description}</p>;
   show_retry = false,
   icon,
@@ -110,5 +97,3 @@ export function EmptyState(): any ({;
           <RefreshCw className="h - 4 w-4" />;
         </Button>)}
     </div>);
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

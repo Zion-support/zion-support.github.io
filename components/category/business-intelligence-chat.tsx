@@ -1,5 +1,3 @@
-
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -19,7 +17,6 @@ const BusinessIntelligenceChat: NextPage = () => {;
       </main>
     </div>
       </Head>;
-
       <main>;
         <h1>BusinessIntelligenceChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -29,26 +26,20 @@ const BusinessIntelligenceChat: NextPage = () => {;
   );
 }
 export default BusinessIntelligenceChat;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-
 const BusinessIntelligenceChat: NextPage = () => {
   return (
     <div>
       <Head>
-
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
-
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
-
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -72,5 +63,3 @@ const BusinessIntelligenceChat: NextPage = () => {
 ;
 export default BusinessIntelligenceChat;
 ;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

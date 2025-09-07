@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
@@ -12,13 +9,9 @@ const Header: React.FC = () => {
     { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' }
   ];
-
 import Button from './Button';
-
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   return (
     <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -30,7 +23,6 @@ const Header: React.FC = () => {
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
@@ -43,7 +35,6 @@ const Header: React.FC = () => {
               </Link>
             ))}
           </nav>
-
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-gray-300 hover:text-white"
@@ -54,7 +45,6 @@ const Header: React.FC = () => {
             </svg>
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-slate-700">
@@ -76,5 +66,3 @@ const Header: React.FC = () => {
     </header>
   );
 };
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

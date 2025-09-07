@@ -12,7 +12,6 @@ export function BillingHeader() {
             <Mail className="h-4 w-4" />
             Contact Billing Support
           </Button>
-
           <Button variant="outline" size="sm" className="gap-1" asChild>
             <Link href="/dashboard/client/analytics">
               <BarChart3 className="h-4 w-4" />
@@ -21,5 +20,3 @@ export function BillingHeader() {
           </Button>
         </div>
       </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

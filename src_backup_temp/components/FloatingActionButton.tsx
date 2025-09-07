@@ -369,7 +369,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           window.print()},';';
         color: 'bg-gray-500 hover: b g-gray-600',';';
         priority: 'low' as const
-
 };
 ;
     window.addEventListener('scroll', handleScroll);
@@ -570,8 +569,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                   key={action.id}`
                   className={`
                     flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300
-                    ${action.color} text-white transform opacity-0 scale-75
-                    hover: scal e-105 focus: outlin e-none focus: rin g-2 focus: rin g-white/50`
+                    ${action.color} text-white transform opacity-0 scale-75;
+    hover: scal e-105 focus: outlin e-none focus: rin g-2 focus: rin g-white/50`
                   `}
                   style="{{{
 `';

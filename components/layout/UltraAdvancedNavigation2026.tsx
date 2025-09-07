@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import {
   Menu,
   X,
@@ -27,7 +26,6 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, 
   BookOpen, MessageCircle 
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -36,8 +34,8 @@ const contactInfo = {
 }
 const serviceCategories = [
   {
-    title: 'AI & Machine Learning 2026'
-    icon: Brain
+    title: "title",
+    icon: Brain;
     color: 'from-purple-600 to-pink-600'
     description: 'Next-generation AI solutions'
     services: [
@@ -253,25 +251,20 @@ const serviceCategories = [
       { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
     ]
   }
-
 ];
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-
       { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Unbreakable encryption', price: '$3,999/month' };
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-algorithm-platform', description: 'Quantum trading algorithms', price: '$12,999/month' };
       { name: 'Quantum Internet Infrastructure', href: '/quantum-internet-infrastructure-platform', description: 'Build the quantum internet', price: '$15,999/month' }
@@ -286,7 +279,6 @@ import { motion, AnimatePresence } from 'framer-motion';
     icon: Microscope,
     color: 'from - teal - 600 to - cyan - 600',
     description: 'Healthcare innovation',
-
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'About Us', href: '/about', icon: Users }
@@ -503,12 +495,10 @@ const UltraAdvancedNavigation2026 = () => {;
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
   }
-
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
-
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -604,7 +594,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
         { name: 'AI Creative', href: '/services?category = ai - creative', description: 'Creative AI and content generation' }
       ];
     }
-
       name: 'Quantum Tech',
       href: '/services?category = quantum',
       icon: Atom,
@@ -621,7 +610,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
       color: 'from - green - 500 to - emerald - 500',
       description: 'Enterprise solutions and infrastructure',
             {/* Logo */}
-
       sub_items: [;
         {
           name: 'Cloud Solutions',
@@ -824,7 +812,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 </Link>;
               </div>;
             </div>;
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -856,7 +843,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
           </div>;
         </div>;
       </nav>;
-
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {isOpen && (;
@@ -870,9 +856,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
             exit={{ opacity: 0 }}
             onClick={() => setIsOpen(false)}
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
-
             onClick={() => setIsOpen(false)}
-
           >
             <motion.div
             onClick={() => setIsOpen(false)}
@@ -949,10 +933,8 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   </Link>;
                 </div>;
               </div>;
-
       <div className="h-20"></div>
     </>
-
       {/* Spacer for fixed navigation */}
   );
 }
@@ -969,7 +951,6 @@ export default UltraAdvancedNavigation2026;    </>);
 }
 export default UltraAdvancedNavigation2026;
 ;
-
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
@@ -978,7 +959,6 @@ export default UltraAdvancedNavigation2026;    </>
   );
 }
 export default UltraAdvancedNavigation2026;
-
 export default UltraAdvancedNavigation2026;
 export default UltraAdvancedNavigation2026
 }

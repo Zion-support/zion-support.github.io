@@ -24,24 +24,17 @@ import { toast } from "sonner";
 export function WebhookManager() {
   const {
     webhooks;
-
     loading  const [newWebhook, setNewWebhook] = useState({
-
-    name: ""
+    name: "name",
     url: ""
-    selectedEvent: "" as WebhookEventType
+    selectedEvent: "" as WebhookEventType;
     eventTypes: [] as WebhookEventType[]
-
     secret: ""  ],
-  
   useEffect(() => {
     fetchWebhooks()
   }, []),
-  
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return,
-    
-
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added");
       return
@@ -51,7 +44,6 @@ export function WebhookManager() {
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
       selectedEvent: "" as WebhookEventType
     })
-
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added"),
       return
@@ -72,12 +64,9 @@ export function WebhookManager() {
     await testWebhook(webhookId, eventType)
   }
   },
-  
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   },
-  
-
   return (
     <div className="space-y-8">
       <Card>
@@ -100,7 +89,7 @@ export function WebhookManager() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;
@@ -243,7 +232,6 @@ export function WebhookManager() {;
                       <div className="flex flex-wrap gap-2 mt-1">
                         {webhook.event_types.map(event => (
                           <ClickableBadge key={event} variant="secondary">
-
                             {eventOptions.find(e => e.value === event)?.label || event}
                       </CardDescription>;
                     </div>;
@@ -273,7 +261,6 @@ export function WebhookManager() {;
                     </div>;
                   </div>;
                 </CardHeader>;
-
                 <CardContent className="py-2">;
                   <div className="flex flex - col space-y-2">;
                     <div>;
@@ -303,7 +290,6 @@ export function WebhookManager() {;
                 </div>;
               </div>;
             </CardContent>;
-
           </Card>)}
       </div>;
     </div>);

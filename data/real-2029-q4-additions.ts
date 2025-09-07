@@ -1,12 +1,12 @@
-      'Intent classification and priority scoring'
+'Intent classification and priority scoring'
       'One-click reply drafts with tone controls'
       'Auto-tagging and routing to teams'
       'PII redaction and allowlist domains'
       'SLA-aware escalations and summaries'
       'Analytics: response time, CSAT impact, volume by topic'
     ]
-    popular: true
-    icon: '✉️'
+    popular: true;
+    icon: "icon",
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300'
     link: 'https://ziontechgroup.com/services/ai-email-triage-copilot'
@@ -32,7 +32,6 @@
       'Auto-tagging and routing to teams',
       'PII redaction and allowlist domains',
       'SLA-aware escalations and summaries',
-
       'Intent classification and priority scoring',
       'One - click reply drafts with tone controls',
       'Auto - tagging and routing to teams',
@@ -41,12 +40,10 @@
     ],
     popular: true,
     icon: '✉️',
-
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / ai - email - triage - copilot',
     market_position:;
-
       'Alternative to basic autoresponders; focuses on triage quality and CRM integration.',
     target_audience: 'Support teams, sales ops, founders',
     trial_days: 14,
@@ -92,12 +89,10 @@
     target_audience: 'Growth teams, product managers, agencies',
     trial_days: 7,
     setup_time: 'Same day',
-
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / mobile - survey - studio',
     market_position:;
-
     category: 'Developer Tools',    useCases: [
       'Landing page surveys'
       'In-product polls'
@@ -144,7 +139,6 @@
     rating: 4.4
     reviews: 16
   }
-
     id: 'kpi - scorecards - studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries',
@@ -153,7 +147,6 @@
     description:;
       'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.',
     features: [;
-
       'Goal trees and KPI ownership',
       'Weekly executive summaries',
       'Alerting on thresholds and trends',
@@ -189,7 +182,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     price: '$99', period: '/month',
 		description: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
     features: [
-
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
 		];
 		popular: true;
@@ -558,10 +550,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		customers: 36;
 ];
 ;
-
 	}
 ];
-
   id: 'ai - email - triage - copilot';
   name: 'AI Email Triage Copilot',
   tagline: 'Auto - categorize, summarize, and draft replies for inbound email';

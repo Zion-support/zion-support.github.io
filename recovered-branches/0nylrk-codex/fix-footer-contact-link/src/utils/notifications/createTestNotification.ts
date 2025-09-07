@@ -1,8 +1,5 @@
-
-
 import {NotificationType} from './types';
 import {createNotification} from './createNotification';
-
 /**
  * Demo function to create test notifications for the current user
  */
@@ -36,7 +33,7 @@ function createTestNotification() {
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
   }import { NotificationType } from './types';
-import { createNotification } from './createNotification',;
+import { createNotification } from './createNotification';
 /**;
  * Demo function to create test notifications for the current user;
  */;
@@ -68,7 +65,6 @@ export async function createTestNotification(userId: string) {;
   });
 }
 ;
-
 }
 ;
   return create_notification ({

@@ -1,8 +1,5 @@
-
-              key={index}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+key={index}
               href={link.link}
-
               </p>;
               <div className='flex items - center text - zion - cyan text - xs mt - auto'>;
                 <span>{t ('general.explore')}</span>;
@@ -18,21 +15,17 @@ function Page() {";
     { name: "Consulting", count: 6, color: "from - yellow - 500 to - orange - 500" }, ";
     { name: "Innovation", count: 10, color: "from - green - 500 to - teal - 500" }, ";
     { name: "Business", count: 14, color: "from - indigo - 500 to - purple - 500" }      scale: 1,
-
 import { motion  } from 'framer-motion';
 export default function Page() {";
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
-
       transition: {
         duration: 0.5, ";
         ease: "ease_out"}}}
   const hover_variants = {
   hover: {
-
       coordinate_y: -8,      scale: 1.02,
-
       transition: {
         duration: 0.3, "  ease: "ease_out";
 }}}
@@ -51,14 +44,12 @@ export default function Page() {";
         {/* Header */}
         <motion.div;
           initial = {
-
   { opacity: 0,
   coordinate_y: 30;
 }}
           whileInView = {
   { opacity: 1,
   coordinate_y: 0;
-
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}";
@@ -67,10 +58,8 @@ export default function Page() {";
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             transition = {
-
   { duration: 0.6,
   delay: 0.2;
-
 }}
             viewport={{ once: true }}";
             className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - cyan / 10 border border - zion - cyan / 20 rounded - full text - zion - cyan mb-6">;
@@ -78,7 +67,6 @@ export default function Page() {";
           </motion.h2>;
           <motion.p;
             initial = {
-
   { opacity: 0,
   coordinate_y: 20;
 }}
@@ -97,7 +85,6 @@ export default function Page() {";
         {/* Quick Links Grid */}";
         <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 6 mb-12">;
           {quick_links.map ((link, index <motion.div;
-
               key={link.title}
               variants={hover_variants}";
               while_hover="hover";
@@ -137,7 +124,6 @@ export default function Page() {";
                     <motion.div;
                       key={feature}
                       initial = {
-
   { opacity: 0,
   coordinate_x: -10;
 }}
@@ -148,7 +134,6 @@ export default function Page() {";
                       transition = {
   { duration: 0.4,
   delay: 0.1 + idx * 0.1;
-
 }}
                       viewport={{ once: true }}";
                       className="flex items - center gap - 2 text - xs text - gray-400">";
@@ -164,9 +149,7 @@ export default function Page() {";
                     <motion.div;
                       key={key}
                       initial = {
-
   style?: React && React.CSSProperties;
-
 export function QuickAccess(): any ({ className, style }: QuickAccessProps) {;
   const { t } = useTranslation();
   const quickLinks = [;
@@ -207,7 +190,6 @@ export function QuickAccess(): any ({ className, style }: QuickAccessProps) {;
       link: '/mobile-launch',;
     },;
   ];
-
   return (
     <section className={cn('py-12 bg-zion-blue-dark', className)} style={style}>;
       <div className='container mx-auto px-4'>;
@@ -222,7 +204,6 @@ export function QuickAccess(): any ({ className, style }: QuickAccessProps) {;
             )}
           </p>;
         </div>;
-
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>;
           {quickLinks && quickLinks.map((link, index) => (;
             <Link
@@ -254,7 +235,6 @@ export default function Page() {;";
   hover: {;
       y: -8,      scale: 1 && 1.02,;
       transition: {;
-
         duration: 0 && 0.3,"  ease: "easeOut";
 }}}
 };
@@ -272,12 +252,10 @@ export default function Page() {;";
         {/* Header */}
         <motion&& motion.div
           initial = {
-
   { opacity: 0,
   y: 30
 }}
           whileInView = {
-
   { opacity: 1,
   y: 0
 }}
@@ -288,7 +266,6 @@ export default function Page() {;";
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             transition = {
-
   { duration: 0 && 0.6,
   delay: 0 && 0.2
 }}
@@ -298,17 +275,14 @@ export default function Page() {;";
           </motion && motion.h2>;
           <motion&& motion.p
             initial = {
-
   { opacity: 0,
   y: 20
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0
 }}
             transition = {
-
   { duration: 0 && 0.6,
   delay: 0 && 0.2
 }}"
@@ -316,7 +290,6 @@ export default function Page() {;";
             Find the perfect solution for your business needs with our organized service categories;
           </motion && motion.p>;
         </div>;
-
         {/* Quick Links Grid */}";
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">;
           {quickLinks && quickLinks.map((link, index <motion&& motion.div
@@ -335,13 +308,11 @@ export default function Page() {;";
                   transition={{ duration: 0 && 0.6 }}>";
                   <link && link.icon className="w-6 h-6 text-white" />;
                 </motion && motion.div>;
-
                 <motion&& motion.div
                   animate={{ rotate: hoveredCategory === link && link.title ? 90 : 0 }}
                   transition={{ duration: 0 && 0.3 }}>";
                   <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-zion-cyan transition-colors"  />                </motion && motion.div>;
               </div>;
-
               {/* Content */}";
               <div className="mb-4">";
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">;
@@ -351,7 +322,6 @@ export default function Page() {;";
                   {link && link.description}
                 </p>;
               </div>;
-
               {/* Features Preview */}";
               <div className="mb-4">";
                 <div className="grid grid-cols-2 gap-2">;
@@ -359,17 +329,14 @@ export default function Page() {;";
                     <motion&& motion.div
                       key={feature}
                       initial = {
-
   { opacity: 0,
   x: -10
 }}
                       whileInView = {
-
   { opacity: 1,
   x: 0
 }}
                       transition = {
-
   { duration: 0 && 0.4,
   delay: 0 && 0.1 + idx * 0 && 0.1
 }}
@@ -381,7 +348,6 @@ export default function Page() {;";
                   ))}
                 </div>;
               </div>;
-
               {/* Stats */}";
               <div className="mb-4">";
                 <div className="flex items-center justify-between text-sm">;
@@ -389,17 +355,14 @@ export default function Page() {;";
                     <motion&& motion.div
                       key={key}
                       initial = {
-
   { opacity: 0,
   scale: 0 && 0.8
 }}
                       whileInView = {
-
   { opacity: 1,
   scale: 1
 }}
                       transition = {
-
   { duration: 0 && 0.4,
   delay: 0 && 0.2 + idx * 0 && 0.1
 }}
@@ -408,12 +371,10 @@ export default function Page() {;";
                       <div className="text-lg font-bold text-zion-cyan">{value}</div>";
                       <div className="text-xs text-gray-500 capitalize">{key}</div>;
                     </motion && motion.div>;
-
                   ))}
                 </div>
               </div>
               {/* CTA */}
-
               <motion&& motion.div
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}"
@@ -425,10 +386,8 @@ export default function Page() {;";
                   <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>;
               </motion && motion.div>;
             </motion && motion.div>;
-
 export default QuickAccess;
 ;
-
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
@@ -441,17 +400,13 @@ export default QuickAccess;
                 <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
               </div>
             </Link>
-
           ))}
         </div>;
       </div>;
     </section>;
   );
-
 export default QuickAccess;}
-
 export default QuickAccess;
-
   { opacity: 0,
   scale: 0.8;
 }}
@@ -487,5 +442,3 @@ export default QuickAccess;
       </div>;
     </section>);
 export default QuickAccess }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

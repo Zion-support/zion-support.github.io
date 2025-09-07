@@ -1,6 +1,4 @@
-
-  title: string,;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+title: string,;
   description: string,;
   images?: string[],;
   category: string,;
@@ -9,9 +7,7 @@
   className?: string,;
   profileType?: 'service' | 'talent';
 }
-
   id,;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   title,;
   description,;
   images,;
@@ -19,16 +15,12 @@
   tags,;
   author,;
   className,;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
             src={images[0]}
             alt={title}
-
         </div>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       )}
       <div className="flex flex-col p-4 flex-grow">
         <div className="mb-2">
@@ -36,14 +28,10 @@
             {category}
           </Badge>
         </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -51,14 +39,10 @@
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
-
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
         )}
-
       </div>;
     </Link>;
   );
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

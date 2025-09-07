@@ -1,5 +1,3 @@
-
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -19,7 +17,6 @@ const CloudArchitectureChat: NextPage = () => {;
       </main>
     </div>
       </Head>;
-
       <main>;
         <h1>CloudArchitectureChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -29,26 +26,20 @@ const CloudArchitectureChat: NextPage = () => {;
   );
 }
 export default CloudArchitectureChat;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-
 const CloudArchitectureChat: NextPage = () => {
   return (
     <div>
       <Head>
-
         <title>CloudArchitectureChat - Zion Tech Solutions</title>
         <title>CloudArchitectureChat - Zion Tech Solutions</title>
         <title>CloudArchitectureChat - Zion Tech Solutions</title>
-
         <title>CloudArchitectureChat - Zion Tech Solutions</title>
-
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -72,5 +63,3 @@ const CloudArchitectureChat: NextPage = () => {
 ;
 export default CloudArchitectureChat;
 ;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

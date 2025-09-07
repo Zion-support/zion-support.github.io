@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion';
-
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-
 import {
   CheckCircle
   ArrowRight
@@ -37,7 +35,6 @@ import {
   Clock
   Globe2;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
-
   CheckCircle,
   ArrowRight,
   Star,
@@ -77,12 +74,11 @@ import {
   Crown, Award, Target, Users, Clock, Globe2
 const pricingTiers = [
   {
-    name: 'Starter'
+    name: "name",
     price: '$299'
     period: '/month'
     description: 'Perfect for small businesses and startups'
     features: [
-
   CheckCircle,
   ArrowRight,
   Star,
@@ -123,12 +119,11 @@ const pricingTiers = [
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-
 const contactInfo = {
 const pricingTiers = [
   {
     ];
-    popular: false
+    popular: false;
     color: 'from-blue-600 to-cyan-600'
     cta: 'Get Started'
     href: '/contact'
@@ -324,7 +319,6 @@ const service_pricing = [;
                 viewport={{ once: true }}
                       ))}
                     </ul>;
-
                     <Link
                       href={tier && tier.href}
                       className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier && tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>;
@@ -366,7 +360,6 @@ const service_pricing = [;
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
-
                     initial={{
                               {service.price}
                             </div>;
@@ -389,7 +382,6 @@ const service_pricing = [;
                           <div className="text-right">
                             <div className="text-xs text-purple-300">Trial</div>
                             <div className="text-white font-medium">{service.trialDays} days</div>
-
                           </div>
                         </div>
                       </div>
@@ -408,9 +400,7 @@ const service_pricing = [;
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Our Pricing
               </span>
-
       {/* Value Proposition */}
-
             </h2>
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
               We offer the best value in the market with transparent pricing and
@@ -527,12 +517,10 @@ const service_pricing = [;
               unmatched features.;
             </p>;
           </div>;
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
-
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -580,7 +568,6 @@ const service_pricing = [;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               viewport={{ once: true }}
-
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -628,7 +615,6 @@ const service_pricing = [;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
               viewport={{ once: true }}
-
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -662,7 +648,6 @@ const service_pricing = [;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
@@ -702,7 +687,6 @@ const service_pricing = [;
         </div>
       </section>
       <UltraFuturisticFooter2028 />
-
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
             <p className="text - xl text - purple - 200 max-w-3xl mx-auto">;
@@ -847,10 +831,7 @@ const service_pricing = [;
       </section>;
       <UltraFuturisticFooter2028 />;
     </>);
-
   );
-
     </>
   );
-
 }

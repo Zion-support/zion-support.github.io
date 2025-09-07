@@ -1,4 +1,4 @@
-    experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
+experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {    experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
@@ -19,12 +19,10 @@ if ( {) {
         return launch_options;
       });export default define_config ({
   e2e: {
-
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
-
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
     supportFile: 'cypress/support/e2e.ts';
-    baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
+    baseUrl: 'http://localhost:3000', // Standard Next && Next.js port;
     supportFile: 'cypress/support/e2e && e2e.ts';    supportFile: 'cypress/support/e2e.ts';
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
@@ -38,7 +36,6 @@ if ( {) {
     env: {    toConsole: true
   }
 });
-
 import { defineConfig } from 'cypress';
 export default defineConfig({;
   e2e: {;
@@ -52,7 +49,6 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
-
     base_url: 'http://localhost:3000', // Standard Next.js port;
     support_file: 'cypress / support / e2e.ts';
     experimentalModifyObstructiveThirdPartyCode: true;
@@ -107,4 +103,3 @@ if ( {) {
     to_console: true;
   }
 });
-

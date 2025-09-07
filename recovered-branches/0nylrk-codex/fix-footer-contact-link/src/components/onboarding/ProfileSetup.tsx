@@ -1,5 +1,3 @@
-
-
 import {useState} from "react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -9,23 +7,21 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters"),
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")}),
-
 type ProfileFormValues = z.infer<typeof profileSchema>,
 interface ProfileSetupProps {
-  onComplete: (data: ProfileFormValues) => void
-  userType: string
+  onComplete: (data: ProfileFormValues) => void;
+    userType: string
 }
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema)
     defaultValues: {
-      displayName: ""
-      bio: ""
+      displayName: "displayName",
+    bio: ""
       headline: ""}})
   const getTypeLabel = () => {      case "talent":;
         return "Talent";
@@ -35,12 +31,10 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         return "User";
     }
   }
-
     switch (userType) {
       case "serviceProvider": return "Service Provider",
     switch (userType) {
       case "serviceProvider": return "Service Provider",
-
       case "talent":
         return "Talent",
       case "client":
@@ -48,11 +42,8 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       default:
         return "User"
     }
-
   },
-
   return (
-
           <FormField
             control={form.control}
             name="displayName"
@@ -79,7 +70,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           Help others get to know you better;
         </p>;
       </div>;
-
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onComplete)} className="space-y-6">;
           <FormField
@@ -143,14 +133,12 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                   />;
                 </FormControl>;
           />;
-
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;          >;
           </Button>;
         </form>;
       </Form>;
-
 }
     </div>);
     </div>;

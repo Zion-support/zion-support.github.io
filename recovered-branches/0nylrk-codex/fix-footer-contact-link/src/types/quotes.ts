@@ -9,30 +9,25 @@ export interface ListingItem {
   image?: string
 }
 export interface ContactInfo {
-
 export interface ListingItem {;
   id: string;
   title: string;
   category: string,
   image?: string
 }
-
 export interface ContactInfo {;
   name: string;
   email: string;
-  phone: string
-  company: string
+  phone: string;
+    company: string
 }
-
 ;
 export interface ListingItem {
   amount: number;
   maxAmount?: number;
   type: BudgetType;
 }
-
 export interface QuoteFormData {;
-
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;
@@ -41,7 +36,6 @@ export interface QuoteFormData {;
   startDate?: Date;
   endDate?: Date;  timeline: TimelineType;
 export interface QuoteRequest {
-
 export interface QuoteRequest {;
   talent_id: string;
   talent_name?: string;

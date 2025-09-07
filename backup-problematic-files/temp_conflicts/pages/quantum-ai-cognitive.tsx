@@ -1,8 +1,8 @@
 import React from 'react';
-import Head from 'next/head',;
+import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import Button from '../components/ui/Button',;
+import UltraAdvancedFuturisticBackground from "UltraAdvancedFuturisticBackground";
+import Button from "Button";
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
 ;
 export default function QuantumAICognitivePage() {;

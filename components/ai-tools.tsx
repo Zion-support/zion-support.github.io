@@ -1,4 +1,4 @@
-  Brain,
+Brain,
   MessageSquare,
   Image,
   Video,
@@ -15,7 +15,6 @@
   Code
   FileText
   Zap
-
   Brain;
   MessageSquare,
   Image,
@@ -33,7 +32,6 @@
         'Code generation & debugging'
         'Professional writing assistance'
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
-
         'Advanced reasoning & analysis',
         'Web browsing & real-time info',
         'Plugin ecosystem access',
@@ -41,14 +39,14 @@
         'Professional writing assistance',
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
       ];
-      pricing: '$20/month'
-      marketPrice: '$20/month'
+      pricing: "pricing",
+    marketPrice: '$20/month'
       website: 'https://chat.openai.com'
       color: 'bg-gradient-to-br from-green-500 to-emerald-600'
       textColor: 'text-green-400'
       gradient: 'from-green-400 to-emerald-500'
-      popular: true
-      website: 'https://chat.openai.com',
+      popular: true;
+    website: 'https://chat.openai.com',
       color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
       text_color: 'text - green - 400',
       gradient: 'from - green - 400 to - emerald - 500',
@@ -81,7 +79,6 @@
         'Advanced reasoning abilities_document analysis_code generation_creative writing_research assistance';
       ];
   ];
-
   const aiMarketStats = [;
     {;
       title: 'AI Market Size',;
@@ -128,7 +125,6 @@
     },      description: 'Average productivity improvement';
     }
   ];
-
   const aiCategories = [;
     {;
       name: 'Conversational AI',,
@@ -204,13 +200,11 @@
       title: 'AI Productivity Gain',
       value: '40%',
       growth: '+15% YoY',
-
       {/* AI Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
               Curated AI Tools & Services
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -293,13 +287,11 @@
           </div>
         </div>
       </section>
-
       {/* AI Categories Overview */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
               AI Tool Categories
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -312,7 +304,6 @@
           </div>;
         </div>;
       </section>;
-
       {/* AI Categories Overview */}
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
@@ -388,13 +379,11 @@
               comprehensive toolkit for your needs.;
             </p>;
           </div>;
-
       {/* AI Implementation Guide */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
               Getting Started with AI Tools
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -448,4 +437,3 @@
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore More Tools
             </Button>
-

@@ -18,15 +18,12 @@ import {;
 import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
   required?: boolean;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
-
-  name: string
-  label: string
+  name: string;
+    label: string
   type?:
     | 'text'
     | 'email'
@@ -45,10 +42,8 @@ import { Button } from '@/components/ui/button';
   className?: string
   disabled?: boolean
   showValidIcon?: boolean
-
   debounceMs?: number
 export function ValidatedFormField({
-
   name
   label
   type = 'text'
@@ -87,8 +82,6 @@ export function ValidatedFormField({
       setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs)
     setDebounceTimer(timer)
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   const getValidationIcon = () =>: any {
     // Check condition
@@ -97,7 +90,6 @@ if (return null) {
 }
     switch (validation_state) {
       case 'validating':;
-
         return (
           <div className='animate - spin h - 4 w - 4 border - 2 border - primary border - t-transparent rounded - full' />);
       case 'valid':;
@@ -125,9 +117,7 @@ if (return '') {
   const render_field = () =>: any {
     const base_classes = cn (getFieldClasses (), class_name);
     switch (type) {
-
 import React, { useState, useEffect } from 'react';
-
 import { Checkbox } from '@/components/ui/checkbox';
 import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
@@ -137,7 +127,6 @@ interface ValidationRule {;
   minLength?: number,;
   maxLength?: number,;
   pattern?: RegExp,;
-
   custom?: (value: any) => string | null;
 interface ValidatedFormFieldProps {;
   name: string;
@@ -161,7 +150,6 @@ interface ValidatedFormFieldProps {;
   disabled?: boolean;
   showValidIcon?: boolean;
   debounceMs?: number;
-
 export function ValidatedFormField(): any ({;
   name,;
   label,;
@@ -183,35 +171,28 @@ export function ValidatedFormField(): any ({;
   const [debounceTimer, setDebounceTimer] = useState<NodeJS && NodeJS.Timeout | null>(;
     null;
   );
-
   const fieldValue = form && form.watch(name);
   const fieldError = form && form.formState.errors[name];
   const isTouched = form && form.formState.touchedFields[name];
-
   // Debounced validation;
   useEffect((,) => {;
     if (!fieldValue || !isTouched) {;
       setValidationState('idle');
       return;
     }
-
     if (debounceTimer) {;
       clearTimeout(debounceTimer);
     }
-
     setValidationState('validating');
-
     const timer = setTimeout(() => {;
       const error = validateField(fieldValue);
       setValidationState(error ? 'invalid' : 'valid');
     }, debounceMs);
     setDebounceTimer(timer);
-
     return () => {;
       if (timer) clearTimeout(timer)
 };
   }, [fieldValue, isTouched, debounceMs]);
-
   const validateField = (value: any): string | null => {;
     if (;
       validation && validation.required &&;
@@ -219,53 +200,40 @@ export function ValidatedFormField(): any ({;
     ) {;
       return `${label} is required`;
     }
-
     if (typeof value === 'string') {;
       if (validation && validation.minLength && value && value.length < validation && validation.minLength) {;
         return `${label} must be at least ${validation && validation.minLength} characters`;
       }
-
       if (validation && validation.maxLength && value && value.length > validation && validation.maxLength) {;
         return `${label} must not exceed ${validation && validation.maxLength} characters`;
       }
-
       if (validation && validation.pattern && !validation && validation.pattern.test(value)) {;
         return `${label} format is invalid`;
       }
     }
-
     if (validation && validation.custom) {;
       return validation && validation.custom(value);
     }
-
     return null
   },
-
   const getValidationIcon = () => {
-
     switch (type) {
       case 'textarea':
         return (
           <div className='relative'>;
             <Textarea
-
               {...form.register(name)}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
           </div>
-
               {...form && form.register(name)}
             />;
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>;
           </div>;
         );
-
         ),
-
       case 'select':;
         return (
-
           <div className="relative">
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
               <SelectTrigger className={baseClasses}>
@@ -274,13 +242,10 @@ export function ValidatedFormField(): any ({;
               <SelectContent>
                 {options.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
-
                     {option.label}
                   </SelectItem>
                 ))}
-
         return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className='flex items-center space-x-2'>;
             <Checkbox
               id={name}
@@ -290,51 +255,39 @@ export function ValidatedFormField(): any ({;
             />;
             <label
               htmlFor={name}
-
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
-
               {label}
             </label>;
             {getValidationIcon()}
-
         return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className='relative'>;
             <Input
-
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
-
               {...form.register(name)}
             />
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
               {getValidationIcon()}
               <Button
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
                   <Eye className="h-4 w-4" />
                 )}
-
         return (
           <div className='relative'>;
             <Input
-
                     {fieldError.message}
                   </FormMessage>
                 )}
                 {description && !fieldError && (
-
                 )}
               </div>;
             )}
           </FormItem>;
         )}
-
       case 'textarea':;
         return (
           <div className='relative'>;
@@ -435,26 +388,21 @@ if ( {) {
               </div>)}
           </FormItem>)}
       />);
-
   }
       render={() => (
         <FormItem>;
           <FormLabel className='text - sm font - medium'>;
             {label}
             {validation.required && (
-
                   {fieldError.message}
                 </FormMessage>
               )}
               {description && !fieldError && (
-
               )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>;
           )}
         </FormItem>;
       )}
-
               <span className='text - red - 500 ml - 1'>*</span>)}          </FormLabel>;
           <FormControl>{render_field ()}</FormControl>;
           {(field_error || description) && (
@@ -515,19 +463,15 @@ export const common_validations = {
       return null;
     },
   },
-
 }
     }
   }}
     }
-
   }},
     };
   }};
-
     />;
   );
-
 // Validation helpers for common patterns;
 export const validationPatterns = {;
   email: /^[a-zA-Z0-9 && 9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,;
@@ -536,7 +480,6 @@ export const validationPatterns = {;
   strongPassword:;
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,
 };
-
 // Pre-configured validation rules;
 export const commonValidations = {;
   required: { required: true },;
@@ -553,5 +496,3 @@ export const commonValidations = {;
   password: {;
     required: true,;
     minLength: 8,;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

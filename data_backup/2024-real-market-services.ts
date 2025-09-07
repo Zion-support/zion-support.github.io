@@ -562,7 +562,7 @@ export const "realMarketServices": RealMarketService[] = [// AI-Powered Business
   Comprehensive marketing automation platform with AI-powered personalization, comprehensive analytics, and automated campaign management. Includes mobile apps and extensive integrations.',
     "launchDate": '2024-02-10,
     "customers": 2300,
-    "rating": 4.7
+    "rating": 4.7;
     reviews: 1250
   },
   // Legal Document Automation

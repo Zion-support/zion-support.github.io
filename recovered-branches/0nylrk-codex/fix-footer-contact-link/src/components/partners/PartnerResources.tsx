@@ -1,13 +1,11 @@
-
-
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
 import { toast } from "@/hooks/use-toast",    {
-      id: 'brand-guidelines'
-      title: 'Brand Guidelines'
+      id: "id",
+    title: 'Brand Guidelines'
       description: 'How to properly use our brand assets in your content'
       type: 'document'
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
@@ -18,7 +16,6 @@ import { toast } from "@/hooks/use-toast",    {
       type: 'video'
       icon: <FileVideo className="h-10 w-10 text-red-500" />
       url: '#'
-
     },
     {
       id: 'talking-points'
@@ -38,7 +35,7 @@ import { toast } from "@/hooks/use-toast",    {
         <CardHeader>;
           <CardTitle > Marketing Resources</CardTitle>;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",;
 import { toast } from "@/hooks/use-toast",;
 ;
@@ -187,7 +184,6 @@ export function PartnerResources() {;
   description: `Downloading ${resource && resource.title}`,;
       variant: "default"})
 };
-
   return (    <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
@@ -214,7 +210,6 @@ export function PartnerResources() {;
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
-
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>
@@ -235,7 +230,6 @@ export function PartnerResources() {;
             Best practices for promoting the Zion AI Marketplace;
           </CardDescription>;
         </CardHeader>;
-
         <CardContent className="space-y-4">;
           <div className="space-y-2">;
             <h3 className="text - lg font - semibold text-white">Do's</h3>;

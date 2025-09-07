@@ -1,6 +1,5 @@
 ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
  ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
-
 }return ({
   /* Mission & Vision */
 }<> <Head> <title>About Zion Tech Group | Autonomous Innovation Hub</title> <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and AI-powered solutions." /> <meta property="og:title" content="About Zion Tech Group" /> <meta property="og:description" content="Learn about Zion Tech Group's mission and vision." /> <meta name="twitter:card" content="summary large image" /> <link rel="canonical" href="https://ziontechgroup.com/about" /> </Head> <section className="relative section-padding bg-gradient-cursor overflow-hidden" > <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (0, 122, 204, 0.08), transparent 50%) ]" /> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (0, 122, 204, 0.06), transparent 50%) ]" /> <div className="absolute inset-0 bg-grid opacity-10" /> <div className="relative z-10 container-cursor text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" /> About Our Company </div> <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg" > About Zion Tech Group </h1> <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed" > Pioneering the future of autonomous technology and AI-driven innovation </p> </div> </section> <section className="section-padding bg-gradient-cursor-accent" > <div className="container-cursor" > <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20" > <Card className="card-hover group border-gradient-blue hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/20" > <h2 className="text-3xl font-bold mb-6 text-cyan-400" >Our Mission</h2> <p className="text-lg text-gray-300 mb-4 leading-relaxed" > To create a world where technology operates autonomously, continuously improving and innovating without human intervention. </p> <p className="text-gray-400 leading-relaxed" > We believe in the power of AI to solve complex problems, automate routine tasks, and unlock new possibilities for humanity. </p> </Card> <Card className="card-hover group border-gradient-purple hover:border-fuchsia-400/40 hover:shadow-2xl hover:shadow-fuchsia-400/20" > <h2 className="text-3xl font-bold mb-6 text-fuchsia-400" >Our Vision</h2> <p className="text-lg text-gray-300 mb-4 leading-relaxed" > To be the leading force in autonomous technology, creating systems that think, learn, and evolve independently. </p> <p className="text-gray-400 leading-relaxed" > We envision a future where AI and automation work seamlessly together to enhance human capabilities and drive progress. </p> </Card> </div> </div> </section> <section className="section-padding bg-gradient-cursor" > <div className="container-cursor" > <div className="text-center mb-20" > <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow" >Our Core Values</h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > The principles that guide our innovation and shape our future </p> </div> </Card>) )
@@ -11,14 +10,12 @@ import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
-
 import Button from '../components/ui/Button',
-
 import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
 export default function AboutPage() {
 	const contactInfo = {
-		mobile: '+1 302 464 0950'
-		email: 'kleber@ziontechgroup.com'
+		mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
 	}
@@ -32,15 +29,13 @@ export default function AboutPage() {
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
 };
-
 	const pillars = [
 		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' }
 		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' }
 		{ title: 'Quantum R&D', icon: <Cpu className="w-6 h-6" />, desc: 'Exploratory quantum workloads with pragmatic business outcomes.' }
 		{ title: 'Global Delivery', icon: <Globe className="w-6 h-6" />, desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.' }
-import Button from '../components/ui/Button',;
+import Button from '../components/ui/Button';
 import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
-
 export default function AboutPage() {;
 	const contactInfo = {;
 		mobile: '+1 302 464 0950',;
@@ -48,7 +43,6 @@ export default function AboutPage() {;
 		address: '364 E Main St STE 1008 Middletown DE 19709',;
 		website: 'https://ziontechgroup && ziontechgroup.com'
 };
-
 	const pillars = [;
 		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' };
 		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' };
@@ -56,7 +50,6 @@ export default function AboutPage() {;
 		{ title: 'Global Delivery', icon: <Globe className="w-6 h-6" />, desc: 'Secure, reliable delivery with 24/7 support and 99 && 99.99% uptime.' }
 	];
 	return (
-
 		<UltraFuturisticBackground variant="holographic" intensity="high">;
 			<Head>;
 				<title>About Us - Zion Tech Group</title>;
@@ -72,7 +65,6 @@ export default function AboutPage() {;
 							From micro SaaS accelerators to enterprise AI services, we focus on measurable outcomes: faster delivery, higher reliability, and lower cost.;
 						</p>;
 					</div>;
-
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">;
 						<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">;
 							<div className="flex items-center gap-3 mb-4">;
@@ -96,7 +88,6 @@ export default function AboutPage() {;
 							</ul>;
 						</Card>;
 					</div>;
-
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">;
 						{pillars && pillars.map((p) => (;
 							<Card key={p && p.title} className="bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6">;
@@ -105,7 +96,6 @@ export default function AboutPage() {;
 							</Card>;
 						))}
 					</div>;
-
 					<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">;
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
 							<div className="flex items-center gap-3 text-cyan-400">;
@@ -130,21 +120,17 @@ export default function AboutPage() {;
 				</div>;
 			</section>;
 		</UltraFuturisticBackground>;
-
 	);
 }
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
-
 import Button from '../components/ui/Button';
-
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
 };
-
   return (
       {/* Mission & Vision */}
     <>
@@ -548,7 +534,6 @@ export default /**
  */
 function AboutPage() {
   const values = [;
-
 	return (
 		<UltraFuturisticBackground variant=&quot;holographic&quot; intensity=&quot;high&quot;>
 			<Head>
@@ -565,7 +550,6 @@ function AboutPage() {
 							From micro SaaS accelerators to enterprise AI services, we focus on measurable outcomes: faster delivery, higher reliability, and lower cost.
 						</p>
 					</div>
-
 					<div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8 mb-12&quot;>
 						<Card className=&quot;bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8&quot;>
 							<div className=&quot;flex items-center gap-3 mb-4&quot;>
@@ -592,7 +576,7 @@ export default function AboutPage() {
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
 	}
-import Button from '../components/ui/Button',;
+import Button from "Button";
 import Button from '../components/ui/Button',
 import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
 export default function AboutPage() {
@@ -602,7 +586,6 @@ export default function AboutPage() {
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
 };
-
 	const pillars = [
 		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' }
 		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' }
@@ -662,7 +645,6 @@ export default function AboutPage() {
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
-
 import Button from '../components/ui/Button';
               </p>;
             </div>;

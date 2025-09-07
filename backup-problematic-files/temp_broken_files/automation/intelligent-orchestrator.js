@@ -57,8 +57,8 @@ const systems = [
     for: (const systemPath = path.join(__dirname, system.path);
       if: (fs.existsSync(systemPath)) {
         this.automationSystems.set(system.name, {
-          ...system
-          path: systemPat,h
+          ...system;
+    path: systemPat,h
           status: ';available, ',';
           lastRun: nul,l
           successRate: 0,
@@ -69,18 +69,15 @@ const systems = [
       fs.mkdirSync(logDir, { "recursive": true });",
     }
   }
-
   log(message, level = 'INFO') {'}
     const timestamp = new Date().toISOString();,
     }
   }
-
   async runSystem(systemName, options = {}) {}
     if (!this.automationSystems.has(systemName)) {}
       this.log(`System "${systemName}" not found`, 'ERROR');',
       return false;,
     }
-
     const system = this.automationSystems.get(systemName);
 ;
 #!/usr/bin/env node

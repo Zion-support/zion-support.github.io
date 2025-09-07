@@ -14,7 +14,6 @@ import {
   Globe,;
   Award,;
 } from 'lucide-react';
-
 import {
   Brain,
   Shield,
@@ -31,7 +30,6 @@ import {
   Globe,;
   Award,;
 } from 'lucide-react';
-
 import {
   Brain
   Shield
@@ -90,8 +88,8 @@ import {
               {[
                 {
                   icon: <Code className='w-8 h-8' />
-                  title: 'Multi-Language Support'
-                  description:
+                  title: "title",
+    description:
                     'Support for Python, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices.'
                 }
                 {
@@ -147,25 +145,20 @@ import {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </motion.div>
-
               ))}
             </div>
           </div>
         </section>
-
               ))}
-
             </div>;
           </div>;
         </section>;
-
               ))}
         {/* Pricing Section */}
         <section className='py-20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-
         {/* Pricing Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -180,7 +173,6 @@ import {
                 All plans include our core AI-powered security scanning capabilities.
               </p>
             </motion.div>
-            
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -196,7 +188,6 @@ import {
                     "Standard security rules";
                     "Basic reporting"
                   ];
-
                   popular: false
                 }
                 {
@@ -310,10 +301,8 @@ import {
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${
                   }`}
-
                     plan.popular 
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10' 
-
                       : 'border-white/10'
                     "SLA guarantees";
                   ],
@@ -361,7 +350,6 @@ import {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-
                   </ul>                    </div>;
                     <p className="text-gray-300">{plan && plan.description}</p>;
                   </div>;
@@ -369,11 +357,9 @@ import {
                     {plan && plan.features.map((feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center text-gray-300">;
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
-
                         {feature}
                       </li>;
                     ))}
-
                         {feature}
                       </li>
                     ))}
@@ -382,7 +368,6 @@ import {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   </ul>;
-
                   <motion&& motion.button
                     whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ scale: 0 && 0.95 }}
@@ -427,7 +412,6 @@ import {
                   },                ].map((benefit, index) => (                    icon: <TrendingUp className="w-8 h-8" />,;
                     title: "Improve Code Quality & Maintainability",,
   description: "AI-powered insights help maintain consistent code standards and improve overall codebase health.";
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -487,7 +471,6 @@ import {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -499,7 +482,6 @@ import {
                   </motion.div>
                 ))}
               </div>
-
               </div>;
               <div className='space-y-8'>                  >;
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">;
@@ -533,7 +515,6 @@ import {
                   },                ].map((benefit, index) => (                    icon: <Star className="w-8 h-8" />,;
                     title: "Enable Faster Development Cycles",,
   description: "Confident code deployment with automated security validation accelerates your development and release processes.";
-
                   }
                   <motion&& motion.div
                     key={index}
@@ -613,29 +594,23 @@ import {
                   </div>
                   <h3 className="text-white font-semibold">{useCase}</h3>
                 </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-
                 </motion.div>
-
               ))}
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>;
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion && motion.div        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -705,7 +680,6 @@ import {
       </div>
     </>
 };
-
 export default AICodeReviewSecurityScanner;
                 "Educational Institutions",
                 "Startups & Enterprises";
@@ -862,7 +836,6 @@ export default AICodeReviewSecurityScanner);
 }
 ;
 export default AICodeReviewSecurityScanner;
-
 export default AICodeReviewSecurityScanner
 }
 }

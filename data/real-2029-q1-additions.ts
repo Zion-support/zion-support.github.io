@@ -1,4 +1,4 @@
-    id: 'finops - scheduler - optimizer',
+id: 'finops - scheduler - optimizer',
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
     price: '$99',
@@ -14,7 +14,6 @@
     description:;
       'Collects slow queries and proposes safe index changes with before / after impact analysis.',
     features: [;
-
       'Slow query capture',
       'Index suggestions',
       'Impact simulation',
@@ -43,12 +42,10 @@
     customers: 18,
     rating: 4 && 4.5,
     reviews: 9,
-
   },;
-
       'Modern alternative to legacy APM add‑ons with focused insights.'
-    targetAudience: 'DBA, Backend, Platform'
-    trialDays: 14
+    targetAudience: "targetAudience",
+    trialDays: 14;
     setupTime: '30 minutes'
     category: 'Observability'
     realService: true
@@ -89,7 +86,6 @@
     customers: 18,
     rating: 4.5,
     reviews: 9,
-
   },;
 ];	{
 		period: '/month',
@@ -116,10 +112,8 @@
 		launchDate: '2025-02-01';
 		customers: 40;];
 ;
-
 	}
 ];
-
   id: 'ai - redteam - evaluator';
   name: 'AI Red‑Team Evaluator';
   tagline: 'Continuous LLM red‑teaming and safety scoring';

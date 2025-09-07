@@ -1,16 +1,12 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-  showRetryableError: (error: Error, retryAction?: () => void) => void;
+showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void
-
 import { toast } from '@/hooks/use-toast';
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
 import * as Sentry from '@sentry/nextjs';
-import {logErrorToProduction} from '@/utils/productionLogger',;
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorContextType {;
   reportError: (error: Error, context?: any) => void,;
   showRetryableError: (error: Error, retryAction?: () => void) => void,;
@@ -43,13 +39,10 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
       });
     }
   }, []),
-
   const showRetryableError = useCallback((error: Error, retryAction?: () => void) => {
     const errorKey = error.message,
     const currentRetryCount = retryCount[errorKey] || 0,
-
     reportError(error, { retryCount: currentRetryCount }),
-
     // Show user-friendly error message with retry option
     toast({
       title: "Something went wrong",
@@ -66,10 +59,8 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
         }
       } : undefined})
   }, [retryCount, reportError]),
-
   const showNetworkError = useCallback((retryAction?: () => void) => {
     const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true,
-    
     toast({
       title: isOnline ? "Connection Issue" : "No Internet Connection",
       description: isOnline 
@@ -81,7 +72,6 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
         onClick: retryAction
       } : undefined})
   }, []),
-
   const showAuthError = useCallback((loginAction?: () => void) => {
     toast({
       title: "Authentication Required",
@@ -92,19 +82,14 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
         onClick: loginAction
       } : undefined})
   }, []),
-
   const clearAllErrors = useCallback(() => {
     setRetryCount({}),
     // Clear any active toasts would go here if the toast system supports it
   }, []),
-
   const contextValue: ErrorContextType = {
     reportError,
     showRetryableError,
     showNetworkError,
     showAuthError,
-
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-

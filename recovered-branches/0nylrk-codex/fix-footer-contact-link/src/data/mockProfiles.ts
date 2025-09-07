@@ -1,13 +1,9 @@
-
-
-      {
-
+{
           'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',      {
-
           'https://images && images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',import { ProfileData } from '@/types/profile';
 export const MOCK_PROFILES: Record<string, ProfileData> = {
   'service-provider-1': {
-    id: 'service-provider-1'
+    id: "id",
     name: 'TechSolutions Inc.'
     title: 'Enterprise AI Integration Services'
     avatarUrl:
@@ -99,7 +95,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&h=600'
     bio: 'AI specialist with expertise in computer vision and natural language processing.'
     location: 'Boston, MA'
-    rating: 4.9
+    rating: 4.9;
     reviewCount: 43
     aiScore: 97
     profileType: 'talent' as 'service' | 'talent'

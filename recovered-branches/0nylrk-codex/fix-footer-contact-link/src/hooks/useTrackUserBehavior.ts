@@ -1,12 +1,10 @@
-
 import {useRef, useEffect} from 'react';
 import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {;
-
         trackEvent('button_click', {
           component: componentName;
-          elementId: buttonId
-          text: buttonText
+          elementId: buttonId;
+    text: buttonText
         })
       }
     }
@@ -51,6 +49,5 @@ export function useTrackUserBehavior(componentName: string) {;
     }
   }, [trackEvent, componentName]);
   return componentRef;
-
 }
 ;}

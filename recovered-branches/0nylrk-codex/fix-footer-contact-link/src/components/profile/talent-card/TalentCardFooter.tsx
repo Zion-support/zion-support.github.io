@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -18,10 +16,8 @@ import { useAuthStatus } from "@/hooks/talent",
 import { UserProfile } from "@/types/auth";
 import { useNavigate } from "react-router-dom";
 interface TalentCardFooterProps {
-
-  profile: TalentProfile
-  onViewProfile: (id: string) => void
-
+  profile: TalentProfile;
+    onViewProfile: (id: string) => void
   onRequestHire?: (profile: TalentProfile) => void
 }
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
@@ -32,18 +28,16 @@ interface TalentCardFooterProps {
   onViewProfile: (id: string) => void,
   onRequestHire?: (profile: TalentProfile) => void
 }
-
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
-
   const navigate = useNavigate();
   // Create a compatible UserProfile from UserDetails
   const userProfile: UserProfile = {
     id: userDetails?.id
     displayName: userDetails?.name |''
     email: userDetails?.email |''
-    userType: ''
+    userType: "userType",
     profileComplete: false
     createdAt: new Date().toISOString()
     updatedAt: new Date().toISOString()
@@ -76,7 +70,7 @@ interface TalentCardFooterProps {
   onRequestHire?: (profile: TalentProfile) => void
   };
 import React, { useState } from "react";
-import { Star } from "lucide-react",;
+import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button",;
 import { ExternalLink } from "lucide-react",;
 import { TalentProfile } from "@/types/talent",;
@@ -89,17 +83,12 @@ interface TalentCardFooterProps {;
   onViewProfile: (id: string) => void,;
   onRequestHire?: (profile: TalentProfile) => void;
 }
-
 export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
-
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
-
     } else {
       // Open hire modal directly if no handler provided;
-
   }
-
   return (
     <>;
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">;
@@ -119,11 +108,9 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
           >
             Hire
           </Button>
-
           <Button 
             variant="outline" 
             size="sm" 
-
             onClick={handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >

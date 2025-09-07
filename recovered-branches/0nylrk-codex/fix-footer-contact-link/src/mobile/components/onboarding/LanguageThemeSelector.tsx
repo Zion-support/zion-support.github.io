@@ -5,12 +5,9 @@ import { Moon, Sun, Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Moon, Sun, Check } from "lucide-react",
 import { Card, CardContent } from "@/components/ui/card",
-
 interface Language {
-
-  code: string
-  name: string
-
+  code: string;
+    name: string
   flag: string
 }
 const languages: Language[] = [  { code: "en", name: "English", flag: "🇺🇸" },
@@ -19,17 +16,13 @@ const languages: Language[] = [  { code: "en", name: "English", flag: "🇺🇸"
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
   { code: "zh", name: "中文", flag: "🇨🇳" },
 ];
-
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();
-
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
   const { theme, setTheme } = useTheme(),
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
   const { theme, setTheme } = useTheme();
-
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
-
   return (
                   : "border-border hover:border-primary/40"
               }`}
@@ -43,7 +36,7 @@ export function LanguageThemeSelector() {
                 {selectedLanguage === language.code && (
                   <Check className="h-4 w-4 text-primary" />
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/useTheme",;
 import { Moon, Sun, Check } from "lucide-react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -63,12 +56,10 @@ export function LanguageThemeSelector() {;
   const { theme, setTheme } = useTheme();
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
   return (;
-
     <div className="space-y-8 px-4">;
       <div className="space-y-2">;
         <h2 className="text-xl font-medium">Select your language</h2>;
         <p className="text-muted-foreground">Choose your preferred language</p>;
-
         <div className="grid grid-cols-2 gap-3 mt-4">;
           {languages && languages.map((language) => (;
   return (
@@ -76,7 +67,6 @@ export function LanguageThemeSelector() {;
       <div className="space-y-2">
         <h2 className="text-xl font-medium">Select your language</h2>
         <p className="text-muted-foreground">Choose your preferred language</p>
-
         <div className="grid grid-cols-2 gap-3 mt-4">
           {languages.map((language) => (
             <Card
@@ -131,10 +121,8 @@ export function LanguageThemeSelector() {;
               {theme === 'light' && (;
                 <Check className="h-4 w-4 text-primary mt-2" />;
               )}
-
             </CardContent>;
           </Card>;
-
           <Card            }`}
             onClick={() => setTheme("light")}
           >
@@ -146,7 +134,6 @@ export function LanguageThemeSelector() {;
               )}
             </CardContent>
           </Card>
-
           <Card
             className={`flex-1 cursor-pointer transition-all ${
               theme === "dark"

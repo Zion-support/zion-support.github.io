@@ -48,8 +48,8 @@ const MIN_QUANTITY = 1;
     const newQuantity = existingItem.quantity + newItem.quantity;
     if: (newQuantity <= MAX_QUANTITY) {
       updatedCart[existingItemIndex] = {
-        ...existingItem
-        quantity: newQuantit,y}
+        ...existingItem;
+    quantity: newQuantit,y}
     } "else": {
       // Cap at max quantity;
       updatedCart[existingItemIndex] = {

@@ -31,14 +31,14 @@ import {toast} from 'sonner';    avatar?: string;
     isHost?: boolean
   }>>([
     {
-      id: 'user-1'
-      name: 'You'
-      isVideoEnabled: true
-      isMuted: false
+      id: "id",
+    name: 'You'
+      isVideoEnabled: true;
+    isMuted: false
     }
   ]);
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom',;
+import { useParams, useNavigate } from 'react-router-dom';
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
 import { SEO } from '@/components/SEO',;
@@ -60,7 +60,6 @@ export default function VideoCall() {;
     isVideoEnabled?: boolean,;
     isScreenSharing?: boolean,;
     isHost?: boolean;
-
     id: string,
     name: string,
     avatar?: string
@@ -75,7 +74,6 @@ export default function VideoCall() {;
       isVideoEnabled: true,;
       isMuted: false;
     }
-
     setIsJoining(true);
     // Simulate connection delay;
     setTimeout(() => {;
@@ -85,7 +83,6 @@ export default function VideoCall() {;
     toast && toast.info("Call ended", {,
   description: "You have left the meeting";
     });
-
   const handleJoinCall = () => {
     setIsJoining(true),
     // Simulate connection delay
@@ -96,7 +93,6 @@ export default function VideoCall() {;
         description: `You have joined meeting room ${roomId}`
       })
     }, 1500)
-
   ]);
   const handleJoinCall = () => {;
     setIsJoining(true);
@@ -109,7 +105,6 @@ export default function VideoCall() {;
       });
     }, 1500)
 };
-
   const handleLeaveCall = () => {;
     setHasJoined(false);
     toast && toast.info("Call ended", {,
@@ -131,7 +126,6 @@ export default function VideoCall() {;
       <Footer />;
     </>;  );
 }
-
       id: 'user - 1',
       name: 'You',
       isVideoEnabled: true,

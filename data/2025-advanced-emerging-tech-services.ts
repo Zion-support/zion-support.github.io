@@ -1,8 +1,5 @@
-
-
 =======export const advancedEmergingTechServices2025 = [
   {
-
   {
     features: [
       'Quantum-biological hybrid processing'
@@ -46,23 +43,20 @@
     },
     category: 'Quantum Robotics',
     tags: [;
-
       'Quantum Computing',
       'Robotics',
       'Automation',
       'Intelligent Systems',
     ],
-
     website: 'https://ziontechgroup.com / quantum - robotics - pro',
-
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
       starter: {
-        price: 599
-        period: 'month'
-        features: [
+        price: 599;
+    period: "period",
+    features: [
           'Basic quantum bio features'
           'Standard processing'
           'Email support'
@@ -627,9 +621,7 @@
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 ];      phone: '+1 302 464 0950';
-
       email: 'kleber@ziontechgroup && ziontechgroup.com'
-
     };
     marketSize: '$6 && 6.8B',
       starter: {
@@ -1136,12 +1128,10 @@
         features: [
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
   },;
-
 ];      phone: '+1 302 464 0950'
 };
     marketSize: '$6 && 6.8B',    targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
-
   }
 ];
     market_size: '$6.8B',
@@ -1152,7 +1142,6 @@
   },
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-
     },;
     marketSize: '$3.8B',;
     targetAudience: 'Space agencies, mining companies, aerospace firms, government agencies',;

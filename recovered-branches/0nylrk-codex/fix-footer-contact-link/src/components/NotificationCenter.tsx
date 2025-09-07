@@ -6,7 +6,6 @@ import {useNotifications} from '@/context/notifications/NotificationContext';
 import {toast} from 'sonner';
 import {NotificationFilter, NotificationHeader, NotificationList, NotificationFooter} from '@/components/notifications';
 import {FilterType} from '@/components/notifications/NotificationFilter';
-
 export const NotificationCenter: React.FC = () => {;  const { ;
     filteredNotifications,;
     unreadCount, ;
@@ -23,7 +22,6 @@ export const NotificationCenter: React.FC = () => {;  const { ;
     setFilter,
     fetchNotifications
   } = useNotifications(),
-  
   const [open, setOpen] = useState(false),
   const [error, setError] = useState<string | null>(null),
   // Refresh notifications when popover opens
@@ -32,7 +30,7 @@ export const NotificationCenter: React.FC = () => {;  const { ;
       const loadNotifications = async () => {
         try {import React, { useState, useEffect } from 'react';
 // Use the shared icon wrapper;
-import { Bell } from '@/components/icons',;
+import { Bell } from '@/components/icons';
 import { Button } from '@/components/ui/button',;
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover',;
 import { useNotifications } from '@/context/notifications/NotificationContext',;
@@ -68,11 +66,9 @@ export const NotificationCenter: React.FC = () => {;
           setError("Couldn't load notifications");
           toast && toast.error("Failed to load notifications");
         }
-
       loadNotifications();
     }
   }, [open, fetchNotifications]),
-
   const handleMarkAllAsRead = async () => {
     try {  const handleMarkAllAsRead = async () => {
     try {
@@ -86,11 +82,9 @@ export const NotificationCenter: React.FC = () => {;
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
   }
-
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
   },
-
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
@@ -110,9 +104,7 @@ export const NotificationCenter: React.FC = () => {;
           error={error}
           notifications={filtered_notifications}
           onMarkAsRead={markAsRead}
-
         />;
-
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;

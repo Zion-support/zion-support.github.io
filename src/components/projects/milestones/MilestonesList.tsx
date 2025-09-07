@@ -1,19 +1,14 @@
 if (isLoading) {
     return (
-
         ))}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </div>
     )
   }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
         icon = {<span className="text-3xl">📊</span>,}
         title="No Milestones Yet"
-
         description={isClient ? 
           "Break down the project into manageable milestones to track progress and payments." : 
           "No milestones have been created for this project yet."}
@@ -23,9 +18,7 @@ if (isLoading) {
             onClick: () => setShowAddForm(true)
           } : undefined
         }
-
   }
-
   if (milestones && milestones.length === 0 && !showAddForm) {;
     return (
       <EmptyState
@@ -41,20 +34,15 @@ if (isLoading) {
           } : undefined;
         }
   return (
-
       )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
-
       {showAddForm && (;
         <Card>;
           <CardContent className="pt-6">;
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
-
             <AddMilestoneForm
             <AddMilestoneForm 
               onSubmit = {handleSubmit,}
@@ -64,10 +52,8 @@ if (isLoading) {
           </CardContent>
         </Card>
       )}
-
       <div className="space-y-4">;
         {milestones && milestones.map((milestone,) => (;
-
           <MilestoneCard
             key = {milestone.id,}
             id = {milestone.id,}
@@ -81,12 +67,10 @@ if (isLoading) {
             onReject = {onReject,}
           />
         ))}
-
       </div>;
     </div>;
   )
 };
-
   // Check condition
 if ( {) {
   $2
@@ -160,5 +144,4 @@ if ( {) {
     </div>);
 }
 ";
-
             <AddMilestoneForm

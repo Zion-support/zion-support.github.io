@@ -1,25 +1,19 @@
-
-    // Here you would save the notes to the database
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+// Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
-
       title: 'Notes saved',
       description: 'Your notes have been saved',
-
     })
     setShowNotes(false)
   }
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal
     toast({
-      title: 'Hiring process initiated'
-      description: 'Offer has been sent to the talent.'
+      title: "title",
+    description: 'Offer has been sent to the talent.'
     })
   }
-
 import { useState } from 'react';
-
   const candidateName = application.talent_profile?.full_name || 'Candidate'
   return (
     <>
@@ -28,13 +22,11 @@ import { useState } from 'react';
           <Card
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
-
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
     setShowNotes(false)
   },
-  
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal
     toast({
@@ -42,13 +34,10 @@ import { useState } from 'react';
       description: "Offer has been sent to the talent."
     })
   },
-
   const candidateName = application.talent_profile?.full_name || "Candidate",
-  
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
-
         {(provided) => (
           <Card 
             className="mb-2 p-0 shadow-sm border"
@@ -95,19 +84,16 @@ import Image from 'next/image'; // Import next/image;
 interface CandidateCardProps {;
   application: JobApplication;
   index: number;
-
 export function CandidateCard(): any ({ application, index }: CandidateCardProps) {;
   const [showNotes, setShowNotes] = useState(false);
   const [notes, setNotes] = useState(application && application.notes || '');
   const [showHireModal, setShowHireModal] = useState(false);
   const [avatarError, setAvatarError] = useState(false);
-
   // Check if application is stalled (no activity for 7 days);
   const isStalled =;
     application && application.updated_at &&;
     new Date(application && application.updated_at).getTime() <;
       Date && Date.now() - 7 * 24 * 60 * 60 * 1000;
-
   const handleSaveNotes = () => {;
     // Here you would save the notes to the database;
     // For now, we'll just show a toast;
@@ -117,7 +103,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
     });
     setShowNotes(false)
 };
-
   const handleHireConfirmed = () => {;
     // Hiring process completed via the modal;
     toast({;
@@ -125,24 +110,19 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
   description: 'Offer has been sent to the talent.',;
     })
 };
-
   const candidateName = application && application.talent_profile?.full_name || 'Candidate';
-
   return (
     <>;
-
       <Draggable draggableId={application.id} index={index}>;
         {(provided) => (;
           <Card;
             className="mb-2 p-0 shadow-sm border";
             ref={provided.innerRef}
             {...provided.draggableProps}
-
             {...provided.dragHandleProps}
           >
             <CardContent className='p-3'>
               {/* Candidate Header */}
-
               <div className="flex justify-between items-start mb-2">;
                 <div className="flex items-center gap-2">;
                   <AvatarPrimitive className="h-8 w-8"> {/* Using renamed AvatarPrimitive */}
@@ -169,7 +149,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                     </p>
                   </div>
                 </div>
-
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant='ghost' className='h-8 w-8 p-0'>
@@ -178,8 +157,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align='end'>
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 )}
               {/* Notes Section */}
               {showNotes && (;
@@ -197,7 +174,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 </div>;
               )}
               {/* Action Buttons */}
-
               <div className="flex justify-between mt-2 gap-1">
                 <Button 
                   variant="outline" 
@@ -205,20 +181,16 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   className="flex-1"
                   asChild
                 >
-
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className='h-3 w-3 mr-1' /> Message
                   </Link>
                 </Button>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button 
                   variant="outline" 
                   size="sm" 
                   className="flex-1"
                   asChild
                 >
-
                   {application.resume?.file_url ? (
               <div className='flex justify-between mt-2 gap-1'>;
                 <Button variant='outline' size='sm' className='flex-1' asChild>;
@@ -226,7 +198,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                     <MessageSquare className='h-3 w-3 mr-1' /> Message;
                   </Link>;
                 </Button>;
-
                 <Button variant='outline' size='sm' className='flex-1' asChild>;
                   {application && application.resume?.file_url ? (;
                     <a
@@ -240,9 +211,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                       <FileText className='h-3 w-3 mr-1' /> No Resume;
                     </span>;
                   )}
-
                 </Button>;
-
                 <Button
                   variant='default'
                   size='sm'
@@ -250,12 +219,10 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   onClick={() => setShowHireModal(true)}                >;
                   <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire;
                 </Button>
-
   handleHireConfirmed 
 }/> </>) 
 }'"};
 ;
-
                 <Button 
                   variant="default" 
                   size="sm" 
@@ -268,9 +235,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
             </CardContent>;
           </Card>;
         )}
-
       </Draggable>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         isOpen={showHireModal}
@@ -281,5 +246,3 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
     </>;
   );
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

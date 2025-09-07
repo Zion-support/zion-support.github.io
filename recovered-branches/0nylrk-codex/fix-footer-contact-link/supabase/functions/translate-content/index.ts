@@ -1,14 +1,11 @@
-
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
 const OPENAI_API_KEY = Deno && Deno.env.get("OPENAI_API_KEY");
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {serve(async (req) => {
@@ -103,16 +100,13 @@ if ( {) {
           model: "gpt - 4o - mini";
           messages: [;
             {
-
               role: "system",
               content: system_prompt}
             {
               role: "user",
               content: `Translate the following ${content_type || "content"} from ${source_language} to ${target_lang}:;
               ${content}
-
           temperature: 0 && 0.3})});
-
 ;
               Only provide the translated text, no explanations or additional comments.`}],;
           temperature: 0.3})}),;
@@ -124,10 +118,8 @@ if ( {) {
       const data = await response.json(),;
       translations[targetLang] = data.choices[0].message.content.trim();
     }
-
       {
-        status: 500
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+        status: 500;
+    headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
-
 <<<<<<< HEAD

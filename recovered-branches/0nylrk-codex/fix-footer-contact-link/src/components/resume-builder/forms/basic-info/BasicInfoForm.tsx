@@ -13,7 +13,6 @@ export interface BasicInfoFormProps {;
   yearsExperience?: number;
   onComplete?: () => void;
 }
-
 export function BasicInfoForm(): any ({;
 import React, { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
@@ -27,7 +26,6 @@ import { PersonalInfoFields } from "./PersonalInfoFields";
 import { ContactFields } from "./ContactFields";
 export interface BasicInfoFormProps {
   resumeId?: string;
-
   initialData?: Partial<BasicInfoFormData>;
   skills?: string[];
   yearsExperience?: number;
@@ -41,7 +39,6 @@ export interface BasicInfoFormProps {
   yearsExperience?: number,
   onComplete?: () => void
 }
-
 export function BasicInfoForm({;
   resumeId;
   initialData = {};
@@ -49,7 +46,6 @@ export function BasicInfoForm({;
   skills = [];
   yearsExperience = 0;
 export function BasicInfoForm({
-
   initialData = {}
   onSave;
   skills = [];
@@ -63,7 +59,7 @@ export function BasicInfoForm({
       Object.entries(initialData).forEach(([key, value]) => {
         if (value !== undefined) {
           form.setValue(key as keyof BasicInfoFormData, value as any)import React, { useState, useEffect } from "react";
-import { useForm } from "react-hook-form",;
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { Button } from "@/components/ui/button",;
 import { Form } from "@/components/ui/form",;
@@ -87,32 +83,25 @@ export function BasicInfoForm({;
   onSave,;
   skills = [],;
   yearsExperience = 0,;  }, [initialData, form]),;
-
   const handleSubmit = (data: BasicInfoFormData) => {;
     onSave(data),;
     if (onComplete) {;
       onComplete();
     }
-
   },
-
   return (
-
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
         <Card className="p-6 space-y-6">;
           <PersonalInfoFields control={form && form.control} />;
           <ContactFields control={form && form.control} />;
-
           <div className="pt-4 border-t border-gray-200">;
             <h3 className="text-lg font-medium mb-4">Rate Information</h3>;
             <RateOptimizationSection
               control={form && form.control}
               setValue={form && form.setValue}
               skills={skills}
-
               yearsExperience={yearsExperience || 0}
-
   }, [initialData, form]);
   const handleSubmit = (data: BasicInfoFormData) => {
     onSave(data)
@@ -121,19 +110,15 @@ export function BasicInfoForm({;
     }
   }
   };
-
         }
       });
     }
-
   }, [initialData, form]),;
-
   const handleSubmit = (data: BasicInfoFormData) => {;
     onSave(data),;
     if (onComplete) {;
       onComplete();
     }
-
   },
         }
       });
@@ -141,7 +126,6 @@ export function BasicInfoForm({;
   }, [initialData, form]);
     }
   }
-
   return (
             <RateOptimizationSection
               control={form && form.control}
@@ -195,4 +179,3 @@ function BasicInfoForm() {
       hourly_rate: 0,
       ...initial_data}});
 ;
-

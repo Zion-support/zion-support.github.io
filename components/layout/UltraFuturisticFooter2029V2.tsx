@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 import {
   Phone
   Mail
@@ -54,7 +53,6 @@ import {
   Infinity;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight
   Brain, Rocket, Target, Shield, Cpu
-
 import {
   Phone,
   Mail,
@@ -104,7 +102,6 @@ import {
   Mountain,
   Globe2,
   Bot,
-
   Crown,;
   Infinity,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, 
@@ -141,11 +138,9 @@ const mainNavigation = [
   { name: 'Micro SAAS', href: '/micro - saas', icon: Target },
   { name: 'Innovations', href: '/innovations', icon: Sparkles },
   { name: 'About', href: '/about', icon: Users },
-
   { name: 'Blog', href: '/blog', icon: BookOpen },
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
-
 const resources = [
   { name: 'Support', href: '/support', icon: MessageCircle }, ];  { name: 'Support', href: '/support', icon: MessageCircle }
 ];
@@ -158,7 +153,6 @@ const resources = [;
   { name: 'Blog', href: '/blog', icon: BookOpen },
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Events', href: '/events', icon: Calendar },
-
 const company = [
   { name: 'Webinars', href: '/webinars', icon: Video }, ];  { name: 'Webinars', href: '/webinars', icon: Video }
 ];
@@ -171,10 +165,9 @@ const company = [;
   { name: 'Investors', href: '/investors', icon: Star },
   { name: 'Press', href: '/press', icon: BookOpen },
   { name: 'Legal', href: '/legal', icon: Shield },
-
 const footerSections = [
   {
-    title: 'Services'
+    title: "title",
     links: [
     links: [
       { name: 'Healthcare', href: '/industries/healthcare' }
@@ -218,34 +211,26 @@ export default /**
  */
 function UltraFuturisticFooter2029V2() {
   },];
-
 export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg - black / 90 backdrop - blur - xl border - t border - cyan - 500 / 20'>      { name: 'Research', href: '/research' }
     ];
   }
 ];
-
 export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>
-
 ];
-
 export default function UltraFuturisticFooter2029V2() {
   return (
-
             <motion.div
-
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-
               <Link href="/" className="flex items-center space-x-3 mb-6 group">
                 <div className="relative">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Rocket className="w-7 h-7 text-white" />
                   </div>
-
 ;
 export default /**
  * UltraFuturisticFooter2029V2 - Function description
@@ -303,7 +288,6 @@ function UltraFuturisticFooter2029V2() {
                   </p>;
                 </div>;
               </Link>;
-
               <p className='text-gray-300 mb-6 leading-relaxed'>;
                 Leading the future with cutting-edge AI, quantum computing,;
                 space technology, and innovative micro SAAS solutions.;
@@ -360,7 +344,6 @@ function UltraFuturisticFooter2029V2() {
               </div>;
             </motion && motion.div>;
           </div>;
-
           {/* Service Categories */}
           {footerSections && footerSections.map((section, index) => (;
             <motion&& motion.div
@@ -377,7 +360,6 @@ function UltraFuturisticFooter2029V2() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
           viewport={{ once: true }}
-
         >
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Featured 2029 Services
@@ -419,7 +401,6 @@ function UltraFuturisticFooter2029V2() {
           </div>;
         </motion && motion.div>;
       </div>;
-
                     ))}
                   </ul>;
                 </div>;
@@ -447,16 +428,13 @@ function UltraFuturisticFooter2029V2() {
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Terms of Service</Link>
               </Link>            </motion.div>
-
             </motion.div>
-
             {/* Social Links */}
             <motion&& motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
-
             >
               {socialLinks.map(social => (
                 <Link
@@ -470,20 +448,16 @@ function UltraFuturisticFooter2029V2() {
                   target="_blank"
                   rel="noopener noreferrer"
                   <social.icon className='w-4 h-4' />                </Link>
-
                 </Link>
-
               ))}
             </motion.div>
           </div>
         </div>
       </div>
-
             </motion && motion.div>;
           </div>;
         </div>;
       </div>;
-
               ))}
       {/* Newsletter Signup */}
       <motion&& motion.div
@@ -491,7 +465,6 @@ function UltraFuturisticFooter2029V2() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
         viewport={{ once: true }}
-
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='text-center'>
@@ -539,13 +512,9 @@ function UltraFuturisticFooter2029V2() {
     </footer>
   );
 }
-
   );
-
 }
-
     </footer>
   );
 }
-
 }

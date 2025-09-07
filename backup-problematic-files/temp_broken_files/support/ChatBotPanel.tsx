@@ -1,6 +1,5 @@
-
 import React, { useState, useRef, useEffect } from "react";
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { ScrollArea } from "@/components/ui/scroll-area",;
@@ -331,9 +330,8 @@ id: `user-$ {;
 content: text;
 setIsLoading (true);
 :temp_broken_files/support/ChatBotPanel.tsx
-
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatBotPanel.tsx
-  id: `bot-$ {;
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatBotPanel.tsx;
+    id: `bot-$ {;
   Date.now () ;
 }`;
 //After 3 failed attempts, suggest escalation if (failedAttempts >= 2) {;
@@ -354,7 +352,6 @@ body: JSON.stringify ({;
 }) ;
 });
 :temp_broken_files/support/ChatBotPanel.tsx
-
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatBotPanel.tsx
 }const data = await response.json ();
 return {;
@@ -391,7 +388,6 @@ timestamp: new Date () ;
 //In a real implementation, this would trigger a live chat request 
 };
 :temp_broken_files/support/ChatBotPanel.tsx
-
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatBotPanel.tsx
   setMessages ( (prev) => [ ...prev, {;
   id: `user-$ {;

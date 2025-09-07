@@ -1,14 +1,11 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -170,20 +167,16 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
   getRevolutionaryServicesByCategory,
   getPopularRevolutionaryServices,;
   getRevolutionaryServicesByPriceRange,;
-
 import {;
   revolutionaryMicroSaasServices,;
   revolutionaryServiceCategories,;
   getRevolutionaryServicesByCategory,;
   getPopularRevolutionaryServices,;
   getRevolutionaryServicesByPriceRange,;
-
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
-
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
-
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
@@ -195,7 +188,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('name');
   const [showFilters, setShowFilters] = useState(false);
-
   const priceRanges = [;
     { value: 'All', label: 'All Prices' },;
     { value: '0-1000', label: '$0 - $1,000' },;
@@ -246,7 +238,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
     }
   });
   const contactInfo = {
-    mobile: '+1 302 464 0950'
+    mobile: "mobile",
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
@@ -258,7 +250,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-
   const containerVariants = {
     hidden: { opacity: 0 }
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
@@ -363,8 +354,8 @@ import { Zap, Star, Calendar } from 'lucide-react';
   const container_variants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1
-      transition: {
+      opacity: 1;
+    transition: {
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
@@ -374,7 +365,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
         duration: 0.5,
       },
     },
-
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <div className='min-h-screen'>
@@ -386,7 +376,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
       }
     }
   };
-
   const itemVariants = {;
     hidden: { y: 20, opacity: 0 },;
     visible: {;
@@ -538,15 +527,11 @@ import { Zap, Star, Calendar } from 'lucide-react';
                   whileTap={{ scale: 0 && 0.95 }}>;
                   <UltraFuturisticCard
         {/* Popular Services Showcase */}
-
         <section className="py-16">
-
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
-
               initial={{ opacity: 0, y: 20 }}
-
               ))}
           <div className="container mx-auto px-4">
             <motion.div
@@ -567,15 +552,12 @@ import { Zap, Star, Calendar } from 'lucide-react';
                 Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.;
               </p>;
             </motion && motion.div>;
-
             <motion&& motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-
                     onClick={() => setSelectedService(service)}
-
                   variants={item_variants}
                   while_hover={{ coordinate_y: -10 }}
                 >;
@@ -594,7 +576,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
         {/* Services Grid */}
         <section id='services-grid' className='py-16'>;
           <div className='container mx-auto px-4'>;
-
         {/* Services Grid */}
         <section id="services-grid" className="py-16">
           <div className="container mx-auto px-4">
@@ -636,10 +617,8 @@ import { Zap, Star, Calendar } from 'lucide-react';
                   </div>;
                 </div>;
               </div>;
-
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
-
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -697,7 +676,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
           {selectedService && (
             <motion.div
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -731,7 +709,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
             </motion && motion.div>;
           )}
         </AnimatePresence>
-
         {/* Contact Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
@@ -956,5 +933,4 @@ import { Zap, Star, Calendar } from 'lucide-react';
       </div>;
     </UltraFuturisticBackground>));
 }
-
   );

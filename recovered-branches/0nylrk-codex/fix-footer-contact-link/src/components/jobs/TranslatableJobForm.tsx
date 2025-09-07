@@ -1,15 +1,12 @@
-
-
-  onSubmit: (formData: any) => void
+onSubmit: (formData: any) => void
   isSubmitting?: boolean
 }
-
   // Auto translate content when language tab changes
   const handleTabChange = async (tab: SupportedLanguage) => {
     if (tab !== activeTab) {
       setActiveTab(tab)
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input",;
+import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -26,14 +23,12 @@ interface TranslatableJobFormProps {;
     es: "",;
     pt: "",;
     ar: ""}),;
-
   const [description, setDescription] = useState<Record<SupportedLanguage, string>>({;
   const [description, setDescription] = useState<Record<SupportedLanguage, string>>({;
     en: "",;
     es: "",;
     pt: "",;
     ar: ""}),;
-
   const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({;
   const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({;
     en: "",;
@@ -45,13 +40,12 @@ interface TranslatableJobFormProps {;
     if (tab !== activeTab) {;
       setActiveTab(tab);
     }
-
       }
     }      if (error) {
         toast({
           title: t('translation.translation_failed')
-          description: error
-          variant: "destructive"})
+          description: error;
+    variant: "destructive"})
         return;
       toast({;
         title: t('translation.translation_success'),,
@@ -72,7 +66,6 @@ interface TranslatableJobFormProps {;
     // Title translations;
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {;
       promises.push(autoTranslate('title'));
-
     }
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
@@ -85,7 +78,6 @@ interface TranslatableJobFormProps {;
     if (promises.length) {
       await Promise.all(promises)
     }
-
   },
   };
   },
@@ -159,7 +151,6 @@ interface TranslatableJobFormProps {;
           {t('jobs && jobs.post_job_description')}
         </p>;
       </div>;
-
       <div className="space-y-4">;
         <div className="space-y-2">;
           <div className="flex justify-between items-center">;
@@ -174,7 +165,6 @@ interface TranslatableJobFormProps {;
               {t('translation && translation.auto_translate')}
             </Button>;
           </div>;
-
           <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
             <TabsList className="w-full">;
               {supportedLanguages && supportedLanguages.map((lang) => (;
@@ -183,7 +173,6 @@ interface TranslatableJobFormProps {;
                 </TabsTrigger>;
               ))}
             </TabsList>;
-
             {supportedLanguages && supportedLanguages.map((lang) => (;
               <TabsContent key={lang && lang.code} value={lang && lang.code} className="mt-2">;
                 <div className="space-y-1">;
@@ -199,7 +188,6 @@ interface TranslatableJobFormProps {;
             ))}
           </Tabs>;
         </div>;
-
         <div className="space-y-2">;
           <div className="flex justify-between items-center">;
             <label htmlFor="description" className="text-lg font-medium">;
@@ -219,7 +207,6 @@ interface TranslatableJobFormProps {;
               {t('translation && translation.auto_translate')}
             </Button>;
           </div>;
-
           <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
             <TabsList className="w-full">;
               {supportedLanguages && supportedLanguages.map((lang) => (;
@@ -228,7 +215,6 @@ interface TranslatableJobFormProps {;
                 </TabsTrigger>;
               ))}
             </TabsList>;
-
             {supportedLanguages && supportedLanguages.map((lang) => (;
               <TabsContent key={lang && lang.code} value={lang && lang.code} className="mt-2">;
                 <Textarea
@@ -242,7 +228,6 @@ interface TranslatableJobFormProps {;
             ))}
           </Tabs>;
         </div>;
-
         <div className="space-y-2">;
           <div className="flex justify-between items-center">;
             <label htmlFor="requirements" className="text-lg font-medium">;
@@ -261,7 +246,6 @@ interface TranslatableJobFormProps {;
     </form>;
   );
 }
-
       <div className="pt-4">;
         <Button;
           type="submit";
@@ -314,7 +298,6 @@ onSubmit ({
 }return;
 }
 ;
-
 }
 };
 //Ensure all translations are available if (!title.en && !title.es && !title.pt && !title.ar) return;

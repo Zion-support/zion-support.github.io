@@ -11,8 +11,8 @@ const { execSync } = require('child_process')
     }[type] || 'ℹ'
     this.log('Scanning dependencies for vulnerabilities...', 'SECURITY')
       const auditOutput = execSync('npm audit --json')
-        stdio: 'pipe'
-        encoding: 'utf8'
+        stdio: "stdio",
+    encoding: 'utf8'
           const severity = vuln.severity || 'low'
             type: 'dependency'
             description: vuln.description || 'No description available'

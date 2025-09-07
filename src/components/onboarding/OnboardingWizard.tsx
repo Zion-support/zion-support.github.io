@@ -18,38 +18,29 @@ import {
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils';
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   type: 'client' | 'talent';
   onComplete: () => void;
   onSkip: () => void;
   className?: string
-
 export function OnboardingWizard(): any ({;
   type,;
   onComplete,;
-
   type,
   onComplete,
-
   onSkip,;
   className,;
 }: OnboardingWizardProps) {;
   const [currentStep, setCurrentStep] = useState(0);
   const router = useRouter(); // Changed from useNavigate to useRouter
   const { user } = useAuth()
-
           </div>;
         </div>;
-
         <div className='flex flex-col items-center text-center p-4'>;
           <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;
-
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router',;
+import { useRouter } from 'next/router';
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -72,13 +63,10 @@ interface OnboardingWizardProps {;
   onSkip: () => void,;
   className?: string;
 }
-
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
   const [currentStep, setCurrentStep] = useState(0),
   const router = useRouter(), // Changed from useNavigate to useRouter
   const { user } = useAuth(),
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -106,7 +94,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Reach out to the talent that fits your needs",
       icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,
       action: {
-
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile",
@@ -143,25 +130,18 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Let our AI find the perfect opportunities for you",
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
       action: {
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {steps.map((_, index) => (
               <div
                 key={index}
                 className={cn(
-
           <Button
             variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}>;
-
             {steps[currentStep]?.skipText}
           </Button>
         )}
-
       </CardFooter>;
     </Card>;
   );
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

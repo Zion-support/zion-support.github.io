@@ -1,36 +1,30 @@
+import React from 'react';
+import Layout from '../components/layout/MainLayout';
 
-     `;
-       });
-       .join("")}
-   </urlset>;
- `;
+export default function SitemapXMLPage() {
+  return (
+    <Layout
+      title="Sitemap XML - Zion Tech Group"
+      description="XML sitemap for search engines."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Sitemap XML</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              XML sitemap for search engines. Coming soon.
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-md p-8 text-center">
+            <h2 className="text-2xl font-semibold mb-4">Coming Soon</h2>
+            <p className="text-gray-600">
+              We're preparing an XML sitemap for search engines. 
+              Check back soon for the sitemap.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
 }
-function SiteMap() {
-  // getServerSideProps will do the heavy lifting;
-}
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  const sitemap = generateSiteMap();
-  res.setHeader("Content-Type", "text/xml");
-  // we send the XML to the browser
-  res.write(sitemap);
-  res.end();
-  return {
-    props: {}
-  }
-}
-export default SiteMap;
-  // We generate the XML sitemap with the posts data;
-  const sitemap = generateSiteMap ();
-;
-  res.set_header ("Content - Type", "text / xml");
-  // we send the XML to the browser;
-  res.write (sitemap);
-  res.end ();
-;
-  return {
-    props: {},
-  }
-}
-;
-export default SiteMap;
-

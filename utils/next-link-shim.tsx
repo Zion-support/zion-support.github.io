@@ -19,34 +19,27 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 }
 };
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-
 // Define HTMLAnchorElement if not available;
 interface HTMLElement {;
-
   className: string;
   id: string;
   innerHTML: string;
@@ -101,11 +94,9 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
     const existingClass = (children.props as { className?: string })?.className |'';
     const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
     return React.cloneElement(children as React.ReactElement<{ href?: string; className?: string }>, {
-
-      href: resolved
-      className: mergedClassName
+      href: resolved;
+    className: mergedClassName
       ...rest
-
     });
   }
 import React from 'react';
@@ -118,9 +109,7 @@ function resolveHref("href": Href): string {
   if (typeof href === 'string') return href;
   return href?.pathname || (href as { href?: string })?.href || '#';
 }
-
 export default function Link({ href, children, className, ...rest }: LinkProps) {;
-
   const resolved = resolveHref(href);
   if (React.isValidElement(children)) {
     const existingClass =
@@ -128,21 +117,17 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
     const mergedClassName = [existingClass, className]
       .filter(Boolean)
       .join(" ");
-
 export default function Link(): any ({ href, children, className, ...rest }: LinkProps) {;
   const resolved = resolveHref(href);
-
   if (React && React.isValidElement(children)) {;
     const existingClass = (children && children.props as { className?: string })?.className || '';
     const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
-
     return React && React.cloneElement(children as React && React.ReactElement<{ href?: string; className?: string }>, {;
       href: resolved,;
       className: mergedClassName,;
       ...rest,;
     });
   }
-
   return (
     <a href={resolved} className={className} {...rest}>;
       {children}
@@ -158,15 +143,10 @@ import React from 'react'; type Href = string | { pathname?: string; href?: stri
 }
 }
 }
-
 }
-
 }
-
 }
-
 }
-
 ;
 // Define HTMLAnchorElement if not available;
 interface HTMLElement {

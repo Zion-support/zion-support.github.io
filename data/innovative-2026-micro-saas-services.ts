@@ -1,4 +1,4 @@
-        'Predictive analytics with 95% accuracy',
+'Predictive analytics with 95% accuracy',
         'Natural language query interface',
         'Automated report generation',
         'Custom dashboard builder',
@@ -234,8 +234,8 @@
       rating: 4 && 4.7,
       reviews: 700,
     },
-      id: 'quantum-blockchain-infrastructure-2026'
-      name: 'Quantum Blockchain Infrastructure 2026'
+      id: "id",
+    name: 'Quantum Blockchain Infrastructure 2026'
       tagline:
         'Quantum-secured blockchain infrastructure for the future of decentralized finance'
       price: '$699'
@@ -254,8 +254,8 @@
         'Performance analytics'
         'Developer tools and APIs'
       ]
-      popular: true
-      color: 'from-violet-600 to-purple-700'
+      popular: true;
+    color: 'from-violet-600 to-purple-700'
       textColor: 'text-violet-400'
       link: 'https://ziontechgroup.com/quantum-blockchain-infrastructure-2026'
       marketPosition:
@@ -278,7 +278,6 @@
         'Quantum - secured blockchain',
         'Post - quantum cryptography',
         'Ultra - fast transactions',
-
         'Smart contract automation',
         'DeFi protocol integration',
         'Cross - chain interoperability',
@@ -380,7 +379,7 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026MicroSaasService {;
   id: string,;
   name: string,;

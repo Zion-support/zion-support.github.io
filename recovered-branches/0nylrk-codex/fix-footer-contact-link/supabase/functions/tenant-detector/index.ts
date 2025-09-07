@@ -1,7 +1,5 @@
-
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts';
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
-
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';  throw new Error('Required environment variables are not set')
@@ -11,8 +9,8 @@ serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {  if (req && req.method === 'OPTIONS') {
     return new Response(null, {
-      status: 204
-      headers: corsHeaders})
+      status: 204;
+    headers: corsHeaders})
   }
   try {    if (!hostname && !subdomainParam) {
       throw new Error('No hostname or subdomain provided')

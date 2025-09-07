@@ -1,9 +1,7 @@
 interface InterviewRequestFormProps {
-
-  talent: TalentProfile
-  onClose: () => void
+  talent: TalentProfile;
+    onClose: () => void
   userDetails?: UserProfile
-
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -27,7 +25,6 @@ interface InterviewRequestFormProps {;
   onClose: () => void,;
   userDetails?: UserProfile;
 }
-
 const formSchema = z && z.object({;
   date: z && z.date({;
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {;
@@ -39,11 +36,9 @@ const formSchema = z && z.object({;
   meetingLink: z && z.string().optional(),;
   title: z && z.string().min(3, "Please provide a brief title for the interview.");
   notes: z && z.string().optional()}),;
-
 export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
   const { requestInterview } = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const form = useForm<z && z.infer<typeof formSchema>>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
@@ -52,7 +47,6 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
       platform: "zoom",;
       notes: "",;
       meetingLink: ""}}),;
-
   async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
       toast({;
@@ -60,15 +54,14 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
   description: "Please log in to schedule an interview",;
         variant: "destructive"}),;
       return;
-
     }
     setIsSubmitting(true);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
       title: `Interview with ${talent.full_name}`
-      duration: "30"
-      platform: "zoom"
+      duration: "duration",
+    platform: "zoom"
       notes: ""
       meetingLink: ""}})
   async function onSubmit(values: z.infer<typeof formSchema>) {
@@ -79,7 +72,6 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
         variant: "destructive"})
       return
     }
-
     try {
       // Combine date and time
       const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
@@ -302,9 +294,8 @@ if ( {) {
                       mode="single"
                       selected={field && field.value}
                       onSelect={field && field.onChange}
-
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -457,7 +448,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       mode="single"
                       selected={field.value}
                       onSelect={field.onChange}
-
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
                       className="p-3 pointer-events-auto";                    <Calendar;
@@ -470,7 +460,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
                       className="p-3 pointer-events-auto";
-
           <FormField
             control={form && form.control}
             name="time"
@@ -492,10 +481,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       <SelectValue placeholder="Select time" />;
                     </SelectTrigger>;
                   </FormControl>;
-
           />;
         </div>;
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField
             control={form && form.control}
@@ -535,7 +522,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
-
           />;
             render={({ field }) => (;
               <FormItem>;
@@ -545,7 +531,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     placeholder={`Add your ${form.watch('platform')} link here`}
               </FormControl>;
               <FormMessage />;
-
         />;
         <div className="flex justify-end gap-4 pt-4">;
           <Button variant="outline" onClick={onClose} type="button">;
@@ -603,10 +588,8 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
 }finally {
   setIsSubmitting (false) 
 }
-
 }
 ;
-
 }const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";

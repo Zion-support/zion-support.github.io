@@ -1,14 +1,11 @@
-
-
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
 import {Quote} from "lucide-react";
   {
-    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
+    quote: "quote",
     author: "Thomas Klein"
     role: "Operations Manager, EcoTech Systems";
-
 const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
@@ -48,6 +45,5 @@ export function TestimonialCarousel() {
           </Carousel>;
         </div>;
       </div>;
-
     </section>);}
 }

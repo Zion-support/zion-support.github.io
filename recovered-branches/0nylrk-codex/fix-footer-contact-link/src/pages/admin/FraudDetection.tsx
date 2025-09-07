@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -10,25 +8,20 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client";
 import { FraudFlag, FraudStats } from "@/types/fraud";
 // Import refactored components
-
 import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@/components/admin/fraud-detection";
 import { supabase } from "@/integrations/supabase/client",
 import { FraudFlag, FraudStats } from "@/types/fraud",
-
 import {
   FraudStatsCards,
   FraudFilters,
   FraudFlagsTable,
   FraudTabContent
 } from "@/components/admin/fraud-detection",
-
 export default function FraudDetection() {
   const [flags, setFlags] = useState<FraudFlag[]>([]),
   const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),
-
   const [stats, setStats] = useState<FraudStats>({
-
-    total_flags: 0
+    total_flags: 0;
     pending_flags: 0
     suspicious_count: 0
     dangerous_count: 0
@@ -41,8 +34,8 @@ export default function FraudDetection() {
       const { data, error } = await supabase
         .from("fraud_flags")
         .select("*")      toast({
-        title: "Flag updated"
-        description: `Action '${action}' was applied successfully.`})
+        title: "title",
+    description: `Action '${action}' was applied successfully.`})
       // Refresh the data
       fetchFraudFlags()
     } catch (error) {
@@ -57,11 +50,9 @@ export default function FraudDetection() {
     setStatusFilter(null);
     setSeverityFilter(null);
     setContentTypeFilter(null)
-
             <Button 
               onClick={fetchFraudFlags} 
               className="bg-zion-purple hover:bg-zion-purple-light"
-
               disabled={isLoading}
             >
               Refresh Data
@@ -78,10 +69,8 @@ export default function FraudDetection() {
             <TabsTrigger value="actioned">Actioned</TabsTrigger>
           </TabsList>        title: "Flag updated",,
   description: `Action '${action}' was applied successfully.`}),;
-
       // Refresh the data;
       fetchFraudFlags();
-
     } catch (error) {;
       console && console.error("Error updating fraud flag:", error);
       toast({;
@@ -90,23 +79,19 @@ export default function FraudDetection() {
         variant: "destructive"});
     }
   };
-
   const resetFilters = () => {;
     setSearchQuery("");
     setStatusFilter(null);
     setSeverityFilter(null);
     setContentTypeFilter(null)
 };
-
   const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
-
   return (
     <AppLayout>;
       <SEO
         title="Fraud Detection | Admin Dashboard" 
         description="Monitor and manage fraud detection alerts on the Zion AI Marketplace" 
       />;
-
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">;
           <div>;
@@ -149,7 +134,6 @@ export default function FraudDetection() {
               </CardContent>;
             </Card>;
           </TabsContent>;
-
           <TabsContent value="pending">;
             <FraudTabContent tab_value="pending" />;
           </TabsContent>;

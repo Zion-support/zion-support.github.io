@@ -1,17 +1,13 @@
 interface TemplateManagerProps {
-
-  isOpen: boolean
-  onClose: () => void
+  isOpen: boolean;
+    onClose: () => void
   onSelectTemplate: (template: ContractFormValues) => void
-
   currentValues?: ContractFormValues
 }
-
   currentValues
 }: TemplateManagerProps) {
   const [mode, setMode] = useState<"list" | "save">("list"),
   const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null),
-
 import {useState} from "react";
 import {useContractTemplates} from "@/hooks/useContractTemplates";
 import {ContractTemplate} from "@/types/contracts";
@@ -27,7 +23,6 @@ interface TemplateManagerProps {;
   onSelectTemplate: (template: ContractFormValues) => void,;
   currentValues?: ContractFormValues;
 }
-
 export function TemplateManager(): any ({;
   isOpen;
   onClose;
@@ -36,14 +31,11 @@ export function TemplateManager(): any ({;
 }: TemplateManagerProps) {;
   const [mode, setMode] = useState<"list" | "save">("list");
   const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null);
-
   const { templates, isLoading } = useContractTemplates();
   const { toast } = useToast();
-
   const handleSelectTemplate = (template: ContractTemplate) => {;
     if (template && template.template_data) {;
       onSelectTemplate(template.template_data);
-
 import { useState } from "react",
 import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { ContractTemplate } from "@/types/contracts",
@@ -90,9 +82,7 @@ currentValues
   onSelectTemplate (template.template data);
 onClose ();
 toast ({
-  
 }
-
 };
 return (<Dialog open= {
   isOpen 
@@ -109,7 +99,6 @@ return (<Dialog open= {
 }
 }/> </div>) : (<TemplateSaveForm onCancel= {
   () => {
-  
 }
 }onComplete= {
   handleSaveComplete 

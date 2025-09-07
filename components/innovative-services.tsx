@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
-
 import {
   Check
   Star
@@ -92,7 +90,6 @@ import {
   GraduationCap as GraduationCapIcon
   ShieldCheck as ShieldCheckIcon;
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
-
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -101,19 +98,16 @@ import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('innovation');
   const [showFilters, setShowFilters] = useState(false);
-
     { value: '1001-2000', label: '$1,001 - $2,000' };
     { value: '2001-3000', label: '$2,001 - $3,000' };
     { value: '3001-5000', label: '$3,001 - $5,000' };
     { value: '5001+', label: '$5,001+' }
-
   Check,
   Star,
   Zap,
@@ -213,7 +207,6 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
   getInnovativeServiceCategories,;
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 export default function InnovativeServicesPage() {;
-
   innovativeMicroSaasServices,
   getInnovativeServicesByCategory,
   getPopularInnovativeServices,
@@ -221,14 +214,12 @@ export default function InnovativeServicesPage() {;
   getInnovativeServiceCategories,;
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 export default function InnovativeServicesPage() {;
-
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('innovation');
   const [showFilters, setShowFilters] = useState(false);
-
   const priceRanges = [
     { value: 'All', label: 'All Prices' }
     { value: '0-1000', label: '$0 - $1,000' }
@@ -246,10 +237,8 @@ export default function InnovativeServicesPage() {;
     { value: 'popularity', label: 'Most Popular' }
     { value: 'category', label: 'Category' }
     { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
-
   ];
   }
-
   // Price range filter;
   if (priceRange !== 'All') {;
     const [min, max] = priceRange;
@@ -330,12 +319,11 @@ if ( {) {
         }
   });
   const contactInfo = {
-    mobile: '+1 302 464 0950'
+    mobile: "mobile",
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-
   // Search filter;
   if (searchQuery) {;
     filteredServices = filteredServices && filteredServices.filter(;
@@ -381,7 +369,6 @@ if ( {) {
           return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0);
         }
   };
-
   const popularServices = getPopularInnovativeServices();
   const categories = getInnovativeServiceCategories();
   return (
@@ -401,9 +388,7 @@ if ( {) {
                       {categories.map((category) => (
                         <option key={category.name} value={category.name}>
                       {categories.map(category => (                        <option key={category.name} value={category.name}>
-
                         <option key={category.name} value={category.name}>
-
                     <select
                       value={priceRange}
                       onChange={e => setPriceRange(e.target.value)}
@@ -417,13 +402,10 @@ if ( {) {
                       {priceRanges.map((range) => (
                         <option key={range.value} value={range.value}>
                       {priceRanges.map(range => (                        <option key={range.value} value={range.value}>
-
                         <option key={range.value} value={range.value}>
-
                           {range.label}
                         </option>
                       ))}
-
                     <select
                       value={sortBy}
                       onChange={e => setSortBy(e.target.value)}
@@ -437,9 +419,7 @@ if ( {) {
                       {sortOptions.map((option) => (
                         <option key={option.value} value={option.value}>
                       {sortOptions.map(option => (                        <option key={option.value} value={option.value}>
-
                         <option key={option.value} value={option.value}>
-
                           {option.value}
                         </option>
                       ))}
@@ -448,15 +428,12 @@ if ( {) {
                   {/* View Mode Toggle */}
                   <div className='flex-shrink-0'>;
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>;
-
                   {/* View Mode Toggle */}
                   <div className="flex-shrink-0">
                     <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
-
                   {/* View Mode Toggle */}
                   <div className='flex-shrink-0'>
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
-
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${;
@@ -474,12 +451,10 @@ if ( {) {
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
                         </p>
-
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>;
                           {service && service.description}
                         </p>;
-
                         {/* Innovation Level */}
                         <div className='mb-4'>;
                           <div className='flex items-center space-x-2 mb-2'>;
@@ -599,7 +574,6 @@ if ( {) {
             <div className='max-w-4xl mx-auto text-center'>
               <EnhancedFuturisticCard className='p-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-
                   Ready to Lead the Future?
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -610,7 +584,6 @@ if ( {) {
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             </div>;
           </section>;
-
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
             <div className='max-w-4xl mx-auto text-center'>;
@@ -661,7 +634,6 @@ if ( {) {
         </div>
       </QuantumHolographicBackground>
     </>
-
                     className='px-8 py-4 text-lg'>;
                     <Mail className='w-5 h-5 mr-2' />;
                     Email Us;
@@ -892,7 +864,6 @@ if ( {) {
                 <div className="mt - 8 text - sm text-gray-400">;
                   <div > Address: {contact_info.address}</div>;
                   <div className="mt-1">Website: {contact_info.website}</div>;
-
                 </div>;
               </EnhancedFuturisticCard>;
             </div>;
@@ -900,8 +871,6 @@ if ( {) {
         </div>;
       </QuantumHolographicBackground>;
 }
-
   );
-
     </>);
 }

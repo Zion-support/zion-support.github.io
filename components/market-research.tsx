@@ -1,11 +1,8 @@
-
-
 export default function MarketResearchPage() {
-
   const marketSegments = [
     {
-      name: 'AI & Machine Learning'
-      marketSize: '$15.7B'
+      name: "name",
+    marketSize: '$15.7B'
       growthRate: '23.4% CAGR'
       keyTrends: [
     {
@@ -113,7 +110,6 @@ export default function MarketResearchPage() {
       icon: <Zap className="w-8 h-8 text-white" />
     };
     {
-
       name: 'Database & Analytics',
       marketSize: '$8.9B',
       growthRate: '18.7% CAGR',
@@ -124,7 +120,6 @@ export default function MarketResearchPage() {
         'Performance optimization focus',
       ],
       topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],
-
       opportunities: [
         'Database performance monitoring',
         'Real-time analytics dashboards',
@@ -134,9 +129,7 @@ export default function MarketResearchPage() {
       color: 'from-cyan-500 to-blue-600',
       icon: <BarChart3 className='w-8 h-8 text-white' />,
     },    {
-
     {
-
       name: 'Security & Identity',
       marketSize: '$12.3B',
       growthRate: '21.2% CAGR',
@@ -147,7 +140,6 @@ export default function MarketResearchPage() {
         'Compliance requirements increasing',
       ],
       topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],
-
       opportunities: [
         'Identity verification platforms',
         'API security gateways',
@@ -157,9 +149,7 @@ export default function MarketResearchPage() {
       color: 'from-green-500 to-emerald-600',
       icon: <Target className='w-8 h-8 text-white' />,
     },    {
-
     {
-
       name: 'Business Intelligence',
       marketSize: '$22.1B',
       growthRate: '19.8% CAGR',
@@ -170,7 +160,6 @@ export default function MarketResearchPage() {
         'Predictive analytics demand',
       ],
       topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
-
       opportunities: [
         'Custom dashboard builders',
         'Data integration platforms',
@@ -180,9 +169,7 @@ export default function MarketResearchPage() {
       color: 'from-orange-500 to-red-600',
       icon: <Activity className='w-8 h-8 text-white' />,
     },    {
-
     {
-
       name: 'API Management',
       marketSize: '$6.8B',
       growthRate: '24.1% CAGR',
@@ -193,7 +180,6 @@ export default function MarketResearchPage() {
         'Developer experience focus',
       ],
       topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],
-
       opportunities: [
         'API rate limiting services',
         'Developer portal platforms',
@@ -203,9 +189,7 @@ export default function MarketResearchPage() {
       color: 'from-indigo-500 to-purple-600',
       icon: <Globe className='w-8 h-8 text-white' />,
     },    {
-
     {
-
       name: 'User Experience Analytics',
       marketSize: '$9.4B',
       growthRate: '20.5% CAGR',
@@ -216,7 +200,6 @@ export default function MarketResearchPage() {
         'Mobile app analytics growth',
       ],
       topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
-
       opportunities: [
         'Heatmap and session recording',
         'A/B testing platforms',
@@ -226,11 +209,9 @@ export default function MarketResearchPage() {
       color: 'from-teal-500 to-cyan-600',
       icon: <Users className='w-8 h-8 text-white' />,
     },  ];
-
   ];
   const competitiveAnalysis = [
     {
-
       company: 'Enterprise Giants',
       examples: ['SalesforceMicrosoftOracleSAP'],
       strengths: [
@@ -240,7 +221,6 @@ export default function MarketResearchPage() {
         'High pricing and complexitySlow innovation cyclesDifficult customizationLong implementation times'
       ];
       marketShare: '45-60%',
-
       pricing: 'High ($1000+/month)'
     },    {
       company: 'Mid-Market Leaders'
@@ -400,9 +380,7 @@ import { Zap } from 'lucide-react';
                               {opportunity}
                             </div>
                           ))}
-
                         </div>
-
                       </div>
                     </div>
                   </div>
@@ -412,13 +390,11 @@ import { Zap } from 'lucide-react';
           </div>
         </div>
       </section>
-
       {/* Competitive Analysis */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
               Competitive Landscape Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -562,7 +538,6 @@ import { Zap } from 'lucide-react';
                       ))}
                     </ul>
                   </div>
-
                       ))}
                   {/* Weaknesses */}
                   <div>;
@@ -589,7 +564,6 @@ import { Zap } from 'lucide-react';
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
               Emerging Market Trends
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -644,13 +618,11 @@ import { Zap } from 'lucide-react';
           </div>
         </div>
       </section>
-
       {/* Pricing Strategies */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
               Pricing Strategy Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -781,7 +753,6 @@ import { Zap } from 'lucide-react';
                       </span>;
                     </div>;
                   </div>;
-
                   <p className='text-gray-300 mb-4'>{trend && trend.description}</p>;
                   <div className='mb-4'>;
                     <h4 className='text-sm font-semibold text-gray-400 mb-2'>;
@@ -817,7 +788,6 @@ import { Zap } from 'lucide-react';
                       ))}
                     </ul>
                   </div>
-
                   {/* Cons */}
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-red-400 mb-2'>
@@ -836,7 +806,6 @@ import { Zap } from 'lucide-react';
                       ))}
                     </ul>
                   </div>
-
                   {/* Best For */}
                   <div>
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
@@ -845,7 +814,6 @@ import { Zap } from 'lucide-react';
                 </div>
               </Card>
             ))}
-
       {/* Pricing Strategies */}
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
@@ -858,7 +826,6 @@ import { Zap } from 'lucide-react';
               market and their implications for business success.;
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
             {pricingStrategies && pricingStrategies.map((strategy, index) => (;
               <Card
@@ -870,7 +837,6 @@ import { Zap } from 'lucide-react';
                     {strategy && strategy.strategy}
                   </h3>;
                   <p className='text-gray-300 mb-6'>{strategy && strategy.description}</p>;
-
                   {/* Pros */}
                   <div className='mb-4'>;
                     <h4 className='text-sm font-semibold text-green-400 mb-2'>;
@@ -885,7 +851,6 @@ import { Zap } from 'lucide-react';
               Analysis of different pricing strategies used in the micro SaaS market and their implications for business success.;
             </p>;
           </div>;
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {pricingStrategies && pricingStrategies.map((strategy, index) => (;
               <Card
@@ -895,7 +860,6 @@ import { Zap } from 'lucide-react';
                 <div className="p-6">;
                   <h3 className="text-xl font-bold text-white mb-3">{strategy && strategy.strategy}</h3>;
                   <p className="text-gray-300 mb-6">{strategy && strategy.description}</p>;
-
                   {/* Pros */}
                   <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Pros:</h4>;
@@ -966,7 +930,6 @@ import { Zap } from 'lucide-react';
             >
               Get Strategic Consultation
             </Button>
-
             <Button
               View Our Services
             </Button>;

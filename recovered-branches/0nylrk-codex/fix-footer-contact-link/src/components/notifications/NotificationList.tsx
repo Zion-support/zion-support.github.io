@@ -1,19 +1,16 @@
-
-
-  loading: boolean,
+loading: boolean,
   error: string | null,
   notifications: Notification[],
   onMarkAsRead: (id: string) => Promise<void>,
   onDismiss: (id: string) => Promise<void>,
   onRetry: () => void
 }
-
 export const NotificationList: React.FC<NotificationListProps> = ({;
   loading;
   error;
   notifications;
   onMarkAsRead;import React from 'react';
-import { ScrollArea } from '@/components/ui/scroll-area',;
+import { ScrollArea } from '@/components/ui/scroll-area';
 import { Skeleton } from '@/components/ui/skeleton',;
 import { Button } from '@/components/ui/button',;
 import { NotificationItem } from './NotificationItem',;
@@ -26,7 +23,6 @@ interface NotificationListProps {;
   onDismiss: (id: string) => Promise<void>,;
   onRetry: () => void;
 }
-
   error;
   notifications;
   onMarkAsRead;  on_dismiss,

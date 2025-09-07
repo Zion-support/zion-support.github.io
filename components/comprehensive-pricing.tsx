@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -154,16 +153,13 @@ import React, { useState } from 'react';
   Crown,
   Gem,;
   Diamond,;
-
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-
 import {;
   revolutionaryMicroSaasServices,;
   revolutionaryServiceCategories,;
-
 } from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -173,7 +169,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('price');
-
     filteredServices = filteredServices.filter(service => {
       const price = parseFloat(service.price.replace('$', '').replace(, ''));
       return price >= min && (max === Infinity |price <= max)
@@ -194,7 +189,7 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
     }
   });
   const contactInfo = {
-    mobile: '+1 302 464 0950'
+    mobile: "mobile",
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
@@ -279,11 +274,9 @@ if ( {) {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
-
         'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];
       icon: <Star className="w-6 h-6" />,
@@ -346,8 +339,8 @@ if ( {) {
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
-      opacity: 1
-      transition: {
+      opacity: 1;
+    transition: {
         staggerChildren: 0.1
       }
     },  };        staggerChildren: 0.1
@@ -362,18 +355,15 @@ if ( {) {
         duration: 0.5,
       },
     },
-
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>;
       <div className='min - h-screen'>;
-
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com'
 };
-
   // Pricing tiers;
   const pricingTiers = [;
     {;
@@ -440,7 +430,6 @@ if ( {) {
       color: 'from-yellow-500 to-orange-600',;
       popular: false;
     }
-
   // Market statistics;
   const marketStats = [;
     {;
@@ -487,7 +476,6 @@ if ( {) {
     },      icon: <TrendingUp className="w-6 h-6" />;
     }
   ];
-
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -499,7 +487,6 @@ if ( {) {
       }
     }
   };
-
   const itemVariants = {;
     hidden: { y: 20, opacity: 0 },;
     visible: {;
@@ -509,7 +496,6 @@ if ( {) {
         duration: 0 && 0.5,;
       },;
     },;
-
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>;
       <div className='min-h-screen'>;
@@ -574,7 +560,6 @@ if ( {) {
                 services. Choose the perfect plan for your business with;
                 guaranteed ROI and enterprise-grade reliability.;
               </motion && motion.p>;
-
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -591,12 +576,9 @@ if ( {) {
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
-
                   </div>
-
                 ))}
               </motion.div>
-
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
@@ -619,14 +601,12 @@ if ( {) {
                 animate={{ opacity: 1, y: 0 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               >
-
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               >
-
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -679,9 +659,7 @@ if ( {) {
                 <span className="text-white">{contactInfo.address}</span>
                 <Globe className="w-5 h-5 text-blue-400" />
                 <span className="text-white">{contactInfo.website}</span>
-
               initial={{ opacity: 0, y: 20 }}
-
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -698,7 +676,6 @@ if ( {) {
                 Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.;
               </p>;
             </motion && motion.div>;
-
             <motion&& motion.div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
@@ -714,7 +691,6 @@ if ( {) {
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
-
         {/* Services Pricing Grid */}
         <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
@@ -723,16 +699,13 @@ if ( {) {
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">;
           <div className="container mx-auto px-4">;
             {/* Filters and Controls */}
-
         {/* Services Pricing Grid */}
         <section id='services-pricing' className='py-20'>
           <div className='container mx-auto px-4'>
             {/* Filters and Controls */}
             <motion.div
               className='mb-8'              initial={{ opacity: 0, y: 20 }}
-
               initial={{ opacity: 0, y: 20 }}
-
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -778,10 +751,8 @@ if ( {) {
                   </div>;
                 </div>;
               </div>;
-
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
-
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -796,17 +767,12 @@ if ( {) {
                   <UltraFuturisticCard
                     variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
-
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
-
                     variant={service.variant as any || 'quantum-advanced'}
-
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
-
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
-
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
@@ -964,9 +930,7 @@ if ( {) {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
-
                 </div>
-
               </div>
             </motion.div>
           </div>
@@ -1167,5 +1131,4 @@ if ( {) {
       </div>;
     </UltraFuturisticBackground>));
 }
-
   );

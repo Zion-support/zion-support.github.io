@@ -9,7 +9,7 @@ interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonE
   href?: string,
   target?: string,
   badge?: React.ReactNodeimport React, { forwardRef } from "react";
-import { ChevronDown } from "lucide-react",;
+import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils",;
 import { SafeRef } from "@/types/ref-types",;
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {;
@@ -26,7 +26,6 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
           {badge && <span>{badge}</span>}
         </a>
       )
-
           <div className="flex items-center gap-2">;
             {icon && <span className="text-muted-foreground">{icon}</span>}
             <span>{children}</span>;
@@ -62,20 +61,15 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
       </button>;
     );
   }
-
 SidebarMenuItem.displayName = "SidebarMenuItem",
 ),
 ),
-
 SidebarMenuItem.displayName = "SidebarMenuItem",
-
   }
-
 SidebarMenuItem.displayName = "SidebarMenuItem",
-
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-  title: string
-  children: React.ReactNode
+  title: string;
+    children: React.ReactNode
 }
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {
   return (
@@ -121,9 +115,7 @@ const SidebarMenuGroup: React.FC < SidebarMenuGroupProps> = ({ title, children, 
 ;
 export { SidebarMenuItem, SidebarMenuGroup }
 ;
-
 },
-
 export { SidebarMenuItem, SidebarMenuGroup };
 export { SidebarMenuItem, SidebarMenuGroup };
   ),;

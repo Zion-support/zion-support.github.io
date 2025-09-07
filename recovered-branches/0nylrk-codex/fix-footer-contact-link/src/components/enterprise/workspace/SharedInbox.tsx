@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -22,10 +20,9 @@ function SharedInbox() {
       unread: true
     }
     },
-
     {
-      id: "msg-2"
-      from: "Talent Support"
+      id: "id",
+    from: "Talent Support"
       subject: "New talent matches"
       preview: "We've found 5 new candidates that match your recent job posting for UI/UX Designer."
       timestamp: "Yesterday"
@@ -39,9 +36,8 @@ function SharedInbox() {
       unread: false
     }
   ],
-
   return (import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge",;
 export function SharedInbox() {;
   // Mock messages;
@@ -85,7 +81,6 @@ export function SharedInbox() {;
           </button>;
         </div>;
       </CardContent>;
-
 }
 ;
     </Card>);

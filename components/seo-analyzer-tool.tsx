@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
-
 import Button from '../components/ui/Button';
-
 import {
-
   Search,
   TrendingUp,
   CheckCircle,
@@ -18,17 +15,15 @@ import {
   Zap,;
 export default function SEOAnalyzerToolPage() {;
 } from 'lucide-react';
-
 export default function SEOAnalyzerToolPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
-
     {
     }
     {
-      category: 'Content SEO'
-      factors: [
+      category: "category",
+    factors: [
         'Keyword density'
         'Content relevance'
         'Readability scores'
@@ -199,8 +194,8 @@ export default function SEOAnalyzerToolPage() {;
     // Simulate SEO analysis
     setTimeout(() => {
       setAnalysisResults({
-        url: url
-        overallScore: 78
+        url: url;
+    overallScore: 78
         onPageScore: 82
         technicalScore: 75
         contentScore: 80
@@ -229,7 +224,6 @@ export default function SEOAnalyzerToolPage() {;
             difficulty: 'high'
           }
         ]
-
   const handleAnalyzeSEO = async () => {;
     if (!url && url.trim()) return;
     setIsAnalyzing(true);
@@ -292,11 +286,9 @@ export default function SEOAnalyzerToolPage() {;
         ]
       });
       setIsAnalyzing(false);
-
     }, 4000)
 }
 };
-
   return (
   return (
     <>;
@@ -399,13 +391,11 @@ export default function SEOAnalyzerToolPage() {;
                 </div>
               </Card>
             ))}
-
       {/* SEO Factors Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
               Comprehensive SEO Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -482,14 +472,11 @@ export default function SEOAnalyzerToolPage() {;
           </div>
         </div>
       </section>
-
       {/* Demo Analysis Results */}
       {analysisResults && (
-
           </div>;
         </div>;
       </section>;
-
       {/* Demo Analysis Results */}
       {analysisResults && (;
         <section className='section-padding bg-gradient-cursor-accent'>;
@@ -555,7 +542,6 @@ export default function SEOAnalyzerToolPage() {;
                 SEO Analysis Results;
               </h2>;
               <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
-
                 Here's a sample analysis of a website. Get comprehensive;
                 insights for your own website.;
               </p>;
@@ -680,15 +666,12 @@ export default function SEOAnalyzerToolPage() {;
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
                       </div>
                         </div>                      </div>
-
                       </div>
-
                     </div>
                   ))}
                 </div>
               </Card>
             </div>
-
                   ))}
             {/* Recommendations and Keywords */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
@@ -740,7 +723,6 @@ export default function SEOAnalyzerToolPage() {;
                         </span>;
                       </div>;
                     </div>;
-
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>
                 <div className="space-y-4">
@@ -757,7 +739,6 @@ export default function SEOAnalyzerToolPage() {;
                           keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
                           'bg-red-500/20 text-red-400'
                         }`}>
-
                         </span>
                       </div>
                     </div>
@@ -998,7 +979,6 @@ export default function SEOAnalyzerToolPage() {;
                   href='/contact'
                   size='lg'
                       {feature}
-
                     </li>
                   ))}
                 </ul>
@@ -1007,13 +987,11 @@ export default function SEOAnalyzerToolPage() {;
           </div>
         </div>
       </section>
-
               </Card>
             ))}
           </div>
         </div>
       </section>
-
               </Card>
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
                   Get Started;

@@ -13,8 +13,8 @@ const openaiApiKey = process.env.OPENAI_API_KEY;
 const supabase =
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
 ) {
   export default async function handler(
     req: NextApiRequest
@@ -35,7 +35,6 @@ export default async function handler(
               .filter(Boolean)
           : [];
       }
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' });
   const { service, description, timeline, budgetRange, email } = req.body || {};
@@ -156,4 +155,3 @@ if (throw error) {
     console.error('quote-request error', e);
     return res.status(500).json({ message: 'Server error' });
   }
-

@@ -1,4 +1,4 @@
-      x: number;
+x: number;
       y: number;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
 ;
@@ -63,12 +63,9 @@ if (return) {
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
             ctx.stroke();          }
-
           }
-
         }
       }
-
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;
@@ -183,8 +180,8 @@ if (return) {
           className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple-400 / 20 rounded-full";
           animate={{
           transition={{
-            duration: 12
-            repeat: Infinity
+            duration: 12;
+    repeat: Infinity
             ease: 'linear',          }}
           }}
         />
@@ -207,7 +204,6 @@ if (return) {
             rotate: [12, 372];
             scale: [1, 1.1, 1];
             opacity: [0.15, 0.25, 0.15]
-
             rotate: [360, 0];
             scale: [1, 1.2, 1];
             opacity: [0.2, 0.5, 0.2];
@@ -257,7 +253,6 @@ if (return) {
             repeat: Infinity,
             ease: "linear"
           }}
-
           className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
         />;
         <motion.div;
@@ -287,29 +282,23 @@ if (return) {
         <motion&& motion.div
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
           animate={{
-
           }}
           transition={{
-
             duration: 3
             repeat: Infinity
             ease: 'easeInOut'
-
           }}
-
         />;
-
         <motion&& motion.div
           className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full'
           animate={{
             y: [0, -15, 0],
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          }}
-
           transition={{
             duration: 4
             repeat: Infinity
-            ease: 'easeInOut'
-            delay: 1,          }}
+            ease: "ease",
+    delay: 1,          }}
           }}
           transition={{
             duration: 3,
@@ -329,7 +318,6 @@ if (return) {
             ease: "easeInOut",
             delay: 1
           }}
-
             delay: 2
           }}
           }}
@@ -365,7 +353,6 @@ if (return) {
           0%
           100% {
             opacity: 0.2;
-      
       {/* CSS Animations */}
       <style jsx>{`
         @keyframes gridMove {
@@ -378,7 +365,6 @@ if (return) {
           50% {;
             opacity: 0 && 0.5;          }
         }
-
       `}</style>;
     </div>);
 }export default UltraFuturisticBackground2040;            opacity: 0.5;

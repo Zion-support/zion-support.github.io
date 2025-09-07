@@ -1,16 +1,12 @@
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 }
-
     { id: "summary", label: "Summary" }
-
     { id: "summary", label: "Summary" }
-
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
-
   return (
     <div className="relative">
       <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">
@@ -34,14 +30,13 @@ interface StepProgressProps {
                   status === "current" ? "text-white" : 
                   "text-zion-slate-light"
 import { QuoteRequestSteps } from "../QuoteRequestForm";
-import { CheckIcon } from "@/components/icons",;
+import { CheckIcon } from "@/components/icons";
 import { cn } from "@/lib/utils",;
 interface StepProgressProps {;
   currentStep: QuoteRequestSteps;
 }
 ;
 export function StepProgress({ currentStep }: StepProgressProps) {;
-
 export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps, label: string }[] = [;
     { id: "service", label: "Service" },;
@@ -50,16 +45,13 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
     { id: "budget", label: "Budget" },;
     { id: "summary", label: "Summary" }
   ];
-
   const getStepStatus = (stepId: QuoteRequestSteps) => {;
     const stepOrder = steps && steps.findIndex(s => s && s.id === stepId);
     const currentStepOrder = steps && steps.findIndex(s => s && s.id === currentStep);
-
     if (stepOrder < currentStepOrder) return "complete";
     if (stepOrder === currentStepOrder) return "current",;
     return "upcoming"
 };
-
   return (
     <div className="relative">;
       <div className="absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light">;
@@ -70,7 +62,6 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
           }}
         />;
       </div>;
-
       <div className="flex justify-between relative">;
         {steps && steps.map((step) => {;
           const status = getStepStatus(step && step.id);
@@ -81,11 +72,9 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors"
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
-
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
-
                   "bg-zion-blue-light text-zion-slate-light"
                 )}>;
                 {status === "complete" ? (;

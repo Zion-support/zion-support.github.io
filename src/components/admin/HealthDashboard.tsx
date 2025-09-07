@@ -3,20 +3,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -34,40 +30,31 @@ import {;
   Activity,;
 } from 'lucide-react';
 interface HealthData {;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
   uptime: number;
   version: string;
   environment: string;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   health: {
     status: string;
     score: number;
     issues: string[];
-
   }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   errors: {
     summary: {
       total: number;
       critical: number;
       high: number;
       medium: number;
-
       patternId: string;
       description: string;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       occurrences: number;
       severity: string;
       solution?: string
     }>
     byCategory: { [category: string]: number }
-
   if (loading) {
     return (
       <div className='flex items-center justify-center p-8'>
@@ -89,7 +76,6 @@ interface HealthData {
         </CardContent>
       </Card>
     )
-
   const fetchHealthData = async () => {;
     try {;
       const response = await fetch('/api/admin/health');
@@ -107,9 +93,7 @@ interface HealthData {
       setLoading(false);
     }
   };
-
   if (!healthData) return null,
-
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -120,12 +104,10 @@ interface HealthData {
         </div>
         <div className="flex items-center space-x-2">
           <Button
-
             variant="outline"
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
           >
-
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
           <Button onClick={fetchHealthData} size="sm">
@@ -188,9 +170,7 @@ interface HealthData {
           <TabsTrigger value="metrics">Metrics</TabsTrigger>
           <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
-
             <Card>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <CardHeader>
                 <CardTitle>System Information</CardTitle>
               </CardHeader>
@@ -224,14 +204,11 @@ interface HealthData {
               </CardHeader>
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
-
                       <li key={index} className="text-sm text-red-600 flex items-start">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
 ;
     return undefined;
   }, [autoRefresh]);
-
   const getStatusIcon = (status: string,) => {;
     switch (status) {;
       case 'healthy':;
@@ -244,7 +221,6 @@ interface HealthData {
         return <Activity className='w-5 h-5 text-gray-500' />;
     }
   };
-
   const getStatusBadge = (status: string) => {;
     const variant =;
       status === 'healthy';
@@ -257,13 +233,11 @@ interface HealthData {
       </Badge>;
     )
 };
-
   const formatUptime = (seconds: number) => {;
     const hours = Math && Math.floor(seconds / 3600);
     const minutes = Math && Math.floor((seconds % 3600) / 60);
     return `${hours}h ${minutes}m`
 };
-
   const formatBytes = (bytes: number) => {;
     return `${bytes && bytes.toFixed(1)} MB`
 };
@@ -274,7 +248,6 @@ interface HealthData {
       </div>;
     );
   }
-
   if (error) {;
     return (
       <Card className='border-red-200 bg-red-50'>;
@@ -303,11 +276,8 @@ interface HealthData {
           <Button
             variant='outline'
             size='sm'
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-
             <Card>
               <CardHeader>
                 <CardTitle>Error Summary</CardTitle>
@@ -347,8 +317,6 @@ interface HealthData {
               </CardHeader>
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         <div
                           key={index}
                           className='border-l-4 border-red-400 pl-3 py-1'>;
@@ -362,14 +330,11 @@ interface HealthData {
                       ))}                  </div>;
                 ) : (;
                   <p className='text-gray-600 text-sm'>No recurring errors</p>;
-
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
                 )}
-
         <TabsContent value="metrics" className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-
             <Card>
               <CardHeader className='pb-2'>
                 <CardTitle className='text-sm'>Error Rate</CardTitle>
@@ -412,42 +377,32 @@ interface HealthData {
                   {formatBytes(healthData.metrics.memoryUsage)}
                 </p>
                 <p className='text-xs text-gray-600'>JavaScript heap</p>
-
               </CardContent>
             </Card>
           </div>
         </TabsContent>
-
           <Card>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <CardHeader>
               <CardTitle>Improvement Recommendations</CardTitle>
             </CardHeader>
             <CardContent>
               {healthData.health.recommendations.length > 0 ? (
-
                   ))}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </ul>;
               ) : (;
                 <p className='text-gray-600'>;
                   No specific recommendations at this time;
                 </p>;
               )}
-
 export default HealthDashboard, ;
 export default HealthDashboard;
 }
-
       const response = await fetch ('/api / admin / health');
       // Check condition
 if ( {) {
   $2
 }
-
             </CardContent>;
           </Card>;
         </TabsContent>;
       </Tabs>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

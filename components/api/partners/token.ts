@@ -1,6 +1,6 @@
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
 ) {
   if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
@@ -43,7 +43,6 @@ export default async function handler(
   const { partner, apiKey: key } = match;
   const token = signJwt(
     {
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   if (req && req.method !== "POST") {
@@ -70,7 +69,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   );
   return res
     .status(200)
-
     .json({ token, partner: { id: partner && partner.id, name: partner && partner.name } });      sub: partner && partner.id;
       apiKeyId: key && key.id;
       name: partner && partner.name;
@@ -80,7 +78,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   );
   return res && res.status(200).json({ token, partner: { id: partner && partner.id, name: partner && partner.name } })
 }
-
       sub: partner.id,
       apiKeyId: key.id,
       name: partner.name,
@@ -103,4 +100,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { partner, apiKey: key } = match;
   const token = signJwt(
     {
-

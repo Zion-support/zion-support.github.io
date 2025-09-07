@@ -1,5 +1,3 @@
-
-
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";
@@ -16,12 +14,10 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-
 export function WebhooksManager() {import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",
 import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",
-
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
@@ -34,7 +30,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-
 export function WebhooksManager() {
   const {
     webhooks,
@@ -49,21 +44,16 @@ export function WebhooksManager() {
       webhookUrl
       selectedEvents
       webhookSecret.trim() === "" ? undefined : webhookSecret    ),
-    
     setShowCreateDialog(false),
     resetWebhookForm()
   },
-
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus)
   },
-
   const handleDeleteWebhook = async (webhookId: string) => {
     await deleteWebhook(webhookId)
     setShowDeleteConfirm(null)
-
   },
-
   const handleTestWebhook = async (webhookId: string) => {
     await testWebhook(webhookId, testEventType);
     setShowTestResult(true)  const resetWebhookForm = () => {
@@ -125,7 +115,7 @@ export function WebhooksManager() {
                 <div className="space-y-2">
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>
 import { useState, useEffect } from "react";
-import { format } from "date-fns",;
+import { format } from "date-fns";
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;
 import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",;
 import { Button } from "@/components/ui/button",;
@@ -186,7 +176,6 @@ export function WebhooksManager() {;
                   </div>;
                 </div>;
               </div>;
-
               <DialogFooter>;
                 <Button variant="outline" onClick={() => {;
                   setShowCreateDialog(false);
@@ -205,7 +194,6 @@ export function WebhooksManager() {;
             </DialogContent>;
           </Dialog>;
         </div>;
-
         {/* Webhooks List */}
         <div className="space-y-4">;
           {loading ? (;
@@ -227,7 +215,6 @@ export function WebhooksManager() {;
                       <span className="max-w-md truncate">{webhook && webhook.url}</span>;
                     </div>;
                   </div>;
-
                   <div className="flex items-center space-x-2">;
                     <div className="flex items-center mr-2">;
                       <Switch
@@ -238,13 +225,11 @@ export function WebhooksManager() {;
                         {webhook && webhook.is_active ? "Active" : "Inactive"}
                       </span>;
                     </div>;
-
                     <DropdownMenu>;
                       <DropdownMenuTrigger asChild>;                        <Button variant="ghost" size="icon">;
                           <MoreVertical size={16} />;
                         </Button>;
                       </DropdownMenuTrigger>;
-
                           onClick={() => setShowDeleteConfirm(webhook && webhook.id)}
                           className="cursor-pointer text-red-500";
                         >;
@@ -253,22 +238,17 @@ export function WebhooksManager() {;
                     </DropdownMenu>;
                   </div>;
                 </div>;
-
                 </div>;
-
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;
                   <span>Created: {format(new Date(webhook && webhook.created_at), 'MMM d, yyyy')}</span>;
                   {webhook && webhook.last_triggered_at && (;
                     <span>Last triggered: {format(new Date(webhook && webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>;
-
                   )}                </div>;
               </div>;
             ));
           )}
-
       <Dialog 
         open={showTestDialog !== null} 
-
         onOpenChange={(open) => {
           if (!open) {      <CardFooter className="justify-between border-t border-zinc-800 py-4">;
         <div className="text-xs text-zinc-500">;
@@ -288,10 +268,8 @@ export function WebhooksManager() {;
             if (showTestResult) {;
               setShowTestResult(false);
               clearTestResult();
-
           }
         }}
-
       >;
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <DialogHeader>;
@@ -305,7 +283,6 @@ export function WebhooksManager() {;
               <div className="space-y-4 py-4">;
                 <div className="space-y-2">;
                   <Label htmlFor="test-event-type">Event Type</Label>;
-
                   <Select            }
           }
         }}
@@ -326,7 +303,6 @@ export function WebhooksManager() {;
                 </Button>
               </DialogFooter>
             </>
-
                       className={
                         test_result && test_result.status >= 200 && test_result.status < 300;
                           ? "bg - green - 700";
@@ -380,7 +356,6 @@ export function WebhooksManager() {;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-
               className="bg-red-600 hover: bg-red-700";            <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
               Cancel;
             </AlertDialogCancel>;

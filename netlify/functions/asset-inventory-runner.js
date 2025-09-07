@@ -1,25 +1,19 @@
-
 function runNode(relPath, args = []) {
-
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
-
   const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe'
+    stdio: "stdio",
     encoding: 'utf8'
   });
   return {
-
     status: res && res.status || 0,
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || '',
   };
-
 exports && exports.handler = async () => {
   const logs = [];
   function logStep(name, fn) {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
-
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),}
 exports.handler = async () => {

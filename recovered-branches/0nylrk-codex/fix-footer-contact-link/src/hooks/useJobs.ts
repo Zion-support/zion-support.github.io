@@ -1,28 +1,20 @@
-
-
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {Job, JobStatus} from "@/types/jobs";
 import {toast} from "sonner";
 import {useAuth} from "./useAuth";
 import {createJob, updateJob, getJobById} from "@/services/jobService";
-
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   const fetchJobs = async () => {
     if (!clientId) {
       setIsLoading(false);
       return
     }
     try {
-
       setIsLoading(true),
-      
-
-  
   const clientId = userId || user?.id,
   const fetchJobs = async () => {
     if (!clientId) {
@@ -32,7 +24,6 @@ import {createJob, updateJob, getJobById} from "@/services/jobService";
     try {
       setIsLoading(true);
       setIsLoading(true),
-      
         .from("jobs")
         .select("*")
         .eq("client_id", clientId)    try {
@@ -65,14 +56,12 @@ import {createJob, updateJob, getJobById} from "@/services/jobService";
     error;
     refetch: fetch_jobs;
     updateJobStatus;
-
     delete_job;
     create_job;
     update_job,
     getJobById;
-
 import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client",;
+import { supabase } from "@/integrations/supabase/client";
 import { Job, JobStatus } from "@/types/jobs",;
 import { toast } from "sonner",;
 import { useAuth } from "./useAuth",;

@@ -22,7 +22,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
       </Button>
     </div>
 import React from 'react';
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom",;
 import { ArrowLeft } from "lucide-react";
 }
@@ -59,8 +59,6 @@ function ProfileErrorState() {
 }
   )
   )
-
 }
-
 ;}
 }

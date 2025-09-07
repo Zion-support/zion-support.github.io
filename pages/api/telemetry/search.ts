@@ -1,58 +1,36 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-;
-const memoryStore: { q: string, ts: number }[] = []
+import { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'POST') {
-    const { q } = req.body || {}
-    if (typeof q === 'string' && q.trim()) {
-      memoryStore.push({ q: q.trim(), ts: Date.now() })
-    }
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
 const memoryStore: { q: string, ts: number }[] = [];
-export default function handler(req, res) {
-  try {
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
-    const { q } = req.body || {};
-    if (typeof q === 'string' && q.trim()) {;
-      memoryStore.push({ q: q.trim(), ts: Date.now() });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    return res.status(204).end();
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  if (req.method === 'GET') {
-    const counts = new Map<string number>();
-    return res.status (204).end ();
+    try {
+      const { q } = req.query;
+      
+      if (q && typeof q === 'string') {
+        memoryStore.push({ q: q.trim(), ts: Date.now() });
+      }
 
+      res.status(200).json({ success: true, searches: memoryStore });
+    } catch (error) {
+      console.error('Telemetry search error:', error);
+      res.status(500).json({ error: 'Failed to fetch search telemetry' });
+    }
+  } else if (req.method === 'POST') {
+    try {
+      const { query } = req.body || {};
+      
+      if (!query || typeof query !== 'string') {
+        return res.status(400).json({ error: 'Query is required' });
+      }
+
+      memoryStore.push({ q: query.trim(), ts: Date.now() });
+      res.status(200).json({ success: true, message: 'Search telemetry recorded' });
+    } catch (error) {
+      console.error('Telemetry search recording error:', error);
+      res.status(500).json({ error: 'Failed to record search telemetry' });
+    }
+  } else {
+    res.status(405).json({ error: 'Method not allowed' });
   }
-
-    const counts = new Map<string, number>();
-    for (const { q } of memoryStore) counts.set(q, (counts.get(q) || 0) + 1);
-    const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n }));
-
+}

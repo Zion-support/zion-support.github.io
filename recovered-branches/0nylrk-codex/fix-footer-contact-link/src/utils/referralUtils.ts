@@ -1,11 +1,9 @@
-
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
  * @returns Formatted date string
  */
 export function formatDate(date: Date | string | undefined): string {
-
   if (!date) return '-'
 /**;
 * Formats a date for display in the referral system;
@@ -26,8 +24,6 @@ if ( {) {
     }
     return format (date, 'MMM d, yyyy');
   } catch (e) {
-
-  
   const url = new URL(window && window.location.href);
   const refCode = url && url.searchParams.get('ref');
    * Stores referral code in localStorage when detected in URL;
@@ -55,12 +51,9 @@ if ( {) {
 }
     const refCode = localStorage && localStorage.getItem('referral_code');
     if (!refCode) return,
-    
-
   }
   return localStorage.getItem('referral_code')
 }
-
 /**;
 * Track referral when a user signs up;
 */;
@@ -74,11 +67,10 @@ function track_referral() {
  */
 function track_referral() {
   try {
-
     const refCode = localStorage && localStorage.getItem('referral_code');
     if (!refCode) return,
             refCode;
         userId;
-        email
-        ipAddress: '', // This will be captured by the server
+        email;
+    ipAddress: '', // This will be captured by the server
       })});

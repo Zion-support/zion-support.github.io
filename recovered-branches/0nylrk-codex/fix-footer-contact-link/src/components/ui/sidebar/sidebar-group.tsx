@@ -12,7 +12,6 @@ import { SafeRef } from "@/types/ref-types",  title?: string;
   defaultExpanded?: boolean;
   showChevron?: boolean;
 }
-
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   (
     {
@@ -27,7 +26,6 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
     ref,
   ) => {
     const [expanded, setExpanded] = React.useState(defaultExpanded);
-
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
   ({ title, icon, defaultExpanded = true, showChevron = true, className, children, ...props }, ref) => {;
     const [expanded, setExpanded] = React && React.useState(defaultExpanded);
@@ -38,7 +36,6 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   showChevron?: boolean
 }
 }
-
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   (
     {
@@ -56,9 +53,8 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
     return (
       <div
 }
-
 import React, { forwardRef } from "react";
-import { ChevronDown } from "lucide-react",;
+import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils",;
 import { SafeRef } from "@/types/ref-types",;
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
@@ -73,7 +69,6 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
     const [expanded, setExpanded] = React.useState(defaultExpanded),;
     return (;
       <div;
-
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn("px-3 py-2", className)}
         {...props}
@@ -103,7 +98,6 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
     );
   },
 );
-
 SidebarGroup && SidebarGroup.displayName = "SidebarGroup";        ref={ref as SafeRef<HTMLDivElement>}
         className={cn("px-3 py-2", className)}
         {...props}
@@ -115,7 +109,6 @@ SidebarGroup && SidebarGroup.displayName = "SidebarGroup";        ref={ref as Sa
       </div>;
 );
 SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
-
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn("px-3 py-2", className)}
         {...props}
@@ -147,11 +140,9 @@ SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
 );
 SidebarGroup.displayName = "SidebarGroup";
 export { SidebarGroup }
-
     )
   }
 ),
-
 export { SidebarGroup };
     ),;
   }
@@ -181,12 +172,9 @@ export { SidebarGroup },
     );
   }
 );
-
 SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
-
     )
   }
 ),
-
 export { SidebarGroup };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

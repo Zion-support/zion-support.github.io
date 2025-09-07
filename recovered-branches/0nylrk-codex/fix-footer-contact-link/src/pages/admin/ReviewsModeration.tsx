@@ -21,13 +21,10 @@ function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
   const [isLoading, setIsLoading] = useState(true),
-  
-
   const fetchReviews = async () => {;
     setIsLoading(true);
     try {
@@ -53,14 +50,10 @@ function ReviewsModerationContent() {
   const handleRefresh = () => {
     fetchReviews()
   }
-
   },
-  
-
   const handleRefresh = () => {
     fetchReviews()
 };
-
   return (
     <>;
       <SEO
@@ -77,7 +70,6 @@ function ReviewsModerationContent() {
             </p>
           </div>
         </div>
-
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -98,13 +90,11 @@ function ReviewsModerationContent() {
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
               </TabsList>
-
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable
                   reviews={reviews}
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
-
 export default function ReviewsModeration() {
   return (
     <ProtectedRoute>
@@ -113,7 +103,7 @@ export default function ReviewsModeration() {
   );
 }
 import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer",;
+import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO",;
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
@@ -205,7 +195,6 @@ function ReviewsModerationContent() {;
         </Card>;
       </main>;
       <Footer />;
-
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
 import { SEO } from '@/components / SEO';
@@ -223,9 +212,7 @@ function ReviewsModerationContent() {
   const [active_tab, setActiveTab] = useState ("pending");
   const [reviews, set_reviews] = useState ([]);
   const [is_loading, setIsLoading] = useState (true);
-
 }
-
 export default function ReviewsModeration() {
   return (
     <ProtectedRoute>

@@ -1,14 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
   if (req.method === 'GET') {
-
   if (req.method === 'GET') {;
   if (req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req.query;
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts = readPosts();
-
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils / types / blog';
 import { read_posts, write_posts } from '@/utils / data / blog_store';
@@ -103,15 +100,10 @@ if ( {) {
     write_posts (posts);
     return res.status (201).json (post);
   }
-
 return res.status(405).end();
 }
-
 }
 }
   return res.status(405).end();
-
 return res.status (405).end ();
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,26 +1,21 @@
-
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
   return (
-
     <div className="flex space-x-2">  return (
-
     <div className="flex space-x-2">
-
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
 interface ActionButtonsProps {
   flag_id: string;
   status: string;
-
     <div className="flex space-x-2">
         variant="ghost"
         size="icon"
         title="View Details"
 import React from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react",;
 ;
 interface ActionButtonsProps {;
@@ -59,11 +54,9 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
         <Button
           variant="ghost"
           size="sm"
-
     </div>;
 );
-
-=======import React from "react",;
+=======import React from "React";
 import { Button } from "@/components/ui/button",;
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react",;
 interface ActionButtonsProps {;
@@ -107,7 +100,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         title="Ban User";
         onClick={() => onAction(flagId, 'ban')}
         disabled={status === 'actioned' || status === 'ignored'}
-
       >;
         <Ban className="h-4 w-4" />;
       </Button>;
@@ -122,7 +114,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
       )}
     </div>;
   );
-
   on_action: (
     flag_id: string,
     action: "warning" | "suspension" | "ban" | "ignore",
@@ -180,7 +171,6 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
         </Button>)}
     </div>);
 }
-
 };
   )
 };
@@ -204,11 +194,8 @@ onClick={() => onAction(flagId, "ignore")}
       )}
 </div>
   );
-
 }
-
 };
-
   )
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

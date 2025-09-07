@@ -1,13 +1,9 @@
-
 }: SmartContractDeploymentProps) {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
-    network: 'none'
-    useEscrow: true
+    network: "network",
+    useEscrow: true;
     deployToChain: false
     walletAddress: ''
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return;
     }
     try {
@@ -16,9 +12,7 @@
       logErrorToProduction ('Deployment error:', { data: error });
     }
   }
-
   return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Card className="w-full">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -29,44 +23,34 @@
           Deploy your agreement as a smart contract for enhanced security and automation
         </CardDescription>
       </CardHeader>
-
     <Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
           Deploy your agreement as a smart contract for enhanced security and automation;
         </CardDescription>;
       </CardHeader>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <CardContent className="space-y-6">
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
             <Switch
-
               id="deploy-blockchain"
               aria-label="Deploy to blockchain"
-
           {deploymentOptions.deployToChain && (
             <>
               <div className="space-y-2">
                 <Label>Select blockchain network</Label>
-
                 <RadioGroup 
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
-
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
-
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -80,24 +64,20 @@
                   </div>
                 </RadioGroup>
               </div>
-
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
                 <Input 
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
-
               <div className="flex items-center space-x-2">
                 <Switch
                   id="use-escrow"
                   aria-label="Use escrow"
                   checked={deploymentOptions.useEscrow}
-
             />;
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>;
           </div>;
-
           {deploymentOptions && deploymentOptions.deployToChain && (;
             <>;
               <div className="space-y-2">;
@@ -106,7 +86,6 @@
                   defaultValue={deploymentOptions && deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions;                    network: value as BlockchainNetwork;
-
           <div className="rounded-md bg-muted p-4">
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">
@@ -115,16 +94,12 @@
           </div>
         </div>
       </CardContent>
-
       <CardFooter className="flex justify-between">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button variant="outline" onClick={handleDownloadSolidity}>
           <Download className="mr-2 h-4 w-4" />
           Download .sol File
         </Button>
-
         <Button onClick={handleDeployContract} disabled={isDeploying}>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {isDeploying ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -133,5 +108,3 @@
           ) : (
             'Deploy Contract'
           )}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

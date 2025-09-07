@@ -1,12 +1,11 @@
-  const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe'
+const res = spawnSync('node', [abs, ...args], {
+    stdio: "stdio",
     encoding: 'utf8'
   });
   return {
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || '',
   };
-
 exports && exports.handler = async () => {
   const logs = [];
   function logStep(name, fn) {

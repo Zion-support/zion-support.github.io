@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Calendar, RefreshCw } from "@/components/icons",
 import { Card, CardContent } from "@/components/ui/card",
@@ -18,7 +16,6 @@ import type { QuoteStatus } from "@/types/quotes",  setSearchQuery;
   setStatusFilter;
   archive_filter;
   setArchiveFilter;
-
               onChange={(e) => setSearchQuery(e && e.target.value)}
 interface QuotesFilterProps {;
   searchQuery: string,;
@@ -70,7 +67,6 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
   onReset;
 }) => {;
   return (
-
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   searchQuery;
   setSearchQuery;
@@ -87,7 +83,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   archiveFilter;
   setArchiveFilter;
   dateRange;
-
   setDateRange
   searchQuery,
   setSearchQuery,
@@ -168,7 +163,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   initialFocus
                   mode="range"
 import React from "react";
-import { Calendar, RefreshCw } from "@/components/icons",;
+import { Calendar, RefreshCw } from "@/components/icons";
 import { Card, CardContent } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
@@ -195,7 +190,6 @@ import type { QuoteStatus } from "@/types/quotes",;  setDateRange;  setDateRange
   onReset;
 }) => {;
   return (
-
   onReset;
 }) => {;
     <Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">;
@@ -207,7 +201,6 @@ import type { QuoteStatus } from "@/types/quotes",;  setDateRange;  setDateRange
               className="pl-10 bg-zion-blue border-zion-blue-light text-white";
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-
             />;
           </div>;
           <div>;
@@ -230,13 +223,10 @@ import type { QuoteStatus } from "@/types/quotes",;  setDateRange;  setDateRange
               <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">;
                 <CalendarComponent
                   initialFocus}
-
 },
 };
 },
-
 },
-
             <p className="text - zion - slate - light text - sm mb-2">Date Range</p>;
             <Popover>;
               <PopoverTrigger as_child>;

@@ -1,6 +1,5 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-
 import {
 import Head from 'next / head';
 import Card from '../components / ui / Card';
@@ -27,7 +26,6 @@ import {
   Mail
   Share2
   Check
-
   Brain;
   Monitor,
   Search,
@@ -372,8 +370,8 @@ import {
           ]
         }
       }
-      marketPrice: '$19-149/month'
-      competitors: ['Pingdom', 'GTmetrix', 'WebPageTest']
+      marketPrice: "marketPrice",
+    competitors: ['Pingdom', 'GTmetrix', 'WebPageTest']
       website: 'https://performance.ziontech.ai'
       demo: 'https://demo.performance.ziontech.ai'
       demo: 'https://demo.ai-content.ziontech.ai'
@@ -381,8 +379,8 @@ import {
     }
   ];
     {
-          price: 199
-          features: [
+          price: 199;
+    features: [
             'Unlimited keywords'
             'Full SEO suite'
             'Daily reports'
@@ -573,7 +571,6 @@ import {
           ]
         }
         enterprise: {
-
             'Unlimited accounts',
             'Enterprise scheduling',
             'Advanced calendar',
@@ -581,7 +578,6 @@ import {
             'Dedicated support',
     }
   ];
-
   const marketInsights = [;
     {;
       title: 'AI Content Generation',;
@@ -787,13 +783,11 @@ import {
                 className="card-hover border-gradient-blue text-center"
               </Card>
             ))}
-
       {/* Services Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
               Our Micro SaaS Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -806,7 +800,6 @@ import {
           </div>;
         </div>;
       </section>;
-
       {/* Services Grid */}
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -819,7 +812,6 @@ import {
               with professional-grade features and competitive pricing.;
             </p>;
           </div>;
-
           <div className='space-y-16'>;
             {microSaasServices && microSaasServices.map((service, index) => (;
           </div>
@@ -908,7 +900,6 @@ import {
                           {service && service.useCases.map((useCase, useCaseIndex) => (;
                             <li key={useCaseIndex} className="flex items-center text-gray-300 text-sm">;
                               <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />;
-
                     <div className="flex flex-wrap gap-4">
                       <Button
                         size='sm'
@@ -997,8 +988,6 @@ import {
           </div>;
         </div>;
       </section>;
-
             <Button
-
     </>);
 }

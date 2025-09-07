@@ -1,4 +1,4 @@
-  id?: string;
+id?: string;
   name?: string;
   email?: string;
   user_type?: string;
@@ -7,7 +7,6 @@
   headline?: string;
   profile_complete?: boolean;
   role?: string;
-
   id?: string;
   name?: string;
   email?: string;
@@ -58,7 +57,7 @@ export interface UserDetails {
   createdAt?: string,
   updatedAt?: string
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import { supabase } from "@/integrations/supabase/client",;
+import { supabase } from "@/integrations/supabase/client";
 import { AuthContext } from "@/context/auth/AuthContext",;
 import type { UserDetails as AuthUserDetails } from "@/types/auth",;
 // Define types for our context;
@@ -97,12 +96,11 @@ export interface AuthContextType {;
   loginWithTwitter: () => Promise<void>,;
   loginWithWeb3: () => Promise<void>;
 }  // Mock auth functions for now - these would connect to Supabase in a real implementation
-
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth    // Mock implementation
     setUser({
-      id: "google-user-id"
-      email: "google@example.com"
+      id: "id",
+    email: "google@example.com"
       displayName: "Google User"
       name: "Google User"
       profileComplete: true
@@ -129,15 +127,12 @@ export interface AuthContextType {;
       name: "Twitter User"
       profileComplete: true
     })
-
   };
-
   const signOut = async () => {;
     // This would be replaced with actual Supabase auth;
     console && console.log("Sign out attempted");
     setUser(null)
 };
-
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {;
     // This would be replaced with actual Supabase auth;
     console && console.log("Sign up attempted with:", email, userData);
@@ -145,28 +140,23 @@ export interface AuthContextType {;
     setUser({ ;
       id: "mock-user-id", ;
       email, ;
-
   },
-
     // // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
-
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
   }
   return context
 }
-
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
-
       console.warn("No wallet detected"),
       return
 ;

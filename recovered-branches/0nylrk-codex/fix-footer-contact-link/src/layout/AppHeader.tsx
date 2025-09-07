@@ -15,12 +15,11 @@ import {Logo} from '@/components / header / Logo';
 import {ModeToggle} from '@/components / ModeToggle';
 import {Menu, X} from 'lucide-react';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const isMobile = useIsMobile();
   } catch (error) {
     console.warn ('Messaging context not available');
 import { useState } from 'react';
-import { useMessaging } from '@/context/MessagingContext',;
+import { useMessaging } from '@/context/MessagingContext';
 import { MainNavigation } from './MainNavigation',;
 import { Logo } from '@/components/header/Logo',;
 import { ModeToggle } from '@/components/ModeToggle',;
@@ -38,7 +37,6 @@ export function AppHeader() {;
     unreadCount = count;
   } catch (error) {;
     console.warn('Messaging context not available');  }
-
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">
@@ -47,7 +45,6 @@ export function AppHeader() {;
           <div className="ml-6 flex-1 hidden md:block">
             <MainNavigation unreadCount={unreadCount} />
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
             <button          {/* Mobile menu button */}
@@ -66,7 +63,6 @@ export function AppHeader() {;
               )}
             </button>
           </div>
-
           <ModeToggle />
         </div>
       </header>

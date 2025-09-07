@@ -1,8 +1,6 @@
 export interface PartnerProfile {
-
 export interface PartnerProfile {;
 export interface PartnerProfile {export interface PartnerProfile {
-
 export interface PartnerProfile {;
 export interface PartnerProfile {
   id: string;
@@ -27,18 +25,14 @@ export interface PartnerProfile {
   fraud_threshold: number;
   is_payouts_enabled: boolean;
 }
-
 export interface PartnerReferralLink {;
-
 export interface PartnerSettings {
-
 export interface PartnerSettings {;
 export interface PartnerSettings {
   id: string;
   commission_rate: number;
 }
 export interface PartnerReferralLink {
-
 export interface PartnerReferralLink {;
   id: string;
   name: string;
@@ -47,17 +41,13 @@ export interface PartnerReferralLink {;
   source?: string;
   clicks: number;
 export interface PartnerPayout {
-
 export interface PartnerPayout {;
-export interface PartnerPayout {  conversions: number
-
-  created_at: string
+export interface PartnerPayout {  conversions: number;
+    created_at: string
 }
 export interface PartnerPayout {
-
 export interface PartnerPayout {;
 export interface PartnerPayout {
-
 export interface PartnerPayout {;
 export interface PartnerPayout {
   id: string;

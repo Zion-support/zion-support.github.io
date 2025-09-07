@@ -8,7 +8,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { SORT_OPTIONS  } from '@/data / sort_options';
@@ -22,7 +21,6 @@ interface SortDropdownProps {
   sortOption: string;
   setSortOption: (option: string) => void;
 }
-
 export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdownProps) {;
   return (
     <DropdownMenu>
@@ -46,7 +44,7 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
       </DropdownMenuContent>
     </DropdownMenu>
 import React from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { SORT_OPTIONS } from "@/data/sortOptions",;
 import { SortDesc, ChevronDown } from "lucide-react",;
 import {;
@@ -58,7 +56,6 @@ interface SortDropdownProps {;
   sortOption: string;
   setSortOption: (option: string) => void;
   );
-
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

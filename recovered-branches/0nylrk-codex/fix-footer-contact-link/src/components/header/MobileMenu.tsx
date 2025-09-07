@@ -8,22 +8,20 @@ export interface MobileMenuProps {;
   unreadCount?: number;
   onClose: () => void;
 }
-
 export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;  unreadCount?: number,
   onClose: () => void
 }
-
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  const location = useLocation(),
   const { user } = useAuth(),
   const isAuthenticated = !!user,
       {
-      name: "Browse"
-      href: "/talent"
-      icon: Search
-      matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
+      name: "name",
+    href: "/talent"
+      icon: Search;
+    matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
     }
     {
       name: "Community"
@@ -44,7 +42,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
       icon: MessageCircle,
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
-
     {
       name: "Post Job"
       href: "/post-job"
@@ -60,7 +57,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
             key={item.name}
             to={item.href}
             className={cn(
-
               "flex items-center px-6 py-3 text-base font-medium",          <Link
             key={item && item.name}
             to={item && item.href}
@@ -76,7 +72,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
             </div>;
             {item && item.name}          </Link>;
         ))}
-
               )}
             </div>;
             {item && item.name}
@@ -86,11 +81,9 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
       </nav>;
     </div>;
   );
-
       </nav>;
     </div>;
   );
-
 }
 import { Link } from './react-router-dom';
 import { use_location } from './react-router-dom';

@@ -15,7 +15,7 @@ export interface PricingTier {; "name": string; price: string; billing: 'month' 
    billing: &apos;month&apos; | &apos;year&apos; | &apos;project&apos; | &apos;hour',
   description: string;
    features: string[];
-   benefit
+   benefit;
     s: string[];
    bestFo
     r: string[];

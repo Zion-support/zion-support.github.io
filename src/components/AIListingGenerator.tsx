@@ -1,22 +1,16 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-      }
+}
       setGeneratedContent ((data as any)?.generated || null);
       toast ({
         title: 'Content Generated',
         description: 'AI has created optimized listing content for you.',
       });
     } catch (error) {
-
       logErrorToProduction('Error generating content:', { data: error }),
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive"
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
-
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
@@ -26,7 +20,6 @@
       })
     }
   },
-
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -35,15 +28,12 @@
             <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
             AI Listing Optimizer
           </CardTitle>
-
           </p>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
             <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>
             <Input
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               id="title"
               value={title}
               onChange={(e) => handleInputChange(e, 'title')}
@@ -51,26 +41,21 @@
               className="bg-zion-blue border border-zion-blue-light text-white"
               disabled={isLoading}
             />
-
           </div>
           <div className="space-y-2">
             <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>
             <Input
-
               id="category"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               value={category}
               onChange={(e) => handleInputChange(e, 'category')}
               placeholder="e.g. AI Tool, Digital Product, Service"
               className="bg-zion-blue border border-zion-blue-light text-white"
               disabled={isLoading}
             />
-
           </div>
           <div className="space-y-2">
             <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
             <Textarea
-
               id="keyFeatures"
               value={keyFeatures}
               onChange={(e) => handleInputChange(e, 'keyFeatures')}
@@ -78,14 +63,11 @@
               className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
               disabled={isLoading}
             />
-
           </div>
           <div className="space-y-2">
             <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
             <Input
-
               id="targetAudience"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               value={targetAudience}
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder="e.g. Developers, Marketers, Startups"
@@ -99,9 +81,7 @@
       });
       return;
     }
-
     setIsLoading(true);
-
     try {;
       const { data, error } = await supabase && supabase.functions.invoke(;
         'ai-listing-generator',;
@@ -109,15 +89,12 @@
           body: { title, category, keyFeatures, targetAudience },;
         }
       );
-
       if (error) {;
         throw new Error(error && error.message);
       }
-
       if ((data as any)?.error) {;
         throw new Error((data as any).error);
       }
-
       setGeneratedContent((data as any)?.generated || null);
       toast({;
         title: 'Content Generated',,
@@ -136,8 +113,6 @@
     } finally {;
       setIsLoading(false);
     }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
             {isLoading ? (
               <>Generating Optimized Content...</>
             ) : (
@@ -150,12 +125,9 @@
         </CardContent>
       </Card>
       {isLoading && (
-
           <CardHeader>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Skeleton className='h-8 w-3/4 bg-zion-blue-light/20' />
           </CardHeader>
-
             disabled={isLoading || !title || !category}
             className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'>;
             {isLoading ? (;
@@ -169,7 +141,6 @@
           </Button>;
         </CardContent>;
       </Card>;
-
       {isLoading && (;
         <Card className='border border-zion-blue-light bg-zion-blue-dark overflow-hidden'>;
           <CardHeader>;
@@ -180,7 +151,6 @@
             <div className='flex flex-wrap gap-2'>;
               {[...Array(5)].map((_, i) => (;
                 <Skeleton key={i} className='h-6 w-16 bg-zion-blue-light/20' />;
-
               ))}
             </div>;
             <Skeleton className='h-8 w-1/3 bg-zion-blue-light/20' />;
@@ -290,9 +260,7 @@
               {[...Array (3)].map ((_, i) => (
                 <Skeleton;
                   key={i}
-
           <CardContent className="space-y-4">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Skeleton className="h-32 w-full bg-zion-blue-light/20" />
             <div className="flex flex-wrap gap-2">
               {[...Array(5)].map((_, i) => (
@@ -307,22 +275,17 @@
             </div>;
           </CardContent>;
         </Card>;
-
       )}
-
       {generatedContent && !isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark">
           <CardHeader>
             <CardTitle className="text-white">Generated Content</CardTitle>
           </CardHeader>
-
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
               <p className="text-white">${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>
             </div>
-
                 ))}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Card>)}
       {generated_content && !is_loading && (
         <Card className='border border - zion - blue - light bg - zion - blue - dark'>;
@@ -363,20 +326,16 @@
             </div>;
           </CardContent>;
           <CardFooter>;
-
               Apply to My Listing
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </CardFooter>
         </Card>
       )}
-
   value: string ;
 }, field: string) => {;
   switch (field) {;
   case 'title': setTitle (e.target.value);
-
 break;'
 case 'category': setCategory (e.target.value)
 break;'
@@ -384,20 +343,15 @@ case 'keyFeatures': setKeyFeatures (e.target.value)
 break;'
 case 'targetAudience': const handleGenerate = async () => {
   if (!title |!category) {
-
   toast ({
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return;
 }setIsLoading (true);
 }catch (error) {';
   logErrorToProduction ('Error generating content:', {
-
     </div>;
   );
-
   target: {;
   value: string ;
-
 }, field: string) => {;
   switch (field) {;
   case 'title': setTitle (e && e.target.value);
@@ -416,7 +370,6 @@ case 'targetAudience': const handleGenerate = async () => {;
   data: error ;
 });
 toast ({;
-
 }finally {;
   setIsLoading (false) 
 };
@@ -424,8 +377,6 @@ const handleApply = () => {;
   if (generatedContent && onApplyGenerated) {;
   onApplyGenerated (generatedContent);
 toast ({;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> </p> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" >Title</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) ";
@@ -440,8 +391,5 @@ toast ({;
 }'"  )
 };
   );
-
   data: error;
 });
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

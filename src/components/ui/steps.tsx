@@ -1,20 +1,13 @@
-
-  className}: StepProps) {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+className}: StepProps) {
   return (
     <li
-
       className={cn(
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className
       )}
     >
       <div
         className={cn(
-
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               status === "incomplete"
             "bg-zion-blue border-zion-cyan text-white":
               status === "current"
@@ -25,8 +18,6 @@
             "bg-zion-blue border-zion-cyan text-white":
               status === "current",
             "bg-zion-purple border-zion-purple text-white":
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
         )}
@@ -35,9 +26,8 @@
           <CheckIcon className="h-5 w-5" />
         ) : (
           <span>
-
 import React from "react";
-import { cn } from "@/lib/utils",;
+import { cn } from "@/lib/utils";
 import { CheckIcon } from 'lucide-react';
 interface StepProps {;
   status: "incomplete" | "current" | "complete",;
@@ -72,85 +62,62 @@ export function Step({;
               status === "complete"}
         )}
       >;
-
             {/* Step number would go here */}
-
         )}
-
             "text-zion-slate-light": status === "incomplete",
             "text-zion-slate-light": status === "incomplete",
-
             "text-white": status === "current" || status === "complete"})}
         >
       </div>;
-
       <div className="ml-4 min-w-0">;
         <h3
           className={cn("text-sm font-medium", {
             "text-zion-slate-light": status === "incomplete"
             "text-white": status === "current" || status === "complete"})}>;
           {label}
-
 interface StepsProps {
   currentStep: number
-  className?: string
-  children: React.ReactNode
+  className?: string;
+    children: React.ReactNode
 }
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children)
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
-
           if (!React.isValidElement(child)) return null,
-          
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
-
           if (!React.isValidElement(child)) return null,
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-          
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
-          
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
       </ol>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="hidden md:flex md:mt-4">
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
-
 interface StepsProps {;
   currentStep: number,;
   className?: string;
   children: React && React.ReactNode;
 }
-
 export function Steps(): any ({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React && React.Children.toArray(children);
-
   return (
-
 }/> </div> </div> </div>) 
 }"};
 ;
-
 ;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
   return (;
-
     <div className={cn("w-full", className)}>;
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
         {React.Children.map(childrenArray, (child, index) => {;
@@ -173,5 +140,3 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
       </div>;
     </div>;
   );
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

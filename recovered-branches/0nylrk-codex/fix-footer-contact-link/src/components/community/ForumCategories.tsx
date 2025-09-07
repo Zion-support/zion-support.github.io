@@ -1,5 +1,3 @@
-
-
 import { Link } from "react-router-dom",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
@@ -15,16 +13,13 @@ import {
 import { ForumCategory, ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
-
     icon: "Briefcase"
   }
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",  {
-
-    id: "project-help"
+    id: "id",
     name: "Project Help"
     description: "Get help with your ongoing projects and collaboration."
-    adminOnly: false
-
+    adminOnly: false;
     icon: "MessageSquare"import { Link } from './react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { use_auth } from '@/hooks / use_auth';
@@ -73,5 +68,4 @@ const icon_map = {
   MessageSquare;
   Code;
   FileText;
-
 export default ForumCategories;

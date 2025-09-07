@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRouter } from 'next/router',;
+import { useRouter } from 'next/router';
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;

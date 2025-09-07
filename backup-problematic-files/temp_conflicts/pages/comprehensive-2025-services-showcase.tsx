@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import Head from 'next/head',;
+import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion',;
 import { ;
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, ;
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom,;
   Search, Filter, ArrowRight, Award, Target, Cpu, Database;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
+import EnhancedNavigation from "EnhancedNavigation";
+import EnhancedFooter from "EnhancedFooter";
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services-2025',;
 ;
 export default function Comprehensive2025ServicesShowcase() {;

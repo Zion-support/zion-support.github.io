@@ -1,15 +1,13 @@
-
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
   {
-
-    id: "talent-1"
+    id: "id",
     title: "Senior AI Engineer"
     description: "Expert in machine learning algorithms and neural networks with 8+ years of experience building production-ready AI systems."
     category: "Engineering"
-    price: 150
+    price: 150;
     currency: "$"
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"];// Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
@@ -41,7 +39,6 @@ const TALENT_LISTINGS: ProductListing[] = [
     price: 145,
     currency: "$",
     tags: ["Statistical Analysis", "Python", "R", "Tableau"],
-
     author: {    description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.";
     category: "Security"
     price: 165
@@ -119,7 +116,6 @@ const TALENT_FILTERS = [
     currency: "$"
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"];
     author: {
-
     id: "talent-6",
     title: "AI Ethics Consultant",
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.",
@@ -127,15 +123,13 @@ const TALENT_FILTERS = [
     price: 180,
     currency: "$",
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"],
-
       title="AI & Tech Talent"
       description="Connect with highly skilled professionals in AI, software development, data science, and more."
       categorySlug="talents"
-
   return (
     <DynamicListingPage
 import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings",;
+import { ProductListing } from "@/types/listings";
 // Sample talent listings;
 const TALENT_LISTINGS: ProductListing[] = [;
   {;
@@ -259,7 +253,6 @@ export default function TalentsPage() {;
   );
 }
 ;
-
       title="AI & Tech Talent"
       description="Connect with highly skilled professionals in AI, software development, data science, and more."
       categorySlug="talents"

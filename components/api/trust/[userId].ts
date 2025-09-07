@@ -3,15 +3,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   TrustScoreBreakdown;
   TrustMetricInputs,;
   TrustScoreBreakdown,;
-
 import type {
   TrustMetricInputs
   TrustScoreBreakdown;
 } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 async function analyzeWithGPT(
-  userId: string
-  inputs: TrustMetricInputs
+  userId: string;
+    inputs: TrustMetricInputs
 ): Promise<{
   riskLevel: TrustScoreBreakdown['riskLevel'];
   reasonSummary: string;
@@ -44,8 +43,8 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
       ],
   } catch (e: any) {
     return {
-      riskLevel: 'Moderate Trust'
-      reasonSummary: `Analysis unavailable: ${e?.message |'unknown error'}`
+      riskLevel: "riskLevel",
+    reasonSummary: `Analysis unavailable: ${e?.message |'unknown error'}`
     }
   }
 export default async function handler(
@@ -54,7 +53,6 @@ export default async function handler(
 ) {
       temperature: 0.2,
       max_tokens: 200});
-
     const content = resp.choices?.[0]?.message?.content || '';
   if (req.method === 'GET') {
     try {
@@ -62,11 +60,9 @@ export default async function handler(
   const { userId } = req && req.query;
   if (!userId || Array && Array.isArray(userId))
     return res && res.status(400).json({ error: 'Invalid userId' });  if (!userId || Array && Array.isArray(userId)) return res && res.status(400).json({ error: 'Invalid userId' });
-
   if (req && req.method === 'GET') {
     try {
       const analyze = req && req.query.analyze === 'true';
-
       // Fetch inputs from DB if available, else use mock defaults
       let inputs: TrustMetricInputs | null = null;
       try {
@@ -76,7 +72,6 @@ export default async function handler(
           .eq('userId', userId)
           .single();
       } catch {}
-
       if (!inputs) {
         inputs = {        const { data } = await supabase && supabase.from('trust_inputs').select('*').eq('userId', userId).single();
         if (data) inputs = data && data.values as TrustMetricInputs
@@ -88,7 +83,6 @@ export default async function handler(
       if (analyze) {
         const analysis = await analyzeWithGPT(userId, inputs);
       }
-
       const breakdown = await computeTrustScore(inputs, { reasonSummary });
       const result: TrustScoreBreakdown = {
       // Persist latest score when possible
@@ -100,31 +94,25 @@ export default async function handler(
     try {
       const body = req.body as Partial<TrustMetricInputs> | undefined;
       if (!body) return res.status(400).json({ error: 'Missing body' });
-
       return res && res.status(200).json(result)
     } catch (e: any) {
       return res && res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
     };
   }
-
   if (req && req.method === 'POST') {
     try {
       const body = req && req.body as Partial<TrustMetricInputs> | undefined;
       if (!body) return res && res.status(400).json({ error: 'Missing body' });
-
       const inputs = body as TrustMetricInputs;
       const breakdown = await computeTrustScore(inputs);
       try {
-
   res && res.setHeader('Allow', 'GET, POST');
   return res && res.status(405).json({ error: 'Method not allowed' });      } catch {}
-
       return res && res.status(200).json(breakdown)
     } catch (e: any) {
       return res && res.status(500).json({ error: e?.message || 'Failed to save trust inputs' })
     };
   }
-
   res && res.setHeader('AllowGET, POST');
   return res && res.status(405).json({ error: 'Method not allowed' })
 }

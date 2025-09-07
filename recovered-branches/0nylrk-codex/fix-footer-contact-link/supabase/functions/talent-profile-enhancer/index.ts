@@ -1,9 +1,7 @@
-
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
-
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
@@ -16,7 +14,6 @@ const cors_headers = {
   name: string;
   title: string;
   bio: string;
-
 }
 interface EnhancedProfile {
   summary: string;
@@ -26,7 +23,7 @@ interface EnhancedProfile {
     platforms: string[];
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',;
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),;
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
@@ -54,7 +51,6 @@ interface EnhancedProfile {;
             Bio: ${talentData && talentData.bio}
             Skills: ${talentData && talentData.skills.join()}
             Location: ${talentData && talentData.location || 'Not specified'}
-            
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text (100-150 words)"
               "categorizedSkills": {
@@ -119,9 +115,7 @@ if ( {) {
     } catch (e) {
       console && console.error("Error parsing OpenAI response:", e);
       throw new Error("Failed to parse the generated content")
-
     console && console.error("Error in talent-profile-enhancer function:", error);
-
         temperature: 0.7,;
         response_format: { type: "json_object" }
       })}),;
@@ -143,7 +137,6 @@ if ( {) {
 ;
     return new Response(;
       JSON.stringify(enhancedProfile),;
-
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
@@ -154,7 +147,6 @@ if ( {) {
     return new Response(
       JSON.stringify({ error: error.message });
     console.error("Error in talent-profile-enhancer function:", error),
-    
     return new Response(
       JSON.stringify({ error: error.message });
       JSON.stringify({ error: error.message }),
@@ -164,7 +156,6 @@ if ( {) {
     return new Response(;
       JSON.stringify({ error: error.message }),;
     console.error("Error in talent-profile-enhancer function:", error),
-    
     return new Response(
       JSON && JSON.stringify(enhancedProfile);
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }

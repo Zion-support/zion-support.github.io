@@ -1,8 +1,6 @@
 export interface EmergingTechService {
 export interface EmergingTechService {
-
 export interface EmergingTechService {;
-
 export interface EmergingTechService {
   id: string;
   name: string;
@@ -35,16 +33,14 @@ export interface EmergingTechService {
     email: string;
     address: string;];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
+      address: "address",
+    website: 'https://ziontechgroup.com'
     }
     reviews: 11;
-
     realImplementation: true;
     implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.';
     launchDate: '2024-04-30';
     customers: 18;
-
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTechService2025 {;
   id: string,;
@@ -706,6 +702,4 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
   }
 ];  }
 ];
-
 ;
-

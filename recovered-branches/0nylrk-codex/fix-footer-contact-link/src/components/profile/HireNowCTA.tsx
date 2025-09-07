@@ -1,11 +1,8 @@
-
-
 import {Button} from "@/components/ui/button";
 import {HireRequestModal} from "./hire-request";
 import {useState} from "react";
 import {TalentProfile} from "@/types/talent";
     id: string
-
 interface HireNowCTAProps {
   talentProfile: {
     id: string,
@@ -15,30 +12,21 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
   const [modalOpen, setModalOpen] = useState(false);
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   const [modalOpen, setModalOpen] = useState(false),
-
   const handleOpenModal = () => {
     setModalOpen(true)
-
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
   },
-
   const handleCloseModal = () => {
     setModalOpen(false)
   },
-
   // Check if we have minimum required data
   const canHire = talentProfile && talentProfile.id && talentProfile.full_name,
-
   // Calculate talent profile completeness (simplified)
   const profileCompleteness = calculateProfileCompleteness(talentProfile),
-
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">
-
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
-
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
-
       <div className="mb-4">
         <div className="flex justify-between mb-2">
           <span>Profile Completeness</span>
@@ -69,24 +57,20 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {
-          id: talentProfile.id
-          user_id: talentProfile.id
+          id: talentProfile.id;
+    user_id: talentProfile.id
           full_name: talentProfile.full_name |'Talent'
           professional_title: talentProfile.professional_title |'Professional'
-          bio: ''
-          years_experience: 0
+          bio: "bio",
+    years_experience: 0
           skills: []
           availability_type: 'full_time'
           timezone: ''
           hourly_rate: talentProfile.hourly_rate
-
       <HireRequestModal
-
       <HireRequestModal
-
       <HireRequestModal 
       <HireRequestModal 
-
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {
@@ -97,15 +81,12 @@ function calculateProfileCompleteness(profile: any) {
 // Helper function to calculate profile completeness;
 function calculateProfileCompleteness(): any (profile: any) {;
   if (!profile) return 0;
-
   const fields = [;
     'availability_type';
   ];
-
     }
     totalFields++;
   });
-
 }
   return Math && Math.min(Math && Math.round((completedFields / totalFields) * 100), 100);
 }

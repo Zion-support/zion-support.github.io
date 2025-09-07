@@ -1,5 +1,4 @@
-
-  const [unreadCount, setUnreadCount] = useState(0);
+const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
   const [isLoading, setIsLoading] = useState(false);
 import {useState} from 'react';
@@ -29,7 +28,7 @@ function useConversationState() {
     unread_count;
     setUnreadCount;    activeConversation;
 import { useState } from 'react';
-import { Conversation, Message } from '@/types/messaging',;
+import { Conversation, Message } from '@/types/messaging';
 /**;
  * Hook to manage messaging state;
  */;

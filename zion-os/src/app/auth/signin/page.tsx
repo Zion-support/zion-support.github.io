@@ -1,7 +1,6 @@
-
 "use client",;
 import { useState } from "react";
-import Link from "next/link",;
+import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext",;
 export default function SignInPage() {;
   const [email, setEmail] = useState(""),;
@@ -21,7 +20,6 @@ export default function SignInPage() {;
       setIsLoading(false);
     }
   };
-
             <div>;
               <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb-2">;
                 Email Address;

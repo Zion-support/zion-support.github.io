@@ -1,20 +1,12 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-      }
-
+}
       // Update this model;
-
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
         .eq ('id', model_id),
       // Refresh the model list;
       fetch_models ();
-
         .order('createdAt', { ascending: false }),;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {;
     try {;
       // If activating, deactivate all other models with the same purpose;
@@ -24,20 +16,17 @@
           .update({ active: false });
           .eq('purpose', purpose);
       }
-
       // Update this model;
       await supabase;
         .from('model_versions');
         .update({ active: !currentActive });
         .eq('id', modelId),;
-
       // Refresh the model list;
       fetchModels();
     } catch (error) {;
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
   },;
-
   return (
     <Card className="w-full">;
       <CardHeader className="flex flex-row items-center justify-between">;
@@ -86,13 +75,11 @@
                     ) : (;
                       <Badge className="bg-yellow-500">Queued</Badge>;
                     )}
-
                     {model && model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
                   </TableCell>;
                   <TableCell>{new Date(model && model.createdAt).toLocaleDateString()}</TableCell>;
                   <TableCell className="text-right">;
                     {model && model.trainingStatus === 'queued' || model && model.trainingStatus === 'running' ? (;
-
                       <Button
                         variant="ghost"
                         size="sm"
@@ -103,15 +90,12 @@
                           <Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (;
                           <RefreshCw className="h-4 w-4" />;
-
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
                           <RefreshCw className="h-4 w-4" />
                         )}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       >
                         {model.active ? (
                           <>
@@ -122,31 +106,23 @@
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
                         )}
-
                       <Button
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-
                         title = {model && model.errorMessage || "Training failed",}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
                       </Button>;
-
                     )}
                   </TableCell>;
                 </TableRow>;
-
                         title={model.errorMessage || "Training failed"}
-
                         title = {model.errorMessage || "Training failed",}
                         title={model.errorMessage || "Training failed"}
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               ))}
             </TableBody>;
           </Table>;
@@ -155,9 +131,7 @@
     </Card>;
   );
 }
-
 }
-
   },
   return (
     <Card className="w-full">;
@@ -246,5 +220,3 @@
       </CardContent>;
     </Card>);
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

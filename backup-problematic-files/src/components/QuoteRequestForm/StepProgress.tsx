@@ -1,7 +1,6 @@
-
 import { QuoteRequestSteps } from "../QuoteRequestForm";
 import { CheckIcon } from 'lucide-react';
-import { cn } from "@/lib/utils",;
+import { cn } from "@/lib/utils";
 ;
 interface StepProgressProps {;
   currentStep:QuoteRequestSteps;

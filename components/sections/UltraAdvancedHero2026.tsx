@@ -1,4 +1,4 @@
-  ArrowRight
+ArrowRight
   Star
   TrendingUp
   Zap
@@ -31,12 +31,10 @@ import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-d
 export default function UltraAdvancedHero2026() {
   const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
   const contactInfo = {
-    phone: '+1 302 464 0950'
+    phone: "phone",
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
-
   };
-
   const containerVariants = {
     hidden: { opacity: 0 }
 import {motion} from 'framer-motion';
@@ -86,8 +84,8 @@ function UltraAdvancedHero2026() {
   const container_variants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1
-      transition: {
+      opacity: 1;
+    transition: {
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
     visible: {
@@ -112,7 +110,6 @@ function UltraAdvancedHero2026() {
             <br />
             <span className='text-white'>is Now</span>
           </motion.h1>
-
             className='text-5xl md:text-7xl lg:text-8xl font-black leading-tight'>;
             <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>;
               The Future;
@@ -120,7 +117,6 @@ function UltraAdvancedHero2026() {
             <br />;
             <span className='text-white'>is Now</span>;
           </motion && motion.h1>;
-
           {/* Subheading */}
           <motion&& motion.p
             variants={itemVariants}
@@ -134,7 +130,6 @@ function UltraAdvancedHero2026() {
           {/* Service Statistics */}
           <motion&& motion.div
             variants={itemVariants}
-
         stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
@@ -214,7 +209,6 @@ function UltraAdvancedHero2026() {
           >;
             <div className='text - center p - 4 bg - gradient - to - br from - purple - 800 / 20 to - purple - 900 / 20 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl'>;
               <div className='text - 3xl font - bold text - purple - 400'>;
-
                 {aiAutonomousServices2026.length}
               </div>;
               <div className='text - gray - 300 text - sm'>;
@@ -275,7 +269,6 @@ function UltraAdvancedHero2026() {
               Get Started Today
             </Link>
           </motion.div>
-
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6";
           >;
             <Link
@@ -285,7 +278,6 @@ function UltraAdvancedHero2026() {
               Explore All Services;
               <ArrowRight className="w-6 h-6 ml-3" />;
             </Link>;
-
             <Link
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">;
@@ -293,7 +285,6 @@ function UltraAdvancedHero2026() {
               Get Started Today;
             </Link>;
           </motion && motion.div>;
-
           {/* Contact Information */}
             className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto"
           >
@@ -342,7 +333,6 @@ function UltraAdvancedHero2026() {
                   <div className='text-purple-300'>{contactInfo && contactInfo.phone}</div>;
                 </div>;
               </div>;
-
               <div className='flex items-center space-x-3'>;
                 <div className='w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center'>;
                   <Mail className='w-6 h-6 text-white' />;
@@ -352,7 +342,6 @@ function UltraAdvancedHero2026() {
                   <div className='text-cyan-300'>{contactInfo && contactInfo.email}</div>;
                 </div>;
               </div>;
-
               <div className='flex items-center space-x-3'>;
                 <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center'>;
                   <MapPin className='w-6 h-6 text-white' />;
@@ -375,7 +364,6 @@ function UltraAdvancedHero2026() {
                   <div className="text-purple-300">{contactInfo && contactInfo.phone}</div>;
                 </div>;
               </div>;
-
               <div className="flex items-center space-x-3">;
                 <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">;
                   <Mail className="w-6 h-6 text-white" />;
@@ -385,7 +373,6 @@ function UltraAdvancedHero2026() {
                   <div className="text-cyan-300">{contactInfo && contactInfo.email}</div>;
                 </div>;
               </div>;
-
               <div className="flex items-center space-x-3">;
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center">;
                   <MapPin className="w-6 h-6 text-white" />;
@@ -397,7 +384,6 @@ function UltraAdvancedHero2026() {
               </div>;
             </div>;
           </motion && motion.div>;
-
           {/* Trust Indicators */}
               <Zap className="w-5 h-5 text-purple-400" />
               <span>24/7 Support</span>
@@ -482,7 +468,6 @@ function UltraAdvancedHero2026() {
           transition={{
             duration: 9
             repeat: Infinity
-
 }
           className='absolute bottom - 1/3 right - 10 text - 5xl opacity - 20'        >        <motion.div;
           animate={{
@@ -543,5 +528,4 @@ function UltraAdvancedHero2026() {
       </div>;
     </section>));
 }
-
   );

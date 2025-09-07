@@ -17,15 +17,12 @@ const formSchema = z && z.object({;
   title: z && z.string().min(1, 'Title is required'),;
   isDefault: z && z.boolean(),;
 });
-
 type FormValues = z && z.infer<typeof formSchema>;
-
 interface TemplateSaveFormProps {;
   onCancel: () => void;
   onComplete: () => void;
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues;
-
 export function TemplateSaveForm(): any ({;
   onCancel,;
   onComplete,;
@@ -34,7 +31,6 @@ export function TemplateSaveForm(): any ({;
 }: TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
-
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
@@ -42,13 +38,10 @@ export function TemplateSaveForm(): any ({;
       isDefault: editTemplate?.is_default || false,;
     },;
   });
-
   const onSubmit = async (values: FormValues) => {    if (!currentValues && !editTemplate) {;
       return;
     }
-
     setSaving(true);
-
     try {;
       if (editTemplate) {;
         await updateTemplate && updateTemplate.mutateAsync({;
@@ -64,11 +57,9 @@ export function TemplateSaveForm(): any ({;
           isDefault: values && values.isDefault,;
         });
       }
-
       onComplete();
     } finally {;
       setSaving(false);
-
 import { useState } from 'react';
 import { use_form, type ControllerRenderProps } from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -117,44 +108,35 @@ if ( {) {
 }
       return;
     }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
-
               <FormLabel>Template Name</FormLabel>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <FormControl>
                 <Input {...field} placeholder='Enter template name' />
               </FormControl>
               <FormMessage />
             </FormItem>
-
             field: ControllerRenderProps<FormValues, 'title'>;
           }) => (            <FormItem>;
               <FormLabel>Template Name</FormLabel>;
             field: ControllerRenderProps < FormValues, 'title'>;
           }) => (            <FormItem>;
               <FormLabel > Template Name</FormLabel>;
-
               <FormControl>;
                 <Input {...field} placeholder='Enter template name' />;
               </FormControl>;
               <FormMessage />;
-
             </FormItem>)}
         />;
         <FormField;
           control={form.control}
           name='is_default';
-
           render={({
             field
           }: {
-
             field: ControllerRenderProps<FormValues, 'isDefault'>;
           }) => (;
             <FormItem className='flex items-center justify-between'>;
@@ -162,37 +144,27 @@ if ( {) {
                 Set as default template;
               </FormLabel>;
               <FormControl>;
-
                 <Switch
                   aria-label='Default template'
                   checked={field && field.value}
                   onCheckedChange={field && field.onChange}                />;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
-
             Cancel
           </Button>
-
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
             ) : (
-
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
-
               `${editTemplate ? "Update" : "Save"} Template`
-
             )}
           </Button>;
         </div>;
       </form>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

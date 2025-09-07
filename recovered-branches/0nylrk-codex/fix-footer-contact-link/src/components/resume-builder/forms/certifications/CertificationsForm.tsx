@@ -1,5 +1,3 @@
-
-
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { Button  } from '@/components/ui/button';
@@ -13,16 +11,12 @@ import { format  } from 'date-fns';
 import { CertificationsList  } from './CertificationsList';
 import { CertificationFormFields  } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';interface CertificationsFormProps {
-
-  resumeId: string
-  certifications: Certification[]
+  resumeId: string;
+    certifications: Certification[]
   onComplete: () => void
-
   onBack: () => void
 }
-
   };
-
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
@@ -34,11 +28,8 @@ import { CertificationFormValues, certificationSchema } from './types';interface
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id)
     }
-
   };
-
   },;
-
   const handleEdit = (cert: Certification) => {;
     setEditingId(cert && cert.id!);
     form && form.reset({;
@@ -73,7 +64,6 @@ import { CertificationFormValues, certificationSchema } from './types';interface
           Add any professional certifications, licenses, or credentials you have earned.;
         </p>;
       </div>;
-
       {certifications && certifications.length > 0 && (;
         <CertificationsList
           certifications={certifications} 
@@ -81,18 +71,14 @@ import { CertificationFormValues, certificationSchema } from './types';interface
           onDelete={handleDelete} 
         />;
       )}
-
       <div className="bg-muted/40 p-6 rounded-lg">;
         <h3 className="text-md font-medium mb-4">;
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>;
-
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(handleAddOrUpdate)} className="space-y-4">;
             <CertificationFormFields form={form} />;
-
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
             <div className="flex justify-between pt-2">;
               <Button
                 type="button"

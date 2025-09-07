@@ -16,13 +16,10 @@ export default function AITalentMatchingPage() {;
       description: "Monitor performance and success rates of placements";
     }
   ];
-
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Bot, Users, TrendingUp } from 'lucide-react'
-
 export default function AITalentMatchingPage() {
-
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
@@ -31,28 +28,23 @@ export default function AITalentMatchingPage() {
       title: "Scalable Talent Pools",
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className="h-8 w-8" />}],
-
   const testimonials = [
     {
       name: "Emily Stone",
       role: "HR Director",
-
       avatar: "/placeholder.svg"},
     {
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
-
     },
     {
       icon: Users,
       title: "Verified Professionals",
-
     },
     {
       icon: TrendingUp,
       title: "Success Tracking",
-
   ];
   const features = [;
     "Machine learning - based candidate matching",
@@ -60,12 +52,10 @@ export default function AITalentMatchingPage() {
     "Real - time market analysis",
     "Automated interview scheduling",
     "Performance analytics dashboard",
-
   ];
   const stats = [;
     { label: "Successful Placements", value: "95%" },
     { label: "Client Satisfaction", value: "98%" },
-
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -79,7 +69,7 @@ export default function AITalentMatchingPage() {
     />
   )
 import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",;
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Bot, Users, TrendingUp } from 'lucide-react';
 export default function AITalentMatchingPage() {;
   const benefits = [;
@@ -112,11 +102,8 @@ export default function AITalentMatchingPage() {;
       subtitle="Find the perfect experts for your projects with intelligent matching.";
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=AI+Talent+Matching";
       description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
-
       benefits={benefits}
       features={features}
       stats={stats}
-
     />;
   );
-

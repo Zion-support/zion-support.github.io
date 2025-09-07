@@ -1,5 +1,4 @@
 import { motion, AnimatePresence } from 'framer-motion';
-
   Menu
   X
   Zap
@@ -76,15 +75,15 @@ import { motion, AnimatePresence } from 'framer-motion';
   Rocket, Star, TrendingUp, Users, Target, Award;
   Phone, Mail, MapPin, ExternalLink, Building
 const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
 const serviceCategories = [
   {
     title: '🚀 2028 Cutting-Edge Innovations'
-    icon: Rocket
+    icon: Rocket;
     color: 'from-violet-600 to-purple-600'
     description: 'Beyond the future of technology'
     services: [
@@ -93,7 +92,6 @@ const serviceCategories = [
       { name: 'Quantum Time Manipulation', href: '/quantum-time-manipulation-platform', description: 'Manipulate time through quantum computing', price: '$25,999/month' }
     ]
 };
-
     ]
 };
 const companyLinks = [
@@ -122,7 +120,6 @@ const companyLinks = [
   { name: '💼 Careers', href: '/careers', icon: Users }
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },];  { name: '📞 Contact', href: '/contact', icon: MessageCircle }
 ];
-
 const _serviceCategories = [
   {_title: '🚀 2028 Cutting-Edge Innovations', _icon: Rocket, _color: 'from-violet-600 to-purple-600', _description: 'Beyond the future of technology', _services: [
       { name: 'AI Consciousness Evolution', _href: '/ai-consciousness-evolution-platform', _description: 'Evolve AI beyond human limits', _price: '$9, _999/month'},
@@ -167,7 +164,6 @@ const _serviceCategories = [
     ]
   }
 ],
-
     ];
   }
   { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
@@ -185,7 +181,6 @@ export default function UltraFuturisticNavigation2027() {;
     if (!isClient) return;
     const handleScroll = () => {
     {
-
 const companyLinks = [;
   { name: '🏠 Home', href: '/', icon: Home },;
   {;
@@ -582,7 +577,6 @@ export default function UltraFuturisticNavigation2027() {;
       name: 'Business Solutions',
       href: '/services?category=Business%20Operations',
       description: '150+ Business Tools',
-
         {          name: 'AI Consciousness Platform',
           href: '/services/ai-consciousness-platform',
           description: 'Advanced AI consciousness simulation',
@@ -605,12 +599,10 @@ export default function UltraFuturisticNavigation2027() {;
           href: '/services/ai-content-factory',
           description: 'Automated content creation',
           price: '$299/month',
-
           name: 'AI Content Factory',
           href: '/services/ai-content-factory',
           description: 'Automated content creation',
           price: '$299/month',
-
           name: 'Smart Inventory Manager',
           href: '/services/smart-inventory-manager',
           description: 'AI-powered inventory optimization',
@@ -699,9 +691,7 @@ export default function UltraFuturisticNavigation2027() {;
           href: '/cloud-platform',
           description: 'Scalable cloud infrastructure',
           price: 'Custom',
-
   ];
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -740,27 +730,22 @@ export default function UltraFuturisticNavigation2027() {;
               <div key={item.name} className='relative group'>
                 <motion.button
                   className='flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20'                  onMouseEnter={() => setActiveDropdown(item.name)}
-
                   onMouseEnter={() => setActiveDropdown(item.name)}
-
                   onMouseLeave={() => setActiveDropdown(null)}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0 && 0.95 }}
                 >;
                   <div
-
                 {/* Dropdown Menu */}
                 <AnimatePresence>;
                   {activeDropdown === item && item.name && (;
                     <motion&& motion.div
                       initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
-
                     >
                       <div className='p-4'>
                         <div className='flex items-center space-x-3 mb-4'>
                           <div
-
           {/* Desktop Navigation */}
           <nav className='hidden xl:flex items - center space - x-1'>;
             {navigation.map (item => (
@@ -848,9 +833,7 @@ export default function UltraFuturisticNavigation2027() {;
                             </Link>;
                                 </div>
                                 <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>
-
                               </div>
-
                             </Link>
                           ))}
                         </div>;
@@ -861,9 +844,7 @@ export default function UltraFuturisticNavigation2027() {;
               </div>;
             ))}
           {/* Right Side */}
-
           <div className='flex items-center space-x-4'>
-
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm'>;
               <a
@@ -883,10 +864,8 @@ export default function UltraFuturisticNavigation2027() {;
               </div>
             ))}
           </nav>
-
           {/* Right Side */}
           <div className='flex items-center space-x-4'>
-
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm'>
               <a
@@ -897,14 +876,11 @@ export default function UltraFuturisticNavigation2027() {;
               </a>;
               <a
             {/* CTA Button */}
-
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-
               <Link
                 href='/contact'
                 className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'>;
                 <Rocket className='w-4 h-4' />                <span>Get Started</span>              <Link
-
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -931,13 +907,11 @@ export default function UltraFuturisticNavigation2027() {;
             </div>
             {/* CTA Button */}
                 href="/contact"
-
                 className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300">;
                 <Rocket className="w-4 h-4" />;
                 <span>Get Started</span>;
               </Link>;
             </motion && motion.div>;
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -989,9 +963,7 @@ export default function UltraFuturisticNavigation2027() {;
                           <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color}`}>;
                             {item.icon}
                 {/* Quick Links & Contact */}
-
                 <div className='space-y-6'>
-
                   <div>
                     <h3 className='text-lg font-semibold text-white mb-4'>
                       Quick Links
@@ -1059,7 +1031,6 @@ export default function UltraFuturisticNavigation2027() {;
                 </Link>;
               </div>;
             </div>;
-
           </motion.div>)}
       </AnimatePresence>;
     </header>);

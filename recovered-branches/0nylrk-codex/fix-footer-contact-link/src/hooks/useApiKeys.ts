@@ -1,5 +1,3 @@
-
-
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
@@ -13,9 +11,7 @@ export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:
   ip_address?: string,
   response_time_ms?: number
 }
-
 export function useApiKeys() {;
-
   const { user } = useAuth();
   const [keys, setKeys] = useState<ApiKey[]>([]);
   const [logs, setLogs] = useState<ApiLog[]>([]);
@@ -98,11 +94,10 @@ if ( {) {
       setKeys(prev => [{ ...result, key: undefined }, ...prev]);
       // Store the actual key value temporarily so it can be displayed once
       toast({
-        title: "API Key Created"
-        description: "Your new API key has been generated. Save it now, you won't be able to see it again."});      toast({
+        title: "title",
+    description: "Your new API key has been generated. Save it now, you won't be able to see it again."});      toast({
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
-
       toast({
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
@@ -148,13 +143,10 @@ if ( {) {
       if (!response.ok) {;
         throw new Error(result.error || 'Failed to create API key');
       }
-
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),
-      
       // Store the actual key value temporarily so it can be displayed once
       setNewApiKey(result.key),
-      
       toast({
         title: "API Key Created",
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."}),
@@ -162,31 +154,23 @@ if ( {) {
       setLoading(false)
     }
   },
-
   // Regenerate API key
   const regenerateApiKey = async (keyId: string) => {
     if (!user) return,
-    
     setLoading(true),
     setError(null),
     setNewApiKey(null),
-    
-
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         setError("Authentication required");
         return
-
         };
         body: JSON && JSON.stringify({ keyId })
       });
-
       const result = await response && response.json();
-      
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to regenerate API key')
-
       };
       // Add the new key to the list;
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),;
@@ -232,18 +216,12 @@ if ( {) {
       if (!response.ok) {;
         throw new Error(result.error || 'Failed to regenerate API key');
       }
-
       // Update the key in the list
-
       setKeys(prev => prev && prev.map(key => 
         key && key.id === keyId ? { ...result, key: undefined } : key
-
       ));
       // Store the new key value
-
       setNewApiKey(result && result.key);
-      
-
       toast({
         title: "API Key Regenerated"
         description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});      ));
@@ -260,17 +238,12 @@ if ( {) {
     } finally {
       setLoading(false)
     }
-
   },
-
   // Fetch API usage logs
   const fetchApiLogs = async (limit = 50, offset = 0) => {
     if (!user) return,
-    
     setLoading(true),
     setError(null),
-    
-
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
@@ -279,22 +252,16 @@ if ( {) {
       }
       const response = await fetch (
         `${getApiUrl ()}/logs?limit=${limit}&offset=${offset}`,
-
         {
           method: 'GET'
           headers: {
-
       const result = await response && response.json();
-      
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to revoke API key')
-
       }        throw new Error(result && result.error || 'Failed to fetch API logs')
       }
-
       setLogs(result && result.logs || []);
       setTotalLogs(result && result.count || 0);
-
       setLogs(result.logs || []);
       setTotalLogs(result.count || 0);      
         variant: "destructive";
@@ -360,26 +327,20 @@ if ( {) {
       setLoading(false)
     }
   },
-
   // Fetch API usage logs
   const fetchApiLogs = async (limit = 50, offset = 0) => {
     if (!user) return,
-    
     setLoading(true),
     setError(null),
-    
-
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         setError("Authentication required");
         return
       const result = await response && response.json();
-      
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to fetch API logs')
       }
-
       setLogs(result && result.logs || []);
       setTotalLogs(result && result.count || 0);
 =======;
@@ -428,11 +389,8 @@ if ( {) {
       if (!response.ok) {;
         throw new Error(result.error || 'Failed to fetch API logs');
       }
-
       setLogs(result.logs || []),
       setTotalLogs(result.count || 0),
-
-      
           method: 'GET'
           headers: {
       return result
@@ -446,7 +404,6 @@ if ( {) {
     regenerateApiKey;
     revokeApiKey;
     fetchApiLogs;
-
   }
 }
         variant: "destructive",
@@ -482,7 +439,6 @@ if ( {) {
     revokeApiKey;
     fetchApiLogs;
     clearNewApiKey: () => setNewApiKey(null);
-
   }
 }
 ;

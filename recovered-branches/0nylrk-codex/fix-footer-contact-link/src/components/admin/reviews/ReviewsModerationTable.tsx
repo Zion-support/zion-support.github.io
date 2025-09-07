@@ -1,4 +1,3 @@
-
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -6,7 +5,6 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
-
 import {
   Table,
   TableBody,
@@ -30,39 +28,31 @@ import {
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",interface ReviewsModerationTableProps {
   reviews: Review[]
-  isLoading: boolean
-
-  onRefresh: () => void
+  isLoading: boolean;
+    onRefresh: () => void
 }
-
 export function ReviewsModerationTable({;
   reviews;
   isLoading;
 export function ReviewsModerationTable({
   reviews,
   isLoading,
-
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
     onError: (error: Error) => {
       toast({
-
-        title: "Error"
-        description: `Failed to update review: ${error.message}`
+        title: "title",
+    description: `Failed to update review: ${error.message}`
         variant: "destructive"})  },
-
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })
   },
-
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review)
     setViewDetailsOpen(true)
-
   },
-
   const renderStars = (rating: number) => {
     return (
       <div className="flex">
@@ -85,7 +75,7 @@ interface ReviewsModerationTableProps {;
       reviewId: string,;
       status: ReviewStatus;
 import { useState } from "react";
-import { useMutation } from "@tanstack/react-query",;
+import { useMutation } from "@tanstack/react-query";
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
 import { format } from "date-fns",;
 import { toast } from "@/hooks/use-toast",;
@@ -154,9 +144,7 @@ export function ReviewsModerationTable({;
       .join("");
       .toUpperCase()
 };
-
   if (isLoading) {;
-
     return (        .eq("id", reviewId);
       if (error) throw error;
       return { reviewId, status }
@@ -175,11 +163,9 @@ export function ReviewsModerationTable({;
       </div>;
     );
   }
-
   const handleApprove = (reviewId: string) => {;
     updateReviewStatus({ reviewId, status: "approved" })
 };
-
   const handleReject = (reviewId: string) => {;
     updateReviewStatus({ reviewId, status: "rejected" })
 };
@@ -187,7 +173,6 @@ export function ReviewsModerationTable({;
     setSelectedReview(review),;
     setViewDetailsOpen(true)
 };
-
   const renderStars = (rating: number) => {;import { useState } from './react';
 import { use_mutation } from '@tanstack / react - query';
 import { Check, X, User, Star, MoreHorizontal } from './lucide-react';
@@ -422,11 +407,9 @@ if ( {) {
                       <AvatarFallback>;
                         {selectedReview && selectedReview.reviewer_profile?.display_name;
                           ? getInitials(selectedReview && selectedReview.reviewer_profile.display_name);
-
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
                     )}
-
                   </Avatar>;
                   <div>;
                     <div className="font-medium">;
@@ -441,11 +424,9 @@ if ( {) {
                 </div>;
                 <div>{renderStars(selectedReview && selectedReview.rating)}</div>;
               </div>;
-
               <div className="border rounded-md p-3 bg-muted/20">;
                 <p className="whitespace-pre-wrap">{selectedReview && selectedReview.review_text}</p>;
               </div>;
-
               <div className="space-y-2">;
                 <h4 className="text-sm font-medium">Additional Ratings</h4>;
                 <div className="flex flex-wrap gap-2">;

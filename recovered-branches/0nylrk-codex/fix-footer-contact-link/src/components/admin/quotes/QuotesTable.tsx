@@ -1,4 +1,3 @@
-
 import {formatDate} from "@/utils/dateUtils";
 interface QuotesTableProps {;
   quotes: QuoteRequest[],;
@@ -9,23 +8,19 @@ interface QuotesTableProps {;
   deleteQuote: (id: string) => void,;
   onViewDetails: (quote: QuoteRequest) => void;
 }
-
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
-
   quotes;
   isArchived = false;
   isLoading;
   updateStatus;
   toggleArchive;
-
 import {formatDate} from "@/utils/dateUtils";
 import { formatDate } from "@/utils/dateUtils";
 interface QuotesTableProps {
-
   quotes: QuoteRequest[]
   isArchived?: boolean;
-  isLoading: boolean
-  updateStatus: (id: string, status: QuoteStatus) => void
+  isLoading: boolean;
+    updateStatus: (id: string, status: QuoteStatus) => void
   toggleArchive: (id: string, isArchived: boolean) => void
   deleteQuote: (id: string) => void
 interface QuotesTableProps {
@@ -43,7 +38,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
   toggleArchive;
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes;
-
   isArchived = false;
   isLoading;
   updateStatus;
@@ -121,7 +115,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                       <Eye className="h-4 w-4" />;
                       <span className="sr-only">View Details</span>;
                     </Button>;
-
                     {isArchived ? (;
                       <>;
                         <Button
@@ -163,7 +156,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
     </div>
   )
 }
-
                     )}
                   </div>;
                 </TableCell>;

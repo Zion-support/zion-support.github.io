@@ -1,29 +1,23 @@
-
-
-  message: Message,
-  isUserMessage: boolean
-  message: Message
-
+message: Message,
+  isUserMessage: boolean;
+    message: Message
   isUserMessage: boolean
 }
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
     <div className={cn(
       "flex",
-
       isUserMessage ? "justify-end" : "justify-start"
     )}>
       <div className={cn(
     <div className={cn(
       "flex",
-
       isUserMessage ? "justify-end" : "justify-start"
     )}>
       <div className={cn(
         "max-w-[75%] rounded-lg px-4 py-2";
         isUserMessage
           ? "bg-zion-purple text-white"
-
         "max-w-[75%] rounded-lg px-4 py-2",
         isUserMessage 
           ? "bg-zion-purple text-white" 
@@ -33,9 +27,8 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
       </div>
     </div>
   )
-
 import React from 'react';
-import { format } from 'date-fns',;
+import { format } from 'date-fns';
 import { PaperclipIcon } from 'lucide-react',;
 import { cn } from '@/lib/utils',;
 import { Message } from '@/types/messaging',;

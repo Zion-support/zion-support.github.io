@@ -1,6 +1,4 @@
-
-
-      description: "Find the perfect match for your project needs",
+description: "Find the perfect match for your project needs",
       icon: <Search className="h-6 w-6 text-zion-cyan" />,
       link: "/match"
 };
@@ -8,11 +6,10 @@
     }
     },
     {
-      title: "Talent Directory"
-      description: "Browse verified tech specialists"
+      title: "title",
+    description: "Browse verified tech specialists"
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
-
     },
     {
       title: "Equipment Catalog"
@@ -67,7 +64,7 @@ function QuickAccess() {
 ;
   return (
 import React from "react";
-import { Link } from "react-router-dom",;
+import { Link } from "react-router-dom";
 import {;
   ArrowRight,;
   Search,;
@@ -117,7 +114,6 @@ export function QuickAccess() {;
     }
   ];
   return (;
-
     }
   ];
   return (;
@@ -182,7 +178,6 @@ export function QuickAccess() {;
             Jump directly to our most popular features;
           </p>;
         </div>;
-
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">;
           {quickLinks && quickLinks.map((link, index) => (;
             <Link
@@ -199,7 +194,6 @@ export function QuickAccess() {;
                 <ArrowRight className="ml-1 h-3 w-3" />
               </div>
             </Link>
-
     <section className="py - 12 bg - zion - blue-dark">;
       <div className="container mx - auto px-4">;
         <div className="text - center mb-8">;

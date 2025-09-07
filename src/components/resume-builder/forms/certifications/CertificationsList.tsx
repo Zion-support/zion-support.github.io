@@ -1,8 +1,7 @@
 interface CertificationsListProps {
   certifications: Certification[]
-  onEdit: (cert: Certification) => void
-
-  onDelete: (id: string) => void
+  onEdit: (cert: Certification) => void;
+    onDelete: (id: string) => void
 }
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
   if (certifications.length === 0) {
@@ -27,10 +26,8 @@ interface CertificationsListProps {;
   onEdit: (cert: Certification) => void,;
   onDelete: (id: string) => void;
 }
-
 export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
   if (certifications && certifications.length === 0) {;
-
 import { Certification } from '@/types/resume';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -41,20 +38,16 @@ interface CertificationsListProps {
   on_edit: (cert: Certification) => void,
   on_delete: (id: string) => void;
 }
-
     return null;
   }
   return (
-
                 <Button
                   variant='ghost'
                   size='icon'
                   onClick={() => onEdit(cert)}
-
                   className='text-primary hover:underline'>              <p className="text-xs mt-2">;
                 <a
                   href = {cert && cert.credential_url,}
-
                   variant="ghost"
                   size="icon"
                   onClick={() => onDelete(cert.id!)}
@@ -71,21 +64,15 @@ interface CertificationsListProps {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
-
                 >
-
                   View credential
-
             )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </CardContent>;
         </Card>;
       ))}
-
     </div>;
   );
 }
-
 export /**
  * CertificationsList - Function description
  */

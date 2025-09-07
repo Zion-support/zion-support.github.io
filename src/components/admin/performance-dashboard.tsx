@@ -1,28 +1,21 @@
-
-  chunkCount: number;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+chunkCount: number;
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Progress } from '@/components / ui / progress';
 import {
-
         performanceScore: 0, // This would need to be calculated;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         chunkCount: resourceCount,;
         cacheHitRate: 0, // This would need to be calculated from resource timing;
         fcp: 0, // First Contentful Paint - would need Performance Observer;
         lcp: 0, // Largest Contentful Paint - would need Performance Observer;
         cls: 0, // Cumulative Layout Shift - would need Performance Observer;
-
       });
     } catch (error) {;
       logErrorToProduction('Failed to collect performance metrics', error, {;
         component: 'PerformanceDashboard',;
-
       // Set fallback metrics;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setMetrics({;
         bundleSize: 0,;
         loadTime: 0,;
@@ -32,17 +25,12 @@ import {
         fcp: 0,;
         lcp: 0,;
         cls: 0,;
-
       });
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   };
-
   const collectWebVitals = async (): Promise<Partial<PerformanceMetrics>> => {;
     if (typeof window === 'undefined') return {};
-
     const vitals: Partial<PerformanceMetrics> = {};
-
     // Collect navigation timing;
     const navigation = performance && performance.getEntriesByType(;
       'navigation';
@@ -51,7 +39,6 @@ import {
       vitals && vitals.fcp = navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart;
       vitals && vitals.lcp = navigation && navigation.loadEventEnd - navigation && navigation.fetchStart;
     }
-
     // Use PerformanceObserver for more accurate metrics;
     if ('PerformanceObserver' in window) {;
       return new Promise(resolve => {;
@@ -72,7 +59,6 @@ import {
             }
           });
         });
-
         observer && observer.observe({;
           entryTypes: [;
             'paint',;
@@ -81,14 +67,12 @@ import {
             'first-input',;
           ],;
         });
-
         // Resolve after a short delay;
         setTimeout(() => {;
           observer && observer.disconnect();
           resolve(vitals);
         }, 2000);
       });    }
-
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -100,14 +84,10 @@ import {
           </p>
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
-
     return vitals;
   };
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   const collectChunkData = async (): Promise<BundleChunk[]> => {;
     if (typeof window === 'undefined') return [];
-
     const resourceEntries = performance && performance.getEntriesByType(;
       'resource';
     ) as PerformanceResourceTiming[];
@@ -115,7 +95,6 @@ import {
       entry =>;
         entry && entry.name.includes('/_next/static/') && entry && entry.name.endsWith('.js');
     );
-
     return scriptEntries;
       .map(entry => ({;
         name: entry && entry.name.split('/').pop()?.split('?')[0] || 'unknown',;
@@ -133,7 +112,6 @@ import {
     if (filename && filename.includes('chunks')) return 'chunk';
     return 'other'
 };
-
   const formatSize = (bytes: number): string => {;
     if (bytes === 0) return '0 B';
     const k = 1024;
@@ -141,26 +119,22 @@ import {
     const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k));
     return parseFloat((bytes / Math && Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
 };
-
   const getScoreColor = (score: number): string => {;
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     return 'text-red-600'
 };
-
   const getScoreIcon = (score: number) => {;
     if (score >= 90) return <CheckCircle className='w-4 h-4 text-green-600' />;
     if (score >= 70);
       return <AlertTriangle className='w-4 h-4 text-yellow-600' />;
     return <AlertTriangle className='w-4 h-4 text-red-600' />
 };
-
   useEffect(() => {;
     collectMetrics();
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds;
     return () => clearInterval(interval);
   }, []);
-
   return (
     <div className='space-y-6'>;
       {/* Header */}
@@ -184,12 +158,9 @@ import {
             opportunities;
           </p>;
         </div>;
-
         <Button onClick={collectMetrics} disabled={isLoading}>;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
-
       <Card>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Package className="w-5 h-5" />
@@ -198,8 +169,6 @@ import {
         </CardHeader>
         <CardContent>
           {chunks.length > 0 ? (
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </span>
                     <div>
                       <p className="font-medium text-sm">{chunk.name}</p>
@@ -223,17 +192,12 @@ import {
                   </div>;
                 </div>;
               ))}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {chunks.length > 10 && (
                 <p className='text-sm text-muted-foreground text-center pt-2'>
                   ... and {chunks.length - 10} more chunks
                 </p>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
-
               <div>
                 <p className='font-medium text-green-900 dark:text-green-100'>
                   Performance monitoring active
@@ -241,11 +205,9 @@ import {
                 <p className='text-sm text-green-700 dark:text-green-300'>
                   Real-time performance tracking is helping optimize your
                   application
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </p>
               </div>
             </div>
-
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
@@ -260,10 +222,8 @@ import {
                 </div>
               </div>
             )}
-
         </CardContent>;
       </Card>;
-
       {/* Recommendations */}
       <Card>;
         <CardHeader>;
@@ -286,7 +246,6 @@ import {
                 </p>;
               </div>;
             </div>;
-
             <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>;
               <CheckCircle className='w-5 h-5 text-green-600 mt-0 && 0.5' />;
               <div>;
@@ -299,7 +258,6 @@ import {
                 </p>;
               </div>;
             </div>;
-
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (;
               <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>;
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0 && 0.5' />;
@@ -314,14 +272,12 @@ import {
                 </div>;
               </div>;
             )}
-
           </div>;
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
-
           {chunks.length > 0 ? (
             <div className='space - y-2'>;
               {chunks.slice (0, 10).map ((chunk, index) => (
@@ -415,5 +371,3 @@ import {
     </div>);
 }
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

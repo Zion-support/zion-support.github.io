@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -24,7 +24,6 @@
   marketSize: string;
   growthRate: string;
   variant: string;
-
     website: string;
   }
       'React',
@@ -106,7 +105,6 @@
     ],
     popular: true,
     icon: '📱',
-
       'AI/ML',      'Social Media APIs',
       'React',
       'Node && Node.js',
@@ -116,7 +114,6 @@
       'AWS',
     ],
   {
-
       'AI-powered planning',
     id: 'intelligent - project - management',
     name: 'Intelligent Project Management',
@@ -127,7 +124,6 @@
       'Smart project management platform that uses AI to optimize resource allocation, predict project timelines, and automate project workflows.',
     features: [;
       'AI - powered planning',
-
       'Resource optimization',
       'Timeline prediction',
       'Risk assessment',
@@ -140,7 +136,6 @@
     ],
     popular: true,
     icon: '📋',
-
       'AI/ML',      'Project Management',
       'React',
       'Node && Node.js',
@@ -173,8 +168,8 @@
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'
-    launchDate: '2024-01-30'
-    customers: 3200
+    launchDate: "launchDate",
+    customers: 3200;
     rating: 4.8
     reviews: 1600
   }
@@ -194,12 +189,10 @@
     launchDate: '2024-01-30';
     customers: 3200;
     rating: 4.8
-
     reviews: 1600
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 1600
 =======      address: '364 E Main St STE 1008 Middletown DE 19709',
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -208,7 +201,6 @@
     customers: 3200;
     rating: 4.8,
     reviews: 1600;
-
   }
 ];
 export interface InnovativeMicroSaas {;  id: string,;
@@ -467,7 +459,6 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     rating: 4.8,;
     reviews: 1600;
   }
-
 ];
   id: string,;
   name: string,;

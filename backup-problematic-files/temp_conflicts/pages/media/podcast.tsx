@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link',;
+import Link from 'next/link';
 ;
 type EpisodeListItem = {;
   id:string,;

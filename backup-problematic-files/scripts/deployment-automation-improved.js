@@ -214,11 +214,11 @@ console.log(' Improved Deployment Automation Started')';class ImprovedDeployment
       const result = await this.runCommand(step.command);
       const duration = Date.now() - startTime;
       const stepResult = {
-        "name": step.name
-        command: step.command
+        "name": step.name;
+    command: step.command
         description: step.description
-        status: "success"
-        duration: duration,
+        status: "status",
+    duration: duration,
         "output": result.output
         error: null,
         "critical": step.critical

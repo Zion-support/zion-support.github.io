@@ -1,5 +1,5 @@
 import fs from 'fs';
-import path from 'path',;
+import path from 'path';
 import type { GetStaticProps } from 'next',;
 ;
 interface Report {;

@@ -1,12 +1,10 @@
 import { X } from 'lucide-react';
-
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system'
   content: string
   timestamp?: number
 }
 function generateSessionId(): string {
-
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -15,49 +13,38 @@ function generateSessionId(): string {
   const [showEscalation, setShowEscalation] = useState(false);
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
-
     } catch {}
   }
-
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
-
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
     } catch {}
   }
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
+        method: "method",
+    headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
           sessionId: sessionIdRef.current
-          reason
-          tag: 'escalate'
+          reason;
+    tag: 'escalate'
         })
       });
-
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
     } catch {}
   }
-
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
-
       setShowEscalation(true)
       setShowEscalation(true);    } catch {}
-
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
     } catch {}
   }
-
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
-
       setShowEscalation(true)
       setShowEscalation(true);    } catch {}
-
     } catch {}
   }
-
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
@@ -74,7 +61,6 @@ function generateSessionId(): string {
     <div className='fixed bottom-4 right-4 z-50'>      }
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
-
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents((n) => {;
           const next = n + 1;
@@ -89,14 +75,10 @@ function generateSessionId(): string {
     }
   }
     <div className='fixed bottom-4 right-4 z-50'>
-
   return (
-
     }
   }
-
   return (
-
     }
   }
   return (
@@ -135,7 +117,6 @@ function generateSessionId(): string {
                 </div>
               </div>
             ))}
-
             )}
                   <button
                     key={q}
@@ -148,9 +129,7 @@ function generateSessionId(): string {
                     onClick={() => onSend(q)}
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
-
                   >
-
                     {q}
                   </button>
                 ))}
@@ -164,11 +143,9 @@ function generateSessionId(): string {
               </div>;
             </div>;
           )}
-
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
-
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (;
               <div className='flex gap-2'>;

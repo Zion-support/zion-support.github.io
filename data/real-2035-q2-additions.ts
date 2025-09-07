@@ -1,11 +1,11 @@
-      'Intent classification + prioritization'
+'Intent classification + prioritization'
       'On-brand response drafting'
       'Automatic polite follow-ups'
       'Lead/contact enrichment'
       'Analytics and response SLAs'
     ]
-    popular: true
-    icon: '📧'
+    popular: true;
+    icon: "icon",
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300'
     link: 'https://ziontechgroup.com/services/ai-email-responder'
@@ -29,7 +29,6 @@
       'On-brand response drafting',
       'Automatic polite follow-ups',
       'Lead/contact enrichment',
-
       'Intent classification + prioritization',
       'On - brand response drafting',
       'Automatic polite follow - ups',
@@ -43,9 +42,7 @@
       'CI integration',
     ],
     popular: false,
-
   {
-
     id: 'postgres - index - advisor - pro',
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -140,7 +137,6 @@
     description:;
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
     features: [
-
     id: 'api - breaking - change - watcher',
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -149,7 +145,6 @@
     description:;
       'Monitor OpenAPI / GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
     features: [;
-
       'Schema registry',
       'Diff rules',
       'Owner mapping',
@@ -177,7 +172,6 @@
     reviews: 3,
   },
   {
-
   {
     id: 'postgres-index-advisor-pro'
     name: 'Postgres Index Advisor Pro'
@@ -1225,10 +1219,8 @@
 		customers: 24;
 ];
 ;
-
 	}
 ];
-
   id: 'ai - email - responder';
   name: 'AI Email Responder',
   tagline: 'Autonomous email triage, drafting, and follow - ups for sales and support';

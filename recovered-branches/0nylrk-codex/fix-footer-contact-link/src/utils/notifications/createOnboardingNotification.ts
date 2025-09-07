@@ -1,15 +1,11 @@
-
-
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
-
 /**
  * Creates an onboarding notification for a user
  */
 export async function createOnboardingNotification({  missingMilestone;
   userRole
 }: OnboardingNotificationParams) {
-
   try {
   let title = '';
   let message = '';
@@ -18,7 +14,7 @@ export async function createOnboardingNotification({  missingMilestone;
   if (userRole === 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':import { createNotification } from './createNotification';
-import { OnboardingNotificationParams } from './types',;
+import { OnboardingNotificationParams } from './types';
 /**;
  * Creates an onboarding notification for a user;
  */;

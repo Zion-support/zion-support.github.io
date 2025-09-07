@@ -15,32 +15,25 @@ import {;
   Monitor,;
 } from 'lucide-react';
 interface QuickAction {;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   label: string,
   description: string;
   icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
-
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
         data: error
       })
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } finally {
       setIsProcessing(null)
     }
   }
-
       id: 'enable - performance - monitor',
-
 import React, { useState } from 'react';
-import { useAuth } from '@/hooks/useAuth',;
+import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -76,9 +69,7 @@ export function QuickActions() {;
       setIsProcessing(null);
     }
   },
-
   const actions: QuickAction[] = [
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Performance Actions
     {
       id: 'enable-performance-monitor',
@@ -87,7 +78,6 @@ export function QuickActions() {;
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
-
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -95,9 +85,7 @@ export function QuickActions() {;
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
-
     {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       id: 'clear-cache',
       label: 'Clear Cache',
       description: 'Clear browser cache and storage',
@@ -110,30 +98,25 @@ export function QuickActions() {;
             names.forEach(name => caches.delete(name))
           })
         }
-
       },
     },
         localStorage.clear(),
         sessionStorage.clear(),
         window.location.reload()
       }},
-
     {
-      id: 'preload-critical-resources'
-      label: 'Preload Critical Resources'
+      id: "id",
+    label: 'Preload Critical Resources'
       description: 'Preload fonts, images, and critical assets'
       icon: <Zap className='w-4 h-4' />
       category: 'performance'
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
         // Preload critical images
         const criticalImages = [
           '/logos/zion-logo.png/images/hero-bg.webp'
         ],
-        
         criticalImages.forEach(img => {
           const link = document.createElement('link'),
           link.rel = 'preload',
@@ -161,11 +144,9 @@ export function QuickActions() {;
             colorDepth: screen.colorDepth
           }
         },
-
         const blob = new Blob([JSON.stringify(metrics, null, 2)], {
           type: 'application/json'
         }),
-        
         const url = URL.createObjectURL(blob),
         const a = document.createElement('a'),
         a.href = url,
@@ -183,9 +164,7 @@ export function QuickActions() {;
       category: 'development',
       dangerous: true,
       action: () => {
-
     {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       id: 'refresh-app',
       label: 'Hard Refresh',
       description: 'Force reload with cache bypass',
@@ -194,18 +173,14 @@ export function QuickActions() {;
       action: () => {
         window.location.reload()
       }}],
-
   const categorizedActions = {
     performance: actions.filter(a => a.category === 'performance'),
     development: actions.filter(a => a.category === 'development'),
     maintenance: actions.filter(a => a.category === 'maintenance')},
-
   const categoryColors = {
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       id: 'download-performance-report',
       label: 'Download Performance Report',
@@ -222,7 +197,6 @@ export function QuickActions() {;
           screen: {
             width: screen.width,
             height: screen.height,
-
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -231,7 +205,6 @@ export function QuickActions() {;
       category: 'development',
       dangerous: true,
       action: () => {
-
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -240,25 +213,18 @@ export function QuickActions() {;
       category: 'maintenance',
       action: () => {
         window.location.reload()
-
   if (!isVisible) {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           Quick Actions
         </Button>
       </div>
     )
-
               ✕
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </Button>
           </div>
         </CardHeader>
-
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
@@ -296,14 +262,11 @@ export function QuickActions() {;
                   </div>;
                 ))}
               </div>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
-
         local_storage.clear ();
         session_storage.clear ();
         window.location.reload ();
@@ -490,5 +453,3 @@ if ( {) {
     </div>);
 }
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

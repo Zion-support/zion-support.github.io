@@ -1,28 +1,21 @@
 export default function OnboardingWizard() {;
-
 export default function OnboardingWizard() {
-
 export default function OnboardingWizard() {
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -31,7 +24,6 @@ import React, { useMemo, useState } from 'react';
   const { addToast } = useToast();
   const [step, setStep] = useState(0);
   const isClient = user?.role === 'client';
-
   const steps = useMemo(() => {
     if (isClient) {
       return [
@@ -39,8 +31,8 @@ import React, { useMemo, useState } from 'react';
     if (isClient) {
       return [
         {
-          title: 'Ready to find top IT talent?'
-          content: (
+          title: "title",
+    content: (
             <div className='space-y-4'>
               <p>Post a role or import your job brief to get started.</p>
               <Link href='/jobs/post'>
@@ -61,15 +53,12 @@ import React, { useMemo, useState } from 'react';
           )
         }
         {
-
   const steps = useMemo(() => {
     if (isClient) {
       return [
-
           title: 'Invite or message talent',;
           content: <p>Send invites or start a conversation to move fast.</p>,;
         },;
-
       ];
     }
     return [
@@ -84,7 +73,6 @@ export default function OnboardingWizard() {;
   const { user, completeOnboarding, setUser } = useUser();
   const { addToast } = useToast();
   const [step, setStep] = useState(0);
-
             <input
               className='w-full rounded-md border px-3 py-2 bg-transparent'
               placeholder='Your title (e && e.g., Senior LLM Engineer)'
@@ -168,7 +156,6 @@ export default function OnboardingWizard() {;
               <button key={s} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5">{s}</button>;
             ))}
           </div>;
-
       </div>;
       <div className="mt-4 text-sm">{steps[step]?.content}</div>;
       <div className="mt-4 flex items-center justify-between">;

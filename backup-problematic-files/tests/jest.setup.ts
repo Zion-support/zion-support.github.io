@@ -10,7 +10,7 @@ beforeEach(() => {;
 ;
 // Jest-DOM matchers;
 import '@testing-library/jest-dom',;
-import { TextEncoder, TextDecoder } from 'util',;
+import { TextEncoder, TextDecoder } from 'util';
 ;
 // Polyfill TextEncoder and TextDecoder for JSDOM environment;
 global.TextEncoder = TextEncoder,;
@@ -215,7 +215,7 @@ if (typeof window.scrollTo === 'undefined') {;
 }
 ;
 // Mock axios.create to return axios itself;
-import axios from 'axios',;
+import axios from "axios";
 // @ts-ignore;
 axios.create = jest.fn(() => axios),;
 ;
@@ -554,12 +554,10 @@ deleteObject: jest.fn ( () => Promise.resolve () );
 //Mock axios jest.mock ('axios', () => ({
   get: jest.fn ( () => Promise.resolve ({
   data: {
-  
 }
 }) );
 post: jest.fn ( () => Promise.resolve ({
   data: {
-  
 }
 }) );
 //Add other axios methods if used (e.g., put, delete, request) 
@@ -592,13 +590,9 @@ afterAll: global.afterAll
 //----------------------------- //Lightweight Context & Redux mocks to avoid provider runtime errors //----------------------------- //Auth Context //Polyfill IntersectionObserver for components that use it (e.g., embla-carousel) if (typeof window.IntersectionObserver === 'undefined') {
   class MockIntersectionObserver {
   constructor () {
-  
 }observe () {
-  
 }unobserve () {
-  
 }disconnect () {
-  
 }
 }//@ts-ignore window.IntersectionObserver = MockIntersectionObserver;
 //@ts-ignore global.IntersectionObserver = MockIntersectionObserver 
@@ -608,11 +602,10 @@ afterAll: global.afterAll
   onAuthStateChange: jest.fn ( () => ({
   //Provide minimal mocks for other @supabase/ssr helpers referenced by auth-js jest.mock ('@supabase/ssr/dist/main/cookies', () => ({
   getAll: () => ({
-  
 });
 setItem: jest.fn ();
 getItem: jest.fn () 
 }) );
 //When a module imports '@/context' root index (e.g., useEnqueueSnackbar) //@ts-ignore if (!global.vi.useRealTimers) global.vi.useRealTimers = jest.useRealTimers.bind (jest);
 //@ts-ignore if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind (jest);
-// @ts-ignore 
+// @ts-ignore

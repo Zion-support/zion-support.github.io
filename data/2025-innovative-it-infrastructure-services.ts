@@ -1,8 +1,5 @@
-
-
 =======export const innovativeITInfrastructureServices2025 = [
   {
-
       'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.'
       'Quantum-enhanced edge processing with 1000x speed improvement'
       'Intelligent workload distribution and optimization'
@@ -27,7 +24,7 @@
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
   {
-    id: 'autonomous-devops-intelligence-platform'
+    id: "id",
     name: 'Autonomous DevOps Intelligence Platform'
     description:
       'Intelligent DevOps platform that autonomously manages software development, deployment, and operations using AI, machine learning, and advanced automation.'
@@ -45,8 +42,8 @@
     ]
     pricing: {
       starter: {
-        price: 149
-        period: 'month'
+        price: 149;
+    period: 'month'
         features: [
           'Basic DevOps automation'
           'Standard CI/CD'
@@ -187,7 +184,6 @@
       'Compliance tools'
     ]
     compliance: [
-
       'SOC2',
       'ISO 27001',
       'Uptime Institute',
@@ -387,7 +383,6 @@
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
-
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'    market_size: '$31.2B',
     target_audience:;
       'Data center operators, cloud providers, enterprise businesses, colocation facilities',

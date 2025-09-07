@@ -1,6 +1,4 @@
-
-  useEffect
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+useEffect
   useRef
   ReactNode
   useContext} from 'react'
@@ -13,15 +11,13 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { X } from 'lucide-react'
 export interface Message {
-  id: string
-  role: 'user' | 'assistant'
+  id: string;
+    role: 'user' | 'assistant'
   message: string
   timestamp: Date
-
   read?: boolean
 }
 export interface ChatAssistantProps {
-
   isOpen: boolean
   onClose: () => void
   recipient: {
@@ -34,12 +30,10 @@ export interface ChatAssistantProps {
   initialMessages?: Message[]
   onSendMessage: (message: string, conversationId?: string,) => Promise<void>
   contextHeader?: ReactNode
-
   /** Optional canned questions shown when the chat is empty */
   starterQuestions?: string[]
 }
 export function ChatAssistant({
-
   isOpen
   onClose
   recipient
@@ -73,15 +67,11 @@ export function ChatAssistant({
       if (initialMessages && initialMessages.length > 0) {
         setDisplayGuestMessages(initialMessages)
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       } else {
         setDisplayGuestMessages (storedGuestMessages);
       }
     }
-
       setLoggedInMessages(newMessages)
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
   const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000)
@@ -103,8 +93,8 @@ export function ChatAssistant({
       // Logged-in user
       const newMessage: Message = {
         id: Date.now().toString()
-        role: 'user'
-        message: messageContent
+        role: "role",
+    message: messageContent
         timestamp: new Date()}
       setCurrentMessages((prev: Message[],) => [...prev, newMessage])
       setPendingApiCallParams({ message: messageContent, conversationId })
@@ -142,13 +132,11 @@ export function ChatAssistant({
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose])
   if (!isOpen) return null
-
   return (
     <div
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
-
         {/* Header */}
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">;
           <div className="flex items-center space-x-3">;
@@ -165,43 +153,32 @@ export function ChatAssistant({
               {recipient && recipient.role && (;
                 <div className="text-xs text-zion-slate">{recipient && recipient.role}</div>;
               )}
-
           <Button
             variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
-
             aria-label="Close chat"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           >
             <X className="h-5 w-5" />
           </Button>
         </div>
-
         {/* Context Header (Optional) */}
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
             {contextHeader}
-
         )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Messages */}
         <div
           className="flex-1 overflow-y-auto p-4 space-y-4"
-
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
-
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               >
                 Cancel
               </Button>
               <Button
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
                 Send
@@ -212,5 +189,3 @@ export function ChatAssistant({
       )}
     </div>;
   );
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

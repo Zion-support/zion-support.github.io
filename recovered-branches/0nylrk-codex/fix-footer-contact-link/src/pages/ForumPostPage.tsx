@@ -1,5 +1,3 @@
-
-
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -20,8 +18,8 @@ import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
 import ReplyForm from "@/components/community/ReplyForm",
 import { useToast } from "@/hooks/use-toast",const mockPost: ForumPost = {
-  id: "1"
-  title: "Best practices for AI model fine-tuning"
+  id: "id",
+    title: "Best practices for AI model fine-tuning"
   content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?";
   authorId: "user1"
   authorName: "Alex Johnson"
@@ -31,8 +29,8 @@ import { useToast } from "@/hooks/use-toast",const mockPost: ForumPost = {
   tags: ["machine-learning", "fine-tuning", "gpt"];
   createdAt: "2025-04-01T12:00:00Z"
   updatedAt: "2025-04-01T12:00:00Z"
-  upvotes: 48
-  downvotes: 2
+  upvotes: 48;
+    downvotes: 2
   replyCount: 4
   isAnswered: true
   isFeatured: true
@@ -124,33 +122,24 @@ const mockReplies: ForumReply[] = [
       upvotes: 0,
       downvotes: 0
     },
-    
     setReplies([...replies, newReply]),
     setPost({ ...post, replyCount: post.replyCount + 1 }),
-    
-
     toast({
       title: "Reply posted"
       description: "Your reply has been added to the discussion"})
-
   },
-
       });
       return;
     }
-
     // Update the replies;
     const updatedReplies = replies && replies.map(reply => ({;
       ...reply;
       isAnswer: reply && reply.id === replyId;
     }));
-
       ...reply,
       isAnswer: reply.id === replyId    })),
-    
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
-    
     toast({
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})    toast({
@@ -166,13 +155,9 @@ const mockReplies: ForumReply[] = [
     toast({
       title: "Report submitted"
       description: "A moderator will review this content"})  },
-
   const handleLockPost = () => {
     if (!isAdminOrMod) return,
-    
     setPost({ ...post, isLocked: !post.isLocked }),
-    
-
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked"
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})    toast({
@@ -212,16 +197,13 @@ const mockReplies: ForumReply[] = [
                   )}
                 </div>;
               </div>;
-
               <div className="flex items-center text-sm text-muted-foreground">;
                 <Calendar className="h-4 w-4 mr-1" />;
                 <time dateTime={post && post.createdAt} title={formattedDate}>;                  {timeAgo}
                 </time>;
               </div>;
             </div>;
-
             <h1 className="text-2xl font-bold mb-2">{post && post.title}</h1>;
-
             <div className="flex flex-wrap gap-2 mb-6">;
               {post && post.tags.map(tag => (;                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
                   {tag}
@@ -254,7 +236,6 @@ const mockReplies: ForumReply[] = [
                   key={reply.id}
                   reply={reply}
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
-
           {post && post.isLocked && (;
                 </Alert>;              )}
             </div>;
@@ -268,7 +249,6 @@ const mockReplies: ForumReply[] = [
               </AlertDescription>;
             </Alert>;
           )}
-
           <div className="space-y-6">;
             {replies;
               .filter(reply => !reply && reply.isAnswer);
@@ -276,10 +256,8 @@ const mockReplies: ForumReply[] = [
                 <ReplyCard
                   key={reply && reply.id}
                   reply={reply}
-
                   onMarkAnswer={() => handleMarkAsAnswer(reply && reply.id)}
                   canMarkAnswer={!post && post.isAnswered && (isAuthor || isAdminOrMod)}
                 />;                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
-
                   canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
                 />

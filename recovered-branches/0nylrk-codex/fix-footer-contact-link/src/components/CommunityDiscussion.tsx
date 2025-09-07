@@ -21,7 +21,6 @@ interface DiscussionPost {
   body: string
 }  body: string
 }
-
   body: string
 }
 const initial_posts: DiscussionPost[] = [;
@@ -35,8 +34,8 @@ const initial_posts: DiscussionPost[] = [;
   body: string
 }
   {
-    id: 2
-    author: "David Kim"
+    id: 2;
+    author: "author",
     time: "50m ago"
     title: "Quick tip: How to rank your Zion listing higher"
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."
@@ -131,7 +130,6 @@ export const CommunityDiscussion: React.FC = () => {const initialPosts: Discussi
               </Button>;
             </div>;
           </CardContent>;
-
                 </AvatarFallback>;
               </Avatar>;
               <div>;

@@ -4,10 +4,8 @@ interface AIMilestoneGeneratorProps {;
   endDate: string | null;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
-
     if (!scope || !startDate || !projectType) {
       return;
-
     }
     const input: MilestoneInput = {
       scope
@@ -79,13 +77,11 @@ if ( {) {
     clearGeneratedMilestones()
     setSelectedMilestones({})
   }
-
   const toggleMilestoneSelection = (index: number, ) =>: any {
     setSelectedMilestones (prev => ({
       ...prev,
       [index]: !prev[index],
     }));
-
   }
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
     onAddMilestone(milestone)
@@ -94,13 +90,11 @@ if ( {) {
     try {
       return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
-
       return dateString
     }
   }
-
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button',;
+import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card',;
 import {;
   Accordion,;
@@ -117,49 +111,33 @@ interface AIMilestoneGeneratorProps {;
   endDate: string | null,;
   projectType: string,;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
-
   onAddMilestone: (milestone: GeneratedMilestone) => void;
-
   scope,;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   startDate,;
   endDate,;
   projectType,;
   onAddMilestones,;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleGenerateMilestones = async () => {;
     if (!scope || !startDate || !projectType) {;
       return;
     }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const input: MilestoneInput = {;
       scope,;
       startDate,;
       endDate,;
-
     try {;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
     }
-
   },
-
   return (
-
         <Button
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
           disabled={isGenerating || !scope || !startDate || !projectType}        >
-
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
-
           {isGenerating ? (
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
@@ -181,7 +159,6 @@ interface AIMilestoneGeneratorProps {;
                 {generatedMilestones.length} milestones generated based on your
                 project scope
               </p>
-
           disabled={isGenerating || !scope || !startDate || !projectType}>;
           {isGenerating ? (;
             <>;
@@ -196,7 +173,6 @@ interface AIMilestoneGeneratorProps {;
           )}
         </Button>;
       </div>;
-
       {generatedMilestones && generatedMilestones.length > 0 && (;
         <Card>;
           <CardContent className='pt-6'>;
@@ -211,10 +187,8 @@ interface AIMilestoneGeneratorProps {;
                 Add Selected to Project;
               </Button>;
             </div>;
-
             <Accordion type='multiple' className='w-full'>;
               {generatedMilestones && generatedMilestones.map((milestone, index) => (;
-
                 <AccordionItem
                   value={`item-${index}`}
                   key={index}
@@ -300,7 +274,6 @@ interface AIMilestoneGeneratorProps {;
                         </div>;
                       </AccordionTrigger>;
                     </div>;
-
               <Button 
                 onClick={handleAddToProject}
                 disabled={!Object.values(selectedMilestones).some(Boolean)}
@@ -308,7 +281,6 @@ interface AIMilestoneGeneratorProps {;
                 Add Selected to Project
               </Button>
             </div>
-
             <Accordion type="multiple" className="w-full">
               {generatedMilestones.map((milestone, index) => (
                 <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">
@@ -326,14 +298,12 @@ interface AIMilestoneGeneratorProps {;
                           <span className="font-medium">{milestone.title}</span>
                           <Badge variant="secondary" className="ml-2 flex items-center">
                             <Sparkles className="w-3 h-3 mr-1" />
-
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
-
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
@@ -341,7 +311,6 @@ interface AIMilestoneGeneratorProps {;
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
-
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
@@ -366,7 +335,6 @@ interface AIMilestoneGeneratorProps {;
                     </div>
                   </AccordionContent>
                 </AccordionItem>
-
                       onClick={e => {;
                         e && e.stopPropagation();
                         handleAddSingleMilestone(milestone);                      }}
@@ -388,19 +356,15 @@ interface AIMilestoneGeneratorProps {;
                     </div>;
                   </AccordionContent>;
                 </AccordionItem>;
-
               ))}
               ))}
-
             </Accordion>;
           </CardContent>;
         </Card>;
       )}
-
     </div>;
   );
 }
-
                     <Button;
                       variant='ghost';
                       size='sm';

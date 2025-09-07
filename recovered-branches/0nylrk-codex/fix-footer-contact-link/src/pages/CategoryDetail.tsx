@@ -1,5 +1,3 @@
-
-
 import { useParams, Link } from "react-router-dom",
 import { Header } from "@/components/header/Header",
 import { Footer } from "@/components/Footer",
@@ -12,7 +10,6 @@ import { useNavigate } from "react-router-dom",
 import { toast } from "@/hooks/use-toast";
 export default function CategoryDetail() {
   // Cast to specify the expected route param type since useParams may be untyped
-
   const { slug } = useParams() as { slug?: string }
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
@@ -24,7 +21,6 @@ export default function CategoryDetail() {
   const navigate = useNavigate(),
   const [isLoading, setIsLoading] = useState(true),
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),  }),
-
   // Map of category slugs to their display data
   const categoryData = {
     'services': {
@@ -42,10 +38,9 @@ export default function CategoryDetail() {
       description: "Rent or buy specialized hardware, servers, and devices",
       icon: <Code className="w-6 h-6" />
     },
-
     'innovation': {
-      title: "Innovation"
-      description: "Discover cutting-edge solutions and tech breakthroughs"
+      title: "title",
+    description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />    'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
@@ -53,7 +48,6 @@ export default function CategoryDetail() {
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
       icon: <BarChart className="w-6 h-6" />
-
     },
     'virtual-assistants': {
       title: "Virtual Assistants"
@@ -62,9 +56,7 @@ export default function CategoryDetail() {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
-
     },
-
     // Find the category data based on slug
     const currentCategory = categoryData[slug as keyof typeof categoryData] |{
       title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') |"Category"
@@ -78,15 +70,14 @@ export default function CategoryDetail() {
         description: `Your quote request for ${listing.title} has been sent.`      // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
-          serviceType: listing.category
-          specificItem: {
+          serviceType: listing.category;
+    specificItem: {
             id: listing.id
             title: listing.title
             category: listing.category
             image: listing.images?.[0]
-
 import { Header } from "@/components/header/Header";
-import { Footer } from "@/components/Footer",;
+import { Footer } from "@/components/Footer";
 import { GradientHeading } from "@/components/GradientHeading",;
 import { ProductListingCard } from "@/components/ProductListingCard",;
 import { useState, useEffect } from "react",;
@@ -208,13 +199,10 @@ export default function CategoryDetail() {;
         }
       });
     }
-
   },
   };
   },
-
   return (
-
   }
 ;
   return (
@@ -246,12 +234,9 @@ export default function CategoryDetail() {;
   },
   };
   },
-
   return (
-
                 <ProductListingCard 
                   key={listing.id} 
-
                   listing={listing}
                   onRequestQuote={handleRequestQuote}
                 />
@@ -341,7 +326,6 @@ icon: <Code className="w-6 h-6" />
   description: "Enterprise AI integrations and services";
 icon: <Briefcase className="w-6 h-6" /> 
 }
-
 };
 useEffect ( () => {
   setIsLoading (true);

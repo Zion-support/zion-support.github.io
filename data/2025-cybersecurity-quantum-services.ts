@@ -11,18 +11,14 @@ export interface CybersecurityQuantumService {;
     currency: string;
     trialDays: number;
     setupTime: string;
-
   {
-
       'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.',
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
     techStack: [
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',
     ],
     realImplementation: true,
-
-    implementationDetails:
-      'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.'
+    implementationDetails: "implementationDetails",
     roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.'
     useCases: [
       'Advanced persistent threat detection'
@@ -38,7 +34,6 @@ export interface CybersecurityQuantumService {;
     support:
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
     compliance: [];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
-
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
     id: 'ai - powered - vulnerability - assessment',

@@ -1,4 +1,3 @@
-
 import {TalentCard} from "@/components/talent/TalentCard";
 import {TalentProfile} from "@/types/talent";
 export interface TalentGridProps {;
@@ -9,12 +8,10 @@ export interface TalentGridProps {;
   onToggleSave: (id: string, isSaved: boolean) => void,;
   isAuthenticated: boolean,;
   viewProfile?: (id: string) => void,;
-
   clearFilters?: () => void;
   handleRequestHire?: (talent: TalentProfile) => void;import { TalentCard } from "@/components/talent/TalentCard";
 import { TalentProfile } from "@/types/talent";
 export interface TalentGridProps {
-
   clearFilters?: () => void;export interface TalentGridProps {
   talents: TalentProfile[],
   isLoading: boolean,
@@ -34,15 +31,12 @@ export function TalentGrid({
   onTalentClick
   savedTalentIds
   onToggleSave
-
   talents, 
   isLoading, 
   onTalentClick, 
   savedTalentIds, 
-
   handleRequestHire
 }: TalentGridProps) {
-
   const handleRequestHireInternal = (talent: TalentProfile) => {
     if (handleRequestHire) {
       handleRequestHire(talent);
@@ -53,12 +47,10 @@ if ( {) {
 }
       view_profile (id);
       // Default implementation
-
   };
-
       // // // console.log("Request to hire:", talent.id)
 import { TalentCard } from "@/components/talent/TalentCard";
-import { TalentProfile } from "@/types/talent",;
+import { TalentProfile } from "@/types/talent";
 export interface TalentGridProps {;
   talents: TalentProfile[],;
   isLoading: boolean,;
@@ -107,7 +99,6 @@ export function TalentGrid({;
     return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
       <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>
       {clearFilters && (
-
 export function TalentGrid(): any ({ ;  talents, ;
   isLoading, ;
   onTalentClick, ;
@@ -138,11 +129,9 @@ export function TalentGrid(): any ({ ;  talents, ;
       )}
     </div>
   }
-
       )}
     </div>;
   }
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
       {talents && talents.map((talent) => (;
@@ -207,7 +196,6 @@ const handleViewProfile = (id: string) => {
 }
 };
 if (isLoading) {
-  
 }if (!talents || talents.length === 0) {
   return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6" > <p className="text-zion-slate-light mb-4" >No talents found matching your criteria</p> clearFilters && (<button onClick= {
   clearFilters 
@@ -236,11 +224,9 @@ if (isLoading) {
         >
           Clear Filters
         </button>
-
       )}
     </div>;
   }
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
       {talents && talents.map((talent) => (;
@@ -254,7 +240,6 @@ if (isLoading) {
           isAuthenticated={isAuthenticated}
         />;
       ))}
-
     </div>;
   );
 }

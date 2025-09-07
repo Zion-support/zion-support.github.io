@@ -1,29 +1,22 @@
-  ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
+ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon;
-
 // Import our new revolutionary services;
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
-
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-
       clearInterval(serviceInterval);
       clearInterval(testimonialInterval);
     }
   }, []);
-
   const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices];
-
   // Get featured services for rotation
   const featuredServices = allRevolutionaryServices.slice(0, 6);
   const features = [
-
 import {
-
   ArrowRight,
   Play,
   Users,
@@ -57,11 +50,9 @@ import {
   Award,
   CheckCircle,
   Zap as ZapIcon,
-
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
-
 // Import our new revolutionary services
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
@@ -110,7 +101,6 @@ const Homepage2043: React.FC = () => {
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
-
 // Import our new revolutionary services
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
@@ -137,9 +127,9 @@ const Homepage2043: React.FC = () => {
   const featuredServices = allRevolutionaryServices.slice(0, 6);
   const features = [
     {
-      icon: AtomIcon
-      title: 'Quantum Computing'
-      description:
+      icon: AtomIcon;
+    title: "title",
+    description:
         'Revolutionary quantum computing with consciousness integration'
       href: '/quantum-bio-computing-platform'
       color: 'from-blue-500 to-cyan-500'
@@ -213,7 +203,6 @@ const Homepage2043: React.FC = () => {
       avatar: '👩‍💻'
     }
   ];
-
   const handleGetStarted = useCallback(() => {
     window.location.href = '/revolutionary-2040-2041-pricing-showcase';
   }, []);
@@ -500,16 +489,13 @@ const Homepage2043: React.FC = () => {
                     ease: 'easeInOut',
                   }}
                   style={{
-
               ))}
             </div>;
-
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
                     delay: i * 0.2,
               ))}
             </div>;
-
             {/* Enhanced grid pattern */}
             <div className='absolute inset-0 opacity-20'>;
               <div
@@ -530,9 +516,7 @@ const Homepage2043: React.FC = () => {
                 Revolutionary 2043 Technology
               </div>
               {/* Main Heading */}
-
               <h1 
-
                 id="hero-heading"
                 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight"
               >
@@ -599,7 +583,6 @@ const Homepage2043: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
                 ))}
         {/* Enhanced Features Section */}
         <section className='py-20 px-4 relative'>;
@@ -610,12 +593,10 @@ const Homepage2043: React.FC = () => {
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology
@@ -680,7 +661,6 @@ const Homepage2043: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
-
                   <p className='text-gray-300 mb-6 leading-relaxed'>
                     {feature.description}
                   </p>
@@ -696,16 +676,13 @@ const Homepage2043: React.FC = () => {
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                     {feature.title}
                   </h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {feature.description}
                   </p>
-
                   <a 
-
                     href={feature.href}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300"
                   >
@@ -717,30 +694,24 @@ const Homepage2043: React.FC = () => {
             </div>
           </div>
         </section>
-
                     className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature && feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>;
                   <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300'>;
                     {feature && feature.title}
                   </h3>;
-
                   <p className='text-gray-300 mb-6 leading-relaxed'>;
                     {feature && feature.description}
                   </p>;
-
                   <a
                     href={feature && feature.href}
                     className='inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300'>;
                     Learn More;
                     <ChevronRight className='w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300' />                  </a>                  </div>;
-
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">;
                     {feature && feature.title}
                   </h3>;
-
                   <p className="text-gray-300 mb-6 leading-relaxed">;
                     {feature && feature.description}
                   </p>;
-
                   <a
                     href={feature && feature.href}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300">;
@@ -752,7 +723,6 @@ const Homepage2043: React.FC = () => {
             </div>;
           </div>;
         </section>;
-
         {/* Enhanced Featured Services Section */}
         <section className='py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">;
@@ -762,12 +732,10 @@ const Homepage2043: React.FC = () => {
         <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">
           <div className="max-w-7xl mx-auto">
             <motion.div
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Featured
@@ -817,7 +785,6 @@ const Homepage2043: React.FC = () => {
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -100 }}
-
                   >
                     <div className='text-6xl mb-6'>
                       {featuredServices[currentServiceIndex]?.icon}
@@ -850,12 +817,10 @@ const Homepage2043: React.FC = () => {
                     </a>
                   </motion.div>
                 </AnimatePresence>
-
                 {/* Navigation Controls */}
                 <button
                   onClick={prevService}
                   className='absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm'
-
                 >
                   <ChevronLeft className='w-6 h-6' />
                 </button>
@@ -903,7 +868,6 @@ const Homepage2043: React.FC = () => {
                           ? 'bg-cyan-400 w-8'                          : 'bg-white/30 hover:bg-white/50'                        index === currentServiceIndex
                           ? 'bg-cyan-400 w-8'
                           : 'bg-white/30 hover:bg-white/50'
-
                       }`}
                     />;
                   ))}
@@ -912,7 +876,6 @@ const Homepage2043: React.FC = () => {
             </div>
           </div>
         </section>
-
                     left: `${Math.random () * 100}%`,
                     top: `${Math.random () * 100}%`,
                   }}                />                    ease: "easeInOut";
@@ -1253,7 +1216,6 @@ const Homepage2043: React.FC = () => {
                           : 'bg - white / 30 hover:bg - white / 50';
                       }`}
                     />))}
-
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${;
                         index === currentServiceIndex;
                           ? 'bg-cyan-400 w-8'                          : 'bg-white/30 hover:bg-white/50'                        index === currentServiceIndex ;
@@ -1280,18 +1242,15 @@ const Homepage2043: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-16'
-
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 What Our
@@ -1353,7 +1312,6 @@ const Homepage2043: React.FC = () => {
                 computing platforms are transforming industries and driving;
                 innovation.;
               </p>;
-
                   key={currentTestimonialIndex}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -1373,7 +1331,6 @@ const Homepage2043: React.FC = () => {
                       <div className='text-gray-400'>;
                         {testimonials[currentTestimonialIndex].role} at{' '}
                         {testimonials[currentTestimonialIndex].company}
-
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
@@ -1387,7 +1344,6 @@ const Homepage2043: React.FC = () => {
                         ? 'bg-emerald-400 w-8'                        : 'bg-white/30 hover:bg-white/50'                      index === currentTestimonialIndex ;
                         ? 'bg-emerald-400 w-8' ;
                         : 'bg-white/30 hover:bg-white/50';
-
                     }`}
                   />;
                 ))}
@@ -1395,7 +1351,6 @@ const Homepage2043: React.FC = () => {
             </div>;
           </div>;
         </section>;
-
                     }`}
                   />
                 ))}
@@ -1407,7 +1362,6 @@ const Homepage2043: React.FC = () => {
         <section className="py-20 px-4 relative">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                 <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
@@ -1458,7 +1412,6 @@ const Homepage2043: React.FC = () => {
     </Layout>
 Math.random () * 100 
   Math.random () * 100 
-
 }%`;
 top: `$ {
   Math.random () * 100
@@ -1489,10 +1442,8 @@ top: `$ {
   opacity: 1, y: 0
 }transition= {
   {
-
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion && motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion && motion.button> <motion && motion.button > <Phone className="w-6 h-6" /> Contact Us </motion && motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup && ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion && motion.div> </div> </section> </main> </Layout>) 
 };
-
 export default Homepage2043;
                   <h3 className="text - xl font - semibold text-white mb-2">Call Us</h3>;
                   <p className="text-cyan-400">+1 302 464 0950</p>;
@@ -1600,4 +1551,3 @@ export default Homepage2043);
 ;
 export default Homepage2043;
 ;
-

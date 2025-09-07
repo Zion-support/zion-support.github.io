@@ -1,13 +1,9 @@
-
-
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
-
 =======
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
-
 export function Footer() {
   return (  return (
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">;
@@ -56,12 +52,10 @@ export function Footer() {
                 href="https://github && github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-
                 className="text-zion-slate hover:text-zion-cyan transition-colors">;                <Github className="h-5 w-5" />;
               </a>;
             </div>;
           </div>;
-
           <div>;
             <h3 className="text-white font-semibold mb-4 text-lg">;
               Marketplace;
@@ -158,7 +152,6 @@ function Footer() {
             <NewsletterForm />;
           </div>;
         </div>;
-
         <div className="mt - 12 pt - 8 border - t border - zion - blue-light">;
           <div className="flex flex - col md: flex - row justify - between items-center">;
             <p className="text - zion - slate text-sm">;
@@ -176,7 +169,6 @@ function Footer() {
                 to="/terms";
                 className="text - zion - slate hover:text - zion - cyan text - sm transition-colors";
               >;
-
                 Terms of Service;
               </Link>;                Terms of Service;
               </Link>;
@@ -186,7 +178,7 @@ function Footer() {
       </div>;
   )
 import { NewsletterForm } from "@/components/NewsletterForm";
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",;
+import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 export function Footer() {;
   return (;
@@ -260,6 +252,5 @@ export function Footer() {;
           </div>;
         </div>;
       </div>;
-
     </footer>;
   );

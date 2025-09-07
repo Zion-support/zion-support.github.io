@@ -1,18 +1,15 @@
 interface ResumeStepContentProps {
-
-  activeTab: string
-  resume: Resume
+  activeTab: string;
+    resume: Resume
   onNextStep: () => void
   onPrevStep: () => void
 }
-
 }: ResumeStepContentProps) => {
   return (
     <>
       <TabsContent value="basic-info">
         <BasicInfoForm
           resumeId={resume?.id!}
-
 import {TabsContent} from "@/components/ui/tabs";
 import {Resume} from "@/types/resume";
 import {BasicInfoForm} from '../forms/basic-info';
@@ -22,7 +19,6 @@ import {SkillsForm} from '../forms/SkillsForm';
 import {CertificationsForm} from '../forms/CertificationsForm';
 import {PreviewResume} from '../PreviewResume';
 interface ResumeStepContentProps {
-
   activeTab: string
   resume: Resume
   onNextStep: () => void
@@ -33,7 +29,6 @@ export const ResumeStepContent = ({
   resume
   onNextStep
   onPrevStep
-
 export const ResumeStepContent = ({ ;
   activeTab;
 export const ResumeStepContent = ({ 
@@ -59,7 +54,7 @@ export const ResumeStepContent = ({
         <WorkExperienceForm
         <WorkExperienceForm 
 import { TabsContent } from "@/components/ui/tabs";
-import { Resume } from "@/types/resume",;
+import { Resume } from "@/types/resume";
 import { BasicInfoForm } from '../forms/basic-info',;
 import { WorkExperienceForm } from '../forms/WorkExperienceForm',;
 import { EducationForm } from '../forms/EducationForm',;
@@ -69,12 +64,9 @@ import { PreviewResume } from '../PreviewResume',;          resumeId={resume?.id
           workExperiences={resume?.work_experience |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
-
         />;
       </TabsContent>;
-
       <TabsContent value="education">;
-
         <EducationForm        />
       </TabsContent>
       <TabsContent value="education">
@@ -144,7 +136,6 @@ onPrevStep
 }/> </TabsContent> </>) 
 };
 }
-
         <PreviewResume 
           resume={resume as Resume} 
           onBack={onPrevStep}

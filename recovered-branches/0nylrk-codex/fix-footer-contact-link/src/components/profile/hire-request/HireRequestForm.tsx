@@ -24,14 +24,11 @@ import { ProjectDetailsField } from "./ProjectDetailsField",
 import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
 export interface HireRequestFormProps {
-
-  talent: TalentProfile
-  onClose: () => void
-
+  talent: TalentProfile;
+    onClose: () => void
   initialJobTitle?: string;  onSubmitSuccess?: () => void
 }
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
-
     initialJobTitle;
     userDetails
   });    initialJobTitle;

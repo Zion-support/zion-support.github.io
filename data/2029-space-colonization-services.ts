@@ -1,4 +1,4 @@
-      'Quantum communication protocols',
+'Quantum communication protocols',
       'AI - powered routing optimization',
       'Multi - planet network management',
       'Satellite constellation control',
@@ -26,7 +26,6 @@
     features: [;
       'Multi - source energy harvesting',
       'AI - powered energy optimization',
-
       'Advanced energy storage',
       'Power distribution systems',
       'Energy efficiency monitoring',
@@ -38,7 +37,6 @@
     ],
     popular: true,
     icon: '⚡',
-
       'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',
     launchDate: '2029-03-01',
     customers: 18,
@@ -68,7 +66,6 @@
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   // Space Colonization & Mining Services
   {
-
     id: 'mars-colonization-automation-platform', name: 'Mars Colonization Automation Platform',
     tagline: 'Automate Mars colonization process with AI and robotics',
     price: '$99,999',
@@ -90,15 +87,12 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     growthRate: '500% annual growth', variant: 'space-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
       website: 'https://ziontechgroup.com';
     }
 ;
-    realImplementation: true
-    implementationDetails:
-      'Advanced interplanetary communication network with quantum protocols, AI routing, satellite management, and real-time monitoring. Includes security protocols and emergency communication systems.'
+    realImplementation: true;
+    implementationDetails: "implementationDetails",
     launchDate: '2029-01-15'
     customers: 15
     rating: 4.8
@@ -277,7 +271,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     growthRate: '350% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -288,7 +281,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     launchDate: '2029-03-01';
     customers: 18;
     rating: 4.8
-
     reviews: 52
   }
 ];import { ServiceVariant } from '../types/service-variants';
@@ -332,12 +324,10 @@ export interface SpaceColonization2029Service {;
   rating: number,;
   reviews: number;
 }
-
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   // Space Colonization & Mining Services
   {
-
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface SpaceColonization2029Service {;
   id: string,;
   name: string,;
@@ -379,7 +369,6 @@ export interface SpaceColonization2029Service {;
   reviews: number;
 }
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -388,7 +377,6 @@ export interface SpaceColonization2029Service {;
     customers: 18;
     rating: 4.8,
     reviews: 52;
-
 ];
 ;
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [;

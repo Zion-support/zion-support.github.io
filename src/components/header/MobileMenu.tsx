@@ -1,6 +1,4 @@
-
-              onClose(), // Close mobile menu on any click
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+onClose(), // Close mobile menu on any click
             }}
           >
             <div className="relative mr-4">
@@ -20,17 +18,12 @@
       </div>
     </div>
   )
-
     name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );
 }
   );
 }
-
 name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
 }
   );
 }
-
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

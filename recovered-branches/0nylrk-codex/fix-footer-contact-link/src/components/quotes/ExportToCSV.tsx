@@ -1,5 +1,3 @@
-
-
 import { Button } from "@/components/ui/button",
 import { Download } from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
@@ -15,7 +13,7 @@ import type { QuoteRequest } from "@/types/quotes",      quote.id;
       document.body.removeChild(link),
       URL.revokeObjectURL(url)
     }, 100)import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react",;
+import { Download } from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes",;
 ;
 interface ExportToCSVProps {;
@@ -42,13 +40,10 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
       quote.requester_email,;
       quote.project_name,;
       quote.project_summary,;
-
       onClick={handleExport}
       className="flex items-center gap-2"
       disabled={quotes.length === 0}
-
     >;
-
       <Download size={16} />;
       Export CSV;
     </Button>;
@@ -61,7 +56,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
             ? `$${quote.budget_min}`;      onClick={handleExport}
       className="flex items-center gap-2"
       disabled={quotes.length === 0}
-
     >;
       <Download size={16} />;
       Export CSV;

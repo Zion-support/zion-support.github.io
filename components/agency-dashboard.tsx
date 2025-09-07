@@ -1,12 +1,9 @@
 import type { GetServerSideProps } from 'next';
-
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
 type Props = { vendor: Vendor | null };
-
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function AgencyDashboardPage({ vendor }: Props) {;
 type Props = { vendor: Vendor | null };
-
 export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
@@ -25,11 +22,10 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       ...(activeVendor.packages |[])
       {
         id: `pkg_${Date.now()}`
-        title: pkgTitle
-        description: pkgDesc
+        title: pkgTitle;
+    description: pkgDesc
         priceUsd: Number(pkgPrice)
       }
-
   function addPackage() {;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
     const packages = [;
@@ -40,7 +36,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
   description: pkgDesc,;
         priceUsd: Number(pkgPrice),;
       },;
-
     ];
     setActiveVendor({ ...activeVendor, packages });
     setPkgTitle('');
@@ -52,9 +47,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     setActiveVendor(updated)
   }
   function addPackage() {
-
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
-
   return (
     <div className='space-y-8'>;
       <div className='flex items-center justify-between'>;
@@ -92,13 +85,11 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-
     <div className="space-y-8">;
       <div className="flex items-center justify-between">;
         <h1 className="text-2xl font-semibold">Agency Dashboard</h1>;
         {!activeVendor && activeVendor.verified && <span className="text-xs px-2 py-0 && 0.5 rounded bg-yellow-100 text-yellow-800">Pending Verification</span>}
       </div>;
-
       <section className="space-y-4">;
         <h2 className="text-lg font-medium">Profile</h2>;
         <form onSubmit={saveProfile} className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -119,11 +110,9 @@ export default function AgencyDashboardPage({ vendor }: Props) {
           </div>;
         </form>;
       </section>;
-
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Publish Packages</h2>;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
-
             <div
               key={p && p.id}
               className='border border-gray-200 dark:border-gray-800 rounded p-4'>;
@@ -151,20 +140,15 @@ export default function AgencyDashboardPage({ vendor }: Props) {
               placeholder='Price (USD)'
               type='number'
               value={pkgPrice}
-
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
-
     const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
     const data = await res.json();
     setItems(data.items || [])
-
   }
-
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
-
   useEffect(() => {
               className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
               Add;
@@ -172,7 +156,6 @@ function Pipeline({ vendorId }: { vendorId: string }) {
         </div>;
       </section>;
   const [items, setItems] = useState<any[]>([]);
-
   async function fetchItems() {;
     const res = await fetch(;
       `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`;
@@ -190,9 +173,7 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     });
     fetchItems();
   useEffect(() => {;
-
   }
-
     fetchItems();
   }, []);
   return (
@@ -267,11 +248,9 @@ function Pipeline({ vendorId }: { vendorId: string }) {
   return { props: { vendor } }
 }
 }
-
     </div>
 };
     </div>
-
 };
         </div>))}
     </div>);

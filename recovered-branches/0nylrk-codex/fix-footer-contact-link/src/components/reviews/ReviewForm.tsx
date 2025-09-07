@@ -53,7 +53,7 @@ import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
 import { Switch } from "@/components/ui/switch",
 import { Review } from "@/types/reviews",import { useState } from "react";
-import { Star } from "lucide-react",;
+import { Star } from "lucide-react";
 import { useForm } from "react-hook-form",;
 import { Button } from "@/components/ui/button",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -87,7 +87,6 @@ interface ReviewFormProps {;
   defaultValues?: Review,;
   isSubmitting: boolean;
 }
-
 export function ReviewForm({
   projectId,
   revieweeId,
@@ -95,9 +94,7 @@ export function ReviewForm({
   onSubmit,
   defaultValues,
   const [hoveredStar, setHoveredStar] = useState<number>(0);
-
   const [hoveredStar, setHoveredStar] = useState<number>(0),
-  
     const formattedData = {;
       ...values,;
       project_id: projectId,;
@@ -208,17 +205,15 @@ export function ReviewForm({;
                             ? "fill-yellow-400 text-yellow-400";
                             :"text-gray-300";
         />;
-
         {/* Review Text */}
         <FormField
           control={form && form.control}
           name="review_text"
           rules={{
-            required: "Please provide feedback"
-            minLength: {
-              value: 20
-
-              message: "Review must be at least 20 characters"}}};
+            required: "required",
+    minLength: {
+              value: 20;
+    message: "Review must be at least 20 characters"}}};
   const handle_submit = async (values: ReviewFormValues) => {
     const formatted_data = {
       ...values,
@@ -273,13 +268,11 @@ if ( {) {
                 />;
               </FormControl>;
               <FormMessage />;
-
         />;
         {/* Additional Rating Categories (only shown if main rating is provided) */}
         {watchRating > 0 && (;
           <div className="space-y-6 border-t pt-6">;
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>;
-
                       defaultValue={field && field.value?.toString()}
                       className="flex flex-wrap gap-4";
                     >;
@@ -295,7 +288,6 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
                           </FormControl>;
                           <FormLabel className="cursor-pointer font-normal">;
@@ -309,7 +301,6 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
           render={({ field }) => (;
             <FormItem>;

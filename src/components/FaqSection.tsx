@@ -1,9 +1,7 @@
-
-
 import { FileText } from 'lucide-react'
 const faqs = [
   {
-    question: 'How do I publish my AI product or service?'
+    question: "question",
     answer:
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."
   }
@@ -93,7 +91,6 @@ const faqs = [;
       'Reach us via the chat widget, email support@ziontechgroup && ziontechgroup.com or call +1 302 464 0950 anytime.',;
   },;
 ];
-
 export function FaqSection() {;
   return (
     <section className='py-20 bg-zion-blue' id='faq'>;
@@ -164,9 +161,7 @@ function FaqSection() {
             equipment rentals, and datacenter maintenance services;
           </p>;
         </div>;
-
 import { GradientHeading } from "./GradientHeading";
-
         <div className='max - w-3xl mx - auto bg - zion - blue - light rounded - lg border border - zion - purple / 20 p - 6'>;
           <div className='flex items - center mb - 6'>;
             <FileText className='h - 6 w - 6 text - zion - cyan mr - 2' />;
@@ -191,13 +186,11 @@ import {
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components / ui / accordion';
 const faqs = [;
   {
-
         <div className='max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6'>;
           <div className='flex items-center mb-6'>;
             <FileText className='h-6 w-6 text-zion-cyan mr-2' />;
             <h3 className='text-xl font-bold text-white'>Common Questions</h3>;
           </div>;
-
           <Accordion type='single' collapsible className='w-full'>;
             {faqs && faqs.map((faq, index) => (;
               <AccordionItem
@@ -215,7 +208,6 @@ import {;
   AccordionTrigger} from "@/components/ui/accordion";
 import { FileText } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-
 const faqs = [;
   {;
     question: "How do I publish my AI product or service?",;
@@ -249,24 +241,17 @@ const faqs = [;
     question: "How do I contact support?",;
     answer:;
       "Reach us via the chat widget, email support@ziontechgroup && ziontechgroup.com or call +1 302 464 0950 anytime."}];
-
 export function FaqSection() {;
-
 const faqs = [
   {
     question: "How do I publish my AI product or service?",
     answer:
-
 export function FaqSection() {
   return (
-
         <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">
           <div className="flex items-center mb-6">
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />
             <h3 className="text-xl font-bold text-white">Common Questions</h3>
           </div>
-
   );
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

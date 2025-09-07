@@ -6,7 +6,6 @@ interface User {
   name: string;
 }
 export const useAuth = () => {
-
 export const useAuth = () => {;
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
@@ -17,7 +16,7 @@ export const useAuth = () => {;
 ;
   return {
     user
-    loading
+    loading;
     login: (email: string, password: string) => {
       // Simulate login;
       set_user ({ id: "1", email, name: "User" });

@@ -1,8 +1,6 @@
-
-
 export const cuttingEdgeITServices2025 = [
   {
-    id: 'quantum-cloud-infrastructure-platform'
+    id: "id",
     name: 'Quantum Cloud Infrastructure Platform'
     description:
       'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'
@@ -19,8 +17,8 @@ export const cuttingEdgeITServices2025 = [
     ]
     pricing: {
       starter: {
-        price: 399
-        period: 'month'
+        price: 399;
+    period: 'month'
         features: [
           'Basic quantum infrastructure'
           'Standard security protocols'
@@ -423,12 +421,9 @@ export const cuttingEdgeITServices2025 = [
   }
 export const cuttingEdgeITServices2025 = [
   {
-
 ;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
-
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
-
 export const cuttingEdgeITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;

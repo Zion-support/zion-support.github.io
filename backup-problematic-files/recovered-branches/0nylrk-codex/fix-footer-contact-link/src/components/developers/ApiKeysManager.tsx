@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
+import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react";
 import { format } from "date-fns",;
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
 ;
@@ -15,7 +14,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
 ;
-import CodeBlock from "./CodeBlock",;
+import CodeBlock from "CodeBlock";
 ;
 export function ApiKeysManager() {;
   const { ;

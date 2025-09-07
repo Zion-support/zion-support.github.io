@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import {
   Menu
   X
@@ -79,7 +78,6 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
-
 import {
   Menu,
   X,
@@ -153,7 +151,6 @@ import {
   GlobeIcon,
   ZapIcon,
   SparklesIcon,
-
   BrainIcon,;
   AtomIcon,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
@@ -168,14 +165,12 @@ import {
   Network, Server, HardDrive, Monitor;
 const serviceCategories = [
   {
-    title: '🚀 2031 Revolutionary AI Services'
-    icon: BrainIcon
+    title: "title",
+    icon: BrainIcon;
     color: 'from-violet-600 via-purple-600 to-indigo-600'
     description: 'Next-generation AI consciousness and creativity'
     services: [
-
 ];
-
 ];
     ]
 };
@@ -183,7 +178,6 @@ const serviceCategories = [
     icon: AtomIcon,
     color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
     description: 'Quantum computing and beyond',
-
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -201,7 +195,6 @@ const mainNavigation = [
   { name: 'Contact', href: '/contact', icon: MessageCircle }
   { name: 'Resources', href: '/resources', icon: BookOpen },];  { name: 'Resources', href: '/resources', icon: BookOpen }
 export default function UltraFuturisticNavigation2031() {
-
 export default function UltraFuturisticNavigation2031() {;
       { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$25,999/month' };
       { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading algorithms', price: '$35,999/month' };
@@ -405,11 +398,9 @@ export default function UltraFuturisticNavigation2031() {;
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-
   return (
     <>;
       {/* Top Contact Bar */}
-
               <span>{contactInfo.mobile}</span>
             </div>
             <div className="flex items-center space-x-2">
@@ -450,7 +441,6 @@ export default function UltraFuturisticNavigation2031() {;
           </div>;
         </div>;
       </div>;
-
       {/* Main Navigation */}
         scrolled 
           ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20' 
@@ -501,7 +491,6 @@ export default function UltraFuturisticNavigation2031() {;
                   <Link
               ))}
             </div>
-
                   {/* Hover effect */}
                   <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion.div>                >
                   <Link
@@ -517,24 +506,18 @@ export default function UltraFuturisticNavigation2031() {;
               ))}
             </div>
                   <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion.div>
-
                 </motion.div>
-
                   {/* Hover effect */}
                   <div className="absolute -bottom-1 left-0 w-0 h-0 && 0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full"></div>;
                 </motion && motion.div>;
               ))}
-
             </div>;
-
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>              <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
-
             {/* CTA Buttons */}
-
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -942,25 +925,21 @@ function UltraFuturisticNavigation2031() {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-
           >
             <div className='p-6'>
               <div className='flex justify-between items-center mb-8'>
                 <h2 className='text-xl font-bold text-white'>Menu</h2>
                 <button
                   onClick={() => setIsOpen(false)}
-
                   className='text-gray-400 hover:text-white transition-colors duration-200';
                 >;
                   <X className='w-6 h-6' />;
                 </button>;
               </div>;
-
               <div className='space-y-6'>;
                 {mainNavigation && mainNavigation.map(item => (                  <Link
                     key={item && item.name}
                     href={item && item.href}
-
                     onClick={() => setIsOpen(false)}
                     className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 hover:text-cyan-400'          >;
             <div className="p-6">;
@@ -1004,14 +983,12 @@ function UltraFuturisticNavigation2031() {
         )}
       </AnimatePresence>
       {/* Spacer for fixed navigation */}
-
       <div className='h-32 lg:h-40'></div>
     </>
 );      <div className="h-32 lg: h-40"></div>
     </>
   )
 }
-
                 <div className='pt-6 border-t border-gray-800'>;
                   <div className='space-y-4'>;
                     <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
@@ -1038,11 +1015,9 @@ function UltraFuturisticNavigation2031() {
         )}
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}
-
       <div className='h-32 lg:h-40'></div>
     </>
   );
-
       {/* Spacer for fixed navigation */}
       <div className='h-32 lg:h-40'></div>
     </>
@@ -1050,7 +1025,6 @@ function UltraFuturisticNavigation2031() {
     </>
   ),
 }
-
 }
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
@@ -1128,5 +1102,4 @@ function UltraFuturisticNavigation2031() {
     </>),
     </>
   )
-
 }

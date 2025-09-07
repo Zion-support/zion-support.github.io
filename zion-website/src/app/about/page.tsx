@@ -1,4 +1,4 @@
-  UserGroupIcon
+UserGroupIcon
   LightBulbIcon
   GlobeAltIcon
   ShieldCheckIcon
@@ -11,7 +11,7 @@ const values = [
     description: 'We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.',
     icon: LightBulbIcon},
   {
-    name: 'Global Impact'
+    name: "name",
     description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.'
     icon: GlobeAltIcon}
   {
@@ -19,7 +19,6 @@ const values = [
     description: 'We maintain the highest standards of security and ethical AI development.'
     icon: ShieldCheckIcon}
   {
-
     name: 'Research Excellence',
     description: 'Our team of world - class researchers drives breakthrough discoveries and innovations.',
     icon: AcademicCapIcon}];
@@ -42,7 +41,6 @@ const team = [;
   {
   return (
     <div className="bg-black">
-
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -214,5 +212,4 @@ const team = [;
     </div>
   )
 };
-
 export default Page;

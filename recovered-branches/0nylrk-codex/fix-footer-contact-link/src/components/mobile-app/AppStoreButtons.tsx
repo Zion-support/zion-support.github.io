@@ -2,7 +2,6 @@ import React from "react";
 import {Apple, GithubIcon} from "lucide-react";
 import {cn} from "@/lib/utils";
 interface AppStoreButtonsProps {;
-
   className?: string;interface AppStoreButtonsProps {
   class_name?: string;
   appStoreUrl?: string;
@@ -10,9 +9,7 @@ interface AppStoreButtonsProps {;
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void;
 }
-
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
-
   appStoreUrl = "#";
   googlePlayUrl = "#";        onClick={handleGooglePlayClick}
         target="_blank"
@@ -33,7 +30,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
           <div className="text-xl font-semibold">Google Play</div>
         </div>},
 import React from "react";
-import { Apple, GithubIcon } from "lucide-react",;
+import { Apple, GithubIcon } from "lucide-react";
 import { cn } from "@/lib/utils",;
 interface AppStoreButtonsProps {;
   className?: string,;

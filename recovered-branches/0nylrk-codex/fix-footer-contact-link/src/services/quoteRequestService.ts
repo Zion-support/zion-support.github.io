@@ -1,19 +1,13 @@
-
 import {supabase} from "@/integrations/supabase/client";
-
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-
 import { supabase } from '@/integrations / supabase / client';
 import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
-
 import { supabase } from "@/integrations/supabase/client";
 import {supabase} from "@/integrations/supabase/client";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
-
     return data && data.map((item: any) => ({
-
       .select(`;
         *;
       .select(`
@@ -24,24 +18,19 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
       `)
       .select(`
         *,
-
         talent:talent_id (
-
         talent:talent_id (
     return data && data.map((item: any) => ({
-
       .order('created_at', { ascending: false });
     if (error) throw error;
     // Format the data to include talent_name
     return data.map((item: any) => ({
-      ...item
-      talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
+      ...item;
+    talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
   }
       ...item,
       talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   };
-  
-
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status }
@@ -85,18 +74,14 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
   }
 }
       .single(),
-    
     if (error) throw error,
-    
     return {
       ...data,
       talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
   },
-  
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status },
-    
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()

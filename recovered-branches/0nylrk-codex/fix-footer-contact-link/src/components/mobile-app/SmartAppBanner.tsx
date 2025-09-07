@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Link } from "react-router-dom",
 import { useIsMobile } from "@/hooks/use-mobile",
-
   appName?: string;
 import React, { useState, useEffect } from './react';
 import { X, ArrowRight } from './lucide-react';
@@ -21,7 +20,6 @@ interface SmartAppBannerProps {
   googlePlayUrl?: string;
   delay?: number, // Delay in milliseconds before showing the banner;
 }
-
   appName = "Zion Marketplace";
   appIconSrc;
   appStoreUrl = "/download";
@@ -38,7 +36,6 @@ interface SmartAppBannerProps {
 }) => {
   const [isVisible, setIsVisible] = useState(false),
   const isMobile = useIsMobile(),
-  
   useEffect(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !localStorage.getItem("smartBannerDismissed")) {
@@ -64,7 +61,7 @@ interface SmartAppBannerProps {
           )}
 },
 import React, { useState, useEffect } from "react";
-import { X, ArrowRight } from "lucide-react",;
+import { X, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom",;
 import { useIsMobile } from "@/hooks/use-mobile",;
 interface SmartAppBannerProps {;
@@ -122,14 +119,11 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
           ) : (;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
-
         </div>;
-
         <div className="flex-1">;
           <h4 className="font-semibold text-white">{appName}</h4>;
           <p className="text-xs text-gray-300">Get our app for the best experience</p>;
         </div>;
-
 export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({
   app_name = "Zion Marketplace";
   appIconSrc;

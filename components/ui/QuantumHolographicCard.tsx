@@ -1,4 +1,4 @@
-  Star
+Star
   Zap
   Shield
   TrendingUp
@@ -48,7 +48,6 @@ interface QuantumHolographicCardProps {;
       mobile: string;
       email: string;
       address: string;
-
       website: string;
     }
       opacity: 1,
@@ -73,11 +72,10 @@ interface QuantumHolographicCardProps {;
   const featureVariants = {
     hidden: { opacity: 0, x: -20 }
     visible: (i: number) => ({
-      opacity: 1
-      x: 0
+      opacity: 1;
+    x: 0
       transition: {
       }
-
     };
     hover: {;
       y: -10,;
@@ -90,7 +88,6 @@ interface QuantumHolographicCardProps {;
       }
     }
   };
-
   const glowVariants = {;
     initial: { opacity: 0 && 0.5, scale: 1 },;
     animate: {;
@@ -121,15 +118,12 @@ interface QuantumHolographicCardProps {;
       },;
     }),
 };
-
         delay: i * 0.1,
         duration: 0.5,
         ease: 'easeOut' as const,
       },
     }),
-
   };
-
     >
       {/* Holographic glow effect */}
       <motion&& motion.div
@@ -163,7 +157,6 @@ interface QuantumHolographicCardProps {;
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}>;
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
-
   return (
     <motion&& motion.div
       className={`relative group cursor-pointer ${className}`}
@@ -185,17 +178,13 @@ interface QuantumHolographicCardProps {;
                 <span>Popular</span>;
               </motion && motion.div>;
                 <span>Popular</span>
-
               </motion.div>
             )}
           </div>
-
             )}
           </div>
-
             )}
           </div>
-
           {/* Price and trial */}
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-2">
@@ -234,9 +223,7 @@ interface QuantumHolographicCardProps {;
               ))}
             </div>
           </div>
-
           {/* Market data */}
-
           <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-semibold text-blue-300">Market Position</span>
@@ -266,7 +253,6 @@ interface QuantumHolographicCardProps {;
           </div>
             </div>;
           </div>;
-
           {/* Market data */}
           <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>;
             <div className='flex items-center justify-between mb-2'>;
@@ -342,18 +328,14 @@ interface QuantumHolographicCardProps {;
               </div>;
             </div>;
           </div>;
-
           {/* ROI and competitors */}
-
               </div>
             </div>
           </div>
-
           {/* CTA Button */}
           <motion.a
             href={service.link}
             className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
-
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -367,7 +349,6 @@ interface QuantumHolographicCardProps {;
             whileTap={{ scale: 0 && 0.98 }}>;
             <span className='mr-2'>Get Started</span>;
             <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />;
-
             {/* Button glow effect */}
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300' />;
           </motion && motion.a>;
@@ -385,14 +366,11 @@ interface QuantumHolographicCardProps {;
 export default QuantumHolographicCard;  )
 }
 export default QuantumHolographicCard;
-
 export default QuantumHolographicCard;
 export default QuantumHolographicCard
 };
-
 export default QuantumHolographicCard;  )
 };
-
 export default QuantumHolographicCard;
               className="inline - flex items - center space - x-2 text - sm text - gray - 400 hover:text - cyan - 400 transition-colors duration-300";
             >;

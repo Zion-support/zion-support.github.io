@@ -1,12 +1,11 @@
-
 import { useState } from "react";
 import { BookOpen, Terminal } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Alert, AlertDescription } from "@/components/ui/alert",;
 import { Badge } from "@/components/ui/badge",;
 ;
-import CodeBlock from "./CodeBlock",;
+import CodeBlock from "CodeBlock";
 import { logInfo } from '@/utils/productionLogger',;
 interface EndpointParam {;
   name:string,;
@@ -417,18 +416,14 @@ print(data)`;
   20 ";
 }/> API Documentation </CardTitle> <CardDescription className=" text-zinc-400"> Reference documentation for integrating with the Zion Marketplace API. </CardDescription> </CardHeader> <CardContent> <Alert className=" bg-blue-900/30 border-blue-800 mb-6"> <Terminal className=" h-4 w-4"/> <AlertDescription> Make sure to include your API key in all requests as a Bearer token in the Authorization header. </AlertDescription> </Alert> <Tabs defaultValue=" jobs"className=" space-y-4"> <TabsList className=" bg-zinc-800 border-zinc-700"> <TabsTrigger value=" jobs">Jobs</TabsTrigger> <TabsTrigger value=" talent">Talent</TabsTrigger> <TabsTrigger value=" quotes">Quotes</TabsTrigger> <TabsTrigger value=" webhooks">Webhooks</TabsTrigger> <TabsTrigger value=" errors">Errors</TabsTrigger> </TabsList> <TabsContent value=" jobs"className=" space-y-6"> <EndpointSection headers=headers) data = response.json () print (data) ` ;
 }
-
 export function ApiDocumentation() {
   return (
     <Card className=&quot;bg-zinc-900 border-zinc-800 text-white&quot;>
-
 import CodeBlock from "./CodeBlock";
-
 interface EndpointParam {name: string,
   type: string,
   description: string,
   required?: boolean}
-
 interface EndpointSectionProps {method: string,
   endpoint: string,
   description: string,
@@ -437,7 +432,6 @@ interface EndpointSectionProps {method: string,
   codeExamples?: Record<string, string>;
   responseExamples?: { success: string}
 }
-
 export function ApiDocumentation() {return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -448,7 +442,6 @@ export function ApiDocumentation() {return (
           Reference documentation for integrating with the Zion Marketplace API.
         </CardDescription>
       </CardHeader>
-      
       <CardContent>
         <Alert className=&quot;bg-blue-900/30 border-blue-800 mb-6&quot;>
           <Terminal className=&quot;h-4 w-4&quot; />
@@ -456,7 +449,6 @@ export function ApiDocumentation() {return (
             Make sure to include your API key in all requests as a Bearer token in the Authorization header.
           </AlertDescription>
         </Alert>
-
         <Tabs defaultValue=&quot;jobs&quot; className=&quot;space-y-4&quot;>
           <TabsList className=&quot;bg-zinc-800 border-zinc-700&quot;>
             <TabsTrigger value=&quot;jobs&quot;>Jobs</TabsTrigger>
@@ -465,7 +457,6 @@ export function ApiDocumentation() {return (
             <TabsTrigger value=&quot;webhooks&quot;>Webhooks</TabsTrigger>
             <TabsTrigger value=&quot;errors&quot;>Errors</TabsTrigger>
           </TabsList>
-          
           <TabsContent value=&quot;jobs&quot; className=&quot;space-y-6&quot;>
             <EndpointSection,
 method=&quot;GET&quot;
@@ -489,19 +480,16 @@ method=&quot;GET&quot;
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
   }
 }),
-
 const data = await response.json(),
 logInfo(data),`,
                 python: `import requests,
 headers = {
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
 }
-
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/jobs',
     params={'limit': 10, 'category': 'development'},    headers=headers
 )
-
 data = response.json()
 print(data)`
               }}
@@ -532,7 +520,6 @@ print(data)`
   }}`
               }}
             />
-            
             <EndpointSection,
 method=&quot;GET&quot;
               endpoint=&quot;/api/jobs/:id&quot;
@@ -551,7 +538,6 @@ method=&quot;GET&quot;
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
   }
 }),
-
 const data = await response.json(),
 logInfo(data),`,
                 python: `import requests,
@@ -572,18 +558,15 @@ headers = {
 const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`, {method: 'GET', headers: {
     'Authorization': 'Bearer YOURAPI_KEY', _'Content-Type': 'application/json'}
 });
-
 const data = await response.json();
 logInfo(data);`,
                 python: `import requests,
 headers = {_'Authorization': 'Bearer YOURAPI_KEY', _'Content-Type': 'application/json'}
-
 jobid = 'jobabc123'
 response = requests.get(
     f'https://api.ziontechgroup.com/v1/jobs/{job_id}',
     headers=headers
 )
-
 data = response.json()
 print(data)`
               }}
@@ -608,7 +591,6 @@ print(data)`
 }`
               }}
             />
-            
             <EndpointSection,
 method=&quot;POST&quot;
               endpoint=&quot;/api/jobs&quot;
@@ -657,7 +639,6 @@ method=&quot;POST&quot;
     },    deadline: '2025-06-30T23:59:59Z'
   })
 }),
-
 const data = await response.json(),
 logInfo(data),`,
                 python: `import requests,
@@ -665,7 +646,6 @@ import json,
 headers = {
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
 }
-
 payload = {
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'],
     'budget': {
@@ -674,13 +654,11 @@ payload = {
         'currency': 'USD'
     },    'deadline': '2025-06-30T23:59:59Z'
 }
-
 response = requests.post(
     'https: //api.ziontechgroup.com/v1/jobs',
     headers=headers,
     data=json.dumps(payload)
 )
-
 data = response.json()
 print(data)`
               }}
@@ -705,7 +683,6 @@ print(data)`
               }}
             />
           </TabsContent>
-          
           <TabsContent value=&quot;talent&quot; className=&quot;space-y-6&quot;>
             <EndpointSection,
 method=&quot;GET&quot;
@@ -728,19 +705,16 @@ method=&quot;GET&quot;
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
   }
 }),
-
 const data = await response.json(),
 logInfo(data),`,
                 python: `import requests,
 headers = {
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
 }
-
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/talent',
     params={'skills': 'react,typescript'},    headers=headers
 )
-
 data = response.json()
 print(data)`
               }}
@@ -765,7 +739,6 @@ print(data)`
   }}`
               }}
             />
-            
             <EndpointSection,
 method=&quot;GET&quot;
               endpoint=&quot;/api/talent/:id&quot;
@@ -784,7 +757,6 @@ method=&quot;GET&quot;
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
   }
 }),
-
 const data = await response.json(),
 logInfo(data),`,
                 python: `import requests,
@@ -805,18 +777,15 @@ headers = {
 const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talentId}\`, {method: 'GET', headers: {
     'Authorization': 'Bearer YOURAPI_KEY', _'Content-Type': 'application/json'}
 });
-
 const data = await response.json();
 logInfo(data);`,
                 python: `import requests,
 headers = {_'Authorization': 'Bearer YOURAPI_KEY', _'Content-Type': 'application/json'}
-
 talentid = 'talentabc123'
 response = requests.get(
     f'https://api.ziontechgroup.com/v1/talent/{talent_id}',
     headers=headers
 )
-
 data = response.json()
 print(data)`
               }}
@@ -1028,7 +997,7 @@ print(data)`;
               </p>;
               ;
               <CodeBlock;
-                code={`import crypto from 'crypto',;
+                code={`import crypto from "crypto";
 ;
 // Function to verify webhook signature;
 function verifyWebhookSignature(payload, signature, secret) {;

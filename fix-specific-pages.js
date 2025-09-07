@@ -69,9 +69,7 @@ function restorePage(pagePath) {;
         // Take the content after the conflict resolution;      }
     }
     // Clean up the content
-
     backupContent = backupContent.trim()
-
     // Ensure it has proper structure
     if (!backupContent.includes('export default')) {
       return { restored: false, reason: 'Backup content is also corrupted' }
@@ -97,7 +95,6 @@ if ( {) {
     const corruptedBackupPath = `${page_path}.corrupted.${timestamp}`,
     fs.writeFileSync (corruptedBackupPath, current_content),
     // Restore the page;
-
 ;
     // Create a backup of the current corrupted file;
     const timestamp = Date.now();
@@ -109,27 +106,20 @@ if ( {) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
 }
-
 // Function to fix specific corrupted pages
 function fixSpecificPages() {
   const results = {
-
-    total: corruptedPages.length
+    total: corruptedPages.length;
     restored: 0
     failed: 0
     details: []
-
   },
-
   },
-  
   console.log('🚀 Starting targeted page restoration...'),
   console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
-  
   // // // console.log('🚀 Starting targeted page restoration...'),
   // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
   },
-
   },
   // // // console.log('🚀 Starting targeted page restoration...'),
   // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
@@ -137,9 +127,7 @@ function fixSpecificPages() {
     if (!fs.existsSync(pagePath)) {
       // // // console.log(`⚠️  Page not found: ${pagePath}`),
       results.failed++,    // // // console.log(`\n🔍 Checking: ${pagePath}`),      results.failed++,
-
   return results
-
       // // // console.log(`❌ Failed: ${pagePath}`),
       // // // console.log(`   Reason: ${result.reason}`)
 ;
@@ -211,7 +199,6 @@ function fixSpecificPages() {;
 if ({
   fixSpecificPages()
 }
-
 ;
 module.exports = {;
   restorePage,;

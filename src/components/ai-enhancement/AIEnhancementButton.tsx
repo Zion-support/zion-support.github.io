@@ -1,61 +1,45 @@
-
-    if ((!options.content |options.content.trim().length < contentLength) &&
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
       toast({
-        title: "Not enough content"
-        description: `Please enter at least ${contentLength} characters before enhancing.`
+        title: "title",
+    description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
-
   },
-  
   const handleRegenerate = async () => {
     await handleEnhance()
   },
-  
   const handleCancel = () => {
     setShowActions(false),
     setGeneratedContent(null)
   },
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">;
-
         <Button
           type="button"
           variant="ghost"
           size="sm"
-
         <Button
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           type="button"
           variant="ghost"
           size="sm"
           onClick = {handleRegenerate,}
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
-
         <Button;
           type="button";
           variant="ghost";
           size="sm";
-
           Apply;
         </Button>;
         <Button;
           type="button";
           variant="ghost";
           size="sm";
-
           Regenerate;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>;
         <Button;
           type="button";
@@ -91,12 +75,9 @@
 }return (<Button) : (<Sparkles className=" h - 4 w-4" />);
 }</Button>);
 }"}
-
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />
       ) : (
         <Sparkles className="h-4 w-4" />
       )}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

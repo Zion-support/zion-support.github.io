@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import {supabase, getFromProfiles} from "../../integrations/supabase/client";
 import {useAuthOperations} from "../../hooks/useAuthOperations";
@@ -8,7 +7,6 @@ import {useNavigate, useLocation} from 'react-router-dom';
 import {useAuthState} from "./useAuthState";
 import {useAuthEventHandlers} from "./useAuthEventHandlers";
 import {mapProfileToUser} from "./profileMapper";
-
 export const AuthProvider = ({ children }: { children: React && React.ReactNode }) => {;  const { ;
     user, setUser, ;
     isLoading, setIsLoading, ;
@@ -27,11 +25,9 @@ import { mapProfileToUser } from "./profileMapper",export const AuthProvider = (
     onboardingStep, setOnboardingStep 
   } = useAuthState(),    onboardingStep, setOnboardingStep 
   } = useAuthState(),
-  
   const navigate = useNavigate(),
   const location = useLocation(),
   const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep),
-
   const {
     login: loginImpl,
     signup: signupImpl,
@@ -43,7 +39,6 @@ import { mapProfileToUser } from "./profileMapper",export const AuthProvider = (
     loginWithTwitter,
     loginWithWeb3
   } = useAuthOperations(setUser, setIsLoading),
-
   // Wrapper for login to match the AuthContextType interface
   const login = async (email: string, password: string) => {
     return loginImpl({ email, password })
@@ -65,7 +60,7 @@ import { mapProfileToUser } from "./profileMapper",export const AuthProvider = (
             console.error("Error fetching user profile:", error),
             setUser(null)
 import React, { useEffect } from "react";
-import { supabase, getFromProfiles } from "../../integrations/supabase/client",;
+import { supabase, getFromProfiles } from "../../integrations/supabase/client";
 import { useAuthOperations } from "../../hooks/useAuthOperations",;
 import { AuthContext } from "./AuthContext",;
 import { cleanupAuthState } from "../../utils/authUtils",;
@@ -100,7 +95,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
               .select('*');
               .eq('id', session && session.user.id);
               .single();
-
             if (profile) {;
               const mappedUser = mapProfileToUser(session && session.user, profile);
               setUser(mappedUser);

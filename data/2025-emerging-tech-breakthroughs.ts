@@ -1,4 +1,4 @@
-      mobile: '+1 302 464 0950',
+mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com',
@@ -8,7 +8,6 @@
 export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
   // Brain-Computer Interface Platform
   {
-
     id: 'brain-computer-interface-platform', name: 'Brain-Computer Interface Platform',
     tagline: 'Direct neural interface for human-computer interaction',
     price: '$25,000',
@@ -33,13 +32,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     variant: 'neural-revolutionary',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
 ;
-    realImplementation: true
-    implementationDetails:
-      'Complete quantum internet security platform with quantum cryptography, network monitoring, and compliance tools.'
+    realImplementation: true;
+    implementationDetails: "implementationDetails",
     launchDate: '2025-02-15'
     customers: 15
     rating: 5.0
@@ -366,7 +362,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     launchDate: '2025-02-25';
     customers: 32;
     rating: 4.7
-
     reviews: 18
   }
 ];import { ServiceVariant } from '../types/service-variants';
@@ -624,7 +619,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-
 export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
   // Brain-Computer Interface Platform
   {

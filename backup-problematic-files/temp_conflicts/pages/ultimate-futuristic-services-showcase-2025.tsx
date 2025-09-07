@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Head from 'next/head',;
+import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion',;
 import { ;
   Search, Filter, Star, Users, TrendingUp, ;
@@ -10,8 +10,8 @@ import { ;
   Sparkles, Target, Award, Lightbulb, Eye,;
   Heart, Zap, Shield, Globe, Rocket, Star, Grid, List;
 } from 'lucide-react',;
-import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground',;
-import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard',;
+import UltraAdvancedQuantumBackground from "UltraAdvancedQuantumBackground";
+import UltraFuturisticServiceCard from "UltraFuturisticServiceCard";
 ;
 // Import all the new 2025 service data;
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',;

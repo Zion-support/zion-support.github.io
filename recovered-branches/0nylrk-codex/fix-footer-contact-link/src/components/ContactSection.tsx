@@ -1,10 +1,8 @@
-
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button",
 import { Mail } from "lucide-react",
-
 import { GradientHeading  } from '@/components / GradientHeading';
 import { Button  } from '@/components / ui / button';
 import { Mail  } from './lucide-react';
@@ -48,7 +46,6 @@ function ContactSection() {
                     type="text"
                     id="subject"
                     className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-
                   <label;
                     html_for="subject";
                     className="block text - sm font - medium text - zion - slate - light mb-1";
@@ -82,7 +79,6 @@ function ContactSection() {
           </div>;
         </div>;
       </div>;
-
                   />
                 </div>
                 <div>
@@ -107,7 +103,7 @@ function ContactSection() {
       </div>
   )
 import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 export function ContactSection() {;
   return (;

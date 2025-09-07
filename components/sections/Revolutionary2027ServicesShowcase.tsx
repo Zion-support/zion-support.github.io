@@ -1,5 +1,4 @@
-
-  ArrowRight
+ArrowRight
   Brain
   Zap
   Shield
@@ -49,25 +48,23 @@ import Link from 'next/link';
 const Revolutionary2027ServicesShowcase = () => {
   const featuredServices = [
     {
-
       icon: Brain,
       color: 'from - purple - 600 to - indigo - 700',
       category: 'Quantum AI & Neuroscience',
-
       icon: Brain,
       color: 'from - purple - 600 to - indigo - 700',
       category: 'Quantum AI & Neuroscience',
       growthRate: '300% annual growth'
     }
     {
-      id: 'autonomous-space-mining-ai'
-      name: 'Autonomous Space Mining AI'
+      id: "id",
+    name: 'Autonomous Space Mining AI'
       description:
         'AI-powered autonomous mining operations in space - extract rare minerals from asteroids and celestial bodies without human intervention.'
       price: '$15,999'
       period: '/month'
-      icon: Rocket
-      color: 'from-blue-600 to-cyan-700'
+      icon: Rocket;
+    color: 'from-blue-600 to-cyan-700'
       category: 'Space Technology & AI'
       features: [
         'Autonomous mining operations'
@@ -205,22 +202,18 @@ const Revolutionary2027ServicesShowcase = () => {
       }
     }
   };
-
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20'></div>;
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0 && 0.1),transparent_50%)]'></div>;
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0 && 0.1),transparent_50%)]'></div>;
-
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20"></div>;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0 && 0.1),transparent_50%)]"></div>;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0 && 0.1),transparent_50%)]"></div>;
-
       <div className="max-w-7xl mx-auto relative z-10">;
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
-
         >
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -261,7 +254,6 @@ const Revolutionary2027ServicesShowcase = () => {
             Transform your business with solutions that were once science fiction.;
           </p>;
         </motion && motion.div>;
-
         {/* Category Overview */}
         <motion&& motion.div
           variants={containerVariants}
@@ -624,7 +616,6 @@ const Revolutionary2027ServicesShowcase = () => {
                       <span>Market: {service.marketSize}</span>
                     ))}
                   </div>
-
                   {/* Market Info */}
                   <div className="pt-4 border-t border-gray-700/50">
                     <div className="flex justify-between items-center text-sm text-gray-400">
@@ -633,7 +624,6 @@ const Revolutionary2027ServicesShowcase = () => {
                     </div>
                   </div>
                   </div>;
-
                   {/* Market Info */}
                   <div className='pt-4 border-t border-gray-700/50'>;
                     <div className='flex justify-between items-center text-sm text-gray-400'>;
@@ -642,7 +632,6 @@ const Revolutionary2027ServicesShowcase = () => {
                         ↑ {service && service.growthRate}
                       </span>                    </div>;
                   </div>;
-
                   {/* Price and CTA */}
                   {/* Price and CTA */}
                   <div className='pt-4 flex items-center justify-between'>;
@@ -678,10 +667,8 @@ const Revolutionary2027ServicesShowcase = () => {
                     </Link>;
                   </div>;
                 </div>;
-
           ))}
         </motion.div>
-
                 {/* Hover Effect Overlay */}
                 <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>              </div>                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>;
               </div>;
@@ -713,10 +700,8 @@ const Revolutionary2027ServicesShowcase = () => {
               </Link>
               <a
                 href='tel:+13024640950'
-
           className="text-center"
         >
-
           className='text-center'>;
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
@@ -828,13 +813,10 @@ const Revolutionary2027ServicesShowcase = () => {
     </section>;
   )
 };
-
 export default Revolutionary2027ServicesShowcase;  )
 };
 export default Revolutionary2027ServicesShowcase;
-
 export default Revolutionary2027ServicesShowcase;
-
 export default Revolutionary2027ServicesShowcase;
   )
 }

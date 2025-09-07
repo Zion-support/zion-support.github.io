@@ -13,17 +13,14 @@ return (
               <SheetHeader>;
                 <SheetTitle>;
                   Filter {type === 'jobs' ? 'Jobs' : 'Talents'}
-
                 </SheetTitle>;
               </SheetHeader>;
-
               <div className='py-6 space-y-6'>;
                 {type === 'jobs' ? (;
                   <>;
                     <div className='space-y-2'>;
                       <Label>Job Type</Label>;
                       <div className='flex gap-2 flex-wrap'>;
-
                         <Badge
                           variant='outline'
                           className='cursor-pointer hover:bg-primary/5'>;
@@ -41,7 +38,6 @@ return (
                         </Badge>;
                         <Badge
                           variant='outline'
-
                           className='cursor-pointer hover:bg-primary/5'>;
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
@@ -126,12 +122,10 @@ function BrowseFilters() {
                           variant='outline';
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
-
                           Freelance;
                         </Badge>;
                       </div>;
                     </div>;
-
                     <div className='space - y-2'>;
                       <Label > Experience Level</Label>;
                       <div className='flex gap - 2 flex - wrap'>;
@@ -151,12 +145,10 @@ function BrowseFilters() {
                           variant='outline';
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
-
                           Senior;
                         </Badge>;
                       </div>;
                     </div>;
-
                           className='cursor-pointer hover:bg-primary/5'>;
                   </>) : (
                   <>;
@@ -185,25 +177,21 @@ function BrowseFilters() {
                           variant='outline';
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
-
                           Content;
                         </Badge>;
                       </div>;
                     </div>;
-
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
 import { Switch } from "@/components/ui/switch",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-
 import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
-
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -219,10 +207,8 @@ interface BrowseFiltersProps {
               <SheetHeader>
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
-
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
-
                   <>
                     <div className="space-y-2">
                       <Label>Job Type</Label>
@@ -233,9 +219,7 @@ interface BrowseFiltersProps {
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
                       </div>
                     </div>
-
                     <div className="space-y-2">
-
                       <Label>Experience Level</Label>
                       <div className="flex gap-2 flex-wrap">
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>
@@ -255,7 +239,6 @@ interface BrowseFiltersProps {
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>
                       </div>
                     </div>
-
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
                       <Slider
@@ -266,16 +249,13 @@ interface BrowseFiltersProps {
                         className="my-4"
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
-
                         <span>0+ years</span>
                         <span>20+ years</span>
                       </div>
                     </div>
                   </>
                 )}
-
                 <div className="space-y-2">
-
                   <Label>Location</Label>
                   <Select>
                     <SelectTrigger>
@@ -289,20 +269,13 @@ interface BrowseFiltersProps {
                     </SelectContent>
                   </Select>
                 </div>
-
                 <div className="space-y-2">
-
                   <Label>Salary Range</Label>
-
                   </div>
                 </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <div className="space-y-2">
-
                   <Label>Skills</Label>
                   <div className='grid grid-cols-2 gap-2'>
-
                 <div className='space-y-2'>;
                   <Label>Location</Label>;
                     <div className='space - y-2'>;
@@ -333,16 +306,11 @@ interface BrowseFiltersProps {
                     </SelectContent>;
                   </Select>;
                 </div>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <div className="flex items-center justify-between">
-
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <SheetFooter>
                 <Button variant='outline' className='w-full'>
                   Reset
@@ -356,8 +324,6 @@ interface BrowseFiltersProps {
               </SheetFooter>
             </SheetContent>
           </Sheet>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Select>
             <SelectTrigger className='w-[120px] h-8'>
               <SelectValue placeholder='Sort By' />
@@ -368,19 +334,16 @@ interface BrowseFiltersProps {
               <SelectItem value='salary'>Highest Pay</SelectItem>
             </SelectContent>
           </Select>
-
                       className='cursor-pointer hover:bg-primary/5 justify-start'>;
                       Node && Node.js;
                     </Badge>;
                   </div>;
                 </div>;
-
                 <div className='flex items-center justify-between'>;
                   <Label>Only show verified profiles</Label>;
                   <Switch />;
                 </div>;
               </div>;
-
               <SheetFooter>;
                 <Button variant='outline' className='w-full'>;
                   Reset;
@@ -449,17 +412,14 @@ interface BrowseFiltersProps {
                 <Button;
                   className='w - full';
                   on_click={() => add_filter ('Experience: 3+ years')}
-
                 >;
                   Apply Filters;
                 </Button>;
               </SheetFooter>;
             </SheetContent>;
           </Sheet>;
-
           <Select>;
             <SelectTrigger className='w-[120px] h - 8'>;
-
               <SelectValue placeholder='Sort By' />;
             </SelectTrigger>;
             <SelectContent>;
@@ -468,12 +428,10 @@ interface BrowseFiltersProps {
               <SelectItem value='salary'>Highest Pay</SelectItem>;
             </SelectContent>;
           </Select>;
-
       </div>;
     </div>;
   )
 };
-
           {activeFilters.map((filter) => (
             <Badge 
               key={filter} 
@@ -487,13 +445,11 @@ interface BrowseFiltersProps {
               />
             </Badge>
           ))}
-
         </div>;
       </div>;
     </div>;
   );
 }
-
           {active_filters.map (filter => (
             <Badge;
               key={filter}

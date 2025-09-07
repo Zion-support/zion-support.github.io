@@ -1,5 +1,3 @@
-
-
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
@@ -18,7 +16,7 @@ import { NoJobsCard } from "./NoJobsCard",    isLoading,
   const currentTalentId = talentId |user?.id;
   const {
     isLoading;
-    updateJobMatchStatus
+    updateJobMatchStatus;
     categorizedMatches: {
       newMatches
       viewedMatches
@@ -26,15 +24,12 @@ import { NoJobsCard } from "./NoJobsCard",    isLoading,
     }
   } = useJobSuggestions(currentTalentId);
   const handleApply = (matchId: string, jobId: string) => {
-
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
     return <NoJobsCard />;
   }
-
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}
-
       {newMatches && newMatches.length > 0 && (;
         <div className="space-y-4">;
           <div className="flex items-center justify-between">;
@@ -43,7 +38,6 @@ import { NoJobsCard } from "./NoJobsCard",    isLoading,
               {newMatches && newMatches.length} New;
             </Badge>;
           </div>;
-
           <div className="grid gap-4 md:grid-cols-2">;
             {newMatches && newMatches.map(match => (;
               <JobMatchesCard              />
@@ -59,18 +53,15 @@ import { NoJobsCard } from "./NoJobsCard",    isLoading,
                 onApply={handleApply} 
                 onDecline={handleDecline} 
               />;
-
             ))}
           </div>;
         </div>;
       )}
-
       {/* Previously Viewed Section */}
       {viewedMatches && viewedMatches.length > 0 && (;        <div className="space-y-4">;
           <div className="flex items-center justify-between">;
             <h3 className="text-lg font-medium">Previously Viewed</h3>;
           </div>;
-
           <div className="grid gap-4 md:grid-cols-2">;
             {viewedMatches && viewedMatches.map(match => (;
               <JobMatchesCard                key={match && match.id} 
@@ -78,12 +69,10 @@ import { NoJobsCard } from "./NoJobsCard",    isLoading,
                 onApply={handleApply} 
                 onDecline={handleDecline} 
               />;
-
             ))}
           </div>;
         </div>;
       )}
-
       {/* Applied Jobs Section */}
       {appliedMatches && appliedMatches.length > 0 && (;            ))}
           </div>;
@@ -96,14 +85,12 @@ import { NoJobsCard } from "./NoJobsCard",    isLoading,
           <div className="flex items-center justify-between">;
             <h3 className="text-lg font-medium">Applied Jobs</h3>;
           </div>;
-
           <div className="grid gap-4 md:grid-cols-2">;
             {appliedMatches && appliedMatches.map(match => (;
               <JobMatchesCard
                 key={match && match.id} 
                 match={match} 
                 onApply={handleApply} 
-
                 onDecline={handleDecline}                onDecline={handleDecline}
                 showApplied={true}
               />;
@@ -111,7 +98,6 @@ import { NoJobsCard } from "./NoJobsCard",    isLoading,
           </div>;
         </div>;
       )}
-
     </div>;
   );
 }  ),; interface SuggestedJobsProps {
@@ -131,7 +117,6 @@ categorizedMatches: {
 viewedMatches;
 appliedMatches 
 }
-
 }= useJobSuggestions (currentTalentId);
 const handleApply = (matchId: string, jobId: string) => {
   updateJobMatchStatus (matchId, 'applied');

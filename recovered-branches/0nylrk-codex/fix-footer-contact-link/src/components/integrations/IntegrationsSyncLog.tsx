@@ -1,5 +1,3 @@
-
-
 import { Card } from "@/components/ui/card";
 import {
   Table;
@@ -12,10 +10,9 @@ import { Badge } from "@/components/ui/badge";
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";// Sample data for integration sync logs
-
 const syncLogs = [
   {
-    id: "1"
+    id: "id",
     integration: "Salesforce"
     event: "contact_synced"
     status: "success"
@@ -27,7 +24,6 @@ const syncLogs = [
     status: "error"
     timestamp: "2024-05-19T16:45:12Z"
     details: "Failed to update deal - API rate limit exceeded"
-
   },
   {
     id: "5"
@@ -91,7 +87,6 @@ const syncLogs = [;
                 <TableCell>{new Date(log && log.timestamp).toLocaleString()}</TableCell>;
                 <TableCell className="hidden md:table-cell">{log && log.details}</TableCell>;
               </TableRow>;
-
         </Table>;
       </div>;
     </Card>;

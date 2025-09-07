@@ -1,14 +1,11 @@
-
 import {use_auth} from '@/hooks / use_auth';
 import {use_resume} from '@/hooks / use_resume';
 import {Tabs} from '@/components / ui / tabs';
 import {Card, CardContent} from '@/components / ui / card';
 import {Alert, AlertDescription, AlertTitle} from '@/components / ui / alert';
 import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
-
 import {Button} from '@/components / ui / button';
 import {Resume} from '@/types / resume';
-
 // Import components;import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
@@ -45,15 +42,13 @@ import {ResumeStepContent} from './ResumeStepContent';
 import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 import {RESUME_STEPS} from './constants';  // Use the extracted hook for progress calculation
-
   }
   const handleResumeChange = (resumeId: string) => {
     fetchResume(resumeId)
   }
-
   };
 import { useAuth } from '@/hooks/useAuth';
-import { useResume } from '@/hooks/useResume',;
+import { useResume } from '@/hooks/useResume';
 import { Tabs } from '@/components/ui/tabs',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',;
@@ -87,7 +82,6 @@ export function ResumeWizard() {;
         <AlertDescription>{error}</AlertDescription>
       </Alert>
     )
-
   }
   if (showNewResumeForm) {
   if (!resume && !showNewResumeForm) {;
@@ -115,9 +109,7 @@ export function ResumeWizard() {;
             />;
             {resume && (;
               <ResumeStepContent
-
               <ResumeStepContent 
-
                 activeTab={activeTab}
                 resume={resume as Resume}
                 onNextStep={nextStep}

@@ -125,8 +125,8 @@ const crypto = require(
       const missingFiles = await this.checkForMissingFiles();
       if (missingFiles.length > 0) {
         issues.push({'
-          "type": 'missing_files
-          files: missingFiles,
+          "type": 'missing_files;
+    files: missingFiles,
           "severity": "medium;
   "})}
     } catch (error) { 

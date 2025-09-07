@@ -7,13 +7,10 @@ if ( {) {
       } else {
         success = await addWorkExperience(resumeId, experienceData)
       }
-
       setError(err.message || 'An error occurred');
     };
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
   const handleEdit = (work: WorkExperience) => {;
-
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -100,15 +97,11 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 }
       await deleteWorkExperience (id);
     }
-
   },
-
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   },
-
   return (
-
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -141,15 +134,12 @@ const workExperienceSchema = z && z.object({;
   description: z && z.string().optional(),;
   location: z && z.string().optional(),;
 });
-
 type WorkExperienceFormValues = z && z.infer<typeof workExperienceSchema>;
-
 interface WorkExperienceFormProps {;
   resumeId: string;
   workExperiences: WorkExperience[];
   onComplete: () => void;
   onBack: () => void;
-
 export function WorkExperienceForm(): any ({;
   resumeId,;
   workExperiences,;
@@ -164,14 +154,12 @@ export function WorkExperienceForm(): any ({;
   } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-
   // Helper function to format dates to string;
   const formatDateValue = (dateValue: string | Date | undefined): string => {;
     if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue;
     return format(dateValue, 'yyyy-MM-dd')
 };
-
   const form = useForm<WorkExperienceFormValues>({;
     resolver: zodResolver(workExperienceSchema),;
     defaultValues: {;
@@ -183,12 +171,10 @@ export function WorkExperienceForm(): any ({;
       location: '',;
     },;
   });
-
   const handleAddOrUpdate = async (data: WorkExperienceFormValues,) => {;
     try {;
       setError(null);
       let success;
-
       const experienceData: WorkExperience = {;
         company_name: data && data.company_name, // Required field;
         role_title: data && data.role_title, // Required field;
@@ -198,13 +184,11 @@ export function WorkExperienceForm(): any ({;
   description: data && data.description,;
         location: data && data.location,
 };
-
       if (editingId) {;
         success = await updateWorkExperience(editingId, experienceData);
       } else {;
         success = await addWorkExperience(resumeId, experienceData);
       }
-
       if (success) {;
         form && form.reset({;
           company_name: '',;
@@ -223,7 +207,6 @@ export function WorkExperienceForm(): any ({;
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work && work.id!);    form && form.reset({;
       ...work,;
-
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work && work.id!);
     form && form.reset({;
@@ -234,13 +217,11 @@ export function WorkExperienceForm(): any ({;
           : undefined,;
     })
 };
-
   const handleDelete = async (id: string,) => {;
     if (confirm('Are you sure you want to delete this work experience?')) {;
       await deleteWorkExperience(id);
     }
   };
-
   const handleEnhanceDescription = (enhancedContent: string) => {;
     form && form.setValue('description', enhancedContent)
 };
@@ -252,7 +233,6 @@ export function WorkExperienceForm(): any ({;
           Add your work history to showcase your professional experience.;
         </p>;
       </div>;
-
       {workExperiences && workExperiences.length > 0 && (;
         <div className='space-y-4'>;
           <h3 className='text-md font-medium'>Added Experience</h3>;
@@ -297,9 +277,7 @@ export function WorkExperienceForm(): any ({;
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
-
                     <Button
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     setEditingId(null),
                     setEditingId(null),
                     form.reset({
@@ -312,13 +290,11 @@ export function WorkExperienceForm(): any ({;
                   } else {
                     onBack()
             />;
-
             {error && (;
               <Alert variant='destructive'>;
                 <AlertDescription>{error}</AlertDescription>;
               </Alert>;
             )}
-
             <div className='flex justify-between pt-2'>;
               <Button
                 type='button'
@@ -340,13 +316,10 @@ export function WorkExperienceForm(): any ({;
                 }}
               >
                 {editingId ? 'Cancel' : 'Back'}
-
               </Button>
-
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
                 {!editingId && workExperiences.length > 0 && (
@@ -354,9 +327,7 @@ export function WorkExperienceForm(): any ({;
                     Next
                   </Button>
                 )}
-
               </Button>;
-
               <div className='flex gap-2'>;
                 <Button type='submit' disabled={isLoading}>;
                   {isLoading && (;
@@ -364,15 +335,12 @@ export function WorkExperienceForm(): any ({;
                   )}
                   {editingId ? 'Update' : 'Add'} Experience;
                 </Button>;
-
                 {!editingId && workExperiences && workExperiences.length > 0 && (;
                   <Button type='button' onClick={onComplete}>;
                     Next;
                   </Button>;
                 )}
-
 ;
-
                 </FormItem>)}
             />;
             {error && (
@@ -419,12 +387,10 @@ if ( {) {
           </form>;
         </Form>;
       </div>;
-
       ...work;
       start_date: formatDateValue(work.start_date),
       end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
   };
-
     </div>);
 }> {';
   editing_id ? 'Cancel': 'Back';

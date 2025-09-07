@@ -1,4 +1,4 @@
-  Brain
+Brain
   Star
   Users
   TrendingUp
@@ -52,8 +52,8 @@
   Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
 const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
@@ -191,7 +191,6 @@ const integrations = [;
   'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion trainingMindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration';
   'Spiritual growth pathwaysPersonal transformation tracking';
 ];
-
 const integrations = [;
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps';
@@ -204,12 +203,10 @@ const integrations = [;
     rating: 5,
     avatar: '👩‍🔬'
   }
-
 const integrations = [;
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps';
 ];
-
   Brain,
   Star,
   Users,
@@ -262,7 +259,6 @@ const features = [;
     avatar: '👩‍🔬';
   }
 export default function AIConsciousnessEvolution2025() {
-
 export default function AIConsciousnessEvolution2025() {
 const testimonials = [;
   {;
@@ -305,7 +301,6 @@ const testimonials = [;
     rating: 5,;
     avatar: '👩‍🔬';
   }
-
 export default function AIConsciousnessEvolution2025() {;
   return (
     <Layout>;
@@ -339,8 +334,8 @@ export default function AIConsciousnessEvolution2025() {;
             <motion.div;
               key={i}
               }}              transition={{
-                duration: 8 + i * 2
-                repeat: Infinity
+                duration: 8 + i * 2;
+    repeat: Infinity
                 delay: i * 0.3
               }}
               style={{
@@ -355,9 +350,7 @@ export default function AIConsciousnessEvolution2025() {;
         </div>;
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">;
           <motion&& motion.div
-
           <motion.div
-
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}>;
@@ -427,7 +420,6 @@ export default function AIConsciousnessEvolution2025() {;
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
                   className='text-center'
-
                 >
                   <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {stat.icon}
@@ -436,26 +428,20 @@ export default function AIConsciousnessEvolution2025() {;
                     {stat.value}
                   </div>
                   <div className='text-sm text-purple-300'>{stat.label}</div>                </motion.div>
-
                 </motion.div>
-
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-
             {/* CTA Buttons */}
-
               <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
               ))}
@@ -481,7 +467,6 @@ export default function AIConsciousnessEvolution2025() {;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-
       {/* Features Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -490,16 +475,13 @@ export default function AIConsciousnessEvolution2025() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Revolutionary Features for
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {' '}
-
             className="text-center mb-16"
           >
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Revolutionary Features for
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Consciousness Evolution</span>
@@ -556,19 +538,15 @@ export default function AIConsciousnessEvolution2025() {;
                   Advanced AI algorithms guide you through personalized consciousness development exercises.
                 </p>
                   consciousness development exercises.                </p>
-
                 </p>
-
               </motion.div>
             ))}
-
             ))}
       {/* How It Works Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-
           </div>
         </div>
       </section>
@@ -576,21 +554,17 @@ export default function AIConsciousnessEvolution2025() {;
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               How AI Consciousness Evolution
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {' '}
-
             className="text-center mb-16"
           >
-
             <h2 className="text-4xl font-bold text-white mb-6">
               How AI Consciousness Evolution
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Works</span>
@@ -675,7 +649,6 @@ export default function AIConsciousnessEvolution2025() {;
                 description: 'Real-time feedback and adaptation ensure continuous growth and development.'
                 icon: <TrendingUp className="w-12 h-12" />
               }
-
             ].map((step, index) => (
               <motion.div
                 key={step.step}
@@ -755,11 +728,8 @@ export default function AIConsciousnessEvolution2025() {;
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className='text-center'
-
                 key={step.step}
-
                 className='text-center'
-
               >
                 <div className='relative mb-8'>
                   <div className='w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -778,14 +748,11 @@ export default function AIConsciousnessEvolution2025() {;
                 <p className='text-gray-300 leading-relaxed'>
                   {step.description}
                 </p>              </motion.div>
-
               </motion.div>
-
             ))}
           </div>
         </div>
       </section>
-
               }
             ].map((step, index) => (;
               <motion&& motion.div
@@ -830,7 +797,6 @@ export default function AIConsciousnessEvolution2025() {;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-
           </div>
         </div>
       </section>
@@ -838,21 +804,17 @@ export default function AIConsciousnessEvolution2025() {;
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Transform Your Life with
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {' '}
-
             className="text-center mb-16"
           >
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Transform Your Life with
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> AI Consciousness</span>
@@ -908,19 +870,15 @@ export default function AIConsciousnessEvolution2025() {;
                   Leverage AI-powered consciousness development for enhanced personal and professional growth.
                 </p>
                   personal and professional growth.                </p>
-
                 </p>
-
               </motion.div>
             ))}
-
             ))}
       {/* Technology Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-
           </div>
         </div>
       </section>
@@ -928,21 +886,17 @@ export default function AIConsciousnessEvolution2025() {;
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Cutting-Edge
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {' '}
-
             className="text-center mb-16"
           >
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Cutting-Edge
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Technology</span>
@@ -971,11 +925,9 @@ export default function AIConsciousnessEvolution2025() {;
                 <p className="text-sm text-gray-300 font-medium">{tech}</p>
               </motion.div>
             ))}
-
           </div>;
         </div>;
       </section>;
-
             ))}
       {/* Testimonials Section */}
       <section className='py-20 bg-black'>;
@@ -1005,16 +957,13 @@ export default function AIConsciousnessEvolution2025() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               What Our Users
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {' '}
-
             className="text-center mb-16"
           >
-
             <h2 className="text-4xl font-bold text-white mb-6">
               What Our Users
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Say</span>
@@ -1052,7 +1001,6 @@ export default function AIConsciousnessEvolution2025() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
                 viewport={{ once: true }}
-
               >
                 <div className='flex items-center mb-4'>
                   <div className='text-3xl mr-3'>{testimonial.avatar}</div>
@@ -1080,21 +1028,17 @@ export default function AIConsciousnessEvolution2025() {;
                 <p className="text-gray-300 italic">"{testimonial.content}"</p>
               </motion.div>
                 <p className='text-gray-300 italic'>"{testimonial.content}"</p>              </motion.div>
-
               </motion.div>
-
             ))}
           </div>
         </div>
       </section>
-
             ))}
       {/* Pricing Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-
           </div>
         </div>
       </section>
@@ -1102,21 +1046,17 @@ export default function AIConsciousnessEvolution2025() {;
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Choose Your
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {' '}
-
             className="text-center mb-16"
           >
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Choose Your
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Evolution Path</span>
@@ -1164,14 +1104,12 @@ export default function AIConsciousnessEvolution2025() {;
                 ],;
                 popular: false,;
               },            ].map((plan, index) => (                  'Everything in ProfessionalTeam managementCustom integrationsDedicated supportWhite-label optionsAdvanced reportingAPI access';
-
                 name: 'Enterprise',
                 price: '$799',
                 period: '/month',
                 ];
                 popular: false;
               }
-
                 }`}
                     : 'border-purple-500/20'
               <motion.div;
@@ -1197,16 +1135,12 @@ export default function AIConsciousnessEvolution2025() {;
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
               };
-
               {
                 name: 'Professional',
                 price: '$299',
                 period: '/month',
-
                     : 'border-purple-500/20'
-
                     : 'border-purple-500/20'
-
                     : 'border-purple-500/20'
                 className={`relative bg - gradient - to - br from - gray - 900 / 50 to - black / 50 backdrop - blur - lg border rounded - 2xl p - 8 ${
                   plan.popular;
@@ -1239,7 +1173,6 @@ export default function AIConsciousnessEvolution2025() {;
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-
                       {feature}
                     </li>;
                   ))}
@@ -1255,11 +1188,9 @@ export default function AIConsciousnessEvolution2025() {;
                 }`}>;
                 </button>;
               </motion && motion.div>;
-
                     </li>
                   ))}
                 </ul>
-
                 <button className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'
@@ -1278,7 +1209,6 @@ export default function AIConsciousnessEvolution2025() {;
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1287,7 +1217,6 @@ export default function AIConsciousnessEvolution2025() {;
               Ready to Evolve Your;
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 {' '}
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1324,7 +1253,6 @@ export default function AIConsciousnessEvolution2025() {;
               {[
                 { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile }
                 { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email }
-
                 { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
                   icon: <MapPin className='w-6 h-6' />,
                   label: 'Visit Us',
@@ -1335,10 +1263,8 @@ export default function AIConsciousnessEvolution2025() {;
                 { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email },
                 { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
                 },              ].map((contact, index) => (
-
                 { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
               ].map((contact, index) => (
-
                 <motion.div
                   key={contact.label}
                 Consciousness?;
@@ -1396,7 +1322,6 @@ export default function AIConsciousnessEvolution2025() {;
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.4 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
-
                 >
                   <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {contact.icon}
@@ -1405,9 +1330,7 @@ export default function AIConsciousnessEvolution2025() {;
                     {contact.label}
                   </div>
                   <div className='text-white font-medium'>{contact.value}</div>                </motion.div>
-
                 </motion.div>
-
               ))}
             </div>
           </motion.div>
@@ -1545,5 +1468,4 @@ export default function AIConsciousnessEvolution2025() {;
       </section>;
     </Layout>));
 }
-
   );

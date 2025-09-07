@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -8,15 +7,13 @@ import {toast} from "sonner";
 interface ScreenshotManagerProps {
   platform: AppPlatform
 }
-
 type Screenshot = {
-  id: string
-  url: string
+  id: string;
+    url: string
   file: File
 }
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
 };
-
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -24,13 +21,12 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     if (e.target.files) {
       addScreenshots(Array.from(e.target.files))
     }
-
 import { AppPlatform } from "./MetadataManager",
 import { toast } from "sonner",
 interface ScreenshotManagerProps {
   platform: AppPlatform
 import React, { useState, useRef } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { Upload, Trash2, Plus } from "lucide-react",;
 import { AppPlatform } from "./MetadataManager",;
@@ -57,14 +53,9 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       return
     }
     // Limit the number of screenshots
-
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
-    
     if (availableSlots <= 0) {
-
-  
-
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
       return
   },;
@@ -174,7 +165,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array && Array.from(e && e.dataTransfer.files));
     }
   };
-
   return (    <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle className="text-lg">App Screenshots</CardTitle>;
@@ -186,7 +176,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               ? "border-zion-cyan bg-zion-cyan/10"
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
-
 =======              : "border-zion-purple/30"
           }`}
           onDragOver={handleDragOver}
@@ -203,7 +192,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
-
 };
   id: string,
   url: string,

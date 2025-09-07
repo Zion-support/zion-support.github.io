@@ -1,4 +1,3 @@
-
 import { useState  } from 'react';
 import { Resume  } from '@/types/resume';
 import { useFetchResume  } from './useFetchResume';
@@ -9,7 +8,6 @@ import { useSkills  } from './useSkills';
 import { useCertifications  } from './useCertifications';
 import { useResumeList  } from './useResumeList';
 export function useResume() {  const [resume, setResume] = useState<Resume | null>(null);
-
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
   const workOperations = useWorkExperience();
@@ -33,11 +31,9 @@ export * from './use_skills';
 export * from './use_certifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
-
 ;
-
 import { useState } from 'react';
-import { Resume } from '@/types/resume',;
+import { Resume } from '@/types/resume';
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
 import { useWorkExperience } from './useWorkExperience',;

@@ -18,16 +18,13 @@ function isAuthorized(req: NextApiRequest): boolean {
   return !superToken |token === superToken;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
-
   if (req && req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
   if (req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
     return res.status(200).json({ metrics: state.metrics |{} })
-
   }
-
   if (req && req.method === 'POST') {
     const started = Date && Date.now();
     try {
@@ -38,11 +35,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       state && state.lastTriggers = triggers;
       writeState(state);
       appendLog({
-        module: 'reflex'
-        type: 'metrics'
+        module: "module",
+    type: 'metrics'
         status: 'ok'
-        latencyMs
-        payload: { metrics, triggers }
+        latencyMs;
+    payload: { metrics, triggers }
       });
       return res && res.status(200).json({ triggers });
     } catch (e: any) {
@@ -53,9 +50,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         payload: { error: e?.message |'unknown' }
       });
   return res && res.status(405).json({ error: 'Method not allowed' });
-
   return res && res.status(405).json({ error: 'Method not allowed' });
-
 }
 }
   append_log,
@@ -140,9 +135,6 @@ return res.status (405).json ({ error: 'Method not allowed' });
       return res.status (500).json ({ error: 'Reflex failure' });
   }
   return res.status (405).json ({ error: 'Method not allowed' });
-
   return res.status(405).json({ error: 'Method not allowed' });
-
   return res.status(405).json({ error: 'Method not allowed' });
 }
-

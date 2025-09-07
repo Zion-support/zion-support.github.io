@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -50,13 +50,10 @@ export interface InnovativeBusinessSolution {
   reviews: number
 }
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
 ;
-    realImplementation: true
-    implementationDetails:
-      'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
+    realImplementation: true;
+    implementationDetails: "implementationDetails",
     launchDate: '2025-02-15'
     customers: 89
     rating: 4.7
@@ -476,7 +473,6 @@ export interface InnovativeBusinessSolution {
     launchDate: '2025-05-01';
     customers: 38;
     rating: 4.7
-
     reviews: 26
   }
 ];import { ServiceVariant } from '../types/service-variants';
@@ -767,7 +763,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
   // AI Business Intelligence Suite
   {

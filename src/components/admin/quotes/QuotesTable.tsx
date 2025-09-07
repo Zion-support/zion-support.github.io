@@ -1,17 +1,13 @@
-
-  quotes
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+quotes
   isArchived = false
   isLoading
   updateStatus
   toggleArchive
-
   quotes,
   isArchived = false,
   isLoading,
   updateStatus,
   toggleArchive,
-
   deleteQuote,
   onViewDetails
 },) => {
@@ -46,23 +42,17 @@
             </TableRow>
           ) : (
             quotes.map(quote => (
-
                 className="border-zion-blue-light hover:bg-zion-blue"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               >
                 <TableCell className="text-white">
                   {quote.talent_name |'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     >
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
-
                     {isArchived ? (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <>
                         <Button
                           variant="ghost"
@@ -74,8 +64,6 @@
                         </Button>
                         <Button
                           variant="ghost"
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           size="icon"
                           className="text-red-500"
                           onClick={() => {
@@ -116,13 +104,10 @@
                             <Archive className="h-4 w-4 mr-2" />
                             Archive
                           </DropdownMenuItem>
-
                           <DropdownMenuItem 
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
-
                             className="text-red-500"
                           >
                             <Trash2 className="h-4 w-4 mr-2" />
@@ -130,9 +115,7 @@
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
-
 import React from "react";
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import {;
   Table,;
@@ -142,7 +125,7 @@ import {;
   TableHeader,;
   TableRow;
 } from "@/components/ui/table",;
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -161,7 +144,6 @@ interface QuotesTableProps {;
   deleteQuote: (id: string,) => void,;
   onViewDetails: (quote: QuoteRequest,) => void;
 }
-
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
   quotes;
   isArchived = false;
@@ -241,34 +223,25 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                       <Eye className="h-4 w-4" />;
                       <span className="sr-only">View Details</span>;
                     </Button>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         >;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
-
                     )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </div>;
                 </TableCell>;
               </TableRow>;
             ));
           )}
-
   );
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 '";
-
         </TableBody>;
       </Table>;
     </div>;
   )
 };
-
 '"
-
                   </div>;
                 </TableCell>;
                 <TableCell className="text-white">;
@@ -369,5 +342,3 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
       </Table>;
     </div>);
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

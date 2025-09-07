@@ -3,9 +3,8 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  
-  // Minimal webpack config
-  webpack: (config, { dev, isServer }) => {
+  // Minimal webpack config;
+    webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
         ignored: [
@@ -26,11 +25,9 @@ const nextConfig = {
     return config;  trailingSlash: false,
   distDir: '.next',
 };
-
 module.exports = nextConfig;
 module.exports = nextConfig
 };
-
 export default nextConfig;
   pageExtensions: ['tsxtsjsxjs'],
   trailingSlash: true,
@@ -101,15 +98,12 @@ reactStrictMode: true
   images: {
 domains: ["localhost", "ziontechgroup.com"]
   }
-  output: 'standalone'
-  trailingSlash: false
+  output: "output",
+    trailingSlash: false
   distDir: '.next'
 }
 module.exports = nextConfig;
-
 module.exports = nextConfig;
-
 module.exports = nextConfig;
-
 module.exports = nextConfig;
 module.exports = nextConfig;

@@ -1,9 +1,8 @@
-  enableNeonEffects = true,;
+enableNeonEffects = true,;
   enableSpaceTime = true;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<any[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
-
   const getColorScheme = () => {;
     switch (colorScheme) {;
       case 'quantum-fusion':;
@@ -61,10 +60,8 @@
     const initParticles = () => {
       particlesRef.current = []
 };
-
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
-
     // Initialize particles;
     const initParticles = () => {;
       particlesRef && particlesRef.current = [];
@@ -183,8 +180,8 @@
               `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`;
             ];
           transition={{
-            duration: 8
-            repeat: Infinity
+            duration: 8;
+    repeat: Infinity
             ease: 'easeInOut'
           }}
         {/* Holographic scan lines */}
@@ -211,27 +208,21 @@
               animate={{
                 opacity: [0, 1, 0];
               }}
-
               transition={{
                 duration: 3
                 delay: i * 0.1
                 repeat: Infinity
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
-
               transition={{
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
-
             />
-
           ))}
                 ease: "easeInOut"
-
               }}
             />;
-
 export default UltraFuturisticBackground2035;
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
@@ -250,5 +241,4 @@ export default UltraFuturisticBackground2035;
 export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
-
 export default UltraFuturisticBackground2035;

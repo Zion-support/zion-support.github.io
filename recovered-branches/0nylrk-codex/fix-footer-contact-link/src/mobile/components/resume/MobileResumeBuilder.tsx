@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -20,14 +18,11 @@ import {
   SelectValue} from "@/components/ui/select",
 import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
-
 type ResumeStep = "basics" | "experience" | "education" | "skills",
-
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),
-  
   const renderStepContent = () => {
     switch (currentStep) {
           <Textarea
@@ -47,7 +42,7 @@ export function MobileResumeBuilder() {
             id="summary" 
             placeholder="Write a brief summary about yourself" 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -60,12 +55,9 @@ import {;
 import { Label } from "@/components/ui/label",;
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",;
 type ResumeStep = "basics" | "experience" | "education" | "skills",;
-
 type ResumeStep = "basics" | "experience" | "education" | "skills",
-
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
-
   const renderStepContent = () => {
     switch (currentStep) {
       case "basics":
@@ -110,18 +102,15 @@ export function MobileResumeBuilder() {
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
-
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
-
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
       </Button>
     </div>
   );
 }
-
 function BasicsStep() {;
   return (
     <Card>
@@ -201,7 +190,6 @@ function BasicsStep() {;
           </CardContent>;
         </Card>;
       ))}
-
       <Button
         variant="outline" 
         className="w-full gap-2" 
@@ -210,9 +198,7 @@ function BasicsStep() {;
     </div>;
   );
 }
-
 function SkillsStep() {;
   const [skills, setSkills] = useState([;
     { id: '1', name: "", proficiency: "beginner" }  ]);
-
   return (

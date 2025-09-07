@@ -4,7 +4,6 @@ import path from 'path';
 import {
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
-
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
@@ -12,8 +11,8 @@ const TALENTS_FILE = path.join(
   'talents.json'
 );
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
 ) {
   try {
   const auth = await authenticateRequest(req);
@@ -90,9 +89,7 @@ if ( {) {
     skills: skills || [],
     programTrack: programTrack || null,
     certificationStatus: certificationStatus || 'pending',
-
     partnerId: auth.partner.id,
-
   };
   records && records.push(record);
   await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });

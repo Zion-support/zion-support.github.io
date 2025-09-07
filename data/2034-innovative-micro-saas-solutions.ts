@@ -1,7 +1,6 @@
 export type InnovativeMicroSaas = {
       'Multi-speaker diarization',
   launch_date?: string;
-
 export type InnovativeMicroSaas = {
 export type InnovativeMicroSaas = {;
   id: string;
@@ -28,10 +27,9 @@ export type InnovativeMicroSaas = {;
   launchDate?: string;
 }
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
-
   {
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
-    category: 'Human Resources'
+    category: "category",
     pricing: { starter: '$69/mo' }
     features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync']
     integrations: ['Greenhouse', 'Lever']
@@ -48,24 +46,19 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     pricing: { starter: '$69/mo' },
     features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
     integrations: ['Greenhouse', 'Lever'],
-
     category: 'Human Resources',
     pricing: { starter: '$69 / mo' },
     features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
     integrations: ['Greenhouse', 'Lever'],
-
     use_cases: ['Faster hiring', 'Bias reduction'],
     link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
     real_service: true,
-
   },
 ];	id: string;
-
 	id: string, name: string,
 	description: string, tagline?: string,
 	}
 ];
-
 name: string,
   description: string;
 tagline?: string;
@@ -143,7 +136,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 }
 =======];
 ;
-
 export type InnovativeMicroSaas = {;
 	id: string,;
 	name: string,,
@@ -222,7 +214,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 	}
 ];
 ;
-
 export type InnovativeMicroSaas = {;
 	id: string,;
 	name: string,,
@@ -300,7 +291,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		realService: true;
 	}
 ];
-
 export type InnovativeMicroSaas = {
   id: string;
   name: string,

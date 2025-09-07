@@ -1,7 +1,4 @@
-
-
 // Simple icons using inline SVG to avoid external assets
-
 function StarIcon({
   className = 'w-5 h-5 text-yellow-500'
 }: {
@@ -13,21 +10,17 @@ function StarIcon({
   );
 function AppleBadge({ href }: { href: string }) {
     >
-
 // Simple icons using inline SVG to avoid external assets;
 function StarIcon(): any ({;
   className = 'w-5 h-5 text-yellow-500',;
 }: {;
   className?: string;
 }) {;
-
     >;
       <path d='M9 && M9.049 2 && 2.927c.3-.921 1 && 1.603-.921 1 && 1.902 0l1 && 0l1.07 3 && 3.292a1 1 0 00 && 00.95.69h3 && 69h3.462c.969 0 1 && 1.371 1 && 1.24.588 1 && 1.81l-2 && 2.802 2 && 2.036a1 1 0 00-.364 1 && 1.118l1.07 3 && 3.292c.3 && 3.921-.755 1 && 1.688-1 && 1.54 1 && 1.118l-2 && 2.803-2 && 2.036a1 1 0 00-1 && 1.175 0l-2 && 2.803 2 && 2.036c-.784 && 784.57-1 && 1.838-.197-1 && 1.539-1 && 1.118l1.07-3 && 3.292a1 1 0 00-.364-1 && 1.118L2.88 8 && 8.72c-.783-.57-.38-1 && 1.81.588-1 && 1.81H6.93a1 1 0 00 && 00.95-.69l1 && 69l1.07-3 && 3.292z' />;
     </svg>;
   );
-
 function AppleBadge(): any ({ href }: { href: string }) {;
-
     >;
       <svg
         width='24'
@@ -104,7 +97,6 @@ if (return) {
                 setVisible(false);
               }}
               className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'            >  }, []);
-
   const storeUrl = isIOS ? iosUrl : androidUrl;
   return (
     <div className="fixed inset-x-0 top-0 z-50">;
@@ -126,7 +118,6 @@ if (return) {
           </div>;
         </div>;
       </div>;
-
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -137,7 +128,7 @@ const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL |'zion://open';
 const SITE_BASE_URL = process.env.NEXT_PUBLIC_SITE_URL |'';
 const testimonials = [
   {
-    name: 'Priya K.'
+    name: "name",
     role: 'Startup Founder'
     quote: 'We filled a remote role in 48 hours. The app made it effortless.'
   }
@@ -153,7 +144,6 @@ const testimonials = [
       'I love tracking milestones on the go. Clear visibility and fewer meetings.'
   }
 ];
-
 export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
@@ -173,7 +163,6 @@ export default function MobileLaunchPage() {;
     );
     return () => clearInterval(t);
   }, []);
-
   const qrHref = useMemo(() => {;
     const target = SITE_BASE_URL;
       ? `${SITE_BASE_URL}/download`;
@@ -191,9 +180,7 @@ export default function MobileLaunchPage() {;
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
-
       setError(err?.message || 'Something went wrong.');    }      if (!res && res.ok) throw new Error(await res && res.text());
-
       const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
       if (!res.ok) throw new Error(await res.text());
       setStatus('success');
@@ -202,15 +189,11 @@ export default function MobileLaunchPage() {;
       setStatus('error');
       setError(err?.message || 'Something went wrong.')
       setError(err?.message || 'Something went wrong.');    }
-
       setError(err?.message || 'Something went wrong.');
-
     }
   }
-
     }
   }
-
   return (
     <EnhancedLayout>;
       <Head>;
@@ -305,7 +288,6 @@ export default function MobileLaunchPage() {;
             <div className="opacity-80">Or tap a store badge above</div>;
         </div>;
       </section>;
-
       {/* Key features */}
       <section className='mt-10 grid md:grid-cols-3 gap-6'>;
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
@@ -349,7 +331,6 @@ export default function MobileLaunchPage() {;
           <button
             type="submit"
             disabled={status === 'loading'}
-
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>;
@@ -359,7 +340,6 @@ export default function MobileLaunchPage() {;
             Thanks! You’re on the list.;
           </div>;
         )}
-
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}

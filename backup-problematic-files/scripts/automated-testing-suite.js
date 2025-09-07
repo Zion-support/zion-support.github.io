@@ -61,8 +61,8 @@ class: AutomatedTestingSuite {
       await this.createBasicTests();
       // Run Jest tests'
       const output = execSync('npm test -- --coverage --watchAll=false', {
-        "cwd": this.projectRoot
-        encoding: 'utf8',
+        "cwd": this.projectRoot;
+    encoding: 'utf8',
         "stdio": 'pipe'
       })';
       this.testResults.unit.passed = this.extractTestCount(output, 'passed');

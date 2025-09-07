@@ -16,7 +16,7 @@ function CTAButton() {
   }
 "use client",;
 import Link from "next/link";
-import { ReactNode } from "react",;
+import { ReactNode } from "react";
 interface CTAButtonProps {;
   href: string,;
   variant?: "primary" | "secondary" | "outline",;

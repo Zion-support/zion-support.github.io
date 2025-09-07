@@ -1,26 +1,22 @@
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
-
 export interface TalentProfileData {export interface TalentProfileData {
-
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {;
   devops: string[];
   platforms: string[];
-
 export interface EnhancedProfile {
   summary: string,
   categorizedSkills: CategorizedSkills
 }
-
   const [error, setError] = useState<string | null>(null);
   const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
     setIsGenerating(true);
     setError(null)      if (error) {
         throw new Error(error.message)
 import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client',;
+import { supabase } from '@/integrations/supabase/client';
 export interface TalentProfileData {;
   name: string,;
   title: string,;
@@ -58,9 +54,7 @@ export function useTalentProfileEnhancer() {;
       }
       return data as EnhancedProfile
     } catch (err: any) {
-
       setError(err && err.message || 'Failed to enhance profile'),
-
 export interface CategorizedSkills {
   programming: string[];
   devops: string[];
@@ -106,6 +100,5 @@ if ( {) {
     enhance_profile;
     is_generating;
     error;
-
   }
 }

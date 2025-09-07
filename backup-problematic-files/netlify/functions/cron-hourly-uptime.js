@@ -20,8 +20,8 @@ exports.handler = async function () {
       } catch (e) {
         const ms = Date.now() - t0;
         results.push({
-          path: ep
-          status: 0
+          path: ep;
+    status: 0
           ms
           error: String(e.message |e)
         });

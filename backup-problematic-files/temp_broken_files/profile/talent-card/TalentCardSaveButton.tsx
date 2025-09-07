@@ -1,7 +1,6 @@
-
 import React from "react";
 import { Heart } from 'lucide-react';
-import { cn } from "@/lib/utils",;
+import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast",;
 import { useRouter } from 'next/router',;
 ;
@@ -87,7 +86,6 @@ isAuthenticated ;
 const router = useRouter ();
 //Handle save toggle return;
 :temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
-
 }variant: "default",
 }) 
 };

@@ -1,5 +1,3 @@
-
-
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -8,14 +6,12 @@ import { CountryPricing } from "@/data/onsiteServicePricing";
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react",
 import { CountryPricing } from "@/data/onsiteServicePricing",
     const emojiMap: Record<string, string> = {;
-
     const emojiMap: Record<string, string> = {
     const emojiMap: Record<string, string> = {;
       "United Kingdom": "🇬🇧";
       "Canada": "🇨🇦";
       "Australia": "🇦🇺";
       "Germany": "🇩🇪",      "Germany": "🇩🇪", ;
-
       "Germany": "🇩🇪", ;
       "Germany": "🇩🇪",
       "Germany": "🇩🇪"
@@ -29,7 +25,6 @@ import { CountryPricing } from "@/data/onsiteServicePricing",
       "Singapore": "🇸🇬";
       "South Korea": "🇰🇷";
       "South Africa": "🇿🇦";
-
       "Germany": "🇩🇪", 
       "France": "🇫🇷",
       "Japan": "🇯🇵",
@@ -68,7 +63,7 @@ import { CountryPricing } from "@/data/onsiteServicePricing",
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" 
               : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge",;
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
@@ -101,7 +96,6 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
       return "8-24 hours";
     }
   };
-
   return (
     <CardclassName={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular 

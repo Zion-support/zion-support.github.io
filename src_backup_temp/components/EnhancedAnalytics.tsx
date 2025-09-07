@@ -472,8 +472,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     if(!enabled) return;
       trackEvent('session_end', {
         session_duration: sessionDuratio n,
-        pages_viewed: 1, // Simplified
-        total_interactions: userInteraction s,
+        pages_viewed: 1, // Simplified;
+    total_interactions: userInteraction s,
         average_time_on_page: timeOnPag e})};
     window.addEventListener('beforeunload', handleBeforeUnload);
     return () => window.removeEventListener('beforeunload', handleBeforeUnload)}, [enabled, sessionStart, userInteractions, timeOnPage]);

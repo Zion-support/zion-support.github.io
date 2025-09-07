@@ -1,4 +1,4 @@
-      vx: number;
+vx: number;
       vy: number;
       size: number;
       color: string;
@@ -62,7 +62,6 @@
         ctx.line_to (canvas.width, y);
         ctx.stroke ();
       }
-
       animationRef && animationRef.current = requestAnimationFrame(animate)
 };
     const handleResize = () => {;
@@ -98,8 +97,8 @@
           className='absolute top-40 right-32 w-24 h-24 border border-pink-400/20 rounded-full'
           animate={{
           transition={{
-            duration: 6
-            repeat: Infinity
+            duration: 6;
+    repeat: Infinity
             ease: 'easeInOut',          }}
         />;
         <motion&& motion.div
@@ -141,7 +140,6 @@
           animate={{
             rotate: [0, -180, -360]
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]
-
           }}
           transition={{
             duration: 10
@@ -154,9 +152,7 @@
           transition={{
         />;
       </div>;
-
       {/* Energy Field Effects */}
-
         />
       </div>
       {/* Energy Field Effects */}
@@ -180,7 +176,6 @@
       </div>
       {/* Energy Field Effects */}
       <div className='fixed inset-0 pointer-events-none z-20'>
-
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent'
           animate={{
@@ -199,33 +194,24 @@
           transition={{
             duration: 20,
             repeat: Infinity,
-
           }}
-
             duration: 20,
             repeat: Infinity,
             ease: 'linear',            ease: "linear"
           }}
-
           }}
-
             duration: 20,
             repeat: Infinity,
-
           }}
-
         />
       </div>
       {/* Content */}
       <div className='relative z-30'>{children}</div>
-
         />;
       </div>;
-
       {/* Content */}
           }}
       <div className='relative z-30'>{children}</div>;
-
       {/* Holographic Overlay */}
       <div className='fixed inset-0 pointer-events-none z-40'>;
         <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />;
@@ -273,7 +259,6 @@ export default UltraFuturisticBackground2026;
   )
 }
 export default UltraFuturisticBackground2026;
-
 export default UltraFuturisticBackground2026;
 export default UltraFuturisticBackground2026
 }

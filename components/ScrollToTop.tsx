@@ -1,10 +1,6 @@
-
-
 const ScrollToTop: React.FC = () => {
-
 export default function ScrollToTop() {;
   const [isVisible, setIsVisible] = useState(false);
-
 const ScrollToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -17,44 +13,34 @@ const ScrollToTop: React.FC = () => {
       behavior: 'smooth'
     })
 };
-
     window.addEventListener('scroll', toggleVisibility);
-
   }, []);
   const scrollToTop = () => {
     window.scrollTo({
-
-      top: 0
-
-      behavior: 'smooth'
+      top: 0;
+    behavior: 'smooth'
     })
 };
-
     window && window.addEventListener('scroll', toggleVisibility);
     return () => window && window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true);
       } else {;
         setIsVisible(false);
       }
     };
-
     window && window.addEventListener('scroll', toggleVisibility);
     return () => window && window.removeEventListener('scroll', toggleVisibility);    return () => window && window.removeEventListener('scroll', toggleVisibility);
   }, []);
-
   const scrollToTop = () => {;
     window && window.scrollTo({;
       top: 0,;
       behavior: 'smooth',;
     })
 };      behavior: 'smooth'});
-
       behavior: 'smooth'})
   };
-
   if (!isVisible) {
     return null;
   }
-
   return (
     <button
       onClick={scrollToTop}
@@ -107,7 +93,6 @@ const ScrollToTop: React.FC = () => {
 export default ScrollToTop;
   )
 };
-
 export default ScrollToTop;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -116,11 +101,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 export default ScrollToTop;  )
 }
 export default ScrollToTop;
-
 origin/main
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
-
 export default ScrollToTop;
 export default ScrollToTop;
 ;

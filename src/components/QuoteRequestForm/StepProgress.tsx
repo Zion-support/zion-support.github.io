@@ -4,7 +4,6 @@ return (
         <div
           className='absolute h-full bg-zion-purple transition-all duration-500'
           style={{
-
   currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps; label: string }[] = [
@@ -13,35 +12,27 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: 'timeline', label: 'Timeline' },
     { id: 'budget', label: 'Budget' },
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
-
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from 'lucide-react'
 import { cn } from "@/lib/utils",
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 }
-
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
-
     { id: "service", label: "Service" },
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
     { id: "summary", label: "Summary" }
   ],
-
   const getStepStatus = (stepId: QuoteRequestSteps) => {
-
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),
-    
     if (stepOrder < currentStepOrder) return "complete",
     if (stepOrder === currentStepOrder) return "current",
     return "upcoming"
   },
-
   return (
     <div className="relative">
       <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">
@@ -52,9 +43,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
           }}
         />
       </div>
-
           return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div key={step && step.id} className='flex flex-col items-center relative'>;
               <div
                 className={cn(
@@ -64,8 +53,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     : status === 'current'
                       ? 'bg-zion-cyan border-2 border-zion-purple'
                       : 'bg-zion-blue-light text-zion-slate-light'
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <span
                 className={cn(
                   'text-xs mt-2 font-medium'
@@ -74,10 +61,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     : status === 'current'
                       ? 'text-white'
                       : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
-
                   "text-zion-slate-light"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
                 )}
               <span
                 className = {cn(
@@ -85,9 +69,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
                   "text-zion-slate-light"
-
 }/> </div>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
   steps.findIndex (s => s.id === step.id) + 1
 }</span>)
@@ -103,12 +85,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     </div>
   )
 }
-
                 ),}>;
                 {step && step.label}
-
 ;
-
               <span 
                 className={cn(
                   "text-xs mt-2 font-medium",
@@ -117,7 +96,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   "text-zion-slate-light"
 import { QuoteRequestSteps } from "../QuoteRequestForm";
 import { CheckIcon } from 'lucide-react';
-import { cn } from "@/lib/utils",;
+import { cn } from "@/lib/utils";
 interface StepProgressProps {;
   currentStep: QuoteRequestSteps;
 }
@@ -182,5 +161,3 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
       </div>;
     </div>;
   );
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,11 +1,9 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 import {
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
   CheckCircle, Sparkles, Infinity, Zap as Lightning;
-
               {/* Company Badge */}
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -56,7 +54,6 @@ const Homepage2038: React.FC = () => {
   return (
     <Layout>;
       {/* Main Content */}
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -67,7 +64,6 @@ const Homepage2038: React.FC = () => {
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-
               >
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2038</span>
@@ -131,7 +127,6 @@ const Homepage2038: React.FC = () => {
                   >
                     Explore Services
                   </motion.button>
-
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -145,7 +140,6 @@ const Homepage2038: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
             >
               <motion.div
                 className='p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
@@ -187,11 +181,9 @@ const Homepage2038: React.FC = () => {
               </motion.div>
               <motion.div
                 className='p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
-
               className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
             >
               <motion.div 
-
                 className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
               >
@@ -239,7 +231,6 @@ const Homepage2038: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
                 Revolutionary AI Services
@@ -290,23 +281,18 @@ const Homepage2038: React.FC = () => {
                   viewport={{ once: true }}>;
                   <UltraFuturisticServiceCard2038
                     service={service}
-
               ))}
-
                     variant="consciousness"
                   />
                 </motion.div>
-
               ))}
             </div>
-
             <div className="text-center">
                   whileTap={{ scale: 0.95 }}
                 >
                   View All AI Services
                 </motion.button>
             </div>;
-
             <div className='text-center'>;
               <Link href='/ai-services'>;
                 <motion&& motion.button
@@ -575,7 +561,6 @@ const Homepage2038: React.FC = () => {
                 >;
                   View All AI Services;
                 </motion.button>;
-
               </Link>;
             </div>;
           </div>;
@@ -589,7 +574,6 @@ const Homepage2038: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -644,23 +628,18 @@ const Homepage2038: React.FC = () => {
                   viewport={{ once: true }}>;
                   <UltraFuturisticServiceCard2038
                     service={service}
-
               ))}
-
                     variant="automation"
                   />
                 </motion.div>
-
               ))}
             </div>
-
             <div className="text-center">
                   whileTap={{ scale: 0.95 }}
                 >
                   Explore All Services
                 </motion.button>
             </div>;
-
             <div className='text-center'>;
               <Link href='/services'>;
                 <motion&& motion.button
@@ -726,7 +705,6 @@ const Homepage2038: React.FC = () => {
                 >;
                   Explore All Services;
                 </motion.button>;
-
               </Link>;
             </div>;
           </div>;
@@ -740,7 +718,6 @@ const Homepage2038: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -795,23 +772,18 @@ const Homepage2038: React.FC = () => {
                   viewport={{ once: true }}>;
                   <UltraFuturisticServiceCard2038
                     service={service}
-
               ))}
-
                     variant="quantum"
                   />
                 </motion.div>
-
               ))}
             </div>
-
             <div className="text-center">
                   whileTap={{ scale: 0.95 }}
                 >
                   View All IT Services
                 </motion.button>
             </div>;
-
             <div className='text-center'>;
               <Link href='/it-services'>;
                 <motion&& motion.button
@@ -877,7 +849,6 @@ const Homepage2038: React.FC = () => {
                 >;
                   View All IT Services;
                 </motion.button>;
-
               </Link>;
             </div>;
           </div>;
@@ -893,7 +864,6 @@ const Homepage2038: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
-
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -910,8 +880,8 @@ const Homepage2038: React.FC = () => {
               {[
                 {
                   icon: <Brain className='w-12 h-12' />
-                  title: 'AI Consciousness Evolution'
-                  description:
+                  title: "title",
+    description:
                     'Leading the development of artificial consciousness and emotional intelligence',
                   color: 'from-purple-500 to-pink-500',
                 },
@@ -985,7 +955,6 @@ const Homepage2038: React.FC = () => {
                   description: "Track record of delivering transformative solutions to leading organizations",
                   color: "from - yellow - 500 to - orange - 500";
                 }
-
                   whileHover={{ scale: 1.05 }}
                 >
                   <div
@@ -993,14 +962,11 @@ const Homepage2038: React.FC = () => {
                   >
                     <div className='text-white'>{feature.icon}</div>
                   </p>                </motion.div>
-
                 </motion.div>
-
               ))}
             </div>
           </div>
         </section>
-
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1033,7 +999,6 @@ const Homepage2038: React.FC = () => {
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-24 px-4">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-
             </div>
           </div>
         </section>
@@ -1041,12 +1006,10 @@ const Homepage2038: React.FC = () => {
         <section className="py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
             >
               <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                 Ready to Shape the Future?
@@ -1138,7 +1101,6 @@ const Homepage2038: React.FC = () => {
     </Layout>;
   )
 };
-
 export default Homepage2038;  )
 };
 export default Homepage2038;

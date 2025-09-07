@@ -1,6 +1,4 @@
-
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div
       className={cn(
@@ -17,7 +15,6 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         )}
       >
         <div className="whitespace-pre-wrap">{message.content}</div>
-        
         {message.attachment_url && (
           <a
             href={message.attachment_url}
@@ -29,8 +26,5 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
             {message.attachment_name || 'Attachment'}
           </a>
         )}
-
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

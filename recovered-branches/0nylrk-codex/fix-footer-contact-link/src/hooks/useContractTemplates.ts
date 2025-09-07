@@ -3,11 +3,9 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
 import { useToast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
-
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
 export function useContractTemplates() {
   const { user, isAuthenticated } = useAuth();
-
   const queryClient = useQueryClient();
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
@@ -18,7 +16,6 @@ export function useContractTemplates() {
   const queryClient = useQueryClient(),
   const { toast } = useToast(),
   const [isLoading, setIsLoading] = useState(false),
-
     queryKey: ['contractTemplates', user?.id],
     queryFn: async () => {
       if (!isAuthenticated |!user) {
@@ -32,7 +29,6 @@ export function useContractTemplates() {
     }
     enabled: isAuthenticated && !!user
   }),
-
   // Create a new template
   const createTemplate = useMutation({
     mutationFn: async ({
@@ -94,14 +90,12 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
-
     },
-
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
-        title: "Template saved"
-        description: "Contract template has been successfully saved."})
+        title: "title",
+    description: "Contract template has been successfully saved."})
       template_data: ContractFormValues,
       is_default?: boolean;
     }) => {
@@ -152,15 +146,11 @@ if ( {) {
         variant: "destructive"})
     }
   }),
-
   // Delete a template
   const deleteTemplate = useMutation({
     mutationFn: async (templateId: string) => {
       if (!user) throw new Error("User not authenticated"),
-      
       setIsLoading(true),
-      
-
       try {
         const { error } = await supabase
           .from('contract_templates')
@@ -171,7 +161,6 @@ if ( {) {
       } finally {
         setIsLoading(false)
       }
-
     },
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
@@ -195,22 +184,17 @@ if ( {) {
           .update({ is_default: true })
           .eq('id', templateId)
           .eq('user_id', user.id),
-        
-
         if (error) throw error
       } finally {
         setIsLoading(false)
       }
-
     },
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Default template set"
         description: "Default contract template has been updated."})
-
     };
-
     onError: (error: Error) => {
       console && console.error("Error setting default template:", error);
       toast({
@@ -226,9 +210,8 @@ if ( {) {
     createTemplate;
     updateTemplate;
     deleteTemplate
-
-    setDefaultTemplate
-        description: "Default contract template has been updated."});
+    setDefaultTemplate;
+    description: "Default contract template has been updated."});
     }
     on_error: (error: Error) => {
       console.error ("Error setting default template:", error);
@@ -293,35 +276,26 @@ if (throw error) {
         variant: "destructive"})
     }
   }),
-
   // Set a template as default
   const setDefaultTemplate = useMutation({
     mutationFn: async (templateId: string) => {
       if (!user) throw new Error("User not authenticated"),
-      
       setIsLoading(true),
-      
-
           .eq('is_default', true),
-        
-
           .eq('user_id', user.id)
           .eq('is_default', true);
           .eq('is_default', true),
-        
         // Then set the new default
         const { error } = await supabase
           .from('contract_templates')
           .update({ is_default: true })
           .eq('id', templateId)
-
           .eq('user_id', user && user.id);
-        
         if (error) throw error  }
 }  }
 }
 import { useState } from "react";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",;
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client",;
 import { useToast } from "@/hooks/use-toast",;
 import { useAuth } from "@/hooks/useAuth",;

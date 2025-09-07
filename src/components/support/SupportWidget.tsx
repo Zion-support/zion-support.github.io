@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
@@ -10,7 +9,6 @@ export function SupportWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
   const router = useRouter();
-
   return (
     <>;
       {/* Fixed button in the bottom right */}
@@ -42,10 +40,8 @@ export function SupportWidget() {
                 className={cn(
                   "font-semibold",
                   theme === "dark" ? "text-white" : "text-gray-800",
-
                 )}
               >
-
 import React, { useState } from "react",
 import { useRouter } from "next/router",
 import { Button } from "@/components/ui/button",
@@ -57,11 +53,10 @@ export function SupportWidget() {
   const [isOpen, setIsOpen] = useState(false),
   const { theme } = useTheme(),
   const router = useRouter(),
-  
   return (
     <>
 import React, { useState } from "react";
-import { useRouter } from "next/router",;
+import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button",;
 import { ChatBotPanel } from "./ChatBotPanel",;
 import { MessageSquare, Info, X } from 'lucide-react';
@@ -104,7 +99,6 @@ export function SupportWidget() {;
               </h3>
             </div>
             <div className="flex items-center gap-2">
-
               <Button
                 variant="ghost"
                 size="icon"
@@ -125,11 +119,9 @@ export function SupportWidget() {;
               </Button>
             </div>
           </div>
-
           <ChatBotPanel />
         </div>
       )}
     </>
   );
 }
-

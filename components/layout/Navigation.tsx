@@ -1,4 +1,4 @@
-  Menu
+Menu
   X
   Home
   Brain
@@ -9,7 +9,6 @@
   MapPin
   Globe
   ChevronDown;
-
   Globe,;
   ChevronDown,;
 } from 'lucide-react';
@@ -18,7 +17,6 @@ import Link from 'next/link';import { ;
   Phone, Mail, MapPin, Globe, ChevronDown;
 } from 'lucide-react';
 import Link from 'next/link';
-
 import { 
   Menu, X, Home, Brain, Cpu, Rocket, 
   Phone, Mail, MapPin, Globe, ChevronDown
@@ -29,16 +27,15 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 const Navigation: React.FC = () => {
-
 import Link from 'next/link';
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     {
-      name: 'Services'
-      href: '/services'
-      icon: Rocket
-      dropdown: [
+      name: "name",
+    href: '/services'
+      icon: Rocket;
+    dropdown: [
   Menu,
   X,
   Home,
@@ -205,7 +202,6 @@ import Link from 'next/link';import {
                                 const Icon = dropdownItem && dropdownItem.icon;
                                 return (
                                   <Link
-
                             </div>
                           </motion.div>
                         )}
@@ -244,7 +240,6 @@ import Link from 'next/link';import {
                 </div>
               ))}
             </div>
-
                 href="/contact"
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
@@ -300,7 +295,6 @@ import Link from 'next/link';import {
           </div>;
         </div>;
       </motion && motion.nav>;
-
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -312,7 +306,6 @@ import Link from 'next/link';import {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-
           >
             {/* Backdrop */}
             <div
@@ -323,14 +316,11 @@ import Link from 'next/link';import {
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             />
-            
-
             {/* Mobile Menu */}
             <motion&& motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-
             >
               <div className='p-6'>
                 {/* Close Button */}
@@ -397,16 +387,13 @@ import Link from 'next/link';import {
                         <Link
                           href={item && item.href}
                           onClick={() => setIsOpen(false)}
-
                           className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
                         >
                           <item.icon className='w-5 h-5 text-cyan-400' />
                           <span className='text-white font-medium'>
                             {item.name}
                           </span>                        </Link>
-
                         </Link>
-
                       )}
                     </div>
                   ))}
@@ -414,7 +401,6 @@ import Link from 'next/link';import {
                       )}
                     </div>;
                   ))}
-
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -423,7 +409,6 @@ import Link from 'next/link';import {
                   <div className='space-y-2 text-sm'>
                     <div className='flex items-center space-x-2 text-gray-300'>
                       <Phone className='w-4 h-4 text-cyan-400' />
-
                       <span>{contactInfo.mobile}</span>
                         <Link
                           href={item && item.href}
@@ -493,10 +478,8 @@ import Link from 'next/link';import {
     </>;
   )
 };
-
 export default Navigation;  )
 };
-
 export default Navigation;
                           </div>;
                           <div className="pl-4 space-y-2">;
@@ -591,5 +574,4 @@ export default Navigation;
 export default Navigation;  )
 }
 export default Navigation;
-
 export default Navigation;

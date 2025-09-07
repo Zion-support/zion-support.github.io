@@ -1,25 +1,18 @@
-
-
 }</div>) import { useEffect, useState } from 'react';
-
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
  </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
-
  </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) ;
 }</div>) import { useEffect, useState } from 'react';
-
 export default function AutomationStatusPage() {;
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
-
   useEffect(() => {;
     fetch('/automation/status && status.json');
       .then((r) => r && r.json());
       .then((j) => setStatus(j));
       .catch(() => setStatus(null));
-
     <div className="space-y-4">;
       <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>;
       {status ? (;
@@ -34,9 +27,7 @@ export default function AutomationStatusPage() {;
     </div>;
   );
 }
-
 </div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }</div>) import { useEffect, useState } from 'react';
 export default /**
  * AutomationStatusPage - Function description
@@ -63,8 +54,5 @@ function AutomationStatusPage() {
         <div className="text - sm text-gray-500">No status available yet.</div>)}
     </div>);
 }
-
   );
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
-

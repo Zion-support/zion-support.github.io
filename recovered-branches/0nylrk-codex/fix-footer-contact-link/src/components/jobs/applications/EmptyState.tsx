@@ -1,10 +1,8 @@
-
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card",
 import { Link } from "react-router-dom",
-
 import { Button  } from '@/components / ui / button';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Link  } from './react-router-dom';
@@ -25,7 +23,6 @@ function EmptyState() {
         </Button>;
       </CardContent>;
     </Card>);
-
 }export function EmptyState() {
   return (
     <Card className="bg-muted/30">
@@ -43,7 +40,7 @@ function EmptyState() {
     </Card>
   )
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card",;
+import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 export function EmptyState() {;
   return (;

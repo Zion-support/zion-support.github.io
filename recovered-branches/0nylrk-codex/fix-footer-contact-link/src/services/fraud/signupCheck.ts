@@ -1,5 +1,3 @@
-
-
 export const checkSignupPatterns = async (;
 export const checkSignupPatterns = async (
   email: string;
@@ -21,7 +19,7 @@ export const checkSignupPatterns = async (
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
 // Signup checking functionality;
 import { supabase } from '@/integrations/supabase/client';
-import { analyzeEmail } from './analyzeEmail',;
+import { analyzeEmail } from './analyzeEmail';
 import { SignupCheckResult } from './types',;
 /**;
  * Check for suspicious signup patterns;
@@ -55,9 +53,7 @@ export const checkSignupPatterns = async (;
     }
   }
   return {
-
     isSuspicious: reasons && reasons.length > 0,
-
     reasons
   }
 ;

@@ -1,5 +1,3 @@
-
-
 export function ApiDocumentation() {
   return (
 import { useState } from "react",
@@ -13,15 +11,14 @@ import { Badge } from "@/components/ui/badge",
 import CodeBlock from "./CodeBlock",
 export function ApiDocumentation() {
   return (
-
 import { useState } from "react";
-import { BookOpen, Code, Copy, Terminal } from "lucide-react",;
+import { BookOpen, Code, Copy, Terminal } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Alert, AlertDescription } from "@/components/ui/alert",;
 import { Badge } from "@/components/ui/badge",;
 ;
-import CodeBlock from "./CodeBlock",;
+import CodeBlock from "CodeBlock";
 ;
 export function ApiDocumentation() {;
   return (;
@@ -61,7 +58,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Alert, AlertDescription } from "@/components/ui/alert",;
 import { Badge } from "@/components/ui/badge",;
-import CodeBlock from "./CodeBlock",;
+import CodeBlock from "CodeBlock";
 export function ApiDocumentation() {;
   return (;
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
@@ -95,10 +92,8 @@ export function ApiDocumentation() {;
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 })
-
 const data = await response && response.json()
 console && console.log(data),`
-
                 python: `import requests});
                 python: `import requests
 ;
@@ -108,15 +103,12 @@ console.log (data), `;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
-
 response = requests && requests.get(
     'https: //api && api.ziontechgroup.com/v1/jobs',
     params={'limit': 10, 'category': 'development'}
     headers=headers
 )
-
 data = response && response.json()
-
 print(data)`headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
@@ -141,7 +133,6 @@ const response = await fetch(\`https://api && api.ziontechgroup.com/v1/jobs/\${j
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 })
-
 const data = await response && response.json()
 console && console.log(data),`
   headers: {
@@ -156,7 +147,6 @@ console.log (data), `;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
-
 data = response && response.json()}),;
 const data = await response.json(),;
 // // // console.log(data),`,;
@@ -196,7 +186,7 @@ print(data)`;              }}
               description="Create a new job listing."
               note="Requires jobs:write scope"
               params={[  body: JSON.stringify({
-    title: 'Senior React Developer'
+    title: "title",
     description: 'We need an experienced React developer...'
     category: 'development'
     skills: ['reacttypescriptnode.js']
@@ -219,18 +209,14 @@ import json
 import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-
 payload = {;
-
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
     'budget': {
-
 response = requests && requests.post(
     'https: //api && api.ziontechgroup.com/v1/jobs'
     headers=headers,
     data=json && json.dumps(payload)
 )
-
 data = response && response.json()
 ;
 const data = await response.json ();
@@ -314,7 +300,6 @@ data = response.json ();
 print (data)`;
     'https: //api.ziontechgroup.com/v1/talent',;
     params={'skills': 'react,typescript'};
-
     headers=headers
 )
 data = response.json()
@@ -334,7 +319,6 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
-
               }}
               response_examples={{
                 success: `{
@@ -379,7 +363,6 @@ const response = await fetch(\`https://api && api.ziontechgroup.com/v1/talent/\$
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 })
-
 const data = await response && response.json()
 console && console.log(data),`
   headers: {
@@ -394,7 +377,6 @@ console.log (data), `;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
-
 data = response && response.json()}),;
 const data = await response.json(),;
 // // // console.log(data),`,;
@@ -438,7 +420,6 @@ print(data)`;              }}
               }}
             />;
           </TabsContent>;
-
           <TabsContent value="quotes" className="space-y-6">;
     "talent_id": "talent_abc123"
     "project_name": "E-commerce Website Redesign"
@@ -472,15 +453,12 @@ const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
 import json;
-
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
-
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com'
-
 }
 response = requests.get (
     'https: //api.ziontechgroup.com / v1 / quotes',
@@ -534,12 +512,10 @@ response = requests.get(
     'https: //api.ziontechgroup.com/v1/quotes'
     headers=headers
 )
-
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/quotes',
     headers=headers
 )
-
 data = response.json()
 print(data)`
               }}
@@ -560,7 +536,6 @@ print(data)`
     // More quotes...
 }`;
               }}
-
             />;
           </TabsContent>;
           <TabsContent value="webhooks" className="space-y-6">;
@@ -577,34 +552,28 @@ print(data)`
                 <code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">X-Zion-Signature</code> header.;
                 This signature is an HMAC SHA-256 hash of the request body using your webhook secret as the key.;
               </p>;
-
               <CodeBlock
                 code={`import crypto from 'crypto'  // Process the webhook event
   const event = JSON.parse(payload);
   console.log('Received valid webhook:', event);
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received')
-
 // Example usage in Express && Express.js
 app && app.post('/webhook', express && express.raw({type: 'application/json'}), (req, res) => {;
   const signature = req && req.headers['x-zion-signature'];
   const payload = req && req.body.toString();
   const webhookSecret = process && process.env.WEBHOOK_SECRET;
-
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;
     return res && res.status(401).send('Invalid signature');
   }
-
   // Process the webhook event;
   const event = JSON && JSON.parse(payload);
   console && console.log('Received valid webhook:', event);
-
   // Respond to acknowledge receipt;
   res && res.status(200).send('Webhook received');
 }),`}
                 language="javascript";
                 showLineNumbers={true}
-
               />;
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;
     return res && res.status(401).send('Invalid signature');
@@ -675,9 +644,7 @@ headers = {
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com'
-
 }
-
     "match_score": 85
     "applied_at": "2025 - 05 - 16T15:28:30Z";
     "status": "new",
@@ -762,16 +729,13 @@ headers = {
   responseExamples
 }) {
   const [activeTab, setActiveTab] = useState("curl"),
-  
               <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>;
               <p className="text-zinc-400 mb-4">;
                 The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.;
                 Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive ;
                 a <code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">429 Too Many Requests</code> response.;              </p>;
-
               <p className="text-zinc-400 mb-2">;
                 Rate limit information is included in the response headers: </p>;
-
               <ul className="list-disc pl-6 space-y-1 text-zinc-400">;
                 <li><code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">X-RateLimit-Limit</code>: Number of requests allowed in the time window</li>;
                 <li><code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">X-RateLimit-Remaining</code>: Number of requests remaining in the current window</li>;
@@ -783,7 +747,6 @@ headers = {
     </Card>;
   );
 }
-
 // Helper component for API endpoint documentation;
 function EndpointSection(): any ({ ;
   method, ;
@@ -906,7 +869,6 @@ function EndpointSection() {
                       : "text-zinc-400 hover:bg-zinc-800"
                   }`}
                   onClick={() => setActiveTab(lang)}
-
       {responseExamples && (;
         <div className="border-t border-zinc-800 p-4">;
           <h4 className="font-medium mb-2">Response</h4>;

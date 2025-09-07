@@ -2,7 +2,6 @@
   const handleViewOffer = (project_id: string, ) =>: any {
     router.push (`/project/${project_id}`);
   }
-
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { Bell, Calendar, X } from 'lucide-react'
@@ -15,13 +14,12 @@ export function ProjectOfferBanner() {
   const { projects, isLoading } = useProjects(),
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
   const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
-  
   useEffect(() => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent'),
       setPendingOffers(offers)
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/router',;
+import { useRouter } from 'next/router';
 import { Bell, Calendar, X } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -51,18 +49,14 @@ export function ProjectOfferBanner() {;
 };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
-
   }
-  
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
         .filter(offer => !dismissed.has(offer.id))
         .map(offer => (
-
           <Card 
             key={offer.id} 
-
             className="border-2 border-primary bg-primary/5"
             onClick = {(,) => handleViewOffer(offer.id),}
           >
@@ -78,9 +72,6 @@ export function ProjectOfferBanner() {;
                   </p>
                 </div>
               </div>
-
-              
-
               <div className="flex items-center gap-2">
                 <Button size="sm" className="whitespace-nowrap">
                   View Offer
@@ -88,7 +79,6 @@ export function ProjectOfferBanner() {;
                 <Button
                   size="sm"
 import React from 'react';
-
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/router';
 import { Bell, Calendar, X } from 'lucide-react'import { Button } from "@/components/ui/button";
@@ -100,14 +90,12 @@ export function ProjectOfferBanner() {;
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
-
   useEffect((,) => {;
     if (projects && !isLoading) {;
       const offers = projects && projects.filter(p => p && p.status === 'offer_sent');
       setPendingOffers(offers);
     }
   }, [projects, isLoading]);
-
   const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {;
     e && e.stopPropagation();    setDismissed(prev => {;
       const updated = new Set(prev);
@@ -115,15 +103,12 @@ export function ProjectOfferBanner() {;
       return updated;
     })
 };
-
   const handleViewOffer = (projectId: string,) => {;
     router && router.push(`/project/${projectId}`)
 };
-
   if (isLoading || pendingOffers && pendingOffers.length === 0 || pendingOffers && pendingOffers.every(p => dismissed && dismissed.has(p && p.id))) {;
     return null;
   }
-
   return (
     <div className="mb-6 space-y-3">;
       {pendingOffers;
@@ -146,7 +131,6 @@ export function ProjectOfferBanner() {;
                   </p>;
                 </div>;
               </div>;
-
               <div className="flex items-center gap-2">;
                 <Button size="sm" className="whitespace-nowrap">;
                   View Offer;
@@ -162,7 +146,6 @@ export function ProjectOfferBanner() {;
             </CardContent>;
           </Card>;
         ))}
-
   if ()) {) {
   $2
 }
@@ -213,14 +196,11 @@ set_dismissed (prev => {
 updated.add (project_id);
 return updated;
 });
-
 }
 const handleViewOffer = (project_id: string) =>: any {
   router.push (`/project/$ {
-
     </div>;
   );
-
 }, [projects, isLoading]);
 const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {;
   e && e.stopPropagation ();
@@ -242,7 +222,6 @@ if (isLoading || pendingOffers && pendingOffers.length === 0 || pendingOffers &&
 }> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) ) ;
 }</div>) ;
 }'"}
-
   project_id;
 }`);
 }
@@ -255,7 +234,6 @@ if () ) {) {
 }> <CardContent className="p - 4 flex items - center justify-between" > <div className="flex items - center gap-2" > <div className="bg - primary / 10 rounded - full p-2" > <Bell className="h - 4 w - 4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items - center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h - 4 w-4" /> </Button> </div> </CardContent> </Card>) );
 }</div>);
 }'"}
-
     </div>;
   );
 }

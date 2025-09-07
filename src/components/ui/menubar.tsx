@@ -1,6 +1,3 @@
-
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const MenubarMenu = MenubarPrimitive.Menu
 const MenubarGroup = MenubarPrimitive.Group
 const MenubarPortal = MenubarPrimitive.Portal
@@ -13,31 +10,24 @@ const Menubar = React.forwardRef<
   <MenubarPrimitive.Root
     ref={ref}
     className={cn(
-
       className
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )}
     {...props}
   />;
 ));
 Menubar.displayName = MenubarPrimitive.Root.displayName;
 const MenubarTrigger = React.forwardRef<;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Trigger>;
 >(({ className, ...props }, ref) => (;
   <MenubarPrimitive.Trigger;
     ref={ref}
-
       className
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )}
     {...props}
   />;
 ));
 MenubarTrigger.displayName = MenubarPrimitive.Trigger.displayName;
 const MenubarSubTrigger = React.forwardRef<;
-
 import * as React from &quot;react & quot;
 import * as MenubarPrimitive from &quot;@radix - ui / react - menubar & quot;
 import { Check, ChevronRight, Circle } from 'lucide-react';
@@ -75,26 +65,19 @@ MenubarTrigger.display_name = MenubarPrimitive.Trigger.display_name;
 const MenubarSubTrigger = React.forward_ref<;
   React.ElementRef < typeof MenubarPrimitive.SubTrigger>,
   React.ComponentPropsWithoutRef < typeof MenubarPrimitive.SubTrigger> & {
-
   React.ElementRef<typeof MenubarPrimitive.SubTrigger>,;
-
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubTrigger> & {;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     inset?: boolean;
   }
 >(({ className, inset, children, ...props }, ref) => (;
   <MenubarPrimitive.SubTrigger;
     ref={ref}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
   >;
     {children}
-
   </MenubarPrimitive.SubTrigger>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ))
 MenubarSubTrigger.displayName = MenubarPrimitive.SubTrigger.displayName
 const MenubarSubContent = React.forwardRef<
@@ -104,8 +87,6 @@ const MenubarSubContent = React.forwardRef<
   <MenubarPrimitive.SubContent
     ref={ref}
     className={cn(
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -117,13 +98,9 @@ const MenubarContent = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Content>
 >(
   (
-
     { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
     { className, align = &quot;start&quot; alignOffset = -4, sideOffset = 8, ...props },
     { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
-
     ref
   ) => (
     <MenubarPrimitive.Portal>
@@ -132,9 +109,7 @@ const MenubarContent = React.forwardRef<
         align={align}
         alignOffset={alignOffset}
         sideOffset={sideOffset}
-
           className
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         )}
         {...props}
       />;
@@ -143,7 +118,6 @@ const MenubarContent = React.forwardRef<
 );
 MenubarContent.displayName = MenubarPrimitive.Content.displayName;
 const MenubarItem = React.forwardRef<;
-
 className={cn (
       &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
       inset && &quot;pl - 8&quot;,
@@ -189,18 +163,13 @@ MenubarContent.display_name = MenubarPrimitive.Content.display_name;
 const MenubarItem = React.forward_ref<;
   React.ElementRef < typeof MenubarPrimitive.Item>,
   React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Item> & {
-
   React.ElementRef<typeof MenubarPrimitive.Item>,;
-
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Item> & {;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     inset?: boolean;
   }
 >(({ className, inset, ...props }, ref) => (;
   <MenubarPrimitive.Item;
     ref={ref}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -208,14 +177,10 @@ const MenubarItem = React.forward_ref<;
 ));
 MenubarItem.displayName = MenubarPrimitive.Item.displayName;
 const MenubarCheckboxItem = React.forwardRef<;
-
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.CheckboxItem>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, children, checked, ...props }, ref) => (;
   <MenubarPrimitive.CheckboxItem;
     ref={ref}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
 className={cn (
@@ -243,14 +208,10 @@ className={cn (
       </MenubarPrimitive.ItemIndicator>
     </span>
     {children}
-
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.RadioItem>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, children, ...props }, ref) => (;
   <MenubarPrimitive.RadioItem;
     ref={ref}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
   </MenubarPrimitive.CheckboxItem>));
@@ -272,16 +233,12 @@ className={cn (
       </MenubarPrimitive.ItemIndicator>
     </span>
     {children}
-
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     inset?: boolean;
   }
 >(({ className, inset, ...props }, ref) => (;
   <MenubarPrimitive.Label;
     ref={ref}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -289,9 +246,7 @@ className={cn (
 ));
 MenubarLabel.displayName = MenubarPrimitive.Label.displayName;
 const MenubarSeparator = React.forwardRef<;
-
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, ...props }, ref) => (;
 className={cn (
       &quot;px - 2 py - 1.5 text - sm font - semibold & quot;,
@@ -306,8 +261,6 @@ const MenubarSeparator = React.forward_ref<;
 >(({ class_name, ...props }, ref) => (
   <MenubarPrimitive.Separator;
     ref={ref}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
         className
       )}
 />));
@@ -325,5 +278,3 @@ const MenubarShortcut = ({
     />;
   );
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

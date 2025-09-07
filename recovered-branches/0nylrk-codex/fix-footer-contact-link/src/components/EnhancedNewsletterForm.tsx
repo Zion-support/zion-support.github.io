@@ -1,7 +1,5 @@
-
 import React from 'react';import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
 import { useState } from "react";
 import { Mail } from "lucide-react";
 export function EnhancedNewsletterForm() {;
@@ -14,7 +12,6 @@ export function EnhancedNewsletterForm() {;
           </p>
         </div>
       ) : (
-
       <div className="flex items-center mb-4">;
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">;
           <Mail className="h-6 w-6" />;
@@ -26,7 +23,6 @@ export function EnhancedNewsletterForm() {;
           </p>;
         </div>;
       </div>;
-
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">            </div>;
           ))}
         </div>;
@@ -57,7 +53,7 @@ export function EnhancedNewsletterForm() {;
     </div>
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input",;
+import { Input } from "@/components/ui/input";
 import { useState } from "react",;
 import { Mail } from "lucide-react",;
 export function EnhancedNewsletterForm() {;
@@ -128,7 +124,6 @@ export function EnhancedNewsletterForm() {;
   e.preventDefault ();
 setIsSubmitting (true);
 //Simulate API call setTimeout ( () => {
-  
 };
 }</div>) ) 
 }</div> <span>Join 10, 000+ tech professionals who already subscribe</span> </div> </div>) 

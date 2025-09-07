@@ -1,28 +1,20 @@
-
-
 import { useState } from "react",
 import { Briefcase, Star, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Briefcase, Star, User } from "lucide-react",
 import { Button } from "@/components/ui/button",    {
-
-      id: "talent"
-      name: "Talent"
+      id: "id",
+    name: "Talent"
       description: "I want to showcase my skills and find opportunities"
-
       icon: Star          const Icon = type.icon;
           const is_selected = selected_type === type.id,
-
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
-          
-
           return (
             <Button;
               key={type.id}          return (
             <Button;
               key={type.id}
-
 =======          return (
             <Button;
               key={type.id}
@@ -34,7 +26,6 @@ import { Button } from "@/components/ui/button",    {
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
-
     <div className="space-y-6">;
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Choose your role</h3>;
@@ -46,7 +37,6 @@ import { Button } from "@/components/ui/button",    {
         {userTypes && userTypes.map((type) => {;
           const Icon = type && type.icon;
           const isSelected = selectedType === type && type.id,;
-
           return (
             <Button
               key={type && type.id}
@@ -60,10 +50,8 @@ import { Button } from "@/components/ui/button",    {
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />;
               </div>;
               <div className="text-center">;
-
 }      </div>;
     </div>;
   );
-
 }
 }

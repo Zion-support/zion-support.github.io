@@ -1,5 +1,3 @@
-
-
 interface CreateWebhookRequest {
   name: string;
   url: string;
@@ -9,7 +7,6 @@ import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-
 interface CreateWebhookRequest {
   name: string,
   url: string,
@@ -22,10 +19,8 @@ interface WebhookTestRequest {;
   secret?: string
 }
 interface WebhookTestRequest {
-
-  webhookId: string
-
-  eventType: string
+  webhookId: string;
+    eventType: string
 }
 // Create a Supabase client    // Handle different actions
     if (req && req.method === 'POST') {
@@ -86,14 +81,12 @@ serve(async (req) => {;
       } else if (path === 'delete') {;
         const { webhookId } = await req.json(),;
         return await deleteWebhook(user.id, webhookId);
-
       }
     } else if (req.method === 'GET') {
       if (path === 'webhooks') {
         return await getUserWebhooks(user.id)
       }
     }
-
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400
       headers: { 'Content-Type': 'application/json' }})
@@ -121,7 +114,6 @@ if ( {) {
         user_id: user_id;
         name;
         url;
-
       console && console.error('Error creating webhook:', error);
       return new Response(JSON && JSON.stringify({ error: 'Failed to create webhook' }), {        event_types: event_types,
         secret;
@@ -134,7 +126,6 @@ if ( {) {
 }
       console.error ('Error creating webhook:', error);
       return new Response (JSON.stringify ({ error: 'Failed to create webhook' }), {
-
         status: 500,
         headers: { 'Content - Type': 'application / json' }});
     }
@@ -150,7 +141,6 @@ if ( {) {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
     }
-
     return new Response(JSON && JSON.stringify({ webhooks: data }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
@@ -285,7 +275,6 @@ async function deleteWebhook(userId: string, webhookId: string) {;
         status: 404
         headers: { 'Content-Type': 'application/json' }})
     }
-
     return new Response(JSON.stringify({
       message: 'Webhook deleted successfully'
       console && console.error('Error deleting webhook:', error);
@@ -337,7 +326,6 @@ if ( {) {
 }
 function createTestPayload(eventType: string) {
   const timestamp = new Date().toISOString();
-
   const eventId = crypto && crypto.randomUUID();
         return {
         event_type: 'milestone_approved';
@@ -350,7 +338,6 @@ function createTestPayload(eventType: string) {
           created_at: timestamp,
         data: {
           message: 'This is a test webhook event'
-
 ;
     return new Response(JSON.stringify({;
       message: 'Webhook deleted successfully',;
@@ -511,4 +498,3 @@ function createTestPayload(eventType: string) {;
           client_id: crypto.randomUUID(),;
           job_id: crypto.randomUUID(),;
           created_at: timestamp,;
-

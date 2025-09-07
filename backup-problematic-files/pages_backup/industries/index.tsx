@@ -32,7 +32,7 @@ import Layout from '../../components/Layout';';
     icon: Settings,
     href: '/industries/manufacturing',
     features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],
-    color: 'from-blue-500 to-cyan-500'
+    color: "color",
     href: '/industries/manufacturing,',
     features: ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',
     color: 'from-blue-500 to-cyan-500'';
@@ -175,7 +175,6 @@ const stats = [;
     color: 'from-gray-500 to-slate-500'',;
   }
 ;];
-
 const stats = [;
   { number: '500+, label: 'Industry Projects' },',;
   { number: '50+, label: 'Fortune 500 Clients' },',;
@@ -449,11 +448,9 @@ import Layout from '../../components/Layout';
                     <div className="text-blue-400 mb-6 group-hover:text-blue-300 transition-colors">
                       <IconComponent className="w-12 h-12" />
                     </div>
-                    
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors">
                       {industry.title}
                     </h3>
-                    
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {industry.description}
                     </p>
@@ -507,7 +504,6 @@ import Layout from '../../components/Layout';
                         </div>
                       ))}
                     </div>
-                    
                     <Link href={industry.href}>
                       <a className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold group-hover:text-blue-200 transition-colors">
                         Learn More
@@ -739,7 +735,6 @@ import Layout from '../../components/Layout';
             </div>;
           </div>;
         </section>;
-
         {/* CTA Section */}
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";

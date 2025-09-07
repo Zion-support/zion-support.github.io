@@ -1,25 +1,17 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-
 interface LoadingState {;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isLoading: boolean;
   error: Error | null;
   retryCount: number;
   isOnline: boolean;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   enableRetry?: boolean;
   maxRetries?: number;
   prefetch?: boolean;
   className?: string;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Enhanced Loading Component;
 const EnhancedLoading: React.FC<{;
   progress?: number;
@@ -44,50 +36,40 @@ const EnhancedLoading: React.FC<{;
   show_progress?: boolean;
 }> = ({
   progress = 0,
-
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
-
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-
 // Enhanced Error Component
 const EnhancedError: React.FC<{
-  error: Error
-  retry: () => void
+  error: Error;
+    retry: () => void
   isOnline: boolean
   retryCount: number
   maxRetries: number
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
-
               Retry {retryCount}/{maxRetries}
             </p>;
           )}
-
         </div>
         {retryCount < maxRetries && (
-
           <Button 
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onClick={retry} 
             variant="outline" 
             size="sm"
             className="border-red-300 text-red-700 hover:bg-red-100"
           >
             <RefreshCw className="h-4 w-4 mr-2" />
-
     return () => {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       window.removeEventListener ('online', updateOnlineStatus);
       window.removeEventListener ('offline', updateOnlineStatus);
     }
   }, []);
   return is_online;
 }
-
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
   // Load component
@@ -162,7 +144,6 @@ const EnhancedError: React.FC<{
       })
     }
           >
-
           error={loadingState.error}
           retry={retry}
           isOnline={loadingState.isOnline}
@@ -171,7 +152,6 @@ const EnhancedError: React.FC<{
         />;
       </motion.div>;
     );
-
   }
   // Success state
   if (DynamicComponent) {
@@ -183,19 +163,14 @@ const EnhancedError: React.FC<{
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-
     <DynamicComponentLoader
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       importFn = {importFn,}
       {...(options |{})}
       {...(props as any)}
-
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(
-
 //   {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
 //         <span className="text-muted-foreground">Loading chart...</span>
@@ -205,5 +180,3 @@ const EnhancedError: React.FC<{
 //   }
 // )
 // export const DynamicThreeComponent = createDynamicComponent(
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

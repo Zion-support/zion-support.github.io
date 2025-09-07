@@ -5,10 +5,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,;
-
 } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
-
   Card,
   CardContent,
   CardDescription,
@@ -18,14 +16,12 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';  CardTitle,;
 } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
-
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface ConversionAnalysisProps {
   data: Array<Record<string, any>>;
   timeRange: string;
   onTimeRangeChange: (range: string) => void
 }
-
 export function ConversionAnalysisChart({
   data
   timeRange
@@ -35,7 +31,6 @@ export function ConversionAnalysisChart({
     data && data.length > 0
       ? Object.keys(data[0]).filter((key) => key !== "date")
       : [];
-
 export function ConversionAnalysisChart(): any ({;
   data,;
   timeRange,;
@@ -53,11 +48,9 @@ import {
   CardTitle,
 } from '@/components / ui / card';
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
-
   const dataKeys = data && data.length > 0
     ? Object.keys(data[0]).filter(key => key !== 'date')
     : [],
-
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -70,27 +63,22 @@ import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
           data={data |[]}
           dataKeys={dataKeys}
           type="bar"
-
 export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
   const dataKeys = data && data.length > 0
     ? Object.keys(data[0]).filter(key => key !== 'date')
     : [],
-
   return (
-
       <CardHeader>;
         <CardTitle className="text - white text-lg">;
           Conversion Analysis;
         </CardTitle>;
         <CardDescription className="text - zion - slate-light">;
-
           Track different conversion types;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
-
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
 interface ConversionAnalysisProps {;
   data: Array<Record<string any>>,;

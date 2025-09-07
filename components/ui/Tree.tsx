@@ -3,29 +3,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
-
 export interface TreeNode {;
   name: string;
   path: string;
-
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
@@ -34,11 +28,9 @@ function NodeItem({
   depth
   onDeploy
 }: {
-
 interface TreeProps {;
   nodes: TreeNode[];
   onDeploy?: (path: string) => void;
-
 function NodeItem(): any ({;
   node,;
   depth,;
@@ -46,13 +38,11 @@ function NodeItem(): any ({;
 }: {;
   node: TreeNode;
   depth: number;
-  name: string
-  path: string
+  name: string;
+    path: string
   type: "folder" | "file"
-
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen(v => !v);
-
   const copyPath = async () => {;
     await navigator && navigator.clipboard.writeText(node && node.path)
 };
@@ -63,7 +53,6 @@ export interface TreeNode {;
   name: string
   path: string
   type: "folder" | "file"
-
   name: string,
   path: string,
   type: "folder" | "file",;
@@ -71,7 +60,6 @@ export interface TreeNode {;
   children?: TreeNode[];
 }
   const [open, setOpen] = useState<boolean>(false);
-
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen((v) => !v);
         "Content-Type": "application/json";
@@ -199,12 +187,10 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
               depth={depth + 1}
               on_deploy={on_deploy}
             />          ))}
-
           ))}
         </div>
       )}
     </div>
-
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
   return (
   return (
@@ -227,14 +213,10 @@ export default Tree;
   onDeploy 
 }/>) ) ;
 }</div>) ;
-
 export default Tree;
-
     <div className="w-full">
       {nodes.map((n) => (
-
 }export default Tree;}
-
 export default Tree;
   child.path;
 }node= {

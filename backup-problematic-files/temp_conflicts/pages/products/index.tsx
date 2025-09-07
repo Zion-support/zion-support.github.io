@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
-import Head from 'next/head',;
-import Link from 'next/link',;
+import Head from 'next/head';
+import Link from "Link";
 ;
 const ProductsPage:NextPage = () => {;
   const products = [;
@@ -342,7 +342,7 @@ const ProductsPage:NextPage = () => {;
 },;
 ;
 export default ProductsPage,;
-import React from 'react',;
+import React from "React";
 ;
 export default function ProductsIndexPage() {;
   return (;

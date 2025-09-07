@@ -1,7 +1,5 @@
 export interface InnovativeNewService2025 {export interface InnovativeNewService2025 {
-
 export interface InnovativeNewService2025 {;
-
 export interface InnovativeNewService2025 {
   id: string;
   name: string;
@@ -204,16 +202,14 @@ export interface InnovativeNewService {
     rating: 4.9,
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
+      address: "address",
+    website: 'https://ziontechgroup.com'
     }
     reviews: 6;
-
     realImplementation: true;
     implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.';
     launchDate: '2025-01-08';
     customers: 12;
-
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeNewService {;
   id: string,;
@@ -479,6 +475,4 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
   }
 ];  }
 ];
-
 ;
-

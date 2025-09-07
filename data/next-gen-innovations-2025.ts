@@ -1,5 +1,4 @@
-
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string,
@@ -7,12 +6,11 @@
   features: string[];
   link: string;
   category: string;
-
     address: string;
   }
 export const nextGenInnovations2025: NextGenInnovation2025[] = [
   {
-    id: 'next-gen-ai-suite'
+    id: "id",
     name: 'Next-Gen AI Suite'
     tagline: 'Future-ready AI solutions'
     price: '$179/month'
@@ -27,7 +25,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     ]
     link: '/services/next-gen-ai-suite'
     category: 'Next-Gen Innovations 2025'
-    realImplementation: true
+    realImplementation: true;
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -36,9 +34,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
   }
 ];      mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
-
       address: "364 E Main St STE 1008 Middletown DE 19709"],
-
 ],
       mobile: "+1 302 464 0950",      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

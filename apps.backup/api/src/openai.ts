@@ -6,7 +6,7 @@ Location: ${opts.location |'Remote'}
 Key skills: ${(opts.tags |[]).join() |'N/A'}
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai.responses.create({
-    model: 'gpt-4o-mini'
+    model: "model",
     input: prompt
 });
 import OpenAI from 'openai';
@@ -31,11 +31,10 @@ Add responsibilities, requirements, and benefits in bullet points.`,;
     input: prompt;
   });
 }
-
 type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {
   return new OpenAI({ apiKey })
-import OpenAI from 'openai',;
+import OpenAI from 'openai';
 type OpenAIClient = OpenAI,;
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
   return new OpenAI({ apiKey });
@@ -51,10 +50,8 @@ Add responsibilities, requirements, and benefits in bullet points.`,;
     model: 'gpt-4o-mini';
     input: prompt;
   });
-
   return completion.output_text;
 }
-
 Company: ${opts && opts.company || 'Confidential'}
 Location: ${opts && opts.location || 'Remote'}
 Key skills: ${(opts && opts.tags || []).join() || 'N/A'}

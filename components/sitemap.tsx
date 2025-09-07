@@ -1,12 +1,8 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-  const links = [
+const links = [
     { name: "Home", href: "/" }
     { name: "Services", href: "/services" }
     {
-
   const links = [;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     { name: "Home", href: "/" },;
     { name: "Services", href: "/services" },;
     {;
@@ -48,8 +44,6 @@
       </div>;
     </div>;
   );
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const links = [;
     { name: "Home", href: "/" },;
     { name: "Services", href: "/services" },;
@@ -63,7 +57,6 @@
     { name: "Resources", href: "/resources" },;
     { name: "Support", href: "/support" },;
     { name: "Contact", href: "/contact" },;
-
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -93,10 +86,7 @@
       </div>;
     </div>;
   );
-
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -146,11 +136,9 @@ function SitemapPage() {
     { name: "Services Advertising", href: "/services - advertising" },
     { name: "Resources", href: "/resources" },
     { name: "Support", href: "/support" },
-
   ];
   return (
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Head>;
         <title > Sitemap | Zion Tech Group</title>;
         <meta;
@@ -218,4 +206,3 @@ function SitemapPage() {
       </div>;
     </div>);
 }
-

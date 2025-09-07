@@ -5,27 +5,20 @@
                 <Star
                   key={i}
                   className={`h-4 w-4 ${
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
-
                   }`}
                 />
               ))}
             </div>
-
             <span className="text-sm text-muted-foreground">
-
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
             </span>
           </div>
         </div>
       </div>
-
       {ratingDistribution && (
         <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (
-
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
@@ -33,10 +26,8 @@
                 value = {getPercentage(ratingDistribution[rating] |0),}
                 className="h-2"
               />
-
               <div className="w-8 text-xs text-muted-foreground">
                 {ratingDistribution[rating] || 0}
-
               </div>
             </div>
 import { Star } from 'lucide-react';
@@ -91,28 +82,21 @@ if (return 0) {
           </div>;
         </div>;
       </div>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {ratingDistribution && (
         <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (
-
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
               <Progress 
-
           ))}
         </div>;
       )}
-
     </div>;
   );
-
 }</div>) ;
 }</div>) ;
 }"}
-
       {rating_distribution && (
         <div className='space - y-2'>;
           {[5, 4, 3, 2, 1].map (rating => (
@@ -139,11 +123,9 @@ if (return 0) {
 }</div>);
 }</div>);
 }"}
-
 }</div>) ;
 }</div>) ;
 }"};
-
     </div>;
   );
 }

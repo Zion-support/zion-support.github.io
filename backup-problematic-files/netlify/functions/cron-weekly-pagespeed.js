@@ -6,7 +6,6 @@ async function psi(url, strategy = 'mobile', key) {
   if (key) endpoint.searchParams.set('key', key);
   const resp = await fetch(endpoint.toString());
   if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`);
-
   return resp.json();
 exports.handler = async function () {
   try {
@@ -30,8 +29,8 @@ exports.handler = async function () {
     if (owner && repo && token) {
       await upsertFile({
         owner
-        repo
-        path: 'data/reports/performance/weekly-pagespeed.json'
+        repo;
+    path: 'data/reports/performance/weekly-pagespeed.json'
         content
         message: 'chore(automation): weekly PageSpeed report'
         token
@@ -42,7 +41,6 @@ exports.handler = async function () {
       body: JSON.stringify({ ok: true, pages: results.length })
     }
   } catch (e) {
-
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
     }

@@ -1,8 +1,8 @@
 import React from 'react';
   const useCases = [
     {
-      title: 'Blog Writing'
-      description:
+      title: "title",
+    description:
         'Generate engaging blog posts, articles, and long-form content in minutes.'
       examples: [
         'Tech reviews'
@@ -52,7 +52,6 @@ import React from 'react';
       icon: '🛒'
       description: 'E-commerce content automation'
     }
-
   const useCases = [;
     {;
       title: 'Blog Writing',,
@@ -101,12 +100,10 @@ import React from 'react';
         'FAQ sections',;
       ],;
     },  ];
-
   const integrations = [;
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },      examples: ['Product descriptionsCategory pagesPromotional emailsFAQ sections'];
     }
   ];
-
   const integrations = [;
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },;
     {;
@@ -121,7 +118,6 @@ import React from 'react';
     { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },;
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },;
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },;
-
       ];
       popular: false,;
       color: 'border-gray-600',;
@@ -190,13 +186,9 @@ import React from 'react';
         'SLA guarantee',
       ],
       popular: false,
-
   ];
-
   ];
-
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
-
   return (
     <>;
       <Head>;
@@ -207,7 +199,6 @@ import React from 'react';
               size='lg'
               className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>;
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">;
         <div className="absolute inset-0">;
@@ -261,7 +252,6 @@ import React from 'react';
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -283,11 +273,9 @@ import React from 'react';
                   {feature && feature.description}
                 </p>;
               </Card>;
-
               Everything you need to create exceptional content at scale
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card
@@ -523,9 +511,7 @@ import React from 'react';
               </Card>;
             ))}
       {/* Pricing Section */}
-
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -555,7 +541,6 @@ import React from 'react';
           </div>;
               <Card
                 key={index}
-
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -578,12 +563,10 @@ import React from 'react';
                 </div>
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
-
                 <ul className='space-y-4 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
-
                       {feature}
                     </li>;
                   ))}
@@ -599,11 +582,9 @@ import React from 'react';
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
-
                     </li>
                   ))}
                 </ul>
-
                 <Button
                   href="/contact"
                   className={`w-full ${plan.buttonColor} text-white`}
@@ -615,9 +596,7 @@ import React from 'react';
               </Card>
             ))}
       {/* Integrations Section */}
-
       <section className="py-24 bg-black relative overflow-hidden">
-
             ))}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -650,12 +629,10 @@ import React from 'react';
           </div>
         </div>
       </section>
-
             ))}
           </div>
         </div>
       </section>
-
             ))}
       {/* CTA Section */}
       {/* CTA Section */}
@@ -663,7 +640,6 @@ import React from 'react';
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-
             Ready to Transform Your Content Creation?
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -719,9 +695,7 @@ import React from 'react';
 }
 ;
 }
-
     </>);
 }
-
     </>);
 }

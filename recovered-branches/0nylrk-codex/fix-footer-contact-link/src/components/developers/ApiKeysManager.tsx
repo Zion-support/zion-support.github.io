@@ -1,22 +1,16 @@
-
-
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
+const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
-
   // Create key form state;
   const [keyName, setKeyName] = useState("");
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]);
-
   // Load keys on mount;
   useState(() => {;
     fetchApiKeys();
   });
-
 import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
-
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
@@ -27,7 +21,6 @@ import { Badge } from "@/components/ui/badge",
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
-
 import CodeBlock from "./CodeBlock",
 export function ApiKeysManager() {  const { 
     keys,
@@ -39,21 +32,16 @@ export function ApiKeysManager() {  const {
     revokeApiKey,
     clearNewApiKey
   } = useApiKeys(),
-  
   const [showCreateDialog, setShowCreateDialog] = useState(false),
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
-  
   // Create key form state
   const [keyName, setKeyName] = useState(""),
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
-
   // Load keys on mount
   useState(() => {
     fetchApiKeys()
-
   }),
-  
   const handleCreateKey = async () => {
     if (keyName.trim() === "" |selectedScopes.length === 0) return;
     await createApiKey(keyName, selectedScopes);
@@ -64,8 +52,6 @@ export function ApiKeysManager() {  const {
     setShowDeleteConfirm(null)
   }
   },
-  
-
   // Scope options
   const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [
     { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' }
@@ -88,11 +74,9 @@ export function ApiKeysManager() {  const {
     setKeyName("");
     setSelectedScopes([]);
     setShowCreateDialog(false)
-
   },
-
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react";
-import { format } from "date-fns",;
+import { format } from "date-fns";
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -104,7 +88,7 @@ import { Badge } from "@/components/ui/badge",;
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
-import CodeBlock from "./CodeBlock",;
+import CodeBlock from "CodeBlock";
 export function ApiKeysManager() {;
   const {;
     keys,;
@@ -126,7 +110,6 @@ export function ApiKeysManager() {;
   useState(() => {;
     fetchApiKeys();
   }),;
-
   const handleCreateKey = async () => {;
     if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;
     setShowCreateDialog(false);
@@ -145,7 +128,6 @@ export function ApiKeysManager() {;
           Create and manage API keys for accessing the Zion APIs.;
         </CardDescription>;
       </CardHeader>;
-
       <CardContent>;
         <div className="flex justify-between items-center mb-6">;
           <p className="text-sm text-zinc-400">;
@@ -153,7 +135,6 @@ export function ApiKeysManager() {;
           </p>;
                         <Checkbox 
                           id={scope.value} 
-
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
@@ -164,11 +145,9 @@ export function ApiKeysManager() {;
                         </Label>;
                       </div>;
                     ))}
-
                   </div>;
                 </div>;
               </div>;
-
               <DialogFooter>;
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>;
                 <Button onClick={handleCreateKey} disabled={keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0}>;                        </Label>;
@@ -180,7 +159,6 @@ export function ApiKeysManager() {;
             </DialogContent>;
           </Dialog>;
         </div>;
-
         {/* API Keys List */}
         <div className="space-y-4">;
           {loading ? (;
@@ -204,11 +182,9 @@ export function ApiKeysManager() {;
                         ) : (;
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>;
                         )}
-
                       </div>;
                     </div>;
                   </div>;
-
                   <DropdownMenu>;
                     <DropdownMenuTrigger asChild>;                      </div>;
                     </div>;
@@ -302,7 +278,6 @@ export function ApiKeysManager() {;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-
       {/* Delete Key Confirmation Dialog */}
       <AlertDialog
         open={showDeleteConfirm !== null}         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}

@@ -1,4 +1,3 @@
-
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {Resend} from "npm: resend@2 ;
@@ -21,18 +20,16 @@ import {Resend} from "npm: resend@2.0.0";
             await resend && resend.emails.send({
               from: "Zion Marketplace <onboarding@resend && resend.dev>";
               to: [talentEmail],
-
               subject: `Your interview with ${clientName} is starting soon!`,
       }
     }
     return new Response(JSON.stringify({ success: true, results }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
               `}),
-            
             results.push(`Reminder sent to talent: ${talentEmail}`)
           } catch (emailError) {
             console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { Resend } from "npm: resend@2.0.0",;
 const corsHeaders = {;
@@ -125,7 +122,6 @@ serve(async (req) => {;
       }
     }
     }
-    
     return new Response(JSON.stringify({ success: true, results }), {
       status: 200})
   } catch (error) {
@@ -134,7 +130,6 @@ serve(async (req) => {;
       status: 500})
   }
 });
-
 ;
     return new Response(JSON.stringify({ success: true, results }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;

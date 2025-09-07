@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {ChevronLeft, Bell, Settings} from "lucide-react";
@@ -14,7 +12,6 @@ import {Button} from "@/components/ui/button";  showBack?: boolean;
   onSettingsClick?: () => void;
 }
   title;
-
   showBack = false;
   showNotifications = false;
   showSettings = false;
@@ -37,7 +34,6 @@ import {Button} from "@/components/ui/button";  showBack?: boolean;
   onNotificationsClick;
 export function MobileHeader({
   title;
-
   title,
   showBack = false,
   showNotifications = false,
@@ -46,7 +42,6 @@ export function MobileHeader({
   onNotificationsClick,
   onSettingsClick}: MobileHeaderProps) {
   const navigate = useNavigate(),
-
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",              onClick={() => navigate(-1)}
@@ -80,11 +75,9 @@ export function MobileHeader({
               <span className="sr-only">Settings</span>
             </Button>
 }
-
 }
-
 import React from "react";
-import { useNavigate } from "react-router-dom",;
+import { useNavigate } from "react-router-dom";
 import { ChevronLeft, Bell, Settings } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 import { Button } from "@/components/ui/button",;
@@ -133,7 +126,6 @@ interface MobileHeaderProps {;
         </div>;
       </div>;
     </header>;
-
 }
 import React from './react';
 import { use_navigate } from './react-router-dom';

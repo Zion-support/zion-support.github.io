@@ -1,7 +1,4 @@
-
-  return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
+return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">
         <Sparkles className="h-12 w-12 text-muted-foreground" />
@@ -13,28 +10,20 @@
       <Button 
         onClick={onRefresh} 
         disabled={isProcessing}
-
         className="mx-auto"
       >
         {isProcessing ? (
           <>
-
             Processing...
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </>
         ) : (
           <>
-
 }
-
             <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches
           </>
         )}
-
       </Button>;
     </Card>;
   );
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

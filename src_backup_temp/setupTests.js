@@ -11,7 +11,7 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
-    addListener: global.global.global.jest.fn(), // deprecated
+    addListener: global.global.global.jest.fn(), // deprecated;
     removeListener: global.global.global.jest.fn(), // deprecated
     addEventListener: global.global.global.jest.fn(),
     removeEventListener: global.global.global.jest.fn(),

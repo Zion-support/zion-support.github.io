@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
@@ -12,15 +10,14 @@ import { FileText, Plus, Users, Search, Calendar } from "lucide-react",
       description: "Create a new job posting",      color: "bg-blue-100 dark:bg-blue-900/20"
     }
     },
-
     {
-      id: "schedule"
-      label: "Schedule Interview"
+      id: "id",
+    label: "Schedule Interview"
       icon: <Calendar className="h-5 w-5 mr-2" />
       description: "Set up candidate interviews"
       color: "bg-amber-100 dark:bg-amber-900/20"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react",;
       <CardHeader>;
         <CardTitle>Quick Actions</CardTitle>;
@@ -59,7 +56,6 @@ import { FileText, Plus, Users, Search, Calendar } from "lucide-react",;
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
-
           ))}
         </div>
       </CardContent>

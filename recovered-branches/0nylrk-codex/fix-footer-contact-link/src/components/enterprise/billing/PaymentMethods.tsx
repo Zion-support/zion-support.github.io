@@ -1,5 +1,3 @@
-
-
 import {;
   Card,;
   CardContent,;
@@ -7,7 +5,6 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
-
 import React from "react";
 import {
   CardContent,
@@ -17,17 +14,15 @@ import {
   CardTitle,;} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
-
 =======} from "@/components/ui/card";
-
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
-      id: "pm-1"
-      type: "credit_card"
+      id: "id",
+    type: "credit_card"
       brand: "Visa"
       last4: "4242"
-      expMonth: 12
-      expYear: 2025
+      expMonth: 12;
+    expYear: 2025
       isDefault: true
     }
     {
@@ -44,7 +39,6 @@ import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
-
     {
       id: "pm-2",
       type: "credit_card",
@@ -53,7 +47,7 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       expMonth: 4,
       expYear: 2026,  )
 import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { CreditCard, Plus, Trash } from "lucide-react",;export function PaymentMethods() {;
   // Mock payment methods;
@@ -78,7 +72,6 @@ import { CreditCard, Plus, Trash } from "lucide-react",;export function PaymentM
           Manage your payment methods for automatic billing;
         </CardDescription>;
       </CardHeader>;
-
   );
   );
       <CardContent className="space-y-4">;

@@ -1,8 +1,6 @@
-
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
-
 export const useNotificationOperations = (user_id?: string): NotificationContextType => {
   const [notifications, set_notifications] = useState < Notification[]>([]);
   const [loading, set_loading] = useState (false);
@@ -28,16 +26,14 @@ if (throw error) {
       set_notifications (data || []);
     } catch (err) {
       console.error ('Error fetching notifications:', err);
-
     } finally {
       set_loading (false);
     }
-
   const filteredNotifications = notifications && notifications.filter(notification => {    loading;
     filter;
     markAsRead;
     markAllAsRead;import { useState, useCallback } from 'react';
-import { supabase } from '@/integrations/supabase/client',;
+import { supabase } from '@/integrations/supabase/client';
 import { Notification, FilterType, NotificationContextType } from './types',;
 export const useNotificationOperations = (userId?: string): NotificationContextType => {;
   const [notifications, setNotifications] = useState<Notification[]>([]),;

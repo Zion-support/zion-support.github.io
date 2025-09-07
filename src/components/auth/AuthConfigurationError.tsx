@@ -1,32 +1,22 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 import React from 'react'
 import Link from 'next/link'
 import {
-
   AlertTriangle,
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ExternalLink,
   RefreshCw,
   Settings,;
   CheckCircle;
-
 } from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
-
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-
   const handleRefresh = () => {;
     if (onRetry) {;
       onRetry();
     } else {;
-
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="text-center mb-6">
             <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">
               <AlertTriangle className="h-8 w-8 text-red-600" />
@@ -38,7 +28,6 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
               The sign-up system needs to be configured before users can create accounts
             </p>
           </div>
-
           <Alert variant="destructive" className="mb-6">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
@@ -47,8 +36,6 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
             </AlertDescription>
           </Alert>
           {/* Technical Details */}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• AUTH0_SECRET</li>
@@ -58,13 +45,11 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
               <li>• AUTH0_CLIENT_SECRET</li>
             </ul>
           </div>
-
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
                 <Settings className="w-4 h-4 mr-2" />
                 Setup Guide
               </Button>
-
   };
   return (;
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">;
@@ -82,16 +67,13 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
               The sign-up system needs to be configured before users can create accounts;
             </p>;
           </div>;
-
           <Alert variant="destructive" className="mb-6">;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <AlertTriangle className="h-4 w-4" />;
             <AlertDescription>;
               <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured. ;
               New users cannot sign up until this is resolved.;
             </AlertDescription>;
           </Alert>;
-
           {/* Technical Details */}
           <div className='bg-gray-50 rounded-lg p-4 mb-6'>;
             <h3 className='font-semibold text-gray-900 mb-2'>;
@@ -151,20 +133,15 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
             <ul className='text - sm text - gray - 700 space - y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb - 6">;
             <h3 className="font - semibold text - gray - 900 mb - 2">Missing Configuration:</h3>;
             <ul className="text - sm text - gray - 700 space - y-1">;
-
             )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Button
               onClick={handleRefresh}
               variant='outline'
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onClick={handleRefresh}
               variant="outline" 
               className="flex-1"
             >
               <RefreshCw className="w-4 h-4 mr-2" />
-
               Check Again
             </Button>
           </div>
@@ -173,16 +150,12 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
               Check Again;
             </Button>;
           </div>;
-
           {/* Quick Setup Steps */}
-
           <div className="border-t pt-6">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <h3 className="font-semibold text-gray-900 mb-3">Quick Setup Steps:</h3>
             <ol className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">1</span>
-
                 <div>
                   <strong>Create Auth0 Account:</strong>
                   <br />
@@ -193,12 +166,9 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
                     className="text-blue-600 hover:underline inline-flex items-center gap-1"
                   >
                     Visit Auth0 Dashboard <ExternalLink className="w-3 h-3" />
-
                   </Link>
                 </div>
               </li>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>
                 <div>
@@ -207,7 +177,6 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
                   Create a "Regular Web Application" named "Zion AI Marketplace"
                 </div>
               </li>
-
                 <div>
                   <strong>Configure Environment:</strong>
                   <br />
@@ -216,7 +185,6 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
                   </a>;
                 </div>;
               </li>;
-
               <li className='flex items-start gap-3'>;
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>;
                   2;
@@ -232,7 +200,6 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
                   </a>;
                 </div>;
               </li>;
-
               <li className="flex items-start gap-3">;
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>;
                 <div>;
@@ -306,11 +273,9 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
                   Create a "Regular Web Application" named "Zion AI Marketplace";
                 </div>;
               </li>;
-
                   file;
                 </div>;
               </li>;
-
               <li className='flex items-start gap-3'>;
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>;
                   4;
@@ -318,45 +283,35 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
                 <div>;
                   <strong>Restart Application:</strong>;
                   <br />;
-
                   Run{' '}
                   <code className='bg-gray-100 px-1 rounded'>;
                     npm run dev;
                   </code>{' '}
-
                   <strong>Configure Environment:</strong>
                   <br />
                   Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file
                 </div>
               </li>
               <li className="flex items-start gap-3">
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">4</span>
                 <div>
                   <strong>Restart Application:</strong>
                   <br />
-
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes
                 </div>
               </li>
             </ol>
           </div>
         </div>
-
             >
               <span>Browse Marketplace</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             >
               <span>View Talent Pool</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Link 
               href="/help" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
@@ -364,68 +319,52 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
               <span>Contact Support</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'>;
               <span>Browse Marketplace</span>            >;
               <span>Browse Marketplace</span>;
               <ExternalLink className="w-4 h-4" />;
             </Link>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
             <Link 
               href="/status" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>System Status</span>
-
           <div className="mt-6 text-center">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="bg-green-50 rounded-lg border border-green-200 p-4">
               <div className="flex items-center justify-center gap-2 text-green-700 mb-2">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Automated Setup Available</span>
-
               </div>
               <p className="text-sm text-green-600 mb-3">
                 Run the setup script to configure Auth0 interactively:
               </p>
-
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
                 npm run setup:auth0
               </code>
             </div>
           </div>
         )}
-
               AUTH0_SETUP_GUIDE_ISSUE_1.md
             </button>
           </p>
         </div>
       </div>
     </div>
-
               onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
-
 export default AuthConfigurationError };
 ;
 export default AuthConfigurationError;
 }
 }
-
         <div className="mt-6 text-center text-sm text-gray-500">;
           <p>;
             For detailed instructions, see{' '}
             <button;
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
-
               className="text-blue-600 hover: underline";
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </button>;
           </p>;
         </div>;
       </div>;
     </div>;
   );
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

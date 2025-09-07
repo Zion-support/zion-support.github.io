@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -14,7 +12,6 @@ import { MobileProjectView } from "../components/projects/MobileProjectView",con
       <MobileHeader
         title="Project Details"
         showBack
-
   },
   startDate: "Oct 15, 2023",
   endDate: "Jan 15, 2024",
@@ -23,7 +20,6 @@ import { MobileProjectView } from "../components/projects/MobileProjectView",con
   progress: 60,
   description: "Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages."
 },
-
 const milestonesData = [
   {
     id: "milestone-1",
@@ -48,7 +44,7 @@ const milestonesData = [
     status: "pending" as const,
     paymentStatus: "pending" as const,
 import React from "react";
-import { MobileHeader } from "../components/common/MobileHeader",;
+import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { MobileProjectView } from "../components/projects/MobileProjectView",;
 // Mock data;
@@ -96,7 +92,6 @@ export function MobileProjects() {;
           project={projectData} ;
         <MobileProjectView 
           project={projectData} 
-
           milestones={milestonesData}
         />
       </main>
@@ -104,22 +99,19 @@ export function MobileProjects() {;
     </div>
   )
       />;
-
       <main className="py-4">;
         <MobileProjectView
           project={projectData} 
           milestones={milestonesData}
         />;
       </main>;
-
       <BottomNavigation />;
     </div>;
   );
 }
 };
 ;
-
-import React from "react",;
+import React from "React";
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { MobileProjectView } from "../components/projects/MobileProjectView",;

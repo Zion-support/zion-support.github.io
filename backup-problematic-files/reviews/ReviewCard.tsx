@@ -1,4 +1,4 @@
-    <div className='enhanced-card hover:shadow-lg transition-shadow'>
+<div className='enhanced-card hover:shadow-lg transition-shadow'>
       <div className='flex items-center justify-between mb-2'>
         <div className='flex items-center gap-2'>
           <StarRating
@@ -27,16 +27,13 @@
         {review.categories?.wouldWorkWithAgain && (
           <span className='pill pill-success'>Would work again</span>
         )}
-
       </div>;
       <p className='text-sm leading-6'>{review && review.text}</p>;
-
       <div className='flex flex-wrap gap-2 mt-3'>;
         {typeof review && review.categories?.communication === 'number' && (;
           <span className='pill'>;
             Communication: {review && review.categories.communication}★;
           </span>;
-
         )}
         {typeof review && review.categories?.qualityOfWork === 'number' && (;
           <span className='pill'>;
@@ -53,7 +50,6 @@
   );
 }
 };
-
 :components/reviews/ReviewCard.tsx
 export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
           <span className="pill pill-success">Would work again</span>
@@ -157,7 +153,6 @@ export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
 ;
 export default ReviewCard;
 ;
-
         {typeof review.categories?.timeliness === 'number' && (
           <span className="pill">Timeliness: {review.categories.timeliness}★</span>
         )}
@@ -166,7 +161,6 @@ export default ReviewCard;
   )
 }
 export default ReviewCard;
-
-:components/reviews/ReviewCard.tsx
-main:components/reviews/ReviewCard.tsx
+:components/reviews/ReviewCard.tsx;
+    main:components/reviews/ReviewCard.tsx
 export default ReviewCard;

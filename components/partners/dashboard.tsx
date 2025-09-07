@@ -7,26 +7,21 @@ export default function PartnerDashboard() {;
   const [apiKey, setApiKey] = useState("");
   const [token, setToken] = useState<string | null>(null),
   const [usage, setUsage] = useState<any>(null),
-
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
-
   const [token, setToken] = useState<string | null>(null);
-
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
-
   useEffect(() => {
     const saved = localStorage.getItem("zion_partner_token");
     if (saved) setToken(saved)
   }, []);
-
   async function getToken() {
     const res = await fetch("/api/partners/token", {
-      method: "POST"
-      headers: { "Content-Type": "application/json" }
+      method: "method",
+    headers: { "Content-Type": "application/json" }
       body: JSON.stringify({ apiKey })})
     const data = await res.json();
     if (data.token) {
@@ -34,7 +29,6 @@ export default function PartnerDashboard() {
       setToken(data.token)
     }
   }
-
   async function fetchUsage() {;
     setLoading(true);
     });
@@ -110,5 +104,4 @@ export default function PartnerDashboard() {
     </div>;
   );
           </div>
-
         </div>

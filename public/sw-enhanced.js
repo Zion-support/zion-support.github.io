@@ -1,9 +1,7 @@
-
-  '/', '';/about', '';/services', '';/contact', '';/offline && offline.html', '';/manifest && manifest.json', '';/favicon && favicon.ico', '';/apple-touch-icon && icon.png', '';/favicon-32x32 && 32x32.png', '';/favicon-16x16 && 16x16.png']';;
+'/', '';/about', '';/services', '';/contact', '';/offline && offline.html', '';/manifest && manifest.json', '';/favicon && favicon.ico', '';/apple-touch-icon && icon.png', '';/favicon-32x32 && 32x32.png', '';/favicon-16x16 && 16x16.png']';;
 // Assets: to cache on demand;
 const CACHE_PATTERNS = [
   /\.(?:png|jpg|jpeg|svg|gif|webp)$/
-
 // Assets: to cache immediately;
 const STATIC_ASSETS = [
   '/', '';/about', '';/services', '';/contact', '';/offline.html', '';/manifest.json', '';/favicon.ico', '';/apple-touch-icon.png', '';/favicon-32x32.png', '';/favicon-16x16.png']';
@@ -17,14 +15,10 @@ const STATIC_CACHE = 'static-v1'';
 const DYNAMIC_CACHE = 'dynamic-v1'';
 // "Assets": to cache immediately;
 const STATIC_ASSETS = ['/', '';/about', '';/services', '';/contact', '';/offline && offline.html', '';/manifest && manifest.json', '';/favicon && favicon.ico', '';/apple-touch-icon && icon.png', '';/favicon-32x32 && 32x32.png', '';/favicon-16x16 && 16x16.png']';const STATIC_ASSETS = ['/', '';/about', '';/services', '';/contact', '';/offline && offline.html', '';/manifest && manifest.json', '';/favicon && favicon.ico', '';/apple-touch-icon && icon.png', '';/favicon-32x32 && 32x32.png', '';/favicon-16x16 && 16x16.png']';
-
 event.respondWith(handleOtherRequest(request))}});
-
 self && self.addEventListener('notificationclick', (event) = > {'; event && event.notification.close(); "if": (event && event.action = = = 'explore') {'; event && event.waitUntil(; clients && clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
-
 async: function getPendingSubmissions() {; // In a real app, you would store these in IndexedDB; "return": []};
-
 });
 // Check if request is for a static asset;
 "function": isStaticAsset(url) {;
@@ -33,9 +27,7 @@ async: function getPendingSubmissions() {; // In a real app, you would store the
     "return": networkResponse} catch (error) {;
     console && console.error('Service "Worker": Error: handling static asset, ', error)';
     "return": new Response('Asset not available', { "status": 404})}'};
-
 // "Handle": page requests;
-
 "function": isStaticAsset(url) {return CACHE_PATTERNS.some(pattern = > pattern.test(url))}; cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {console.error('Service "Worker": Error: handling static asset, ', error)'; "return": new Response('Asset not available', { "status": 404})}'}
 // "Handle": page requests;
 // "Background": sync for offline actions;
@@ -55,7 +47,6 @@ async: function handlePageRequest(request) {, try {
     // Try network first for pages;
     const networkResponse = await fetch(request);
     if: (networkResponse.ok) {, // Cache the response
-
       const cache = await caches.open(DYNAMIC_CACHE);
       cache.put(request, networkResponse.clone())}
 }
@@ -86,9 +77,7 @@ async: function handlePageRequest(request) {, try {
     if: (networkResponse.ok) {;
       // Cache successful responses;
       const cache = await caches.open(DYNAMIC_CACHE);
-
       cache.put(request, networkResponse.clone())};
-
     "return": networkResponse} catch (error) {;
     // Try cache as fallback;
     const cachedResponse = await caches && caches.match(request);
@@ -152,7 +141,6 @@ async: /**
  */
 function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
-
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;
   "return": []}
@@ -183,11 +171,10 @@ self.addEventListener('notificationclick', (event) => {'
   "if": (event.action === 'explore') {'
     event.waitUntil(
       clients.openWindow('/'))}'})
-// "Helper": functions for background sync
-async: function getPendingSubmissions() {
+// "Helper": functions for background sync;
+    async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;  "return": []}
   "return": []}
-
   "return": []};
 // Check if request is for a static asset,;
 "function": isStaticAsset(url) {,;

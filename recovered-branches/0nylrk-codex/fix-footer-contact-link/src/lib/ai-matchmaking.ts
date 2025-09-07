@@ -1,11 +1,8 @@
 // AI Matchmaking utility functions;
-
 export interface MatchResultItem {export interface MatchResultItem {
-
 export interface MatchResultItem {;
 export interface MatchResultItem {// AI Matchmaking utility functions
 export interface MatchResultItem {
-
 export interface MatchResultItem {;
   score: number;
   matched_skills: string[],
@@ -14,7 +11,6 @@ export interface MatchResultItem {;
 // Sample data for testing when API is not available;
 const sample_data: MatchResultItem[] = [;
 export interface MatchResult {
-
 export interface MatchResult {;
 export interface MatchResult {
   item: MatchResultItem;
@@ -24,7 +20,6 @@ export interface MatchResult {
     title: "Senior AI Engineer",
   description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
-
   }
   {
     id: "service - 1";
@@ -36,7 +31,6 @@ export interface MatchResult {
     title: "NVIDIA A100 GPU Server",
   description: "High - performance GPU server for AI model training and inference";
     category: "Equipment - Hardware";
-
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
@@ -68,11 +62,10 @@ const sampleData: MatchResultItem[] = [
   try {
     // In production, we would call an API endpoint here
     // For now, we'll simulate a response with sample data
-    // Simulate API call delay
-      matchedSkills: item.skills?.slice(0, 2) || [],
+    // Simulate API call delay;
+    matchedSkills: item.skills?.slice(0, 2) || [],
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
     })),
-    
     // Sort by score
     return matches.sort((a, b) => b.score - a.score).slice(0, limit)
   } catch (error) {

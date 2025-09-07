@@ -15,25 +15,19 @@ import { Button } from '@/components/ui/button'
   Shield
   Search
 } from 'lucide-react'
-
 interface PerformanceMetrics {
   buildSize: string;
   pageCount: number;
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error'
 interface Improvement {
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   title: string,
   description: string;
   status: 'completed' | 'in-progress' | 'planned';
   impact: 'high' | 'medium' | 'low';
   category: 'performance' | 'security' | 'ux' | 'build'
-
   return (
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -45,7 +39,6 @@ interface Improvement {
             <p className='text-xs text-gray-500'>Generated pages</p>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -57,7 +50,6 @@ interface Improvement {
             <p className='text-xs text-gray-500'>Average page load</p>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -65,50 +57,39 @@ interface Improvement {
             </CardTitle>
           </CardHeader>
           <CardContent>
-
             </div>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </CardContent>
         </Card>
       </div>
-
 const PerformanceDashboard: React.FC = () => {;
   const [metrics] = useState<PerformanceMetrics>({;
     buildSize: '959 MB',;
     pageCount: 166,;
-
   const improvements: Improvement[] = [;
     {;
       id: '1',;
       title: 'Fixed Search Bar Issues',;
-
     },;
     {;
       id: '2',;
       title: 'Environment Validation System',;
-
     },;
     {;
       id: '3',;
       title: 'NextAuth Configuration Fix',;
-
     },;
     {;
       id: '4',;
       title: 'API Client Error Handling',;
-
     },;
     {;
       id: '5',;
       title: 'Bundle Analyzer Integration',;
-
     },;
     {;
       id: '6',;
       title: 'Health Check Endpoint',;
-
       {/* Completed Improvements */}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
@@ -120,13 +101,11 @@ const PerformanceDashboard: React.FC = () => {;
           </CardDescription>
         </CardHeader>
         <CardContent>
-
           <div className="space-y-4">
             {completedImprovements.map((improvement) => (
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <div className="flex-shrink-0 mt-1">
                   {getCategoryIcon(improvement.category)}
-
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
@@ -140,9 +119,7 @@ const PerformanceDashboard: React.FC = () => {;
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
-
                   <p className="text-sm text-gray-600 mt-1">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },;
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
@@ -152,20 +129,16 @@ const PerformanceDashboard: React.FC = () => {;
       case 'build': return <TrendingUp className="h-4 w-4" />,;
       default: return <CheckCircle className="h-4 w-4" />;
     }
-
             </div>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </CardContent>;
         </Card>;
       </div>;
-
       {/* Completed Improvements */}
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items - center space - x-2'>;
             <CheckCircle className='h - 5 w - 5 text - green - 500' />;
             <span > Completed Improvements</span>;
-
           </CardTitle>;
           <CardDescription>;
             Recent performance and functionality improvements that have been;
@@ -173,17 +146,13 @@ const PerformanceDashboard: React.FC = () => {;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-
                   <p className='text-sm text-gray-600 mt-1'>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {improvement.description}
                   </p>
                 </div>
               </div>
             ))}
-
           Check Health Status
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
           <TrendingUp className="h-4 w-4 mr-2" />
@@ -192,18 +161,14 @@ const PerformanceDashboard: React.FC = () => {;
       </div>
     </div>
   )
-
           variant='outline';
         >;
           <TrendingUp className='h-4 w-4 mr-2' />;
-
 export default PerformanceDashboard;
 export default PerformanceDashboard, ;
 export default PerformanceDashboard;
 }
-
 },
-
 export default PerformanceDashboard, 
       <div className="flex space-x-4">;
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">;
@@ -212,13 +177,11 @@ export default PerformanceDashboard,
         </Button>;
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">;
           <TrendingUp className="h-4 w-4 mr-2" />;
-
           Bundle Analysis;
         </Button>;
       </div>;
     </div>;
   );
-
           <div className='space - y-4'>;
             {completed_improvements.map (improvement => (
               <div;
@@ -270,5 +233,3 @@ export default PerformanceDashboard,
 }
 export default PerformanceDashboard;
 export default PerformanceDashboard,
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

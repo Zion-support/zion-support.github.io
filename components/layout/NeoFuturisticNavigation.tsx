@@ -101,17 +101,15 @@ import {
   Link as LinkIcon,;
 import Button from '../ui/Button';
 export default function NeoFuturisticNavigation() {;
-
 export default function NeoFuturisticNavigation() {
-
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const router = useRouter();
   const serviceCategories = [
     {
-      name: 'Quantum Computing'
-      description: 'Revolutionary quantum computing solutions'
+      name: "name",
+    description: 'Revolutionary quantum computing solutions'
       icon: <Atom className='w-5 h-5' />
       color: 'from-purple-500 to-pink-500'
       services: [
@@ -435,34 +433,27 @@ export default function NeoFuturisticNavigation() {
     { name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
   ];
     >
-
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',
 };
-
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20)
 };
-
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleDropdown = (dropdown: string) => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
 };
-
   const closeMobileMenu = () => {;
     setIsOpen(false);
     setActiveDropdown(null)
 };
-
   const isActive = (path: string) => router && router.pathname === path;
-
   const serviceCategories = [;
     {;
       name: 'Quantum Computing',,
@@ -695,7 +686,6 @@ export default function NeoFuturisticNavigation() {
       ],;
     },;
   ];
-
   const companyInfo = [;
     {;
       name: 'About Zion Tech Group',,
@@ -722,7 +712,6 @@ export default function NeoFuturisticNavigation() {
       link: '/contact',;
     },;
   ];
-
   const resources = [;
     {;
       name: 'Documentation',,
@@ -755,7 +744,6 @@ export default function NeoFuturisticNavigation() {
       link: '/reports',;
     },;
   ];
-
   // Popular quick links to flagship services;
   const popularServiceLinks = [;
     { name: 'AI Content Generator', href: '/ai-content-generator' },;
@@ -768,7 +756,6 @@ export default function NeoFuturisticNavigation() {
     { name: 'AI Sales Automation', href: '/ai-sales-automation' },;
     { name: 'AI Market Research', href: '/ai-market-research' },;
   ];
-
   // Newly added real services quick links;
   const newServiceLinks = [;
     {;
@@ -793,7 +780,6 @@ export default function NeoFuturisticNavigation() {
     },;
     { name: 'LLM Usage Governance', href: '/services/llm-usage-governance' },;
   ];
-
     >;
       {/* Scroll Progress Bar */}
       <div className='absolute top-0 left-0 h-1 w-full bg-transparent'>;
@@ -811,7 +797,6 @@ export default function NeoFuturisticNavigation() {
                     {serviceCategories.map((category, index) => (
                   />;
                 </button>;
-
                 {activeDropdown === 'mobile-services' && (;
                   <div className='ml-4 space-y-3'>;
                     {serviceCategories && serviceCategories.map((category, index) => (;

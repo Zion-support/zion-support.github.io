@@ -1,12 +1,9 @@
-
-
 export function EnterpriseHero() {
   return (import React from "react",
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button",
 import { GradientHeading } from "@/components/GradientHeading",
-
 export function EnterpriseHero() {
   return (
     <section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80">
@@ -25,9 +22,7 @@ export function EnterpriseHero() {
           <div>;
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">;
               Enterprise{" "}
-
               Scale your talent acquisition with a custom-branded hiring portal, dedicated talent pool, and powerful admin controls.
-
               <GradientHeading className="inline">;
                 Talent Solutions;
               </GradientHeading>;
@@ -63,11 +58,9 @@ export function EnterpriseHero() {
                   src="/logos / placeholder - logo.svg";
                   alt="Enterprise 3";
                   className="h-8";
-
                 />;                />;
-
 import React from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading",;
 ;
 export function EnterpriseHero() {;
@@ -104,7 +97,7 @@ export function EnterpriseHero() {;
 }
     </section>
   )
-import React from "react",;
+import React from "React";
 import { Button } from "@/components/ui/button",;
 import { GradientHeading } from "@/components/GradientHeading";
 export function EnterpriseHero() {;
@@ -156,7 +149,6 @@ export function EnterpriseHero() {;
   );
 }
 ;
-
 }
     </section>;
   );

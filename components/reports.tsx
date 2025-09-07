@@ -1,12 +1,8 @@
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
 import React from 'react';
-
  </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
-
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
-
 import React from 'react';
-
  </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
   reports.filter (report => report.featured) .map ( (report, index) => (<motion.div key= {
   index
@@ -35,10 +31,7 @@ import React from 'react';
 }</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1" > <span>Download</span> <Download className="w-4 h-4" /> </button> </div> </motion && motion.article>) ) ;
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion && motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
 };
-export default ReportsPage;import React from 'react';
-
-import React from 'react';
-
+export default ReportsPage;import React from "React";
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { FileText;
@@ -62,7 +55,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 const ReportsPage: React.FC = () => {
   const reports = [;
     {
-
       title: 'The Future of Quantum Computing in Enterprise: 2024 - 2030',
       excerpt: 'Comprehensive analysis of quantum computing adoption trends, market opportunities, and strategic implications for businesses across industries.';
       date: '2024 - 01 - 15',
@@ -103,11 +95,10 @@ const ReportsPage: React.FC = () => {
       featured: false,
       icon: <Shield className="w-8 h-8" />,
       color: 'from - red - 500 to - orange - 500';
-
     }
     {
-      title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding'
-      excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.';
+      title: "title",
+    excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.';
     }
     {
       title: 'Sustainable Technology: Green Computing & Environmental Impact'
@@ -137,7 +128,6 @@ const ReportsPage: React.FC = () => {
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.;
             </motion && motion.p>;
-
             <motion&& motion.div
               className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
               initial={{ opacity: 0, y: 30 }}
@@ -158,7 +148,6 @@ const ReportsPage: React.FC = () => {
             </motion && motion.div>;
           </div>;
         </section>;
-
         {/* Featured Report */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -172,7 +161,6 @@ const ReportsPage: React.FC = () => {
                 Featured Report;
               </h2>;
             </motion && motion.div>;
-
             {reports && reports.filter(report => report && report.featured).map((report, index) => (;
               <motion&& motion.div
                 key={index}
@@ -208,7 +196,6 @@ const ReportsPage: React.FC = () => {
                     </div>;
                     <h3 className="text-3xl font-bold text-white mb-4">{report && report.title}</h3>;
                     <p className="text-xl text-gray-300 leading-relaxed mb-6">{report && report.excerpt}</p>;
-
                     <div className="flex flex-wrap items-center gap-6 mb-6">;
                       <span className="text-gray-400 text-sm flex items-center space-x-1">;
                         <User className="w-4 h-4" />;
@@ -227,13 +214,10 @@ const ReportsPage: React.FC = () => {
                         <span>{formatNumber(report && report.views)} views</span>;
                       </span>;
                     </div>;
-
                     <div className="flex flex-wrap gap-2 mb-6">;
                       {report && report.tags.map((tag, tagIndex) => (;
                         <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">;
-
                           {tag}
-
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -305,6 +289,4 @@ const ReportsPage: React.FC = () => {
                 </a>;
                 <a
                   href="/services"
-
 export default ReportsPage;
-

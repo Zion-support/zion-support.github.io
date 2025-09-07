@@ -1,6 +1,4 @@
-
-                <Button onClick={() => window.location.reload()} variant="default">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+<Button onClick={() => window.location.reload()} variant="default">
                   Refresh Page
                 </Button>
               </div>
@@ -8,17 +6,13 @@
           </Card>
         </div>
       )
-
     return this.props.children
   }      )
     }
-
     return this.props.children
 };
 } ;
-
 }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   onClick={() => window && window.location.reload()}
                   variant='default';
                 >                  Refresh Page;
@@ -41,16 +35,11 @@
         </div>;
       );
     }
-
     return this && this.props.children;
   }      );
-
     }
-
     return this && this.props.children;
   };
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   static getDerivedStateFromError (error: Error): State {
     return { has_error: true, error }
   }
@@ -108,5 +97,3 @@ if ( {) {
     return this.props.children;
   }      );
     }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

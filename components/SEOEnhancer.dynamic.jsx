@@ -1,5 +1,4 @@
 import React from 'react';
-
 ;
 const SEOEnhancer.dynamic = () => {
   return (
@@ -8,6 +7,4 @@ const SEOEnhancer.dynamic = () => {
     </div>);
 }
 ;
-
 export default SEOEnhancer.dynamic;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,3 @@
-
-
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {TrustedBySection} from "@/components/TrustedBySection";
@@ -20,7 +18,6 @@ import {SocialShareSection} from "@/components/SocialShareSection";
 import {useTranslation} from "react-i18next";
 import {useLanguage} from "@/context/LanguageContext";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone} from "lucide-react";
-
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 import { Header } from "@/components/Header",
@@ -53,27 +50,20 @@ import {
   BarChart3,
   Smartphone
 } from "lucide-react",
-
 export default function Index() {
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
-  
   // Tools and features showcase
-
   const toolsFeatures = [
     {
       title: t("home.tool_ai_matcher")
       description: t("home.tool_ai_matcher_desc")
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />
       link: "/match"
-
 export default function Index() {;
-
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
-
     },
-
     }
     },
     {
@@ -81,15 +71,14 @@ export default function Index() {;
       description: t("home.tool_talent_desc")
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
-
     },
     {
       title: t("home.tool_equipment")
       description: t("home.tool_equipment_desc")
       icon: <Settings className="h-6 w-6 text-zion-purple" />
       link: "/equipment"    {
-      title: "Mobile App"
-      description: "Take Zion with you on the go with our mobile app for iOS and Android"
+      title: "title",
+    description: "Take Zion with you on the go with our mobile app for iOS and Android"
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />
       link: "/mobile-launch"
     {;
@@ -128,7 +117,7 @@ export default function Index() {;
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,;
       link: "/mobile-launch";
 import { Footer } from "@/components/Footer";
-import { TrustedBySection } from "@/components/TrustedBySection",;
+import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel",;
 import { FloatingCTA } from "@/components/FloatingCTA",;
 import { HeroSection } from "@/components/HeroSection",;
@@ -225,7 +214,6 @@ export default function Index() {;
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
                 </div>;
               </Link>;
-
             ))}
           </div>
         </div>
@@ -256,7 +244,6 @@ export default function Index() {;
               {t("home && home.tools_description")}
             </p>;
           </div>;
-
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>;
             {toolsFeatures && toolsFeatures.map((feature, index) => (;
               <Link
@@ -276,22 +263,17 @@ export default function Index() {;
           </div>;
         </div>;
       </section>;
-
       <CategoriesSection />;
       <BenefitsSection />;
-
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />;
-
       <HowItWorksSection />;
       <FeaturedListingsSection />;
       <TestimonialCarousel />;
       <TrustedBySection />;
       <BlogSection />;
-
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />;
-
       <WaitlistSection />;
       <FloatingCTA />;
       <Footer />;

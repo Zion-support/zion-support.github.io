@@ -1,4 +1,3 @@
-
 import { Link  } from 'react-router-dom';
 import { Logo  } from './Logo';
 import { UserMenu  } from './UserMenu';
@@ -10,13 +9,11 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";  customTheme?: {
-
-    primaryColor: string
+    primaryColor: string;
     backgroundColor: string
     textColor: string
   }
 }
-
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
@@ -41,7 +38,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   const navigate = useNavigate(),
   const [query, setQuery] = useState(""),
   const searchSuggestions = generateSearchSuggestions(),
-  
   // If we have a white-label tenant and no specific customTheme is provided,
   // use the tenant's primary color
   const effectiveTheme = customTheme || (isWhitelabel ? {
@@ -58,7 +54,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     </header>
   )
 }
-
           {!hideLogin && <UserMenu />}
         </div>
       </div>

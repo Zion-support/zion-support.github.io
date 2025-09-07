@@ -1,23 +1,18 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -40,7 +35,6 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Navigate } from "react-router-dom",
 import type { QuoteRequest } from "@/types/quotes";
-
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);    quotes;
     is_loading;
@@ -78,7 +72,7 @@ import {
     toggleArchive,
     deleteQuote            
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer",;
+import { Footer } from "@/components/Footer";
 import { useAdminQuotes } from "@/hooks/useAdminQuotes",;
 import { useAuth } from "@/hooks/useAuth",;
 import { ;
@@ -135,13 +129,10 @@ export default function QuoteManager() {;
               </div>;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
-
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
-
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
-
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -189,11 +180,9 @@ function QuoteManager() {
           isOpen={showDetails}
           onClose={() => {
             setShowDetails(false);
-
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
-
           }}
         />
         <Footer />

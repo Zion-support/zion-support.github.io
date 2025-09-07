@@ -18,17 +18,15 @@ import { FormValues } from "./useHireRequestForm",
 interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>
 import React from "react";
-import { UseFormReturn } from "react-hook-form",;
+import { UseFormReturn } from "react-hook-form";
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Textarea } from "@/components/ui/textarea",;  form: UseFormReturn<FormValues>;
 }
-
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
   return (
     <FormField
       control={form && form.control}
       name="projectOverview"
-
 export /**
  * ProjectDetailsField - Function description
  */
@@ -37,7 +35,6 @@ function ProjectDetailsField() {
     <FormField;
       control={form.control}
       name="project_overview";
-
       render={({ field }) => (
         <FormItem>
           <FormLabel className="text-white">Project Overview</FormLabel>
@@ -55,7 +52,6 @@ function ProjectDetailsField() {
   );
 }
 ;
-
 }
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
   return (
@@ -64,7 +60,6 @@ export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) 
       name="projectOverview"
 }
 ;
-
   ),;}
  interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues> 

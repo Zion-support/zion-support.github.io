@@ -1,9 +1,5 @@
-
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-gray-300">
@@ -39,7 +35,6 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Quick Links */}
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
@@ -50,7 +45,6 @@ const Footer: React.FC = () => {
               <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
-
           {/* Services */}
           <div>
             <h3 className="text-white font-semibold mb-4">Services</h3>
@@ -62,12 +56,8 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.
           </p>
-
         </div>
       </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

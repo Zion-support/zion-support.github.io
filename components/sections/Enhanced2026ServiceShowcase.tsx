@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { motion } from 'framer-motion';
 import {
   ArrowRight
@@ -18,7 +17,6 @@ import {
   Brain,
   Globe,;
   Rocket,;
-
   ArrowRight,
   Star,
   TrendingUp,
@@ -27,7 +25,6 @@ import {
   Brain,
   Globe,;
   Rocket,;
-
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
@@ -37,8 +34,8 @@ import { innovative2026ITInfrastructureServices } from '../../data/innovative-20
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
   const itemVariants = {
     hidden: {
-      opacity: 0
-      y: 50
+      opacity: 0;
+    y: 50
       scale: 0.9
     }
     visible: {      opacity: 1,        delayChildren: 0.1
@@ -109,7 +106,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
     }
   };
       className='group relative'
-
     >
       <motion.div
       className='group relative'>;
@@ -152,7 +148,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
                 <span>Popular</span>;
               </div>;
             )}
-
       whileHover="hover"
       className="group relative"
     >
@@ -236,7 +231,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           {/* Features */}          <p className="text-slate-300 text-sm mb-4 leading-relaxed">;
             {service && service.description}
           </p>;
-
           {/* Features */}
                   <div
                     key={idx}
@@ -331,11 +325,9 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           </p>
         </motion.div>
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />;
-
       <div className='container mx-auto px-4 relative z-10'>        {/* Section header */}    <section className="py-20 relative overflow-hidden">;
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />;
-
         {/* AI Services Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -441,12 +433,10 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             {innovative2026AIServices && innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
           </motion && motion.div>;
         </motion && motion.div>;
-
         {/* IT Infrastructure Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Globe className='w-6 h-6 text-purple-400' />
@@ -476,7 +466,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             {innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
-
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8'>;
@@ -498,7 +487,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             </h3>
           </div>
           <motion.div
-
           <motion&& motion.div
             variants={containerVariants}
             initial='hidden'
@@ -515,7 +503,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-
         {/* Micro SAAS Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -527,7 +514,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
               Micro SAAS Solutions;
             </h3>;
           </div>;
-
           <motion&& motion.div
             variants={containerVariants}
             initial='hidden'
@@ -536,7 +522,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             {innovative2026MicroSaasServices && innovative2026MicroSaasServices.map((service, index) =>;
               renderServiceCard(service, index);
             )}          </motion && motion.div>          </div>;
-
           <motion&& motion.div
             variants={containerVariants}
             initial="hidden"
@@ -545,7 +530,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             {innovative2026MicroSaasServices && innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
           </motion && motion.div>;
         </motion && motion.div>;
-
         {/* CTA Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -594,7 +578,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
         </motion.div>
       </div>
     </section>
-
           transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
           className='text-center mt-16'>;
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>;
@@ -841,9 +824,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
               and IT services to drive growth, efficiency, and competitive;
               advantage.;
             </p>;
-
   );
-
 }
 }
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4'>;

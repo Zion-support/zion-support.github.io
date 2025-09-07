@@ -1,12 +1,7 @@
-
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <AnimatePresence>
       {isOpen && (
@@ -24,9 +19,7 @@ interface SidebarProps {
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
-
           >
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="p-6">
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
@@ -38,20 +31,16 @@ interface SidebarProps {
                 </div>
                 <button
                   onClick={onClose}
-
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               {/* Navigation */}
               <nav className="space-y-4">
                 {Object.entries(navigation).map(([title, links]) => (
                   <div key={title}>
                     <button
                       onClick={() => handleDropdownToggle(title)}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
@@ -68,18 +57,14 @@ interface SidebarProps {
                   ))}
                 </div>
               </div>
-
               </div>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>
           </motion.div>
         </>
       )}
     </AnimatePresence>
   );
-
 import React, { useState, useEffect } from 'react';
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -96,7 +81,6 @@ import {
   LogOut,
   Search
 } from 'lucide-react';
-
 const navigation = {
   'Services': [
     { name: 'AI Services', href: '/ai-services' },
@@ -116,11 +100,7 @@ const navigation = {
     { name: 'Contact', href: '/contact' }
   ]
 };
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

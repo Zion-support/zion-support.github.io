@@ -1,33 +1,24 @@
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({
+import { NextApiRequest, NextApiResponse } from 'next';
 
-    ok: true
-    message:;
-      "OAuth mock callback successful. Use /api / integrations / connect to finalize connection."
-  });
-}
-
-      "OAuth mock callback successful. Use /api/integrations/connect to finalize connection.",;
-  });
-}
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-export default function handler(req, res) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
   try {
-  res.status(200).json({ ok: true, message: 'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.' });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
+    const { provider } = req.query;
+    
+    if (!provider || typeof provider !== 'string') {
+      return res.status(400).json({ error: 'Invalid provider' });
+    }
 
+    // Placeholder for OAuth callback logic
+    res.status(200).json({
+      success: true,
+      message: 'OAuth callback successful. Use /api/integrations/connect to finalize connection.'
+    });
+  } catch (error) {
+    console.error('OAuth callback error:', error);
+    res.status(500).json({ error: 'Failed to process OAuth callback' });
+  }
+}

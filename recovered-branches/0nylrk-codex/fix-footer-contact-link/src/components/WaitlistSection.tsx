@@ -17,18 +17,13 @@ export function WaitlistSection() {;
   const [agreeTerms, setAgreeTerms] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { toast } = useToast(),
-
-    
     setIsSubmitting(true),
-    
     try {
       // Simulating an API call
       await new Promise(resolve => setTimeout(resolve, 1000)),
-      
-
       toast({
-        title: "Success!"
-        description: "Thank you for registering with Zion. We'll be in touch soon."})
+        title: "title",
+    description: "Thank you for registering with Zion. We'll be in touch soon."})
       // Reset form
       setEmail(""),
       setName(""),
@@ -47,10 +42,7 @@ export function WaitlistSection() {;
     } finally {
       setIsSubmitting(false)
     }
-
   },
-  
-
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
       {/* Background elements */}
@@ -66,7 +58,6 @@ export function WaitlistSection() {;
               Complete your registration to access exclusive features and personalized services.;
             </p>;
           </div>;
-
           <form onSubmit={handleSubmit} className="space-y-6 bg-zion-blue-light p-8 rounded-lg border border-zion-purple/20">;
             <div className="space-y-2">;
               <Label htmlFor="name">Full Name</Label>;              <Input
@@ -74,11 +65,9 @@ export function WaitlistSection() {;
                 type="email"
                 placeholder="you@company && company.com"
                 value={email}
-
             <Button 
               type="submit" 
               disabled={isSubmitting} 
-
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -90,7 +79,7 @@ export function WaitlistSection() {;
   )
 }
 import { useState } from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;

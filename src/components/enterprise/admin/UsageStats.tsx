@@ -1,6 +1,4 @@
-
-        <Card>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+<Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
             <CardDescription>
@@ -32,8 +30,6 @@
             </Button>
           </CardFooter>
         </Card>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -66,9 +62,7 @@
             </Button>
           </CardFooter>
         </Card>
-
         <Card>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
             <CardDescription>
@@ -98,8 +92,6 @@
             </Button>
           </CardFooter>
         </Card>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -142,9 +134,7 @@
           </CardFooter>
         </Card>
       </div>
-
           </div>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div>
             <h3 className='font-medium'>Need higher limits?</h3>
             <p className='text-sm text-muted-foreground'>
@@ -155,7 +145,6 @@
         </div>
         <Button>Contact Us</Button>
       </div>
-
 import {;
   Card,;
   CardContent,;
@@ -173,7 +162,6 @@ export function UsageStats() {;
   description: 'The new usage limits have been saved successfully.',;
     })
 };
-
   return (
     <div className='space-y-8'>;
       <div>;
@@ -183,32 +171,26 @@ export function UsageStats() {;
       <div>;
         <h3 className='text - xl font - medium mb - 4'>Usage Limits & Settings</h3>;
         <p className='text - muted - foreground mb - 6'>;
-
           Configure usage limits for your team to manage your subscription;
           resources.;
         </p>;
       </div>;
-
       <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 6'>;
         <Card>;
           <CardHeader>;
             <CardTitle > Job Postings</CardTitle>;
-
             <CardDescription>;
               Set monthly limits for job postings across your organization;
             </CardDescription>;
           </CardHeader>;
-
           <CardContent className='space - y-4'>;
             <div>;
               <div className='flex items - center justify - between mb - 2'>;
                 <div className='text - sm font - medium'>;
-
                   Monthly job posting limit;
                 </div>;
                 <Badge variant='outline'>25 / 50</Badge>;
               </div>;
-
               <Progress value={50} className='h - 2' />;
             </div>;
             <div className='grid gap - 4'>;
@@ -216,39 +198,31 @@ export function UsageStats() {;
                 <div className='text - sm'>New limit:</div>;
                 <div className='col - span - 2'>;
                   <Input type='number' min='1' default_value='50' />;
-
                 </div>;
               </div>;
             </div>;
           </CardContent>;
           <CardFooter>;
-
             <Button size='sm' on_click={handleSaveChanges}>;
-
               Save Changes;
             </Button>;
           </CardFooter>;
         </Card>;
-
         <Card>;
           <CardHeader>;
             <CardTitle > Candidate Contacts</CardTitle>;
-
             <CardDescription>;
               Limit the number of direct candidate contacts per month;
             </CardDescription>;
           </CardHeader>;
-
           <CardContent className='space - y-4'>;
             <div>;
               <div className='flex items - center justify - between mb - 2'>;
                 <div className='text - sm font - medium'>;
-
                   Monthly contact credits;
                 </div>;
                 <Badge variant='outline'>178 / 500</Badge>;
               </div>;
-
               <Progress value={35.6} className='h - 2' />;
             </div>;
             <div className='grid gap - 4'>;
@@ -256,29 +230,23 @@ export function UsageStats() {;
                 <div className='text - sm'>New limit:</div>;
                 <div className='col - span - 2'>;
                   <Input type='number' min='1' default_value='500' />;
-
                 </div>;
               </div>;
             </div>;
           </CardContent>;
           <CardFooter>;
-
             <Button size='sm' on_click={handleSaveChanges}>;
-
               Save Changes;
             </Button>;
           </CardFooter>;
         </Card>;
-
         <Card>;
           <CardHeader>;
             <CardTitle > AI Features</CardTitle>;
-
             <CardDescription>;
               Set the AI usage limits for matching and content generation;
             </CardDescription>;
           </CardHeader>;
-
           <CardContent className='space - y-4'>;
             <div>;
               <div className='flex items - center justify - between mb - 2'>;
@@ -292,29 +260,23 @@ export function UsageStats() {;
                 <div className='text - sm'>New limit:</div>;
                 <div className='col - span - 2'>;
                   <Input type='number' min='1' default_value='1000' />;
-
                 </div>;
               </div>;
             </div>;
           </CardContent>;
           <CardFooter>;
-
             <Button size='sm' on_click={handleSaveChanges}>;
-
               Save Changes;
             </Button>;
           </CardFooter>;
         </Card>;
-
         <Card>;
           <CardHeader>;
             <CardTitle > Budget Controls</CardTitle>;
-
             <CardDescription>;
               Set spending caps for premium features and services;
             </CardDescription>;
           </CardHeader>;
-
           <CardContent className='space - y-4'>;
             <div>;
               <div className='flex items - center justify - between mb - 2'>;
@@ -334,7 +296,6 @@ export function UsageStats() {;
                 <div className='text - sm'>Alert threshold:</div>;
                 <div className='col - span - 2'>;
                   <select className='w - full flex h - 10 rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring'>;
-
                     <option value='75'>75% of limit</option>;
                     <option value='80'>80% of limit</option>;
                     <option value='90'>90% of limit</option>;
@@ -345,13 +306,9 @@ export function UsageStats() {;
             </div>;
           </CardContent>;
           <CardFooter>;
-
             <Button size='sm' on_click={handleSaveChanges}>;
-
               Save Changes;
             </Button>;
           </CardFooter>;
         </Card>;
       </div>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

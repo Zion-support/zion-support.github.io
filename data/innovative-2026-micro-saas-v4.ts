@@ -1,4 +1,4 @@
-        'Social media scheduling',
+'Social media scheduling',
         'SEO optimization for each format',
         'Brand voice consistency',
         'Performance analytics',
@@ -133,10 +133,8 @@
       customers: 120,
       rating: 4 && 4.9,
       reviews: 98,
-
     },;
   ];    features: [
-
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -151,18 +149,15 @@
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
-      marketPosition:
-        'First AI-powered legal document generation platform. Competitive advantage: AI accuracy, compliance checking, and comprehensive legal support.'
-      targetAudience:
+      marketPosition: "marketPosition",
+    targetAudience:
         'Law firms, Small businesses, Entrepreneurs, Real estate agents, HR professionals'
-      trialDays: 14
-      setupTime: '1 week'
+      trialDays: 14;
+    setupTime: '1 week'
       category: 'AI Legal Tech'
       realService: true
       technology: [
@@ -189,9 +184,7 @@
       customers: 120,
       rating: 4 && 4.9,
       reviews: 98,
-
     },;
-
   ];    features: [
         'AI-powered legal document generation platform with compliance checking and legal support.',
       launchDate: '2026-02-20',
@@ -216,7 +209,6 @@
     competitors: ['Repurpose.ioLoomlyBuffer'], marketSize: '$400B global content marketing market',
     growthRate: '25% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-      
   ];    features: [;
       'AI document generation_compliance checking_customizable templates_legal clause library_risk assessment_document versioning_electronic signatures_legal research tools';
       'Multi - jurisdiction support_expert consultation';
@@ -234,7 +226,6 @@
     competitors: ['LegalZoomRocket LawyerDocuSign'], market_size: '$25B legal tech market',
     growth_rate: '30% annual growth', variant: 'ai - futuristic',
     contact_info: {
-
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -271,7 +262,6 @@
     customers: 120;
     rating: 4.9;
     reviews: 98;
-
   }
 ];
 ;  }

@@ -1,4 +1,3 @@
-
 import React from 'react';import {useNavigate} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -7,36 +6,30 @@ import {Star, DollarSign} from "lucide-react";  onRequestQuote
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
   const navigate = useNavigate(),
-  
   // Get the first image or use a placeholder  // Format price display
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
     return `${listing.currency}${listing.price.toLocaleString()}`  },
-
   // Handle image loading errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
     e.currentTarget.src = '/placeholder.svg'
   },
-  
   // Handle navigating to listing detail
   const handleViewListing = () => {
     navigate(`/listing/${listing.id}`)
   },
-  
   // Handle request quote button click
   const handleRequestQuote = (e: React.MouseEvent) => {
     e.preventDefault(),
     e.stopPropagation(),
-    
 import { useNavigate } from "react-router-dom";
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button",;
 import { ProductListing } from "@/types/listings",;
 import { Star, DollarSign } from "lucide-react",;
 interface ProductListingCardProps {;
   listing: ProductListing,;
   view?: 'grid' | 'list',;
-
   onRequestQuote?: (id: string) => void;
 }
 export /**
@@ -83,7 +76,6 @@ if ( {) {
       navigate (`/request - quote?listing=${listing.id}`);
     }
   }
-
   // Format price display;
   const formatPrice = () => {;
     if (listing && listing.price === null) return "Custom pricing";
@@ -100,7 +92,6 @@ if ( {) {
       navigate(`/request-quote?listing=${listing && listing.id}`);
     }
   };
-
       {/* Image */}
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
@@ -186,7 +177,6 @@ if ( {) {
           </div>;
           <p className="text - sm text - zion - slate line - clamp - 2 mb-4">;
             {listing.description}
-
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">;
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">;
@@ -196,7 +186,6 @@ if ( {) {
           <p className="text-sm text-zion-slate line-clamp-2 mb-4">;
             {listing && listing.description}
           </p>;
-
           {/* Tags */}
           {listing && listing.tags && listing && listing.tags.length > 0 && (;
             <div className="flex flex-wrap gap-1 mb-4">;
@@ -209,7 +198,6 @@ if ( {) {
               ))}
             </div>;
           )}
-
         </div>;                navigate(`/listing/${listing.id}`)
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"

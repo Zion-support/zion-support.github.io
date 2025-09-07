@@ -1,4 +1,3 @@
-
 import { defineConfig, devices } from '@playwright/test';
 ;
 export default defineConfig({;
@@ -22,16 +21,12 @@ export default defineConfig({;
     }}
     }
     {
-      name: "Desktop Firefox"
-
-      use: {        browser_name: 'webkit';
+      name: "name",
+    use: {        browser_name: 'webkit';
 }
     }
     {
-
       name: "Mobile Chrome"
       use: {
-
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 });
-

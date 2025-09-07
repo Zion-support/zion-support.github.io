@@ -9,7 +9,6 @@ import {Link} from "react-router-dom";
 import {ApplicationStatus} from "@/types/jobs";
 export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications();
-
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
     switch (status) {
@@ -23,10 +22,8 @@ import { Link } from "react-router-dom";
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications();
-
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
-
 import { useState } from './react';
 import { useJobApplications } from '@/hooks / useJobApplications';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -43,12 +40,10 @@ function MyApplications() {
   const { applications, is_loading, error } = useJobApplications ();
 ;
   const getStatusBadge = (status: ApplicationStatus) =>: any {
-
 import { Link } from "react-router-dom",
 import { ApplicationStatus } from "@/types/jobs",
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications(),
-  
   const getStatusBadge = (status: ApplicationStatus) => {
     switch (status) {
       case "new": return <Badge variant="secondary">New</Badge>,
@@ -66,9 +61,7 @@ export function MyApplications() {
         return <Badge variant="outline">{status}</Badge>
     }
   }
-
   },
-  
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -100,17 +93,13 @@ export function MyApplications() {
       case "viewed":;
         return <Badge variant="outline">Viewed</Badge>;
       case "shortlisted":;
-
   },
-  
-
   if (isLoading) {
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,;
       default:;
         return <Badge variant="outline">{status}</Badge>;
     }
   };
-
   if (isLoading) {;
     return (
       <div className="flex justify-center items-center p-8">;
@@ -118,18 +107,14 @@ export function MyApplications() {
       </div>;
     );
   }
-
   if (error) {;
-
     return (
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">;
         <p>{error}</p>;
       </div>;
     );
   }
-
   if (applications && applications.length === 0) {;
-
     return (
       <Card className="bg-muted/30">;
         <CardContent className="pt-6 text-center">;
@@ -143,9 +128,8 @@ export function MyApplications() {
       </Card>;
     );
   }
-
 =======import { useState } from "react";
-import { useJobApplications } from "@/hooks/useJobApplications",;
+import { useJobApplications } from "@/hooks/useJobApplications";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -217,7 +201,6 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
-
   return (
     <div className="grid gap-4 md:grid-cols-2">;
       {applications && applications.map((application) => (;
@@ -235,6 +218,5 @@ export function MyApplications() {;
           </CardHeader>;
           <CardContent>;
             <div className="space-y-3">;
-
                 <Button 
-                  variant="default" 
+                  variant="default"

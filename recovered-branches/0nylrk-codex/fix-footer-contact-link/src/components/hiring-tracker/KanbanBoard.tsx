@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react",
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -17,7 +15,7 @@ interface DnDLocation {
   droppableId: string,
   index: number
 import { useState, useEffect } from "react";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",;
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -28,22 +26,18 @@ import { KanbanColumn } from "./KanbanColumn",;
 import { useIsMobile } from "@/hooks/use-mobile",;
 interface DnDLocation {;
   droppableId: string,;
-  index: number;  droppableId: string
-
-  index: number
+  index: number;  droppableId: string;
+    index: number
 }
 interface DropResult {
-
   draggableId: string
   source: DnDLocation
-
   destination?: DnDLocation | null
 }
 // Define the kanban board columns based on application statuses
-
 const COLUMNS = [
   {
-    id: "new"
+    id: "id",
     title: "Applied"
     description: "New applications"}
   {
@@ -64,9 +58,7 @@ const COLUMNS = [
     description: "Not moving forward"}]
 interface KanbanBoardProps {
   jobId?: string
-
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
-
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();
@@ -90,9 +82,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
          destination.index === source.index)) {
       return
     }
-
 ;
-
 // Define the kanban board columns based on application statuses;
 const COLUMNS = [;
   {;
@@ -115,21 +105,17 @@ const COLUMNS = [;
     id: "rejected",;
     title: "Rejected",,
   description: "Not moving forward"}],;
-
 interface KanbanBoardProps {;
   jobId?: string;
 }
-
   // Initialize columns with applications based on their status;
   useEffect(() => {;
     if (applications) {;
       // Group applications by status;  }
-
   },
       // Get the application that was dragged;
     const application = applications && applications.find(app => app && app.id === draggableId);
     if (!application) return;
-
     // Update the application status in the database;            <CardHeader>;
               <Skeleton className="h-8 w-24" />;
             </CardHeader>;
@@ -137,7 +123,6 @@ interface KanbanBoardProps {;
               <Skeleton className="h-[400px] w-full" />;
             </CardContent>;
           </Card>;
-
       </div>;
     );
   }
@@ -151,7 +136,6 @@ interface KanbanBoardProps {;
       </Card>;
     );
   }
-
 import { useState, useEffect } from './react';
 import { DragDropContext, Droppable, Draggable } from './react - beautiful - dnd';
 import { useJobApplications } from '@/hooks / useJobApplications';

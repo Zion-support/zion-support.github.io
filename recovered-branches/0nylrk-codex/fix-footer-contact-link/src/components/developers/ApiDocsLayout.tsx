@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Search } from "lucide-react",
@@ -7,14 +5,12 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
-
   const location = useLocation();
   const currentPath = location.pathname;
   const location = useLocation(),
   const currentPath = location.pathname,
-  
 import React from "react";
-import { Link, useLocation } from "react-router-dom",;
+import { Link, useLocation } from "react-router-dom";
 import { Search } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
 import { cn } from "@/lib/utils",;
@@ -46,6 +42,5 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
     </div>;
   );
 }
-
 export default ApiDocsLayout;;
 export default ApiDocsLayout;

@@ -1,5 +1,3 @@
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 import { Search, X } from 'lucide-react'
 import { Input  } from '@/components/ui/input';
 import { AutocompleteSuggestions  } from '@/components/search/AutocompleteSuggestions';
@@ -7,47 +5,34 @@ import { fireEvent  } from '@/lib/analytics';
 import { SearchSuggestion  } from '@/types/search';
 import { slugify  } from '@/lib/slugify';
 import { useDebounce  } from '@/hooks/useDebounce';
-
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 /**
  * SearchBar component props
  */
 interface SearchBarProps {
   /**
-
   value: string,
-
    * The current value of the search input;
    */;
   value: string;  value: string,
-
   /**
    * Function to call when the search input changes
    * @param {string} val - The new value of the search input
    */
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   /**
    * Function to call when a suggestion is selected
    * @param {SearchSuggestion} suggestion - The selected suggestion
    */
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   /**
    * The placeholder text for the search input
    */
   placeholder?: string
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   value,
   onChange,
   onSelectSuggestion,;
   placeholder = 'Search...';
-
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const router = useRouter()
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
   const [focused, setFocused] = useState(false)
@@ -78,7 +63,6 @@ interface SearchBarProps {
     if (!debounced) {
       setSuggestions([])
       setHighlightedIndex(-1)
-
     }
     const controller = new AbortController()
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal })
@@ -116,7 +100,6 @@ interface SearchBarProps {
     inputRef.current?.blur()
       aria-expanded={focused && suggestions.length > 0}
       aria-haspopup='listbox'
-
 /**;
  * SearchBar component props;
  */;
@@ -124,28 +107,21 @@ interface SearchBarProps {;
   /**;
    * The current value of the search input;
    */;
-
   /**;
    * Function to call when the search input changes;
    * @param {string} val - The new value of the search input;
    */;
-
   onChange: (val: string) => void,;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   /**;
    * Function to call when a suggestion is selected;
    * @param {SearchSuggestion} suggestion - The selected suggestion;
    */;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   /**;
    * The placeholder text for the search input;
    */;
   placeholder?: string;
 }
-
           }}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           onBlur={e => {;
             // Only blur if not clicking on suggestions;
             const relatedTarget = e && e.relatedTarget as HTMLElement;
@@ -155,18 +131,13 @@ interface SearchBarProps {;
             ) {;
               setFocused(false);
               setHighlightedIndex(-1);
-
           aria-autocomplete="list"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
           onKeyDown={(e) => {
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               }
               // If Enter is pressed and there's a value, navigate with query parameter;
               if (e && e.key === 'Enter' && value && value.trim()) {                e && e.preventDefault(); // Prevent form submission if SearchBar is in a form;
-
                 fireEvent('search', { search_term: value });
                 router && router.push(`/search?q=${encodeURIComponent(value)}`);
                 setFocused(false);
@@ -179,7 +150,6 @@ interface SearchBarProps {;
                 router && router.push(`/search?q=${encodeURIComponent(value)}`);
                 setFocused(false);
                 inputRef && inputRef.current?.blur();
-
               }
               return;
             if (!focused || suggestions.length === 0) {
@@ -195,26 +165,20 @@ interface SearchBarProps {;
                 fireEvent('search', { search_term: value });
                 router.push(`/search?q=${encodeURIComponent(value)}`);
                 setFocused(false);
-
                 inputRef.current?.blur()
-
               }
               return
             }
-
             aria-label="Clear search"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           >
             <X className="h-4 w-4" />
           </button>
         )}
-
 ;
 }
 }
 }
 }
-
       </div>;
       <AutocompleteSuggestions;
         suggestions={suggestions}
@@ -223,5 +187,3 @@ interface SearchBarProps {;
         visible={focused}
         highlightedIndex={highlightedIndex}
         listId={listId}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -22,7 +22,7 @@ export const ContactForm: Reac t.FC = () => {';';';';';
     timeline: ''});';';';';';
   const [isSubmitting, setIsSubmitting] = useState<any>(false);',';';';';
     ';';';';';
-import React, { useState } from 'react',;',';';
+import React, { useState } from 'react';',';';
     ;
 import { motion } from 'framer-motion';
 import {;

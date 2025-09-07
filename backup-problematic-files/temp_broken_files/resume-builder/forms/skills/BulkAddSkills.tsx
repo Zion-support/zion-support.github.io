@@ -1,6 +1,5 @@
-
 import { useState } from 'react';
-import { Button } from '@/components/ui/button',;
+import { Button } from '@/components/ui/button';
 import { Loader2, Sparkles } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
 import { useResume } from '@/hooks/useResume',;

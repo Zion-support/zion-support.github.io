@@ -1,5 +1,3 @@
-
-
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import { AppLayout } from "@/layout/AppLayout",
@@ -10,12 +8,11 @@ import { Globe } from "lucide-react";
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
-
-    id: "service-1"
+    id: "id",
     title: "AI Development & Integration"
     description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems."
     category: "Development"
-    price: 5000
+    price: 5000;
     currency: "$"
     tags: ["AI Integration", "Machine Learning", "Enterprise"];
 import { Link } from "react-router-dom",
@@ -45,7 +42,6 @@ import { Globe } from "lucide-react",    author: {
     rating: 4.9
     reviewCount: 103}
   {
-
     id: "service-5",
     title: "IT Infrastructure Modernization",
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
@@ -53,7 +49,6 @@ import { Globe } from "lucide-react",    author: {
     price: 8500,
     currency: "$",
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
-
     author: {
       name: "ModernizeIT Consulting"
       id: "modernize-it"}
@@ -96,7 +91,6 @@ import { Globe } from "lucide-react",    author: {
           </div>;
         </div>;
       </div>;
-
       />;
       <TrustedBySection />;
     </AppLayout>;

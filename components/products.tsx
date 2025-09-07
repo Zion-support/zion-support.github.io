@@ -1,5 +1,3 @@
-
-
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>
@@ -17,8 +15,6 @@ export default function Placeholder() {
         </Link>
       </div>
   );export default function Placeholder() {
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <main className='min-h-screen p-8'>;
       <Head>;
@@ -49,7 +45,6 @@ export default function Placeholder() {
       </div>;
     </main>;
   );
-
 import Head from 'next / head';
 import Link from 'next / link';
 export default /**
@@ -88,5 +83,3 @@ function Placeholder() {
       </div>;
     </main>);
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

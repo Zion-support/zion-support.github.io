@@ -253,8 +253,8 @@ export default ErrorMonitor} catch (error) {
   'error') || line && line.includes(
   'warning')) {
         errors && errors.push({'
-          "type": 'eslint
-          message: line && line.trim()
+          "type": 'eslint;
+    message: line && line.trim()
           raw: line})}
     }
   }

@@ -1,5 +1,4 @@
 }
-
 import React from 'react';
 interface FilterSidebarProps {
   class_name?: string;
@@ -10,15 +9,14 @@ export const FilterSidebar: React.FC < FilterSidebarProps> = ({
   children;
 }, ) => {  return (
     <div className={`filter - sidebar ${class_name || ''}`}>;
-
       {children}
     </div>
   )
 }
 export default FilterSidebar
 interface FilterOption {
-  value: string
-  label: string
+  value: string;
+    label: string
   count?: number
 }
 interface FilterGroup {
@@ -27,7 +25,6 @@ interface FilterGroup {
   options: FilterOption[]
   type: 'checkbox' | 'radio' | 'range'}
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
-
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({ ;
   className,;
   children ;
@@ -37,16 +34,13 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ ;
     </div>;
   )
 };
-
 export default FilterSidebar;
-
         <div
           className="fixed inset-0 bg-black/50 z-40 lg: hidden"
           onClick={onClose}
         />
       )}
       {/* Sidebar */}
-
       <divclassName={`
         fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none'
         ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`
@@ -63,13 +57,11 @@ export default FilterSidebar;
                         )};
                       </span>;
                     </label>;
-
                   )})}
               </div>
             </div>
           ))}
         </div>
-
   filters: FilterGroup[];
   selected_filters: Record < string, any>;
   onFilterChange: key: string, value: string, checked: boolean void;
@@ -107,11 +99,9 @@ function FilterSidebar() {
               </div>;
             </div>))}
         </div>;
-
       </div>;
     </>)}
 '"`;
-
 import React from 'react';
 interface FilterSidebarProps {;
   className?: string,;

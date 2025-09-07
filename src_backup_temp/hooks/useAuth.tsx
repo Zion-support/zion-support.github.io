@@ -171,8 +171,8 @@ export function useAuth(props: any) {
           setAuthState({
             user,
             isAuthenticated: tru e,
-:src/hooks/useAuth.tsx
-            isLoading: fals e})} catch(error) {
+:src/hooks/useAuth.tsx;
+    isLoading: fals e})} catch(error) {
           // console.error('Error parsing stored user:', error);
             isLoading: fals e,
           })} catch(error) {

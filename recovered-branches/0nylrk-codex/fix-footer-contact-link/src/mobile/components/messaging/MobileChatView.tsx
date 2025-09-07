@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -12,7 +10,7 @@ import {toast} from "sonner";  id: string,;
   timestamp: string,;
   isMe: boolean,;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input",;
 import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -39,14 +37,12 @@ interface MobileChatViewProps {;
   onBack: () => void,;
   onSendMessage: (content: string) => void;
 }
-
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-
 interface MobileChatViewProps {;
   contact: {;
     id: string,;
@@ -58,17 +54,14 @@ interface MobileChatViewProps {;
   onBack: () => void,;
   onSendMessage: (content: string) => void;
 }
-
 export function MobileChatView(): any ({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
   const [newMessage, setNewMessage] = useState("");
-
   const navigate = useNavigate();
       onSendMessage(newMessage);      setNewMessage("");
     }  const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
     toast.success("Starting video call", {
       description: `Connecting with ${contact.name}...`
-
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`,
     toast.success("Starting video call", {
@@ -78,17 +71,13 @@ export function MobileChatView(): any ({ contact, messages, onBack, onSendMessag
     navigate(`/call/${roomId}`)
   }
     }),
-    
     // Navigate to video call page
     navigate(`/call/${roomId}`)
   },
-  
-
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`;
     toast.success("Starting audio call", {
       description: `Connecting with ${contact.name}...`
-
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`,
     toast.success("Starting audio call", {
@@ -97,7 +86,6 @@ export function MobileChatView(): any ({ contact, messages, onBack, onSendMessag
             >
               <p>{message.content}</p>
               <div className={cn(                "text-xs mt-1 flex justify-end";
-
   },;
   const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
@@ -134,9 +122,7 @@ export function MobileChatView(): any ({ contact, messages, onBack, onSendMessag
     // Navigate to video call page with audio-only flag;
     navigate(`/call/${roomId}?audioOnly=true`)
 };
-
   return (  return (
-
 import React, { useState } from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
@@ -244,14 +230,12 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
             </div>;
           </div>;
         ))}
-
       </div>;
       <div className="sticky bottom-0 bg-background border-t border-border p-2">;
         <div className="flex items-center gap-2">;
           <Button variant="ghost" size="icon">;
             <PaperclipIcon className="h-5 w-5" />;
           </Button>;
-
             <Send className="h-5 w-5" />;
           </Button>;
         </div>;
@@ -290,7 +274,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
 }
 }
 ;
-
   ),;}
  interface Message {
   id: string;

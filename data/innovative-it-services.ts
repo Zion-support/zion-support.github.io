@@ -29,7 +29,6 @@ export interface InnovativeITService {
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
   {
@@ -45,9 +44,8 @@ export interface InnovativeITService {
       '5G optimization',
     ],
     popular: true,
-    icon: '🌐',    realImplementation: true
-    implementationDetails:
-      'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
+    icon: '🌐',    realImplementation: true;
+    implementationDetails: "implementationDetails",
     launchDate: '2024-01-01'
     customers: 800
     rating: 4.9
@@ -266,7 +264,6 @@ export interface InnovativeITService {
     launchDate: '2024-01-20';
     customers: 2500;
     rating: 4.7
-
     reviews: 1250
   }
 ];  id: string,;
@@ -352,7 +349,6 @@ export const innovativeITServices: InnovativeITService[] = [;
     customers: 2500;
     rating: 4.7,
     reviews: 1250;
-
   }
 ;  }
 ];

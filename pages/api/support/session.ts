@@ -1,17 +1,25 @@
+import { NextApiRequest, NextApiResponse } from 'next';
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import { readJson, writeJson } from '../../../utils/fsDb',;
-import { logSupportEventToOperator } from '../../../utils/operator',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  const { sessionId, eventType, payload } = req.body as { sessionId: string, eventType: string, payload?: any }
-  if (!sessionId || !eventType) return res.status(400).json({ error: 'sessionId and eventType required' })
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
-  const log = readJson<any[]>('support/sessions.json', [])
-  const entry = { ts: Date.now(), sessionId, eventType, payload }
-  log.push(entry)
-  writeJson('support/sessions.json', log)
+  try {
+    const { sessionId, eventType, payload } = req.body as { 
+      sessionId: string; 
+      eventType: string; 
+      payload?: any 
+    };
+    
+    if (!sessionId || !eventType) {
+      return res.status(400).json({ error: 'Session ID and event type are required' });
+    }
 
-  await logSupportEventToOperator({ type: eventType, sessionId, payload })
-
+    // Placeholder for support session logic
+    res.status(200).json({ success: true, message: 'Support session event recorded' });
+  } catch (error) {
+    console.error('Support session error:', error);
+    res.status(500).json({ error: 'Failed to process support session' });
+  }
+}

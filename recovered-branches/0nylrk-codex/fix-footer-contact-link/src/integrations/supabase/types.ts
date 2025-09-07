@@ -1,4 +1,3 @@
-
 export type Json =;
   | string;
   | number;
@@ -27,21 +26,19 @@ export type Json =;
           status_code: number;
           user_agent?: string | null;
           user_id?: string | null;
-        }            foreignKeyName: "api_logs_api_key_id_fkey"
-            columns: ["api_key_id"]
-            isOneToOne: false
-            referencedRelation: "api_keys"            columns: ["resume_id"]
+        }            foreignKeyName: "foreignKeyName",
+    columns: ["api_key_id"]
+            isOneToOne: false;
+    referencedRelation: "api_keys"            columns: ["resume_id"]
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-
             foreignKeyName: "job_applications_job_id_fkey";
             columns: ["job_id"];
             isOneToOne: false;
             referenced_relation: "jobs";
             referenced_columns: ["id"];
           }          },
-
           {
             foreignKeyName: "job_applications_resume_id_fkey";
             columns: ["resume_id"];
@@ -144,11 +141,8 @@ export type Json =;
             isOneToOne: false;
             referenced_relation: "project_milestones";
             referenced_columns: ["id"];
-
           }          }
-
           },
-
           },
           {
             foreignKeyName: "project_milestones_project_id_fkey";
@@ -162,11 +156,8 @@ export type Json =;
             isOneToOne: false;
             referenced_relation: "projects";
             referenced_columns: ["id"];
-
           }          }
-
           },
-
             columns: ["job_id"]
             isOneToOne: false
             referencedRelation: "jobs"
@@ -312,7 +303,6 @@ export type Json =;
             isOneToOne: false
             referencedRelation: "referral_codes"
             referencedColumns: ["code"]
-
           },
           }
           {
@@ -385,11 +375,8 @@ export type Json =;
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
-
           }          }
-
           },
-
             columns: ["reviewee_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
@@ -402,7 +389,6 @@ export type Json =;
           days_since_login: number;
           onboarding_status: Json;
         }[];
-
       complete_referral: {
         Args: { _referred_id: string, _user_type: string }
         Returns: undefined;
@@ -467,7 +453,6 @@ export type Json =;
 export type Tables<;
   DefaultSchemaTableNameOrOptions extends;
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
-
           date: string
           event_type: string
           count: number
@@ -519,7 +504,6 @@ export type Tables<;
     }
   }
 }
-
 type DefaultSchema = Database[Extract<keyof Database, "public">]
 export type Tables<
   DefaultSchemaTableNameOrOptions extends
@@ -543,9 +527,7 @@ export type TablesInsert<
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
     : never = never;
 > = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
-
     | keyof DefaultSchema["CompositeTypes"]
-
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database  }
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
@@ -559,9 +541,7 @@ export type TablesInsert<
 export const Constants = {
   public: {
     Enums: {
-
       api_key_scope: [
-
 ;        "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
 ;

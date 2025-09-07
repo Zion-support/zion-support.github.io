@@ -4,12 +4,9 @@ import { Users, Rocket, Brain, Atom, Shield, Cloud;
   ArrowRight, MapPin, Clock, DollarSign, Star, Zap
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-
       title: "Senior AI Engineer",
       department: "AI & Machine Learning",;
-
       location: "San Francisco, CA / Remote";
-
 export default function CareersPage() {;
   const openPositions = [;
     {;
@@ -21,7 +18,6 @@ export default function CareersPage() {;
       salary: "$150,000 - $200,000",
   description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients",;
       requirements: [;
-
         "Advanced degree in Computer Science, AI, or related field";
         "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
         "Experience with large-scale AI model deployment";
@@ -30,8 +26,8 @@ export default function CareersPage() {;
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
     }
     {
-      title: "Quantum Computing Researcher"
-      department: "Quantum Computing"
+      title: "title",
+    department: "Quantum Computing"
       location: "San Francisco, CA / Remote";
       type: "Full - time",
       experience: "3+ years",
@@ -120,11 +116,9 @@ export default function CareersPage() {;
                 <p className="text-white/70">{benefit && benefit.description}</p>;
               </motion && motion.div>;
             ))}
-
           </div>;
         </div>;
       </section>;
-
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -149,9 +143,7 @@ export default function CareersPage() {;
                         <p className="text-white/70">{position && position.department}</p>;
                       </div>;
                     </div>;
-
                     <p className="text-white/80 mb-4">{position && position.description}</p>;
-
                     <div className="flex flex-wrap gap-4 mb-4">;
                       <div className="flex items-center gap-2 text-white/70">;
                         <MapPin className="w-4 h-4" />;
@@ -170,27 +162,22 @@ export default function CareersPage() {;
                         <span>{position && position.salary}</span>;
                       </div>;
                     </div>;
-
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Requirements</h4>;
                       <ul className="space-y-1">;
                         {position && position.requirements.map((req, idx) => (;
                           <li key={idx} className="text-sm text-white/80 flex items-center">;
                             <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2" />;
-
                             {req}
                           </li>
                         ))}
-
                       </ul>;
                     </div>;
-
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>;
                       <div className="flex flex-wrap gap-2">;
                         {position && position.benefits.map((benefit) => (;
                           <span key={benefit} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">;
-
                             {benefit}
                           </span>
                         ))}
@@ -208,7 +195,6 @@ export default function CareersPage() {;
           </div>
         </div>
       </section>
-
                       </div>;
                     </div>;
                   </div>;

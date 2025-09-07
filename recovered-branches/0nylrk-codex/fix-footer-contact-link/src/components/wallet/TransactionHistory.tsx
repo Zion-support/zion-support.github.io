@@ -15,9 +15,7 @@ import { ScrollArea } from "@/components/ui/scroll-area",import { Badge } from "
 import { formatDistanceToNow } from "date-fns";
 export function TransactionHistory() {
   const { transactions, loading } = useWallet();
-
   if (loading) {;
-
   if (loading) {
     return (
       <Card>;
@@ -28,9 +26,8 @@ export function TransactionHistory() {
       </Card>;
     );
   }
-
 import React from "react";
-import { useWallet } from "@/hooks/useWallet",;
+import { useWallet } from "@/hooks/useWallet";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { ScrollArea } from "@/components/ui/scroll-area",;
@@ -54,7 +51,6 @@ export function TransactionHistory() {;
       </Card>
     );
   }
-
     <Card>;
       <CardHeader>;
         <CardTitle>Transaction History</CardTitle>;

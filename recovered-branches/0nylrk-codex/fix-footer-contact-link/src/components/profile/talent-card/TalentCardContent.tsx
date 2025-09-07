@@ -7,7 +7,6 @@ interface TalentCardContentProps {
   timezone: string | undefined;
   skills: string[] | undefined;
 }
-
 export function TalentCardContent({
   summary,
   bio,
@@ -15,27 +14,23 @@ export function TalentCardContent({
   skills,
 }: TalentCardContentProps) {
   const [isHovering, setIsHovering] = useState(false);
-
-skills: string[] | undefined
-  skills: string[] | undefined
+skills: string[] | undefined;
+    skills: string[] | undefined
 }
   const [isHovering, setIsHovering] = useState(false);
   return (
     <div>
 import React, { useState } from "react";
-import { MapPin } from "lucide-react",;
+import { MapPin } from "lucide-react";
 import { TalentCardSkills } from "./TalentCardSkills",;
-
 interface TalentCardContentProps {;
   summary: string | undefined,;
   bio: string,;
   timezone: string | undefined,;
   skills: string[] | undefined;
 }
-
 export function TalentCardContent(): any ({ summary, bio, timezone, skills }: TalentCardContentProps) {;
   const [isHovering, setIsHovering] = useState(false);
-
   const [isHovering, setIsHovering] = useState(false);
   return (;
 interface TalentCardContentProps {;
@@ -49,7 +44,6 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
   const [isHovering, setIsHovering] = useState(false),;
 ;
   return (;
-
 }      {/* Location */}
       {timezone && (;
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;

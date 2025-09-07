@@ -1,8 +1,6 @@
 // Mock data for demonstration
-
 const jobsData = [
   {
-
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -20,10 +18,9 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 // Mock data for demonstration
-
 const jobsData = [
   {
-    id: "1"
+    id: "id",
     title: "Senior React Developer"
     subtitle: "TechCorp Inc."
     description: "Looking for a skilled React developer to join our team for a long-term project. Experience with TypeScript and GraphQL required."
@@ -102,7 +99,6 @@ export function MobileBrowse() {
   const { user } = useAuth(),
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs"),
-  
   return (
     <div className="min-h-screen">
       <MobileHeader
@@ -195,7 +191,6 @@ const talentsData = [;
     match: 82;
   }
 ];
-
 export function MobileBrowse() {;
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
@@ -321,15 +316,12 @@ function MobileBrowse() {
         <BrowseCards          items={browseType === "jobs" ? jobsData : talentsData}
           type={browseType}
           onViewDetails={handleViewDetails}
-
         />;
       </div>;
-
       <BottomNavigation />;
     </div>;
   );
 }
-
         <BrowseCards
           items={browseType === "jobs" ? jobsData : talentsData}
           type={browseType}

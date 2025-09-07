@@ -1,6 +1,4 @@
 import React from 'react';
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   quote: string;
   author: string;
 }) {;
@@ -9,13 +7,10 @@ import React from 'react';
       <blockquote className='italic opacity-90'>“{quote}”</blockquote>;
       <figcaption className='mt-2 font-medium opacity-80'>;
         — {author}
-
 export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
   const colorMap = {
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export /**
  * TrustBadge - Function description
@@ -37,8 +32,6 @@ export /**
  * MicroTestimonial - Function description
  */
 function MicroTestimonial() {
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <figure className='border rounded - md p - 3 text - sm'>;
       <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;
@@ -48,44 +41,32 @@ function MicroTestimonial() {
     </figure>);  const color_map = {
     Verified: 'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200',
     Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated': 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200'} as const,
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;
       <span className="leading-none">{type}</span>;
     </span>);
 }
-
       </figcaption>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </figure>;
   );  const colorMap = {;
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,;
   return (
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export /**
  * MicroTestimonial - Function description
  */
 function MicroTestimonial() {
   return (
     <figure className="border rounded - md p - 3 text - sm">;
-
   );
 }
-
     </figure>
   );
 }
-
   type: 'Verified' | 'Pro' | 'Top Rated';
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }) {
   const colorMap = {
-    Verified:
-      'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200'
+    Verified: "Verified",
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200'
     'Top Rated':
       'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'
@@ -101,7 +82,6 @@ export function MicroTestimonial({
   quote,
   author,
 }: {;
-
   quote: string;
   author: string;
 }) {;
@@ -135,9 +115,6 @@ export /**
 function MicroTestimonial() {
   return (
     <figure className="border rounded - md p - 3 text - sm">;
-
     </figure>
   );
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

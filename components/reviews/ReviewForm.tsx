@@ -1,29 +1,22 @@
-
-  categories?: {
+categories?: {
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -31,7 +24,6 @@ class ErrorBoundary extends React.Component {
   submitting ? 'Submitting...' : 'Submit Review' ;
 }</button> </form>) 
 };
-
 type Props = {;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
 };import React, { useState } from 'react';
@@ -50,10 +42,8 @@ export type ReviewFormValues = {;
 };
   anonymous?: boolean
 };
-
 type Props = {;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
-
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
@@ -64,7 +54,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
   const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
-
           categories: {
             communication
             qualityOfWork
@@ -73,8 +62,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
           }
         })
       });
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {;
       setMessage(err && err.message);
@@ -82,8 +69,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
       setSubmitting(false);    }
   }
   return (
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -101,13 +86,10 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
       </div>;
       <div>;
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
-
             communication;
             qualityOfWork;
             timeliness;
             wouldWorkWithAgain}})});
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
@@ -115,19 +97,14 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
-
         <input
           id='anonymous'
           type='checkbox'
           checked={anonymous}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       set_submitting (false);
     }
   }
@@ -175,26 +152,19 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
-
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
-
             />;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
           <span className='pill'>Optional</span>        </div>;
       </div>;
-
       </button>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {message && <p className='text - sm'>{message}</p>}
     </form>);
 }
@@ -204,4 +174,3 @@ export default ReviewForm;    </form>);
 ;
 export default ReviewForm;
 ;
-

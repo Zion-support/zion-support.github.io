@@ -35,21 +35,18 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         </Router>
       </WhitelabelProvider>
     </HelmetProvider>
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App ;
 import './index ;
 import {HelmetProvider} from 'react-helmet-async';
 import {BrowserRouter, as, Router} from 'react-router-dom';
-
 import React from 'react';
-import ReactDOM from 'react-dom/client',;
-import App from './App.tsx',;
+import ReactDOM from 'react-dom/client';
+import App from "App";
 import './index.css',;
 import { HelmetProvider } from 'react-helmet-async',;
 import { BrowserRouter as Router } from 'react-router-dom',;
-
 // Import i18n configuration;
 import './i18n';
 import {LanguageProvider} from '@/context/LanguageContext';
@@ -77,7 +74,6 @@ ReactDOM && ReactDOM.createRoot(document && document.getElementById('root')!).re
         </Router>;
       </WhitelabelProvider>;
     </HelmetProvider>;
-
 import React from 'react';
 import ReactDOM from 'react-dom / client';
 import App from './App.tsx';

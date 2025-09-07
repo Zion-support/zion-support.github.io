@@ -1,25 +1,21 @@
-  useState,
+useState,
   useRef,
   useEffect,
   FormEvent,
   KeyboardEvent,;
-
 import React, {;
   useState,;
   useRef,;
   useEffect,;
   FormEvent,;
   KeyboardEvent,;
-
 import React, {
   useState,
   useRef,
   useEffect,
   FormEvent,
   KeyboardEvent,;
-
 } from "react";
-
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 interface ChatInputProps {;
@@ -33,7 +29,7 @@ interface ChatInputProps {
   onSend: (message: string) => void,
   disabled?: boolean
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react",;
 interface ChatInputProps {;
   onSend: (message: string) => void,;
@@ -63,7 +59,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
       }
     }
   },
-
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;  return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
@@ -73,7 +68,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
         placeholder="Type your message..."
         value={message}});
   )
-
 }
   )
 }

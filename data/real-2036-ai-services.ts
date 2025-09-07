@@ -1,7 +1,6 @@
-
 export const real2036AIServices = [
   {
-    id: 'ai-emotion-intelligence-platform'
+    id: "id",
     name: 'AI Emotion Intelligence Platform'
     tagline: 'Advanced emotional AI understanding'
     description:
@@ -15,7 +14,7 @@ export const real2036AIServices = [
       'Multi-modal emotion detection'
       'Emotional pattern analysis'
     ]
-    popular: true
+    popular: true;
     category: 'Emotional AI'
     icon: '😊🤖'
     marketPrice: '$5,000-8,000/month'
@@ -1005,7 +1004,6 @@ export const real2036AIServices = [;
       'Traffic optimization',
       'Safety systems',
     ],
-
   },;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]

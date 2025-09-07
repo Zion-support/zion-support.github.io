@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
-
 import Button from '../components/ui/Button';
-
 import {
-
   Code,
   CheckCircle,
   AlertTriangle,
@@ -18,20 +15,18 @@ import {
   TrendingUp,;
 export default function CodeQualityCheckerPage() {;
 } from 'lucide-react';
-
 export default function CodeQualityCheckerPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [codeInput, setCodeInput] = useState('');
-
     { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyleSonarQube integration'] },
     { name: 'C++', icon: '⚙️', features: ['Clang - tidy_static analysis_memory leak detection'] },
     { name: 'Go', icon: '🟢', features: ['Golangci - lint_go vet_performance analysis'] },
     { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
   const pricing = [
     {
-      name: 'Developer'
-      price: '$29'
+      name: "name",
+    price: '$29'
       period: '/month'
       description: 'Perfect for individual developers and small projects'
       features: [
@@ -72,8 +67,8 @@ export default function CodeQualityCheckerPage() {;
     setTimeout(() => {
       setAnalysisResults({
         language: 'JavaScript'
-        qualityScore: 85
-        issues: [
+        qualityScore: 85;
+    issues: [
         recommendations: [
           'Use const for immutable variables to improve code clarity'
           'Break down large functions into smaller, more focused functions'
@@ -85,7 +80,6 @@ export default function CodeQualityCheckerPage() {;
     }, 3000)
 };      setIsAnalyzing(false)
     }, 3000)
-
     setIsAnalyzing(true);
     // Simulate code analysis;
     setTimeout(() => {;
@@ -235,9 +229,7 @@ export default function CodeQualityCheckerPage() {;
                 </div>
               </Card>
             ))}
-
       {/* Supported Languages Section */}
-
               Multi-Language Support
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -250,7 +242,6 @@ export default function CodeQualityCheckerPage() {;
           </div>;
         </div>;
       </section>;
-
       {/* Supported Languages Section */}
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -263,7 +254,6 @@ export default function CodeQualityCheckerPage() {;
               language-specific analysis rules and best practices.;
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {supportedLanguages && supportedLanguages.map((language, index) => (;
                       {feature.icon}
@@ -326,14 +316,11 @@ export default function CodeQualityCheckerPage() {;
           </div>
         </div>
       </section>
-
       {/* Demo Analysis Results */}
       {analysisResults && (
-
           </div>;
         </div>;
       </section>;
-
       {/* Demo Analysis Results */}
       {analysisResults && (;
         <section className='section-padding bg-gradient-cursor-accent'>;
@@ -418,7 +405,6 @@ export default function CodeQualityCheckerPage() {;
                 Code Quality Analysis Results;
               </h2>;
               <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
-
                 Here's a sample code quality analysis. Get comprehensive;
                 insights for your own code.;
               </p>;
@@ -480,7 +466,6 @@ export default function CodeQualityCheckerPage() {;
                       ) : (;
                         <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
                       )}
-
               {/* Quality Metrics */}
               <Card className='border-gradient-teal'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -492,7 +477,6 @@ export default function CodeQualityCheckerPage() {;
                     <span className='text-orange-400 font-bold'>
                       {analysisResults.metrics.complexity}
                     </span>
-
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Maintainability</span>
@@ -542,9 +526,7 @@ export default function CodeQualityCheckerPage() {;
                   <div key={index} className='flex items-start space-x-3'>
                     <CheckCircle className='w-5 h-5 text-teal-400 mt-1 flex-shrink-0' />
                     <span className='text-gray-300'>{rec}</span>                  </div>
-
                   </div>
-
             <Card className='border-gradient-teal'>;
               <h3 className='text-2xl font-bold mb-6 text-white'>;
                 Improvement Recommendations;
@@ -566,7 +548,6 @@ export default function CodeQualityCheckerPage() {;
           </div>;
         </section>;
       )}
-
               Simple Pricing
       {/* Pricing Section */}
             </h2>
@@ -759,7 +740,6 @@ export default function CodeQualityCheckerPage() {;
                   href='/contact'
                   size='lg'
                       {feature}
-
                     </li>
                   ))}
                 </ul>
@@ -768,13 +748,11 @@ export default function CodeQualityCheckerPage() {;
           </div>
         </div>
       </section>
-
               </Card>
             ))}
           </div>
         </div>
       </section>
-
               </Card>
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
                   Get Started;

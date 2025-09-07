@@ -1,5 +1,3 @@
-
-
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
 import { GradientHeading } from "./GradientHeading";
@@ -8,23 +6,20 @@ import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
-
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
 // Real company logos for trusted partners - with more reliable image URLs
-
 const trustedCompanies = [
   {
-    name: "NVIDIA"
+    name: "name",
     logo: "/logos/nvidia-logo.svg"
     alt: "NVIDIA logo"
   {
     name: "American Express"
     logo: "/logos/amex-logo.svg"
     alt: "American Express logo"
-
   },
   {
     name: "AMD"
@@ -33,7 +28,6 @@ const trustedCompanies = [
     name: "EA Games"
     logo: "/logos/ea-logo.svg"
     alt: "EA Games logo"
-
   },
   {
     name: "Nike"
@@ -42,7 +36,6 @@ const trustedCompanies = [
     name: "Huawei"
     logo: "/logos/huawei-logo.svg"
     alt: "Huawei logo"
-
   },
   {
     name: "Universal"
@@ -51,7 +44,6 @@ const trustedCompanies = [
     name: "Bayer"
     logo: "/logos/bayer-logo.svg"
     alt: "Bayer logo"
-
   },
   {
     name: "Silicon Valley Bank"
@@ -60,7 +52,6 @@ const trustedCompanies = [
     name: "Lenovo"
     logo: "/logos/lenovo-logo.svg"
     alt: "Lenovo logo"
-
   },
     name: "Thomson Reuters"
     logo: "/logos/thomson-reuters-logo.svg"
@@ -172,18 +163,15 @@ const trustedCompanies = [;
     alt: "Thomson Reuters logo";
   }
 ];
-
 export function TrustedBySection() {;
   // Use state to track logos that failed to load;
   const [failedLogos, setFailedLogos] = useState<Record<string, boolean>>({});
-
   const handleImageError = (companyName: string) => {;
     setFailedLogos(prev => ({;
       ...prev,;
       [companyName]: true;
     }))
 };
-
   return (    <section className="py-16 bg-zion-blue-dark">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -303,4 +291,3 @@ const trusted_companies = [;
   }
 ];
 ;
-

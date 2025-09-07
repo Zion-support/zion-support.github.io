@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string,
   description: string;
   category: string;
@@ -12,9 +12,8 @@
   implementationTime: string;
   roi: string;
   link: string;
-
   {
-    id: 'quantum-machine-learning'
+    id: "id",
     name: 'Quantum Machine Learning Platform'
     description:
       'Revolutionary platform that combines quantum computing with machine learning for unprecedented AI capabilities and computational power.'

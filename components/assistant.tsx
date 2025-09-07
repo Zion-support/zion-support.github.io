@@ -1,7 +1,6 @@
 interface Message {;
   role: 'user' | 'assistant';
   content: string;
-
 export default function Assistant() {;
   const params =;
     typeof window !== 'undefined';
@@ -20,12 +19,11 @@ export default function Assistant() {;
   const brand = params.get('brand') |'Zion AI';
   const [messages, setMessages] = useState<Message[]>([
     {
-      role: 'assistant'
-      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`
+      role: "role",
+    content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`
     }
   ]);
   const [input, setInput] = useState('');
-
   const faqs: Record<string, string> = useMemo(;
     () => ({;
       'is this role remote':;
@@ -39,7 +37,6 @@ export default function Assistant() {;
   );
     { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
   const [input, setInput] = useState('');
-
   const faqs: Record<string, string> = useMemo(() => ({;
     'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics && specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability && availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
   async function handleAsk(): any (question: string) {;
@@ -52,7 +49,6 @@ export default function Assistant() {;
         { role: 'assistant', content: faqs[faq] },;
       ]);
       return;
-
     }
     ]);
   }
@@ -82,7 +78,6 @@ export default function Assistant() {;
           className="flex-1 border rounded px-3 py-2 text-sm"
           placeholder="Ask about the role..."
           value={input}
-
           onChange={(e) => setInput(e && e.target.value)}
         />;
         <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>;
@@ -98,11 +93,8 @@ export default function Assistant() {;
 }
   );
   );
-
   );
-
 }
-
 import {useEffect, useMemo, useState} from 'react';
 ;
 interface Message {
@@ -254,5 +246,4 @@ if ( {) {
       </form>
     </div>
   )
-
 }

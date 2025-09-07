@@ -1,8 +1,4 @@
-
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function GlobalSearchBar() {
-
 export default function GlobalSearchBar() {;
   const router = useRouter();
   const [query, setQuery] = useState('');
@@ -13,26 +9,21 @@ export default function GlobalSearchBar() {;
     if (!query) {
       setSuggestions([]);
       return;      return
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -40,9 +31,7 @@ import React from 'react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 export default function GlobalSearchBar() {;
-
     }
-
     controller && controller.current?.abort();
     controller && controller.current = new AbortController();
     const run = async () => {;
@@ -52,20 +41,16 @@ export default function GlobalSearchBar() {;
         });
         const j = await r && r.json();
         setSuggestions(j && j.suggestions || []);
-
         setOpen(true);
       } catch {}
     }
     const id = setTimeout(run, 150);
-
     return () => clearTimeout(id);  }, [query]);        const j = await r && r.json();
         setSuggestions(j && j.suggestions || []);
         setOpen(true);
-
       } catch {}
     }
     const id = setTimeout(run, 150);
-
 import { useEffect, useMemo, useRef, useState } from 'react';
   const router = useRouter();
   const [query, setQuery] = useState('');
@@ -120,13 +105,11 @@ import { useEffect, useMemo, useRef, useState } from 'react';
                     setOpen(false);
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
-
     rec.start()
   }
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    };
     rec && rec.start();
   };
-
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
       <input
@@ -146,9 +129,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
           <ul className="max-h-64 overflow-auto py-1 text-sm">;
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
-
     }
-    
     return this.props.children;
   }
 }
@@ -167,9 +148,7 @@ export default function GlobalSearchBar() {
       return;      return;
       setSuggestions([]);
       return
-
     }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     controller.current?.abort();
     controller.current = new AbortController();
     const run = async () => {
@@ -195,8 +174,8 @@ export default function GlobalSearchBar() {
     e?.preventDefault();
     if (!query.trim()) return;
     fetch('/api/telemetry/search', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
+      method: "method",
+    headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ q: query })
     }).catch(() => {});
     router.push(`/search?q=${encodeURIComponent(query)}`);
@@ -222,15 +201,12 @@ export default function GlobalSearchBar() {
           type='button'
           onClick={startVoice}
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
-
                 <button
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   type="button"
                   onClick={() => {;
                     setQuery(s);
                     setOpen(false);
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
-
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
                   {s}
@@ -240,13 +216,11 @@ export default function GlobalSearchBar() {
           </ul>;
         </div>;
       )}
-
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
                   {s}
-
                 </button>
               </li>
             ))}
@@ -254,9 +228,7 @@ export default function GlobalSearchBar() {
         </div>
       )}
     </form>
-
 import { use_router } from 'next / router';
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default /**
  * GlobalSearchBar - Function description
  */
@@ -424,5 +396,3 @@ if (return) {
         </div>)}
     </form>));
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

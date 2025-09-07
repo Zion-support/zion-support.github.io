@@ -1,5 +1,4 @@
 } from 'lucide-react';
-
 import {
   Mail
   Lock
@@ -11,13 +10,12 @@ import {
   Code
   Play;
 } from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
-
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
     {
-      id: 'email-validator'
-      title: 'Email Validator Pro'
+      id: "id",
+    title: 'Email Validator Pro'
       description:
         'Advanced email validation with domain checking and deliverability scoring'
       icon: <Mail className='w-6 h-6' />
@@ -79,10 +77,8 @@ export default function DemosPage() {
     }
   ];
   const activeDemoData = demos.find(demo => demo.id === activeDemo);
-
 export default function DemosPage() {;
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
-
     <>;
       <Head>;
         <title>;
@@ -167,7 +163,6 @@ export default function DemosPage() {;
           </div>
         </div>
       </section>
-
       {/* Active Demo */}
       <section className='py-16 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -189,7 +184,6 @@ export default function DemosPage() {;
               {activeDemoData?.title}
             </h2>;
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
-
             </p>;
           </div>;
           <div className='animate-fade-in'>{activeDemoData?.component}</div>        </div>;
@@ -197,7 +191,6 @@ export default function DemosPage() {;
       {/* Features */}              Live Demo;
             </div>;
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">;
-
               {activeDemoData?.title}
             </h2>;
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">;
@@ -258,7 +251,6 @@ export default function DemosPage() {;
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <BarChart3 className='w-8 h-8 text-orange-400' />              <p className="text-gray-400 leading-relaxed">
-
                 See exact request/response formats for easy integration
               </p>
             </Card>
@@ -286,7 +278,6 @@ export default function DemosPage() {;
               Experience the quality and reliability of our services before integrating them into your applications
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -299,7 +290,6 @@ export default function DemosPage() {;
                 Test actual API endpoints with real data processing and response times
               </p>
             </Card>
-
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <CheckCircle className="w-8 h-8 text-green-400" />
@@ -311,7 +301,6 @@ export default function DemosPage() {;
                 Experience complete service capabilities, not just mock responses
               </p>
             </Card>
-
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Code className="w-8 h-8 text-purple-400" />
@@ -323,7 +312,6 @@ export default function DemosPage() {;
                 See exact request/response formats for easy integration
               </p>
             </Card>
-
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <BarChart3 className="w-8 h-8 text-orange-400" />
@@ -405,6 +393,5 @@ export default function DemosPage() {;
         </div>;
       </section>;
 }
-
   );
 }

@@ -28,7 +28,6 @@ class ErrorBoundary extends React.Component {
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
       {/* Gradient Background */}
       {/* Animated Orbs */}
@@ -79,8 +78,8 @@ function AnimatedBackground() {
           scale: [1, 1.2, 1];
         }}
         transition={{
-          duration: 20
-          repeat: Infinity
+          duration: 20;
+    repeat: Infinity
           ease: "easeInOut"
         }}
         className="absolute top-3/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"

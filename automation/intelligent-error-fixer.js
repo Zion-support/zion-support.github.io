@@ -23,8 +23,8 @@ class IntelligentErrorFixer {
   }
   initializeErrorPatterns() {
     return {
-      // Syntax errors
-      missingBraces: {
+      // Syntax errors;
+    missingBraces: {
         pattern: /return\(\s*$/m,
         fix: (content) => content.replace(/return\(\s*$/gm, 'return (')
       },
@@ -69,7 +69,6 @@ class IntelligentErrorFixer {
       return { success: false, output: error.stdout || error.message };
     }
   }
-
 <=>  async runTypeCheck() {
     try {
       this.log('Running TypeScript check...');
@@ -92,13 +91,11 @@ class IntelligentErrorFixer {
 <=      
 >    return errors;
   }
-
 >  async fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
       this.log(`File not found: ${filePath}`, 'ERROR');
       return false;
     }
-
 <=>      // Apply error pattern fixes
       for (const [patternName, pattern] of Object.entries(this.errorPatterns)) {
         const matches = content.match(pattern.pattern);
@@ -112,7 +109,6 @@ class IntelligentErrorFixer {
           }
         }
       }
-
 <=>      if (content.includes('};')) {
         content = content.replace(/}\s*;\s*$/gm, '}');
         modified = true;
@@ -130,7 +126,6 @@ class IntelligentErrorFixer {
         this.log(`Successfully fixed and saved: ${filePath}`);
         return true;
       }
-
 <=>        if (file.isDirectory()) {
           scanDirectory(path.join(dir, file.name));
         } else if (file.name.endsWith('.js') || file.name.endsWith('.tsx')) {
@@ -196,7 +191,6 @@ const {
             return content.replace(match[0], match[0] + match[0].charAt(0));
           }},
         "mergeConflicts": {
-
 =          "fix": content => {
             // Remove merge conflict markers
             return content          pattern: /||
@@ -514,7 +508,6 @@ const {
 if (require.main === module) {
   const fixer = new IntelligentErrorFixer();
   fixer.run().catch(console.error);
-
 =module.exports = IntelligentErrorFixer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||}
 module.exports = IntelligentErrorFixer;

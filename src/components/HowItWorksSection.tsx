@@ -1,14 +1,10 @@
-
-
 import { GradientHeading } from "./GradientHeading";
-
 import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
   className?: string;
   style?: React.CSSProperties
-
 const getSteps = (t: any,) => [
   {
     title: t('how_it_works.post')
@@ -41,7 +37,7 @@ export default function Page() {
     title: "Plan","
     description: "Collaborate on project requirements, timeline, and deliverables","
     color: "from-zion-blue to-zion-blue-dark","
-    bgColor: "from-zion-blue/20 to-zion-blue-dark/20"
+    bgColor: "bgColor",
     details: ["
       "Interactive project planning","
       "Timeline optimization","
@@ -88,13 +84,12 @@ const stats = [ "
   const [hoveredStep, setHoveredStep] = useState < number | null> (null)
   const [activeStep, setActiveStep] = useState < number> (0)
       transition: {
-        staggerChildren: 0.2
-        delayChildren: 0.1}}}
+        staggerChildren: 0.2;
+    delayChildren: 0.1}}}
   const statsVariants = {
   hidden: { opacity: 0
   scale: 0.8
 }
-
 import React from 'react';
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from 'lucide-react';
@@ -194,9 +189,7 @@ const stats = [ ";
     visible: {
       opacity: 1,      scale: 1
       transition: {
-
 const getSteps = (t: any,) => [
-
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from 'lucide-react'
@@ -206,11 +199,8 @@ interface HowItWorksSectionProps {
   className?: string,
   style?: React.CSSProperties
 }
-
 const getSteps = (t: any) => [
-
   {
-
     title: t('how_it_works.post'),
     description: t('how_it_works.post_desc'),
     icon: Send},
@@ -225,25 +215,18 @@ const getSteps = (t: any) => [
   {
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
-
   return (
-
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
-          
           <div className="space-y-12 md:space-y-0">
             {steps.map((step, index) => (
-
 export default Component;
-
 }
 }
 }
-
   );
 }
-
                       </p>                    </div>                    </div>) : null}
                 </div>;
                       <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
@@ -269,5 +252,3 @@ export default Component;
 }
 }
 ;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

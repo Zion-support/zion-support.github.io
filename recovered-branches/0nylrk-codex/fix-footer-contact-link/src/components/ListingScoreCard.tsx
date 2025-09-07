@@ -1,12 +1,9 @@
-
-
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {StarIcon} from "lucide-react";interface ListingScoreCardProps {
   title: string,
   description: string,
-
   image?: string;
   category: string,;
   image?: string;
@@ -56,7 +53,7 @@ interface ListingScoreCardProps {
             </div>;
           )}
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { StarIcon } from "lucide-react",;
 interface ListingScoreCardProps {;
   title: string,,
@@ -128,12 +125,10 @@ export function ListingScoreCard({;
                     "h-4 w-4", 
                     star <= Math && Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
-
                     "h-4 w-4", 
                     star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
-
                   )}
                 />;
               ))}

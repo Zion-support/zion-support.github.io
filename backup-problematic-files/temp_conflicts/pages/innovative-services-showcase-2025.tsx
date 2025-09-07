@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Head from 'next/head',;
+import Head from 'next/head';
 import { motion } from 'framer-motion',;
 import { ;
   Search, Filter, Star, CheckCircle, ArrowRight, ;
@@ -8,7 +8,7 @@ import { ;
   Zap, Globe, Cpu, Database, Lock, Cloud,;
   Stethoscope, GraduationCap, Leaf, Truck;
 } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
+import Layout from "Layout";
 ;
 // Import all the new 2025 innovative service data;
 import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services',;

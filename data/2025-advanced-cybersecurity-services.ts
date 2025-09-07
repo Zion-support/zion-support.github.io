@@ -1,4 +1,4 @@
-        'Continuous identity verification and authentication',
+'Continuous identity verification and authentication',
         'Micro - segmentation and network isolation',
         'Adaptive access controls and policies',
         'Real - time threat detection and response',
@@ -47,8 +47,8 @@
       useCases: [
         'Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting'
       ]
-      roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.'
-      competitors: [
+      roi: "roi",
+    competitors: [
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -141,8 +141,8 @@
       popular: true
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.'
       launchDate: '2024-09-25'
-      customers: 43
-      rating: 4.7
+      customers: 43;
+    rating: 4.7
       reviews: 21
     }
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
@@ -150,7 +150,6 @@
       customers: 43,
       rating: 4.7,
       reviews: 21,
-
     },;
       id: 'iot - security - platform',
       name: 'IoT Security Platform',
@@ -160,7 +159,6 @@
       description:;
         'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
       features: [;
-
         'IoT device authentication and management',
         'Network traffic monitoring and analysis',
         'Threat detection and response',
@@ -195,7 +193,6 @@
       rating: 4 && 4.7,
       reviews: 21,
   ];    features: [
-
 =======      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -291,7 +288,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedCybersecurityService {;
   id: string,;
   name: string,;

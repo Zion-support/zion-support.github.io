@@ -1,21 +1,15 @@
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 import { RefreshCcw, AlertCircle } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed
-
       resetErrorBoundary()
     } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError })
       Sentry.captureException(retryError)
-
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCcw, AlertCircle } from 'lucide-react';
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (function MarketplaceErrorFallback(): any ({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {;
   const handleRetry = async () => {;
     try {;
@@ -25,38 +19,29 @@ import { RefreshCcw, AlertCircle } from 'lucide-react';
     } catch (retryError) {;
       logErrorToProduction('Error during retry:', { data: retryError }),;
       Sentry && Sentry.captureException(retryError);
-
             onClick={() => window.location.reload()}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             variant="outline"
             className="w-full"
           >
             Reload Page
           </Button>
         </div>
-
         <div className="text-center text-sm text-muted-foreground">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           If the problem persists, please{' '}
           <a
             href="mailto: support@example.com"
             className="text-primary hover:underline"
-
           >
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a 
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
-
             contact support
           </a>
         </div>
       </div>
     </div>
-
       // Re - call SWR mutate ('*') to refresh all cached data;
       await mutate ((, ) => true, undefined, { revalidate: true }),
       resetErrorBoundary ();
@@ -91,9 +76,7 @@ import { RefreshCcw, AlertCircle } from 'lucide-react';
             on_click={() => window.location.reload ()}
             variant="outline";
             className="w - full";
-
   },;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (;
     <div className="flex items-center justify-center min-h-[400px] p-6">;
       <div className="max-w-md w-full space-y-4">;
@@ -104,25 +87,19 @@ import { RefreshCcw, AlertCircle } from 'lucide-react';
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
           </AlertDescription>;
         </Alert>;
-
             variant="outline";
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             className="w-full";
           >;
             Reload Page;
           </Button>;
         </div>;
-
           </a>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </div>;
     </div>;
   );
-
 interface MarketplaceErrorBoundaryProps {;
   children: React && React.ReactNode;
-
 export function MarketplaceErrorBoundary(): any ({;
   children,;
 }: MarketplaceErrorBoundaryProps) {;
@@ -140,30 +117,23 @@ export function MarketplaceErrorBoundary(): any ({;
       Sentry && Sentry.captureException(error);
     });
   };
-
       >;
-
       {children}
     </ErrorBoundary>;
   );
 }   return (
     <ErrorBoundary
-
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}>;
       {children}
-
     </ErrorBoundary>;
   );
 } ;
-
   );
 }
-
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode,
 }
-
 export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {
   const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
     // Log boundary errors to Sentry
@@ -176,5 +146,3 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
       Sentry.captureException(error)
     })
   };
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

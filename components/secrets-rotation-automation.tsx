@@ -1,33 +1,25 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
-
 export default function SecretsRotationAutomationPage() {
-
   const features = [
     "Automated key and secret rotation"
     "JIT credentials with expirations"
@@ -36,12 +28,9 @@ export default function SecretsRotationAutomationPage() {
     "Cloud KMS and Vault support"
   ];
   return (
-
 export default function SecretsRotationAutomationPage() {
   const features = [
-
     "Automated key and secret rotation",
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
     "CI / CD integration (GitHub Actions, CircleCI)",
@@ -101,8 +90,6 @@ export default function SecretsRotationAutomationPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text-cyan-300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>;
       <SEO;
@@ -121,9 +108,7 @@ export default function SecretsRotationAutomationPage() {
           <div className="mt - 8 grid sm:grid - cols-2 gap-6">;
             {features.map ((f) => (
               <div;
-
     <>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <SEO
         title="Secrets Rotation Automation"
         description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs."
@@ -140,7 +125,6 @@ export default function SecretsRotationAutomationPage() {
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
             {features.map((f) => (
               <div
-
                 key={f}
                 className="flex items - start space - x-3 p - 4 rounded - xl bg-white / 5 border border-white / 10";
               >;
@@ -180,10 +164,7 @@ export default function SecretsRotationAutomationPage() {
           </div>;
         </section>;
       </main>;
-
             </a>;
           </div>;
         </section>;
       </main>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

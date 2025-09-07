@@ -1,4 +1,4 @@
-  Mail
+Mail
   Phone
   MapPin
   Globe
@@ -15,9 +15,7 @@
   BookOpen
   Briefcase
   Atom;
-
 } from 'lucide-react';
-
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
   Mail,
@@ -35,7 +33,6 @@ import { AnimatePresence } from 'framer-motion';
   Shield,
   Users,
   BookOpen,
-
 } from 'lucide-react';
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
@@ -52,9 +49,7 @@ interface FooterSection {;
     ]
   }
   {
-
-    title: 'Solutions'
-
+    title: "title",
     links: [
       {
         label: 'Healthcare & Biotech'
@@ -123,15 +118,14 @@ interface FooterSection {;
         { label: 'Investors', href: '/investors' },
   ];
     visible: {
-      opacity: 1
-      transition: {
+      opacity: 1;
+    transition: {
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
       y: 0
       opacity: 1
       transition: {
-
 interface FooterSection {;
   title: string,;
   links: FooterLink[];
@@ -373,7 +367,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
   const scrollToTop = () => {;
     window && window.scrollTo({ top: 0, behavior: 'smooth' });    window && window.scrollTo({ top: 0, behavior: 'smooth' })
 };
-
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
       {/* Animated Background Elements */}
@@ -382,7 +375,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
-
   return (
     <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>;
       {/* Animated Background Elements */}
@@ -534,7 +526,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   {section.items.map ((item) => (
                     <li key={item.label}>;
                       <Link;
-
                         href={item.href}
                         className="text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate-x-1 inline-block";
                       >;
@@ -583,7 +574,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
-
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
               {/* Social Links */}
@@ -649,7 +639,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             </div>;
           </motion && motion.div>;
         </div>;
-
         {/* Bottom Bar */}
         <motion&& motion.div
                       </Link>;
@@ -738,7 +727,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
-
         >
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
@@ -829,12 +817,10 @@ export default UltraAdvancedFuturisticFooter2025;      </motion.button>
   )
 }
 export default UltraAdvancedFuturisticFooter2025;
-
 export default UltraAdvancedFuturisticFooter2025;
 export default UltraAdvancedFuturisticFooter2025
 }
 };
-
 export default UltraAdvancedFuturisticFooter2025;
         </motion.div>;
       </div>;

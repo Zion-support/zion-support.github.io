@@ -1,5 +1,3 @@
-
-
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -16,10 +14,9 @@ import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend E
         department: "Product",
         description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
       },
-
       {
-        title: "UX/UI Designer"
-        location: "Remote"
+        title: "title",
+    location: "Remote"
         type: "Full-time"
         department: "Product"
         description: "Create intuitive and engaging user experiences that make complex technology accessible to all users."
@@ -55,7 +52,6 @@ import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend E
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
       )
-
     },
     marketing: [;
       {;
@@ -98,7 +94,6 @@ import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend E
           </div>;
         </div>;
       </main>;
-
     </AppLayout>);
 }
 }

@@ -1,15 +1,12 @@
-
 import React, { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-
 import {;
   Card,;
   CardContent,;
   CardFooter,;
   CardHeader,;} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-
 import { toast } from "sonner";
 import { Check, Copy, ExternalLink } from "lucide-react";
 } from "@/components/ui/card";
@@ -19,7 +16,6 @@ import { Check, Copy, ExternalLink } from "lucide-react";
 export function ZapierIntegration() {;
   const [copied, setCopied] = useState(false);
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
-
 import React, { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -27,11 +23,9 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input",
 import { toast } from "sonner",
 import { Check, Copy, ExternalLink } from "lucide-react",
-
 export function ZapierIntegration() {
   const [copied, setCopied] = useState(false),
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),
-  
   const handleCopyApiKey = () => {
     navigator.clipboard.writeText(apiKey),
     setCopied(true),
@@ -41,22 +35,17 @@ export function ZapierIntegration() {
 import React, { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-
 import { toast } from "sonner";
 import { Check, Copy, ExternalLink } from "lucide-react";
-
 export function ZapierIntegration() {;
   const [copied, setCopied] = useState(false);
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
-
   const handleCopyApiKey = () => {;
     navigator && navigator.clipboard.writeText(apiKey);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
-
   Card,
   CardContent,
   CardFooter,            <div className="space-y-4">
@@ -73,9 +62,6 @@ export function ZapierIntegration() {;
             </div>;
           </CardHeader>;
           <CardContent>;
-
-        
-
           <CardHeader>
             <h3 className="text-lg font-semibold">Popular Zaps</h3>
           </CardHeader>
@@ -128,7 +114,7 @@ export function ZapierIntegration() {;
 }
   )
 import React, { useState } from "react";
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;
@@ -156,7 +142,6 @@ export function ZapierIntegration() {;
           <CardContent>;
             <p className="text-sm text-muted-foreground mb-4">;
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;
-
             <p className="text - sm text - muted - foreground mb-4">;
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
               to set up integrations.;
@@ -175,7 +160,5 @@ export function ZapierIntegration() {;
           </div>;
         </CardContent>;
       </Card>;
-
     </div>;
-
   );}

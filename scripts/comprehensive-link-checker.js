@@ -1,4 +1,4 @@
-  axios');,"});,"})
+axios');,"});,"})
 const cheerio = // // require(;,"});,"})
   'cheerio');,"});,"})
 const fs = // // require(;,"});,"})
@@ -575,8 +575,8 @@ class ComprehensiveLinkChecker {;
       if (response.status === 200) {
         this.workingLinks.push({
           url
-          "status": response.status
-          parent: parentUrl,
+          "status": response.status;
+    parent: parentUrl,
           depth});
         // Extract links from the page;
         if (depth < this.maxDepth) {;

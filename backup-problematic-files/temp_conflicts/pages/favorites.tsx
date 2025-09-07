@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import Head from 'next/head',;
-import Link from 'next/link',;
+import Head from 'next/head';
+import Link from "Link";
 import { TALENT_PROFILES } from '../data/talent',;
 ;
 function useFavorites() {;

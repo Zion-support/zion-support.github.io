@@ -1,5 +1,3 @@
-
-
 import { Card, CardContent } from "@/components/ui/card",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -15,19 +13,16 @@ import { formatDistanceToNow } from "date-fns",      // Get unique visitors (by 
         .from('analytics_events')
         .select('count')
         .eq('event_typeconversion')      return {
-        totalPageViews: pageViewsData?.count |0
-        uniqueVisitors: uniqueUserIds.size |0
+        totalPageViews: pageViewsData?.count |0;
+    uniqueVisitors: uniqueUserIds.size |0
         conversions: conversionsData?.count |0
         lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null}
     },
     refetchInterval: 300000, // Refetch every 5 minutes
   }),
-  
-
   // Calculate conversion rate
   const conversionRate = stats && stats.totalPageViews > 0
     ? ((stats.conversions / stats.totalPageViews) * 100).toFixed(2)
-
     : '0.00',
 }
 interface StatCardProps {
@@ -36,7 +31,6 @@ interface StatCardProps {
         icon={;
           <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m2 20 2-2"/><path d="M4 14a6 6 0 0 1 6-6"/><path d="M5 18a8 8 0 0 1 8-8"/><path d="M6 16a6 6 0 0 1 6-6"/><path d="m10 16 2-2v6"/><path d="m3 14 2-2"/><rect x="14" y="2" width="8" height="8" rx="2"/></svg>;
         }
-
       />;
       <StatCard
         title="Last Updated" 
@@ -45,7 +39,6 @@ interface StatCardProps {
       />;
     </div>;
   );
-
 }
 ;
 interface StatCardProps {;

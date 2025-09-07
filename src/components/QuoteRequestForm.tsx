@@ -1,4 +1,3 @@
-
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
 import {useToast} from "@/hooks/use-toast"
@@ -18,12 +17,10 @@ import {Sparkles, Loader2} from 'lucide-react'
 import {z} from "zod"
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary"
 const serviceStepSchema = z.object({
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [formData, setFormData] = useState<QuoteFormData>({
-    serviceType: ""
+    serviceType: "serviceType",
     serviceCategory: ""
-    specificItem: null
+    specificItem: null;
     projectName: ""
     projectDescription: ""
     startDate: undefined
@@ -32,19 +29,14 @@ const serviceStepSchema = z.object({
     budget: {
       amount: 0
       type: "fixed"
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     contactInfo: {
       name: ""
       email: ""
       phone: ""
       company: ""
     }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   )
 }
-
 import { useState } from './react';
 import {log_debug, logErrorToProduction} from '@/utils / production_logger';
 import { use_toast } from '@/hooks / use - toast';
@@ -102,5 +94,3 @@ function QuoteRequestForm() {
 }
   );
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -18,8 +18,8 @@ jest.mock('@prisma/client', () => {
 });
 let prisma: PrismaClient;
 interface ProductLike {
-  id: string
-  name: string
+  id: string;
+    name: string
   description?: string
   images?: unknown[]
   price?: number | null

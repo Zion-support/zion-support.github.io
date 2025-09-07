@@ -1,38 +1,25 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { X } from 'lucide-react'
-
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
   // TODO: Add dependencies if needed
-
 }
-
 export function FloatingCTA() {
-
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
 import { useState, useEffect } from "react",
 import { X } from 'lucide-react'
-
 export function FloatingCTA() {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
-
       } else {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         setIsVisible (false);
       }
-
 import { X } from 'lucide-react';
 export function FloatingCTA() {;
-
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">
@@ -49,29 +36,23 @@ export function FloatingCTA() {;
           >
             <Link href="/signup">Register Now</Link>
           </Button>
-
           <button 
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
           >
-
             <X className="w-5 h-5" />
           </button>
         </div>
       </div>
     </div>
   )
-
             aria-label='Close'           aria-label="Button">;
             <X className='w-5 h-5' />          </button>;
             <X className="w-5 h-5" />;
-
 ;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from "@/components/ui/button";
-import Link from "next/link",;
+import Link from "next/link";
 import { useState, useEffect } from "react",;
 import { X } from 'lucide-react';
 export function FloatingCTA() {;
@@ -118,13 +99,9 @@ export function FloatingCTA() {;
             className="text-zion-slate hover: text-white p-1";
             aria-label="Close";
           >;
-
             <X className="w-5 h-5" />;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </button>;
         </div>;
       </div>;
     </div>;
   );
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

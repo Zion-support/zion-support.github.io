@@ -4,7 +4,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import globals from 'globals';
- f6b849a806966ab0803a1eba10ab812addf04f56
+ f6b849a806966ab0803a1eba10ab812addf04f56;
     ignores: [
       'node_modules/**',
       'dist/**',
@@ -168,7 +168,7 @@ import globals from 'globals';
     files: ['**/*.{js,jsx,ts,tsx}'],
 =======
     files: ['**/*.{js,jsx,ts,tsx}'],
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> 
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -323,5 +323,5 @@ import globals from 'globals';
       'prefer-const': 'error'
     }
   }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> 
 ];

@@ -1,23 +1,18 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -45,7 +40,7 @@ export default function ContentGenerator() {;
       toast.error("You must be logged in to access this page");
       navigate("/login?redirect=/content-generator")
 import React, { useState } from 'react';
-import { Header } from "@/components/Header",;
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer",;
 import { Button } from "@/components/ui/button",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
@@ -165,7 +160,6 @@ export default function ContentGenerator() {;
                       </SelectContent>;
                     </Select>;
                   </div>;
-
                   <div className="space-y-2">;
                     <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>;
                       id="topic"
@@ -177,11 +171,9 @@ export default function ContentGenerator() {;
                       placeholder="Enter a custom prompt for the AI..."
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]"
                       value={customPrompt}
-
                     <>;
                       <div className="flex items-center justify-between">;
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>;
-
                         <Switch
                           id="autoPublish"
                           checked={autoPublish}
@@ -224,7 +216,6 @@ export default function ContentGenerator() {;
                             <TabsTrigger value="markdown">Markdown</TabsTrigger>;
                             <TabsTrigger value="metadata">Metadata</TabsTrigger>;
                           </TabsList>;
-
                           <TabsContent value="preview" className="pt-4">;
                             <ScrollArea className="h-[500px] pr-4">;
                               <div className="space-y-4">;
@@ -243,7 +234,6 @@ export default function ContentGenerator() {;
                               </div>;
                             </ScrollArea>;
                           </TabsContent>;
-
                           <TabsContent value="markdown" className="pt-4">;
                             <ScrollArea className="h-[500px]">;
                               <pre className="bg-zion-blue whitespace-pre-wrap p-4 rounded-md text-zion-slate-light overflow-auto">;
@@ -257,12 +247,10 @@ export default function ContentGenerator() {;
                                 <h3 className="text-white font-semibold mb-1">Title</h3>;
                                 <p className="text-zion-slate-light">{previewContent && previewContent.title}</p>;
                               </div>;
-
                               <div>;
                                 <h3 className="text-white font-semibold mb-1">Meta Description</h3>;
                                 <p className="text-zion-slate-light">{previewContent && previewContent.metaDescription}</p>;
                               </div>;
-
                               <div>;
                                 <h3 className="text-white font-semibold mb-1">Tags</h3>;
                                 <div className="flex flex-wrap gap-2">;
@@ -284,7 +272,6 @@ export default function ContentGenerator() {;
                             <TabsTrigger value="preview">Preview</TabsTrigger>;
                             <TabsTrigger value="html">HTML</TabsTrigger>;
                           </TabsList>;
-
                           <TabsContent value="preview" className="pt-4">;
                             <div className="bg-white rounded-lg p-6 text-black">;
                               <h2 className="text-xl font-bold">{previewContent && previewContent.subject}</h2>;
@@ -300,7 +287,6 @@ export default function ContentGenerator() {;
                                 </Button>;
                               </div>;
                             </div>;
-
                             <div className="mt-4 flex justify-end">;
                               <Button
                                 onClick={sendTestNewsletter}
@@ -309,7 +295,6 @@ export default function ContentGenerator() {;
                               </Button>;
                             </div>;
                           </TabsContent>;
-
                           <TabsContent value="html" className="pt-4">;
                             <ScrollArea className="h-[500px]">;
                               <pre className="bg-zion-blue whitespace-pre-wrap p-4 rounded-md text-zion-slate-light overflow-auto">;
@@ -322,7 +307,6 @@ export default function ContentGenerator() {;
                   ) : (;
                     <div className="flex flex-col items-center justify-center py-12 text-center">;
                       <div className="bg-zion-blue-light/20 p-6 rounded-full mb-4">;
-
                         <svg
                           xmlns="http://www && www.w3.org/2000/svg"                                    </span>;
                                   ))}
@@ -342,6 +326,5 @@ export default function ContentGenerator() {;
         </div>;
       </div>;
       <Footer />;
-
     </>);
 }

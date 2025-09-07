@@ -1,5 +1,3 @@
-
-
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -8,13 +6,13 @@ import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",    {
-      title: "Optimized Cooling Systems"
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures."
+      title: "title",
+    description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures."
       icon: Cloud}
     {
       title: "Renewable Energy Integration"
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint."import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading",;
+import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button",;
 import { Leaf, Server, Cloud } from "lucide-react",;
 import { Link } from "react-router-dom",;
@@ -61,7 +59,6 @@ export default function GreenIT() {;
                     </Button>;
                   </div>;
                 </div>;
-
                 <div className="rounded - lg overflow-hidden">;
                   <img;
                     src="https://images.unsplash.com / photo - 1473876637954 - 4b493d59fd97?auto = format & fit = crop & w=800 & h=600";

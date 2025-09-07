@@ -1,26 +1,18 @@
-
-  Trophy,
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+Trophy,
   Award,
   BadgeCheck,
   Star,
   MessageSquare
 },
-
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
-
   return (
-
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
 export default UserBadges;
 }
 }
 }
-
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-        
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
@@ -46,17 +38,13 @@ export default UserBadges;
         )
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react';
 import { Badge } from "@/types/community";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",;
-
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 interface UserBadgesProps {;
   badges: Badge[];
 }
-
 const iconMap = {;
   Trophy;
   Award;
   BadgeCheck;
   Star;
   MessageSquare;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

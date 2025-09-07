@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
-
   const [ open, setOpen ] = useState(false),;
-
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
@@ -27,50 +25,38 @@ import Link from 'next/link';
                 href='#features';
                 className='text - sm font - medium hover:text - primary';
               >;
-
                 Features;
               </Link>;
             </li>;
             <li>;
-
               <Link;
                 href='#pricing';
                 className='text - sm font - medium hover:text - primary';
               >;
-
                 Pricing;
               </Link>;
             </li>;
             <li>;
-
               <Link;
                 href='#testimonials';
                 className='text - sm font - medium hover:text - primary';
               >;
-
                 Testimonials;
               </Link>;
             </li>;
             <li>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { Menu } from 'lucide-react'
 import Link from "next/link",
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false),
-
   return (
-
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </li>
           </ul>
         </div>
       </div>
-
           >;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Menu className="h-6 w-6" />;
           </button>;
           <ul className={`${open ? "flex" : "hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>;
@@ -85,10 +71,7 @@ export function EnterpriseStickyNav() {
             </li>;
             <li>;
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>;
-
             </li>;
           </ul>;
         </div>;
       </div>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

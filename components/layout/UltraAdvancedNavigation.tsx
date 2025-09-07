@@ -1,4 +1,4 @@
-  Menu
+Menu
   X
   ChevronDown
   Search
@@ -27,7 +27,6 @@
   Code;
 } from 'lucide-react';
 import Link from 'next/link';import {
-
   Menu,
   X,
   ChevronDown,
@@ -56,21 +55,18 @@ import Link from 'next/link';import {
   Lock,
   Code,
 } from 'lucide-react';
-
 import Link from 'next/link';import { ;
-
   Lock,
   Code,
 } from 'lucide-react';
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
   Bot, Car, Building2, DollarSign, Monitor, Users;
     {
-      name: 'AI Services'
-      href: '#'
-      icon: Brain
-      description: 'Cutting-edge AI solutions'
+      name: "name",
+    href: '#'
+      icon: Brain;
+    description: 'Cutting-edge AI solutions'
       dropdown: [
       description: 'Benchmarks & vendor references'
     }
@@ -105,7 +101,6 @@ import Link from 'next/link';import { ;
       isScrolled 
         ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
         : 'bg-transparent'
-
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -161,10 +156,8 @@ import Link from 'next/link';import { ;
               </div>;
             </Link>;
           </motion && motion.div>;
-
                   </Link>
                 )}
-
                 )}
                 {/* Dropdown Menu */}
                 {item && item.dropdown && (;
@@ -173,7 +166,6 @@ import Link from 'next/link';import { ;
                       <motion&& motion.div
                         initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
-
                       >
                         <div className="p-4">
                           <div className="text-sm text-gray-400 mb-3">{item.description}</div>
@@ -182,7 +174,6 @@ import Link from 'next/link';import { ;
                               <Link
                   </Link>
                 )}
-
                 {/* Dropdown Menu */}
                 {item.dropdown && (
                   <AnimatePresence>
@@ -208,9 +199,7 @@ import Link from 'next/link';import { ;
               <a
               </a>
               <a
-
           </div>
-
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-6">
             <div className="flex items-center space-x-4 text-sm text-gray-300">
@@ -218,7 +207,6 @@ import Link from 'next/link';import { ;
                 <Phone className="w-4 h-4" />
                 <span className="hidden xl:inline">{contactInfo.mobile}</span>
               </a>
-
               <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
                 <Mail className="w-4 h-4" />
                 <span className="hidden xl:inline">{contactInfo.email}</span>
@@ -252,7 +240,6 @@ import Link from 'next/link';import { ;
           </div>;
         </div>;
       </div>;
-
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -269,15 +256,11 @@ import Link from 'next/link';import { ;
                       href={item.href}
                       onClick={() => setIsOpen(false)}
                       {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>
-
                       <span>{item.name}</span>
-
                     </Link>
-
                   )}
                 </div>
               ))}
-
               {/* Mobile Contact Info */}
               <div className="pt-6 border-t border-gray-800/50">
                 <div className="space-y-3 text-sm text-gray-400">
@@ -309,10 +292,8 @@ import Link from 'next/link';import { ;
     </nav>;
   )
 };
-
 export default UltraAdvancedNavigation;  )
 };
-
 export default UltraAdvancedNavigation;
       {/* Mobile Menu */}
       <AnimatePresence>;
@@ -440,7 +421,6 @@ export default UltraAdvancedNavigation);
 }
 ;
 export default UltraAdvancedNavigation;
-
 export default UltraAdvancedNavigation;
   )
 }

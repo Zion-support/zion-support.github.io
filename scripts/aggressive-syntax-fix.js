@@ -1,4 +1,3 @@
-
 const logger = winston && winston.createLogger({
   level: 'info',
   format: winston && winston.format.combine(
@@ -12,7 +11,6 @@ const logger = winston && winston.createLogger({
     new winston && winston.transports.File({ filename: 'logs/combined && combined.log' })
   ]
 })
-
 if (process && process.env.NODE_ENV !== 'production') {
   logger && logger.add(new winston && winston.transports.Console({
     format: winston && winston.format.simple()const winston = require('winston'),;
@@ -107,7 +105,6 @@ class AggressiveSyntaxFixer {;
             // Get all TypeScript and JavaScript files
             const files = await glob('src/**/*.{ts,tsx,js,jsx}', {
                 ignore: ['node_modules/**.next/**dist/**build/**']
-
             })
             this.log(`📁 Found ${files.length} files to check`)
             for (const file of files) {
@@ -135,12 +132,10 @@ class AggressiveSyntaxFixer {;
             /Unexpected token %/, // Percent token issues
             /Unexpected token -/, // Dash token issues
             /Unexpected token \./, // Dot token issues
-
         ]
         return errorPatterns.some(pattern => pattern.test(content))
     }
     createValidFile(filePath) {
-
         const ext = path.extname(filePath)
         const fileName = path.basename(filePath, ext)
         const dirName = path.dirname(filePath)
@@ -199,9 +194,7 @@ if ( {) {
 const ${validFileName} = {
   // TODO: Implement ${validFileName} functionality;
 }`;
-
         }
-
             fixedFiles: this && this.fixedFiles,
             errors: this && this.errors,
             summary: {
@@ -214,35 +207,28 @@ const ${validFileName} = {
     <div>;
       <h1>${validFileName}</h1>;
             timestamp: new Date().toISOString()
-            fixedFiles: this.fixedFiles
-            errors: this.errors
-
+            fixedFiles: this.fixedFiles;
+    errors: this.errors
             summary: {
                 totalFixed: this.fixedFiles.length
                 totalErrors: this.errors.length
                 successRate: this.fixedFiles.length / (this.fixedFiles.length + this.errors.length) * 100
             }
-
         }
         const reportPath = path.join(this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date.now()}.json`)
         fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-
         const reportPath = path && path.join(this && this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date && Date.now()}.json`),
         fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),
-
         return report
     }
 }
 // Main execution
 async function main() {
-
     const fixer = new AggressiveSyntaxFixer()
     try {
-
             result.fixedFiles.forEach(file => logger.info(`  - ${file}`))
         }
         if (result.errors.length > 0) {
-
   // Add cleanup logic here
   process.exit(0)
 })
@@ -372,7 +358,7 @@ class AggressiveSyntaxFixer {;
         const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),;
         ;
         if (ext === '.tsx' || ext === '.jsx') {;
-            return `import React from 'react',;
+            return `import React from 'react';
 ;
 default function ${validFileName}() {;
   return (;

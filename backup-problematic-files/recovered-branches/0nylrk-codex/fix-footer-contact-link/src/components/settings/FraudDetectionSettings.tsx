@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch',;
 import { Button } from '@/components/ui/button',;
 import { Label } from '@/components/ui/label',;
@@ -150,11 +150,9 @@ const [isSaving, setIsSaving] = useState (false);
 const handleSavePreferences = async () => {
   if (!user?.id) return;
 try {
-  
 }catch (error) {
   console.error ('Error saving preferences:', error);
 toast ({
-  
 }finally {
   setIsSaving (false) 
 }

@@ -78,7 +78,7 @@ emai",';
     "l": "string;';';
   nam",';';';
     "e": "string;;
-import {createSlice", PayloadAction } from '@reduxjs/toolkit',;',';';
+import {createSlice", PayloadAction } from '@reduxjs/toolkit';',';';
     ;
 import {User } from 'lucide-react',;';';
     ;

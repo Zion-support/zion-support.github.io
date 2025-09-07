@@ -1,5 +1,3 @@
-
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -19,7 +17,6 @@ const WebApplicationDevelopmentChat: NextPage = () => {;
       </main>
     </div>
       </Head>;
-
       <main>;
         <h1>WebApplicationDevelopmentChat</h1>;
         <p>Service details coming soon...</p>;
@@ -29,26 +26,20 @@ const WebApplicationDevelopmentChat: NextPage = () => {;
   );
 }
 export default WebApplicationDevelopmentChat;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-
 const WebApplicationDevelopmentChat: NextPage = () => {
   return (
     <div>
       <Head>
-
         <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>
         <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>
         <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>
-
         <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>
-
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -72,5 +63,3 @@ const WebApplicationDevelopmentChat: NextPage = () => {
 ;
 export default WebApplicationDevelopmentChat;
 ;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

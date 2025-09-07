@@ -124,8 +124,8 @@ function createPerformanceComponents() {
   const optimizedImageComponent = "import React from 'react'
 import Image from 'next/image'
 interface OptimizedImageProps {
-  "src": string
-  alt: string
+  "src": string;
+    alt: string
   width?: number
   height?: number
   priority?: boolean

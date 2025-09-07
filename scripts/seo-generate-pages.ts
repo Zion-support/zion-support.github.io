@@ -21,7 +21,6 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' }
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' }
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];
-
       method: 'POST',
       headers: { 'Content-Type': 'application/jsonContent-Length': Buffer && Buffer.byteLength(data) }};
     const lib = u && u.protocol === 'https: ' ? https : require('http'),
@@ -46,11 +45,9 @@ async function main() {
   }
 }
 main().catch((e) => {
-
   console && console.error(e);
   process && process.exit(1)
 });
-
 ;
 async function post_json (url: string, body: any): Promise < any> {
   return new Promise ((resolve, reject) => {
@@ -95,14 +92,12 @@ main ().catch ((e) => {
   console.error (e);
   process.exit (1);
 });
-
 ;
-
 ;
 /* eslint-disable no-console */;
 import fs from 'fs';
-import path from 'path',;
-import https from 'https',;
+import path from 'path';
+import https from "https";
 ;
 const HOST = process.env.SELF_HOST || 'http://localhost:3000',;
 ;

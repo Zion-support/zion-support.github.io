@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from './react';
 import { Button  } from '@/components / ui / button';
 import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';
@@ -9,7 +7,6 @@ import { use_resume  } from '@/hooks / use_resume';
 import { exportResumeToPDF  } from '@/utils / pdf_export';
 import { toast  } from '@/components / ui / use - toast';  );
   const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
-
   const [customFile, setCustomFile] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const { resume, fetchResume } = useResume();import React, { useState, useEffect } from "react";
@@ -24,7 +21,6 @@ import { ResumePreviewCard } from "./ResumePreviewCard";
 import { UploadSection } from "./UploadSection";
 import { SelectResumeSection } from "./SelectResumeSection";
 import { ResumeOption, ResumeSelectorProps } from "./types";
-
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
@@ -37,14 +33,12 @@ import { ResumePreviewCard } from './ResumePreviewCard',
 import { UploadSection } from './UploadSection',
 import { SelectResumeSection } from './SelectResumeSection',
 import { ResumeOption, ResumeSelectorProps } from './types',
-
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
   const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),
   const [customFile, setCustomFile] = useState<File | null>(null),
   const [isLoading, setIsLoading] = useState(false),
-  
   const { resume, fetchResume } = useResume(),
           setIsLoading(false);
       }
@@ -52,9 +46,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     loadResumes();
   }, [fetchResume]);        setSelectedResume(options[0]);
         onResumeSelected(options[0]);
-
 import React, { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
 import { Label } from "@/components/ui/label",;
 import { Plus, Loader2 } from 'lucide-react',;
@@ -168,34 +161,27 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0]
 };
-
       setIsLoading(true),
       try {
         await fetchResume()
       } catch (error) {
         console.error("Error loading resumes:", error)
       } finally {
-
   };
-
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0],
-      
       // Check if it's a PDF file
       if (file.type !== "application/pdf") {
         toast({
-
   };
-
   // Handle resume selection change;
   const handleResumeSelect = (resumeId: string) => {;
     const selected = resumeOptions && resumeOptions.find((opt) => opt && opt.id === resumeId);
     if (selected) {;
       (setSelectedResume(selected), onResumeSelected(selected));
     }
-
           variant: "destructive"
         }),
         return
@@ -204,7 +190,6 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
   const handleFileUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     if (e && e.target.files && e && e.target.files[0]) {;
       const file = e && e.target.files[0];
-
       // Check if it's a PDF file;
       if (file && file.type !== "application/pdf") {;
         toast({;
@@ -217,14 +202,11 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
       setSelectedResume(customOption);
       onResumeSelected(customOption);
     }
-
           title: "Invalid file type",
           description: "Please upload a PDF file",
-
     try {
       setIsLoading(true),
       const pdfBlob = await exportResumeToPDF(selectedResume.resume),
-      
       // Create download link
       const url = URL.createObjectURL(pdfBlob),
       const link = document.createElement('a'),
@@ -232,18 +214,15 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
       link.download = `${selectedResume.title || 'Resume'}.pdf`,
       document.body.appendChild(link),
       link.click(),
-      
       // Clean up
       document.body.removeChild(link),
       URL.revokeObjectURL(url),
-      
       toast({
         title: "Success!",
         description: "Your resume has been downloaded."})        title: "Download failed",
         description: "There was an error downloading your resume.",
         variant: "destructive"
       })
-
     } finally {
       setIsLoading(false)
     }      <RadioGroup
@@ -259,11 +238,9 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
   const handleGenerateResume = () => {
     window.open("/dashboard/talent/portfolio_blank");
   }
-
   return (
     <div className="space-y-4">;
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>;
-
       });
     } finally {;
       setIsLoading(false);
@@ -322,14 +299,12 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
             Use most recent AI Resume;
           </Label>;
         </div>;
-
         <div className="flex items-center space-x-2">;
           <RadioGroupItem value="select" id="select" />;
           <Label htmlFor="select" className="text-white">;
             Select from saved versions;
           </Label>;
         </div>;
-
         <div className="flex items-center space-x-2">;
           <RadioGroupItem value="upload" id="upload" />;
           <Label htmlFor="upload" className="text-white">;            Upload a custom resume (PDF);
@@ -344,7 +319,6 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
           isLoading={isLoading}
         />;
       )}
-
       {selectedOption === "select" && (;
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
@@ -353,9 +327,7 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
           isLoading={isLoading}
         />;
       )}
-
       {selectedOption === "upload" && (;
-
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
           <Label htmlFor="recent" className="text-white">Use most recent AI Resume</Label>;
@@ -372,9 +344,7 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
           <Label htmlFor="upload" className="text-white">Upload a custom resume (PDF)</Label>;
         </div>;
       </RadioGroup>;
-
       {selectedOption === "upload" && (;
-
       {selectedOption === "upload" && (;
           customFile={customFile}
           onFileUpload={handleFileUpload}
@@ -390,9 +360,7 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
         />;
       )}
 ;
-
 ;
-
           className="text-zion-purple border-zion-purple/20"
         >
           <Plus className="h-4 w-4 mr-2" />
@@ -420,7 +388,6 @@ const {
 try {
   await fetchResume () 
 }catch (error) {
-  
 }finally {
   setIsLoading (false) 
 }
@@ -445,7 +412,6 @@ onResumeSelected (customOption)
 }catch (error) {
   console.error ('Error downloading PDF:', error);
 toast ({
-  
 }finally {
   setIsLoading (false) 
 }

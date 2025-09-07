@@ -1,6 +1,4 @@
-
-      localStorage.getItem('bundle-analyzer') === 'true'
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
     if (!show) return;
     setIsVisible(true)
@@ -53,15 +51,12 @@ if ( {) {
 if (return) {
   $2
 }
-
         totalSize,
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
-
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
       // Get performance entries for script resources;
@@ -125,10 +120,8 @@ if (return) {
       collectBundleInfo()
     }
   }
-
 import React, { useState, useEffect } from 'react';
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-import { useAuth } from '@/hooks/useAuth',;
+import { useAuth } from '@/hooks/useAuth';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
 import { Button } from '@/components/ui/button',;
@@ -140,7 +133,6 @@ interface BundleInfo {;
   gzippedSize: number,;
   chunkCount: number,;
   loadTime: number,;
-
   cacheHitRate: number;
 }
 ;
@@ -239,18 +231,14 @@ export function BundleAnalyzer() {;
   if (!shouldShow) {;
     return null;
   }
-
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button
-
           Bundle Analyzer
         </Button>
       </div>
     )
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
                 ✕
               </Button>
             </div>
@@ -291,54 +279,38 @@ export function BundleAnalyzer() {;
                 <Progress value={bundleInfo.cacheHitRate} className="h-2" />
               </div>
               <div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </Button>;
             </div>;
           </div>;
         </CardHeader>;
-
                         </span>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
                             cached
                           </Badge>
                         )}
                       </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         {formatSize(chunk.size)}
                       </Badge>
                     </div>
                   ))}
-
                 </div>;
               </div>;
-
               {bundleInfo && bundleInfo.totalSize > 1000000 && (;
                 <div className='flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs'>;
                   <AlertTriangle className='w-3 h-3 text-yellow-600' />;
                   <span>Bundle size is large. Consider code splitting.</span>;
                 </div>;
-
               )}
-
             </>
           ) : (
-
 } 
-
 }
-
         </CardContent>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </Card>;
     </div>;
   );
 } ;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <CardContent className='pt - 0 space - y-3'>;
           {bundle_info ? (
             <>;
@@ -418,5 +390,3 @@ export function BundleAnalyzer() {;
         </CardContent>;
       </Card>;
     </div>);
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

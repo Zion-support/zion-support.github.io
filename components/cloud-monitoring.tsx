@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -40,17 +39,14 @@ import React from 'react';
   Settings,;
   Code,;
 } from 'lucide-react';
-
 export default function CloudMonitoringPage() {
   const features = [
-
 export default function CloudMonitoringPage() {
   const features = [
     {
       icon: <Activity className='w-8 h-8 text-white' />
-      description:
-        'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      description: "description",
+    color: 'bg-gradient-to-br from-green-500 to-emerald-600'
       gradient: 'from-green-400 to-emerald-500'
     }
     {
@@ -94,7 +90,6 @@ export default function CloudMonitoringPage() {
       gradient: 'from-teal-400 to-blue-500',
     },;
   ];
-
   const monitoringCapabilities = [
     {
       category: 'Infrastructure'
@@ -144,7 +139,6 @@ export default function CloudMonitoringPage() {
     }
       icon: <Activity className='w-8 h-8 text-white' />,
   ];
-
 export default function CloudMonitoringPage() {
   const features = [
     {
@@ -216,7 +210,6 @@ export default function CloudMonitoringPage() {
   return (
               className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>;
-
       {/* Hero Section */}
             <Button
               href="#pricing"
@@ -266,13 +259,11 @@ export default function CloudMonitoringPage() {
           </div>
         </div>
       </section>
-
       {/* Monitoring Capabilities */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-
               Comprehensive Monitoring
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -315,7 +306,6 @@ export default function CloudMonitoringPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-
               Use Cases
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -370,11 +360,8 @@ export default function CloudMonitoringPage() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
-
       <section id="pricing" className="py-24 bg-black relative overflow-hidden">
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -406,7 +393,6 @@ export default function CloudMonitoringPage() {
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
                     {plan.price}
-
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -422,12 +408,10 @@ export default function CloudMonitoringPage() {
                 </div>
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
-
                 <ul className='space-y-4 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
-
                       {feature}
                     </li>;
                   ))}
@@ -443,11 +427,9 @@ export default function CloudMonitoringPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
-
                     </li>
                   ))}
                 </ul>
-
                 <Button
                   href="/contact"
                   className={`w-full ${plan.buttonColor} text-white`}
@@ -459,9 +441,7 @@ export default function CloudMonitoringPage() {
               </Card>
             ))}
       {/* Integrations Section */}
-
       <section className="py-24 bg-gray-900 relative overflow-hidden">
-
             ))}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -505,19 +485,15 @@ export default function CloudMonitoringPage() {
                 <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
-
               </Card>
-
             ))}
           </div>
         </div>
       </section>
-
             ))}
           </div>
         </div>
       </section>
-
             ))}
       {/* CTA Section */}
       {/* CTA Section */}
@@ -525,7 +501,6 @@ export default function CloudMonitoringPage() {
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-
             Ready to Monitor Your Infrastructure?
           </h2>
           <p className='text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -564,14 +539,12 @@ export default function CloudMonitoringPage() {
               href="#demo"
               variant="outline"
               size="lg"
-
               Watch Demo;
             </Button>;
           </div>;
         </div>;
       </section>;
 }
-
   );
 }
     </>);

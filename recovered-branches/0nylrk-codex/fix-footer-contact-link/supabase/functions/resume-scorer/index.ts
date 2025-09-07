@@ -2,12 +2,10 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
-
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
@@ -17,12 +15,9 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
       JSON.stringify({ error: "OpenAI API key is not configured" }),;      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
-
   const supabase = createClient(supabaseUrl, supabaseAnonKey),
-
   try {
     const { applicationId } = await req.json(),
-        
     if (!applicationId) {
       throw new Error("Application ID is required")
     }
@@ -86,7 +81,6 @@ if ( {) {
           ${resume.resume_skills.map((skill: any) => skill.name).join(", ")}
         `;
         `,
-        
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
       }
     }
@@ -101,8 +95,8 @@ if ( {) {
     }
     // 4. Prepare job details      resumeSkills = application.talent_profile?.skills |[]
     }
-    // 4. Prepare job details
-        Bio: ${application.talent_profile?.bio || ""}
+    // 4. Prepare job details;
+    Bio: ${application.talent_profile?.bio || ""}
         Cover Letter: ${application.cover_letter || ""}
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `;
@@ -187,19 +181,16 @@ if ( {) {
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `,;
       resumeSkills = application.talent_profile?.skills || [];
-
     }
-
     // 4. Prepare job details
     const jobTitle = application.job?.title || "",
     const jobDescription = application.job?.description || "",
     const jobSkills = application.job?.skills || [],
         model: "gpt-4o-mini";          {
-            role: "system"
-            content: `You are an expert resume analyzer that compares resumes against job descriptions
+            role: "role",
+    content: `You are an expert resume analyzer that compares resumes against job descriptions
             to determine how well a candidate matches a job. Analyze the resume and job details
             provided, focusing on skills, experience, and qualifications.`
-
           },
             # Resume Content
             ${resumeContent}
@@ -210,13 +201,10 @@ if ( {) {
             4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match"
     const aiResult = await openAIResponse.json(),
     let matchResult,
-    
     try {
       // Extract JSON from the response
       const content = aiResult.choices[0].message.content,
       matchResult = JSON.parse(content),
-      
-
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {      // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
@@ -237,10 +225,8 @@ if ( {) {
       // Extract JSON from the response
       const content = aiResult && aiResult.choices[0].message && message.content;
       matchResult = JSON && JSON.parse(content);
-      
       // Validate required fields
       if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
-      
       // Validate required fields
       if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
         throw new Error("Invalid response format")
@@ -260,7 +246,6 @@ if ( {) {
     );
   }
 });
-
 ;
       }
     }
@@ -398,14 +383,12 @@ if ( {) {
 }),;
  serve (async (req) => {
   //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
 }const supabase = createClient (supabaseUrl, supabaseAnonKey);
 try {
   const {
   applicationId 
 }= await req.json ();
 if (!applicationId) {
-  
 }//1. Fetch the application with job details and resume content const {
   data: application, error: appError 
 }= await supabase .from ("job applications") job id;

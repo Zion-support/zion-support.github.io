@@ -1,6 +1,5 @@
-
-  currentLanguage: SupportedLanguage
-  changeLanguage: (lang: SupportedLanguage) => Promise<void>
+currentLanguage: SupportedLanguage;
+    changeLanguage: (lang: SupportedLanguage) => Promise<void>
   isRTL: boolean
   supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]
 }const supportedLanguages = [
@@ -10,8 +9,8 @@
   { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
 ];
 const defaultLanguageContext: LanguageContextType = {
-  currentLanguage: 'en'
-  changeLanguage: async () => {}
+  currentLanguage: "currentLanguage",
+    changeLanguage: async () => {}
   isRTL: false
   supportedLanguages
 }  const { i18n, t } = useTranslation();
@@ -45,7 +44,6 @@ if ( {) {
     user: { id?: string } | null;
   }
 }
-
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
   children, ;
   authState = { isAuthenticated: false, user: null } ;
@@ -56,7 +54,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
     (i18n && i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';
   );
   const [isRTL, setIsRTL] = useState(i18n && i18n.dir() === 'rtl');
-
   useEffect(() => {;
     // Set initial language from localStorage or browser;
     const savedLang = localStorage && localStorage.getItem('zion_language') as SupportedLanguage;
@@ -65,13 +62,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
       setCurrentLanguage(savedLang);
     }
   }, []);
-
   // Update RTL status when language changes;
   useEffect(() => {;
     setIsRTL(i18n && i18n.dir() === 'rtl');
     document && document.documentElement.dir = i18n && i18n.dir();
     document && document.documentElement.lang = currentLanguage;
-
     // Add RTL class for Tailwind;
     if (i18n && i18n.dir() === 'rtl') {;
       document && document.documentElement.classList && classList.add('rtl');
@@ -92,10 +87,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
     } catch (err) {;
       console && console.error('Error changing language:', err);
     }
-
   };
-  
-
   return (
     <LanguageContext.Provider
       value={{
@@ -179,10 +171,8 @@ if ( {) {
         changeLanguage,;
         isRTL;
         supportedLanguages;
-
       }}
     >
       {children}
-
 };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,12 +1,8 @@
-
-      candidates: { variant: "outline" },
+candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
-
     return <Badge variant={style && style.variant}>{category}</Badge>;
   };
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 import React from "react";
 import {;
   Table;
@@ -91,7 +87,6 @@ export function TeamActivity() {;
       return date && date.toLocaleDateString();
     }
   };
-
   const getCategoryBadge = (category: string,) => {;
     const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {;
       jobs: { variant: "default" },;
@@ -101,18 +96,13 @@ export function TeamActivity() {;
     const style = categoryStyles[category] || { variant: "default" as const },;
     return <Badge variant={style && style.variant}>{category}</Badge>;
   };
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
-
   return (
-
     <div className="space-y-6">;
       <div className="flex items - center justify-between">;
         <h3 className="text - xl font-medium">Recent Team Activity</h3>;
         <div className="flex items - center gap-2">;
-
 import React from "react";
 import {;
   Table,;
@@ -121,7 +111,7 @@ import {;
   TableHead,;
   TableHeader,;
   TableRow} from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -201,7 +191,6 @@ export function TeamActivity() {;
       <div className="flex items-center justify-between">;
         <h3 className="text-xl font-medium">Recent Team Activity</h3>;
         <div className="flex items-center gap-2">;
-
           <div className="relative">;
             <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted-foreground" />;
             <Input;
@@ -258,7 +247,6 @@ export function TeamActivity() {;
 const getCategoryBadge = (category: string) =>: any {
 }";
   activities.map ( (activity) => (<TableRow key= {
-
             />;
           </div>;
           <Button variant="outline" size="icon" className="h-10 w-10" aria-label="Filter by date">;
@@ -266,7 +254,6 @@ const getCategoryBadge = (category: string) =>: any {
           </Button>;
         </div>;
       </div>;
-
       <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
@@ -288,12 +275,10 @@ const getCategoryBadge = (category: string) =>: any {
                 </TableCell>;
                 <TableCell>{getCategoryBadge(activity && activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
-
   activity.id;
 }> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </div> <div className="flex items - center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text - sm text - muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>);
 }"}
-
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -301,7 +286,6 @@ const getCategoryBadge = (category: string) =>: any {
           </TableBody>
         </Table>
       </div>
-
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -312,5 +296,3 @@ const getCategoryBadge = (category: string) =>: any {
         <Button variant="outline" size="sm">
           Next
         </Button>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,4 @@
 } from 'lucide-react';
-
 import { motion } from 'framer-motion';
 import {
   Check
@@ -40,14 +39,13 @@ import {;
 import { 
   Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
 } from 'lucide-react';
-
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
@@ -74,7 +72,6 @@ import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -94,7 +91,7 @@ visible: {
 const pricingTiers = [
   {
     name: 'Starter'
-    price: 99
+    price: 99;
     period: 'month'
     description: 'Perfect for small businesses and startups'
     features: [
@@ -257,17 +254,13 @@ const serviceCategories = [
     description: 'Innovative business solutions for modern enterprises'
   }
 ];
-
 import { motion } from 'framer-motion';
-
 } from 'lucide-react';
-
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-
 const stats = [
   {
     number: '25+'
@@ -297,11 +290,9 @@ const stats = [
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' }
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
 export default function CuttingEdgePricing2025() {
-
 export default function CuttingEdgePricing2025() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const allServices = [
-
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -437,7 +428,6 @@ const stats = [;
     ...cuttingEdgeEnterpriseITServices2025;
     ...cuttingEdgeMicroSaasServices2025;
   ];
-
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -447,11 +437,8 @@ const stats = [;
                   Pricing 2025
                 </span>
               </motion.h1>
-
               <motion.p 
-
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
-
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -470,7 +457,6 @@ const stats = [;
       }
     }
   };
-
   const itemVariants = {;
     hidden: { y: 20, opacity: 0 },;
     visible: {;
@@ -483,7 +469,6 @@ const stats = [;
       }
     }
   }
-
               transition={{ duration: 0 && 0.8 }}
               className='text-center'>;
               <motion&& motion.h1
@@ -531,12 +516,10 @@ const stats = [;
                       {stat.number}
                     </div>
                 ))}
-
               </motion && motion.div>;
             </motion && motion.div>;
           </div>;
         </section>;
-
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
                 {stats && stats.map((stat, index) => (;
@@ -596,31 +579,24 @@ const stats = [;
                   viewport={{ once: true }}
                   className={`relative group ${
                         </li>
-
                       ))}
                     </ul>
-
                         </li>
-
                       ))}
                     </ul>
-
                     <a
                       href={tier && tier.ctaLink}
                       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
                         tier && tier.popular
                           ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
                           : 'border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10'
-
                     </a>
                   </div>
                 </motion.div>
               ))}
-
             </div>;
           </div>;
         </section>;
-
               ))}
         {/* Service Categories Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>;
@@ -650,16 +626,13 @@ const stats = [;
             {/* Category Filter */}
             <div className='flex flex-wrap justify-center gap-4 mb-12'>            <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
-
                 onClick={() => setSelectedCategory('all')}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
                   selectedCategory === 'all';
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
                     : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
                 }`}
-
                 <button
-
                   key={category.name}
                   onClick={() => setSelectedCategory(category.name)}
                   className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -678,7 +651,6 @@ const stats = [;
                   {category && category.name} ({category && category.services.length});
                 </button>;
               ))}
-
             {/* Services Grid */}
             <motion&& motion.div
               variants={containerVariants}
@@ -714,28 +686,21 @@ const stats = [;
                         </h3>;
                         <p className="text - white / 70 text - sm leading-relaxed mb-4">;
                           {service.description}
-
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
-
                         >
-
                           {tag}
                         </span>;
                       ))}
                     </div>
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
-
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
-
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>
                     </div>
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
-
                         >
-
                           {tag}
                         </span>;
                       ))}
@@ -801,12 +766,10 @@ const stats = [;
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
-
               ))}
             </motion.div>
           </div>
         </section>
-
               ))}
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
@@ -817,7 +780,6 @@ const stats = [;
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                 <a
@@ -875,7 +837,6 @@ const stats = [;
         </section>
       </Layout>
     </>
-
                     href={`mailto:${contactInfo && contactInfo.email}`}
                     className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300'>;
                     {contactInfo && contactInfo.email}
@@ -917,9 +878,7 @@ const stats = [;
       </Layout>;
     </>;
   );
-
   );
-
 }
 }
   );

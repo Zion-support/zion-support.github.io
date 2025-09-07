@@ -1,6 +1,5 @@
-  model: 'gpt-4o-mini';
+model: 'gpt-4o-mini';
 messages: [ {
-
   role: 'system', content: 'You are a helpful assistant.' 
 // Create utility
 export const Create = () => {
@@ -17,14 +16,13 @@ export const Create = () => {
 });
 const content = response && response.choices[0]?.message?.content || '';
 const typeMatch = content && content.match (/type\s*:\s* (.+) $/im);
-
 async function summarizeWithOpenAI(description: string) {
   try {
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
     const response = await client.chat.completions.create({
-      model: 'gpt-4o-mini'
-      messages: [
+      model: "model",
+    messages: [
         { role: 'system', content: 'You are a helpful assistant.' }
         { role: 'user', content: prompt }
       ]
@@ -51,8 +49,8 @@ async function summarizeWithOpenAI(description: string) {
     });
   }
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
 ) {
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
     return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
@@ -71,12 +69,10 @@ export default async function handler(
     return { summary: description && description.slice(0, 280), type: 'unknown' }
   };
 }
-
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } = req.body |{}
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-
   const normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, '');
   const ai = await summarizeWithOpenAI(String(description));
   const requests = await loadRequests();
@@ -136,10 +132,8 @@ function handler() {
   description: String(description);
   requests.push(record);
   await saveRequests(requests);
-
   // TODO: Integrate notifications (email/webhook) for admin and talent
 }
-
   return res.status(200).json({ id, status: 'ok' });
 }
     budget: normalized_budget,

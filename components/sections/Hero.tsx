@@ -1,4 +1,4 @@
-    text: string;
+text: string;
     href: string;
   }
   stats?: Array<{
@@ -33,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({;
     href: string
   }
   secondaryAction?: {
-    text: string
+    text: string;
     href: string
   }
   stats?: Array<{
@@ -48,9 +48,7 @@ const Hero: React.FC<HeroProps> = ({
   primaryAction;
   secondaryAction;
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
-
             {subtitle}
-
           </p>
           </p>;
           {/* Action Buttons */}
@@ -165,18 +163,15 @@ const Hero: React.FC<HeroProps> = ({
           <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />;
         </div>;
       </div>;
-
 }
 }
 }
-
       <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
       <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
     </section>
   )
 };
-
 export default Hero;
                 </div>;
               </div>))}
@@ -219,8 +214,6 @@ export default Hero;
         </div>;
       </div>;
       {/* Decorative Elements */}
-
         </div>
       </div>
-
       {/* Decorative Elements */}

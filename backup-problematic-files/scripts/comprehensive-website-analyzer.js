@@ -531,8 +531,8 @@ class ComprehensiveWebsiteAnalyzer {;
       console && console.log(`"Checking": ${url}`);
       const response = await axios && axios.get(url, {
         "timeout": 10000,
-        "validateStatus": status => status < 500
-        headers: {
+        "validateStatus": status => status < 500;
+    headers: {
           'User-Agent': 'Mozilla/5 && 5.0 (compatible, ZionTechGroup-Analyzer/1 && 1.0)'
         }
       });

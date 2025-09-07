@@ -1,37 +1,29 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useRef, useEffect } from 'react'
 import { MessageSquare, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ChatMessage, ChatInput } from '@/components/ChatAssistant'
 import { logErrorToProduction } from '@/utils/productionLogger'
 interface Msg {
-  id: string
-  role: 'user' | 'assistant'
+  id: string;
+    role: 'user' | 'assistant'
   message: string
-
 import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { ChatMessage, ChatInput } from '@/components/ChatAssistant',;
+import { ChatMessage, ChatInput } from '@/components/ChatAssistant';
 import {logErrorToProduction} from '@/utils/productionLogger',;
-
 // Fallback responses when API is unavailable
-
 const FALLBACK_RESPONSES = [
-
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
   "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
-
       // If Supabase function fails, try local API fallback
       if (!res.ok) {
         res = await fetch('/api/kb-chat', {
-          method: 'POST'
-          headers: { 'Content-Type': 'application/json' }
+          method: "method",
+    headers: { 'Content-Type': 'application/json' }
           body: JSON.stringify({
-
         const message = null;
           data.message ||
           data.choices?.[0]?.message?.content ||
@@ -40,9 +32,7 @@ const FALLBACK_RESPONSES = [
           ''
         const finalMsg = null;
           message.trim() ||
-
           FALLBACK_RESPONSES[
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."
@@ -65,13 +55,10 @@ const FALLBACK_RESPONSES = [
         let buffer = ''
         let accumulated = ''
         while (!done) {
-
           const result = await reader.read();
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           done = result.done;
           buffer += decoder.decode(result.value || new Uint8Array());
           const lines = buffer.split('\n');
-
           for (let i = 0; i < lines.length - 1; i++) {
             let line = lines[i]?.trim()
             if (!line) continue
@@ -83,9 +70,7 @@ const FALLBACK_RESPONSES = [
               }
               try {
                 const json = JSON.parse(line)
-
                   ''
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 if (token) {
                   accumulated += token
                   setMessages(prev =>
@@ -93,12 +78,9 @@ const FALLBACK_RESPONSES = [
                       m.id === botId ? { ...m, message: accumulated } : m
                     )
                   )
-
                 }
               } catch (_) {
-
           FALLBACK_RESPONSES[
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."
@@ -118,30 +100,23 @@ const FALLBACK_RESPONSES = [
         id: Date.now().toString() + '-e'
         role: 'assistant'
         message: fallbackResponse
-
     } finally {
       setLoading(false)
       setTyping(false)
     }
-
   }
   if (!open) {
-    
         onClick={() => setOpen(true)}
         size='icon'
         variant='outline'
         className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
         aria-label='Open help chat'      >
         <MessageSquare className='h-5 w-5' />
-
         const final = accumulated.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m))
-
     }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
-
   if (!open) {
     return (
       <Button 
@@ -152,13 +127,10 @@ const FALLBACK_RESPONSES = [
         aria-label="Open help chat"
       >
         <MessageSquare className="h-5 w-5" />
-
       </Button>
     )
   }
   return (
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>
       </div>
       <div className="flex-1 overflow-y-auto p-3 space-y-4" style={{ maxHeight: '400px' }}>
@@ -167,12 +139,10 @@ const FALLBACK_RESPONSES = [
             role="assistant" 
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" 
           />
-
         )}
         {messages && messages.map(m => (;
           <ChatMessage key={m && m.id} role={m && m.role} message={m && m.message} />;
         ))}
-
         <div ref={endRef} />
       </div>
       <div className='p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30'>
@@ -180,5 +150,3 @@ const FALLBACK_RESPONSES = [
       </div>
     </div>
   )
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

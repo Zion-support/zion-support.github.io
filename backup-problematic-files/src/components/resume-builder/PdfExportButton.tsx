@@ -1,10 +1,8 @@
-
-
 }
 }
 import React, { useState } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams;
-import { Header } from '@/components/Header',;
+import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -35,7 +33,6 @@ export default function ProjectRoom() {;
       isMuted: false;
     }
   ]),
-  
   const startVideoCall = () => {
     setIsInCall(true),
     toast.success("Video call started", {
@@ -46,14 +43,12 @@ export default function ProjectRoom() {;
       setActiveTab('video')
     }
   },
-  
   const endVideoCall = () => {
     setIsInCall(false),
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     })
   },
-  
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
     const mockUsers = [
@@ -89,7 +84,6 @@ export default function ProjectRoom() {;
       toast(`${randomUser.name} joined the call`);
     }
   },
-  
   return (
     <>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />
@@ -107,7 +101,6 @@ export default function ProjectRoom() {;
             <Button variant="outline">Invite Team Member</Button>
           </div>
         </div>
-        
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
           <TabsList className="grid grid-cols-6 md:w-fit">
             <TabsTrigger value="chat" className="flex items-center gap-2">
@@ -141,7 +134,6 @@ export default function ProjectRoom() {;
               <span className="hidden sm:inline">Settings</span>
             </TabsTrigger>
           </TabsList>
-          
           <TabsContent value="chat" className="space-y-4">
             <Card>
               <CardHeader>
@@ -155,7 +147,6 @@ export default function ProjectRoom() {;
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="files" className="space-y-4">
             <Card>
               <CardHeader>
@@ -169,7 +160,6 @@ export default function ProjectRoom() {;
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="video" className="space-y-4">
             <Card>
               <CardHeader>
@@ -209,7 +199,6 @@ export default function ProjectRoom() {;
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="calendar" className="space-y-4">
             <Card>
               <CardHeader>
@@ -223,7 +212,6 @@ export default function ProjectRoom() {;
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="team" className="space-y-4">
             <Card>
               <CardHeader>
@@ -237,7 +225,6 @@ export default function ProjectRoom() {;
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="settings" className="space-y-4">
             <Card>
               <CardHeader>

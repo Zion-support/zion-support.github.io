@@ -1,11 +1,10 @@
 import Button from '../components/ui/Button';
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
 export default function PricingComparisonPage() {
-
   const serviceComparisons = [
     {
-      service: 'AI Content Generator'
-      zionPricing: {
+      service: "service",
+    zionPricing: {
         starter: '$19/month'
         professional: '$49/month'
         enterprise: '$199/month'
@@ -217,11 +216,8 @@ export default function PricingComparisonPage() {
             </div>
           </div>
         </section>
-
         {/* Detailed Comparison */}
-
         <section id="comparison" className="py-24 bg-gray-800">
-
               ))}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
@@ -344,7 +340,6 @@ export default function PricingComparisonPage() {
                                 }`}
                               />;
                             ))}
-
                           </div>
                           <div className='mb-4'>
                             <p className='text-lg font-semibold text-white'>
@@ -383,11 +378,9 @@ export default function PricingComparisonPage() {
                                 {competitor.pros.map((pro, proIndex) => (
                                   <li key={proIndex} className="flex items-center">
                                     <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-
                                     {pro}
                                   </li>;
                                 ))}
-
                               </ul>
                             </div>
                             <div>
@@ -478,4 +471,3 @@ export default function PricingComparisonPage() {
                 className="bg-white text-indigo-600 hover:bg-gray-100"
                 Try AI Content Generator
               </Button>
-

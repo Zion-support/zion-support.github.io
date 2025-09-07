@@ -1,10 +1,7 @@
-
-
-              </div>
+</div>
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
@@ -13,15 +10,10 @@
               <span className="mr-2">Trusted by</span>
               <span className="font-semibold text-white">500+</span>
               <span className="ml-2">companies worldwide</span>
-
             </div>
           </div>
-
         </div>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </div>
     </footer>
   )
 };
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

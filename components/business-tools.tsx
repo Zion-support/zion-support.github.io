@@ -1,5 +1,4 @@
 } from 'lucide-react';
-
 import {
   ExternalLink
   Check
@@ -42,12 +41,11 @@ import {
   AlertCircle
   MessageSquare;
 } from 'lucide-react';import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
-
 export default function BusinessToolsPage() {
   const businessTools = [
     {
-      category: 'Project Management'
-      tools: [
+      category: "category",
+    tools: [
         {
           name: 'Notion'
           description:
@@ -96,11 +94,9 @@ export default function BusinessToolsPage() {
           icon: <Calendar className='w-6 h-6' />
           color: 'bg-gradient-to-br from-red-500 to-pink-600'
         }
-
       ]
 };
       category: 'Communication & Collaboration',
-
       tools: [
         {
           name: 'Slack'
@@ -374,36 +370,29 @@ export default function BusinessToolsPage() {
           color: 'bg-gradient-to-br from-purple-500 to-pink-600'
         }
       ]
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-
       category: 'Analytics & Business Intelligence',
       tools: [;
         {
           name: 'Google Analytics',
-
   const businessInsights = [
     {
       title: 'Remote Work Tools'
@@ -454,7 +443,6 @@ import React from 'react';
     }
     }
   ];
-
   const productivityTips = [;
     {;
       title: 'Start with Free Tiers',,
@@ -526,11 +514,8 @@ import React from 'react';
           </div>
         </div>
       </section>
-
       {/* Business Tools */}
-
       <section className="section-padding bg-gradient-cursor">
-
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
                 <h3 className="text-xl font-bold text-white mb-3">{insight && insight.title}</h3>;
                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">{insight && insight.description}</p>;
@@ -600,9 +585,7 @@ import React from 'react';
                   </Card>
                       </ul>;
                     </div>;
-
                     <Button
-
                     <Button
                       href={tool && tool.website}
                       variant='primary'
@@ -632,7 +615,6 @@ import React from 'react';
             {productivityTips.map((tip, index) => (
         </div>;
       </section>;
-
       {/* Productivity Tips */}
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
@@ -721,19 +703,15 @@ import React from 'react';
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{tip.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{tip.description}</p>
-
               </Card>
-
             ))}
           </div>
         </div>
       </section>
-
             ))}
           </div>
         </div>
       </section>
-
             ))}
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>;
@@ -797,7 +775,6 @@ import React from 'react';
               href='/contact'
               variant='outline'
               size='lg'
-
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
         <div className="container-cursor text-center relative z-10">
@@ -823,7 +800,6 @@ import React from 'react';
               size="lg"
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
             >
-
               Get Business Consultation
             </Button>;
           </div>;
@@ -837,4 +813,3 @@ import React from 'react';
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
               Explore Micro SaaS
             </Button>
-

@@ -50,7 +50,7 @@ export default function ZionHireAI() {
               <div className="space-y-4">;
                 <h1 className="text-3xl md:text-5xl font-bold tracking-tighter text-white">;
                   {isWhitelabel ? `${brandName} Recruiting Assistant` : "Zion Hire AI"}import React from "react";
-import { Header } from "@/components/Header",;
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
 import { useWhitelabel } from "@/context/WhitelabelContext",;
@@ -171,7 +171,6 @@ function ZionHireAI() {
         </section>;
       </main>;
       <Footer />;
-
 }
 ;
     </>);

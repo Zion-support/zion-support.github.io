@@ -25,7 +25,6 @@ import { Zap } from 'lucide-react'
 export function FeaturesGuideSection() {
   const features = [
     {
-
         'Navigate to the AI Matcher page from the homepage or marketplace',
         'Fill in your project requirements and specifications',
         'Review the AI-recommended matches tailored to your needs',
@@ -170,8 +169,8 @@ export function FeaturesGuideSection() {
     {
       id: "talent-directory",
       title: "Talent Directory",
-      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings."
-      icon: <Users className="h-10 w-10 text-zion-purple" />,
+      description: "description",
+    icon: <Users className="h-10 w-10 text-zion-purple" />,
       instructions: [
         "Access the talent directory from the main navigation"
         "Use filters to narrow down by skills, experience, and pricing"
@@ -291,11 +290,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Button } from "./ui/button",
 import { fireEvent } from '@/lib/analytics',
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
-
 export function FeaturesGuideSection() {
   const features = [
     {
-
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -409,7 +406,6 @@ export function FeaturesGuideSection() {
       buttonText: "View Resources"
     }
   ],
-
   return (
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -420,7 +416,6 @@ export function FeaturesGuideSection() {
             the world of AI and tech services
           </p>
         </div>
-
         <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">
             {features.slice(0, 4).map(feature => (
@@ -430,7 +425,7 @@ export function FeaturesGuideSection() {
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
 import Link from "next/link";
-import { GradientHeading } from "./GradientHeading",;
+import { GradientHeading } from "./GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { Button } from "./ui/button",;
 import { fireEvent } from '@/lib/analytics',;
@@ -549,9 +544,7 @@ export function FeaturesGuideSection() {;
       ],;
       link: "/help";
       buttonText: "View Resources";
-
     }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       id: 'talent-directory'
       title: 'Talent Directory'
@@ -675,8 +668,6 @@ export function FeaturesGuideSection() {;
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace"
         "Fill in your project requirements and specifications"
@@ -934,7 +925,6 @@ export function FeaturesGuideSection() {;
       buttonText: 'View Resources',;
     },;
   ];
-
   return (
     <section className='py-20 bg-zion-blue-dark'>;
       <div className='container mx-auto px-4'>;
@@ -945,7 +935,6 @@ export function FeaturesGuideSection() {;
             navigate the world of AI and tech services;
           </p>;
         </div>;
-
         <Tabs defaultValue='ai-matcher' className='w-full max-w-5xl mx-auto'>;
           <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8'>;
             {features && features.slice(0, 4).map(feature => (;
@@ -1328,29 +1317,21 @@ function FeaturesGuideSection() {
         "Join community forums to connect with other users";
         "Contact our support team for personalized assistance";
       ];
-
                 {feature.title}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </TabsTrigger>
             ))}
           </TabsList>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {features.slice(4).map(feature => (
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
-
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               >
                 {feature.title}
               </TabsTrigger>
             ))}
           </TabsList>
           {features.map(feature => (
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <TabsContent key={feature.id} value={feature.id} className="mt-8">
               <div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">
                 <div className="md:w-1/3 flex flex-col items-center md:items-start">
@@ -1359,15 +1340,12 @@ function FeaturesGuideSection() {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
-
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
                   <ol className="list-decimal list-inside space-y-3 pl-4">
                     {feature.instructions.map((instruction, idx,) => (
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
-
     <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -1377,7 +1355,6 @@ function FeaturesGuideSection() {
             the world of AI and tech services;
           </p>;
         </div>;
-
         <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">;
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">;
             {features && features.slice(0, 4).map(feature => (;
@@ -1404,7 +1381,6 @@ function FeaturesGuideSection() {
               </TabsTrigger>;
             ))}
           </TabsList>;
-
           {features && features.map(feature => (;
             <TabsContent key={feature && feature.id} value={feature && feature.id} className='mt-8'>;
               <div className='bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8'>;
@@ -1432,7 +1408,6 @@ function FeaturesGuideSection() {
                     </Link>;
                   </Button>;
                 </div>;
-
                 <div className='md:w-2/3 bg-zion-blue-dark p-6 rounded-lg'>;
                   <h4 className='text-xl font-semibold text-white mb-4'>;
                     How to Use;
@@ -1448,7 +1423,6 @@ function FeaturesGuideSection() {
                       <li key={idx} className="text-zion-slate-light">;
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>;
                       </li>;
-
                     ))}
                   </ol>
                 </div>
@@ -1456,23 +1430,17 @@ function FeaturesGuideSection() {
             </TabsContent>
           ))}
         </Tabs>
-
           <Button
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             asChild
           >
             <Link
-
             </Link>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </Button>
         </div>
       </div>
     </section>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 }
                   </p>;
@@ -1531,10 +1499,6 @@ function FeaturesGuideSection() {
       </div>;
     </section>);
 }
-
   );
 }
-
   )
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

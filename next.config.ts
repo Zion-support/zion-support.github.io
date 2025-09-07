@@ -2,7 +2,6 @@ import type { NextConfig } from 'next';
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
-
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   compress: true,
@@ -15,14 +14,12 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true 
   },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  
-  // Performance optimizations
-  experimental: {
+  // Performance optimizations;
+    experimental: {
     scrollRestoration: true,
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
   },
-  
   // Image optimization
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
@@ -33,7 +30,6 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
   },
-  
   // Security headers
   async headers() {
     return [{
@@ -48,7 +44,6 @@ const nextConfig: NextConfig = {
       }
     ];
   },
-  
   // Bundle analyzer
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -62,5 +57,4 @@ const nextConfig: NextConfig = {
     return config;
   }
 };
-
 module.exports = withBundleAnalyzer(nextConfig);

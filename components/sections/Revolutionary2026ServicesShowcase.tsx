@@ -1,4 +1,4 @@
-  ArrowRight
+ArrowRight
   Star
   TrendingUp
   Zap
@@ -26,7 +26,6 @@ import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-d
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
-
 import Link from 'next/link';
 import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
@@ -41,8 +40,8 @@ export default function Revolutionary2026ServicesShowcase() {
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
-      opacity: 1
-      transition: {
+      opacity: 1;
+    transition: {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -57,7 +56,6 @@ export default function Revolutionary2026ServicesShowcase() {;
     0,;
     3;
   );  const featuredMetaverseServices = metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.slice(0, 3);
-
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -69,26 +67,21 @@ export default function Revolutionary2026ServicesShowcase() {;
       }
     }
   };
-
   return (
     <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
       {/* Enhanced Background Effects */}
   };
-
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Enhanced Background Effects */}
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}
-
         {/* Enhanced Header */}
-
         <motion.div
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
-
         >
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>
             <Sparkles className='w-5 h-5 text-purple-400' />
@@ -177,7 +170,6 @@ export default function Revolutionary2026ServicesShowcase() {;
         </motion.div>
             with our revolutionary solutions.;
           </p>;
-
           {/* Service Statistics */}
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-12'>;
             <div className='text-center'>;
@@ -234,13 +226,11 @@ export default function Revolutionary2026ServicesShowcase() {;
             </div>;
           </div>;
         </motion && motion.div>;
-
         {/* AI Autonomous Services Section */}
         <motion&& motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
-
           viewport={{ once: true }}
                 key={service.id}
                 variants={item_variants}
@@ -285,10 +275,8 @@ export default function Revolutionary2026ServicesShowcase() {;
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
-
                   <Link 
                     href={service.link} 
-
                     className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -335,7 +323,6 @@ export default function Revolutionary2026ServicesShowcase() {;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredQuantumServices.map((service, index) => (
               <motion.div
                 key={service.id}
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredAIServices && featuredAIServices.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.id}
@@ -351,7 +338,6 @@ export default function Revolutionary2026ServicesShowcase() {;
               <p className="text-blue-300">Fully autonomous AI systems that run your business</p>;
             </div>;
           </div>;
-
         {/* Quantum Space Tech Services Section */}
         <motion&& motion.div
           variants={containerVariants}
@@ -402,10 +388,8 @@ export default function Revolutionary2026ServicesShowcase() {;
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
-
                   <Link 
                     href={service.link} 
-
                     className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -428,15 +412,12 @@ export default function Revolutionary2026ServicesShowcase() {;
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">;
               View All Quantum Space Services <ArrowRight className="w-5 h-5 ml-2" />;
           </div>;
-
         {/* Metaverse & Digital Reality Services Section */}
         <motion&& motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
-
           viewport={{ once: true }}
-
                       </span>;
                       <span className='text - gray - 400 text - sm'>;
                         ({service.reviews});
@@ -503,7 +484,6 @@ export default function Revolutionary2026ServicesShowcase() {;
           </div>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {featuredMetaverseServices.map ((service, index) => (
               <motion.div;
-
         {/* Metaverse & Digital Reality Services Section */}
         <motion&& motion.div
           variants={containerVariants}
@@ -550,10 +530,8 @@ export default function Revolutionary2026ServicesShowcase() {;
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
-
                   <Link 
                     href={service.link} 
-
                     className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -577,7 +555,6 @@ export default function Revolutionary2026ServicesShowcase() {;
               View All Metaverse Services <ArrowRight className="w-5 h-5 ml-2" />;
           </div>;
         </motion && motion.div>;
-
         {/* Call to Action Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -600,7 +577,6 @@ export default function Revolutionary2026ServicesShowcase() {;
         </motion.div>
       </div>
     </section>
-
               to start your transformation.;
             </p>;
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
@@ -636,9 +612,7 @@ export default function Revolutionary2026ServicesShowcase() {;
       </div>;
     </section>;
   );
-
   );
-
 }
 }
   );

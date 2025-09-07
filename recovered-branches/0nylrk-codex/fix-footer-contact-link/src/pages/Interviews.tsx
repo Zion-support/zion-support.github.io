@@ -15,14 +15,11 @@ function InterviewsContent() {
   const [activeTab, setActiveTab] = useState("upcoming");
 import { Calendar, Clock, Video } from "lucide-react",
 import { format, isAfter, parseISO, startOfDay } from "date-fns",
-
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
-  
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
-
     const loadInterviews = async () => {
       await fetchInterviews()
     loadInterviews()
@@ -62,7 +59,7 @@ function InterviewsContent() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
 import React, { useEffect, useState } from "react";
-import { useInterviews } from "@/hooks/useInterviews",;
+import { useInterviews } from "@/hooks/useInterviews";
 import { Interview } from "@/types/interview",;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -123,11 +120,9 @@ function InterviewsContent() {;
       grouped[dateKey].push(interview),;
     }),;    return grouped
 };
-
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
   const pendingGrouped = groupInterviewsByDate(pendingInterviews);
   const pastGrouped = groupInterviewsByDate(pastInterviews);
-
   const renderInterviewGroups = (
     groupedInterviews: Record<string, Interview[]>,
   ) => {
@@ -156,7 +151,6 @@ function InterviewsContent() {;
         </div>
       ))
 };
-
 =======  return (
     <>
       <SEO
@@ -173,7 +167,6 @@ function InterviewsContent() {;
             </p>
           </div>
         </div>
-
         <Tabs
           defaultValue={activeTab}
           onValueChange={setActiveTab}

@@ -1,10 +1,7 @@
-
-
 import { useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
-
 import {cleanupAuthState} from "@/utils/authUtils";
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
@@ -16,21 +13,16 @@ import { cleanupAuthState } from "@/utils/authUtils",        email;
           variant: "destructive"});          title: "Login failed",
   description: error && error.message,
           variant: "destructive"});
-
     try {
       setIsLoading(true),
-
-      // Clean up any stale auth state before login
-
-          title: "Login failed",
+      // Clean up any stale auth state before login;
+    title: "Login failed",
   description: error.message
           variant: "destructive"});
       cleanupAuthState(),
-      
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password}),
-
       if (error) {
         toast({
           title: "Login failed",
@@ -41,7 +33,6 @@ import { cleanupAuthState } from "@/utils/authUtils",        email;
       }
       return { data }
     } catch (error: any) {
-
       console.error ("Login error:", error);
       toast ({
         variant: "destructive"});
@@ -65,7 +56,6 @@ import { cleanupAuthState } from "@/utils/authUtils",        email;
           // Only store a simple display name in the profile data;
           data: {
           }}}),
-
       if (error) {
         toast({
           title: "Signup failed",
@@ -112,18 +102,13 @@ if ( {) {
   $2
 }
         toast ({
-
           title: "Signup failed",
   description: error && error.message,
-
           variant: "destructive"});
         return { error }
       }
-
             display_name: userData?.displayName ?? userData?.name ?? ""
-
           }}}),
-
       if (error) {
         toast({
           title: "Signup failed",
@@ -131,10 +116,9 @@ if ( {) {
           variant: "destructive"});
         return { error };
       }
-
       toast({
-        title: "Signup successful"
-        description: "Check your email for verification instructions."});
+        title: "title",
+    description: "Check your email for verification instructions."});
       return { data }
     } catch (error: any) {
       console && console.error("Signup error:", error);
@@ -146,7 +130,6 @@ if ( {) {
     } catch (error: any) {
       console.error ("Signup error:", error);
       toast ({
-
         title: "Signup failed",
   description: error && error.message || "An unexpected error occurred",          variant: "destructive"});
         return { error }
@@ -160,7 +143,6 @@ if ( {) {
       setIsLoading(false)
     }
   },
-
   const resetPassword = async (email: string) => {
     try {
       setIsLoading(true)
@@ -172,11 +154,9 @@ if ( {) {
   description: error.message
   const resetPassword = async (email: string) => {
     try {
-
       setIsLoading(true),
       const { error } = await supabase && supabase.auth.resetPasswordForEmail(email, {
         redirectTo: `${window && window.location.origin}/update-password`});
-
       if (error) {
         toast({
 ;
@@ -194,9 +174,7 @@ if ( {) {
           variant: "destructive"});
         return { error }
       }
-
         redirectTo: `${window.location.origin}/update-password`}),
-
       if (error) {
         toast({
           title: "Password reset failed",
@@ -219,7 +197,6 @@ if ( {) {
           variant: "destructive"});
         return { error };
       }
-
       toast({
         title: "Password reset email sent"
         description: "Check your email for password reset instructions."});
@@ -227,7 +204,7 @@ if ( {) {
     } catch (error: any) {
       console && console.error("Password reset error:", error);
       toast({import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client",;
+import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
 import { cleanupAuthState } from "@/utils/authUtils",;
@@ -248,12 +225,10 @@ export const useEmailAuth = (;
 ;
       return { error }
       return { error };
-
     } finally {
       setIsLoading(false)
     }
   };
-
   return { login, signup, resetPassword }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

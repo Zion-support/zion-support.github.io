@@ -1,4 +1,3 @@
-
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
@@ -21,7 +20,6 @@ import { Star } from 'lucide-react';
   const [indentSize, setIndentSize] = useState(2);
   const [compactMode, setCompactMode] = useState(false);
   const [showLineNumbers, setShowLineNumbers] = useState(true);
-
       setIsValid(true);
       setErrorMessage('');
     } catch (error) {;
@@ -29,10 +27,8 @@ import { Star } from 'lucide-react';
       setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');    }      setErrorMessage('');
     } catch (error) {;
       setIsValid(false);
-
       setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON')
 };
-
   const clearAll = () => {;
     setInputJson('');
     setFormattedJson('');
@@ -51,31 +47,27 @@ import { Star } from 'lucide-react';
     document.body.removeChild(a);
         }
         {
-          type: 'work'
-          number: '555-987-6543'
+          type: "type",
+    number: '555-987-6543'
         }
       ]
       interests: ['programming', 'reading', 'hiking']
-      active: true
-      lastLogin: '2024-01-15T10:30:00Z'
+      active: true;
+    lastLogin: '2024-01-15T10:30:00Z'
     }
     setInputJson(JSON.stringify(sample, null, 2));
     setFormattedJson('');
     setIsValid(true)
 };
-
   const copyToClipboard = (text: string) => {;
     navigator && navigator.clipboard.writeText(text)
 };
-
   const downloadJSON = (content: string, filename: string) => {;
     const blob = new Blob([content], { type: 'application/json' });    const url = URL && URL.createObjectURL(blob)
 };
-
   const copyToClipboard = (text: string) => {;
     navigator && navigator.clipboard.writeText(text)
 };
-
   const downloadJSON = (content: string, filename: string) => {;
     const blob = new Blob([content], { type: 'application/json' }),;
     const url = URL && URL.createObjectURL(blob);
@@ -87,11 +79,9 @@ import { Star } from 'lucide-react';
     document && document.body.removeChild(a);
     URL && URL.revokeObjectURL(url)
 };
-
   const loadSampleJSON = () => {;
     const sample = {    URL && URL.revokeObjectURL(url)
 };
-
   const loadSampleJSON = () => {;
     const sample = {;
       name: 'John Doe',;
@@ -116,24 +106,20 @@ import { Star } from 'lucide-react';
       active: true,;
       lastLogin: '2024-01-15T10:30:00Z',
 };
-
     setInputJson(JSON && JSON.stringify(sample, null, 2));
     setFormattedJson('');
     setIsValid(true);
     setErrorMessage('')
 };
-
   const getLineNumbers = (text: string) => {;
     const lines = text && text.split('\n');
     return lines && lines.map((_, index) => index + 1).join('\n')
 };    setErrorMessage('')
 };
-
   const getLineNumbers = (text: string) => {;
     const lines = text && text.split('\n');
     return lines && lines.map((_, index) => index + 1).join('\n');    return lines && lines.map((_, index) => index + 1).join('\n')
 };
-
   return (
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900">
@@ -212,9 +198,7 @@ import { Star } from 'lucide-react';
                   size="sm"
                     </div>
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
-
                       {getLineNumbers(inputJson)}
-
                     isValid ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                   {showLineNumbers && (
                     <div className='absolute left - 0 top - 0 bottom - 0 w - 12 bg - gray - 700 border - r border - gray - 600 text - xs text - gray - 400 p - 2 font - mono overflow - hidden'>                      {getLineNumbers (input_json)}              <div className="space-y-4">;
@@ -240,16 +224,12 @@ import { Star } from 'lucide-react';
                     className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${;
                       showLineNumbers ? 'pl-16' : '';
                     }`}
-
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
                 <div className='flex space-x-3'>
-
                     <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
-
                 <div className='flex space-x-3'>;
-
                   <Button
                     onClick={formatJSON}
                     disabled={!inputJson && inputJson.trim()}
@@ -302,7 +282,6 @@ import { Star } from 'lucide-react';
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-
               Professional JSON Formatting Features
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -414,7 +393,6 @@ import { Star } from 'lucide-react';
           </div>
         </div>
       </section>
-
                 {formattedJson && (;
                   <div className='text-sm text-gray-400'>;
                     <p>• Characters: {formattedJson && formattedJson.length}</p>;

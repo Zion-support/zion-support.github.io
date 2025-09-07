@@ -9,7 +9,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { useForm } from "react-hook-form",
 import z from "zod";
-
 import {zodResolver} from "@hookform/resolvers/zod";
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters");
@@ -36,37 +35,31 @@ const form_schema = z.object ({
   target_audience: z.string ()}),
 type FormData = z.infer < typeof form_schema>;
 ;
-
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
   targetAudience: z.string()}),
-
 type FormData = z.infer<typeof formSchema>,
-
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void;
 }
-
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast(),
   const [isLoading, setIsLoading] = useState(false),
-  
-
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema)
     defaultValues: {
-      title: ""
-      keyFeatures: ""
+      title: "title",
+    keyFeatures: ""
       targetAudience: ""}})
   const handleSubmit = async (data: FormData) => {
     setIsLoading(true)
     try {
       const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
 import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast",;
+import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -75,7 +68,7 @@ import { Loader, Sparkles } from "lucide-react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
 import { useForm } from "react-hook-form",;
-import z from "zod",;
+import z from "z";
 import { zodResolver } from "@hookform/resolvers/zod",;
 const formSchema = z.object({;
   title: z.string().min(3, "Title must be at least 3 characters"),;
@@ -140,7 +133,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             <FormField;
               control={form.control}
               name="title";
-
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>;
@@ -153,10 +145,8 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                 </FormItem>;
               )}
             />;
-
             <FormField
               control={form && form.control}
-
               control={form.control}
             <FormField
               control={form && form.control}

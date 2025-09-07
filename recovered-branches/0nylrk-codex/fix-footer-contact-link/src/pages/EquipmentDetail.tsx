@@ -23,9 +23,7 @@ import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 interface EquipmentSpecification {
-
 }
-
 }
 // Sample data - in a real app this would come from an API
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
@@ -54,13 +52,11 @@ interface EquipmentDetails {
   description: string,
   brand: string,
   category: string,
-
   subcategory?: string;
   images: string[],;
   price: number,;
   currency: string,;
   rating?: number;
-
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";    images: [
@@ -70,8 +66,8 @@ interface EquipmentDetails {
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800",
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800",
     ]
-    price: 6999
-    currency: "$"
+    price: 6999;
+    currency: "currency",
     rating: 4.9
     reviewCount: 87
     inStock: true
@@ -87,7 +83,6 @@ interface EquipmentDetails {
       "Anamorphic de-squeeze options";
       "Custom 3D LUT support";
     ];
-
       { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" },
       { name: "Resolution", value: "8K (8192 x 4320)" },
       { name: "Dynamic Range", value: "16+ stops" },
@@ -97,7 +92,6 @@ interface EquipmentDetails {
       { name: "Storage", value: "Dual CFexpress Type B" },
       { name: "Battery Life", value: "~3 hours continuous recording" },
       { name: "Weight", value: "4.5 lbs (body only)" },
-
       { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
     ],
     features: [
@@ -122,7 +116,6 @@ interface EquipmentDetails {
     brand: "AudioTech",
     category: "Equipment",
     subcategory: "Audio",
-
     images: [
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";    images: [
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",
@@ -159,15 +152,10 @@ interface EquipmentDetails {
     warranty: "3 years manufacturer warranty"
     returnPolicy: "21-day return policy for items in original condition"
   }
-
 },
-
   },
-
   const handleBuyNow = () => {
     setIsAdding(true),
-    
-
   return (
     <>
       <Header />
@@ -310,16 +298,13 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     returnPolicy: "21-day return policy for items in original condition";
   }
 };
-
 export default function EquipmentDetail() {;
   const { equipmentId } = useParams() as { equipmentId?: string };
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
-
   // In a real app, this would fetch from an API;
   const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined;
-
   if (!equipment) {;    return (
       <>;
         <Header />;
@@ -363,7 +348,6 @@ if ( {) {
           </div>;
         </div>;
         <Footer />;
-
   return (    <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -381,13 +365,10 @@ if ( {) {
                       {equipment && equipment.subcategory}
                     </Badge>;
                   )}
-
                 </div>;
-
                 {/* Product Title */}
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment && equipment.name}</h1>;
                 <p className="text-zion-cyan mb-4">Brand: {equipment && equipment.brand}</p>;
-
                               : "text-zion-slate-light"
                           }`}                              : "text-zion-slate-light"
                           }`}
@@ -398,7 +379,6 @@ if ( {) {
                 <div className="text-3xl font-bold text-white mb-4">;
                   {equipment && equipment.currency}{equipment && equipment.price.toLocaleString()}
                 </div>;
-
                 {/* Stock Status */}
                 <div className="mb-6">;
                   {equipment && equipment.inStock ? (;
@@ -417,9 +397,7 @@ if ( {) {
                       <span>Out of Stock</span>;
                     </div>;
                   )}
-
                     <button 
-
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
@@ -447,7 +425,6 @@ if ( {) {
                   >;
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
-
                 ;
                 {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
@@ -459,7 +436,6 @@ if ( {) {
                       <p className="text-xs">For orders over $100 within the US</p>;
                     </div>;
                   </div>;
-
                   {/* Warranty */}
                   {equipment && equipment.warranty && (;                {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
@@ -474,7 +450,6 @@ if ( {) {
                       </div>;
                     </div>;
                   )}
-
                   {/* Return Policy */}
                   {equipment && equipment.returnPolicy && (;                  {/* Return Policy */}
                   {equipment && equipment.returnPolicy && (;

@@ -1,5 +1,3 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Link from "next/link",
 import { 
   DropdownMenu,
@@ -10,14 +8,12 @@ import {
 import { Button } from "@/components/ui/button",
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
-
 interface ApplicationActionsProps {
   application: JobApplication,
   processingId: string | null,
   onViewApplication: (applicationId: string) => Promise<void>,
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
-
 export function ApplicationActions({
   application;
   processingId;
@@ -34,7 +30,6 @@ export function ApplicationActions({
       >
         <Eye className="h-4 w-4" />
       </Button>
-      
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button 
@@ -62,7 +57,6 @@ export function ApplicationActions({
           </DropdownMenuItem>
           <DropdownMenuItem 
             onClick={() => onStatusChange(application.id, "hired")}
-
           >
             Hire
           </DropdownMenuItem>
@@ -70,19 +64,15 @@ export function ApplicationActions({
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
           >
-
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Button 
         variant="default" 
         size="sm"
         asChild
       >
-
             onClick={() => onStatusChange(application && application.id, 'hired')}          >;
             Shortlist;
           </DropdownMenuItem>;
@@ -96,7 +86,6 @@ export function ApplicationActions({
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem
-
             onClick={() => onStatusChange(application && application.id, 'rejected')}
             className='text-red-600'          >            onClick={() => onStatusChange(application && application.id, "hired")}
           >;
@@ -105,7 +94,6 @@ export function ApplicationActions({
           <DropdownMenuItem
             onClick={() => onStatusChange(application && application.id, "rejected")}
             className="text-red-600";
-
 import Link from 'next/link';
 import {
   DropdownMenu,
@@ -159,24 +147,14 @@ export function ApplicationActions({;
           >;
             Shortlist;
           </DropdownMenuItem>;
-          <DropdownMenuItem;
-
-          >;
+          <DropdownMenuItem>;
             Schedule Interview;
           </DropdownMenuItem>;
-          <DropdownMenuItem;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-          >;
+          <DropdownMenuItem>;
             Hire;
           </DropdownMenuItem>;
-          <DropdownMenuItem;
-
-          >;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+          <DropdownMenuItem>;
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

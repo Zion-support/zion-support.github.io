@@ -1,17 +1,14 @@
-
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
 import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
   // Fetch auth status and saved talents  } = useUIState(),
-
   return {
     // Talents and loading state
     talents,
     filteredTalents,
     isLoading,
-    
     // Search and filter state
     searchTerm,
     setSearchTerm,
@@ -24,7 +21,6 @@ export function useTalentDirectory() {
     setExperienceRange,
     sortOption,
     setSortOption,
-    
     // UI state
     isMobileFilterOpen,
     setIsMobileFilterOpen,
@@ -33,13 +29,10 @@ export function useTalentDirectory() {
     selectedTalent,
     setSelectedTalent,
     expandedSections,
-    
     // Auth and user state
     isAuthenticated,
     userDetails,
     savedTalents,
-    
-
     // Actions
     toggleSkill;
     toggleAvailability;
@@ -47,9 +40,8 @@ export function useTalentDirectory() {
     clearFilters;
     toggleSection;
     handleToggleSave
-
     expanded_sections;import { useAuthStatus } from "./talent/useAuthStatus";
-import { useTalentData } from "./talent/useTalentData",;
+import { useTalentData } from "./talent/useTalentData";
 import { useFilterTalents } from "./talent/useFilterTalents",;
 import { useUIState } from "./talent/useUIState",;
 export function useTalentDirectory() {;
@@ -134,7 +126,6 @@ export function useTalentDirectory() {;
   }
 }
 ;
-
   }
 }
 ;

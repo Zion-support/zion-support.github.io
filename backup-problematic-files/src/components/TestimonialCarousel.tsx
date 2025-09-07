@@ -1,4 +1,3 @@
-
 import {;
   Carousel,;
   CarouselContent,;
@@ -6,11 +5,11 @@ import {;
   CarouselNext,;
   CarouselPrevious} from "@/components/ui/carousel",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Avatar } from "@/components/ui/avatar",;
+import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button",;
 import { Quote } from 'lucide-react';
-import Link from "next/link",;
-import Image from "next/image",;
+import Link from "Link";
+import Image from "Image";
 import { CASE_STUDIES } from "@/data/case-studies",;
 ;
 const testimonials = CASE_STUDIES,;

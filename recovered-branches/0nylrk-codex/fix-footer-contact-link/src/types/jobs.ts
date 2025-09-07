@@ -11,7 +11,6 @@ export type JobCategory =;
 ;
 export interface JobBudget {
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
-
 export type JobCategory = 
   | 'development' 
   | 'design' 
@@ -20,17 +19,13 @@ export type JobCategory =
   | 'data' 
   | 'business' ;
   | 'other';
-
 export interface JobBudget {;  min: number;
   max: number;
   currency: string;
 }
-
 export interface Job {;
-
 }
 export interface Job {export interface Job {
-
 export interface Job {;
 }
 export interface Job {
@@ -46,22 +41,17 @@ export interface Job {
   created_at: string;
   updated_at: string;
 }
-
 export interface JobFormData {;
-
-  created_at: string
-  updated_at: string
+  created_at: string;
+    updated_at: string
 }
 export interface JobFormData {
-
 export interface JobFormData {;
   title: string,
   description: string;
   category: JobCategory;
   skills: string;
-
 export interface ResumeAttachment {;
-
 export interface ResumeAttachment {export interface ResumeAttachment {
   id: string;
   title: string;
@@ -71,7 +61,6 @@ export interface ResumeAttachment {export interface ResumeAttachment {
   summary?: string;
   skills?: string[];
 }
-
 export type ApplicationStatus =
   | "new"
   | "viewed"
@@ -79,18 +68,14 @@ export type ApplicationStatus =
   | "interview"
   | "hired"
   | "rejected";
-
 export interface JobApplication {
 export interface JobApplication {
-
 export interface JobApplication {;
-
 export interface JobApplication {  summary?: string
   skills?: string[]
 }
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
 export interface JobApplication {
-
 export interface JobApplication {;
 export interface JobApplication {
   id: string;
@@ -243,7 +228,6 @@ export interface JobApplication {;
   notes?: string,  // New field for client notes;
 }
 ;
-
 }
 ;
 }

@@ -1,4 +1,3 @@
-
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume, ResumeBasicInfo  } from '@/types/resume';
@@ -6,7 +5,6 @@ import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useResumeActions() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-
   const [error, setError] = useState<string | null>(null);
   const createResume = async (basicInfo: ResumeBasicInfo): Promise<string | null> => {
     if (!user) {
@@ -19,14 +17,10 @@ export function useResumeActions() {  const { user } = useAuth();
         .single();
       if (error) throw error;
       showSuccessToast("Resume created", "Your resume has been created successfully");
-
         })
         .eq('id', resumeId)
         .eq('user_id', user && user.id);
-      
-
 =======      if (error) throw error,
-      
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Resume, ResumeBasicInfo} from '@/types / resume';
@@ -87,20 +81,14 @@ if (throw error) {
       setIsLoading(false)
           title: basicInfo && basicInfo.title;
           headline: basicInfo && basicInfo.headline,
-          summary: basicInfo && basicInfo.summary
-
-          title: basicInfo.title,
+          summary: basicInfo && basicInfo.summary;
+    title: basicInfo.title,
           headline: basicInfo.headline,
           summary: basicInfo.summary
-
         })
         .eq('id', resumeId)
         .eq('user_id', user && user.id);
-      
-
       if (error) throw error,
-      
-
       return showSuccessToast("Resume updated", "Your resume information has been updated");
     setIsLoading(true),;
     setError(null),;
@@ -127,7 +115,6 @@ if (throw error) {
       setError('You must be logged in to set active resume'),;
       return false;
     }
-    
     setIsLoading(true),
     setError(null),
         try {
@@ -135,10 +122,7 @@ if (throw error) {
       const { error: resetError } = await supabase
         .from('talent_resumes')
         .update({ is_active: false })        .eq('user_id', user.id),
-      
       if (resetError) throw resetError,
-      
-
       // Then, set the selected resume as active
       const { error } = await supabase
         .from('talent_resumes')
@@ -183,19 +167,16 @@ if (throw error) {
     } finally {
       setIsLoading (false);
     }
-
 ;  return {;
     isLoading,;
     error,;
     createResume;
     updateBasicInfo;
-
     setActiveResume}
 }
 ;
-
 import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client',;
+import { supabase } from '@/integrations/supabase/client';
 import { Resume, ResumeBasicInfo } from '@/types/resume',;
 import { useAuth } from '@/hooks/useAuth',;
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils',;

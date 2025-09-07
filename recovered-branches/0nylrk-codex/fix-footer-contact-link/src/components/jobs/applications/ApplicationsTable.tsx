@@ -1,8 +1,7 @@
 interface ApplicationsTableProps {
-
   applications: JobApplication[]
-  processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
+  processingId: string | null;
+    onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
   onViewScore: (application: JobApplication) => void
 import {format} from "date-fns";
@@ -20,7 +19,6 @@ import {toast} from "@/hooks/use-toast";export function ApplicationsTable({
   applications
   processingId
   onViewApplication
-
 export function ApplicationsTable(): any ({ ;
   applications, ;
   processingId, ;
@@ -29,13 +27,10 @@ export function ApplicationsTable(): any ({ ;
   onViewScore;
 }: ApplicationsTableProps) {;
   const [hireModalOpen, setHireModalOpen] = useState(false);
-
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
-
 export function ApplicationsTable({ 
   applications, 
   processingId, 
-
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application)
     setHireModalOpen(true)
@@ -73,11 +68,9 @@ export function ApplicationsTable({
                     />;
                   </div>;
                 </TableCell>;
-
           </TableBody>;
         </Table>;
       </div>;
-
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
         isOpen={hireModalOpen}

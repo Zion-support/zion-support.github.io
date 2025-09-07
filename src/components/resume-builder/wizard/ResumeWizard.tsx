@@ -5,10 +5,7 @@ if (isLoading) {
       </div>;
     );
   }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (error) {
-
   if (error) {;
     return (
       <div className="flex justify-center items-center h-64">
@@ -16,29 +13,22 @@ if (isLoading) {
       </div>
     )
   }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
   }
   if (showNewResumeForm) {
-
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }
-
   if (showNewResumeForm) {;
     return (
       <CreateResumeForm
         onCreateResume = {handleCreateNewResume,}
         onCancel = {(,) => setShowNewResumeForm(false),}
         isLoading = {isLoading,}
-
       />;
     );
   }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
@@ -53,15 +43,10 @@ if (isLoading) {
       />;
     );
   }
-
   return (
-
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
           <Button;
             onClick={() => setShowNewResumeForm(true)}
-
             variant="outline"
             size="sm"
             className="gap-2"
@@ -71,16 +56,12 @@ if (isLoading) {
           </Button>
         </div>
       </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title |'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             variant="outline";
             size="sm";
@@ -141,11 +122,8 @@ if ( {) {
           </Button>;
         </div>;
       </div>;
-
             />;
-
             {resume && (;
-
               <ResumeStepContent
                 activeTab = {activeTab,}
                 resume = {resume as Resume,}
@@ -153,21 +131,17 @@ if ( {) {
                 onPrevStep = {prevStep,}
               />
             )}
-
           </Tabs>;
         </CardContent>;
       </Card>;
     </div>;
   )
 };
-
 };
 <AlertTitle>Error</AlertTitle> <AlertDescription> {;
   error ;
 }</AlertDescription> </Alert>) ;
-
 }if (showNewResumeForm) {;
-
   () => setShowNewResumeForm (false) ;
 }isLoading= {;
   isLoading ;
@@ -234,13 +208,11 @@ if ( {) {
 }/> {
   resume && (<ResumeStepContent active_tab= {
   active_tab;
-
 }resume= {
   resume as Resume;
 }onNextStep= {
   next_step;
 }onPrevStep= {
-
   prev_step;
 }/>);
 }</Tabs> </CardContent> </Card> </div>);

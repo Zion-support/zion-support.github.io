@@ -8,8 +8,8 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '*/15 * * * *', // Every 15 minutes
-      max_memory_restart: '512M',
+      cron_restart: '*/15 * * * *', // Every 15 minutes;
+    max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
         LOG_LEVEL: 'info',

@@ -1,7 +1,4 @@
-
-
 type Theme = "dark" | "light" | "system"
-
 type ThemeProviderProps = {
   children: React.ReactNode
   defaultTheme?: Theme
@@ -20,7 +17,7 @@ type ThemeProviderProps = {
     root.classList.add(theme)
   }, [theme])
   const value = {
-    theme
+    theme;
     setTheme: (theme: Theme) => {  return context
 }
 }

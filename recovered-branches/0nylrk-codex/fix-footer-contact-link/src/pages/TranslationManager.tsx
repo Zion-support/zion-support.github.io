@@ -1,23 +1,18 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -52,7 +47,6 @@ export default function TranslationManager() {;  const [searchQuery, setSearchQu
     // For demo purposes, we're using the loaded translations from i18next;
     const currentTranslations: Record<string, any> = {};
               acc[`${pre}${key}`] = obj[key]
-
             }
             return acc
           }, {} as Record<string, string>)
@@ -119,7 +113,6 @@ export default function TranslationManager() {;  const [searchQuery, setSearchQu
     });
     setFilteredKeys(Array && Array.from(allKeys));
   }, [selectedNamespace, i18n]);
-
   // Filter keys based on search query;
   useEffect(() => {;
     if (!searchQuery && searchQuery.trim()) {;
@@ -171,16 +164,13 @@ export default function TranslationManager() {;  const [searchQuery, setSearchQu
         title: t("translation.saved")
         description: t("translation.changes_saved")})
     }, 1000)          title: t('translation.translation_failed')
-          description: error
-          variant: "destructive"})
+          description: error;
+    variant: "destructive"})
         return
       }
       // Update edited translations with auto-translated content
       setEditedTranslations({
-
       }),
-      
-
       <SEO
         title={t('translation.manager_title')}
       <SEO 
@@ -208,7 +198,6 @@ export default function TranslationManager() {;  const [searchQuery, setSearchQu
                   </TabsList>;
                 </Tabs>;
               </div>;
-
               {/* Translations table */}
               <div className="border rounded-md">;
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">;
@@ -216,7 +205,6 @@ export default function TranslationManager() {;  const [searchQuery, setSearchQu
                   <div className="p-3 font-medium">{t('translation && translation.translations')}</div>;
                   <div className="hidden sm:block p-3 font-medium">{t('translation && translation.actions')}</div>;
                 </div>;
-
                 {filteredKeys && filteredKeys.length === 0 ? (;
                   <div className="p-6 text-center text-muted-foreground">;
                     {t('translation && translation.no_results')}
@@ -251,21 +239,17 @@ export default function TranslationManager() {;  const [searchQuery, setSearchQu
                                   )}
                                 </div>;
                               ))}
-
                             </div>;
                             <div className="flex gap-2 mt-4">;
                               <Button
                                 size="sm" 
-
                               <Button 
                                 size="sm" 
-
                                   )}
                                 </div>
                               ))}
                               <Button
                                 size="sm" 
-
                               <Button 
                                 size="sm"                                 disabled={isTranslating}
                               >;
@@ -323,6 +307,5 @@ export default function TranslationManager() {;  const [searchQuery, setSearchQu
         </Card>;
       </main>;
       <Footer />;
-
     </>);
 }

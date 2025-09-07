@@ -5,9 +5,7 @@ return (
             key={star}
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
           />;
-
 import {  Dialog,  Dialog,
-
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { Star, Flag, User } from 'lucide-react'
@@ -17,13 +15,11 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import {
   Dialog,
-
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { Star, Flag, User } from 'lucide-react'
@@ -40,7 +36,6 @@ import {
   DialogTitle,
           />
         ))}
-
               <AvatarFallback className="bg-muted">
                 <User className="h-4 w-4" />
               </AvatarFallback>
@@ -51,10 +46,9 @@ import {
                 <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name} />
               ) : (
                 <AvatarFallback>
-
                   {review.reviewer_profile?.display_name ? 
 import { useState } from "react";
-import { formatDistanceToNow } from "date-fns",;
+import { formatDistanceToNow } from "date-fns";
 import { Star, Flag, User } from 'lucide-react';
 import { Review } from '@/types / reviews';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
@@ -140,17 +134,14 @@ if (return null) {
       .substring (0, 2);
   }
   return (
-
     <div className='border rounded - lg p - 4 bg - card'>;
       <div className='flex justify - between items - start mb - 3'>;
         <div className='flex items - center gap - 3'>;
           {review.is_anonymous ? (
-
   }
       </div>;
     );
   },;
-
   const getInitials = (name: string,) => {;
     return name;
       .split(" ");
@@ -159,20 +150,16 @@ if (return null) {
       .toUpperCase();
       .substring(0, 2);
   };
-
   return (
-
               )}
             </Avatar>;
           )}
-
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
         <div className="flex items-center gap-3">
     <div className="border rounded - lg p - 4 bg - card">;
       <div className="flex justify - between items - start mb - 3">;
         <div className="flex items - center gap - 3">;
-
           {review.is_anonymous ? (
             <Avatar>;
               <AvatarFallback className="bg - muted">;
@@ -181,26 +168,21 @@ if (return null) {
             </Avatar>) : (
             <Avatar>;
               {review.reviewer_profile?.avatar_url ? (
-
                 <AvatarImage src={review && review.reviewer_profile.avatar_url} alt={review && review.reviewer_profile.display_name} />;
               ) : (;
                 <AvatarFallback>;
                   {review && review.reviewer_profile?.display_name ? ;
                     getInitials(review && review.reviewer_profile.display_name) : "??"}
-
                 </AvatarFallback>
               )}
             </Avatar>
           )}
-
         review.would_work_again !== undefined) && (
         <div className='border-t pt-3 mt-3'>
           <div className='flex flex-wrap gap-2'>
             {review.communication_rating && (
-
               </Badge>
             )}
-
             {review.quality_rating && (
               <Badge variant='outline' className='flex gap-1 items-center'>
                 Quality
@@ -209,7 +191,6 @@ if (return null) {
                 </span>
               </Badge>
             )}
-
             {review.timeliness_rating && (
               <Badge variant='outline' className='flex gap-1 items-center'>
                 Timeliness
@@ -239,9 +220,7 @@ if (return null) {
                 </span>;
               </Badge>)}
             {review.would_work_again !== undefined && (
-
                 {review.would_work_again ? "Would work again" : "Would not work again"}
-
             </div>
             <div className="text-sm text-muted-foreground">
               {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
@@ -255,7 +234,6 @@ if (return null) {
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
@@ -263,7 +241,6 @@ if (return null) {
               <Badge variant="outline" className="flex gap-1 items-center">
                 Communication
                 <span className="ml-1 text-yellow-500">{review.communication_rating}/5</span>
-
           <div>;
             <div className="font - medium">;
               {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name || "User"}
@@ -300,34 +277,26 @@ if (return null) {
               </Badge>)}
             {review.would_work_again !== undefined && (
               <Badge;
-
               </Badge>
             )}
             {review.quality_rating && (
-
               <Badge variant="outline" className="flex gap-1 items-center">
                 Quality
                 <span className="ml-1 text-yellow-500">{review.quality_rating}/5</span>
-
               </Badge>
             )}
             {review.timeliness_rating && (
-
               <Badge variant="outline" className="flex gap-1 items-center">
                 Timeliness
                 <span className="ml-1 text-yellow-500">{review.timeliness_rating}/5</span>
-
               </Badge>
             )}
             {review.would_work_again !== undefined && (
-
               <Badge 
-
                 variant={review.would_work_again ? "default" : "secondary"}
                 className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
               >
                 {review.would_work_again ? "Would work again" : "Would not work again"}
-
           <div>;
             <div className='font-medium'>;
               {review && review.is_anonymous;
@@ -341,14 +310,11 @@ if (return null) {
             </div>;
           </div>;
         </div>;
-
         <div className='flex'>{renderStars(review && review.rating)}</div>;
       </div>;
-
       <div className='mb-4'>;
         <p className='text-sm whitespace-pre-wrap'>{review && review.review_text}</p>;
       </div>;
-
       {(review && review.communication_rating ||;
         review && review.quality_rating ||;
         review && review.timeliness_rating ||;
@@ -363,7 +329,6 @@ if (return null) {
                 </span>;
               </Badge>;
             )}
-
             {review && review.quality_rating && (;
               <Badge variant='outline' className='flex gap-1 items-center'>;
                 Quality;
@@ -372,7 +337,6 @@ if (return null) {
                 </span>;
               </Badge>;
             )}
-
             {review && review.timeliness_rating && (;
               <Badge variant='outline' className='flex gap-1 items-center'>;
                 Timeliness;
@@ -381,7 +345,6 @@ if (return null) {
                 </span>;
               </Badge>;
             )}
-
             {review && review.would_work_again !== undefined && (;
               <Badge
                 variant={review && review.would_work_again ? 'default' : 'secondary'}
@@ -399,16 +362,13 @@ if (return null) {
             </div>;
           </div>;
         </div>;
-
         <div className="flex">;
           {renderStars(review && review.rating)}
         </div>;
       </div>;
-
       <div className="mb-4">;
         <p className="text-sm whitespace-pre-wrap">{review && review.review_text}</p>;
       </div>;
-
       {(review && review.communication_rating || review && review.quality_rating || review && review.timeliness_rating || review && review.would_work_again !== undefined) && (;
         <div className="border-t pt-3 mt-3">;
           <div className="flex flex-wrap gap-2">;
@@ -418,21 +378,18 @@ if (return null) {
                 <span className="ml-1 text-yellow-500">{review && review.communication_rating}/5</span>;
               </Badge>;
             )}
-
             {review && review.quality_rating && (;
               <Badge variant="outline" className="flex gap-1 items-center">;
                 Quality;
                 <span className="ml-1 text-yellow-500">{review && review.quality_rating}/5</span>;
               </Badge>;
             )}
-
             {review && review.timeliness_rating && (;
               <Badge variant="outline" className="flex gap-1 items-center">;
                 Timeliness;
                 <span className="ml-1 text-yellow-500">{review && review.timeliness_rating}/5</span>;
               </Badge>;
             )}
-
             {review && review.would_work_again !== undefined && (;
               <Badge
                 variant={review && review.would_work_again ? "default" : "secondary"}
@@ -443,36 +400,28 @@ if (return null) {
           </div>;
         </div>;
       )}
-
       <div className='mt-3 flex justify-end'>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
             <Button variant='ghost' size='sm' className='text-muted-foreground'>
               <Flag className='h-3 w-3 mr-1' />              Report
-      
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
             <Button variant="ghost" size="sm" className="text-muted-foreground">
               <Flag className="h-3 w-3 mr-1" />
-
               Report
-
               Report
-
             </Button>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
-
                 If you believe this review violates our community guidelines,
-
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
-
       <div className='mt-3 flex justify-end'>;
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
           <DialogTrigger asChild>;
@@ -500,13 +449,10 @@ if (return null) {
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
-
               onChange = {(e,) => setReportReason(e && e.target.value),}
               className="min-h-[100px]";
             />;
-
             <DialogFooter>;
-
               <Button
                 variant='outline'
                 onClick={() => setIsReportDialogOpen(false)}
@@ -515,37 +461,29 @@ if (return null) {
               </Button>;
               <Button
                 onClick={handleReport}
-
               onChange = {(e,) => setReportReason(e.target.value),}
-
                 If you believe this review violates our community guidelines, please provide details below.
               </DialogDescription>
             </DialogHeader>
-            
             <Textarea
               placeholder="Why are you reporting this review?"
               value={reportReason}
               onChange={(e) => setReportReason(e.target.value)}
-
               className="min-h-[100px]"
             />
-            
             <DialogFooter>
               <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
                 Cancel
               </Button>
-
               <Button 
                 onClick={handleReport} 
                 disabled={!reportReason.trim() || isReporting}
               >
                 {isReporting ? "Submitting..." : "Submit Report"}
-
               </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
-
                 disabled={!reportReason && reportReason.trim() || isReporting}>;
                 {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}
               </Button>;
@@ -555,7 +493,6 @@ if (return null) {
       </div>;
     </div>;
   );
-
               <DialogTitle > Report Review</DialogTitle>;
               <DialogDescription>;
                 If you believe this review violates our community guidelines,

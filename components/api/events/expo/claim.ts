@@ -1,6 +1,6 @@
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
 ) {
   // In production: verify signature, mint or issue POAP
   console.log(

@@ -25,7 +25,6 @@ export type CuttingEdgeAIService = {
 }
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   {
-
     id: 'ai - product - spec - writer',
     name: 'AI Product Spec Writer',
     description:;
@@ -33,18 +32,15 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     category: 'AI Business Management',
     pricing: { starter: '$79 / mo' },
     features: [;
-
       'PRD templates',
       'Story generation',
       'Acceptance criteria',
       'Analytics alignment',
     ],
     integrations: ['Jira', 'Linear'],
-
     use_cases: ['Faster planning', 'Better alignment'],
     link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
     real_service: true,
-
   },
   {
     id: 'ai - creative - studio',
@@ -54,7 +50,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     category: 'AI Creativity',
     pricing: { starter: '$149 / mo' },
     features: [;
-
       'Brand kit',
       'Image & video gen',
       'Review & approvals',
@@ -66,11 +61,9 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     realService: true,
   },;
 ];	id: string;
-
 ];	id: string;
 	id: string, name: string,
 	description: string,
-
 	category:
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
@@ -94,8 +87,8 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		id: 'ai-emotional-support-agent';
 		name: 'AI Emotional Support Agent',
   description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.';
-		category: 'AI Emotional Intelligence'
-		pricing: { starter: '$99/mo' }
+		category: "category",
+    pricing: { starter: '$99/mo' }
 		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'];
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
@@ -125,7 +118,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 ];
 	}
 ];
-
 name: string,
   description: string;
 category:;
@@ -186,7 +178,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 }
 =======];
 ;
-
 export type CuttingEdgeAIService = {;
 	id: string,;
 	name: string,,
@@ -248,7 +239,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 	}
 ];
 ;
-
 export type CuttingEdgeAIService = {;
 	id: string,;
 	name: string,,
@@ -309,7 +299,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		realService: true;
 	}
 ];
-
 export type CuttingEdgeAIService = {
   id: string;
   name: string,

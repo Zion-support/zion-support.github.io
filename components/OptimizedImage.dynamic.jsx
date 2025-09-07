@@ -1,5 +1,4 @@
 import React from 'react';
-
 ;
 const OptimizedImage.dynamic = () => {
   return (
@@ -8,6 +7,4 @@ const OptimizedImage.dynamic = () => {
     </div>);
 }
 ;
-
 export default OptimizedImage.dynamic;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

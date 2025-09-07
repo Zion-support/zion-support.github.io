@@ -1,13 +1,11 @@
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
-
 export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
-
 interface NotificationFilterProps {
   filter: FilterType,
   onFilterChange: (filter: FilterType) => void
 import React from 'react';
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system',;
 interface NotificationFilterProps {;
   filter: FilterType,;
@@ -17,12 +15,10 @@ interface NotificationFilterProps {;
   | "onboarding"
   | "messages"
   | "system";
-
 interface NotificationFilterProps {
   filter: FilterType;
   onFilterChange: (filter: FilterType) => void;
 }
-
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter,
   onFilterChange,
@@ -53,10 +49,8 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
       </Tabs>
     </div>
   );
-
   )
 },
-
   ),;
 },; export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
 <Tabs defaultValue= {
@@ -67,7 +61,6 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
 };
   );
 }
-
   )
 },
 };

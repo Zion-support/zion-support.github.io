@@ -1,7 +1,7 @@
 import React from 'react';
-import Head from 'next/head',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
+import Head from 'next/head';
+import Card from "Card";
+import Button from "Button";
 import { ;
   Brain,;
   MessageSquare, ;

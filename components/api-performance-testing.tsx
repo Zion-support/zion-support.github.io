@@ -1,34 +1,25 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function ApiPerformanceTestingPage() {
-
   const features = [
     "k6/Gatling-compatible test runner"
     "SLO-aware latency reports"
@@ -37,19 +28,16 @@ export default function ApiPerformanceTestingPage() {
     "Synthetic traffic for staging"
   ];
   return (
-
 export default function ApiPerformanceTestingPage() {
   const features = [
     "k6/Gatling-compatible test runner",
     "SLO-aware latency reports",
-
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
   ];
 ;
   return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <>;
       <SEO;
         title="API Performance Testing";
@@ -84,7 +72,6 @@ export default function ApiPerformanceTestingPage() {
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
             {features.map((f) => (
               <div
-
                 key={f}
                 className="flex items - start space - x-3 p - 4 rounded - xl bg-white / 5 border border-white / 10";
               >;
@@ -120,7 +107,6 @@ export default function ApiPerformanceTestingPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text-cyan-300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
-
   return (
     <>;
       <SEO;
@@ -139,7 +125,6 @@ export default function ApiPerformanceTestingPage() {
           <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
             {features.map ((f) => (
               <div;
-
     <>
       <SEO
         title="API Performance Testing"
@@ -157,7 +142,6 @@ export default function ApiPerformanceTestingPage() {
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
             {features.map((f) => (
               <div
-
                 key={f}
                 className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10";
               >;
@@ -197,11 +181,7 @@ export default function ApiPerformanceTestingPage() {
           </div>;
         </section>;
       </main>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </a>;
           </div>;
         </section>;
       </main>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

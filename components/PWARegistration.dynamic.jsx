@@ -1,5 +1,4 @@
 import React from 'react';
-
 ;
 const PWARegistration.dynamic = () => {
   return (
@@ -8,6 +7,4 @@ const PWARegistration.dynamic = () => {
     </div>);
 }
 ;
-
 export default PWARegistration.dynamic;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

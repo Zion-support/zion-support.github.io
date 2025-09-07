@@ -1,6 +1,5 @@
 export const new2025Services: EnhancedRealMicroSaasService[] = [
   {
-
       'Jailbreak and injection detection',
       'PII redaction and audit trail',
       'Hallucination and grounding score',
@@ -28,7 +27,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   }
   {
     id: 'serverless-cron-orchestrator';
-    name: 'Serverless Cron Orchestrator'
+    name: "name",
     tagline: 'Reliable schedules, retries and dead-lettering across clouds';
     price: '$59';
     period: '/month'
@@ -542,7 +541,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     technology: ['Next.jsLLM APIs'];
     integrations: ['HubSpotSalesforceOutreach'];
     use_cases: ['Outbound emails_lead nurturing_meeting booking'];
-    reviews: 21
+    reviews: 21;
     competitors: ['SmartleadReply.io_apollo.io'];
     market_size: '$5B sales tech';
     growth_rate: '26% CAGR';
@@ -866,10 +865,7 @@ reviews: 6,
   },;
 ];
     reviews: 6
-
   }
 ];
-
 ;
-
 ];

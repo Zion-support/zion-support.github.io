@@ -1,11 +1,8 @@
-
-
 import {useState} from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {CreateResumeFormProps} from "./types";
-
 export const CreateResumeForm = ({ ;
   onCreateResume;
   onCancel;
@@ -14,7 +11,7 @@ export const CreateResumeForm = ({ ;
               placeholder="Resume Title (e && e.g. 'AI Engineer Resume')"
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
 import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card",;
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
 import { CreateResumeFormProps } from "./types",;
@@ -22,7 +19,6 @@ export const CreateResumeForm = ({;
   onCreateResume,;
   onCancel,;
   isLoading;
-
     <Card className="w-full max-w-2xl mx-auto">;
       <CardContent className="py-8">;
         <div className="text-center">;
@@ -31,9 +27,7 @@ export const CreateResumeForm = ({;
               type="text";
               placeholder="Resume Title (e.g. 'AI Engineer Resume')";
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";              value={newResumeTitle}
-
               disabled={!newResumeTitle.trim() || isLoading}
-
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
             />

@@ -1,8 +1,6 @@
-
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;  const [progress, setProgress] = useState(0);
-
   useEffect(() => {
     // Calculate progress based on completed sections
     if (!resume) {
@@ -10,11 +8,10 @@ export const useResumeProgress = (resume: Resume | null) => {;  const [progress,
       return;
     }
 import { useState, useEffect } from 'react';
-import { Resume } from '@/types/resume',;
+import { Resume } from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;
   const [progress, setProgress] = useState(0),;
   useEffect(() => {;
-
     // Calculate progress based on completed sections;
     // Check condition
 if ( {) {
@@ -26,32 +23,26 @@ if ( {) {
     let completed = 0;
 ;
     // Basic info is always considered (1 point);
-
     completed += 1,;
     // Work experience (1 point if at least one entry);
     if (resume.work_experience && resume.work_experience.length > 0) {;
       completed += 1;      completed += 1;
     }
-
     // Education (1 point if at least one entry)
     if (resume.education && resume.education.length > 0) {
       completed += 1;
     }
-
     // Skills (1 point if at least one entry)
     if (resume.skills && resume.skills.length > 0) {
       completed += 1;
     }
-
     // Certifications (1 point if at least one entry)
     if (resume.certifications && resume.certifications.length > 0) {
       completed += 1;
     }
-
     const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage);
   }, [resume]);
-
     // Check condition
 if ( {) {
   $2
@@ -67,7 +58,6 @@ if ( {) {
     if (resume && resume.certifications && resume && resume.certifications.length > 0) {
       completed += 1
     }};
-
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
 ;
@@ -118,6 +108,5 @@ export const useResumeProgress = (resume:Resume | null) => {;
 };
   return progress
 };
-
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

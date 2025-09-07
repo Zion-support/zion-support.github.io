@@ -1,32 +1,18 @@
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-;
-const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {}
-
-  const { address } = req.query as { address?: string }
-  if (!address) return res.status(400).json({ error: 'Missing address' })
-  const data = store[String(address).toLowerCase()] |null
-
-  return res.status(200).json({ data })
-  const { address } = req.query as { address?: string }
-  if (!address) return res.status(400).json({ error: 'Missing address' })
-  const data = store[String(address).toLowerCase()] || null
-  return res.status(200).json({ data });
-};
-const store: Record<string, any> = (global as any).ZION_DID_STORE || {};
-export default function handler(req: any, res: any) {
-  res.status(200).json({ store });
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {};
+(global as any).__ZION_DID_STORE__ = store;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { address } = req.query as { address?: string };
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  const { address } = req.query as { address?: string };
+  if (!address) {
+    return res.status(400).json({ error: 'Missing address' });
+  }
+
+  const data = store[String(address).toLowerCase()] || null;
+  res.status(200).json({ data });
+}

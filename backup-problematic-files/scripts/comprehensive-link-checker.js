@@ -610,8 +610,8 @@ class ComprehensiveLinkChecker {;
       if (response && response.status === 200) {
         this && this.workingLinks.push({
           url
-          "status": response && response.status
-          parent: parentUrl,
+          "status": response && response.status;
+    parent: parentUrl,
           depth});
         // Extract links from the page;
         if (depth < this && this.maxDepth) {;

@@ -1,11 +1,7 @@
-
-
 import React from 'react';
-
 interface Homepage2040Props {
   className?: string;
 }
-
 const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
   return (
     <div className={className || ''}>
@@ -81,7 +77,6 @@ import {
   FileText, BarChart3, Heart, Truck, ShieldCheck;
   Sparkles, Infinity as InfinityIcon, Zap as Lightning
 } from 'lucide-react';
-
 // Import new service data
 import { innovativeMicroSaasServices2025V2  } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
@@ -92,8 +87,8 @@ const Homepage2040: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     visible: {
-      opacity: 1
-      y: 0
+      opacity: 1;
+    y: 0
       transition: {
         duration: 0.6
         ease: "easeOut" as const
@@ -251,13 +246,10 @@ const Homepage2040: React.FC = () => {
                   }}
                 />;
               ))}
-
             </div>;
           </div>;
-
           <div className="text-center max-w-6xl mx-auto relative z-10">;
             <motion&& motion.div
-
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -267,24 +259,19 @@ const Homepage2040: React.FC = () => {
                 variants={itemVariants}
                 className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
                 role="banner"
-
               <motion.h1 
-
                 variants={itemVariants}
                 id="hero-heading"
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
               >
                 Zion Tech Group
               </motion.h1>
-
               <motion.p 
-
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
               >
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
               </motion.p>
-              
               {/* Enhanced CTA Section */}
               <motion.div 
                 variants={itemVariants}
@@ -309,7 +296,6 @@ const Homepage2040: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
-
               {/* Enhanced Trust Indicators */}
               <motion.div
                 variants={itemVariants}
@@ -317,13 +303,11 @@ const Homepage2040: React.FC = () => {
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight">;
                 Zion Tech Group;
               </motion && motion.h1>;
-
               <motion&& motion.p 
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">;
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide;
               </motion && motion.p>;
-
               {/* Enhanced CTA Section */}
               <motion&& motion.div 
                 variants={itemVariants}
@@ -347,11 +331,9 @@ const Homepage2040: React.FC = () => {
                   </button>;
                 </Link>;
               </motion && motion.div>;
-
               {/* Enhanced Trust Indicators */}
               <motion&& motion.div
                 variants={itemVariants}
-
                 className="flex flex-wrap justify-center gap-8 text-sm text-gray-400">;
                 <div className="flex items-center gap-2">;
                   <ShieldCheck className="w-5 h-5 text-green-400" />;
@@ -369,14 +351,12 @@ const Homepage2040: React.FC = () => {
                   <Star className="w-5 h-5 text-yellow-400" />;
                   <span>4 && 4.9/5 Rating</span>;
                 </div>;
-
                 {/* SVG Pattern Background */}
                 <div className="absolute inset-0 bg-gray-800/20"></div>;
               </motion && motion.div>;
             </motion && motion.div>;
           </div>;
         </section>;
-
         {/* Enhanced Stats Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
@@ -459,7 +439,6 @@ const Homepage2040: React.FC = () => {
                       <div className="mb-6">;
                         <span className="text - 2xl font - bold text-cyan-400">;
                           {service.price}
-
                       {/* CTA Button */}
                       <Link 
                         href={service.link}
@@ -508,9 +487,7 @@ const Homepage2040: React.FC = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-
               <motion.div 
-
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center"
               >
@@ -549,6 +526,4 @@ const Homepage2040: React.FC = () => {
     </Layout>
   )
 }
-
 export default Homepage2040;
-

@@ -1,8 +1,8 @@
 import React from 'react';
-import Head from 'next/head',;
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
+import Head from 'next/head';
+import UltraFuturisticBackground from "UltraFuturisticBackground";
 import { Button } from '../components/ui/Button',;
-import Card from '../components/ui/Card',;
+import Card from "Card";
 import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react',;
 ;
 export default function AuditLogVaultPage() {;

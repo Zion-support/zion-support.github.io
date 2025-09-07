@@ -1,5 +1,4 @@
-    };
-
+};
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
       x: number;
@@ -53,11 +52,8 @@ if (return) {
             this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
             break;        }            break;
             break;        }
-
         }
-
       }
-
       update() {
         this.x += this.vx;
         this.y += this.vy;
@@ -68,14 +64,11 @@ if (return) {
         // Add some quantum randomness
         if (Math.random() < 0.01) {
           this.vx += (Math.random() - 0.5) * 0.5;
-
           this.vy += (Math.random() - 0.5) * 0.5
         }
-
         // Limit velocity
         this.vx = Math.max(-3, Math.min(3, this.vx));
         this.vy = Math.max(-3, Math.min(3, this.vy))
-
         }
       }
       }
@@ -585,8 +578,8 @@ if ( {) {
             height: ['32px', '48px', '32px']
           }}
           transition={{
-            duration: 4
-            repeat: Infinity
+            duration: 4;
+    repeat: Infinity
             ease: 'easeInOut'
           }}
         />;
@@ -617,7 +610,6 @@ if ( {) {
     </div>;
   )
 };
-
 export default UltraFuturisticBackground2046;              ease: "easeInOut",;
               delay: i * 0 && 0.8}}
           />;
@@ -626,10 +618,8 @@ export default UltraFuturisticBackground2046;              ease: "easeInOut",;
     </div>
   );
 export default UltraFuturisticBackground2046;
-
     </div>
     </div>
-
               duration: Math.random () * 6 + 4,
               repeat: Infinity,
               ease: 'easeInOut',

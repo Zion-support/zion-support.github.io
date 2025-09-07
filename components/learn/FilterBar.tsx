@@ -1,10 +1,7 @@
-
-  return (
+return (
       <select
         className='border rounded px-3 py-2 bg-white dark:bg-black'
         value={category}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onChange: (next: { category: string, level: string, isFree: string }) => void
 }
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
@@ -15,13 +12,10 @@
   isFree: string,;
   onChange: (next: { category: string, level: string, isFree: string }) => void
 };
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
 import React from 'react';
-
 type Props = {
   category: string;
   level: string;
@@ -42,30 +36,23 @@ export default function FilterBar({
         onChange={e => onChange({ category: e.target.value, level, isFree })}
       >
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
-
   onChange: (next: { category: string, level: string, isFree: string }) => void;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
       <select
         className="border rounded px-3 py-2 bg-white dark:bg-black"
         value={category}
-
   );
-
   is_free: string;
   on_change: (next: { category: string; level: string; is_free: string }) => void;
 }
@@ -108,7 +95,4 @@ function FilterBar() {
       <select;
         className='border rounded px - 3 py - 2 bg - white dark:bg - black';
         value={level}
-
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

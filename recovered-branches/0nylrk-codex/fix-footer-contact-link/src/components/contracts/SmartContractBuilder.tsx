@@ -1,13 +1,10 @@
 interface SmartContractBuilderProps {
-
-  isOpen: boolean
-  onClose: () => void
+  isOpen: boolean;
+    onClose: () => void
   talent: TalentProfile
   clientName: string
   onContractGenerated?: (contractContent: string) => void
-
   onDeploy?: (contractContent: string) => void
-
 import {useState} from "react";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
@@ -28,31 +25,23 @@ interface SmartContractBuilderProps {;
   onContractGenerated?: (contractContent: string) => void,;
   onDeploy?: (contractContent: string) => void;
 }
-
 export function SmartContractBuilder(): any ({;
-
 export function SmartContractBuilder({;export function SmartContractBuilder({;
   isOpen;
   onClose;
   talent;
   clientName;
   onContractGenerated;  const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
-
-    network: 'ethereum'
+    network: "network",
     useEscrow: true
-
     deployToChain: false
-
   }),
   const [deployStatus, setDeployStatus] = useState<string>(''),
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
-  
   const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts(),
-
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData)
   },
-
   // Convert ContractFormValues to contract content string
   const handleContractGenerated = async (formValues: ContractFormValues) => {
     if (!formValues) return
@@ -148,12 +137,11 @@ if ( {) {
   }
   }
 };
-
       console.error("Error deploying contract:", error),
       setDeployStatus('error'),
       toast.error("Failed to deploy smart contract")
 import { useState } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog",;
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
 import { Button } from "@/components/ui/button",;
 import { Save } from "lucide-react",;
@@ -226,14 +214,11 @@ export function SmartContractBuilder({;
       toast && toast.error("Failed to generate smart contract");
     }
   };
-
   const handleDeployContract = async () => {;
     if (!generatedContract) return;
-
     try {;
       setDeployStatus('deploying');
       const contractInfo = await deploySmartContract(generatedContract, deployOptions);
-
       if (contractInfo) {;
         setDeploymentInfo(contractInfo);
         setDeployStatus('deployed');
@@ -248,7 +233,6 @@ export function SmartContractBuilder({;
       toast && toast.error("Failed to deploy smart contract");
     }
   };
-
   // Modified to match the expected interface;
   const handleFormSubmit = (contract: string) => {;
     // This should be a function that takes a string (contract content);
@@ -259,7 +243,6 @@ export function SmartContractBuilder({;
     setGeneratedContract(contract);
     setActiveTab("preview")
 };
-
   return (  return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
@@ -273,9 +256,7 @@ export function SmartContractBuilder({;
                   onClose={onClose}
                   deployStatus={deployStatus}
                   deploymentInfo={deploymentInfo}
-
                 />;
-
                 {!deploymentInfo && deployOptions && deployOptions.deployToChain && (;
                   <div className="mt-6 flex justify-center">;            />;
           </TabsContent>;
@@ -345,9 +326,7 @@ const handleLoadTemplate = (templateData: ContractFormValues) => {
 try {
   setGeneratedContract (generatedContractText);
 setActiveTab ("preview");
-  
 }
-
 };
 const handleDeployContract = async () => {
   if (!generatedContract) return;
@@ -355,7 +334,6 @@ try {
   setDeployStatus ('deploying');
 const contractInfo = await deploySmartContract (generatedContract, deployOptions);
 if (contractInfo) {
-  
 }
 };
 //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {

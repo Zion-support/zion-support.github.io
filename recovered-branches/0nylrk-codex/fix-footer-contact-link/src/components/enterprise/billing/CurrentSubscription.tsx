@@ -4,21 +4,17 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
-
     teamSeats: {
-      used: 32
-      total: 50
+      used: 32;
+    total: 50
     }
-
   return (
   },
-
   return (
-
 =======
   return (
 import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 export function CurrentSubscription() {;

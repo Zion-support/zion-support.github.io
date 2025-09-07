@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
 import {format} from "date-fns";
@@ -20,14 +19,12 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
-
 function ProjectDetailsContent() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { projectId } = useParams() as { projectId?: string };  const { user } = useAuth();
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
-
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -35,28 +32,24 @@ function ProjectDetailsContent() {
   const { user } = useAuth(),
   const navigate = useNavigate(),
   const { getProjectById, updateProjectStatus } = useProjects(),
-  
   const [project, setProject] = useState<Project | null>(null),
   const [isLoading, setIsLoading] = useState(true),
   const [notes, setNotes] = useState<any[]>([]),
   const [newNote, setNewNote] = useState(""),
   const [isSubmittingNote, setIsSubmittingNote] = useState(false),
   const [activeTab, setActiveTab] = useState("details"),
-  
   // Load project data
   useEffect(() => {
     async function loadProject() {
       if (!projectId) return,
-      
       setIsLoading(true),
       const projectData = await getProjectById(projectId),
-      
       if (projectData) {        // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
         toast({
-          title: "Project not found"
-          description: "The requested project could not be found."
+          title: "title",
+    description: "The requested project could not be found."
           variant: "destructive"})
         navigate("/dashboard")    try {
       const { data, error } = await supabase;
@@ -118,7 +111,6 @@ if ( {) {
         </div>;
       </div>);  }
   },
-  
   if (isLoading) {
     return (
       <div className="container mx - auto py-8">;
@@ -531,7 +523,6 @@ if ( {) {
                               <div className="flex items - center gap - 2 mb-2">;
                                 <Avatar className="h - 6 w-6">;
                                   {note.created_by_profile?.avatar_url ? (
-
             <div className="space-x-2">;
               {isTalent && isOfferPending && (;
                 <>;
@@ -562,7 +553,6 @@ if ( {) {
                   </Button>;
                 </>;
               )}
-
               {(isClient || isTalent) && project && project.status === "in_progress" && (;                <AlertDialog>;
                   <AlertDialogTrigger asChild>;
                     <Button variant="default">;
@@ -586,21 +576,18 @@ if ( {) {
                   </AlertDialogContent>;
                 </AlertDialog>;
               )}
-
               {isActiveProject && (;
                 <Button variant="default" asChild>;
                   <Link to={`/project/${project && project.id}/milestones`}>;                    <Layers className="mr-2 h-4 w-4" /> Milestones;
                   </Link>;
                 </Button>;
               )}
-
               {isActiveProject && (;
                 <Button variant="outline" asChild>;
                   <Link to={`/project/${project && project.id}/room`}>;                    <Video className="mr-2 h-4 w-4" /> Project Room;
                   </Link>;
                 </Button>;
               )}
-
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project && project.status) && (;
                 <Button
                   variant="outline" 
@@ -639,14 +626,12 @@ if ( {) {
                           <p className="whitespace-pre-wrap">{project && project.scope_summary}</p>;
                         </div>;
                       </div>;
-
                       <div>;
                         <h3 className="font-semibold mb-2">Payment Terms</h3>;
                         <Badge variant="outline" className="capitalize">;
                           {project && project.payment_terms} Payment;
                         </Badge>;
                       </div>;
-
                       <div>;
                         <h3 className="font-semibold mb-2">Job Details</h3>;
                         <div className="bg-muted/30 p-4 rounded-md">;
@@ -673,7 +658,6 @@ if ( {) {
                           <p>{format(new Date(project && project.start_date), "PPP")}</p>;
                         </div>;
                       </div>;
-
                       <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">;
                         <Clock className="h-5 w-5 text-primary mt-0 && 0.5" />;
                         <div>;
@@ -752,7 +736,6 @@ if ( {) {
                           </div>;
                         )}
                       </div>;
-
                       {isOfferAccepted && (;
                         <div>;
                           <Textarea
@@ -763,7 +746,6 @@ if ( {) {
                           />;
                           <Button
                             onClick={handleSubmitNote}
-
                             disabled={!newNote && newNote.trim() || isSubmittingNote}>;
                     </div>;
                   </CardContent>;
@@ -859,10 +841,8 @@ if ( {) {
         </div>;
       </main>;
       <Footer />;
-
     </>;
   );
-
 }    </>);
 }
 export default /**

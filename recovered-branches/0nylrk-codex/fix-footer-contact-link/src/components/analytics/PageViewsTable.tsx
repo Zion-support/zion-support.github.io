@@ -1,5 +1,3 @@
-
-
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -13,7 +11,6 @@ const timeRangeToInterval = {
   '30d': { days: 30, interval: 'day' }
   '90d': { days: 90, interval: 'week' }
   '365d': { days: 365, interval: 'month' }
-
                     {formatPathName(page.path)}
                   </div>
                   <div className="flex items-center gap-3">
@@ -30,7 +27,7 @@ const timeRangeToInterval = {
   )
 }
 import { useQuery } from "@tanstack/react-query";
-import { supabase } from "@/integrations/supabase/client",;
+import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Skeleton } from "@/components/ui/skeleton",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
@@ -48,7 +45,6 @@ type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',;                         
             <div className="text-center py-8 text-zion-slate">;
               No page view data available for this time period;
             </div>;
-
           )}
 }
 ;}

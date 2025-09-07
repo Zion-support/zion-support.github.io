@@ -1,13 +1,10 @@
-
-
-  projectName: string,
+projectName: string,
   scopeSummary: string,
   startDate: Date,
   endDate?: Date;
   projectType: string,
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
-
 export function MilestoneSuggestions({;
 import React, { useState } from 'react';
   projectName;
@@ -15,7 +12,7 @@ import React, { useState } from 'react';
   startDate;
   endDate;
   projectType;import React, { useState } from 'react';
-import { Button } from '@/components/ui/button',;
+import { Button } from '@/components/ui/button';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Loader2, Sparkles, Check } from 'lucide-react',;
@@ -29,13 +26,11 @@ interface MilestoneSuggestionsProps {;
   projectType: string,;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
-
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
       projectType: projectType || "Other"
     },
-
     const milestones = await generateMilestones(input),
         if (milestones.length > 0) {
       setShowSuggestions(true),
@@ -62,7 +57,6 @@ export function MilestoneSuggestions({;
 }: MilestoneSuggestionsProps) {;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
   const [showSuggestions, setShowSuggestions] = useState(false);
-
       setShowSuggestions(true);
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones);
@@ -114,24 +108,18 @@ if ( {) {
   }
 ;
   const format_date = (date_string: string) =>: any {
-
     try {
       return format (parseISO (date_string), 'MMM dd, yyyy');
     } catch (error) {
   };
-
   const formatDate = (dateString: string) => {;
     try {;
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
-
     }
-
   },
-
   }
-
   return (
     <div className="space-y-4">;
       {!showSuggestions && (;
@@ -150,11 +138,9 @@ if ( {) {
               <Sparkles className="mr-2 h-4 w-4" />;
               Suggest Project Milestones with AI;
             </>;
-
           )}
         </Button>;
       )}
-
           )}
         </Button>
       )}
@@ -195,7 +181,6 @@ if ( {) {
           </CardContent>
         </Card>
       )}
-
       {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;        <Card>;
           <CardHeader className="pb-3">;
             <CardTitle className="text-lg flex items-center">;
@@ -223,13 +208,11 @@ if ( {) {
                   </div>;
                 </div>;
               ))}
-
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">;
                 <Check className="h-4 w-4 mr-1 text-green-500" />;                These milestones will be added to your contract;
               </div>;
             </div>;
           </CardContent>;
-
         </Card>)}
     </div>);
 }

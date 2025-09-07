@@ -7,8 +7,8 @@ export const trackEvent = (;
     window.gtag('event', eventName, properties)}';,
 };
   if (typeof window !== 'undefined' && window && window.gtag) {
-      page_path: url
-      page_path: url,;
+      page_path: url;
+    page_path: url,;
     });
   }
 }
@@ -35,16 +35,12 @@ if ( {) {
   $2
 }
     window.gtag ('config', 'GA_MEASUREMENT_ID', {
-
       page_path: url,
-
       page_path: url,;    });
   }
-
   if (typeof window !== 'undefined' && window && window.gtag) {
     window && window.gtag('config', GA_TRACKING_ID, {
       page_path: url,
-
     });
   }
 }
@@ -84,14 +80,13 @@ if ( {) {
   id: string;
 }
       value: Math.round(metric.value)
-      event_category: 'Web Vitals'
-      event_label: metric.id
+      event_category: "event_category",
+    event_label: metric.id
       non_interaction: true
       value: Math.round(metric.value),
       event_category: 'Web Vitals',
       event_label: metric.id,
       non_interaction: true,;
-
       event_category: 'Web Vitals',
       event_label: metric.id,
       non_interaction: true,

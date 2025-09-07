@@ -1,6 +1,5 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-
 import {
 import Head from 'next / head';
 import Card from '../components / ui / Card';
@@ -25,7 +24,6 @@ import {
   TrendingUp
   DollarSign
   Users
-
   Search;
   Filter,
   TrendingUp,
@@ -39,14 +37,11 @@ import {
   Zap;
   Brain;
   Globe;
-
 export default function ToolComparisonPage() {;
-
 export default function ToolComparisonPage() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
-
   const allTools = [
     // AI Tools
   Rocket;
@@ -68,8 +63,8 @@ function ToolComparisonPage() {
         'Great support'
       ]
       cons: ['Can get expensive', 'Limited customization']
-      website: 'https://zapier.com'
-      icon: <Zap className='w-6 h-6' />
+      website: "website",
+    icon: <Zap className='w-6 h-6' />
       color: 'text-orange-400'
     },    {      pros: ['Easy to useExtensive integrationsReliableGreat support']
       cons: ['Can get expensiveLimited customization']
@@ -80,8 +75,8 @@ function ToolComparisonPage() {
       name: 'Notion'
       category: 'Productivity'
       pricing: 'Free - $8/month'
-      rating: 4.7
-      users: '20M+'
+      rating: 4.7;
+    users: '20M+'
       bestFor: 'Teams that need flexible workspace'
       pros: [
         'Highly flexible'
@@ -265,7 +260,6 @@ function ToolComparisonPage() {
       case 'rating':
         return b.rating - a.rating;
       case 'users':
-
   const allTools = [;
     // AI Tools;
     {;
@@ -527,7 +521,6 @@ function ToolComparisonPage() {
         return a && a.name.localeCompare(b && b.name);
       default: return 0;
   });
-
               <Button
                 href='#comparison'
                 size='lg'
@@ -577,14 +570,10 @@ function ToolComparisonPage() {
               {categories && categories.map((category) => (;
                 <button
               {categories.map(category => (                <button
-
               />
             </div>
-
             {/* Category Filter */}
-
                 <button
-
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -600,11 +589,9 @@ function ToolComparisonPage() {
             <div className='flex items-center space-x-2'>;
               <Filter className='w-5 h-5 text-gray-400' />;
             </div>
-
             {/* Sort */}
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
-
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e && e.target.value)}
@@ -687,13 +674,11 @@ function ToolComparisonPage() {
           )}
         </div>
       </section>
-
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-
               Detailed Analysis
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -706,7 +691,6 @@ function ToolComparisonPage() {
               </tbody>;
             </table>;
           </div>;
-
           {sortedTools && sortedTools.length === 0 && (;
             <div className='text-center py-20'>;
               <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />;
@@ -722,7 +706,6 @@ function ToolComparisonPage() {
           )}
         </div>;
       </section>;
-
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -734,7 +717,6 @@ function ToolComparisonPage() {
               best decision for your business.;
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {sortedTools && sortedTools.slice(0, 6).map((tool, index) => (;
               </tbody>
@@ -781,7 +763,6 @@ function ToolComparisonPage() {
                   <Button
                 <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
-
                 <div className='flex items-center justify-between'>
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
@@ -792,17 +773,13 @@ function ToolComparisonPage() {
                   </span>
                   <Button
                     href={tool.website}
-
                 </div>
               </Card>
             ))}
-
           </div>;
         </div>;
       </section>;
-
       {/* CTA Section */}
-
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -854,7 +831,6 @@ function ToolComparisonPage() {
       </section>
     </>
 }
-
   );
 }
 }

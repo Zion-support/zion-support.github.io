@@ -17,7 +17,6 @@ import {
   Clock,
   Target,;
   Crown,;} from 'lucide-react';
-
 import {
   Rocket,
   Brain,
@@ -37,7 +36,6 @@ import {
   Clock,
   Target,;
   Crown,;} from 'lucide-react';
-
 import {
   Rocket
   Brain
@@ -58,18 +56,16 @@ import {
   Target
   Crown;} from 'lucide-react';
 export default function UltraFuturisticHero2028() {
-
   const features = [import {;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
-
   ArrowRight, Star, TrendingUp, Users, Award, Play;
   CheckCircle, DollarSign, Clock, Target, Crown
 export default function UltraFuturisticHero2028() {
   const features = [
     {
-      icon: Brain
-      text: 'AI Consciousness Evolution'
-      color: 'from-emerald-500 to-teal-500'
+      icon: Brain;
+    text: "text",
+    color: 'from-emerald-500 to-teal-500'
     }
     {
       icon: Atom
@@ -94,33 +90,27 @@ export default function UltraFuturisticHero2028() {
     { value: '25+', label: 'AI Solutions', icon: Brain }
     { value: '15+', label: 'Quantum Technologies', icon: Atom }
     { value: '1000+', label: 'Happy Clients', icon: Users }
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
   ];
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black pt-20'>;
@@ -187,12 +177,10 @@ import { motion } from 'framer-motion';
             <span className="text-cyan-400 font-mono text-sm">2028 Future Technology</span>;
             <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />;
         </motion && motion.div>;
-
         {/* Main Heading */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight'>
             <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent'>
@@ -216,7 +204,6 @@ import { motion } from 'framer-motion';
               </span>;
             </span>;
           </h1>;
-
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -250,7 +237,6 @@ import { motion } from 'framer-motion';
             <span>Explore 2028 Services</span>;
             <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />;
           </motion && motion.button>;
-
           <motion&& motion.button
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }}
@@ -267,7 +253,6 @@ import { motion } from 'framer-motion';
             <span>Watch Demo</span>;
           </motion && motion.button>;
         </motion && motion.div>;
-
         {/* Features Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -287,16 +272,13 @@ import { motion } from 'framer-motion';
                   <h3 className="text-lg font-semibold text-white text-center group-hover:text-cyan-400 transition-colors">
                     {feature.text}
                   <h3 className='text-lg font-semibold text-white text-center group-hover:text-cyan-400 transition-colors'>                    {feature.text}
-
                     {feature.text}
-
                   </h3>
                 </div>
               </motion.div>
             ))}
           </div>
         </motion.div>
-
             ))}
         {/* Stats */}
         <motion&& motion.div
@@ -319,15 +301,12 @@ import { motion } from 'framer-motion';
                 <div className="text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors">
                   {stat.label}
                 <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors'>                  {stat.label}
-
                   {stat.label}
-
                 </div>
               </motion.div>
             ))}
           </div>
         </motion.div>
-
             ))}
         {/* Trust Indicators */}
         <motion&& motion.div
@@ -381,12 +360,10 @@ import { motion } from 'framer-motion';
               <div className="text-emerald-400 font-semibold">Startups</div>;
           </div>;
         </motion && motion.div>;
-
         {/* Bottom CTA */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           <div className='inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm'>
             <div className='flex items-center space-x-2'>
@@ -403,7 +380,6 @@ import { motion } from 'framer-motion';
               <Star className="w-5 h-5 text-yellow-400" />;
               <span className="text-white font-semibold">Ready to transform your business?</span>;
             </div>;
-
           transition={{ duration: 0.8, delay: 1.6 }}
           className="text-center"
         >
@@ -412,7 +388,6 @@ import { motion } from 'framer-motion';
               <Star className="w-5 h-5 text-yellow-400" />
               <span className="text-white font-semibold">Ready to transform your business?</span>
             </div>
-
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 hover:border-purple-300"
@@ -422,20 +397,17 @@ import { motion } from 'framer-motion';
           </div>
         </motion.div>
       </div>
-
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 hover:border-purple-300">;
               Get Started;
             </Link>;
           </div>;
         </motion && motion.div>;
       </div>;
-
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 2 }}
-
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -452,11 +424,8 @@ import { motion } from 'framer-motion';
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
   );
-
 }
-
   );
-
   );
 }
                 </div>;

@@ -19,11 +19,8 @@ export default function CompanyWorkspace() {
   const { user } = useAuth(),
   const { company, isLoading, error } = useCompanyWorkspace(companySlug),
   const { isWhitelabel, tenant, brandName } = useWhitelabel(),
-  
-
   if (isLoading) {
     return (
-
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
       </div>
@@ -34,35 +31,29 @@ export default function CompanyWorkspace() {
   }
   // In white-label mode, use the tenant's theme instead of the company's theme
   const effectiveTheme = isWhitelabel ? {
-    primaryColor: tenant?.primary_color |company.theme?.primaryColor
+    primaryColor: tenant?.primary_color |company.theme?.primaryColor;
     backgroundColor: company.theme?.backgroundColor |'var(--background)'
     textColor: company.theme?.textColor |'var(--foreground)'
   } : company.theme;
-
   // Check if user has access to this company workspace
   const hasAccess = true, // For demo purposes, always grant access
   if (!hasAccess) {
     return <Navigate to="/unauthorized" />
       <SEO
       <SEO 
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -73,11 +64,9 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
 import {useWhitelabel} from "@/context/WhitelabelContext";
-
       <SEO 
-
 import React from "react";
-import { Header } from "@/components/Header",;
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer",;
 import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -92,7 +81,6 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
     );
   }
   }
-
 ;
   return (;
     <ProtectedRoute>;
@@ -180,4 +168,3 @@ if ( {) {
     </ProtectedRoute>);
 }}
 }
-

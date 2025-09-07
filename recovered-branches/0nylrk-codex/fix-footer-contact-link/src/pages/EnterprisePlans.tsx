@@ -29,7 +29,6 @@ import { SEO } from "@/components/SEO",export default function EnterprisePlans()
     </>
   );
 }
-
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -40,9 +39,8 @@ import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
 import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
 import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
 import {SEO} from "@/components/SEO";
-
 import React from "react";
-import { Header } from "@/components/Header",;
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer",;
 import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero",;
 import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable",;
@@ -51,7 +49,6 @@ import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA",;
 import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges",;
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",;
 import { SEO } from "@/components/SEO";
-
 export default function EnterprisePlans() {;
   return (
     <>;
@@ -67,4 +64,3 @@ export default function EnterprisePlans() {;
       />;
       <Header />;    </>);
 ;
-

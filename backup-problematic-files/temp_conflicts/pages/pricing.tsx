@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import Head from 'next/head',;
+import Head from 'next/head';
 import { motion } from 'framer-motion',;
 import { ;
   Check, Star, Zap, Shield, Rocket, Brain, Atom, ;
   Users, Globe, Code, Server, Cpu, ArrowRight,;
   TrendingUp, Award, Clock, DollarSign;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
+import EnhancedNavigation from "EnhancedNavigation";
+import EnhancedFooter from "EnhancedFooter";
 ;
 export default function PricingPage() {;
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),;

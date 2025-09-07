@@ -1,24 +1,19 @@
 import type { UserDetails } from "@/types/auth";
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",import {supabase} from "@/integrations/supabase/client";
-
 import type { UserDetails } from "@/types/auth";
-
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
-
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
  */
-
 export const cleanupAuthState = () => {
-
   // Remove standard auth tokens
 import { supabase } from "@/integrations/supabase/client";
-import type { UserDetails } from "@/types/auth",;
+import type { UserDetails } from "@/types/auth";
 /**;
  * Utility function to clean up authentication state;
  * This helps prevent auth state inconsistencies and "limbo" states;
@@ -53,7 +48,6 @@ export const cleanupAuthState = () => {;
       await supabase
         .from("email_campaigns")
         .insert({
-
             user_type: user.user_type || "unknown",
             display_name: user.display_name || user.email?.split ("@")[0] || "User";          user_id: user.id,
           campaign_type: "welcome_series",

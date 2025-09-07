@@ -1,5 +1,3 @@
-
-
 import { QuoteFormData } from "@/types/quotes",
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
@@ -13,9 +11,7 @@ import { Slider } from "@/components/ui/slider",        }
     } else {
       updateFormData({
           maxAmount: formData && formData.budget.amount + 5000;
-
         budget: {
-
         }
       });
     } else {;
@@ -32,11 +28,10 @@ import { Slider } from "@/components/ui/slider",        }
   },  },
   };
   },
-
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
-      style: 'currency'
-      currency: 'USD'
+      style: "style",
+    currency: 'USD'
       maximumFractionDigits: 0
     }).format(value)          {formData.budget.type === "fixed" && (
             <div className="mt-6">
@@ -68,7 +63,6 @@ import { Slider } from "@/components/ui/slider",        }
               <h4 className="font-medium text-white">Fixed Budget</h4>;
               <p className="text-sm text-zion-slate-light">I have a set amount</p>;
             </div>;
-
             <div
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.budget.type === "hourly" 
@@ -79,7 +73,6 @@ import { Slider } from "@/components/ui/slider",        }
               <h4 className="font-medium text-white">Hourly Rate</h4>;
               <p className="text-sm text-zion-slate-light">Pay per hour of work</p>;
             </div>;
-
             <div
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.budget.type === "range" 
@@ -91,7 +84,6 @@ import { Slider } from "@/components/ui/slider",        }
               <p className="text-sm text-zion-slate-light">I have a min and max</p>;
             </div>;
           </div>;
-
           {formData && formData.budget.type === "fixed" && (;
             <div className="mt-6">;
               <Label className="text-zion-slate-light mb-4 block">;
@@ -106,7 +98,6 @@ import { Slider } from "@/components/ui/slider",        }
                         ...formData && formData.budget, ;
                         amount: newAmount,;
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount;
-
                       }
                     });
                   }}
@@ -118,7 +109,6 @@ import { Slider } from "@/components/ui/slider",        }
                   <span>$50,000</span>;
                 </div>;
               </div>;
-
               <div>;
                 <Label className="text-zion-slate-light mb-4 block">;
                   Maximum Budget: {formatCurrency(formData && formData.budget.maxAmount || 0)}

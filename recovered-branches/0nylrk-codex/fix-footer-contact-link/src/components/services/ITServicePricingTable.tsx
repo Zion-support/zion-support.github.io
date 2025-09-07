@@ -23,7 +23,6 @@ export function ITServicePricingTable() {
     key: "country",
     direction: "ascending",
   });
-
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing];
     // Filter by search query
@@ -32,7 +31,6 @@ export function ITServicePricingTable() {
         item.country.toLowerCase().includes(searchQuery.toLowerCase()),
       );
     }
-
     // Sort data
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
@@ -47,7 +45,6 @@ if ( {) {
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
       key,
-
   return (    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
       <div className="flex items-center mb-6">;
         <div className="relative flex-1">;
@@ -56,7 +53,7 @@ if ( {) {
             placeholder="Search by country..."
             value={searchQuery}
 import { useState, useMemo } from "react";
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
 import { Input } from "@/components/ui/input",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Globe, Search, ArrowUpDown } from "lucide-react",;
@@ -112,7 +109,6 @@ export function ITServicePricingTable() {;
           <Input
             placeholder="Search by country..."
             value={searchQuery}
-
       <div className="rounded-md border border-zion-blue-light overflow-hidden">
         <Table>
           <TableHeader className="bg-zion-blue">

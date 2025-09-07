@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string,
   description: string;
@@ -16,15 +16,12 @@
   contact: {
     phone: string;
     email: string;
-
 ];      phone: '+1 302 464 0950';
-
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
     trial_days: 60;
     setup_time: '4 - 6 weeks';
-
     competitors: ['PTCSiemensGE DigitalRockwell Automation'];
     roi: 'Average customer sees 600% ROI through operational improvements';
     launch_date: '2024 - 01 - 10';
@@ -37,16 +34,13 @@
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-
     trialDays: 60;
     setupTime: '4-6 weeks';
     competitors: ['PTCSiemensGE DigitalRockwell Automation'];
     roi: 'Average customer sees 600% ROI through operational improvements';
     launchDate: '2024-01-10';
     customers: 950;
-
-    rating: 4.9
-
+    rating: 4.9;
     reviews: 520
   }
 ];
@@ -442,14 +436,11 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     rating: 4.9,;
     reviews: 520;
     reviews: 520;
-
 export interface ComprehensiveService {;
-
   }
 ];
     phone: string;
     email: string;
-
     address: string;
   }
   competitors: string[];
@@ -499,8 +490,7 @@ export interface ComprehensiveService {;
     rating: 4 && 4.8,
     reviews: 1250,
   },
-
-    id: 'ai-content-factory-pro'
+    id: "id",
     name: 'AI Content Factory Pro'
     tagline:
       'Enterprise-grade AI content generation with brand voice consistency'
@@ -1064,9 +1054,7 @@ export interface ComprehensiveService {;
     customers: 950;
     reviews: 520
     reviews: 520;
-
 export interface ComprehensiveService {;
-
   }
 ];
   id: string, name: string,
@@ -1078,10 +1066,8 @@ export interface ComprehensiveService {;
   integrations: string[], compliance: string[],
   website: string,
   contact: {
-      
     phone: string, email: string,
     address: string
-  
     },
     trialDays: number, setupTime: string,
   competitors: string[], roi: string,
@@ -1089,12 +1075,10 @@ export interface ComprehensiveService {;
   rating: number,
   reviews: number
 }
-
 export const comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    
     },
     trialDays: 14, setupTime: '5 minutes',
     competitors: ['JasperCopy.aiWritesonicGrammarly Business'], roi: 'Average customer sees 300% ROI within 3 months',
@@ -1102,7 +1086,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.8,
     reviews: 1250
   };
-
   // Customer Success & Support
   {
     id: 'ai-customer-success-platform', name: 'AI Customer Success Platform',
@@ -1122,10 +1105,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['SalesforceHubSpotPipedriveIntercomZendeskSlack'], compliance: ['GDPRCCPASOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-customer-success-platform',
     contact: {
-      
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    
     },
     trialDays: 21, setupTime: '1-2 days',
     competitors: ['GainsightTotangoClientSuccessChurnZero'], roi: 'Average customer sees 400% ROI through reduced churn',
@@ -1133,7 +1114,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9,
     reviews: 950
   };
-
   // Financial Technology
   {
     id: 'ai-financial-risk-manager', name: 'AI Financial Risk Manager',
@@ -1153,10 +1133,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['FiservJack HenryFISTemenosSalesforceOracle'], compliance: ['Basel IIIDodd-FrankSOXGDPRSOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-financial-risk-manager',
     contact: {
-      
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    
     },
     trialDays: 30, setupTime: '2-4 weeks',
     competitors: ['SASIBMOracleSAP'], roi: 'Average customer sees 500% ROI through risk reduction',
@@ -1164,7 +1142,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.7,
     reviews: 680
   };
-
   // Healthcare & Biotech
   {
     id: 'ai-healthcare-diagnostics', name: 'AI Healthcare Diagnostics Platform',
@@ -1184,10 +1161,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['EpicCernerAllscriptsGE HealthcareSiemensPhilips'], compliance: ['HIPAAFDACE MarkSOC2ISO 27001ISO 13485'],
     website: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
     contact: {
-      
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    
     },
     trialDays: 60, setupTime: '4-6 weeks',
     competitors: ['IBM Watson HealthGoogle HealthMicrosoft HealthcarePhilips'], roi: 'Average customer sees 600% ROI through improved diagnostic accuracy',
@@ -1195,7 +1170,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9,
     reviews: 420
   };
-
   // E-commerce & Retail
   {
     id: 'ai-ecommerce-optimizer', name: 'AI E-commerce Optimizer',
@@ -1215,10 +1189,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['ShopifyWooCommerceMagentoBigCommerceSalesforceKlaviyo'], compliance: ['GDPRCCPAPCI DSSSOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-ecommerce-optimizer',
     contact: {
-      
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    
     },
     trialDays: 14, setupTime: '1-2 days',
     competitors: ['Dynamic YieldOptimizelyKlevuAlgolia'], roi: 'Average customer sees 350% ROI through increased conversions',
@@ -1226,7 +1198,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.8,
     reviews: 1680
   };
-
   // Cybersecurity & Compliance
   {
     id: 'ai-cybersecurity-suite', name: 'AI Cybersecurity Suite',
@@ -1246,10 +1217,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['SplunkServiceNowJiraSlackMicrosoft 365Google Workspace'], compliance: ['SOC2ISO 27001NISTGDPRHIPAAPCI DSS'],
     website: 'https://ziontechgroup.com/ai-cybersecurity-suite',
     contact: {
-      
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    
     },
     trialDays: 30, setupTime: '1-2 weeks',
     competitors: ['CrowdStrikeSentinelOneCarbon BlackCylance'], roi: 'Average customer sees 450% ROI through threat prevention',
@@ -1257,7 +1226,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9,
     reviews: 1100
   };
-
   // Data & Analytics
   {
     id: 'ai-data-pipeline-platform', name: 'AI Data Pipeline Platform',
@@ -1277,10 +1245,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['SnowflakeDatabricksAWSGoogle CloudAzureTableau'], compliance: ['SOC2ISO 27001GDPRCCPAHIPAA'],
     website: 'https://ziontechgroup.com/ai-data-pipeline-platform',
     contact: {
-      
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    
     },
     trialDays: 21, setupTime: '1-2 weeks',
     competitors: ['FivetranAlteryxTalendInformatica'], roi: 'Average customer sees 400% ROI through data automation',
@@ -1288,7 +1254,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.8,
     reviews: 1450
   };
-
   // Human Resources
   {
     id: 'ai-hr-recruitment-platform', name: 'AI HR Recruitment Platform',
@@ -1308,10 +1273,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['WorkdayBambooHRGreenhouseLeverSlackMicrosoft Teams'], compliance: ['EEOCOFCCPGDPRCCPASOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-hr-recruitment-platform',
     contact: {
-      
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    
     },
     trialDays: 14, setupTime: '1-2 days',
     competitors: ['HireVuePymetricsHiredScoreEntelo'], roi: 'Average customer sees 300% ROI through improved hiring',
@@ -1319,7 +1282,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.7,
     reviews: 890
   };
-
   // Legal & Compliance
   {
     id: 'ai-legal-contract-analyzer', name: 'AI Legal Contract Analyzer',
@@ -1339,10 +1301,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['ClioMyCasePracticePantherLexisNexisWestlawDocuSign'], compliance: ['SOC2ISO 27001GDPRCCPAAttorney-client privilege'],
     website: 'https://ziontechgroup.com/ai-legal-contract-analyzer',
     contact: {
-      
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    
     },
     trialDays: 30, setupTime: '1-2 weeks',
     competitors: ['EvisortContractPodAiKira SystemsLuminance'], roi: 'Average customer sees 500% ROI through contract automation',
@@ -1350,7 +1310,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.8,
     reviews: 580
   };
-
   // Manufacturing & IoT
   {
     id: 'ai-manufacturing-optimizer', name: 'AI Manufacturing Optimizer',
@@ -1370,10 +1329,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['SAPOracleSiemensRockwellGE DigitalPTC'], compliance: ['ISO 9001ISO 14001OHSAS 18001SOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
     contact: {
-      
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    
     },
     trialDays: 60, setupTime: '4-6 weeks',
     competitors: ['PTCSiemensGE DigitalRockwell Automation'], roi: 'Average customer sees 600% ROI through operational improvements',

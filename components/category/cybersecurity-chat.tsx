@@ -1,6 +1,3 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -10,9 +7,7 @@ const CybersecurityChat: NextPage = () => {;
       <Head>;
         <title>CybersecurityChat - Zion Tech Solutions</title>;
         <meta name="description" content="CybersecurityChat blog post" />{" "}
-
       </Head>;
-
       <main>
         <h1>CybersecurityChat</h1>
         <p>Blog content coming soon...</p>
@@ -20,7 +15,6 @@ const CybersecurityChat: NextPage = () => {;
       </main>
     </div>
       </Head>;
-
       <main>;
         <h1>CybersecurityChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -30,9 +24,7 @@ const CybersecurityChat: NextPage = () => {;
   );
 }
 export default CybersecurityChat;
-
 import type { NextPage } from './next';
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Head from './next / head';
 import Link from './next / link';
 const CybersecurityChat: NextPage = () => {
@@ -52,5 +44,3 @@ const CybersecurityChat: NextPage = () => {
 ;
 export default CybersecurityChat;
 ;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

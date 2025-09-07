@@ -1,21 +1,16 @@
-
-  projectId: string,
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+projectId: string,
   milestoneId?: string,
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
   className?: string
 }
-
 export function RaiseDisputeButton({ 
-
   projectId,
   milestoneId, 
   variant = "outline", 
   size,
   className 
 }: RaiseDisputeButtonProps) {
-
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
           <DialogHeader>
@@ -25,12 +20,10 @@ export function RaiseDisputeButton({
               this project.
             </DialogDescription>
           </DialogHeader>
-
         onClick={() => setIsDialogOpen(true)}      >;
         <ShieldAlert className='h-4 w-4 mr-2' />;
         Raise Dispute;
       </Button>;
-
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
         <DialogContent className='sm:max-w-[550px]'>;
           <DialogHeader>;
@@ -47,29 +40,24 @@ export function RaiseDisputeButton({
         <DialogContent className='sm:max - w-[550px]'>;
           <DialogHeader>;
             <DialogTitle > Raise a Dispute</DialogTitle>;
-
             <DialogDescription>;
               Please provide details about the issue you're experiencing with;
               this project.;
             </DialogDescription>;
           </DialogHeader>;
-
             onCancel={() => setIsDialogOpen(false)}          />;
         </DialogContent>;
       </Dialog>;
     </>;
   );
 }
-
           <DisputeForm;
             project_id={project_id}
             milestone_id={milestone_id}
             onDisputeCreated={handleDisputeCreated}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <DisputeForm 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import {;
   Dialog,;
   DialogContent,;
@@ -128,5 +116,3 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

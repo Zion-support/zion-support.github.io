@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -14,9 +12,8 @@ import { Loader2, ShieldCheck, Download } from "lucide-react",
 import { toast } from "sonner",  isDeploying
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
-
-    network: 'none'
-    useEscrow: true
+    network: "network",
+    useEscrow: true;
     deployToChain: false
     walletAddress: ''              checked={deploymentOptions.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions({
@@ -25,7 +22,7 @@ import { toast } from "sonner",  isDeploying
             <Switch 
               id="deploy-blockchain"
 import React, { useState } from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
 import { Label } from "@/components/ui/label",;
@@ -41,39 +38,32 @@ import { toast } from "sonner",;  isDeploying;
     deployToChain: false,;
     walletAddress: '';
   });
-
   const handleDeployContract = async () => {;
     if (deploymentOptions && deploymentOptions.deployToChain && !deploymentOptions && deploymentOptions.walletAddress) {;
       toast && toast.error("Please enter a wallet address for blockchain deployment");
       return;
     }
-
     try {;
       await onDeploy(deploymentOptions);
     } catch (error) {;
       console && console.error("Deployment error:", error);
     }
   };
-
   const handleDownloadSolidity = () => {;
     // Create a blob from the Solidity code;
     const blob = new Blob([solidityCode], { type: 'text/plain' }),;
     const url = URL && URL.createObjectURL(blob);
-
     // Create a temporary anchor to trigger download;
     const a = document && document.createElement('a');
     a && a.href = url;
     a && a.download = 'ZionContract && ZionContract.sol';
     document && document.body.appendChild(a);
     a && a.click();
-
     // Clean up;
     URL && URL.revokeObjectURL(url);
     document && document.body.removeChild(a);
-
     toast && toast.success("Solidity contract downloaded")
 };
-
   return (    <Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -119,13 +109,10 @@ import { toast } from "sonner",;  isDeploying;
               </div>
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
-
               })}
-
             />;
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>;
           </div>;
-
           {deploymentOptions && deploymentOptions.deployToChain && (;
             <>;
               <div className="space-y-2">;
@@ -133,7 +120,6 @@ import { toast } from "sonner",;  isDeploying;
                 <RadioGroup
                   defaultValue={deploymentOptions && deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
-
                     ...deploymentOptions;
                     network: value as BlockchainNetwork;
                 >;
@@ -147,15 +133,12 @@ import { toast } from "sonner",;  isDeploying;
                   </div>;
                 </RadioGroup>;
               </div>;
-
                 <Input 
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}                  })}
-
                 />;
               </div>;
-
               <div className="flex items-center space-x-2">;
                   onChange={(e) => setDeploymentOptions({
                     ...deploymentOptions;
@@ -163,20 +146,17 @@ import { toast } from "sonner",;  isDeploying;
                   onChange={(e) => setDeploymentOptions({;
                     ...deploymentOptions;
                     walletAddress: e.target.value;
-
                   })}
                 />;
               </div>;
               <div className="flex items-center space-x-2">;
                   id="use-escrow"
                   checked={deploymentOptions.useEscrow}
-
                     ...deploymentOptions;
                     useEscrow: checked
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
                     useEscrow: checked;
-
                   })}
                 />;
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>;
@@ -187,7 +167,6 @@ import { toast } from "sonner",;  isDeploying;
       </CardFooter>;
     </Card>;
   );
-
       <CardContent className="space-y-6">;
         <div className="space-y-4">;
           <div className="flex items - center space-x-2">;

@@ -1,6 +1,5 @@
-
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, FileText, Link } from 'lucide-react',;
+import { ArrowLeft, FileText, Link } from 'lucide-react';
 import { PdfExportButton } from '../PdfExportButton',;
 import { Resume } from '@/types/resume',;
 import { useState } from 'react',;
@@ -81,7 +80,6 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
       </div>;
     </div>;
   ),;}
- 
 }`;
 document.head.appendChild (style);
 //Trigger print dialog window.print ();

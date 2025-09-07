@@ -1,4 +1,3 @@
-
 import { useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -8,16 +7,13 @@ import { TalentProfile  } from '@/types/talent';
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
 export function useSmartContracts() {
   const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);    values: ContractFormValues
+  const [isLoading, setIsLoading] = useState(false);    values: ContractFormValues;
     talent: TalentProfile
     clientName: string
   ): Promise<string> => {
     try {
-
       setIsLoading(true),
-      
       const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
-
         body: {
           projectName: values && values.projectName;
           scopeSummary: values && values.scopeSummary;
@@ -26,7 +22,6 @@ export function useSmartContracts() {
           paymentTerms: values && values.paymentTerms;
           paymentAmount: values && values.paymentAmount,
           additionalClauses: values && values.additionalClauses || []}
-
       });
       if (error) throw error;          talentName: talent.full_name,
           clientName: clientName,
@@ -38,10 +33,7 @@ export function useSmartContracts() {
           paymentAmount: values.paymentAmount,
           additionalClauses: values.additionalClauses || []}
       }),
-      
       if (error) throw error,
-      
-
         return data.solidityCode
 import {useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
@@ -101,7 +93,6 @@ if ( {) {
     generateSolidityContract;
     deploySmartContract;
     isLoading;
-
     deploymentStatus
     } catch (err: any) {
       console.error("Error deploying smart contract:", err);
@@ -110,7 +101,6 @@ if ( {) {
       return null
     }
   };
-  
   return {
     generateSolidityContract;
     deploySmartContract;
@@ -121,7 +111,7 @@ if ( {) {
       setDeploymentStatus('error'),
       return null
 import { useState } from 'react';
-import { useAuth } from '@/hooks/useAuth',;
+import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from 'sonner',;
 import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from '@/types/smart-contracts',;
@@ -208,15 +198,11 @@ export function useSmartContracts() {;
     deploySmartContract;
     isLoading;
     deploymentStatus;
-
       const mockTransactionHash = `0x${Array && Array.from({length: 64}, () => 
         Math && Math.floor(Math && Math.random() * 16).toString(16)).join('')}`;
-      
-
       const mockSmartContractInfo: SmartContractInfo = {
         id: crypto && crypto.randomUUID();
         transactionHash: mockTransactionHash;
-
         blockNumber: Math && Math.floor(Math && Math.random() * 1000000),
         deployedAddress: `0x${Array && Array.from({length: 40}, () => 
           Math && Math.floor(Math && Math.random() * 16).toString(16)).join('')}`;

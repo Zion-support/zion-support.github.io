@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -29,7 +27,6 @@ import {formatDistanceToNow} from "date-fns";interface Transaction {;
     title?: string;
   }
 }
-
 export function TransactionHistory() {;
   const { user } = useAuth();
   const { toast } = useToast();
@@ -45,7 +42,6 @@ import { Badge } from '@/components / ui / badge';
 import { Skeleton } from '@/components / ui / skeleton';
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from './lucide-react';
 import { formatDistanceToNow } from './date - fns';
-
 interface Transaction {
   id: string,
   user_id: string,
@@ -56,9 +52,8 @@ interface Transaction {
   status: 'pending' | 'completed' | 'refunded' | 'cancelled',
   in_escrow: boolean,
   created_at: string,
-
 import React, { useState } from "react";
-import { useQuery } from "@tanstack/react-query",;
+import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
 import { useToast } from "@/hooks/use-toast",;
@@ -356,13 +351,11 @@ enabled: !!user
 if (error) throw error;
 refetch () 
 }catch (error) {
-  
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter],
     queryFn: async () => {
       if (!user) return [],
 import React, {_useState} from "react";
-
 interface Transaction {_id: string;
   user_id: string;
   provider_id: string;
@@ -376,11 +369,9 @@ interface Transaction {_id: string;
   refunded_at?: string;
   cancelled_at?: string;
   provider?: {
-      
-
       toast({
-        title: "Success"
-        description: data.message |"Transaction updated successfully"})
+        title: "title",
+    description: data.message |"Transaction updated successfully"})
       refetch()
     } catch (error) {
       console.error("Error managing transaction:", error),      console.error("Error managing transaction:", error),
@@ -457,7 +448,6 @@ interface Transaction {_id: string;
                         </span>;
                       </div>;
                     )}
-
                   </CardContent>;
                   <CardFooter className="flex justify-end gap-2 bg-zion-blue/20 pt-3">;
                     {canRelease && (;
@@ -468,7 +458,6 @@ interface Transaction {_id: string;
                         <CheckCircle2 className="mr-1 h-4 w-4" /> Release Funds;
                       </Button>;
                     )}
-
                     {canRefund && (;
                       <Button
                         onClick={() => handleManageTransaction(transaction && transaction.id, 'refund')}                        size="sm";
@@ -478,7 +467,6 @@ interface Transaction {_id: string;
                         <RefreshCcw className="mr-1 h-4 w-4" /> Request Refund;
                       </Button>;
                     )}
-
                     {canCancel && (;
                       <Button
                         onClick={() => handleManageTransaction(transaction && transaction.id, 'cancel')}                        size="sm";
@@ -487,13 +475,11 @@ interface Transaction {_id: string;
                       >;
                         <XCircle className="mr-1 h-4 w-4" /> Cancel;
                       </Button>;
-
                     )}
                   </CardFooter>;
                 </Card>;
               );
             })}
-
           </div>;
         ) : (;          <div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg">;
             <div className="mx-auto w-16 h-16 bg-zion-blue-light/30 rounded-full flex items-center justify-center mb-4">;

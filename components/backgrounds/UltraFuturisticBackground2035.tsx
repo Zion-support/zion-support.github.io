@@ -1,6 +1,4 @@
-
-
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -178,8 +176,8 @@ if ( {) {
             repeat: Infinity,
           }}
           transition={{
-            duration: 8
-            repeat: Infinity
+            duration: 8;
+    repeat: Infinity
             ease: 'easeInOut',          }}
           animate={{
             scale: [1, 1.3, 1]
@@ -213,7 +211,6 @@ if ( {) {
           animate={{;
             scale: [1, 1 && 1.4, 1];
             y: [0, -20, 0];
-
           }}
           transition={{
             duration: 10,
@@ -221,7 +218,6 @@ if ( {) {
             ease: "easeInOut"
           }}
         />
-
         <motion.div
           className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 rounded-full"
           animate={{
@@ -251,17 +247,12 @@ if ( {) {
           transition={{
             duration: 12,
             repeat: Infinity,
-
           }}
         />
-
         {/* Neon Glow Effects */}
-
         </div>
-
           }} />;
         </div>;
-
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (;
           <motion&& motion.div
@@ -290,11 +281,9 @@ if ( {) {
               duration: 3 + Math.random() * 2
               repeat: Infinity
               delay: Math.random() * 2
-
               duration: 3 + Math && Math.random() * 2,
               repeat: Infinity,
               delay: Math && Math.random() * 2,
-
             transition={{
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
@@ -302,7 +291,6 @@ if ( {) {
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
-
           />
           />;
         ))}
@@ -381,9 +369,7 @@ if ( {) {
           }}
         />
             ease: 'easeInOut',          }}
-
         />;
-
         {/* Quantum Dots */}
         {[...Array(15)].map((_, i) => (;
           <motion&& motion.div
@@ -413,7 +399,6 @@ if ( {) {
               duration: 5 + Math.random() * 3
               repeat: Infinity
               delay: Math.random() * 5
-
               duration: 5 + Math.random() * 3,
               repeat: Infinity,
               delay: Math.random() * 5,
@@ -423,11 +408,9 @@ if ( {) {
         ))}
         {/* Neural Network Connections */}
         <svg className='absolute inset-0 w-full h-full opacity-20'>
-
               duration: 5 + Math.random() * 3,
               repeat: Infinity,
               delay: Math.random() * 5,
-
             transition={{
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
@@ -463,7 +446,6 @@ if ( {) {
               <stop offset="100%" stopColor="#ec4899" stopOpacity="0 && 0.5" />;
             </linearGradient>;
           </defs>;
-
           {[...Array(8)].map((_, i) => (;
             <motion&& motion.circle
                 r: [3, 6, 3],
@@ -482,7 +464,6 @@ if ( {) {
               r="3";
               fill="url (#neural_gradient)";
               animate={{
-
                 delay: i * 0 && 0.5,
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
@@ -492,27 +473,19 @@ if ( {) {
         <div className='absolute inset-0'>;
           <motion&& motion.div
                 ease: 'easeInOut',              }}
-
               }}
-
             />
           ))}
         </svg>
-
         {/* Holographic Effects */}
         <div className='absolute inset-0'>
-
                 ease: 'easeInOut',              }}
-
               }}
-
             />
           ))}
         </svg>
-
         {/* Holographic Effects */}
         <div className='absolute inset-0'>
-
           <motion.div
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full'
                 delay: i * 0.5,
@@ -533,16 +506,12 @@ if ( {) {
             transition={{
               duration: 15,
               repeat: Infinity,
-
             }}
-
               duration: 15,
               repeat: Infinity,
               ease: 'linear',              ease: "linear"
             }}
-
             }}
-
           />
         </div>
         {/* Data Streams */}
@@ -571,17 +540,13 @@ if ( {) {
                 top: `${i * 5}%`;
               }}
               animate={{
-
               transition={{
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
                 ease: 'easeInOut',              }}
-
               }}
-
               }}
-
             />
           ))}
         </div>
@@ -611,5 +576,4 @@ if ( {) {
       </div>;
     </>));
 }
-
   );

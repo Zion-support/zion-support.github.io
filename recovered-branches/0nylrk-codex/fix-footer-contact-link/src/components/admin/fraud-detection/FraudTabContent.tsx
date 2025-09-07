@@ -1,13 +1,10 @@
-
 import React from './react';
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 import React from "react",
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
-
 interface FraudTabContentProps {
-
         <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">
           <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />
           <h3 className="text-xl font-medium mb-4">Pending Review Flags</h3>
@@ -24,8 +21,6 @@ interface FraudTabContentProps {
       );
       ),
           ),
-    
-
     case 'actioned':
       return (
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">
@@ -38,9 +33,8 @@ interface FraudTabContentProps {
       )
     default:
       return null
-
 import React from "react";
-import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 interface FraudTabContentProps {;
   tabValue: string;
 }
@@ -80,12 +74,9 @@ interface FraudTabContentProps {
           </p>;
         </div>;
       ),;
-
     default:;
       return null;
-
 }
-
 export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value }) => {
   switch (tab_value) {
     case 'pending':;

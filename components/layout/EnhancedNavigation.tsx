@@ -1,4 +1,4 @@
-  Menu,
+Menu,
   X,
   ChevronDown,
   Search,
@@ -24,7 +24,6 @@ import Link from "next/link";
 interface EnhancedNavigationProps {;
   className?: string;
 }
-
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""
 }) => {
@@ -40,8 +39,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   }, []);
   const navigationItems = [
     {
-      name: "Services"
-      href: "/services"
+      name: "name",
+    href: "/services"
       icon: <Brain className="w-4 h-4" />
       dropdown: [
         {
@@ -105,8 +104,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           icon: <Car className="w-4 h-4" />
         }
       ]
-      hasDropdown: true
-      dropdownItems: [
+      hasDropdown: true;
+    dropdownItems: [
     {
       name: "Solutions"
       href: "/solutions"
@@ -131,7 +130,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     website: "https://ziontechgroup.com"
   }
   ];
-
   ];
   return (
     <nav
@@ -358,7 +356,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 </div>;
               ))}
               {/* Contact Info */}
-
               <div className="pt-4 border-t border-cyan-500/20">;
                 <div className="space-y-2 text-sm text-gray-400">;
                   <div className="flex items-center space-x-2">;
@@ -371,7 +368,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   </div>;
                 </div>;
               </div>;
-
               {/* Mobile CTA */}
               <div className="pt-4">;
                 <Link
@@ -475,7 +471,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 </Link>;
               </div>;
             </div>;
-
           </motion.div>)}
       </AnimatePresence>;
     </nav>);
@@ -485,4 +480,3 @@ export default EnhancedNavigation
 )
 };
 export default EnhancedNavigation;
-

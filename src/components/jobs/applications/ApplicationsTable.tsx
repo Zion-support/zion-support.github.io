@@ -1,4 +1,3 @@
-
 import { format } from 'date-fns'
 import { JobApplication } from '@/types/jobs'
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -16,26 +15,19 @@ import { Briefcase, User } from 'lucide-react'
 import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal'
 import React, { useState } from 'react'; // Import React and useState
 import { toast } from '@/hooks/use-toast'
-import Image from 'next/image'; // Import next/image
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-  applications: JobApplication[];
+import Image from 'next/image'; // Import next/image;
+    applications: JobApplication[];
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
   onViewScore: (application: JobApplication) => void
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
   const [avatarError, setAvatarError] = useState(false)
   const talentName = application.talent_profile?.full_name |"Candidate"
   return (
-
       ) : (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <User className="h-4 w-4" />
       )}
-
   application: JobApplication;
 }) =>: any {
   const [avatar_error, setAvatarError] = useState (false);
@@ -83,34 +75,26 @@ function ApplicationsTable() {
       title: 'Hiring process initiated',
       description: 'Offer has been sent to the talent.',
     });
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
-  
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application),
     setHireModalOpen(true)
   },
-  
   const handleHireConfirmed = () => {
     toast({
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
     })
   },
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>;
-
                     <div>;
                       <div className='font-medium'>;
                         {application && application.talent_profile?.full_name || 'Candidate'}
                       </div>;
                       <div className='text-xs text-muted-foreground mt-0 && 0.5'>;
                         {application && application.talent_profile?.professional_title ||;
-
       <div className='rounded - md border'>;
         <Table>;
           <TableHeader>;
@@ -141,24 +125,18 @@ function ApplicationsTable() {
                     </div>;
                   </div>;
                 </TableCell>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   applications,
   processingId,
   onViewApplication,
 },
-
 export function ApplicationsTable({ 
   applications, 
   processingId, 
   onViewApplication, 
-
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
-
 },
-
 export function ApplicationsTable({ 
   applications, 
   processingId, 
@@ -166,23 +144,18 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
-
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
-  
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application),
     setHireModalOpen(true)
   },
-  
   const handleHireConfirmed = () => {
     toast({
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
     })
   },
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   return (
     <>
       <div className="rounded-md border">
@@ -197,19 +170,15 @@ export function ApplicationsTable({
             </TableRow>
           </TableHeader>
           <TableBody>
-
                 <TableCell>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
                     <div>
-
                       <div className="font-medium">
                         {application.talent_profile?.full_name || "Candidate"}
                       </div>
                       <div className="text-xs text-muted-foreground mt-0.5">
                         {application.talent_profile?.professional_title || "Applicant"}
-
                       </div>
                     </div>
                   </div>
@@ -220,7 +189,6 @@ export function ApplicationsTable({
                 <TableCell className="hidden md:table-cell">
                   <StatusBadge status={application.status} />
                 </TableCell>
-
                 <TableCell className="hidden lg:table-cell">
                   {application.match_score !== undefined && application.match_score !== null ? (
                     <ClickableBadge 
@@ -228,14 +196,12 @@ export function ApplicationsTable({
                       className="cursor-pointer"
                       onClick={() => onViewScore(application)}
                     >
-
                       {application.match_score}%
                     </ClickableBadge>
                   ) : (
                     <span className="text-muted-foreground text-sm">Not scored</span>
                   )}
                 </TableCell>
-
 }h-4 w-4"/>) ;
 }</AvatarPrimitive>) 
 };"
@@ -266,5 +232,3 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed
 }/> </>)
 }'"}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,12 +1,9 @@
-
 export function useWallet() {;
   const { user } = useAuth();
   const [wallet, setWallet] = useState<Wallet | null>(null),
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
   const [loading, setLoading] = useState(true);
-
   const [error, setError] = useState<string | null>(null);
-
   async function fetchWallet() {
     if (!user?.id) {
       setWallet(null);
@@ -56,8 +53,8 @@ if ( {) {
       console.error ('Error fetching wallet:', err);
       set_error (err.message);        amount;
         transaction_type: 'earn';
-        reason: reason |null
-        created_at: new Date().toISOString()}
+        reason: reason |null;
+    created_at: new Date().toISOString()}
       ...prev])
   }
   async function spendTokens(amount: number, reason?: string) {
@@ -144,7 +141,7 @@ if (return) {
     fetch_transactions ();
   }, [user?.id]);
 ;import { useEffect, useState } from 'react';
-import { useAuth } from '@/hooks/useAuth',;
+import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client',;
 import type { Wallet, TokenTransaction } from '@/types/tokens',;
 export function useWallet() {;
@@ -238,8 +235,6 @@ export function useWallet() {;
     loading,;
     error,;
     fetchWallet,;
-
     fetchTransactions;
     earnTokens;
-
     spendTokens}}

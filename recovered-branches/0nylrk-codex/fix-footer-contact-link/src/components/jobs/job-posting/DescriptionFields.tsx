@@ -1,10 +1,9 @@
-  FormField
+FormField
   FormItem
   FormLabel
   FormControl
   FormDescription
   FormMessage
-
 import {;
   FormField,;
   FormItem,;
@@ -12,7 +11,6 @@ import {;
   FormControl,;
   FormDescription,;
   FormMessage,;
-
   FormField,
   FormItem,
   FormLabel,
@@ -20,18 +18,14 @@ import {;
   FormDescription,
   FormMessage,;
 } from "@/components/ui/form";
-
 import { Textarea } from "@/components/ui/textarea";} from "@/components/ui/form";
-
 import { Textarea } from "@/components/ui/textarea";
-
 import { JobSchemaType } from "./validation";
 interface DescriptionFieldsProps {;
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
   editorContent: string
 }
-
         control={control}
         name="description"        render={({ field }) => (;
           <FormItem>;
@@ -47,7 +41,7 @@ interface DescriptionFieldsProps {
   handleEditorChange: (content: string) => void,
   editorContent: string
 import React from 'react';
-import { Control } from 'react-hook-form',;
+import { Control } from 'react-hook-form';
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",;
 import { Textarea } from "@/components/ui/textarea",;
 import { JobSchemaType } from './validation',;
@@ -61,7 +55,6 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
   return (;
     <>;
       <FormField;
-
         control={control}
         name="description"
         render={({ field }) => (
@@ -94,10 +87,8 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
               <Textarea;
                 placeholder="Provide instructions on how to apply for this job";
                 className="resize - none min-h-[100px]";
-
       />;
     </>;
-
   );}  );
           </FormItem>)}
       />;

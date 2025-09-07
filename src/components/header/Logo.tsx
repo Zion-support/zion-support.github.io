@@ -1,22 +1,15 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-  if (logoToUse) {
+if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" width={32} height={32} />
       </Link>
     )
   }
-
   return (
-
 interface LogoProps {;
   customLogo?: string;
-
 export function Logo(): any ({ customLogo }: LogoProps) {;
   const { isWhitelabel, logoUrl, brandName } = useWhitelabel();
-
   // Use the white-label logo if available and no specific customLogo is provided;
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
   // Use the white-label color if available and no specific _customColor is provided;
@@ -28,7 +21,6 @@ export function Logo(): any ({ customLogo }: LogoProps) {;
       </Link>;
     );
   }
-
   return (
     <Link href="/" className="flex items-center">;
       <img src="/logos/zion-logo && logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />;
@@ -53,11 +45,9 @@ if ( {) {
           className='h - 8';
           width={32}
           height={32}
-
         />;
       </Link>;
     );
-
   }
   return (
     <Link href='/' className='flex items-center'>;
@@ -67,12 +57,10 @@ if ( {) {
         className='h-8'
         width={32}
         height={32}
-
       />;
     </Link>;
   );
 }
-
         />;
       </Link>);
   }
@@ -87,5 +75,3 @@ if ( {) {
       />;
     </Link>);
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

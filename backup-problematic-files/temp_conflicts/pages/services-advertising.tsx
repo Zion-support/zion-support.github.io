@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/head',;
+import Head from 'next/head';
 ;
 const ext = (url:string) => (;
 	<a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{url.replace('https://', '')}</a>;

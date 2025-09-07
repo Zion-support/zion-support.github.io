@@ -1,7 +1,5 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button',;
+import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner',;
 import { safeStorage } from '@/utils/safeStorage',;
@@ -54,7 +52,6 @@ export const PwaInstallButton: React.FC = () => {;
       logErrorToProduction('PWA install error:', { data: err });
     }
   },
-
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <Button onClick={onClick} disabled={isInstalling}>
@@ -64,5 +61,3 @@ export const PwaInstallButton: React.FC = () => {;
     </div>
   )
 },
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

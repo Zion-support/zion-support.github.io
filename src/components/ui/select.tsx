@@ -1,6 +1,3 @@
-
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const Select = SelectPrimitive.Root
 const SelectGroup = SelectPrimitive.Group
 const SelectValue = SelectPrimitive.Value
@@ -11,15 +8,11 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-
       className
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )}
     {...props}
   >;
     {children}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ))
@@ -31,9 +24,7 @@ const SelectScrollUpButton = React.forwardRef<
   <SelectPrimitive.ScrollUpButton
     ref={ref}
     className={cn(
-
       className
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )}
     {...props}
   >
@@ -48,8 +39,6 @@ const SelectScrollDownButton = React.forwardRef<
   <SelectPrimitive.ScrollDownButton
     ref={ref}
     className={cn(
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -62,14 +51,10 @@ SelectScrollDownButton.displayName =
 const SelectContent = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
-
   <SelectPrimitive.Portal>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className
       )}
       position={position}
@@ -78,14 +63,11 @@ const SelectContent = React.forwardRef<
       <SelectScrollUpButton />
       <SelectPrimitive.Viewport
         className={cn(
-
       >;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {children}
       </SelectPrimitive.Viewport>;
       <SelectScrollDownButton />;
     </SelectPrimitive.Content>;
-
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
 >(({ className, ...props }, ref) => (;
   </SelectPrimitive.Portal>));
@@ -96,13 +78,10 @@ const SelectLabel = React.forward_ref<;
 >(({ class_name, ...props }, ref) => (
   <SelectPrimitive.Label;
     ref={ref}
-
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
 >(({ className, children, ...props }, ref) => (;
   <SelectPrimitive.Item;
     ref={ref}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -121,5 +100,3 @@ const SelectSeparator = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Separator
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

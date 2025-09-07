@@ -1,4 +1,4 @@
-    id: 'ai - emotional - intelligence - platform',
+id: 'ai - emotional - intelligence - platform',
     name: 'AI Emotional Intelligence Platform',
     tagline: 'Advanced emotion recognition and response generation',
     price: '$1, 799',
@@ -89,8 +89,8 @@
     reviews: 89,
   },
       'Production financial AI platform with real-time trading and comprehensive risk management.'
-    launchDate: '2025-01-15'
-    customers: 45
+    launchDate: "launchDate",
+    customers: 45;
     rating: 4.8
     reviews: 32
   }
@@ -102,7 +102,6 @@
     description:;
       'Advanced financial platform that uses AI to analyze markets, execute trades, and manage portfolios with superior performance and risk management.',
     features: [;
-
       'AI market analysis',
       'Algorithmic trading',
       'Portfolio optimization',

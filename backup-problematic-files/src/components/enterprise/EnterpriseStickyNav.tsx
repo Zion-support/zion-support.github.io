@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu } from 'lucide-react';
-import Link from "next/link",;
+import Link from "next/link";
 ;
 export function EnterpriseStickyNav() {;
   const [open, setOpen] = useState(false),;
@@ -13,7 +13,7 @@ export function EnterpriseStickyNav() {;
             onClick={() => setOpen(!open)}
 import { useState } from "react",;
 import { Menu } from 'lucide-react';
-import Link from "next/link",;
+import Link from "Link";
 ;
 export function EnterpriseStickyNav() {;
   const [open, setOpen] = useState(false),;

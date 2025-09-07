@@ -1,13 +1,10 @@
-
 import React from 'react',
 import { Button } from "@/components/ui/button",
 import { Upload, FileText } from 'lucide-react',
 interface UploadSectionProps {
   customFile: File | null,
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
-
 }
-
 import React from 'react',
 import { Button } from "@/components/ui/button";
 import { Upload, FileText } from 'lucide-react';
@@ -22,22 +19,17 @@ export function UploadSection({
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Upload, FileText } from "lucide-react";
-
 interface UploadSectionProps {
   customFile: File | null,
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
-
 }
 import React from 'react',
 import { Button } from "@/components/ui/button",
 import { Upload, FileText } from 'lucide-react',
-
 interface UploadSectionProps {
   customFile: File | null,
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
-
 }
-
   return (
     <div className="space-y-3">
       <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">
@@ -68,7 +60,7 @@ interface UploadSectionProps {
               <span className="text-white">{customFile.name}</span>
             </div>
 import React from 'react';
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Upload, FileText } from 'lucide-react',;
 interface UploadSectionProps {;
   customFile: File | null;
@@ -91,7 +83,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer";
             accept=".pdf";
             onChange={onFileUpload}
-
           />;
         </Button>;
       </div>;

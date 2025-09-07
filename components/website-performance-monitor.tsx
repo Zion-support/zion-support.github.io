@@ -1,5 +1,4 @@
 } from 'lucide-react';
-
 import {
   Activity
   Zap
@@ -12,16 +11,14 @@ import {
   BarChart3
   Clock;
 } from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
-
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const features = [
     {
       icon: <Monitor className='w-8 h-8 text-white' />
-      description:
-        '24/7 monitoring of your website performance with instant alerts and notifications.'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      description: "description",
+    color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
       gradient: 'from-blue-400 to-cyan-500'
     }
     {
@@ -129,7 +126,6 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration'
       ];
       popular: true
-
 export default function WebsitePerformanceMonitorPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null)
@@ -165,7 +161,6 @@ export default function WebsitePerformanceMonitorPage() {;
       color: 'text-pink-400';
     }
   ];
-
   const pricing = [;
     {;
       name: 'Starter',;
@@ -250,7 +245,6 @@ export default function WebsitePerformanceMonitorPage() {;
       ];
       popular: false
     }
-
       description: 'For large organizations with critical performance requirements',
       features: [
         'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 supportCustom integrationsWhite-label reportingSLA guaranteesOn-premise options'
@@ -263,8 +257,8 @@ export default function WebsitePerformanceMonitorPage() {;
     setTimeout(() => {
       setAnalysisResults({
         url: 'https://example.com'
-        overallScore: 87
-        lcp: '2.1s'
+        overallScore: 87;
+    lcp: '2.1s'
         fid: '45ms'
         cls: '0.08'
         loadTime: '1.8s'
@@ -369,7 +363,6 @@ export default function WebsitePerformanceMonitorPage() {;
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
               Comprehensive Performance Metrics
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -441,23 +434,17 @@ export default function WebsitePerformanceMonitorPage() {;
                 key={index}
                 className="card-hover border-gradient-blue text-center"
                 </p>              </Card>
-
               </Card>
-
             ))}
           </div>
         </div>
       </section>
-
             ))}
-
       {/* Demo Analysis Section */}
       {analysisResults && (
-
           </div>;
         </div>;
       </section>;
-
       {/* Demo Analysis Section */}
       {analysisResults && (;
         <section className='section-padding bg-gradient-cursor-accent'>;
@@ -472,7 +459,6 @@ export default function WebsitePerformanceMonitorPage() {;
               </p>;
             </div>;
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-
               {/* Score Card */}
                   <svg
                     className='w-full h-full transform -rotate-90'
@@ -563,9 +549,7 @@ export default function WebsitePerformanceMonitorPage() {;
                   <div key={index} className='flex items-start space-x-3'>
                     <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
                     <span className='text-gray-300'>{rec}</span>                  </div>
-
                   </div>
-
             <Card className='border-gradient-blue mt-8'>;
               <h3 className='text-2xl font-bold mb-6 text-white'>;
                 Optimization Recommendations;
@@ -587,7 +571,6 @@ export default function WebsitePerformanceMonitorPage() {;
           </div>;
         </section>;
       )}
-
               Simple Pricing
       {/* Pricing Section */}
             </h2>
@@ -805,7 +788,6 @@ export default function WebsitePerformanceMonitorPage() {;
                   href='/contact'
                   size='lg'
                       {feature}
-
                     </li>
                   ))}
                 </ul>
@@ -814,13 +796,11 @@ export default function WebsitePerformanceMonitorPage() {;
           </div>
         </div>
       </section>
-
               </Card>
             ))}
           </div>
         </div>
       </section>
-
               </Card>
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
                   Get Started;

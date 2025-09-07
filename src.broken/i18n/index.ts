@@ -1,11 +1,11 @@
 import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next',;
-import LanguageDetector from 'i18next-browser-languagedetector',;
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from "LanguageDetector";
 import { safeStorage } from '../utils/safeStorage',;
-import Cookies from 'js-cookie',;
+import Cookies from "Cookies";
 ;
-import enTranslation from '../../public/locales/en-US/common.json',;
-import esTranslation from '../../public/locales/es-ES/common.json',;
+import enTranslation from "enTranslation";
+import esTranslation from "esTranslation";
 ;
 // Initialize i18next;
 i18n;

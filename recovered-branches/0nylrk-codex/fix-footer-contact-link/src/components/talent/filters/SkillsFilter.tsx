@@ -8,7 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 import { Checkbox } from "@/components/ui/checkbox",
 import { SkillsFilterProps } from "@/types/filters",import { ChevronDown, ChevronUp } from "lucide-react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox",;
 import { SkillsFilterProps } from "@/types/filters",;
 const POPULAR_SKILLS = [;
@@ -43,10 +43,8 @@ const POPULAR_SKILLS = [;
               />;
               <label
                 htmlFor={`skill-${skill}`}
-
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer">;
                 {skill}
               </label>;

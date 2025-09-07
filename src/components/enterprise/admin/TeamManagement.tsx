@@ -1,20 +1,14 @@
-
-    // In a real app, this would make an API call to add the member
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+// In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
-
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
-
       return
     }
     toast({
-
       title: 'Invitation sent',
       description: `An invitation has been sent to ${newMemberEmail}`,
-
     })
     setNewMemberEmail('')
     setIsAddingMember(false)
@@ -22,8 +16,8 @@
   const handleRemoveMember = (_memberId: number,) => {
     // In a real app, this would make an API call to remove the member
     toast({
-      title: 'Team member removed'
-      description: 'The team member has been removed from your workspace.'
+      title: "title",
+    description: 'The team member has been removed from your workspace.'
     })
   }
   const handleResendInvite = (memberEmail: string,) => {
@@ -32,37 +26,29 @@
       title: 'Invitation resent'
       description: `A new invitation has been sent to ${memberEmail}`
     })
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
       return
     }
-
     toast({
-
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
-
     setNewMemberEmail(""),
     setIsAddingMember(false)
   },
-
   const handleRemoveMember = (_memberId: number) => {
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed",
       description: "The team member has been removed from your workspace."})
   },
-
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent",
       description: `A new invitation has been sent to ${memberEmail}`})
   },
-
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -87,7 +73,6 @@
                   Email
                 </Label>
                 <Input
-
                   id="email"
                   type="email"
                   placeholder="colleague@company.com"
@@ -95,7 +80,6 @@
                   value={newMemberEmail}
                   onChange={(e) => setNewMemberEmail(e.target.value)}
                 />
-
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label htmlFor="role" className="text-right">
@@ -121,9 +105,7 @@
           </DialogContent>
         </Dialog>
       </div>
-
       <div className="rounded-md border">
-
         <Table>
           <TableHeader>
             <TableRow>
@@ -135,21 +117,17 @@
             </TableRow>
           </TableHeader>
           <TableBody>
-
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
-
                 <TableCell>
                   <div className="flex items-center gap-2">
                     <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-sm font-medium">
                         {member.name
-
                           .split(" ")
                           .map((n) => n[0])
                           .join("")}
                       </span>
-
                     </div>
                     <div>
                       <div className="font-medium">{member.name}</div>
@@ -162,10 +140,8 @@
                 <TableCell>{member.role}</TableCell>
                 <TableCell>
                   <Badge
-
                     variant={member.status === "active" ? "default" : "outline"}
                   >
-
                     {member.status}
                   </Badge>
                 </TableCell>
@@ -174,18 +150,15 @@
                   <div className="flex justify-end gap-2">
                     {member.status === "pending" ? (
                       <Button
-
                         variant="ghost"
                         size="sm"
                         onClick={() => handleResendInvite(member.email)}
                       >
                         <Mail className="h-4 w-4 mr-1" />
-
                         Resend
                       </Button>
                     ) : (
                       <Button
-
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"
@@ -223,7 +196,6 @@ import { toast } from "@/hooks/use-toast";
 export function TeamManagement() {;
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState('');
-
   // Mock team members data;
   const teamMembers = [;
     {;
@@ -259,7 +231,6 @@ export function TeamManagement() {;
       lastActive: '3 days ago',;
     },;
   ];
-
   const handleAddMember = () => {;
     // In a real app, this would make an API call to add the member;
     if (!newMemberEmail) {;
@@ -270,16 +241,13 @@ export function TeamManagement() {;
       });
       return;
     }
-
     toast({;
       title: 'Invitation sent',,
   description: `An invitation has been sent to ${newMemberEmail}`,;
     });
-
     setNewMemberEmail('');
     setIsAddingMember(false)
 };
-
   const handleRemoveMember = (_memberId: number,) => {;
     // In a real app, this would make an API call to remove the member;
     toast({;
@@ -287,7 +255,6 @@ export function TeamManagement() {;
   description: 'The team member has been removed from your workspace.',;
     })
 };
-
   const handleResendInvite = (memberEmail: string,) => {;
     // In a real app, this would make an API call to resend the invitation;
     toast({;
@@ -295,9 +262,7 @@ export function TeamManagement() {;
   description: `A new invitation has been sent to ${memberEmail}`,;
     })
 };
-
   return (
-
     <div className='space - y-6'>;
       <div className='flex items - center justify - between'>;
         <h3 className='text - xl font - medium'>Team Members</h3>;
@@ -305,21 +270,17 @@ export function TeamManagement() {;
           <DialogTrigger as_child>;
             <Button className='gap - 2'>;
               <UserPlus className='h - 4 w - 4' />;
-
               Add Team Member;
             </Button>;
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
-
               <DialogTitle > Add Team Member</DialogTitle>;
-
               <DialogDescription>;
                 Send an invitation to join your workspace. They'll receive an;
                 email with instructions.;
               </DialogDescription>;
             </DialogHeader>;
-
             <div className='grid gap - 4 py - 4'>;
               <div className='grid grid - cols - 4 items - center gap - 4'>;
                 <Label html_for='email' className='text - right'>;
@@ -341,7 +302,6 @@ export function TeamManagement() {;
                   id='role';
                   className='col - span - 3 flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background file:border - 0 file:bg - transparent file:text - sm file:font - medium placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50';
                 >;
-
                   <option value='admin'>Admin</option>;
                   <option value='recruiter'>Recruiter</option>;
                   <option value='manager'>Manager</option>;
@@ -350,7 +310,6 @@ export function TeamManagement() {;
               </div>;
             </div>;
             <DialogFooter>;
-
               >;
                 Cancel;
               </Button>;
@@ -359,7 +318,6 @@ export function TeamManagement() {;
           </DialogContent>;
         </Dialog>;
       </div>;
-
       <div className='rounded-md border'>;
         <Table>;
           <TableHeader>;
@@ -423,16 +381,12 @@ export function TeamManagement() {;
                       <div className='font - medium'>{member.name}</div>;
                       <div className='text - sm text - muted - foreground'>;
                         {member.email}
-
                       </div>;
                     </div>;
                   </div>;
                 </TableCell>;
-
                     )}
                   </div>;
                 </TableCell>;
               </TableRow>;
             ))}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

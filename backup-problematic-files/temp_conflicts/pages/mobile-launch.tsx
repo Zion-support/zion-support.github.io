@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import { useEffect, useMemo, useState } from 'react',;
-import EnhancedLayout from '../components/layout/EnhancedLayout',;
-import Link from 'next/link',;
+import { useEffect, useMemo, useState } from 'react';
+import EnhancedLayout from "EnhancedLayout";
+import Link from "Link";
 ;
 // Simple icons using inline SVG to avoid external assets;
 function StarIcon({ className = 'w-5 h-5 text-yellow-500' } { className?:string }) {;

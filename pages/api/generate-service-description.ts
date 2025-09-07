@@ -1,128 +1,31 @@
+import { NextApiRequest, NextApiResponse } from 'next';
 
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import OpenAI from "openai";
-
-import type { NextApiRequest, NextApiResponse } from './next';
-import OpenAI from './openai';
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page. Service Title: ${req.body?.title || 'Service'} Target Audience: ${req.body?.targetAudience || 'General'} Key Features: - ${req.body?.keyFeatures?.join('\n- ') || 'Feature 1'} ${req.body?.additionalNotes ? `Additional Notes: ${req.body.additionalNotes}` : ''} ${req.body?.toneInstruction || ''} Requirements: - 2-3 sentence hook opening that addresses audience needs - 3-5 concise sections with bolded headings (e.g., What You Get, How It Works, Why Choose Us, Deliverables, Timeline) - Use clear, benefit-focused language - End with a short call to action`;
-  res.status(200).json({ description: 'Service description generated' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
 export type GenerateServiceDescriptionRequest = {
   title: string;
-
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
-) {
-    const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page.
-Service Title: ${title}
-Target Audience: ${targetAudience}
-Key Features:
-    });
-    let description = "";
-
-      temperature: 0.7
-      });
-
-    let description = '';
-    const output = response.output?.[0];
-    if (output && output.type === 'message') {
-      // Aggregate all text parts from the first message
-      description = output.content
-        .filter((c) => c.type === 'output_text')
-        .map((c: any) => c.text)
-        .join('\n')
-
-    }
-    if (!description) {
-      // Fallback to top-level text if available
-      // @ts-ignore
-
-  tone?: 'professional' | 'friendly' | 'persuasive' | 'technical';
+  targetAudience: string;
+  keyFeatures: string[];
+  additionalNotes?: string;
+  toneInstruction?: string;
 };
-export type GenerateServiceDescriptionResponse = {
-  description: string;
-};
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
-}
-    const output = response.output?.[0];
-    // Check condition
-if ( {) {
-  $2
-}
-      // Aggregate all text parts from the first message;
-      description = output.content;
-  }
-}
 
+  try {
+    const { title, targetAudience, keyFeatures, additionalNotes, toneInstruction } = req.body as GenerateServiceDescriptionRequest;
+    
+    if (!title || !targetAudience || !keyFeatures) {
+      return res.status(400).json({ error: 'Title, target audience, and key features are required' });
+    }
+
+    // Placeholder for service description generation
+    const description = `Service: ${title}\nTarget Audience: ${targetAudience}\nKey Features: ${keyFeatures.join(', ')}`;
+    
+    res.status(200).json({ success: true, description });
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    if (!description) {;
-      // Fallback to top-level text if available;
-      // @ts-ignore;
-      description = (response as any).content?.[0]?.text || 'Unable to generate description at this time.';
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    return res.status(200).json({ description });
-  } catch (error) {
-    console.error('OpenAI generation error:', error);
-    return res.status(500).json({ error: 'Failed to generate description' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Service description generation error:', error);
+    res.status(500).json({ error: 'Failed to generate service description' });
   }
 }

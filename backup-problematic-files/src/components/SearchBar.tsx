@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router',;
+import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input',;
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions',;

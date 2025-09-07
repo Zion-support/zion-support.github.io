@@ -1,7 +1,4 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function ApplicationRow({
-
   application
   processingId
   onViewApplication
@@ -9,7 +6,6 @@ export function ApplicationRow({
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
-
 import { formatDistanceToNow } from 'date-fns';
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -21,7 +17,6 @@ import { ScoreBadge } from './ScoreBadge';
 import { ApplicationActions } from './ApplicationActions';
 import Image from 'next/image'; // Import next/image;
 import React, { useState } from 'react'; // Import useState;
-
 interface ApplicationRowProps {;
   application: JobApplication;
   processingId: string | null;
@@ -38,7 +33,6 @@ interface ApplicationRowProps {;
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>,;
   onViewScore: (application: JobApplication,) => void;
 }
-
 export function ApplicationRow(): any ({;
   application,;
   processingId,;
@@ -48,55 +42,44 @@ export function ApplicationRow(): any ({;
 }: ApplicationRowProps) {;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
-
     <TableRow key={application.id}>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <TableCell>
         <div className="flex items-center gap-3">
           <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatarError ? (
               <Image
-
                 alt={talentName}
                 width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
                 height={36} // Corresponds to h-9 w-9
                 className="rounded-full object-cover" // Ensure rounded and object-cover
                 onError={() => setAvatarError(true)}
-
             </div>
           </div>
         </div>
       </TableCell>
       <TableCell>
-
         </div>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </TableCell>
       <TableCell>
         <StatusBadge status={application.status} />
       </TableCell>
       <TableCell>
-
         <Button 
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           variant="ghost" 
           size="sm" 
           onClick={() => onViewScore(application)}
           className="flex items-center gap-1"
         >
           <BarChart className="h-4 w-4 mr-1" />
-
           <ScoreBadge application={application} />
         </Button>
       </TableCell>
       <TableCell>
         {application.resume ? (
-
           <Button variant="ghost" size="sm" asChild>
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">
               <FileText className="h-4 w-4 mr-1" /> View
             </Link>
-
           </Button>
         ) : (
           <span className="text-muted-foreground text-sm">No resume</span>
@@ -104,10 +87,9 @@ export function ApplicationRow(): any ({;
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
-
 import { formatDistanceToNow } from "date-fns";
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict;
 import { TableRow, TableCell } from "@/components/ui/table",;
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
@@ -222,19 +204,13 @@ export function ApplicationRow({;
         </div>;
       </TableCell>;
       <TableCell>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <ScoreBadge application={application} />;
         </Button>;
       </TableCell>;
       <TableCell>;
-
             </a>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </Button>;
         ) : (;
           <span className="text-muted-foreground text-sm">No resume</span>;
         )}
       </TableCell>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

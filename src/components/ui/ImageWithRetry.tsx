@@ -1,11 +1,7 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-  /** CSS class for the retry button */
-
+/** CSS class for the retry button */
   retryClassName?: string;  retryClassName?: string
-
 import React, { useState } from 'react';
-import Image, { type ImageProps } from 'next/image',;
+import Image, { type ImageProps } from 'next/image';
 import { cn } from '@/lib/utils',;
 interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
   src: string,;
@@ -14,9 +10,7 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
   fallbackSrc?: string,;
   /** CSS class for the retry button */;
   retryClassName?: string;
-
 }
-
   fallbackSrc?: string
   /** CSS class for the retry button */
   retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
@@ -26,7 +20,6 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   alt?: string
   /** Source to use if the main src fails */
   fallbackSrc?: string
-
   /** CSS class for the retry button */
   retryClassName?: string;  retryClassName?: string
 }
@@ -34,17 +27,13 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({
-
       <Image
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {...props}
         src = {currentSrc,}
         alt = {alt,}
         onError = {handleError,}
         className = {cn(className),}
         fill = {fill,}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   const fill = !('width' in props) && !('height' in props);
   return (
     <div className="relative inline-block">
@@ -69,5 +58,3 @@ export function ImageWithRetry({
   );
 }
 ;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

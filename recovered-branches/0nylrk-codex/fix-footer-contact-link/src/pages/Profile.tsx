@@ -19,9 +19,7 @@ import { toast } from "sonner",
 export default function Profile() {
   const { user, isLoading, logout } = useAuth(),
   const navigate = useNavigate(),
-
   const { user, isLoading, logout } = useAuth();
-
     return (
       <>
         <Header />
@@ -32,7 +30,6 @@ export default function Profile() {
       </>
     );
   }
-
   if (!user) {;
     return (
       <>
@@ -70,7 +67,7 @@ export default function Profile() {
       <Footer />
     </>
   )import React, { useEffect } from 'react';
-import { Header } from "@/components/Header",;
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
@@ -83,7 +80,6 @@ export default function Profile() {;
     if (!isLoading && !user) {;
       toast.error("Please log in to view your profile"),;
       navigate("/login?redirect=/profile");
-
     }
   }, [user, is_loading, navigate]);
 ;
@@ -153,7 +149,6 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
-
     </>);
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

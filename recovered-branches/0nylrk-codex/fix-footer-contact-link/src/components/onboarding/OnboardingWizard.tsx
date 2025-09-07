@@ -1,4 +1,3 @@
-
 import { useState, useEffect  } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
@@ -15,20 +14,18 @@ interface WizardStep {;
 };
   skipText?: string;
 }
-
 interface OnboardingWizardProps {;
   type: 'client' | 'talent',;
   onComplete: () => void,;
   onSkip: () => void,;
   className?: string;
 }
-
 export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom',;
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
-import Rocket from 'lucide-react/dist/esm/icons/rocket',;
+import Rocket from "Rocket";
 import { FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react',;
 import { cn } from '@/lib/utils',;
 interface WizardStep {;
@@ -48,17 +45,15 @@ interface OnboardingWizardProps {;
   onSkip: () => void,;
   className?: string;
     {
-      title: "Preview your profile"
-      description: "See how clients will view your profile"
+      title: "title",
+    description: "See how clients will view your profile"
       icon: <Eye className="h-6 w-6 text-zion-purple" />
       action: {
         text: "Preview Profile"
         url: `/talent/${user?.id}`
-
       },
       skipText: "Skip for now"
     },
-
   ];
   const steps = type === 'client' ? clientSteps : talentSteps;
   // Navigate to the specified URL
@@ -108,17 +103,12 @@ interface OnboardingWizardProps {;
       onSkip();
     }
   },
-
-  
-  
-  
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
         <CardTitle className="text-center text-white">
           {type === 'client' ?
             "Ready to find top IT talent?" :
-
   // Define steps based on user type;
   const clientSteps: WizardStep[] = [;
     {;
@@ -212,7 +202,6 @@ interface OnboardingWizardProps {;
       onSkip();
     }
   };
-
   return (    <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>;
       <CardHeader>;
         <CardTitle className="text-center text-white">;
@@ -229,9 +218,7 @@ interface OnboardingWizardProps {;
       <CardFooter className="flex flex-col space-y-2">;
         <Button
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
-
           onClick={handleAction}>;
           {steps[currentStep].action && action.text}
         </Button>;
-
         {steps[currentStep].skipText && (;

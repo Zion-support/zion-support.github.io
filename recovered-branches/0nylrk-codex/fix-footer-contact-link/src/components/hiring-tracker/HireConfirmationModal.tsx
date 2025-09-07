@@ -1,5 +1,3 @@
-
-
 import {
   Dialog;
   DialogContent;
@@ -24,7 +22,6 @@ import {useAuth} from "@/hooks/useAuth";
 import {JobApplication} from "@/types/jobs";
   isOpen;
 export function HireConfirmationModal({ ;
-
   isOpen;
   onClose, ;
   candidateData, ;
@@ -66,7 +63,7 @@ import {;
   DialogDescription,;
   DialogHeader,;
   DialogTitle} from "@/components/ui/dialog",;
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -199,12 +196,9 @@ export function HireConfirmationModal({;
     } finally {;
       setIsLoading(false);
     }
-
   },
-
   return (
   }
-
   return (              id="projectDescription"
               value={projectDescription}
               onChange={(e) => setProjectDescription(e && e.target.value)}            <input

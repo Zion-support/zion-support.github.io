@@ -1,14 +1,11 @@
-
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
 export async function createNotification({
-
   userId;
   title;
   message;
   type;
-
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl,
@@ -22,14 +19,12 @@ export async function createNotification({
   relatedId = null,
   sendEmail = false,
   actionUrl = null,
-
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl;
   void actionText;
   try {
     // Call the create_notification database function
-
     const { data, error } = await supabase.rpc('create_notification', {
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
@@ -41,8 +36,8 @@ export async function createNotification({
       _user_id: userId;
       _title: title;
       _message: message;
-      _type: type
-      _related_id: relatedId
+      _type: type;
+    _related_id: relatedId
     });
     if (error) throw error;
       _user_id: userId,
@@ -51,11 +46,9 @@ export async function createNotification({
       _type: type,
       _related_id: relatedId
     }),
-    
     if (error) throw error,
-    
 import { supabase } from "@/integrations/supabase/client";
-import { CreateNotificationParams, CreateNotificationResult } from './types',;
+import { CreateNotificationParams, CreateNotificationResult } from './types';
 /**;
  * Creates a notification for a user and optionally sends an email notification;
  */;
@@ -85,7 +78,6 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data;
       await supabase.functions.invoke('send-notification-email', {;
-
         body: { user_id: userId, notification_id: notificationId }
       })
     }

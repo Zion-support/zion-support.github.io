@@ -3,17 +3,13 @@ interface TextAnalysisResult {
   }
 }
 export default async function handler(
-
-  req: NextApiRequest
-
-  res: NextApiResponse<TextAnalysisResult | { error: string }>
+  req: NextApiRequest;
+    res: NextApiResponse<TextAnalysisResult | { error: string }>
 ) {
   }
   try {
     const { text } = req && req.body;
-
     // Basic statistics
-
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
     const words = text
@@ -180,4 +176,3 @@ export default async function handler(
   }
   }
 }
-

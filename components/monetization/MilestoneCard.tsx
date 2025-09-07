@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -7,19 +6,15 @@ class ErrorBoundary extends React.Component {
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -28,7 +23,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-
   milestone: Milestone;
   project_id: string;
   role: 'client' | 'talent' | 'admin';
@@ -71,7 +65,6 @@ export default function MilestoneCard({
           className='text-sm text-blue-600'
           onClick={() => setExpanded(v => !v)}
         >          {expanded ? 'Hide' : 'Details'}
-
 type Props = {
 ;
   return (
@@ -91,7 +84,6 @@ type Props = {
       </div>;
       <div className='mt - 3'>;
         <div className='flex items - center gap - 2'>type Props = {
-
   const [expanded, setExpanded] = useState(false);
   const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
   const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
@@ -109,9 +101,8 @@ type Props = {
   const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone && milestone.status === 'Submitted';
   const canClientMarkPaid = role !== 'talent' && milestone && milestone.status === 'Approved';
-
-              <div
-  on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) => Promise < void> | void;
+              <div;
+    on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) => Promise < void> | void;
 }
 ;
 const status_steps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
@@ -155,7 +146,6 @@ function MilestoneCard() {
             <div key={step} className="flex items-center">;
               <div;
                 className={
-
                 }
                 title={step}
               />
@@ -169,7 +159,6 @@ function MilestoneCard() {
             </div>
           ))}
         </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
-
                   'h - 2 w - 2 rounded - full ' + (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300');
                 }
                 title={step}
@@ -211,14 +200,11 @@ function MilestoneCard() {
           <button
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
-
       <div className='mt-4 flex flex-wrap gap-2'>
         {canClientMarkInProgress && (
           <button
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
-
             onClick={() => onAction('in_progress', milestone.id)}
-
                     </a>
                   </li>
                 ))}
@@ -232,20 +218,17 @@ function MilestoneCard() {
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
-
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone && milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
         {canClientMarkInProgress && (;
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700">;
             Mark In Progress;
           </button>;
-
       <div className="mt-4 flex flex-wrap gap-2">
         {canClientMarkInProgress && (
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
             onClick={() => onAction('in_progress', milestone.id)}
-
           >
             Mark In Progress
           </button>
@@ -270,7 +253,6 @@ function MilestoneCard() {
         )}
       </div>
     </div>
-
         )}
       </div>
     </div>

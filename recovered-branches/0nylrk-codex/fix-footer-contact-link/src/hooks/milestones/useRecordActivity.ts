@@ -1,4 +1,3 @@
-
 export const useRecordActivity = () => {;
   const { user } = useAuth();import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
@@ -20,11 +19,10 @@ export const useRecordActivity = () => {
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)    }
   };
-  
   return {
     recordMilestoneActivity
 import { supabase } from '@/integrations/supabase/client';
-import { MilestoneActivity } from './types',;
+import { MilestoneActivity } from './types';
 export const useRecordActivity = () => {;
   const { user } = useAuth(),;
   const recordMilestoneActivity = async (;
@@ -56,7 +54,6 @@ export const useRecordActivity = () => {;
       console.error("Error recording activity:", err),;
       return null;
   }
-
 }
 };
   return {;
@@ -66,12 +63,9 @@ export const useRecordActivity = () => {;
     recordMilestoneActivity
   }
 }
-
   };
   return {;
     recordMilestoneActivity;
-
   }
-
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

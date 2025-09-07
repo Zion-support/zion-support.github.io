@@ -1,12 +1,10 @@
-
 interface IntegrationCardProps {
-  title: string
-  description: string
+  title: string;
+    description: string
   icon: React.ReactNode
   status?: 'connected' | 'disconnected' | 'pending'
   href?: string
   onConnect?: () => void
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -24,9 +22,7 @@ import {;
   Briefcase,;
   Users,;
 } from 'lucide-react';
-
 }
-
 interface IntegrationCardProps {;
   title: string;
   description: string;
@@ -34,7 +30,6 @@ interface IntegrationCardProps {;
   status?: 'connected' | 'disconnected' | 'pending';
   href?: string;
   onConnect?: () => void;
-
 export function IntegrationCard({
   title,
   description,
@@ -80,7 +75,6 @@ export function IntegrationCard({
               href={href}
               target='_blank'
               rel='noopener noreferrer'
-
 import React from "react";
 import { logDebug } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button";
@@ -89,7 +83,6 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
 interface IntegrationCardProps {
   title: string
   description: string
@@ -107,11 +100,10 @@ interface IntegrationCardProps {
             <span>Connect</span>;
             <ArrowRight className='ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5' />          </Button>;
             <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;
-
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 import React from "react";
-import { logDebug } from '@/utils/productionLogger',;
+import { logDebug } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -123,18 +115,14 @@ interface IntegrationCardProps {;
   status?: "connected" | "disconnected" | "pending";
   href?: string;
   onConnect?: () => void;
-
 }
-
 export function IntegrationCard(): any ({;
   title;
   description;
   icon;
-
   status = "disconnected";
   href;
   onConnect}: IntegrationCardProps) {;
-
   return (
     <Card className="overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -157,7 +145,6 @@ export function IntegrationCard(): any ({;
           ) : (;
             <Badge variant="outline">Not Connected</Badge>;
           )}
-
         </div>;
       </CardHeader>;
       <CardContent className="pb-4">;
@@ -168,16 +155,12 @@ export function IntegrationCard(): any ({;
           <Button variant="outline" className="w-full" asChild>;
             <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">;
               <span>Manage</span>;
-
               <ExternalLink className="h-3.5 w-3.5" />;
-
             </a>;
           </Button>;
         ) : (;
           <Button variant="default" className="w-full" onClick={onConnect}>;
             <span>Connect</span>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>
       </CardHeader>
       <CardContent className="pb-4">
@@ -194,15 +177,11 @@ export function IntegrationCard(): any ({;
         ) : (
           <Button variant="default" className="w-full" onClick={onConnect}>
             <span>Connect</span>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
-
 export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
       <IntegrationCard
-
         title="Slack"
         description="Send notifications and interact with Zion from Slack."
         icon={<Slack className="h-5 w-5" />}
@@ -211,23 +190,15 @@ export function IntegrationCards() {
       <IntegrationCard
         title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
-
         icon={<Briefcase className="h-5 w-5" />}
-
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />
-
       <IntegrationCard
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title="Microsoft Teams"
         description="Receive updates through Microsoft Teams."
         icon={<Users className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Teams clicked')}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       />;
     </div>;
   );
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

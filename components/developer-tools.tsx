@@ -1,6 +1,5 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-
 import {
 import Head from 'next / head';
 import Card from '../components / ui / Card';
@@ -22,7 +21,6 @@ import {
   Cloud
   Shield
   Zap
-
   Code;
   GitBranch,
   Database,
@@ -34,7 +32,6 @@ import {
   CheckCircle;
   TrendingUp;
   Cpu;
-
       pricing: '$10 / month',
       market_price: '$10 - 20 / month',
       website: 'https://github.com / features / copilot',
@@ -89,8 +86,8 @@ import {
   description: 'Global developer tools market size'
     }
     {
-      title: 'AI Code Tools'
-      value: '$2.1B'
+      title: "title",
+    value: '$2.1B'
       growth: '+45% YoY'
       description: 'AI-powered development tools market'
     },      description: 'AI-powered development tools market'
@@ -163,13 +160,11 @@ import {
               informed decisions about your development stack.;
             </p>;
           </div>;
-
       {/* Developer Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
               Curated Developer Tools & Services
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -234,7 +229,6 @@ import {
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
               Complete Developer Workflow
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -289,7 +283,6 @@ import {
           </div>;
         </div>;
       </section>;
-
       {/* Tool Categories */}
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -361,13 +354,10 @@ import {
           </div>
         </div>
       </section>
-
           </div>;
         </div>;
       </section>;
-
       {/* CTA Section */}
-
             Start with one tool or build a complete development stack. Each tool;
             is designed to work independently and integrate seamlessly with your;
             existing workflow.;
@@ -405,4 +395,3 @@ import {
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore AI Tools
             </Button>
-

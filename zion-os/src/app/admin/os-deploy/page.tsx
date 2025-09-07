@@ -1,7 +1,5 @@
 "use client";
-
 import React, { useState } from "react";export default function OSDeployPage() {
-
 export default function OSDeployPage() {;
 const [loading, setLoading] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
@@ -22,27 +20,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 'use client';
 =======    const labels: { [key: string]: string } = {
-      ai: 'AI Integration'
-      blockchain: 'Blockchain Technology'
+      ai: "ai",
+    blockchain: 'Blockchain Technology'
       governance: 'Governance System'
       treasury: 'Treasury Management';
     }
@@ -58,27 +52,21 @@ ai: 'Advanced AI capabilities and automation'
     return descriptions[key] |'Feature description';
   }
 'use client';
-
 export default function OSDeployPage() {;
   const [loading, setLoading] = useState(false);
-
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setLoading(true);
-
     // Simulate deployment
     setTimeout(() => {
       setLoading(false);
     }, 3000)
 };
-
   const loading = false;
   const message = "";
   const messageType = "success";
-
   // Mock feature keys and functions
   const FeatureKeys = ["ai", "blockchain", "governance", "treasury"];
-
   const labelFor = (key: string) => {
     const labels: { [key: string]: string } = {
       ai: 'AI Integration',
@@ -97,7 +85,6 @@ ai: 'Advanced AI capabilities and automation',
     };
     return descriptions[key] || "Feature description"
 };
-
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">
@@ -125,7 +112,6 @@ ai: 'Advanced AI capabilities and automation',
                   placeholder="zion.example.com"
                 />
               </div>
-
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Subdomain
@@ -161,7 +147,6 @@ ai: 'Advanced AI capabilities and automation',
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
-
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Governance Type
@@ -176,7 +161,6 @@ ai: 'Advanced AI capabilities and automation',
                   <option value="HYBRID">Hybrid Governance</option>
                 </select>
               </div>
-
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Country
@@ -188,7 +172,6 @@ ai: 'Advanced AI capabilities and automation',
                   placeholder="United States"
                 />
               </div>
-
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Payment Gateway
@@ -196,7 +179,6 @@ ai: 'Advanced AI capabilities and automation',
                 <select
                   id="paymentGateway"
                   name="paymentGateway"
-
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
                   <option value="">None</option>;
                   <option value="stripe">Stripe</option>;
@@ -207,7 +189,6 @@ ai: 'Advanced AI capabilities and automation',
               </div>;
             </div>;
           </div>;
-
           {/* Feature Selection */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
@@ -216,10 +197,8 @@ ai: 'Advanced AI capabilities and automation',
               </span>
               Feature Selection
             </h2>
-
                   id="tokenSystem"
                   name="tokenSystem"
-
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
               <div className="space-y-2">;
                 <label html_for="domain" className="block text - sm font - medium text-white / 90">Domain</label>;
@@ -276,7 +255,6 @@ ai: 'Advanced AI capabilities and automation',
                   name="token_system";
                   className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition-all";
                 >;
-
                   <option value="SHARED">ZION$ Shared</option>;
                   <option value="LOCAL">Local Token</option>;
                   <option value="HYBRID">Hybrid System</option>;
@@ -291,7 +269,6 @@ ai: 'Advanced AI capabilities and automation',
                 <label
                   key={k}
                   className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
-
                   <input
               <div className="space-y-2">;
                 <label html_for="country" className="block text - sm font - medium text-white / 90">Country</label>;
@@ -350,7 +327,6 @@ ai: 'Advanced AI capabilities and automation',
               ))}
             </div>
           </div>
-
           {/* Additional Features */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
@@ -359,7 +335,6 @@ ai: 'Advanced AI capabilities and automation',
               </span>
               Additional Features
             </h2>
-
 =======                <input
                   id="treasury"
                   type="checkbox"
@@ -385,7 +360,6 @@ ai: 'Advanced AI capabilities and automation',
                 </div>;
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
-
                 <input
                   id="governance"
                   type="checkbox"
@@ -411,7 +385,6 @@ ai: 'Advanced AI capabilities and automation',
                 </div>;
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
-
                 <input
                   id="moderation"
                   type="checkbox"
@@ -437,7 +410,6 @@ ai: 'Advanced AI capabilities and automation',
                 </div>;
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
-
                 <input
                   id="partnerships"
                   type="checkbox"
@@ -455,7 +427,6 @@ ai: 'Advanced AI capabilities and automation',
               </label>
             </div>
           </div>
-
           {/* Submit Button */}
           <div className="text-center">
             <button
@@ -464,7 +435,6 @@ ai: 'Advanced AI capabilities and automation',
             >
               {loading ? "Deploying..." : "Deploy Digital Economy"}
             </button>
-
               <div
                 className={`mt-6 p-4 rounded-lg ${
                   messageType === "success"
@@ -483,8 +453,8 @@ ai: 'Advanced AI capabilities and automation',
               >
 "use client",;
 import { useState } from "react";
-import { FeatureKeys } from "@/lib/zod",;
-import LoadingSpinner from "@/app/components/LoadingSpinner",;
+import { FeatureKeys } from "@/lib/zod";
+import LoadingSpinner from "LoadingSpinner";
 export default function AdminDeployPage() {;
   const [loading, setLoading] = useState(false),;
   const [message, setMessage] = useState<string | null>(null),;
@@ -879,13 +849,11 @@ export default function AdminDeployPage() {;
 }
               </div>;
             )}
-
           </div>;
         </form>;
       </div>;
     </div>);
 }
-
 ;
 function labelFor(key: string) {;
   switch (key) {;

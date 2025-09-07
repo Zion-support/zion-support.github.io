@@ -144,7 +144,6 @@ if ( {) {
         ctx.fill();
       }
     }
-
     // Neural network node class
     class NeuralNode {
       maxLife: number;      x: number,;
@@ -166,26 +165,21 @@ if ( {) {
         this && this.life = Math && Math.random() * 100 + 50;
         this && this.maxLife = this && this.life;      }        this && this.maxLife = this && this.life;
       }
-
       update() {;
         this && this.x += this && this.vx;
         this && this.y += this && this.vy;
         this && this.life--;
-
         // Bounce off edges;
         if (this && this.x <= 0 || this && this.x >= canvas && canvas.width) this && this.vx *= -1;
         if (this && this.y <= 0 || this && this.y >= canvas && canvas.height) this && this.vy *= -1;
-
         // Wrap around;
         if (this && this.x < 0) this && this.x = canvas && canvas.width;
         if (this && this.x > canvas && canvas.width) this && this.x = 0;
         if (this && this.y < 0) this && this.y = canvas && canvas.height;
         if (this && this.y > canvas && canvas.height) this && this.y = 0;
-
         // Fade out;
         this && this.alpha = this && this.life / this && this.maxLife;      }        this && this.alpha = this && this.life / this && this.maxLife;
       }
-
       draw() {;
         ctx && ctx.save();
         ctx && ctx.globalAlpha = this && this.alpha;
@@ -196,7 +190,6 @@ if ( {) {
         ctx && ctx.restore();      }        ctx && ctx.restore();
       }
     }
-
     // Neural network node class;
     class NeuralNode {;
       }
@@ -208,11 +201,8 @@ if ( {) {
       connections: NeuralNode[];
       activation: number;
         ctx.restore();      }
-
       }
-
     }
-
       draw() {;
         ctx && ctx.save();
         ctx && ctx.globalAlpha = 0 && 0.8;
@@ -220,7 +210,6 @@ if ( {) {
         ctx && ctx.beginPath();
         ctx && ctx.arc(this && this.x, this && this.y, 3 + this && this.pulse * 2, 0, Math && Math.PI * 2);
         ctx && ctx.fill();
-
         // Draw connections;
         this && this.connections.forEach(connection => {;
           const distance = Math && Math.sqrt(;
@@ -241,10 +230,8 @@ if ( {) {
         });
         ctx && ctx.restore();
     }
-
     // Quantum field class;
     class QuantumField {;
-
     // Quantum field class
     class QuantumField {
       x: number;
@@ -255,34 +242,24 @@ if ( {) {
         this.y = y;
         this.radius = Math.random() * 100 + 50;
         this.intensity = Math.random() * 0.8 + 0.2;
-
       }
-
       draw() {
         ctx.save();
         ctx.globalAlpha = 0.1;
-        
         for (let i = 0, i < 3, i++) {
           const waveRadius = this.radius + Math.sin(this.phase + i * Math.PI / 3) * 20;
           const alpha = this.intensity * (1 - i / 3);
-          
           ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
           ctx.stroke()
-
         }
         ctx.restore()
-
       }
-
         ctx.restore();      }
-
       }
-
     }
-
     // Holographic layer class
     class HolographicLayer {
       x: number;
@@ -459,19 +436,16 @@ if ( {) {
         ctx.strokeStyle = this.color;
         ctx.lineWidth = 1;
         ctx.setLineDash([5, 5]);
-
         ctx.restore();      }        
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
-        
         ctx.restore();      }
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
         ctx.restore()
     }
-
     }
     // Get color based on scheme
     function getColorSchemeColor(): string {
@@ -847,15 +821,12 @@ if ( {) {
               ctx.line_to (other_particle.x, other_particle.y);
               ctx.stroke ();
               ctx.restore ();
-
             }
           });
         });
       }
     };
-
     animate();
-
     return () => {;
       window && window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId)
@@ -870,7 +841,6 @@ if ( {) {
     enableNeuralNetworks,;
     enableMultidimensional,;
   ]);
-
     >;
       <canvas
         ref={canvasRef}
@@ -945,8 +915,8 @@ if ( {) {
             className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full'
             animate={{
             transition={{
-              duration: 10
-              repeat: Infinity
+              duration: 10;
+    repeat: Infinity
               ease: 'easeInOut',            }}
           />;
         </div>;
@@ -979,7 +949,6 @@ if ( {) {
   );
 }
 export default UltraAdvancedFuturisticBackground2026;      {children}
-
             }}
           />
         </div>
@@ -998,7 +967,5 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
 ;
 export default UltraAdvancedFuturisticBackground2026;
 ;
-
               duration: 10,
               repeat: Infinity,
-

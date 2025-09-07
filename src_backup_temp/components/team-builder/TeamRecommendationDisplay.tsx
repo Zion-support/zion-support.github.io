@@ -7,8 +7,8 @@ interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {;
 "}
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
   recommendation: TeamRecommendatio n;
-  projectBrief: ProjectBrie f; // For budget comparison
-  onInviteTalent: talentI d: string, roleTitle: string void;
+  projectBrief: ProjectBrie f; // For budget comparison;
+    onInviteTalent: talentI d: string, roleTitle: string void;
   // onEditRole: roleI d: string void; // For future add/remove
   // onRemoveRole: roleI d: string void; // For future add/remove
 }

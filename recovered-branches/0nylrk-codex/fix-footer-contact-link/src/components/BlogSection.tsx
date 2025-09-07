@@ -1,10 +1,8 @@
-
-    return (
+return (
       new Date(b && b.publishedDate).getTime() - new Date(a && a.publishedDate).getTime();
     );
   });
   .slice(0, 3);
-
             className="mt-4 md:mt-0 border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
             asChild
           >
@@ -16,10 +14,9 @@
                     e: React.SyntheticEvent<HTMLImageElement, Event>
                   ) => {
                     const target = e.currentTarget as HTMLImageElement;
-
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,import { GradientHeading } from "./GradientHeading";
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "./ui/button",;
 import { Link } from "react-router-dom",;
 import { BLOG_POSTS } from "@/data/blog-posts",;
@@ -30,7 +27,6 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {;
 export function BlogSection() {;
   return (export function BlogSection() {;
   return (
-
 import { GradientHeading } from "./GradientHeading",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 import { Button } from "./ui/button",;

@@ -1,8 +1,7 @@
 interface QuoteDetailsProps {
-  quote: QuoteRequest | null
-  isOpen: boolean
+  quote: QuoteRequest | null;
+    isOpen: boolean
   onClose: () => void
-
 };
 import React from "react";
 import { ;
@@ -23,21 +22,14 @@ interface QuoteDetailsProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
-
       return format(new Date(dateString), 'PPP');
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (e) {;
       return dateString;
     }
   }
-
   return (
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Separator className="my-4" />
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Requester Information</h3>
@@ -53,8 +45,6 @@ interface QuoteDetailsProps {;
               </div>
             </CardContent>
           </Card>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
@@ -71,22 +61,16 @@ interface QuoteDetailsProps {;
             </CardContent>
           </Card>
         </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card className="mt-6">
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
             <p className="mb-4">{quote.project_summary}</p>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {quote.project_description && (
               <>
                 <h4 className="font-medium mt-4">Additional Details</h4>
                 <p>{quote.project_description}</p>
               </>
             )}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="mt-6 flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-gray-500" />
               <span className="font-medium">Budget: </span>
@@ -99,15 +83,12 @@ interface QuoteDetailsProps {;
             </div>
           </CardContent>
         </Card>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="mt-6 flex justify-end">
           <Button onClick={onClose}>Close</Button>
         </div>
       </DialogContent>
     </Dialog>
   )
-
     <Dialog open={isOpen} onOpenChange={(open,) => !open && onClose()}>;
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
@@ -119,9 +100,7 @@ interface QuoteDetailsProps {;
             Quote request submitted on {formatDate(quote && quote.created_at)}
           </DialogDescription>;
         </DialogHeader>;
-
         <Separator className="my-4" />;
-
         <div className="grid grid-cols-1 md: grid-cols-2 gap-6">;
           <Card>;
             <CardContent className="pt-6">;
@@ -138,7 +117,6 @@ interface QuoteDetailsProps {;
               </div>;
             </CardContent>;
           </Card>;
-
           <Card>;
             <CardContent className="pt-6">;
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>;
@@ -155,19 +133,16 @@ interface QuoteDetailsProps {;
             </CardContent>;
           </Card>;
         </div>;
-
         <Card className="mt-6">;
           <CardContent className="pt-6">;
             <h3 className="text-lg font-medium mb-3">Project Details</h3>;
             <p className="mb-4">{quote && quote.project_summary}</p>;
-
             {quote && quote.project_description && (;
               <>;
                 <h4 className="font-medium mt-4">Additional Details</h4>;
                 <p>{quote && quote.project_description}</p>;
               </>;
             )}
-
             <div className="mt-6 flex items-center gap-2">;
               <DollarSign className="h-4 w-4 text-gray-500" />;
               <span className="font-medium">Budget: </span>;
@@ -180,7 +155,6 @@ interface QuoteDetailsProps {;
             </div>;
           </CardContent>;
         </Card>;
-
         <div className="mt-6 flex justify-end">;
           <Button onClick={onClose}>Close</Button>;
         </div>;
@@ -188,7 +162,6 @@ interface QuoteDetailsProps {;
     </Dialog>;
   )
 };
-
   (open) => !open && onClose () ;
 }> <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto" > <DialogHeader> <DialogTitle className="text-2xl flex items-center justify-between" > <span> {;
   quote && quote.project name ;
@@ -208,7 +181,6 @@ interface QuoteDetailsProps {;
 }` : 'Not specified') ;
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>) 
 };
-
 import React from './react';
 import {
   Dialog;

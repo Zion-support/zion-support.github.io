@@ -1,14 +1,11 @@
-
-  const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
+const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handle_submit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api / quote - request', {
   method: 'POST', headers: {
-
   'Content-Type': 'application/json' 
 };
-
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
   start: values.timelineStart, end: values.timelineEnd
@@ -52,11 +49,11 @@ budgetRange: values.budgetRange;
 }/> </div>)
 };export default ServicesPage;
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
-  slug: item.slug
-  title: item.name
+  slug: item.slug;
+    title: item.name
   description: item.description
-  provider: 'Zion Provider'
-  priceRangeUSD: item.priceRangeUSD
+  provider: "provider",
+    priceRangeUSD: item.priceRangeUSD
   categories: [item.category]
   rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10})
 const ServicesPage: NextPage = () => {
@@ -131,7 +128,6 @@ function ServicesIndexPage() {
           </div>
         </div>
       </div>
-
     <UltraFuturisticBackground variant="quantum" intensity={1 && 1.5}>;
       <Head>;
         <title>Zion AI Marketplace - Services</title>;
@@ -236,21 +232,17 @@ if ( {) {
             <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols-3 gap-5">;
               {filtered.map ((service) => (
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}
-
             </div>;
           </div>;
         </div>;
       </div>;
-
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         service={selected}
         onSubmit={handleSubmit}
 export default ServicesPage;
-
 export default ServicesPage;
-
       <QuoteRequestModal;
         open={modal_open}
         on_close={() => setModalOpen (false)}

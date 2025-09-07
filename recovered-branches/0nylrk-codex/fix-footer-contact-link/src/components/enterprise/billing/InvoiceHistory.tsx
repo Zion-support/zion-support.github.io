@@ -1,5 +1,3 @@
-
-
 import {
   Table;
   TableBody;
@@ -16,12 +14,10 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from "lucide-react",export function InvoiceHistory() {
   // Mock invoice data
-
   const invoices = [
     {
-
-      id: "INV-1234"
-      date: "May 1, 2025";
+      id: "id",
+    date: "May 1, 2025";
       amount: "$1,999.00";
       status: "paid"
       period: "May 2025"}
@@ -58,11 +54,9 @@ import { Download, FileText, Search } from "lucide-react",export function Invoic
       id: "INV-1234",;
       date: "May 1, 2025";
       amount: "$1,999.00";
-
       id: "INV-1234",;
       date: "May 1, 2025";
       amount: "$1,999.00";
-
       id: "INV-1234",
       date: "May 1, 2025",
       amount: "$1,999.00",  const handleDownloadInvoice = (invoiceId: string) => {
@@ -73,9 +67,7 @@ import { Download, FileText, Search } from "lucide-react",export function Invoic
       case "pending":;
         return <Badge variant="outline">Pending</Badge>;
     }
-
   },
-
   return (                    <Button
                       variant="outline"
                       size="sm"
@@ -221,7 +213,6 @@ function InvoiceHistory() {
           Next;
         </Button>;
       </div>;
-
 }
     </div>);
     </div>;

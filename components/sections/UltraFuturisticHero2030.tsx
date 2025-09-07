@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 import {
   ArrowRight,
   Zap,
@@ -24,14 +23,14 @@ import {
   TrendingUp, Shield, Globe, Cpu, Sparkles;
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
 const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
 const features = [
   {
-    icon: Brain
+    icon: Brain;
     title: 'AI Consciousness'
     description: 'Develop genuine AI consciousness and emotional intelligence'
   }
@@ -91,7 +90,6 @@ export default function UltraFuturisticHero2030() {
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
-
   };
   {;
     icon: Rocket,;
@@ -116,7 +114,6 @@ export default function UltraFuturisticHero2030() {
   description: 'Unbreakable encryption with quantum key distribution';
   }
 ];
-
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
       {/* Background Glow Effects */}
@@ -134,7 +131,6 @@ export default function UltraFuturisticHero2030() {
           transition={{ duration: 0.8 }}
           className='mb-8'        >          className="mb-8"
           className='mb-8'        >
-
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -176,7 +172,6 @@ export default function UltraFuturisticHero2030() {
           </motion.p>
         </motion.div>
             <span className="text-emerald-400 font-semibold">Space Technology</span>;
-
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -189,16 +184,13 @@ export default function UltraFuturisticHero2030() {
             Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.;
           </motion && motion.p>;
         </motion && motion.div>;
-
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           <Link
             href='/contact'
-
             className='group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-2xl text-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-purple-500/25'>;
             <span className='relative z-10 flex items-center'>;
               Get Started Today;
@@ -206,7 +198,6 @@ export default function UltraFuturisticHero2030() {
             </span>;
             <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>;
           </Link>;
-
           <Link
             href='/services'
             className='group px-8 py-4 border-2 border-purple-500/30 text-purple-300 font-semibold rounded-2xl text-lg hover:bg-purple-500/10 hover:border-purple-500/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
@@ -215,7 +206,6 @@ export default function UltraFuturisticHero2030() {
               <Play className='ml-2 w-5 h-5 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />            </span>        >;
           <Link
             href="/contact"
-
             className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-2xl text-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-purple-500/25">;
             <span className="relative z-10 flex items-center">;
               Get Started Today;
@@ -223,7 +213,6 @@ export default function UltraFuturisticHero2030() {
             </span>;
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>;
           </Link>;
-
           <Link
             href="/services"
         {/* Features Grid */}
@@ -233,7 +222,6 @@ export default function UltraFuturisticHero2030() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >
-
         >
           {features.map((feature, index) => (
             <motion.div
@@ -483,7 +471,6 @@ function UltraFuturisticHero2030() {
         >;
           {features.map ((feature, index) => (
             <motion.div;
-
               key={index}
               initial={{ opacity: 0, coordinate_y: 30 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
@@ -507,7 +494,6 @@ function UltraFuturisticHero2030() {
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -540,7 +526,6 @@ function UltraFuturisticHero2030() {
               initial={{ opacity: 0, scale: 0 && 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 1.8 + index * 0.1 }}
-
             >
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
                 <stat.icon className="w-8 h-8 text-purple-400" />
@@ -596,7 +581,6 @@ function UltraFuturisticHero2030() {
               <Globe className='w-6 h-6 text-emerald-400 mb-2' />
               <span className='text-gray-300 text-sm'>Visit Us</span>
               <a
-
                 href={contactInfo.website}
                 className='text-white font-semibold hover:text-emerald-400 transition-colors'
               >                {contactInfo.website.replace('https://', '')}            <div className="flex flex-col items-center">
@@ -640,12 +624,10 @@ function UltraFuturisticHero2030() {
             </div>;
           </div>;
         </motion && motion.div>;
-
         {/* Trust Indicators */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           <p className='text-gray-400 text-sm mb-4'>
             Trusted by leading companies worldwide
@@ -722,5 +704,4 @@ function UltraFuturisticHero2030() {
             scale: [1, 1.5, 1],
             opacity: [0.3, 0.8, 0.3],
           }}
-
     </section>

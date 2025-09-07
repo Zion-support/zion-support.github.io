@@ -1,20 +1,16 @@
-
 import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
-
-  projectId: string
-  isUnderDispute: boolean
+  projectId: string;
+    isUnderDispute: boolean
   disputeId?: string;
   isTalent: boolean
-
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
 import { ShieldAlert } from "lucide-react",
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
-
   onAddMilestone
 }: ProjectActionsProps) {
   return (        <RaiseDisputeButton
@@ -22,7 +18,7 @@ import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
           variant="outline"
         />
 import React from 'react';
-import { Button } from '@/components/ui/button',;
+import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom',;
 import { ShieldAlert } from "lucide-react",;
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
@@ -43,7 +39,6 @@ export function ProjectActions({;
 }: ProjectActionsProps) {;        <RaiseDisputeButton
           projectId={projectId}
           variant="outline"        />;
-
     </div>
   )
 }import {Button} from '@/components / ui / button';

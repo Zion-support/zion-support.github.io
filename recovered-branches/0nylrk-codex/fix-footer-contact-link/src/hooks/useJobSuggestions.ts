@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -11,10 +9,7 @@ import { JobMatch } from "@/types/jobs",
 export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
-  
-
   useEffect(() => {
-
     const fetchSuggestedJobs = async () => {
       if (!talentId) return;
       try {
@@ -28,48 +23,36 @@ export function useJobSuggestions(talentId?: string) {
           .eq("talent_id", talentId)      } finally {
         setIsLoading (false);
       }
-
       } finally {
         setIsLoading(false)
       }
     }
     },
-    
     fetchSuggestedJobs()
   }, [talentId]),
-
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
         status
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
-
       },
-      
       const { error } = await supabase
         .from("job_talent_matches")
         .update(updates)
         .eq("id", matchId),
-        
       if (error) throw error,
-      
-
       // Update local state
-
       setJobMatches(matches => 
         matches && matches.map(match => 
           match && match.id === matchId 
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
-
       ),
-      
-
       if (status === 'applied') {
         toast({
-          title: "Application Submitted"
-          description: "You've successfully applied to this job"
+          title: "title",
+    description: "You've successfully applied to this job"
         })
       } else if (status === 'declined') {
         toast({
@@ -156,9 +139,8 @@ if ( {) {
   }
 }}
 }
-
 import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client",;
+import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast",;
 import { JobMatch } from "@/types/jobs",;
 ;
@@ -279,7 +261,6 @@ job:job id (*) `)
   ...match, status, ... (status === 'viewed' ? {
   viewed at: new Date () .toISOString () 
 }: {
-  
 }) 
 }: match) );
 //Show appropriate message 

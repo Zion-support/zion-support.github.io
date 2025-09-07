@@ -1,4 +1,4 @@
-  x: number;
+x: number;
   y: number;
   coordinate_x: number;
   coordinate_y: number;
@@ -17,7 +17,6 @@
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
-
 interface EnergyField {;
   x: number,;
   y: number,;
@@ -26,11 +25,8 @@ interface EnergyField {;
   color: string,;
   pulse: number;
 }
-
 export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
-
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
-
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -177,8 +173,8 @@ if ( {) {
         className='absolute inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
           transition={{
-            duration: 8
-            repeat: Infinity
+            duration: 8;
+    repeat: Infinity
             ease: 'easeInOut',      }
       {/* Animated background canvas */}
       <canvas
@@ -224,28 +220,20 @@ if ( {) {
             duration: 10
             repeat: Infinity
             ease: 'easeInOut',          }}          }}
-
           }}
-
           }}
-
             duration: 10,
             repeat: Infinity,
-
         />
       </div>
       {/* Gradient overlays for depth */}
-
         />;
       </div>;
-
       {/* Gradient overlays for depth */}
       <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />;
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />;
-
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
-      
       {/* Content */}
       <div className='relative z-10'>{children}</div>;
     </div>;

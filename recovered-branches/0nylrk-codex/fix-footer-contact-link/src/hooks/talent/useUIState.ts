@@ -1,8 +1,6 @@
-
 import {useState} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
-
   return {
     isMobileFilterOpen;
     setIsMobileFilterOpen;
@@ -13,7 +11,7 @@ export function useUIState() {;
     selected_talent;
     setSelectedTalent;
 import { useState } from 'react';
-import { TalentProfile } from '@/types/talent',;
+import { TalentProfile } from '@/types/talent';
 export function useUIState() {;
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false),;
   const [isHireModalOpen, setIsHireModalOpen] = useState(false),;
@@ -50,7 +48,6 @@ export function useUIState() {;
     closeMobileFilter}
 }    expandedSections;
     toggleSection;
-
     expanded_sections;
     toggle_section;
     closeMobileFilter}

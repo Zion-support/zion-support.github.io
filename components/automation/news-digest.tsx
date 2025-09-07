@@ -1,7 +1,4 @@
-
-
-}</div> </div>) import fs from 'fs';
-import fs from 'fs';
+}</div> </div>) import fs from "fs";
 import path from 'path';
  </div> </div>) ) ;
 }</div> </div>) import fs from 'fs';
@@ -31,7 +28,6 @@ export async function getServerSideProps() {;
   } catch {}
   return { props: { items, generatedAt } }
 }
-
 export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
   return (
     <div className="space-y-6">;
@@ -50,14 +46,11 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
             </div>;
           </div>;
         ))}
-
     </div>;
-
 );
 }
   );
 }
-
 export default /**
  * NewsDigestPage - Function description
  */

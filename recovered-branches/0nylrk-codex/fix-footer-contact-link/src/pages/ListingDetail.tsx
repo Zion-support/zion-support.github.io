@@ -11,7 +11,6 @@ import {PaymentButton} from "@/components/transactions/PaymentButton";
 import {AppLayout} from "@/layout/AppLayout";
 import {ProfileContact} from "@/components/profile/ProfileContact";
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-
 export default function ListingDetail() {;
   // useParams may be untyped in this environment, so avoid passing a;  // type argument and cast the result instead to prevent TS2347 errors.;
   const { id } = useParams() as { id?: string };
@@ -79,7 +78,7 @@ export default function ListingDetail() {;
                           onError={(e) => {                            const target = e.target as HTMLImageElement,
                             target.src = "/placeholder.svg"
 import { useState } from "react";
-import { useParams } from "react-router-dom",;
+import { useParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { Skeleton } from "@/components/ui/skeleton",;
@@ -98,14 +97,12 @@ export default function ListingDetail() {;
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),;
   const [isLoading, setIsLoading] = useState(false),;
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),;
-
   // Find the listing from our shared data source - now also checking equipment listings;
   const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === id);
   if (!listing) {;
     return (
   // Find the listing from our shared data source - now also checking equipment listings;
   const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === id);
-
   if (!listing) {;
     return (
       <AppLayout>;
@@ -124,7 +121,6 @@ export default function ListingDetail() {;
         <div className="container mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Column - Images */}
-
             <div className="lg:col-span-2">;
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;
                 <div className="aspect-[16/9] w-full relative">;
@@ -190,7 +186,6 @@ export default function ListingDetail() {;
                     </Badge>;
                   )}
                 </div>;
-
                 {/* Tags */}
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>;
@@ -313,10 +308,9 @@ export default function ListingDetail() {;
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                       onPaymentInitiated={() => {
                         toast({
-                          title: "Payment Processing"
-                          description: "Redirecting to secure checkout..."
+                          title: "title",
+    description: "Redirecting to secure checkout..."
                         })
-
                   {listing.price !== null ? (;
                     <PaymentButton;
                       amount={listing.price}
@@ -348,9 +342,7 @@ export default function ListingDetail() {;
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>;
                   )}
-
                           const target = e.target as HTMLImageElement,
-
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)                  <Button
                     variant="outline" 
                     onClick={handleContact}

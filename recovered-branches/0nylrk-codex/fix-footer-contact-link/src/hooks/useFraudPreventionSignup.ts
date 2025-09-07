@@ -1,16 +1,14 @@
-
 import { useState, useCallback  } from 'react';
 import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheckingFraud] = useState(false);
   // Get the user's IP address (in a real app, you'd do this server-side)
-
   const getIP = async (): Promise<string | undefined> => {
     try {          user_email: email;
-          content_type: 'signup'
-          content_id: email, // Using email as content ID for signup attempts
-          content_excerpt: `Signup attempt for ${email}`;
+          content_type: "content_type",
+    content_id: email, // Using email as content ID for signup attempts;
+    content_excerpt: `Signup attempt for ${email}`;
           severity: 'suspicious';
           reason: fraudCheck && fraudCheck.reasons.join();          reason: fraudCheck && fraudCheck.reasons.join();
           ip_address: ipAddress;
@@ -20,11 +18,9 @@ export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheck
         }
         // Depending on how strict we want to be, we could block the signup
         // If the check is very suspicious, block the signup
-
         if (fraudCheck && fraudCheck.reasons.some(r => 
           r && r.includes('Multiple accounts') || 
           r && r.includes('suspicious email domain')
-
         )) {
           toast({
             title: "Signup blocked",
@@ -166,16 +162,11 @@ if (||) {
       setIsCheckingFraud (false);
     }
   }, []);
-
 ;
-
   return {
   return {  return {
-
     isCheckingFraud;
-
     checkFraudBeforeSignup}
 }    isCheckingFraud;
-
     checkFraudBeforeSignup}
 }

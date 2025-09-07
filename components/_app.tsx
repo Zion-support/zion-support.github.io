@@ -1,4 +1,3 @@
-
 import type { AppProps } from 'next / app',
 import '../styles / globals.css',
 /**
@@ -6,5 +5,3 @@ import '../styles / globals.css',
  */
 function MyApp() {
   return <Component {...page_props} />;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

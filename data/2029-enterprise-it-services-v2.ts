@@ -1,7 +1,5 @@
-
-    contact: {
-    description:
-      'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.'
+contact: {
+    description: "description",
     category: [
       'Cybersecurity'
       'AI'
@@ -170,20 +168,16 @@
     },
   },
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
-
     ];
     marketSize: '$28 && 28.9B by 2029';
     competitors: ['ServiceNowBMCMicro FocusIvanti'];
     technology: ['AI/MLAutomationMonitoringITSM'];
     integration: ['ITSM platformsMonitoring toolsEnterprise systems'];
     support: ['24/7 operations supportIT expertsImplementation team'];
-
     }
   }
 ];
-
 ;
-
 export interface EnterpriseITService2029V2 {;
   id: string;
   name: string,
@@ -222,7 +216,6 @@ export interface EnterpriseITService2029V2 {;
     mobile: string;
     email: string;
     website: string;
-
     address: string;
   }
 export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
@@ -508,7 +501,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     },
   },;
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
-
     ];
     benefits: [
       'Quantum computing capabilitiesUnbreakable securityExponential performance gainsFuture-proof infrastructureCompetitive advantageLong-term investment value'
@@ -607,7 +599,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     maintenance: 'Fully autonomous, continuous optimization',
     training: 'IT operations training, certification',
     documentation: 'Operations guides, best practices',
-
     compliance: ['SOC 2ISO 27001ITILCOBIT']
     scalability: 'Enterprise-grade, multi-tenant support';
     roi: '450% within 18 months'
@@ -633,7 +624,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     analytics: 'Operations insights, performance metrics';
     customization: 'Custom workflows, integration templates';
     funding: 'Series B funding, $180M valuation';
-
     exit: 'IPO or enterprise acquisition';
     contact: {
       mobile: '+1 302 464 0950';

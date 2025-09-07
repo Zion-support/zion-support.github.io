@@ -1,4 +1,4 @@
-  Code,
+Code,
   Zap,
   Shield,
   BarChart3,
@@ -11,7 +11,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Zap, Star } from 'lucide-react';
 export default function APITestingSuitePage() {;
 } from 'lucide-react';
-
 import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap, Star } from 'lucide-react';
@@ -20,12 +19,11 @@ export default function APITestingSuitePage() {
   const [testResults, setTestResults] = useState(null);
   const [apiEndpoint, setApiEndpoint] = useState('');
   const [apiKey, setApiKey] = useState('');
-
   ];
   const pricing = [
     {
-      name: 'Starter'
-      price: '$49'
+      name: "name",
+    price: '$49'
       period: '/month'
       description: 'Perfect for developers and small teams'
       features: [
@@ -187,7 +185,6 @@ function APITestingSuitePage() {
       period: '/month',
       description: 'For large organizations with complex API requirements',
     },  ];
-
   const handleTestAPI = async () => {;
     if (!apiEndpoint && apiEndpoint.trim()) return;        'Unlimited API testsCustom test scenariosCustom alerting rules24/7 dedicated supportUnlimited endpointsAdvanced security testingWhite-label optionsCustom integrations';
       ];
@@ -197,8 +194,8 @@ function APITestingSuitePage() {
     // Simulate API testing
     setTimeout(() => {
       setTestResults({
-        endpoint: apiEndpoint
-        status: 'success'
+        endpoint: apiEndpoint;
+    status: 'success'
         responseTime: '245ms'
         statusCode: 200
         tests: [
@@ -208,10 +205,8 @@ function APITestingSuitePage() {
             value: '245ms'
             threshold: '<500ms'
           }
-
   const handleTestAPI = async () => {;
     if (!apiEndpoint && apiEndpoint.trim()) return;
-
     setIsTesting(true);
     // Simulate API testing;
     setTimeout(() => {;
@@ -282,7 +277,6 @@ function APITestingSuitePage() {
           API Testing Suite - Zion Tech Group | Comprehensive API Testing &;
           Monitoring Tool;
         </title>;
-
         recommendations: [
           'Consider implementing response caching for better performance'
           'Monitor response times during peak usage'
@@ -337,7 +331,6 @@ function APITestingSuitePage() {
             suite. Functional, performance, and security testing for REST
             GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
             secure.
-
           </p>
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>;
@@ -405,7 +398,6 @@ function APITestingSuitePage() {
               Our API testing suite provides everything you need to ensure your APIs are reliable, performant, and secure.;
             </p>;
           </div>;
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {features && features.map((feature, index) => (;
               <Card
@@ -416,13 +408,11 @@ function APITestingSuitePage() {
                 </div>
               </Card>
             ))}
-
       {/* Test Types Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
               Comprehensive Testing Coverage
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -478,7 +468,6 @@ function APITestingSuitePage() {
               We cover all aspects of API testing to ensure your APIs meet the highest standards of quality and reliability.;
             </p>;
           </div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {testTypes && testTypes.map((type, index) => (;
               <Card
@@ -500,16 +489,13 @@ function APITestingSuitePage() {
           </div>
         </div>
       </section>
-
       {/* Demo Test Results */}
       {testResults && (
-
         <section className="section-padding bg-gradient-cursor-accent">
           <div className="container-cursor">
             <div className="text-center mb-12">
               <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
                 API Test Results
-
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
                 Here's a sample API test result. Get comprehensive insights for your own API endpoints.
@@ -537,7 +523,6 @@ function APITestingSuitePage() {
           </div>;
         </div>;
       </section>;
-
       {/* Demo Test Results */}
       {testResults && (;
         <section className='section-padding bg-gradient-cursor-accent'>;
@@ -551,7 +536,6 @@ function APITestingSuitePage() {
                 your own API endpoints.;
               </p>;
             </div>;
-
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8'>;
               {/* Summary Card */}
               <Card className='border-gradient-indigo text-center'>;
@@ -579,7 +563,6 @@ function APITestingSuitePage() {
                 Here's a sample API test result. Get comprehensive insights for your own API endpoints.;
               </p>;
             </div>;
-
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">;
               {/* Summary Card */}
               <Card className="border-gradient-indigo text-center">;
@@ -614,14 +597,11 @@ function APITestingSuitePage() {
                         <span className="text-xs text-gray-400">{test.value}</span>
                       </div>
                         </span>                      </div>
-
                       </div>
-
                     </div>
                   ))}
                 </div>
               </Card>
-
               {/* Performance Metrics */}
               <Card className='border-gradient-indigo'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -633,7 +613,6 @@ function APITestingSuitePage() {
                     <span className='text-indigo-400 font-bold'>
                       {testResults.responseTime}
                     </span>
-
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Throughput</span>
@@ -671,9 +650,7 @@ function APITestingSuitePage() {
                   <div key={index} className='flex items-start space-x-3'>
                     <CheckCircle className='w-5 h-5 text-indigo-400 mt-1 flex-shrink-0' />
                     <span className='text-gray-300'>{rec}</span>                  </div>
-
                   </div>
-
             <Card className='border-gradient-indigo'>;
               <h3 className='text-2xl font-bold mb-6 text-white'>;
                 Optimization Recommendations;
@@ -695,7 +672,6 @@ function APITestingSuitePage() {
           </div>;
         </section>;
       )}
-
               Simple Pricing
       {/* Pricing Section */}
             </h2>
@@ -934,7 +910,6 @@ function APITestingSuitePage() {
                   href='/contact'
                   size='lg'
                       {feature}
-
                     </li>
                   ))}
                 </ul>
@@ -943,13 +918,11 @@ function APITestingSuitePage() {
           </div>
         </div>
       </section>
-
               </Card>
             ))}
           </div>
         </div>
       </section>
-
               </Card>
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
                   Get Started;
@@ -1023,7 +996,6 @@ function APITestingSuitePage() {
       </section>
     </>
 }
-
   );
 }
 }

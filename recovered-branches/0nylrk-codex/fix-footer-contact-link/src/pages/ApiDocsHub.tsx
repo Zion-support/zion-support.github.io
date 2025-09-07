@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
@@ -10,10 +8,10 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",      title: "
       icon: Zap,
       path: "/developers/docs/samples",
       color: "from-yellow-500 to-orange-500"},
-      title: "Error Codes & Rate Limits"
-      description: "Understanding API errors and rate limiting"
-      icon: AlertCircle
-      path: "/developers/docs/errors"
+      title: "title",
+    description: "Understanding API errors and rate limiting"
+      icon: AlertCircle;
+    path: "/developers/docs/errors"
       color: "from-red-500 to-rose-500"}]
   return (
     <ApiDocsLayout>
@@ -54,14 +52,12 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",      title: "
       icon: AlertCircle,;
       path: "/developers/docs/errors",;
       color: "from-red-500 to-rose-500"}],;
-
   return (    <ApiDocsLayout>;
       <div className="max-w-4xl">;
         <h1 className="text-4xl font-bold text-white mb-6">Zion AI Marketplace API</h1>;
         <p className="text-zinc-400 text-lg mb-12">;
           Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.;
         </p>;
-
         <div className="grid gap-6 md:grid-cols-2">;
       icon: Zap,
       path: "/developers / docs / samples",
@@ -148,7 +144,6 @@ export default ApiDocsHub;
           {sections.map((section) => (;
             <Link;
               key={section.path} ;
-
   );}
 ;
 export default ApiDocsHub,;

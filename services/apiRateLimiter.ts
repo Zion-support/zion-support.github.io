@@ -1,17 +1,13 @@
-
-  burst_limit: number,
+burst_limit: number,
   window_size: number;
-
 }
 export interface RateLimitRule {export interface RateLimitConfig {
 export interface RateLimitConfig {;
   requestsPerMinute: number;
   requestsPerHour: number;
   requestsPerDay: number;
-
   burst_limit: number,
   window_size: number;
-
 export interface RateLimitConfig {
   requestsPerMinute: number;
   requestsPerHour: number;
@@ -29,27 +25,22 @@ export interface RateLimitStats {
   method: string;
   timestamp: Date;
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
-
   private apiKey: string;
-
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
-
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
         body: JSON && JSON.stringify(rule)});
-
       if (!response && response.ok) {
         throw new Error(`Failed to create rate limit rule: ${response && response.statusText}`)
       }
-
       return await response && response.json()
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
@@ -166,7 +157,6 @@ if ( {) {
       ];
     }
   }
-
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'PATCH',
         headers: {
@@ -178,8 +168,8 @@ if ( {) {
       }
       return await response.json()
     } catch (error) {
-      // Mock update for demo
-  requestsPerMinute: number,;
+      // Mock update for demo;
+    requestsPerMinute: number,;
   requestsPerHour: number,;
   requestsPerDay: number,;
   burstLimit: number,;
@@ -312,7 +302,6 @@ export class APIRateLimiterService {;
           created_at: new Date (),
           updated_at: new Date ();
           updated_at: new Date ();
-
         }
       ];
     }
@@ -323,13 +312,10 @@ export class APIRateLimiterService {;
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
         body: JSON && JSON.stringify(updates)});
-
       if (!response && response.ok) {
         throw new Error(`Failed to update rate limit rule: ${response && response.statusText}`)
       }
-
       return await response && response.json()
-
     } catch (error) {
       // Mock update for demo
       const existingRule = (await this && this.getRateLimitRules()).find(r => r && r.id === id);
@@ -358,10 +344,8 @@ export class APIRateLimiterService {;
           last_request: new Date ();
           current_usage: {
             minute: 15;
-
             hour: 180,
             day: 1200;
-
           }
         }
         {
@@ -376,14 +360,11 @@ export class APIRateLimiterService {;
             hour: 95,
             day: 650;
           }
-
 export interface RateLimitConfig {;
-
         }
       ];
     }
   }
-
           }
         }
       ]
@@ -391,31 +372,24 @@ export interface RateLimitConfig {;
   }
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
     try {
-
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/api-keys`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
         body: JSON && JSON.stringify({ name, permissions, rateLimit })});
-
       if (!response && response.ok) {
         throw new Error(`Failed to create API key: ${response && response.statusText}`)
       }
-
       return await response && response.json()
     } catch (error) {
       // Mock API key creation for demo;
       return {
-
           'Authorization': `Bearer ${this && this.apiKey}`}});
-
       if (!response && response.ok) {
         throw new Error(`Failed to fetch API keys: ${response && response.statusText}`)
       }
-
       return await response && response.json()
-
         id: `key_${Date.now ()}`;
         name;
         key: `zion_${Math.random ().to_string (36).substr (2, 9)}`;
@@ -448,21 +422,17 @@ export interface RateLimitConfig {;
             requestsPerMinute: 50;
             requestsPerHour: 500;
             requestsPerDay: 5000;
-
   }
-
             burst_limit: 25,
             window_size: 60;
           }
           created_at: new Date ();
           last_used: new Date (),
           is_active: true;
-
         }
       ];
     }
   }
-
     } catch (error) {
       // Mock violations for demo;
       return [;
@@ -497,7 +467,6 @@ export interface RateLimitConfig {;
     name: 'Enterprise';
     price: 199;
     period: '/month';
-
   }
 }
 }

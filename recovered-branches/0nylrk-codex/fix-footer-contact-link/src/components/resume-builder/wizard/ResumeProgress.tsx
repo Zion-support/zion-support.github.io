@@ -1,4 +1,3 @@
-
 import { Progress } from "@/components/ui/progress",
 import { ResumeProgressProps } from "./types",
 import {Progress} from "@/components/ui/progress";
@@ -6,15 +5,12 @@ import {ResumeProgressProps} from "./types";
 import { Progress } from "@/components/ui/progress",
 import { ResumeProgressProps } from "./types",  )
 };
-
   );
 }
-
 };
 },
 import { Progress } from "@/components/ui/progress";
-import { ResumeProgressProps } from "./types",;
-
+import { ResumeProgressProps } from "./types";
 export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {;
   return (
     <div className="flex flex-col gap-1 w-full sm:w-auto">;

@@ -1,13 +1,9 @@
-
-      case "Recommended for Review":
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+case "Recommended for Review":
         return "bg-blue-100 text-blue-800"
       case "Low Match":
         return "bg-orange-100 text-orange-800"
       default:
         return "bg-gray-100 text-gray-800"
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
   // Trigger the scoring process
@@ -18,14 +14,9 @@
       const { error } = await supabase.rpc(
         'trigger_resume_scoring'
         { application_id: application.id }
-
       ),
-      
       if (error) throw error,
-      
       toast.success("Resume scoring has been initiated"),
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
       // Poll for results every 3 seconds for up to 30 seconds
       let attempts = 0
       const maxAttempts = 10
@@ -37,21 +28,16 @@
           .eq("id", application.id)
           .single()
         if (error) {
-
 interface ApplicationScoreCardProps {;
   application: JobApplication,;
   onScoreUpdated?: (updatedApplication: JobApplication,) => void;
 }
-
 export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
   const [isScoring, setIsScoring] = useState(false);
-
   // Determine if application has been scored;
   const hasScore = typeof application && application.match_score === 'number';
-
       let attempts = 0;
       const maxAttempts = 10;
-
   // Get suggestion color;
   const getSuggestionColor = (suggestion: string | undefined,) => {;
     switch (suggestion) {;
@@ -64,48 +50,38 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
         return "bg-gray-100 text-gray-800";
     }
   },;
-
   // Trigger the scoring process;
   const handleScore = async () => {;
     try {;
       setIsScoring(true),;
-
       // Call the trigger_resume_scoring function;
       const { error } = await supabase && supabase.rpc(;
         'trigger_resume_scoring',;
         { application_id: application && application.id }
       ),;
-
       if (error) throw error,;
-
       toast && toast.success("Resume scoring has been initiated"),;
-
       // Poll for results every 3 seconds for up to 30 seconds;
       let attempts = 0,;
       const maxAttempts = 10,;
-
       const checkScore = async () => {;
         attempts++,;
-
         const { data, error } = await supabase;
           .from("job_applications");
           .select("*");
           .eq("id", application && application.id);
           .single(),;
-
         if (error) {;
           setIsScoring(false),;
           toast && toast.error("Failed to check scoring status"),;
           return;
         }
-
         if (data && data.scored_at) {;
           setIsScoring(false),;
           toast && toast.success("Resume scoring completed"),;
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),;
           return;
         }
-
         if (attempts < maxAttempts) {;
           setTimeout(checkScore, 3000);
         } else {;
@@ -113,37 +89,28 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
           toast && toast.info("Scoring is taking longer than expected. Check back later.");
         }
       },;
-
           setIsScoring(false),
           toast.error("Failed to check scoring status"),
           return;
-
         }
         if (data.scored_at) {
-
           setIsScoring(false),
           toast.success("Resume scoring completed"),
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),
-
         }
-
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000)
         } else {
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
-
     }
   },
-
       setTimeout(checkScore, 3000);
-
     } catch (error: any) {;
       setIsScoring(false),;
       toast && toast.error(`Failed to score resume: ${error && error.message}`);
     }
   },;
-
   // Render the score result or button to score;
   return (
     <Card className="overflow-hidden">;
@@ -152,11 +119,9 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
           Resume Match Score;
           <Badge variant={hasScore ? "default" : "outline"} className="ml-2">;
             {hasScore ? "SCORED" : "NOT SCORED"}
-
           </Badge>;
         </CardTitle>;
       </CardHeader>;
-
       <CardContent>;
         {hasScore ? (;
           <div>;
@@ -170,7 +135,6 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                 <div className="font-semibold text-xl">{application && application.match_score}/100</div>;
               </div>;
             </div>;
-
             {/* Summary */}
             <div className="flex items-start mb-4">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
@@ -181,7 +145,6 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                 <div className="font-medium">{application && application.match_summary}</div>;
               </div>;
             </div>;
-
             {/* Suggestion */}
             <div className="flex items-start">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
@@ -197,10 +160,8 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                     Scored on {scoredDate}
                   </div>;
                 )}
-
               </div>;
             </div>;
-
             {/* Breakdown (Collapsible) */}
             {application && application.match_breakdown && (;
               <div className="mt-4 pt-4 border-t">;
@@ -218,44 +179,32 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
-
                     )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-                    
                     {application.match_breakdown.experience_match && (
                       <div>
                         <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
                         <p>{application.match_breakdown.experience_match.analysis}</p>
                       </div>
                     )}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {application.match_breakdown.certifications_match && (
                       <div>;
                         <p className="font-medium">Certifications Match: {application.match_breakdown.certifications_match.score}/100</p>;
                         {application.match_breakdown.certifications_match.matching && (
                           <p > Matching certs: {application.match_breakdown.certifications_match.matching.join (", ")}</p>)}
                         {application.match_breakdown.certifications_match.missing && (
-
                     )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-                    
                     {application.match_breakdown.education_match && (
                       <div>
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
-
             )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
           </div>;
         ) : (;
           <div className="text-center py-4">;
             <p className="text-muted-foreground mb-4">;
               Analyze how well this resume matches your job requirements.;
             </p>;
-
             <Button
               onClick = {handleScore,}
               disabled = {isScoring,}
@@ -267,11 +216,9 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                 </>;
               ) : (;
                 "Score Resume";
-
             <Button 
               onClick={handleScore} 
               disabled={isScoring}
-
               className="w-full"
             >
               {isScoring ? (
@@ -281,13 +228,10 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                 </>
               ) : (
                 "Score Resume"
-
       </CardContent>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </Card>;
   );
 }
-
                           <p > Missing certs: {application.match_breakdown.certifications_match.missing.join (", ")}</p>)}
                       </div>)}
                     {application.match_breakdown.education_match && (
@@ -319,5 +263,3 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
       </CardContent>;
     </Card>);
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

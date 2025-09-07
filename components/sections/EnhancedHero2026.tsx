@@ -1,4 +1,4 @@
-  ArrowRight
+ArrowRight
   Star
   TrendingUp
   Zap
@@ -8,7 +8,6 @@
   Rocket
   CheckCircle;
 } from 'lucide-react';
-
 interface EnhancedHero2026Props {;
   contactInfo: {;
   ArrowRight,
@@ -18,7 +17,6 @@ interface EnhancedHero2026Props {;
   Shield,
   Globe,
   Brain,
-
 } from 'lucide-react';
 interface EnhancedHero2026Props {
   contact_info: {
@@ -31,11 +29,9 @@ interface EnhancedHero2026Props {
   Rocket,;
   CheckCircle,;
 } from 'lucide-react';
-
     mobile: string;
     email: string;
     address: string;
-
     website: string;
     totalServices: number;
     aiServices: number;
@@ -45,11 +41,9 @@ interface EnhancedHero2026Props {
       }
     }
   }
-
         staggerChildren: 0.2,
       },
     },  }        ease: "ease_out" as const;
-
       }
     }
   }
@@ -57,8 +51,8 @@ interface EnhancedHero2026Props {
   const stats_variants = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: {
-      y: 0
-      opacity: 1
+      y: 0;
+    opacity: 1
       transition: {
   const itemVariants = {;
     hidden: { y: 30, opacity: 0 },;
@@ -108,7 +102,6 @@ interface EnhancedHero2026Props {
         {Array.from ({ length: 20 }).map ((_, i) => (
           <motion.div;
             key={i}
-
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
             }}
@@ -121,7 +114,6 @@ interface EnhancedHero2026Props {
               repeat: Infinity,
               ease: 'easeInOut',
               delay: Math && Math.random() * 2,            }}  }
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
       {/* Enhanced Background Elements */}
@@ -155,12 +147,10 @@ interface EnhancedHero2026Props {
             key={i}
             className="absolute w - 2 h - 2 bg - cyan-400 / 30 rounded-full";
             style={{
-
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               ease: 'easeInOut',
               delay: Math.random() * 2,            }}  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Enhanced Background Elements */}
@@ -192,16 +182,12 @@ interface EnhancedHero2026Props {
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
-
               ease: 'easeInOut',
               delay: Math.random() * 2,              ease: "easeInOut",
               delay: Math.random() * 2
             }}
-
             }}
-
           />
-
             }}
           />;
         ))}
@@ -243,7 +229,6 @@ interface EnhancedHero2026Props {
               </motion.div>
             ))}
           </motion.div>
-
           {/* Enhanced CTA Section */}
           <motion.div variants={itemVariants} className='space-y-6'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -259,16 +244,11 @@ interface EnhancedHero2026Props {
                 </span>
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
-
           {/* Enhanced CTA Section */}
-
-              
               <Button 
                 href="/contact" 
-
               <Button 
                 href="/contact" 
-
                 variant="secondary"
                 size="xl"
                 className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
@@ -295,7 +275,6 @@ interface EnhancedHero2026Props {
                 </span>;
               </Button>;
             </div>;
-
             {/* Trust Indicators */}
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400'>;
               <div className='flex items-center space-x-2'>;
@@ -456,5 +435,4 @@ interface EnhancedHero2026Props {
       </div>;
     </section>));
 }
-
   );

@@ -1,12 +1,9 @@
 interface ApplicationRowProps {
-
-  application: JobApplication
-  processingId: string | null
+  application: JobApplication;
+    processingId: string | null
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
-
   onViewScore: (application: JobApplication) => void
-
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {Calendar, User, FileText, BarChart} from "lucide-react";
@@ -24,9 +21,7 @@ interface ApplicationRowProps {;
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,;
   onViewScore: (application: JobApplication) => void;
 }
-
 export function ApplicationRow(): any ({;
-
 export function ApplicationRow({;export function ApplicationRow({;
   application;
   processingId;
@@ -37,19 +32,16 @@ export function ApplicationRow({
   processingId,
   onViewApplication,
   onStatusChange,}
-
   onViewScore
 }: ApplicationRowProps) {
   return (
-
     <TableRow key={application && application.id}>;  return (
-
     <TableRow key={application && application.id}>;        )}
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
   return (import { formatDistanceToNow } from "date-fns";
-import { Link } from "react-router-dom",;
+import { Link } from "react-router-dom";
 import { Calendar, User, FileText, BarChart } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { Avatar } from "@/components/ui/avatar",;
@@ -75,7 +67,6 @@ export function ApplicationRow({;
 }: ApplicationRowProps) {;
   return (;
     <TableRow key={application.id}>;
-
       <TableCell>;
         <div className="flex items-center gap-3">;
           <Avatar className="h-9 w-9">;

@@ -482,7 +482,7 @@ export const "advancedBlockchainWeb3Services2025": AdvancedBlockchainWeb3Service
   Advanced metaverse development platform with AI content generation and blockchain ownership.',
     "launchDate": '2024-07-20,
     "customers": 18,
-    "rating": 4.7
+    "rating": 4.7;
     reviews: 35
 ]}}
 import { ServiceVariant } from "../types/service-variants"; export interface AdvancedBlockchainWeb3Service { id: string; name: string; tagline: string; price: string; period: string,

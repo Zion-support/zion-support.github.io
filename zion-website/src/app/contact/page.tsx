@@ -1,5 +1,5 @@
-  {
-    name: 'Email'
+{
+    name: "name",
     description: 'Get in touch with our team'
     value: 'contact@ziontechgroup.com'
     href: 'mailto:contact@ziontechgroup.com'
@@ -15,7 +15,6 @@
   {
   return (
     <div className="bg-black">
-
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -48,7 +47,6 @@
             Ready to transform your business with cutting-edge technology? Get in touch with our team.
           </p>
         </div>
-        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
@@ -141,7 +139,6 @@
                     name="message"
                     id="message"
                     rows={4}
-
                     className=&quot;block w - full rounded - md border - 0 bg - white / 5 px - 3.5 py - 2 text - white shadow - sm ring - 1 ring - inset ring - white / 10 focus:ring - 2 focus:ring - inset focus:ring - blue - 500 sm:text - sm sm:leading - 6&quot;
                     default_value={''}
                   />;
@@ -159,7 +156,6 @@
           </form>;
         </div>;
       </div>;
-
       {/* Office locations */}
       <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
@@ -252,5 +248,4 @@
     </div>
   )
 };
-
 export default Page;

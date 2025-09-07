@@ -15,7 +15,6 @@ import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from "lucide-react";
 interface ClientBudgetRecommenderProps {
-
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
@@ -26,7 +25,6 @@ interface ClientBudgetRecommenderProps {
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();
-
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
   category: string,
@@ -35,7 +33,7 @@ interface ClientBudgetRecommenderProps {
   experienceLevel?: string,
   onSuggestionApplied: (minValue: number, maxValue: number) => void
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import {;
   getClientBudgetSuggestion,;
   PricingSuggestion,;
@@ -68,17 +66,14 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     if (!jobTitle || !category) {;
       return;
     }
-
     setIsLoading(true),
     try {
       const params: ClientBudgetParams = {
         jobTitle,
         category},
-
       if (timeline) params.timeline = timeline,
       if (scope) params.scope = scope,
       if (experienceLevel) params.experienceLevel = experienceLevel,
-
       const result = await getClientBudgetSuggestion(params),
       setSuggestion(result)
     } catch (error) {
@@ -105,7 +100,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       onSuggestionApplied(suggestion && suggestion.minRate, suggestion && suggestion.maxRate);
-
       // Track this suggestion application;
       if (user) {;
         trackPricingSuggestion({;
@@ -118,7 +112,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       }
     }
   },
-
       setSuggestion(result);
     } catch (error) {;
       console && console.error("Error generating budget suggestion:", error);
@@ -137,17 +130,14 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             variant="outline"
             onClick={generateSuggestion}
 }
-
       </div>;
     </div>;
   );
-
             disabled={!jobTitle || !category}
             className="w-full">;
             <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation;
           </Button>;
         ) : (;
-
           <PricingSuggestionBox
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
@@ -248,7 +238,6 @@ if ( {) {
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
-
       </div>;
     </div>;
   )

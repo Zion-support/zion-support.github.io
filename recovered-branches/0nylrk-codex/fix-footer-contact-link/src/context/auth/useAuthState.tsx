@@ -1,6 +1,4 @@
-
-
- * Custom hook to manage auth state
+* Custom hook to manage auth state
  */
 export function useAuthState() {
   return {
@@ -10,9 +8,8 @@ export function useAuthState() {
     setIsLoading,
     onboardingStep,
     setOnboardingStep
-
 import React, { useState } from "react";
-import type { UserProfile } from "@/types/auth",;
+import type { UserProfile } from "@/types/auth";
   }
 }
 import React, { useState } from "react",;
@@ -21,7 +18,6 @@ import type { UserProfile } from "@/types/auth",;
  * Custom hook to manage auth state;
  */;
 export function useAuthState() {;
-
 import React, { useState } from './react';
 import type { UserProfile } from "@/types / auth";
 /**;
@@ -43,12 +39,10 @@ function useAuthState() {
     setIsLoading;
     onboardingStep;
     setOnboardingStep;
-
   }
 }
 ;
   return {
-
   return {;
     user;
     set_user;

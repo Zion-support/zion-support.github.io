@@ -4,27 +4,24 @@ export interface ListingCategory {
   description: string;
   icon: string;
 }
-
 }export interface ProductListing {
   id: string;
   title: string,
   description: string;
-
   category: string,
   subcategory?: string, // Adding optional subcategory field;
 export interface ListingCategory {
 export interface ListingCategory {;
   id: string;
   name: string;
-
 }
 export interface ProductListing {
   id: string;
   title: string,
   description: string;
   category: string;
-  subcategory?: string; // Adding optional subcategory field
-  price: number | null;
+  subcategory?: string; // Adding optional subcategory field;
+    price: number | null;
   currency: string;
   tags: string[];
   author: {
@@ -33,7 +30,6 @@ export interface ProductListing {
   id: string;
   title: string;
   category: string;
-
 export interface ListingCategory {;
   id: string,;
   name: string,,
@@ -85,7 +81,5 @@ export interface ListingItem {;
   image?: string;
   description?: string;
 }
-
 export interface ListingCategory {;
-
 export type ListingView = 'grid' | 'list';

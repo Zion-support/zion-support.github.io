@@ -22,7 +22,7 @@ export interface AdvancedPricingTier {; "id": string; name: string; price: numbe
    roi: string;
    marketPrice: string;
    contactInfo: { phone: string;
-   emai
+   emai;
     l: string;
    websit
     e: string} recommendedFor: string[] limitation

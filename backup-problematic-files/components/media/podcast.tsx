@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link',;
+import Link from 'next/link';
 type EpisodeListItem = {;
   id: string,;
   title: string,;
@@ -29,9 +29,7 @@ export default function PodcastIndexPage() {;
     },
     load()
   }, []),
-
   if (loading) return <div>Loading episodes</div>,
-
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">

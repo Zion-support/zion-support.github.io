@@ -1,9 +1,7 @@
-  contactInfo: {
-      
+contactInfo: {
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -11,8 +9,8 @@
   reviews: number
 }
       'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'
-    launchDate: '2025-06-20'
-    customers: 1900
+    launchDate: "launchDate",
+    customers: 1900;
     rating: 4.8
     reviews: 950
       'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.',
@@ -31,14 +29,11 @@
     launchDate: '2025-06-20';
     customers: 1900;
     rating: 4.8
-
     reviews: 950
   }
-
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
   {
-
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
     tagline: 'Transform data into actionable insights with AI', price: '$299',
     period: '/month',
@@ -59,9 +54,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     competitors: ['TableauPower BILookerQlikSisense'], marketSize: '$29.9B market',
     growthRate: '220% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 950
       website: 'https://ziontechgroup.com';

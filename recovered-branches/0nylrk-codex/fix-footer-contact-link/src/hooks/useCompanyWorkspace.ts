@@ -1,11 +1,8 @@
-
-
 import { useState, useEffect } from "react",
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
 export function useCompanyWorkspace(companySlug?: string) {
   const [company, setCompany] = useState<Company | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-
   const [error, setError] = useState<string | null>(null);
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard",
 export function useCompanyWorkspace(companySlug?: string) {
@@ -17,8 +14,8 @@ export function useCompanyWorkspace(companySlug?: string) {
         // For demo purposes, let's assume it exists
         setCompany({          theme: {
             primaryColor: "#4f46e5";
-            backgroundColor: "#ffffff"
-            textColor: "#1f2937"}
+            backgroundColor: "backgroundColor",
+    textColor: "#1f2937"}
           plan: "Teams";
           teamSize: 5;
           teamLimit: 10;
@@ -35,7 +32,6 @@ export function useCompanyWorkspace(companySlug?: string) {
       setIsLoading(false)
     }, 1000), // Simulate loading delay
   }, [companySlug]);
-
   return { company, isLoading, error }
 import { useState, useEffect } from './react';
 import { Company } from '@/components / enterprise / workspace / CompanyDashboard';
@@ -94,7 +90,6 @@ if ( {) {
   }, [company_slug]);
 ;
   return { company, is_loading, error }
-
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
             textColor: "#1f2937"},
@@ -108,10 +103,9 @@ if ( {) {
       setIsLoading(false)
     }, 1000), // Simulate loading delay
   }, [companySlug]);
-
   return { company, isLoading, error }
 }import { useState, useEffect } from "react";
-import { Company } from "@/components/enterprise/workspace/CompanyDashboard",;
+import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
 export function useCompanyWorkspace(companySlug?: string) {;
   const [company, setCompany] = useState<Company | null>(null),;
   const [isLoading, setIsLoading] = useState(true),;
@@ -158,7 +152,6 @@ export function useCompanyWorkspace(companySlug?: string) {;
       setIsLoading(false);
     }, 1000), // Simulate loading delay;
   }, [companySlug]);
-
   return { company, isLoading, error }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,4 +1,4 @@
-  Link
+Link
   Copy
   BarChart3
   ArrowRight
@@ -9,7 +9,6 @@
   Settings
   Trash2;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
-
 export default function URLShortenerPage() {
   Link,
   Copy,
@@ -19,47 +18,37 @@ export default function URLShortenerPage() {
   CheckCircle,
   ExternalLink,
   QrCode,
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
-
   Settings,;
   Trash2,;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
-
 import {
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
-
 export default function URLShortenerPage() {;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
-
 export default function URLShortenerPage() {;
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
   const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
   const [isShortening, setIsShortening] = useState(false);
-
     setShortenedUrls(prev => [newShortUrl, ...prev]);
     setLongUrl('');
     setCustomAlias('');
@@ -98,19 +87,15 @@ export default function URLShortenerPage() {;
       longUrl: longUrl.trim()
       shortUrl;
       alias;
-      clicks: 0
-      createdAt: new Date().toISOString()
+      clicks: 0;
+    createdAt: new Date().toISOString()
       qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
     }
-    
     setIsShortening(true);
-    
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
     const alias = customAlias.trim() || generateRandomAlias();
     const shortUrl = `https://zion.tech/${alias}`;
-    
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
@@ -139,7 +124,6 @@ import {
     for (let index = 0, i < 6, i++) {
       result += chars.char_at (Math.floor (Math.random () * chars.length));
     }
-
   return (
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-orange-900 via-red-900 to-pink-900">
@@ -210,7 +194,6 @@ import {
                     </>
                   )}
                 </Button>
-
                 <Button
                   onClick={generateShortUrl}
                   disabled={!longUrl && longUrl.trim() || isShortening}
@@ -298,7 +281,6 @@ import {
                     ))}
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
-
         <section className="py-20 bg-gray-800">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -408,9 +390,7 @@ import {
           </div>;
         </section>;
       )}
-
       {/* Features */}
-
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to create, manage, and track your shortened
@@ -617,6 +597,5 @@ import {
         </div>;
       </section>;
 }
-
   );
 }

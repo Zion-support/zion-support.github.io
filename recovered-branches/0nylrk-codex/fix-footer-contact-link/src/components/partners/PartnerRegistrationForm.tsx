@@ -1,4 +1,3 @@
-
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -12,7 +11,6 @@ import {Textarea} from "@/components/ui/textarea";
 import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
-
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
   twitter: z.string().optional(),
@@ -23,26 +21,23 @@ import {supabase} from "@/integrations/supabase/client";
   audience_size: z.string(),
   payout_method: z.string(),
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),
-
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
-
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),
   async function onSubmit(data: PartnerFormValues) {
     if (!user) {
       toast({
-        title: "Authentication required"
-        description: "You must be logged in to register as a partner."
+        title: "title",
+    description: "You must be logged in to register as a partner."
         variant: "destructive"})
       return
-
           }
         ])
         .select();
       if (error) throw error;
 import { useState } from "react";
-import { z } from "zod",;
+import { z } from "zod";
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -87,8 +82,8 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodRes
       const hasExistingPartner = await checkExistingPartner();
       if (hasExistingPartner) return;
           {
-            user_id: user.id
-            name: data.name
+            user_id: user.id;
+    name: data.name
             website: data.website |null
             social_media: {      // Insert new partner profile;
       const { data: newPartner, error } = await supabase;
@@ -108,7 +103,6 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodRes
             payout_method: data && data.payout_method,;
             bio: data && data.bio,;
             status: 'pending', // Partners need approval;
-
           }
         ]);
         .select();
@@ -117,7 +111,6 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodRes
     } catch (error: any) {      toast({
         title: "Submission failed"
         description: error.message |"There was a problem submitting your application."
-
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)    }
@@ -146,7 +139,6 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodRes
         ]);
         .select(),;
       if (error) throw error,;
-
               twitter: data.twitter || null,
               instagram: data.instagram || null,
               youtube: data.youtube || null,
@@ -206,9 +198,7 @@ if ( {) {
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
                 />;
-
                 <FormField
                   control={form && form.control}
                   name="instagram"
@@ -217,7 +207,6 @@ if ( {) {
                       <FormLabel>Instagram (Optional)</FormLabel>;
                 />;
                 <FormField;
-
                   control={form.control}
                   name="instagram";
                   render={({ field }) => (
@@ -227,18 +216,14 @@ if ( {) {
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
                 />;
               </div>;
-
               <div className="grid sm:grid-cols-2 gap-4">;                      <FormControl>;
                         <Input placeholder="Profile URL or username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
                 />;
               </div>;
-
               <FormField
                 control={form && form.control}                <FormField
                   control={form && form.control}
@@ -260,7 +245,6 @@ if ( {) {
                           </SelectTrigger>;
                         </FormControl>;
                         <SelectContent>;
-
                 />;
                       />;
                     </FormControl>;
@@ -268,10 +252,8 @@ if ( {) {
                       Limit: 500 characters;
                     </FormDescription>;
                     <FormMessage />;
-
             <Button 
               type="submit" 
-
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : "Submit Application"}
@@ -286,6 +268,5 @@ if ( {) {
               {is_submitting ? "Submitting..." : "Submit Application"}
 };
 }
-
 }
 <<<<<<< HEAD

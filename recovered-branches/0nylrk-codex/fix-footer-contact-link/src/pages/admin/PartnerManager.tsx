@@ -27,16 +27,14 @@ import { toast } from "@/hooks/use-toast",
 import { Check, Flag, Search, Settings, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 interface PartnerProfile {
-
-  id: string
-  user_id: string
+  id: string;
+    user_id: string
   name: string
   status: 'pending' | 'approved' | 'rejected'
   created_at: string
   niche: string
   audience_size: string
   social_media?: Record<string, string>;
-
   website?: string;
   bio?: string;
   payout_method?: string;
@@ -56,22 +54,17 @@ interface PartnerProfile {
   bio?: string,
   payout_method?: string,
   fraud_flags?: number,
-
   commission_rate?: number
 }
-
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
-
   const navigate = useNavigate();
   const navigate = useNavigate();
-
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
-
       navigate("/login");
       return;
     }
@@ -90,8 +83,8 @@ interface PartnerProfile {
       if (!data |data.length === 0) {
         const mockData: PartnerProfile[] = [
           {
-            id: '1'
-            user_id: 'user1'
+            id: "id",
+    user_id: 'user1'
             name: 'AI Bytes'
             status: 'pending'
             created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString()
@@ -170,11 +163,10 @@ interface PartnerProfile {
       } else {
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery)
-
       navigate("/login"),
       return
 import { useState, useEffect } from "react";
-import { useAuth } from "@/hooks/useAuth",;
+import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -195,9 +187,7 @@ interface PartnerProfile {;
   created_at: string,;
   niche: string,;
   audience_size: string,;
-
   social_media?: Record<string, string>;
-
 import { useState, useEffect } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { use_navigate } from './react-router-dom';
@@ -235,7 +225,6 @@ interface PartnerProfile {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
-
         setPartners(mockData);
         filterPartners(mockData, activeTab, searchQuery);
       } else {;
@@ -378,7 +367,6 @@ if ( {) {
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
-
     } catch (error) {;
       console.error("Error fetching partners:", error),;
       toast({;
@@ -389,15 +377,12 @@ if ( {) {
       setIsLoading(false);
     }
   };
-
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {;
     let filtered = partners,;
-
     // Filter by status;
     if (status !== "all") {;
       filtered = filtered && filtered.filter(p => p && p.status === status);
     }
-
     // Filter by search query;
     if (query) {;
       const lowerQuery = query && query.toLowerCase();
@@ -408,22 +393,17 @@ if ( {) {
         p && p.website?.toLowerCase().includes(lowerQuery);
       );
     }
-
-    
     setFilteredPartners(filtered)
   },
-
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value)
     filterPartners(partners, activeTab, e.target.value)
   },
-
   const handleTabChange = (value: string) => {
     setActiveTab(value)
     filterPartners(partners, value, searchQuery)
   }
   },
-
   const handleViewDetails = (partner: PartnerProfile) => {
     setSelectedPartner(partner)
     setIsDetailsOpen(true)
@@ -467,9 +447,7 @@ if ( {) {
         title: "Error"
         description: "Failed to update partner settings"
         variant: "destructive"})
-
   };
-
 ;
     setFilteredPartners(filtered);
   },;
@@ -510,7 +488,6 @@ if ( {) {
       case 'over100k': return 'Over 100,000';
       default: return size;
     }
-
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
@@ -524,7 +501,6 @@ if ( {) {
     }
   }
   },
-
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null
       case 'rejected':;
@@ -533,7 +509,6 @@ if ( {) {
         return <Badge variant="outline">{status}</Badge>;
     }
     return (
-
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
         <Flag className="h-3 w-3" />
   },;
@@ -723,7 +698,6 @@ if ( {) {
                   <Button 
                     variant="destructive" 
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
-
               <div className="grid grid-cols-2 gap-2">;
                 <div>;
                   <p className="text-xs text-zion-slate-light">Payout Method</p>;
@@ -734,7 +708,6 @@ if ( {) {
                   <p className="text-white">{selectedPartner && selectedPartner.commission_rate || 25}%</p>;
                 </div>;
               </div>;
-
               {selectedPartner && selectedPartner.fraud_flags && selectedPartner && selectedPartner.fraud_flags > 0 && (;
                 <Alert className="bg-red-900/20 border-red-900/50 text-red-500">;
                   <AlertTitle className="flex items-center gap-2">;
@@ -819,7 +792,6 @@ function PartnerTable({
   partners
   isLoading
   onViewDetails
-
 function PartnerTable({ 
   partners, 
   isLoading, 
@@ -827,7 +799,6 @@ function PartnerTable({
   onUpdateStatus;
   onOpenSettings;
   getStatusBadge;
-
   getFraudFlagBadge
 }: PartnerTableProps) {
   if (isLoading) {
@@ -836,7 +807,6 @@ function PartnerTable({
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
     );
-
   }
     return (
       <div className="text-center py-8">;
@@ -882,9 +852,7 @@ function PartnerTable({
                 )}
                 <Button
                   variant="outline"
-                
                 <Button 
-
                   variant="outline" 
                   size="sm"
                   onClick={() => onViewDetails(partner)}

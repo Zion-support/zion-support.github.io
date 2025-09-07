@@ -1,12 +1,10 @@
-
 export const innovativeMicroSaasSolutions2025 = [
   {
-
     pricing: {
       starter: {
-        price: 49
-        period: 'month'
-        features: [
+        price: 49;
+    period: "period",
+    features: [
           'Up to 1,000 feedback items/month'
           'Basic sentiment analysis'
           'Email support'
@@ -52,7 +50,6 @@ export const innovativeMicroSaasSolutions2025 = [
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },;    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },;
-
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
     ];
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];

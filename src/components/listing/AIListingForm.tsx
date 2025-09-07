@@ -1,5 +1,4 @@
-
-        <Input
+<Input
           id="category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
@@ -11,10 +10,8 @@
       <div className="space-y-2">
         <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
         <Textarea
-
 import { Sparkles } from 'lucide-react'
 import { Star } from 'lucide-react';
-
 interface AIListingFormProps {
   onSubmit: (formData: {
     title: string,
@@ -30,13 +27,11 @@ interface AIListingFormProps {
     targetAudience?: string
   }
 }
-
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) { const { toast  } = useToast(),
   const [ title, setTitle ] = useState(initialValues.title || ""),
   const [ category, setCategory ] = useState(initialValues.category || ""),
   const [ keyFeatures, setKeyFeatures ] = useState(initialValues.keyFeatures || ""),
   const [ targetAudience, setTargetAudience ] = useState(initialValues.targetAudience || ""),
-
   const handleSubmit = () => {
     if (!title || !category) {
       toast({
@@ -46,7 +41,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       });
       return
     }
-
     onSubmit({
       title;
       category;
@@ -54,15 +48,12 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       targetAudience
     })
   };
-
   return (
     <div className="space-y-4">
-
       </div>
       <div className="space-y-2">
         <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
         <Input
-
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Enter your product or service title"
@@ -153,14 +144,13 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         <Input;
           id="category";
           value={category}
-
           id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
           placeholder="e.g. Developers, Marketers, Startups"
           className="bg-zion-blue border border-zion-blue-light text-white"
 import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast",;
+import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -210,7 +200,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
         <Input;
           id="title";
-
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Enter your product or service title"
@@ -246,20 +235,16 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
-
         />;
       </div>;
       <Button;
-
         onClick={handleSubmit}
-
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (
           <>Generating Optimized Content...</>
         ) : (
           <>
-
             Generate Optimized Content
           </>
         )}
@@ -269,4 +254,3 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 }: AIListingFormProps) {
   if (!title |!category) {
   toast ({
-

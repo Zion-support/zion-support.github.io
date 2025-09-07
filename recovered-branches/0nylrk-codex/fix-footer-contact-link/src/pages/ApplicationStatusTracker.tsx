@@ -6,10 +6,8 @@ import { Briefcase, Inbox } from "lucide-react",import { ProtectedRoute } from "
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile();
-
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useIsMobile } from "@/hooks/use-mobile",
-
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
   }
@@ -23,7 +21,7 @@ export default function ApplicationStatusTracker() {
   )
 }
 import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO",;
+import { SEO } from "@/components/SEO";
 import { ApplicationsTracker } from "@/components/jobs/applications",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Briefcase, Inbox } from "lucide-react",;
@@ -36,7 +34,6 @@ import { useIsMobile } from "@/hooks/use-mobile",;
             <p className="text-muted-foreground mt-1">Track where you stand in the hiring process</p>;
           </div>;
         </div>;
-
         <div className="grid grid-cols-1 gap-6">;
           <Card>;
             <CardHeader className="border-b bg-muted/50">;
@@ -85,7 +82,6 @@ export default /**
  */
 function ApplicationStatusTracker() {
   return (
-
 }
 ;
 export default function ApplicationStatusTracker() {;
@@ -94,6 +90,5 @@ export default function ApplicationStatusTracker() {;
       </AppLayout>;
     </ProtectedRoute>);
 }
-
 }
 }

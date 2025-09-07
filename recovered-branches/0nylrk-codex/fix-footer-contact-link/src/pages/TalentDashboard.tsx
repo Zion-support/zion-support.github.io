@@ -36,7 +36,6 @@ import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingIntervie
 function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
-
   return (
     <>
       <SEO
@@ -116,7 +115,7 @@ function TalentDashboardContent() {
               </CardContent>
             </Card>            
 import { useState, useEffect } from "react";
-import { AppHeader } from "@/layout/AppHeader",;
+import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer",;
 import { Button } from "@/components/ui/button",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -165,7 +164,6 @@ function TalentDashboardContent() {;
         </div>;
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div>
             <Card className="mb-8">
@@ -217,12 +215,10 @@ function TalentDashboardContent() {;
               </CardContent>;
             </Card>;            {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
-
             {/* Upcoming Interviews Card */}
             <div className="mt-8">
               <UpcomingInterviewsCard />
             </div>
-
             <Card className="mt-8">
               <CardHeader>
                 <CardTitle className="text-lg">Quick Stats</CardTitle>
@@ -251,7 +247,6 @@ function TalentDashboardContent() {;
               </CardContent>
             </Card>
           </div>
-
           <div className="lg:col-span-2">
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
               <TabsList className="mb-6">
@@ -262,11 +257,9 @@ function TalentDashboardContent() {;
                 <TabsTrigger value="applications">My Applications</TabsTrigger>
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
               </TabsList>
-
               <TabsContent value="job-matches" className="mt-0">
                 <SuggestedJobs />
               </TabsContent>
-
               <TabsContent value="applications" className="mt-0">
                 <MyApplications />
                 <div className="mt-4 flex justify-center">
@@ -278,7 +271,6 @@ function TalentDashboardContent() {;
                   </Button>
                 </div>
               </TabsContent>
-
               <TabsContent value="saved" className="mt-0">
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">
@@ -299,7 +291,6 @@ function TalentDashboardContent() {;
     </>
   );
 }
-
 export default function TalentDashboard() {
   return (
     <ProtectedRoute>
@@ -307,7 +298,6 @@ export default function TalentDashboard() {
     </ProtectedRoute>
   );
 }
-
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';

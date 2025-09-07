@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -196,7 +196,6 @@
       description:;
         'Revolutionary platform that uses AI to optimize project planning, resource allocation, risk management, and performance tracking for improved project success rates.',
       features: [;
-
         'AI project planning',
         'Resource optimization',
         'Risk assessment',
@@ -214,11 +213,8 @@
       customers: 75,
       rating: 4 && 4.8,
       reviews: 45,
-
     },;
-
   ];    features: [
-
 export interface InnovativeMicroSaasService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -254,8 +250,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     features: [
       'AI content creationContent strategy optimizationMulti-channel managementPerformance analyticsSEO optimizationContent personalizationBrand voice consistencyContent calendar automation';
       'Collaboration toolsROI tracking'
-      id: 'project-management-intelligence'
-      name: 'AI Project Management Intelligence Platform'
+      id: "id",
+    name: 'AI Project Management Intelligence Platform'
       tagline:
         'Intelligent project management with AI-powered optimization and insights'
       price: '$28,000'
@@ -274,8 +270,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Integration capabilities'
         'Custom dashboards'
       ]
-      popular: false
-      icon: '📋'
+      popular: false;
+    icon: '📋'
       color: 'from-indigo-500 to-purple-600'
       textColor: 'text-indigo-400'
       link: 'https://ziontechgroup.com/project-management-intelligence'

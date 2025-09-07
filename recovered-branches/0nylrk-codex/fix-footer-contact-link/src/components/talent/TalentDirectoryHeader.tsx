@@ -3,7 +3,6 @@ interface TalentDirectoryHeaderProps {
   title: string,
   description: string;
 }
-
 export function TalentDirectoryHeader({
   title,
   description,
@@ -19,11 +18,9 @@ export function TalentDirectoryHeader({
     </div>
   );
 }
-
         </h1>;
         <p className="text-zion-slate-light max-w-2xl">;
 =======}
-
 import React from "react";
 ;
 interface TalentDirectoryHeaderProps {;
@@ -44,7 +41,7 @@ export function TalentDirectoryHeader({ title, description } TalentDirectoryHead
       </div>
     </div>
   )
-import React from "react",;
+import React from "react";
 interface TalentDirectoryHeaderProps {;
   title: string,
   description: string;
@@ -64,7 +61,6 @@ export function TalentDirectoryHeader({ title, description }: TalentDirectoryHea
     </div>;
         <p className="text-zion-slate-light max-w-2xl">
         <p className="text-zion-slate-light max-w-2xl">
-
 }
 ;
 export /**

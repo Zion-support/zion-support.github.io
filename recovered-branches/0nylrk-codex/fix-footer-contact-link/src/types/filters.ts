@@ -8,7 +8,6 @@ export interface FilterSidebarProps {
   selectedRegions: string[];
   toggleRegion: (region: string) => void;
   priceRange: [number, number];
-
   selected_skills: string[];
   toggle_skill: (skill: string) => void;
   selected_availability: string[];
@@ -44,9 +43,7 @@ export interface FilterComponentProps {
   toggleSection: () => void;
   isMobileFilterOpen?: boolean;
 }
-
   selectedSkills: string[]
-
   toggleSkill: (skill: string) => void
 export interface SkillsFilterProps extends FilterComponentProps {
   selectedSkills: string[];
@@ -60,34 +57,28 @@ export interface RegionFilterProps extends FilterComponentProps {
   selectedRegions: string[];
   toggleRegion: (region: string) => void;
 }
-
 }
 export interface ExperienceFilterProps extends FilterComponentProps {
-
 export interface SkillsFilterProps extends FilterComponentProps {
   selectedSkills: string[],
   toggleSkill: (skill: string) => void
 }
-
 export interface AvailabilityFilterProps extends FilterComponentProps {
   selectedAvailability: string[],
   toggleAvailability: (availability: string) => void
 }
-
 export interface RegionFilterProps extends FilterComponentProps {
   selectedRegions: string[],
   toggleRegion: (region: string) => void
 }
-
 export interface ExperienceFilterProps extends FilterComponentProps {;
   experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void
 }
-
 export interface PriceFilterProps extends FilterComponentProps {;
   priceRange: [number, number];
-  setPriceRange: (range: [number, number]) => void
-  searchTerm: string,;
+  setPriceRange: (range: [number, number]) => void;
+    searchTerm: string,;
   setSearchTerm: (term: string) => void,;
   selectedSkills: string[],;
   toggleSkill: (skill: string) => void,;
@@ -142,15 +133,12 @@ export interface PriceFilterProps extends FilterComponentProps {
   priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void;
 }
-
 export interface FilterSidebarProps {;
-
 }
 export interface SearchFilterProps {
   searchTerm: string;
   setSearchTerm: (term: string) => void;
 }
-
 export interface SortFilterProps {
   sortOption: string;
   setSortOption: (option: string) => void;
@@ -158,19 +146,14 @@ export interface SortFilterProps {
 export interface SortFilterProps {
   sort_option: string,
   setSortOption: (option: string) => void;
-
 }  searchTerm: string
-
 }
 export interface SearchFilterProps {
-
   search_term: string,
   setSearchTerm: (term: string) => void;
 }
 export interface SortFilterProps {
-
   sortOption: string
-
   setSortOption: (option: string) => void
 }
 ;

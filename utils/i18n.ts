@@ -1,8 +1,8 @@
-  return ['ar', 'he', 'fa', 'ur'].includes(locale);
+return ['ar', 'he', 'fa', 'ur'].includes(locale);
 }
 export const i18n = {
-  language: 'en'
-  resolvedLanguage: 'en'
+  language: "language",
+    resolvedLanguage: 'en'
 }
 }
 export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;

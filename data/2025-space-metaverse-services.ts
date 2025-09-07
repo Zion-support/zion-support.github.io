@@ -11,15 +11,11 @@ export interface SpaceMetaverseService {;
     currency: string;
     trialDays: number;
     setupTime: string;
-
   {
-
       'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms',
     ],
     realImplementation: true,
-
-    implementationDetails:
-      'Production-ready metaverse platform with comprehensive development tools, 3D engine, and blockchain integration. Includes mobile SDK and developer portal.'
+    implementationDetails: "implementationDetails",
     roi: 'Developers achieve 400% ROI through reduced development costs and increased monetization opportunities.'
     useCases: [
       'Virtual reality games'

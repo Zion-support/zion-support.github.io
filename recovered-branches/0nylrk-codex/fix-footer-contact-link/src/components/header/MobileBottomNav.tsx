@@ -19,10 +19,10 @@ import { useAuth } from "@/hooks/useAuth",export function MobileBottomNav({ unre
   const { user } = useAuth(),
   const isAuthenticated = !!user,
     {
-      name: "Messages"
-      href: "/messages"
-      icon: MessageSquare
-      matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
+      name: "name",
+    href: "/messages"
+      icon: MessageSquare;
+    matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
       badge: unreadCount
       authRequired: true    {
       name: "Dashboard"
@@ -31,12 +31,10 @@ import { useAuth } from "@/hooks/useAuth",export function MobileBottomNav({ unre
       matches: (path: string) => path.startsWith("/dashboard")
       authRequired: true
     }
-
   // Filter items based on auth status
   const visibleItems = navItems.filter(item => 
     !item.authRequired || (item.authRequired && isAuthenticated)
   ),
-
               item.matches(location.pathname)
                 ? "text-zion-cyan"
                 : "text-white/70 hover:text-white"
@@ -77,14 +75,12 @@ import { useAuth } from "@/hooks/useAuth",export function MobileBottomNav({ unre
       authRequired: true;
     }
   ];
-
   // Filter items based on auth status;
   const visibleItems = navItems && navItems.filter(item => ;
     !item && item.authRequired || (item && item.authRequired && isAuthenticated);
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
       <div className="flex justify-around items-center h-16">;
-
               "flex flex-col items-center justify-center w-full h-full px-1 py-1"
               item && item.matches(location && location.pathname)
         {visibleItems && visibleItems.map(item => (;

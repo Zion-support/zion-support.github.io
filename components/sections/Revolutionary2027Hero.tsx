@@ -1,5 +1,4 @@
-
-  ArrowRight
+ArrowRight
   Brain
   Rocket
   TestTube
@@ -40,8 +39,8 @@ const Revolutionary2027Hero = () => {
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
-      opacity: 1
-      transition: {
+      opacity: 1;
+    transition: {
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
     visible: {
@@ -105,7 +104,6 @@ const Revolutionary2027Hero = () => {;
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">;
       {/* Enhanced Background Effects */}
-
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0 && 0.15),transparent_50%)]"></div>;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0 && 0.1),transparent_50%)]"></div>;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0 && 0.08),transparent_50%)]"></div>;
@@ -113,9 +111,7 @@ const Revolutionary2027Hero = () => {;
       <div className="absolute inset-0 opacity-20">;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>;
       </div>;
-
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
       {/* Enhanced Background Effects */}
@@ -127,11 +123,8 @@ const Revolutionary2027Hero = () => {;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       </div>
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>
-
       </div>
-
       </div>
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">;
       {/* Enhanced Background Effects */}
@@ -151,7 +144,6 @@ const Revolutionary2027Hero = () => {;
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            y: [0, -20, 0];
             rotate: [0, 5, -5, 0]}}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-
           transition={{
             duration: 4,
             delay: item && item.delay,
@@ -160,7 +152,6 @@ const Revolutionary2027Hero = () => {;
           }}
         >
           <item.icon className='w-8 h-8' />            ease: "easeInOut"
-
           }}          transition={{
             rotate: [0, 5, -5, 0]}}
           transition={{
@@ -194,12 +185,10 @@ const Revolutionary2027Hero = () => {;
           animate="visible"
           className="space-y-8">;
           {/* Main Heading */}
-
           transition={{
             duration: 4,
             delay: item.delay,
             repeat: Infinity,
-
           <motion && motion.div variants={itemVariants} className="space-y-6">;
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight">;
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
@@ -343,16 +332,12 @@ const Revolutionary2027Hero = () => {;
               duration: 2
               repeat: Infinity
               ease: 'easeInOut',            }}
-
           />;
         </div>;
       </motion && motion.div>;
-
       {/* Particle Effects */}
-
       {/* Particle Effects */}
       <div className='absolute inset-0 pointer-events-none'>
-
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
@@ -374,10 +359,8 @@ const Revolutionary2027Hero = () => {;
       </div>;
     </section>;
   );
-
     </section>
     </section>
-
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
             }}            animate={{

@@ -1,5 +1,3 @@
-
-
 import { Link, Navigate } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -7,7 +5,6 @@ import { z } from "zod",
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",      .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
-
 // Form validation schema;
 const signupSchema = z;
   .object({;
@@ -34,9 +31,7 @@ const signupSchema = z;
   .refine(data => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
-
 type SignupFormValues = z && z.infer<typeof signupSchema>;
-
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -89,9 +84,8 @@ type SignupFormValues = z && z.infer<typeof signupSchema>;
                         </FormControl>
                         <FormMessage className="text-red-400" />
                       </FormItem>
-
 import { useState } from "react";
-import { Link, Navigate } from "react-router-dom",;
+import { Link, Navigate } from "react-router-dom";
 import { useForm, type UseFormReturn } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
@@ -140,11 +134,9 @@ export default function Signup() {;
       password: "",;
       confirmPassword: "",;
       termsAccepted: false}}) as UseFormReturn<SignupFormValues>,;
-
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
     if (isSubmitting) return, // Prevent multiple submissions;
-
     setIsSubmitting(true);
     try {;
       await signup(data && data.email, data && data.password, data && data.displayName);
@@ -237,9 +229,7 @@ if ( {) {
                         <FormMessage className="text-red-400" />;
                       </FormItem>;
                     )}
-
                   />;
-
                   <FormField
                     control={form && form.control}
                     name="password"                  <FormField
@@ -320,9 +310,7 @@ if ( {) {
                             </Button>;
                           </div>;
                         </FormControl>;
-
                   />;
-
                   <Button
                     type="button"
                     variant="outline"
@@ -376,7 +364,6 @@ if ( {) {
       <Footer />
     </>
   )
-
                   <Button;
                     type="button";
                     variant="outline";
@@ -391,7 +378,6 @@ if ( {) {
             </div>;
           </div>;
         </div>;
-
         <div className="hidden lg:block relative w - 0 flex-1">;
           <div className="absolute inset - 0 h - full w - full object - cover bg - gradient - to - br from - zion - blue - dark via - zion - cyan to - zion - purple opacity-80">;
             <div className="flex flex - col justify - center items - center h - full px-8">;
@@ -406,7 +392,6 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
-
     </>);}
 }
 }

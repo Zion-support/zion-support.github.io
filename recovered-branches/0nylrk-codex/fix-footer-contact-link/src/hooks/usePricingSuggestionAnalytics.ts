@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from 'react';
 import { supabase } from '@/integrations / supabase / client';interface PricingSuggestionAnalytics {
   total_suggestions: number;
@@ -6,7 +5,6 @@ import { supabase } from '@/integrations / supabase / client';interface PricingS
   averagePriceGap: number,
   suggestionsByCategory: { category: string, count: number, acceptance_rate: number }[];
   recent_suggestions: {
-
     id: string;
     user_id: string;
     suggested_min: number;
@@ -30,10 +28,9 @@ import { supabase } from "@/integrations/supabase/client",interface PricingSugge
     createdAt: string,
     type: 'client' | 'talent'        setAnalytics({
           ...mockData;
-          isLoading: false
-          error: null
+          isLoading: false;
+    error: null
         });
-
         // Mock data for demonstration
         const mockData = {
           totalSuggestions: 256,
@@ -55,13 +52,11 @@ import { supabase } from "@/integrations/supabase/client",interface PricingSugge
             createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),
             type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
         },
-
         setAnalytics({
           ...mockData,
           isLoading: false,
           error: null
         }),
-
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')

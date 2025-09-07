@@ -3,11 +3,9 @@ launchDate: '2025-01-25';
 real_implementation: true;
 implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launch_date: '2025 - 01 - 25';
-
 rating: 4 && 4.7;
 reviews: 89 
 };
-
 // Autonomous Data Analytics Platform realImplementation: true;
 implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
 launchDate: '2025-01-28';
@@ -19,7 +17,6 @@ launch_date: '2025 - 01 - 28';
 customers: 234;  }
 ];
 ;
-
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAIAutomationService {;
   id: string,;
@@ -257,7 +254,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',;
   }
 ];
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -269,8 +265,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
   }
 ];
 ;
-
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAIAutomationService {;
   id: string,;
   name: string,;

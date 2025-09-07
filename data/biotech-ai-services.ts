@@ -29,7 +29,6 @@ export interface BiotechAIService {
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
       'Machine Learning',
@@ -63,9 +62,8 @@ export interface BiotechAIService {
       'API for lab integration',
     ],
     popular: true,
-    icon: '🔬',    realImplementation: true
-    implementationDetails:
-      'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'
+    icon: '🔬',    realImplementation: true;
+    implementationDetails: "implementationDetails",
     launchDate: '2024-01-15'
     customers: 120
     rating: 5.0
@@ -358,7 +356,6 @@ export interface BiotechAIService {
     launchDate: '2024-03-10';
     customers: 90;
     rating: 4.9
-
     reviews: 45
   }
 ];  id: string,;
@@ -444,7 +441,6 @@ export const biotechAIServices: BiotechAIService[] = [;
     customers: 90;
     rating: 4.9,
     reviews: 45;
-
   }
 ;  }
 ];

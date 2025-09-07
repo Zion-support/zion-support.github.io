@@ -1,5 +1,4 @@
 import { Check, X } from 'lucide-react'
-
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -21,14 +20,11 @@ export function EnterprisePricingTable() {
         { name: "Dedicated success manager", included: false }]},
     {
       name: "Business",
-
       billing: "/month",
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
       features: [
-
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
         { name: "Enhanced SLA (8h)", included: true },
@@ -46,30 +42,22 @@ export function EnterprisePricingTable() {
       users: "Unlimited users",
       popular: false,
       features: [
-
       <div className="container mx-auto max-w-7xl">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-
           </p>
         </div>
-
                       </Button>
                     </div>
                   </TableHead>
                 ))}
-
       </div>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </section>
-
       </div>;
     </section>;
   )
 };
-
               </TableRow>;
             </TableHeader>;
             <TableBody>;
@@ -87,11 +75,9 @@ export function EnterprisePricingTable() {
                   ))}
                 </TableRow>
               ))}
-
             </TableBody>;
           </Table>;
         </div>;
-
         <div className='mt-8 text-center text-sm text-muted-foreground'>;
           All plans include SSL security, 99 && 99.9% uptime SLA, and dedicated;
           support        </div>;
@@ -105,5 +91,3 @@ export function EnterprisePricingTable() {
     </section>;
   );
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

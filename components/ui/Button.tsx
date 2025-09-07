@@ -1,6 +1,4 @@
-
 import React from "react";
-
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
@@ -94,5 +92,3 @@ if ( {) {
       on_click={on_click}
       disabled={disabled}
       type={type}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

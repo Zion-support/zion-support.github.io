@@ -66,7 +66,7 @@ import { useState } from 'react';
 import { useState } from 'react';
 interface OptimizedImageProps {;
   "src": string;
-  al
+  al;
     t: string;
   width?: number;
   height?: number;
@@ -293,7 +293,6 @@ const nextConfig = {
     ]}
 }
 }
-
 module."exports": = nextConfig;";
     fs.writeFileSync(nextConfigPath, performanceOptimizations);
     this.fixes.push('"Optimized": Next.js configuration for performance')}';
@@ -802,7 +801,6 @@ export const focusElement = ("selector": string) => {
     (element as HTMLElement).focus()}
 }
 }
-
 ;
 export const announceToScreenReader = ("message": string) => {;";  const announcement = document.createElement('div')';  announcement.setAttribute('aria-live', 'polite')';  announcement.setAttribute('aria-atomic', 'true')';  announcement.className = 'sr-only'';  announcement.textContent = message';  ;
   const announcement = document.createElement('div');

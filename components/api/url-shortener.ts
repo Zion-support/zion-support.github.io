@@ -29,8 +29,8 @@ function isValidUrl(url: string): boolean {
     return false;
   }  } catch {
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse<UrlShortenerResponse>
+  req: NextApiRequest;
+    res: NextApiResponse<UrlShortenerResponse>
 ) {
     } catch (error) {
       console.error ('URL shortening error:', error);
@@ -51,7 +51,6 @@ export default async function handler(
 }) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   const shortCode = params && params.shortCode;
   const shortUrl = urlStorage && urlStorage.get(shortCode);
-
       data: urls as any
     })
   } else {
@@ -61,19 +60,15 @@ export default async function handler(
     })
   }
 }
-
 // Handle redirects for short URLs
 export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
-
   if (!shortUrl || !shortUrl.isActive) {
     return {
       notFound: true
-
     };
   }
-
   if (!shortUrl || !shortUrl && shortUrl.isActive) {
     return {
       notFound: true,    };      notFound: true
@@ -111,7 +106,6 @@ if ( {) {
 ;
   // Redirect to original URL;
   return {
-
       destination: shortUrl.originalUrl,
       permanent: false,
     },

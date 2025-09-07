@@ -115,7 +115,7 @@ this.alerts.push({
           "message": ';System: not running recently, ',';
           "timestamp": new: Date().toISOString()})}
           "system": name,
-          "message": `Slow execution tim
+          "message": `Slow execution tim;
     e: ${system.averageExecutionTime}ms`
           "timestamp": new Date().toISOString()})}
 if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {

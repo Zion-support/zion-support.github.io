@@ -1,7 +1,5 @@
 import {
-
 export function EnterpriseTestimonials() {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <section id="testimonials" className="py-20 px-4 md:px-6">
       <div className="container mx-auto max-w-6xl">
@@ -29,8 +27,6 @@ export function EnterpriseTestimonials() {
                   </blockquote>
                   <div className='flex items-center gap-4'>
                     <div className='h-12 w-12 rounded-full overflow-hidden bg-muted'>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
             <CarouselNext />
           </div>
         </Carousel>
@@ -39,13 +35,11 @@ export function EnterpriseTestimonials() {
   )
 };
 }
-
                       />
                     </div>
                     <div>
                       <p className='font-bold'>{testimonial.author}</p>
                       <p className='text-sm text-muted-foreground'>                        {testimonial.title}, {testimonial.company}
-
 import React from "react",
 import { Quote } from 'lucide-react'
 import {
@@ -54,9 +48,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious} from "@/components/ui/carousel",
-
 const testimonials = [
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     quote: "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",
     author: "Sarah Johnson",
@@ -74,8 +66,6 @@ const testimonials = [
     author: "Elena Rodriguez",
     title: "CTO",
     company: "FutureTech Systems",
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 export function EnterpriseTestimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 md:px-6">
@@ -88,25 +78,19 @@ export function EnterpriseTestimonials() {
             See how enterprise teams are transforming their hiring process
           </p>
         </div>
-
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <div className="bg-card rounded-xl p-8 border border-border h-full">
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />
                   <blockquote className="text-xl mb-6 italic">
                     "{testimonial.quote}"
                   </blockquote>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Quote } from 'lucide-react';
 import {;
   Carousel,;
   CarouselContent,;
   CarouselItem,;
   CarouselNext,;
-
     <section id="testimonials" className="py-20 px-4 md:px-6">;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-12">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
@@ -116,18 +100,12 @@ import {;
             See how enterprise teams are transforming their hiring process;
           </p>;
         </div>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                 <div className="bg-card rounded-xl p-8 border border-border h-full">;
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />;
                   <blockquote className="text-xl mb-6 italic">;
-
             <CarouselNext />
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>
         </Carousel>
       </div>
     </section>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

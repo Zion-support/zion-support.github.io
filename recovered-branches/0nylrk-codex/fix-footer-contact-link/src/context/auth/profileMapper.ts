@@ -1,7 +1,4 @@
-
-
 import type { UserProfile } from "@/types/auth",
-
   id: string,
   email?: string | null;
 }
@@ -9,7 +6,6 @@ import type { UserProfile } from "@/types/auth",
 * Maps Supabase profile data to our app's user model;
 */;
 export function mapProfileToUser (user: SupabaseUser, profile: any): UserProfile {
-
   return {
 /**
  * Maps Supabase profile data to our app's user model
@@ -34,12 +30,10 @@ export interface SupabaseUser {
     bio: profile && profile.bio || undefined;
     headline: profile && profile.headline || undefined;
     avatar_url: profile && profile.avatar_url || undefined,
-    avatarUrl: profile && profile.avatar_url || undefined, // Add for compatibility
+    avatarUrl: profile && profile.avatar_url || undefined, // Add for compatibility;
     role: profile && profile.user_type // Map user_type to role for backward compatibility
 }
-
   return {
-
     avatarUrl: profile.avatar_url || undefined, // Add for compatibility
     role: profile.user_type // Map user_type to role for backward compatibility
   }

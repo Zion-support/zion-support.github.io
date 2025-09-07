@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react';
 import path from '"node": path';
 export default defineConfig({
 	plugins: [react({
-			// Handle JSX in .js files
-			include: '**/*.{jsx,js,ts,tsx}',
+			// Handle JSX in .js files;
+    include: '**/*.{jsx,js,ts,tsx}',
 			// Fast refresh
 			"fastRefresh": true,
 			// JSX runtime

@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -31,18 +31,16 @@
   rating: number;
   reviews: number;
   benefits: string[];
-  marketAdvantage: string
-  capabilities: string[],
+  marketAdvantage: string;
+    capabilities: string[],
   market_advantage: string;
 }
 const contact = {
   mobile: '+1 302 464 0950';
     tagline: 'Create high - quality content at scale with AI';
     price: '$299';
-
     link: 'https://ziontechgroup && ziontechgroup.com/ai-content-generation';
     marketPosition: 'Leading AI content generation platform with enterprise features',
-
     targetAudience: 'Marketing teams, Content creators, Agencies, E-commerce businesses';
     trialDays: 14;
     setupTime: '1-2 days';
@@ -124,7 +122,7 @@ const contact = {
     technology: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
     integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
     useCases: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization'];
-    roi: 'Reduce deployment time by 70% and increase team productivity by 50%'
+    roi: "roi",
     period: '/month',
     description: 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.';
     features: [;

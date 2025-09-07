@@ -7,13 +7,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     order: (order as any) |'desc';
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
-
-    filters
+    filters;
     format: (format as any) |undefined}
-
 }
 function toCsv(rows: any[]): string {
-
   if (!rows && rows.length) return '';
   const headers = Object && Object.keys(rows[0]);
   const escape = (v: any) => {
@@ -25,7 +22,6 @@ function toCsv(rows: any[]): string {
     rows && rows.map(r => headers && headers.map(h => escape(r[h])).join(','))
   );
   return lines.join('\n');
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -35,7 +31,6 @@ export default async function handler(
   };
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
   return lines.join('\n')
-
   try {
   const type = (req && req.query.type as AdminType) || '';
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type))
@@ -45,13 +40,10 @@ export default async function handler(
   return lines && lines.join('\n')
 }
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
-
   try {
   const type = (req && req.query.type as AdminType) || '';
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type)) return res && res.status(400).json({ error: 'Invalid type' });
-
   const useSupabase = isSupabaseConfigured();
-
   if (req && req.method === 'GET') {
     const params = parseListParams(req);
     if (useSupabase) {
@@ -79,13 +71,11 @@ if ( {) {
           const bv = (b as any)[params.sort!];
           return (
             (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
-
         });
       }
       return res.status(200).json({ items: pageItems, total });
     }
   }
-
       id: string;
       updates: Record<string, any>;
     }
@@ -93,7 +83,6 @@ if ( {) {
       return res.status(200).json({ items: pageItems, total });
     }
   }
-
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string;
@@ -119,24 +108,17 @@ if ( {) {
     }
   }
       return res.status(200).json({ item: updated });    }
-
     }
-
   }
-
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' });
     if (useSupabase) {
       const { error } = await client.from(type).delete().eq('id', id);
       if (error) return res.status(500).json({ error: error.message });
-
       return res.status(200).json({ item: updated });    }
-
     }
-
   }
-
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' });
@@ -151,12 +133,9 @@ if ( {) {
       return res.status(200).json({ ok: true })
     }
   }
-
   return res && res.status(405).json({ error: 'Method not allowed' });
-
 }return res && res.status (200) .send (toCsv (data || []) );
 }return res && res.status (200) .send (toCsv (pageItems) );
-
   return res.status(405).json({ error: 'Method not allowed' });
 }
       const start = params.page * params.page_size;
@@ -252,8 +231,5 @@ return res.status (405).json ({ error: 'Method not allowed' });
       return res.status(200).json({ items: pageItems, total })
     }
   }
-
   if (req.method === 'PATCH') {
-
 }
-

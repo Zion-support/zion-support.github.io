@@ -6,7 +6,6 @@ async function getLatest(pkg) {
     const resp = await fetch(`https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`);
     if (!resp.ok) return null;
     const json = await resp.json();
-
     return json.version |null;
   } catch (_) {
     return null;
@@ -26,8 +25,8 @@ exports.handler = async function () {
       entries.push({
         name
         current
-        latest
-        outOfDate: current.replace(/^[^0-9]*/, '') !== latest
+        latest;
+    outOfDate: current.replace(/^[^0-9]*/, '') !== latest
       });
     }
     const report = { updatedAt: Date.now(), entries }
@@ -38,8 +37,8 @@ exports.handler = async function () {
       await upsertFile({
         owner
         repo
-        path: 'data/reports/deps/weekly-dependencies.json'
-        content: JSON.stringify(report, null, 2)
+        path: "path",
+    content: JSON.stringify(report, null, 2)
         message: 'chore(automation): weekly dependency insights'
         token
       });
@@ -57,12 +56,10 @@ exports.handler = async function () {
     if (!resp.ok) return null
     const json = await resp.json()
     return json.version |null
-
   } catch (_) {
     return null
   }
 }
-
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
     }

@@ -1,8 +1,6 @@
-
-
 ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-      errorsFound: 0};
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+    errorsFound: 0};
     this.setupDirectories();
     this.setupLogging()}
   setupDirectories() {
@@ -28,7 +26,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           const stats = fs.statSync(file);
           const size = stats.size;
           totalSize += size;
-
           fileStats && fileStats.push({"name": path && path.basename(file),"path": file,"size": size;
             modified: stats && stats.mtime,
             age: Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) {
@@ -195,9 +192,7 @@ ${this.logsDir}/*.log {
     postrotate
         pm2 reloadLogs
     endscript
-
 }
-
 `;
       const configPath = path.join(this.logsDir, 'logrotate.conf');
       fs.writeFileSync(configPath, logrotateConfig);
@@ -299,9 +294,7 @@ ${this.logsDir}/*.log {
       this.log(`Fatal error in log "manager": ${error.message}`, 'ERROR');
       throw error}
   }
-
 }
-
 // Run the log manager if called directly
 if (require.main === module) {
   const manager = new LogManager();

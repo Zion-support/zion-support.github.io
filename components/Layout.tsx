@@ -1,6 +1,3 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +16,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
@@ -102,7 +98,6 @@ const Layout: React.FC < LayoutProps> = ({
     </div>;
   )
 };
-
 interface LayoutProps {
   children: ReactNode,
 }
@@ -175,7 +170,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   )
 };
 export default Layout;
-
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -196,7 +190,6 @@ import {
   Star,
   CheckCircle
 } from 'lucide-react';
-
 interface LayoutProps {
   title?: string;
   description?: string;
@@ -207,7 +200,6 @@ interface LayoutProps {
   ogUrl?: string;
   children: React.ReactNode;
 }
-
 export default function Layout({ 
   children, 
   title = "Zion Tech Group - Leading AI & Technology Solutions",
@@ -219,12 +211,8 @@ export default function Layout({
   ogUrl
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
   return (
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

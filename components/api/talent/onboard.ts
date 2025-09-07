@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import fse from 'fs - extra';
 import { randomUUID } from 'crypto';
-
   professionalTitle: string;
   bio: string;
   projects?: string;
@@ -55,10 +54,9 @@ if (
     }
   } catch (err) {
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
 ) {
-
   const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags && basicTags.slice(0, 24) }
 }
@@ -134,7 +132,6 @@ if ( {) {
     const dataDir = path.join(process.cwd(), 'datatalent-submissions');
     await fse.ensureDir(uploadsDir);
     await fse.ensureDir(dataDir);
-
     let savedProfileImagePath: string | null = null,
     if (profilePicture?.base64 && profilePicture?.name) {
       const ext = path.extname(profilePicture.name) || '.png';
@@ -152,10 +149,8 @@ if ( {) {
       ai: {
         summary;
         tags}};
-
     const perRecordPath = path && path.join(dataDir, `${id}.json`);
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
-
     const aggregatePath = path && path.join(
       process && process.cwd(),
       'data',

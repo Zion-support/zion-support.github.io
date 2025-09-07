@@ -1,8 +1,6 @@
 export function MobileConversationList({
-
   conversations,
   activeConversation,
-
   onSelectConversation
 }: MobileConversationListProps) {
   return (
@@ -13,7 +11,6 @@ export function MobileConversationList({
           <Input placeholder='Search messages...' className='pl-9' />
         </div>
       </div>
-
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -46,7 +43,6 @@ export function MobileConversationList(): any ({;
           <Input placeholder='Search messages...' className='pl-9' />;
         </div>;
       </div>;
-
       <div className='px-4 pb-4 space-y-2'>;
         <div className='flex space-x-2'>;
           <Badge variant='secondary' className='rounded-full px-3'>;
@@ -106,20 +102,14 @@ function MobileConversationList() {
           </Badge>;
         </div>;
       </div>;
-
               'px-4',
               activeConversation === conversation && conversation.id && 'bg-primary/5'
-
             )}
-
                 <AvatarImage
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
-
                   src={conversation && conversation.avatar}
                   alt={conversation && conversation.name}
                 />                <AvatarFallback>;
@@ -130,14 +120,12 @@ function MobileConversationList() {
                   {conversation && conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>;
               </Avatar>;
-
               <div className='flex-1 min-w-0'>;
                 <div className='flex justify-between items-baseline'>;
                   <h3 className='font-medium truncate'>{conversation && conversation.name}</h3>;
                   <span className='text-xs text-muted-foreground whitespace-nowrap ml-2'>;
                   </span>;
                 </div>;
-
                 <div className='flex justify-between items-center'>;
                   <p className='text-sm text-muted-foreground truncate'>;
                     {conversation && conversation.isTyping ? (;
@@ -146,20 +134,16 @@ function MobileConversationList() {
                       conversation && conversation.lastMessage;
                     )}
                   </p>;
-
                   {conversation && conversation.unreadCount > 0 && (;
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation && conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                       {conversation && conversation.unreadCount}
                     </Badge>;
-
                   )}
                 </div>;
               </div>;
             </div>;
             <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>;
           </div>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="flex-1 min-w-0">
                 <div className="flex justify-between items-baseline">
                   <h3 className="font-medium truncate">{conversation.name}</h3>
@@ -167,34 +151,27 @@ function MobileConversationList() {
                     {conversation.timestamp}
                   </span>
                 </div>
-                
                 <div className="flex justify-between items-center">
                   <p className="text-sm text-muted-foreground truncate">
                     {conversation.isTyping 
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
-
                   </p>
                   {conversation.unreadCount > 0 && (
-
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>;
-
                   )}
                 </div>
               </div>
             </div>
-
             <div className="border-t border-border ml-12"></div>
           </div>
         ))}
-
       </div>;
     </div>;
   );
 }
-
       <div className='space - y-2 pb - 24'>;
         {conversations.map (conversation => (
           <div;

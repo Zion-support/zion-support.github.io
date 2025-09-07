@@ -1,4 +1,3 @@
-
 export const advancedAIServices2025 = [
       'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.'
       'Natural language query processing'
@@ -27,9 +26,9 @@ export const advancedAIServices2025 = [;
     ],
     pricing: {
       starter: {
-        price: 199
-        period: 'month'
-        features: ['Up to 10 users', 'Basic AI insights', 'Standard reports']
+        price: 199;
+    period: "period",
+    features: ['Up to 10 users', 'Basic AI insights', 'Standard reports']
       }
       professional: {
     contact: {

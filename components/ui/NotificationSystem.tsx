@@ -1,18 +1,13 @@
-
-
-  id: string;
+id: string;
   type: "success" | "error" | "warning" | "info";
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   title?: string;
   message: string;
   duration?: number;
 }
-
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
   const typeStyles = {
-    success: "bg-green-50 border-green-400 text-green-800"
+    success: "success",
     error: "bg-red-50 border-red-400 text-red-800"
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800"
     info: "bg-blue-50 border-blue-400 text-blue-800"
@@ -57,13 +52,10 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
     error: "bg-red-50 border-red-400 text-red-800",
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800",
     info: "bg-blue-50 border-blue-400 text-blue-800",
-
   };
   return `${baseStyles} ${typeStyles[type]}`;
 };
-
 import React from 'react';
-
 interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
@@ -71,13 +63,11 @@ interface Notification {
   message: string;
   duration?: number;
 }
-
 interface NotificationContextType {
   notifications: Notification[];
   addNotification: (notification: Omit<Notification, 'id'>) => void;
   removeNotification: (id: string) => void;
 }
-
   return (
     <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>
       {children}
@@ -85,28 +75,22 @@ interface NotificationContextType {
     </NotificationContext.Provider>
   );
 };
-
 const NotificationContainer: React.FC = () => {
   const { notifications, removeNotification } = useNotifications();
-
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
       {notifications.map((notification) => (
-
       ))}
     </div>
   );
 };
-
   const colors = {
     success: 'bg-green-500',
     error: 'bg-red-500',
     warning: 'bg-yellow-500',
     info: 'bg-blue-500',
   };
-
   const Icon = icons[notification.type];
-
   return (
     <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'}>
       <div className="flex items-start">
@@ -125,5 +109,3 @@ const NotificationContainer: React.FC = () => {
     </div>
   );
 };
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

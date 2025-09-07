@@ -1,4 +1,3 @@
-
 import { jsPDF  } from 'jspdf';
 import { Certification  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
@@ -8,7 +7,6 @@ export function addCertificationsSection(  doc: jsPDF;
   colors: PdfThemeColors;
   startY: number
 ): number {
-
   let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {  let yPos = startY;
@@ -34,10 +32,9 @@ export function addCertificationsSection(  doc: jsPDF;
       const issueDate = formatDate(cert.issue_date);
       const expirationText = cert.expiration_date ? ` - ${formatDate(cert.expiration_date)}` : '';
       doc.setFontSize(10);
-
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10)
 import { jsPDF } from 'jspdf';
-import { Certification } from '@/types/resume',;
+import { Certification } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig',;
 import { formatDate } from '../formatters',;
 export function addCertificationsSection(;
@@ -79,4 +76,3 @@ export function addCertificationsSection(;
       const expirationText = cert.expiration_date ? ` - ${formatDate(cert.expiration_date)}` : '';
       doc.setFontSize(10);
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10);
-

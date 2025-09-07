@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -16,8 +14,8 @@ import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
 import UserBadges from "@/components/community/UserBadges",
 import ReputationDisplay from "@/components/community/ReputationDisplay",    {
-      id: "badge2"
-      name: "Top Contributor"
+      id: "id",
+    name: "Top Contributor"
       description: "Among the top 5% of contributors"
       icon: "Trophy"
       color: "#F59E0B"  }
@@ -25,7 +23,6 @@ import ReputationDisplay from "@/components/community/ReputationDisplay",    {
     id: "11"
     title: "How to structure an AI prompt for best results"
     content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...";
-
     authorId: "user1"
     authorName: "Alex Johnson"
     authorAvatar: "https://i.pravatar.cc/150?img=3"
@@ -34,10 +31,10 @@ import ReputationDisplay from "@/components/community/ReputationDisplay",    {
     tags: ["monitoring", "production", "devops"];
     createdAt: "2025-03-12T09:30:00Z"
     updatedAt: "2025-03-12T09:30:00Z"
-    upvotes: 24
+    upvotes: 24;
     downvotes: 0
     replyCount: 6import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom",;
+import { useParams, Link } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
@@ -47,9 +44,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { formatDistanceToNow } from "date-fns",;
 import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community",;
-import PostCard from "@/components/community/PostCard",;
-import UserBadges from "@/components/community/UserBadges",;
-import ReputationDisplay from "@/components/community/ReputationDisplay",;
+import PostCard from "PostCard";
+import UserBadges from "UserBadges";
+import ReputationDisplay from "ReputationDisplay";
 // Mock user data;
 const mockUser: CommunityUser = {;
   id: "user1",;

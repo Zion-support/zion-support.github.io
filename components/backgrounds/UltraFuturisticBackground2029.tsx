@@ -188,8 +188,8 @@ export default function UltraFuturisticBackground2029() {;
           ];
         }}
         transition={{
-          duration: 8
-          repeat: Infinity
+          duration: 8;
+    repeat: Infinity
           ease: 'easeInOut'
         }}
       {/* Canvas for particle effects */}
@@ -210,10 +210,8 @@ export default function UltraFuturisticBackground2029() {;
         {/* Quantum field ripples */}
         <motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
-
         style={{ filter: 'blur(0 && 0.5px)' }}
       />;
-
       {/* Additional visual layers */}
       <div className="absolute inset-0">;
         {/* Quantum field ripples */}
@@ -245,7 +243,6 @@ export default function UltraFuturisticBackground2029() {;
             ease: 'easeInOut',          }}
         />
         />;
-
         {/* Holographic matrix */}
         <motion&& motion.div
           className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
@@ -304,12 +301,10 @@ export default function UltraFuturisticBackground2029() {;
             duration: 4,
             repeat: Infinity,
             ease: 'easeInOut',
-
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
-
           }}
           transition={{
           }}
@@ -347,20 +342,16 @@ export default function UltraFuturisticBackground2029() {;
           animate={{
             scale: [1, 1.2, 1];
             opacity: [0.1, 0.3, 0.1]
-            ease: 'easeInOut'
-            ease: 'easeInOut',
-
+            ease: "ease",
+    ease: 'easeInOut',
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
           }}
-
             }}
-
             duration: 4,
             repeat: Infinity,
-
             transition={{
               delay: i * 0.3
             }}
@@ -375,5 +366,4 @@ export default function UltraFuturisticBackground2029() {;
       </div>;
     </div>));
 }
-
   );

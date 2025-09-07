@@ -1,5 +1,3 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
@@ -7,12 +5,10 @@ import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community",
 import { logInfo } from '@/utils/productionLogger',
-
 interface PostCardProps {
   post: ForumPost
   compact?: boolean
 }
-
       "transition-shadow hover: shadow-md",
 import React from 'react';
 import { formatDistanceToNow } from './date - fns';
@@ -33,5 +29,3 @@ interface PostCardProps {
 const PostCardComponent = ({ post, compact = false }: PostCardProps) =>: any {
   const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
   return (
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

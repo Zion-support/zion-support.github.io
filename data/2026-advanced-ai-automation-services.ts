@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -34,20 +34,17 @@
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
-
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
-
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }
 ;
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
-
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+  address: "address",
+    website: 'https://ziontechgroup.com'
 }
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -56,7 +53,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     ],
     popular: true,
     icon: '🤖',
-
     link: 'https://ziontechgroup.com/ai-autonomous-business-processor',
     marketPosition:;
       'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.',
@@ -67,7 +63,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'healthcare'
       'financial services'
     ]
-    trialDays: 21
+    trialDays: 21;
     setupTime: '1 week'
     category: 'AI & Automation'
     realService: true
@@ -270,7 +266,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     customers: 198;
     rating: 4.9,
     reviews: 267;
-
   }
 ];
 ;import { ServiceVariant } from '../types/service-variants';

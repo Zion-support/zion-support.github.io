@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
-
 interface SEOProps {
   title: string;
   description: string;
@@ -13,13 +12,10 @@ interface SEOProps {
   type?: string;
 }
 =======
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
   url?: string;
   image?: string;
   type?: string;
 }
-
 const SEO: React.FC<SEOProps> = ({
   title,
   description,
@@ -42,7 +38,6 @@ const SEO: React.FC<SEOProps> = ({
   noindex?: boolean;
   canonical?: string;
 }
-
 export function SEO({
   title = 'Zion Tech Group - Leading AI & Technology Solutions',
   description = 'Transform your business with cutting-edge AI, quantum computing, cybersecurity, and digital transformation services. Expert technology solutions for the modern enterprise.',
@@ -62,7 +57,6 @@ export function SEO({
   const location = useLocation();
   const currentUrl = url || `${window.location.origin}${location.pathname}`;
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-
   // Default structured data for organization
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -97,7 +91,6 @@ export function SEO({
       "Machine Learning"
     ]
   };
-
   // Service-specific structured data
   const getServiceStructuredData = () => {
     if (type === 'service' && section) {
@@ -120,7 +113,6 @@ export function SEO({
     }
     return null;
   };
-
   // Article structured data
   const getArticleStructuredData = () => {
     if (type === 'article' && publishedTime) {
@@ -152,7 +144,6 @@ export function SEO({
     }
     return null;
   };
-
   // Breadcrumb structured data
   const getBreadcrumbStructuredData = () => {
     const pathSegments = location.pathname.split('/').filter(Boolean);
@@ -165,7 +156,6 @@ export function SEO({
           "item": "https://ziontechgroup.com"
         }
       ];
-
       let currentPath = '';
       pathSegments.forEach((segment, index) => {
         currentPath += `/${segment}`;
@@ -176,7 +166,6 @@ export function SEO({
           "item": `https://ziontechgroup.com${currentPath}`
         });
       });
-
       return {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -185,7 +174,6 @@ export function SEO({
     }
     return null;
   };
-
   // FAQ structured data for relevant pages
   const getFAQStructuredData = () => {
     if (location.pathname.includes('/faq') || location.pathname.includes('/help')) {
@@ -215,7 +203,6 @@ export function SEO({
     return null;
   };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
-
   // Combine all structured data
   const combinedStructuredData = [
     defaultStructuredData,
@@ -225,7 +212,6 @@ export function SEO({
     getFAQStructuredData(),
     structuredData
   ].filter(Boolean);
-
   // Performance optimization: Preload critical resources
   useEffect(() => {
     // Preload critical fonts
@@ -233,31 +219,26 @@ export function SEO({
       { rel: 'preload', href: '/fonts/orbitron-v16-latin-400.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
       { rel: 'preload', href: '/fonts/orbitron-v16-latin-600.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' }
     ];
-
     fontLinks.forEach(link => {
       const linkElement = document.createElement('link');
       Object.assign(linkElement, link);
       document.head.appendChild(linkElement);
     });
-
     // Preload critical images
     const imageLinks = [
       { rel: 'preload', href: image, as: 'image' }
     ];
-
     imageLinks.forEach(link => {
       const linkElement = document.createElement('link');
       Object.assign(linkElement, link);
       document.head.appendChild(linkElement);
     });
-
     // DNS prefetch for external domains
     const externalDomains = [
       'https://fonts.googleapis.com',
       'https://fonts.gstatic.com',
       'https://www.google-analytics.com'
     ];
-
     externalDomains.forEach(domain => {
       const link = document.createElement('link');
       link.rel = 'dns-prefetch';
@@ -265,7 +246,6 @@ export function SEO({
       document.head.appendChild(link);
     });
   }, [image]);
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -274,10 +254,8 @@ export function SEO({
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
-      
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
-      
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={currentUrl} />
@@ -288,7 +266,6 @@ export function SEO({
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@ziontechgroup" />
@@ -296,7 +273,6 @@ export function SEO({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       <meta name="theme-color" content="#0ea5e9" />
@@ -304,7 +280,6 @@ export function SEO({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
       {/* Article specific meta tags */}
       {type === 'article' && publishedTime && (
         <>
@@ -316,39 +291,32 @@ export function SEO({
           ))}
         </>
       )}
-      
       {/* Favicon and App Icons */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/site.webmanifest" />
-      
       {/* Structured Data */}
       {combinedStructuredData.map((data, index) => (
         <script key={index} type="application/ld+json">
           {JSON.stringify(data)}
         </script>
       ))}
-      
       {/* Performance and Security Headers */}
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="referrer" content="strict-origin-when-cross-origin" />
-      
       {/* Social Media Verification */}
       <meta name="google-site-verification" content="your-google-verification-code" />
       <meta name="msvalidate.01" content="your-bing-verification-code" />
-      
       {/* Additional SEO Meta Tags */}
       <meta name="application-name" content="Zion Tech Group" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="format-detection" content="telephone=no" />
-      
       {/* Language and Region */}
       <meta name="language" content="English" />
       <meta name="geo.region" content="US" />
       <meta name="geo.placename" content="United States" />
-      
       {/* Business Information */}
       <meta name="business:contact_data:street_address" content="Your Street Address" />
       <meta name="business:contact_data:locality" content="Your City" />
@@ -356,7 +324,6 @@ export function SEO({
       <meta name="business:contact_data:postal_code" content="Your ZIP Code" />
       <meta name="business:contact_data:country_name" content="United States" />
       <meta name="business:contact_data:phone_number" content="+1-XXX-XXX-XXXX" />
-      
       {/* Custom CSS for critical rendering */}
       <style>{`
         /* Critical CSS for above-the-fold content */
@@ -365,7 +332,6 @@ export function SEO({
           transform: translateY(0);
           transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        
         .loading .hero-section {
           opacity: 0;
           transform: translateY(20px);

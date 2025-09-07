@@ -1,4 +1,3 @@
-
 import {Link} from "react-router-dom";
 import {GradientHeading} from "./GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -7,13 +6,12 @@ import {Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Pl
 export function FeaturesGuideSection() {
   const features = [
     {
-      id: "ai-matcher"
-      title: "AI Matcher"
+      id: "id",
+    title: "AI Matcher"
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system."
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />      ]
       link: "/match"
       buttonText: "Try AI Matcher"
-
 export function FeaturesGuideSection() {;
   const features = [;
     {;
@@ -24,7 +22,6 @@ export function FeaturesGuideSection() {;
         "Save favorite profiles for future reference";
         "Contact talents directly or request quotes through their profiles";
       ];
-
       link: "/talents",
       button_text: "Explore Talents";
       instructions: [
@@ -56,7 +53,6 @@ export function FeaturesGuideSection() {;
       ]
       link: "/services"
       buttonText: "View Services"
-
     },
         "Search the equipment catalog by category or specifications";
         "Check availability and rental / purchase options";
@@ -65,14 +61,12 @@ export function FeaturesGuideSection() {;
       id: "analytics"
       title: "Marketplace Analytics"
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";
-
     },
     {
       id: "analytics",
       title: "Marketplace Analytics",
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
-
       instructions: [
         "Access analytics from your user dashboard";
         "View interactive charts on market trends and rates";
@@ -142,7 +136,7 @@ export function FeaturesGuideSection() {;
 ;
   return (
 import { GradientHeading } from "./GradientHeading";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "./ui/button",;
 import {;
   Users,;
@@ -289,10 +283,8 @@ export function FeaturesGuideSection() {;
             {features.slice(4).map(feature => (
               <TabsTrigger                key={feature.id}
                 value={feature.id}
-
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
-
                 {feature.title}
                 key={feature.id}
                 value={feature.id}
@@ -310,7 +302,6 @@ export function FeaturesGuideSection() {;
     </section>
   )
 };
-
         </Tabs>;
         ;
         <div className="mt-12 text-center">;
@@ -332,8 +323,5 @@ export function FeaturesGuideSection() {;
           </Button>;
         </div>;
       </div>;
-
     </section>);
-
 }
-

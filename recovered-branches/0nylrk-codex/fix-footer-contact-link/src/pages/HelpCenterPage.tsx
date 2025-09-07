@@ -11,24 +11,19 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-
 import React from "react";
 import HelpCenter from "@/components/support/HelpCenter";
 import {SEO} from "@/components/SEO";
@@ -40,11 +35,10 @@ export default function HelpCenterPage() {;
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace"
 }
 import React from "react";
-import HelpCenter from "@/components/support/HelpCenter",;
+import HelpCenter from "@/components/support/HelpCenter";
 import { SEO } from "@/components/SEO";
 export default function HelpCenterPage() {;
   return (;
-
       />;
       <HelpCenter />;
     </>;  );
@@ -64,6 +58,5 @@ function HelpCenterPage() {
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace";
       />;
       <HelpCenter />;
-
     </>;
   );

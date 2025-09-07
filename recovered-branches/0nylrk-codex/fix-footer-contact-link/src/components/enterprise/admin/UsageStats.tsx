@@ -1,4 +1,4 @@
-  Card
+Card
   CardContent
   CardDescription
   CardFooter
@@ -61,7 +61,7 @@
         </Card>
       </div>  )
 import React from "react";
-import { Slider } from "@/components/ui/slider",;
+import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -82,13 +82,11 @@ export function UsageStats() {;
   description: "The new usage limits have been saved successfully."})
 };
   return (;
-
     <div className="space-y-8">;
       <div>;
         <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>;
         <p className="text-muted-foreground mb-6">;
   }
-
           Configure usage limits for your team to manage your subscription;
           resources.;
         </p>;
@@ -97,7 +95,6 @@ export function UsageStats() {;
               Set monthly limits for job postings across your organization;
             </CardDescription>;
           </CardHeader>;
-
           <CardContent className="space-y-4">;
             <div>;
               <div className="flex items - center justify - between mb-2">;
@@ -110,21 +107,17 @@ export function UsageStats() {;
             </div>;
           </CardContent>;
           <CardFooter>;
-
             <Button size="sm" on_click={handleSaveChanges}>;
-
               Save Changes;
             </Button>;
           </CardFooter>;
         </Card>;
-
         <Card>;
           <CardHeader>;
             <CardTitle > AI Features</CardTitle>;            <CardDescription>;
               Set spending caps for premium features and services;
             </CardDescription>;
           </CardHeader>;
-
           <CardContent className="space-y-4">;
             <div>;
               <div className="flex items - center justify - between mb-2">;

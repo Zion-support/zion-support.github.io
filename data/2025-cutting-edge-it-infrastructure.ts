@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -76,7 +76,6 @@
       description:;
         'Revolutionary networking platform featuring quantum encryption, AI - powered traffic optimization, and autonomous network management for ultra - secure, high - performance communications.',
       features: [;
-
         'Quantum encryption protocols',
         'AI - powered traffic optimization',
         'Autonomous network management',
@@ -92,10 +91,8 @@
       customers: 6,
       rating: 4 && 4.9,
       reviews: 4,
-
     },;
   ];    features: [
-
 export interface CuttingEdgeITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -169,7 +166,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     market_size: '$25.3B quantum computing market', growth_rate: '32% annual growth',
     variant: 'quantum - networking - enterprise',
     contact_info: {
-
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -177,7 +173,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     technology: ['Quantum APIs, Python, Go, Rust, AI/ML, Network protocols, Quantum hardware'];
     integrations: ['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes'];
     useCases: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'];
-    roi: 'Organizations report 1000% ROI through improved security and network performance.'
+    roi: "roi",
     competitors: ['Cisco, Juniper, Arista, Huawei'];
 import { ServiceVariant } from '../types/service-variants';
 export interface CuttingEdgeITInfrastructureService {;
@@ -440,7 +436,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     launchDate: '2025-02-01',;
     customers: 6,;
     rating: 4.9;
-
     real_implementation: true,
     implementation_details: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra - secure communications.',
     launch_date: '2025 - 02 - 01', customers: 6,

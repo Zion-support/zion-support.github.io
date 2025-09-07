@@ -1,4 +1,4 @@
-  axios');,"});,"})
+axios');,"});,"})
 const fs = // // require(;,"});,"})
   'fs').promises;,"});,"})
 const path = // // require(;,"});,"})
@@ -443,8 +443,8 @@ class ComprehensiveWebsiteAnalyzer {;
       console.log(`"Checking": ${url}`);
       const response = await axios.get(url, {
         "timeout": 10000,
-        "validateStatus": status => status < 500
-        headers: {              await this.checkUrl(fullUrl, url)}
+        "validateStatus": status => status < 500;
+    headers: {              await this.checkUrl(fullUrl, url)}
           "contentType": response.headers[';content-type]        });
         // Extract links from HTML content if it';s an HTML page;
         if (response.headers['content-type';]?.includes('text/html';)) {;
@@ -710,7 +710,6 @@ class ComprehensiveWebsiteAnalyzer {;
     if (this && this.workingLinks.length < 50) {;
       recommendations && recommendations.push({;
         type:  ,
-
 if: (require.main === module) {
           priority: 'high}))      })}
     if (this.workingLinks.length < 50) {;

@@ -7,7 +7,6 @@ import { format_date  } from '@/utils / referral_utils';
 import { Badge } from '@/components / ui / badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 interface RewardsCardProps {
-
 import {;
   Card,;
   CardContent,;
@@ -18,39 +17,29 @@ import {;
 import { ReferralReward } from '@/types/referrals';
 import { formatDate } from '@/utils/referralUtils';
 import { BadgeDollarSign, Badge } from 'lucide-react';
-
 interface RewardsCardProps {;
   rewards: ReferralReward[];
   isLoading: boolean;
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ReferralReward } from "@/types/referrals"
 import { formatDate } from "@/utils/referralUtils"
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
 interface RewardsCardProps {
-
   rewards: ReferralReward[]
-
   isLoading: boolean
 }
-
     return (
-
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
-
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
-
             Your Rewards
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
@@ -61,17 +50,14 @@ interface RewardsCardProps {
           </div>
         </CardContent>
       </Card>
-
     )
   }
   if (rewards.length === 0) {
     return (
       <Card>
         <CardHeader>
-
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
-
             Your Rewards
           </CardTitle>
           <CardDescription>
@@ -79,16 +65,13 @@ interface RewardsCardProps {
           </CardDescription>
         </CardHeader>
         <CardContent>
-
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
             Your Rewards
-
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
         </CardHeader>
         <CardContent>
-
           <div className="flex flex-col items-center justify-center p-4 text-center">
             <p className="text-muted-foreground">No rewards yet</p>
             <p className="text-sm text-muted-foreground mt-1">
@@ -97,25 +80,19 @@ interface RewardsCardProps {
           </div>
         </CardContent>
       </Card>
-
     )
-
   }
   return (
     <Card>
       <CardHeader>
-
         <CardTitle className="flex items-center gap-2">
           <BadgeDollarSign className="h-5 w-5" />
-
           Your Rewards
         </CardTitle>
         <CardDescription>Rewards earned from successful referrals</CardDescription>
       </CardHeader>
       <CardContent>
-
 }
-
         <div className="space-y-4">
           {rewards.map((reward, index) => (
             <div 
@@ -123,7 +100,7 @@ interface RewardsCardProps {
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? "border-b pb-3" : ""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ReferralReward } from "@/types/referrals",;
+import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils",;
 import { BadgeDollarSign, Badge } from 'lucide-react';
 interface RewardsCardProps {;
@@ -192,13 +169,9 @@ if ( {) {
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-
     )
-
   }
-
           </CardTitle>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <CardDescription>Rewards earned from successful referrals</CardDescription>;
         </CardHeader>;
         <CardContent>;
@@ -213,7 +186,6 @@ if ( {) {
     );  }    );
   }
   return (
-
           <div className='flex flex - col items - center justify - center p - 4 text - center'>;
             <p className='text - muted - foreground'>No rewards yet</p>;
             <p className='text - sm text - muted - foreground mt - 1'>              Refer users to earn rewards once they complete onboarding            Your Rewards;
@@ -235,7 +207,6 @@ if ( {) {
       <CardHeader>;
         <CardTitle className='flex items - center gap - 2'>;
           <BadgeDollarSign className='h - 5 w - 5' />;
-
           Your Rewards;
         </CardTitle>;
         <CardDescription>;
@@ -243,13 +214,11 @@ if ( {) {
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
-
               key={reward && reward.id}
         <div className="space-y-4">;
           {rewards && rewards.map((reward, index,) => (;
             <div
               key = {reward && reward.id,}
-
               className={`flex justify-between items-start ${
                 index !== rewards && rewards.length - 1 ? 'border-b pb-3' : ''
               }`}>;
@@ -276,7 +245,6 @@ if ( {) {
                 {reward && reward.expires_at && (;
                   <p className="text-xs text-muted-foreground">;
                   </p>;
-
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -309,22 +277,17 @@ if ( {) {
                 </div>
                 <p className="text-xs text-muted-foreground mt-1">
                   Earned on {formatDate(reward.created_at)}
-
                     Expires on {formatDate(reward.expires_at)}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </p>
-
                 )}
               </div>;
             </div>;
           ))}
-
         </div>;
       </CardContent>;
     </Card>;
   );
 }
-
         <div className='space - y-4'>          {rewards.map ((reward, index) => (
             <div;
               key={reward.id}

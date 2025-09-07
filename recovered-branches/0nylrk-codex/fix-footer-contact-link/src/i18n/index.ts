@@ -1,4 +1,3 @@
-
 import {initReactI18next} from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import enTranslation from './locales/en/translation ;
@@ -10,8 +9,8 @@ import arTranslation from './locales/ar/translation ;
     }
     detection: {
       order: ['localStoragenavigator'];
-      lookupLocalStorage: 'zion_language'
-      caches: ['localStorage']
+      lookupLocalStorage: "lookupLocalStorage",
+    caches: ['localStorage']
     }});
 // For RTL language support
   .use (LanguageDetector) // Detect user language;

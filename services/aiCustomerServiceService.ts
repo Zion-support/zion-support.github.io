@@ -49,7 +49,6 @@ export interface CustomerServiceResponse {
   ai_response?: AIResponse;
   estimatedResolutionTime: string;export class AICustomerServiceService {;
   private apiKey: string;
-
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey
@@ -73,11 +72,9 @@ export interface CustomerServiceResponse {
   }
   async getTicket(ticketId: string): Promise<CustomerTicket> {
     try {
-
       if (!response && response.ok) {
         throw new Error(`Get ticket API error: ${response && response.statusText}`)
       }
-
       const data = await response && response.json();
       return {
         ...data;
@@ -87,7 +84,6 @@ export interface CustomerServiceResponse {
         conversationHistory: data && data.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}
-
     } catch (error) {
       console && console.error('Error getting ticket:', error);
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
@@ -103,8 +99,8 @@ export interface CustomerServiceResponse {
         updatedAt: new Date(data.updatedAt);
         resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined;
         conversationHistory: data.conversationHistory.map((msg: any) => ({
-          ...msg
-          timestamp: new Date(msg.timestamp)}))}
+          ...msg;
+    timestamp: new Date(msg.timestamp)}))}
     } catch (error) {
       console.error('Error getting ticket:', error);
       throw error
@@ -115,12 +111,10 @@ export interface CustomerServiceResponse {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         method: 'PATCH',
         headers: {
-
           'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Update ticket API error: ${response && response.statusText}`)
       }
-
       const data = await response && response.json();
       return {
         ...data;
@@ -130,7 +124,6 @@ export interface CustomerServiceResponse {
         conversationHistory: data && data.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}
-
     } catch (error) {
       console && console.error('Error getting ticket:', error);    } catch (error) {
       console && console.error('Error updating ticket:', error);    } catch (error) {
@@ -167,7 +160,6 @@ export interface CustomerServiceResponse {
         conversationHistory: ticket && ticket.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}))
-
     } catch (error) {
       console && console.error('Error searching tickets:', error);    } catch (error) {
       console && console.error('Error searching tickets:', error);
@@ -204,7 +196,6 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
   attachments: string[],;
   conversationHistory: CustomerMessage[];
 export interface CustomerTicket {;
-
 export interface CustomerTicket {;
   id:string,;
   customerId:string,;
@@ -601,6 +592,4 @@ export class AICustomerServiceService {;
 }
 ;
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
-
 export interface CustomerTicket {;
-

@@ -1,22 +1,15 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-            endDate: endDate?.toISOString()}
+endDate: endDate?.toISOString()}
         }
       })
-
 }
 }
-
 ...form_data;            start_date: start_date?.toISOString (),
             end_date: end_date?.toISOString ()}
         }
       });
 }
 }
-
 import { useState } from 'react',
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -38,20 +31,17 @@ interface ServiceQuoteModalProps {
   onOpenChange: (open: boolean) => void,
   service: ProductListing | null
 }
-
 const BUDGET_RANGES = [
   { label: "Less than $5,000", value: "0-5000" },
   { label: "$5,000 - $10,000", value: "5000-10000" },
   { label: "$10,000 - $25,000", value: "10000-25000" },
   { label: "$25,000 - $50,000", value: "25000-50000" },
   { label: "$50,000+", value: "50000+" }],
-
 const TIMELINE_OPTIONS = [
   { label: "Less than 1 month", value: "lt-1month" },
   { label: "1-3 months", value: "1-3months" },
   { label: "3-6 months", value: "3-6months" },
   { label: "6+ months", value: "6+months" }],
-
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({
     description: '',
@@ -62,16 +52,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),
   const [isSubmitting, setIsSubmitting] = useState(false),
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
   },
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(),
     setIsSubmitting(true),
-
     try {
       // Call Supabase function to process the quote
       const { data, error } = await supabase.functions.invoke('process-quote', {
@@ -86,14 +73,11 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             endDate: endDate?.toISOString()}
         }
       }),
-
       if (error) throw error,
-
       // Show success message
       toast({
         title: "Quote Request Submitted!",
         description: "We've sent your request to the service provider. They will contact you soon."}),
-
       // Close the modal and reset form
       onOpenChange(false),
       setFormData({
@@ -114,17 +98,14 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       setIsSubmitting(false)
     }
   },
-
   const nextStep = () => {
     if (currentStep === 'details') setCurrentStep('timeline'),
     else if (currentStep === 'timeline') setCurrentStep('contact')
   },
-
   const prevStep = () => {
     if (currentStep === 'timeline') setCurrentStep('details'),
     else if (currentStep === 'contact') setCurrentStep('timeline')
   },
-
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -133,7 +114,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             Request Service Quote
           </DialogTitle>
         </DialogHeader>
-
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Step 1: Service Details */}
           {currentStep === 'details' && (
@@ -143,7 +123,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 <p className="text-white text-lg">{service?.title || "Custom Service"}</p>
                 <p className="text-zion-slate-light text-sm mt-1">{service?.category}</p>
               </div>
-
               <div className="space-y-2">
                 <Label htmlFor="description" className="text-white">Project Description</Label>
                 <Textarea
@@ -156,7 +135,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   required
                 />
               </div>
-
               <div className="space-y-2">
                 <Label htmlFor="budget" className="text-white">Estimated Budget</Label>
                 <Select 
@@ -170,7 +148,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                     {BUDGET_RANGES.map((range) => (
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">
 import { useState } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",;
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -192,5 +170,3 @@ interface ServiceQuoteModalProps {;
   service: ProductListing | null;
 }
 ;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

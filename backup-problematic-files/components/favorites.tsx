@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import Head from 'next/head',;
-import Link from 'next/link',;
+import Head from 'next/head';
+import Link from "Link";
 import { TALENT_PROFILES } from '../data/talent',;
 function useFavorites() {;
   const storageKey = 'zion_favorites',;
@@ -14,17 +14,14 @@ function useFavorites() {;
   const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug)),;
   return { favorites, remove }
 }
-
 export default function FavoritesPage() {
   const { favorites, remove } = useFavorites(),
   const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]),
-
   return (
     <div>
       <Head>
         <title>Favorites  Zion AI Marketplace</title>
       </Head>
-
       <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">
         <nav aria-label="Breadcrumb">
           <ol className="flex items-center gap-2">
@@ -34,9 +31,7 @@ export default function FavoritesPage() {
           </ol>
         </nav>
       </div>
-
       <h1 className="text-2xl font-semibold mb-4">Saved Talent</h1>
-
       {profiles.length === 0 ? (
         <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-8 text-center">
           <div className="text-gray-600 dark:text-gray-300">You haven't saved any talent yet.</div>

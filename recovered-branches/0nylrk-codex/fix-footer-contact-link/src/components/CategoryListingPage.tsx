@@ -1,5 +1,3 @@
-
-
 import React from 'react';import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -19,12 +17,10 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/u
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react";
 // Example listing type
 interface Listing {
-
-  id: string
-  title: string
+  id: string;
+    title: string
   description: string
   category: string
-
   subcategory?: string;
   image?: string;
   tags?: string[];
@@ -37,7 +33,6 @@ interface Listing {
   createdAt: string
 }
 interface CategoryListingPageProps {
-
   title: string
   description: string
   listings: Listing[]
@@ -107,14 +102,12 @@ export function CategoryListingPage({
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
-
 // Example listing type;
 interface Listing {;
   id: string,;
   title: string,,
   description: string,;
   category: string,;
-
 import { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -127,10 +120,8 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
 // Example listing type;
 // Example listing type}
 ;
-
 }
 ;
-
 interface CategoryListingPageProps {;
   title: string,,
   description: string,;
@@ -138,7 +129,6 @@ interface CategoryListingPageProps {;
   sortOptions?: { label: string, value: string }[],;
   filterOptions?: { label: string, value: string }[];
 }
-
   return (
     <>
       <Header />
@@ -221,13 +211,11 @@ export function CategoryListingPage({;
           <div className="text-center mb-12">;
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-
               {description}
                 </SelectContent>;
               </Select>;
             </div>;
           </div>;
-
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -247,7 +235,6 @@ export function CategoryListingPage({;
                   rating={listing.rating}
             </p>;
           </div>;
-
           {/* Listings Grid */}
           {processedListings && processedListings.length > 0 ? (;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -266,7 +253,6 @@ export function CategoryListingPage({;
                   reviewCount={listing && listing.reviewCount}
                 />;
               ))}
-
                   setSearchQuery(""),
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >

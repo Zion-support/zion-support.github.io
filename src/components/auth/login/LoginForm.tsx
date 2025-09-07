@@ -4,8 +4,6 @@ import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {
   Form,
   FormControl,
@@ -65,21 +63,17 @@ if ( {) {
           if (.includes ('email not confirmed')) {
   $2
 }
-
           ) {
             error_message =;
               'Your email is not confirmed. Please check your inbox for a confirmation link.';
-
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
-
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import {
@@ -89,18 +83,14 @@ import {
   FormItem,
   FormLabel,
   const form = useForm<LoginFormValues>({
-
         let errorMessage = 'Login failed. Please try again.'; // Default generic error
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (result?.error && result?.error?.message) {
           if (
             result.error.message.toLowerCase().includes('email not confirmed')
           ) {
             errorMessage =
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
-
   FormMessage} from "@/components/ui/form",
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
 import { Checkbox } from "@/components/ui/checkbox",
@@ -109,9 +99,7 @@ const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters"),
   rememberMe: z.boolean()}),
-
 type LoginFormValues = z.infer<typeof loginSchema>,
-
 export function LoginForm() {
   const { isLoading, login } = useAuth(),
   const [showPassword, setShowPassword] = useState(false),
@@ -119,27 +107,21 @@ export function LoginForm() {
   const [isResending, setIsResending] = useState(false),
   const [verificationMessage, setVerificationMessage] = useState(''),
   const router = useRouter(),
-  
   const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema) as any
+    resolver: zodResolver(loginSchema) as any;
     defaultValues: {
-
       email: "",
       password: "",
       rememberMe: false}}),
-
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return,
-
     try {
       setIsSubmitting(true)
       // Pass email and password to the login function
-
           } else {
             error_message = result.error.message;
           }
         }
-
       const response = await fetch ('/api / auth / resend - verification - email', {
         method: 'POST',
         headers: { 'Content - Type': 'application / json' },
@@ -155,7 +137,6 @@ if ( {) {
       } else {
         setVerificationMessage (
           data.message || 'Failed to resend verification email.');
-
       }
     } catch (err) {
       setVerificationMessage ('Failed to resend verification email.');
@@ -174,38 +155,28 @@ if ( {) {
     }
     router.push (`/verify - status?email=${encodeURIComponent (email)}`);
   }
-
 import {;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
   FormLabel,;
-
       } else {;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         fireEvent('login', { method: 'email' });
       }
     } finally {;
       setIsSubmitting(false);
     }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {;
       const response = await fetch('/api/auth/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
-
       }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (err) {;
       setVerificationMessage('Failed to resend verification email.');
     } finally {;
       setIsResending(false);
     }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Form {...form}>
       {form.formState.errors.root && (
@@ -213,9 +184,7 @@ import {;
           <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
         </Alert>
       )}
-
       <form;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         onSubmit={form.handleSubmit(onSubmit, (errors) => {;
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
           if (firstError) {;
@@ -230,17 +199,13 @@ import {;
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "email"> }) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
-
               <FormControl>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                 </div>
               </FormControl>
               <FormMessage className="text-red-400" />
             </FormItem>
-
         className="space-y-6";
       >;
         <FormField;
@@ -259,14 +224,11 @@ import {;
                     {...field}
                   />
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
-
                 </div>
               </FormControl>
               <FormMessage className='text-red-400' />
             </FormItem>
-
           )}
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         />;
         <FormField;
           control={form.control}
@@ -362,24 +324,18 @@ import {;
                   </Button>;
                 </div>;
               </FormControl>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <FormControl>
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
           }) => (;
             <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
               <FormControl>;
-
               </FormControl>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
               </div>
             </FormItem>
           )}
-
           </div>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="text-sm">
             <Link href="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
               Forgot password?
@@ -387,9 +343,7 @@ import {;
           </div>
         </div>
         <Button
-
             Check status
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </Button>
         </div>
         <p className="text-sm text-center mt-4">
@@ -400,13 +354,12 @@ import {;
       </form>
     </Form>
   )
-
 }setIsResending (true);'
 setVerificationMessage ('')
 try {'
   const response = await fetch ('/api/auth/resend-verification-email', {'
-  method: 'POST'
-headers: {'
+  method: "method",
+    headers: {'
   'Content-Type': 'application/json'
 }
 body: JSON.stringify ({
@@ -429,7 +382,6 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
 })
-
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)
@@ -450,10 +402,7 @@ if (!email) {'
   isResending ? 'Sending...': 'Resend / Verify e-mail'
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
 }'"}
-
             Create account;
           </Link>;
         </p>;
       </form>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

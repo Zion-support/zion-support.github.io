@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-
   Phone
   Mail
   MapPin
@@ -23,7 +22,6 @@ import { motion } from 'framer-motion';
   Youtube
   Instagram;} from 'lucide-react';import {
 import { 
-
   Phone,
   Mail,
   MapPin,
@@ -52,8 +50,8 @@ import {
   Twitter, Linkedin, Github, Youtube, Instagram
 const serviceCategories = [
   {
-    title: 'AI & Consciousness'
-    icon: Brain
+    title: "title",
+    icon: Brain;
     services: [
     services: [;
       {
@@ -144,7 +142,6 @@ const serviceCategories = [
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
               >
                 <div className='flex items-center space-x-3'>
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -183,14 +180,10 @@ const serviceCategories = [
               </motion.div>
             ))}
           </div>
-
                       {service.name}
-
           </div>;
-
           {/* Additional Links */}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
-
                       key={service.name}
                       href={service.href}
                       className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration-200 text-sm";
@@ -229,9 +222,7 @@ const serviceCategories = [
                     className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
-
                   >
-
                     {link.name}
                   </Link>
                 ))}
@@ -242,12 +233,9 @@ const serviceCategories = [
                 ))}
               </div>
             </div>
-
                     {link.name}
-
               </div>;
             </div>;
-
                     className="block text - gray - 400 hover:text - white transition - colors duration-200 text-sm";
                   >;
                 ))}
@@ -277,7 +265,6 @@ const serviceCategories = [
                 ))}
               </div>
             </div>
-
             {/* Social Links */}
             <div>
               <h4 className='text-white font-semibold mb-4'>Follow Us</h4>
@@ -286,9 +273,7 @@ const serviceCategories = [
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <a
-
             {/* Social Links */}
-
                     key={social.name}
                     href={social.href}
                     className={`w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
@@ -299,7 +284,6 @@ const serviceCategories = [
             </div>
           </div>
         </div>
-
                   </Link>))}
               </div>;
             </div>;
@@ -333,7 +317,6 @@ const serviceCategories = [
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
-
               >
                 Stay Ahead of the Future
               </motion.h3>
@@ -342,7 +325,6 @@ const serviceCategories = [
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
-
               >
                 Get the latest insights on AI, quantum computing, and emerging
                 technologies delivered to your inbox.
@@ -353,7 +335,6 @@ const serviceCategories = [
               >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
-              
               <motion.div
                 className='text-gray-400 mb-6 max-w-2xl mx-auto'>;
                 Get the latest insights on AI, quantum computing, and emerging;
@@ -365,7 +346,6 @@ const serviceCategories = [
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
-
               >
                 <input
                   type='email'

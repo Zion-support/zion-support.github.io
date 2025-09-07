@@ -1,20 +1,14 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export { SidebarMenuItem, SidebarMenuGroup }
 export { SidebarMenuItem, SidebarMenuGroup }
 }
 export { SidebarMenuItem, SidebarMenuGroup }
-
 SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
-
 export { SidebarMenuItem, SidebarMenuGroup };
 export { SidebarMenuItem, SidebarMenuGroup }
 };
 export { SidebarMenuItem, SidebarMenuGroup };
-
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
-
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -25,11 +19,9 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   href?: string,
   target?: string,
   badge?: React.ReactNode
-
 import React, { forwardRef } from "react";
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ChevronDown } from 'lucide-react';
-import { cn } from "@/lib/utils",;
+import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types",;
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {;
   icon?: React.ReactNode,;
@@ -96,14 +88,11 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
     );
   }
 ),
-
 SidebarMenuItem.displayName = "SidebarMenuItem",
-
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string,
   children: React.ReactNode
 }
-
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {
   return (
     <div className="space-y-1" {...props}>
@@ -112,7 +101,6 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
     </div>
   )
 },
-
 export { SidebarMenuItem, SidebarMenuGroup },
 ),;
 SidebarMenuItem.displayName = "SidebarMenuItem",;
@@ -129,5 +117,3 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
     </div>;
   );
 },;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

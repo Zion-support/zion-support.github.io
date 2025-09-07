@@ -1,5 +1,4 @@
 interface AIMatchingResultsProps {
-
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
   isLoading?: boolean
@@ -9,11 +8,8 @@ interface AIMatchingResultsProps {
   onSelectMatch?: (match: MatchResultItem,) => void
   isLoading?: boolean
   projectDescription?: string
-
   serviceType?: string
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const categories = {
     all: matches,
     talent: matches.filter (match =>;
@@ -22,7 +18,6 @@ interface AIMatchingResultsProps {
       match.category.toLowerCase ().includes ('service')),
     equipment: matches.filter (match =>;
       match.category.toLowerCase ().includes ('equipment')),
-
   }
   // Get the icon for a category;
   const getCategoryIcon = (category: string) =>: any {
@@ -49,29 +44,23 @@ if ( {) {
         </div>;
       </div>);
   }
-
   }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className='space-y-4'>;
       <Tabs
         defaultValue='all'
         value={activeTab}
         onValueChange={setActiveTab}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                             ? 'bg-zion-cyan'
                             : match && match.category.toLowerCase().includes('service')
                               ? 'bg-zion-purple'
                               : 'bg-green-500'
                         )}
-
                       />;
                       <div className='flex-1 p-4'>;
                         <div className='flex items-start gap-4'>;
                           <Avatar className='h-12 w-12 border border-zion-blue-light'>;
                             {match && match.image ? (;
-
                               <AvatarImage
                                 src={match && match.image}
                                 alt={match && match.title}
@@ -81,7 +70,6 @@ if ( {) {
                                 <CategoryIcon className='h-6 w-6 text-zion-purple' />;
                               </AvatarFallback>;
                             )}
-
   // Check condition
 if ( {) {
   $2
@@ -169,7 +157,6 @@ if ( {) {
                             <div className='flex justify - between'>;
                               <div>;
                                 <h3 className='font - medium text - white'>;
-
                                   {match.title}
                                 </h3>;
                                 <p className='text - zion - slate - light text - sm'>;
@@ -180,9 +167,7 @@ if ( {) {
                                 <div className='text - right ml - 2'>;
                                   <div className='font - medium text - white'>;
                                     ${match.price}
-
                           </Avatar>;
-
                           <div className='flex-1'>;
                             <div className='flex justify-between'>;
                               <div>;
@@ -203,34 +188,26 @@ if ( {) {
                                       .toLowerCase();
                                       .includes('talent');
                                       ? '/hour';
-
                                       : ''}
                                   </div>;
                                 </div>;
                               )}
-
                                   </div>
                                 </div>
                               )}
                             </div>
-
                           </div>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         </div>;
                       </div>;
                     </div>;
-
             )}
           </TabsContent>;
         ))}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
       </Tabs>;
     </div>;
   );
 }
-
                   </Card>);
               })) : (
               <div className='text - center py - 8 text - zion - slate - light'>;
@@ -239,5 +216,3 @@ if ( {) {
           </TabsContent>))}
       </Tabs>;
     </div>);
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

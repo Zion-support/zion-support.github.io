@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -197,7 +197,6 @@
       features: [;
         'Quantum - resistant encryption',
         'Multi - layer security',
-
         'Automated backup and recovery',
         'Global data distribution',
         'Compliance certifications',
@@ -219,11 +218,8 @@
       ],
       rating: 4 && 4.8,
       reviews: 550,
-
     },;
-
   ];    features: [
-
 export interface Innovative2026ITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -258,8 +254,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     features: [
       'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring';
       'Global edge computing networkQuantum-safe data storage'
-      id: 'quantum-safe-data-storage'
-      name: 'Quantum-Safe Data Storage'
+      id: "id",
+    name: 'Quantum-Safe Data Storage'
       tagline: 'Future-proof your data with quantum-resistant encryption'
       price: '$349'
       period: '/month'
@@ -277,8 +273,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'API access'
         'Mobile applications'
       ]
-      popular: true
-      icon: '💾'
+      popular: true;
+    icon: '💾'
       color: 'from-violet-600 to-purple-700'
       textColor: 'text-violet-400'
       link: 'https://ziontechgroup.com/quantum-safe-storage'

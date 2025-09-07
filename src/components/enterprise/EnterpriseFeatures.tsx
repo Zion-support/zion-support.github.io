@@ -1,8 +1,6 @@
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 const features = [
   {
-    title: 'Private Hiring Portal'
+    title: "title",
     description:
       'Create a secure, private hiring portal accessible only to your team members.'
     icon: Shield
@@ -38,9 +36,7 @@ const features = [
     icon: Globe
   }
 ]
-
             <div
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               key={feature.title}
               className='bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md'            >
               <div className='h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5'>
@@ -48,12 +44,9 @@ const features = [
               </div>
               <h3 className='font-bold text-xl mb-3'>{feature.title}</h3>
               <p className='text-muted-foreground'>{feature.description}</p>            </div>
-
             </div>
-
 import React from "react",
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
-
 const features = [
   {
     title: "Private Hiring Portal",
@@ -79,7 +72,6 @@ const features = [
     title: "Global Access",
     description: "Connect with talent across multiple regions with localized interfaces.",
     icon: Globe}],
-
 export function EnterpriseFeatures() {
   return (
     <section id="features" className="py-20 px-4 md:px-6 bg-muted/50">
@@ -92,10 +84,7 @@ export function EnterpriseFeatures() {
             Our enterprise solutions offer powerful tools designed for large teams and complex hiring needs
           </p>
         </div>
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
-
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
           {features.map (feature => (
             <div;
@@ -104,5 +93,3 @@ export function EnterpriseFeatures() {
               <div className='h - 12 w - 12 rounded - lg bg - primary / 10 flex items - center justify - center mb - 5'>;
                 <feature.icon className='h - 6 w - 6 text - primary' />;
               </div>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

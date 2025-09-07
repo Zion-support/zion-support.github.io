@@ -1,56 +1,9 @@
-<<<<<<< HEAD
-module.exports = {
-  apps: [
-    {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      name: 'auto-fix',
-      script: 'scripts/pm2/auto-fix.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      log_file: 'logs/pm2/auto-fix.log',
-      error_file: 'logs/pm2/auto-fix-error.log',
-      out_file: 'logs/pm2/auto-fix-out.log',
-    },
-    {
-      name: 'healthcheck',
-      script: 'scripts/pm2/healthcheck.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '128M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      log_file: 'logs/pm2/health.log',
-      error_file: 'logs/pm2/health-error.log',
-      out_file: 'logs/pm2/health-out.log',
-    },
-    {
-      name: 'code-quality-monitor',
-      script: 'scripts/pm2/code-quality-monitor.js',
-<<<<<<< HEAD
->>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
-      name: 'bolt-zion-app',
-=======
-module.exports = {
-  apps: [
-    {
-      name: 'ci-cd-pipeline',
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
       name: 'bolt-zion-app',
       name: 'ci-cd-pipeline',
       name: 'ci-cd-pipeline',
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-      script: 'npm',
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6;
+    script: 'npm',
       args: 'run build',
       cwd: '/workspace',
       instances: 1,
@@ -58,18 +11,6 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'code-quality-monitor',
-        QUALITY_THRESHOLD: '80',
-        AUTO_FIX_CRITICAL: 'true',
-=======
-        NODE_ENV: 'production'
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
         NODE_ENV: 'production',
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       },
@@ -81,20 +22,6 @@ module.exports = {
     {
 name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
-        NODE_ENV: 'production',
-      },
-      log_file: 'logs/pm2/preview.log',
-      error_file: 'logs/pm2/preview-error.log',
-      out_file: 'logs/pm2/preview-out.log',
-    },
-    {
-      name: 'auto-fix',
-=======
-      name: 'continuous-automation',
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
       name: 'continuous-automation',
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -106,19 +33,6 @@ name: 'auto-commit-fixes',
       watch: false,
       max_memory_restart: '1G',
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        NODE_ENV: 'production',
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'auto-commit-fixes',
-        COMMIT_FREQUENCY: 'hourly',
-        AUTO_PUSH: 'false',
-=======
-        NODE_ENV: 'production'
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
       },
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/automation-error.log',
@@ -127,9 +41,6 @@ name: 'auto-commit-fixes',
       time: true,
     },
     {
-<<<<<<< HEAD
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
@@ -176,27 +87,6 @@ script: 'node',
       watch: false,
       max_memory_restart: '1G',
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        NODE_ENV: 'production',
-      },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      error_file: './logs/automation-error.log',
-      out_file: './logs/automation-out.log',
-      log_file: './logs/automation-combined.log',
-      time: true
-    },
-    {
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-      name: 'dependency-monitor',
-      script: 'scripts/pm2/dependency-monitor.js',
-<<<<<<< HEAD
->>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
-=======
-        NODE_ENV: 'development',
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -205,13 +95,6 @@ script: 'node',
       log_file: 'logs/pm2/code-quality-monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-  ]
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     },
     {
       name: 'auto-commit-fixes',

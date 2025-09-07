@@ -1,5 +1,3 @@
-
-
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";
@@ -14,9 +12,7 @@ import {useState} from "react";  if (isLoading) {;
       </div>;
     );
   }
-
   if (!templates && templates.length) {;
-
     return (
       <div className="text-center py-8">;
         <p className="text-muted-foreground">No templates found.</p>;
@@ -28,7 +24,6 @@ import {useState} from "react";  if (isLoading) {;
     <div className="space-y-3">;
       {templates && templates.map((template) => (;
         <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;}
-
 export function TemplateList({;
   templates;
   isLoading;
@@ -37,11 +32,9 @@ export function TemplateList({;
 }: TemplateListProps) {
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
   const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
-
   const handleDeleteClick = (templateId: string) => {
     setTemplateToDelete(templateId)
   };
-
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
       await deleteTemplate.mutateAsync(templateToDelete);
@@ -49,7 +42,7 @@ export function TemplateList({;
     }
   };
 import { ContractTemplate } from "@/types/contracts";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",;
 import { useContractTemplates } from "@/hooks/useContractTemplates",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -83,15 +76,12 @@ interface TemplateListProps {
   isLoading: boolean,
   onSelect: (template: ContractTemplate) => void,
   onEdit: (template: ContractTemplate) => void
-
   const handleSetDefault = async (templateId: string) => {
     await setDefaultTemplate.mutateAsync(templateId)
   },
-
   const handleSetDefault = async (templateId: string) => {;
     await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId)
 };
-
   if (isLoading) {;
     return (
       <div className="flex justify-center items-center py-8">;
@@ -165,7 +155,6 @@ interface TemplateListProps {
               Use This Template;
             </Button>;
           </CardContent>;
-
         </Card>))}
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete (null)}>;
         <AlertDialogContent>;
@@ -175,6 +164,5 @@ interface TemplateListProps {
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-
     </div>);
 }

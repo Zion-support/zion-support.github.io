@@ -1,8 +1,5 @@
-
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
-
+const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
     useAuth();
-
   return (
     <div className="mt-6">
       <div className="relative">
@@ -16,7 +13,6 @@
         </div>
       </div>
       <div className="mt-6 grid grid-cols-4 gap-3">
-
         <Button
           type="button"
           variant="outline"
@@ -65,14 +61,12 @@
           onClick={() => loginWithTwitter()}
           disabled={isLoading}  )
 import { Facebook, Twitter } from "lucide-react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth",;
 import { Web3Login } from "./Web3Login",;
-
 export function SocialLogin() {;
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
     useAuth();
-
   return (    <div className="mt-6">;
       <div className="relative">;
         <div className="absolute inset-0 flex items-center">;

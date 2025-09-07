@@ -1,16 +1,11 @@
-
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
-
 export function AdminHeader() {
-
 export function AdminHeader() {;
-
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
   return (
-
 import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Download, Settings } from "lucide-react",;
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;
 export function AdminHeader() {;
@@ -37,7 +32,6 @@ export function AdminHeader() {;
       </div>;
 }}
 ;
-
 }
       ;
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;

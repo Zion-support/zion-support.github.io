@@ -1,10 +1,8 @@
-
-
 export default function CookieConsent() {;
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [preferences, setPreferences] = useState({
-    necessary: true
+    necessary: true;
     analytics: false
     marketing: false
     functional: false
@@ -22,7 +20,6 @@ export default function CookieConsent() {;
       marketing: true
       functional: true
     }
-
 export default function CookieConsent() {;
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -32,14 +29,12 @@ export default function CookieConsent() {;
     marketing: false,;
     functional: false,;
   });
-
   useEffect(() => {;
     const consent = localStorage && localStorage.getItem("cookie-consent");
     if (!consent) {;
       setIsVisible(true);
     }
   }, []);
-
   const acceptAll = () => {;
     const allAccepted = {;
       necessary: true,;

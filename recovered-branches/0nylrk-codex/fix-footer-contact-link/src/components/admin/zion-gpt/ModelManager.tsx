@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react',
 import { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
@@ -12,11 +11,8 @@ import {Badge} from "@/components/ui/badge";
 import {Loader2, RefreshCw, Play, CheckCircle, AlertCircle} from "lucide-react";
 import {supabase} from '@/integrations/supabase/client';
 import {ModelConfig} from '@/utils/zion-gpt';interface ModelVersionData extends ModelConfig {
-
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
-
   errorMessage?: string
-
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -74,7 +70,7 @@ if (throw error) {
     }
   }
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",;
@@ -109,17 +105,14 @@ export function ZionGPTModelManager() {;
           ...(data && data.status === 'succeeded' ? { active: true } : {});
         });
         .eq('id', modelId);
-
     } catch (error) {;
       console && console.error(`Error checking status for model ${modelId}:`, error);
     } finally {;
       setActiveJobs(prev => ({ ...prev, [modelId]: false }));
     }
   };                    )}
-
                   </TableCell>;
                 </TableRow>;
-
               ))}
             </TableBody>;
           </Table>;

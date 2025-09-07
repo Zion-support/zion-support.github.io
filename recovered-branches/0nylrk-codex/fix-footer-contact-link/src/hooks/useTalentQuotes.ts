@@ -1,4 +1,3 @@
-
 import { useState  } from 'react';
 import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
 import { quoteRequestService  } from '@/services/quoteRequestService';
@@ -13,12 +12,10 @@ import { useAuth  } from '@/hooks/useAuth';  const { toast } = useToast();
     queryKey: ['quotestalent', talentId];    
     return true
   }),
-
   // Mark as viewed/responded mutation
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
-
     onSuccess: (_, variables) => {
       let message = "Status updated";
       if (variables && variables.status === 'in_review') {
@@ -27,8 +24,8 @@ import { useAuth  } from '@/hooks/useAuth';  const { toast } = useToast();
         message = "Quote marked as responded"
       }
       toast({
-        title: message
-        description: "The quote request status has been updated"        variant: "destructive"
+        title: message;
+    description: "The quote request status has been updated"        variant: "destructive"
       })
     }
   });
@@ -131,7 +128,6 @@ import { useAuth  } from '@/hooks/useAuth';  const { toast } = useToast();
 }
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
-
     setArchiveFilter,
     markAsViewed: (id: string) => 
       updateStatusMutation && updateStatusMutation.mutate({ id, status: 'in_review' });

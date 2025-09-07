@@ -1,6 +1,3 @@
-
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const ServicePage: NextPage<Props> = () => {
   return (<> <Head> <title>Instagram Content Scheduler | Services</title> <meta name="description" content="Auto-generate posts from blog feeds and schedule with analytics." /> </Head> <main> <h1>InstagramContentScheduler</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default ServicePage;  return (
     <>
@@ -16,7 +13,6 @@ const ServicePage: NextPage<Props> = () => {
     </div>
   )
 }
-
  //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
 const ServicePage: NextPage<Props> = () => {;
   return (<> <Head> <title>Instagram Content Scheduler | Services</title> <meta name="description" content="Auto-generate posts from blog feeds and schedule with analytics." /> </Head> <main> <h1>InstagramContentScheduler</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default ServicePage;  return (
@@ -34,7 +30,6 @@ const ServicePage: NextPage<Props> = () => {;
   );
 };
 export default ServicePage;
-
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record < string never>;
 const ServicePage: NextPage < Props> = () => {
   return (<> <Head> <title > Instagram Content Scheduler | Services</title> <meta name="description" content="Auto - generate posts from blog feeds and schedule with analytics." /> </Head> <main> <h1 > InstagramContentScheduler</h1> <p > Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default ServicePage;  return (
@@ -53,5 +48,3 @@ const ServicePage: NextPage < Props> = () => {
 ;
 export default ServicePage;
 ;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

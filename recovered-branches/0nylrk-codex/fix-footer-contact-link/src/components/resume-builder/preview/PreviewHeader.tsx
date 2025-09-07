@@ -13,7 +13,6 @@ import {useIsMobile} from '@/hooks/use-mobile';interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void;
 }
-
   const handleBrowserPrint = () => {
     setIsPrinting(true);
     // Inject print-specific CSS only for the duration of printing
@@ -23,7 +22,7 @@ import {useIsMobile} from '@/hooks/use-mobile';interface PreviewHeaderProps {
         body * {
           visibility: hidden
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, FileText, Link } from 'lucide-react',;
+import { ArrowLeft, FileText, Link } from 'lucide-react';
 import { PdfExportButton } from '../PdfExportButton',;
 import { Resume } from '@/types/resume',;
 import { useState } from 'react',;
@@ -51,10 +50,8 @@ interface PreviewHeaderProps {;
       }
     `;
     document.head.appendChild(style);
-
     // Trigger print dialog
     window.print();
-
     // Remove the temporary style element after printing
     setTimeout(() => {
       document.head.removeChild(style),
@@ -79,7 +76,6 @@ interface PreviewHeaderProps {;
           <FileText className="h-4 w-4" />
           Print
         </Button>
-
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
           Add to Profile
@@ -126,7 +122,6 @@ interface PreviewHeaderProps {;
     </div>);
 }
   ),;}
- 
 }`;
 document.head.appendChild (style);
 //Trigger print dialog window.print ();
@@ -150,7 +145,6 @@ document.head.appendChild (style);
 }
 }
 ;
-
   )
 }
 ;

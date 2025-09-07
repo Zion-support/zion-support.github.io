@@ -1,4 +1,4 @@
-  FormControl,
+FormControl,
   FormField,
   FormItem,
 FormMessage,;
@@ -8,7 +8,6 @@ interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string;
 }
-
 import {;
   Form,;
   FormControl,;
@@ -17,9 +16,7 @@ import {;
   FormMessage,;
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
 interface ReplyFormProps {;
-
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
 }
@@ -30,11 +27,9 @@ import { Textarea  } from '@/components / ui / textarea';
 import {
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
-
   Form,
   FormControl,
   FormField,
@@ -42,7 +37,6 @@ import {
 FormMessage,;
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
   return (
     <Card>;
       <CardContent className="pt-6">;
@@ -151,22 +145,17 @@ export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
           </form>;
         </Form>;
       </CardContent>;
-
 FormMessage,;
 } from "@/components/ui/form";
-
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 };
-
     setIsSubmitting(true);
     try {;
       (await onSubmit(values && values.content), form && form.reset());
     } finally {;
       setIsSubmitting(false);
     }
-
   },
-
   return (
     <Card>;
       <CardContent className="pt-6">;
@@ -179,7 +168,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
                 <FormItem>;
                   <FormControl>;
                     <Textarea
-
 export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
   const [is_submitting, setIsSubmitting] = useState (false);
 ;
@@ -210,7 +198,6 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                 <FormItem>;
                   <FormControl>;
                     <Textarea;
-
                       placeholder={
                         parent_id;
                           ? "Write your reply...";
@@ -221,26 +208,22 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                     />;
                   </FormControl>;
                   <FormMessage />;
-
                 </FormItem>)}
             />;
             <div className="mt - 4 flex justify-end">;
               <Button type="submit" disabled={is_submitting}>;
                 {is_submitting ? "Submitting..." : "Post Reply"}
-
               </Button>;
             </div>;
           </form>;
         </Form>;
       </CardContent>;
-
     </Card>);
 }
 ;
 export default ReplyForm;
 ;
 } from "@/components/ui/form";
-
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
@@ -249,7 +232,6 @@ interface ReplyFormProps {
 interface ReplyFormValues {
   content: string;
 }
-
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<ReplyFormValues>({
@@ -266,7 +248,6 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
     }
   }
   };
-
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { Button } from "@/components/ui/button",
@@ -279,15 +260,13 @@ import {
   FormMessage
 } from "@/components/ui/form",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
-
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>,
   parentId?: string
-import { useState } from "react",;
+import { useState } from "react";
 import { useForm } from "react-hook-form",;
 import { Button } from "@/components/ui/button",;
 import { Textarea } from "@/components/ui/textarea",;
-
 import {;
   Form,;
   FormControl,;
@@ -296,13 +275,10 @@ import {;
   FormMessage,;
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
 interface ReplyFormProps {;
-
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
 }
-
 import { useState  } from './react';
 import { use_form  } from './react - hook - form';
 import { Button  } from '@/components / ui / button';
@@ -310,13 +286,10 @@ import { Textarea  } from '@/components / ui / textarea';
 import {
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
-
 interface ReplyFormValues {;
-
   content: string;
 }
     setIsSubmitting(true);
@@ -325,7 +298,6 @@ interface ReplyFormValues {;
     } finally {;
       setIsSubmitting(false);
     }
-
   }
   return (
     <Card>;
@@ -363,7 +335,6 @@ interface ReplyFormValues {;
     </Card>
   )
 },
-
     </Card>;
   ),;
 },;
@@ -392,9 +363,7 @@ export default ReplyForm;
 );
 }
 export default ReplyForm;
-
 export default ReplyForm;
-
   );
 }
 export default ReplyForm;

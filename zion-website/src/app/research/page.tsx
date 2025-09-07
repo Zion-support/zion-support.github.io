@@ -1,6 +1,6 @@
 import {
   {
-    metric: 'Patents Filed'
+    metric: "metric",
     value: '25+'
     description: 'Intellectual property protecting our innovations'}
   {
@@ -42,7 +42,6 @@ import {
             Our research spans the cutting edge of AI and technology, driving innovation
             and advancing the state of the art.          </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {researchAreas.map((area, index) => (
             <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
@@ -315,5 +314,4 @@ import {
     </div>
   )
 };
-
 export default Page;

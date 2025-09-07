@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -28,9 +28,7 @@
     mobile: string;
     email: string;
     address: string;
-
   {
-
 =======      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -47,7 +45,6 @@
   {];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -72,11 +69,10 @@
     ],
     popular: true,
     icon: '🌐',
-    marketPosition:
-      'Advanced edge orchestration platform competing with AWS Greengrass and Azure IoT Edge'
+    marketPosition: "marketPosition",
     targetAudience:
       'IoT companies, Manufacturing, Smart cities, Transportation, Healthcare'
-    trialDays: 30
+    trialDays: 30;
     setupTime: '2 weeks'
     category: 'Edge Computing'
     realService: true
@@ -583,6 +579,5 @@
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
 export interface AdvancedITService {;
-
   }
 ];

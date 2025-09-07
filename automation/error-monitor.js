@@ -148,21 +148,17 @@ class ErrorMonitor {
         }
       }
     }
-
             timestamp: new Date().toISOString(),
           });
-
     );
         }
       }
     }
-
 =    return errors;
   }
   parseESLintErrors(output) {
     const errors = [];
     const lines = output.split('\n');<
-
     );
       }
     }
@@ -221,8 +217,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         message: error.message,
         timestamp: new Date().toISOString()
 ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-        timestamp: new Date().toISOString()
+ursor/fix-syntax-push-and-merge-to-main-40de;
+    timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ========        timestamp: new Date().toISOString()      });
     }

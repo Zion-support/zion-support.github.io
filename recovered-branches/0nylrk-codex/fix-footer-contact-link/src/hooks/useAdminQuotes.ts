@@ -1,11 +1,9 @@
-
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 import { useToast } from '@/components/ui/use-toast';
 import type { DateRange } from '@/types/dateRange';
-
 export const useAdminQuotes = () => {
 export const useAdminQuotes = () => {;    enabled: true});
   // Filter quotes based on selected filters
@@ -25,9 +23,8 @@ export const useAdminQuotes = () => {;    enabled: true});
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
     onSuccess: () => {
       toast({
-        title: "Status updated"
-        description: "The quote request status has been updated"
-
+        title: "title",
+    description: "The quote request status has been updated"
     };
     onError: (error: Error) => {
       toast({
@@ -136,7 +133,6 @@ export const useAdminQuotes = () => {;    enabled: true});
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }
-
     updateStatus: (id: string, status: QuoteStatus) => 
       updateStatusMutation && updateStatusMutation.mutate({ id, status });
     toggleArchive: (id: string, isArchived: boolean) => 

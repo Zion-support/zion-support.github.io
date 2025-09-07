@@ -1,4 +1,4 @@
- trace: on-first-retry'
+trace: on-first-retry'
 }
  trace: on-first-retry' 
 // Playwright.config utility
@@ -7,9 +7,7 @@ export const Playwright.config = () => {
   return null
 };
 reporter: [ ['list'], ['json', {
-
   outputFile: playwright-logs/test-results && results.json' 
-
 }], ['html', {
   outputFolder: playwright-logs/html-report', open: never'
 }]];
@@ -26,7 +24,7 @@ reporter: [ ['list'], ['json', {
 }
 // {
   // name: webkit', // use: {
-    timeout: 120 * 1000, // 2 minutes timeout for server to start
+    timeout: 120 * 1000, // 2 minutes timeout for server to start;
     stdout: pipe', // Pipe stdout to the console'    stderr: pipe', // Pipe stderr to the console'  }
   // Optional: Define projects for different browsers
   // projects: [

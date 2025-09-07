@@ -23,7 +23,6 @@ export default function PostJob() {
       </div>
     );
   }
-
   return (
     <>
       <SEO
@@ -62,7 +61,7 @@ export default function PostJob() {
   }
   return (
 import { Header } from "@/components/header";
-import { Footer } from "@/components/Footer",;
+import { Footer } from "@/components/Footer";
 import { JobPostingForm } from "@/components/jobs",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { SEO } from "@/components/SEO",;

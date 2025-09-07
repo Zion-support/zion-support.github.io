@@ -8,9 +8,7 @@ export /**
 function ClientOnboardingSteps() {
   const onboarding_status = useOnboardingStatus ();
   const steps: OnboardingStep[] = [;
-
     {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       id: 'response',
       label: 'Receive your first application',
       completed: onboarding_status.response_received,
@@ -20,14 +18,11 @@ function ClientOnboardingSteps() {
   ];
   return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client - dashboard",
       action: "Check Dashboard"}],
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       link: "/client-dashboard",
       action: "Check Dashboard"}],
-  
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
 import React from "react";
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",;
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react';
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",;
 export function ClientOnboardingSteps() {;
@@ -53,9 +48,7 @@ export function ClientOnboardingSteps() {;
       action: "Check Dashboard"}];
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
-
   const steps: OnboardingStep[] = [
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       id: "post-job",
       label: "Post your first job",
@@ -71,5 +64,3 @@ export function ClientOnboardingSteps() {;
     {
       id: "response",
       label: "Receive your first application",
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

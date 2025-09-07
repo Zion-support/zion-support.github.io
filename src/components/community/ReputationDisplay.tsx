@@ -1,28 +1,19 @@
-
-
 import { Trophy } from 'lucide-react'
-
 interface ReputationDisplayProps {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   reputation: number,
   size?: 'sm' | 'md' | 'lg'
 }
-
 export const ReputationDisplay = ({ 
   reputation,
-
   size = 'md' 
 }: ReputationDisplayProps) => {
-  // Calculate next milestone
-
-      progress: 'h-1',  // Styling based on size
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+  // Calculate next milestone;
+    progress: 'h-1',  // Styling based on size
   const sizeClasses = {
     sm: {
-      container: "text-xs"
-      icon: "w-3 h-3"
+      container: "container",
+    icon: "w-3 h-3"
       progress: "h-1"
-
     }
     md: {
       container: "text-sm"
@@ -33,9 +24,7 @@ export const ReputationDisplay = ({
       container: "text-base"
       icon: "w-5 h-5"
       progress: "h-3"
-
 }
-
 export default ReputationDisplay;
 ';
     },
@@ -49,7 +38,6 @@ export default ReputationDisplay;
       icon: 'w - 5 h - 5',
       progress: 'h - 3',
     },
-
   }
   return (
     <div className='space - y-1'>;
@@ -65,7 +53,6 @@ export default ReputationDisplay;
       </div>;
     </div>);
 }
-
 export const ReputationDisplay = ({;
   reputation,;
   size = 'md',}: ReputationDisplayProps) => {;
@@ -77,7 +64,6 @@ export const ReputationDisplay = ({ ;
   const currentLevel = Math && Math.floor(reputation / 100);
   const nextMilestone = (currentLevel + 1) * 100;
   const progress = ((reputation % 100) / 100) * 100;
-
   // Styling based on size;
   const sizeClasses = {;
     sm: {;
@@ -101,12 +87,9 @@ export const ReputationDisplay = ({ ;
       progress: "h-3";
     }
   };
-
   return (
-
   },;
   return (;
-
     <div className="space-y-1">;
       <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>;
         <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />;
@@ -114,15 +97,11 @@ export const ReputationDisplay = ({ ;
         <span className="text-muted-foreground">rep</span>;
       </div>;
       <Progress value={progress} className={sizeClasses[size].progress} />;
-
       </div>;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>;
   )
 };
-
 ';
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },;
     md: {;
       container: 'text-sm',;
@@ -135,5 +114,3 @@ export const ReputationDisplay = ({ ;
       progress: 'h-3',;
     },
 };
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

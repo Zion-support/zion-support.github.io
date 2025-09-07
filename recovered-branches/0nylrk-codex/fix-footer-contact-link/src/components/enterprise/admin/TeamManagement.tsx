@@ -1,5 +1,3 @@
-
-
 import {
   Table;
   TableBody;
@@ -35,11 +33,9 @@ import { Badge } from "@/components/ui/badge",
   const handleRemoveMember = (memberId: number) => {
     // In a real app, this would make an API call to remove the member
     toast({
-      title: "Team member removed"
-      description: "The team member has been removed from your workspace."})
-
+      title: "title",
+    description: "The team member has been removed from your workspace."})
   },
-
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
@@ -148,7 +144,6 @@ if ( {) {
                 Send an invitation to join your workspace. They'll receive an email with instructions.;
               </DialogDescription>;
             </DialogHeader>;
-
                   className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">;                          .join("")}
                       </span>
                     </div>
@@ -204,7 +199,6 @@ if ( {) {
               </div>;
             </div>;
             <DialogFooter>;
-
               <Button variant="outline" on_click={() => setIsAddingMember (false)}>;
                 Cancel;
               </Button>;
@@ -215,7 +209,6 @@ if ( {) {
                 <TableCell>;
                   <Badge;
                     variant={member.status === "active" ? "default" :"outline"}
-
                         onClick={() => handleRemoveMember(member.id)}
                       >
                         <Trash className="h-4 w-4" />

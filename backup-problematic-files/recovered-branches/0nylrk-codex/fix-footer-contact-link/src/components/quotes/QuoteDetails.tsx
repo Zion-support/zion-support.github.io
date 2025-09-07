@@ -1,4 +1,3 @@
-
 import React from "react";
 import { ;
   Dialog,;
@@ -7,7 +6,7 @@ import { ;
   DialogTitle, ;
   DialogDescription ;
 } from "@/components/ui/dialog",;
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Separator } from "@/components/ui/separator",;

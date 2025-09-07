@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -47,7 +47,7 @@
     email: string;
     address: string
 };
-    id: 'ai-digital-twin-platform'
+    id: "id",
     name: 'AI Digital Twin Platform'
     tagline:
       'Intelligent digital twin creation and simulation with AI-powered insights'
@@ -67,7 +67,7 @@
       'API for custom integrations'
       'Mobile app for monitoring'
     ]
-    popular: false
+    popular: false;
     marketPosition:
       'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our advantage: AI automation reduces digital twin creation time by 60% and improves simulation accuracy.'
     targetAudience:
@@ -132,12 +132,9 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
     service => service.category === category;
   );
-
 ];
-
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular)
 };
-
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
@@ -574,7 +571,6 @@ export const getPopularEmergingTechServices2026 = () => {export const getEmergin
     return price >= minPrice && price <= maxPrice;
   })
 };    return price >= minPrice && price <= maxPrice
-
   })
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
@@ -768,7 +764,6 @@ export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPri
   return emergingTechServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice
-
   })
 };
 ;
@@ -776,9 +771,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>: any 
   return emergingTechServices2026.filter (
     service => service.category === category);
 }
-
 export interface EmergingTechService2026 {;
-
   })
 };
 ;
@@ -786,7 +779,6 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>: any 
   return emergingTechServices2026.filter (
     service => service.category === category);
 }
-
 export interface EmergingTechService2026 {;
   id: string,;
   name: string,;
@@ -842,7 +834,6 @@ export const getEmergingTechServices2026ByPriceRange = (
   });
 }
 ;
-
 export interface EmergingTechService2026 {
 }
 }

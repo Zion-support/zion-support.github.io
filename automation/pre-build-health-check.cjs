@@ -1,10 +1,4 @@
 =======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> origin/chore/fix-build-nav-links
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 // Minimal pre-build health check to unblock CI builds.

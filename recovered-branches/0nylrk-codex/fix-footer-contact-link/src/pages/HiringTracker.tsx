@@ -11,7 +11,6 @@ import { Briefcase } from "lucide-react",
 function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string },
   const [activeTab, setActiveTab] = useState<string>("kanban"),
-
   return (
     <>
       <SEO
@@ -31,7 +30,6 @@ function HiringTrackerContent() {
             </p>
           </div>
         </div>
-
         <Tabs
           defaultValue="kanban"
           onValueChange={setActiveTab}
@@ -41,11 +39,9 @@ function HiringTrackerContent() {
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
-
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId} />
           </TabsContent>
-
           <TabsContent value="analytics" className="mt-6">
             <HiringAnalytics jobId={jobId} />
           </TabsContent>
@@ -55,7 +51,6 @@ function HiringTrackerContent() {
     </>
   );
 }
-
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
@@ -63,9 +58,8 @@ export default function HiringTracker() {
     </ProtectedRoute>
   );
 }
-
 import { useState } from "react";
-import { useParams } from "react-router-dom",;
+import { useParams } from "react-router-dom";
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",;

@@ -1,16 +1,12 @@
-
-  key?: string | number; // Added key prop;
+key?: string | number; // Added key prop;
 }
-
 export function FeatureCard(): any ({;
   title,;
   description,;
   icon,;
   className,;
 }: FeatureCardProps) {;
-
   return (
-
     <div
       className={cn(interface FeatureCardProps {
   title: string,
@@ -19,7 +15,6 @@ export function FeatureCard(): any ({;
   className?: string,
   key?: string | number, // Added key prop
 }
-
 export function FeatureCard({ title, description, icon, className }: FeatureCardProps) {
   return (
     <div className={cn(
@@ -29,7 +24,6 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
       <div className="mr-4 text-zion-cyan p-2">
         {icon}
       </div>
-
       <div>
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
         <p className="text-zion-slate-light">{description}</p>
@@ -66,14 +60,11 @@ function FeatureCard() {
         <p className="text - zion - slate-light">{description}</p>;
       </div>;
     </div>);
-
 }
 }
-
 }
-
 import { cn } from "@/lib/utils";
-import React from "react",;
+import React from "react";
 ;
 interface FeatureCardProps {;
   title:string,,

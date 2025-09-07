@@ -1,20 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
 ) {
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const item = agendaItems.find(i => i.id === id);
   if (!item) return res.status(404).send('Not found');
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
   res.setHeader('Content-Typetext/plain')
-
   res.status(200).send(transcript)
-
   try {
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { id } = req && req.query as { id?: string };
   const item = agendaItems && agendaItems.find(i => i && i.id === id);
   if (!item) return res && res.status(404).send('Not found');
@@ -29,9 +23,7 @@ export default async function handler(
   res && res.setHeader('Content-Typetext/plain'),
   res && res.status(200).send(transcript)
 }
-
 import { agenda_items } from '../../../../data / expo / agenda';
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export default async /**
  * handler - Function description
@@ -56,7 +48,4 @@ function handler() {
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q & A...`;
   res.set_header ('Content - Typetext / plain'),
   res.status (200).send (transcript);
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 }
-

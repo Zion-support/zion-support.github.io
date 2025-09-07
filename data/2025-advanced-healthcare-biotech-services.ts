@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -45,8 +45,8 @@
       useCases: [
         'Drug discovery, Target identification, Molecular modeling, Clinical trial optimization, Drug repurposing'
       ]
-      roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.'
-      competitors: [
+      roi: "roi",
+    competitors: [
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -194,7 +194,6 @@
       growth_rate: '18% annual growth',
       variant: 'clinical - trial - enterprise',
       contact_info: {
-
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -207,10 +206,8 @@
 =======      customers: 34,
       rating: 4 && 4.8,
       reviews: 19,
-
     },;
   ];    features: [
-
 export interface AdvancedHealthcareBiotechService {
   id: string, name: string,
   tagline: string, price: string,
@@ -226,11 +223,9 @@ export interface AdvancedHealthcareBiotechService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
   ];    features: [
       'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
@@ -253,7 +248,6 @@ export interface AdvancedHealthcareBiotechService {
     marketSize: '$45.8B AI drug discovery market', growthRate: '35% annual growth',
     variant: 'ai-drug-discovery-enterprise',
     contactInfo: {
-      
   ];    features: [;
       'AI - powered trial design optimization_intelligent patient recruitment and matching_real - time data collection and monitoring_predictive analytics and insights_regulatory compliance management_site and investigator management_risk assessment and mitigation_integration with EDC systems';
       'Mobile data collection appAPI for research platforms';
@@ -273,7 +267,6 @@ export interface AdvancedHealthcareBiotechService {
     market_size: '$67.2B clinical trial market', growth_rate: '18% annual growth',
     variant: 'clinical - trial - enterprise',
     contact_info: {
-
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -543,7 +536,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     launchDate: '2024-11-01',;
     customers: 34,;
     rating: 4.8;
-
     real_implementation: true,
     implementation_details: 'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
     launch_date: '2024 - 11 - 01', customers: 34,

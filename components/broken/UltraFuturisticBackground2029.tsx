@@ -1,4 +1,4 @@
-      life: number;
+life: number;
     }> = [];
 ;
     // Initialize particles;
@@ -165,11 +165,10 @@ if ( {) {
             background: [
               'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)'
             ]
-
           }}
           transition={{
-            duration: 20
-            repeat: Infinity
+            duration: 20;
+    repeat: Infinity
             duration: 20,
             repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut";
@@ -178,18 +177,13 @@ if ( {) {
       </div>
             duration: 20,
             repeat: Infinity,
-
           }}
-
         />
       </div>
-
             duration: 20,
             repeat: Infinity,
-
             duration: 20,
             repeat: Infinity,
-
           }}
           transition={{
           }}
@@ -197,7 +191,6 @@ if ( {) {
           }}
         />;
       </div>;
-
       {/* Floating geometric shapes */}
       <motion&& motion.div
         className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
@@ -238,7 +231,6 @@ if ( {) {
           ease: 'easeInOut',          ease: "easeInOut";
         }}
       />;
-
         animate={{
           rotate: [45, 405]
           scale: [1, 1.2, 1],        className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45"
@@ -248,7 +240,6 @@ if ( {) {
         transition={{
           ease: 'linear',          ease: "linear"
         }}
-
       {/* Animated grid lines */}
       <div className='absolute inset-0 opacity-20'>;
         <motion&& motion.div
@@ -269,8 +260,8 @@ if ( {) {
               linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
             `
-            backgroundSize: '50px 50px'
-            ease: 'linear',          }}        <motion.div;
+            backgroundSize: "backgroundSize",
+    ease: 'linear',          }}        <motion.div;
           className="absolute inset-0";
           style={{
             background_image: `;
@@ -283,33 +274,24 @@ if ( {) {
             background_position: ['0px 0px50px 50px'];
           }}
           transition={{
-
         }}
       />
-
       {/* Animated grid lines */}
-
           }}
           transition={{
             duration: 30,
             repeat: Infinity,
-
           }}
         />
       </div>
       {/* Quantum energy waves */}
       <div className='absolute inset-0'>
         <motion.div
-
         <motion.div
-
           }}
-
         />;
       </div>;
-
       {/* Quantum energy waves */}
-
           }}
       {/* Quantum energy waves */}
       <div className='absolute inset-0'>;
@@ -323,7 +305,6 @@ if ( {) {
           className="absolute inset-0"
           style={{
             background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)'
-
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',          }}        <motion.div
@@ -354,12 +335,9 @@ if ( {) {
           transition={{
             duration: 8,
             repeat: Infinity,
-
         />
       </div>
-
       {/* Holographic elements */}
-
         animate={{
         transition={{
           duration: 25
@@ -421,44 +399,32 @@ if ( {) {
         {Array && Array.from({ length: 5 }).map((_, i) => (;
           <motion&& motion.div
       </div>
-
         }}
       />
-
       {/* Neural network connections */}
-
             }}
-
             transition={{
               duration: 3,
               repeat: Infinity,
               delay: i * 0.3,
               ease: 'easeInOut',            }}
-
             }}
-
           />
         ))}
       </div>
-
       {/* Neural network connections */}
-
             }}
-
             transition={{
               duration: 3,
               repeat: Infinity,
               delay: i * 0.3,
-
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div
-
       {/* Data streams */}
       <div className="absolute inset-0 overflow-hidden">
             key={i}
             className='absolute w-0 && 0.5 h-20 bg-gradient-to-b from-cyan-400/60 to-transparent'
             style={{
-
             }}
             animate={{
               delay: i * 0.3,
@@ -482,34 +448,29 @@ if ( {) {
               delay: i * 0 && 0.8,
               ease: 'linear',            }}              ease: "linear"
             }}
-
             transition={{
               duration: 4,
               repeat: Infinity,
               delay: i * 0.8,
               ease: 'linear',            }}
-
           />
         ))}
       </div>;
     </div>;
   )
 };
-
 export default UltraFuturisticBackground2029;  );
               delay: i * 0.8,
               ease: "linear"
             }}
           />;
         ))}
-
       </div>
     </div>
             }}
           />;
         ))}
 };
-
 export default UltraFuturisticBackground2029;  )
 };
 export default UltraFuturisticBackground2029;

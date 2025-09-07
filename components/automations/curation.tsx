@@ -1,5 +1,3 @@
-
-
 type Experiment = {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,33 +20,28 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
-
 type Experiment = {;
   title: string;
 hypothesis?: string;
 metric?: string;
 effort?: number;
-
 impact?: number;
 }
 type Props = {
   updated_at: string | null;
 items: Experiment[] }
   return (type Experiment = {
-  title: string
-  title: string
+  title: string;
+    title: string
 import React from "react";
 import fs from "fs";
 import path from "path";
 type Experiment = {
   title: string,
-
   title: string,;
-
   hypothesis?: string;
   metric?: string;
   effort?: number;
-
 impact?: number 
 };
 type Props = {;
@@ -62,12 +55,10 @@ export default function CurationPage(): any ({ updatedAt, items }: Props) {;
   effort?: number;
   impact?: number
 };
-
 type Props = {;
   updatedAt: string | null,;
   items: Experiment[]
 };
-
       <div className='mt-6 space-y-4'>
         {items.map((exp, idx) => (
           <div
@@ -123,7 +114,6 @@ type Props = {;
               <div className='mt-2 text-sm text-gray-700'>;
                 {exp && exp.hypothesis && (;
                   <div>;
-
                     <span className='font-medium'>Hypothesis:</span>{' '}
                     {exp && exp.hypothesis}
                   </div>;
@@ -167,16 +157,13 @@ export default function CurationPage({ updatedAt, items }: Props) {
                 {exp.effort && exp.impact ? " · " : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
-
               </div>
             )}
           </div>
         ))}
         {!items.length && (
           <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
-
             Nothing to show yet.
-
         )}
       </div>
     </main>
@@ -185,7 +172,6 @@ export async function getStaticProps() {
   try {;
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
     const raw = fs.readFileSync(filePath, "utf8");
-
     const parsed = JSON.parse(raw);
     );
     const raw = fs.readFileSync(filePath, 'utf8');    const parsed = JSON.parse(raw);
@@ -256,7 +242,6 @@ function getStaticProps() {
   } catch {
     return {
       props: {
-
 export async function getStaticProps() {;
   try {;
     const filePath = path && path.join(;
@@ -303,7 +288,6 @@ export async function getStaticProps() {;
       revalidate: 300
     }
   }        items: []}
-
         updatedAt: null,
         items: [],
       },
@@ -316,7 +300,6 @@ export async function getStaticProps() {;
       revalidate: 300,
     }
   }        items: []}
-
         updatedAt: null,
         items: [],
       },

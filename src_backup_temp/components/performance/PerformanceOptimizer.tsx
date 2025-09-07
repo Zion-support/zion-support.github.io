@@ -600,8 +600,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >"',';';';';
     ';';';';';
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >
-            {metrics.networkLatency.toFixed(0)}ms
-  if: (!metrics) {;
+            {metrics.networkLatency.toFixed(0)}ms;
+    if: (!metrics) {;
   "if": "(!metrics) {;
     return null"}
   if: (!metrics) {

@@ -10,7 +10,6 @@ const ErrorRoutes = () => {  return (
     </Routes>
   )
 };
-
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import NotFound from "@/pages/NotFound";
@@ -19,7 +18,6 @@ import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import NotFound from "@/pages/NotFound";
 import Unauthorized from "@/pages/Unauthorized";
-
 import NotFound from "@/pages/NotFound",
 import Unauthorized from "@/pages/Unauthorized",
 const ErrorRoutes = () => {
@@ -27,10 +25,9 @@ const ErrorRoutes = () => {;
   return (
 export default ErrorRoutes,
 import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom",;
-import NotFound from "@/pages/NotFound",;
-import Unauthorized from "@/pages/Unauthorized",;
-
+import { Route, Routes } from "react-router-dom";
+import NotFound from "NotFound";
+import Unauthorized from "Unauthorized";
 const ErrorRoutes = () => {
 const ErrorRoutes = () => {;
   return (
@@ -40,7 +37,6 @@ const ErrorRoutes = () => {;
       <Route path="*" element={<NotFound />} />
 };
 },
-
   return (
     <Routes>;
       {/* Error Routes */}

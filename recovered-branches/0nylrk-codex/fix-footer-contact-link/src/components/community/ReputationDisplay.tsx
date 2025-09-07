@@ -1,5 +1,3 @@
-
-
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 import { Trophy } from "lucide-react";
@@ -8,30 +6,25 @@ import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
-
 import {Trophy} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 interface ReputationDisplayProps {
-
   reputation: number
   size?: 'sm' | 'md' | 'lg'
 }
-
     lg: {
-      container: "text-base"
-      icon: "w-5 h-5"
+      container: "container",
+    icon: "w-5 h-5"
       progress: "h-3"
     }
-
 import {Progress} from "@/components/ui/progress";import {Trophy} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
 interface ReputationDisplayProps {;
   reputation: number,;
   size?: 'sm' | 'md' | 'lg';
 }
-
 export const ReputationDisplay = ({ ;
   reputation;
   size = 'md' ;
@@ -45,7 +38,6 @@ export const ReputationDisplay = ({ ;
       progress: "h-3";
     }
   };
-
   return (    <div className="space-y-1">;
       <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>;
         <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />;
@@ -66,8 +58,6 @@ sm: {
 export default ReputationDisplay;
   )
 };
-
 },
-
 export default ReputationDisplay;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

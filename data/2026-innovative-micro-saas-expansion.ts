@@ -1,4 +1,4 @@
-  id: string;
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -31,8 +31,8 @@
   rating: number;
   reviews: number;
     {
-      id: 'ai-business-intelligence-suite'
-      name: 'AI Business Intelligence Suite'
+      id: "id",
+    name: 'AI Business Intelligence Suite'
       tagline:
         'Transform raw data into actionable insights with AI-powered analytics'
       price: '$299'
@@ -51,8 +51,8 @@
         'API for third-party integrations'
         '24/7 AI monitoring and alerts'
       ]
-      popular: true
-      color: 'from-blue-600 to-cyan-600'
+      popular: true;
+    color: 'from-blue-600 to-cyan-600'
       textColor: 'text-blue-400'
       link: 'https://ziontechgroup.com/ai-business-intelligence-suite'
       marketPosition:

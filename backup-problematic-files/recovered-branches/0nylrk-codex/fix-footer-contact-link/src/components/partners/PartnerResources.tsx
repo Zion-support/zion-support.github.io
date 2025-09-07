@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",;
 import { toast } from "@/hooks/use-toast",;
 ;
@@ -167,6 +167,5 @@ url: string
 }const resources: ResourceItem[] = [ {
   const handleDownload = (resource: ResourceItem) => {
   //In a real app, this would download the actual resource toast ({
-  
 }
 }

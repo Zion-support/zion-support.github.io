@@ -1,6 +1,3 @@
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
 import { Button } from "@/components/ui/button",
@@ -13,21 +10,16 @@ interface TimelineStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
-
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
-
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 formData && formData.timeline === 'flexible'
                   ? 'bg-zion-purple/20 border-zion-purple'
                   : 'bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50'
               }`}
               onClick={() => updateFormData({ timeline: 'flexible' })}
-
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
                   Start Date
@@ -35,12 +27,10 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
-
                 I'm flexible on the timing;
               </p>;
             </div>;
           </div>;
-
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
@@ -49,31 +39,25 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">
                     <Calendar
-
                       mode="single"
                       selected={formData.startDate}
                       onSelect={(date) => updateFormData({ startDate: date })}
                       initialFocus
                       className="p-3 pointer-events-auto"
-
                     />
                   </PopoverContent>
                 </Popover>
               </div>
-
               <div>
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Label className='block mb-2 text-zion-slate-light'>
                   End Date
                 </Label>
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
-
                       selected={formData && formData.startDate}
                       onSelect={date => updateFormData({ startDate: date })}                      initialFocus;
                       className='p-3 pointer-events-auto';
-
           {form_data.timeline === 'fixed' && (
             <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4 mt - 6'>;
               <div>;
@@ -106,11 +90,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                   </PopoverContent>;
                 </Popover>;
               </div>;
-
                       className="p-3 pointer-events-auto"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { format } from "date-fns";
-import { Calendar } from "@/components/ui/calendar",;
+import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button",;
 import { Label } from "@/components/ui/label",;
 import { CalendarIcon } from 'lucide-react';
@@ -187,12 +169,8 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                   </PopoverContent>;
                 </Popover>;
               </div>;
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>)}
         </div>;
       </div>;
     </div>);
 }
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,6 +1,5 @@
-
 import React, { useState, useRef, useEffect } from "react";
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input",;
 import { ScrollArea } from "@/components/ui/scroll-area",;
 import { Separator } from "@/components/ui/separator",;
@@ -345,7 +344,6 @@ headers: {
   "Content-Type" : "application/json" 
 };
 body: JSON.stringify ({
-  
 }) 
 });
 }const data = await response.json ();
@@ -354,7 +352,6 @@ return {
 message: data.message 
 }
 }catch (error) {
-  
 }
 };
 const suggestEscalation = () => {
@@ -373,7 +370,6 @@ timestamp: m.timestamp
 }) ) 
 }) 
 }catch (error) {
-  
 }
 };
 const handleQuickReply = (text: string) => {

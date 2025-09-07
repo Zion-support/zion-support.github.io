@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -13,15 +7,11 @@
  * Replaces GitHub Actions health monitoring workflows;
  * Runs every 5 minutes to monitor system health;
  */
-
 const { execSync } = require('child_process');
 const fs = require('fs');
-
 const log = (message) => {}
   const timestamp = new Date().toISOString();
-  
 };
-
 const runCommand = (command, description) => {}
   try {}
     log(`Starting: ${description}`);
@@ -38,19 +28,14 @@ const runCommand = (command, description) => {}
     return { success: false, error: error.message };
   };
 };
-
 const checkSystemHealth = () => {}
   log('Checking system health');
-  
   // Check if the application is running;
   const appCheck = runCommand('curl -f http://localhost:3000 || echo "App not responding"', 'Checking application health');
-  
   // Check disk space;
   const diskCheck = runCommand('df -h .', 'Checking disk space');
-  
   // Check memory usage;
   const memoryCheck = runCommand('free -m', 'Checking memory usage');
-  
   return {}
     app: appCheck.success,
     disk: diskCheck.success,
@@ -58,8 +43,6 @@ const checkSystemHealth = () => {}
     overall: appCheck.success && diskCheck.success && memoryCheck.success;
   };
 };
-
-
 const generateHealthReport = (results) => {}
   const report = {}
     timestamp: new Date().toISOString(),
@@ -68,32 +51,22 @@ const generateHealthReport = (results) => {}
       status: results.system.overall ? 'HEALTHY' : 'UNHEALTHY'
     };
   };
-  
-  
   // Save report;
   const reportPath = 'logs/pm2/health-report.json';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   log(`Health report saved to ${reportPath}`);
-  
   return report;
 };
-
 const main = async () => {}
   log('Starting Health Monitor Process');
-  
   // Check system health;
   const systemResults = checkSystemHealth();
-  
   // Generate comprehensive report;
   const results = {}
     system: systemResults;
   };
-  
   const report = generateHealthReport(results);
-  
-  
   const report = generateHealthReport(results);
-  
   if (report.overall.status === 'HEALTHY') {}
     log('System health check passed: All systems operational');
   } else {}
@@ -101,33 +74,22 @@ const main = async () => {}
   };
   log('Health Monitor Process completed');
 };
-
-
 // Handle process termination;
 process.on('SIGINT', () => {}
   log('Health Monitor Process interrupted');
   process.exit(0);
 }
 });
-
-
 process.on('SIGTERM', () => {}
   log('Health Monitor Process terminated');
   process.exit(0);
 }
 });
-
-
 // Run the main function;
 main().catch(error => {})
   log(`Health Monitor Process failed: ${error.message}`);
   process.exit(1);
 }
-<<<<<<< HEAD
-});
-=======
-});
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 });});

@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
@@ -20,18 +18,16 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",      name: "Business"
-      price: "$1,999";
+import { Badge } from "@/components/ui/badge",      name: "name",
+    price: "$1,999";
       billing: "/month"
       description: "Ideal for growing companies"
       users: "Up to 50 users"
-      popular: true
+      popular: true;
+    name: "Business",;
+      price: "$1,999";
       name: "Business",;
       price: "$1,999";
-
-      name: "Business",;
-      price: "$1,999";
-
       name: "Business",
       price: "$1,999",export function EnterprisePricingTable() {;
   const plans = [;

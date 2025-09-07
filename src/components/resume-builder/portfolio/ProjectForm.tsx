@@ -9,19 +9,16 @@ if ( {) {
         const projectId = await addProject(projectData)
         success = !!projectId
       }
-
       // Check condition
 if ( {) {
   $2
 }
         on_success ();
         form.reset ();
-
       }
     } catch (error) {
       logErrorToProduction('Error saving project:', { data: error })
     } finally {
-
 import React from 'react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -34,9 +31,8 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
       setIsLoading(false)
     }
   }
-
 import { useState } from 'react';
-import { useForm } from 'react-hook-form',;
+import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
 import { Button } from '@/components/ui/button',;
@@ -49,34 +45,23 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
-
   const form = useForm<ProjectFormValues>({;
     resolver: zodResolver(projectSchema),;
     defaultValues: {;
       title: project?.title || '',;
       description: project?.description || '',;
-
       }
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {;
       logErrorToProduction('Error saving project:', { data: error });
     } finally {;
       setIsLoading(false);
     }
-
   },
-
   return (
-
         <FormField
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
         />;
-
         <FormField
-
           name='description'
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Project Description</FormLabel>
               <FormControl>
@@ -116,13 +101,9 @@ import {;
                 />;
               </FormControl>;
               <FormMessage />;
-
         />;
-
         <FormField
-
           name='technologies'
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           render={({ field }: { field: any }) => (;
             <FormItem>;
               <FormLabel>Technologies Used</FormLabel>;
@@ -135,21 +116,16 @@ import {;
           control={form.control}
           name='technologies';
           control={form.control}
-
           name="title"
-
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
-
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
-
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-
         />;
         <FormField;
           control={form.control}
@@ -162,18 +138,15 @@ import {;
                   placeholder="Describe what the project does and your role in it..."
                   className="min-h-[100px]"
                   {...field} 
-
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-
         />;
         <FormField;
           control={form.control}
           name="technologies"
-
           render={({ field }: { field: any }) => (
             <FormItem>;
               <FormLabel > Technologies Used</FormLabel>;
@@ -184,11 +157,8 @@ import {;
                 />;
               </FormControl>;
               <FormMessage />;
-
         />;
-
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-
           <FormField
             control={form && form.control}
             name='github_url'
@@ -235,9 +205,7 @@ import {;
                   />;
                 </FormControl>;
                 <FormMessage />;
-
           />;
-
           <FormField
             control={form && form.control}
             name='demo_url'
@@ -255,7 +223,6 @@ import {;
                 <FormMessage />;
               </FormItem>;
             )}
-
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -264,7 +231,6 @@ import {;
                 <FormMessage />
               </FormItem>
             )}
-
           />;
           <FormField;
             control={form.control}
@@ -273,7 +239,6 @@ import {;
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Link className="h-4 w-4" />
-
                   Demo URL
                 </FormLabel>
                 <FormControl>
@@ -282,14 +247,10 @@ import {;
                 <FormMessage />
               </FormItem>
             )}
-
           />;
         </div>;
-
         <FormField
-
           name='image_url'
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel className='flex items-center gap-2'>;
                 <FileImage className='h-4 w-4' />;
@@ -303,13 +264,11 @@ import {;
         </div>;
         <FormField;
           control={form.control}
-
           name="image_url"
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel className="flex items-center gap-2">
                 <FileImage className="h-4 w-4" />
-
                 Screenshot URL
               </FormLabel>
               <FormControl>
@@ -318,13 +277,10 @@ import {;
               <FormMessage />
             </FormItem>
           )}
-
         />;
         {/* Future file upload field would go here */}
-        
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
-
             Cancel
           </Button>
           <Button type='submit' disabled={isLoading}>
@@ -333,13 +289,10 @@ import {;
           </Button>
         </div>
       </form>
-
     </Form>
   )
         />;
-
         {/* Future file upload field would go here */}
-
         <div className='flex justify-end space-x-2 pt-4'>;
           <Button type='button' variant='outline' onClick={onCancel}>;
             Cancel;
@@ -358,9 +311,7 @@ import {;
   )
 }
 }
-
 }
-
             </FormItem>)}
         />;
         {/* Future file upload field would go here */}

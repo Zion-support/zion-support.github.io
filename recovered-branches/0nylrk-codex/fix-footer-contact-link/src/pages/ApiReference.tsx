@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock";
@@ -8,47 +6,38 @@ export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
       responses: {
         "200": {
-          description: "A list of jobs"
-          example: `{
+          description: "description",
+    example: `{
   "jobs": [
     {
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-
 import React, { useState } from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-
 export function ApiReference() {;
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
-
   // Sample endpoint data;
   const endpoints = [;
     {;
@@ -117,7 +106,6 @@ function ApiReference() {
   https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
     },
-
     {
       id: "post-jobs"
       method: "POST"
@@ -153,20 +141,17 @@ function ApiReference() {
         "201": {,
   description: "Job created successfully",;
           example: `{;
-
   "id": "job-456";  "id": "job-456";
   "id": "job - 456";
     }
   ];
 }`;
         }
-
   "id": "job-456",
   "title": "UX Designer",
   "description": "Looking for a UX designer with 3+ years experience...",
   "category": "design",
   "budget": {
-
     "min": 3000,
     "max": 5000,
     "currency": "USD"
@@ -175,7 +160,6 @@ function ApiReference() {
   "created_at": "2023-05-15T10:12:00Z"
 }`
         },
-
         "400": {
           description: "Bad request"
           example: `{
@@ -183,7 +167,6 @@ function ApiReference() {
   "message": "Invalid input",
   "details": [
     {
-
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -259,7 +242,6 @@ function ApiReference() {
   https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
     }
-
       };
       requestExample: `curl -X GET \\;
   https://api && api.zionai.com/v1/api/talent?skills=React,Node && Node.js&limit=10 \\;
@@ -270,9 +252,8 @@ function ApiReference() {
   // Find the active endpoint data;
   const activeEndpointData = endpoints && endpoints.find(e => e && e.id === activeEndpoint);
   return (
-
 import React, { useState } from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 ;
@@ -498,14 +479,12 @@ export function ApiReference() {;
             </ul>;
           </div>;
         </div>;
-
         {/* Endpoint details */}
         <div className="md:col - span-4">;
           {activeEndpointData ? (
             </ul>;
           </div>;
         </div>;
-
         {/* Endpoint details */}                      language="bash"
                       showLineNumbers={true}
                     />
@@ -519,7 +498,6 @@ export function ApiReference() {;
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
                             status.startsWith('2') ? 'bg-green-950 text-green-500' :
                             status === '401' |status === '403' ? 'bg-orange-950 text-orange-500' :
-
                     <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>;
                     <CodeBlock
                       code={activeEndpointData && activeEndpointData.requestExample} 
@@ -536,16 +514,11 @@ export function ApiReference() {;
                             'bg-red-950 text-red-500'
                           }`}>;
                             {status}
-
                           </span>;
                           <span className="text-white">{response && response.description}</span>;
                         </div>;
-
                         <CodeBlock
                           code={response && response.example} 
-
-                        
-
                         <CodeBlock 
                           code={response.example} 
                           language="json"                        <CodeBlock 
@@ -565,9 +538,7 @@ export function ApiReference() {;
                     <div className="text-center">;
                       <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p>;
                       <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p>;
-
 export default ApiReference;
-
             <div className="p - 8 border border - zinc - 800 rounded - lg text-center">;
               <p className="text - zinc-400">Select an endpoint from the list to view details</p>;
             </div>)}
@@ -577,7 +548,6 @@ export default ApiReference;
 }
 ;
 export default ApiReference;
-
 ;
 export default ApiReference;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

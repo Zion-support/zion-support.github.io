@@ -1,8 +1,6 @@
 export interface EmergingTechInnovationService {
 export interface EmergingTechInnovationService {
-
 export interface EmergingTechInnovationService {;
-
 export interface EmergingTechInnovationService {
   id: string;
   name: string;
@@ -33,14 +31,13 @@ export interface EmergingTechInnovationService {
   contact_info: {
     mobile: string;
     email: string;
-    address: string;    tagline:
-      'Next-generation quantum internet infrastructure for unbreakable communication'
+    address: string;    tagline: "tagline",
     price: '$6,999'
     period: '/month'
     description:
     targetAudience:
       'Telecommunications companies, Government agencies, Research institutions, Financial institutions'
-    trialDays: 14
+    trialDays: 14;
     setupTime: '6-8 weeks'
     category: 'Quantum Computing & AI'
     realService: true
@@ -492,7 +489,6 @@ export interface EmergingTechInnovationService {
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
   }
 ];
-
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },;
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
@@ -965,10 +961,8 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
   }
 ];
-
     ];
     market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
-
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },;
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
@@ -976,8 +970,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
   }
 ];
-
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTechInnovation {;
   id: string,;
   name: string,;

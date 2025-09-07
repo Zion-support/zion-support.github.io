@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -15,8 +13,8 @@ import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Cal
       details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities.";
     }
     {
-      title: "Services Marketplace"
-      description: "Discover professional tech and AI services for your business needs, from development to consulting.";    {
+      title: "title",
+    description: "Discover professional tech and AI services for your business needs, from development to consulting.";    {
       title: "Community Hub"
       description: "Connect with like-minded professionals, share insights, and stay updated with industry trends.";
       icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />
@@ -25,7 +23,6 @@ import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Cal
     {
       title: "Developer Tools"
       description: "Access our API documentation, SDKs, and integration guides to build on top of the Zion platform.";
-
       icon: <Code className="h - 10 w - 10 p - 2 rounded - md bg - gray - 100 text - gray-700" />,
       link: "/developers",
       details: "Leverage our robust API with comprehensive documentation, code examples, and developer support.";    }
@@ -60,13 +57,11 @@ import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Cal
             Explore our comprehensive suite of tools designed to transform how you connect, collaborate, and create in the tech ecosystem.;
           </p>;
         </div>;
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
           {features && features.map((feature, index) => (;
             <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50">;
               <CardHeader className="pb-2">;
                 <div className="flex justify-between items-start">;
-
                   {feature.icon}
                   {feature.badge && (
                 </div>;

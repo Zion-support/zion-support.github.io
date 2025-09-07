@@ -1,4 +1,3 @@
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -16,9 +15,7 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
     const supabaseClient = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
-
     ),
-
     // Get notification details and user email
     const { data: notification, error: notificationError } = await supabaseClient
       .from('notifications')
@@ -26,9 +23,7 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
       .eq('id', notification_id)      .from('profiles')
       .select('display_name, email')
       .eq('id', user_id)
-
       .single(),
-
       import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {
@@ -37,19 +32,17 @@ const cors_headers = {
 ;
 interface EmailRequest {
   user_id: string,
-
         headers: { ...corsHeaders, "Content-Type": "application/json" };
         status: 500}
     )
         headers: { ...corsHeaders, "Content-Type": "application/json" },
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 const corsHeaders = {;
   "Access-Control-Allow-Origin": "*",;
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
 interface EmailRequest {;
   user_id: string,;
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2",;
 ;
@@ -89,11 +82,8 @@ serve(async (req) => {;
       .select('display_name, email');
       .eq('id', user_id);
       .single(),;
-
   }
 });
-
 ;
-
   }
 });

@@ -1,7 +1,6 @@
-
 export const real2036ITServices = [
   {
-    id: 'quantum-cloud-infrastructure-platform'
+    id: "id",
     name: 'Quantum Cloud Infrastructure Platform'
     tagline: 'Next-generation quantum cloud computing'
     description:
@@ -15,7 +14,7 @@ export const real2036ITServices = [
       'Quantum security protocols'
       'Scalable quantum infrastructure'
     ]
-    popular: true
+    popular: true;
     category: 'Quantum Cloud'
     icon: '☁️⚛️'
     marketPrice: '$8,000-15,000/month'
@@ -1005,7 +1004,6 @@ export const real2036ITServices = [;
       'Application recovery',
       'Business continuity',
     ],
-
   },;
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]

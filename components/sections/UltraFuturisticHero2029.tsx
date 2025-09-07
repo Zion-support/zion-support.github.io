@@ -1,4 +1,4 @@
-  ArrowRight
+ArrowRight
   Star
   TrendingUp
   Zap
@@ -29,9 +29,9 @@ export default /**
 function UltraFuturisticHero2029() {
   const features = [;
     {
-      icon: Cpu
-      text: 'Autonomous IT Operations'
-      color: 'from-cyan-500 to-teal-600'
+      icon: Cpu;
+    text: "text",
+    color: 'from-cyan-500 to-teal-600'
     },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-violet-500 to-purple-600' }
     { icon: Atom, text: 'Quantum Computing Solutions', color: 'from-blue-500 to-cyan-600' }
     { icon: Rocket, text: 'Space Technology Innovation', color: 'from-emerald-500 to-teal-600' }
@@ -51,7 +51,6 @@ function UltraFuturisticHero2029() {
     { number: '$2.5B+', label: 'Market Opportunity', icon: TrendingUp }
     { number: '99.9%', label: 'Success Rate', icon: Star }
     { number: '24/7', label: 'AI Operations', icon: Zap }
-
 import {;
   ArrowRight,;
   Star,;
@@ -209,7 +208,6 @@ export default function UltraFuturisticHero2029() {;
               key={i}
               className="absolute w - 1 h - 1 bg - cyan - 400 rounded-full opacity-20";
               animate={{
-
                 duration: Math && Math.random() * 10 + 10,
                 repeat: Infinity,
                 ease: "linear"
@@ -220,10 +218,8 @@ export default function UltraFuturisticHero2029() {;
             />
           ))}
         </div>
-
           ))}
         </div>
-
         {/* Grid Pattern */}
         <div className='absolute inset-0 opacity-10'>
           <div
@@ -242,7 +238,6 @@ export default function UltraFuturisticHero2029() {;
               backgroundSize: '50px 50px'
             }}
           />
-
         {/* Grid Pattern */}
         <div className='absolute inset-0 opacity-10'>
           <div
@@ -252,16 +247,13 @@ export default function UltraFuturisticHero2029() {;
               backgroundSize: '50px 50px'
             }}
           />
-
           ))}
         </div>;
-
         {/* Grid Pattern */}
         <div className='absolute inset-0 opacity-10'>;
           <div
             className='absolute inset-0'
             style={{
-
         </div>
         {/* Gradient Orbs */}
     { icon: Cpu, text: 'Autonomous IT Operations', color: 'from-cyan-500 to-teal-600' }
@@ -276,15 +268,12 @@ export default function UltraFuturisticHero2029() {;
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}
-
         {/* Main Heading */}
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className='mb-8'
-
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               2029
@@ -323,12 +312,10 @@ export default function UltraFuturisticHero2029() {;
             Experience the future of technology with Zion Tech Group's revolutionary 2029 services. ;
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.;
         </motion && motion.div>;
-
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           <Link
             href='/services'
@@ -343,7 +330,6 @@ export default function UltraFuturisticHero2029() {;
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           {features.map((feature, index) => (
             <motion.div
@@ -416,9 +402,7 @@ export default function UltraFuturisticHero2029() {;
         >;
         {/* Main Heading */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}
-
         {/* Main Heading */}
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -479,13 +463,11 @@ export default function UltraFuturisticHero2029() {;
         >
           {features.map((feature, index) => (
             <motion.div
-
               key={feature.text}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
               className='group p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/50'
-
             >
               <div
                 className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform`}
@@ -496,13 +478,11 @@ export default function UltraFuturisticHero2029() {;
             </motion.div>
           ))}
         </motion.div>
-
           ))}
         {/* Stats */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -546,12 +526,10 @@ export default function UltraFuturisticHero2029() {;
                 <stat.icon className="w - 8 h - 8 text-cyan-400" />;
               </div>;
               <div className="text - 3xl md:text - 4xl font - bold text - white mb - 2 group - hover:text - cyan-400 transition-colors">;
-
                 {stat.number}
               </div>;
               <div className="text - sm text - gray - 400 group - hover:text - gray-300 transition-colors">;
                 {stat.label}
-
             >
               <div className='w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform'>
                 <stat.icon className='w-8 h-8 text-cyan-400' />
@@ -560,20 +538,16 @@ export default function UltraFuturisticHero2029() {;
                 {stat.number}
               </div>
               <div className='text-sm text-gray-400 group-hover:text-gray-300 transition-colors'>                {stat.label}
-
                 {stat.label}
-
               </div>
             </motion.div>
           ))}
         </motion.div>
-
           ))}
         {/* Scroll Indicator */}
         <motion&& motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -582,7 +556,6 @@ export default function UltraFuturisticHero2029() {;
           </motion.div>
         </motion.div>
       </div>
-
       {/* Floating Elements */}
       <motion&& motion.div
               </div>;
@@ -619,7 +592,6 @@ export default function UltraFuturisticHero2029() {;
       {/* Floating Elements */}
       <motion.div;
         animate={{ rotate: 360 }}
-
       />
       <motion.div
         animate={{ rotate: -360 }}
@@ -644,6 +616,5 @@ export default function UltraFuturisticHero2029() {;
       />;
     </section>);
 }
-
 }
   );

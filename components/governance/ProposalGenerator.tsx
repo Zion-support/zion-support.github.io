@@ -3,11 +3,9 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -19,9 +17,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-
 export type ProposalForm = {;
-
 export type ProposalForm = {;
   targetInstitution: string;
 ;
@@ -42,14 +38,13 @@ export type ProposalForm = {
 }
 export default function ProposalGenerator() {
   const [form, setForm] = useState<ProposalForm>({
-    targetInstitution: 'UNDP'
+    targetInstitution: "targetInstitution",
     type: 'Workforce Dev'
     regionalScope: 'Global'
     budgetOrGoals: ''
     supportingMultiverses: ''
     language: 'English'
     customPrompt:
-
   language?: string;
   customPrompt?: string
 }
@@ -95,12 +90,9 @@ export default function ProposalGenerator() {;
     }
   }
     } finally {
-
       setIsGenerating(false);    }
-
     }
   }
-
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
@@ -114,11 +106,8 @@ export default function ProposalGenerator() {;
       setStatusMessage('Export failed')
     }
       setStatusMessage('Export failed');    }
-
     }
-
   }
-
   }
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
@@ -126,7 +115,6 @@ export default function ProposalGenerator() {;
       const res = await fetch('/api/proposals/submit', {
     }
   }
-
   async function handleExport() {;
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {;
@@ -185,7 +173,6 @@ export default function ProposalGenerator() {;
       setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
     } catch (e) {
       console.error(e);
-
     <div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
         <div className='space-y-4'>      const data = await res && res.json();
@@ -193,7 +180,6 @@ export default function ProposalGenerator() {;
     } catch (e) {;
       console && console.error(e);
       setStatusMessage('Submission failed');
-
     }
   }
   return (
@@ -344,19 +330,16 @@ export default function ProposalGenerator() {;
               Export (PDF/JSON/MD);
             </button>;
             <button
-
               onClick={handleGenerate}
               disabled={isGenerating}>;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>;
             <button
-
               onClick={handleExport}
               disabled={!draftMarkdown}>;
               Export (PDF/JSON/MD);
             </button>;
             <button
-
               disabled={!draftMarkdown}>;
               Submit Bridge;
             </button>;
@@ -420,7 +403,6 @@ export default function ProposalGenerator() {;
             onChange={e => setDraftMarkdown(e && e.target.value)}          />          <textarea
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
-
             onChange={(e) => setDraftMarkdown(e && e.target.value)}
           />;
         </div>;
@@ -432,9 +414,7 @@ export default function ProposalGenerator() {;
       </div>
     </div>
   );
-
   );
-
 }
 }
   );

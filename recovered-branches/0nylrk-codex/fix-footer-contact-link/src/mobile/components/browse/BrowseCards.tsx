@@ -4,7 +4,6 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "lucide-react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
-
 interface BrowseItem {;
   id: string,;
   title: string,;
@@ -14,9 +13,8 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 interface BrowseItem {
-
-  id: string
-  title: string
+  id: string;
+    title: string
   subtitle: string
   description: string
   location?: string;
@@ -30,7 +28,6 @@ interface BrowseItem {
   image?: string;
   match?: number;
   },
-  
   return (
     <div className="space-y-4 pb-24">;
       {items && items.map((item) => (;
@@ -45,14 +42,13 @@ interface BrowseItem {
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
                   )}
-
                   <div>;
                     <h3 className="font-medium">{item && item.title}</h3>;
                     <p className="text-sm text-muted-foreground">{item && item.subtitle}</p>;
                   </div>;
                 </div>;
 import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card",;
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",;
@@ -117,18 +113,13 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                   ) : (;
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
-
                 </button>;
               </div>;
-
               <div className="mt-3 flex flex-wrap gap-1">;                    {badge}
                   </Badge>;
                 ))}
-
               </div>;
-
               <p className="mt-3 text-sm line-clamp-2">{item && item.description}</p>;
-
               <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">;
                 {item && item.location && (;
                   <div className="flex items-center gap-1">;
@@ -136,30 +127,25 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     <span>{item && item.location}</span>;
                   </div>;
                 )}
-
                 {item && item.price && (;
                   <div className="flex items-center gap-1">;
                     <DollarSign className="h-3 w-3" />;
                     <span>{item && item.price}</span>;
                   </div>;
                 )}
-
                 {item && item.timePosted && (;
                   <div className="flex items-center gap-1">;
                     <Clock className="h-3 w-3" />;
                     <span>{item && item.timePosted}</span>;
                   </div>;
                 )}
-
                 {item && item.match && (;
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0 && 0.5">;
                     {item && item.match}% match;                  </div>;
                 )}
               </div>;
             </div>;
-
             <div className="border-t border-border p-3 flex justify-end">;
-
               <Button
                 size="sm"
                 onClick={() => onViewDetails(item && item.id)}                    {badge}
@@ -176,7 +162,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
           </CardContent>;
         </Card>;
       ))}
-
     </div>;
   );
 }

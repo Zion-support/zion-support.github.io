@@ -2881,7 +2881,7 @@ export const "revolutionaryAIServices2025": AIService[] = [,"}),"})
   }"}),"})
 ],"}),"};)
   "email": string;
-  websit
+  websit;
     e: string;
   addres
     s: string}

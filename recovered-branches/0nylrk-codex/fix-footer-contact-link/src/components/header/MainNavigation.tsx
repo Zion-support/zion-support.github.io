@@ -1,7 +1,5 @@
-
 import { cn } from '@/lib / utils';
 import { NavLink } from './react-router-dom';
-
 =======import { Link  } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
@@ -12,7 +10,6 @@ import {NavLink} from "react-router-dom";        className={({ isActive }) =>;
             "text-sm font-medium transition-colors hover: text-primary",;
             isActive ? "text-zion-cyan" : "text-muted-foreground";
           );
-
  * MainNavigation - Function description
  */
 function MainNavigation() {
@@ -64,7 +61,6 @@ function MainNavigation() {
       >;
         Partner Program;
       </NavLink>;
-
             isActive ? "text-zion-cyan" : "text-muted-foreground",;            "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light";
           );
         }
@@ -112,7 +108,6 @@ function MainNavigation() {
         to="/partners"
         className={({ isActive }) =>
           cn(
-
             "text-sm font-medium transition-colors hover:text-primary",          cn(;
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground",
@@ -131,7 +126,7 @@ function MainNavigation() {
             "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
           )
 import React from 'react';
-import { Link } from 'react-router-dom',;
+import { Link } from 'react-router-dom';
 import { cn } from "@/lib/utils",;
 import { NavLink } from "react-router-dom",;
 interface MainNavigationProps {;
@@ -183,7 +178,6 @@ function MainNavigation() {
     </nav>);
 }
 ;
-
   ),;}
  interface MainNavigationProps {
   className?: string 

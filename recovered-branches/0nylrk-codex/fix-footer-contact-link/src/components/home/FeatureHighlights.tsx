@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
@@ -39,12 +37,10 @@ function FeatureHighlights() {
         "Dedicated account management and priority support";
         "Custom talent pools and preferred provider networks";
         "Advanced analytics and reporting capabilities";
-
       title: "For Talent Seekers",
-
     {
-      title: "For Talent & Service Providers"
-      features: [
+      title: "title",
+    features: [
       features: [
         "AI-powered talent matching based on your specific project requirements";
         "Verified profiles with skills validation and credential checking";
@@ -73,7 +69,6 @@ function FeatureHighlights() {
         "Custom talent pools and preferred provider networks",
         "Advanced analytics and reporting capabilities",
         "API access for seamless integration with your HR systems",
-
         "Customizable workflow and approval processes"
       ]
         "Customizable workflow and approval processes";
@@ -96,11 +91,10 @@ function FeatureHighlights() {
   ];
 ;
   return (
-
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card",;
+import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react",;
-import React from "react",;
+import React from "React";
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from "lucide-react",;
   const highlightsData = [;
@@ -142,7 +136,6 @@ import { Check } from "lucide-react",;
               </CardContent>;
             </Card>;
           ))}
-
         </div>;
       </div>;
     </section>;

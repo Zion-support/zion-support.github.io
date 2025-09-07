@@ -1,6 +1,5 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-
 import {
 import Head from 'next / head';
 import Card from '../components / ui / Card';
@@ -26,7 +25,6 @@ import {
   FileText
   BarChart3
   Users
-
   Brain;
   MessageSquare,
   Image,
@@ -44,13 +42,13 @@ import {
       bestFor: 'Content creators, developers, researchers'
     }
     {
-      name: 'Midjourney'
-      description:
+      name: "name",
+    description:
         'AI-powered image generation tool that creates stunning artwork, illustrations, and designs from text descriptions.'
       category: 'AI Art'
       pricing: '$10 - $30/month'
-      rating: 4.7
-      users: '1M+'
+      rating: 4.7;
+    users: '1M+'
       icon: <Image className='w-8 h-8 text-purple-400' />
       color: 'bg-gradient-to-br from-purple-500 to-pink-600'
       features: [
@@ -289,7 +287,6 @@ function AIBusinessToolsPage() {
       rating: 4.3,
       users: '100K+',
       icon: <Video className='w - 8 h - 8 text - blue - 400' />,      description: 'AI video maker that transforms text content into engaging videos for social media and marketing.',
-
       category: 'AI Video',
       pricing: 'Free - $79 / month',
       rating: 4.3,
@@ -323,7 +320,6 @@ function AIBusinessToolsPage() {
       : aiTools.filter(tool => tool.category === selectedCategory);  const filteredTools = selectedCategory === 'All'
     ? aiTools
     : aiTools.filter(tool => tool.category === selectedCategory);
-
   return (
     <>;
       <Head>;
@@ -399,7 +395,6 @@ function AIBusinessToolsPage() {
               {selectedCategory === 'All'
                 ? 'All AI Tools'
                 : `${selectedCategory} Tools`}
-
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Discover the most powerful AI tools that are transforming how businesses operate and create content.'
@@ -440,7 +435,6 @@ function AIBusinessToolsPage() {
                     <p className='text-gray-400 leading-relaxed mb-4'>
                       {tool.description}
                     </p>
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -465,7 +459,6 @@ function AIBusinessToolsPage() {
                         </span>;
                       </div>;
                     </div>;
-
                     <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>;
                       <span className='px-2 py-1 bg-gray-800 rounded-full'>;
                         {tool && tool.category}
@@ -473,11 +466,9 @@ function AIBusinessToolsPage() {
                       <span>{tool && tool.users} users</span>;
                       <span className='text-green-400'>{tool && tool.pricing}</span>;
                     </div>;
-
                     <p className='text-gray-400 leading-relaxed mb-4'>;
                       {tool && tool.description}
                     </p>;
-
                     <div className='mb-4'>;
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>;
                         Key Features:;
@@ -497,13 +488,11 @@ function AIBusinessToolsPage() {
                         href={tool.website}
                         variant='outline'
                         size='sm'
-
       {/* AI Benefits Section */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-
               Why Choose AI Tools?
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">

@@ -1,23 +1,18 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -59,7 +54,6 @@ import { UserProfile } from "@/types/auth",
 import { toast } from "@/hooks/use-toast";
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped
-
   const { id } = useParams() as { id?: string }
   const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
@@ -80,12 +74,11 @@ export default function TalentProfilePage() {
   useEffect(() => {
     if (error) {
       toast({
-        title: "Error loading profile"
-        description: "There was a problem loading this talent profile. Please try again."
+        title: "title",
+    description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
-
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom",;
+import { useParams, useNavigate } from "react-router-dom";
 import { TalentProfile } from "@/components/profile/TalentProfile",;
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",;
 import { ProfileErrorState } from "@/components/profile/ProfileErrorState",;
@@ -140,7 +133,6 @@ export default function TalentProfilePage() {;
   }, [error]),;
   if (isLoading) {;
     return <ProfileLoadingState />;
-
   }
   if (error |!profile) {
     return <ProfileErrorState error={error} />

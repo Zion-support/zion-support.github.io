@@ -25,15 +25,12 @@ interface Milestone {
   status: "completed" | "in_progress" | "pending",
   payment_status: "paid" | "pending" | "overdue",
   amount: string;
-
-  id: string
-  title: string
+  id: string;
+    title: string
   dueDate: string
   status: "completed" | "in_progress" | "pending"
   paymentStatus: "paid" | "pending" | "overdue"
-
   amount: string}
-
 interface ProjectViewProps {
   project: {
     id: string;
@@ -41,7 +38,7 @@ interface ProjectViewProps {
     client: {
   const navigate = useNavigate();
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card",;
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
@@ -75,11 +72,8 @@ interface ProjectViewProps {;
 };
   milestones: Milestone[];
 }
-
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   const navigate = useNavigate(),
-  
-
 interface Milestone {
   id: string,
   title: string,
@@ -87,20 +81,15 @@ interface Milestone {
   status: "completed" | "in_progress" | "pending",
   paymentStatus: "paid" | "pending" | "overdue",
   amount: string
-
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
-
     }),
     // Navigate to messaging with this client
   }
-
   },
-  
                   >
                     {milestone.paymentStatus}
                   </Badge>
                 </div>
-
                 <div className="pl-7">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Due Date:</span>
@@ -126,7 +115,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 </div>
               </CardContent>
             </Card>
-
         </div>
       </section>
     </div>
@@ -148,7 +136,6 @@ interface Milestone {;
   paymentStatus: "paid" | "pending" | "overdue",;
   amount: string;
 }
-
 interface ProjectViewProps {;
   project: {;
     id: string,;
@@ -166,26 +153,21 @@ interface ProjectViewProps {;
 };
   milestones: Milestone[];
 }
-
 export function MobileProjectView(): any ({ project, milestones }: ProjectViewProps) {;
   const navigate = useNavigate();
-
   const startProjectCall = () => {;
     const roomId = `project-${project && project.id}`;
     toast && toast.success("Starting project call", {,
   description: "Initializing video connection...";
     });
-
     navigate(`/call/${roomId}`)
 };
-
   const messageClient = () => {;
     toast && toast.info("Opening message thread with client", {,
   description: `Messaging ${project && project.client.name}...`;
     });
     // Navigate to messaging with this client
 };
-
   return (    <div className="space-y-6 px-4 pb-24">;
       <Card>;
         <CardContent className="p-4">;
@@ -203,7 +185,6 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
               </div>;
               <Badge>{project && project.status}</Badge>;
             </div>;
-
             <div className="space-y-1">;
               <div className="flex justify-between items-center text-sm">;
                 <span>Progress</span>;
@@ -211,7 +192,6 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
               </div>;
               <Progress value={project && project.progress} className="h-2" />;
             </div>;
-
             <div className="grid grid-cols-2 gap-3 text-sm">;
               <div>;
                 <p className="text-muted-foreground">Start Date</p>;
@@ -230,7 +210,6 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
                 <p className="font-medium capitalize">{project && project.status}</p>;
               </div>;
             </div>;
-
             <div>;
               <p className="text-sm text-muted-foreground mb-1">Description</p>;
               <p className="text-sm">{project && project.description}</p>;
@@ -255,7 +234,6 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
           </div>;
         </CardContent>;
       </Card>;
-
       <section>;
         <h2 className="text-lg font-medium mb-4">Milestones</h2>;
         <div className="space-y-3">;
@@ -279,7 +257,6 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
                     {milestone && milestone.paymentStatus}
                   </Badge>;
                 </div>;
-
                 <div className="pl-7">;
                   <div className="flex justify-between text-sm">;
                     <span className="text-muted-foreground">Due Date:</span>;

@@ -1,6 +1,6 @@
 import React from 'react';
-import SEO from '../components/SEO',;
-import Layout from '../components/layout/Layout',;
+import SEO from '../components/SEO';
+import Layout from "Layout";
 import { motion } from 'framer-motion',;
 import { ;
   Star, Brain, Atom, Shield, Zap, TrendingUp, Globe, ;

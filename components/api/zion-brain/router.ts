@@ -1,6 +1,6 @@
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
 ) {
   if (!isAuthorized(req))
     return res.status(401).json({ error: "Unauthorized" });
@@ -31,7 +31,6 @@ function isAuthorized(req: NextApiRequest): boolean {
     const result = detectIntent(String(text || ''));
     const routed = await routeToChain(result.intent, payload || {});
     const latencyMs = Date.now() - started;
-
     return res.status(200).json({ ...result, routed })
   } catch (e: any) {
     const latencyMs = Date.now() - started;

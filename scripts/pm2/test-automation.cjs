@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -12,11 +6,9 @@
  * PM2 Test Automation Service;
  * Runs automated tests and reports results;
  */
-
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-
 class TestAutomation {}
   constructor() {}
     this.processName = process.env.PM2_PROCESS_NAME || 'test-automation';
@@ -35,12 +27,6 @@ class TestAutomation {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -51,11 +37,9 @@ class TestAutomation {}
   async runTests() {}
     try {}
       this.log('Starting test automation...');
-      
       // Check if test script exists in package.json;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       const testScript = packageJson.scripts?.test || packageJson.scripts?.['test:smoke'];
-      
       if (!testScript) {}
         this.log('No test script found in package.json');
         return { success: false, message: 'No test script configured' };
@@ -63,22 +47,17 @@ class TestAutomation {}
       // Run tests;
       const testCommand = this.parallelTests ? `${testScript} --run` : testScript;
       this.log(`Running tests: ${testCommand}`);
-      
-      
       const result = execSync(testCommand, { })
         encoding: 'utf8',
         stdio: 'pipe',
         cwd: process.cwd();
       }
 });
-
       this.log('Tests completed successfully');
       this.log(`Test output: ${result}`);
-
       return { success: true, output: result };
     } catch (error) {}
       this.log(`Test execution failed: ${error.message}`);
-      
       if (this.autoRetryFailed) {}
         this.log('Retrying failed tests...');
         try {}
@@ -101,8 +80,6 @@ class TestAutomation {}
   async checkCoverage() {}
     try {}
       this.log('Checking test coverage...');
-      
-      
       // Try to run coverage command;
       const coverageCommand = 'npm run test:coverage || npm run coverage || npx jest --coverage';
       const result = execSync(coverageCommand, { })
@@ -111,13 +88,10 @@ class TestAutomation {}
         cwd: process.cwd();
       }
 });
-
       // Extract coverage percentage (simplified);
       const coverageMatch = result.match(/(\d+)%/);
       const coverage = coverageMatch ? parseInt(coverageMatch[1]) : 0;
-      
       this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`);
-      
       if (coverage < this.coverageThreshold) {}
         this.log(`WARNING: Coverage below threshold!`);
         return { coverage, belowThreshold: true };
@@ -141,19 +115,15 @@ class TestAutomation {}
         parallelTests: this.parallelTests;
       };
     };
-
     const reportFile = path.join(__dirname, '../../logs/pm2/test-automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
     this.log(`Test report generated: ${reportFile}`);
     return report;
   };
   async start() {}
     this.log(`${this.processName} started`);
-    
     try {}
       const report = await this.generateReport();
-      
       if (report.testResults.success) {}
         this.log('Test automation completed successfully');
       } else {}
@@ -172,11 +142,6 @@ if (require.main === module) {}
   const testAutomation = new TestAutomation();
   testAutomation.start().catch(console.error);
 };
-<<<<<<< HEAD
-module.exports = TestAutomation;
-=======
-module.exports = TestAutomation;
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 module.exports = TestAutomation;module.exports = TestAutomation;

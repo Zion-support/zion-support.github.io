@@ -33,7 +33,6 @@ module.exports = {
       wait_ready: true,
       listen_timeout: 10000
     },
-
     // AI-Powered Intelligent Orchestrator
     {
       name: 'ai-intelligent-orchestrator',
@@ -43,8 +42,8 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */1 * * *', // Every hour
-      max_memory_restart: '1G',
+      cron_restart: '0 */1 * * *', // Every hour;
+    max_memory_restart: '1G',
       restart_delay: 15000,
       env: {
         NODE_ENV: 'production',
@@ -59,7 +58,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Advanced Predictive Analytics Engine
     {
       name: 'predictive-analytics-engine',
@@ -84,7 +82,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Intelligent Auto-Scaling Manager
     {
       name: 'intelligent-auto-scaler',
@@ -111,7 +108,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Advanced Security & Vulnerability Scanner
     {
       name: 'advanced-security-scanner',
@@ -138,7 +134,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Intelligent Git Workflow Manager
     {
       name: 'intelligent-git-manager',
@@ -165,7 +160,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Advanced Performance Optimizer
     {
       name: 'advanced-performance-optimizer',
@@ -192,7 +186,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Intelligent Backup & Recovery System
     {
       name: 'intelligent-backup-system',
@@ -219,7 +212,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Real-time Health Dashboard
     {
       name: 'health-dashboard',
@@ -245,7 +237,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Intelligent Code Quality Manager
     {
       name: 'intelligent-code-quality',
@@ -271,7 +262,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Advanced Testing Automation
     {
       name: 'advanced-testing-automation',
@@ -298,7 +288,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Intelligent Deployment Orchestrator
     {
       name: 'intelligent-deployment-orchestrator',
@@ -325,7 +314,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Resource Monitor & Optimizer
     {
       name: 'resource-monitor-optimizer',
@@ -351,7 +339,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // AI-Powered Error Prevention
     {
       name: 'ai-error-prevention',
@@ -378,7 +365,6 @@ module.exports = {
       time: true
     }
   ],
-
   // Enhanced PM2 Deploy configuration
   deploy: {
     production: {

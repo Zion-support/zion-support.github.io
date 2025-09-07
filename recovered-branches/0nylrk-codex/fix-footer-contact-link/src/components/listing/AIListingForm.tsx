@@ -1,5 +1,3 @@
-
-
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -48,14 +46,13 @@ import {Sparkles} from "lucide-react";
           onChange={(e) => setTargetAudience(e.target.value)}
           placeholder="e.g. Developers, Marketers, Startups"
           className="bg-zion-blue border border-zion-blue-light text-white"
-
       <Button 
       <Button
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
       <Button 
 import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast",;
+import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -64,7 +61,6 @@ import { Sparkles } from "lucide-react",;    category?: string;
     targetAudience?: string;
   }
 }
-
 export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
   const { toast } = useToast();          onChange={(e) => setKeyFeatures(e && e.target.value)}
           placeholder="Briefly describe the main features or benefits";
@@ -80,7 +76,6 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
           placeholder="e && e.g. Developers, Marketers, Startups";
           className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
-
         />;
       </div>;
       <Button;        <Input
@@ -103,7 +98,6 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
             Generate Optimized Content;
           </>;
         )}
-
       </Button>;
     </div>;
   );

@@ -1,23 +1,18 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -66,10 +61,8 @@ export default function Marketplace() {;  const searchSuggestions: SearchSuggest
   const handleFilterChange = (filterType: string, value: string) => {    
     return true
   }),
-  
   const handleFilterChange = (filterType: string, value: string) => {
     // // // console.log(`Filter changed: ${filterType} = ${value}`),
-
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev =>
@@ -86,7 +79,6 @@ export default function Marketplace() {;  const searchSuggestions: SearchSuggest
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),;
   const filterOptions = generateFilterOptions();
-
   // Filter listings based on selected filters;
   const filteredListings = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {;
     // Search filter;
@@ -95,30 +87,24 @@ export default function Marketplace() {;  const searchSuggestions: SearchSuggest
         !listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()))) {;
       return false;
     }
-
     // Product type filter;
     if (selectedProductTypes && selectedProductTypes.length > 0 && !selectedProductTypes && selectedProductTypes.includes(listing && listing.category)) {;
       return false;
     }
-
     // Location filter;
     if (selectedLocations && selectedLocations.length > 0 && listing && listing.location && !selectedLocations && selectedLocations.includes(listing && listing.location)) {;
       return false;
     }
-
     // Availability filter;
     if (selectedAvailability && selectedAvailability.length > 0 && listing && listing.availability && !selectedAvailability && selectedAvailability.includes(listing && listing.availability)) {;
       return false;
     }
-
     // Rating filter;
     if (selectedRating && (!listing && listing.rating || listing && listing.rating < selectedRating)) {;
       return false;
     }
-
     return true;
   });
-
   const handleFilterChange = (filterType: string, value: string) => {;
     console && console.log(`Filter changed: ${filterType} = ${value}`),;
     switch (filterType) {;
@@ -138,24 +124,20 @@ export default function Marketplace() {;  const searchSuggestions: SearchSuggest
         );
         break;
     }
-
   };
-
   const clearAllFilters = () => {;
     setSearchQuery("");
     setSelectedProductTypes([]);
     setSelectedLocations([]);
     setSelectedAvailability([]);
-
   },
     // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
     if (listing) {
       toast({
-        title: "Quote Requested"
-        description: `Your quote request for ${listing.title} has been sent.`
-
+        title: "title",
+    description: `Your quote request for ${listing.title} has been sent.`
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -273,7 +255,6 @@ if ( {) {
             title: listing.title,;
             category: listing.category,;
             image: listing.images?.[0];
-
           }
         }
       });
@@ -282,9 +263,7 @@ if ( {) {
   },  },
   };
   },
-
   return (
-
     <AppLayout>;
       <main className="flex-grow container mx-auto px-4 py-8">;
         <div className="max-w-4xl mx-auto mb-8">;
@@ -297,7 +276,6 @@ if ( {) {
         <div className="max - w-4xl mx - auto mb-8">;
           <h1 className="text - 3xl font - bold text - white mb-4">AI & Tech Marketplace</h1>;
           <p className="text - zion - slate-light">;
-
   }
             Discover professional services and products for your AI and tech projects.;
             Browse our curated collection of solutions from verified providers.;
@@ -320,20 +298,16 @@ if ( {) {
               </Button>;
               <Button variant="ghost" size="icon" className="text - zion - slate-light">;
                 <ListFilter className="h - 4 w-4" />;
-
               </Button>;
             </div>;
           </div>;
         </div>;
-
         {/* Main layout with sidebar and results */}
         <div className="grid grid - cols - 1 lg:grid - cols - 4 gap-6">;
           {/* Sidebar Filters */}
           <div className="lg: col - span-1">;
             <FilterSidebar;
-
               filters={{
-
                 selectedProductTypes
                 selectedLocations
                 selectedAvailability,
@@ -360,11 +334,9 @@ if ( {) {
                 selectedProductTypes;
                 selectedLocations;
                 selectedAvailability
-
                 selectedProductTypes,
                 selectedLocations,
                 selectedAvailability,
-
               }}
               filterOptions={filterOptions}
               onFilterChange={handleFilterChange}
@@ -392,10 +364,8 @@ if ( {) {
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
-            
               </p>;
             </div>;
-
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               {filteredListings && filteredListings.length > 0 ? (;

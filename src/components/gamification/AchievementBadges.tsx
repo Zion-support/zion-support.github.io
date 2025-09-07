@@ -1,18 +1,14 @@
 export interface Achievement {
-
-  id: string
-  title: string
+  id: string;
+    title: string
   description: string
   achieved: boolean
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-
 export interface Achievement {
   id: string,
   title: string,
   description: string,
   achieved: boolean
-
 import { BadgeCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 export interface Achievement {
@@ -23,13 +19,11 @@ export interface Achievement {
 interface AchievementBadgesProps {
   achievements: Achievement[];
   achievements: Achievement[];
-
 }
 export interface Achievement {
   id: string
   title: string
   description: string
-
   achieved: boolean
 }
 interface AchievementBadgesProps {
@@ -43,39 +37,29 @@ export interface Achievement {;
   title: string,
   description: string;
   achieved: boolean;
-
 interface AchievementBadgesProps {;
   achievements: Achievement[];
   achievements: Achievement[];
-
 import { BadgeCheck } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 export interface Achievement {
   id: string,
   title: string,
   description: string,
-
 }
-
 export interface Achievement {;
   id: string,;
   title: string,,
   description: string,;
   achieved: boolean;
 }
-
 interface AchievementBadgesProps {;
   achievements: Achievement[];
 }
-
 export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {;
   return (
-
               <p className="font-medium">{a.title}</p>
               <p className="text-sm text-muted-foreground">{a.description}</p>
             </div>
           </div>
         ))}
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

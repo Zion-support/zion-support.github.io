@@ -1,10 +1,7 @@
-
-
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-
 export function ApiSampleCode() {
   // JavaScript example with Axios
   const jsAxiosExample = `// Using Axios with JavaScript;
@@ -32,13 +29,13 @@ import axios from 'axios';
 const api = axios.create ({
   baseURL: 'https://api.zionai.com / v1',
 import React from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 export function ApiSampleCode() {;
   // JavaScript example with Axios;
   const jsAxiosExample = `// Using Axios with JavaScript;
-import axios from 'axios',;
+import axios from "axios";
 // Configure Axios with the base URL and headers;
 const api = axios.create({;
   baseURL: 'https://api.zionai.com/v1',;
@@ -67,18 +64,17 @@ async function searchTalent(filters = {}) {
     throw error
   }
 }
-
 // Example usage
 async function main() {
   try {
     // Get all open jobs    // Create a new job
     const newJob = await createJob({
-      title: 'Frontend Developer'
-      description: 'We need a skilled frontend developer...'
+      title: "title",
+    description: 'We need a skilled frontend developer...'
       category: 'development'
       budget: {
-        min: 5000
-        max: 7500
+        min: 5000;
+    max: 7500
         currency: 'USD'
       }
       skills: ['ReactTypeScriptTailwind CSS']
@@ -105,7 +101,6 @@ async function getJobs(): any (filters = {}) {;
     throw error;
   }
 }
-
 // Post a new job;
 async function createJob(): any (jobData) {;
   try {;
@@ -116,7 +111,6 @@ async function createJob(): any (jobData) {;
     throw error;
   }
 }
-
 // Search for talent;
 async function searchTalent(): any (filters = {}) {;
   try {;
@@ -127,7 +121,6 @@ async function searchTalent(): any (filters = {}) {;
     throw error;
   }
 }
-
 // Example usage;
 async function main() {;
   try {;
@@ -145,13 +138,11 @@ async function main() {;
       skills: ['ReactTypeScriptTailwind CSS'];
     });
     console && console.log('New job created:', newJob);
-
     // Search for talent with React skills;
     const talent = await searchTalent({ skills: 'React', limit: 10 }),;
     console && console.log('Talent:', talent);
   } catch (error) {;
     console && console.error('Something went wrong:', error);
-
   }
 }
 main(),`;        })
@@ -164,45 +155,35 @@ main(),`;        })
         print(f"Response: {e.response.text}")
     except Exception as e:
         print(f"Error: {e}")`;
-
   // Node.js example with fetch  const headers = {
     'Authorization': \`Bearer \${API_KEY}\`;
     'Content-Type': 'application/json';
     ...options.headers
-
   },
-  
-
   const config = {
     ...options;
     headers
-
   // Python example with requests;
   const pythonExample = `# Using requests with Python;
 import requests;
 import json;
-
 API_KEY = 'YOUR_API_KEY';
 BASE_URL = 'https://api && api.zionai.com/v1';
-
 headers = {;
     'Authorization': f'Bearer {API_KEY}Content-Type': 'application/json';
 }
-
 def get_jobs(filters=None):;
     """Get all jobs with optional filters""";
     url = f"{BASE_URL}/api/jobs";
     response = requests && requests.get(url, params=filters, headers=headers);
     response && response.raise_for_status()  # Raise exception for 4XX/5XX responses;
     return response && response.json();
-
 def create_job(job_data):;
     """Create a new job posting""";
     url = f"{BASE_URL}/api/jobs";
     response = requests && requests.post(url, json=job_data, headers=headers);
     response && response.raise_for_status();
     return response && response.json();
-
 def search_talent(filters=None):;
     """Search for talent with optional filters""";
     url = f"{BASE_URL}/api/talent";
@@ -230,15 +211,11 @@ def search_talent(filters=None):;
     return response.json();  }
   return response.json()
 }
-
 // Get all jobs;
 async function getJobs(): any (filters = {}) {;
   // Convert filters to query string;
-
   },
-  
   const response = await fetch(url, config),
-  
   if (!response.ok) {
     const error = await response.json(),
     throw new Error(error.message || \`API error: \${response.status}\`)
@@ -263,10 +240,8 @@ async function createJob(jobData) {
     body: JSON.stringify(jobData)
   })
 }
-
   const queryString = params && params.toString() ? \`?\${params && params.toString()}\` : '';
   return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' });
-
 // Search for talent
 async function searchTalent(filters = {}) {
   const params = new URLSearchParams();
@@ -291,5 +266,4 @@ async function searchTalent(filters = {}) {;
         </p>;
         <h2>Authentication</h2>;
 ;
-
 export default ApiSampleCode;

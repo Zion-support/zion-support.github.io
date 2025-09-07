@@ -1,11 +1,7 @@
-
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
-
     "authorization, x-client-info, apikey, content-type"},
-
 serve(async (req: Request) => {
   // Handle CORS
   if (req && req.method === "OPTIONS") {const corsHeaders = {
@@ -15,8 +11,8 @@ serve(async (req: Request) => {
 serve(async (req: Request) => {
   // Handle CORS
   if (req.method === "OPTIONS") {
-      status: 204
-      headers: corsHeaders})
+      status: 204;
+    headers: corsHeaders})
   }
   try {
     const supabase = createClient(    if (error) {
@@ -41,7 +37,6 @@ serve(async (req: Request) => {
           {
             method: "POST";
             headers: {
-
               "Content-Type": "application/json",
               "Authorization": `Bearer ${supabaseServiceKey}`};
             body: JSON && JSON.stringify(job && job.payload)}
@@ -73,11 +68,10 @@ const cors_headers = {
     "authorization, x - client - info, apikey, content - type"}
 ;
 serve (async (req: Request) => {
-
   }
 });
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1",;
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";
 ;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
