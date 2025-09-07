@@ -22,8 +22,8 @@ import {
   Filter,
   ChevronDown
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { SEO } from '@/components/SEO';
+import { enhancedServicesCatalog, EnhancedServiceItem, EnhancedServiceCategory } from '@/data/enhancedServicesCatalog2025';
 
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -90,7 +90,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <>
       <SEO 
         title="Revolutionary Services Showcase 2025 - Zion Tech Group"
         description="Explore our comprehensive suite of AI-powered, quantum computing, blockchain, and innovative micro SAAS services. Transform your business with cutting-edge technology solutions."
