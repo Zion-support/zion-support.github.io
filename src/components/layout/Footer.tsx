@@ -151,7 +151,8 @@ export function Footer() {
     { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
     { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github },
     { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },
-    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
+    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram },
+    { name: "Website", href: "https://ziontechgroup.com", icon: Globe }
   ];
 
   return (

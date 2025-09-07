@@ -382,7 +382,7 @@ export default function Pricing() {
                 </Link>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 

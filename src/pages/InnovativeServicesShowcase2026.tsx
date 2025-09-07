@@ -196,7 +196,7 @@ export default function InnovativeServicesShowcase2026() {
         }
       ]
     }
-  ];
+  };
 
   return (
     <>
@@ -439,6 +439,8 @@ export default function InnovativeServicesShowcase2026() {
                     Call Now
                   </a>
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+                <p className="text-cyan-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
           </div>

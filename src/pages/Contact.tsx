@@ -44,8 +44,8 @@ import z from "zod";
 import { ChatAssistant } from "@/components/ChatAssistant/ChatAssistant";
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
 import { 
-  Mail, 
   Phone, 
+  Mail, 
   MapPin, 
   Clock, 
   Send, 
@@ -98,6 +98,12 @@ const Contact = () => {
     e.preventDefault();
     setFormStatus('submitting');
     // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    // Reset form after 5 seconds
     setTimeout(() => {
       setFormStatus('success');
       // Reset form after success
