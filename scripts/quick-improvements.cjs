@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 console.log(' Creating quick improvements...')
@@ -7,6 +6,7 @@ const errorBoundary = `import React from 'react'
     console.error('Error caught by boundary:')
 fs.writeFileSync('src/components/LoadingSpinner.tsx')
 // console.log(' Loading Spinner created')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,3 +39,7 @@ console.log('� Quick improvements completed!')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log('� Quick improvements completed!')
+console.log('� Quick improvements completed!')
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

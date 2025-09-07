@@ -1,6 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Solutions | Zion Tech Group',
   description: 'Comprehensive technology solutions for modern businesses. AI, automation, and digital transformation services.',
@@ -13,8 +12,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
-};
-
+}
 export default function SolutionsPage() {
   const solutions = [
     {
@@ -55,6 +53,7 @@ export default function SolutionsPage() {
     }
   ];
 
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}

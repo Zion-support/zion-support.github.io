@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -63,6 +62,7 @@ console.log(' Starting enhanced error detection and fixing automation...')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -90,3 +90,7 @@ console.log(' Starting enhanced error detection and fixing automation...')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error(' Enhanced error detection "failed")
+    console.error(' Enhanced error detection "failed")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

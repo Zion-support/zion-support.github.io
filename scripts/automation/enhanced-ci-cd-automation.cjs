@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -218,8 +217,8 @@ console.log(` Quality checks completed. "Score"`)
       path.join(this.reportDir, "ci-cd-report.json")
       path.join(this.reportDir, "CI_CD_REPORT.md")
     console.log(""� "CI/CD" report generated successfully")
-  generateMarkdownReport(report) {return # ""CI/CD""}
-  generateMarkdownReport(report) {return # "CI/CD"}
+  generateMarkdownReport($2) {return # ""CI/CD""}
+  generateMarkdownReport($2) {return # "CI/CD"}
 - **Status**: ${this.ciResults.dependencies.status === "success" ? " Success" : " Failed"}
 - **Duration**: ${this.ciResults.dependencies.result?.duration || """N/A"""}
 ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResults.dependencies.result?.error || "Unknown error"} : ""
@@ -286,6 +285,7 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
   console.error(" Pipeline "failed": ")
   console.error(" Pipeline "failed": ")
   console.error(" ""CI/CD"" automation "failed": ")
+<<<<<<< HEAD
 // Start the ""CI/CD""
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -319,3 +319,7 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+//
+// Start the "
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

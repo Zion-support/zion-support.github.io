@@ -1,12 +1,11 @@
-
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
-      'INFO': 'ℹ'
-      'SUCCESS': ''
-      'ERROR': ''
-      'WARNING': '⚠'
-      'FIX': ''
+      "INFO": "ℹ"
+      "SUCCESS": ""
+      "ERROR": ""
+      "WARNING": "⚠"
+      "FIX": ""
     }[type] || 'ℹ'
     const content = fs.readFileSync(filePath, 'utf8')
     const lines = content.split('\n')
@@ -54,6 +53,7 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -81,3 +81,7 @@ const path = require('path')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

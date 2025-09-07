@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -107,6 +106,7 @@ async log(message, type = "INFO")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -131,3 +131,8 @@ async log(message, type = "INFO")
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
           this.fixes.push({ file, "type": "export", "description": "Added missing default export" }")"
 
+=======
+console.error(""Error": ")
+  console.error(""Error": ")
+          this.fixes.push({ file, "type": "export", "description": "Added missing default export" }")"
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

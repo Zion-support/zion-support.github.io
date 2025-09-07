@@ -1,10 +1,7 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/ai-health-monitor.cjs
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/ai-health-monitor.cjs
 
 const os = require('os')
 // console.log('🤖 AI Health Monitor starting...')
@@ -60,7 +57,3 @@ const os = require('os')
       console.error('Error saving "analysis")
       console.error('Error saving "alert")
         console.log('🧠 AI Analysis "completed")
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/ai-health-monitor.cjs
-<<<<<<< HEAD:scripts/intelligent/ai-health-monitor.cjs
-        console.error('Error in AI "analysis")
-        console.error('Error in AI "analysis")

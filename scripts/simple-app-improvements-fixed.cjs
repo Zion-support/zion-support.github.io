@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
     this.log(`Total improvements: ${this.improvements.length}`);
@@ -61,3 +62,15 @@ console.log('=====')
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+this.log(`Total improvements: ${this.improvements.length}`)
+    this.log(`Total errors: ${this.errors.length}`)
+//
+const improvements = new SimpleAppImprovements()
+improvements.runAllImprovements().catch(console.error)
+///usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+// console.log(' Simple App Improvements System')
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

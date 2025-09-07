@@ -1,11 +1,7 @@
-
-import TryItConsole from './TryItConsole';
-
+import TryItConsole from './TryItConsole'
   endpoint,
-}: {;
-
-import { EndpointSpec } from '../../data/api-docs/types';
-
+}: {
+import { EndpointSpec } from '../../data/api-docs/types'
 export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
   return (
     <div className="space-y-4">
@@ -17,7 +13,7 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
 
       <div />
         <div className='text-xl font-semibold text-high-contrast' />}
-}
+
           {endpoint.title}
 
         <div className='font-medium mb-2'>Code Examples</div>        <CodeSamples samples={endpoint.samples} />
@@ -53,14 +49,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             (endpoint.auth |[]).includes('wallet')
       <div />
 <div className='font-medium mb-2' />Try It</div>
-        <TryItConsole;
+        <TryItConsole
 method={endpoint && endpoint.method}
           path={endpoint && endpoint.path}
           requiresAuth={
 
             (endpoint.auth |[]).includes('jwt') |}
             (endpoint.auth |[]).includes('wallet')}
-          }
+
            />
       </div>
       {endpoint.rateLimits && endpoint.rateLimits.length > 0 && (
@@ -78,30 +74,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       )}
 
-      {endpoint && endpoint.rateLimits && endpoint && endpoint.rateLimits.length > 0 && (;
+      {endpoint && endpoint.rateLimits && endpoint && endpoint.rateLimits.length > 0 && (
         <div>;'
           <div className='font-medium mb-2'>Rate Limits</div>;'
-          <ul className='list-disc pl-5 text-sm text-high-contrast-muted'>;
-            {endpoint && endpoint.rateLimits.map((r, idx) => (;
-              <li key={idx}>;
+          <ul className='list-disc pl-5 text-sm text-high-contrast-muted'>
+            {endpoint && endpoint.rateLimits.map((r, idx) => (
+              <li key={idx}>
                 {r && r.tier}: {r && r.limitPerMinute}/min;'
                 {r && r.burst ? `, burst ${r && r.burst}` : ''}
-              </li>            ))}      </div>;
-      {(endpoint && endpoint.rateLimits && endpoint && endpoint.rateLimits.length > 0) && (;
+              </li>            ))}      </div>
+      {(endpoint && endpoint.rateLimits && endpoint && endpoint.rateLimits.length > 0) && (
         <div>;"
           <div className="font-medium mb-2">Rate Limits</div>;"
-          <ul className="list-disc pl-5 text-sm text-high-contrast-muted">;
+          <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
             {endpoint && endpoint.rateLimits.map((r, idx) => (;'`
-              <li key={idx}>{r && r.tier}: {r && r.limitPerMinute}/min{r && r.burst ? `, burst ${r && r.burst}` : ''}</li>;
-
+              <li key={idx}>{r && r.tier}: {r && r.limitPerMinute}/min{r && r.burst ? `, burst ${r && r.burst}` : ''}</li>
             ))}
-          </ul>;
-        </div>;
+          </ul>
+        </div>
       )}
       )}
-    </div>;
-  );
-}
+    </div>
+  )
           </ul>
         </div>
       )}
@@ -140,48 +134,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       )}
     </div>
-  );
-
+  )
       )}
     </div>
-  );
-}
-          </span>        </div>;
-      </div>;
+  )
+          </span>        </div>
+      </div>
       <div>;'
-        <div className='font - medium mb - 2'>Code Examples</div>        <CodeSamples samples={endpoint.samples} />;
+        <div className='font - medium mb - 2'>Code Examples</div>        <CodeSamples samples={endpoint.samples} />
       </div>;"
       <div>        <div className="text - xl font - semibold text - high - contrast">{endpoint.title}</div>;"
         <div className="text - sm text - high - contrast - muted">{endpoint.description}</div>;"
         <div className="mt - 2 inline - flex items - center gap - 2 text - xs">;"
           <span className="px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary">{endpoint.method}</span>;"
           <code className="px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary">{endpoint.path}</code>;"
-          <span className="px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary">{endpoint.visibility}</span>;
-      </div>;
+          <span className="px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary">{endpoint.visibility}</span>
+      </div>
       <div>;'"
-        <div className='font - medium mb - 2'>Code Examples</div>        <div className="font - medium mb - 2">Code Examples</div>;
-        <CodeSamples samples={endpoint.samples} />;
-      </div>;
+        <div className='font - medium mb - 2'>Code Examples</div>        <div className="font - medium mb - 2">Code Examples</div>
+        <CodeSamples samples={endpoint.samples} />
+      </div>
       <div>;'
-        <div className='font - medium mb - 2'>Try It</div>;
-        <TryItConsole;
+        <div className='font - medium mb - 2'>Try It</div>
+        <TryItConsole
           method={endpoint.method}
           path={endpoint.path}
           requires_auth={'
             (endpoint.auth || []).includes ('jwt') ||;'
-            (endpoint.auth || []).includes ('wallet');
-          }
-        />;
-      </div>;
+            (endpoint.auth || []).includes ('wallet')
+        />
+      </div>
       {endpoint.rate_limits && endpoint.rate_limits.length > 0 && (
         <div>;'
           <div className='font - medium mb - 2'>Rate Limits</div>;'
-          <ul className='list - disc pl - 5 text - sm text - high - contrast - muted'>;
+          <ul className='list - disc pl - 5 text - sm text - high - contrast - muted'>
             {endpoint.rate_limits.map ((r, idx) => (
-              <li key={idx}>;
-
-}
-
+              <li key={idx}>
 origin/cursor/automate-test-improve-and-merge-code-2533
-}
-

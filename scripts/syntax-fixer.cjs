@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require("fs")
 const path = require("path")
 const { exec } = require("child_process")
@@ -10,6 +9,7 @@ const util = require("util")
   async log(message, level = "INFO")
       console.error(`Failed to write to log "file"`)
     await this.log(" Starting syntax error fixing...")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,3 +42,7 @@ const util = require("util")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+    fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

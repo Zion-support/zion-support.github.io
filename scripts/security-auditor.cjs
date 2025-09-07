@@ -1,12 +1,13 @@
-    this.projectRoot = process.cwd();
-
+this.projectRoot = process.cwd()
     this.ensureDirectories()}
-
-  ensureDirectories() {
+  ensureDirectories($2) {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { "recursive": true })}"
-  }
+log($2) {
+    const timestamp = new Date().toISOString()
+  async runNpmAudit() {"
 
+<<<<<<< HEAD
   log(message) {
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
@@ -70,10 +71,26 @@
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       const foundEnvFiles = [];
       const sensitiveVars = [];
+=======
+        "timeout": 120000;")      })
+      const auditData = JSON.parse(result)
+      const vulnerabilities = auditData.vulnerabilities || {}
+      const vulnerabilityCount = Object.keys(vulnerabilities).length
+      this.log(`🔍 Found ${vulnerabilityCount} vulnerabilities`)
+      return {
+  // TODO: Implement
+        vulnerabilities,"
 
-      for (const envFile of envFiles) {
-        const envPath = path.join(this.projectRoot, envFile);
+      return { "error": error.message }}"
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+
+  async checkEnvironmentVariables() {"
+      const foundEnvFiles = []
+      const sensitiveVars = []
+  for($2) {
+        const envPath = path.join(this.projectRoot, envFile)
         if (fs.existsSync(envPath)) {
+<<<<<<< HEAD
           foundEnvFiles.push(envFile);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,17 +107,20 @@
           // Check for sensitive variables
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
           const sensitivePatterns = [/API_KEY/i,
+=======
+          foundEnvFiles.push(envFile)
+          // Check for sensitive variables;          const sensitivePatterns = [/API_KEY/i,
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
             /SECRET/i,
             /PASSWORD/i,
             /TOKEN/i,
             /PRIVATE/i,
             /CREDENTIAL/i;]
-          ];
-
-          const lines = content.split('\n');
+          ]
+          const lines = content.split('\n')
           lines.forEach((line, index) => {
             if (line.trim() && !line.startsWith('#')) {
-              const [key] = line.split('=');
+              const [key] = line.split('=')
               if (key && sensitivePatterns.some(pattern => pattern.test(key))) {
                 sensitiveVars.push({
 
@@ -109,14 +129,21 @@
                 })}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 `;
       this.log(`🔐 Found ${foundEnvFiles.length} environment files`);`;
       this.log(`🔐 Found ${sensitiveVars.length} potentially sensitive variables`);
 
+=======
+`
+      this.log(`🔐 Found ${foundEnvFiles.length} environment files`);`
+      this.log(`🔐 Found ${sensitiveVars.length} potentially sensitive variables`)
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   // TODO: Implement
 }"
         "envFiles": foundEnvFiles,"
         sensitiveVars,"
+<<<<<<< HEAD
 
 
       const foundVulnerable = Object.keys(dependencies).filter(dep => )
@@ -126,10 +153,15 @@
             }
           })}
       }
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
-      this.log(`🔐 Found ${foundEnvFiles.length} environment files`);
-      this.log(`🔐 Found ${sensitiveVars.length} potentially sensitive variables`);
+      const foundVulnerable = Object.keys(dependencies).filter(dep => )        vulnerablePackages.some(vuln => dep.includes(vuln))
+      )
+      this.log(`📦 Found ${foundVulnerable.length} potentially vulnerable packages`)
+  // TODO: Implement
 
+<<<<<<< HEAD
       return {
         "envFiles": foundEnvFiles,
         sensitiveVars,
@@ -230,10 +262,25 @@
           patterns.forEach(pattern => {)
             const matches = content.match(pattern.pattern);
             if (matches) {
+=======
+  // TODO: Implement
+      const securityIssues = []
+      // Check for common security issues in code
+      const patterns = [{
+
+      const files = this.findSourceFiles()
+  for($2) {
+  // TODO: Implement
+
+          patterns.forEach(pattern => {)
+            const matches = content.match(pattern.pattern)
+  if($2) {
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
               securityIssues.push({)
 
                 "count": matches.length;"
           })} catch (error) {"
+<<<<<<< HEAD
           // Skip files that can't be read;
 
       this.log(`🔍 Found ${securityIssues.length} potential security issues`);
@@ -278,12 +325,18 @@
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+          // Skip files that can't be read
+      this.log(`🔍 Found ${securityIssues.length} potential security issues`)
+  // TODO: Implement
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
     const scanDirectory = (dir) => {
   // TODO: Implement
 
-        this.fixes.push('Applied automatic security fixes');
-        console.log('✅ Security fixes applied');
+        this.fixes.push('Applied automatic security fixes')
+        console.log('✅ Security fixes applied')
       } catch (error) {
+<<<<<<< HEAD
         console.log('❌ Could not apply automatic fixes');
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -384,10 +437,27 @@
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log('❌ Could not apply automatic fixes')
+      "analysis": {"
+        npmAudit: await this.runNpmAudit(),"        "environmentVariables": await this.checkEnvironmentVariables(),
+        "dependencies": await this.checkDependencies(),
+        "codeSecurity": await this.checkCodeSecurity()"
+    }
+    // Generate recommendations;    report.recommendations = this.generateRecommendations(report.analysis)
+    const reportFile = path.join(this.reportsDir, `security-report-${Date.now()}.json`)
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
+    return report}
+  generateRecommendations($2) {
+    const recommendations = []
+  if($2) {
+      recommendations.push({"
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
     return recommendations}
 
   async run() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -437,13 +507,24 @@ if (require.main === module) {
       
       
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+// TODO: Implement
+      const report = await this.generateSecurityReport()
+      throw error}
+  if($2) {
+  const auditor = new SecurityAuditor()
+  auditor.run()
+    .then((report) => {
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
       process.exit(0)})
     .catch((error) => {"
 
       process.exit(1)})}
 
-module.exports = SecurityAuditor;
+module.exports = SecurityAuditor
+main
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -468,6 +549,9 @@ main
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -504,8 +588,12 @@ const { execSync } = require('child_process')
         "priority"
         "message"
         "impact"
+<<<<<<< HEAD
       console.error('\n� Security Auditor "failed")
 <<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+      console.error('\n� Security Auditor "failed")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

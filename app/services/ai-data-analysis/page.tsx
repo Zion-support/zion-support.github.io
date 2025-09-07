@@ -1,6 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'AI Data Analysis Platform - Zion Tech Group',
   description: 'Build AI-powered data analysis platforms with automated insights, predictive analytics, and intelligent business intelligence tools.',
@@ -184,5 +183,4 @@ export default function AIDataAnalysisPage() {
 
       <Pricing />
     </div>
-  );
-}
+  )

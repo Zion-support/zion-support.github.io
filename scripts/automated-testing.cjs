@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,9 +14,12 @@
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
-
+///usr/bin/env node
 const { execSync } = require('child_process')
 console.log('🧪 Running Automated Tests...')
       "status"
@@ -24,6 +28,7 @@ console.log('🧪 Running Automated Tests...')
   execSync('npm run lint', { "stdio"})
   execSync('npm run type-check', { "stdio"})
     execSync('npm audit --audit-level=moderate', { "stdio"})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,3 +61,7 @@ console.log('🧪 Test "Summary")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log('🧪 Test "Summary")
+console.log('🧪 Test "Summary")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

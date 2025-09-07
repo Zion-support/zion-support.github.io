@@ -1,4 +1,3 @@
-
 const fs = require('fs')
 const path = require('path')
 console.log(' Comprehensive Health Check Starting...')
@@ -11,6 +10,7 @@ console.log(' Comprehensive Health Check Starting...')
         "name"
         "check"
         "name"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,3 +43,7 @@ console.log(' Comprehensive Health Check Starting...')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+"check"
+        "check"
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,8 +14,13 @@
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const { execSync } = require("child_process")
 const fs = require("fs")
+///usr/bin/env node
+const { execSync } = require("child_process")
 
       "timestamp"
       summary: { passed: 0, "failed": 0, "warnings"}
@@ -55,6 +61,7 @@ const fs = require("fs")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -80,3 +87,7 @@ const fs = require("fs")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log(`� Report saved "to"`)
+    console.log(`� Report saved "to"`)
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

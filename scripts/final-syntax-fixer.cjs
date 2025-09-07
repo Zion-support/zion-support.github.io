@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,9 +14,12 @@
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
-
+///usr/bin/env node
   console.log(' Starting Final Syntax Fixer...')
     const files = findCodeFiles('.;')
         const originalContent = fs.readFileSync(file, 'utf8')
@@ -29,6 +33,7 @@ const path = require('path')
           content = content.replace(stringConcatSemicolon, '$"1")
           content = content.replace(templateLiteralSemicolon, '"$1$2")
           content = content.replace(templateLiteralSemicolon, '"$1$2")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,3 +66,7 @@ const path = require('path')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error(' Final syntax fixer "failed")
+    console.error(' Final syntax fixer "failed")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

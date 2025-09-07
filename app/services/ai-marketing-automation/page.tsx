@@ -48,5 +48,4 @@ export default function AiMarketingAutomationPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )

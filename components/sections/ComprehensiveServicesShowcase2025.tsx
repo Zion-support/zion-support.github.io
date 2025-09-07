@@ -1,13 +1,9 @@
-
-import { advancedCybersecurity2025  } from '../../data/advanced-cybersecurity-2025';
-import { blockchainWeb32025  } from '../../data/blockchain-web3-2025';
-import { iotEdgeComputing2025  } from '../../data/iot-edge-computing-2025';
-import { healthcareBiotech2025  } from '../../data/healthcare-biotech-2025';
-import { fintechFinancial2025  } from '../../data/fintech-financial-2025';
-
-import { educationElearning2025 } from '../../data/education-elearning-2025';
-
-
+import { advancedCybersecurity2025  } from '../../data/advanced-cybersecurity-2025'
+import { blockchainWeb32025  } from '../../data/blockchain-web3-2025'
+import { iotEdgeComputing2025  } from '../../data/iot-edge-computing-2025'
+import { healthcareBiotech2025  } from '../../data/healthcare-biotech-2025'
+import { fintechFinancial2025  } from '../../data/fintech-financial-2025'
+import { educationElearning2025 } from '../../data/education-elearning-2025'
     {
       title: 'Cybersecurity & Security',
   icon: Shield,
@@ -49,34 +45,29 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
       services: educationElearning2025,
       gradient: 'from-amber-600 via-yellow-600 to-orange-600'}
   description: 'Advanced learning and educational technology'}
-    }
-  ];
 
+  ]
 const containerVariants = {}
     hidden: { opacity: 0}
-}
+
     visible: {
-      opacity: 1;
+      opacity: 1
 transition: {}
 staggerChildren: 0.1}
-      }
-    }
-  };
 
+  }
 const itemVariants = {}
     hidden: { y: 20, opacity: 0}
-}
+
     visible: {
-      y: 0;
-opacity: 1;
+      y: 0
+opacity: 1
 transition: {}
 duration: 0.5}
-      }
-    }
-  };
 
+  }
   return (
-    <section className=\"relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden\"    />;
+    <section className=\"relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden\"    />
       {/* Animated Background Elements */}
 
   return ("
@@ -92,17 +83,15 @@ duration: 0.5}
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
 
         {/* Header *}
-}
 
-        <motion.div;
+        <motion.div
 initial={{ opacity: 0, y: 30 }
-}
+
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }
-}
 
           <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>
-            Revolutionary 2025 Services;
+            Revolutionary 2025 Services
           </h2>'
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
 
@@ -110,28 +99,26 @@ initial={{ opacity: 0, y: 30 }
         </motion.div>
 
           transition={{ duration: 0 && 0.8 }
-}
-          className='text-center mb-16'>;
-          <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'    />;
-            Revolutionary 2025 Services;
-          </h2>;
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'    />;
-            Discover our comprehensive suite of cutting-edge micro SAAS;
-            services, IT solutions, and AI innovations designed to transform;
-            your business and drive success in the digital age.          </p>        >;"
-          <h2 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6\"    />;
-            Revolutionary 2025 Services;
-          </h2>;"
-          <p className=\"text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed\"    />;
-            Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI innovations designed to transform your business and drive success in the digital age.;
-          </p>;
-        </motion && motion.div>;
 
+          className='text-center mb-16'>
+          <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'    />
+            Revolutionary 2025 Services
+          </h2>
+          <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'    />
+            Discover our comprehensive suite of cutting-edge micro SAAS
+            services, IT solutions, and AI innovations designed to transform
+            your business and drive success in the digital age.          </p>        >;"
+          <h2 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6\"    />
+            Revolutionary 2025 Services
+          </h2>;"
+          <p className=\"text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed\"    />
+            Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI innovations designed to transform your business and drive success in the digital age.
+          </p>
+        </motion && motion.div>
         {/* Service Categories */}
 
           whileInView='visible'
           viewport={{ once: true }
-}
 
           className='space-y-16'
             />
@@ -145,36 +132,33 @@ className='relative'
               {/* Category Header */}
                     {category.title}
                   </h3>;"
-                  <p className="text - gray - 400 text - lg">;
-
+                  <p className="text - gray - 400 text - lg">
                   <p className='text-gray-400 text-lg'>                    {category.description}
 
                     {category.description}
-                  <p className='text-gray-400 text-lg'    />                    {category.description}{category.description}</p>;
-                </div>;
+                  <p className='text-gray-400 text-lg'    />                    {category.description}{category.description}</p>
+                </div>
               </div>;"
-              <div className=\"flex items-center mb-8\"    />;
+              <div className=\"flex items-center mb-8\"    />
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${category && category.gradient} mr-4`}    />
 "
-                  <category && category.icon className=\"w-8 h-8 text-white\"    />;
-                </div>;
+                  <category && category.icon className=\"w-8 h-8 text-white\"    />
+                </div>
                 <div    />;"
-                  <h3 className=\"text-3xl font-bold text-white mb-2\"    />;
+                  <h3 className=\"text-3xl font-bold text-white mb-2\"    />
                     {category && category.title}
                   </h3>;"
-                  <p className=\"text-gray-400 text-lg\"    />;
+                  <p className=\"text-gray-400 text-lg\"    />
                     {category && category.description}
-                  </p>;
-                </div>;
-
-              </div>;
-
+                  </p>
+                </div>
+              </div>
               {/* Services Grid */}
 
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {category.services.map((service, serviceIndex) => (
-                  <motion.div;
+                  <motion.div
                     key={service.id}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -184,9 +168,9 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                       />
 
                     {/* Service Header *}
-}
-                    <div className='mb-4'    />;
-                      <h4 className='text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors'    />;
+
+                    <div className='mb-4'    />
+                      <h4 className='text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors'    />
                         {service.name}
 
                       </h4>
@@ -198,16 +182,14 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                     </div>
 "
                     <div className=\"mb-4\"    />;"
-                      <h4 className=\"text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors\"    />;
+                      <h4 className=\"text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors\"    />
                         {service && service.name}
                       </h4>;"
-                      <p className=\"text-gray-400 text-sm leading-relaxed\"    />;
+                      <p className=\"text-gray-400 text-sm leading-relaxed\"    />
                         {service && service.description}
-                      </p>;
-                    </div>;{/* Features */}<p className='text-gray-400 text-sm leading-relaxed'    />                        {service.description}{service.description}</p>;
-                    </div>;
-
-
+                      </p>
+                    </div>;{/* Features */}<p className='text-gray-400 text-sm leading-relaxed'    />                        {service.description}{service.description}</p>
+                    </div>
                     {/* Features */}
 
                       <p className='text-gray-400 text-sm leading-relaxed'    />                        {service.description}
@@ -219,7 +201,7 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                     {/* Features */}
 
                             {feature}
-                          </li>;
+                          </li>
                         ))}
 
                         {service.features && service.features.length > 3 && ("
@@ -240,54 +222,54 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
 
                           {service.price}
                           {service.perio}
-}
-                        </span>;
-                      </div>;
-                      <div className='text-xs text-gray-500 mt-1'    />;
+
+                        </span>
+                      </div>
+                      <div className='text-xs text-gray-500 mt-1'    />
                         Market position: {service.marketPositio}
-}
-                      </div>;
-                    </div>;
+
+                      </div>
+                    </div>
                     {/* ROI */}
-<div className='mb-4'    />;
-                      <h5 className='text-sm font-medium text-purple-300 mb-2'    />;
-                        ROI & Benefits:;
-                      </h5>;
-                      <div className='text-xs text-gray-400'    />;
-                        <div className='flex items-center mb-1'    />;
-                          <TrendingUp className='w-3 h-3 text-blue-400 mr-2 flex-shrink-0'    />;
+<div className='mb-4'    />
+                      <h5 className='text-sm font-medium text-purple-300 mb-2'    />
+                        ROI & Benefits:
+                      </h5>
+                      <div className='text-xs text-gray-400'    />
+                        <div className='flex items-center mb-1'    />
+                          <TrendingUp className='w-3 h-3 text-blue-400 mr-2 flex-shrink-0'    />
                           {service.roi}
-                        </div>;
-                        <div className='text-xs text-gray-500'    />;
+                        </div>
+                        <div className='text-xs text-gray-500'    />
                           Setup time: {service.setupTim}
-}
-                        </div>;
-                      </div>;
-                    </div>;
+
+                        </div>
+                      </div>
+                    </div>
                     {/* Use Cases */}
-<div className='mb-4'    />;
-                      <h5 className='text-sm font-medium text-purple-300 mb-2'    />;
-                        Perfect for:;
-                      </h5>;
-                      <div className='flex flex-wrap gap-1'    />;
+<div className='mb-4'    />
+                      <h5 className='text-sm font-medium text-purple-300 mb-2'    />
+                        Perfect for:
+                      </h5>
+                      <div className='flex flex-wrap gap-1'    />
                         {service.useCases;}
                           ?.slice(0, 3).map((useCase, useCaseIndex) => (<span;}
                               key={useCaseIndex}
                               className='px-2 py-1 bg-slate-700/50 text-xs text-gray-300 rounded-full'    />
 
                               {useCase}
-                            </span>;
+                            </span>
                           ))}
-                      </div>;
-                    </div>;
+                      </div>
+                    </div>
                     {/* CTA Button */}
-<div className='mt-6'    />;
-                      <a;
+<div className='mt-6'    />
+                      <a
                         href={service.link}
 
                         className='inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover: from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'
                           />
-                        Learn More;
+                        Learn More
                         <ArrowRight className='w-4 h-4 ml-2'    />
                       </a>
                     </div>
@@ -295,47 +277,44 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                   </motion.div>
 
                     {/* Hover Effect Overlay *}
-}
-<div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'    />;
-                  </motion.div>;
+
+<div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'    />
+                  </motion.div>
                         href={service && service.link}
-                        className='inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
-                        Learn More;
-                        <ArrowRight className='w-4 h-4 ml-2'    />                      </a>;
+                        className='inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'>
+                        Learn More
+                        <ArrowRight className='w-4 h-4 ml-2'    />                      </a>
                     </div>;{/* Hover Effect Overlay */}
-                    <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'    />                  </motion && motion.div>                      <a;
+                    <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'    />                  </motion && motion.div>                      <a
                         href={service && service.link}"
-                        className=\"inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30\"    />;
+                        className=\"inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30\"    />
                         Learn More;"
-                        <ArrowRight className=\"w-4 h-4 ml-2\"    />;
-                      </a>;
+                        <ArrowRight className=\"w-4 h-4 ml-2\"    />
+                      </a>
                     </div>;{/* Hover Effect Overlay */}"
-                    <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'    />                    <div className=\"absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none\"    />;
-                  </motion && motion.div>;
+                    <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'    />                    <div className=\"absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none\"    />
+                  </motion && motion.div>
                 ))}
-              </div>;
-            </motion && motion.div>;
+              </div>
+            </motion && motion.div>
           ))}
         {/* Call to Action */}
-        <motion&& motion.div;
+        <motion&& motion.div
           initial={{ opacity: 0, y: 30 }
-}
 
             <h3 className='text-3xl font-bold text-white mb-4'>
               Ready to Transform Your Business?
             </h3>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'    />
-              Join thousands of businesses already leveraging our cutting-edge;
+              Join thousands of businesses already leveraging our cutting-edge
 solutions to drive innovation, efficiency, and growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'    />
-              <a;
+              <a
 href='https://ziontechgroup && ziontechgroup.com/contact'
 
-                className='inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'    />;
-                Get Started Today;
-                <Rocket className='w-5 h-5 ml-2'    />;
-              </a>;
-
-export default ComprehensiveServicesShowcase2025;
-
+                className='inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'    />
+                Get Started Today
+                <Rocket className='w-5 h-5 ml-2'    />
+              </a>
+export default ComprehensiveServicesShowcase2025

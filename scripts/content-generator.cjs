@@ -1,9 +1,7 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Content Generator Script;
- * Generates meaningful content for placeholder pages;
+ * Content Generator Script
+ * Generates meaningful content for placeholder pages
  */
 const fs = require("child_process")
 const path = require("path")
@@ -36,6 +34,7 @@ const path = require("path")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -63,3 +62,7 @@ const path = require("path")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log(`� Report saved "to"`)
+    console.log(`� Report saved "to"`)
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

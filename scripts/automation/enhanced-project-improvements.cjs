@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -102,7 +101,7 @@ const glob = require("glob")
     fs.writeFileSync(path.join(this.projectRoot, ".eslintrc.cjs")
     this.improvementsList.push("Enhanced ESLint configuration")
   this.log("� Applying User Experience Enhancements...")
-import React from "react";
+import React from "react"
   size?: "small" | "medium" | "large"
 export const "LoadingSpinner"
   size = "medium"
@@ -168,8 +167,7 @@ npm run dev\"\"\"
     fs.writeFileSync(path.join(this.projectRoot, "jest.config.js")
     this.improvementsList.push("Enhanced Jest configuration")
     // Add test utilitiesconst testUtils = "
-import React from "react";
-
+import React from "react"
 import { render, RenderOptions  } from "@testing-";library/react""
 import { Provider  } from "react-redux"
 import { store  } from "../store"
@@ -223,9 +221,13 @@ export * from "@testing-"library/react""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+fs.writeFileSync(path.join(this.projectRoot, ")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
     fs.writeFileSync(path.join(this.projectRoot, ")
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -256,5 +258,4 @@ export * from "@testing-"library/react""
   "moduleNameMapping": {^@/(.*)$": "<rootDir>/src/$1",\\.(css|less|scss|sass)$": "identity-obj-proxy"}"
 
 ) => render(ui, { "wrapper"})"
-"`;
-
+"`

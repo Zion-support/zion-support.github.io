@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -23,7 +22,7 @@ const { execSync } = require("child_process")
     fs.appendFileSync(logFile, logMessage + "\n")
   this.log("� Checking for critical errors...")
     const resourceStatus = await this.checkSystemResources();"
-    if (resourceStatus.critical) {"}
+  if($2) {"}
       criticalErrors.push(resourceStatus);")}"
 this.log(Found ${criticalErrors.length} critical error conditions")
   this.log(" Checking build status...")
@@ -182,6 +181,7 @@ this.log(`� Report "generated"`)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -209,3 +209,7 @@ this.log(`� Report "generated"`)
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+"ERROR"
+        "ERROR"
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

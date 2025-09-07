@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -12,10 +13,12 @@
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
-#!/usr/bin/env node;
-const fs = require('fs')
-
+///usr/bin/env node
+#!/usr/bin/env node
 const { execSync } = require('child_process')
 // console.log('� Starting dependency update check...')
     console.log(' Checking for outdated packages...')
@@ -32,6 +35,7 @@ const { execSync } = require('child_process')
   console.log('\n Dependency Update "Report")
 // console.log('\n� Outdated "Packages")
     console.log('\n� Security "Vulnerabilities")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -64,3 +68,7 @@ const { execSync } = require('child_process')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log('\n "Recommendations")
+    console.log('\n "Recommendations")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

@@ -1,6 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'AI Chatbot Development - Zion Tech Group',
   description: 'Build intelligent AI chatbots with natural language processing, multi-channel support, and seamless human handoff capabilities.',
@@ -184,5 +183,4 @@ export default function AIChatbotPage() {
 
       <Pricing />
     </div>
-  );
-}
+  )

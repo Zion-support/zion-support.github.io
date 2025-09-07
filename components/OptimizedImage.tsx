@@ -1,16 +1,14 @@
-
-import React from "react";
-import Image from "next/image";
+import React from "react"
+import Image from "next/image"
 interface OptimizedImageProps {
 
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  quality?: number;
-
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  quality?: number
 'use client'
 import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
@@ -34,13 +32,13 @@ interface OptimizedImageProps {
   onLoad?: () => void
   onError?: () => void
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-}
+
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
 }) => {
 
   return (
-    <Image;
+    <Image
       src={src}
       alt={alt}
       width={width}
@@ -51,9 +49,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       placeholder="blur""
       blurDataURL="data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
     />
-  );
-};
-export default OptimizedImage;
+  )
+}
+export default OptimizedImage
   src, alt,
   width, height,
   className = '', priority = false,

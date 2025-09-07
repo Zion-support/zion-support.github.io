@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -17,7 +16,7 @@ const crypto = require("crypto")
   "patterns"
           "suggestions"
           "performance"
-  this.learningDataObj = { "patterns": {}, "suggestions": {}, "performance"
+  this.learningDataObj = { "patterns":  "suggestions":  "performance"
   log(message, level = "INFO")
   this.log("🤖 Starting AI-powered code quality analysis...")
   this.log("🤖 Starting AI-powered code quality analysis...")
@@ -202,6 +201,7 @@ this.log(")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -229,3 +229,7 @@ this.log(")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

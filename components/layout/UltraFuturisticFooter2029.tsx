@@ -1,12 +1,9 @@
-
     title: 'AI & Machine Learning'
-    icon: Brain;
+    icon: Brain
     services: ['
   },];      { name: 'DevOps Automation', href: '/devops-automation' }
-    ];
-  }
-];
-
+    ]
+]
     title: 'Company'
     links: ['
       { name: 'About Us', href: '/about' },'
@@ -33,8 +30,8 @@
     title: 'Legal',
 
             <p className='text-gray-400 mb-6 leading-relaxed'>
-              Leading the revolution in AI, quantum computing, and autonomous;
-technology solutions. Transforming businesses with cutting-edge;
+              Leading the revolution in AI, quantum computing, and autonomous
+technology solutions. Transforming businesses with cutting-edge
 innovation.
             </p>
             {/* Contact Information */}
@@ -52,7 +49,7 @@ innovation.
                 </a>
 
               {socialLinks.map(social => (
-                <a;
+                <a
                   key={social.name}
                   href={social.href}'
                   target='_blank''
@@ -61,61 +58,56 @@ innovation.
 
                 </a>
               )
-}
+
             </div>
           </div>
 
-];
-
+]
 const UltraFuturisticFooter2029 = (
- ;
+
   return (
 
               </div>
             </div>
 ) => {
   return $3;}
-}
+
             {/* Social Links */}
 
                 </a>
 
               ))}
 
-];
+]
   return (
     <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50'    />      { name: 'Compliance'}
   href: '/compliance'}
-}
-    ];
-  }
-];
+
+    ]
+]
   return (
-    <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50'    />;
-
+    <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50'    />
       {/* Main Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'    />;
-        <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'    />;
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'    />
+        <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'    />
           {/* Company Info */}
-          <div className='lg:col-span-1'    />;
-            <div className='flex items-center space-x-3 mb-6'    />;
-              <div className='w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center'    />;
-                <Rocket className='w-6 h-6 text-white'    />;
-              </div>;
-              <div    />;
-                <h3 className='text-xl font-bold text-white'    />;
-                  Zion Tech Group;
-                </h3>;
-                <p className='text-sm text-gray-400'    />Innovating the Future</p>;
-              </div>;
-            </div>;
-            <p className='text-gray-400 mb-6 leading-relaxed'    />;
-              Leading the revolution in AI, quantum computing, and autonomous;
-              technology solutions. Transforming businesses with cutting-edge;
-              innovation.;
-            </p>;
-
-
+          <div className='lg:col-span-1'    />
+            <div className='flex items-center space-x-3 mb-6'    />
+              <div className='w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center'    />
+                <Rocket className='w-6 h-6 text-white'    />
+              </div>
+              <div    />
+                <h3 className='text-xl font-bold text-white'    />
+                  Zion Tech Group
+                </h3>
+                <p className='text-sm text-gray-400'    />Innovating the Future</p>
+              </div>
+            </div>
+            <p className='text-gray-400 mb-6 leading-relaxed'    />
+              Leading the revolution in AI, quantum computing, and autonomous
+              technology solutions. Transforming businesses with cutting-edge
+              innovation.
+            </p>
           {/* Service Categories */}
 
 <div className='lg:col-span-1'>
@@ -132,14 +124,14 @@ const UltraFuturisticFooter2029 = (
                     {category.services.map(service => (}
                       <li key={service.name}    />
 
-                        <Link;
+                        <Link
 href={service.href}
                           className='text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group'    />
 
-                          <ArrowRight className='w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200'    />;
-                          <span    />{service.name}</span>;
-                        </Link>;
-                      </li>;
+                          <ArrowRight className='w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200'    />
+                          <span    />{service.name}</span>
+                        </Link>
+                      </li>
                     ))}
 
                   </ul>
@@ -147,46 +139,45 @@ href={service.href}
 
               ))}
           {/* Service Categories */}
-          <div className='lg:col-span-1'    />;
-            <h4 className='text-lg font-semibold text-white mb-6'    />;
-              Our Services;
-            </h4>;
-            <div className='space-y-4'    />;
-              {serviceCategories && serviceCategories.map((category, index) => (<div key={index}    />;
-                  <h5 className='text-sm font-medium text-gray-300 mb-3'    />;
+          <div className='lg:col-span-1'    />
+            <h4 className='text-lg font-semibold text-white mb-6'    />
+              Our Services
+            </h4>
+            <div className='space-y-4'    />
+              {serviceCategories && serviceCategories.map((category, index) => (<div key={index}    />
+                  <h5 className='text-sm font-medium text-gray-300 mb-3'    />
                     {category && category.title}
-                  </h5>;
-                  <ul className='space-y-2'    />;
-                    {category && category.services.map(service => (<li key={service && service.name}    />;
-                        <Link;
+                  </h5>
+                  <ul className='space-y-2'    />
+                    {category && category.services.map(service => (<li key={service && service.name}    />
+                        <Link
                           href={service && service.href}
-                          className='text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group'    />;
+                          className='text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group'    />
                           <ArrowRight className='w-3 h-3 opacity-0 group-hover: opacity-100 transition-opacity duration-200'    />                          <span    />{service && service.nam}
-}</span>              {serviceCategories && serviceCategories.map((category, index) => (<div key={index}    />;
+}</span>              {serviceCategories && serviceCategories.map((category, index) => (<div key={index}    />
                   <h5 className=\"text-sm font-medium text-gray-300 mb-3\"    />{category && category.title}</h5>;"
-                  <ul className=\"space-y-2\"    />;
-                    {category && category.services.map((service) => (<li key={service && service.name}    />;
-                        <Link;
+                  <ul className=\"space-y-2\"    />
+                    {category && category.services.map((service) => (<li key={service && service.name}    />
+                        <Link
                           href={service && service.href}"
                           className=\"text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group\"    />;"
-                          <ArrowRight className=\"w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200\"    />;
-                          <span    />{service && service.name}</span>;
-                        </Link>;
-                      </li>;
+                          <ArrowRight className=\"w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200\"    />
+                          <span    />{service && service.name}</span>
+                        </Link>
+                      </li>
                     ))}
-                  </ul>;
-                </div>;
+                  </ul>
+                </div>
               ))}
-            </div>;
-          </div>;
-
+            </div>
+          </div>
             <h4 className='text-lg font-semibold text-white mb-6'>
-              Quick Links;
+              Quick Links
             </h4>'
             <div className='grid grid-cols-2 gap-2'>
               {quickLinks.map(link => (
 
-                <Link;
+                <Link
                   key={link.name}
                   href={link.href}
 
@@ -200,30 +191,29 @@ href={service.href}
 
               ))}
           {/* Footer Sections *}
-}
-          <div className='lg:col-span-1'    />;
-            <h4 className='text-lg font-semibold text-white mb-6'    />Company</h4>;
-            <div className='space-y-4'    />;
-              {footerSections && footerSections.map(section => (<div key={section && section.title}    />;
-                  <h5 className='text-sm font-medium text-gray-300 mb-3'    />;
+
+          <div className='lg:col-span-1'    />
+            <h4 className='text-lg font-semibold text-white mb-6'    />Company</h4>
+            <div className='space-y-4'    />
+              {footerSections && footerSections.map(section => (<div key={section && section.title}    />
+                  <h5 className='text-sm font-medium text-gray-300 mb-3'    />
                     {section && section.title}
-                  </h5>;
-                  <ul className='space-y-2'    />;
-                    {section && section.links.map(link => (<li key={link && link.name}    />;
-                        <Link;
+                  </h5>
+                  <ul className='space-y-2'    />
+                    {section && section.links.map(link => (<li key={link && link.name}    />
+                        <Link
                           href={link && link.href}
                           className='text-sm text-gray-400 hover: text-white transition-colors duration-200'    />                <div key={section && section.titl}
 }    />;"
                   <h5 className=\"text-sm font-medium text-gray-300 mb-3\"    />{section && section.title}</h5>;"
-                  <ul className=\"space-y-2\"    />;
-                    {section && section.links.map((link) => (<li key={link && link.name}    />;
-                        <Link;
+                  <ul className=\"space-y-2\"    />
+                    {section && section.links.map((link) => (<li key={link && link.name}    />
+                        <Link
                           href={link && link.href}"
-                          className=\"text-sm text-gray-400 hover:text-white transition-colors duration-200\"    />;
+                          className=\"text-sm text-gray-400 hover:text-white transition-colors duration-200\"    />
                           {link && link.name}
-                        </Link>;
-                      </li>;
-
+                        </Link>
+                      </li>
           {/* Footer Sections */}
 
             <div className='space-y-4'>
@@ -232,11 +222,11 @@ href={service.href}
                   <h5 className='text-sm font-medium text-gray-300 mb-3'    />
 
                     {section.titl}
-}
-                  </h5>;
-                  <ul className='space-y-2'    />;
-                    {section.links.map(link => (<li key={link.name}    />;
-                        <Link;
+
+                  </h5>
+                  <ul className='space-y-2'    />
+                    {section.links.map(link => (<li key={link.name}    />
+                        <Link
                           href={link.href}
 
                           className='text-sm text-gray-400 hover: text-white transition-colors duration-200'
@@ -249,36 +239,36 @@ href={service.href}
               © 2025 Zion Tech Group. All rights reserved.
             </div>'
             <div className='flex items-center space-x-6 text-sm text-gray-400'>
-                        </Link>;
+                        </Link>
                       </li>))}
-                  </ul>;
+                  </ul>
                     ))}
-                  </ul>;
-                </div>;
+                  </ul>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-              <Link;
-                href='/privacy';
-                className='hover:text-white transition-colors'    />;
-                Privacy Policy;
-              </Link>;
-              <Link;
-                href='/terms';
-                className='hover:text-white transition-colors'    />;
-                Terms of Service;
-              </Link>;
+            </div>
+          </div>
+        </div>
+      </div>
+              <Link
+                href='/privacy'
+                className='hover:text-white transition-colors'    />
+                Privacy Policy
+              </Link>
+              <Link
+                href='/terms'
+                className='hover:text-white transition-colors'    />
+                Terms of Service
+              </Link>
               <Link'
                 href='/cookies'
             </div>"
             <div className="flex items-center space-x-6 text-sm text-gray-400">"
               <Link href="/privacy" className="hover:text-white transition-colors">
-                Privacy Policy;
+                Privacy Policy
               </Link>"
               <Link href="/terms" className="hover:text-white transition-colors">
-                Terms of Service;
+                Terms of Service
               </Link>"
               <Link href="/cookies" className="hover:text-white transition-colors">
 
@@ -288,8 +278,5 @@ href={service.href}
         </div>
       </div>
       {/* Newsletter Signup *}
-}
 
-}
-export default UltraFuturisticFooter2029;
-
+export default UltraFuturisticFooter2029

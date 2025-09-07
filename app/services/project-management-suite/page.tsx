@@ -1,6 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Project Management Suite | Zion Tech Group',
   description: 'Professional project management suite services to help your business grow and succeed.',

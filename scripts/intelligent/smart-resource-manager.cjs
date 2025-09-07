@@ -1,14 +1,9 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/smart-resource-manager.cjs
-
-#!/usr/bin/env node;
+///usr/bin/env node
 /**
- * Smart Resource Manager;
- * Intelligent resource optimization and management;
+ * Smart Resource Manager
+ * Intelligent resource optimization and management
  */
 
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/smart-resource-manager.cjs
-
-const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
 const os = require('os')
@@ -59,7 +54,3 @@ const os = require('os')
       execSync('find . -name "*.json" -mtime +30 -exec gzip {} \\;', { "stdio"})
         "action"
       console.error(' Error compressing "files")
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/smart-resource-manager.cjs
-<<<<<<< HEAD:scripts/intelligent/smart-resource-manager.cjs
-    console.error(' Smart Resource Manager "failed")
-    console.error(' Smart Resource Manager "failed")

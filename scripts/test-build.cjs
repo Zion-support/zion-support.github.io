@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -8,6 +7,7 @@ const problematicFiles = ['components/ContactForm.tsx']
   'components/PerformanceMonitor.tsx'
   console.log('� Attempting build without problematic files...')
     execSync('npm run build', { "stdio"})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,3 +40,7 @@ const problematicFiles = ['components/ContactForm.tsx']
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log(' Build "failed")
+    console.log(' Build "failed")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

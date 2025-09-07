@@ -37,6 +37,7 @@ import { SERVICE_CATEGORIES;
   AI_SERVICES;
   IT_SERVICES;
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
   MICRO_SAAS_SERVICES;
   CYBERSECURITY_SERVICES;
   DATA_ANALYTICS_SERVICES;
@@ -64,6 +65,7 @@ export function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const filteredServices = ALL_SERVICES.filter(service => {
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
         return AI_SERVICES;
       case 'it-services':
         return IT_SERVICES;
@@ -143,6 +145,7 @@ import React, { useState } from 'react',;
 
 import React, { useState } from 'react',;
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
 import {;
   SERVICE_CATEGORIES,;
   ALL_SERVICES,;
@@ -207,6 +210,7 @@ import { ServiceCategory, ServiceSolution } from '@/types/services';
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
               >
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
                 ✉️ Email Us
               </Link>
 
@@ -231,6 +235,7 @@ import { ServiceCategory, ServiceSolution } from '@/types/services';
         <div className="container mx - auto px - 4 py - 20">;
           <div className="text - center max - w-4xl mx - auto">;
             <h1 className="text - 5xl font - bold mb - 6">;
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
               Zion Tech Group Services;
             </h1>;
             <p className="text - xl mb - 8 text - blue-100">;
@@ -265,6 +270,7 @@ import { ServiceCategory, ServiceSolution } from '@/types/services';
           </div>;
         </div>;
       </div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
 
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>"
@@ -277,13 +283,7 @@ import { ServiceCategory, ServiceSolution } from '@/types/services';
               <span>kleber@ziontechgroup.com</span>
             </div>
 
-            <div className="flex items-center gap-2">
-              <span className="text-blue-600">🌐</span>
-              <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
-            <div className="flex items-center gap-2">
-              <span className="text-blue-600">🌐</span>
-              <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
-
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
       {/* Contact Info Banner */}
 <div className='bg-white border-b'>
         <div className='container mx-auto px-4 py-4'>
@@ -313,11 +313,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 ziontechgroup.com
 
+origin/cursor/automate-test-improve-and-merge-code-2533
+                ziontechgroup.com
+
+              </Link>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
             </div>
           </div>
         </div>
       </div>
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
                 href='https://ziontechgroup && ziontechgroup.com'
                 className='text-blue-600 hover:underline'>                ziontechgroup && ziontechgroup.com              <span>364 E Main St STE 1008, Middletown DE 19709</span>;
             </div>;
@@ -381,6 +388,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex-1">
               <input
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
                 type="text"
 
                 placeholder="Search services..."
@@ -393,6 +401,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               {SERVICE_CATEGORIES.map((category) => (
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
       {/* Search and Filter Section */}
 <div className='container mx-auto px-4 py-8'>
         <div className='bg-white rounded-xl shadow-lg p-6 mb-8'>
@@ -436,6 +445,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {selectedServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
           ))}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -477,6 +487,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       </div>
       {/* Why Choose Zion Tech Group */}
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
               Why Choose Zion Tech Group?
             </h2>
 
@@ -498,17 +509,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               Why Choose Zion Tech Group?
             </h2>
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We deliver innovative, reliable, and cost-effective solutions that drive real business results;
             </p>
           </div>
 
           
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🚀</span>
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
               </div>
               <h3 className='text-xl font-semibold mb-2'>Innovation First</h3>
 
@@ -521,6 +535,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🛡️</span>
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
               </div>
 
               <h3 className='text-xl font-semibold mb-2'>
@@ -530,24 +545,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 SOC 2, HIPAA, GDPR compliant solutions;
               </p>
             </div>
-
-      <div className="bg-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Zion Tech Group?
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-            </h2>
-
-              </div>
-              <h3 className='text-xl font-semibold mb-2'>Fast Deployment</h3>
-              <p className='text-gray-600'>Quick setup and implementation</p>
-            </div>
-            </h2>
-            </h2>
-
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We deliver innovative, reliable, and cost-effective solutions that drive real business results;
             </p>
@@ -570,6 +568,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               <p className="text-gray-600">Quick setup and implementation</p>
             </div>
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
             <div className="text-center">
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
@@ -582,6 +581,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
               <p className="text-gray-600">Trusted by businesses nationwide</p>
 
+              <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
+
+              <p className="text-gray-600">Trusted by businesses nationwide</p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
             <div className='text-center'>
               <div className='bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
                 <span className='text-2xl'>🎯</span>
@@ -590,6 +593,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               <p className='text-gray-600'>Trusted by businesses nationwide</p>
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
             </div>
           </div>
         </div>
@@ -627,12 +632,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               ✉️ Get Free Consultation;
             </Link>
-
-            </Link>
-            <a 
-
-            <a 
-
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
               href="https://ziontechgroup.com"
 
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
@@ -644,6 +644,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
               Why Choose Zion Tech Group?;
             </h2>;'
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>;
@@ -831,6 +832,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className="text-4xl font-bold mb-6">
 
             Ready to Transform Your Business?
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
           </h2>
 
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
@@ -896,6 +898,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'
 
+              href="https://ziontechgroup.com"
+
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
             >
               🌐 Visit Website;
           </div>
@@ -911,6 +919,7 @@ interface ServiceCardProps {}
               href="tel: +13024640950""
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors">;
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
   )
       <div className="bg-white py-16">;
         <div className="container mx-auto px-4">;
@@ -998,6 +1007,7 @@ interface ServiceCardProps {;
 interface ServiceCardProps {;
   service: ServiceSolution;
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
 }
 function ServiceCard(): any ({ service }: ServiceCardProps) {;
 );
@@ -1009,6 +1019,7 @@ function ServiceCard({ service }: ServiceCardProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [showDetails, setShowDetails] = useState(false);
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
     if (service.pricing.basic.popular) return service.pricing.basic;
     if (service.pricing.enterprise.popular) return service.pricing.enterprise;
     return service.pricing.professional;
@@ -1025,6 +1036,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (service && service.pricing.enterprise && enterprise.popular) return service && service.pricing.enterprise;
     return service && service.pricing.professional;
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
     if (service.pricing.professional.popular) return service.pricing.professional,
     if (service.pricing.basic.popular) return service.pricing.basic,
     if (service.pricing.enterprise.popular) return service.pricing.enterprise,
@@ -1117,6 +1129,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   const popularPlan = getPopularPlan(),
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
             </span>;
           </div>;
           <div>          </div>;
@@ -1177,6 +1190,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
       {/* Service Content */}
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
       {/* Service Image */}
       <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
         <img 
@@ -1189,6 +1203,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
         <div className="absolute top-4 right-4">"
         <div className="absolute top-4 right-4">
+"
+        <div className="absolute top-4 right-4">"
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
           <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
 
         />
@@ -1201,6 +1218,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {service.aiScore && (
 
 "
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
             <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
 
 <div className='absolute bottom-4 left-4'>
@@ -1215,34 +1233,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               AI Score: {service.aiScore}
             </span>;
           </div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
 
         )}
       </div>
       {/* Service Content */}
-
-      {/* Service Image */}
-      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
-        <img 
-          src={service.images[0]} 
-          alt={service.title}
-          className="w-full h-full object-cover"
-        />
-
-        <div className="absolute top-4 right-4">
-          <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
-            {service.category}
-          </span>
-        </div>
-        {service.aiScore && (
-
-          <div className="absolute bottom-4 left-4">
-            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-              AI Score: {service.aiScore}
-            </span>;
-          </div>;
-        )}
-      </div>
-      {/* Service Content */}
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
 <div className='p-6'>
         <div className='flex items-start justify-between mb-3'>
           <h3 className='text-xl font-bold text-gray-900 mb-2'>
@@ -1262,19 +1258,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Provider Info */}
         <div className='flex items-center gap-3 mb-4'>
           <div className='w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center'>
-
-            <span className='text-blue-600 font-semibold text-sm'>              {service.provider.name.charAt(0)}
-            </span>
-          </div>
-          <div>          </div>
-        </div>
-        <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
-        {/* Provider Info */}
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
 
         )}
       </div>
       {/* Service Content */}
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
@@ -1298,6 +1288,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <span className="text-blue-600 font-semibold text-sm">
 
             <span className='text-blue-600 font-semibold text-sm'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
               {service.provider.name.charAt(0)}
             </span>
           </div>
@@ -1312,6 +1303,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>"
         {/* Pricing */}            <p className="font-medium text-gray-900">{service.provider.name}</p>
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
             <p className="text-sm text-gray-500">{service.provider.location}</p>
           </div>
           {service.provider.verified && ("
@@ -1336,6 +1328,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
         {/* Pricing */}
         <div className='bg-gray-50 rounded-lg p-4 mb-4'>
+          )}
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+        </div>
+        {/* Pricing */}
+
+<p className='font-medium text-gray-900'>{service.provider.name}</p>
+            <p className='text-sm text-gray-500'>{service.provider.location}</p>
+          </div>
+          {service.provider.verified && (
+            <span className='text-blue-600 text-sm'>✓ Verified</span>
+          )}
+        </div>
+        {/* Pricing */}
+<div className='bg-gray-50 rounded-lg p-4 mb-4'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
           <div className='text-center'>
             <div className='text-2xl font-bold text-gray-900'>
               {popularPlan.currency}
@@ -1356,6 +1365,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
             {popularPlan.popular && (
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
               <span className='bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium'>              <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
 
             <p className="font-medium text-gray-900">{service.provider.name}</p>
@@ -1370,6 +1382,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             <span className="text-blue-600 text-sm">✓ Verified</span>;
         </div>;
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
                 Most Popular
               </span>
             )}
@@ -1383,6 +1396,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h4 className='font-semibold text-gray-900 mb-2'>Key Features:</h4>
           <div className='flex flex-wrap gap-2'>
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
             {service.features.slice(0, 3).map((feature, index) => (
               <span 
                 key={index}
@@ -1402,6 +1416,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
 
                 {feature}
+
+        {/* Pricing */}
+        <div className="bg-gray-50 rounded-lg p-4 mb-4">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-gray-900">
+              {popularPlan.currency}{popularPlan.price}
+              <span className="text-sm font-normal text-gray-500">
+                /{popularPlan.period}
+              </span>
+            </div>
+            {popularPlan.popular && (
+              <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
               </span>
             )}
           </div>;
@@ -1429,10 +1457,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 {feature}
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
         {/* Features Preview */}
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
               </span>;
             </div>;
             {popular_plan.popular && ('"
@@ -1480,31 +1510,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         {/* Action Buttons */}
         <div className='flex gap-2'>
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
           <button
             onClick={() => setShowDetails(!showDetails)}
             className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors'          >        <div className="flex gap-2">;
           <button
             onClick={() => setShowDetails(!showDetails)}
             className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors";
-
-        {/* Action Buttons */}
-        {/* Action Buttons */}
-
-        <div className="flex gap-2">
-          <button
-            onClick={() => setShowDetails(!showDetails)}
-            className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-
-          >
-
-<div className='flex gap-2'>
-          <button
-            onClick={() => setShowDetails(!showDetails)}
-            className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors'
-          >
-
-            {showDetails ? 'Hide Details' : 'View Details'}
-          </button>;
           <a;
             href={`tel:+13024640950`}
 
@@ -1518,6 +1530,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
             {showDetails ? 'Hide Details' : 'View Details'}
           </button>;
+            {showDetails ? 'Hide Details' : 'View Details'}
+          </button>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
           <a
             href={`tel:+13024640950`}
 
@@ -1528,6 +1543,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors'
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
           >
             Call Now;
           </a>
@@ -1549,6 +1565,14 @@ className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-gre
           </a>;
         </div>;
 
+            <div className="space-y-4">
+              {/* Benefits */}
+              <div>
+
+                    <li key={index}>{benefit}</li>
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
         {/* Detailed Information */}
         {showDetails && (
 
@@ -1567,6 +1591,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               <div>
 
                     <li key={index}>{benefit}</li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
                   ))}
                 </ul>
               </div>
@@ -1580,22 +1605,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       key={index}
 
                   ))}
-              {/* Technologies */}
-                  {service.technologies.slice(0, 4).map((tech, index) => (
-                    <span 
-                      key={index}
-                      className='bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs'                    >                  {service.technologies.slice(0, 4).map((tech, index) => (
-                    <span
-                      key={index}
-
-                      className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
-                    >
-                      {tech}
-                    </span>;
-                  ))}
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                  ))}
-
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
                 </ul>;
               </div>;
               {/* Use Cases */}
@@ -1606,6 +1616,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs"
                     >
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
                       {useCase}
                     </span>;
                   ))}
@@ -1667,12 +1678,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 <div>
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
                   <span className="font-medium text-gray-900">Deployment:</span>
 
                   <p className="text-gray-600">{service.deploymentTime}</p>
                 </div>
                 <div>
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
                   <span className="font-medium text-gray-900">Support:</span>
 
                   <p className="text-gray-600">{service.support.slice(0, 2).join(', ')}</p>
@@ -1736,12 +1749,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               {/* All Pricing Plans */}
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
                   ))}
                 </div>;
               </div>;
 
               {/* Contact CTA */}
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
                   Ready to get started with {service.title}?
                 </p>"
                 <div className="flex gap-2 justify-center">
@@ -1751,18 +1766,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
 <div className='bg-blue-50 rounded-lg p-4 text-center'>
                 <p className='text-sm text-blue-800 mb-2'>
                   Ready to get started with {service.title}?
                 </p>
                 <div className='flex gap-2 justify-center'>
-                  <a
-                    href={`tel:+13024640950`}
-                    className='bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors'
-
-                  >
-                    📞 Call +1 302 464 0950
-                  </a>
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
                   <a
                     href={`tel:+13024640950`}
                     className='bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors'
@@ -1778,6 +1788,10 @@ className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:b
 className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors'
 
                   >
+
+className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors'
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
                     ✉️ Email Inquiry
 
                   </Link>
@@ -1830,6 +1844,7 @@ className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:b
 }
 }
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
       </div>;
     </div>;
   );  );
@@ -1842,6 +1857,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   )
 }
+
+  )
+}
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
         {/* Detailed Information */}
 
         {show_details && (
@@ -1957,11 +1979,13 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       </div>
     </div>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
-      </div>
-    </div>
-);
-
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

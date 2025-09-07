@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,9 +14,12 @@
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
-
+///usr/bin/env node
 const { execSync } = require('child_process')
   console.log(' Starting Enhanced Syntax Fixer...')
     const files = findCodeFiles('.;')
@@ -39,9 +43,13 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+console.error(' Enhanced syntax fixer "failed")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
     console.error(' Enhanced syntax fixer "failed")
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -63,5 +71,4 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-    const reportPath = 'enhanced-syntax-fix-report.json;
-
+    const reportPath = 'enhanced-syntax-fix-report.json

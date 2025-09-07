@@ -2,10 +2,13 @@
 @tailwind components;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @tailwind utilities;
 =======
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 @tailwind utilities;
 
 @layer base {
@@ -72,6 +75,9 @@
 }
 
 @layer utilities {
+=======
+@tailwind utilities;@layer utilities {
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
   .focus-visible:focus {
     @apply outline-none ring-2 ring-blue-500 ring-offset-2;
   }
@@ -240,7 +246,13 @@
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 @tailwind utilities;
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+@tailwind utilities;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

@@ -1,5 +1,6 @@
 
 ;
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
 import Head from 'next/head';
 export default function RequestQuote() {return (<>;
       <Head>;
@@ -49,3 +50,4 @@ export default function RequestQuote() {
   );
   );
 }
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

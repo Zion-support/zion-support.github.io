@@ -1,6 +1,5 @@
-
-#!/usr/bin/env node;
-import { execSync, spawn } from;
+///usr/bin/env node
+import { execSync, spawn } from
   'child_process'
   'fs'
   'path'
@@ -38,9 +37,6 @@ import { execSync, spawn } from;
         useEffect: "
         useRef: "
         FC: "
-
-        ReactNode: "
-        ReactNode: "
-#!/usr/bin/env node
-import { execSync, spawn } from;
-
+ReactNode: "        ReactNode: "
+///usr/bin/env node
+import { execSync, spawn } from

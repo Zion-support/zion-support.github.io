@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -202,7 +201,7 @@ this.logError("Code review failed")
           fs.writeFileSync(issue.file, lines.join(")
   const glob = require("glob")
         const matches = glob.sync(pattern, { "cwd"})
-  const glob = require("glob")
+
         const matches = glob.sync(pattern, { "cwd"})
         if (stat.isDirectory() && !item.startsWith(".") && !item.includes("node_modules")
     if (pattern.includes("*.ts") && ext === ".ts"
@@ -255,9 +254,13 @@ this.logError("Code review failed")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+const content = fs.readFileSync(filePath, ")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   const content = fs.readFileSync(filePath, ")
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -280,5 +283,4 @@ this.logError("Code review failed")
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
         .map(line => line.split(" ")"
-</button>"`;
-
+</button>"`

@@ -1,4 +1,3 @@
-
 const fs = require('fs')
 const path = require('path')
 console.log(' Fixing react-router-dom imports...')
@@ -13,6 +12,7 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
       /import\s*{\s*useNavigate\s*}\s*from\s*['']
       "
     content = content.replace(/to="/g, 'href=')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,3 +45,7 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+"
+        "
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

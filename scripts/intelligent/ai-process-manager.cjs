@@ -1,14 +1,9 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/ai-process-manager.cjs
-
-#!/usr/bin/env node;
+///usr/bin/env node
 /**
- * AI-Powered Process Manager;
- * Intelligent process management with machine learning capabilities;
+ * AI-Powered Process Manager
+ * Intelligent process management with machine learning capabilities
  */
 
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/ai-process-manager.cjs
-
-const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -34,7 +29,3 @@ const { execSync } = require('child_process')
         "message"
         "averageMemoryUsage"
         "averageCpuUsage"
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/ai-process-manager.cjs
-<<<<<<< HEAD:scripts/intelligent/ai-process-manager.cjs
-    console.error(' AI Process Manager "failed")
-    console.error(' AI Process Manager "failed")

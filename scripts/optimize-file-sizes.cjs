@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,9 +14,12 @@
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
-
+///usr/bin/env node
 console.log('� Starting File Size Optimization...')
 const largeFiles = ['pages/ai-services.tsx']
   'pages/it-services.tsx
@@ -24,6 +28,7 @@ const largeFiles = ['pages/ai-services.tsx']
   const content = fs.readFileSync(filePath, 'utf8')
   const lines = content.split('\n')
     const backupPath = filePath + '.backup;'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,8 +54,10 @@ console.log(' File size optimization completed')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+console.log(' File size optimization completed')
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 console.log(' File size optimization completed')
 
 console.log(' File size optimization completed')
-    const backupPath = filePath + '.backup;
-
+    const backupPath = filePath + '.backup

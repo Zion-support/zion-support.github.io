@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const pm2 = require("pm2")
 const chalk = require("chalk")
 const ora = require("ora")
@@ -91,9 +90,13 @@ const Table = require("cli-table3")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+console.error(chalk.red(" Dashboard "error": ")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   console.error(chalk.red(" Dashboard "error": ")
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -119,4 +122,3 @@ const Table = require("cli-table3")
 </process>"
 // console.log(chalk.gray("  stop <process>     - Stop a specific process")"
     console.log(chalk.gray("  start <process>    - Start a specific process")"
-

@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -29,9 +28,13 @@ console.log(' Starting intelligent TypeScript error fixer...')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+console.error(' Intelligent TypeScript error fixer failed to "start")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   console.error(' Intelligent TypeScript error fixer failed to "start")
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -54,4 +57,3 @@ console.log(' Starting intelligent TypeScript error fixer...')
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 </any>"
-

@@ -1,22 +1,16 @@
-
-
-import Link from 'next/link';
-
+import Link from 'next/link'
 interface EnhancedMarketplaceCardProps {
-  title: string;
-  description: string;
-  price?: string;
-
-  image?: string;
-  href: string;
-  category?: string;
-  rating?: number;
-  reviews?: number;
-  features?: string[];
-  isNew?: boolean;
-  isPopular?: boolean;
-}
-
+  title: string
+  description: string
+  price?: string
+  image?: string
+  href: string
+  category?: string
+  rating?: number
+  reviews?: number
+  features?: string[]
+  isNew?: boolean
+  isPopular?: boolean
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
   title,
   description,
@@ -129,19 +123,15 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
         </div>
       </div>
     </Link>
-  );
-};
-
-export default EnhancedMarketplaceCard;
-
+  )
+}
+export default EnhancedMarketplaceCard
 interface MarketplaceCardProps {
 interface EnhancedMarketplaceCardProps {
-  title: string;
-  description: string;
-  price?: string;
-  image?: string;
-}
-
+  title: string
+  description: string
+  price?: string
+  image?: string
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title,
   description,
@@ -181,8 +171,6 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
         </button>
       </div>
     </div>
-  );
-};
-
-export default EnhancedMarketplaceCard;
-
+  )
+}
+export default EnhancedMarketplaceCard

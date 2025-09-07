@@ -1,5 +1,6 @@
 
 ;
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
 import Head from 'next/head';
 export default function Contact() {return (<>;
       <Head>;
@@ -43,3 +44,4 @@ export default function Contact() {
   );
   );
 }
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

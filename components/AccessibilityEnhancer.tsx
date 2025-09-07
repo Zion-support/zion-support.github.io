@@ -1,81 +1,60 @@
-
-'use client';
-
-import React, { useState, useEffect } from 'react';
-
+'use client'
+import React, { useState, useEffect } from 'react'
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
+  children: React.ReactNode
 export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState('medium');
-  const [reducedMotion, setReducedMotion] = useState(false);
-
+  const [isHighContrast, setIsHighContrast] = useState(false)
+  const [fontSize, setFontSize] = useState('medium')
+  const [reducedMotion, setReducedMotion] = useState(false)
   const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, motion: boolean) => {
-    const root = document.documentElement;
-    
-    if (highContrast) {
-      root.classList.add('high-contrast');
+    const root = document.documentElement
+  if($2) {
+      root.classList.add('high-contrast')
     } else {
-      root.classList.remove('high-contrast');
-    }
-
-    if (motion) {
-      root.classList.add('reduced-motion');
+      root.classList.remove('high-contrast')
+  if($2) {
+      root.classList.add('reduced-motion')
     } else {
-      root.classList.remove('reduced-motion');
-    }
-
+      root.classList.remove('reduced-motion')
     // Apply font size
-    root.style.setProperty('--font-size-multiplier', getFontSizeMultiplier(fontSize));
-  };
-
+    root.style.setProperty('--font-size-multiplier', getFontSizeMultiplier(fontSize))
+  }
   const getFontSizeMultiplier = (size: string): string => {
-    switch (size) {
-      case 'small': return '0.875';
-      case 'medium': return '1';
-      case 'large': return '1.125';
-      case 'extra-large': return '1.25';
-      default: return '1';
-    }
-  };
-
+  switch($2) {
+      case 'small': return '0.875'
+      case 'medium': return '1'
+      case 'large': return '1.125'
+      case 'extra-large': return '1.25'
+      default: return '1'
+  }
   useEffect(() => {
     // Load saved preferences
-    const savedHighContrast = localStorage.getItem('highContrast') === 'true';
-    const savedFontSize = localStorage.getItem('fontSize') || 'medium';
-    const savedReducedMotion = localStorage.getItem('reducedMotion') === 'true';
-
-    setIsHighContrast(savedHighContrast);
-    setFontSize(savedFontSize);
-    setReducedMotion(savedReducedMotion);
-
+    const savedHighContrast = localStorage.getItem('highContrast') === 'true'
+    const savedFontSize = localStorage.getItem('fontSize') || 'medium'
+    const savedReducedMotion = localStorage.getItem('reducedMotion') === 'true'
+    setIsHighContrast(savedHighContrast)
+    setFontSize(savedFontSize)
+    setReducedMotion(savedReducedMotion)
     // Apply initial styles
-    applyAccessibilityStyles(savedHighContrast, savedFontSize, savedReducedMotion);
-  }, [applyAccessibilityStyles]);
-
+    applyAccessibilityStyles(savedHighContrast, savedFontSize, savedReducedMotion)
+  }, [applyAccessibilityStyles])
   const toggleHighContrast = () => {
-    const newValue = !isHighContrast;
-    setIsHighContrast(newValue);
-    localStorage.setItem('highContrast', newValue.toString());
-    applyAccessibilityStyles(newValue, fontSize, reducedMotion);
-  };
-
+    const newValue = !isHighContrast
+    setIsHighContrast(newValue)
+    localStorage.setItem('highContrast', newValue.toString())
+    applyAccessibilityStyles(newValue, fontSize, reducedMotion)
+  }
   const changeFontSize = (newSize: string) => {
-    setFontSize(newSize);
-    localStorage.setItem('fontSize', newSize);
-    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
-  };
-
+    setFontSize(newSize)
+    localStorage.setItem('fontSize', newSize)
+    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion)
+  }
   const toggleReducedMotion = () => {
-    const newValue = !reducedMotion;
-    setReducedMotion(newValue);
-    localStorage.setItem('reducedMotion', newValue.toString());
-    applyAccessibilityStyles(isHighContrast, fontSize, newValue);
-
-  };
-
+    const newValue = !reducedMotion
+    setReducedMotion(newValue)
+    localStorage.setItem('reducedMotion', newValue.toString())
+    applyAccessibilityStyles(isHighContrast, fontSize, newValue)
+  }
   return (
     <>
 
@@ -92,7 +71,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
           >
             {isHighContrast ? 'Disable' : 'Enable'} High Contrast
           </button>
-          
+
           <div className="text-xs text-gray-600 dark:text-gray-300">Font Size:</div>
           <div className="flex gap-1">
             {['small', 'medium', 'large', 'extra-large'].map((size) => (
@@ -130,28 +109,19 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
 
       <style jsx global>{`
         .high-contrast {
-          --text-color: #ffffff;
-          --bg-color: #000000;
-          --border-color: #ffffff;
-        }
-
+          --text-color: #ffffff
+          --bg-color: #000000
+          --border-color: #ffffff
         .high-contrast * {
-          color: var(--text-color) !important;
-          background-color: var(--bg-color) !important;
-          border-color: var(--border-color) !important;
-        }
-
+          color: var(--text-color) !important
+          background-color: var(--bg-color) !important
+          border-color: var(--border-color) !important
         .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-
+          animation-duration: 0.01ms !important
+          animation-iteration-count: 1 !important
+          transition-duration: 0.01ms !important
         .accessibility-enhanced {
-          font-size: calc(1rem * var(--font-size-multiplier, 1));
-        }
+          font-size: calc(1rem * var(--font-size-multiplier, 1))
       `}</style>
     <   />
-  );
-}
-
+  )

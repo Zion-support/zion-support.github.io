@@ -20,6 +20,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@axe-core/cli@^4.10.2":
   version "4.10.2"
   resolved "https://registry.npmjs.org/@axe-core/cli/-/cli-4.10.2.tgz"
@@ -55,6 +56,44 @@
 =======
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.27.1":
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.27.1":
+=======
+<<<<<<< HEAD
+"@axe-core/cli@^4.10.2":
+  version "4.10.2"
+  resolved "https://registry.npmjs.org/@axe-core/cli/-/cli-4.10.2.tgz"
+  integrity sha512-QBAKaeCWpegkPr5OoA0BJ5rXh8wcGtPXViE9T1OgmPeSf1YCPOz+6ccrOF4h68Y4djCMpFqb9nm3/fpjKoQJQg==
+  dependencies:
+    "@axe-core/webdriverjs" "^4.10.2"
+    axe-core "~4.10.3"
+    chromedriver latest
+    colors "^1.4.0"
+    commander "^9.4.1"
+    dotenv "^16.4.5"
+    selenium-webdriver "~4.22.0"
+
+"@axe-core/react@^4.10.2":
+  version "4.10.2"
+  resolved "https://registry.npmjs.org/@axe-core/react/-/react-4.10.2.tgz"
+  integrity sha512-BIHQ+kMtOpPTmtMrJDGQMkXQT8C3YX5GIUmqXQ6tCAUaK7ZwhfbyNBaYlG0h0IdC7mHL0uxTXYxOI6r4Lgnw6w==
+  dependencies:
+    axe-core "~4.10.3"
+    requestidlecallback "^0.3.0"
+
+"@axe-core/webdriverjs@^4.10.2":
+  version "4.10.2"
+  resolved "https://registry.npmjs.org/@axe-core/webdriverjs/-/webdriverjs-4.10.2.tgz"
+  integrity sha512-ppnc7+xG4KEQ0cnKOOB7B4+ACrB13O0BPVhzJpDSQ1LlBNrWdMlfdJujMhnE0v6gsOV0YxnbZQnokaGOaaFIjQ==
+  dependencies:
+    axe-core "~4.10.3"
+
+"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.27.1":
+=======
+"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.27.1":
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "7.27.1"
   resolved "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.27.1.tgz"
   integrity sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==
@@ -424,8 +463,16 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@eslint-community/eslint-utils@^4.7.0", "@eslint-community/eslint-utils@^4.8.0":
 =======
+=======
+"@eslint-community/eslint-utils@^4.7.0", "@eslint-community/eslint-utils@^4.8.0":
+=======
+<<<<<<< HEAD
+"@eslint-community/eslint-utils@^4.7.0", "@eslint-community/eslint-utils@^4.8.0":
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 "@csstools/media-query-list-parser@^4.0.3":
   version "4.0.3"
   resolved "https://registry.npmjs.org/@csstools/media-query-list-parser/-/media-query-list-parser-4.0.3.tgz"
@@ -750,9 +797,13 @@
 
 "@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.7.0":
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 "@eslint-community/eslint-utils@^4.7.0", "@eslint-community/eslint-utils@^4.8.0":
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "4.8.0"
   dependencies:
     eslint-visitor-keys "^3.4.3"
@@ -1000,8 +1051,17 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@heroicons/react@^2.2.0":
   version "2.2.0"
+=======
+"@heroicons/react@^2.2.0":
+  version "2.2.0"
+=======
+<<<<<<< HEAD
+"@heroicons/react@^2.2.0":
+  version "2.2.0"
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   resolved "https://registry.npmjs.org/@heroicons/react/-/react-2.2.0.tgz"
   integrity sha512-LMcepvRaS9LYHJGsF0zzmgKCUim/X3N/DQKc4jepAXJ7l8QxJ1PmxJzqplF2Z3FE4PqBAIGyJAQ/w4B5dsqbtQ==
 =======
@@ -1019,10 +1079,14 @@
 "@heroicons/react@^2.2.0":
   version "2.2.0"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 "@heroicons/react@^2.2.0":
   version "2.2.0"
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 "@hookform/resolvers@^5.2.1":
   version "5.2.1"
@@ -1477,10 +1541,18 @@
   version "15.5.2"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/@next/env/-/env-15.5.2.tgz"
   integrity sha512-Qe06ew4zt12LeO6N7j8/nULSOe3fMXE4dM6xgpBQNvdzyK1sv5y4oAP3bq4LamrvGCZtmRYnW8URFCeX5nFgGg==
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+  resolved "https://registry.npmjs.org/@next/env/-/env-15.5.2.tgz"
+  integrity sha512-Qe06ew4zt12LeO6N7j8/nULSOe3fMXE4dM6xgpBQNvdzyK1sv5y4oAP3bq4LamrvGCZtmRYnW8URFCeX5nFgGg==
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 "@next/eslint-plugin-next@15.5.2":
   version "15.5.2"
@@ -1490,14 +1562,22 @@
     fast-glob "3.3.1"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 "@next/eslint-plugin-next@14.2.32":
   version "14.2.32"
   dependencies:
     glob "10.3.10"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 "@next/swc-linux-x64-gnu@^15.5.2", "@next/swc-linux-x64-gnu@15.5.2":
   version "15.5.2"
@@ -1805,6 +1885,10 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
 "@playwright/test@^1.55.0":
   version "1.55.0"
   resolved "https://registry.npmjs.org/@playwright/test/-/test-1.55.0.tgz"
@@ -1814,16 +1898,26 @@
 
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 "@pm2/agent@~2.1.1":
   version "2.1.1"
   resolved "https://registry.npmjs.org/@pm2/agent/-/agent-2.1.1.tgz"
   integrity sha512-0V9ckHWd/HSC8BgAbZSoq8KXUG81X97nSkAxmhKDhmF8vanyaoc1YXwc2KVkbWz82Rg4gjd2n9qiT3i7bdvGrQ==
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   dependencies:
     async "~3.2.0"
     chalk "~3.0.0"
@@ -1876,9 +1970,15 @@
   integrity sha512-mrZOev24EDhnefmnZX7WVVT7v+r9LttPRqf54ONvj6re4XMF7wFTpK2tLJi4XHB7fFp/6xhYbgRel8YV7gQiyA==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   dependencies:
     "@opentelemetry/instrumentation" "^0.52.0 || ^0.53.0 || ^0.54.0 || ^0.55.0 || ^0.56.0 || ^0.57.0"
 
@@ -2506,8 +2606,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 "@rushstack/eslint-patch@^1.10.3":
   version "1.12.0"
 
@@ -2579,6 +2685,10 @@
   integrity sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 "@rushstack/eslint-patch@^1.3.3":
   version "1.12.0"
 
@@ -2605,8 +2715,12 @@
     "@sendgrid/client" "^8.1.5"
     "@sendgrid/helpers" "^8.0.0"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 "@sinclair/typebox@^0.34.0":
   version "0.34.41"
@@ -2868,8 +2982,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 "@types/mysql@2.15.26":
   version "2.15.26"
   resolved "https://registry.npmjs.org/@types/mysql/-/mysql-2.15.26.tgz"
@@ -2877,6 +2997,7 @@
   dependencies:
     "@types/node" "*"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 "@types/node@*", "@types/node@>=13.7.0":
   version "20.19.13"
@@ -2899,6 +3020,29 @@
 =======
 "@types/next@^8.0.7":
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+"@types/next@^8.0.7":
+=======
+"@types/node@*", "@types/node@>=13.7.0":
+  version "20.19.13"
+  resolved "https://registry.npmjs.org/@types/node/-/node-20.19.13.tgz"
+  integrity sha512-yCAeZl7a0DxgNVteXFHt9+uyFbqXGy/ShC4BlcHkoE0AfGXYv/BUiplV72DjMYXHDBXFjhvr6DD1NiRVfB4j8g==
+  dependencies:
+    undici-types "~6.21.0"
+=======
+"@types/next-server@*":
+  version "8.1.2"
+  resolved "https://registry.npmjs.org/@types/next-server/-/next-server-8.1.2.tgz"
+  integrity sha512-Fm4QhAxwDlC9AHiGy23Lhv7DeTTt1O1s7tnAsyVOLPjePmYXPZVbOCrxd2oRHZnIIYWw41JelLbq4hN1B5idlQ==
+  dependencies:
+    "@types/next" "*"
+    "@types/node" "*"
+    "@types/react" "*"
+    "@types/react-loadable" "*"
+
+"@types/next@*", "@types/next@^8.0.7":
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "8.0.7"
   resolved "https://registry.npmjs.org/@types/next/-/next-8.0.7.tgz"
   integrity sha512-I/Gcj1YfOFmpBBX5XgBP1t1wKcFS0TGk8ytW99ujjvCp8U31QuKqM3fvvGb7+Hf1CJt3BAAgzGT0aCigqO5opQ==
@@ -2914,9 +3058,12 @@
   version "18.19.124"
   dependencies:
 <<<<<<< HEAD
+<<<<<<< HEAD
     undici-types "~5.26.4"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
     undici-types "~6.21.0"
 
 "@types/pg-pool@2.0.6":
@@ -2934,7 +3081,14 @@
     "@types/node" "*"
     pg-protocol "*"
     pg-types "^2.2.0"
+<<<<<<< HEAD
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+    undici-types "~5.26.4"
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 "@types/phoenix@^1.6.6":
   version "1.6.6"
@@ -2955,10 +3109,18 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/react@*":
 =======
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+"@types/react@*":
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 "@types/react-dom@^18.3.7":
   version "18.3.7"
 
@@ -2981,9 +3143,15 @@
 
 "@types/react@*", "@types/react@^18.3.24":
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "18.3.24"
   dependencies:
     "@types/prop-types" "*"
@@ -3194,6 +3362,7 @@ acorn-walk@^8.1.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 acorn@^8.11.0, acorn@^8.14.0, acorn@^8.15.0, acorn@^8.4.1:
 =======
 acorn@^8.11.0, acorn@^8.15.0, acorn@^8.4.1, acorn@^8.9.0:
@@ -3201,6 +3370,16 @@ acorn@^8.11.0, acorn@^8.15.0, acorn@^8.4.1, acorn@^8.9.0:
 =======
 acorn@^8.11.0, acorn@^8.14.0, acorn@^8.15.0, acorn@^8.4.1:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+acorn@^8.11.0, acorn@^8.14.0, acorn@^8.15.0, acorn@^8.4.1:
+=======
+<<<<<<< HEAD
+acorn@^8.11.0, acorn@^8.14.0, acorn@^8.15.0, acorn@^8.4.1:
+=======
+acorn@^8.11.0, acorn@^8.15.0, acorn@^8.4.1, acorn@^8.9.0:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "8.15.0"
 
 agent-base@^7.0.2, agent-base@^7.1.0, agent-base@^7.1.2:
@@ -3520,8 +3699,14 @@ available-typed-arrays@^1.0.7:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 avvio@^9.0.0:
   version "9.1.0"
   resolved "https://registry.npmjs.org/avvio/-/avvio-9.1.0.tgz"
@@ -3547,6 +3732,7 @@ aws-sdk@^2.1692.0:
     xml2js "0.6.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 axe-core@^4.10.0, axe-core@^4.10.3, axe-core@~4.10.3:
 =======
 axe-core@^4.10.0:
@@ -3554,10 +3740,20 @@ axe-core@^4.10.0:
 =======
 axe-core@^4.10.0, axe-core@^4.10.3:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+axe-core@^4.10.0, axe-core@^4.10.3:
+=======
+axe-core@^4.10.0, axe-core@^4.10.3, axe-core@~4.10.3:
+=======
+axe-core@^4.10.0:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "4.10.3"
   resolved "https://registry.npmjs.org/axe-core/-/axe-core-4.10.3.tgz"
   integrity sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 axios@^1.11.0, axios@^1.7.4:
@@ -3567,6 +3763,16 @@ axios@^1.8.2:
 =======
 axios@^1.11.0:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+axios@^1.11.0:
+=======
+<<<<<<< HEAD
+axios@^1.11.0, axios@^1.7.4:
+=======
+axios@^1.8.2:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "1.11.0"
   resolved "https://registry.npmjs.org/axios/-/axios-1.11.0.tgz"
   integrity sha512-1Lx3WLFQWm3ooKDYZD1eXmoGO9fxYQjrycfHFC8P0sCfQVXyROp0p9PFWBehewBOdCwHc+f/b8I0fMto5eSfwA==
@@ -3644,6 +3850,7 @@ balanced-match@^1.0.0:
   version "1.0.2"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
@@ -3656,6 +3863,21 @@ base64-js@^1.3.0:
 
 base64-js@^1.0.2, base64-js@^1.3.0:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+
+base64-js@^1.0.2, base64-js@^1.3.0:
+=======
+<<<<<<< HEAD
+  resolved "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz"
+  integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
+
+base64-js@^1.0.2, base64-js@^1.3.0:
+=======
+
+base64-js@^1.3.0:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "1.5.1"
   resolved "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
@@ -3717,6 +3939,7 @@ braces@^3.0.3, braces@~3.0.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 browserslist@^4.24.0, browserslist@^4.24.4, browserslist@^4.25.3:
 =======
 browserslist@^4.24.0, browserslist@^4.24.4, browserslist@^4.25.1:
@@ -3724,6 +3947,16 @@ browserslist@^4.24.0, browserslist@^4.24.4, browserslist@^4.25.1:
 =======
 browserslist@^4.24.0, browserslist@^4.24.4:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+browserslist@^4.24.0, browserslist@^4.24.4:
+=======
+<<<<<<< HEAD
+browserslist@^4.24.0, browserslist@^4.24.4, browserslist@^4.25.3:
+=======
+browserslist@^4.24.0, browserslist@^4.24.4, browserslist@^4.25.1:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "4.25.4"
   dependencies:
     caniuse-lite "^1.0.30001737"
@@ -3762,8 +3995,14 @@ buffer-from@^1.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 buffer@4.9.2:
   version "4.9.2"
   resolved "https://registry.npmjs.org/buffer/-/buffer-4.9.2.tgz"
@@ -3775,9 +4014,15 @@ buffer@4.9.2:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 bytes@^3.1.2, bytes@3.1.2:
   version "3.1.2"
   resolved "https://registry.npmjs.org/bytes/-/bytes-3.1.2.tgz"
@@ -3841,6 +4086,10 @@ chalk@^5.3.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
 chalk@^4.1.2:
   version "4.1.2"
   resolved "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"
@@ -3861,8 +4110,12 @@ chalk@^5.3.0:
   resolved "https://registry.npmjs.org/chalk/-/chalk-5.6.0.tgz"
   integrity sha512-46QrSQFyVSEyYAgQ22hQ+zDa60YHA4fBstHmtSApj1Y5vKtG27fWowW03jCk5KcbXEWPZUIR894aARCA/G1kfQ==
 
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 chalk@~3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz"
@@ -3873,9 +4126,15 @@ chalk@~3.0.0:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 chalk@3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz"
@@ -3895,8 +4154,14 @@ charm@~0.1.1:
   integrity sha512-syedaZ9cPe7r3hoQA9twWYKu5AIyCswN5+szkmPBe9ccdLrj4bYaCnLVPTLd2kgVRc7+zoX4tyPgRnFKCj5YjQ==
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 cheerio-select@^2.1.0:
   version "2.1.0"
@@ -3950,11 +4215,19 @@ chokidar@^3.5.3:
 chokidar@^3.6.0:
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 chokidar@^3.5.3, chokidar@^3.6.0:
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+
+chokidar@^3.5.3, chokidar@^3.6.0:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "3.6.0"
   resolved "https://registry.npmjs.org/chokidar/-/chokidar-3.6.0.tgz"
   integrity sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==
@@ -3971,8 +4244,14 @@ chokidar@^3.5.3, chokidar@^3.6.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 chokidar@^4.0.3:
   version "4.0.3"
   resolved "https://registry.npmjs.org/chokidar/-/chokidar-4.0.3.tgz"
@@ -4005,9 +4284,15 @@ ci-info@^3.2.0:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 ci-info@^4.2.0:
   version "4.3.0"
   resolved "https://registry.npmjs.org/ci-info/-/ci-info-4.3.0.tgz"
@@ -4089,6 +4374,10 @@ color@^4.2.3:
     color-string "^1.9.0"
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
 
 colors@^1.4.0:
   version "1.4.0"
@@ -4096,8 +4385,12 @@ colors@^1.4.0:
   integrity sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 combined-stream@^1.0.8:
   version "1.0.8"
@@ -4116,6 +4409,10 @@ commander@^4.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
 commander@^9.4.1:
   version "9.5.0"
   resolved "https://registry.npmjs.org/commander/-/commander-9.5.0.tgz"
@@ -4123,13 +4420,18 @@ commander@^9.4.1:
 
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 commander@2.15.1:
   version "2.15.1"
   resolved "https://registry.npmjs.org/commander/-/commander-2.15.1.tgz"
   integrity sha512-VlfT9F3V0v+jr4yxPc5gg9s62/fIVWsd2Bk2iD435um1NlGMYdVCq+MjcXnhYq2icNOizHr1kK+5TI6H0Hy0ag==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 compare-versions@^6.1.0:
@@ -4142,6 +4444,8 @@ compare-versions@^6.1.0:
 concat-map@0.0.1:
   version "0.0.1"
 =======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 configstore@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/configstore/-/configstore-7.0.0.tgz"
@@ -4151,7 +4455,22 @@ configstore@^7.0.0:
     dot-prop "^9.0.0"
     graceful-fs "^4.2.11"
     xdg-basedir "^5.1.0"
+<<<<<<< HEAD
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+compare-versions@^6.1.0:
+  version "6.1.1"
+  resolved "https://registry.npmjs.org/compare-versions/-/compare-versions-6.1.1.tgz"
+  integrity sha512-4hm4VPpIecmlg59CHXnRDnqGplJFrbLG4aFEl5vl6cK1u76ws3LLvX7ikFnTDl5vo39sjWD6AaDPYodJp/NNHg==
+
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+concat-map@0.0.1:
+  version "0.0.1"
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 content-disposition@^1.0.0:
   version "1.0.0"
@@ -4218,8 +4537,14 @@ critters@^0.0.23:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 cron-parser@^5.3.0:
   version "5.3.1"
   resolved "https://registry.npmjs.org/cron-parser/-/cron-parser-5.3.1.tgz"
@@ -4235,10 +4560,17 @@ croner@~4.1.92:
 cross-spawn@^7.0.3, cross-spawn@^7.0.5, cross-spawn@^7.0.6:
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 cross-spawn@^7.0.2, cross-spawn@^7.0.3, cross-spawn@^7.0.5, cross-spawn@^7.0.6:
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+cross-spawn@^7.0.2, cross-spawn@^7.0.3, cross-spawn@^7.0.5, cross-spawn@^7.0.6:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "7.0.6"
   dependencies:
     path-key "^3.1.0"
@@ -4247,8 +4579,14 @@ cross-spawn@^7.0.2, cross-spawn@^7.0.3, cross-spawn@^7.0.5, cross-spawn@^7.0.6:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 csp_evaluator@1.1.5:
   version "1.1.5"
   resolved "https://registry.npmjs.org/csp_evaluator/-/csp_evaluator-1.1.5.tgz"
@@ -4271,6 +4609,10 @@ css-what@^6.1.0:
   integrity sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 css.escape@^1.5.1:
   version "1.5.1"
   resolved "https://registry.npmjs.org/css.escape/-/css.escape-1.5.1.tgz"
@@ -4303,8 +4645,12 @@ cssdb@^8.4.0:
   integrity sha512-lyATYGyvXwQ8h55WeQeEHXhI+47rl52pXSYkFK/ZrCbAJSgVIaPFjYc3RM8TpRHKk7W3wsAZImmLps+P5VyN9g==
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz"
@@ -4322,12 +4668,20 @@ csstype@^3.0.2, csstype@^3.1.3:
   version "3.1.3"
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/csstype/-/csstype-3.1.3.tgz"
   integrity sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 culvert@^0.1.2:
   version "0.1.2"
@@ -4335,8 +4689,14 @@ culvert@^0.1.2:
   integrity sha512-yi1x3EAWKjQTreYWeSd98431AV+IEE0qoDyOoaHJ7KJ21gv6HtBXHVLX74opVSGqcR8/AbjJBHAHpcOy2bj5Gg==
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 "d3-array@2 - 3":
   version "3.2.4"
@@ -4375,9 +4735,15 @@ d3-time-format@^4.1.0:
     d3-array "2 - 3"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 damerau-levenshtein@^1.0.8:
   version "1.0.8"
@@ -4472,6 +4838,7 @@ debug@^3.2.7:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.5, debug@^4.3.7, debug@^4.4.0, debug@^4.4.1, debug@4:
 =======
 debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.5, debug@^4.3.7, debug@^4.4.0, debug@4:
@@ -4479,6 +4846,16 @@ debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3
 =======
 debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.5, debug@^4.3.7, debug@^4.4.0, debug@^4.4.1, debug@4:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.5, debug@^4.3.7, debug@^4.4.0, debug@^4.4.1, debug@4:
+=======
+<<<<<<< HEAD
+debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.5, debug@^4.3.7, debug@^4.4.0, debug@^4.4.1, debug@4:
+=======
+debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.5, debug@^4.3.7, debug@^4.4.0, debug@4:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "4.4.1"
   dependencies:
     ms "^2.1.3"
@@ -4490,6 +4867,7 @@ debug@~4.3.1:
   dependencies:
     ms "^2.1.3"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 debug@4.3.1:
@@ -4506,6 +4884,23 @@ decimal.js@^10.4.3:
 =======
 decimal.js@^10.4.3, decimal.js@^10.5.0:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+decimal.js@^10.4.3, decimal.js@^10.5.0:
+=======
+<<<<<<< HEAD
+debug@4.3.1:
+  version "4.3.1"
+  resolved "https://registry.npmjs.org/debug/-/debug-4.3.1.tgz"
+  integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
+  dependencies:
+    ms "2.1.2"
+
+decimal.js@^10.4.3, decimal.js@^10.5.0:
+=======
+decimal.js@^10.4.3:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "10.6.0"
   resolved "https://registry.npmjs.org/decimal.js/-/decimal.js-10.6.0.tgz"
   integrity sha512-YpgQiITW3JXGntzdUmyUR1V812Hn8T1YVXhCu+wO3OpS4eU9l4YdD3qjyiKdV6mvV29zapkMeD390UVEf2lkUg==
@@ -4630,8 +5025,14 @@ dom-serializer@^2.0.0:
   dependencies:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
     domelementtype "^2.3.0"
     domhandler "^5.0.2"
     entities "^4.2.0"
@@ -4670,10 +5071,17 @@ dotenv@^17.2.2:
   integrity sha512-Sf2LSQP+bOlhKWWyhFsn0UsfdK/kCWRv1iuA2gXAwt3dyNabr6QSj00I2V10pidqz69soatm9ZwZvpQMTIOd5Q==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
     esutils "^2.0.2"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+    esutils "^2.0.2"
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 dunder-proto@^1.0.0, dunder-proto@^1.0.1:
   version "1.0.1"
@@ -4732,8 +5140,14 @@ encodeurl@^2.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 encoding-sniffer@^0.2.1:
   version "0.2.1"
   resolved "https://registry.npmjs.org/encoding-sniffer/-/encoding-sniffer-0.2.1.tgz"
@@ -4743,6 +5157,7 @@ encoding-sniffer@^0.2.1:
     whatwg-encoding "^3.1.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 end-of-stream@^1.1.0, end-of-stream@^1.4.1:
 =======
 end-of-stream@^1.4.1:
@@ -4750,6 +5165,15 @@ end-of-stream@^1.4.1:
 =======
 end-of-stream@^1.4.1:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+end-of-stream@^1.4.1:
+=======
+end-of-stream@^1.1.0, end-of-stream@^1.4.1:
+=======
+end-of-stream@^1.4.1:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "1.4.5"
   resolved "https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.5.tgz"
   integrity sha512-ooEGc6HP26xXq/N+GCGOT0JKCLDGrq2bQUZrQ7gyrJiZANJ/8YDTxTpQBXGMn+WbIQXNVpyWymm7KYVICQnyOg==
@@ -4758,8 +5182,14 @@ end-of-stream@^1.4.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 enquirer@^2.3.6:
   version "2.4.1"
   resolved "https://registry.npmjs.org/enquirer/-/enquirer-2.4.1.tgz"
@@ -4770,9 +5200,15 @@ enquirer@^2.3.6:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 enquirer@2.3.6:
   version "2.3.6"
   resolved "https://registry.npmjs.org/enquirer/-/enquirer-2.3.6.tgz"
@@ -4782,8 +5218,14 @@ enquirer@2.3.6:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 entities@^4.2.0, entities@^4.4.0:
   version "4.5.0"
   resolved "https://registry.npmjs.org/entities/-/entities-4.5.0.tgz"
@@ -4791,9 +5233,15 @@ entities@^4.2.0, entities@^4.4.0:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 entities@^6.0.0:
   version "6.0.1"
   resolved "https://registry.npmjs.org/entities/-/entities-6.0.1.tgz"
@@ -4956,12 +5404,20 @@ escalade@^3.1.1, escalade@^3.2.0:
   version "3.2.0"
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/escalade/-/escalade-3.2.0.tgz"
   integrity sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 escape-html@^1.0.3:
   version "1.0.3"
@@ -4991,19 +5447,33 @@ escodegen@^2.1.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 eslint-config-next@^15.5.2:
   version "15.5.2"
   resolved "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-15.5.2.tgz"
   integrity sha512-3hPZghsLupMxxZ2ggjIIrat/bPniM2yRpsVPVM40rp8ZMzKWOJp2CGWn7+EzoV2ddkUr5fxNfHpF+wU1hGt/3g==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 eslint-config-next@^14.2.32:
   version "14.2.32"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+eslint-config-next@^14.2.32:
+  version "14.2.32"
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   dependencies:
     "@next/eslint-plugin-next" "15.5.2"
     "@rushstack/eslint-patch" "^1.10.3"
@@ -5077,6 +5547,7 @@ eslint-plugin-import@^2.31.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 eslint-plugin-jsx-a11y@^6.10.0, eslint-plugin-jsx-a11y@^6.10.2:
 =======
 eslint-plugin-jsx-a11y@^6.7.1:
@@ -5084,6 +5555,16 @@ eslint-plugin-jsx-a11y@^6.7.1:
 =======
 eslint-plugin-jsx-a11y@^6.10.0, eslint-plugin-jsx-a11y@^6.10.2:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+eslint-plugin-jsx-a11y@^6.10.0, eslint-plugin-jsx-a11y@^6.10.2:
+=======
+<<<<<<< HEAD
+eslint-plugin-jsx-a11y@^6.10.0, eslint-plugin-jsx-a11y@^6.10.2:
+=======
+eslint-plugin-jsx-a11y@^6.7.1:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "6.10.2"
   resolved "https://registry.npmjs.org/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.10.2.tgz"
   integrity sha512-scB3nz4WmG75pV8+3eRUQOHZlNSUhFNq37xnpgRkCCELU3XMvXAxLk1eqWWyE22Ki4Q01Fnsw9BA3cJHDPgn2Q==
@@ -5106,21 +5587,35 @@ eslint-plugin-jsx-a11y@^6.10.0, eslint-plugin-jsx-a11y@^6.10.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 eslint-plugin-react-hooks@^5.0.0, eslint-plugin-react-hooks@^5.2.0:
   version "5.2.0"
   resolved "https://registry.npmjs.org/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-5.2.0.tgz"
   integrity sha512-+f15FfK64YQwZdJNELETdn5ibXEUQmW1DZL6KXhNnc2heoy/sg9VJJeT7n8TlMWouzWqSWavFkIhHyIbIAEapg==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 "eslint-plugin-react-hooks@^4.5.0 || 5.0.0-canary-7118f5dd7-20230705", eslint-plugin-react-hooks@^4.6.2:
   version "4.6.2"
   resolved "https://registry.npmjs.org/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.6.2.tgz"
   integrity sha512-QzliNJq4GinDBcD8gPB5v0wh6g8q3SUi6EFF0x8N/BL9PoVs0atuGc47ozMRyOWAKdwaZ5OnbOEa3WR+dSGKuQ==
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 eslint-plugin-react-refresh@^0.4.20:
   version "0.4.20"
@@ -5247,6 +5742,7 @@ esutils@^2.0.2:
   version "2.0.3"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 =======
@@ -5255,6 +5751,17 @@ esutils@^2.0.2:
   resolved "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+  resolved "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz"
+  integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
+=======
+<<<<<<< HEAD
+  resolved "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz"
+  integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 etag@^1.8.1:
   version "1.8.1"
@@ -5272,8 +5779,14 @@ eventemitter2@^6.3.1:
   integrity sha512-JEPTiaOt9f04oa6NOkc4aH+nVp5I3wEjpHbIPqfgCdD5v5bUzy7xQqwcVO2aDQgOWhI28da57HksMrzK9HlRxg==
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 eventemitter2@~5.0.1, eventemitter2@5.0.1:
   version "5.0.1"
@@ -5286,9 +5799,15 @@ events@^3.3.0:
   integrity sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 events@1.1.1:
   version "1.1.1"
@@ -5395,6 +5914,7 @@ extrareqp2@^1.0.0:
   dependencies:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     debug "^4.1.1"
     get-stream "^5.1.0"
     yauzl "^2.10.0"
@@ -5408,6 +5928,25 @@ extrareqp2@^1.0.0:
   dependencies:
     follow-redirects "^1.14.0"
 
+=======
+    follow-redirects "^1.14.0"
+
+=======
+<<<<<<< HEAD
+    debug "^4.1.1"
+    get-stream "^5.1.0"
+    yauzl "^2.10.0"
+  optionalDependencies:
+    "@types/yauzl" "^2.9.1"
+
+extrareqp2@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/extrareqp2/-/extrareqp2-1.0.0.tgz"
+  integrity sha512-Gum0g1QYb6wpPJCVypWP3bbIuaibcFiJcpuPM10YSXp/tzqi84x9PJageob+eN4xVRIOto4wjSGNLyMD54D2xA==
+  dependencies:
+    follow-redirects "^1.14.0"
+
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 fast-decode-uri-component@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/fast-decode-uri-component/-/fast-decode-uri-component-1.0.1.tgz"
@@ -5416,10 +5955,14 @@ fast-decode-uri-component@^1.0.1:
     follow-redirects "^1.14.0"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 
+<<<<<<< HEAD
 =======
     follow-redirects "^1.14.0"
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz"
@@ -5469,8 +6012,14 @@ fast-levenshtein@^2.0.6:
   version "2.0.6"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   resolved "https://registry.npmjs.org/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz"
   integrity sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==
 
@@ -5492,9 +6041,15 @@ fast-uri@^3.0.0, fast-uri@^3.0.1:
   integrity sha512-iPeeDKJSWf4IEOasVVrknXpaBV0IApz/gp7S2bb7Z4Lljbl2MGJRqInZiUrQwV16cpzw/D3S5j5Julj/gT52AA==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 fastify-plugin@^5.0.0:
   version "5.0.1"
@@ -5540,6 +6095,10 @@ fclone@~1.0.11, fclone@1.0.11:
   integrity sha512-GDqVQezKzRABdeqflsgMr7ktzgF9CyS+p2oe0jJqUY6izSSbhPIQJDpoU4PtGcD7VPM9xh/dVrTu6z1nwgmEGw==
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
 
 fd-slicer@~1.1.0:
   version "1.1.0"
@@ -5549,8 +6108,12 @@ fd-slicer@~1.1.0:
     pend "~1.2.0"
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 fdir@^6.5.0:
   version "6.5.0"
@@ -5684,19 +6247,33 @@ fraction.js@^4.3.7:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 framer-motion@^12.23.12:
   version "12.23.12"
   resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-12.23.12.tgz"
   integrity sha512-6e78rdVtnBvlEVgu6eFEAgG9v3wLnYEboM8I5O5EXvfKC8gxGQB8wXJdhkMy10iVcn05jl6CNw7/HTsTCfwcWg==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 framer-motion@^10.18.0:
   version "10.18.0"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+framer-motion@^10.18.0:
+  version "10.18.0"
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   dependencies:
     motion-dom "^12.23.12"
     motion-utils "^12.23.6"
@@ -5899,14 +6476,24 @@ glob@^7.1.4:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 globals@^14.0.0:
   version "14.0.0"
   resolved "https://registry.npmjs.org/globals/-/globals-14.0.0.tgz"
   integrity sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 glob@10.3.10:
   version "10.3.10"
   resolved "https://registry.npmjs.org/glob/-/glob-10.3.10.tgz"
@@ -5925,8 +6512,12 @@ globals@^13.19.0:
   dependencies:
     type-fest "^0.20.2"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 globalthis@^1.0.4:
   version "1.0.4"
@@ -5981,6 +6572,7 @@ gopd@^1.0.1, gopd@^1.2.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11, graceful-fs@^4.2.9:
 =======
 graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11:
@@ -5988,6 +6580,16 @@ graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11:
 =======
 graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11, graceful-fs@^4.2.9:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11, graceful-fs@^4.2.9:
+=======
+<<<<<<< HEAD
+graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11, graceful-fs@^4.2.9:
+=======
+graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "4.2.11"
   resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
@@ -6158,14 +6760,22 @@ human-signals@^2.1.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
+=======
 husky@^9.1.7:
   version "9.1.7"
   resolved "https://registry.npmjs.org/husky/-/husky-9.1.7.tgz"
   integrity sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 iconv-lite@^0.4.4:
   version "0.4.24"
   resolved "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.24.tgz"
@@ -6305,13 +6915,21 @@ ip-address@^10.0.1, ip-address@10.0.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
 ip-regex@^4.1.0:
   version "4.3.0"
   resolved "https://registry.npmjs.org/ip-regex/-/ip-regex-4.3.0.tgz"
   integrity sha512-B9ZWJxHHOHUhUjCPrMpLD4xEq35bUTClHM1S6CBU5ixQnkZmwipwgc96vAd7AAGM9TGHvJR+Uss+/Ak6UphK+Q==
 
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 ipaddr.js@^2.1.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-2.2.0.tgz"
@@ -6319,9 +6937,15 @@ ipaddr.js@^2.1.0:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 ipaddr.js@1.9.1:
   version "1.9.1"
   resolved "https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-1.9.1.tgz"
@@ -6578,6 +7202,7 @@ isarray@^2.0.5:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 is2@^2.0.6:
   version "2.0.9"
   resolved "https://registry.npmjs.org/is2/-/is2-2.0.9.tgz"
@@ -6594,6 +7219,25 @@ isarray@~1.0.0:
 =======
 isarray@~1.0.0:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+isarray@~1.0.0:
+=======
+<<<<<<< HEAD
+is2@^2.0.6:
+  version "2.0.9"
+  resolved "https://registry.npmjs.org/is2/-/is2-2.0.9.tgz"
+  integrity sha512-rZkHeBn9Zzq52sd9IUIV3a5mfwBY+o2HePMh0wkGBM4z4qjvy2GwVxQ6nNXSfw6MmVP6gf1QIlWjiOavhM3x5g==
+  dependencies:
+    deep-is "^0.1.3"
+    ip-regex "^4.1.0"
+    is-url "^1.2.4"
+
+isarray@^1.0.0, isarray@~1.0.0:
+=======
+isarray@~1.0.0:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "1.0.0"
   resolved "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz"
   integrity sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==
@@ -7095,8 +7739,14 @@ jiti@^1.21.6:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 jmespath@0.16.0:
   version "0.16.0"
   resolved "https://registry.npmjs.org/jmespath/-/jmespath-0.16.0.tgz"
@@ -7109,9 +7759,15 @@ jpeg-js@^0.4.1, jpeg-js@^0.4.4:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 js-git@^0.7.8:
   version "0.7.8"
   resolved "https://registry.npmjs.org/js-git/-/js-git-0.7.8.tgz"
@@ -7123,8 +7779,14 @@ js-git@^0.7.8:
     pako "^0.2.5"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 js-library-detector@^6.7.0:
   version "6.7.0"
@@ -7132,9 +7794,15 @@ js-library-detector@^6.7.0:
   integrity sha512-c80Qupofp43y4cJ7+8TTDN/AsDwLi5oOm/plBrWI+iQt485vKXCco+yVmOwEgdo9VOdsYTuV0UlTeetVPTriXA==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -7344,8 +8012,14 @@ lie@~3.3.0:
   integrity sha512-UaiMJzeWRlEujzAuw5LokY1L5ecNQYZKfmyZ9L7wDHb/p5etKaxXhohBcrw0EYby+G/NA52vRSN4N39dxHAIwQ==
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   dependencies:
     immediate "~3.0.5"
 
@@ -7405,11 +8079,19 @@ lighthouse@^12.8.2:
     yargs-parser "^21.0.0"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
   dependencies:
     immediate "~3.0.5"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+  dependencies:
+    immediate "~3.0.5"
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 lilconfig@^3.0.0, lilconfig@^3.1.3:
   version "3.1.3"
@@ -7529,10 +8211,18 @@ lucide-react@^0.536.0:
   version "0.536.0"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/lucide-react/-/lucide-react-0.536.0.tgz"
   integrity sha512-2PgvNa9v+qz4Jt/ni8vPLt4jwoFybXHuubQT8fv4iCW5TjDxkbZjNZZHa485ad73NSEn/jdsEtU57eE1g+ma8A==
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+  resolved "https://registry.npmjs.org/lucide-react/-/lucide-react-0.536.0.tgz"
+  integrity sha512-2PgvNa9v+qz4Jt/ni8vPLt4jwoFybXHuubQT8fv4iCW5TjDxkbZjNZZHa485ad73NSEn/jdsEtU57eE1g+ma8A==
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 luxon@^3.7.1:
   version "3.7.2"
@@ -7540,6 +8230,10 @@ luxon@^3.7.1:
   integrity sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 lz-string@^1.5.0:
   version "1.5.0"
   resolved "https://registry.npmjs.org/lz-string/-/lz-string-1.5.0.tgz"
@@ -7547,8 +8241,12 @@ lz-string@^1.5.0:
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 make-dir@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/make-dir/-/make-dir-4.0.0.tgz"
@@ -7666,6 +8364,10 @@ minimatch@^10.0.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
 minimatch@^3.0.4, minimatch@^3.1.1:
   version "3.1.2"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz"
@@ -7682,8 +8384,12 @@ minimatch@^3.1.2:
 
 minimatch@^9.0.0:
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 minimatch@^10.0.3:
   version "10.0.3"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-10.0.3.tgz"
@@ -7697,11 +8403,19 @@ minimatch@^3.0.4, minimatch@^3.1.1, minimatch@^3.1.2:
     "@isaacs/brace-expansion" "^5.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 minimatch@^9.0.1:
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 minimatch@^9.0.0:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+minimatch@^9.0.0:
+=======
+minimatch@^9.0.1:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "9.0.5"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz"
   integrity sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==
@@ -7727,6 +8441,10 @@ minimist@^1.2.0, minimist@^1.2.5, minimist@^1.2.6:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
 mitt@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/mitt/-/mitt-3.0.1.tgz"
@@ -7734,8 +8452,12 @@ mitt@^3.0.1:
 
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 mkdirp@1.0.4:
   version "1.0.4"
   resolved "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz"
@@ -7765,8 +8487,14 @@ mongodb@^6.19.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 motion-dom@^12.23.12:
   version "12.23.12"
   resolved "https://registry.npmjs.org/motion-dom/-/motion-dom-12.23.12.tgz"
@@ -7780,22 +8508,38 @@ motion-utils@^12.23.6:
   integrity sha512-eAWoPgr4eFEOFfg2WjIsMoqJTW6Z8MTUCgn/GZ3VRpClWBdnbjryiA3ZSNLyxCTmCQx4RmYX6jX1iWHbenUPNQ==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 ms@^2.1.1, ms@^2.1.3:
   version "2.1.3"
 
+=======
+ms@^2.1.1, ms@^2.1.3:
+  version "2.1.3"
+
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+ms@^2.1.1, ms@^2.1.3:
+  version "2.1.3"
+
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 <<<<<<< HEAD
 ms@2.1.2:
   version "2.1.2"
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
+<<<<<<< HEAD
 =======
 ms@^2.1.1, ms@^2.1.3:
   version "2.1.3"
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 mute-stream@~0.0.4:
   version "0.0.8"
   resolved "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.8.tgz"
@@ -7803,14 +8547,22 @@ mute-stream@~0.0.4:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 mute-stream@~0.0.4:
   version "0.0.8"
   resolved "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.8.tgz"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 mz@^2.7.0:
   version "2.7.0"
   dependencies:
@@ -7899,12 +8651,20 @@ node-releases@^2.0.19:
   version "2.0.20"
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/node-releases/-/node-releases-2.0.20.tgz"
   integrity sha512-7gK6zSXEH6neM212JgfYFXe+GmZQM+fia5SsusuBIUgnPheLFBmIPhtFoAQRj8/7wASYQnbDlHPVwY0BefoFgA==
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
@@ -7921,8 +8681,14 @@ npm-run-path@^4.0.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 nth-check@^2.0.1:
   version "2.1.1"
   resolved "https://registry.npmjs.org/nth-check/-/nth-check-2.1.1.tgz"
@@ -7933,10 +8699,17 @@ nth-check@^2.0.1:
 nwsapi@^2.2.12, nwsapi@^2.2.16:
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 nwsapi@^2.2.12:
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+nwsapi@^2.2.12:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "2.2.22"
   resolved "https://registry.npmjs.org/nwsapi/-/nwsapi-2.2.22.tgz"
   integrity sha512-ujSMe1OWVn55euT1ihwCI1ZcAaAU3nxUiDwfDQldc51ZXaB9m2AyOn6/jh1BLe2t/G8xd6uKG1UBF2aZJeg2SQ==
@@ -8032,8 +8805,14 @@ onetime@^5.1.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 open@^8.4.0:
   version "8.4.2"
   resolved "https://registry.npmjs.org/open/-/open-8.4.2.tgz"
@@ -8044,13 +8823,21 @@ open@^8.4.0:
     is-wsl "^2.2.0"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 openai@^5.11.0:
   version "5.19.1"
   resolved "https://registry.npmjs.org/openai/-/openai-5.19.1.tgz"
   integrity sha512-zSqnUF7oR9ksmpusKkpUgkNrj8Sl57U+OyzO8jzc7LUjTMg4DRfR3uCm+EIMA6iw06sRPNp4t7ojp3sCpEUZRQ==
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 optionator@^0.9.3:
   version "0.9.4"
@@ -8108,6 +8895,7 @@ p-try@^2.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 pac-proxy-agent@^7.0.1, pac-proxy-agent@^7.1.0:
 =======
 pac-proxy-agent@^7.0.1:
@@ -8115,6 +8903,16 @@ pac-proxy-agent@^7.0.1:
 =======
 pac-proxy-agent@^7.0.1, pac-proxy-agent@^7.1.0:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+pac-proxy-agent@^7.0.1, pac-proxy-agent@^7.1.0:
+=======
+<<<<<<< HEAD
+pac-proxy-agent@^7.0.1, pac-proxy-agent@^7.1.0:
+=======
+pac-proxy-agent@^7.0.1:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "7.2.0"
   resolved "https://registry.npmjs.org/pac-proxy-agent/-/pac-proxy-agent-7.2.0.tgz"
   integrity sha512-TEB8ESquiLMc0lV8vcd5Ql/JAKAoyzHFXaStwjkzpOpC5Yv+pIzLfHvjTSdf3vpa2bMiUQrg9i6276yn8666aA==
@@ -8235,6 +9033,7 @@ path-to-regexp@^8.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 pend@~1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/pend/-/pend-1.2.0.tgz"
@@ -8276,6 +9075,50 @@ picocolors@^1.0.0, picocolors@^1.1.1:
 =======
 picocolors@^1.0.0, picocolors@^1.1.1:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+picocolors@^1.0.0, picocolors@^1.1.1:
+=======
+<<<<<<< HEAD
+pend@~1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/pend/-/pend-1.2.0.tgz"
+  integrity sha512-F3asv42UuXchdzt+xXqfW1OGlVBe+mxa2mqI0pg5yAHZPvFmY3Y6drSf/GQ1A86WgWEN9Kzh/WrgKa6iGcHXLg==
+
+pg-int8@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/pg-int8/-/pg-int8-1.0.1.tgz"
+  integrity sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==
+
+pg-protocol@*:
+  version "1.10.3"
+  resolved "https://registry.npmjs.org/pg-protocol/-/pg-protocol-1.10.3.tgz"
+  integrity sha512-6DIBgBQaTKDJyxnXaLiLR8wBpQQcGWuAESkRBX/t6OwA8YsqP+iVSiond2EDy6Y/dsGk8rh/jtax3js5NeV7JQ==
+
+pg-types@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/pg-types/-/pg-types-2.2.0.tgz"
+  integrity sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==
+  dependencies:
+    pg-int8 "1.0.1"
+    postgres-array "~2.0.0"
+    postgres-bytea "~1.0.0"
+    postgres-date "~1.0.4"
+    postgres-interval "^1.1.0"
+
+picocolors@^1.0.0, picocolors@^1.1.1, picocolors@1.1.1:
+=======
+path@^0.12.7:
+  version "0.12.7"
+  resolved "https://registry.npmjs.org/path/-/path-0.12.7.tgz"
+  integrity sha512-aXXC6s+1w7otVF9UletFkFcDsJeO7lSZBPUQhtb5O0xJe8LtYhj/GxldoL09bBj9+ZmE2hNoHqQSFMN5fikh4Q==
+  dependencies:
+    process "^0.11.1"
+    util "^0.10.3"
+
+picocolors@^1.0.0, picocolors@^1.1.1:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "1.1.1"
   resolved "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz"
   integrity sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==
@@ -8349,6 +9192,10 @@ pkg-dir@^4.2.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
 playwright-core@1.55.0:
   version "1.55.0"
   resolved "https://registry.npmjs.org/playwright-core/-/playwright-core-1.55.0.tgz"
@@ -8365,8 +9212,12 @@ playwright@1.55.0:
 
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 pm2-axon-rpc@~0.7.0, pm2-axon-rpc@~0.7.1:
   version "0.7.1"
   resolved "https://registry.npmjs.org/pm2-axon-rpc/-/pm2-axon-rpc-0.7.1.tgz"
@@ -8461,14 +9312,24 @@ postcss-load-config@^4.0.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 postcss-media-query-parser@^0.2.3:
   version "0.2.3"
   resolved "https://registry.npmjs.org/postcss-media-query-parser/-/postcss-media-query-parser-0.2.3.tgz"
   integrity sha512-3sOlxmbKcSHMjlUXQZKQ06jOswE7oVkXPxmZdoB1r5l0q6gTFTQSHxNxOrCccElbW7dxNytifNEo8qidX2Vsig==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 postcss-logical@^8.1.0:
   version "8.1.0"
   resolved "https://registry.npmjs.org/postcss-logical/-/postcss-logical-8.1.0.tgz"
@@ -8476,8 +9337,12 @@ postcss-logical@^8.1.0:
   dependencies:
     postcss-value-parser "^4.2.0"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 postcss-nested@^6.2.0:
   version "6.2.0"
@@ -8494,15 +9359,34 @@ postcss-selector-parser@^6.1.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 postcss-selector-parser@^6.1.2:
   version "6.1.2"
   dependencies:
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
 
+<<<<<<< HEAD
+=======
+postcss-selector-parser@^7.0.0:
+  version "7.1.0"
+  resolved "https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-7.1.0.tgz"
+  integrity sha512-8sLjZwK0R+JlxlYcTuVnyT2v+htpdrjDOKuMcOVdYjt52Lh8hWRYpxBPoKx/Zg+bcjc3wx6fmQevMmUztS/ccA==
+  dependencies:
+    cssesc "^3.0.0"
+    util-deprecate "^1.0.2"
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
 postcss-selector-parser@6.0.10:
   version "6.0.10"
   dependencies:
@@ -8523,8 +9407,19 @@ postcss@^8.4.31, postcss@^8.4.43, postcss@^8.4.47:
 postcss-value-parser@^4.0.0, postcss-value-parser@^4.2.0:
   version "4.2.0"
 
+<<<<<<< HEAD
 postcss@^8.4.23, postcss@^8.4.43, postcss@^8.4.47, postcss@^8.5.6:
+<<<<<<< HEAD
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+postcss@^8.4.23, postcss@^8.4.47, postcss@^8.5.6:
+=======
+postcss@^8.4.31, postcss@^8.4.43, postcss@^8.4.47:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "8.5.6"
   dependencies:
     nanoid "^3.3.11"
@@ -8547,6 +9442,7 @@ prelude-ls@^1.2.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 prettier@^3.6.2:
 =======
 prettier@^3.0.3:
@@ -8554,6 +9450,16 @@ prettier@^3.0.3:
 =======
 prettier@^3.6.2:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+prettier@^3.6.2:
+=======
+<<<<<<< HEAD
+prettier@^3.6.2:
+=======
+prettier@^3.0.3:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "3.6.2"
   resolved "https://registry.npmjs.org/prettier/-/prettier-3.6.2.tgz"
   integrity sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==
@@ -8583,8 +9489,14 @@ process-nextick-args@~2.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 process-warning@^4.0.0:
   version "4.0.1"
   resolved "https://registry.npmjs.org/process-warning/-/process-warning-4.0.1.tgz"
@@ -8601,19 +9513,31 @@ progress@^2.0.3:
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 process@^0.11.1:
   version "0.11.10"
   resolved "https://registry.npmjs.org/process/-/process-0.11.10.tgz"
   integrity sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 promptly@^2:
   version "2.2.0"
   resolved "https://registry.npmjs.org/promptly/-/promptly-2.2.0.tgz"
   integrity sha512-aC9j+BZsRSSzEsXBNBwDnAxujdx19HycZoKgRgzWnS8eOHg1asuf9heuLprfbe739zY3IdUQx+Egv6Jn135WHA==
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 <<<<<<< HEAD
   dependencies:
     read "^1.0.4"
@@ -8624,8 +9548,12 @@ prompts@^2.4.2:
   integrity sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   dependencies:
     read "^1.0.4"
 
@@ -8671,6 +9599,7 @@ proxy-addr@^2.0.7:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 proxy-agent@^6.4.0, proxy-agent@^6.5.0:
   version "6.5.0"
   resolved "https://registry.npmjs.org/proxy-agent/-/proxy-agent-6.5.0.tgz"
@@ -8682,11 +9611,29 @@ proxy-agent@~6.4.0:
   integrity sha512-u0piLU+nCOHMgGjRbimiXmA9kM/L9EHh3zL81xCdp7m+Y2pHIsnmbdDoEDoAz5geaonNR6q6+yOPQs6n4T6sBQ==
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 proxy-agent@^6.5.0:
   version "6.5.0"
   resolved "https://registry.npmjs.org/proxy-agent/-/proxy-agent-6.5.0.tgz"
   integrity sha512-TmatMXdr2KlRiA2CyDu8GqR8EjahTG3aY3nXjdzFyoZbmB8hrBsTyMezhULIXKnC0jpfjlmiZ3+EaCzoInSu/A==
+<<<<<<< HEAD
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+proxy-agent@^6.4.0, proxy-agent@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.npmjs.org/proxy-agent/-/proxy-agent-6.5.0.tgz"
+  integrity sha512-TmatMXdr2KlRiA2CyDu8GqR8EjahTG3aY3nXjdzFyoZbmB8hrBsTyMezhULIXKnC0jpfjlmiZ3+EaCzoInSu/A==
+=======
+proxy-agent@~6.4.0:
+  version "6.4.0"
+  resolved "https://registry.npmjs.org/proxy-agent/-/proxy-agent-6.4.0.tgz"
+  integrity sha512-u0piLU+nCOHMgGjRbimiXmA9kM/L9EHh3zL81xCdp7m+Y2pHIsnmbdDoEDoAz5geaonNR6q6+yOPQs6n4T6sBQ==
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   dependencies:
     agent-base "^7.1.2"
     debug "^4.3.4"
@@ -8727,10 +9674,18 @@ punycode@^2.1.0, punycode@^2.1.1, punycode@^2.3.1:
   version "2.3.1"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz"
   integrity sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+  resolved "https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz"
+  integrity sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 punycode@1.3.2:
   version "1.3.2"
@@ -8750,9 +9705,15 @@ puppeteer-core@^24.17.1:
     ws "^8.18.3"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 pure-rand@^7.0.0:
   version "7.0.1"
@@ -8885,8 +9846,14 @@ react-is@^19.1.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 react-refresh@^0.17.0:
   version "0.17.0"
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.17.0.tgz"
@@ -8894,9 +9861,15 @@ react-refresh@^0.17.0:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 react-remove-scroll-bar@^2.3.7:
   version "2.3.8"
   resolved "https://registry.npmjs.org/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.8.tgz"
@@ -8981,8 +9954,14 @@ readable-stream@~2.3.6:
     util-deprecate "~1.0.1"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 readdirp@^4.0.1:
   version "4.1.2"
@@ -8990,9 +9969,15 @@ readdirp@^4.0.1:
   integrity sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 readdirp@~3.6.0:
   version "3.6.0"
@@ -9044,6 +10029,10 @@ regexp.prototype.flags@^1.5.3, regexp.prototype.flags@^1.5.4:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
 regexpu-core@^6.2.0:
   version "6.2.0"
   resolved "https://registry.npmjs.org/regexpu-core/-/regexpu-core-6.2.0.tgz"
@@ -9075,8 +10064,12 @@ requestidlecallback@^0.3.0:
 
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz"
@@ -9084,8 +10077,14 @@ require-directory@^2.1.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 require-from-string@^2.0.2:
   version "2.0.2"
   resolved "https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz"
@@ -9093,17 +10092,29 @@ require-from-string@^2.0.2:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 require-in-the-middle@^5.0.0:
   version "5.2.0"
   resolved "https://registry.npmjs.org/require-in-the-middle/-/require-in-the-middle-5.2.0.tgz"
   integrity sha512-efCx3b+0Z69/LGJmm9Yvi4cqEdxnoGnxYxGxBghkkTTFeXRtTCmmhO0AnAfHz59k957uTSuy8WaHqOs8wbYUWg==
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   dependencies:
     debug "^4.1.1"
     module-details-from-path "^1.0.3"
@@ -9115,9 +10126,15 @@ require-in-the-middle@^7.1.1:
   integrity sha512-gAZ+kLqBdHarXB64XpAe2VCjB7rIRv+mU8tfRWziHRJ5umKsIHN2tLLv6EtMw7WCdP19S0ERVMldNvxYCHnhSQ==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   dependencies:
     debug "^4.3.5"
     module-details-from-path "^1.0.3"
@@ -9157,6 +10174,7 @@ resolve-pkg-maps@^1.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 resolve@^1.1.7, resolve@^1.22.1, resolve@^1.22.10, resolve@^1.22.4, resolve@^1.22.8:
 =======
 resolve@^1.1.7, resolve@^1.22.1, resolve@^1.22.4, resolve@^1.22.8:
@@ -9164,6 +10182,16 @@ resolve@^1.1.7, resolve@^1.22.1, resolve@^1.22.4, resolve@^1.22.8:
 =======
 resolve@^1.1.7, resolve@^1.22.1, resolve@^1.22.4, resolve@^1.22.8:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+resolve@^1.1.7, resolve@^1.22.1, resolve@^1.22.4, resolve@^1.22.8:
+=======
+<<<<<<< HEAD
+resolve@^1.1.7, resolve@^1.22.1, resolve@^1.22.10, resolve@^1.22.4, resolve@^1.22.8:
+=======
+resolve@^1.1.7, resolve@^1.22.1, resolve@^1.22.4, resolve@^1.22.8:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "1.22.10"
   dependencies:
     is-core-module "^2.16.0"
@@ -9300,8 +10328,14 @@ safe-regex-test@^1.0.3, safe-regex-test@^1.1.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 safe-regex2@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/safe-regex2/-/safe-regex2-5.0.0.tgz"
@@ -9316,9 +10350,15 @@ safe-stable-stringify@^2.3.1:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 "safer-buffer@>= 2.1.2 < 3", "safer-buffer@>= 2.1.2 < 3.0.0":
   version "2.1.2"
   resolved "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz"
@@ -9330,8 +10370,14 @@ sax@^1.2.4:
   integrity sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 sax@>=0.6.0, sax@1.2.1:
   version "1.2.1"
@@ -9339,9 +10385,15 @@ sax@>=0.6.0, sax@1.2.1:
   integrity sha512-8I2a3LovHTOpm7NV5yOyO8IHqgVsfK4+UuySrXU8YXkSRX7k6hCV9b3HrkKCr3nMpgj+0bmocaJJWpvp1oc7ZA==
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 saxes@^6.0.0:
   version "6.0.0"
@@ -9359,14 +10411,24 @@ scheduler@^0.23.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 secure-json-parse@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/secure-json-parse/-/secure-json-parse-4.0.0.tgz"
   integrity sha512-dxtLJO6sc35jWidmLxo7ij+Eg48PM/kleBsxpC8QJE0qJICe+KawkDQmvCMZUr9u7WKVHgMW6vy3fQ7zMiFZMA==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 selenium-webdriver@~4.22.0:
   version "4.22.0"
   resolved "https://registry.npmjs.org/selenium-webdriver/-/selenium-webdriver-4.22.0.tgz"
@@ -9378,13 +10440,21 @@ selenium-webdriver@~4.22.0:
 
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 semver@^6.3.1:
   version "6.3.1"
   resolved "https://registry.npmjs.org/semver/-/semver-6.3.1.tgz"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 semver@^7.5.3, semver@^7.5.4, semver@^7.6.0, semver@^7.6.2, semver@^7.7.1, semver@^7.7.2:
   version "7.7.2"
@@ -9424,8 +10494,12 @@ semver@~7.5.0:
   version "7.5.4"
   resolved "https://registry.npmjs.org/semver/-/semver-7.5.4.tgz"
   integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.27.3"
     "@babel/helper-member-expression-to-functions" "^7.27.1"
@@ -9435,6 +10509,7 @@ semver@~7.5.0:
     "@babel/traverse" "^7.28.3"
     semver "^6.3.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 semver@~7.5.4:
   version "7.5.4"
@@ -9447,6 +10522,19 @@ semver@~7.5.4:
 semver@^7.5.2, semver@^7.5.3, semver@^7.5.4, semver@^7.6.0, semver@^7.6.2, semver@^7.7.1, semver@^7.7.2:
   version "7.7.2"
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+semver@^7.5.2, semver@^7.5.3, semver@^7.5.4, semver@^7.6.0, semver@^7.6.2, semver@^7.7.1, semver@^7.7.2:
+  version "7.7.2"
+=======
+semver@~7.5.4:
+  version "7.5.4"
+  resolved "https://registry.npmjs.org/semver/-/semver-7.5.4.tgz"
+  integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
+  dependencies:
+    lru-cache "^6.0.0"
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 semver@~7.5.0:
   version "7.5.4"
@@ -9576,6 +10664,7 @@ shebang-regex@^3.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 shimmer@^1.2.0, shimmer@^1.2.1:
 =======
 shimmer@^1.2.0:
@@ -9583,6 +10672,16 @@ shimmer@^1.2.0:
 =======
 shimmer@^1.2.0, shimmer@^1.2.1:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+shimmer@^1.2.0, shimmer@^1.2.1:
+=======
+<<<<<<< HEAD
+shimmer@^1.2.0, shimmer@^1.2.1:
+=======
+shimmer@^1.2.0:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "1.2.1"
   resolved "https://registry.npmjs.org/shimmer/-/shimmer-1.2.1.tgz"
   integrity sha512-sQTKC1Re/rM6XyFM6fIAGHRPVGvyXfgzIDvzoq608vM+jeyVD0Tu1E6Np0Kc2zAIFWIj963V2800iF/9LPieQw==
@@ -9636,6 +10735,10 @@ simple-swizzle@^0.2.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
 sisteransi@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/sisteransi/-/sisteransi-1.0.5.tgz"
@@ -9643,8 +10746,12 @@ sisteransi@^1.0.5:
 
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz"
@@ -9721,14 +10828,22 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
+=======
 source-map@^0.7.3:
   version "0.7.6"
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.7.6.tgz"
   integrity sha512-i5uvt8C3ikiWeNZSVZNWcfZPItFQOsYTUAOkcUPGd8DqDy1uOUikjt5dG+uRlwyvR108Fb9DOd4GvXfT0N2/uQ==
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 sparse-bitfield@^3.0.3:
   version "3.0.3"
   resolved "https://registry.npmjs.org/sparse-bitfield/-/sparse-bitfield-3.0.3.tgz"
@@ -9738,8 +10853,14 @@ sparse-bitfield@^3.0.3:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 speedline-core@^1.4.3:
   version "1.4.3"
   resolved "https://registry.npmjs.org/speedline-core/-/speedline-core-1.4.3.tgz"
@@ -9756,9 +10877,15 @@ split2@^4.0.0:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz"
@@ -10071,6 +11198,10 @@ tailwindcss@^3.4.17:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
 tar-fs@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/tar-fs/-/tar-fs-3.1.0.tgz"
@@ -10101,8 +11232,12 @@ tcp-port-used@^1.0.2:
 
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 teeny-request@^10.0.0:
   version "10.1.0"
   resolved "https://registry.npmjs.org/teeny-request/-/teeny-request-10.1.0.tgz"
@@ -10144,8 +11279,14 @@ thenify-all@^1.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 third-party-web@^0.27.0, third-party-web@latest:
   version "0.27.0"
   resolved "https://registry.npmjs.org/third-party-web/-/third-party-web-0.27.0.tgz"
@@ -10189,6 +11330,10 @@ tldts@^6.1.32:
     tldts-core "^6.1.86"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 tinyglobby@^0.2.13:
   version "0.2.15"
   dependencies:
@@ -10200,8 +11345,12 @@ tmp@^0.2.3:
   version "0.2.5"
   resolved "https://registry.npmjs.org/tmp/-/tmp-0.2.5.tgz"
   integrity sha512-voyz6MApa1rQGUxT3E+BK7/ROe8itEx7vD8/HEvt4xwXucvQ5G5oeEiHkmHZJuBO21RpOf+YYm9MOivj709jow==
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 tmpl@1.0.5:
   version "1.0.5"
@@ -10260,6 +11409,7 @@ ts-interface-checker@^0.1.9:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ts-jest@^29.2.5:
 =======
 ts-jest@^29.4.1:
@@ -10267,6 +11417,16 @@ ts-jest@^29.4.1:
 =======
 ts-jest@^29.2.5:
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+ts-jest@^29.2.5:
+=======
+<<<<<<< HEAD
+ts-jest@^29.2.5:
+=======
+ts-jest@^29.4.1:
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   version "29.4.1"
   resolved "https://registry.npmjs.org/ts-jest/-/ts-jest-29.4.1.tgz"
   integrity sha512-SaeUtjfpg9Uqu8IbeDKtdaS0g8lS6FT6OzM3ezrDfErPJPHNDo/Ey+VFGP1bQIDfagYDLyRpd7O15XpG1Es2Uw==
@@ -10312,12 +11472,20 @@ tslib@^2.0.0, tslib@^2.0.1, tslib@^2.1.0, tslib@^2.4.0, tslib@^2.8.0:
   version "2.8.1"
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz"
   integrity sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 tslib@1.9.3:
   version "1.9.3"
@@ -10428,8 +11596,14 @@ unbox-primitive@^1.1.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 undici-types@~6.21.0:
   version "6.21.0"
   resolved "https://registry.npmjs.org/undici-types/-/undici-types-6.21.0.tgz"
@@ -10441,6 +11615,10 @@ undici@^7.12.0:
   integrity sha512-7oZJCPvvMvTd0OlqWsIxTuItTpJBpU1tcbVl24FMn3xt3+VSunwUasmfPJRE57oNO1KsZ4PgA1xTdAX4hq8NyQ==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-2.0.1.tgz"
@@ -10468,8 +11646,12 @@ undici-types@~5.26.4:
   version "5.26.5"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 universalify@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/universalify/-/universalify-0.2.0.tgz"
@@ -10566,8 +11748,14 @@ util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 util@^0.12.4:
   version "0.12.5"
   resolved "https://registry.npmjs.org/util/-/util-0.12.5.tgz"
@@ -10580,6 +11768,10 @@ util@^0.12.4:
     which-typed-array "^1.1.2"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 util@^0.10.3:
   version "0.10.4"
   resolved "https://registry.npmjs.org/util/-/util-0.10.4.tgz"
@@ -10587,8 +11779,12 @@ util@^0.10.3:
   dependencies:
     inherits "2.0.3"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 uuid@^11.1.0:
   version "11.1.0"
@@ -10597,8 +11793,14 @@ uuid@^11.1.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 uuid@8.0.0:
   version "8.0.0"
   resolved "https://registry.npmjs.org/uuid/-/uuid-8.0.0.tgz"
@@ -10606,9 +11808,15 @@ uuid@8.0.0:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 v8-compile-cache-lib@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/v8-compile-cache-lib/-/v8-compile-cache-lib-3.0.1.tgz"
@@ -10630,21 +11838,35 @@ vary@^1, vary@^1.1.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
 vite@^7.1.4:
   version "7.1.4"
   resolved "https://registry.npmjs.org/vite/-/vite-7.1.4.tgz"
   integrity sha512-X5QFK4SGynAeeIt+A7ZWnApdUyHYm+pzv/8/A57LqSGcI88U6R6ipOs3uCesdc6yl7nl+zNO0t8LmqAdXcQihw==
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 vite@^5.4.19:
   version "5.4.19"
   resolved "https://registry.npmjs.org/vite/-/vite-5.4.19.tgz"
   integrity sha512-qO3aKv3HoQC8QKiNSTuUM1l9o/XX3+c+VTgLHbJWHZGeTPVAg2XwazI9UWzoxjIJCGCV2zU60uqMzjeLZuULqA==
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   dependencies:
     esbuild "^0.21.3"
     postcss "^8.4.43"
@@ -10852,6 +12074,7 @@ ws@^7.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ws@^8.18.0, ws@^8.18.2, ws@^8.18.3, ws@>=8.16.0:
   version "8.18.3"
   resolved "https://registry.npmjs.org/ws/-/ws-8.18.3.tgz"
@@ -10864,6 +12087,21 @@ ws@^8.18.0, ws@^8.18.2:
 ws@^8.18.0, ws@^8.18.2, ws@^8.18.3:
   version "8.18.3"
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+ws@^8.18.0, ws@^8.18.2, ws@^8.18.3:
+  version "8.18.3"
+=======
+<<<<<<< HEAD
+ws@^8.18.0, ws@^8.18.2, ws@^8.18.3, ws@>=8.16.0:
+  version "8.18.3"
+  resolved "https://registry.npmjs.org/ws/-/ws-8.18.3.tgz"
+  integrity sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==
+=======
+ws@^8.18.0, ws@^8.18.2:
+  version "8.18.3"
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
 ws@~7.5.10:
   version "7.5.10"
@@ -10872,6 +12110,10 @@ ws@~7.5.10:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+<<<<<<< HEAD
 xdg-basedir@^5.1.0:
   version "5.1.0"
   resolved "https://registry.npmjs.org/xdg-basedir/-/xdg-basedir-5.1.0.tgz"
@@ -10879,8 +12121,12 @@ xdg-basedir@^5.1.0:
 
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 xml-name-validator@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/xml-name-validator/-/xml-name-validator-5.0.0.tgz"

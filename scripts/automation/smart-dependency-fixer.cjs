@@ -1,12 +1,10 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 console.log(""� Starting smart dependency fixer automation...")
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 console.log(""� Starting smart dependency fixer automation...")
 // Get automation interval from environment variable ("default")
   console.log(`� Running smart dependency fixer at ${new Date().toISOString()}
@@ -139,9 +137,13 @@ console.log(`� Starting smart dependency fixer automation...``)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+console.log(" No missing packages found")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   console.log(" No missing packages found")
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -164,6 +166,5 @@ console.log(`� Starting smart dependency fixer automation...``)
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 // Get automation interval from environment variable ("default")"
-  console.log(`� Running smart dependency fixer at ${new Date().toISOString()}`;
+  console.log(`� Running smart dependency fixer at ${new Date().toISOString()}`
 console.log(`� Starting smart dependency fixer automation...``)"
-

@@ -1,16 +1,12 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 console.log("" Starting JSX error fixer automation...")
 // Get automation interval from environment variable ("default")
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
 console.log("" Starting JSX error fixer automation...")
-// Get automation interval from environment variable ("default")
-// console.log(" Starting JSX error fixer automation...")
+//
     console.log(`" Fixing JSX closing tag errors..."`)
 // console.log(" Fixing JSX expression errors..."")
     console.log(" Fixing JSX parent element errors...")
@@ -63,7 +59,7 @@ console.log("" Starting JSX error fixer automation...")
         content = content.replace(/href:\s*any"\/"/g, ""href": "/")
         content = content.replace(/key:\s*any(\w+)/g, ""key": $1"
         "
-        if (content !== originalContent) {"}
+  if($2) {"}
           fs.writeFileSync(filePath, content);"
           fixes++;"
           console.log("   Fixed JSX expressions in ${filePath}")
@@ -126,6 +122,7 @@ process.on("SIGTERM")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -153,3 +150,7 @@ process.on("SIGTERM")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error(" Failed to start JSX error "fixer": ")
+  console.error(" Failed to start JSX error "fixer": ")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

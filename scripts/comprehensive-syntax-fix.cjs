@@ -1,4 +1,3 @@
-
 const fs = require('fs')
 const path = require('path')
 console.log(' Comprehensive syntax fix...')
@@ -17,9 +16,13 @@ console.log(' Comprehensive syntax fix...')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+content = content.replace(/<div className="([^"]*)\n\s*([^"]*)\s*>/g, '<div className="$1 $2"
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
     content = content.replace(/<div className="([^"]*)\n\s*([^"]*)\s*>/g, '<div className="$1 $2"
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -48,4 +51,3 @@ console.log(' Comprehensive syntax fix...')
 </h1>"
     content = content.replace(/<p className="([^"]*)\n\s*([^"]*)\s*>/g,<p className="$1 $2
 </p>"
-

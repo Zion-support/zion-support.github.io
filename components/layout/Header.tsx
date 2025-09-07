@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X, Phone } from 'lucide-react';
-
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { Menu, X, Phone } from 'lucide-react'
 const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'Contact', href: '/contact' },
-  ];
-
+  ]
   return (
     <header className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,7 +19,7 @@ const Header: React.FC = () => {
               Zion Tech Group
             </Link>
           </div>
-          
+
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
               <Link
@@ -34,7 +31,7 @@ const Header: React.FC = () => {
               </Link>
             ))}
           </nav>
-          
+
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/contact"
@@ -44,7 +41,7 @@ const Header: React.FC = () => {
               Contact Us
             </Link>
           </div>
-          
+
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -54,7 +51,7 @@ const Header: React.FC = () => {
             </button>
           </div>
         </div>
-        
+
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -80,7 +77,6 @@ const Header: React.FC = () => {
         )}
       </div>
     </header>
-  );
-};
-
-export default Header;
+  )
+}
+export default Header

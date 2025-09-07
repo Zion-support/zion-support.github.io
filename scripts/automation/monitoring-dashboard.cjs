@@ -1,9 +1,7 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Advanced Monitoring Dashboard;
- * Real-time monitoring of PM2 processes and system health;
+ * Advanced Monitoring Dashboard
+ * Real-time monitoring of PM2 processes and system health
  */
 
 <<<<<<< HEAD
@@ -42,6 +40,7 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -69,3 +68,7 @@ const path = require('path')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+"
+                "
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

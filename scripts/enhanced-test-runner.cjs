@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -34,6 +35,12 @@ const { execSync, spawn } = require('child_process');
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+///usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+const { execSync, spawn } = require('child_process')
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   "summary": {}"
     total: 0,"
     "passed": 0,
@@ -43,9 +50,9 @@ const { execSync, spawn } = require('child_process');
     "coverage": 0;"
   },"
   "recommendations": [];"
-};
-
+}
 function log(level, message) {}
+<<<<<<< HEAD
   const timestamp = new Date().toISOString();
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,10 +117,34 @@ async function runJestTests() {}
 
       "result": { passed: true, output };"
     testReport.summary.passed++;
+=======
+const timestamp = new Date().toISOString()
+  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message})}
+async function runJestTests() {}"
+
+})
+    const endTime = Date.now()
+    const result = JSON.parse(output)
+    testReport.tests.push({})
+
+      "result": result;"    testReport.summary.total += result.numTotalTests
+    testReport.summary.passed += result.numPassedTests
+    testReport.summary.failed += result.numFailedTests
+    testReport.summary.skipped += result.numPendingTests
+    testReport.summary.duration += endTime - startTime
+  if($2) {}
+
+    testReport.summary.total += result.total
+    testReport.summary.passed += result.passed
+    testReport.summary.failed += result.failed
+      "result": { passed: true, output };"
+    testReport.summary.passed++
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
     "
 
       "result": { passed: false, "error": error.message };"
     testReport.summary.failed++;"
+<<<<<<< HEAD
 
 =======
 =======
@@ -250,12 +281,14 @@ async function runTypeTests() {}
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 function generateRecommendations() {}
-  const recommendations = [];
-  const { total, passed, failed, coverage } = testReport.summary;
-  
-  if (total === 0) {}
+  const recommendations = []
+  const { total, passed, failed, coverage } = testReport.summary
+  if($2) {}
     recommendations.push({})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -354,3 +387,16 @@ main();
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+await runJestTests()
+    await runPlaywrightTests()
+    await runCypressTests()
+    await runLintTests()
+    await runTypeTests()
+    testReport.summary.total = testReport.tests.reduce((sum, test) => sum + (test.result.total || 1), 0)
+    testReport.recommendations = generateRecommendations()
+    // Display summary
+    process.exit(1)}
+main()
+`
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

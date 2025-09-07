@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node,"}),"
+///usr/bin/env node,"}),"
 ,"}),"
 const fs = require(,"}),"
         "stdio"
@@ -33,7 +32,4 @@ const fs = require(,"}),"
         "action"
       '\n Dependency Monitor "Summary"
   '\n "Recommendations"
-
-      '\n� "CRITICAL"
-      '\n� "CRITICAL"
-
+'\n� "CRITICAL"      '\n� "CRITICAL"

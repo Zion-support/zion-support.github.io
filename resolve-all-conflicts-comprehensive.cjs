@@ -12,16 +12,16 @@ function resolveMergeConflicts(filePath) {
         let content = fs.readFileSync(filePath, 'utf8');
         
         // Check if file has merge conflicts
-        if (!content.includes('<<<<<<< HEAD')) {
+        if (!content.includes('')) {
             return false; // No conflicts to resolve
         }
         
         // Strategy: Keep HEAD version (current branch) for most conflicts
         // Remove merge conflict markers and keep the HEAD version
-        content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)        
+        content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)        
         // Remove any remaining conflict markers
-        content = content.replace(/<<<<<<< HEAD\n/g, '');
-        content = content.replace(/=======\n/g, '');
+        content = content.replace(/\n/g, '');
+        content = content.replace(/\n/g, '');
         content = content.replace(/        
         // Clean up any duplicate content
         content = content.replace(/\n\n\n+/g, '\n\n');
@@ -39,7 +39,7 @@ function resolveMergeConflicts(filePath) {
 // Function to get all files with merge conflicts
 function getConflictFiles() {
     try {
-        const result = execSync('grep -l "<<<<<<< HEAD" . -r --include="*.js" --include="*.ts" --include="*.tsx" --include="*.json" --include="*.cjs" --include="*.mjs" --include="*.yml" --include="*.yaml"', { encoding: 'utf8' });
+        const result = execSync('grep -l "" . -r --include="*.js" --include="*.ts" --include="*.tsx" --include="*.json" --include="*.cjs" --include="*.mjs" --include="*.yml" --include="*.yaml"', { encoding: 'utf8' });
         return result.trim().split('\n').filter(file => file.length > 0);
     } catch (error) {
         return [];

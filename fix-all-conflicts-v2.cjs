@@ -6,17 +6,8 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-    // Remove all merge conflict markers and keep the better version (after =======)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)    
-    // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?    
-    // Clean up any remaining markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?    content = content.replace(/=======[\s\S]*?    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
-    
-    // Remove any orphaned conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*$/g, '');
-    content = content.replace(/=======[\s\S]*$/g, '');
-    content = content.replace(/    
+)
+    content = content.replace(/[\s\S]*?
     // Clean up any duplicate content that might have been left behind
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
@@ -36,7 +27,7 @@ function fixMergeConflicts(filePath) {
 const { execSync } = require('child_process');
 let files = [];
 try {
-  const output = execSync('find . -name "*.tsx" -o -name "*.ts" | xargs grep -l "<<<<<<< HEAD"', { encoding: 'utf8' });
+  const output = execSync('find . -name "*.tsx" -o -name "*.ts" | xargs grep -l ""', { encoding: 'utf8' });
   files = output.trim().split('\n').filter(f => f);
 } catch (error) {
   console.log('No files with merge conflicts found');

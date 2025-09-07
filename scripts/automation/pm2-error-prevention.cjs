@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -51,7 +50,7 @@ const { execSync } = require("child_process")
   const content = fs.readFileSync(filePath, "utf8")
       if (content.includes(".ts") || content.includes(.ts"")
       const importLines = content.match(/import.*"from/g")
-    if (importIssues > 0) {console.log(⚠  Found ${importIssues} import issues"")
+  if($2) {console.log(⚠  Found ${importIssues} import issues"")
   console.log("" No import issues found")
   const content = fs.readFileSync(filePath, "utf8")
       if (content.includes("any"")
@@ -61,7 +60,7 @@ const { execSync } = require("child_process")
       if (content.includes("any"")
       if (content.includes("<\\w+")
       if (content.includes("\\w+\\w+":")
-    if (syntaxIssues > 0) {console.log("})
+  if($2) {console.log("})
   console.log("" No syntax issues found")
       const result = execSync("npm run lint -- --quiet")
   "cwd"
@@ -69,7 +68,7 @@ const { execSync } = require("child_process")
         "stdio": "pipe"
       const unusedImportCount = (result.match(/""unused/g"")
   console.log("" No syntax issues found")
-      if (this.config.autoFix) {"}
+  if($2) {"}
         await this.autoFixSyntaxIssues();")}")} else {"}
       console.log(" No syntax issues found")
       const result = execSync("npm run lint -- --quiet")
@@ -77,7 +76,7 @@ const { execSync } = require("child_process")
         "encoding": "utf8"
         "stdio": "pipe"
       const unusedImportCount = (result.match(/"unused/g")
-      if (unusedImportCount > 0) {console.log(⚠  Found ${unusedImportCount} unused imports")
+  if($2) {console.log(⚠  Found ${unusedImportCount} unused imports")
 // console.log(" No unused imports found")
       console.log(")
 // console.log(" No unused imports found")
@@ -134,6 +133,7 @@ process.on("SIGTERM")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -161,3 +161,7 @@ process.on("SIGTERM")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log("� Received SIGTERM, shutting down gracefully...")
+  console.log("� Received SIGTERM, shutting down gracefully...")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

@@ -20,10 +20,8 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
   interactive = true,
   onClick
 }) => {
-=======
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
   const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -167,7 +165,6 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       animationRef.current = requestAnimationFrame(animate);
     };
 
-<<<<<<< HEAD
     createParticles();
     animate();
 

@@ -1,4 +1,3 @@
-
 const fs = require('fs')
 const path = require('path')
 
@@ -11,6 +10,7 @@ const path = require('path')
       content = importLines.join('\n') + '\n\n'
         otherLines.join('\n') + '\n'
         '};\n\n'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,3 +43,7 @@ const path = require('path')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
+    if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

@@ -36,7 +36,6 @@ const EnhancedNavigation: React.FC = () => {
             </Link>
             <Link href="/contact">
               <a className="text-gray-600 hover:text-gray-900">Contact</a>
-=======
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">

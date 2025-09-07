@@ -1,6 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Ai Powered Devops Platform - Zion Tech Group',
   description: 'Professional Ai Powered Devops Platform services to help your business grow and succeed.',

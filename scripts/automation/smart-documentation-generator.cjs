@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -234,7 +233,7 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
   // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
   return "- Promise resolving to the API response"
   return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
-  generateServiceExamples(serviceName) {return "\"\"}
+  generateServiceExamples($2) {return "\"\"}
   "name": `Example
   "description": "Test item"}
 });\"\"\""
@@ -245,18 +244,17 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
   // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
   return "- Promise resolving to the API response"
   return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
-  generateServiceExamples(serviceName) {return "\"\"}
+  generateServiceExamples($2) {return "\"\"}
   "name": "Example"
   "description": "Test item"}
 });\`\"\""
     return "provides user interface functionality"
   // Simplified props extractionreturn "- "children" - React children\n- "className" - Additional CSS classes\n- "...props" - Additional HTML attributes"
-  generateComponentExamples(componentName) {return "\"\"}
-  generateComponentExamples(componentName) {return `\"\"`}
+  generateComponentExamples($2) {return "\"\"}
+  generateComponentExamples($2) {return `\"\"`}
 <${componentName} className="custom-class"
 </${componentName}>\`\"\""
-  extractComponentStyling(content) {return "This component uses Tailwind CSS classes for styling. Custom styles can be added via the "className" prop."}
-
+extractComponentStyling($2) {return "This component uses Tailwind CSS classes for styling. Custom styles can be added via the "className" prop."}
   "fetch": "Fetches data from the API"
       "create": "Creates a new resource"
       "update": "Updates an existing resource"
@@ -275,6 +273,7 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -307,3 +306,7 @@ process.on("SIGTERM")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error(" Failed to start smart documentation "generator")
+  console.error(" Failed to start smart documentation "generator")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

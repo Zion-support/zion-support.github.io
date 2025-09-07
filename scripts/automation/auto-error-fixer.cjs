@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -14,11 +15,13 @@
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 
+=======
+//
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
-  const fs = require("fs")
-const path = require("path")
+
 const { execSync } = require("child_process")
     this.logFile = path.join(this.projectRoot, "auto-error-fixer-report.json")
   this.log(" Starting Auto Error Fixer...")
@@ -171,6 +174,7 @@ const { execSync } = require("child_process")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -196,3 +200,7 @@ const { execSync } = require("child_process")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+process.on(")
+  process.on(")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

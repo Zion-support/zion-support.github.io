@@ -1,9 +1,7 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Intelligent Auto-Scaler;
- * AI-powered auto-scaling system for PM2 processes;
+ * Intelligent Auto-Scaler
+ * AI-powered auto-scaling system for PM2 processes
  */
 
 <<<<<<< HEAD
@@ -61,6 +59,7 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       this.log(` Fatal "error"`)
@@ -81,22 +80,24 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+this.log(` Fatal "error"`)
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
       this.log(` Fatal "error"`)
 
       this.log(` Fatal "error"`)
       "scalingStrategy"""
-      this.log(` Failed to save scaling "config"`)""`;
-          this.log(` Failed to connect to "PM2"`)""`;
+      this.log(` Failed to save scaling "config"`)""`
+          this.log(` Failed to connect to "PM2"`)""`
       this.log(` Scaling analysis "failed"`)""
       "action"""
       "reason"""
-      "priority"""`;
-      this.log(` Failed to save scaling "history"`)""`;
+      "priority"""`
+      this.log(` Failed to save scaling "history"`)""`
       return { "score": 0.5, "message"}""
       "level"""
         "type"""
         "message"""
-        "action"""`;
+        "action"""`
       this.log(` Strategy optimization "failed"`)""
-      "onlineProcesses"""`;
-
+"onlineProcesses"""`

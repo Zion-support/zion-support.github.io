@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,9 +14,12 @@
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
-
+///usr/bin/env node
 console.log(' Starting Code Refactoring Automation...')
     "file"
     "issues"
@@ -31,6 +35,7 @@ console.log(' Starting Code Refactoring Automation...')
     "extractedComponents"
     "nextSteps"
   console.log('� Next "steps")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,6 +61,9 @@ console.log(' Starting Code Refactoring Automation...')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+console.error(' Code refactoring automation "failed")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   console.error(' Code refactoring automation "failed")
 
   console.error(' Code refactoring automation "failed")
@@ -66,5 +74,4 @@ console.log(' Starting Code Refactoring Automation...')
       "recommendations"""
     "extractedComponents"""
     "nextSteps"""
-  console.log('� Next "steps")""');
-
+console.log('� Next "steps")""')

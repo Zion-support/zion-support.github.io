@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,8 +14,13 @@
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const { execSync } = require('child_process')
 const fs = require('fs')
+///usr/bin/env node
+const { execSync } = require('child_process')
 
 console.log(' Starting Automation Orchestrator...')
     "name"
@@ -44,6 +50,7 @@ console.log(' Starting Automation Orchestrator...')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   console.error('Orchestrator "failed")
@@ -64,6 +71,9 @@ console.log(' Starting Automation Orchestrator...')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+console.error('Orchestrator "failed")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   console.error('Orchestrator "failed")
 
   console.error('Orchestrator "failed")
@@ -73,8 +83,7 @@ console.log(' Starting Automation Orchestrator...')
       "output"""
         "encoding"""
         "stdio"""
-// console.log('\n Automation Orchestrator "Summary")""');
-    console.log('\n Failed "Tasks")""');
-// console.log('\n "Recommendations")""');
-    console.log('\n "Recommendations")""');
-
+// console.log('\n Automation Orchestrator "Summary")""')
+    console.log('\n Failed "Tasks")""')
+// console.log('\n "Recommendations")""')
+    console.log('\n "Recommendations")""')

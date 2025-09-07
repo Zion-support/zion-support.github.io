@@ -1,9 +1,7 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const axios = require("child_process")
 const fs = require("fs")
 const path = require("path")
-
   constructor(baseUrl = ""https": //ziontechgroup.com")
   log(message, level = "info")
     this.log(` "Checking"`)
@@ -69,9 +67,13 @@ const path = require("path")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+return { "success": false, "error"}
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
       return { "success": false, "error"}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -94,5 +96,4 @@ const path = require("path")
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
       if (!html.includes("<h1>")"
-</h1>"`;
-
+</h1>"`

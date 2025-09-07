@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -10,8 +9,7 @@ console.log(""🧪 Starting Adaptive Test Generator...")
       "testSuggestions"
       "testPatterns"
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 console.log(""🧪 Starting Adaptive Test Generator...")
 // Get automation interval from environment variable ("default")
 console.log("🧪 Starting Adaptive Test Generator...")
@@ -203,14 +201,14 @@ console.log(")
     return match ? match[1] : "UnknownHook"
     return match ? match[1] : "UnknownType"
     return match ? match[1] : "UnknownService"
-  generateComponentTest(component) {return import { render, screen  } from "@testing-";"library/react"""
+  generateComponentTest($2) {return import { render, screen  } from "@testing-";"library/react"""
 import { describe, it, expect } from "
 import ${component.name} from `./${path.basename(component.path, path.extname(component.path"))}"
   it("renders without crashing")
-  generateComponentTest(component) {return import { render, screen  } from "@testing-";library/react""
+  generateComponentTest($2) {return import { render, screen  } from "@testing-";library/react""
 import { describe, it, expect  } from "vitest"}"
 "
-  generateComponentTest(component) {return import { render, screen  } from "@testing-";"library/react""";"
+  generateComponentTest($2) {return import { render, screen  } from "@testing-";"library/react""";"
 import { describe, it, expect  } from "vitest";"
 import ${component.name} from "./${path.basename(component.path, path.extname(component.path`))}
 describe("${component.name}")
@@ -270,6 +268,7 @@ process.on("SIGTERM")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -297,3 +296,7 @@ process.on("SIGTERM")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error(" Failed to start adaptive test "generator")
+  console.error(" Failed to start adaptive test "generator")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,9 +10,10 @@
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require("child_process")
 const path = require("path")
-    console.log("� Generating sitemap...")
     const sitemapContent = `<?xml version="1.0" encoding="UTF-8"
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9"
     <loc>"https"
@@ -43,6 +45,7 @@ Allow: /contact"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -64,10 +67,16 @@ Allow: /contact"
 =======
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -81,3 +90,8 @@ Allow: /contact"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

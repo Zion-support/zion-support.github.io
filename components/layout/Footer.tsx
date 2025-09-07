@@ -1,23 +1,19 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
-
+import React from 'react'
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react'
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
+  const currentYear = new Date().getFullYear()
   const services = [
     { name: 'AI Development', href: '/services/ai-development' },
     { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
     { name: 'Web Development', href: '/services/web-development' },
     { name: 'Mobile Apps', href: '/services/mobile-development' },
-  ];
-
+  ]
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
-  ];
-
+  ]
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
@@ -34,7 +30,7 @@ const Footer: React.FC = () => {
               <Instagram className="h-5 w-5 hover:text-blue-400 cursor-pointer" />
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
@@ -47,7 +43,7 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
@@ -60,7 +56,7 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-2">
@@ -79,7 +75,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-300">
             © {currentYear} Zion Tech Group. All rights reserved.
@@ -87,7 +83,6 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
-
-export default Footer;
+  )
+}
+export default Footer

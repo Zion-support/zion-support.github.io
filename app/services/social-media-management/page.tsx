@@ -1,6 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Social Media Management - Zion Tech Group',
   description: 'Professional social media management services to help your business grow and succeed.',
@@ -48,5 +47,4 @@ export default function SocialMediaManagementPage() {
         </div>
       </section>
     </div>
-  );
-}
+)

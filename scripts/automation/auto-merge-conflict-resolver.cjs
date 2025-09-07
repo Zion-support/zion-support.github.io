@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -71,19 +70,19 @@ this.log(" Resolved conflict in ${filePath}")
       .replace(/\s*\"n/g", ")
   async processBranch(branchName) {this.log("� Processing "branch": ${branchName}")
   // Checkout the branchconst checkoutResult = await this.runCommand("git checkout ${branchName}")
-      if (!checkoutResult.success) {this.log(" Failed to checkout ${branchName}", "ERROR")
+  if($2) {this.log(" Failed to checkout ${branchName}", "ERROR")
       const mergeResult = await this.runCommand("git merge main")
-      if (mergeResult.success) {this.log(" Successfully merged ${branchName} with main")
+  if($2) {this.log(" Successfully merged ${branchName} with main")
   "branch"
           "status": "merged"
           "timestamp"
         await this.runCommand("git add .");const commitResult = await this.runCommand("git commit -m Auto-resolve merge conflicts in ${branchName}")
-        if (commitResult.success) {this.log(" Successfully resolved conflicts in ${branchName}")
+  if($2) {this.log(" Successfully resolved conflicts in ${branchName}")
   "branch"
             "status": "conflicts_resolved"
             "timestamp"
         await this.runCommand("git add .");const commitResult = await this.runCommand("git commit -m Auto-resolve merge conflicts in ${branchName}"")
-        if (commitResult.success) {this.log(" Successfully resolved conflicts in ${branchName}")
+  if($2) {this.log(" Successfully resolved conflicts in ${branchName}")
   "branch"
             "status": "conflicts_resolved"
             "timestamp"
@@ -138,6 +137,7 @@ this.log(" Found ${branches.length} cursor branches to process")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -165,3 +165,7 @@ this.log(" Found ${branches.length} cursor branches to process")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error(" Auto merge conflict resolution "failed": ")
+  console.error(" Auto merge conflict resolution "failed": ")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

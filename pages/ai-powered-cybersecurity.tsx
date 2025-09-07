@@ -1,6 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Ai Powered Cybersecurity - Zion Tech Group',
   description: 'Professional Ai Powered Cybersecurity services to help your business grow and succeed.',

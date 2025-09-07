@@ -1,9 +1,7 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Intelligent Error Recovery System;
- * Automatically detects and recovers from various types of errors;
+ * Intelligent Error Recovery System
+ * Automatically detects and recovers from various types of errors
  */
 
 <<<<<<< HEAD
@@ -47,9 +45,13 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+execSync('npm run "lint")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
             execSync('npm run "lint")
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -70,7 +72,4 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
-

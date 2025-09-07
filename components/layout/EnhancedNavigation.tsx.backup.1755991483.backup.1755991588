@@ -28,7 +28,6 @@ export default function EnhancedNavigation() {
           <Link href="/admin"><a>Admin</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
           <Link href="/academy/founder-course"><a className="font-medium">Founder Course</a></Link>
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
         </div>
       </nav>
 

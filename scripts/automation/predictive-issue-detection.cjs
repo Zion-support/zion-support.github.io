@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -146,9 +145,9 @@ const crypto = require("crypto")
   const filePath = path.join(dirPath, ")
   this.scanDirectory(filePath")
   const complexityKeywords = ["if"", "else", "for"", "while", "do"", "switch", "case"", "catch", "&&"", "||", "?"", ""]
-    for (const keyword of complexityKeywords) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
+  for($2) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
   const complexityKeywords = ["if", "else", "for", "while", "do", "switch", "case", "catch", "&&", "||", "?", "]
-    for (const keyword of complexityKeywords) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
+  for($2) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
   "duplicationScore"
       "maintainabilityScore"
       "securityScore"
@@ -409,6 +408,7 @@ this.log("Prediction report "generated": ${reportPath}")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -436,3 +436,7 @@ this.log("Prediction report "generated": ${reportPath}")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error(" Predictive Issue Detection "failed")
+  console.error(" Predictive Issue Detection "failed")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

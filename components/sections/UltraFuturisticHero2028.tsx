@@ -1,15 +1,13 @@
-
       color: 'from-violet-500 to-purple-500'
-    }
 
     {
       icon: Shield,
       text: 'Quantum Internet Security'}
   color: 'from-red-500 to-orange-500'}
-    }
+
     {}
       icon: Shield,'
-      text: 'Quantum Internet Security',';
+      text: 'Quantum Internet Security','
       color: 'from-red-500 to-orange-500',;'
     },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-emerald-500 to-teal-500' },'
     { icon: Atom, text: 'Quantum Time Manipulation', color: 'from-violet-500 to-purple-500' },'
@@ -22,35 +20,24 @@
     { value: '1000+', label: 'Happy Clients', icon: Users }
 
 class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
-  }
-  
+  constructor($2) {}
+    super(props)
+    this.state = { hasError: false }
   static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {'
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
+    return { hasError: true }
+  componentDidCatch($2) {'
+    console.error('Error caught by boundary:', error, errorInfo)
+  render($2) {}
+  if($2) {}
+      return <div>Something went wrong.</div>
+    return this.props.children
 }'
 import React from 'react';'
 import Link from 'next/link';'
-import { motion } from 'framer-motion';
-
+import { motion } from 'framer-motion'
       color: 'from-red-500 to-orange-500',
     },
-  ];
-
+  ]
 const stats = [
     { value: '50+'}
   label: 'Cutting-Edge Services', icon: Rocket}
@@ -63,33 +50,32 @@ const stats = [
 },
 { value: '1000+'}
   label: 'Happy Clients', icon: Users}
-}
-  ];
-  return (
-    <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black pt-20'    />;
 
+  ]
+  return (
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black pt-20'    />
       {/* Animated Background */}
       {/* Floating Elements */}
-      <div className='absolute inset-0 overflow-hidden pointer-events-none'    />;
-        <motion&& motion.div;
+      <div className='absolute inset-0 overflow-hidden pointer-events-none'    />
+        <motion&& motion.div
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }
-}
-          className='absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full opacity-60';
-           />;
-        <motion&& motion.div;
+
+          className='absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full opacity-60'
+           />
+        <motion&& motion.div
           animate={{ y: [0, 20, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }
-}
-          className='absolute top-40 right-20 w-1 h-1 bg-blue-400 rounded-full opacity-40';
-           />;
-        <motion&& motion.div;
+
+          className='absolute top-40 right-20 w-1 h-1 bg-blue-400 rounded-full opacity-40'
+           />
+        <motion&& motion.div
           animate={{ y: [0, -15, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }
-}
-          className='absolute bottom-40 left-20 w-1 && 1.5 h-1 && 1.5 bg-purple-400 rounded-full opacity-50';
-           />;
-        <motion&& motion.div;
+
+          className='absolute bottom-40 left-20 w-1 && 1.5 h-1 && 1.5 bg-purple-400 rounded-full opacity-50'
+           />
+        <motion&& motion.div
           animate={{ y: [0, 25, 0] }}
           transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
 
@@ -101,10 +87,9 @@ const stats = [
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'    />
 
         {/* Badge *}
-}
-        <motion&& motion.div;
+
+        <motion&& motion.div
           initial={{ opacity: 0, y: 30 }
-}
 
           animate={{ opacity: 1, y: 0 }}
 
@@ -114,22 +99,21 @@ className='mb-8'
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full px-6 py-3 mb-6 backdrop-blur-sm'    />
             <Rocket className='w-5 h-5 text-cyan-400'    />
             <span className='text-cyan-400 font-mono text-sm'    />
-              2028 Future Technology;
+              2028 Future Technology
             </span>
             <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse'    />
           </div>
         </motion.div>
 
             <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent'>
-              The Future of;
+              The Future of
             </span>
             <br    />
             <span className='text-white'    />
               Technology is{' }
-}
 
               <span className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent'    />
-                Here;
+                Here
               </span>
             </span>
           </h1>
@@ -161,28 +145,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.button>
         </motion.div>
 
-            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />;
-          </motion && motion.button>;<motion&& motion.button;
+            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />
+          </motion && motion.button>;<motion&& motion.button
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }
-}
-            className='group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm'    />;
-            <Play className='w-5 h-5'    />            <span    />Watch Demo</span>          >;
+
+            className='group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm'    />
+            <Play className='w-5 h-5'    />            <span    />Watch Demo</span>          >
             <span    />Explore 2028 Services</span>;"
-            <ArrowRight className=\"w-5 h-5 group-hover:translate-x-1 transition-transform duration-300\"    />;
-          </motion && motion.button>;
-          <motion&& motion.button;
+            <ArrowRight className=\"w-5 h-5 group-hover:translate-x-1 transition-transform duration-300\"    />
+          </motion && motion.button>
+          <motion&& motion.button
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }
 }"
             className=\"group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm\"    />;"
-            <Play className=\"w-5 h-5\"    />;
-            <span    />Watch Demo</span>;
-          </motion && motion.button>;
+            <Play className=\"w-5 h-5\"    />
+            <span    />Watch Demo</span>
+          </motion && motion.button>
         </motion && motion.div>;{/* Features Grid */}
-        <motion&& motion.div;
+        <motion&& motion.div
           initial={{ opacity: 0, y: 30 }
-}
 
         {/* Features Grid */}
 
@@ -193,9 +176,9 @@ className='mb-16'
               <motion.div;}
 key={feature.text}
                 initial={{ opacity: 0, scale: 0.8 }
-}
+
                 animate={{ opacity: 1, scale: 1 }
-}
+
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
 
 className='group relative'
@@ -215,8 +198,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
 
             ))}
-          </div>;
-        </motion.div>;
+          </div>
+        </motion.div>
             ))}
         {/* Stats */}
 
@@ -227,9 +210,9 @@ className='mb-16'
               <motion.div;}
 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }
-}
+
                 animate={{ opacity: 1, scale: 1 }
-}
+
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
 
 className='text-center group'
@@ -245,16 +228,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors'>                  {stat.label}
 
                   {stat.valu}
-}
-                </div>;
-                <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors'    />;
+
+                </div>
+                <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors'    />
                   {stat.label}
                 <div className='text-sm text-cyan-400/70 group-hover: text-cyan-300 transition-colors'    />                  {stat.label}{stat.labe}
-}</div>;
-              </motion.div>;
+}</div>
+              </motion.div>
             ))}
-          </div>;
-        </motion.div>;
+          </div>
+        </motion.div>
             ))}
         {/* Trust Indicators */}
 
@@ -264,14 +247,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm'>
 
             <h3 className='text-2xl font-bold text-white mb-6'>
-              Trusted by Industry Leaders;
+              Trusted by Industry Leaders
             </h3>'
             <div className='flex flex-wrap justify-center items-center gap-8 opacity-70'>'
               <div className='text-cyan-400 font-semibold'>
-                Fortune 500 Companies;
+                Fortune 500 Companies
               </div>'
               <div className='text-blue-400 font-semibold'>
-                Government Agencies;
+                Government Agencies
               </div>'
               <div className='text-purple-400 font-semibold'>
 
@@ -279,7 +262,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >"
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm">"
             <h3 className="text-2xl font-bold text-white mb-6">
-              Trusted by Industry Leaders;
+              Trusted by Industry Leaders
             </h3>"
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">"
               <div className="text-cyan-400 font-semibold">Fortune 500 Companies</div>"
@@ -287,8 +270,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-purple-400 font-semibold">Research Institutions</div>"
               <div className="text-emerald-400 font-semibold">Startups</div>'
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm'>;'
-            <h3 className='text-2xl font-bold text-white mb-6'>;
-
+            <h3 className='text-2xl font-bold text-white mb-6'>
               <div className='text-emerald-400 font-semibold'>Startups</div>
             </div>
           </div>
@@ -307,16 +289,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
 
         {/* Bottom CTA *}
-}
-        <motion&& motion.div;
+
+        <motion&& motion.div
           initial={{ opacity: 0, y: 30 }
-}
 
           animate={{ opacity: 1, y: 0 }
-}
 
           transition={{ duration: 0.8, delay: 1.6 }
-}
+
 className='text-center'
          />
           <div className='inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm' />
@@ -333,9 +313,8 @@ className='text-center'
           <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm">;"
             <div className="flex items-center space-x-2">;"
               <Star className="w-5 h-5 text-yellow-400" />;"
-              <span className="text-white font-semibold">Ready to transform your business?</span>;
-            </div>;
-
+              <span className="text-white font-semibold">Ready to transform your business?</span>
+            </div>
           transition={{ duration: 0.8, delay: 1.6 }}"
 
           className="text-center"
@@ -353,132 +332,120 @@ className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
 
-              Get Started;
+              Get Started
             </Link>
           </div>
         </motion.div>
       </div>
 
-              Get Started;
-            </Link>;
-          </div>;
-        </motion && motion.div>;
+              Get Started
+            </Link>
+          </div>
+        </motion && motion.div>
       </div>;{/* Scroll Indicator */}
-      <motion&& motion.div;
+      <motion&& motion.div
         initial={{ opacity: 0 ;}}
         animate={{ opacity: 1 ;}}
         transition={{ duration: 1;, delay: 2 ;}}
 
             className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
-  );
+  )
         animate={{ opacity: 1 ;}
-}
 
         transition={{ duration: 1, delay: 2 }
-}
 
 className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
        />
-        <motion.div;
+        <motion.div
 animate={{ y: [0;, 10, 0] }}
           transition={{ duration: 2;, repeat: Infinity;, ease: 'easeInOut' ;}
-}
-          className='w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center' />;
-          <motion&& motion.div;
+
+          className='w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center' />
+          <motion&& motion.div
             animate={{ y: [0;, 12, 0] }}
 
             transition={{ duration: 2;, repeat: Infinity;, ease: 'easeInOut' ;}
-}
 
-  );
-
-  );
-}
-                </div>;
+  )
+  )
+                </div>
               </motion.div>))}
-          </div>;
-        </motion.div>;
+          </div>
+        </motion.div>
         {/* Trust Indicators */}
-        <motion.div;
-
-            <h3 className='text - 2xl font - bold text - white mb - 6'>;
-              Trusted by Industry Leaders;
+        <motion.div
+            <h3 className='text - 2xl font - bold text - white mb - 6'>
+              Trusted by Industry Leaders
             </h3>;'
             <div className='flex flex - wrap justify - center items - center gap - 8 opacity - 70'>;'
-              <div className='text - cyan - 400 font - semibold'>;
-                Fortune 500 Companies;
+              <div className='text - cyan - 400 font - semibold'>
+                Fortune 500 Companies
               </div>;'
-              <div className='text - blue - 400 font - semibold'>;
-                Government Agencies;
+              <div className='text - blue - 400 font - semibold'>
+                Government Agencies
               </div>;'
-              <div className='text - purple - 400 font - semibold'>;
-                Research Institutions;
+              <div className='text - purple - 400 font - semibold'>
+                Research Institutions
               </div>;'"
               <div className='text - emerald - 400 font - semibold'>Startups</div>            </div>            <div className="flex flex - wrap justify - center items - center gap - 8 opacity - 70">;"
               <div className="text - cyan - 400 font - semibold">Fortune 500 Companies</div>;"
               <div className="text - blue - 400 font - semibold">Government Agencies</div>;"
               <div className="text - purple - 400 font - semibold">Research Institutions</div>;"
-              <div className="text - emerald - 400 font - semibold">Startups</div>;
-          </div>;
-        </motion.div>;
+              <div className="text - emerald - 400 font - semibold">Startups</div>
+          </div>
+        </motion.div>
         {/* Bottom CTA */}
-        <motion.div;
-
-          className='text - center';
+        <motion.div
+          className='text - center'
         >;'
           <div className='inline - flex items - center space - x-4 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 border border - purple - 500 / 30 rounded - 2xl px - 8 py - 4 backdrop - blur - sm'>;'
             <div className='flex items - center space - x-2'>;'
               <Star className='w - 5 h - 5 text - yellow - 400' />;'
-              <span className='text - white font - semibold'>;
-                Ready to transform your business?;
-              </span>;
-            </div>;
+              <span className='text - white font - semibold'>
+                Ready to transform your business?
+              </span>
+            </div>
             <Link;'
               href='/contact';'
               className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 6 py - 2 rounded - xl font - semibold hover:shadow - lg hover:shadow - purple - 500 / 50 transition - all duration - 300 border border - purple - 400 / 50 hover:border - purple - 300'            >        >;"
           <div className="inline - flex items - center space - x-4 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 border border - purple - 500 / 30 rounded - 2xl px - 8 py - 4 backdrop - blur - sm">;"
             <div className="flex items - center space - x-2">;"
               <Star className="w - 5 h - 5 text - yellow - 400" />;"
-              <span className="text - white font - semibold">Ready to transform your business?</span>;
-            </div>;
+              <span className="text - white font - semibold">Ready to transform your business?</span>
+            </div>
             <Link;"
               href="/contact";"
-              className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 6 py - 2 rounded - xl font - semibold hover:shadow - lg hover:shadow - purple - 500 / 50 transition - all duration - 300 border border - purple - 400 / 50 hover:border - purple - 300";
-            >;
-              Get Started;
-            </Link>;
-          </div>;
-        </motion.div>;
-      </div>;
+              className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 6 py - 2 rounded - xl font - semibold hover:shadow - lg hover:shadow - purple - 500 / 50 transition - all duration - 300 border border - purple - 400 / 50 hover:border - purple - 300"
+            >
+              Get Started
+            </Link>
+          </div>
+        </motion.div>
+      </div>
       {/* Scroll Indicator */}
-      <motion.div;
-
-            className="w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2";
-          />;
-        </motion.div>;
-      </motion.div>;
-    </section>);
-}
-
+      <motion.div
+            className="w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2"
+          />
+        </motion.div>
+      </motion.div>
+    </section>)
             className='w-1 h-3 bg-cyan-400 rounded-full mt-2'
           />
-        <motion.div;
+        <motion.div
 animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }
-}
-          className='w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center'    />;
-          <motion&& motion.div;
+
+          className='w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center'    />
+          <motion&& motion.div
             animate={{ y: [0, 12, 0] }}
 
             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }
-}
 
             className='w-1 h-3 bg-cyan-400 rounded-full mt-2'
              />
         </motion.div>
       </motion.div>
     </section>
-  );
-}
+  )
 origin/cursor/automate-test-improve-and-merge-code-2533
 

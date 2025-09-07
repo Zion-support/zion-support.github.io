@@ -1,8 +1,8 @@
-
 const fs = require('fs')
 const path = require('path')
 // console.log('� Auditing dependencies...')
         console.log(' Auditing code security...')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,3 +35,7 @@ const path = require('path')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+"status"
+            "status"
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

@@ -1,5 +1,4 @@
-            Apply as Vendor;
-          </a>;
-        </Link>;
-      </div>;
-
+            Apply as Vendor
+          </a>
+        </Link>
+      </div>

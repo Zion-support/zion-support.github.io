@@ -1,32 +1,29 @@
-
-import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
-import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play  } from 'lucide-react';
-
+import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo'
+import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play  } from 'lucide-react'
 export default function DemosPage() {
-  const [activeDemo, setActiveDemo] = useState<string>('email-validator');
-  const demos = null;
-
+  const [activeDemo, setActiveDemo] = useState<string>('email-validator')
+  const demos = null
   return (
     <>
       <Head><title>
-          Interactive Demos | Zion Tech Group - Test Our Micro SaaS Services;
+          Interactive Demos | Zion Tech Group - Test Our Micro SaaS Services
         </title>
-        <meta;
+        <meta
 name='description'
           content='Try our professional micro SaaS services with interactive demos. Test email validation, password strength, URL shortening, and text analysis in real-time.'
            />
-        <meta;
+        <meta
 property='og: title'
           content='Interactive Demos | Zion Tech Group'
            />
-        <meta;
+        <meta
 property='og:description'
           content='Test our micro SaaS services with interactive demos.'
            />
         <meta name='twitter:card' content='summary_large_image'    />
       </Head>
       {/* Hero Section *,}
-}
+
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'    />
         <div className='absolute inset-0'    />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]'    />
@@ -39,26 +36,26 @@ property='og:description'
             <div className='mb-8'    />
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-scale-in'    />
                 <Play className='w-4 h-4 mr-2'    />
-                Interactive Demos;
+                Interactive Demos
               </div>
             </div>
             <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'    />
-              Try Our;
+              Try Our
               <span className='block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'    />
-                Micro SaaS Services;
+                Micro SaaS Services
               </span>
             </h1>
             <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'    />
-              Experience our professional-grade micro SaaS services firsthand;
-with interactive demos. Test, explore, and see the power of our;
+              Experience our professional-grade micro SaaS services firsthand
+with interactive demos. Test, explore, and see the power of our
 APIs in action.
             </p>
             <div className='flex flex-col sm: flex-row gap-6 justify-center items-center mb-20'    />
-              <Button;
+              <Button
 href='#demos'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
-              <Button;
+              <Button
 href='/micro-saas'
                 variant='outline'
                 size='lg'
@@ -72,11 +69,10 @@ href='/micro-saas'
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-              Each demo showcases a different micro SaaS service with full;
-              functionality;
-            </p>;
-          </div>;
-
+              Each demo showcases a different micro SaaS service with full
+              functionality
+            </p>
+          </div>
               >
                 <Code className='w-5 h-5 mr-2' />
                 View All Services
@@ -84,31 +80,31 @@ href='/micro-saas'
             </div>
           </div>
           {/* Stats */}
-<div;
+<div
 className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
             style={{ animationDelay: '0.6s' }}
               />
             <div className='text-center group'    />
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'    />
-                4;
+                4
               </div>
               <div className='text-gray-400 text-sm'    />Live Demos</div>
             </div>
             <div className='text-center group'    />
               <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'    />
-                Real;
+                Real
               </div>
               <div className='text-gray-400 text-sm'    />API Endpoints</div>
             </div>
             <div className='text-center group'    />
               <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'    />
-                Free;
+                Free
               </div>
               <div className='text-gray-400 text-sm'    />To Test</div>
             </div>
             <div className='text-center group'    />
               <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'    />
-                Instant;
+                Instant
               </div>
               <div className='text-gray-400 text-sm'    />Results</div>
             </div>
@@ -116,8 +112,8 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-
         </div>
       </section>
       {/* Demo Navigation *,}
-}
-<section;
+
+<section
 id='demos'
         className='py-16 bg-gray-900 relative overflow-hidden'
           />
@@ -125,11 +121,11 @@ id='demos'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'    />
           <div className='text-center mb-12'    />
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'    />
-              Choose a Service to Test;
+              Choose a Service to Test
             </h2>
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'    />
-              Each demo showcases a different micro SaaS service with full;
-functionality;
+              Each demo showcases a different micro SaaS service with full
+functionality
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
@@ -139,36 +135,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 key={demo && demo.id}
                 onClick={() => setActiveDemo(demo && demo.id)}
-                className={`p-4 rounded-lg border transition-all duration-300 text-left group ${;
+                className={`p-4 rounded-lg border transition-all duration-300 text-left group ${
                   activeDemo === demo && demo.id;'
                     ? 'border-blue-500 bg-blue-500/10';'
                     : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80';`
                 }`}
-              >;
-
+              >
                   {demo && demo.icon}
                 </div>;'
-                <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>;
+                <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>
                   {demo && demo.title}
                 </h3>;'
-                <p className='text-sm text-gray-400 leading-relaxed'>;
+                <p className='text-sm text-gray-400 leading-relaxed'>
                   {demo && demo.description}
-                </p>;
+                </p>
                 {activeDemo === demo && demo.id && (;'
                   <div className='mt-3 flex items-center text-blue-400 text-sm'>;'
                     <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo                  {demo && demo.icon}
                 </div>;"
-                <h3 className="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">;
+                <h3 className="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                   {demo && demo.title}
                 </h3>;"
-                <p className="text-sm text-gray-400 leading-relaxed">;
+                <p className="text-sm text-gray-400 leading-relaxed">
                   {demo && demo.description}
-                </p>;
+                </p>
                 {activeDemo === demo && demo.id && (;"
                   <div className="mt-3 flex items-center text-blue-400 text-sm">;"
-                    <CheckCircle className="w-4 h-4 mr-2" />;
-                    Active Demo;
-                  </div>;
+                    <CheckCircle className="w-4 h-4 mr-2" />
+                    Active Demo
+                  </div>
                 key={demo.id}
                 on_click={() => setActiveDemo (demo.id)}`
                 className={`p - 4 rounded - lg border transition - all duration - 300 text - left group ${}
@@ -177,17 +172,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     : 'border - gray - 700 bg - gray - 800 / 50 hover:border - gray - 600 hover:bg - gray - 800 / 80';`
                 }`}
               >
-<div;
+<div
 className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-center justify-center mb-3 group-hover: scale-110 transition-transform duration-300`}
                     />
 
                   {demo.ico,}
-}
-                </div>;
-                <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'    />;
+
+                </div>
+                <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'    />
                   {demo.title}
-                </h3>;
-                <p className='text-sm text-gray-400 leading-relaxed'    />;
+                </h3>
+                <p className='text-sm text-gray-400 leading-relaxed'    />
                   {demo.description}
 
                 </p>
@@ -195,11 +190,11 @@ className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-cent
 
                   <div className='mt-3 flex items-center text-blue-400 text-sm'    />
                     <CheckCircle className='w-4 h-4 mr-2'    />
-                    Active Demo;
+                    Active Demo
                   </div>}
-}
+
                 )}
-              </button>;
+              </button>
             ))}
           </div>
         </div>
@@ -210,32 +205,31 @@ className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-cent
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;'
           <div className='text-center mb-12'>;'
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>;'
-              <Play className='w-4 h-4 mr-2' />;
-              Live Demo;
-            </div>;'
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>;
-
               <Play className='w-4 h-4 mr-2' />
-              Live Demo;
+              Live Demo
+            </div>;'
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
+              <Play className='w-4 h-4 mr-2' />
+              Live Demo
             </div>'
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
               {activeDemoData?.title}
 
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
 
-            </p>;
+            </p>
           </div>;'
-          <div className='animate-fade-in'>{activeDemoData?.component}</div>        </div>;
-      </section>;
+          <div className='animate-fade-in'>{activeDemoData?.component}</div>        </div>
+      </section>
       {/* Active Demo */}
-      <section className='py-16 bg-black relative overflow-hidden'    />;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'    />;
-          <div className='text-center mb-12'    />;
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'    />;
-              <Play className='w-4 h-4 mr-2'    />;
-              Live Demo;
-            </div>;
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'    />;
+      <section className='py-16 bg-black relative overflow-hidden'    />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'    />
+          <div className='text-center mb-12'    />
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'    />
+              <Play className='w-4 h-4 mr-2'    />
+              Live Demo
+            </div>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'    />
       {/* Active Demo */}
 
 <section className='py-16 bg-black relative overflow-hidden'    />
@@ -243,7 +237,7 @@ className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-cent
           <div className='text-center mb-12'    />
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'    />
               <Play className='w-4 h-4 mr-2'    />
-              Live Demo;
+              Live Demo
             </div>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'    />
               {activeDemoData?.title}
@@ -261,8 +255,8 @@ className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-cent
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
             </h2>'
             <p className='text-lg text-gray-400 max-w-3xl mx-auto'>
-              Experience the quality and reliability of our services before;
-              integrating them into your applications;
+              Experience the quality and reliability of our services before
+              integrating them into your applications
             </p>
           </div>'
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'
@@ -271,11 +265,11 @@ className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-cent
                 <Zap className='w-8 h-8 text-blue-400' />
               </div>'
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>
-                Real Performance;
+                Real Performance
               </h3>'
               <p className='text-gray-400 leading-relaxed'>
-                Test actual API endpoints with real data processing and response;
-                times;
+                Test actual API endpoints with real data processing and response
+                times
               </p>
             </Card>'
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>'
@@ -283,11 +277,11 @@ className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-cent
                 <CheckCircle className='w-8 h-8 text-green-400' />
               </div>'
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300'>
-                Full Functionality;
+                Full Functionality
               </h3>'
               <p className='text-gray-400 leading-relaxed'>
-                Experience complete service capabilities, not just mock;
-                responses;
+                Experience complete service capabilities, not just mock
+                responses
               </p>
             </Card>'
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>'
@@ -319,9 +313,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <BarChart3 className='w-8 h-8 text-orange-400' />
               </div>'
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-orange-400 transition-colors duration-300'>
-                Detailed Results;
+                Detailed Results
               </h3>'
-              <p className='text-gray-400 leading-relaxed'>                Get comprehensive analysis and insights from each service;
+              <p className='text-gray-400 leading-relaxed'>                Get comprehensive analysis and insights from each service
               </p>
             </Card>'
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-cyan-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>'
@@ -335,7 +329,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Why Test Our Demos?
             </h2>"
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Experience the quality and reliability of our services before integrating them into your applications;
+              Experience the quality and reliability of our services before integrating them into your applications
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'    />
@@ -344,11 +338,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Zap className='w-8 h-8 text-blue-400'    />
               </div>
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'    />
-                Real Performance;
+                Real Performance
               </h3>
               <p className='text-gray-400 leading-relaxed'    />
-                Test actual API endpoints with real data processing and response;
-times;
+                Test actual API endpoints with real data processing and response
+times
               </p>
             </Card>
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'    />
@@ -356,11 +350,11 @@ times;
                 <CheckCircle className='w-8 h-8 text-green-400'    />
               </div>
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300'    />
-                Full Functionality;
+                Full Functionality
               </h3>
               <p className='text-gray-400 leading-relaxed'    />
-                Experience complete service capabilities, not just mock;
-responses;
+                Experience complete service capabilities, not just mock
+responses
               </p>
             </Card>
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover: border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'    />
@@ -368,11 +362,11 @@ responses;
                 <Code className='w-8 h-8 text-purple-400'    />
               </div>
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300'    />
-                API Examples;
+                API Examples
               </h3>
 
               <p className='text-gray-400 leading-relaxed'    />
-                See exact request/response formats for easy integration;
+                See exact request/response formats for easy integration
               </p>
             </Card>
 
@@ -381,11 +375,11 @@ responses;
                 <BarChart3 className='w-8 h-8 text-orange-400'    />
               </div>
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-orange-400 transition-colors duration-300'    />
-                Detailed Results;
+                Detailed Results
               </h3>
 
               <p className='text-gray-400 leading-relaxed'    />
-                Get comprehensive analysis and insights from each service;
+                Get comprehensive analysis and insights from each service
               </p>
             </Card>
 
@@ -394,10 +388,10 @@ responses;
                 <Play className='w-8 h-8 text-cyan-400'    />
               </div>
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors duration-300'    />
-                Instant Testing;
+                Instant Testing
               </h3>
               <p className='text-gray-400 leading-relaxed'    />
-                No signup required - start testing immediately;
+                No signup required - start testing immediately
               </p>
             </Card>
 
@@ -406,7 +400,7 @@ responses;
                 <CheckCircle className='w-8 h-8 text-pink-400'    />
               </div>
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-pink-400 transition-colors duration-300'    />
-                Production Ready;
+                Production Ready
               </h3>"
               <p className="text-gray-400 leading-relaxed">
 
@@ -444,92 +438,88 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
-          <div className='animate-fade-in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">;
+          <div className='animate-fade-in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">
             {activeDemoData?.component}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* Features */}'
       <section className='py-24 bg-gray-900 relative overflow-hidden'>;'
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;'
           <div className='text-center mb-20'>;'
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
             </h2>;'
-            <p className='text-lg text-gray-400 max-w-3xl mx-auto'>;
-            </p>;
+            <p className='text-lg text-gray-400 max-w-3xl mx-auto'>
+            </p>
           </div>;'"
-          <div className='animate - fade - in'>{activeDemoData?.component}</div>          <div className="animate - fade - in">;
+          <div className='animate - fade - in'>{activeDemoData?.component}</div>          <div className="animate - fade - in">
             {activeDemoData?.component}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* Features */}'
       <section className='py - 24 bg - gray - 900 relative overflow - hidden'>;'
         <div className='absolute inset - 0 bg-[linear - gradient (rgba (59, 130, 246, 0.05)_1px, transparent_1px), linear - gradient (90deg, rgba (59, 130, 246, 0.05)_1px, transparent_1px)] bg-[size:50px_50px] opacity - 20' />;'
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10'>;'
           <div className='text - center mb - 20'>;'
-            <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
+            <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>
             </h2>;'
-            <p className='text - lg text - gray - 400 max - w-3xl mx - auto'>;
-              Experience the quality and reliability of our services before;
-              integrating them into your applications;
-            </p>;
-          </div>;
-                Test actual API endpoints with real data processing and response;
-                times;
-              </p>;
-            </Card>;
-                Experience complete service capabilities, not just mock;
-                responses;
-              </p>;
-            </Card>;
-                Same infrastructure that powers our production services;
-              </p>;
-            </Card>;
-          </div>;
-        </div>;
-      </section>;
-              Get Started;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-}
-
+            <p className='text - lg text - gray - 400 max - w-3xl mx - auto'>
+              Experience the quality and reliability of our services before
+              integrating them into your applications
+            </p>
+          </div>
+                Test actual API endpoints with real data processing and response
+                times
+              </p>
+            </Card>
+                Experience complete service capabilities, not just mock
+                responses
+              </p>
+            </Card>
+                Same infrastructure that powers our production services
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+              Get Started
+            </Button>
+          </div>
+        </div>
+      </section>
       {/* CTA Section *,}
-}
+
 <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'    />
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10'    />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'    />
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'    />
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'    />
-            After testing our demos, integrate these professional services into;
+            After testing our demos, integrate these professional services into
 your applications with our comprehensive APIs and documentation.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'    />
-            <Button;
+            <Button
 href='/micro-saas'
               variant='secondary'
               size='lg'
               className='bg-white text-blue-600 hover:bg-gray-100 shadow-2xl'
                 />
-              View All Services;
+              View All Services
               <Code className='w-5 h-5 ml-2'    />
             </Button>
-            <Button;
+            <Button
 href='/contact'
               variant='outline'
               size='lg'
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
                 />
-              Get Started;
+              Get Started
             </Button>
           </div>
         </div>
       </section>
     <   />
-  );
-}
-
+  )

@@ -1,28 +1,22 @@
-
-import React, { useState } from 'react';
-
-type Question = any;
-  question: string;
-  options: string[];
-  answerIndex: number;
-}
-
-  );
+import React, { useState } from 'react'
+type Question = any
+  question: string
+  options: string[]
+  answerIndex: number
+  )
   function submit() {
     setSubmitted(true);}
     onComplete(score);}
-  }
-  return (
-    <div className='space-y-4'    />;
-      {questions && questions.map((q, idx) => (;}
-        <div key={q && q.id} className='border rounded p-3'    />;
 
+  return (
+    <div className='space-y-4'    />
+      {questions && questions.map((q, idx) => (;}
+        <div key={q && q.id} className='border rounded p-3'    />
                   type='radio'
 origin/cursor/automate-test-improve-and-merge-code-2533
 
     onComplete(score)
-  }
- ;
+
   return (
 
             ))}
@@ -35,26 +29,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='text-green-600'    />Correct</span>
               ) : (
                 <span className='text-red-600'    />Incorrect</span>}
-}
+
               )}
-            </div>;
+            </div>
           )}
 
         </div>
       ))}
 
-<button;
+<button
 onClick={submit}
         className='px-4 py-2 bg-blue-600 text-white rounded'    />
 
-        Submit Quiz;
-      </button>;
+        Submit Quiz
+      </button>
       {submitted && (<div className='text-sm'    />;}
           Score: {score} / {questions.lengt}
-}
-  );
-}
 
+  )
 <button
         onClick={submit}
         className='px-4 py-2 bg-blue-600 text-white rounded'
@@ -65,10 +57,10 @@ onClick={submit}
         <div className='text-sm'>
           Score: {score} / {questions.length}
         </div>
-        </div>;
+        </div>
       )}
 
     </div>
-  );
+  )
 origin/cursor/automate-test-improve-and-merge-code-2533
 

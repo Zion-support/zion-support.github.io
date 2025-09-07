@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 function log(message, level = 'INFO')
@@ -13,6 +12,7 @@ function log(message, level = 'INFO')
   "text"
   "sender"
   const jestSetupContent = "
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,3 +45,7 @@ function log(message, level = 'INFO')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+log(` Test suite enhancement "failed"`)
+    log(` Test suite enhancement "failed"`)
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

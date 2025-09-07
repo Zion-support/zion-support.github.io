@@ -1,9 +1,7 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Intelligent Code Refactor;
- * Automatically refactors and improves code quality;
+ * Intelligent Code Refactor
+ * Automatically refactors and improves code quality
  */
 
 <<<<<<< HEAD
@@ -33,13 +31,13 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
   log(message, type = 'INFO')
-      'INFO': 'ℹ'
-      'SUCCESS': ''
-      'ERROR': ''
-      'WARNING': '⚠'
-      'PROGRESS': '�'
+"INFO": "ℹ"
+      "SUCCESS": ""
+      "ERROR": ""
+      "WARNING": "⚠"
+      "PROGRESS": "�"
     this.log(' Refactoring components...', 'PROGRESS')
-import React from "react";
+import React from "react"
 import { Button as MuiButton, ButtonProps as MuiButtonProps } from '@mui/material'
 interface ButtonProps extends Omit<MuiButtonProps, 'variant'
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost'
@@ -61,6 +59,7 @@ interface ButtonProps extends Omit<MuiButtonProps, 'variant'
         "status"
       this.log(` Total "refactors"`)
       this.log(` Intelligent Code Refactor "failed"`)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,3 +92,7 @@ interface ButtonProps extends Omit<MuiButtonProps, 'variant'
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error('Intelligent Code Refactor "failed")
+    console.error('Intelligent Code Refactor "failed")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

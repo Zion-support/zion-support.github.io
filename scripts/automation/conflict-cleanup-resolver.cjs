@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -135,6 +134,7 @@ this.log("� Detailed report saved "to": ${reportPath}")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -163,3 +163,7 @@ this.log("� Detailed report saved "to": ${reportPath}")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error(" Fatal "error")
+  console.error(" Fatal "error")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

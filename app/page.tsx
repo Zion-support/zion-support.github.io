@@ -1,19 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import {
-  LightBulbIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  StarIcon,
-  RocketLaunchIcon
-} from '@heroicons/react/24/outline';
-import { Metadata } from 'next';
-
+import React from 'react'
+import Link from 'next/link'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Enterprise AI & IT Solutions | Micro SaaS Development',
   description: 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
@@ -140,40 +127,69 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-700 to-purple-700 text-white py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/services"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Explore Services
-              </Link>
-              <Link
-                href="/contact"
-                className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Get Started
-              </Link>
-            </div>
+      <section className="py-20 px-4 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 animate-pulse" />
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
+            Zion Tech Group
+          </h1>
+          <p className="text-2xl md:text-3xl text-slate-300 mb-8">
+            Innovative Micro SaaS, AI Services & IT Solutions
+          </p>
+          <p className="text-lg text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Transform your business with our cutting-edge technology solutions.
+            From AI-powered automation to cloud infrastructure, we deliver
+            enterprise-grade solutions that drive growth and innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
+            >
+              Get Started Today
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <Link
+              href="/services"
+              className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              Explore Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { number: "67+", label: "Services" },
+              { number: "500+", label: "Clients" },
+              { number: "99.9%", label: "Uptime" },
+              { number: "24/7", label: "Support" }
+            ].map((stat, index) => (
+              <div key={index} className="space-y-2">
+                <div className="text-4xl md:text-5xl font-bold text-blue-400">
+                  {stat.number}
+                </div>
+                <div className="text-slate-300">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Services
+<section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">              Our Services
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Comprehensive solutions for modern businesses
@@ -249,58 +265,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-16 md:py-24 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Us?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We combine technical expertise with business acumen to deliver solutions that drive real results.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <LightBulbIcon className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Innovation</h3>
-              <p className="text-gray-600">Cutting-edge technology solutions</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ShieldCheckIcon className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Security</h3>
-              <p className="text-gray-600">Enterprise-grade security measures</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ChartBarIcon className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Performance</h3>
-              <p className="text-gray-600">Optimized for speed and efficiency</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <UserGroupIcon className="w-8 h-8 text-orange-600" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Support</h3>
-              <p className="text-gray-600">24/7 expert support team</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="bg-gradient-to-r from-blue-700 to-purple-700 text-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
+{/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">            Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how our solutions can help you achieve your goals.
+          <p className="text-xl text-slate-400 mb-12">
+            Get in touch with our experts to discuss your project requirements and discover
+            how our innovative solutions can drive your business forward.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link 
@@ -336,5 +308,4 @@ export default function HomePage() {
     </div>
   );
 }
-
 

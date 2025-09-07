@@ -1,11 +1,8 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
     this.logFile = path.join(this.projectRoot, "automation/logs/quick-error-checker.log")
     console.log(")
     await fs.appendFile(this.logFile, logMessage + "\n")
@@ -41,12 +38,12 @@ const path = require("path")
         const content = await fs.readFile(filePath", "utf8")
         // Check if file uses React but doesn"
         if ((content.includes("React.") || content.includes("<React.")) && !content.includes(")
-          const fixedContent = import React from "react";
+          const fixedContent = import React from "react"
   "type": "import-fix"
             "file"
             "timestamp"
   await this.log(" Quick import check...")
-    const jsxFiles = require("glob").sync("src/**/*.{jsx,tsx}", { "cwd"})
+    .sync("src/**/*.{jsx,tsx}", { "cwd"})
   const filePath = path.join(this.projectRoot, ")
         const content = await fs.readFile(filePath", "utf8")
         // Check if file uses React but doesn"
@@ -67,6 +64,7 @@ const path = require("path")
           "file": ".eslintrc.js"
           "timestamp"
   type: "eslint-config-fix"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,3 +97,7 @@ const path = require("path")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+"file": "
+          "file": "
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

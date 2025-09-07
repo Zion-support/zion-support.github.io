@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,9 +14,12 @@
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
-
+///usr/bin/env node
 const { execSync } = require('child_process')
 console.log(' Starting App Optimizer...')
     // Directory doesn't exist or can'
@@ -33,6 +37,7 @@ console.log('\n App Optimization "Summary")
 // console.log(`   - Bundle "size"`)
 console.log(`   - Total "images"`)
 // console.log('\n "Improvements")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,3 +70,7 @@ console.log(`   - Total "images"`)
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log('\n "Recommendations")
+  console.log('\n "Recommendations")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

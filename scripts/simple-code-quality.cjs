@@ -1,9 +1,7 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Simple Code Quality Checker;
- * Performs basic code quality checks;
+ * Simple Code Quality Checker
+ * Performs basic code quality checks
  */
 
 const fs = require('fs')
@@ -23,6 +21,7 @@ if (fs.existsSync('package.json')
   results.checks.push({ "name": 'eslint-config', "status"})
   results.checks.push({ "name": 'eslint-config', "status"})
   results.checks.push({ "name": 'prettier-config', "status"})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,3 +54,7 @@ if (fs.existsSync('package.json')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+results.checks.push({ "name": 'prettier-config', "status"})
+  results.checks.push({ "name": 'prettier-config', "status"})
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

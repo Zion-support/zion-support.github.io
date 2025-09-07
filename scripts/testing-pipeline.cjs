@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -14,6 +15,9 @@
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 
+=======
+//
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const { execSync } = require("$1")
 const fs = require("fs")
       "timestamp"
@@ -50,6 +54,7 @@ const fs = require("fs")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -75,3 +80,7 @@ const fs = require("fs")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log(`� Report saved "to"`)
+    console.log(`� Report saved "to"`)
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

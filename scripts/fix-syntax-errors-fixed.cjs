@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -14,6 +15,9 @@
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 
+=======
+//
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require("$1")
 const path = require("path")
       let content = fs.readFileSync(filePath, "utf8")
@@ -33,6 +37,7 @@ const path = require("path")
       "pages/help.tsx"
       "pages/pricing-guide.tsx"
       "pages/pricing.tsx"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,5 +65,9 @@ const path = require("path")
 
       "
 
+=======
+"
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
       "
 
+      "

@@ -1,6 +1,5 @@
-'use client';
-import React, { useState } from 'react';
-
+'use client'
+import React, { useState } from 'react'
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -17,12 +16,11 @@ export default function ContactPage() {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
-
+    })
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault()
+    setIsSubmitting(true)
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     setSubmitStatus('success');
@@ -206,5 +204,4 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  );
-}
+)

@@ -1,23 +1,16 @@
-
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-
-}
-  featured?: boolean;
-
-}
-  featured?: boolean;
-
+  description?: string
+  children?: NavigationItem[]
+  badge?: string
+  title?: string
+  featured?: boolean
+  featured?: boolean
 const contactInfo = {
 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com'}
-};
-
+}
 const navigationItems: NavigationItem[] = [
   {
     name: 'Pricing',
@@ -28,12 +21,12 @@ icon: <DollarSign className = 'w-5 h-5'    />,
   children: [
       { name: 'Standard Pricing'}
   href: '/pricing', description: 'Our plans'}
-}
+
       {
         name: 'Market Pricing',
   href: '/market-pricing'}
         description: 'Compare market averages'}
-      }
+
     ]
   },
   {
@@ -57,9 +50,9 @@ icon: <DollarSign className = 'w-5 h-5'    />,
         name: 'Services Advertising',
   href: '/services-advertising'}
         description: 'Features, benefits and market pricing links'}
-      }
+
     ]
-  }
+
   {'
     name: 'All Services','
     href: '/comprehensive - services - showcase - 2025',"
@@ -154,7 +147,7 @@ icon: <DollarSign className = 'w-5 h-5'    />,
         name: 'Biotech AI Research','
         href: '/biotech-ai','
         description: 'AI-driven biotech',
-  }
+
   {'
       { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' }
     ]'
@@ -162,15 +155,14 @@ icon: <DollarSign className = 'w-5 h-5'    />,
     icon: <Brain className="w - 5 h - 5" />,'
     badge: 'New',
     featured: true,
-    children: [;
-
+    children: [
         description: 'Predict and prevent churn with AI',
         featured: true,
       },
       {
 
   const closeMobileMenu = () => {}
-    setIsOpen(false);
+    setIsOpen(false)
     closeDropdowns();    }'
     name: 'Micro SAAS Solutions','
     href: '/micro - saas','
@@ -193,8 +185,7 @@ icon: <DollarSign className = 'w-5 h-5'    />,
       { name: 'AI Autonomous Ecosystem', href: '/ai - autonomous - ecosystem - manager', description: 'Self - managing AI systems' },'
       { name: 'AI Ethics & Governance', href: '/ai - ethics - governance - framework', description: 'Ethical AI frameworks' },'
       { name: 'Advanced AI Automation', href: '/advanced - ai - automation - services', description: 'AI automation for development, testing, DevOps, security, and data' }
-    ];
-  }
+    ]
   {'
       { name: 'Invoice Studio', href: '/invoice-studio', description: 'Instant branded invoices and payments' }
     ]'
@@ -202,7 +193,7 @@ icon: <DollarSign className = 'w-5 h-5'    />,
     icon: <Rocket className="w - 5 h - 5" />,'
     badge: 'Hot',
     featured: true,
-    children: [;
+    children: [
       {'
         name: 'Customer Success Platform','
         href: '/ai - customer - success - platform','
@@ -302,8 +293,7 @@ icon: <DollarSign className = 'w-5 h-5'    />,
       { name: 'Keyword Research Engine', href: '/keyword - research - engine', description: 'Low - competition keywords discovery' },'
       { name: 'Privacy Analytics Suite', href: '/analytics - suite', description: 'Cookie - less, privacy - friendly analytics' }'
       { name: 'Invoice Studio', href: '/invoice - studio', description: 'Instant branded invoices and payments' }
-    ];
-  }
+    ]
   {'
       { name: 'AI-Powered Space Technology', href: '/ai-powered-space-technology', description: 'Revolutionary space AI' }
     ]'
@@ -311,7 +301,7 @@ icon: <DollarSign className = 'w-5 h-5'    />,
     icon: <Atom className="w - 5 h - 5" />,'
     badge: 'Hot',
     featured: true,
-    children: [;
+    children: [
       {'
         name: 'Quantum - Secure Cloud Infrastructure','
         href: '/quantum - secure - cloud - infrastructure','
@@ -416,8 +406,7 @@ icon: <DollarSign className = 'w-5 h-5'    />,
       { name: 'Quantum Metaverse', href: '/quantum - metaverse', description: 'Quantum - enhanced virtual worlds' },'
       { name: 'Quantum IoT Platform', href: '/quantum - iot', description: 'Quantum - secured IoT' },'
       { name: 'AI - Powered Space Technology', href: '/ai - powered - space - technology', description: 'Revolutionary space AI' }
-    ];
-  }
+    ]
   {}
     ]
   }'
@@ -431,48 +420,47 @@ icon: <DollarSign className = 'w-5 h-5'    />,
         name: 'Healthcare AI''
         href: '/healthcare-ai-solutions''
         description: 'AI-powered healthcare'
-      }
+
       {'
         name: 'Financial Technology''
         href: '/fintech-solutions''
         description: 'Next-gen fintech'
-      }
+
       {'
         name: 'Manufacturing AI''
         href: '/manufacturing-ai-solutions''
         description: 'Smart manufacturing'
-      }
+
       {'
         name: 'Retail Technology''
         href: '/innovative-business-solutions''
         description: 'Digital retail transformation'
-      }
+
       {'
         name: 'Education Technology''
         href: '/training''
         description: 'AI-powered learning'
-      }
+
       {'
         name: 'Government Solutions''
         href: '/enterprise-solutions-showcase''
         description: 'Public sector innovation'
-      }
+
       {'
         name: 'Energy & Utilities''
         href: '/quantum-energy''
         description: 'Sustainable energy tech'
-      }
+
       {'
         name: 'Biotech AI Research''
         href: '/biotech-ai''
         description: 'AI-driven biotech'
-      }
+
     ]
-  }
 
     badge: 'Enterprise',
   featured: true,
-    children: [;
+    children: [
       {
         name: 'Zero Trust Security',
   href: '/zero - trust - security - platform'}
@@ -512,7 +500,7 @@ icon: <DollarSign className = 'w-5 h-5'    />,
         name: 'AI - Powered Cybersecurity',
   href: '/ai - powered - cybersecurity'}
         description: 'Intelligent threat detection'}
-      }
+
     ]
   },
     name: 'Industry Solutions',
@@ -520,64 +508,51 @@ icon: <DollarSign className = 'w-5 h-5'    />,
     icon: <Building className='w - 5 h - 5'    />,
     description: 'Industry - specific technology solutions',
   badge: 'Industry',
-    children: [;
-
-  const [isOpen, setIsOpen] = useState(false);
-
-const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-const [isScrolled, setIsScrolled] = useState(false);
+    children: [
+  const [isOpen, setIsOpen] = useState(false)
+const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+const [isScrolled, setIsScrolled] = useState(false)
   useEffect(() => {
 
     const handleScroll = (
 
 setIsScrolled(window.scrollY > 10)) => {
   return $3;}
+
 }
-};
-
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 const toggleDropdown = (
     setActiveDropdown(activeDropdown === name ? null : name);) => {
   return $3;}
-}
-  }
 
 const closeDropdowns = (
     setActiveDropdown(null)) => {
   return $3;}
+
 }
-};
-
-
 const closeMobileMenu = (
-    setIsOpen(false);
-
-            {/* Desktop Navigation */}  };
-
+  setIsOpen($2) {/* Desktop Navigation */}  }
   return ("
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${}
       isScrolled'
         ? 'bg-black/95 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl'
             {/* Desktop Navigation */}
-                  <button;
+                  <button
                     onClick={() => toggleDropdown(item && item.name)}'
-                    className='flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400'                  >;
+                    className='flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400'                  >
                     {item && item.icon}
                     <span>{item && item.name}</span>;"
-                    {item && item.badge && (            <div className="hidden lg:flex items-center gap-8">;
+                    {item && item.badge && (            <div className="hidden lg:flex items-center gap-8">
               {navigationItems && navigationItems.map((item) => (;"
-                <div key={item && item.name} className="relative group">;
-                  <button;
+                <div key={item && item.name} className="relative group">
+                  <button
                     onClick={() => toggleDropdown(item && item.name)}"
-                    className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400";
+                    className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
                     {item && item.icon}
-                    <span>{item && item.name}</span>;
-                    {item && item.badge && (;
+                    <span>{item && item.name}</span>
+                    {item && item.badge && (
                       <span;`
                         className={`px-2 py-1 text-xs rounded-full ${'
                           item && item.badge === 'New''
@@ -593,9 +568,9 @@ const closeMobileMenu = (
                                     : item && item.badge === 'Industry''
                                       ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30''
                                       : 'bg-gray-500/20 text-gray-400 border border-gray-500/30'`
-                        }`}>;
+                        }`}>
                         {item && item.badge}
-                      </span>;
+                      </span>
                     )}
                     <ChevronDown;`
                       className={`w-4 h-4 transition-transform duration-200 ${'
@@ -610,7 +585,7 @@ const closeMobileMenu = (
                         item && item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
               {navigationItems.map((item) => ("
                 <div key={item.name} className="relative group">
-                  <button;
+                  <button
                     onClick={() => toggleDropdown(item.name)}"
                     className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"'
                         item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :'
@@ -620,42 +595,41 @@ const closeMobileMenu = (
                         item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :'
                         item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
 
-closeDropdowns();
-  };
-
+closeDropdowns()
+  }
     >
 
       {/* Background Effects */}
-      <div className='absolute inset-0'    />;
-        <div;
+      <div className='absolute inset-0'    />
+        <div
           className={`absolute inset-0 transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0';}
           }`}    />
 
-          <div className='absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black/95'    />;
-          <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5'    />;
-        </div>;
-      </div>;
-      <div className='relative z-10'    />;
-        <div className='container mx-auto px-4'    />;
-          <div className='flex items-center justify-between h-20'    />;
+          <div className='absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black/95'    />
+          <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5'    />
+        </div>
+      </div>
+      <div className='relative z-10'    />
+        <div className='container mx-auto px-4'    />
+          <div className='flex items-center justify-between h-20'    />
             {/* Logo */}
-            <Link href='/' className='flex items-center gap-3 group'    />;
-              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'    />;
-                <Brain className='w-6 h-6 text-white'    />;
-              </div>;
-              <div    />;
-                <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'    />;
-                  Zion Tech Group;
-                </div>;
-                <div className='text-xs text-gray-400'    />;
-                  Revolutionary Technology;
-                </div>;
-              </div>;
-            </Link>;
+            <Link href='/' className='flex items-center gap-3 group'    />
+              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'    />
+                <Brain className='w-6 h-6 text-white'    />
+              </div>
+              <div    />
+                <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'    />
+                  Zion Tech Group
+                </div>
+                <div className='text-xs text-gray-400'    />
+                  Revolutionary Technology
+                </div>
+              </div>
+            </Link>
             {/* Desktop Navigation */}
-<div className='hidden lg:flex items-center gap-8'    />;
-              {navigationItems.map(item => (<div key={item.name} className='relative group'    />;
-                  <button;
+<div className='hidden lg:flex items-center gap-8'    />
+              {navigationItems.map(item => (<div key={item.name} className='relative group'    />
+                  <button
                     onClick={() =    /> toggleDropdown(item.name)}
 
                     className='flex items-center gap-2 px-4 py-2 text-gray-300 hover: text-white transition-colors duration-200 group-hover:text-cyan-400'
@@ -664,7 +638,7 @@ closeDropdowns();
                     <span    />{item.name}</span>
                     {item.badge && (
 
-<span;
+<span
 className={`px-2 py-1 text-xs rounded-full ${
                           item.badge === 'New'
                             ? 'bg-green-500/20 text-green-400 border border-green-500/30'
@@ -679,14 +653,14 @@ className={`px-2 py-1 text-xs rounded-full ${
                                     : item.badge === 'Industry'
                                       ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30'
                                       : 'bg-gray-500/20 text-gray-400 border border-gray-500/30'}
-}
+
                         }`}    />
 
                         {item.badg}
-}
-                      </span>;
+
+                      </span>
                     )}
-                    <ChevronDown;
+                    <ChevronDown
                       className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : '';}
                       }`}
 
@@ -698,16 +672,16 @@ className={`px-2 py-1 text-xs rounded-full ${
                     {activeDropdown === item.name && (
                       <motion.div;}
 initial={{ opacity: 0, y: 10, scale: 0.95 }
-}
+
                         animate={{ opacity: 1, y: 0, scale: 1 }
-}
+
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
 
                   {/* Dropdown Menu */}
-                  <AnimatePresence>;
-                    {activeDropdown === item && item.name && (;
-                      <motion&& motion.div;
+                  <AnimatePresence>
+                    {activeDropdown === item && item.name && (
+                      <motion&& motion.div
                         initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}`
                                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${}
@@ -733,79 +707,79 @@ initial={{ opacity: 0, y: 10, scale: 0.95 }
                                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${'
                                     : 'text-gray-300 hover:text-white hover:bg-gray-800/50'`
                                 }`}
-                                onClick={closeDropdowns}    />;
+                                onClick={closeDropdowns}    />
                                 {child && child.featured && (<Star className='w-4 h-4 text-cyan-400'    />;}
                                 )}
-                                <div className='flex-1'    />;
-                                  <div className='font-medium'    />;
+                                <div className='flex-1'    />
+                                  <div className='font-medium'    />
                                     {child && child.name}
-                                  </div>;
-                                    <div className='text-sm opacity-75'    />;
+                                  </div>
+                                    <div className='text-sm opacity-75'    />
                                       {child && child.description}
-                                    </div>;
+                                    </div>
                                   )}
                                 </div>;"
-                                <ArrowRight className='w-4 h-4 opacity-50'    />                              </Link>                                <ArrowRight className=\"w-4 h-4 opacity-50\"    />;
-                              </Link>;
+                                <ArrowRight className='w-4 h-4 opacity-50'    />                              </Link>                                <ArrowRight className=\"w-4 h-4 opacity-50\"    />
+                              </Link>
                             ))}
-                          </div>;
-                        </div>;
-                      </motion && motion.div>;
+                          </div>
+                        </div>
+                      </motion && motion.div>
                     )}
-                  </AnimatePresence>;
-                </div>;
+                  </AnimatePresence>
+                </div>
               ))}
                     }`}
-                  >;
+                  >
                     {action && action.icon}
-                    <span    />{action && action.name}</span>;
-                  </Link>;
+                    <span    />{action && action.name}</span>
+                  </Link>
                 ))}
               {/* Contact Info */}
-              <div className='flex items-center gap-4 text-sm text-gray-400'    />;
-                <a;
+              <div className='flex items-center gap-4 text-sm text-gray-400'    />
+                <a
                   href={`tel: ${contactInfo && contactInfo.mobile}
-}
-                  className='flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200'    />;
-                  <Phone className='w-4 h-4'    />;
+
+                  className='flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200'    />
+                  <Phone className='w-4 h-4'    />
                   <span className='hidden xl: inline'    />{contactInfo && contactInfo.mobil}
-}</span>;
-                </a>;
-                <a;
+}</span>
+                </a>
+                <a
                     key={action.name}
                     href={action.href}
-                    className={`flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 ${action.primary;
+                    className={`flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 ${action.primary
                         ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white hover:from - cyan - 600 hover:to - blue - 600 shadow - lg shadow - cyan - 500 / 25';}
                         : 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';}
                     }`}    />
 
                     {action.icon}
-                    <span    />{action.name}</span>;
+                    <span    />{action.name}</span>
                   </Link>))}
-              </div>;
+              </div>
               {/* Contact Info */}
                   href={`mailto: ${contactInfo && contactInfo.email}
-}
-                  className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200'>;
-                  <Mail className='w-4 h-4'    />;
+
+                  className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200'>
+                  <Mail className='w-4 h-4'    />
                   <span className='hidden xl: inline'    />{contactInfo && contactInfo.emai}"
-}</span>                </a>              <div className=\"flex items-center gap-4 text-sm text-gray-400\"    />;
+}</span>                </a>              <div className=\"flex items-center gap-4 text-sm text-gray-400\"    />
                 <a href={`tel: ${contactInfo && contactInfo.mobile},"
 } className=\"flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200\"    />;"
                   <Phone className=\"w-4 h-4\"    />;"
                   <span className=\"hidden xl: inline\"    />{contactInfo && contactInfo.mobil}
-}</span>;
-                </a>;
+}</span>
+                </a>
                 <a href={`mailto: ${contactInfo && contactInfo.email},"
 } className=\"flex items-center gap-2 hover:text-purple-400 transition-colors duration-200\"    />;"
                   <Mail className=\"w-4 h-4\"    />;"
                   <span className=\"hidden xl: inline\"    />{contactInfo && contactInfo.emai}
-}</span>;
-              </div>;
+}</span>
+              </div>
             </div>;{/* Mobile Menu Button */}
-            <button;
+            <button
               onClick={() =    /> setIsOpen(!isOpen)}
-              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200';
+              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200'
               aria-label='Toggle mobile menu'>
 
               {isOpen ? (<X className='w-6 h-6'    />;}
@@ -814,12 +788,11 @@ initial={{ opacity: 0, y: 10, scale: 0.95 }
               aria-label=\"Toggle mobile menu\">
 "
               {isOpen ? <X className=\"w-6 h-6\"    /> : <Menu className=\"w-6 h-6\"    />}
-          </div>;
-        </div>;
-
+          </div>
+        </div>
         {/* Mobile Menu */}
-        <AnimatePresence>;
-          {isOpen && (;
+        <AnimatePresence>
+          {isOpen && (
             <motion&& motion.div'
                         item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :'
                         item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :'
@@ -830,7 +803,7 @@ initial={{ opacity: 0, y: 10, scale: 0.95 }
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
-                      <motion.div;
+                      <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -851,11 +824,11 @@ initial={{ opacity: 0, y: 10, scale: 0.95 }
                             </div>
                           </div>'
                           <div className='space-y-2'>
-                            {item.children?.map(child => (                              <Link;
+                            {item.children?.map(child => (                              <Link
                                 key={child.name}
                                 href={child.href}`
                                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${}
-                              <Link;
+                              <Link
                                 key={child.name}
 
                                 }`}
@@ -918,12 +891,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
         {/* Mobile Menu */}
-        <AnimatePresence    />;
+        <AnimatePresence    />
           {isOpen && (<motion.div;}
               initial={{ opacity: 0, height: 0 }
-}
+
               animate={{ opacity: 1, height: 'auto' }
-}
 
               exit={{ opacity: 0, height: 0 }}
 
@@ -935,20 +907,20 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
 
                   {/* Mobile Navigation Items */}
                   {navigationItems.map(item => (<div key={item.nam}
-}    />;
-                      <button;
+}    />
+                      <button
                         onClick={() =    /> toggleDropdown(item.name)}
                         className='flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white transition-colors duration-200'>
 
-                        <div className='flex items-center gap-3'    />;
+                        <div className='flex items-center gap-3'    />
                           {item.icon}
-                          <span    />{item.name}</span>;
-                          {item.badge && (<span;
-                              className={`px-2 py-1 text-xs rounded-full ${item.badge === 'New';
-                                  ? 'bg-green-500/20 text-green-400';
-                                  : item.badge === 'Hot';
-                                    ? 'bg-red-500/20 text-red-400';
-                                    : item.badge === 'Showcase';
+                          <span    />{item.name}</span>
+                          {item.badge && (<span
+                              className={`px-2 py-1 text-xs rounded-full ${item.badge === 'New'
+                                  ? 'bg-green-500/20 text-green-400'
+                                  : item.badge === 'Hot'
+                                    ? 'bg-red-500/20 text-red-400'
+                                    : item.badge === 'Showcase'
                                       ? 'bg-cyan-500/20 text-cyan-400';}
                                       : 'bg-gray-500/20 text-gray-400';}
                               }`}
@@ -964,35 +936,33 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
 `
                         />                      </button>                        <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${'
                           activeDropdown === item && item.name ? 'rotate-180' : ''`
-                        }`} />;
-                      </button>;
-
+                        }`} />
+                      </button>
                       {/* Mobile Dropdown */}
-                      <AnimatePresence>;
-                        {activeDropdown === item && item.name && (;
-
+                      <AnimatePresence>
+                        {activeDropdown === item && item.name && (
                                 key={child && child.name}
                                 href={child && child.href}`
                                 className={`block p-3 rounded-lg transition-colors duration-200 ${'
                                     : 'text-gray-400 hover:text-white hover:bg-gray-800/50'`
                                 }`}
                                 onClick={closeMobileMenu}>;'
-                                <div className='font-medium'>{child && child.name}</div>;
+                                <div className='font-medium'>{child && child.name}</div>
                                 {child && child.description && (;'
-                                  <div className='text-sm opacity-75 mt-1'>;
+                                  <div className='text-sm opacity-75 mt-1'>
                                     {child && child.description}"
-                                  </div>                                )}                                <div className="font-medium">{child && child.name}</div>;
+                                  </div>                                )}                                <div className="font-medium">{child && child.name}</div>
                                 {child && child.description && (;"
-                                  <div className="text-sm opacity-75 mt-1">{child && child.description}</div>;
+                                  <div className="text-sm opacity-75 mt-1">{child && child.description}</div>
 child.featured
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400'
                                     : 'text-gray-400 hover:text-white hover:bg-gray-800/50'}
-}
+
                                 }`}
                                 onClick={closeMobileMen}
-}
-                                  />;
-<div className='font-medium'    />{child.name}</div>;
+
+                                  />
+<div className='font-medium'    />{child.name}</div>
                                 {child.description && (<div className='text-sm opacity-75 mt-1'    />;}
                                     {child.description}
 
@@ -1001,13 +971,12 @@ child.featured
 
                               </Link>
 
-                              </Link>;
+                              </Link>
                             ))}
-                          </motion && motion.div>;
+                          </motion && motion.div>
                         )}
-                      </AnimatePresence>;
-                    </div>;
-
+                      </AnimatePresence>
+                    </div>
                   ))}
 
                   {/* Mobile Quick Actions */}
@@ -1017,25 +986,24 @@ child.featured
                         <Link;}
 key={action.name}
                           href={action.href}
-                        <Link;
+                        <Link
                           key={action && action.name}
                           href={action && action.href}
-                          className={`flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 ${action && action.primary;
+                          className={`flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 ${action && action.primary
                               ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white';}
                               : 'text-gray-300 hover:text-white hover:bg-gray-800/50';}
                           }`}
-                          onClick={closeMobileMenu}    />;
+                          onClick={closeMobileMenu}    />
                           {action && action.icon}
-                          <span    />{action && action.name}</span>;
-                        </Link>;
+                          <span    />{action && action.name}</span>
+                        </Link>
                       ))}
                   {/* Mobile Contact Info */}'
                   <div className='pt-4 border-t border-gray-800/50'>;'
-                    <div className='space-y-3 text-sm text-gray-400'>;
-
+                    <div className='space-y-3 text-sm text-gray-400'>
                         <span>{contactInfo.mobile}</span>
                       </a>
-                      <a;
+                      <a
 href={`mailto: ${contactInfo.email}`}
                         className='flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200'
                           />
@@ -1056,12 +1024,9 @@ href={`mailto: ${contactInfo.email}`}
       </div>
     </nav>
 )
-};
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-}, []);
 }
-;
+origin/cursor/automate-test-improve-and-merge-code-2533
+}, [])
 }, []);"
 </div> <div    /> <div className=\"text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent\"     /> Zion Tech Group </div> <div className=\"text - xs text - gray - 400\"     />Revolutionary Technology</div> </div> </a> > {}
   item.icon;}
@@ -1071,45 +1036,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   item.badge && (<span className= {
   `px - 2 py - 1 text - xs rounded - full $ {
   item.badge === 'New' ? 'bg - green - 500 / 20 text - green - 400 border border - green - 500 / 30' : item.badge === 'Hot' ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30' : item.badge === 'Showcase' ? 'bg - cyan - 500 / 20 text - cyan - 400 border border - cyan - 500 / 30' : item.badge === 'Future' ? 'bg - purple - 500 / 20 text - purple - 400 border border - purple - 500 / 30' : item.badge === 'Enterprise' ? 'bg - blue - 500 / 20 text - blue - 400 border border - blue - 500 / 30' : item.badge === 'Industry' ? 'bg - orange - 500 / 20 text - orange - 400 border border - orange - 500 / 30' : 'bg - gray - 500 / 20 text - gray - 400 border border - gray - 500 / 30';}
-}
-}`;
+
+}`
 }    /> {item.badge;}
 }</span>)}<ChevronDown className= {`w - 4 h - 4 transition - transform duration - 200 $ {active_dropdown === item.name ? 'rotate - 180' : '';}
-}`;
+}`
 }   /> </button> {/* Dropdown Menu */;}
 }<AnimatePresence    /> {active_dropdown === item.name && (<motion.div)}</div    /> </div> <Link key= {child.name;}
 }href= {child.href;}
-}className= {`flex items - center gap - 3 p - 3 rounded - xl transition - all duration - 200 $ {child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover:bg - cyan - 500 / 20': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';}
-}`;
+}className= {`flex items - center gap - 3 p - 3 rounded - xl transition - all duration - 200 $ {child.featured ? "bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover:bg - cyan - 500 / 20": "text - gray - 300 hover:text - white hover:bg - gray - 800 / 50";}
+}`
 }on_click= {close_dropdowns;}"
 }    />)}</div> <ArrowRight className=\"w - 4 h - 4 opacity - 50\"    /> </a>) )}</div> </div> </motion.div>)}</AnimatePresence> </div>) )}</div> <Link key= {action.name;}
 }href= {action.href;}
-}className= {`flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 $ {action.primary ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white hover:from - cyan - 600 hover:to - blue - 600 shadow - lg shadow - cyan - 500 / 25': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';}
-}`;
+}className= {`flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 $ {action.primary ? "bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white hover:from - cyan - 600 hover:to - blue - 600 shadow - lg shadow - cyan - 500 / 25": "text - gray - 300 hover:text - white hover:bg - gray - 800 / 50";}
+}`
 }    /> </a> </div> </div> {/* Mobile Menu Button */;}
 }<button </button    /> </div> </div> {/* Mobile Menu */;}
-}<AnimatePresence    /> <span className= {`px - 2 py - 1 text - xs rounded - full $ {item.badge === 'New'? 'bg - green - 500 / 20 text - green - 400': item.badge === 'Hot'? 'bg - red - 500 / 20 text - red - 400': item.badge === 'Showcase'? 'bg - cyan - 500 / 20 text - cyan - 400': 'bg - gray - 500 / 20 text - gray - 400';}
-}`;
+}<AnimatePresence    /> <span className= {`px - 2 py - 1 text - xs rounded - full $ {item.badge === 'New'? 'bg - green - 500 / 20 text - green - 400': item.badge === 'Hot'? 'bg - red - 500 / 20 text - red - 400': item.badge === 'Showcase'? "bg - cyan - 500 / 20 text - cyan - 400": "bg - gray - 500 / 20 text - gray - 400";}
+}`
 }    /> {item.badge;}
-}</span>)}</div> <ChevronDown className= {`w - 4 h - 4 transition - transform duration - 200 $ {active_dropdown === item.name ? 'rotate - 180': '';}
-}`;
+}</span>)}</div> <ChevronDown className= {`w - 4 h - 4 transition - transform duration - 200 $ {active_dropdown === item.name ? "rotate - 180": "";}
+}`
 }   /> </button> {/* Mobile Dropdown */;}
 }<AnimatePresence    /> > {item.children?.map ( (child) => (<Link key= {child.name;}
 }href= {child.href;}
-}className= {`block p - 3 rounded - lg transition - colors duration - 200 $ {child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 text - cyan - 400': 'text - gray - 400 hover:text - white hover:bg - gray - 800 / 50';}
-}`;
+}className= {`block p - 3 rounded - lg transition - colors duration - 200 $ {child.featured ? "bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 text - cyan - 400": "text - gray - 400 hover:text - white hover:bg - gray - 800 / 50";}
+}`
 }on_click= {closeMobileMenu;}
 }    />)}</a>) )}</motion.div>)}</AnimatePresence> </div>) )}<Link key= {action.name;}
 }href= {action.href;}
 }className = {}
 
-export default UltraFuturisticNavigation2035;
-}
-
-export default UltraFuturisticNavigation2035;
-
+export default UltraFuturisticNavigation2035
+export default UltraFuturisticNavigation2035
 export default UltraFuturisticNavigation2035;  )}
 
-export default UltraFuturisticNavigation2035;
+export default UltraFuturisticNavigation2035
 '"`
 

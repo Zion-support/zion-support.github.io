@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -13,6 +14,8 @@
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const fs = require('fs')
 const path = require('path')
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
 
@@ -61,6 +64,7 @@ console.log(' Enhanced Automation System Starting...')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -88,3 +92,7 @@ console.log(' Enhanced Automation System Starting...')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error('Automation system "failed")
+    console.error('Automation system "failed")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

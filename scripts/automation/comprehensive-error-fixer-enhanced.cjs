@@ -1,6 +1,4 @@
-
-#!/usr/bin/env node;
-
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
@@ -27,6 +25,7 @@ const glob = require('glob')
       const importRegex = /import\s+.*\s+from\s+['"]([^'')]
           "type"
           "description"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,3 +58,7 @@ const glob = require('glob')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+const backupPath = path.join(this.backupDir, path.basename(filePath) + "
+  const backupPath = path.join(this.backupDir, path.basename(filePath) + "
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

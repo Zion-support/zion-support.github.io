@@ -48,5 +48,4 @@ export default function BlockchainSolutionsPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

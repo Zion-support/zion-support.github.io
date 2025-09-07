@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -22,12 +21,12 @@ const { execSync } = require("child_process")
   this.log("� Ensuring we are on main branch...")
   const currentBranch = execSync("git branch --show-current")
   "encoding": "utf8"
-      if (currentBranch !== "main") {this.log("Switching from ${currentBranch} to main...")
+  if($2) {this.log("Switching from ${currentBranch} to main...")
         execSync("git checkout main", { "stdio": "inherit"})
   this.log("� Ensuring we are on main branch...")
   const currentBranch = execSync("git branch --show-current")
   "encoding": "utf8"
-      if (currentBranch !== "main") {this.log("Switching from ${currentBranch} to main...")
+  if($2) {this.log("Switching from ${currentBranch} to main...")
         execSync("git checkout main", { "stdio": "inherit"})
       this.log("Pulling latest changes from main...")
       execSync("git pull origin main", { "stdio": "inherit" })} catch (error) {  throw new Error("Failed to ensure main "branch": ${error.message  }")
@@ -138,6 +137,7 @@ this.log("� Detailed report saved "to": ${reportPath}")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -166,3 +166,7 @@ this.log("� Detailed report saved "to": ${reportPath}")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error(" Fatal "error")
+  console.error(" Fatal "error")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

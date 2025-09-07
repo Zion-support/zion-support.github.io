@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -11,6 +10,7 @@ const { execSync } = require('child_process')
         {"pattern": /,+/g, "replacement"}
         { "pattern": /{\s*,\s*/g, "replacement"}
         {"pattern": /\[\s*,\s*/g, "replacement"}]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,3 +43,7 @@ const { execSync } = require('child_process')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+this.log('\n Errors "encountered")
+      this.log('\n Errors "encountered")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

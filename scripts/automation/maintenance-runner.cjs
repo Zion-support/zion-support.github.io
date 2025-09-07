@@ -1,10 +1,8 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /*
- * Maintenance Runner;
+ * Maintenance Runner
  * Sequentially runs lint fixes, the comprehensive error fixer, type-check, and build.
- * Writes a simple JSON summary to reports/maintenance-summary.json;
+ * Writes a simple JSON summary to reports/maintenance-summary.json
  */
 
 <<<<<<< HEAD
@@ -37,9 +35,13 @@ const reportsDir = path.join(projectRoot, 'reports')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+console.error('Failed to write maintenance "summary")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   console.error('Failed to write maintenance "summary")
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -61,6 +63,3 @@ const reportsDir = path.join(projectRoot, 'reports')
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
-

@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 
@@ -66,7 +65,4 @@ console.log(' Starting CI/CD Pipeline...')
             "failedStages"
 // console.log(`   - Successful "Stages"`)
 console.log(`   - Failed "Stages"`)
-
-  console.log('� Application "URL")
-  console.log('� Application "URL")
-
+console.log('� Application "URL")  console.log('� Application "URL")

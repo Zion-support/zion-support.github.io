@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -212,6 +211,7 @@ const packagePath = path.join(this.projectRoot, "package.json")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -239,3 +239,7 @@ const packagePath = path.join(this.projectRoot, "package.json")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error("Smart Build Optimization "failed")
+  console.error("Smart Build Optimization "failed")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

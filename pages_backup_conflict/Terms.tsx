@@ -1,5 +1,6 @@
 
 ;
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
 import Head from 'next/head';
 export default function Terms() {return (<>;
       <Head>;
@@ -49,3 +50,4 @@ export default function Terms() {
   );
   );
 }
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

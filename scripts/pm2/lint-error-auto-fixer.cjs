@@ -1,6 +1,5 @@
-
-#!/usr/bin/env node;
-import { execSync, spawn } from;
+///usr/bin/env node
+import { execSync, spawn } from
   'child_process'
   'fs'
   'path'
@@ -20,22 +19,17 @@ import { execSync, spawn } from;
         warnings: this.parseLintOutput(output, 'warning')
     const lines = output.split('\\n')
           type: 'lint'
-
-  '
-#!/usr/bin/env node
-import { execSync, spawn } from;
-
+'
+///usr/bin/env node
+import { execSync, spawn } from
       console.log(')
-  ');
+  ')
       execSync(')
 
         const newContent = lines.join(')
     const varMatch = message.match(/'(.+?)
     if (line.includes('console.')
     if (message.includes('single quotes')
+lines[lineIndex] = line.replace(/"/g, ")      lines[lineIndex] = line.replace(/"/g, ")
 
       lines[lineIndex] = line.replace(/"/g, ")
-      lines[lineIndex] = line.replace(/"/g, ")
-
-      lines[lineIndex] = line.replace(/"/g, ")
-

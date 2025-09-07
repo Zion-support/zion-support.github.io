@@ -1,4 +1,10 @@
+//
+const fs = require("fs")
+const path = require("path")
+const exts = new Set([".js", ".jsx", ".ts", ".tsx"])
+//
 
+<<<<<<< HEAD
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const fs = require("fs");
@@ -20,24 +26,26 @@ const exts = new Set([".js", ".jsx", ".ts", ".tsx"]);
 #!/usr/bin/env node"
 const fs = require("fs");
 const path = require("path");
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const exts = new Set([".js", ".jsx", ".ts", ".tsx"]);"
-/**;
- * Returns true if the file should be processed;
- */;
+/**
+ * Returns true if the file should be processed
+ */
 function shouldProcess(filePath) {}
-  const ext = path.extname(filePath);
-  return exts.has(ext)};
-;
-/**;
- * Clean content by removing stray trailing apostrophes introduced at EOL;
+  const ext = path.extname(filePath)
+  return exts.has(ext)}
+/**
+ * Clean content by removing stray trailing apostrophes introduced at EOL
 function cleanContent(content) {}
-  // Line-level fixes;
+  // Line-level fixes
   const lines = content.split(/\r?\n/).map(line =>;)
-    line;
+    line
       // Remove a single trailing apostrophe after common closing tokens;"
-      .replace(/([)}\]>])\s*"\s*$/u, "$1");
-      .replace(/>\s*"\s*$/u, ">");
+      .replace(/([)}\]>])\s*"\s*$/u, "$1")
+      .replace(/>\s*"\s*$/u, ">")
       .replace(/^"\s*$/u, );"
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,10 +61,15 @@ function cleanContent(content) {}
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   let out = lines.join("\n");
+=======
+)
+  let out = lines.join("\n")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 "
   let out = lines.join("\n");"
-  // In-line fixes across the whole file;
+  // In-line fixes across the whole file
   out = out;"
+<<<<<<< HEAD
     // Comma followed by stray apostrophe (e.g., "Shield,");
     .replace(/,\s*"/g, ",");
     // Remove apostrophe after closing tokens if followed by punctuation or end;
@@ -102,6 +115,26 @@ function cleanContent(content) {}
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   return out};
+=======
+    // Comma followed by stray apostrophe (e.g., "Shield,")
+    .replace(/,\s*"/g, ",")
+    // Remove apostrophe after closing tokens if followed by punctuation or end
+    .replace(/([)}>])\s*"\s*(?=\s*["", ")}\]"]|\s*$)/g, "$1")
+    // "JSX": >"< to ><
+    .replace(/,\s*"/g, ",");"
+    // Remove apostrophe after closing tokens if followed by punctuation or end;"
+    .replace(/([)}>])\s*"\s*(?=\s*[, ")}\]"]|\s*$)/g, "$1")
+    // "JSX": >"< to ><;"
+
+  // In-line fixes across the whole file
+    // Remove apostrophe after closing tokens if followed by punctuation or end;"
+.replace(/([)}>])\s*"\s*(?=\s*[", ")}\]"]|\s*$)/g, "$1")
+    // "JSX": >"< to ><
+    .replace(/>\s*"\s*</g, "><")
+    .replace(/>\s*"\s*</g, "><");"
+
+  return out}
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 function walk(dir, files = []) {}"
   for (const entry of fs.readdirSync(dir, { "withFileTypes": true })) {}
   if (entry.name === "node_modules" || entry.name.startsWith(".git"));"
@@ -109,20 +142,20 @@ function walk(dir, files = []) {}"
     const p = path.join(dir, "entry.name);"
     if (entry.isDirectory()) {}"
   walk(p", files)} else if (shouldProcess(p)) {}"
-  files.push(p)};
-  };
-  return files};
+  files.push(p)}
+  }
+  return files}
 function $1() {}
-  const root = process.cwd();
-  const files = walk(root);
-  let changed = 0;
-  for (const f of files) {}
+  const root = process.cwd()
+  const files = walk(root)
+  let changed = 0
+  for($2) {}
   try {}"
   const original = fs.readFileSync(f, "utf8");"
-      const updated = cleanContent(original);
-      if (updated !== original) {}"
+      const updated = cleanContent(original)
+  if($2) {}"
 
-        changed += 1};
+        changed += 1}
     } catch (e) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,6 +165,7 @@ function $1() {}
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -189,3 +223,11 @@ if (require.main === module) {}
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+} catch (e) {}  // ignore file-level errors} catch (e) {}
+  // ignore file-level errors}
+  console.log(`Cleaned ${changed} files.`)}
+  if($2) {}
+  main()}
+  main()}
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

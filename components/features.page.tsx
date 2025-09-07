@@ -1,40 +1,8 @@
-
-
-import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
-
+import {Bot, Globe2, MonitorSmartphone} from 'lucide-react'
 export default function FeaturesPage() {
 
-import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
-
-  return (
-    <EnhancedLayout>;
-      <h1 className='text-2xl font-semibold'>Features</h1>;
-      <div className='mt-6 grid md:grid-cols-3 gap-6'>;
-        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
-          <Globe2 className='h-6 w-6 text-indigo-500' />;
-          <div className='mt-3 text-lg font-semibold'>Global Hiring</div>;
-
-          <p className='mt-1 text-sm opacity-80'>;
-            Source across timezones and markets with vetted profiles.;
-          </p>;'
-        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;'
-          <Bot className='h-6 w-6 text-indigo-500' />;'
-          <div className='mt-3 text-lg font-semibold'>AI Matching</div>;'
-          <p className='mt-1 text-sm opacity-80'>;
-            Instantly surface best-fit candidates for your role.;
-          </p>;
-        </div>;'
-        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;'
-          <MonitorSmartphone className='h-6 w-6 text-indigo-500' />;'
-          <div className='mt-3 text-lg font-semibold'>Mobile Milestones</div>;'
-          <p className='mt-1 text-sm opacity-80'>;
-            Track deliverables and approvals anywhere.;
-          </p>        </div>;
-      </div>;
-    </EnhancedLayout>;
-
- */
-function FeaturesPage() {}
+import {Bot, Globe2, MonitorSmartphone} from 'lucide-react'
+  return($2) {}
   return (
     <EnhancedLayout>;'
       <h1 className='text - 2xl font - semibold'>Features</h1>;'
@@ -42,40 +10,34 @@ function FeaturesPage() {}
         <div className='rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950'>;'
           <Globe2 className='h - 6 w - 6 text - indigo - 500' />;'
           <div className='mt - 3 text - lg font - semibold'>Global Hiring</div>;'
-          <p className='mt - 1 text - sm opacity - 80'>;
-            Source across timezones and markets with vetted profiles.;
+          <p className='mt - 1 text - sm opacity - 80'>
+            Source across timezones and markets with vetted profiles.
           </p>;'
         <div className='rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950'>;'
           <Bot className='h - 6 w - 6 text - indigo - 500' />;'
           <div className='mt - 3 text - lg font - semibold'>AI Matching</div>;'
-          <p className='mt - 1 text - sm opacity - 80'>;
-            Instantly surface best - fit candidates for your role.;
-          </p>;
+          <p className='mt - 1 text - sm opacity - 80'>
+            Instantly surface best - fit candidates for your role.
+          </p>
         </div>;'
         <div className='rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950'>;'
           <MonitorSmartphone className='h - 6 w - 6 text - indigo - 500' />;'
           <div className='mt - 3 text - lg font - semibold'>Mobile Milestones</div>;'
-          <p className='mt - 1 text - sm opacity - 80'>;
-            Track deliverables and approvals anywhere.;
-          </p>        </div>;
-      </div>;
-    </EnhancedLayout>);
+          <p className='mt - 1 text - sm opacity - 80'>
+            Track deliverables and approvals anywhere.
+          </p>        </div>
+      </div>
+    </EnhancedLayout>)
 }        <div className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950">;"
           <MonitorSmartphone className="h - 6 w - 6 text - indigo - 500" />;"
           <div className="mt - 3 text - lg font - semibold">Mobile Milestones</div>;"
-          <p className="mt - 1 text - sm opacity - 80">Track deliverables and approvals anywhere.</p>;
-      </div>;
-    </EnhancedLayout>);
-}
-
+          <p className="mt - 1 text - sm opacity - 80">Track deliverables and approvals anywhere.</p>
+      </div>
+    </EnhancedLayout>)
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
-  return (
-
-export default function FeaturesPage() {;
-  return (
-
-export default function FeaturesPage() {_return (
+  return($2) {
+  return($2) {_return (
 
     <EnhancedLayout>
       <h1 className="text-2xl font-semibold">Features</h1>
@@ -91,9 +53,8 @@ export default function FeaturesPage() {_return (
           <p className="mt-1 text-sm opacity-80">Instantly surface best-fit candidates for your role.</p>
         </div>
         <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
-
+import EnhancedLayout from '../components/layout/EnhancedLayout'
+import { Bot, Globe2, MonitorSmartphone } from 'lucide-react'
 export default function FeaturesPage() {
   return (
     <EnhancedLayout>
@@ -120,8 +81,8 @@ export default function FeaturesPage() {
           </p>
         </div>
       </div>
-    </EnhancedLayout>;
-  );
+    </EnhancedLayout>
+  )
 }        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <MonitorSmartphone className="h-6 w-6 text-indigo-500" />
           <div className="mt-3 text-lg font-semibold">Mobile Milestones</div>
@@ -129,9 +90,7 @@ export default function FeaturesPage() {
         </div>
       </div>
     </EnhancedLayout>
-  );
-}
-
+  )
 }        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <MonitorSmartphone className="h-6 w-6 text-indigo-500" />
           <div className="mt-3 text-lg font-semibold">Mobile Milestones</div>
@@ -139,14 +98,12 @@ export default function FeaturesPage() {
       </div>
     </EnhancedLayout>
 
-  );
-  );
-
-  );
-
+  )
+  )
+  )
 ursor/fix-website-loading-errors-and-merge-6662
 
-  );
-  );
+  )
+  )
 origin/cursor/automate-test-improve-and-merge-code-2533
 

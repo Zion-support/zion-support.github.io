@@ -1,18 +1,15 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
-/**;
- * PM2 Monitoring Dashboard for Zion Application;
- * Provides real-time monitoring of all PM2 processes;
- */;
-
+//
+/**
+ * PM2 Monitoring Dashboard for Zion Application
+ * Provides real-time monitoring of all PM2 processes
+ */
 const { exec } = require("$1")
 const fs = require("$1")
 const path = require("path")
     this.logsDir = "./logs"
 const { exec } = require("$1")
-const fs = require("$1")
-const path = require("path")"
+
+"
     this.logsDir = "./logs"
       exec("pm2 status --no-daemon")
       exec(pm2 logs ${processName} --lines ${lines} --nostream")
@@ -86,6 +83,7 @@ const path = require("path")"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -113,3 +111,7 @@ const path = require("path")"
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+process.on(")
+  process.on(")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

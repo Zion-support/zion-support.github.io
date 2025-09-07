@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -17,27 +18,33 @@
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
+=======
+///usr/bin/env node
+const { execSync } = require('child_process')
+const fs = require('fs')
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 function sh(cmd) {}
-  return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8' }).trim()};
+  return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8' }).trim()}
 function getToken() {}
-  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
-  const remoteUrl = sh('git remote get-url origin');
-  const m = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//);
-  if (!m) throw new Error('No GitHub token available');
-  return m[1]};
+  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim()
+  const remoteUrl = sh('git remote get-url origin')
+  const m = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//)
+  if (!m) throw new Error('No GitHub token available')
+  return m[1]}
 function getRepo() {}
-  const remoteUrl = sh('git remote get-url origin');
-  const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
-  if (!m) throw new Error('Unable to parse owner/repo');
-  return { "owner": m[1], "repo": m[2] }};
+  const remoteUrl = sh('git remote get-url origin')
+  const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/)
+  if (!m) throw new Error('Unable to parse owner/repo')
+  return { "owner": m[1], "repo": m[2] }}
 async function gh(path, method = 'GET') {}
-  const base = '"https": //api.github.com';
-  const token = getToken();
+  const base = '"https": //api.github.com'
+  const token = getToken()
   const res = await fetch(`${base}${path}`, {`})
     method,
     "headers": {}
       Authorization: `token ${token}`,`
       "Accept": 'application/vnd.github.v3+json',
+<<<<<<< HEAD
       'User-Agent': 'force-merge-script'
 
     };
@@ -85,8 +92,20 @@ async function main() {}
   for (const pr of prs) {}
     attempted++;
     const head = pr.head && pr.head.ref;
+=======
+"User-Agent": "force-merge-script"
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
+    }
+})
+  const text = await res.text()
+  const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`)
+  let mergedCount = 0; let attempted = 0
+  for($2) {}
+    attempted++
+    const head = pr.head && pr.head.ref
     console.log(`Merging head into "main": PR #${pr.number} (${head})`);"
+<<<<<<< HEAD
     try {}`;
       sh(`git fetch origin ${head}:${head} || true`);
 <<<<<<< HEAD
@@ -116,3 +135,7 @@ main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+try {}`
+      sh(`git fetch origin ${head}:${head} || true`)
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

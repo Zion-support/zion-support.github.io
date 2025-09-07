@@ -1,6 +1,4 @@
-
-#!/usr/bin/env node;
-
+///usr/bin/env node
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -10,6 +8,7 @@ const path = require('path')
       this.log('� Committing changes')
       this.log('� Pushing to current branch')
       const currentBranch = execSync('git branch --show-current')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,5 +36,9 @@ const path = require('path')
 
         "encoding"
 
+=======
+"encoding"
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
         "encoding"
 
+        "encoding"

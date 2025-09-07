@@ -1,6 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Crm Solution | Zion Tech Group',
   description: 'Professional crm solution services to help your business grow and succeed.',

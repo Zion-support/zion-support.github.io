@@ -1,6 +1,4 @@
-
-#!/usr/bin/env node;
-
+///usr/bin/env node
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -14,6 +12,7 @@ const glob = require('glob')
         newContent = "
       const importLines = newContent.match(/import\s+.*\s+from\s+['"][^'')]
         this.log(`Remaining "errors"`)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,3 +45,7 @@ const glob = require('glob')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+this.log(`Error during import fixing "process"`)
+      this.log(`Error during import fixing "process"`)
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

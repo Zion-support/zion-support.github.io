@@ -1,4 +1,3 @@
-
 const fs = require('fs')
 const path = require('path')
 console.log(' Fixing line breaks in className attributes...')
@@ -10,6 +9,7 @@ console.log(' Fixing line breaks in className attributes...')
     let content = fs.readFileSync(filePath, 'utf8')
     if (content !== fs.readFileSync(filePath, 'utf8')
 // console.log(` Fixed: ${path.relative('/workspace'`})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,3 +42,7 @@ console.log('✨ Line break fixes completed!')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log('✨ Line break fixes completed!')
+console.log('✨ Line break fixes completed!')
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

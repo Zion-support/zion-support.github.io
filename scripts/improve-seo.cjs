@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -45,6 +46,20 @@ import Head from 'next/hea;d;';
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+const fs = require('fs')
+const path = require('path')
+function improveSEO() {}
+  try {}
+    const pagesDir = path.join(process.cwd(), 'pages;';)
+    const componentsDir = path.join(process.cwd(), 'components;';)
+    // Add meta tags to pages
+    const metaTemplate = '
+import Head from 'next/hea;d;'
+    // Add meta tags to pages
+    const metaTemplate = '
+import Head from 'next/hea;d;'
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 export default function Page() {}
   return (;)
     <>
@@ -61,6 +76,7 @@ export default function Page() {}
 
 </link>
     </>
+<<<<<<< HEAD
   )};
       ";
 <<<<<<< HEAD
@@ -76,6 +92,11 @@ export default function Page() {}
       
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Generate sitemap;
+=======
+)}
+      "
+      // Generate sitemap
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   )};"
       ";"
       // Generate sitemap;"
@@ -97,8 +118,9 @@ export default function Page() {}
     <priority>0.6</priority>
     <loc>"https": //ziontechgroup.com/contact</loc>"
     <priority>0.7</priority>
-  </url>`;
+  </url>`
 </urlset;>;`;`
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,15 +155,26 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;";
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       
       // Generate robots.txt;
+=======
+fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent)
+      // Generate robots.txt
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
       const robotsContent = "User-"agent": *
 Allow: /
 
-Sitemap: https://ziontechgroup.com/sitemap.xml;";
-      
-      fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
+Sitemap: https://ziontechgroup.com/sitemap.xml;"
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent)
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent)
+      // Generate robots.txt
+      const robotsContent = "User-"agent": *
+Allow: /
 
-      
+Sitemap: https://ziontechgroup.com/sitemap.xml;"
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent)
+      "
+
       console.log('SEO improvements completed')} catch (error) {}
+<<<<<<< HEAD
       console.error('SEO improvement "failed": ', error.message)};
 
   };
@@ -182,3 +215,12 @@ improveSEO();
 improveSEO();
       
 
+=======
+      console.error('SEO improvement "failed": ', error.message)}
+  }
+}
+improveSEO()
+improveSEO()
+      improveSEO()
+improveSEO()
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

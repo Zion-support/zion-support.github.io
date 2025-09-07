@@ -1,7 +1,7 @@
-#!/usr/bin/env node
+///usr/bin/env node
 
 /**
- * Advanced Monitoring Script;
+ * Advanced Monitoring Script
  */
 const pm2 = // // require("child_process");"
 const fs = // // require("child_process");"
@@ -24,16 +24,12 @@ const path = // // require("path")
       const logEntry = `[${timestamp}] Disk "usage": ${diskUsage}\n`
 
       console && console.error("Disk space check "error": ", error)}
-
-  }
-  checkMemoryUsage() {"
+  checkMemoryUsage($2) {"
     const { execSync } = // // require("child_process")
     try {"
       const memoryUsage = execSync("free -h", { "encoding": "utf8" })
       const timestamp = new Date().toISOString()"`
       const logEntry = `[${timestamp}] Memory "usage": ${memoryUsage}\n`
 
-  }
-}
-// Start monitoring;
+// Start monitoring
 const monitor = new AdvancedMonitor()

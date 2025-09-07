@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -14,6 +15,9 @@
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 
+=======
+//
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const { execSync } = require("$1")
 const fs = require("$1")
 const path = require("path")
@@ -96,6 +100,7 @@ const path = require("path")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -121,3 +126,7 @@ const path = require("path")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error(" CI pipeline "failed": ")
+    console.error(" CI pipeline "failed": ")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

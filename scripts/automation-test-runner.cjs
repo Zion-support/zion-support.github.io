@@ -1,9 +1,7 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Automation Test Runner;
- * Tests all automation scripts and reports results;
+ * Automation Test Runner
+ * Tests all automation scripts and reports results
  */
 
 const fs = require('fs')
@@ -16,6 +14,7 @@ const { execSync } = require('child_process')
     const testScripts = [{ "path": 'scripts/health-check.cjs', "desc"}]
       { "path": 'scripts/simple-performance-monitor.cjs', "desc"}
       { "path": 'scripts/simple-code-quality.cjs', "desc"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,3 +47,7 @@ const { execSync } = require('child_process')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+"status"
+          "status"
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

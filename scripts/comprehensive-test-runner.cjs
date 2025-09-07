@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const { execSync } = require('child_process')
 console.log('🧪 Starting Comprehensive Test Runner...')
@@ -9,6 +8,7 @@ console.log('🧪 Starting Comprehensive Test Runner...')
     addTest('Unit Tests', 'skipped', 0, { "reason"})
     runCommand('PYTHONPATH="$(pwd)/zion_academy" python3 -m unittest discover -s zion_academy/tests -p "test_*.py"
     addTest('Python Unit Tests', 'skipped', 0, { "reason"})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,3 +41,7 @@ console.log('\n Test Results "Summary")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log('\n Test Results "Summary")
+console.log('\n Test Results "Summary")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

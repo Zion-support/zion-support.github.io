@@ -1,6 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Analytics Dashboard | Zion Tech Group',
   description: 'Professional analytics dashboard services to help your business grow and succeed.',

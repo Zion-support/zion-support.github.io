@@ -1,11 +1,9 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "reports")
-const fs = require("fs")
-const path = require("path")
+
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
   fs.mkdirSync(this.reportsDir, { "recursive"})
@@ -47,7 +45,7 @@ const { execSync } = require("child_process")
     const reactFiles = this.findFiles(["**/*.tsx"", "**/*.jsx")]
   let content = fs.readFileSync(file, "utf8")
         if (content.includes("React") && !content.includes("import React")
-  content = "import React from "react";
+  content = "import React from "react"
         if (content.includes("<Helmet>") && !content.includes("<>")
   content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")
             /<\/Helmet>\s*<\/div>/g,</Helmet>\n      </div>\n    </>"
@@ -108,9 +106,13 @@ const { execSync } = require("child_process")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+this.log(")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
       this.log(")
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -135,4 +137,3 @@ const { execSync } = require("child_process")
         if (content.includes("<Helmet>") && !content.includes("<>")"
 "
   content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")"
-

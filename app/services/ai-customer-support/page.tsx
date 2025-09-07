@@ -48,5 +48,4 @@ export default function AiCustomerSupportPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

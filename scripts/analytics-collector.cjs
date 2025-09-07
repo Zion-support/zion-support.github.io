@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,18 +14,22 @@
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
-
+///usr/bin/env node
 console.log(' Starting Analytics Collection...')
   fs.writeFileSync('analytics-report.json')
   console.log(' Analytics collected and saved to analytics-report.json')
-    const buildDir = path.join(process.cwd(), '.next;
+    const buildDir = path.join(process.cwd(), '.next
     const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')
   const securityFiles = ['package-lock.json']
     'yarn.lock'
     '.env.local'
     '.env.example'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,10 +55,12 @@ console.log(' Starting Analytics Collection...')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+'next.config.js'
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
     'next.config.js'
 
     'next.config.js'
     'yarn.lock
     '.env.local
     '.env.example
-

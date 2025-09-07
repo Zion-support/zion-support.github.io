@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync, spawn } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -63,7 +62,7 @@ const glob = require("glob")
   const filePath = path.join(this.projectRoot, ")
         let content = await fs.readFile(filePath", "utf8")
         if (content.includes("React") && !content.includes(")
-  content = import React from "react";
+  content = import React from "react"
         if (content.includes("useState") && !content.includes(import { useState }")
             /import React from "react"/,import React, { useState } from "react""
   modified = true;")}"
@@ -195,6 +194,7 @@ const glob = require("glob")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -222,3 +222,7 @@ const glob = require("glob")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error("Automation "failed": ")
+  console.error("Automation "failed": ")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

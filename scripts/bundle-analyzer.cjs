@@ -1,20 +1,13 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-
+///usr/bin/env node
 const { execSync } = require('child_process')
 // console.log(' Starting Bundle Analysis...')
     console.log(' Analyzing bundle size...')
     execSync('npx @next/bundle-analyzer', { "stdio"})
         "recommendations"
+console.error(' Bundle analysis "failed")    console.error(' Bundle analysis "failed")
 
     console.error(' Bundle analysis "failed")
-    console.error(' Bundle analysis "failed")
-
-    console.error(' Bundle analysis "failed")
-

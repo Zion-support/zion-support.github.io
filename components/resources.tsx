@@ -1,75 +1,39 @@
-
-import Link from 'next/link';
-export default function ResourcesPage() {}
+import React from 'react'
+import Link from 'next/link'
+export default function ResourcesPage() {
   return (
-
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {'
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}'
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Link from 'next/link';
-
-export default ResourcesPage;
-'
-              name: 'Market Pricing','
-              href: '/market - pricing','
-              blurb: 'Vendor links and typical budgets.',
-            },
-            {'
-              name: 'Services Advertising','
-              href: '/services - advertising','
-              blurb: 'Features, capabilities, and benefits.',
-            },
-            {'
-              name: 'Case Studies','
-              href: '/case - studies','
-              blurb: 'Proof of value and outcomes.',
-            },
-            {'
-              name: 'Developer Hub','
-              href: '/developer','
-              blurb: 'APIs, SDKs, and examples.',
-            },
-          ].map (it => (
-            <Link;
-              key={it.href}
-              href={it.href}'
-              className='p - 6 rounded - 2xl bg - black / 50 border border - gray - 800 hover:border - cyan - 500 / 50 transition - colors block';
-            >;'
-              <div className='text - sm text - gray - 400'>Resource</div>;'
-              <h3 className='text - xl font - semibold text - white'>{it.name}</h3>;'
-              <p className='mt - 1 text - gray - 300'>{it.blurb}</p>;'
-              <div className='mt - 3 text - cyan - 300'>Open →</div>            </Link>            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' }'
-            { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },'
-            { name: 'Market Pricing', href: '/market - pricing', blurb: 'Vendor links and typical budgets.' },'
-            { name: 'Services Advertising', href: '/services - advertising', blurb: 'Features, capabilities, and benefits.' }'
-            { name: 'Case Studies', href: '/case - studies', blurb: 'Proof of value and outcomes.' },'
-            { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
-
-        </div>;
-      </div>;
-    </UltraFuturisticBackground>));
-}
-;
-export default ResourcesPage;
-;
-
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-8">Resources</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <h2 className="text-xl font-semibold mb-4">Documentation</h2>
+            <p className="text-gray-300 mb-4">
+              Comprehensive guides and API documentation for all our services.
+            </p>
+            <Link href="/docs" className="text-blue-400 hover:text-blue-300">
+              View Documentation →
+            </Link>
+          </div>
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <h2 className="text-xl font-semibold mb-4">Tutorials</h2>
+            <p className="text-gray-300 mb-4">
+              Step-by-step tutorials to help you get started quickly.
+            </p>
+            <Link href="/tutorials" className="text-blue-400 hover:text-blue-300">
+              Browse Tutorials →
+            </Link>
+          </div>
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <h2 className="text-xl font-semibold mb-4">Support</h2>
+            <p className="text-gray-300 mb-4">
+              Get help from our support team and community.
+            </p>
+            <Link href="/support" className="text-blue-400 hover:text-blue-300">
+              Contact Support →
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  )

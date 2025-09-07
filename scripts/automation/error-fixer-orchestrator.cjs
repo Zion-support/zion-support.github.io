@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -36,6 +35,7 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -63,3 +63,7 @@ const { execSync } = require('child_process')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+this.log(`Error processing fixer "queue"`)
+      this.log(`Error processing fixer "queue"`)
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

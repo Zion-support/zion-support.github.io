@@ -1,8 +1,6 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Fix Team Page - Targeted fix for team.tsx;
+ * Fix Team Page - Targeted fix for team.tsx
  */
 
 <<<<<<< HEAD
@@ -110,6 +108,7 @@ const fs = require('fs')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -135,3 +134,7 @@ const fs = require('fs')
 
 const fs = require('fs')
 
+=======
+"transition"
+              "transition"
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

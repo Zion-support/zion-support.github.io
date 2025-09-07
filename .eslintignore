@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 pages.broken/**
 pages.corrupted.*/**
 pages.disabled/**
@@ -13,8 +17,12 @@ services/**
 *.cjs
 *.mjs
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 <<<<<<< HEAD
 src
 src.disabled
@@ -188,8 +196,11 @@ automation/**
 backup-problematic-files/**
 >>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
+=======
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 =======
 pages.broken/**
 pages.corrupted.*/**
@@ -204,4 +215,10 @@ services/**
 *.cjs
 *.mjs
 >>>>>>> cursor/integrate-build-improve-and-re-verify-3ee7
+<<<<<<< HEAD
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

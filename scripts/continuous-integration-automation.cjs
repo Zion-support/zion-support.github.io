@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -14,6 +15,9 @@
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 
+=======
+//
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -34,6 +38,7 @@ const path = require('path')
       "type"
       "message"
       console.log('\n FAILED "STEPS")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,3 +71,7 @@ const path = require('path')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+this.log(`� CI automation "failed"`)
+      this.log(`� CI automation "failed"`)
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

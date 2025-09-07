@@ -1,22 +1,22 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Server, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Smartphone, 
-  Globe, 
-  Lock, 
-  CheckCircle, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  DollarSign, 
-  Clock, 
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import {
+  Server,
+  Shield,
+  Cloud,
+  Database,
+  Smartphone,
+  Globe,
+  Lock,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  DollarSign,
+  Clock,
   Award,
   Users,
   Building,
@@ -32,14 +32,12 @@ import {
   Wifi,
   HardDrive,
   Network
-} from 'lucide-react';
-
+} from 'lucide-react'
 const contactInfo = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
-};
-
+}
 const itServices = [
   {
     id: 1,
@@ -272,9 +270,8 @@ const itServices = [
     targetUsers: 'C-Level Executives, IT Directors, Business Owners',
     roi: '200-400%',
     popular: false
-  }
-];
 
+]
 const industries = [
   {
     title: "Healthcare & Medical",
@@ -311,9 +308,8 @@ const industries = [
     description: "Secure, compliant IT solutions for government agencies and public organizations",
     icon: "🏛️",
     useCases: ["Citizen services", "Document management", "Security compliance", "Digital transformation"]
-  }
-];
 
+]
 export default function ITServicesPage() {
   return (
     <>
@@ -323,7 +319,7 @@ export default function ITServicesPage() {
         <meta name="keywords" content="IT services, cloud migration, cybersecurity, network management, DevOps, IT consulting, infrastructure, managed services" />
         <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Head>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20">
@@ -338,17 +334,17 @@ export default function ITServicesPage() {
                 IT Services & Solutions
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100">
-                Comprehensive IT services to modernize your infrastructure, enhance security, and drive digital transformation. 
+                Comprehensive IT services to modernize your infrastructure, enhance security, and drive digital transformation.
                 From cloud migration to cybersecurity, we deliver enterprise-grade solutions at competitive prices.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   href="/contact"
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
                 >
                   Get IT Consultation
                 </Link>
-                <a 
+                <a
                   href={`tel:${contactInfo.phone}`}
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
                 >
@@ -394,7 +390,7 @@ export default function ITServicesPage() {
                       Popular
                     </div>
                   )}
-                  
+
                   <div className="flex items-center mb-4">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                       <service.icon className="w-8 h-8 text-blue-600" />
@@ -407,9 +403,9 @@ export default function ITServicesPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  
+
                   <div className="mb-4">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-2xl font-bold text-blue-600">{service.price}</span>
@@ -572,7 +568,7 @@ export default function ITServicesPage() {
                   icon: Clock,
                   title: "24/7 Support",
                   description: "Round-the-clock monitoring and support services"
-                }
+
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -606,24 +602,24 @@ export default function ITServicesPage() {
                 Ready to Modernize Your IT Infrastructure?
               </h2>
               <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                Transform your technology infrastructure with our comprehensive IT services. From cloud migration to cybersecurity, 
+                Transform your technology infrastructure with our comprehensive IT services. From cloud migration to cybersecurity,
                 we'll help you build a robust, secure, and scalable IT environment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Link 
+                <Link
                   href="/contact"
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
                 >
                   Get IT Assessment
                 </Link>
-                <a 
+                <a
                   href={`tel:${contactInfo.phone}`}
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
                 >
                   Call {contactInfo.phone}
                 </a>
               </div>
-              
+
               {/* Contact Information */}
               <div className="grid md:grid-cols-3 gap-8 mt-12">
                 <div className="flex items-center justify-center">
@@ -644,5 +640,4 @@ export default function ITServicesPage() {
         </section>
       </div>
     </>
-  );
-}
+  )

@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 console.log(' Starting comprehensive syntax error fixing...')
@@ -33,6 +32,7 @@ console.log(' Starting comprehensive syntax error fixing...')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -60,3 +60,7 @@ console.log(")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log(")
+console.log(")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

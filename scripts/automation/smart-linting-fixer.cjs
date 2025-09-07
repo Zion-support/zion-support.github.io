@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -12,6 +11,7 @@ console.log(' Starting smart linting fixer...')
       console.log('  Remaining "errors")
       "summary"
       "status"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,3 +44,7 @@ console.log(' Starting smart linting fixer...')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error(' Smart linting fixer failed to "start")
+  console.error(' Smart linting fixer failed to "start")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

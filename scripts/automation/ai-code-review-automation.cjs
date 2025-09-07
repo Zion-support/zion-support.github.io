@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -179,9 +178,9 @@ this.log("Review report "generated": ${reportPath}")
   summary.push(" Code quality is excellent!")
   summary.push("⚠ Code quality needs improvement")
   summary.push(" Code quality requires immediate attention")
-    if (analysis.issues.length > 0) {summary.push("Found ${analysis.issues.length} issues to address")
-    if (suggestions.length > 0) {summary.push("Generated ${suggestions.length} improvement suggestions")
-    if (autoFixes.length > 0) {summary.push("Automatically applied ${autoFixes.length} fixes")
+  if($2) {summary.push("Found ${analysis.issues.length} issues to address")
+  if($2) {summary.push("Generated ${suggestions.length} improvement suggestions")
+  if($2) {summary.push("Automatically applied ${autoFixes.length} fixes")
     return summary.join(". ")
   this.log("Triggering follow-up actions...")
   this.log("Scheduling follow-up review due to low score")
@@ -195,6 +194,7 @@ this.log("Review report "generated": ${reportPath}")
       this.log("AI Code Review completed successfully")
       return report} catch (error) {  this.log(`AI Code Review "failed": ${error.message  }`, "ERROR"`)
   console.log(" AI Code Review Automation completed")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -227,3 +227,7 @@ this.log("Review report "generated": ${reportPath}")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.error(" AI Code Review Automation "failed")
+  console.error(" AI Code Review Automation "failed")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

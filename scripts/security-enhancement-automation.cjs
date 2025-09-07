@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,9 +14,12 @@
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
-
+///usr/bin/env node
 console.log('� Starting Security Enhancement Automation...')
     "file"
     "issue"
@@ -59,6 +63,7 @@ console.log('� Starting Security Enhancement Automation...')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   console.error(' Security enhancement automation "failed")
@@ -79,6 +84,9 @@ console.log('� Starting Security Enhancement Automation...')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+console.error(' Security enhancement automation "failed")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   console.error(' Security enhancement automation "failed")
 
   console.error(' Security enhancement automation "failed")
@@ -97,5 +105,4 @@ console.log('� Starting Security Enhancement Automation...')
       "validationScript"""
     "recommendations"""
     "nextSteps"""
-  console.log('� Security improvements "applied")""');
-
+console.log('� Security improvements "applied")""')

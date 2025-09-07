@@ -1,22 +1,19 @@
-import React from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import Footer from './Footer';
-
+import React from 'react'
+import Head from 'next/head'
+import Header from './Header'
+import Footer from './Footer'
 interface MainLayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-  type?: string;
-  image?: string;
-  url?: string;
-}
-
-export default function MainLayout({ 
+  children: React.ReactNode
+  title?: string
+  description?: string
+  keywords?: string
+  canonical?: string
+  noindex?: boolean
+  nofollow?: boolean
+  type?: string
+  image?: string
+  url?: string
+export default function MainLayout({
   children,
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading technology solutions provider specializing in web development, mobile applications, AI integration, and cloud services.',
@@ -58,5 +55,4 @@ export default function MainLayout({
         <Footer />
       </div>
     </>
-  );
-}
+  )

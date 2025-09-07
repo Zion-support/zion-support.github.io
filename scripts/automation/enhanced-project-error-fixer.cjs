@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -107,7 +106,7 @@ const glob = require("glob")
             !content.includes("import * as React")
               content.includes("export default")
               content.includes("export {"})
-  content = "import React from "react";
+  content = "import React from "react"
             file.endsWith(".ts")
             content.includes("<")
             content.includes(">")
@@ -141,7 +140,7 @@ const glob = require("glob")
             content.includes("<")
             !content.includes("import React")
             !content.includes("import * as React")
-  content = import React from "react";
+  content = import React from "react"
             /<>\s*<\/>/g,<React.Fragment></React.Fragment>"
             "className={$1}"
             this.fixesApplied.push(""FIXED_REACT")
@@ -204,6 +203,7 @@ const glob = require("glob")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -231,3 +231,7 @@ const glob = require("glob")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+this.log("Remaining "errors": ")
+  this.log("Remaining "errors": ")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

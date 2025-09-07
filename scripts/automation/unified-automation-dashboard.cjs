@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -84,7 +83,7 @@ this.log("Dashboard generated successfully at ${htmlPath}")
       reports["console-error-fixer"]
       reports["console-error-fixer"]
   actions.push(Review and remove console.log statements from production code")
-  generateHTMLDashboard(dashboard) {return "}
+  generateHTMLDashboard($2) {return "}
 <html lang="
     <meta name=viewport content=width=device-width, initial-scale=1.0"
     <script src=""https": //cdn.tailwindcss.com"
@@ -227,6 +226,7 @@ this.log("Dashboard generated successfully at ${htmlPath}")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -254,3 +254,7 @@ this.log("Dashboard generated successfully at ${htmlPath}")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

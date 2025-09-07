@@ -133,7 +133,6 @@ const heroStats = [
 
         {/* Enhanced Hero Section 2026 */}
         <UltraAdvancedHero2026V2 />
-=======
     <UltraFuturisticBackground2029>
       <Head>
         <title>Zion Tech Group - 2029 Revolutionary Technology Services | AI, Quantum Computing, Space Tech</title>
@@ -193,7 +192,6 @@ const heroStats = [
         {/* Hero Section */}
         <UltraFuturisticHero2029 />
 
-=======
       {/* Main Content */}
       <main id="main-content" className="min-h-screen bg-black text-white">
         {/* Hero Section with Enhanced Background */}
@@ -342,7 +340,6 @@ const heroStats = [
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3264
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -458,7 +455,6 @@ const heroStats = [
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
           </div>
         </section>
 

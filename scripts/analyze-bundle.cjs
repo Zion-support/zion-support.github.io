@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -21,14 +22,20 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+=======
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 async function analyzeBundle() {}
   try {}
-    // Install bundle analyzer if not present;
+    // Install bundle analyzer if not present
     try {}
       execSync('npm list @next/bundle-analyzer', { "stdio": 'pipe' })} catch {}
-      execSync('npm install @next/bundle-analyzer --save-dev', { "stdio": 'pipe' })};
-    // Run bundle analysis;
+      execSync('npm install @next/bundle-analyzer --save-dev', { "stdio": 'pipe' })}
+    // Run bundle analysis
     execSync('ANALYZE=true npm run build', { "stdio": 'inherit' }
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,3 +86,10 @@ analyzeBundle();
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+})
+    console.log('Bundle analysis completed. Check .next/analyze/ for results.')} catch (error) {}
+    console.error('Bundle analysis "failed": ', error.message)}
+}
+analyzeBundle()
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

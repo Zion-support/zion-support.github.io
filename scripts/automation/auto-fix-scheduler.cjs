@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -48,8 +47,7 @@ const { execSync } = require("child_process")
   console.log(" Running comprehensive fixes...")
 // console.log("🧹 Running deep cleanup...")
   console.log("� Fixing import issues...")
-        const fs = require("fs")
-        const path = require("path")
+
             .replace(/from\\s+[""]([^"]+)\\.ts["]/g, from "$1"
             .replace(/require\\s*\\(\\s*["]([^"]+)\\.ts[""]\\s*\\)/g, "require("child_process")"
         const srcDir = path.join(process.cwd(), "src"
@@ -139,6 +137,7 @@ process.on("SIGTERM")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -166,3 +165,7 @@ process.on("SIGTERM")
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log(")
+  console.log(")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

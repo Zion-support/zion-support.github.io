@@ -1,11 +1,9 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
       this.projectRoot,merge-conflict-resolver-report.json"
-const fs = require("fs")
-const path = require("path")
+
 const { execSync } = require("child_process")
       this.projectRoot,merge-conflict-resolver-report.json"
   this.log(" Starting Merge Conflict Resolver...")
@@ -70,7 +68,7 @@ const { execSync } = require("child_process")
         .split("\n")
         .filter(line => line.length > 0)} catch (error) {  this.log(" Could not check git "status": ${error.message  }")
         line => line.startsWith("M ") || line.startsWith("A ")
-      if (resolvedFiles.length > 0) {this.log("� Committing ${resolvedFiles.length} resolved files...")
+  if($2) {this.log("� Committing ${resolvedFiles.length} resolved files...")
 const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files resolved";execSync("git commit -m ${message}"", { "stdio": "pipe"})
         this.log(" Conflicts committed successfully")
     } catch (error) {  this.log(" Could not commit resolved "conflicts": ${error.message  }")
@@ -89,6 +87,7 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
       "logFile"
   process.on("SIGINT")
   process.on("SIGINT")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -121,3 +120,7 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+process.on(")
+  process.on(")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

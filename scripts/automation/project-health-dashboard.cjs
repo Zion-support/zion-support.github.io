@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -137,7 +136,7 @@ const { execSync } = require("child_process")
       "issues"
       const srcPath = path.join(this.projectRoot, "src")
   health.issues.push(Found ${corrupted.length} corrupted source files")
-      if (backupFiles.length > 0) {health.issues.push(`Found ${backupFiles.length} backup files``)
+  if($2) {health.issues.push(`Found ${backupFiles.length} backup files``)
   health.status = "HEALTHY"
   health.status = "CRITICAL"
   health.status = "WARNING"
@@ -310,9 +309,13 @@ this.log("Summary report "generated": ${summaryFile}")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -342,4 +345,3 @@ this.log("Summary report "generated": ${summaryFile}")
                     <span class="
                     <span>Total "Dependencies
 </span>"
-

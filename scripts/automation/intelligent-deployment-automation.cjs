@@ -1,10 +1,8 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Intelligent Deployment Automation;
- * Advanced deployment system with blue-green, canary, and rollback capabilities;
- * Features: Automated testing, health checks, gradual rollouts, intelligent rollbacks;
+ * Intelligent Deployment Automation
+ * Advanced deployment system with blue-green, canary, and rollback capabilities
+ * Features: Automated testing, health checks, gradual rollouts, intelligent rollbacks
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,6 +131,7 @@ const http = require('http')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -160,3 +159,7 @@ const http = require('http')
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+this.log(` Fatal error: ${error.message}`, 'ERROR'`)
+      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

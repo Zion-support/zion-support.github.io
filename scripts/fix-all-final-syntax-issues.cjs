@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -17,6 +18,9 @@
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
 // console.log(' Fixing All Final Syntax Issues...')
@@ -54,6 +58,7 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
             <p style={{ "fontSize": '1.125rem', "color": '#94a3b8', "marginBottom": '2rem', "maxWidth": '600px', "margin"}
             <div style={{ "display": 'flex', "gap": '1rem', "justifyContent": 'center', "flexWrap"}
               <Link href="/careers" style={{ "background": 'linear-gradient(135deg, #3b82f6, #8b5cf6)', "color": 'white', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "transition"}
+<<<<<<< HEAD
               <Link href="/contact" style={{ "background": 'transparent', "color": '#3b82f6', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "border": '2px solid #3b82f6', "transition"}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,3 +74,6 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+              <Link href="/contact" style={{ "background": 'transparent', "color": '#3b82f6', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "border": '2px solid #3b82f6', "transition"}
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
