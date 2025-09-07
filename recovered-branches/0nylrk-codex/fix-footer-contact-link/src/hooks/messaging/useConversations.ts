@@ -1,49 +1,237 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
-import { UserProfile, UserDetails  } from '@/types/auth';''
-import { supabase  } from '@/integrations/supabase/client';''
-import { Conversation, ConversationContextData  } from '@/types/messaging';''
-import { toast } from '@/hooks/use-toast';''
-import {UserProfile, UserDetails} from '@/types/auth';''
-import {supabase} from '@/integrations/supabase/client';''
-import {Conversation, ConversationContextData} from '@/types/messaging';''
-import {toast} from '@/hooks/use-toast';'
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { supabase  } from '@/integrations/supabase/client';
+import { Conversation, ConversationContextData  } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import {UserProfile, UserDetails} from '@/types/auth';
+import {supabase} from '@/integrations/supabase/client';
+import {Conversation, ConversationContextData} from '@/types/messaging';
+import {toast} from '@/hooks/use-toast';
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+// Allow either UserProfile or UserDetails
+=======
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { supabase  } from '@/integrations/supabase/client';
+import { Conversation, ConversationContextData  } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+<<<<<<< HEAD
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { supabase  } from '@/integrations/supabase/client';
+import { Conversation, ConversationContextData  } from '@/types/messaging';
+<<<<<<< HEAD
+import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { toast } from '@/hooks/use-toast';
+import {UserProfile, UserDetails} from '@/types/auth';
+import {supabase} from '@/integrations/supabase/client';
+import {Conversation, ConversationContextData} from '@/types/messaging';
+import {toast} from '@/hooks/use-toast';
+
+
+// Allow either UserProfile or UserDetails
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+type UserWithProfile = UserProfile | UserDetails | null;
+/**
+ * Hook to handle conversation operations
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+ */
+<<<<<<< HEAD
+<<<<<<< HEAD
+export function useConversations(
+<<<<<<< HEAD
+=======
+=======
+import {UserProfile, UserDetails} from '@/types / auth';
+import {supabase} from '@/integrations / supabase / client';
+import {Conversation, ConversationContextData} from '@/types / messaging';
+import {toast} from '@/hooks / use - toast';
+// Allow either UserProfile or UserDetails;
+type UserWithProfile = UserProfile | UserDetails | null;
+;
+/**;
+* Hook to handle conversation operations;
+*/;
+export function use_conversations (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { UserProfile, UserDetails  } from '@/types/auth';'
+import { supabase  } from '@/integrations/supabase/client';'
+import { Conversation, ConversationContextData  } from '@/types/messaging';'
+import { toast } from '@/hooks/use-toast';
+'
+import {UserProfile, UserDetails} from '@/types/auth';'
+import {supabase} from '@/integrations/supabase/client';'
+import {Conversation, ConversationContextData} from '@/types/messaging';'
+import {toast} from '@/hooks/use-toast';
+
+
+
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle conversation operations;
  */
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  user: UserWithProfile;
+=======
+ */  user: UserWithProfile;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ */  user: UserWithProfile;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ */
 export function useConversations(
-  user: UserWithProfile;,)
-  set_conversations: (conversations: Conversation[]) => void;,
+  user: UserWithProfile;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  set_conversations: (conversations: Conversation[]) => void;
   setUnreadCount: (count: number) => void;
       if (error) throw error;
-      // Format conversations;
+<<<<<<< HEAD
+      // Format conversations
+
       const formattedConversations: Conversation[] = data && data.map(conv => {
         const isUserOne = conv && conv.user_one_id === user && user.id;
-        const otherUserId = isUserOne ? conv && conv.user_two_id: conv && conv.user_one_id;,)
+        const otherUserId = isUserOne ? conv && conv.user_two_id : conv && conv.user_one_id;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        
+
+<<<<<<< HEAD
+=======
+=======
+=======
+        .or(`user_one_id && user_one_id.eq.${user && user.id},user_two_id && user_two_id.eq.${user && user.id}`);
+      if (error) throw error;
+      // Format conversations
+      const formattedConversations: Conversation[] = data && data.map(conv => {
+        const isUserOne = conv && conv.user_one_id === user && user.id;
+        const otherUserId = isUserOne ? conv && conv.user_two_id : conv && conv.user_one_id;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  setIsLoading: (loading: boolean) => void) {
+=======
+      // Format conversations;
+  setIsLoading: (loading: boolean) => void) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  /**;
+  * Fetch conversations for the current user;
+  */;
+  const fetch_conversations = async () => {}
+    // Check condition;
+if (return) {}
+  $2;
+}
+    setIsLoading (true),
+    try {}
+      // Fetch conversations from the database;
+      const { data, error } = await supabase;'
+        .from ('conversations');'
+        .select ('*');
+        .or (`user_one_id.eq.${user.id}, user_two_id.eq.${user.id}`);
+;
+      // Check condition;
+if (throw error) {}
+  $2;
+}
+      // Format conversations;
+      const formatted_conversations: Conversation[] = data.map (conv => {}
+        const isUserOne = conv.user_one_id === user.id;
+        const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id;
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+        return {
+=======
+        return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          id: conv && conv.id;
+          user_id: otherUserId;
+          other_user: {}
+            id: otherUserId;
+
+
+
+          }
+=======
+                  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+                  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        
+
   setIsLoading: (loading: boolean) => void) {
   /**;
   * Fetch conversations for the current user;
   */;
   const fetch_conversations = async () => {
-    // Check condition;
+    // Check condition
 if (return) {
-  $2;
+  $2
 }
     setIsLoading (true),
     try {
-  // TODO: Implement
-}
       // Fetch conversations from the database;
-      const { data, error } = await supabase;'
-        .from ('conversations');''
-        .select ('*');'
+      const { data, error } = await supabase;
+        .from ('conversations');
+        .select ('*');
         .or (`user_one_id.eq.${user.id}, user_two_id.eq.${user.id}`);
 ;
-      // Check condition;
+      // Check condition
 if (throw error) {
-  $2;
+  $2
 }
       // Format conversations;
       const formatted_conversations: Conversation[] = data.map (conv => {
@@ -51,145 +239,300 @@ if (throw error) {
         const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id;
 ;
         return {
-  // TODO: Implement
-}
-          id: conv && conv.id;,
-  user_id: otherUserId;
-          other_user: {,
-  id: otherUserId;
+          id: conv && conv.id;
+          user_id: otherUserId;
+          other_user: {
+            id: otherUserId;
 
             avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,
             user_type: isUserOne ? conv.user_two_type : conv.user_one_type;
 
           }
-          name: isUserOne ? conv.user_two_name : conv.user_one_name;,
-  avatar_url: isUserOne ? conv.user_two_avatar: conv.user_one_avatar;,
-  last_message: conv.last_message ? {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+          name: isUserOne ? conv.user_two_name : conv.user_one_name;
+          avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar;
+<<<<<<< HEAD
+          last_message: conv.last_message ? {
 
             content: conv.last_message,
             created_at: conv.last_message_time;
 
           } : undefined;
-          updated_at: conv.updated_at |conv.created_at;,
-  unread_count: conv.unread_count |0;
-          context_type: conv.context_type;,
-  name: isUserOne ? conv && conv.user_two_name: conv && conv.user_one_name;,
-  avatar_url: isUserOne ? conv && conv.user_two_avatar : conv && conv.user_one_avatar,
+          updated_at: conv.updated_at |conv.created_at;
+          unread_count: conv.unread_count |0;
+          context_type: conv.context_type;
+
+            name: isUserOne ? conv && conv.user_two_name : conv && conv.user_one_name;
+            avatar_url: isUserOne ? conv && conv.user_two_avatar : conv && conv.user_one_avatar,
+            user_type: isUserOne ? conv && conv.user_two_type : conv && conv.user_one_type
+          };
+          name: isUserOne ? conv && conv.user_two_name : conv && conv.user_one_name;
+          avatar_url: isUserOne ? conv && conv.user_two_avatar : conv && conv.user_one_avatar;
+          last_message: conv && conv.last_message ? {
+            content: conv && conv.last_message,
+            created_at: conv && conv.last_message_time
+          } : undefined;
+          updated_at: conv && conv.updated_at || conv && conv.created_at;
+          unread_count: conv && conv.unread_count || 0;
+          context_type: conv && conv.context_type;
+          context_id: conv && conv.context_id,
+          context_data: conv && conv.context_data
+
+        }
+      });
+      setConversations(formattedConversations);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      // Calculate total unread count
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      // Calculate total unread count
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+      const totalUnread = formattedConversations && formattedConversations.reduce(
+        (total, conv) => total + (conv && conv.unread_count || 0), 
+
+<<<<<<< HEAD
+=======
+      const totalUnread = formattedConversations && formattedConversations.reduce(
+        (total, conv) => total + (conv && conv.unread_count || 0), 
+      const totalUnread = formattedConversations.reduce(
+        (total, conv) => total + (conv.unread_count |0)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        0
+=======
+          last_message: conv.last_message ? {}
+          } : undefined;
+          updated_at: conv.updated_at |conv.created_at;
+          unread_count: conv.unread_count |0;
+          context_type: conv.context_type;
+
+            name: isUserOne ? conv && conv.user_two_name : conv && conv.user_one_name;
+            avatar_url: isUserOne ? conv && conv.user_two_avatar : conv && conv.user_one_avatar,
             user_type: isUserOne ? conv && conv.user_two_type : conv && conv.user_one_type;
           };
-          name: isUserOne ? conv && conv.user_two_name : conv && conv.user_one_name;,
-  avatar_url: isUserOne ? conv && conv.user_two_avatar: conv && conv.user_one_avatar;,
-  last_message: conv && conv.last_message ? {
+          name: isUserOne ? conv && conv.user_two_name : conv && conv.user_one_name;
+          avatar_url: isUserOne ? conv && conv.user_two_avatar : conv && conv.user_one_avatar;
+          last_message: conv && conv.last_message ? {}
             content: conv && conv.last_message,
             created_at: conv && conv.last_message_time;
           } : undefined;
-          updated_at: conv && conv.updated_at || conv && conv.created_at;,
-  unread_count: conv && conv.unread_count || 0;
-          context_type: conv && conv.context_type;,
-  context_id: conv && conv.context_id,
+          updated_at: conv && conv.updated_at || conv && conv.created_at;
+          unread_count: conv && conv.unread_count || 0;
+          context_type: conv && conv.context_type;
+          context_id: conv && conv.context_id,
           context_data: conv && conv.context_data;
-        })
+        }
       });
       setConversations(formattedConversations);
       // Calculate total unread count;
-      const totalUnread = formattedConversations && formattedConversations.reduce()
-        (total, conv) => total + (conv && conv.unread_count || 0), 
-
         0;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       );
       setUnreadCount(totalUnread)
-    } catch (error) {'
-      console && console.error('Error fetching conversations:', error)'
+    } catch (error) {}
+    } finally {}
+=======
+        0
+      );
+      setUnreadCount(totalUnread)
+    } catch (error) {
+      console && console.error('Error fetching conversations:', error)
     } finally {
-  // TODO: Implement
-}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsLoading (false);
     }
   }
 
+<<<<<<< HEAD
+
+
+    try {}
+      // Check if conversation already exists;
+      const { data: existingConversations, error: fetchError } = await supabase'
+        .from('conversations')'
+        .select('id')
+
+
+
+      if (fetchError) throw fetchError;
+      let conversationId;
+      if (existingConversations && existingConversations.length > 0) {}
+        // Use existing conversation;
+        conversationId = existingConversations[0].id;
+        // Update context if provided;
+        if (contextType |contextId |contextData) {}
+          await supabase'
+            .from('conversations')
+            .update({}
+              context_type: contextType;
+              context_id: contextId;
+              context_data: contextData;
+              updated_at: new Date().toISOString()
+            })'
+            .eq('id', conversationId)
+        }
+      } else {}
+        // Get recipient information;
+        const { data: recipientData, error: recipientError } = await supabase'
+          .from('profiles')'
+          .select('display_name, avatar_url, user_type')'
+          .eq('id', recipientId)
+          .single();
+        if (recipientError) throw recipientError;
+        // Create a new conversation;
+        const { data: newConversation, error: createError } = await supabase'
+          .from('conversations')
+          .insert({}
+            user_one_id: user && user.id;
+            user_one_name: user && user.displayName || user && user.email;'
+            user_one_avatar: user && user.avatarUrl || ('avatar_url' in user ? user && user.avatar_url : undefined);
+            user_one_type: user && user.userType;
+
+
+
+            user_two_id: recipientId;'
+=======
     if (!user || !initialMessage && initialMessage.trim()) return,
     
 
     try {
-  // TODO: Implement
-}
-      // Check if conversation already exists;
-      const { data: existingConversations, error: fetchError } = await supabase;'
-        .from('conversations')''
-        .select('id')'
+      // Check if conversation already exists
+      const { data: existingConversations, error: fetchError } = await supabase
+        .from('conversations')
+        .select('id')
+
         .or(`and(user_one_id && user_one_id.eq.${user && user.id},user_two_id && user_two_id.eq.${recipientId}),and(user_one_id && user_one_id.eq.${recipientId},user_two_id && user_two_id.eq.${user && user.id})`);
         
 
       if (fetchError) throw fetchError;
       let conversationId;
       if (existingConversations && existingConversations.length > 0) {
-        // Use existing conversation;
+        // Use existing conversation
         conversationId = existingConversations[0].id;
-        // Update context if provided;
+        // Update context if provided
         if (contextType |contextId |contextData) {
-          await supabase;'
-            .from('conversations')'
+          await supabase
+            .from('conversations')
             .update({
-              context_type: contextType;,
-  context_id: contextId;
-              context_data: contextData;,)
-  updated_at: new Date().toISOString()
-            })'
-            .eq('id', conversationId)'
+              context_type: contextType;
+              context_id: contextId;
+              context_data: contextData
+              updated_at: new Date().toISOString()
+            })
+            .eq('id', conversationId)
         }
       } else {
-  // TODO: Implement
-}
-        // Get recipient information;
-        const { data: recipientData, error: recipientError } = await supabase;'
-          .from('profiles')''
-          .select('display_name, avatar_url, user_type')''
-          .eq('id', recipientId)'
+        // Get recipient information
+        const { data: recipientData, error: recipientError } = await supabase
+          .from('profiles')
+          .select('display_name, avatar_url, user_type')
+          .eq('id', recipientId)
           .single();
         if (recipientError) throw recipientError;
-        // Create a new conversation;
-        const { data: newConversation, error: createError } = await supabase;'
-          .from('conversations')'
+        // Create a new conversation
+        const { data: newConversation, error: createError } = await supabase
+          .from('conversations')
           .insert({
 
-            user_one_id: user && user.id;,
-  user_one_name: user && user.displayName || user && user.email;)'
-            user_one_avatar: user && user.avatarUrl || ('avatar_url' in user ? user && user.avatar_url : undefined);',
-  user_one_type: user && user.userType;
+            user_one_id: user && user.id;
+            user_one_name: user && user.displayName || user && user.email;
+            user_one_avatar: user && user.avatarUrl || ('avatar_url' in user ? user && user.avatar_url : undefined);
+            user_one_type: user && user.userType;
 
-            user_two_id: recipientId;,'
-  user_two_name: recipientData?.display_name |'User';'
-            user_two_avatar: recipientData?.avatar_url;,
-  user_two_type: recipientData?.user_type;
-            created_at: new Date().toISOString();,
-  updated_at: new Date().toISOString();
-            last_message: initialMessage;,
-  last_message_time: new Date().toISOString();
-            context_type: contextType;,
-  context_id: contextId;
+            user_two_id: recipientId;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+            user_two_name: recipientData?.display_name |'User';
+            user_two_avatar: recipientData?.avatar_url;
+            user_two_type: recipientData?.user_type;
+            created_at: new Date().toISOString();
+            updated_at: new Date().toISOString();
+            last_message: initialMessage;
+            last_message_time: new Date().toISOString();
+            context_type: contextType;
+<<<<<<< HEAD
+            context_id: contextId;
             context_data: contextData;
           })'
-          .select('id')'
+          .select('id')
+          .single();
+        if (createError) throw createError;
+<<<<<<< HEAD
+        conversationId = newConversation.id
+=======
+
+        
+<<<<<<< HEAD
+        conversationId = newConversation && newConversation.id
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        conversationId = newConversation && newConversation.id
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        conversationId = newConversation && newConversation.id;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      }
+
+<<<<<<< HEAD
+      }
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+      }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import { UserProfile, UserDetails } from '@/types/auth',;
+import { supabase } from '@/integrations/supabase/client',;
+import { Conversation, ConversationContextData } from '@/types/messaging',;
+=======
+'
+import { UserProfile, UserDetails } from '@/types/auth',;'
+import { supabase } from '@/integrations/supabase/client',;'
+import { Conversation, ConversationContextData } from '@/types/messaging',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            context_id: contextId
+            context_data: contextData
+          })
+          .select('id')
           .single();
         if (createError) throw createError;
 
         
-        conversationId = newConversation && newConversation.id;
+        conversationId = newConversation && newConversation.id
+
       }
 
 
-      }'
-import { UserProfile, UserDetails } from '@/types/auth',;''
-import { supabase } from '@/integrations/supabase/client',;''
-import { Conversation, ConversationContextData } from '@/types/messaging',;''
-import { toast } from '@/hooks/use-toast',;'
+      }
+import { UserProfile, UserDetails } from '@/types/auth',;
+import { supabase } from '@/integrations/supabase/client',;
+import { Conversation, ConversationContextData } from '@/types/messaging',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+import { toast } from '@/hooks/use-toast',;
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null,;
 /**;
  * Hook to handle conversation operations;
  */;
 export function useConversations(;
-  user: UserWithProfile,;)
+  user: UserWithProfile,;
   setConversations: (conversations: Conversation[]) => void,;
   setUnreadCount: (count: number) => void,;
   setIsLoading: (loading: boolean) => void;
@@ -202,9 +545,15 @@ export function useConversations(;
     setIsLoading(true),;
     try {;
       // Fetch conversations from the database;
+<<<<<<< HEAD
       const { data, error } = await supabase;'
-        .from('conversations');''
-        .select('*');'
+        .from('conversations');'
+        .select('*');`
+=======
+      const { data, error } = await supabase;
+        .from('conversations');
+        .select('*');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .or(`user_one_id.eq.${user.id},user_two_id.eq.${user.id}`),;
       if (error) throw error,;
       // Format conversations;
@@ -214,16 +563,16 @@ export function useConversations(;
         return {;
           id: conv.id,;
           user_id: otherUserId,;
-          other_user: {;,
-  id: otherUserId,;
+          other_user: {;
+            id: otherUserId,;
             name: isUserOne ? conv.user_two_name : conv.user_one_name,;
             avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,;
             user_type: isUserOne ? conv.user_two_type : conv.user_one_type;
           },;
           name: isUserOne ? conv.user_two_name : conv.user_one_name,;
           avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,;
-          last_message: conv.last_message ? {;,
-  content: conv.last_message,;
+          last_message: conv.last_message ? {;
+            content: conv.last_message,;
             created_at: conv.last_message_time;
           } : undefined,;
           updated_at: conv.updated_at || conv.created_at,;
@@ -231,17 +580,21 @@ export function useConversations(;
           context_type: conv.context_type,;
           context_id: conv.context_id,;
           context_data: conv.context_data;
-        })
+        }
       }),;
       setConversations(formattedConversations),;
       // Calculate total unread count;
-      const totalUnread = formattedConversations.reduce(;)
+      const totalUnread = formattedConversations.reduce(;
         (total, conv) => total + (conv.unread_count || 0),;
         0;
       ),;
       setUnreadCount(totalUnread);
+<<<<<<< HEAD
     } catch (error) {;'
-      console.error('Error fetching conversations:', error);'
+=======
+    } catch (error) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      console.error('Error fetching conversations:', error);
     } finally {;
       setIsLoading(false);
     }
@@ -251,17 +604,27 @@ export function useConversations(;
    */;
   const createConversation = async (;
     recipientId: string,;
+<<<<<<< HEAD
     initialMessage: string,;'
-    contextType: 'job' | 'talent' | 'general' = 'general',;'
+=======
+    initialMessage: string,;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    contextType: 'job' | 'talent' | 'general' = 'general',;
     contextId?: string,;
-    contextData?: ConversationContextData;)
+    contextData?: ConversationContextData;
   ) => {;
     if (!user || !initialMessage.trim()) return,;
     try {;
       // Check if conversation already exists;
+<<<<<<< HEAD
       const { data: existingConversations, error: fetchError } = await supabase;'
-        .from('conversations');''
-        .select('id');'
+        .from('conversations');'
+        .select('id');`
+=======
+      const { data: existingConversations, error: fetchError } = await supabase;
+        .from('conversations');
+        .select('id');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .or(`and(user_one_id.eq.${user.id},user_two_id.eq.${recipientId}),and(user_one_id.eq.${recipientId},user_two_id.eq.${user.id})`),;
       if (fetchError) throw fetchError,;
       let conversationId,;
@@ -270,34 +633,59 @@ export function useConversations(;
         conversationId = existingConversations[0].id,;
         // Update context if provided;
         if (contextType || contextId || contextData) {;
+<<<<<<< HEAD
           await supabase;'
-            .from('conversations');'
+=======
+          await supabase;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+            .from('conversations');
             .update({;
               context_type: contextType,;
               context_id: contextId,;
-              context_data: contextData,;)
+              context_data: contextData,;
               updated_at: new Date().toISOString();
+<<<<<<< HEAD
             });'
-            .eq('id', conversationId);'
+=======
+            });
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+            .eq('id', conversationId);
         }
       } else {;
         // Get recipient information;
+<<<<<<< HEAD
         const { data: recipientData, error: recipientError } = await supabase;'
-          .from('profiles');''
-          .select('display_name, avatar_url, user_type');''
-          .eq('id', recipientId);'
+          .from('profiles');'
+          .select('display_name, avatar_url, user_type');'
+=======
+        const { data: recipientData, error: recipientError } = await supabase;
+          .from('profiles');
+          .select('display_name, avatar_url, user_type');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+          .eq('id', recipientId);
           .single(),;
         if (recipientError) throw recipientError,;
         // Create a new conversation;
+<<<<<<< HEAD
         const { data: newConversation, error: createError } = await supabase;'
-          .from('conversations');'
+          .from('conversations');
           .insert({;
             user_one_id: user.id,;
-            user_one_name: user.displayName || user.email,;)'
-            user_one_avatar: user.avatarUrl || ('avatar_url' in user ? user.avatar_url : undefined),;'
+            user_one_name: user.displayName || user.email,;'
+            user_one_avatar: user.avatarUrl || ('avatar_url' in user ? user.avatar_url : undefined),;
             user_one_type: user.userType,;
             user_two_id: recipientId,;'
-            user_two_name: recipientData?.display_name || 'User',;'
+=======
+        const { data: newConversation, error: createError } = await supabase;
+          .from('conversations');
+          .insert({;
+            user_one_id: user.id,;
+            user_one_name: user.displayName || user.email,;
+            user_one_avatar: user.avatarUrl || ('avatar_url' in user ? user.avatar_url : undefined),;
+            user_one_type: user.userType,;
+            user_two_id: recipientId,;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+            user_two_name: recipientData?.display_name || 'User',;
             user_two_avatar: recipientData?.avatar_url,;
             user_two_type: recipientData?.user_type,;
             created_at: new Date().toISOString(),;
@@ -307,32 +695,115 @@ export function useConversations(;
             context_type: contextType,;
             context_id: contextId,;
             context_data: contextData;
+<<<<<<< HEAD
           });'
-          .select('id');'
+=======
+          });
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+          .select('id');
           .single(),;
         if (createError) throw createError,;
         conversationId = newConversation.id;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+      
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+      // Calculate total unread count      }
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      }
+      
+      }
+      
+      }
+<<<<<<< HEAD
+      
+      }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      // Calculate total unread count      }
+=======
 
 
       }
       
       }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       
       }
       
       }
       
       }
-      // Send the initial message;
-      await supabase;'
-        .from('messages')'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+      // Send the initial message
+      await supabase
+        .from('messages')
         .insert({
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+
+=======
+          conversation_id: conversationId;
+          sender_id: user.id;
+          recipient_id: recipientId;
+          content: initialMessage;
+          created_at: new Date().toISOString()
+          read: false
+        });
+      // Update conversations list
+      await fetchConversations();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      }
+      
+      }
+
+      // Send the initial message;
+      await supabase'
+        .from('messages')
+        .insert({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           conversation_id: conversationId,
           sender_id: user.id,
           recipient_id: recipientId,
-          content: initialMessage,)
+          content: initialMessage,
           created_at: new Date().toISOString(),
           read: false;
         }),
@@ -341,41 +812,82 @@ export function useConversations(;
       await fetchConversations(),
       
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
 
-      // Return the conversation ID;
-      return conversationId;
-    } catch (error) {'
-      console && console.error('Error creating conversation:', error);'
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+      // Return the conversation ID
+      return conversationId
+    } catch (error) {
+      console && console.error('Error creating conversation:', error);
       toast({
 
 
-      // Return the conversation ID;
-      return conversationId;)
-    } catch (error) {'
-      console.error('Error creating conversation:', error),'
-      toast({'
-        title: "Failed to create conversation";","
-  description: "Please try again later"""
-        variant: "destructive"")
+      // Return the conversation ID
+      return conversationId
+    } catch (error) {
+      console.error('Error creating conversation:', error),
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      toast({
+<<<<<<< HEAD
+=======
+      toast({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+        title: "Failed to create conversation";
+        description: "Please try again later"
+        variant: "destructive"
       })
     }
   }
   return {
-  // TODO: Implement
-}"
-        title: "Failed to create conversation",""
-        description: "Please try again later",""
-        variant: "destructive""
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+        title: "Failed to create conversation",
+        description: "Please try again later",
+        variant: "destructive"
       })
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    }
+  };
+
+  return {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      // Return the conversation ID;
+      return conversationId;
+    } catch (error) {'
+      console.error('Error creating conversation:', error),
+      toast({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
       // Send the initial message;
-      await supabase;"
-        .from('messages');'
+      await supabase;'
+=======
+;
+      // Send the initial message;
+      await supabase;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+        .from('messages');
         .insert({;
           conversation_id: conversationId,;
           sender_id: user.id,;
           recipient_id: recipientId,;
-          content: initialMessage,;)
+          content: initialMessage,;
           created_at: new Date().toISOString(),;
           read: false;
         }),;
@@ -383,207 +895,324 @@ export function useConversations(;
       await fetchConversations(),;
       // Return the conversation ID;
       return conversationId;
+<<<<<<< HEAD
     } catch (error) {;'
-      console.error('Error creating conversation:', error),;'
-      toast({;'
-        title: "Failed to create conversation",;""
-        description: "Please try again later",;""
-        variant: "destructive";")
+      console.error('Error creating conversation:', error),;
+      toast({;
+        title: "Failed to create conversation",;"
+        description: "Please try again later",;"
+=======
+    } catch (error) {;
+      console.error('Error creating conversation:', error),;
+      toast({;
+        title: "Failed to create conversation",;
+        description: "Please try again later",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+        variant: "destructive";
       });
     }
   };
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return {;
+<<<<<<< HEAD
+    fetchConversations;
+
+    createConversation}
+}
+=======
+=======
   return {;"
-        variant: "destructive""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        variant: "destructive"
+      })
+
+=======
+  return {;
+        variant: "destructive"
       })
 
 
     }
   }
   return {
-  // TODO: Implement
-}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     fetchConversations;
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     createConversation}
-;
   /**;
-  * Create a new conversation and send initial message;
-  */;
   const create_conversation = async (
     recipient_id: string,
-    initial_message: string;,"
-  context_type: 'job' | 'talent' | 'general' = 'general';'
-    context_id?: string;)
-    context_data?: ConversationContextData) => {
-    if () return, ) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    initial_message: string;'
+    context_type: 'job' | 'talent' | 'general' = 'general';
+    context_id?: string;
+    context_data?: ConversationContextData) => {}
+    if () return, ) {}
   $2;
 }
-    try {
-  // TODO: Implement
-}
+    try {}
       // Check if conversation already exists;
       const { data: existing_conversations, error: fetch_error } = await supabase;'
-        .from ('conversations');''
-        .select ('id');'
+        .from ('conversations');'
+        .select ('id');`
         .or (`and (user_one_id.eq.${user.id}, user_two_id.eq.${recipient_id}), and (user_one_id.eq.${recipient_id}, user_two_id.eq.${user.id})`);
 ;
       // Check condition;
-if (throw fetch_error) {
+if (throw fetch_error) {}
   $2;
 }
       let conversation_id;
 ;
       // Check condition;
-if ( {) {
+if ( {) {}
   $2;
+=======
+    initial_message: string;
+    context_type: 'job' | 'talent' | 'general' = 'general';
+    context_id?: string;
+=======
+    initial_message: string;,"
+  context_type: 'job' | 'talent' | 'general' = 'general';
+    context_id?: string;)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    context_data?: ConversationContextData) => {
+    if () return, ) {
+  // TODO: Implement
+      // Check if conversation already exists;
+      const { data: existing_conversations, error: fetch_error } = await supabase;
+        .select ('id');`;
+        .or (`and (user_one_id.eq.${user.id}, user_two_id.eq.${recipient_id}), and (user_one_id.eq.${recipient_id}, user_two_id.eq.${user.id})`);
+      // Check condition;
+if (throw fetch_error) {
+      let conversation_id;
+      // Check condition;
+if ( {) {
+<<<<<<< HEAD
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Use existing conversation;
         conversation_id = existing_conversations[0].id;
-;
         // Update context if provided;
+<<<<<<< HEAD
+<<<<<<< HEAD
         // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
           await supabase;'
-            .from ('conversations');'
+            .from ('conversations');
+            .update ({}
+=======
+        // Check condition
+if ( {) {
+  $2
+}
+          await supabase;
+            .from ('conversations');
+            .update ({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+              context_type: context_type;
+              context_id: context_id;
+              context_data: context_data,
+              updated_at: new Date ().toISOString ();
+<<<<<<< HEAD
+            });'
+            .eq ('id', conversation_id);
+        }
+      } else {}
+        // Get recipient information;
+        const { data: recipient_data, error: recipient_error } = await supabase;'
+          .from ('profiles');'
+          .select ('display_name, avatar_url, user_type');'
+          .eq ('id', recipient_id);
+          .single ();
+;
+        // Check condition;
+if (throw recipient_error) {}
+  $2;
+}
+        // Create a new conversation;
+        const { data: new_conversation, error: create_error } = await supabase;'
+          .from ('conversations');
+          .insert ({}
+            user_one_id: user.id;
+            user_one_name: user.display_name || user.email;'
+            user_one_avatar: user.avatar_url || ('avatar_url' in user ? user.avatar_url : undefined);
+            user_one_type: user.user_type;
+            user_two_id: recipient_id;'
+=======
+            });
+=======
+        // Check condition;
             .update ({
               context_type: context_type;,
   context_id: context_id;
               context_data: context_data,)
               updated_at: new Date ().toISOString ();
-            });'
-            .eq ('id', conversation_id);'
-        }
-      } else {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            .eq ('id', conversation_id);
   // TODO: Implement
-}
         // Get recipient information;
-        const { data: recipient_data, error: recipient_error } = await supabase;'
-          .from ('profiles');''
-          .select ('display_name, avatar_url, user_type');''
-          .eq ('id', recipient_id);'
+        const { data: recipient_data, error: recipient_error } = await supabase;
+          .from ('profiles');
+          .select ('display_name, avatar_url, user_type');
+          .eq ('id', recipient_id);
+          .single ();
+        // Check condition;
+if (throw recipient_error) {
+        // Create a new conversation;
+        const { data: new_conversation, error: create_error } = await supabase;
+          .insert ({
+<<<<<<< HEAD
+            user_one_id: user.id;
+            user_one_name: user.display_name || user.email;
+            user_one_avatar: user.avatar_url || ('avatar_url' in user ? user.avatar_url : undefined);
+            user_one_type: user.user_type;
+            user_two_id: recipient_id;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+            user_two_name: recipient_data?.display_name || 'User';
+            user_two_avatar: recipient_data?.avatar_url;
+            user_two_type: recipient_data?.user_type;
+            created_at: new Date ().toISOString ();
+            updated_at: new Date ().toISOString ();
+            last_message: initial_message;
+            last_message_time: new Date ().toISOString ();
+            context_type: context_type;
+            context_id: context_id,
+            context_data: context_data;
+<<<<<<< HEAD
+          });'
+          .select ('id');
           .single ();
 ;
         // Check condition;
-if (throw recipient_error) {
+if (throw create_error) {}
   $2;
-}
-        // Create a new conversation;
-        const { data: new_conversation, error: create_error } = await supabase;'
-          .from ('conversations');'
-          .insert ({
+=======
+          });
+=======
             user_one_id: user.id;,
-  user_one_name: user.display_name || user.email;)'
+  user_one_name: user.display_name || user.email;)
             user_one_avatar: user.avatar_url || ('avatar_url' in user ? user.avatar_url : undefined);',
   user_one_type: user.user_type;
-            user_two_id: recipient_id;,'
-  user_two_name: recipient_data?.display_name || 'User';'
+            user_two_id: recipient_id;,
+  user_two_name: recipient_data?.display_name || 'User';
             user_two_avatar: recipient_data?.avatar_url;,
   user_two_type: recipient_data?.user_type;
             created_at: new Date ().toISOString ();,
-  updated_at: new Date ().toISOString ();
             last_message: initial_message;,
   last_message_time: new Date ().toISOString ();
-            context_type: context_type;,
   context_id: context_id,
             context_data: context_data;
-          });'
-          .select ('id');'
-          .single ();
-;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+          .select ('id');
         // Check condition;
 if (throw create_error) {
-  $2;
+<<<<<<< HEAD
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         conversation_id = new_conversation.id;
-      }
       // Send the initial message;
+<<<<<<< HEAD
+<<<<<<< HEAD
       await supabase;'
-        .from ('messages');'
+        .from ('messages');
+        .insert ({}
+=======
+      await supabase;
+        .from ('messages');
         .insert ({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+          conversation_id: conversation_id;
+          sender_id: user.id;
+          recipient_id: recipient_id;
+          content: initial_message;
+=======
+        .from ('messages');
           conversation_id: conversation_id;,
   sender_id: user.id;
           recipient_id: recipient_id;,
   content: initial_message;)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           created_at: new Date ().toISOString (),
-          read: false;
-        });
-;
       // Update conversations list;
       await fetch_conversations ();
-;
       // Return the conversation ID;
       return conversation_id;
+<<<<<<< HEAD
+<<<<<<< HEAD
     } catch (error) {'
-      console.error ('Error creating conversation:', error);'
-      toast ({'
-        title: "Failed to create conversation";","
-  description: "Please try again later",""
-        variant: "destructive";")
+      console.error ('Error creating conversation:', error);
+      toast ({"
+        title: "Failed to create conversation";"
+        description: "Please try again later","
+=======
+    } catch (error) {
+      console.error ('Error creating conversation:', error);
+      toast ({
+        title: "Failed to create conversation";
+        description: "Please try again later",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+        variant: "destructive";
       });
     }
   }
 ;
-  return {
-  // TODO: Implement
+<<<<<<< HEAD
+  return {}
+    fetch_conversations;
+    create_conversation}
+
+
 }
+
+<<<<<<< HEAD
+=======
+  return {
+=======
+      console.error ('Error creating conversation:', error);
+      toast ({
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     fetch_conversations;
     create_conversation}
 }
 }
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+import { UserProfile, UserDetails } from '@/types/auth',;
+import { supabase } from '@/integrations/supabase/client',;
+import { Conversation, ConversationContextData } from '@/types/messaging',;
+import { toast } from '@/hooks/use-toast',;
+;
 "
-import { UserProfile, UserDetails } from '@/types/auth',;''
-import { supabase } from '@/integrations/supabase/client',;''
-import { Conversation, ConversationContextData } from '@/types/messaging',;''
-import { toast } from '@/hooks/use-toast',;'
-;
 // Allow either UserProfile or UserDetails;
-type UserWithProfile = UserProfile | UserDetails | null,;
-;
 /**;
- * Hook to handle conversation operations;
- */;
-export function useConversations(;
   user:UserWithProfile,;)
   setConversations:(conversations:Conversation[]) => void,;
   setUnreadCount:(count:number) => void,;
   setIsLoading:(loading:boolean) => void;
-) {;
   /**;
-   * Fetch conversations for the current user;
-   */;
-  const fetchConversations = async () => {;
-    if (!user) return,;
-    ;
-    setIsLoading(true),;
-    ;
-    try {;
       // Fetch conversations from the database;
-      const { data, error } = await supabase;'
-        .from('conversations');''
-        .select('*');'
-        .or(`user_one_id.eq.${user.id},user_two_id.eq.${user.id}`),;
-        ;
-      if (error) throw error,;
-      ;
       // Format conversations;
       const formattedConversations:Conversation[] = data.map(conv => {;
-        const isUserOne = conv.user_one_id === user.id,;
         const otherUserId = isUserOne ? conv.user_two_id :conv.user_one_id,;
-        ;
-        return {;
           id:conv.id,;
           user_id:otherUserId,;
-          other_user: {;,
   id:otherUserId,;
             name:isUserOne ? conv.user_two_name :conv.user_one_name,;
             avatar_url:isUserOne ? conv.user_two_avatar :conv.user_one_avatar,;
             user_type:isUserOne ? conv.user_two_type :conv.user_one_type;
-          },;
-          name:isUserOne ? conv.user_two_name :conv.user_one_name,;
-          avatar_url:isUserOne ? conv.user_two_avatar :conv.user_one_avatar,;
-          last_message: conv.last_message ? {;,
   content:conv.last_message,;
             created_at:conv.last_message_time;
           } undefined,;
@@ -593,149 +1222,71 @@ export function useConversations(;
           context_id:conv.context_id,;
           context_data:conv.context_data;
         },;)
-      }),;
-      ;
-      setConversations(formattedConversations),;
-      ;
       // Calculate total unread count;
-      const totalUnread = formattedConversations.reduce(;)
         (total, conv) => total + (conv.unread_count || 0), ;
-        0;
-      ),;
       setUnreadCount(totalUnread),;
-    } catch (error) {;'
-      console.error('Error fetching conversations:', error),;'
-    } finally {;
+      console.error('Error fetching conversations:', error),;
       setIsLoading(false),;
-    }
-  },;
-;
   /**;
-   * Create a new conversation and send initial message;
-   */;
-  const createConversation = async (;
     recipientId:string, ;
-    initialMessage:string,;'
-    contextType:'job' | 'talent' | 'general' = 'general',;'
+    initialMessage:string,;
+    contextType:'job' | 'talent' | 'general' = 'general',;
     contextId?:string,;
     contextData?:ConversationContextData;)
-  ) => {;
-    if (!user || !initialMessage.trim()) return,;
-    ;
-    try {;
       // Check if conversation already exists;
-      const { data:existingConversations, error:fetchError } = await supabase;'
-        .from('conversations');''
-        .select('id');'
-        .or(`and(user_one_id.eq.${user.id},user_two_id.eq.${recipientId}),and(user_one_id.eq.${recipientId},user_two_id.eq.${user.id})`),;
-        ;
-      if (fetchError) throw fetchError,;
-      ;
-      let conversationId,;
-      ;
-      if (existingConversations && existingConversations.length > 0) {;
+      const { data:existingConversations, error:fetchError } = await supabase;
         // Use existing conversation;
-        conversationId = existingConversations[0].id,;
-        ;
         // Update context if provided;
-        if (contextType || contextId || contextData) {;
-          await supabase;'
-            .from('conversations');'
-            .update({;
               context_type:contextType,;
               context_id:contextId,;
               context_data:contextData,;)
               updated_at:new Date().toISOString();
-            });'
-            .eq('id', conversationId),;'
-        }
-      } else {;
+            .eq('id', conversationId),;
         // Get recipient information;
-        const { data:recipientData, error:recipientError } = await supabase;'
-          .from('profiles');''
-          .select('display_name, avatar_url, user_type');''
-          .eq('id', recipientId);'
-          .single(),;
-          ;
-        if (recipientError) throw recipientError,;
-        ;
+        const { data:recipientData, error:recipientError } = await supabase;
         // Create a new conversation;
-        const { data:newConversation, error:createError } = await supabase;'
-          .from('conversations');'
-          .insert({;
+        const { data:newConversation, error:createError } = await supabase;
             user_one_id:user.id,;
-            user_one_name:user.displayName || user.email,;)'
-            user_one_avatar:user.avatarUrl || ('avatar_url' in user ? user.avatar_url :undefined),;'
+            user_one_name:user.displayName || user.email,;)
+            user_one_avatar:user.avatarUrl || ('avatar_url' in user ? user.avatar_url :undefined),;
             user_one_type:user.userType,;
-            user_two_id:recipientId,;'
-            user_two_name:recipientData?.display_name || 'User',;'
+            user_two_id:recipientId,;
+            user_two_name:recipientData?.display_name || 'User',;
             user_two_avatar:recipientData?.avatar_url,;
             user_two_type:recipientData?.user_type,;
             created_at:new Date().toISOString(),;
             updated_at:new Date().toISOString(),;
             last_message:initialMessage,;
             last_message_time:new Date().toISOString(),;
-            context_type:contextType,;
-            context_id:contextId,;
             context_data:contextData;
-          });'
-          .select('id');'
-          .single(),;
-          ;
-        if (createError) throw createError,;
-        ;
         conversationId = newConversation.id,;
-      }
-      ;
       // Send the initial message;
-      await supabase;'
-        .from('messages');'
-        .insert({;
           conversation_id:conversationId,;
           sender_id:user.id,;
           recipient_id:recipientId,;
           content:initialMessage,;)
-          created_at:new Date().toISOString(),;
           read:false;
-        }),;
-      ;
       // Update conversations list;
-      await fetchConversations(),;
-      ;
       // Return the conversation ID;
       return conversationId,;
-    } catch (error) {;'
-      console.error('Error creating conversation:', error),;'
-      toast({;'
         title:"Failed to create conversation",;""
         description:"Please try again later",;""
         variant:"destructive";")
-      }),;
-    }
-  },;
-;
-  return {;
     fetchConversations,;
     createConversation},;
 } //Allow either UserProfile or UserDetails type UserWithProfile = UserProfile | UserDetails | null;
 /** * Hook to handle conversation operations */export function useConversations (user: UserWithProfile, setConversations: (conversations: Conversation[]) => void;,
   setUnreadCount: (count: number) => void;,
-  setIsLoading: (loading: boolean) => void) {
   /** * Fetch conversations for the current user */setIsLoading (true);
-try {
   // TODO: Implement
-}
   //Fetch conversations from the database const {
   // TODO: Implement
-}
   data, error;"
-}= await supabase .from ('conversations') .select ('*') if (error) throw error;'
+}= await supabase .from ('conversations') .select ('*') if (error) throw error;
 //Format conversations return {
   // TODO: Implement
-}
   id: conv.id, user id: otherUserId, other user: {,
   id: otherUserId, name: isUserOne ? conv.user two name : conv.user one name, avatar url: isUserOne ? conv.user two avatar : conv.user one avatar, user type: isUserOne ? conv.user two type : conv.user one type;
-};
 name: isUserOne ? conv.user two name : conv.user one name;
 avatar url: isUserOne ? conv.user two avatar : conv.user one avatar;
 last message: conv.last message ? {,
@@ -746,48 +1297,53 @@ unread count: conv.unread count || 0;
 context type: conv.context type;
 context id: conv.context id;
 context data: conv.context data;
-}
-});
 setConversations (formattedConversations);
 //Calculate total unread count const totalUnread = formattedConversations.reduce ( (total, conv) => total + (conv.unread count || 0);
 0 /** * Create a new conversation and send initial message */try {
   // TODO: Implement
-}
   //Check if conversation already exists const {
   // TODO: Implement
-}
-  data: existingConversations, error: fetchError;'
-}= await supabase .from ('conversations') .select ('id') if (fetchError) throw fetchError;'
-let conversationId;
-//Update context if provided if (contextType || contextId || contextData) {'
-  await supabase .from ('conversations') .update ({'
-}
+  data: existingConversations, error: fetchError;
+}= await supabase .from ('conversations') .select ('id') if (fetchError) throw fetchError;
+//Update context if provided if (contextType || contextId || contextData) {
+  await supabase .from ('conversations') .update ({
 }else {
   // TODO: Implement
-}
   //Get recipient information const {
   // TODO: Implement
-}
-  data: recipientData, error: recipientError;)'
-}= await supabase .from ('profiles') .select ('display name, avatar url, user type') .eq ('id', recipientId) .single ();'
-if (recipientError) throw recipientError;
+  data: recipientData, error: recipientError;)
+}= await supabase .from ('profiles') .select ('display name, avatar url, user type') .eq ('id', recipientId) .single ();
 //Create a new conversation const {
   // TODO: Implement
-}
-  data: newConversation, error: createError;'
-}= await supabase .from ('conversations') .insert ({')'
-  user one id: user.id, user one name: user.displayName || user.email, user one avatar: user.avatarUrl || ('avatar url' in user ? user.avatar url : undefined), user one type: user.userType, user two id: recipientId, user two name: recipientData?.display name || 'User', user two avatar: recipientData?.avatar url, user two type: recipientData?.user type, created at: new Date () .toISOString (), updated at: new Date () .toISOString (), last message: initialMessage, last message time: new Date () .toISOString (), context type: contextType, context id: contextId, context data: contextData;''
-}) .select ('id') .single ();'
-if (createError) throw createError;
-conversationId = newConversation.id;'
-}//Send the initial message await supabase .from ('messages') //Update conversations list await fetchConversations ();'
+  data: newConversation, error: createError;
+}= await supabase .from ('conversations') .insert ({')
+  user one id: user.id, user one name: user.displayName || user.email, user one avatar: user.avatarUrl || ('avatar url' in user ? user.avatar url : undefined), user one type: user.userType, user two id: recipientId, user two name: recipientData?.display name || 'User', user two avatar: recipientData?.avatar url, user two type: recipientData?.user type, created at: new Date () .toISOString (), updated at: new Date () .toISOString (), last message: initialMessage, last message time: new Date () .toISOString (), context type: contextType, context id: contextId, context data: contextData;
+}) .select ('id') .single ();
+}//Send the initial message await supabase .from ('messages') //Update conversations list await fetchConversations ();
 // Return the conversation ID;
-}
-};
-}
-    fetchConversations;
 
     createConversation}
 }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 }
-'
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      toast({}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      toast({}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+`;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

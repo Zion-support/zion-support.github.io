@@ -8,8 +8,6 @@ const geistSans = Geist({"
 
 const geistMono = Geist_Mono({"
   variable: "--font-geist-mono",""
-  subsets: ["latin"],")
-});
 
 export const metadata: Metadata = {,"
   title: "Create Next App",""
@@ -28,5 +26,4 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
 </body>
-      </body>
-    </html>)"
+    </html>)"`;

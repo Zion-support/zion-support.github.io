@@ -1,8 +1,28 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Shield, Lock, Eye, AlertTriangle, Users, Database } from 'lucide-react';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',;
+;
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function CybersecurityPage() {
+  const features = [
+    'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+=======
 export default function Cybersecurity() {
   const contact = {
     phone: '+1 302 464 0950',
@@ -48,109 +68,315 @@ export default function Cybersecurity() {
       features: ['Data encryption', 'Backup solutions', 'Data loss prevention', 'Privacy compliance']
     }
   ];
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
+export default function CybersecurityPage() {
+  const features = [
+    'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  const solutions = [
+    { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
+    { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
+    { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' },
+    { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }],
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
-    <>
+    <Layout>
       <Head>
-        <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity services including security assessments, threat detection, identity management, and compliance. Protect your business with Zion Tech Group." />
-        <meta name="keywords" content="cybersecurity, security assessment, threat detection, identity management, compliance, penetration testing" />
-        <link rel="canonical" href={`${contact.site}/cybersecurity`} />
-        <meta property="og:title" content="Cybersecurity Services - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive cybersecurity services including security assessments, threat detection, and compliance." />
-        <meta property="og:url" content={`${contact.site}/cybersecurity`} />
-        <meta property="og:type" content="website" />
+        <title>Cybersecurity | Zion Tech Group</title>
+<<<<<<< HEAD
+        <meta name="description" content="Zero Trust designs, cloud posture hardening, incident response, and compliance readiness." />
+        <link rel="canonical" href="https://ziontechgroup.com/cybersecurity" />
       </Head>
-
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Cybersecurity Services
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Protect your business with comprehensive cybersecurity solutions, threat detection, and compliance services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
-                  className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Get Security Assessment
-                </Link>
-                <Link 
-                  href="/services"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
-                >
-                  View All Services
-                </Link>
-              </div>
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <header className="text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4">
+              <Shield className="w-8 h-8 text-white" />
             </div>
-          </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Comprehensive Security Solutions
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From threat detection to compliance management, we provide end-to-end cybersecurity services to protect your digital assets.
-              </p>
+=======
+<meta
+          name='description'
+          content='Zero Trust designs, cloud posture hardening, incident response, and compliance readiness.'
+        />
+        <link rel='canonical' href='https://ziontechgroup.com/cybersecurity' />
+      </Head>
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto space-y-12'>
+          <header className='text-center'>
+            <div className='inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4'>
+              <Shield className='w-8 h-8 text-white' />
             </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Cybersecurity</h1>
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto">From strategy to operations: identity, data, networks, and workloads secured by design.</p>
+            <div className="mt-2 text-sm text-gray-400">New: VAPT and MDM offerings below.</div>
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-red-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                        <span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+            </div>
+          </header>
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Key Capabilities</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {features.map((f) => (
+                <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
+                  <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
+                  <span className="text-gray-200">{f}</span>
+<<<<<<< HEAD
+
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {solutions.map((s) => (
+                <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
+                  <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
+                  <p className="text-gray-300 text-sm">Learn more</p>
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
                 </div>
+=======
+=======
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4'>
+              Cybersecurity
+            </h1>
+            <p className='text-gray-300 text-lg max-w-3xl mx-auto'>
+              From strategy to operations: identity, data, networks, and
+              workloads secured by design.
+            </p>
+            <div className='mt-2 text-sm text-gray-400'>
+              New: VAPT and MDM offerings below.
+            </div>
+            <div className='mt-6 flex flex-col sm:flex-row items-center justify-center gap-4'>
+              <a href='/contact' className='px-8 py-4'>
+                Security Assessment
+              </a>
+              <a href='/market-pricing' className='px-8 py-4'>
+                See Market Pricing
+              </a>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+            </div>
+          </header>
+          <section>
+<h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>
+              Key Capabilities
+            </h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+              {features.map(f => (
+                <div
+                  key={f}
+                  className='flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60'
+                >
+                  <CheckCircle className='w-5 h-5 text-emerald-400 mt-0.5' />
+                  <span className='text-gray-200'>{f}</span>
+                </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+              <a href="/vulnerability-assessment-penetration-testing" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40 transition-colors">
+                <div className="text-gray-200 font-semibold mb-2">Vulnerability Assessment & Pentest (VAPT)</div>
+                <p className="text-gray-300 text-sm">Learn more</p>
+              </a>
+              <a href="/mobile-device-management" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
+                <div className="text-gray-200 font-semibold mb-2">Mobile Device Management (MDM)</div>
+                <p className="text-gray-300 text-sm">Learn more</p>
+              </a>
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+              <a href="/vulnerability-assessment-penetration-testing" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40 transition-colors">
+                <div className="text-gray-200 font-semibold mb-2">Vulnerability Assessment & Pentest (VAPT)</div>
+                <p className="text-gray-300 text-sm">Learn more</p>
+=======
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="bg-gray-50 py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Secure Your Business Today
+          </section>
+          <section>
+<h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>
+              Highlighted Solutions
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Don't wait for a security breach. Let our experts help you build a robust security posture.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
+              {solutions.map(s => (
+                <a
+                  key={s.name}
+                  href={s.href}
+                  className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors'
+                >
+                  <div className='text-gray-200 font-semibold mb-2'>
+                    {s.name}
+                  </div>
+                  <p className='text-gray-300 text-sm'>Learn more</p>
+                </a>
+              ))}
+              <a
+                href='/vulnerability-assessment-penetration-testing'
+                className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors'
               >
-                Schedule Security Audit
-              </Link>
-              <a 
-                href={`tel:${contact.phone}`}
-                className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
-              >
-                Call {contact.phone}
+                <div className='text-gray-200 font-semibold mb-2'>
+                  Vulnerability Assessment & Pentest (VAPT)
+                </div>
+                <p className='text-gray-300 text-sm'>Learn more</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               </a>
+              <a
+                href='/mobile-device-management'
+                className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors'
+              >
+                <div className='text-gray-200 font-semibold mb-2'>
+                  Mobile Device Management (MDM)
+                </div>
+                <p className='text-gray-300 text-sm'>Learn more</p>
+              </a>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
-    </>
-  );
+    </Layout>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  )
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
+export default function CybersecurityPage(req, res) {
+  try {
+
 }
+
+import React from 'react',
+import Head from 'next / head',
+import Layout from '../components / layout / Layout',
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
+;
+export default /**
+ * CybersecurityPage - Function description
+ */
+function CybersecurityPage() {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  const features = [;
+    'Zero Trust architectures and identity - first segmentation_cloud posture hardening, secrets management, and key rotation_threat detection, incident response playbooks, and tabletop exercises_compliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
+  const solutions = [;
+    { name: 'Zero Trust Architecture', href: '/zero - trust - network - architecture' },
+    { name: 'Domain & TLS Monitoring', href: '/domain - dns - monitor' },
+    { name: 'Email Security (DMARC)', href: '/email - dmarc - analyzer' },
+    { name: 'Vendor Risk Automation', href: '/vendor - risk - automation' }],
+  return (
+    <Layout>;
+      <Head>;
+        <title > Cybersecurity | Zion Tech Group</title>;
+        <meta name="description" content="Zero Trust designs, cloud posture hardening, incident response, and compliance readiness." />;
+        <link rel="canonical" href="https://ziontechgroup.com / cybersecurity" />;
+      </Head>;
+      <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
+        <div className="max - w-7xl mx - auto space - y-12">;
+          <header className="text - center">;
+            <div className="inline - flex items - center justify - center w - 16 h - 16 rounded - 2xl bg - gradient - to - r from - cyan - 500 to - purple - 600 mb - 4">;
+              <Shield className="w - 8 h - 8 text - white" />;
+            </div>;
+            <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 4">Cybersecurity</h1>;
+            <p className="text - gray - 300 text - lg max - w-3xl mx - auto">From strategy to operations: identity, data, networks, and workloads secured by design.</p>;
+            <div className="mt - 2 text - sm text - gray - 400">New: VAPT and MDM offerings below.</div>;
+            <div className="mt - 6 flex flex - col sm:flex - row items - center justify - center gap - 4">;
+              <a href="/contact" className="px - 8 py - 4">Security Assessment</a>;
+              <a href="/market - pricing" className="px - 8 py - 4">See Market Pricing</a>;
+            </div>;
+          </header>;
+          <section>;
+            <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 6 text - center">Key Capabilities</h2>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+              {features.map ((f) => (
+                <div key={f} className="flex items - start gap - 3 p - 4 rounded - xl bg - black / 40 border border - gray - 700 / 60">;
+                  <CheckCircle className="w - 5 h - 5 text - emerald - 400 mt - 0.5" />;
+                  <span className="text - gray - 200">{f}</span>;
+                </div>))}
+            </div>;
+          </section>;
+          <section>;
+            <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 6 text - center">Highlighted Solutions</h2>;
+            <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 6">;
+              {solutions.map ((s) => (
+                <a key={s.name} href={s.href} className="p - 6 rounded - 2xl bg - black / 40 border border - gray - 700 / 60 hover:border - cyan - 500 / 40 transition - colors">;
+                  <div className="text - gray - 200 font - semibold mb - 2">{s.name}</div>;
+                  <p className="text - gray - 300 text - sm">Learn more</p>;
+                </a>))}
+              <a href="/vulnerability - assessment - penetration - testing" className="p - 6 rounded - 2xl bg - black / 40 border border - gray - 700 / 60 hover: border - cyan - 500 / 40 transition - colors">;
+                <div className="text - gray - 200 font - semibold mb - 2">Vulnerability Assessment & Pentest (VAPT)</div>;
+                <p className="text - gray - 300 text - sm">Learn more</p>;
+              </a>;
+              <a href="/mobile - device - management" className="p - 6 rounded - 2xl bg - black / 40 border border - gray - 700 / 60 hover:border - cyan - 500 / 40 transition - colors">;
+                <div className="text - gray - 200 font - semibold mb - 2">Mobile Device Management (MDM)</div>;
+                <p className="text - gray - 300 text - sm">Learn more</p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+              </a>;
+            </div>;
+          </section>;
+        </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+      </div>;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,25 +1,43 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
-  // TODO: Implement
-}
   constructor(props) {
+=======
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     super(props);
     this.state = { hasError: false };
-import { X } from 'lucide-react'''
-import { Button } from '@/components/ui/button'''
-import { Badge } from '@/components/ui/badge''
-interface SearchFilters {
-  // TODO: Implement
-}
+import { X } from 'lucide-react''
+import { Button } from '@/components/ui/button''
+import { Badge } from '@/components/ui/badge'
+interface SearchFilters {}
   types: string[],
   category: string,
   minPrice: number,
   maxPrice: number,
+<<<<<<< HEAD
   minRating: number,
-  sort: string;'
-import React from 'react',;''
-import { X } from 'lucide-react';''
-import { Button } from '@/components/ui/button',;''
-import { Badge } from '@/components/ui/badge',;'
+  sort: string
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import React from 'react',;
+import { X } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+=======
+  minRating: number,;
+  sort: string;
+'
+import React from 'react',;'
+import { X } from 'lucide-react';'
+import { Button } from '@/components/ui/button',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import { Badge } from '@/components/ui/badge',;
 interface SearchFilters {;
   types: string[],;
   category: string,;
@@ -27,8 +45,6 @@ interface SearchFilters {;
   maxPrice: number,;
   minRating: number,;
   sort: string;
-
-
 
 }
 ;
@@ -40,239 +56,552 @@ interface ActiveFiltersBarProps {;
 }
 ;
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
-</ActiveFiltersBarProps>
+  filters,;
+  onFiltersChange,;
+  onClearAll,;'
+  className = '';
+}) => {;
   const activeFilters: Array<{ key: string, label: string, value: string }> = [],;
   // Add type filters;
   filters.types.forEach(type => {;
-    const labels: Record<string string> = {;
-</string>
+    const labels: Record<string string> = {;'
+      product: 'Products',;'
+      talent: 'Talent',;'
+      service: 'Services',;'
+      blog: 'Blog Posts',;'
+      doc: 'Documentation';
+    },;
+    activeFilters.push({;
+      key: `type-${type}`,;'
+      label: 'Type',;
+      value: labels[type] || type;
+    });
+  }),;
+  // Add category filter;
+  if (filters.category) {;
+    activeFilters.push({;'
+      key: 'category',;'
+      label: 'Category',;
+      value: filters.category;
+    });
+  }
+<<<<<<< HEAD
+;
+  // Add price filter;
+  if (filters.minPrice > 0 || filters.maxPrice < 10000) {;
+    activeFilters.push({;
+      key: 'price',;
+      label: 'Price',;
+      value: `$${filters.minPrice} - $${filters.maxPrice}`;
+=======
+  
+  static getDerivedStateFromError(error) {}
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {'
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+'
+import { X } from 'lucide-react'';
+import { Button  } from '@/components/ui/button';'
+import { Badge } from '@/components/ui/badge';
+
+interface SearchFilters {;
+  types: string[],;
+  category: string,;
+  minPrice: number,;
+  maxPrice: number,;
+  minRating: number,;
+  sort: string;
+}
+
+interface ActiveFiltersBarProps {;
+  filters: SearchFilters,;
+  onFiltersChange: (filters: SearchFilters,) => void,;
+  onClearAll: () => void,;
+  className?: string;
+}
+
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
-</ActiveFiltersBarProps>
+  filters,;
+  onFiltersChange,;
+  onClearAll,;'
+  className = '';
+},) => {;
   const activeFilters: Array<{ key: string, label: string, value: string }> = [],;
 
   // Add type filters;
   filters && filters.types.forEach(type => {;
-    const labels: Record<string, string> = {;
-</string>)
-  if (filters && filters.minPrice > 0 || filters && filters.maxPrice < 10000) {;
+    const labels: Record<string, string> = {;'
+      product: 'Products',;'
+      talent: 'Talent',;'
+      service: 'Services',;'
+      blog: 'Blog Posts',;'
+      doc: 'Documentation';
+    },;
+    activeFilters && activeFilters.push({;`
+      key: `type-${type}`,;'
+      label: 'Type',;
+      value: labels[type] || type;
+    });
+  }),;
+
+  // Add category filter;
+  if (filters && filters.category) {;
     activeFilters && activeFilters.push({;'
-      key: 'price',;''
-      label: 'Price',;'
-      value: `$${filters && filters.minPrice} - $${filters && filters.maxPrice}`;)
+      key: 'category',;'
+      label: 'Category',;
+      value: filters && filters.category;
     });
   }
 
+  // Add price filter;
+  if (filters && filters.minPrice > 0 || filters && filters.maxPrice < 10000) {;
+    activeFilters && activeFilters.push({;'
+      key: 'price',;'
+      label: 'Price',;`
+      value: `$${filters && filters.minPrice} - $${filters && filters.maxPrice}`;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    });
+  }
+;
   // Add rating filter;
+<<<<<<< HEAD
+  if (filters.minRating > 0) {;
+    activeFilters.push({;
+      key: 'rating',;
+      label: 'Rating',;
+      value: `${filters.minRating}+ stars`;
+    });
+  }
+;
+  // Add sort filter (only if not default);
+  if (filters.sort !== 'relevance') {;
+    const sortLabels: Record<string string> = {;
+      price_asc: 'Price: Low to High',;
+      price_desc: 'Price: High to Low',;
+      rating: 'Highest Rated';
+    },;
+    activeFilters.push({;
+      key: 'sort',;
+=======
   if (filters && filters.minRating > 0) {;
     activeFilters && activeFilters.push({;'
-      key: 'rating',;''
-      label: 'Rating',;'
-      value: `${filters && filters.minRating}+ stars`;)
+      key: 'rating',;'
+      label: 'Rating',;`
+      value: `${filters && filters.minRating}+ stars`;
     });
   }
 
   // Add sort filter (only if not default);'
-  if (filters && filters.sort !== 'relevance') {;'
-    const sortLabels: Record<string, string> = {;
-</string>
+  if (filters && filters.sort !== 'relevance') {;
+    const sortLabels: Record<string, string> = {;'
+      price_asc: 'Price: Low to High',;'
+      price_desc: 'Price: High to Low',;'
+      rating: 'Highest Rated';
+    },;
+    activeFilters && activeFilters.push({;'
+      key: 'sort',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      label: 'Sort',;
+      value: sortLabels[filters.sort] || filters.sort;
+    });
+  }
+<<<<<<< HEAD
+;
+  const removeFilter = (filterKey: string) => {;
+    if (filterKey.startsWith('type-')) {;
+      const typeToRemove = filterKey.replace('type-', ''),;
+      const newTypes = filters.types.filter(t => t !== typeToRemove),;
+      onFiltersChange({ ...filters, types: newTypes });
+    } else if (filterKey === 'category') {;
+      onFiltersChange({ ...filters, category: '' });
+=======
+
+  const removeFilter = (filterKey: string,) => {;'
+    if (filterKey && filterKey.startsWith('type-')) {;'
+      const typeToRemove = filterKey && filterKey.replace('type-', ''),;
+      const newTypes = filters && filters.types.filter(t => t !== typeToRemove),;
+      onFiltersChange({ ...filters, types: newTypes });'
+    } else if (filterKey === 'category') {;'
+      onFiltersChange({ ...filters, category: '' });'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    } else if (filterKey === 'price') {;
+      onFiltersChange({ ...filters, minPrice: 0, maxPrice: 10000 });'
+    } else if (filterKey === 'rating') {;
+      onFiltersChange({ ...filters, minRating: 0 });'
+    } else if (filterKey === 'sort') {;'
+      onFiltersChange({ ...filters, sort: 'relevance' });
+    }
+  },;
+  if (activeFilters.length === 0) {;
+    return null;
+
+  return (
+<<<<<<< HEAD
+    <div className={`flex items-center gap-2 flex-wrap ${className}`}>
+      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
+=======
+
         <Badge;
           key = {filter.key,}
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {activeFilters.map(filter => (
-</Badge>
         <Badge;
           key={filter.key} 
 
+<<<<<<< HEAD
+          variant="secondary" 
+=======
 
-'
-          variant="secondary"""
-          className="flex items-center gap-1 pl-2 pr-1""
-        >
-</Badge>"
-          <span className="text-xs">"
-</span>
+
+          variant="secondary" "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          className="flex items-center gap-1 pl-2 pr-1"
+        >"
+          <span className="text-xs">
+            {filter.label}: {filter.value}
+<<<<<<< HEAD
           </span>
-    <div className={`flex items-center gap-2 flex-wrap ${className}`}>;
-</div>"
-      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>;"
+          <Button
+            variant="ghost"
+            size="sm"
+=======
+          </span>`
+    <div className={`flex items-center gap-2 flex-wrap ${className}`}>;"
+      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>;
+
+      {activeFilters && activeFilters.map(filter => (;
         <Badge;
           key = {filter && filter.key,}"
-          variant="secondary"""
+          variant="secondary" "
           className="flex items-center gap-1 pl-2 pr-1">;"
-</Badge>"
-          <span className="text-xs">;"
-</span>
+          <span className="text-xs">;
+            {filter && filter.label}: {filter && filter.value}
           </span>;
-          <Button;"
-            variant="ghost"""
-            size="sm"""
-            className="h-4 w-4 p-0 hover:bg-transparent"")
+          <Button"
+            variant="ghost""
+            size="sm""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            className="h-4 w-4 p-0 hover:bg-transparent"
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onClick={() => removeFilter(filter.key)}
-</Button>"
-            <X className="h-3 w-3" />"
-</X>
+
+<<<<<<< HEAD
+=======
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            aria-label={`Remove ${filter.label} filter`}
+          >"
+            <X className="h-3 w-3" />
           </Button>
         </Badge>
-      <Button;"
-        variant="ghost"""
-        size="sm""
+      ))}
+<<<<<<< HEAD
+
+      <Button
+        variant="ghost"
+=======
+      <Button"
+        variant="ghost""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        size="sm"
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+        onClick={onClearAll}
+=======
         onClick={onClearAll}
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
 "
-        className="text-xs h-6 px-2""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        className="text-xs h-6 px-2"
       >
-</Button>
+        Clear all;
       </Button>
     </div>
-export const ActiveFiltersBar: React.FC < ActiveFiltersBarProps> = ({
+  )
+<<<<<<< HEAD
+},
+
+export default ActiveFiltersBar,
+=======
+
+;'
+export default ActiveFiltersBar; import React from 'react';'
+import { X } from 'lucide-react';'
+import { Button } from '@/components / ui / button';'
+import { Badge } from '@/components / ui / badge';
+interface SearchFilters {}
+  types: string[],
+  category: string,
+  min_price: number,
+  max_price: number,
+  min_rating: number,
+  sort: string;
+}
+interface ActiveFiltersBarProps {}
+  filters: SearchFilters,
+  onFiltersChange: (filters: SearchFilters, ) => void,
+  onClearAll: () => void,
+  class_name?: string;
+}
+export const ActiveFiltersBar: React.FC < ActiveFiltersBarProps> = ({}
   filters,
   onFiltersChange,
-  onClearAll,"
-  class_name = '';')
-}, ) => {
+  onClearAll,';
+  class_name = '';
+}, ) => {}
   const active_filters: Array<{ key: string, label: string, value: string }> = [],
   // Add type filters;
-  filters.types.for_each (type => {
+  filters.types.for_each (type => {}
     const labels: Record < string, string> = {'
-      product: 'Products',''
-      talent: 'Talent',''
-      service: 'Services',''
-      blog: 'Blog Posts',''
-      doc: 'Documentation';'
+      product: 'Products','
+      talent: 'Talent','
+      service: 'Services','
+      blog: 'Blog Posts','
+      doc: 'Documentation';
     },
-    active_filters.push ({
+    active_filters.push ({}`
       key: `type-${type}`,'
-      label: 'Type','
-      value: labels[type] || type;)
+      label: 'Type',
+      value: labels[type] || type;
     });
   }),
   // Add category filter;
   // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
     active_filters.push ({'
-      key: 'category',''
-      label: 'Category','
-      value: filters.category;)
+      key: 'category','
+      label: 'Category',
+      value: filters.category;
     });
   }
   // Add price filter;
   // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
     active_filters.push ({'
-      key: 'price',''
-      label: 'Price','
-      value: `$${filters.min_price} - $${filters.max_price}`;)
+      key: 'price','
+      label: 'Price',`
+      value: `$${filters.min_price} - $${filters.max_price}`;
     });
   }
   // Add rating filter;
   // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
     active_filters.push ({'
-      key: 'rating',''
-      label: 'Rating','
-      value: `${filters.min_rating}+ stars`;)
+      key: 'rating','
+      label: 'Rating',`
+      value: `${filters.min_rating}+ stars`;
     });
   }
   // Add sort filter (only if not default);
   // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
     const sort_labels: Record < string, string> = {'
-      price_asc: 'Price: Low to High',''
-      price_desc: 'Price: High to Low',''
-      rating: 'Highest Rated';'
+      price_asc: 'Price: Low to High','
+      price_desc: 'Price: High to Low','
+      rating: 'Highest Rated';
     },
     active_filters.push ({'
-      key: 'sort',''
-      label: 'Sort','
-      value: sort_labels[filters.sort] || filters.sort;)
+      key: 'sort','
+      label: 'Sort',
+      value: sort_labels[filters.sort] || filters.sort;
     });
   }
-  const remove_filter = (filter_key: string, ) =>: any {
-  // TODO: Implement
-}
-    if () {) {
+  const remove_filter = (filter_key: string, ) =>: any {}
+    if () {) {}
   $2;
 }'
-      const typeToRemove = filter_key.replace ('type-', ''),'
+      const typeToRemove = filter_key.replace ('type-', ''),
       const new_types = filters.types.filter (t => t !== typeToRemove),
       onFiltersChange ({ ...filters, types: new_types });
     } else // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }'
-      onFiltersChange ({ ...filters, category: '' });'
+      onFiltersChange ({ ...filters, category: '' });
     } else // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
       onFiltersChange ({ ...filters, min_price: 0, max_price: 10000 });
     } else // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
       onFiltersChange ({ ...filters, min_rating: 0 });
     } else // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }'
-      onFiltersChange ({ ...filters, sort: 'relevance' });'
+      onFiltersChange ({ ...filters, sort: 'relevance' });
     }
   },
   // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
     return null;
   }
-  return (
-    <div className={`flex items - center gap - 2 flex - wrap ${class_name}`}>;
-</div>'
-      <span className="text - sm font - medium text - muted - foreground">Active filters:</span>;"
+  return (`
+    <div className={`flex items - center gap - 2 flex - wrap ${class_name}`}>;"
+      <span className="text - sm font - medium text - muted - foreground">Active filters:</span>;
+      {active_filters.map (filter => (
         <Badge;
           key = {filter.key, }"
-          variant="secondary";""
-          className="flex items - center gap - 1 pl - 2 pr - 1";"
-        >;
-</Badge>"
-          <span className="text - xs">;"
-</span>
+          variant="secondary";"
+          className="flex items - center gap - 1 pl - 2 pr - 1";
+        >;"
+          <span className="text - xs">;
+            {filter.label}: {filter.value}
           </span>;
           <Button;"
-            variant="ghost";""
-            size="sm";""
-            className="h - 4 w - 4 p - 0 hover:bg - transparent";")
-            on_click = {(, ) => remove_filter (filter.key), }
-</Button>"
-            <X className="h - 3 w - 3" />;"
-</X>
+            variant="ghost";"
+            size="sm";"
+            className="h - 4 w - 4 p - 0 hover:bg - transparent";
+            on_click = {(, ) => remove_filter (filter.key), }`
+            aria - label={`Remove ${filter.label} filter`}
+          >;"
+            <X className="h - 3 w - 3" />;
           </Button>;
         </Badge>))}
       <Button;"
-        variant="ghost";""
-        size="sm";"
+        variant="ghost";"
+        size="sm";
         on_click = {onClearAll, }"
-        className="text - xs h - 6 px - 2";"
+        className="text - xs h - 6 px - 2";
       >;
-</Button>
+        Clear all;
       </Button>;
     </div>);
+
+},
+export default ActiveFiltersBar,
+";
+        className="text-xs h-6 px-2">;
+        Clear all;
       </Button>;
     </div>;
+  );
+},;
+
+export default ActiveFiltersBar,;
+interface Filter {;
+  key: string;
+  value: string;
+  label: string;
+}
+
 interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
 
-  filters: Filter[];,
-  onRemoveFilter: key: string void;,
+  filters: Filter[];
+  onRemoveFilter: key: string void;
+
   onClearAll: : unknown void}"
-        className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline""
+        className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
-        Clear all;"
+<<<<<<< HEAD
+        Clear all
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      </button>
+    </div>
+  )}
+'"
+
+  filters: Filter[];
+  onRemoveFilter: key: string void;
+  onClearAll: : unknown void}
+        className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
+      >;
+        Clear all;
+      </button>;
+    </div>)}
+'";
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+import React from 'react';
+
+export default ActiveFiltersBar; import React from 'react'
+import { X } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import { Badge } from '@/components/ui/badge';
+interface SearchFilters {
+  types: string[];
+  category: string;
+  minPrice: number;
+  maxPrice: number;
+  minRating: number;
+  sort: string
+}
+interface ActiveFiltersBarProps {
+
+  className?: string
+}
+export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        Clear all;
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

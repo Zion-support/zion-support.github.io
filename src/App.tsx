@@ -1,37 +1,34 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import React, { Suspense, lazy } from 'react';
-import Footer from './components/Footer';
 import Header from './components/Header';
-import LoadingSpinner from './components/LoadingSpinner';
-
-
-// Lazy load pages
-const HomePage = lazy(() => import('./pages/index'));
-const AboutPage = lazy(() => import('./pages/about'));
-const ContactPage = lazy(() => import('./pages/contact'));
-const ServicesPage = lazy(() => import('./pages/services/index'));
-const ComprehensiveMicroSaasShowcase = lazy(() => import('./pages/services/comprehensive-micro-saas-showcase'));
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import { ThemeProvider } from './components/ThemeProvider';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <ThemeProvider>
       <Router>
-        <Header />
-        <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
+        <ScrollToTop />
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-1">
             <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services/comprehensive-micro-saas-showcase" element={<ComprehensiveMicroSaasShowcase />} />
-              <Route path="*" element={<HomePage />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<Home />} />
             </Routes>
-          </Suspense>
-        </main>
-        <Footer />
+          </main>
+          <Footer />
+        </div>
       </Router>
-    </div>
+    </ThemeProvider>
   );
 }
 
