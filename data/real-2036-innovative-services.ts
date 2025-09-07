@@ -1,12 +1,4 @@
-<<<<<<< HEAD;
-;
-export type Real2036InnovativeService = {id: string, name: string,tagline: string, description: string,category: string, price: string,export type Real2036InnovativeService = {id: string;export type Real2036InnovativeService = {id: string;
-export type Real2036InnovativeService = any;name: string;
-export type Real2036InnovativeService = {
-  id: string, name: string,
-=======
 id: string, name: string,
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 tagline: string, description: string,
   category: string, price: string,
 
@@ -1555,18 +1547,12 @@ useCases?: string[];
   price: '$699',
     period: '/month',
   features: [;
-<<<<<<< HEAD;
-      'Demand forecasting',
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
       'Inventory optimization',
       'Route optimization',
       'Supplier management',
       'Risk assessment',
       'Real - time tracking',
       'Performance analytics',
-<<<<<<< HEAD;
-=======
       'Custom workflows',
     ],}
   useCases?: string[]}
@@ -1951,7 +1937,6 @@ marketSize: '$8.9B',
       'Production optimization'
       'Real-time monitoring'
       'Supply chain integration'
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
       'Custom workflows'
     ],
 

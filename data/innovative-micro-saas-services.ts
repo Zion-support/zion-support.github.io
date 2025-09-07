@@ -1,15 +1,4 @@
-<<<<<<< HEAD;
-;
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com';
-    }realImplementation: true;
-  }];      mobile: '+1 302 464 0950';
-  id: string;
-export interface InnovativeMicroSaasService  {id: string;name: string;
-  id: string;
-=======
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 name: string;
   tagline: string;
   price: string;
@@ -853,9 +842,6 @@ export const newInnovativeServices = [;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 address: '364 E Main St STE 1008 Middletown DE 19709',}
   website: 'https://ziontechgroup && ziontechgroup.com'}
     };
@@ -1634,14 +1620,8 @@ implementationDetails: 'Advanced autonomous vehicle platform with quantum AI, re
 // New Innovative Micro-SaaS Services;
 export const newInnovativeServices = [
   {
-<<<<<<< HEAD;
-      'Complete space mission control platform with AI integration and real-time operations'
-    launchDate: '2024-08-01',
-  customers: 12;
-=======
     launchDate: \"launchDate\",
     customers: 12;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 rating: 4.9;}
 reviews: 6}
   }
@@ -1938,16 +1918,8 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     name: 'Quantum AI Brain-Computer Interface',;
     tagline: 'Direct neural interface with quantum AI for unprecedented cognitive enhancement',;
     price: '$2,999',;
-<<<<<<< HEAD;
-period: '/month',;
-    description: 'Revolutionary brain-computer interface powered by quantum AI, enabling direct neural communication, cognitive enhancement, and unprecedented human-AI symbiosis.',;
-
-    id: 'quantum - internet - security - platform',
-=======
     period: '/month',,
   description: 'Revolutionary brain-computer interface powered by quantum AI, enabling direct neural communication, cognitive enhancement, and unprecedented human-AI symbiosis.',;
-=======    id: 'quantum - internet - security - platform',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 name: 'Quantum Internet Security Platform',
   tagline: 'Unhackable quantum - secured internet infrastructure',
     price: '$12, 999',
@@ -2019,13 +1991,7 @@ name: 'Quantum Internet Security Platform',
     reviews: 12;
   },
   {
-<<<<<<< HEAD;
-      'AI-powered production planning',
-  {
-
-=======
       'AI-powered production planning',  {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
       'AI-powered production planning',
     id: 'ai - powered - autonomous - manufacturing',
   name: 'AI - Powered Autonomous Manufacturing',

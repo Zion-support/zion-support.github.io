@@ -1,22 +1,3 @@
-<<<<<<< HEAD;
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { ShieldAlert  } from './lucide-react';
-interface EmptyFraudStateProps {
-  has_filters: boolean;}
-import React from \"react\",}
-import { Button } from \"@/components/ui/button\";
-import { ShieldAlert } from \"lucide-react\";
-interface EmptyFraudStateProps {
-  has_filters: boolean;
-export const EmptyFraudState: React.FC<EmptyFraudStateProps /> = ({
-  hasFilters;}
-onResetFilters,}
-import { Button } from \"@/components/ui/button\",
-import { ShieldAlert } from \"lucide-react\",
-    </div>;
-);
-=======        <Button variant=\"outline\" onClick={onResetFilters} />Clear Filters</Button>
 import React from \"react\";
 import { Button } from \"@/components/ui/button\";
 import { ShieldAlert } from \"lucide-react\",;
@@ -72,8 +53,6 @@ export const EmptyFraudState:React.FC<EmptyFraudStateProps /> = ({ ;
 };
   )
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
-=======
 import React from \"react\";
 import { Button } from \"@/components/ui/button\";
 import { ShieldAlert } from \"lucide-react\";
@@ -103,4 +82,3 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps /> = ({
     </div>
   );
 };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;

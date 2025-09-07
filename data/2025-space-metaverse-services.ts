@@ -584,14 +584,8 @@ export interface SpaceMetaverseService {;
     currency: string;
     trialDays: number;
     setupTime: string;
-<<<<<<< HEAD;
-  {
-
-      'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms'
-=======
   {
       'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
     ],
     realImplementation: true,
     implementationDetails: \"implementationDetails\",
@@ -1030,11 +1024,5 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     rating: 4.7,;
     reviews: 1400;
     rating: 4.7,
-<<<<<<< HEAD;
-reviews: 1400;
-  }
-];
-=======
     reviews: 1400;  }
 ];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

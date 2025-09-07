@@ -1,11 +1,4 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-export interface Innovative2026EmergingTechService  {id: string;
-  id: string;
-=======
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 name: string;
   tagline: string;
   price: string;
@@ -834,13 +827,7 @@ reviews: 25;
       reviews: 30;
     }
   ];
-<<<<<<< HEAD;
-export const getPopularEmergingTechServices = (;
-
-
-=======
 export const getPopularEmergingTechServices = () => {;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 return innovative2026EmergingTechServices.filter(service => service.popular);) => {
   return $3;}
 }
@@ -1421,9 +1408,6 @@ export const getEmergingTechServicesByCategory = (
   return $3;}
 }
 };
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export const getEmergingTechServicesByPriceRange = (
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service && service.price.replace('$', '').replace(, ''));
@@ -1473,9 +1457,6 @@ export interface Innovative2026EmergingTechService {;
   reviews: number;
 
 };
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: any {
@@ -1520,15 +1501,6 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
   return innovative2026EmergingTechServices.filter (service => {
     const price = parse_int (service.price.replace ('$', '').replace (, ''));
     return price >= min_price && price <= max_price;}
-<<<<<<< HEAD}
-  });
-
-
-
-
-};
-=======
   })
 }
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

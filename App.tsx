@@ -1,9 +1,4 @@
-<<<<<<< HEAD;
-import React from 'react';
-<<<<<<< HEAD;
-=======
 import ServiceCard from './src/components/ServiceCard';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0ffd;
 const services = [
     {
       title: 'AI Solutions',
@@ -43,13 +38,11 @@ const services = [
     },
   ];
 
-=======
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4e93;
 return (
     <div className=\"min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100\" />
       <ScrollToTop />

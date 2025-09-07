@@ -1,11 +1,4 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-export interface AdvancedAIAutomationService  {id: string;
-  id: string;
-=======
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 name: string;
   tagline: string;
   price: string;
@@ -497,25 +490,14 @@ const contact = {mobile: '+1 302 464 0950',
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',}
-<<<<<<< HEAD;}
-website: 'https://ziontechgroup.com'};
-
-export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
-
-
-=======
   website: 'https://ziontechgroup.com',};
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com' }
 ;
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: \"address\",}
@@ -912,13 +894,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
     reviews: 267;
   }
 ];
-<<<<<<< HEAD;
-;
-
-import { ServiceVariant } from '../types/service-variants',;
-=======
 ;import { ServiceVariant } from '../types/service-variants';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export interface AdvancedAIAutomationService {;
   id: string,;
   name: string,;

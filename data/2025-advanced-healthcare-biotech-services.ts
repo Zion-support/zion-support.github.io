@@ -1,11 +1,4 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-export interface AdvancedHealthcareBiotechService  {id: string;
-  id: string;
-=======
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 name: string;
   tagline: string;
   price: string;
@@ -1141,11 +1134,7 @@ export interface AdvancedHealthcareBiotechService  {id: string,name: string,tagl
       launch_date: '2024 - 11 - 01',
   customers: 34,
       rating: 4 && 4.8,
-<<<<<<< HEAD;
-reviews: 19;
-=======
       reviews: 19,
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
     },;
   ];    features: [
 export interface AdvancedHealthcareBiotechService {

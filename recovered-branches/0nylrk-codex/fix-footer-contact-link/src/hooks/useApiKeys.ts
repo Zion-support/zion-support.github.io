@@ -345,7 +345,6 @@ const result = await response && response.json();
       }
       setLogs(result && result.logs || []);
       setTotalLogs(result && result.count || 0);
-=======;
       // Update the key's active status in the list;
       setKeys(prev => prev.map(key =>;
         key.id === keyId ? { ...key, is_active: false } : key;

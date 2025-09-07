@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import Head from "next/head";
-import Layout from "../components/layout/Layout";
-import { Satellite, CheckCircle, Globe2 } from "@heroicons/react/24/outline";
-
-const features = [
-  "Mission Control Systems",
-  "Satellite Operations",
-  "Secure Communications",
-  "Earth Observation",
-  "Space Data Analytics",
-  "Mission Planning"
-];
-
-export default function SpaceTech() {
-  return (
-  <Layout>
-    <Head>
-      <title>Space Technology | Zion Tech Group</title>
-      <meta
-        name="description"
-        content="Space mission control, satellite operations, and secure communications consulting."
-=======
 import React from \"react\";
 import Head from \"next/head\";
 import Layout from \"../components/layout/Layout\";
@@ -33,7 +9,6 @@ return (
       <meta;
 name=\"description\"
         content=\"Space mission control, satellite operations, and secure communications consulting.\"
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
       />
       <link rel=\"canonical\" href=\"https://ziontechgroup.com/space-tech\" />
     </Head>

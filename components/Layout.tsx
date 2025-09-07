@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-
-interface LayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-}
-
-export default function Layout({ children, title = 'Zion Tech Group', description = 'Leading AI and technology solutions' }: LayoutProps) {
-=======
 }export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }}
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
@@ -414,7 +402,6 @@ export default function Layout({
 }: LayoutProps) {
  ;
   const [sidebarOpen, setSidebarOpen] = useState(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
   return (
     <>}
       <Head />}
@@ -423,12 +410,6 @@ export default function Layout({
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
         <link rel=\"icon\" href=\"/favicon.ico\" />
       </Head>
-<<<<<<< HEAD
-      <main>{children}</main>
-    </>
-  );
-}
-=======
       <div className=\"min-h-screen bg-gray-50\" />
         {children}
       </div>
@@ -437,4 +418,3 @@ export default function Layout({
 }
         <meta name=\"description\" content={description} />
 
->>>>>>> cursor/automate-test-improve-and-merge-code-064d

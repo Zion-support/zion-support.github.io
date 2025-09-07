@@ -1,14 +1,4 @@
-<<<<<<< HEAD;
-;
-export interface InnovativeNewService2025  {export interface InnovativeNewService2025  {export interface InnovativeNewService2025  {export interface InnovativeNewService2025  {export interface InnovativeNewService2025  {export interface InnovativeNewService2025  {ursor/fix-website-loading-errors-and-merge-6662;}
-export interface InnovativeNewService2025  {export interface InnovativeNewService2025  {export interface InnovativeNewService2025  {import { ServiceVariant  } from '../types/service-variants';
-export interface InnovativeNewService  {import { ServiceVariant   } from '../types/service-variants';
-export interface InnovativeNewService2025  {id: string;
-export interface InnovativeNewService2025 {
-
-=======
 export interface InnovativeNewService2025 {export interface InnovativeNewService2025 {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export interface InnovativeNewService2025 {;
 export interface InnovativeNewService2025 {
 

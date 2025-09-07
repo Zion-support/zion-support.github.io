@@ -34,9 +34,6 @@ function resolveMergeConflicts() {
           // For modify/delete conflicts, keep the modified version (HEAD)
           const lines = content.split('\n');
           const resolvedContent = lines.filter(line => 
-            !line.includes('<<<<<<< HEAD') && 
-            !line.includes('=======') && 
-            !line.includes('>>>>>>>') &&
             !line.includes('deleted in') &&
             !line.includes('modified in HEAD')
           ).join('\n');
@@ -45,22 +42,7 @@ function resolveMergeConflicts() {
           deletedCount++;
         }
         // Check if it's an add/add conflict
-        else if (content.includes('<<<<<<< HEAD') && content.includes('=======') && content.includes('>>>>>>>')) {
-          console.log(`Resolving add/add conflict for ${file} - keeping both versions`);
-          // For add/add conflicts, try to merge both versions
-          const lines = content.split('\n');
-          let resolvedContent = '';
-          let inConflict = false;
-          let headContent = '';
-          let incomingContent = '';
-          
-          for (const line of lines) {
-            if (line.includes('<<<<<<< HEAD')) {
-              inConflict = true;
-              headContent = '';
-            } else if (line.includes('=======')) {
               incomingContent = '';
-            } else if (line.includes('>>>>>>>')) {
               inConflict = false;
               // Merge both versions, preferring the longer/more complete one
               if (incomingContent.trim().length > headContent.trim().length) {
@@ -89,21 +71,13 @@ function resolveMergeConflicts() {
           resolvedCount++;
         }
         // Check if it's a content conflict
-        else if (content.includes('<<<<<<< HEAD') && content.includes('=======') && content.includes('>>>>>>>')) {
-          console.log(`Resolving content conflict for ${file} - keeping incoming version`);
-          // For content conflicts, prefer the incoming version (after =======)
           const lines = content.split('\n');
           let resolvedContent = '';
           let inConflict = false;
           let keepContent = false;
           
           for (const line of lines) {
-            if (line.includes('<<<<<<< HEAD')) {
-              inConflict = true;
-              keepContent = false;
-            } else if (line.includes('=======')) {
               keepContent = true;
-            } else if (line.includes('>>>>>>>')) {
               inConflict = false;
               keepContent = false;
             } else if (!inConflict || keepContent) {

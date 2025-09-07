@@ -78,19 +78,6 @@ class RunAllAutomations {
       { name: 'Type Check', command: 'npx tsc --noEmit' },
       { name: 'Lint Fix', command: 'npm run lint' },
       { name: 'Build Application', command: 'npm run build' },
-<<<<<<< HEAD
-      { name: 'Test Smoke', command: 'npm run test:smoke' },
-      { name: 'Security Audit', command: 'npm audit' },
-      { name: 'Performance Monitor', command: 'node scripts/performance-monitor.cjs' },
-      { name: 'SEO Optimizer', command: 'node scripts/seo-optimizer.cjs' },
-      { name: 'Health Check', command: 'node scripts/health-checker.cjs' },
-      { name: 'Quick Improvements', command: 'node scripts/quick-improvements.cjs' },
-      { name: 'Performance Improver', command: 'node scripts/performance-optimizer.cjs' },
-      { name: 'Security Improver', command: 'node scripts/security-auditor.cjs' },
-      { name: 'App Enhancer', command: 'node scripts/app-enhancer.cjs' },
-      { name: 'Test Automation', command: 'node scripts/test-automation.cjs' },
-      { name: 'Deployment Automation', command: 'node scripts/deployment-automation.cjs' },
-=======
       { name: 'Comprehensive Test Suite', command: 'node scripts/pm2/comprehensive-test-suite.cjs' },
       { name: 'Security Audit', command: 'npm audit' },
       { name: 'Performance Monitor', command: 'node scripts/pm2/performance-monitor.cjs' },
@@ -101,7 +88,6 @@ class RunAllAutomations {
       { name: 'App Optimizer', command: 'node scripts/pm2/app-optimizer.cjs' },
       { name: 'Database Optimizer', command: 'node scripts/pm2/database-optimizer.cjs' },
       { name: 'API Monitor', command: 'node scripts/pm2/api-monitor.cjs' },
->>>>>>> pr-12287
       { name: 'Git Status', command: 'git status' },
       { name: 'Git Add', command: 'git add .' },
       { name: 'Git Commit', command: 'git commit -m "Automated improvements and fixes"' },
@@ -168,8 +154,4 @@ if (require.main === module) {
   }
 }
 
-<<<<<<< HEAD
 module.exports = RunAllAutomations;
-=======
-module.exports = RunAllAutomations;
->>>>>>> pr-12287

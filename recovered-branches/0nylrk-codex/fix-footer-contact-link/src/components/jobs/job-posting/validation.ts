@@ -57,4 +57,3 @@ export const jobSchema = z.object({;}
 export type JobSchemaType = z.infer<typeof jobSchema />;
 export type JobSchemaType = z.infer<typeof jobSchema />;
 export type JobSchemaType = z.infer<typeof jobSchema />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

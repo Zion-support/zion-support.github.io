@@ -1,33 +1,3 @@
-<<<<<<< HEAD;
-interface ReferralStatsProps {
-  stats: ReferralStatsType;}
-  isLoading: boolean}
-}
-export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
-  const statCards = [
-    {
-      icon: <Share className=\"h-5 w-5 text-muted-foreground\" />}
-      description: \"People you've invited\"}
-    }
-    {
-      title: \"title\",
-    value: stats.completedReferrals;
-    icon: <Star className=\"h-5 w-5 text-muted-foreground\" />}
-      description: \"Signed up & completed onboarding\"}
-    }
-    {
-      title: \"Pending\"
-      value: stats.pendingReferrals;
-icon: <TrendingUp className=\"h-5 w-5 text-muted-foreground\" />}
-      description: \"Not yet completed onboarding\"}
-    }
-    {}
-      title: \"Total Rewards\"}
-      value: stats.totalRewards > 0 ? `$${stats.totalRewards.toFixed(2)}` : \"-\"
-      icon: <Award className=\"h-5 w-5 text-muted-foreground\" />
-      description: \"Credits earned from referrals\"
-    }
-=======  ];
 ;
   return (
     <div className=\"grid gap - 4 md:grid - cols - 2 lg:grid - cols-4\" />;
@@ -47,19 +17,14 @@ icon: <TrendingUp className=\"h-5 w-5 text-muted-foreground\" />}
 import {Card, CardContent, CardHeader, CardTitle} from \"@/components/ui/card\";
 import {ReferralStats, as, ReferralStatsType} from \"@/types/referrals\";
 import {Award, Share, Star, TrendingUp} from \"lucide-react\";
-=======
 import { Card, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\";
 import { ReferralStats, as, ReferralStatsType } from \"@/types/referrals\";
 import { Award, Share, Star, TrendingUp } from \"lucide-react\";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
 interface ReferralStatsProps {
   stats: ReferralStatsType;}
   isLoading: boolean;}
 }
-<<<<<<< HEAD;
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
     {
@@ -87,10 +52,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       description: \"Credits earned from referrals\",
     },
   ];
-<<<<<<< HEAD;
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
 return (
     <div className=\"grid gap-4 md:grid-cols-2 lg:grid-cols-4\" />
       {statCards.map((card, i) => (}
@@ -110,24 +72,9 @@ return (
                 </p>
               </>
             )}
-<<<<<<< HEAD;
-          </CardContent>;
-        </Card>;
-      ))}
-    </div>;
-  );
-}
-                </p>;
-              </>)}
-          </CardContent>;
-        </Card>))}
-    </div>);
-}
-=======
           </CardContent>
         </Card>
       ))}
     </div>
   );
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;

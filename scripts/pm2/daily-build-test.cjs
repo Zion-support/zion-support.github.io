@@ -168,5 +168,3 @@ main().catch(error => {})
   log(`Daily Build and Test Process "failed": ${error.message}`);
   process.exit(1);
 }
-<<<<<<< HEAD
-});

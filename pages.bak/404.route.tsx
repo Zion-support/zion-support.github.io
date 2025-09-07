@@ -17,11 +17,7 @@ module.exports = default function NotFound(){return (<main style={{ padding: \"\
 import React from 'react';
 interface 404.routeProps {
   // Add props here as needed}
-<<<<<<< HEAD;}
-export default function 404.route({}: 404.routeProps) {}
-=======}
 export default function 404.route({ }: 404.routeProps) {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 class ErrorBoundary extends React.Component {
   constructor(props) {}
     super(props);}
@@ -72,19 +68,11 @@ export default function 404 && 404.route() {return (<div />;
       <h1 />404 && 404.route</h1>;
       <p />This component is currently under development.</p>;
     </div>;
-<<<<<<< HEAD}
-  )import * as React from 'react';}
-export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'\",\"fontFamily\": \'sans-serif\' }} /><h1 />404 - Not Found</h1></main>)}\";
-module.exports = default function NotFound(){return (<main style={{ padding: \"\"40px\"\",fontFamily: \"sans-serif\" }} /><h1 />404 - Not Found</h1></main>)}\"'\"'\";
-ursor/automate-test-improve-and-merge-code-646c;
-interface 404.routeProps  {// Add props here as needed;
-=======
   );
 import React from \"React\";
 import * as React from 'react';
 interface 404.routeProps {
   // Add props here as needed}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
 }
 export default function 404.route() {interface 404.routeProps  {// Add props here as needed;}
 }

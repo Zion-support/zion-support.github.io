@@ -39,15 +39,3 @@ class SecurityAuditor {
       }
     }
   }
-<<<<<<< HEAD:backup-problematic-files/scripts/security-auditor.js;
-const fs = // // require('fs');
-class SecurityAuditor {
-  constructor() {}
-    this && this.issues = [];}
-    this && this.fixes = []}
-  checkPackageJson() {
-    try {
-      const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json', 'utf8'));
-      // Check for security-related scripts;
-<<<<<<< HEAD:backup-problematic-files/scripts/security-auditor.js}
-}

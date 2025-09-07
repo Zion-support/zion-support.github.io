@@ -751,7 +751,6 @@ onClick={handleSubmitNote}
                   </CardContent>;
                 </Card>;
               </TabsContent>;
-=======                        <img;
 src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
                         />

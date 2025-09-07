@@ -1,12 +1,5 @@
-<<<<<<< HEAD;
 export const real2026Q2Additions = [
   {
-
-
-=======
-export const real2026Q2Additions = [
-  {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
       'Jira',
       'ServiceNow',
       'Slack',
@@ -88,132 +81,7 @@ export const real2026Q2Additions = [
   roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;}
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;}
   },;
-<<<<<<< HEAD;
-      'Training data augmentation',
-      'Privacy - preserving analytics',
-      'Test data generation',
-    ],
-    integrations: ['S3', 'BigQuery', 'Snowflake', 'Databricks'],
-    competitors: ['Mostly AI', 'Gretel', 'YData'],
-    price: '$1, 200',
-  period: '/month',
-    trial_days: 14,
-    setup_time: 'Fast',
-  market_position: 'Growing demand driven by privacy regulations',
-    roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
-  {
-      'DTC brands returns automation',
-      'Marketplace return SLAs',
-      'Reduce WISMO support',
-    ],
-    integrations: ['Shopify', 'BigCommerce', 'Magento', 'Stripe', 'Shippo'],
-    competitors: ['Loop Returns', 'Returnly'],
-    price: '$399',
-  period: '/month',
-    trial_days: 14,
-    setup_time: 'Fast',
-  market_position: 'Ideal for mid - market brands and marketplaces',
-    roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
-      'OpenAI',
-      'Azure OpenAI',
-      'Vertex AI',
-      'LangChain',
-      'Vercel',
-      'Datadog',
-    ],
-    competitors: ['Humanloop', 'Arize', 'Langfuse'],
-    price: '$490',
-  period: '/month',
-    trial_days: 14,
-    setup_time: 'Fast',
-  market_position: 'Hot category with fast adoption in AI apps',
-    roi: 'Cut token spend by 25% and improve response quality by 12%',
-      'FinOps guardrails',
-      'Cost regression prevention',
-      'Unit economics tracking',
-    ],
-    integrations: ['AWS', 'GCP', 'Azure', 'Kubernetes', 'Slack', 'PagerDuty'],
-    competitors: ['CloudZero', 'Kubecost'],
-    price: '$690',
-  period: '/month',
-    trial_days: 14,
-    setup_time: 'Fast',
-  market_position: 'Proven ROI for cloud - native teams',
-    roi: 'Reduce cloud waste by 30% within 60 days',
-      'Contract workflows',
-      'Internal approvals',
-      'Customer onboarding',
-    ],
-    integrations: ['Zapier', 'Make && Make.com', 'Salesforce', 'HubSpot'],
-    competitors: ['DocuSign API', 'HelloSign API'],
-    price: '$149',
-  period: '/month',
-      'Public trust for SaaS',
-      'B2B vendor requirements',
-      'Platform reliability communications',
-    ],
-    integrations: ['AWS CloudWatch', 'Datadog', 'New Relic', 'PagerDuty'],
-    competitors: ['Statuspage', 'Better Uptime'],
-    price: '$79',
-  period: '/month',
-    trial_days: 14,
-    setup_time: 'Fast',
-  market_position: 'Great value with SLO - first approach',
-    roi: 'Improve uptime communications and reduce churn risk',
-      'Sales security reviews',
-      'Procurement diligence',
-    ],
-    integrations: ['SecurityScorecard', 'BitSight', 'OneTrust', 'Jira'],
-    competitors: ['Whistic', 'Vanta', 'ZenGRC'],
-    price: '$890',
-  period: '/month',
-    trial_days: 14,
-    setup_time: 'Fast',
-  market_position: 'Sales - assisted and security - led adoption',
-    roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
-      'Developer portals',
-      'Internal knowledge bases',
-      'Customer docs',
-    ],
-    integrations: ['GitHub', 'Confluence', 'Notion', 'Zendesk'],
-    competitors: ['Algolia Answers', 'Vectara'],
-    price: '$249',
-  period: '/month',
-      'MSPs and IT providers',
-      'Internal IT for SMBs',
-      'BYOD governance',
-    ],
-    integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
-    competitors: ['Atera', 'NinjaOne'],
-    price: '$4',
-  roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;}
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;}
-  },;
-
-
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
-
-    id: 'ai-governance-compliance-hub',
-  name: 'AI Governance & Compliance Hub',
-    category: 'AI & Data',
-  tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',
-    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',
-  features: [
-      'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)'
-
-    period: '/device / month',
-  trial_days: 14,
-    setup_time: 'Fast',
-  market_position: 'Cost - effective RMM for partners and IT teams',
-    roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',
-  link: 'https://ziontechgroup.com / services / msp - remote - device - ops',
-  },
-];      'Windows / macOS / Linux agent and lightweight mode_patch automation and health policies_remote scripts and secure sessions_inventory, software metering, and alerts_ticketing and customer portals';
-    ];
-=======
-];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
-=======    ];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];
     competitors: ['AteraNinjaOne'];
@@ -417,10 +285,6 @@ export const real2026Q2Additions = [;
     id: 'msp-remote-device-ops',;
     name: 'MSP Remote Device Ops',;
     category: 'Cloud & FinOps',;
-<<<<<<< HEAD;
-tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',;
-    description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',;
-=======
     tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',,
   description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',;
     features: [;
@@ -627,7 +491,6 @@ tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.
     category: 'Cloud & FinOps',;
     tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',,
   description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 features: [;
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals';
     ],;

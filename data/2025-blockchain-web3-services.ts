@@ -610,14 +610,8 @@ export interface BlockchainWeb3Service {;
     currency: string;
     trialDays: number;
     setupTime: string;
-<<<<<<< HEAD;
-  {
-
-      'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis'
-=======
   {
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
     ],
     realImplementation: true,
     implementationDetails: \"implementationDetails\",
@@ -635,98 +629,8 @@ export interface BlockchainWeb3Service {;
     ]
     support:
       '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.'
-<<<<<<< HEAD;
-compliance: [
-    color: 'from - green - 500 to - emerald - 600',
-  popular: true,
-    launch_date: '2024 - 01 - 15',
-  customers: 8500,
-    rating: 4 && 4.9,}
-    reviews: 6200}
-  },
-  {
-    implementationDetails: 'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.',
-  roi: 'NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.'
-    useCases: [
-      'NFT investment research'
-      'Portfolio optimization'
-      'Market trend analysis'
-      'Rarity and value assessment'
-      'Trading strategy development'
-      'Brand NFT strategy'
-    ]
-    integrations: [
-      'OpenSea, Rarible, Foundation, Ethereum, Polygon, Solana, Custom NFT platforms'
-    ]
-    support: '24/7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.',
-  compliance: [
-    color: 'from - pink - 500 to - rose - 600',
-  popular: true,
-    launch_date: '2024 - 03 - 01',
-  customers: 3200,
-    rating: 4 && 4.7,}
-    reviews: 2100}
-  },
-  {
-    competitors: [
-      'IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain'
-    ]
-    techStack: [
-    implementationDetails: 'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.',
-  roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.'
-    useCases: [
-      'Food safety tracking'
-      'Pharmaceutical authenticity'
-      'Luxury goods verification'
-      'Sustainable sourcing verification'
-      'Compliance monitoring'
-      'Quality assurance'
-    ]
-    integrations: [
-      'SAP, Oracle, Microsoft Dynamics, Salesforce, Custom ERP systems, IoT platforms'
-    ]
-    support:
-    color: 'from - blue - 500 to - cyan - 600',
-  popular: true,
-    launch_date: '2024 - 02 - 10',
-  customers: 950,
-    rating: 4 && 4.8,}
-    reviews: 680}
-  },
-  {
-    implementationDetails: 'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.',
-  roi: 'Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.'
-    useCases: [
-      'Social networking'
-      'Content creation and sharing'
-      'Community building'
-      'Brand marketing'
-      'Influencer monetization'
-      'Decentralized governance'
-    ]
-    integrations: [
-      'MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'
-    ]
-    support: 'Community support, developer documentation, custom development services, and enterprise solutions.',
-  compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
-    link: 'https://ziontechgroup.com/web3-social-media-platform',
-  icon: '🌐',
-    color: 'from-purple-500 to-indigo-600',
-  popular: true,
-    launchDate: '2024-01-01',
-  customers: 25000,
-    rating: 4.6,}
-    reviews: 18000}
-  },;
-];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
-
-
-      'Community support, developer documentation, custom development services, and enterprise solutions.',
-    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
-=======
     compliance: [];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
       'Community support, developer documentation, custom development services, and enterprise solutions.',    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
   id: 'web3 - social - media - platform',
     name: 'Web3 Social Media Platform',
@@ -1086,11 +990,5 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     rating: 4.6,;
     reviews: 18000;
     rating: 4.6,
-<<<<<<< HEAD;
-reviews: 18000;
-  }
-];
-=======
     reviews: 18000;  }
 ];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

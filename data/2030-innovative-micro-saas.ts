@@ -1,34 +1,13 @@
-<<<<<<< HEAD;
-;
-      'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.';
-    launchDate: '2030-03-01';
-    customers: 89;
-    rating: 4.7;
-    reviews: 52;
-=======
 'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.'
     launchDate: \"launchDate\",
     customers: 89;
     rating: 4.7;
 reviews: 52;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
   }
       'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.',launchDate: '2030-03-01',
   customers: 89,rating: 4.7,reviews: 52;
   }];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD;
-address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    }import { ServiceVariant  } from '../types / service - variants';
-export interface InnovativeMicroSaas2030  {{id: 'ai-business-intelligence-2030';
-    name: 'AI Business Intelligence 2030';
-    tagline: 'Next-generation AI-powered business insights';
-    price: '$2,999';
-    period: '/month';
-    description:;
-      'Revolutionary 2030 platform for AI-powered business intelligence, providing real-time insights, predictive analytics, and autonomous decision-making.','AI-powered analytics','Real-time insights',real_implementation: boolean;
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',}
   website: 'https://ziontechgroup.com'}
     }
@@ -45,7 +24,6 @@ export interface InnovativeMicroSaas2030 {
       'AI-powered analytics',
       'Real-time insights',
   real_implementation: boolean;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 implementation_details: string;}
   launch_date: string;}
 import { ServiceVariant  } from '../types/service-variants';
@@ -77,16 +55,10 @@ export interface InnovativeMicroSaas2030  {id: string;
   variant: ServiceVariant;
   contactInfo: {mobile: string;
     email: string;
-<<<<<<< HEAD;}
-address: string;website: string;}
-  }website: string;
-  },realImplementation: boolean;
-=======
     address: string;
     website: string;
   }
   realImplementation: boolean;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 implementationDetails: string;
   launchDate: string;
   customers: number;
@@ -974,23 +946,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
   growthRate: '700%+ annual growth potential',
     variant: 'ai-futuristic',
   contactInfo: {
-<<<<<<< HEAD;
-mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}
-    }
-    },
-    realImplementation: true, implementationDetails: 'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.',
-  launchDate: '2030-03-01', customers: 89,
-    rating: 4.7,
-    reviews: 52;
-
-
-import { ServiceVariant } from '../types/service-variants',;
-=======
 import { ServiceVariant } from '../types/service-variants';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export interface InnovativeMicroSaas2030 {;
   id: string,;
   name: string,;
@@ -1252,9 +1208,6 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     customers: 89,;
     rating: 4.7;
     reviews: 52;
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
   }
 ];
 
@@ -1448,11 +1401,7 @@ reviews: 52;
     marketSize: 'Growing market - $80B+ potential',
   growthRate: '700%+ annual growth potential',
     variant: 'ai-futuristic',
-<<<<<<< HEAD;
-contactInfo: {}
-=======}
     contactInfo: {import { ServiceVariant } from '../types/service-variants';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export interface InnovativeMicroSaas2030 {;
   id: string,;
   name: string,;
@@ -1714,12 +1663,5 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     customers: 89,;
     rating: 4.7;
     reviews: 52;
-<<<<<<< HEAD;
   }
 ];
-
-
-=======
-  }
-];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

@@ -74,52 +74,6 @@ import React from 'react';,import {Brain,MessageSquare,BarChart3,FileText,Search
         </div>;
       </div>;
       {/* Stats Section */}
-<<<<<<< HEAD;
-      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\" />;
-        <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\" />;
-          {stats.map((stat, index) => (<div key={index} className=\"text-center\" />;
-              <div className=\"text-3xl md:text-4xl font-bold text-blue-400 mb-2\" />{stat.value}</div>;
-              <div className=\"text-gray-300 text-sm\" />{stat.label}</div>;
-            </div>;
-  Brain,MessageSquare,BarChart3,FileText,Search,Shield,Users,Zap,CheckCircle,Star,ExternalLink,ArrowRight,Phone,Mail,MapPin,Linkedin,Twitter,Github;
-} from 'lucide-react',export default function AIServicesPage() {const aiServices = [;
-    {name: \"AI Content Generation Suite\",,description: \"Revolutionary AI-powered content creation platform that generates high-quality, SEO-optimized content for blogs, marketing materials, and social media.\",icon: <FileText className=\"w-12 h-12 text-blue-500\" />,features: [;
-        \"Multi-language content generation\",\"SEO optimization with keyword research\",\"Brand voice training and customization\",\"Plagiarism detection and originality scoring\",\"Content performance analytics\",\"Automated content scheduling\",\"Team collaboration tools\",\"API integration capabilities\";}
-      ],pricing: {starter: \"$299/month\",professional: \"$599/month\",enterprise: \"$1,299/month\";}
-      },marketPrice: \"$500-800/month\",useCases: [\"Marketing agencies\", \"Content creators\", \"E-commerce businesses\", \"Bloggers\", \"Social media managers\"],benefits: [;
-        \"10x faster content creation\",\"Improved SEO rankings\",\"Consistent brand voice\",\"Reduced content costs\",\"24/7 content generation\";
-      ],website: \"https://ziontechgroup.com/ai-content-generation\";
-    },{name: \"AI Customer Service Platform\",,description: \"Intelligent chatbot solution with advanced natural language processing, sentiment analysis, and seamless human handoff capabilities.\",icon: <MessageSquare className=\"w-12 h-12 text-green-500\" />,features: [;
-        \"Natural language understanding\",\"Multi-language support (50+ languages)\",\"Sentiment analysis and mood detection\",\"Seamless human agent handoff\",\"Integration with major CRM platforms\",\"Real-time analytics and reporting\",\"Custom knowledge base training\",\"Voice and text support\";}
-      ],pricing: {starter: \"$199/month\",professional: \"$399/month\",enterprise: \"$799/month\";}
-      },marketPrice: \"$300-600/month\",useCases: [\"E-commerce platforms\", \"SaaS companies\", \"Customer support teams\", \"Healthcare providers\", \"Financial services\"],benefits: [;
-        \"24/7 customer support\",\"Reduced response times\",\"Lower support costs\",\"Improved customer satisfaction\",\"Scalable support operations\";
-      ],website: \"https://ziontechgroup.com/ai-customer-service\";
-    },{name: \"AI Sales Intelligence Platform\",,description: \"Predictive analytics and lead scoring platform powered by machine learning algorithms for sales optimization and revenue growth.\",icon: <BarChart3 className=\"w-12 h-12 text-purple-500\" />,features: [;
-        \"Advanced lead scoring algorithms\",\"Sales forecasting and predictions\",\"Pipeline analytics and insights\",\"CRM and marketing automation integration\",\"Real-time performance tracking\",\"Custom sales playbooks\",\"Competitive intelligence\",\"Revenue optimization recommendations\";}
-      ],pricing: {starter: \"$399/month\",professional: \"$799/month\",enterprise: \"$1,599/month\";}
-      },marketPrice: \"$600-1000/month\",useCases: [\"Sales teams\", \"B2B companies\", \"Growth teams\", \"Sales managers\", \"Revenue operations\"],benefits: [;
-        \"Increased conversion rates\",\"Better lead prioritization\",\"Improved sales forecasting\",\"Higher revenue per salesperson\",\"Data-driven sales decisions\";
-      ],website: \"https://ziontechgroup.com/ai-sales-intelligence\";
-    },{name: \"AI-Powered Search & RAG System\",,description: \"Advanced retrieval-augmented generation system for intelligent document search, knowledge management, and contextual information retrieval.\",icon: <Search className=\"w-12 h-12 text-orange-500\" />,features: [;
-        \"Vector-based semantic search\",\"Document processing and indexing\",\"Contextual question answering\",\"Multi-format document support\",\"Real-time knowledge updates\",\"Custom knowledge base creation\",\"API access and integrations\",\"Advanced analytics and insights\";}
-      ],pricing: {starter: \"$499/month\",professional: \"$999/month\",enterprise: \"$1,999/month\";}
-      },marketPrice: \"$800-1500/month\",useCases: [\"Research institutions\", \"Legal firms\", \"Healthcare organizations\", \"Educational institutions\", \"Enterprise knowledge management\"],benefits: [;
-        \"Instant information retrieval\",\"Improved research efficiency\",\"Better decision making\",\"Reduced information silos\",\"Enhanced knowledge sharing\";
-      ],website: \"https://ziontechgroup.com/ai-search-rag\";
-    },{name: \"AI Security & Guardrails\",,description: \"Comprehensive AI safety and security platform with content filtering, bias detection, and ethical AI governance tools.\",icon: <Shield className=\"w-12 h-12 text-red-500\" />,features: [;
-        \"Content safety filtering\",\"Bias detection and mitigation\",\"Ethical AI guidelines enforcement\",\"Real-time threat detection\",\"Compliance monitoring\",\"Audit trails and reporting\",\"Custom policy creation\",\"Integration with AI platforms\";}
-      ],pricing: {starter: \"$599/month\",professional: \"$1,199/month\",enterprise: \"$2,499/month\";}
-      },marketPrice: \"$1000-2000/month\",useCases: [\"AI development teams\", \"Enterprises\", \"Government agencies\", \"Healthcare providers\", \"Financial institutions\"],benefits: [;
-        \"Reduced AI risks\",\"Compliance assurance\",\"Ethical AI deployment\",\"Improved trust and transparency\",\"Risk mitigation\";
-      ],website: \"https://ziontechgroup.com/ai-security-guardrails\";
-    },{name: \"AI Evaluation & Testing Lab\",,description: \"Comprehensive AI model evaluation platform with automated testing, performance benchmarking, and quality assurance tools.\",icon: <Brain className=\"w-12 h-12 text-indigo-500\" />,features: [;
-        \"Automated model testing\",\"Performance benchmarking\",\"Quality assurance tools\",\"Bias and fairness testing\",\"Robustness evaluation\",\"Custom evaluation metrics\",\"Continuous monitoring\",\"Comprehensive reporting\";}
-      ],pricing: {starter: \"$799/month\",professional: \"$1,599/month\",enterprise: \"$3,199/month\";}
-      },marketPrice: \"$1200-2500/month\",useCases: [\"AI research teams\", \"ML engineers\", \"Data scientists\", \"AI product teams\", \"Quality assurance teams\"],benefits: [;
-        \"Improved AI model quality\",\"Faster model deployment\",\"Reduced AI risks\",\"Better performance tracking\",\"Comprehensive evaluation\";
-      ],website: \"https://ziontechgroup.com/ai-evaluation-lab\";
-=======
       <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\" />
         <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\" />
           {stats.map((stat, index) => (}
@@ -329,7 +283,6 @@ export default function AIServicesPage() {;
         \"Comprehensive evaluation\";
       ],;
       website: \"https://ziontechgroup.com/ai-evaluation-lab\";
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
     }
   ],const stats = [;
     { label: \"AI Models Deployed\", value: \"500+\" },{ label: \"Client Satisfaction\", value: \"98%\" },{ label: \"Cost Savings\", value: \"40-60%\" }{ label: \"Implementation Time\", value: \"2-4 weeks\" }

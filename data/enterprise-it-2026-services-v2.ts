@@ -4,10 +4,7 @@ export interface EnterpriseIt2026ServiceV2  {export interface EnterpriseIt2026Se
 export interface EnterpriseIt2026ServiceV2  {export interface EnterpriseIt2026ServiceV2  {import { ServiceVariant  } from '../types/service-variants';
 export interface EnterpriseIT2026ServiceV2  {export interface EnterpriseIt2026ServiceV2  {id: string;
 export interface EnterpriseIt2026ServiceV2 {
-<<<<<<< HEAD;
-=======
 export interface EnterpriseIt2026ServiceV2 {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export interface EnterpriseIt2026ServiceV2 {;
 export interface EnterpriseIt2026ServiceV2 {
 
@@ -583,11 +580,6 @@ implementationDetails: 'Production-ready quantum security platform with post-qua
     rating: 4.9;
 reviews: 180;
   }
-<<<<<<< HEAD;
-}
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture;
   {
@@ -625,12 +617,7 @@ website: 'https://ziontechgroup.com';}
     customers: 280;
     rating: 4.9,
     reviews: 180;
-<<<<<<< HEAD;
-];
-import { ServiceVariant } from '../types/service-variants',;
-=======
 ];import { ServiceVariant } from '../types/service-variants';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;
   name: string,;
@@ -1071,8 +1058,4 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
   }
 ];
   }
-<<<<<<< HEAD;
-;
-=======
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

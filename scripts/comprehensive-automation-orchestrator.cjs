@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-/**
- * Comprehensive Automation Orchestrator
- * Orchestrates all automation scripts for maximum efficiency
- */
-const fs = require("fs");
-const path = require("path");
-const { execSync, spawn } = require("child_process");
-=======
 #!/usr/bin/env node;
 /**;
  * Comprehensive Automation Orchestrator;
@@ -163,7 +153,6 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n"`)
         "Monitor application performance"
     const reportPath = path.join(this.reportsDir, "comprehensive-automation-report.json")
     this.log(" Starting Comprehensive Automation Orchestrator")
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
 
 class ComprehensiveAutomationOrchestrator {
   constructor() {

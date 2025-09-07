@@ -1,7 +1,6 @@
 import {createClient} from \"https: //esm.sh/@supabase/supabase-js@2\";
 import {JobData, MatchResult} from \"./types.ts\";
 import {normalizeSkillsWithAI, findBestMatches} from \"./ai-matcher.ts\";
-=======import {createClient} from \"https: //esm.sh/@supabase/supabase-js@2\"
 import {JobData, MatchResult} from \"./types.ts\";
 import {normalizeSkillsWithAI, findBestMatches} from \"./ai-matcher.ts\";
 // Initialize the Supabase client;
@@ -211,4 +210,3 @@ await Promise.all (matchInsertPromises)
 ;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

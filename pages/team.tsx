@@ -21,42 +21,6 @@ import Layout from \"../components/Layout\";
 const teamMembers = [
   {
     id: 1,
-<<<<<<< HEAD
-    name: "Dr. Sarah Johnson",
-    position: "Chief Technology Officer",
-    department: "Engineering",
-    bio: "Leading our AI initiatives with 15+ years of experience in machine learning and data science.",
-    expertise: ["AI & Machine Learning", "Data Science", "Python", "TensorFlow"],
-    image: "/images/team/sarah-johnson.jpg",
-    linkedin: "https://linkedin.com/in/sarahjohnson",
-    twitter: "https://twitter.com/sarahjohnson",
-    github: "https://github.com/sarahjohnson"
-  },
-  {
-    id: 2,
-    name: "Michael Chen",
-    position: "Cloud Solutions Architect",
-    department: "Infrastructure",
-    bio: "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications.",
-    expertise: ["Cloud Architecture", "AWS", "Azure", "DevOps"],
-    image: "/images/team/michael-chen.jpg",
-    linkedin: "https://linkedin.com/in/michaelchen",
-    twitter: "https://twitter.com/michaelchen",
-    github: "https://github.com/michaelchen"
-  },
-  {
-    id: 3,
-    name: "Emily Rodriguez",
-    position: "Security Specialist",
-    department: "Cybersecurity",
-    bio: "Ensuring enterprise-grade security with expertise in threat detection and prevention.",
-    expertise: ["Cybersecurity", "Penetration Testing", "Compliance", "Risk Assessment"],
-    image: "/images/team/emily-rodriguez.jpg",
-    linkedin: "https://linkedin.com/in/emilyrodriguez",
-    twitter: "https://twitter.com/emilyrodriguez",
-    github: "https://github.com/emilyrodriguez"
-  }
-=======
     name: \"Kleber Santos\",
     position: \"CEO & Founder\",
     department: \"Leadership\",
@@ -137,43 +101,10 @@ const teamMembers = [
     github: \"https://github.com/lisawang\",}
     expertise: [\"Product Strategy\", \"SaaS Development\", \"UX/UI\", \"Mobile Apps\"],}
   },
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
 ];
 
 const departments = [
   {
-<<<<<<< HEAD
-    name: "Engineering",
-    description: "Software development and technical innovation",
-    icon: "💻",
-    count: 12
-  },
-  {
-    name: "Data Science",
-    description: "AI and machine learning solutions",
-    icon: "🤖",
-    count: 8
-  },
-  {
-    name: "Cybersecurity",
-    description: "Security and compliance expertise",
-    icon: "🔒",
-    count: 6
-  },
-  {
-    name: "Operations",
-    description: "Project management and delivery",
-    icon: "⚙️",
-    count: 10
-  }
-];
-
-const stats = [
-  { number: "50+", label: "Team Members" },
-  { number: "15+", label: "Years Experience" },
-  { number: "25+", label: "Countries Represented" },
-  { number: "95%", label: "Employee Satisfaction" },
-=======
     name: \"Leadership\",
     description: \"Strategic vision and company direction\",
     icon: \"👑\",}
@@ -228,7 +159,6 @@ const stats = [
   { number: \"15+\", label: \"Years Experience\" },
   { number: \"25+\", label: \"Countries Represented\" },
   { number: \"95%\", label: \"Employee Satisfaction\" },
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
 ];
 
 export default function TeamPage() {
@@ -300,22 +230,6 @@ key={index}
             </p>
           </div>
 
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={member.id}
-                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-center mb-4">
-                  <div className="w-24 h-24 rounded-full mx-auto mb-4 bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center text-white text-2xl font-bold">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">
-=======
           <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8\" />
             {teamMembers.slice(0, 3).map((member, index) => (}
               <motion.div;}
@@ -332,7 +246,6 @@ src={member.image}
                     className=\"w-24 h-24 rounded-full mx-auto mb-4 object-cover\"
                   />
                   <h3 className=\"text-xl font-bold text-gray-900\" />
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
                     {member.name}
                   </h3>
                   <p className=\"text-purple-600 font-semibold\" />
@@ -376,14 +289,6 @@ href={member.github}
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Departments */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Departments
-=======
       {/* All Team Members */}
       <section className=\"py-16 bg-gray-50\" />
         <div className=\"container mx-auto px-4\" />
@@ -462,7 +367,6 @@ href={member.github}
           <div className=\"text-center mb-12\" />
             <h2 className=\"text-3xl font-bold text-gray-900 mb-4\" />
               Our Departments;
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
             </h2>
             <p className=\"text-xl text-gray-600\" />
               Specialized teams working together to deliver excellence;
@@ -553,9 +457,6 @@ href=\"/contact\"
       </section>
     </Layout>
   );
-<<<<<<< HEAD
-}
-=======
 }
 import Head from \"next/head\";
 import { motion } from \"framer-motion\";
@@ -628,4 +529,3 @@ title=\"Our Team | Zion Tech Group\"
     </>}
   );}
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-064d

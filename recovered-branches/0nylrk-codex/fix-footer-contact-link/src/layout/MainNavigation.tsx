@@ -97,7 +97,6 @@ to={link.href}
   }
     <nav className={cn(\"ml-6 hidden md:flex\", className)} />;
       <ul className=\"flex items-center gap-1\" />;
-=======        {links && links.map((link) => (;}
           <li key={link && link.name} />;
             <Link;
 to={link && link.href}

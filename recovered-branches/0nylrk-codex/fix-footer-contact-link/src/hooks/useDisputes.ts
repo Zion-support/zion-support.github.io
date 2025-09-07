@@ -83,7 +83,6 @@ export function useDisputes() {}
     } catch (err: any) {
           ...data && data.project,
           title: data && data.project?.job?.title || 'Untitled Project'
-=======          ...data.project,}
           title: data.project?.job?.title || 'Untitled Project';}
         }
       } as Dispute;

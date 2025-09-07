@@ -9,5 +9,3 @@ function SimpleLayout() {,
         <title />{title}</title>,
         {description && <meta name=\"description\" content={description} />}
       </Head>,
-=======
->>>>>>>

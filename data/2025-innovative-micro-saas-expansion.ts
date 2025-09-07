@@ -1,11 +1,4 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-export interface InnovativeMicroSaasExpansionService  {id: string;
-  id: string;
-=======
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 name: string;
   tagline: string;
   price: string;
@@ -1134,11 +1127,7 @@ export interface InnovativeMicroSaasExpansionService  {id: string,name: string,t
       launch_date: '2024 - 07 - 15',
   customers: 520,
       rating: 4 && 4.9,
-<<<<<<< HEAD;
-reviews: 267;
-=======
       reviews: 267,
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
     },;
   ];    features: [
 export interface InnovativeMicroSaasExpansionService {

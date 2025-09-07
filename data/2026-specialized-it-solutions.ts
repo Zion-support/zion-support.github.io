@@ -1,11 +1,4 @@
-<<<<<<< HEAD;
-;
-}id: string;
-export interface SpecializedITSolution2026  {id: string;name: string;
-  id: string;
-=======
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 name: string;
   tagline: string;
   price: string;
@@ -1125,12 +1118,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   });
 }
 ;
-<<<<<<< HEAD;
-export interface SpecializedITSolution2026 {;}
-}
-};
-=======
 export interface SpecializedITSolution2026 {}
 }
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

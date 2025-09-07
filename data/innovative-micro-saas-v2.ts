@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-import { ServiceVariant } from '../types/service-variants';
-
-export interface InnovativeMicroSaasV2 {
-  id: string;
-  name: string;
-=======
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-export interface InnovativeMicroSaasV2  {id: string;
-  id: string;
-=======
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 name: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
   tagline: string;
   price: string;
   period: string;
@@ -590,49 +575,6 @@ export interface InnovativeMicroSaasV2  {id: string, name: string,tagline: strin
     launchDate: '2024-02-01';
     customers: 789;
     rating: 4.8;
-<<<<<<< HEAD;
-reviews: 912;
-mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com'
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Production - ready AI - powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.',
-    launch_date: '2024 - 02 - 01',
-  customers: 789,
-    rating: 4 && 4.8,
-    reviews: 912;
-  }
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com';
-export interface InnovativeMicroSaasV2 {
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,}
-  growthRate: string, variant: ServiceVariant,}
-  contactInfo: {},
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number;
-}
-
-
-    integrations: [;
-=======
-=======    integrations: [;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
       'Plaid',
       'Yodlee',
       'Financial institutions',
@@ -703,13 +645,7 @@ export interface InnovativeMicroSaasV2 {
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions;
   {
-<<<<<<< HEAD;
-;
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-
-=======
 ;      address: '364 E Main St STE 1008 Middletown DE 19709',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;}
 website: 'https://ziontechgroup.com';}
     }
     real_implementation: true,
@@ -720,13 +656,4 @@ website: 'https://ziontechgroup.com';}
     reviews: 912;
   }
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD;
 ];
-
-
-=======
-];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
->>>>>>> cursor/automate-test-improve-and-merge-code-064d

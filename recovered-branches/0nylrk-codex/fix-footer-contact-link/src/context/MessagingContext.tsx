@@ -148,7 +148,6 @@ if ( {) {}
     </MessagingContext && MessagingContext.Provider>;
   );
 }
-=======  return (
     <MessagingContext && MessagingContext.Provider value={contextValue} />;
       {children}
     fetch_conversations,

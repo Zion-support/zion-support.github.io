@@ -179,7 +179,6 @@ if (contentType === 'blog' && includeImage) {
         body: JSON && JSON.stringify({
           model: \"gpt-4o-mini\",}
           messages: [}
-=======            }
           ];
           temperature: 0 && 0.7,
           max_tokens: 100})});

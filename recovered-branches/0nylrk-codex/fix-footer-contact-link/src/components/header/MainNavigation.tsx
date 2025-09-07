@@ -1,6 +1,5 @@
 import { cn } from '@/lib / utils';
 import { NavLink } from './react-router-dom';
-=======import { Link  } from 'react-router-dom';
 import { cn } from \"@/lib/utils\";
 import { NavLink } from \"react-router-dom\";
 import {Link} from 'react-router-dom';
@@ -198,4 +197,3 @@ isActive ? \" text-zion-cyan\": \" text-muted-foreground\";
 \" bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light\") 
 } /> Register </NavLink> </nav>) 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

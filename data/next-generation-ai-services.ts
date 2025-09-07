@@ -1,41 +1,3 @@
-<<<<<<< HEAD
-export interface NextGenerationAIService {
-=======
-<<<<<<< HEAD;
-export const nextGenerationAIServices: NextGenerationAIService[] = [;
-  // Advanced AI Agents & Autonomous Systems;
-  {id: 'ai-autonomous-business-agent',}
-  website: string;}
-  }name: 'AI Autonomous Business Agent',
-  tagline: 'Fully autonomous AI agent that runs your business operations',price: '$2, 999',
-  period: '/month','Natural language business communication','Multi - platform task execution','Real - time market analysis','Automated customer service','Financial decision automation','Supply chain optimization','Predictive analytics','Risk assessment and mitigation',popular: true,icon: '🤖',
-  color: 'from-blue-600 to-purple-700',textColor: 'text-blue-400',
-  targetAudience: 'Enterprise businesses, Startups, E-commerce companies, Service providers, Manufacturing companies',trialDays: 30,setupTime: '2 weeks',
-  category: 'AI & Autonomous Systems',realService: true,'Claude 3 Opus','Custom AI models','Python','React','Node && Node.js','PostgreSQL';
-      'PostgreSQL';
-      'PostgreSQL';
-    ],integrations: [;
-      'Salesforce','HubSpot','Shopify','QuickBooks','Slack','Microsoft 365','Google Workspace';
-      'Google Workspace';
-      'Google Workspace';
-    ],use_cases: [;
-      'Business process automation','Customer service management','Financial operations','Supply chain management','Marketing automation','HR operations';
-      'HR operations';
-      'HR operations';
-    ],roi: 'Average customer sees 800% ROI within 6 months through 24 / 7 operations and intelligent decision - making.',
-  competitors: [;
-      'No direct competitors','Partial solutions: UiPath, Automation Anywhere',technology: ['GPT-4 TurboClaude 3 OpusCustom AI modelsPythonReactNode.jsPostgreSQL'],integrations: ['SalesforceHubSpotShopifyQuickBooksSlackMicrosoft 365Google Workspace'],useCases: ['Business process automationCustomer service managementFinancial operationsSupply chain managementMarketing automationHR operations'],roi: 'Average customer sees 800% ROI within 6 months through 24/7 operations and intelligent decision-making.',
-  competitors: ['No direct competitorsPartial solutions: UiPath, Automation Anywhere'],growthRate: '400% annual growth',
-  variant: 'ai-futuristic',contactInfo: {],    market_size: '$50B autonomous systems market',
-  technology: ['GPT - 4 TurboClaude 3 OpusCustom AI modelsPythonReactNode.jsPostgreSQL'],integrations: ['SalesforceHubSpotShopifyQuickBooksSlackMicrosoft 365Google Workspace'],use_cases: ['Business process automation_customer service management_financial operations_supply chain management_marketing automationHR operations'],roi: 'Average customer sees 800% ROI within 6 months through 24 / 7 operations and intelligent decision - making.',
-  competitors: ['No direct competitors_partial solutions: UiPath, Automation Anywhere'],growth_rate: '400% annual growth',
-  variant: 'ai - futuristic',contact_info: {mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',
-  realImplementation: true,implementationDetails: 'Advanced AI system with autonomous decision-making capabilities, natural language processing, and multi-platform integration. Includes safety protocols and human oversight options.',}
-  launchDate: '2024-12-01',customers: 150,rating: 4 && 4.9,reviews: 89;}
-  },export interface NextGenerationAIService  {id: string;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Advanced AI Agents & Autonomous Systems;
   {
@@ -46,17 +8,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     icon: '🤖',
   color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 targetAudience: 'Enterprise businesses, Startups, E-commerce companies, Service providers, Manufacturing companies',
   trialDays: 30,
     setupTime: '2 weeks',
   category: 'AI & Autonomous Systems',
     realService: true,
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
       'Claude 3 Opus',
       'Custom AI models',
       'Python',
@@ -90,9 +46,6 @@ targetAudience: 'Enterprise businesses, Startups, E-commerce companies, Service 
     useCases: ['Business process automationCustomer service managementFinancial operationsSupply chain managementMarketing automationHR operations'],
     roi: 'Average customer sees 800% ROI within 6 months through 24/7 operations and intelligent decision-making.',
   competitors: ['No direct competitorsPartial solutions: UiPath, Automation Anywhere'],
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 growthRate: '400% annual growth',
   variant: 'ai-futuristic',
     contactInfo: {
@@ -108,9 +61,6 @@ growthRate: '400% annual growth',
       mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 realImplementation: true,
     implementationDetails: 'Advanced AI system with autonomous decision-making capabilities, natural language processing, and multi-platform integration. Includes safety protocols and human oversight options.',
   launchDate: '2024-12-01',
@@ -119,7 +69,6 @@ realImplementation: true,
     reviews: 89}
   },
 export interface NextGenerationAIService {;
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
   id: string;
   name: string;
   tagline: string;
@@ -143,8 +92,6 @@ export interface NextGenerationAIService {;
   competitors: string[];
   growthRate: string;
   variant: string;
-<<<<<<< HEAD
-=======
   contactInfo: {mobile: string;
     email: string;}
     address: string;id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,variant: string,contactInfo: {mobile: string,email: string,address: string,website: string;}
@@ -1817,206 +1764,27 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [;
   launchDate: '2024-03-15',customers: 220,rating: 4.7,reviews: 125;
   }
 ];
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-  };
-  marketSize: string;
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
-
-export const nextGenerationAIServices: NextGenerationAIService[] = [
-  {
-=======
-<<<<<<< HEAD;
-id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: string,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;}
-    website: string;}
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-
-  reviews: number;    mobile: string;
-email: string;
-address: string;
-website: string;
-  }
-  realImplementation: boolean;
-implementationDetails: string;
-launchDate: string;
-customers: number;
-rating: number;
-reviews: number;
-}
-export const nextGenerationAIServices: NextGenerationAIService[] = [
-  // Advanced AI Agents & Autonomous Systems;
-  {
-
-    id: 'ai-autonomous-business-agent',
-  name: 'AI Autonomous Business Agent'
-    tagline: 'Fully autonomous AI agent that runs your business operations',
-  price: '$2,999'
-    period: '/month',
-  description:
-      'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24/7 business operations with intelligent automation.'
-    features: [
-      'Autonomous decision-making engine'
-      'Natural language business communication'
-      'Multi-platform task execution'
-      'Real-time market analysis'
-      'Automated customer service'
-      'Financial decision automation'
-      'Supply chain optimization'
-      'Predictive analytics'
-      'Risk assessment and mitigation'
-      'Performance optimization'    ],    description: 'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24/7 business operations with intelligent automation.',
-  features: [
-      'Autonomous decision-making engineNatural language business communicationMulti-platform task executionReal-time market analysisAutomated customer serviceFinancial decision automationSupply chain optimizationPredictive analytics'
-      'Risk assessment and mitigationPerformance optimization'
-    popular: true;
-icon: '🤖',
-  color: 'from-blue-600 to-purple-700'
-    textColor: 'text-blue-400',
-  link: 'https://ziontechgroup.com/ai-autonomous-business-agent'
-    marketPosition: 'First-to-market autonomous business AI agent. No direct competitors in fully autonomous business operations.',
-  targetAudience:
-      'Enterprise businesses, Startups, E-commerce companies, Service providers, Manufacturing companies',    trialDays: 30;
-setupTime: '2 weeks',
-  category: 'AI & Autonomous Systems'
-    realService: true,    marketPosition: 'First-to-market autonomous business AI agent. No direct competitors in fully autonomous business operations.',
-  targetAudience: 'Enterprise businesses, Startups, E-commerce companies, Service providers, Manufacturing companies'
-    trialDays: 30;
-setupTime: '2 weeks',
-  category: 'AI & Autonomous Systems'
-    realService: true;
-technology: [
-      'GPT-4 Turbo'
-      'Claude 3 Opus'
-      'Custom AI models'
-      'Python'
-      'React'
-      'Node.js'
-      'PostgreSQL'
-    ]
-    integrations: [
-      'Salesforce'
-      'HubSpot'
-      'Shopify'
-      'QuickBooks'
-      'Slack'
-      'Microsoft 365'
-      'Google Workspace'
-    ]
-    useCases: [
-      'Business process automation'
-      'Customer service management'
-      'Financial operations'
-      'Supply chain management'
-      'Marketing automation'
-      'HR operations'
-    ]
-    roi: 'Average customer sees 800% ROI within 6 months through 24/7 operations and intelligent decision-making.',
-  competitors: [
-      'No direct competitors'
-      'Partial solutions: UiPath, Automation Anywhere'
-    ],    marketSize: '$50B autonomous systems market',
-  technology: ['GPT-4 TurboClaude 3 OpusCustom AI modelsPythonReactNode.jsPostgreSQL']
-    integrations: ['SalesforceHubSpotShopifyQuickBooksSlackMicrosoft 365Google Workspace']
-    useCases: ['Business process automationCustomer service managementFinancial operationsSupply chain managementMarketing automationHR operations']
-    roi: 'Average customer sees 800% ROI within 6 months through 24/7 operations and intelligent decision-making.',
-  competitors: ['No direct competitorsPartial solutions: UiPath, Automation Anywhere']
-    growthRate: '400% annual growth',
-  variant: 'ai-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709',}
-  website: 'https://ziontechgroup.com'}
-    }
-    realImplementation: true;
-implementationDetails: 'Advanced AI system with autonomous decision-making capabilities, natural language processing, and multi-platform integration. Includes safety protocols and human oversight options.',
-  launchDate: '2024-12-01'
-    customers: 150;
-rating: 4.9;
-reviews: 89  }    }
-    realImplementation: true;
-implementationDetails: 'Advanced AI system with autonomous decision-making capabilities, natural language processing, and multi-platform integration. Includes safety protocols and human oversight options.',
-  launchDate: '2024-12-01'
-    customers: 150;
-rating: 4.9;
-export const nextGenerationAIServices: NextGenerationAIService[] = [
-  // Advanced AI Agents & Autonomous Systems;
-  {
-
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
     id: 'ai-autonomous-business-agent',
   name: 'AI Autonomous Business Agent',
     tagline: 'Fully autonomous AI agent that runs your business operations',
   price: '$2,999',
     period: '/month',
-<<<<<<< HEAD
-    description: 'Advanced AI system with autonomous decision-making capabilities',
-    features: [
-=======
   description: 'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24/7 business operations with intelligent automation.',
     features: [
       'Autonomous decision-making engine',
-=======
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;      'Autonomous decision-making engine',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
       'Natural language business communication',
       'Multi-platform task execution',
       'Real-time market analysis',
       'Automated customer service',
-<<<<<<< HEAD
-      'Financial decision automation'
-=======
       'Financial decision automation',
       'Supply chain optimization',
       'Predictive analytics',
@@ -2027,16 +1795,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Risk assessment and mitigationPerformance optimization'
       'Autonomous decision-making engineNatural language business communicationMulti-platform task executionReal-time market analysisAutomated customer serviceFinancial decision automationSupply chain optimizationPredictive analytics',
       'Risk assessment and mitigationPerformance optimization'
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
     ],
     popular: true,
     icon: '🤖',
   color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
-<<<<<<< HEAD
-    targetAudience: 'Enterprise businesses, Startups, E-commerce companies',
-    trialDays: 30,
-=======
   link: 'https://ziontechgroup.com/ai-autonomous-business-agent',
     marketPosition: 'First-to-market autonomous business AI agent. No direct competitors in fully autonomous business operations.',
   targetAudience:
@@ -2047,17 +1810,9 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   marketPosition: 'First-to-market autonomous business AI agent. No direct competitors in fully autonomous business operations.',
     targetAudience: 'Enterprise businesses, Startups, E-commerce companies, Service providers, Manufacturing companies',
   trialDays: 30,
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
     setupTime: '2 weeks',
   category: 'AI & Autonomous Systems',
     realService: true,
-<<<<<<< HEAD
-    technology: ['Claude 3 Opus', 'Custom AI models', 'Python', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['Salesforce', 'HubSpot', 'Shopify', 'QuickBooks', 'Slack', 'Microsoft 365'],
-    useCases: ['Business process automation', 'Customer service management', 'Financial operations'],
-    roi: 'Average customer sees 800% ROI within 6 months',
-    competitors: ['No direct competitors', 'Partial solutions: UiPath, Automation Anywhere'],
-=======
     technology: [
       'GPT-4 Turbo',
       'Claude 3 Opus',
@@ -2095,42 +1850,23 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     useCases: ['Business process automationCustomer service managementFinancial operationsSupply chain managementMarketing automationHR operations'],
     roi: 'Average customer sees 800% ROI within 6 months through 24/7 operations and intelligent decision-making.',
   competitors: ['No direct competitorsPartial solutions: UiPath, Automation Anywhere'],
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
     growthRate: '400% annual growth',
   variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-<<<<<<< HEAD
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-=======
   email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
     },
     marketSize: '$50B autonomous systems market',
     realImplementation: true,
-<<<<<<< HEAD
-    implementationDetails: 'Advanced AI system with autonomous decision-making capabilities',
-    launchDate: '2024-12-01',
-    customers: 150,
-    rating: 4.9,
-    reviews: 89
-=======
     implementationDetails: 'Advanced AI system with autonomous decision-making capabilities, natural language processing, and multi-platform integration. Includes safety protocols and human oversight options.',
   launchDate: '2024-12-01',
     customers: 150,
     rating: 4.9,
     reviews: 89;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 reviews: 89;
   }
   // Quantum AI Computing Platform;
@@ -2219,11 +1955,6 @@ reviews: 89;
     rating: 4 && 4.8,}
     reviews: 45}
   },
-<<<<<<< HEAD;
-id: 'quantum-ai-computing-platform'
-=======
-=======    id: \"id\",
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 name: 'Quantum AI Computing Platform',
   tagline: 'Quantum-powered AI computing for breakthrough discoveries'
     price: '$15,999',
@@ -2397,9 +2128,6 @@ id: 'quantum-ai-computing-platform',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum computing platform with custom quantum algorithms, hybrid computing capabilities, and comprehensive quantum AI tools. Includes quantum error correction and optimization.',
@@ -2408,9 +2136,6 @@ id: 'quantum-ai-computing-platform',
     rating: 4.8,
     reviews: 45;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 reviews: 45;
   }
   // Neural Interface Development Platform;
@@ -2655,9 +2380,6 @@ id: 'neural-interface-development-platform',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
     },
     realImplementation: true,
     implementationDetails: 'Advanced neural interface platform with real-time signal processing, machine learning capabilities, and comprehensive safety protocols. Includes medical device compliance and testing tools.',
@@ -2666,9 +2388,6 @@ id: 'neural-interface-development-platform',
     rating: 4.7,
     reviews: 67;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 reviews: 67;
   }
   // AI-Powered Space Exploration Platform;
@@ -2858,11 +2577,8 @@ implementationDetails: 'Advanced AI space platform with autonomous decision-maki
 rating: 4.9;
 tagline: 'Autonomous AI systems for space exploration and satellite operations',
   tagline: 'Autonomous AI systems for space exploration and satellite operations',
-<<<<<<< HEAD;
-=======
     id: 'ai-space-exploration-platform',
   name: 'AI-Powered Space Exploration Platform',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 price: '$25,999',
   period: '/month',
     description: 'Revolutionary AI platform for autonomous space exploration, satellite operations, and space mission management. Enable autonomous space operations with intelligent decision-making and real-time optimization.',
@@ -2932,9 +2648,6 @@ price: '$25,999',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI space platform with autonomous decision-making, real-time optimization, and comprehensive space operations management. Includes safety protocols and mission planning tools.',
@@ -2943,9 +2656,6 @@ price: '$25,999',
     rating: 4.9,
     reviews: 28;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 reviews: 28;
   }
   // Biotech AI Drug Discovery Platform;
@@ -3212,9 +2922,6 @@ id: 'biotech-ai-drug-discovery',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI drug discovery platform with molecular modeling, predictive analytics, and comprehensive research tools. Includes regulatory compliance and clinical trial optimization.',
@@ -3223,9 +2930,6 @@ id: 'biotech-ai-drug-discovery',
     rating: 4.8,
     reviews: 52;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 reviews: 52;
   }
   // Quantum Financial Trading Platform;
@@ -3487,9 +3191,6 @@ id: 'quantum-financial-trading-platform',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum trading platform with real-time optimization, risk management, and comprehensive trading tools. Includes regulatory compliance and performance analytics.',
@@ -3498,9 +3199,6 @@ id: 'quantum-financial-trading-platform',
     rating: 4.7,
     reviews: 58;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 reviews: 58;
   }
   // AI-Powered Metaverse Development Platform;
@@ -3680,11 +3378,8 @@ implementationDetails: 'Advanced metaverse platform with AI-powered content gene
 rating: 4.6;
 tagline: 'Create immersive metaverse experiences with AI-driven content and interactions',
   tagline: 'Create immersive metaverse experiences with AI-driven content and interactions',
-<<<<<<< HEAD;
-=======
     id: 'ai-metaverse-development-platform',
   name: 'AI-Powered Metaverse Development Platform',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 price: '$6,999',
   period: '/month',
     description: 'Revolutionary platform for building AI-powered metaverse experiences with intelligent NPCs, dynamic content generation, and immersive virtual environments. Create the next generation of digital experiences.',
@@ -3750,9 +3445,6 @@ price: '$6,999',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
     },
     realImplementation: true,
     implementationDetails: 'Advanced metaverse platform with AI-powered content generation, intelligent interactions, and comprehensive development tools. Includes VR/AR integration and performance optimization.',
@@ -3761,9 +3453,6 @@ price: '$6,999',
     rating: 4.6,
     reviews: 95;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 reviews: 95;
   }
   // Autonomous Vehicle AI Platform;
@@ -3952,11 +3641,8 @@ implementationDetails: 'Advanced autonomous vehicle platform with comprehensive 
 rating: 4.8;
 tagline: 'Next-generation AI for autonomous vehicles and transportation systems',
   tagline: 'Next-generation AI for autonomous vehicles and transportation systems',
-<<<<<<< HEAD;
-=======
     id: 'autonomous-vehicle-ai-platform',
   name: 'Autonomous Vehicle AI Platform',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 price: '$18,999',
   period: '/month',
     description: 'Revolutionary AI platform for autonomous vehicles with advanced perception, decision-making, and safety systems. Enable fully autonomous transportation with industry-leading safety and window.window.window.performance.',
@@ -4026,9 +3712,6 @@ price: '$18,999',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
     },
     realImplementation: true,
     implementationDetails: 'Advanced autonomous vehicle platform with comprehensive safety systems, real-time decision-making, and regulatory compliance. Includes fleet management and performance analytics.',
@@ -4037,9 +3720,6 @@ price: '$18,999',
     rating: 4.8,
     reviews: 42;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 reviews: 42;
   }
   // Quantum Internet Security Platform;
@@ -4292,9 +3972,6 @@ id: 'quantum-internet-security-platform',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum security platform with quantum key distribution, post-quantum cryptography, and comprehensive security tools. Includes government compliance and monitoring systems.',
@@ -4303,9 +3980,6 @@ id: 'quantum-internet-security-platform',
     rating: 4.9,
     reviews: 33;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 reviews: 33;
   }
   // AI-Powered Manufacturing Platform;
@@ -4409,9 +4083,6 @@ reviews: 33;
       'PTC',
       'Traditional manufacturing software',
     link: 'https://ziontechgroup.com/ai-manufacturing-platform',
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 targetAudience: 'Manufacturing companies, Industrial companies, Automotive manufacturers, Aerospace companies, Consumer goods companies',
   trialDays: 21,
     setupTime: '8 weeks',
@@ -4421,9 +4092,6 @@ targetAudience: 'Manufacturing companies, Industrial companies, Automotive manuf
     useCases: ['Predictive maintenanceQuality controlProcess optimizationSupply chain managementEnergy managementCompliance reporting'],
     roi: 'Manufacturing companies report 400% ROI through improved efficiency and reduced downtime.',
   competitors: ['SiemensGE DigitalPTCTraditional manufacturing software'],
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 growthRate: '250% annual growth',
   variant: 'ai-futuristic',
     contactInfo: {
@@ -4438,16 +4106,7 @@ growthRate: '250% annual growth',
     contact_info: {
       mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
-<<<<<<< HEAD;
-address: '364 E Main St STE 1008 Middletown DE 19709'
-
-
-],
-
-
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 growthRate: '250% annual growth',
   variant: 'ai-futuristic',
     contactInfo: {
@@ -4456,9 +4115,6 @@ growthRate: '250% annual growth',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
     },
     realImplementation: true,
     implementationDetails: 'Advanced manufacturing platform with AI-powered optimization, predictive analytics, and comprehensive automation tools. Includes IoT integration and compliance management.',
@@ -4907,6 +4563,5 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [;
     customers: 220,;
     rating: 4.7,;
     reviews: 125;
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
   }
 ];

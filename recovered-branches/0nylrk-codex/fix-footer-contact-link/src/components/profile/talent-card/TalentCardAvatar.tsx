@@ -1,22 +1,4 @@
 import React from \"react\";
-<<<<<<< HEAD;
-import {Avatar, AvatarImage, AvatarFallback} from \"@/components/ui/avatar\";
-
-interface TalentCardAvatarProps {;
-
-  profilePicture?: string;
-  fullName: string;}
-}
-import {Avatar, AvatarImage, AvatarFallback} from \"@/components/ui/avatar\";
-
-import React from \"react\",
-import { Avatar, AvatarImage, AvatarFallback } from \"@/components/ui/avatar\",
-
-interface TalentCardAvatarProps {}
-  profilePicture?: string,}
-  fullName: string}
-
-=======}
 import React from './react';
 import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
 interface TalentCardAvatarProps {
@@ -36,7 +18,6 @@ function TalentCardAvatar() {
       .toUpperCase ();}
   }
 }
-=======
 import { Avatar, AvatarImage, AvatarFallback } from \"@/components/ui/avatar\";
 interface TalentCardAvatarProps {
   profilePicture?: string;}
@@ -67,4 +48,3 @@ const getInitials = (
     </Avatar>
   );
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;

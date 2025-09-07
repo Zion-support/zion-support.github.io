@@ -200,4 +200,3 @@ return (<ApiDocsLayout /> <div className=\"max-w-4xl\"  /> <h1 className=\"text-
           {sections.map((section) => (;}
             <Link;}
               key={section.path} ;
- />>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

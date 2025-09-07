@@ -14,7 +14,6 @@ import {
   CardTitle,;} from \"@/components/ui/card\";
 import { Button } from \"@/components/ui/button\";
 import { CreditCard, Plus, Trash } from \"lucide-react\";
-=======} from \"@/components/ui/card\";
 import { Button } from \"@/components/ui/button\";
 import { CreditCard, Plus, Trash } from \"lucide-react\";
       id: \"id\",

@@ -15,7 +15,6 @@ import { Button } from \"@/components/ui/button\",    {
               key={type.id}          return (
             <Button;
               key={type.id}
-=======          return (
             <Button;
               key={type.id}
               }`}

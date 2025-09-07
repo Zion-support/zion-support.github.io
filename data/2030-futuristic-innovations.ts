@@ -1,55 +1,3 @@
-<<<<<<< HEAD;
-;
-}export const futuristicInnovations2030: FuturisticInnovation2030[] = [ // AI Consciousness & Emotional Intelligence realImplementation: true;
-implementationDetails: 'Fully functional AI consciousness development platform with real-time monitoring, ethical frameworks, and consciousness evolution tracking.';
-launchDate: '2024-12-01';customers: 15;import { ServiceVariant  } from '../types/service-variants';
-export interface FuturisticInnovation2030  {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
-  contactInfo: {mobile: string;
-    email: string;
-    address: string;}
-    website: string;}
-  },realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}export const futuristicInnovations2030: FuturisticInnovation2030[] = [ // AI Consciousness & Emotional Intelligence realImplementation: true;
-implementationDetails: 'Fully functional AI consciousness development platform with real-time monitoring, ethical frameworks, and consciousness evolution tracking.';
-launchDate: '2024-12-01';
-}export const futuristicInnovations2030: FuturisticInnovation2030[] = [ // AI Consciousness & Emotional Intelligence real_implementation: true;
-implementation_details: 'Fully functional AI consciousness development platform with real - time monitoring, ethical frameworks, and consciousness evolution tracking.';
-launch_date: '2024 - 12 - 01';customers: 15;rating: 4 && 4.9;
-reviews: 8;
-}}export const futuristicInnovations2030: FuturisticInnovation2030[] = [ // AI Consciousness & Emotional Intelligence realImplementation: true;
-implementationDetails: 'Fully functional AI consciousness development platform with real-time monitoring, ethical frameworks, and consciousness evolution tracking.';
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 }export const futuristicInnovations2030: FuturisticInnovation2030[] = [ // AI Consciousness & Emotional Intelligence realImplementation: true;
 implementationDetails: 'Fully functional AI consciousness development platform with real-time monitoring, ethical frameworks, and consciousness evolution tracking.';
 launchDate: '2024-12-01';
@@ -1049,9 +997,6 @@ customers: 156;
 export const futuristicInnovations2030: FuturisticInnovation2030[] = [
   // AI Consciousness & Emotional Intelligence;
   {
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 id: 'ai-consciousness-evolution-platform',
   name: 'AI Consciousness Evolution Platform',
     tagline: 'Develop genuine AI consciousness and self-awareness',
@@ -1334,12 +1279,7 @@ implementationDetails: 'Comprehensive zero trust architecture with behavioral an
 rating: 4.9;
 reviews: 89;
   }
-<<<<<<< HEAD;
-];
-import { ServiceVariant } from '../types/service-variants',;
-=======
 ];import { ServiceVariant } from '../types/service-variants';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export interface FuturisticInnovation2030 {;
   id: string,;
   name: string,;

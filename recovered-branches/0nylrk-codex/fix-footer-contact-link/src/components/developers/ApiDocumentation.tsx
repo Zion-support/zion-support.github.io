@@ -652,7 +652,6 @@ headers = {}
             <div className=\"prose prose-invert max-w-none\" />;
               <h3 className=\"text-lg font-semibold mb-2\" />Error Responses</h3>;
               <p className=\"text-zinc-400 mb-4\" />;
-=======                The Zion API uses conventional HTTP status codes to indicate the success or failure of an API request.;
                 In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error with the;
                 provided information, and codes in the 5xx range indicate an error with our servers.;
               </p>;

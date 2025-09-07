@@ -121,15 +121,6 @@ export type InnovativeMicroSaas = {'Multi-speaker diarization',launch_date?: str
 		| 'Supply Chain Management';
 		| 'Customer Support';
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
-<<<<<<< HEAD;
-export type InnovativeMicroSaas = {
-      'Multi-speaker diarization',
-  launch_date?: string;
-
-
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
   {
 
     id: 'local - seo - reviews - booster',
@@ -191,18 +182,11 @@ export type InnovativeMicroSaas = {
     integrations: ['Greenhouse', 'Lever'],
     use_cases: ['Faster hiring', 'Bias reduction'],
     link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
-<<<<<<< HEAD;
-real_service: true;
-  }
-=======
     real_service: true,
   },
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 ];	id: string;
 	id: string, name: string,
 	description: string, tagline?: string,
-<<<<<<< HEAD;
-=======
 	}
 ];
 name: string,
@@ -280,7 +264,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
   real_service: true;
 }
-=======];
 ;
 export type InnovativeMicroSaas = {;
 	id: string,;
@@ -466,7 +449,6 @@ export type InnovativeMicroSaas = {
     integrations: ['Greenhouse', 'Lever'],
   },
 ];	id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 category:
 		| 'Content Marketing'
 		| 'Business Operations'

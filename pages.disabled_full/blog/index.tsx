@@ -1,6 +1,5 @@
 =;
 <:pages.disabled_full/blog/index.tsx;
-=>>>>>>>> main:corrupted_backup/index.tsx;
 ursor/fix-website-loading-errors-and-merge-6662;
 ursor/automate-test-improve-and-merge-code-646c;
 import type { NextPage } from \'next\'; import Head from \'next/head\'; import Link from \'next/link\'; import { Calendar,User,ArrowRight,Search,Filter } from \'lucide-react\'; const \"Blog\": NextPage = () => {}},{}},{}},{}},{}},{}},{}},{}},{}},{}} ]; const categories = [\'All Posts\',\'AI & Machine Learning\',\'Blockchain\',\'Cloud Computing\',\'Cybersecurity\',\'Data Analytics\',\'DevOps\',\'Software Architecture\',\'Emerging Tech\',\'Sustainability\' ]; const featuredPost = blogPosts.find(post => post.featured)const regularPosts = blogPosts.filter(post => !post.featured)const formatDate = () => {
@@ -18,7 +17,6 @@ export default function Index() {return (<div />;
     </div>;}
   )}ursor/fix-syntax-push-and-merge-to-main-40de;
 <:pages.disabled_full/blog/index.tsx;
-=>>>>>>>> main:corrupted_backup/index.tsx;
 ursor/automate-test-improve-and-merge-code-646c;
 =>;
 interface IndexProps {

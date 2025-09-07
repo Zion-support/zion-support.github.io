@@ -70,12 +70,7 @@ try {
         </h1>
         <p className=\"text-xl text-gray-600 max-w-2xl mx-auto\" />
           Ready to transform your business with cutting-edge technology? 
-<<<<<<< HEAD;
-Let&apos;
-s discuss your project and create a custom solution.
-=======
           Let&apos;s discuss your project and create a custom solution.
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e;
         </p>
       </div>
 
@@ -147,12 +142,7 @@ s discuss your project and create a custom solution.
                 <div className=\"flex items-center\" />
                   <CheckCircleIcon className=\"w-5 h-5 text-green-600 mr-2\" />
                   <p className=\"text-green-800\" />
-<<<<<<< HEAD;
-Thank you! Your message has been sent successfully. We&apos;
-ll get back to you within one business day.
-=======
                     Thank you! Your message has been sent successfully. We&apos;ll get back to you within one business day.
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e;
                   </p>
                 </div>}
               </div>}

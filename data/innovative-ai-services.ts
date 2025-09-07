@@ -29,9 +29,6 @@ export interface InnovativeAIService {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
   {
       'Enterprise-grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99 && 99.99% safety record.',
     features: [

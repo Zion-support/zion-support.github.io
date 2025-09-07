@@ -1,11 +1,4 @@
-<<<<<<< HEAD;
-;
-  id: string;
-export interface PracticalBusinessSolution2029  {id: string;name: string;
-  id: string;
-=======
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 name: string;
   tagline: string;
   price: string;
@@ -181,19 +174,10 @@ export interface PracticalBusinessSolution2029 {;
 ;
     }
   }
-<<<<<<< HEAD;
-];
-
-;
-export interface PracticalBusinessSolution2029 {;}
-  };
-
-=======
 ;    }
   }
 ;export interface PracticalBusinessSolution2029 {}
 };
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =
   [
     {

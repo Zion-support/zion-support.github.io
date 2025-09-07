@@ -1,11 +1,4 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-export interface InnovativeMicroSaasService  {id: string;
-  id: string;
-=======
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 name: string;
   tagline: string;
   price: string;
@@ -1927,13 +1920,7 @@ reviews: 28}
   customers: 34;
 rating: 4.9;
 reviews: 28;
-<<<<<<< HEAD;
-    }
-  ];    features: [
-
-=======
     }  ];    features: [
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export interface InnovativeMicroSaasService {
   id: string, name: string,
   tagline: string, price: string,
@@ -2587,11 +2574,7 @@ rating: 4.9;
 reviews: 28;
   }
 ];
-<<<<<<< HEAD;
-import { ServiceVariant } from '../types/service-variants',;
-=======
 import { ServiceVariant } from '../types/service-variants';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export interface InnovativeMicroSaasService {;
   id: string,;
   name: string,;
@@ -3352,10 +3335,7 @@ realImplementation: true, implementationDetails: 'Robotics-grade platform with A
   launchDate: '2023-10-01', customers: 34;
 rating: 4.9;
 reviews: 28;
-<<<<<<< HEAD;
-=======
 import { ServiceVariant } from '../types/service-variants';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export interface InnovativeMicroSaasService {;
   id: string,;
   name: string,;

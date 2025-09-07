@@ -307,30 +307,6 @@ import { ApiDocsSpec } from './types';
 }
 export default v1;
   ];
-<<<<<<< HEAD;
-product: 'Zion OS',
-  versions: ['v1']
-  defaultVersion: 'v1',
-  lastUpdatedIso: new Date().toISOString()
-  sections: [
-const base_url = 'https://api.zion.os';
-;
-const v1: ApiDocsSpec = {
-  product: 'Zion OS',
-  versions: ['v1'],
-  default_version: 'v1',
-  lastUpdatedIso: new Date ().toISOString (),
-  sections: [;
-    {
-
-      id: 'auth',
-  title: 'Auth (JWT, OAuth, Wallet)'
-
-          ],}
-          versions: ['v1']}
-        }
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
       ]
     },
       id: \"id\",
@@ -379,9 +355,6 @@ const v1: ApiDocsSpec = {
   properties: { items: { type: 'array',}
   items: { type: 'object' } }, nextPage: { type: 'string' } } }
           samples: [
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
         }
       ];
     }
@@ -389,24 +362,6 @@ const v1: ApiDocsSpec = {
   code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token />'` },
             { language: 'javascript',}
   code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token />' } }).then(r => r && r.json())` },
-<<<<<<< HEAD;
             { language: 'python',
   code: `import requests\nrequests ;
-
-
-
-  ];}
-}
-  }
-};
-export default v1;
-  ];
-}
-;
-export default v1;
-;
-=======
-            { language: 'python',
-  code: `import requests\nrequests ;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
 }

@@ -36,5 +36,3 @@ import { execSync, spawn } from;
     useEffect: "
         useRef: "
         FC: "
-<<<<<<< HEAD;
-    ReactNode: "

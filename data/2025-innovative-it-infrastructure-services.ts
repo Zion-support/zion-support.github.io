@@ -1,12 +1,4 @@
-<<<<<<< HEAD;
-export const innovativeITInfrastructureServices2025 = [
   {
-
-
-=======
-=======export const innovativeITInfrastructureServices2025 = [
-  {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
       'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.'
       'Quantum-enhanced edge processing with 1000x speed improvement'
       'Intelligent workload distribution and optimization'
@@ -398,12 +390,7 @@ period: 'month',
       phone: '+1 302 464 0950',}
   email: 'kleber@ziontechgroup.com'}
     },
-<<<<<<< HEAD;
-      'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
-    market_size: '$31.2B',
-=======
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'    market_size: '$31.2B',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 target_audience:;
       'Data center operators, cloud providers, enterprise businesses, colocation facilities',
     competitive_advantage:;
@@ -651,9 +638,4 @@ export const innovativeITInfrastructureServices2025 = [;
   }
 ];
 ;
-<<<<<<< HEAD;
-  }
 ];
-=======
-];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

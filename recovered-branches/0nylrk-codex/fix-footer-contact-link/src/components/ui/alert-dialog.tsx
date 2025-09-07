@@ -50,7 +50,6 @@ const AlertDialogHeader = ({
   className}
   ...props}
 }: React.HTMLAttributes<H</HTMLDivElement />TMLDivElement>) => (
-=======  <div;
 className={cn(
 
       \"flex flex-col space-y-2 text-center sm:text-left\",
@@ -161,7 +160,6 @@ const AlertDialogDescription = React.forwardRef<
   React.Compon</typeof>entPropsWithoutRef<typeof AlertDialogPrimitive.Description />
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Description;
-=======    ref={ref}
     className={cn ('text - lg font - semibold', class_name)}
     {...props}
   />));

@@ -1,11 +1,4 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-export interface InnovativeBusinessSolution  {id: string;
-  id: string;
-=======
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 name: string;
   tagline: string;
   price: string;
@@ -940,17 +933,6 @@ export interface InnovativeBusinessSolution {
       mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD;
-real_implementation: true,
-    implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.';
-    launch_date: '2025 - 05 - 01';
-    customers: 38;
-    rating: 4.7,
-    reviews: 26;
-
-];
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 ;
     realImplementation: true;
     implementationDetails: \"implementationDetails\",
@@ -1366,12 +1348,7 @@ implementationDetails: 'Comprehensive AI-powered project management platform wit
     rating: 4.7;
 reviews: 26;
   }
-<<<<<<< HEAD;
-];
-import { ServiceVariant } from '../types/service-variants',;
-=======
 ];import { ServiceVariant } from '../types/service-variants';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 export interface InnovativeBusinessSolution {;
   id: string,;
   name: string,;
@@ -1666,10 +1643,5 @@ website: 'https://ziontechgroup.com';}
     customers: 38;
     rating: 4.7,
     reviews: 26;
-<<<<<<< HEAD;
-  }
-;
-=======
   }  }
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

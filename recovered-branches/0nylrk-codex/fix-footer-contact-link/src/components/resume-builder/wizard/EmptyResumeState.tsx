@@ -20,22 +20,5 @@ export const EmptyResumeState = (
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD;
-  )
-};
-
-  );
-}
-
-};            Create Resume;
-          </Button>;
-        </div>;
-      </CardContent>;
-
-    </Card>);
-}
-}
-=======
   );
 };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
