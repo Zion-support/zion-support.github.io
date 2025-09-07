@@ -62,4 +62,3 @@ function Categories() {
       <Footer />;
     </>);
 }
-<<<<<<< HEAD

@@ -1,15 +1,19 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+;
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+type EpisodeListItem = any;useEffect ( () => {const load = async () => {try {return (<div className='space-y-6'>;
 =======
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 type EpisodeListItem = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 useEffect ( () => {
   const load = async () => {
   try {
   return (
     <div className='space-y-6'>;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       <div className='flex items-center justify-between'>;
         <h1 className='text-3xl font-bold'>Zion Podcast</h1>;
         <Link href='/studio/host' className='text-blue-600 underline'>;
@@ -18,8 +22,7 @@ useEffect ( () => {
       </div>;
       {episodes && episodes.length === 0 && <p>No episodes yet.</p>}
       <ul className='space-y-4'>;
-        {episodes && episodes.map(ep => (;
-          <li key={ep && ep.id} className='border rounded p-4'>;
+        {episodes && episodes.map(ep => (<li key={ep && ep.id} className='border rounded p-4'>;
             <div className='flex items-center justify-between'>;
               <div>;
                 <h2 className='text-xl font-semibold'>{ep && ep.title}</h2>;
@@ -27,34 +30,35 @@ useEffect ( () => {
                   Guest: {ep && ep.inviteeName} ·{' '}
                   {new Date(ep && ep.createdAt).toLocaleString()}
                 </p>;
-                {ep && ep.summary && (;
-                  <p className='mt-2 text-gray-700'>{ep && ep.summary}</p>;
+                {ep && ep.summary && (<p className='mt-2 text-gray-700'>{ep && ep.summary}</p>;
                 )}
               </div>;
               <div className='flex gap-3'>;
-                {ep && ep.audio?.mp3Url && (;
-                  <a
+                {ep && ep.audio?.mp3Url && (<a;
                     href={ep && ep.audio.mp3Url}
-                    className='px-3 py-2 bg-blue-600 text-white rounded'
 <<<<<<< HEAD
+                    className='px-3 py-2 bg-blue-600 text-white rounded';
                     download>                    MP3;
                   </a>;
                 )}
-                {ep && ep.audio?.wavUrl && (  if (loading) return <div>Loading episodes…</div>;
+                {ep && ep.audio?.wavUrl && (  if (loading) return <div>Loading episodes…</div>;download;
+                  >;
+  return (<div className="space-y-6">;
 =======
+                    className='px-3 py-2 bg-blue-600 text-white rounded'
+
                     download
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       <div className="flex items-center justify-between">;
         <h1 className="text-3xl font-bold">Zion Podcast</h1>;
         <Link href="/studio/host" className="text-blue-600 underline">Create Episode</Link>;
       </div>;
       {episodes && episodes.length === 0 && <p>No episodes yet.</p>}
       <ul className="space-y-4">;
-        {episodes && episodes.map((ep) => (;
-          <li key={ep && ep.id} className="border rounded p-4">;
+        {episodes && episodes.map((ep) => (<li key={ep && ep.id} className="border rounded p-4">;
             <div className="flex items-center justify-between">;
               <div>;
                 <h2 className="text-xl font-semibold">{ep && ep.title}</h2>;
@@ -62,16 +66,13 @@ useEffect ( () => {
                 {ep && ep.summary && <p className="mt-2 text-gray-700">{ep && ep.summary}</p>}
               </div>;
               <div className="flex gap-3">;
-                {ep && ep.audio?.mp3Url && (;
-                  <a href={ep && ep.audio.mp3Url} className="px-3 py-2 bg-blue-600 text-white rounded" download>;
+                {ep && ep.audio?.mp3Url && (<a href={ep && ep.audio.mp3Url} className="px-3 py-2 bg-blue-600 text-white rounded" download>;
                     MP3;
                   </a>;
-                )}
 <<<<<<< HEAD
-                {ep && ep.audio?.wavUrl && (;
-                  <a
+                )}{ep && ep.audio?.wavUrl && (<a;
                     href={ep && ep.audio.wavUrl}
-                    className='px-3 py-2 bg-gray-700 text-white rounded'
+                    className='px-3 py-2 bg-gray-700 text-white rounded';
                     download>                    WAV;
                   </a>;
                 )}
@@ -79,10 +80,9 @@ useEffect ( () => {
                     WAV;
                   </a>;
                 )}
-                {ep && ep.audio?.mp4Url && (;
-                  <a
+                {ep && ep.audio?.mp4Url && (<a;
                     href={ep && ep.audio.mp4Url}
-                    className='px-3 py-2 bg-purple-700 text-white rounded'
+                    className='px-3 py-2 bg-purple-700 text-white rounded';
                     download>                    MP4                  <a href={ep && ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>;
                     MP4;
                   </a>;
@@ -90,56 +90,54 @@ useEffect ( () => {
               </div>;
             </div>;
             <div className='mt-3 flex gap-4'>;
-              <Link
+              <Link;
                 href={`/media/podcast/${ep && ep.id}`}
                 className='text-blue-600 underline'>;
                 View Transcript;
               </Link>            </div>            <div className="mt-3 flex gap-4">;
               <Link href={`/media/podcast/${ep && ep.id}`} className="text-blue-600 underline">View Transcript</Link>;
             </div>;
-          </li>;
+          </li>;{ep.audio?.wavUrl && (<a;
 =======
+                )}
+
                 {ep.audio?.wavUrl && (
 <a
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                     href={ep.audio.wavUrl}
-                    className='px-3 py-2 bg-gray-700 text-white rounded'
-                    download
-                  >
-                    WAV
-                  </a>
+                    className='px-3 py-2 bg-gray-700 text-white rounded';
+                    download;
+                  >;
+                    WAV;
+                  </a>;
                 )}
-                {ep.audio?.mp4Url && (
-<a
+                {ep.audio?.mp4Url && (<a;
                     href={ep.audio.mp4Url}
-                    className='px-3 py-2 bg-purple-700 text-white rounded'
-                    download
-                  >
-                    MP4
-                  </a>
+                    className='px-3 py-2 bg-purple-700 text-white rounded';
+                    download;
+                  >;
+                    MP4;
+                  </a>;
                 )}
-              </div>
-            </div>
-<div className='mt-3 flex gap-4'>
-              <Link
+              </div>;
+            </div>;
+<div className='mt-3 flex gap-4'>;
+              <Link;
                 href={`/media/podcast/${ep.id}`}
-                className='text-blue-600 underline'
-              >
-                View Transcript
-              </Link>
-            </div>
-          </li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+                className='text-blue-600 underline';
+              >;
+                View Transcript;
+              </Link>;
+            </div>;
+          </li>;
         ))}
       </ul>;
     </div>;
-  );
-<<<<<<< HEAD
-  // Check condition
-if (return <div > Loading episodes…</div>) {
-  $2
+  )// Check condition;
+if (return <div > Loading episodes…</div>) {$2;
 }
-  return (
-    <div className='space - y-6'>;
+  return (<div className='space - y-6'>;
       <div className='flex items - center justify - between'>;
         <h1 className='text - 3xl font - bold'>Zion Podcast</h1>;
         <Link href='/studio / host' className='text - blue - 600 underline'>;
@@ -148,8 +146,7 @@ if (return <div > Loading episodes…</div>) {
       </div>;
       {episodes.length === 0 && <p > No episodes yet.</p>}
       <ul className='space - y-4'>;
-        {episodes.map (ep => (
-          <li key={ep.id} className='border rounded p - 4'>;
+        {episodes.map (ep => (<li key={ep.id} className='border rounded p - 4'>;
             <div className='flex items - center justify - between'>;
               <div>;
                 <h2 className='text - xl font - semibold'>{ep.title}</h2>;
@@ -157,31 +154,26 @@ if (return <div > Loading episodes…</div>) {
                   Guest: {ep.invitee_name} ·{' '}
                   {new Date (ep.created_at).toLocaleString ()}
                 </p>;
-                {ep.summary && (
-                  <p className='mt - 2 text - gray - 700'>{ep.summary}</p>)}
+                {ep.summary && (<p className='mt - 2 text - gray - 700'>{ep.summary}</p>)}
               </div>;
               <div className='flex gap - 3'>;
-                {ep.audio?.mp3Url && (
-                  <a;
+                {ep.audio?.mp3Url && (<a;
                     href={ep.audio.mp3Url}
                     className='px - 3 py - 2 bg - blue - 600 text - white rounded';
                     download;
                   >                    MP3;
                   </a>)}
-                {ep.audio?.wav_url && (  // Check condition
-if (return <div > Loading episodes…</div>) {
-  $2
+                {ep.audio?.wav_url && (  // Check condition;
+if (return <div > Loading episodes…</div>) {$2;
 }
-  return (
-    <div className="space - y-6">;
+  return (<div className="space - y-6">;
       <div className="flex items - center justify - between">;
         <h1 className="text - 3xl font - bold">Zion Podcast</h1>;
         <Link href="/studio / host" className="text - blue - 600 underline">Create Episode</Link>;
       </div>;
       {episodes.length === 0 && <p > No episodes yet.</p>}
       <ul className="space - y-4">;
-        {episodes.map ((ep) => (
-          <li key={ep.id} className="border rounded p - 4">;
+        {episodes.map ((ep) => (<li key={ep.id} className="border rounded p - 4">;
             <div className="flex items - center justify - between">;
               <div>;
                 <h2 className="text - xl font - semibold">{ep.title}</h2>;
@@ -189,12 +181,10 @@ if (return <div > Loading episodes…</div>) {
                 {ep.summary && <p className="mt - 2 text - gray - 700">{ep.summary}</p>}
               </div>;
               <div className="flex gap - 3">;
-                {ep.audio?.mp3Url && (
-                  <a href={ep.audio.mp3Url} className="px - 3 py - 2 bg - blue - 600 text - white rounded" download>;
+                {ep.audio?.mp3Url && (<a href={ep.audio.mp3Url} className="px - 3 py - 2 bg - blue - 600 text - white rounded" download>;
                     MP3;
                   </a>)}
-                {ep.audio?.wav_url && (
-                  <a;
+                {ep.audio?.wav_url && (<a;
                     href={ep.audio.wav_url}
                     className='px - 3 py - 2 bg - gray - 700 text - white rounded';
                     download;
@@ -203,8 +193,7 @@ if (return <div > Loading episodes…</div>) {
                 {ep.audio?.mp4Url && (                  <a href={ep.audio.wav_url} className="px - 3 py - 2 bg - gray - 700 text - white rounded" download>;
                     WAV;
                   </a>)}
-                {ep.audio?.mp4Url && (
-                  <a;
+                {ep.audio?.mp4Url && (<a;
                     href={ep.audio.mp4Url}
                     className='px - 3 py - 2 bg - purple - 700 text - white rounded';
                     download;
@@ -224,10 +213,18 @@ if (return <div > Loading episodes…</div>) {
             </div>;
           </li>))}
       </ul>;
-    </div>);
-}
-
-
+    </div>)}}
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                className='text-blue-600 underline'
+              >
+                View Transcript
+              </Link>
+            </div>
+          </li>
+        ))}
+      </ul>;
+    </div>;
+  );
+
 }
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

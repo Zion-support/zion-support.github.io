@@ -412,17 +412,20 @@ EOF
 display_ecosystem_status() {
     banner "🧠 Enhanced Intelligent PM2 Ecosystem V2 Status"
 <<<<<<< HEAD
-<<<<<<< HEAD
     echo "====="
+
+    echo "====="
+
+    echo "====="
+
+=======
+
+    echo "============================================================="
 =======
     echo "============================================================="
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    echo "============================================================="
 =======
     echo "====="
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     echo
     
     # Show PM2 process list
@@ -535,17 +538,20 @@ run_comprehensive_health_check() {
 main() {
     banner "🚀 Enhanced Intelligent PM2 Ecosystem V2 Startup"
 <<<<<<< HEAD
-<<<<<<< HEAD
     banner "="
+
+    banner "="
+
+    banner "="
+
+=======
+
+    banner "=================================================="
 =======
     banner "=================================================="
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    banner "=================================================="
 =======
     banner "="
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     echo
     
     # System checks

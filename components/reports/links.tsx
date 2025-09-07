@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 export default function LinksReportRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
-<<<<<<< HEAD
       window.location.replace('/reports/links/index.html')
     }
   }, []);
@@ -45,9 +44,3 @@ if ( {) {
 
 
 
-=======
-      window.location.replace('/reports/links/index.html');
-    }
-  }, []);
-  return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

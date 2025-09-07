@@ -1,23 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+ursor/automate-test-improve-and-merge-code-646c;
+"use client";import React, { useState } from 'react';
+"use client";"use client";"use client";"use client";
+import { useState  } from 'react';
+export default function OSDeployPage() {export default function OSDeployPage() {const [loading, setLoading] = useState(false)const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setLoading(true)// Simulate deployment;
+    setTimeout(() => {setLoading(false)}, 3000)}
+  const [message, setMessage] = useState('')const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success')// Mock feature keys and functions;
 "use client";
 
 import React, { useState } from "react";
-=======
-<<<<<<< HEAD
 "use client";
 
-import React, { useState } from "react";
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-"use client";
-import { useState } from 'react';
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function OSDeployPage() {
 
 export default function OSDeployPage() {;
@@ -29,43 +22,19 @@ const [loading, setLoading] = useState(false);
     setTimeout(() => {
       setLoading(false);
     }, 3000);
-<<<<<<< HEAD
   }
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');
   // Mock feature keys and functions
   const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
-  const labelFor = (key: string) => {
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
+  const labelFor = (key: string) => {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
   }
 }
+'use client';const labels: { [key: string]: string } = {ai: 'AI Integration';
+      blockchain: 'Blockchain Technology';
+      governance: 'Governance System';
 'use client';
-<<<<<<< HEAD
-=======
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -74,21 +43,19 @@ class ErrorBoundary extends React.Component {
     }
     return labels[key] |key;
   }
-  const getFeatureDescription = (key: string) => {
-    const descriptions: { [key: string]: string } = {
-ai: 'Advanced AI capabilities and automation'
-      blockchain: 'Secure blockchain infrastructure'
-      governance: 'Decentralized governance mechanisms'
-      treasury: 'Automated treasury management'
+  const getFeatureDescription = (key: string) => {const descriptions: { [key: string]: string } = {ai: 'Advanced AI capabilities and automation';
+      blockchain: 'Secure blockchain infrastructure';
+      governance: 'Decentralized governance mechanisms';
+      treasury: 'Automated treasury management';
     }
     return descriptions[key] |'Feature description';
   }
+'use client';export default function OSDeployPage() {const [loading, setLoading]  = useState(false)const handleSubmit = async (e: React && React.FormEvent) => {e && e.preventDefault()setLoading(true)// Simulate deployment;
+    setTimeout(() => {setLoading(false)}, 3000)}const loading = false;
 'use client';
 
 export default function OSDeployPage() {;
   const [loading, setLoading] = useState(false);
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -102,26 +69,13 @@ export default function OSDeployPage() {;
 
   const loading = false;
   const message = "";
-  const messageType = "success";
-
-  // Mock feature keys and functions
-  const FeatureKeys = ["ai", "blockchain", "governance", "treasury"];
-
-  const labelFor = (key: string) => {
-    const labels: { [key: string]: string } = {
-      ai: 'AI Integration',
-      blockchain: 'Blockchain Technology',
-      governance: 'Governance System',
-      treasury: 'Treasury Management';
+  const messageType  = "success";// Mock feature keys and functions;
+  const FeatureKeys  = ["ai", "blockchain", "governance", "treasury"];const labelFor = (key: string) => {const labels: { [key: string]: string } = {ai: 'AI Integration',blockchain: 'Blockchain Technology',governance: 'Governance System',treasury: 'Treasury Management';
     }
+    return labels[key] || key;{/* Header */}const getFeatureDescription = (key: string) => {const descriptions: { [key: string]: string } = {ai: 'Advanced AI capabilities and automation',blockchain: 'Secure blockchain infrastructure',governance: 'Decentralized governance mechanisms',treasury: 'Automated treasury management';
+    }return descriptions[key] || "Feature description";
+  }{/* Header */}
     return labels[key] || key;
-<<<<<<< HEAD
-        {/* Header */}
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 
   const getFeatureDescription = (key: string) => {
     const descriptions: { [key: string]: string } = {
@@ -143,47 +97,37 @@ ai: 'Advanced AI capabilities and automation',
             configurations
           </p>
         </div>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
         {/* Header */}
-=======
-
-
-        {/* Header */}
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 
         <div className="text-center mb-12">;
+          <h1 className="text-4xl font-bold mb-4">;
+            🚀 Launch Your Digital Economy;
+          </h1>;
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">;
+            Deploy your custom Zion OS instance with advanced features and;
+            configurations;
+          </p>;
+        </div>;
+        {/* Header */}{/* Header */}
+        {/* Header */}{/* Header */}<div className="text-center mb-12">;
           <h1 className="text-4xl font-bold mb-4">🚀 Launch Your Digital Economy</h1>;
           <p className="text-xl text-white/70 max-w-2xl mx-auto">;
             Deploy your custom Zion OS instance with advanced features and configurations;
           </p>;
-        </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-
-        <form onSubmit={handleSubmit} className="space-y-8">;
+        </div>;<form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">
-                ⚙️
-              </span>
-              Basic Configuration
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">
-                  Instance Name *
-                </label>
-<<<<<<< HEAD
-=======
-=======
+          <div className="glass-effect rounded-2xl p-8">;
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
+              <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">;
+                ⚙️;
+              </span>;
+              Basic Configuration;
+            </h2>;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Instance Name *;
+                </label>;
         <form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">;
@@ -193,85 +137,44 @@ ai: 'Advanced AI capabilities and automation',
             </h2>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
-                <label className="block text-sm font-medium text-white/90">Instance Name *</label>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                <input
-                  id="instanceName"
-                  name="instanceName"
-                  type="text"
-                  required
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  placeholder="My Digital Economy"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">
-                  Vertical
-                </label>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-
+                <label className="block text-sm font-medium text-white/90">Instance Name *</label>;ursor/automate-test-improve-and-merge-code-646c;
+                <input;
+                  id="instanceName";
+                  name="instanceName";
+                  type="text";
+                  required;
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all";
+                  placeholder="My Digital Economy";
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Vertical;
+                </label>;
                 />;
               </div>;
               <div className="space-y-2">;
-                <label className="block text-sm font-medium text-white/90">Vertical</label>;
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
-                <select
-                  id="vertical"
-                  name="vertical"
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">
-                  Domain
-                </label>
-                <input
-                  name="domain"
-                  type="text"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  placeholder="zion.example.com"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">
-                  Subdomain
-                </label>
-<<<<<<< HEAD
-=======
-=======
+                <label className="block text-sm font-medium text-white/90">Vertical</label>;<select;
+                  id="vertical";
+                  name="vertical";
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Domain;
+                </label>;
+                <input;
+                  name="domain";
+                  type="text";
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all";
+                  placeholder="zion.example.com";
+                />;
+              </div>;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Subdomain;
+                </label>;
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
-  }
-;
-  const getFeatureDescription = (key: string) =>: any {
-    const descriptions: { [key: string]: string } = {
-ai: 'Advanced AI capabilities and automation',
-      blockchain: 'Secure blockchain infrastructure',
-      governance: 'Decentralized governance mechanisms',
-      treasury: 'Automated treasury management';
+  }const getFeatureDescription = (key: string) =>: any {const descriptions: { [key: string]: string } = {ai: 'Advanced AI capabilities and automation',blockchain: 'Secure blockchain infrastructure',governance: 'Decentralized governance mechanisms',treasury: 'Automated treasury management';
     }
     return descriptions[key] || 'Feature description';
-  }
-;
-  return (
-    <div className="min - h-screen py - 8 px - 4 sm:px - 6 lg:px - 8">;
+  }return (<div className="min - h-screen py - 8 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-6xl mx - auto">;
         {/* Header */}
         <div className="text - center mb - 12">;
@@ -305,10 +208,56 @@ ai: 'Advanced AI capabilities and automation',
                   id="vertical";
                   name="vertical";
                   className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";
-                >;
+                >;<option value="GENERAL">General</option>;
+        </div>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+        <form onSubmit={handleSubmit} className="space-y-8">;
+          {/* Basic Configuration */}
+          <div className="glass-effect rounded-2xl p-8">
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
+              <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">
+                ⚙️
+              </span>
+              Basic Configuration
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Instance Name *
+                </label>
+                <input
+                  id="instanceName"
+                  name="instanceName"
+                  type="text"
+                  required
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  placeholder="My Digital Economy"
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Vertical
+                </label>
+                <select
+                  id="vertical"
+                  name="vertical"
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Domain
+                </label>
+                <input
+                  name="domain"
+                  type="text"
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  placeholder="zion.example.com"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Subdomain
+                </label>
                   <option value="GENERAL">General</option>;
                   <option value="HEALTH">Healthcare</option>;
                   <option value="EDUCATION">Education</option>;
@@ -317,99 +266,124 @@ ai: 'Advanced AI capabilities and automation',
                   <option value="FINANCE">Finance</option>;
                   <option value="TECH">Technology</option>;
                 </select>;
-              </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-                  placeholder="zion && zion.example.com"
+              </div>;placeholder="zion && zion.example.com";
                 />;
               </div>;
               <div className="space-y-2">;
-                <label className="block text-sm font-medium text-white/90">Subdomain</label>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+                <label className="block text-sm font-medium text-white/90">Subdomain</label>;ursor/automate-test-improve-and-merge-code-646c;
+                <input;
+                  id="subdomain";
+                  name="subdomain";
+                  type="text";
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all";
+                  placeholder="latam";
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Default Language;
+                </label>;
+                />;
+              </div>;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">Default Language</label>;ursor/automate-test-improve-and-merge-code-646c;
+                <input;
+                  id="defaultLanguage";
+                  name="defaultLanguage";
+                  type="text";
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all";
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Region;
+                </label>;
+                />;
+              </div>;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">Region</label>;ursor/automate-test-improve-and-merge-code-646c;
+                <input;
+                  id="region";
+                  name="region";
+                  type="text";
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all";
+                  placeholder="North America";
+                />;
+              </div>;
+            </div>;
+          </div>;{/* Economic Configuration */}
+          <div className="glass-effect rounded-2xl p-8">;
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
+              <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">;
+                💰;
+              </span>;
+              Economic Configuration;
+            </h2>;
+ursor/automate-test-improve-and-merge-code-646c;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Token System;
+                </label>;
+                <select;
+                  id="tokenSystem";
+                  name="tokenSystem";
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Governance Type;
+                </label>;
+                <select;
+                  name="governanceType";
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all";
+                >;
+                  <option value="ADMIN">Admin Control</option>;
+                  <option value="DAO LITE">DAO-lite</option>;
+                  <option value="DAO FULL">Full DAO</option>;
+                  <option value="HYBRID">Hybrid Governance</option>;
+                </select>;
+              </div>;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Country;
+                </label>;
+                <input;
+                  name="country";
+                  type="text";
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all";
+                  placeholder="United States";
+                />;
+              </div>;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Payment Gateway;
+                </label>;
+                <select;
+                  id="paymentGateway";
+                  name="paymentGateway";
+              </div>;
                 <input
                   id="subdomain"
                   name="subdomain"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="latam"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Default Language
                 </label>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-
-                />;
-              </div>;
-              <div className="space-y-2">;
-                <label className="block text-sm font-medium text-white/90">Default Language</label>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <input
                   id="defaultLanguage"
                   name="defaultLanguage"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Region
                 </label>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-
-                />;
-              </div>;
-              <div className="space-y-2">;
-                <label className="block text-sm font-medium text-white/90">Region</label>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <input
                   id="region"
                   name="region"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="North America"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 />;
               </div>;
             </div>;
@@ -424,10 +398,6 @@ ai: 'Advanced AI capabilities and automation',
               Economic Configuration
             </h2>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
@@ -481,6 +451,32 @@ ai: 'Advanced AI capabilities and automation',
                 </select>;
               </div>;
             </div>;
+          </div>;{/* Feature Selection */}
+          <div className="glass-effect rounded-2xl p-8">;
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
+              <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">;
+                🔧;
+              </span>;
+              Feature Selection;
+            </h2>;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">Token System</label>;
+                <select;
+                  id="tokenSystem";
+                  name="tokenSystem";
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">Token System</label>;
+                <select;
+                  id="tokenSystem";
+                  name="tokenSystem";
+                <select;
+                  id="tokenSystem";
+                  name="tokenSystem";
+                <select;
+                  id="tokenSystem";
+                  name="tokenSystem";
           </div>;
 
           {/* Feature Selection */}
@@ -492,25 +488,9 @@ ai: 'Advanced AI capabilities and automation',
               Feature Selection
             </h2>
 
-<<<<<<< HEAD
-=======
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-              <div className="space-y-2">;
-                <label className="block text-sm font-medium text-white/90">Token System</label>;
-<<<<<<< HEAD
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
-=======
-<<<<<<< HEAD
-                <select
-                  id="tokenSystem"
-                  name="tokenSystem"
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
@@ -570,21 +550,11 @@ ai: 'Advanced AI capabilities and automation',
                   id="token_system";
                   name="token_system";
                   className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";
-                >;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                  <option value="SHARED">ZION$ Shared</option>;
+                >;<option value="SHARED">ZION$ Shared</option>;
                   <option value="LOCAL">Local Token</option>;
                   <option value="HYBRID">Hybrid System</option>;
                 </select>;
-              </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
+              </div>;className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
                   <option value="ADMIN">Admin Control</option>;
                   <option value="DAO LITE">DAO-lite</option>;
               <div className="space - y-2">;
@@ -595,28 +565,15 @@ ai: 'Advanced AI capabilities and automation',
                   className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";
                 >;
                   <option value="ADMIN">Admin Control</option>;
-                  <option value="DAO LITE">DAO - lite</option>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                  <option value="DAO FULL">Full DAO</option>;
+                  <option value="DAO LITE">DAO - lite</option>;<option value="DAO FULL">Full DAO</option>;
                   <option value="HYBRID">Hybrid Governance</option>;
                 </select>;
-              </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-                />;
+              </div>;/>;
               </div>;
               <div className="space-y-2">;
-                <label className="block text-sm font-medium text-white/90">Payment Gateway</label>;
-
-                <select
-                  id="paymentGateway"
-                  name="paymentGateway"
-
+                <label className="block text-sm font-medium text-white/90">Payment Gateway</label>;<select;
+                  id="paymentGateway";
+                  name="paymentGateway";
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
                   <option value="">None</option>;
                   <option value="stripe">Stripe</option>;
@@ -632,23 +589,28 @@ ai: 'Advanced AI capabilities and automation',
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
               <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">🔧</span>;
               Feature Selection;
-            </h2>;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
+            </h2>;<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">;
+              {FeatureKeys && FeatureKeys.map((k) => (<label;
+                  key={k}
+                  className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;ursor/automate-test-improve-and-merge-code-646c;
+                  <input;
+                >;
+
+                  <option value="SHARED">ZION$ Shared</option>;
+                  <option value="LOCAL">Local Token</option>;
+                  <option value="HYBRID">Hybrid System</option>;
+                </select>;
+              </div>;
+                  <option value="DAO FULL">Full DAO</option>;
+                  <option value="HYBRID">Hybrid Governance</option>;
+                </select>;
+              </div>;
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">;
               {FeatureKeys && FeatureKeys.map((k) => (;
                 <label
                   key={k}
                   className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <input
               <div className="space - y-2">;
                 <label html_for="country" className="block text - sm font - medium text - white / 90">Country</label>;
@@ -683,8 +645,7 @@ ai: 'Advanced AI capabilities and automation',
               Feature Selection;
             </h2>;
             <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
-              {FeatureKeys.map ((k) => (
-                <label;
+              {FeatureKeys.map ((k) => (<label;
                   key={k}
                   html_for={`feature-${k}`}
                   className="flex items - center gap - 3 p - 4 rounded - lg border border - white / 10 hover:border - white / 20 transition - colors cursor - pointer group";
@@ -693,43 +654,34 @@ ai: 'Advanced AI capabilities and automation',
                     id={`feature-${k}`}
                     type="checkbox";
                     name="features";
+                    value={k}ursor/automate-test-improve-and-merge-code-646c;
+                    className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2";
+                  />;
+                  <div>;
+                    <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
                     value={k}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
                     className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                   />
                   <div>
                     <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
                       {labelFor(k)}
-                    </div>
-                    <div className="text-sm text-white/60">
+                    </div>;
+                    <div className="text-sm text-white/60">;
                       {getFeatureDescription(k)}
-                    </div>
-                  </div>
-                </label>
+                    </div>;
+                  </div>;
+                </label>;
               ))}
-            </div>
-          </div>
-
+            </div>;
+          </div>;
           {/* Additional Features */}
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">
-                🚀
-              </span>
-              Additional Features
-            </h2>
-
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-
+          <div className="glass-effect rounded-2xl p-8">;
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
+              <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">;
+                🚀;
+              </span>;
+              Additional Features;
+            </h2>;
             </div>;
           </div>;
           {/* Additional Features */}
@@ -739,24 +691,38 @@ ai: 'Advanced AI capabilities and automation',
               Additional Features;
             </h2>;
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
-              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
+              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;ursor/automate-test-improve-and-merge-code-646c;
+                <input;
+                  id="treasury";
+                  type="checkbox";
+                  name="treasury";
+                  aria-label="Treasury Management";
+                  className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2";
+ursor/automate-test-improve-and-merge-code-646c;
+                />;
+                <div>;
+                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
+                    Treasury Management;
+                  </div>;
+                  <div className="text-sm text-white/60">;
+                    Manage community funds with transparency;
+                  </div>;
+                </div>;
+              </label>;
+          <div className="glass-effect rounded-2xl p-8">
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
+              <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">
+                🚀
+              </span>
+              Additional Features
+            </h2>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <input
                   id="treasury"
                   type="checkbox"
                   name="treasury"
                   aria-label="Treasury Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -767,13 +733,6 @@ ai: 'Advanced AI capabilities and automation',
                   </div>
                 </div>
               </label>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 
                 />;
                 <div>;
@@ -783,28 +742,32 @@ ai: 'Advanced AI capabilities and automation',
                   <div className="text-sm text-white/60">Manage community funds with transparency</div>;
                 </div>;
               </label>;
+              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;ursor/automate-test-improve-and-merge-code-646c;
+                <input;
+                  id="governance";
+                  type="checkbox";
+                  name="governance";
+                  aria-label="Governance System";
+                  className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2";
+ursor/automate-test-improve-and-merge-code-646c;
+                />;
+                <div>;
+                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
+                    Governance System;
+                  </div>;
+                  <div className="text-sm text-white/60">;
+                    Local + global decision making;
+                  </div>;
+                </div>;
+              </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <input
                   id="governance"
                   type="checkbox"
                   name="governance"
                   aria-label="Governance System"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -815,13 +778,6 @@ ai: 'Advanced AI capabilities and automation',
                   </div>
                 </div>
               </label>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 
                 />;
                 <div>;
@@ -831,28 +787,32 @@ ai: 'Advanced AI capabilities and automation',
                   <div className="text-sm text-white/60">Local + global decision making</div>;
                 </div>;
               </label>;
+              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;ursor/automate-test-improve-and-merge-code-646c;
+                <input;
+                  id="moderation";
+                  type="checkbox";
+                  name="moderation";
+                  aria-label="Content Moderation";
+                  className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2";
+ursor/automate-test-improve-and-merge-code-646c;
+                />;
+                <div>;
+                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
+                    Content Moderation;
+                  </div>;
+                  <div className="text-sm text-white/60">;
+                    Automated content and behavior monitoring;
+                  </div>;
+                </div>;
+              </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <input
                   id="moderation"
                   type="checkbox"
                   name="moderation"
                   aria-label="Content Moderation"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -863,13 +823,6 @@ ai: 'Advanced AI capabilities and automation',
                   </div>
                 </div>
               </label>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 
                 />;
                 <div>;
@@ -879,28 +832,34 @@ ai: 'Advanced AI capabilities and automation',
                   <div className="text-sm text-white/60">Automated content and behavior monitoring</div>;
                 </div>;
               </label>;
+              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;ursor/automate-test-improve-and-merge-code-646c;
+                <input;
+                  id="partnerships";
+                  type="checkbox";
+                  name="partnerships";
+                  aria-label="Partnership Management";
+                  className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2";
+ursor/automate-test-improve-and-merge-code-646c;
+                />;
+                <div>;
+                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
+                    Partnership Management;
+                  </div>;
+                  <div className="text-sm text-white/60">;
+                    Institutional partnership management;
+                  </div>;
+                </div>;
+              </label>;
+            </div>;
+          </div>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <input
                   id="partnerships"
                   type="checkbox"
                   name="partnerships"
                   aria-label="Partnership Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -915,25 +874,17 @@ ai: 'Advanced AI capabilities and automation',
           </div>
 
           {/* Submit Button */}
-          <div className="text-center">
-            <button
+          <div className="text-center">;
+            <button;
               disabled={loading}
-              className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed hover-lift"
-            >
+              className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed hover-lift";
+            >;
               {loading ? "Deploying..." : "Deploy Digital Economy"}
-            </button>
-
-              <div
-                className={`mt-6 p-4 rounded-lg ${
-                  messageType === "success"
-                    ? "bg-green-900/20 border border-green-500/20 text-green-400"
-                    : "bg-red-900/20 border border-red-500/20 text-red-400"
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-
+            </button>;
+              <div;
+                className={`mt-6 p-4 rounded-lg ${messageType === "success";
+                    ? "bg-green-900/20 border border-green-500/20 text-green-400";
+                    : "bg-red-900/20 border border-red-500/20 text-red-400";
                 />;
                 <div>;
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
@@ -1016,41 +967,41 @@ ai: 'Advanced AI capabilities and automation',
                   <div className="font - medium text - white group - hover:text - blue - 400 transition - colors">;
                     Partnership Management;
                   </div>;
-                  <div className="text - sm text - white / 60">Institutional partnership management</div>;
+                  <div className="text - sm text - white / 60">Institutional partnership management</div>;</div>;
+              </label>;
+            </div>;
+          </div>;</button>;
+            {message && (<div;
+                className={`mt-6 p-4 rounded-lg ${messageType === 'success';
+                    ? 'bg-green-900/20 border border-green-500/20 text-green-400';
+                    : 'bg-red-900/20 border border-red-500/20 text-red-400';
+                }`}
+              >;
+                }`}
+              >;
+                }`}
+              >;
+"use client",import { useState } from "react",import { FeatureKeys } from "@/lib/zod",import LoadingSpinner from "@/app/components/LoadingSpinner",export default function AdminDeployPage() {const [loading, setLoading] = useState(false),const [message, setMessage] = useState<string | null>(null),const [messageType, setMessageType] = useState<'success' | 'error'>('success'),async function onSubmit() {event.preventDefault(),setLoading(true),setMessage(null),const formData = new FormData(event.currentTarget)const formData = new FormData(event.currentTarget)const formData = new FormData(event.currentTarget)const features: Record<string boolean> = {},FeatureKeys.forEach((k) => (features[k] = formData.get(k) === "on")),const payload = {instanceName: String(formData.get("instanceName") || ""),domain: String(formData.get("domain") || "" ) || undefined,subdomain: String(formData.get("subdomain") || "" ) || undefined,vertical: String(formData.get("vertical") || "GENERAL"),defaultLanguage: String(formData.get("defaultLanguage") || "en"),tokenSystem: String(formData.get("tokenSystem") || "SHARED"),governanceType: String(formData.get("governanceType") || "ADMIN"),region: String(formData.get("region") || "") || undefined,country: String(formData.get("country") || "") || undefined,features,addons: {paymentGateway: String(formData.get("paymentGateway") || "") || undefined,sovereignTreasury: formData.get("sovereignTreasury") === "on",dualGovernance: formData.get("dualGovernance") === "on",aiModeration: formData.get("aiModeration") === "on",affiliatePanel: formData.get("affiliatePanel") === "on"}},try {const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) })const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) }),const data = await res.json(),if (!res.ok) {setMessageType('error'),setMessage(data.error || "Deployment failed"),return;
+      }setMessageType('success'),setMessage(`✅ Deployment queued successfully! ID: ${data.deploymentId}`),(event.target as HTMLFormElement).reset()} catch (error) {setMessageType('error'),setMessage("Network error occurred. Please try again.")} finally {setLoading(false)}
+  }const getVerticalIcon = (vertical: string) => {switch (vertical) {case "HEALTH": return <Shield className="w-5 h-5 text-blue-400" />,case "EDUCATION": return <Building2 className="w-5 h-5 text-green-400" />,case "LAW": return <Shield className="w-5 h-5 text-purple-400" />,case "GOV": return <Users className="w-5 h-5 text-red-400" />,default: return <Globe className="w-5 h-5 text-gray-400" />;
+            </button>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+              <div
+                className={`mt-6 p-4 rounded-lg ${
+                  messageType === "success"
+                    ? "bg-green-900/20 border border-green-500/20 text-green-400"
+                    : "bg-red-900/20 border border-red-500/20 text-red-400"
                 </div>;
               </label>;
             </div>;
           </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-            </button>;
-            {message && (;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <div
                 className={`mt-6 p-4 rounded-lg ${
                   messageType === 'success'
                     ? 'bg-green-900/20 border border-green-500/20 text-green-400'
                     : 'bg-red-900/20 border border-red-500/20 text-red-400'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 }`}
               >
-=======
 "use client",;
 import { useState } from "react",;
 import { FeatureKeys } from "@/lib/zod",;
@@ -1063,7 +1014,7 @@ export default function AdminDeployPage() {;
     event.preventDefault(),;
     setLoading(true),;
     setMessage(null),;
-    const formData = new FormData(event.currentTarget),;
+    const formData = new FormData(event.currentTarget);
     const features: Record<string boolean> = {},;
     FeatureKeys.forEach((k) => (features[k] = formData.get(k) === "on")),;
       const payload = {;
@@ -1101,27 +1052,9 @@ export default function AdminDeployPage() {;
     } finally {;
       setLoading(false);
     }
-  }
-;
-  const getVerticalIcon = (vertical: string) => {;
-    switch (vertical) {;
-      case "HEALTH": return <Shield className="w-5 h-5 text-blue-400" />,;
-      case "EDUCATION": return <Building2 className="w-5 h-5 text-green-400" />,;
-      case "LAW": return <Shield className="w-5 h-5 text-purple-400" />,;
-      case "GOV": return <Users className="w-5 h-5 text-red-400" />,;
-      default: return <Globe className="w-5 h-5 text-gray-400" />;
+  },const getGovernanceIcon = (type: string) => {switch (type) {case "ADMIN": return <Crown className="w-5 h-5 text-yellow-400" />,case "DAO_LITE": return <Users className="w-5 h-5 text-blue-400" />,case "DAO_FULL": return <Zap className="w-5 h-5 text-purple-400" />,default: return <Crown className="w-5 h-5 text-gray-400" />;
     }
-  },;
-  const getGovernanceIcon = (type: string) => {;
-    switch (type) {;
-      case "ADMIN": return <Crown className="w-5 h-5 text-yellow-400" />,;
-      case "DAO_LITE": return <Users className="w-5 h-5 text-blue-400" />,;
-      case "DAO_FULL": return <Zap className="w-5 h-5 text-purple-400" />,;
-      default: return <Crown className="w-5 h-5 text-gray-400" />;
-    }
-  },;
-  return (;
-    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
+  },return (<div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-6xl mx-auto">;
         {/* Header */}
         <div className="text-center mb-12">;
@@ -1265,8 +1198,7 @@ export default function AdminDeployPage() {;
               Core Features;
             </h2>;
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">;
-              {FeatureKeys.map((k) => (;
-                <label key={k} className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
+              {FeatureKeys.map((k) => (<label key={k} className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
                   <input type="checkbox" name={k} className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2" />;
                   <div>;
                     <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
@@ -1423,111 +1355,86 @@ export default function AdminDeployPage() {;
           {/* Submit Section */}
           <div className="text-center">;
             <button;
-              disabled={loading} ;
-              className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed hover-lift";
+              disabled={loading}className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed hover-lift";
             >;
-              {loading ? (;
-                <LoadingSpinner size="sm" text="Deploying..." />;
-              ) : (;
-                "🚀 Deploy Instance";
+              {loading ? (<LoadingSpinner size="sm" text="Deploying..." />;
+              ) : ("🚀 Deploy Instance";
               )}
             </button>;
-            {message && (;
-              <div className={`mt-6 p-4 rounded-lg ${;
-                messageType === 'success';
+            {message && (<div className={`mt-6 p-4 rounded-lg ${messageType === 'success';
                   ? 'bg-green-900/20 border border-green-500/20 text-green-400';
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
-              }`}>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+              }`}>;{message}
+              </div>;
+            )}
                 {message}
               </div>;
             )}
-=======
-  };
-
-  return (
-    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-<div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">🚀 Deploy Zion OS Instance</h1>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Create a new digital economy with AI-powered automation and blockchain integration
-          </p>
-        </div>
-
-        <form onSubmit={handleSubmit} className="space-y-8">
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6">Basic Configuration</h2>
-            
-            <div className="space-y-6">
-              <div>
-                <label className="block text-white font-medium mb-2">Instance Name</label>
-                <input 
-                  name="name" 
-                  className="input-field" 
-                  placeholder="My Digital Economy"
-                  required
-                />
-              </div>
-              
-              <div>
-                <label className="block text-white font-medium mb-2">Description</label>
-                <textarea 
-                  name="description" 
-                  className="input-field" 
+  }return (<div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
+<div className="max-w-4xl mx-auto">;
+        <div className="text-center mb-12">;
+          <h1 className="text-4xl font-bold mb-4">🚀 Deploy Zion OS Instance</h1>;
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">;
+            Create a new digital economy with AI-powered automation and blockchain integration;
+          </p>;
+        </div>;
+        <form onSubmit={handleSubmit} className="space-y-8">;
+          <div className="glass-effect rounded-2xl p-8">;
+            <h2 className="text-2xl font-semibold mb-6">Basic Configuration</h2>;
+            <div className="space-y-6">;
+              <div>;
+                <label className="block text-white font-medium mb-2">Instance Name</label>;
+                <input;
+                  name="name";
+                  className="input-field";
+                  placeholder="My Digital Economy";
+                  required;
+                />;
+              </div>;
+              <div>;
+                <label className="block text-white font-medium mb-2">Description</label>;
+                <textarea;
+                  name="description";
+                  className="input-field";
                   rows={3}
-                  placeholder="Describe your digital economy's purpose and goals"
-                />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-white font-medium mb-2">Vertical</label>
-                  <select name="vertical" className="select-field">
-                    <option value="GENERAL">General</option>
-                    <option value="HEALTH">Healthcare</option>
-                    <option value="EDUCATION">Education</option>
-                    <option value="LAW">Legal</option>
-                    <option value="GOV">Government</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-white font-medium mb-2">Region</label>
-                  <input 
-                    name="region" 
-                    className="input-field" 
-                    placeholder="North America"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-<div className="text-center">
-            <button 
-              type="submit"
+                  placeholder="Describe your digital economy's purpose and goals";
+                />;
+              </div>;
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+                <div>;
+                  <label className="block text-white font-medium mb-2">Vertical</label>;
+                  <select name="vertical" className="select-field">;
+                    <option value="GENERAL">General</option>;
+                    <option value="HEALTH">Healthcare</option>;
+                    <option value="EDUCATION">Education</option>;
+                    <option value="LAW">Legal</option>;
+                    <option value="GOV">Government</option>;
+                  </select>;
+                </div>;
+                <div>;
+                  <label className="block text-white font-medium mb-2">Region</label>;
+                  <input;
+                    name="region";
+                    className="input-field";
+                    placeholder="North America";
+                  />;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+<div className="text-center">;
+            <button;
+              type="submit";
               disabled={loading}
-              className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
+              className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed";
+            >;
               {loading ? "Deploying..." : "🚀 Deploy Instance"}
-            </button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-                }`}>;
+            </button>;
+          </div>;
+        </form>;
+      </div>;
+    </div>;
+  )}}`}>;
                 {message}
               </div>;
             )}
@@ -1535,8 +1442,7 @@ export default function AdminDeployPage() {;
         </form>;
       </div>;
     </div>;
-  );
-          {/* Submit Button */}
+  ){/* Submit Button */}
           <div className="text - center">;
             <button;
               disabled={loading}
@@ -1544,87 +1450,44 @@ export default function AdminDeployPage() {;
             >;
               {loading ? 'Deploying...' : 'Deploy Digital Economy'}
             </button>;
-            {message && (
-              <div;
-                className={`mt - 6 p - 4 rounded - lg ${
-                  message_type === 'success';
+            {message && (<div;
+                className={`mt - 6 p - 4 rounded - lg ${message_type === 'success';
                     ? 'bg - green - 900 / 20 border border - green - 500 / 20 text - green - 400';
                     : 'bg - red - 900 / 20 border border - red - 500 / 20 text - red - 400';
                 }`}
               >;
                 {message}
-              </div>)}
-<<<<<<< HEAD
-=======
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              </div>)}ursor/fix-website-loading-errors-and-merge-6662;
+ursor/fix-website-loading-errors-and-merge-6662;
+                {message}
+              </div>;
+            )}</div>;
+              }`}>;
+                {message}
+              </div>;
+            )}
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
                 {message}
               </div>;
             )}
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>;
         </form>;
       </div>;
-    </div>);
-}
-
-;
-function labelFor(key: string) {;
-  switch (key) {;
-    case "marketplace": return "Marketplace",;
-    case "zion_gpt": return "ZionGPT Core",;
-    case "resume_ai": return "Resume AI",;
-    case "token_rewards": return "Token System",;
-    case "onchain_contracts": return "Smart Contracts",;
-    case "kyc_aml": return "KYC/AML",;
-    case "dao_voting": return "DAO Voting",;
-    case "incubator_grants": return "Incubator",;
-    case "academy": return "Zion Academy",;
-    case "partner_api": return "Partner API",;
-    case "regional_dashboards": return "Regional Dashboards",;
-    case "vendor_plugin": return "Vendor Plugin",;
-    case "web3_login": return "Web3 Login",;
-    case "multi_currency": return "Multi-Currency",;
-    default: return key;
+    </div>)}function labelFor() {switch (key) {case "marketplace": return "Marketplace",case "zion_gpt": return "ZionGPT Core",case "resume_ai": return "Resume AI",case "token_rewards": return "Token System",case "onchain_contracts": return "Smart Contracts",case "kyc_aml": return "KYC/AML",case "dao_voting": return "DAO Voting",case "incubator_grants": return "Incubator",case "academy": return "Zion Academy",case "partner_api": return "Partner API",case "regional_dashboards": return "Regional Dashboards",case "vendor_plugin": return "Vendor Plugin",case "web3_login": return "Web3 Login",case "multi_currency": return "Multi-Currency",default: return key;
   }
-}
-;
-function getFeatureDescription(key: string) {;
-  switch (key) {;
-    case "marketplace": return "Jobs, talent, and project marketplace",;
-    case "zion_gpt": return "Core AI intelligence system",;
-    case "resume_ai": return "AI-powered resume and proposal builder",;
-    case "token_rewards": return "Token system with rewards",;
-    case "onchain_contracts": return "Smart contract builder",;
-    case "kyc_aml": return "Identity verification and compliance",;
-    case "dao_voting": return "Proposal and voting system",;
-    case "incubator_grants": return "Startup incubation and funding",;
-    case "academy": return "Educational platform",;
-    case "partner_api": return "API access for partners",;
-    case "regional_dashboards": return "Regional and institutional views",;
-    case "vendor_plugin": return "White-label vendor solutions",;
-    case "web3_login": return "Web3 authentication and DID";
+}function getFeatureDescription() {switch (key) {case "marketplace": return "Jobs, talent, and project marketplace",case "zion_gpt": return "Core AI intelligence system",case "resume_ai": return "AI-powered resume and proposal builder",case "token_rewards": return "Token system with rewards",case "onchain_contracts": return "Smart contract builder",case "kyc_aml": return "Identity verification and compliance",case "dao_voting": return "Proposal and voting system",case "incubator_grants": return "Startup incubation and funding",case "academy": return "Educational platform",case "partner_api": return "API access for partners",case "regional_dashboards": return "Regional and institutional views",case "vendor_plugin": return "White-label vendor solutions",case "web3_login": return "Web3 authentication and DID";
     case "multi_currency": return "Multi-currency support";
     default: return "Core platform feature";
   }
 }
+}ursor/fix-website-loading-errors-and-merge-6662;
+ursor/automate-test-improve-and-merge-code-646c;
+ursor/fix-website-loading-errors-and-merge-6662;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

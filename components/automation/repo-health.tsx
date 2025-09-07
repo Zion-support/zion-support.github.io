@@ -1,43 +1,22 @@
+
 <<<<<<< HEAD
-import fs from 'fs',
-import path from 'path';
+import fs from 'fs',import path from 'path';
 import type { GetStaticProps } from 'next';
-interface Report {
-  generatedAt: string;
-  commits: { last7d: number, last30d: number },
-  changes: { last7dFiles: string[] },
-  largestFiles: { file: string, bytes: number }[],
-  stalePages: { file: string, lastCommitAt: string }[]
-}
- 
-
-}
+interface Report  {generatedAt: string;
+  commits: { last7d: number, last30d: number },changes: { last7dFiles: string[] },largestFiles: { file: string, bytes: number }[],stalePages: { file: string, lastCommitAt: string }[];
+}}
 type Props = { report: Report | null }
-export const getStaticProps: GetStaticProps<Props> = async () => {
-;
-}
-type Props = { report: Report | null },
-export const getStaticProps: GetStaticProps < Props> = async () => {
-  try {
-    const file = path.join (process.cwd (), 'publicautomationrepo - health.json');
-    const raw = fs.readFileSync (file, 'utf8');
-    const data = JSON.parse (raw);
-    return { props: { report: data }, revalidate: 3600 }
-  } catch {;
-    return { props: { report: null }, revalidate: 3600 }
+export const getStaticProps: GetStaticProps<Props>  = async () => {}
+type Props = { report: Report | null },export const getStaticProps: GetStaticProps < Props> = async () => {try {const file = path.join (process.cwd (), 'publicautomationrepo - health.json')const raw = fs.readFileSync (file, 'utf8')const data = JSON.parse (raw)return { props: { report: data }, revalidate: 3600 }
+  } catch {return { props: { report: null }, revalidate: 3600 }
   }
-export default function RepoHealth(): any ({ report }: Props) {
-};
-
-export default function RepoHealth({ report }: Props) {
-export default function RepoHealth({ report }: Props) {;
-  if (!report) return <div>No report yet. Check back soon.</div>;
+export default function RepoHealth(): any ({ report }: Props) {}export default function RepoHealth() {export default function RepoHealth() {if (!report) return <div>No report yet. Check back soon.</div>;type Props = any;return (<div className="space-y-6">;
 =======
 type Props = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
     <div className="space-y-6">;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       <header className="space-y-1">;
         <h1 className="text-3xl font-bold">Repo Health</h1>;
         <p className="text-gray-600 dark:text-gray-300">Automated activity and maintenance snapshot.</p>;
@@ -51,31 +30,21 @@ type Props = any;
       <section>;
         <h2 className="font-semibold mb-2">Largest Files</h2>;
         <ul className="text-sm space-y-1">;
-          {report && report.largestFiles.map((f, i) => (;
-            <li key={i} className="flex justify-between gap-4"><span className="truncate">{f && f.file}</span><span className="text-gray-500">{(f && f.bytes/1024).toFixed(1)} KB</span></li>;
-
-          ))}
+          {report && report.largestFiles.map((f, i) => (<li key={i} className="flex justify-between gap-4"><span className="truncate">{f && f.file}</span><span className="text-gray-500">{(f && f.bytes/1024).toFixed(1)} KB</span></li>;))}
         </ul>;
       </section>;
       <section>;
         <h2 className="font-semibold mb-2">Stale Pages (90d)</h2>;
         <ul className="text-sm space-y-1">;
-          {report && report.stalePages.map((p, i) => (;
-            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
-          ))}
 <<<<<<< HEAD
+          {report && report.stalePages.map((p, i) => (<li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
+          ))}}export default /**;
+ * RepoHealth - Function description;
+ */;
+function RepoHealth() {// Check condition;
+if (return <div > No report yet. Check back soon.</div>) {$2;
 }
-;
-export default /**
- * RepoHealth - Function description
- */
-function RepoHealth() {
-  // Check condition
-if (return <div > No report yet. Check back soon.</div>) {
-  $2
-}
-  return (
-    <div className="space-y-6">;
+  return (<div className="space-y-6">;
       <header className="space-y-1">;
         <h1 className="text-3xl font-bold">Repo Health</h1>;
         <p className="text - gray - 600 dark:text-gray-300">Automated activity and maintenance snapshot.</p>;
@@ -89,22 +58,27 @@ if (return <div > No report yet. Check back soon.</div>) {
       <section>;
         <h2 className="font-semibold mb-2">Largest Files</h2>;
         <ul className="text-sm space-y-1">;
-          {report.largest_files.map ((f, i) => (
-            <li key={i} className="flex justify-between gap-4"><span className="truncate">{f.file}</span><span className="text-gray-500">{(f.bytes / 1024).to_fixed (1)} KB</span></li>))}
+          {report.largest_files.map ((f, i) => (<li key={i} className="flex justify-between gap-4"><span className="truncate">{f.file}</span><span className="text-gray-500">{(f.bytes / 1024).to_fixed (1)} KB</span></li>))}
         </ul>;
       </section>;
       <section>;
         <h2 className="font-semibold mb-2">Stale Pages (90d)</h2>;
         <ul className="text-sm space-y-1">;
-          {report.stale_pages.map ((p, i) => (
-            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.file}</span><span className="text-gray-500">{new Date (p.lastCommitAt).toLocaleDateString ()}</span></li>))}
+          {report.stale_pages.map ((p, i) => (<li key={i} className="flex justify-between gap-4"><span className="truncate">{p.file}</span><span className="text-gray-500">{new Date (p.lastCommitAt).toLocaleDateString ()}</span></li>))}
         </ul>;
       </section>;
-    </div>);
+    </div>)</ul>;
+      </section>;
+    </div>;
+)}
 =======
+          {report && report.stalePages.map((p, i) => (;
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
+          ))}
+
         </ul>
       </section>
     </div>
 );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

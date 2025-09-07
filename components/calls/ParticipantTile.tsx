@@ -1,100 +1,65 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+;
+import React, { useEffect, useRef } from 'react';
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
+type Props = any;
+import type {RemoteParticipant;
+  LocalParticipant;
+  TrackPublication;
 =======
 import React, { useEffect, useRef } from 'react';
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 type Props = any;
 import type {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   RemoteParticipant
   LocalParticipant
   TrackPublication
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   Track;
-  RemoteParticipant,
-  LocalParticipant,
-  TrackPublication,;
-  Track,;
-
-import type {;
-  RemoteParticipant,;
-  LocalParticipant,;
-  TrackPublication,;
-  Track,;
-} from 'livekit-client';
-
-type Props = {;
-  participant: RemoteParticipant | LocalParticipant;
+  RemoteParticipant,LocalParticipant,TrackPublication,Track,RemoteParticipant,LocalParticipant,TrackPublication,Track,} from 'livekit-client';
+type Props = {participant: RemoteParticipant | LocalParticipant;
+  isLocal?: boolean;
+  displayName?: string;participant;
+  isLocal;
+  displayName;
+  participant,isLocal,displayName,}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null)type Props = {participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
 <<<<<<< HEAD
-  participant
-  isLocal
-  displayName
-  participant,
-  isLocal,
-  displayName,;
-}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
-type Props = {
-  participant: RemoteParticipant | LocalParticipant
-  isLocal?: boolean;
-  displayName?: string
 }
-export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
-};
-
+export default function ParticipantTile() {}}
+export default function ParticipantTile() {const videoRef = useRef<HTMLVideoElement | null>(null)const audioRef = useRef<HTMLAudioElement | null>(null)useEffect(() => {const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {if (track.kind === 'video' && videoRef.current) {track.attach(videoRef.current)}export default function ParticipantTile(): any ({participant,isLocal,displayName,}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null)type Props = {participant: RemoteParticipant | LocalParticipant,isLocal?: boolean;
+  displayName?: string;
+}useEffect(() => {const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {if (track && track.kind === 'video' && videoRef && videoRef.current) {track && track.attach(videoRef && videoRef.current)}
+      if (track && track.kind === 'audio' && audioRef && audioRef.current) {track && track.attach(audioRef && audioRef.current)}
+    }const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {if (track && track.kind === 'video' && videoRef && videoRef.current) {track && track.detach(videoRef && videoRef.current)}
+      if (track && track.kind === 'audio' && audioRef && audioRef.current) {track && track.detach(audioRef && audioRef.current)}        track && track.attach(videoRef && videoRef.current)}
+      if (track && track.kind === 'audio' && audioRef && audioRef.current) {track && track.attach(audioRef && audioRef.current)}
+      }
+      if (track && track.kind === 'audio' && audioRef && audioRef.current) {track && track.detach(audioRef && audioRef.current)track && track.detach(videoRef && videoRef.current)}
+      }
+    }track.attach(videoRef.current)}
+      if (track.kind === 'audio' && audioRef.current) {track.attach(audioRef.current)}
+    }const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {if (track.kind === 'video' && videoRef.current) {track.detach(videoRef.current)}
+      if (track.kind === 'audio' && audioRef.current) {track.detach(audioRef.current)}
+    }participant.tracks.forEach(pub => {const track = pub.track;
+if (track) handleTrackSubscribed(pub, track)})participant.on('trackSubscribed', handleTrackSubscribed)participant.on('trackUnsubscribed', handleTrackUnsubscribed)return () => {participant.off('trackSubscribed', handleTrackSubscribed)participant.off('trackUnsubscribed', handleTrackUnsubscribed)}}, [participant])return (<div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>;
+      <video;
 =======
+
 }
 export default function ParticipantTile({
   participant,
   isLocal,
   displayName,
 }: Props) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
     const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
       if (track.kind === 'video' && videoRef.current) {
-<<<<<<< HEAD
-        track.attach(videoRef.current);
-};
 
-export default function ParticipantTile(): any ({;
-  participant,;
-  isLocal,;
-  displayName,;
-}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
-type Props = {;
-  participant: RemoteParticipant | LocalParticipant,;
-  isLocal?: boolean;
-  displayName?: string;
-};
-
-  useEffect(() => {;
-    const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {;
-      if (track && track.kind === 'video' && videoRef && videoRef.current) {;
-        track && track.attach(videoRef && videoRef.current);
-      }
-      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
-        track && track.attach(audioRef && audioRef.current);      }
-    };
-    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;
-      if (track && track.kind === 'video' && videoRef && videoRef.current) {;
-        track && track.detach(videoRef && videoRef.current);
-      }
-      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
-        track && track.detach(audioRef && audioRef.current);      }        track && track.attach(videoRef && videoRef.current);
-      }
-      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
-        track && track.attach(audioRef && audioRef.current);
-      }
-      }
-      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
-        track && track.detach(audioRef && audioRef.current);        track && track.detach(videoRef && videoRef.current);
-      }
-      }
-    };
-=======
 track.attach(videoRef.current);
       }
       if (track.kind === 'audio' && audioRef.current) {
@@ -113,29 +78,38 @@ track.detach(videoRef.current);
     participant.tracks.forEach(pub => {
       const track = pub.track;
 if (track) handleTrackSubscribed(pub, track);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     });
     participant.on('trackSubscribed', handleTrackSubscribed);
     participant.on('trackUnsubscribed', handleTrackUnsubscribed);
     return () => {
       participant.off('trackSubscribed', handleTrackSubscribed);
-<<<<<<< HEAD
-=======
+
 participant.off('trackUnsubscribed', handleTrackUnsubscribed);
     };
   }, [participant]);
   return (
     <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       <video
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         ref={videoRef}
-        autoPlay
-        playsInline
+        autoPlay;
+        playsInline;
         muted={Boolean(isLocal)}
-        className='w-full h-48 object-cover bg-black'
 <<<<<<< HEAD
-
+        className='w-full h-48 object-cover bg-black';
+      />;
+      <audio ref={audioRef} autoPlay className='hidden' />;
+      <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'>;
+        {displayName |;
+          (participant as any).name |;
+          (isLocal ? 'You' : 'Participant')}
+      </div>;
+    </div>;
+  )return (RemoteParticipant,LocalParticipant,TrackPublication,Track,} from 'livekit - client';
+type Props = {participant: RemoteParticipant | LocalParticipant;
 =======
+        className='w-full h-48 object-cover bg-black'
+
       />
       <audio ref={audioRef} autoPlay className='hidden' />
       <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'>
@@ -145,7 +119,6 @@ participant.off('trackUnsubscribed', handleTrackUnsubscribed);
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
   RemoteParticipant,
   LocalParticipant,
@@ -154,101 +127,56 @@ participant.off('trackUnsubscribed', handleTrackUnsubscribed);
 } from 'livekit - client';
 type Props = {
   participant: RemoteParticipant | LocalParticipant;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   is_local?: boolean;
   display_name?: string;
-}
-;
-export default /**
- * ParticipantTile - Function description
- */
-function ParticipantTile() {  const video_ref = useRef < HTMLVideoElement | null>(null);
-type Props = {
-  participant: RemoteParticipant | LocalParticipant,
-  is_local?: boolean;
+}export default /**;
+ * ParticipantTile - Function description;
+ */;
+function ParticipantTile() {  const video_ref = useRef < HTMLVideoElement | null>(null)type Props = {participant: RemoteParticipant | LocalParticipant,is_local?: boolean;
   display_name?: string;
+}export default /**;
+ * ParticipantTile - Function description;
+ */;
+function ParticipantTile() {const video_ref = useRef < HTMLVideoElement | null>(null)const audio_ref  = useRef < HTMLAudioElement | null>(null)useEffect (() => {const handleTrackSubscribed = (pub: TrackPublication, track: Track) =>: any {// Check condition;
+if ( {) {$2;
 }
-;
-export default /**
- * ParticipantTile - Function description
- */
-function ParticipantTile() {
-  const video_ref = useRef < HTMLVideoElement | null>(null);
-  const audio_ref = useRef < HTMLAudioElement | null>(null);
-;
-  useEffect (() => {
-    const handleTrackSubscribed = (pub: TrackPublication, track: Track) =>: any {
-      // Check condition
-if ( {) {
-  $2
+        track.attach (video_ref.current)}
+      // Check condition;
+if ( {) {$2;
 }
-        track.attach (video_ref.current);
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        track.attach (audio_ref.current);      }
+        track.attach (audio_ref.current)}
     }
-    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) =>: any {
-      // Check condition
-if ( {) {
-  $2
+    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) =>: any {// Check condition;
+if ( {) {$2;
 }
-        track.detach (video_ref.current);
-      }
-      // Check condition
-if ( {) {
-  $2
+        track.detach (video_ref.current)}
+      // Check condition;
+if ( {) {$2;
 }
-        track.detach (audio_ref.current);      }        track.attach (video_ref.current);
-      }
-      // Check condition
-if ( {) {
-  $2
+        track.detach (audio_ref.current)}        track.attach (video_ref.current)}
+      // Check condition;
+if ( {) {$2;
 }
-        track.attach (audio_ref.current);
-      }
+        track.attach (audio_ref.current)}
     }
-    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) =>: any {
-      // Check condition
-if ( {) {
-  $2
+    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) =>: any {// Check condition;
+if ( {) {$2;
 }
-        track.detach (video_ref.current);
-      }
-      // Check condition
-if ( {) {
-  $2
+        track.detach (video_ref.current)}
+      // Check condition;
+if ( {) {$2;
 }
-        track.detach (audio_ref.current);        track.detach (video_ref.current);
-      }
-      // Check condition
-if ( {) {
-  $2
+        track.detach (audio_ref.current)track.detach (video_ref.current)}
+      // Check condition;
+if ( {) {$2;
 }
-        track.detach (audio_ref.current);
-    }
-;
-    participant.tracks.for_each (pub => {
-      const track = pub.track;
-      if (handleTrackSubscribed (pub, track)) {
-  $2
-}    });      if (handleTrackSubscribed (pub, track)) {
-  $2
+        track.detach (audio_ref.current)}participant.tracks.for_each (pub => {const track = pub.track;
+      if (handleTrackSubscribed (pub, track)) {$2;
+}    })if (handleTrackSubscribed (pub, track)) {$2;
 }
-    });
-;
-    participant.on ('track_subscribed', handleTrackSubscribed);
-    participant.on ('track_unsubscribed', handleTrackUnsubscribed);
-;
-    return () => {
-      participant.off ('track_subscribed', handleTrackSubscribed);
-      participant.off ('track_unsubscribed', handleTrackUnsubscribed);
-    }
-  }, [participant]);
-;
-  return (
-    <div className='bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative'>;
+    })participant.on ('track_subscribed', handleTrackSubscribed)participant.on ('track_unsubscribed', handleTrackUnsubscribed)return () => {participant.off ('track_subscribed', handleTrackSubscribed)participant.off ('track_unsubscribed', handleTrackUnsubscribed)}
+  }, [participant])return (<div className='bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative'>;
       <video;
         ref={video_ref}
         auto_play;
@@ -262,22 +190,23 @@ if ( {) {
           (participant as any).name ||;
           (is_local ? 'You' : 'Participant')}
       </div>;
-    </div>);  }, [participant]);
-;
-  return (
-    <div className="bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative">;
+    </div>)}, [participant])return (<div className="bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative">;
       <video ref={video_ref} auto_play plays_inline muted={Boolean (is_local)} className="w - full h - 48 object - cover bg - black" />;
       <audio ref={audio_ref} auto_play className="hidden" />;
       <div className="absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white">;
         {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
       </div>;
+<<<<<<< HEAD
+    </div>)}
+      </div>;
+    </div>;
+)})
+=======
     </div>);
 }
       </div>
     </div>
 );
 }
-<<<<<<< HEAD
-  );
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

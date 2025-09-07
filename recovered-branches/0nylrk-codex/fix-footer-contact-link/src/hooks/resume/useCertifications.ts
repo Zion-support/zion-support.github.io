@@ -87,4 +87,3 @@ if ( {) {
     setIsLoading (true);
     set_error (null);
 ;
-<<<<<<< HEAD

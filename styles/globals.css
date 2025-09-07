@@ -1,3 +1,9 @@
+
+@tailwind base; @tailwind components; @tailwind utilities;
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+@tailwind base; @tailwind components; @tailwind utilities;
+>>>>>>> main
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,24 +19,35 @@
 }
 
 @layer components {
-  .animate-fade-in {
-    animation: fadeIn 0.6s ease-in-out;
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900;
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900;
+  }
+
+  .card {
+    @apply p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105;
+  }
+
+  .hero {
+    @apply min-h-screen flex items-center justify-center px-4 py-20;
+  }
+
+  .cta-buttons {
+    @apply flex flex-col sm:flex-row gap-4 justify-center;
   }
 }
 
+@tailwind base; @tailwind components; @tailwind utilities;
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 @layer utilities {
   .focus-visible:focus {
     @apply outline-none ring-2 ring-blue-500 ring-offset-2;
   }
+}
+@tailwind base; @tailwind components; @tailwind utilities;
+>>>>>>> main
 }

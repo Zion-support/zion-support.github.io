@@ -1,30 +1,29 @@
 import Head from 'next/head';
+<<<<<<< HEAD
+import { Phone, Mail, MapPin, Check, ArrowRight, Shield   } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',import Button from '../components/ui/Button';
+import { extraServices  } from '../data/extra-services';
+export default function IAMAccessReviewPage() {const service = extraServices.find(s =>;
+    s.link.endsWith('/iam-access-review'))if (!service) return null;export default function IAMAccessReviewPage() {const service  = extraServices.find(s => s.link.endsWith('/iam-access-review'))export default function IAMAccessReviewPage() {const service = extraServices && extraServices.find(s =>;
+    s && s.link.endsWith('/iam-access-review'))if (!service) return null;export default function IAMAccessReviewPage() {const service = extraServices && extraServices.find(s => s && s.link.endsWith('/iam-access-review'))if (!service) return null;return (<UltraAdvancedFuturisticBackground>;
+      <Head>;
+        <title>{service && service.name} - Zion Tech Group</title>;
+        <meta name='description' content={service && service.description} />;)if (!service) return null;
+  return (<UltraAdvancedFuturisticBackground>;
+      <Head>;
+        <title>{service.name} - Zion Tech Group</title>;
+<meta name='description' content={service.description} />;
+        <link;
+          rel='canonical';
+          href='https://ziontechgroup && ziontechgroup.com/iam-access-review';
+=======
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 
 export default function IAMAccessReviewPage() {
-<<<<<<< HEAD
 
-  const service = extraServices.find(s =>
-    s.link.endsWith('/iam-access-review')
-  );  if (!service) return null;export default function IAMAccessReviewPage() {
-  const service = extraServices.find(s => s.link.endsWith('/iam-access-review'));
-
-export default function IAMAccessReviewPage() {;
-  const service = extraServices && extraServices.find(s =>;
-    s && s.link.endsWith('/iam-access-review');
-  );  if (!service) return null;export default function IAMAccessReviewPage() {;
-  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/iam-access-review'));
-  if (!service) return null;
-
-  return (
-    <UltraAdvancedFuturisticBackground>;
-      <Head>;
-        <title>{service && service.name} - Zion Tech Group</title>;
-        <meta name='description' content={service && service.description} />;
-=======
   );
   if (!service) return null;
   return (
@@ -32,10 +31,10 @@ export default function IAMAccessReviewPage() {;
       <Head>
         <title>{service.name} - Zion Tech Group</title>
 <meta name='description' content={service.description} />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <link
           rel='canonical'
           href='https://ziontechgroup && ziontechgroup.com/iam-access-review'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         />;
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
         <div className='max-w-6xl mx-auto'>;
@@ -53,8 +52,7 @@ export default function IAMAccessReviewPage() {;
               <h2 className='text-2xl font-semibold mb-4'>Capabilities</h2>;
               <p className='text-slate-300 mb-6'>{service && service.description}</p>;
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>;
-                {service && service.features.slice(0, 12).map((feat, i) => (;
-                  <li
+                {service && service.features.slice(0, 12).map((feat, i) => (<li;
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
                     <Check className='w-5 h-5 text-cyan-400 mt-0 && 0.5' />;
@@ -80,11 +78,11 @@ export default function IAMAccessReviewPage() {;
                   </div>;
                 </div>;
               </div>;
-              <Button
-                href='/contact'
-                variant='quantum'
-                size='lg'
 <<<<<<< HEAD
+              <Button;
+                href='/contact';
+                variant='quantum';
+                size='lg';
                 className='w-full'>;
                 Start Trial;
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -107,29 +105,23 @@ export default function IAMAccessReviewPage() {;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
 import Head from 'next / head';
-import {Phone, Mail, MapPin, Check, ArrowRight, Shield} from 'lucide-react';
+import { Phone, Mail, MapPin, Check, ArrowRight, Shield } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
-import { extra_services } from '../data / extra - services';
-export default /**
- * IAMAccessReviewPage - Function description
- */
-function IAMAccessReviewPage() {
-  const service = extra_services.find (string =>;
-    s.link.ends_with ('/iam - access - review'));  // Check condition
-if (return null) {
-  $2
-}export default /**
- * IAMAccessReviewPage - Function description
- */
-function IAMAccessReviewPage() {
-  const service = extra_services.find (string => s.link.ends_with ('/iam - access - review'));
-  // Check condition
-if (return null) {
-  $2
+import { extra_services  } from '../data / extra - services';
+export default /**;
+ * IAMAccessReviewPage - Function description;
+ */;
+function IAMAccessReviewPage() {const service = extra_services.find (string =>;
+    s.link.ends_with ('/iam - access - review'))// Check condition;
+if (return null) {$2;
+}export default /**;
+ * IAMAccessReviewPage - Function description;
+ */;
+function IAMAccessReviewPage() {const service = extra_services.find (string => s.link.ends_with ('/iam - access - review'))// Check condition;
+if (return null) {$2;
 }
-  return (
-    <UltraAdvancedFuturisticBackground>;
+  return (<UltraAdvancedFuturisticBackground>;
       <Head>;
         <title>{service.name} - Zion Tech Group</title>;
         <meta name='description' content={service.description} />;
@@ -153,8 +145,7 @@ if (return null) {
               <h2 className='text - 2xl font - semibold mb - 4'>Capabilities</h2>;
               <p className='text - slate - 300 mb - 6'>{service.description}</p>;
               <ul className='grid grid - cols - 1 md:grid - cols - 2 gap - 3'>;
-                {service.features.slice (0, 12).map ((feat, i) => (
-                  <li;
+                {service.features.slice (0, 12).map ((feat, i) => (<li;
                     key={i}
                     className='flex items - start space - x-3 text - slate - 200';
                   >;
@@ -210,18 +201,45 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-  const service = extraServices.find(s => s.link.endsWith('/iam-access-review'));
-  if (!service) return null;
-
-  return (
-    <UltraAdvancedFuturisticBackground>
-      <Head>
-        <title>{service.name} - Zion Tech Group</title>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+  const service = extraServices.find(s => s.link.endsWith('/iam-access-review'))if (!service) return null;return (<UltraAdvancedFuturisticBackground>;
+      <Head>;
+        <title>{service.name} - Zion Tech Group</title>;
+              <div className="mt-6 space-y-3 text-sm text-slate-300">;
+                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>;
+                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>;
+                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>;
+                className='w-full';
+              >;
+                Start Trial;
+                <ArrowRight className='w-5 h-5 ml-2' />;
+              </Button>;
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
+                <div className='flex items-center space-x-2'>;
+                  <Phone className='w-4 h-4 text-cyan-400' />;
+                  <span>{service.contactInfo.mobile}</span>;
+                </div>;
+                <div className='flex items-center space-x-2'>;
+                  <Mail className='w-4 h-4 text-purple-400' />;
+                  <span>{service.contactInfo.email}</span>;
+                </div>;
+                <div className='flex items-center space-x-2'>;
+                  <MapPin className='w-4 h-4 text-green-400' />;
+                  <span className='text-xs'>{service.contactInfo.address}</span>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>;
+}
+}</UltraAdvancedFuturisticBackground>)})}
 =======
+              <Button
+                href='/contact'
+                variant='quantum'
+                size='lg'
+
                 className='w-full'
               >
                 Start Trial
@@ -241,21 +259,13 @@ if (return null) {
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>
               </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-}
-}
 
-    </UltraAdvancedFuturisticBackground>);
-}
-;
-=======
   );
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

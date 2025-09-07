@@ -1,37 +1,16 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
   }
 }
-import React from "react";
-import Head from "next/head";
-
-export default function LocationsPage() {;
-  return (
-    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
+import React from 'react';
+import Head from 'next/head';
+export default function LocationsPage() {return (<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
         <title>Locations | Zion Tech Group</title>;
-        <meta
-          name="description"
-          content="Our office locations and contact information."
+        <meta;
+          name="description";
+          content="Our office locations and contact information.";
         />;
         <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/locations" />;
       </Head>;
@@ -41,8 +20,7 @@ export default function LocationsPage() {;
         </h1>;
         <div className="p-6 rounded-2xl bg-black/40 border border-cyan-500/20">;
           <h2 className="text-white text-xl font-semibold mb-2">;
-            Middletown, DE (HQ);
-          </h2>;
+            Middletown, DE (HQ)</h2>;
           <p className="text-slate-300">;
             364 E Main St STE 1008 Middletown DE 19709;
           </p>;
@@ -52,16 +30,13 @@ export default function LocationsPage() {;
           <a className="text-cyan-400" href="tel:+13024640950">;
             +1 302 464 0950;
           </a>{" "}
-          or email{" "}
 <<<<<<< HEAD
-import React from './react';
+          or email{" "}import React from './react';
 import Head from './next / head';
-export default /**
- * LocationsPage - Function description
- */
-function LocationsPage() {
-  return (
-    <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
+export default /**;
+ * LocationsPage - Function description;
+ */;
+function LocationsPage() {return (<div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
       <Head>;
         <title > Locations | Zion Tech Group</title>;
         <meta;
@@ -76,8 +51,7 @@ function LocationsPage() {
         </h1>;
         <div className="p - 6 rounded - 2xl bg - black / 40 border border-cyan-500 / 20">;
           <h2 className="text - white text - xl font-semibold mb-2">;
-            Middletown, DE (HQ);
-          </h2>;
+            Middletown, DE (HQ)</h2>;
           <p className="text-slate-300">;
             364 E Main St STE 1008 Middletown DE 19709;
           </p>;
@@ -98,9 +72,17 @@ function LocationsPage() {
           .;
         </p>;
       </div>;
-    </div>);
-}
+    </div>)}<a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">;
+            kleber@ziontechgroup.com;
+          </a>;
+          .;
+        </p>;
+      </div>;
+    </div>;
+  )
 =======
+          or email{" "}
+
           <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">
             kleber@ziontechgroup.com
           </a>
@@ -109,4 +91,4 @@ function LocationsPage() {
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
