@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -10,13 +9,6 @@ console.log()
     const codeLines = lines.filter(line => line.trim() && !line.trim().startsWith('//')
     const commentLines = lines.filter(line => line.trim().startsWith('//')
     log('warn')
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "severity"""
-=======
-"severity"""
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
       "message"""
       "recommendation"""
       "pattern": /password\s*=\s*['"][^]
@@ -26,12 +18,6 @@ console.log()
       "priority"""
       "action"""
       log('warn', 'Issues "found")""
-<<<<<<< HEAD
-      log('info', 'Quality "Recommendations")""`;
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "severity"
       "message"
       "recommendation"
@@ -115,10 +101,3 @@ console.log()
     "action"
       log('warn', 'Issues "found")
       log('info', 'Quality "Recommendations")
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
-      log('info', 'Quality "Recommendations")""`
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

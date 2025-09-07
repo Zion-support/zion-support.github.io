@@ -1,35 +1,10 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useDebounce } from "@/hooks/useDebounce";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { BlogPost } from "@/types/blog";
-=======
-import { useState, useEffect } from "react",
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { useDebounce } from "@/hooks/useDebounce",
-import { GradientHeading } from "@/components/GradientHeading",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { BlogPost } from "@/types/blog",
->>>>>>> cursor/automate-test-improve-and-merge-code-aa0d
 import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { Search } from 'lucide-react'
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-// Categories for filtering
-const CATEGORIES = $2;
+// Categories for filtering,
+  const CATEGORIES = $2;
   "Trends",
   "Marketing",
   "Sustainability",
@@ -37,11 +12,9 @@ const CATEGORIES = $2;
   "Recruitment",
   "Infrastructure"
 ],
-
 export interface BlogProps {
   posts?: BlogPost[]
 }
-
 export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   logInfo($2);
   const [searchQuery, setSearchQuery] = useState($2);
@@ -50,7 +23,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const query = useDebounce($2);
   const [isLoading, setIsLoading] = useState($2);
   const router = useRouter($2);
-  // Reset state when navigating away to avoid cross-page leakage
+  // Reset state when navigating away to avoid cross-page leakage,
   useEffect(() => {
     return () => {
       setSearchQuery($2);
@@ -58,14 +31,12 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       setPosts([...initialPosts])
     }
   }, [router.asPath, initialPosts]),
-
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setPosts(prev => [...prev, generateRandomBlogPost()]),
   //   }, 120000), // every 2 minutes
   //   return () => clearInterval($2);
   // }, []),
-
   useEffect(() => {
     const fetchPosts = async () => {
       setIsLoading($2);
@@ -80,20 +51,18 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         setIsLoading(false)
       }
     },
-
     fetchPosts()
   }, [query]),
-
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter($2);
-  // Get featured posts
+  // Get featured posts,
   const featuredPosts = posts.filter($2);
   logInfo($2);
   return (
     <>
-      <SEO
-        title="Blog - Latest from Zion Tech Marketplace"
+      <SEO,
+  title="Blog - Latest from Zion Tech Marketplace"
         description="Read expert insights and news on the Zion Tech Marketplace blog. Stay informed about trends, tips, and stories that help you succeed. Sign up for updates and never miss a breakthrough."
         keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
         canonical="https: //app.ziontechgroup.com/blog"
@@ -107,12 +76,10 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>
           </div>
-          
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (() => {
             const featuredPost = $2;
             if (!featuredPost) return null,
-            
             return (
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
@@ -139,8 +106,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                     {featuredPost.excerpt}
                   </p>
                   <div className="flex items-center mb-6">
-                    <img
-                      src={featuredPost.author.avatarUrl}
+                    <img,
+  src={featuredPost.author.avatarUrl}
                       alt={featuredPost.author.name}
                       className="w-10 h-10 rounded-full mr-3"
                       onError={(e) => {
@@ -155,8 +122,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       </p>
                     </div>
                   </div>
-                  <Button 
-                    asChild
+                  <Button,
+  asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"
                   >,
                     <Link href={`/blog/${featuredPost.slug}`}>
@@ -168,21 +135,19 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
             </div>
             )
           })()}
-        
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
-                <Input
-                  type="text"
+                <Input,
+  type="text"
                   placeholder="Search articles...",
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                 />
               </div>
-              
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" aria-label="Filter by category">
                   <SelectValue placeholder="Select Category" />
@@ -202,20 +167,19 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
               </div>
             )}
           </div>
-
           {/* Blog Posts Grid */}
           {!isLoading && filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {filteredPosts.map((post) => (
                 <Card,
                   key={post.id}
-                  asChild
-                  className="bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-all duration-300 group-hover:shadow-lg",
+                  asChild,
+  className="bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-all duration-300 group-hover:shadow-lg",
                 >,
                   <Link href={`/blog/${post.slug}`} className="block group">
                   <div className="aspect-[16/9] relative overflow-hidden">
-                    <img
-                      src={post.featuredImage}
+                    <img,
+  src={post.featuredImage}
                       alt={post.featuredImageAlt || post.title}
                       className="object-cover w-full h-full hover: scale-105 transition-transform duration-300",
                       onError={(e) => {,
@@ -240,8 +204,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       {post.excerpt}
                     </p>
                     <div className="flex items-center">
-                      <img
-                        src={post.author.avatarUrl}
+                      <img,
+  src={post.author.avatarUrl}
                         alt={post.author.name}
                         className="w-8 h-8 rounded-full mr-2"
                         onError={(e) => {
@@ -260,14 +224,13 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
               ))}
             </div>
           ) : null}
-
           {/* No Results Message - Show only if not loading and no posts */}
           {!isLoading && filteredPosts.length === 0 && (
             <div className="text-center py-16">
               <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>
               <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
-              <Button
-                variant="outline"
+              <Button,
+  variant="outline"
                 onClick={() => {
                   setSearchQuery($2);
                   setSelectedCategory("All Categories")

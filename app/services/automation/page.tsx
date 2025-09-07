@@ -14,7 +14,6 @@ export default function AutomationPage() {
           and business process optimization. Streamline operations, reduce costs, and boost efficiency with intelligent automation.
         </p>
       </section>
-
       {/* Automation Solutions Showcase */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Automation Solutions</h2>
@@ -63,7 +62,6 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Core Automation Services */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Core Automation Services</h2>
@@ -103,7 +101,6 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Industry Applications */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Industry Applications</h2>
@@ -130,7 +127,6 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Automation Benefits</h2>
@@ -157,7 +153,6 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Pricing Plans */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>
@@ -203,18 +198,17 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Contact CTA */}
       <ContactCTA />
     </div>
-  )
+  );
 function AutomationSolution({ title, description, features, pricing, icon }: {
   title: string
   description: string
   features: string[]
   pricing: string
-  icon: string
-}) {
+  icon: string;
+}) {;
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
@@ -230,11 +224,11 @@ function AutomationSolution({ title, description, features, pricing, icon }: {
       </ul>
       <div className="text-lg font-bold text-blue-600">{pricing}</div>
     </div>
-  )
+  );
 function AutomationServiceItem({ title, details }: {
   title: string
-  details: string[]
-}) {
+  details: string[];
+}) {;
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
@@ -247,38 +241,38 @@ function AutomationServiceItem({ title, details }: {
         ))}
       </ul>
     </div>
-  )
+  );
 function IndustryCard({ title, description, icon }: {
   title: string
   description: string
-  icon: string
-}) {
+  icon: string;
+}) {;
   return (
     <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
       <div className="text-3xl mb-3">{icon}</div>
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
-  )
+  );
 function BenefitCard({ title, description, icon }: {
   title: string
   description: string
-  icon: string
-}) {
+  icon: string;
+}) {;
   return (
     <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
       <div className="text-3xl mb-3">{icon}</div>
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
-  )
+  );
 function AutomationPricingPlan({ name, price, duration, features, popular }: {
   name: string
   price: string
   duration: string
   features: string[]
-  popular: boolean
-}) {
+  popular: boolean;
+}) {;
   return (
     <div className={`bg-white border-2 rounded-xl p-6 ${popular ? 'border-blue-500 relative' : 'border-gray-200'}`}>
       {popular && (
@@ -299,45 +293,3 @@ function AutomationPricingPlan({ name, price, duration, features, popular }: {
           </li>
         ))}
       </ul>
-      <a
-        href="tel:+13024640950"
-        className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold text-center block transition-colors ${
-          popular
-            ? 'bg-blue-600 text-white hover:bg-blue-700'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-        }`}
-      >
-        Get Started
-      </a>
-    </div>
-  )
-function ContactCTA() {
-  return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center mt-12">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Automate Your Business Processes?
-      </h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your automation needs and create a solution that streamlines your operations.
-        Our team has automated processes for 300+ companies, saving millions in operational costs.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
-      </div>
-      <div className="mt-6 text-sm text-gray-600">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-      </div>
-    </div>
-  );
-}
