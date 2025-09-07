@@ -1,202 +1,63 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com';
+  const baseUrl = 'https://zion.app'
   
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/solutions`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/research`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    // AI Services
-    {
-      url: `${baseUrl}/services/ai-services`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/ai-analytics-platform`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-chatbot-builder`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-code-reviewer`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-content-generator`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-customer-support`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-customer-support-automation`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-data-analytics`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-email-optimizer`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-financial-analytics`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-invoice-generator`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-marketing-automation`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-meeting-assistant`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-powered-crm`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-project-management-suite`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-social-media-scheduler`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/ai-social-scheduler`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    // Other Services
-    {
-      url: `${baseUrl}/services/blockchain`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/blockchain-solutions`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/cybersecurity`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/cybersecurity-suite`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/data-analytics`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/devops-automation`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/it-services`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/micro-saas`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/smart-invoice-generator`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-  ];
+  // Static routes
+  const staticRoutes = [
+    '',
+    '/about',
+    '/contact',
+    '/research',
+    '/services',
+    '/solutions',
+  ]
+
+  // Service routes
+  const serviceRoutes = [
+    '/services/ai-analytics-platform',
+    '/services/ai-chatbot-builder',
+    '/services/ai-code-reviewer',
+    '/services/ai-content-generator',
+    '/services/ai-customer-support',
+    '/services/ai-customer-support-automation',
+    '/services/ai-data-analytics',
+    '/services/ai-email-optimizer',
+    '/services/ai-financial-analytics',
+    '/services/ai-invoice-generator',
+    '/services/ai-marketing-automation',
+    '/services/ai-meeting-assistant',
+    '/services/ai-powered-crm',
+    '/services/ai-project-management-suite',
+    '/services/ai-services',
+    '/services/ai-social-media-scheduler',
+    '/services/ai-social-scheduler',
+    '/services/blockchain',
+    '/services/blockchain-solutions',
+    '/services/cybersecurity',
+    '/services/cybersecurity-suite',
+    '/services/data-analytics',
+    '/services/devops-automation',
+    '/services/e-commerce-solutions',
+    '/services/erp-solutions',
+    '/services/fintech-solutions',
+    '/services/healthcare-solutions',
+    '/services/iot-solutions',
+    '/services/it-services',
+    '/services/micro-saas',
+    '/services/mobile-app-development',
+    '/services/qa-testing',
+    '/services/smart-invoice-generator',
+    '/services/software-development',
+    '/services/web-development',
+  ]
+
+  const allRoutes = [...staticRoutes, ...serviceRoutes]
+
+  return allRoutes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: route === '' ? 1.0 : route.startsWith('/services') ? 0.8 : 0.9,
+  }))
 }
