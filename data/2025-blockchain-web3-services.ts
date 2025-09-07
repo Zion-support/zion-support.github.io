@@ -95,8 +95,23 @@ pr-12325
   {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+<<<<<<< HEAD
   {}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis'
+=======
+  {
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+      'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+      'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     ],
     realImplementation: true,
 

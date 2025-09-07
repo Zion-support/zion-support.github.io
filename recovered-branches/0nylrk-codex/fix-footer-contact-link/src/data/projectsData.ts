@@ -342,6 +342,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -365,11 +366,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 job: {
       title: \"title\",
     description: 'Develop dashboards using React and integrate ML models'}
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 
     job: {,
@@ -444,6 +448,11 @@ pr-12325
     }
   }
 ];
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
 
     }
   }
@@ -455,4 +464,8 @@ pr-12325
 ;
 "
 
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

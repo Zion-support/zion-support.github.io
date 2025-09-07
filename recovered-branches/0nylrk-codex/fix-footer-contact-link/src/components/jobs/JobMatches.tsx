@@ -74,9 +74,17 @@ import {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import {;
   Card,;
   CardHeader,;
@@ -103,6 +111,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",
 import { useJobMatches } from "@/hooks/useJobMatches",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,6 +189,13 @@ export function JobMatches({ jobId }: JobMatchesProps) {};
 =======
 import { Skeleton } from "@/components/ui/skeleton",    useJobMatches(jobId);
 =======
+=======
+import { Skeleton } from "@/components/ui/skeleton",    useJobMatches(jobId);
+  const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
+=======
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 import { Skeleton } from "@/components/ui/skeleton",
 
 import React from "react",;
@@ -238,9 +254,15 @@ const { matches, isLoading, isProcessing, triggerAIMatching } =
   const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
 <<<<<<< HEAD
   
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   if (isLoading) {
 =======
   if (isLoading) {}
@@ -263,6 +285,7 @@ const { matches, isLoading, isProcessing, triggerAIMatching } =
                 <Skeleton className="h-4 w-48" />"
                 <Skeleton className="h-4 w-32" />
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -307,6 +330,13 @@ import React from "react",;
             </div>import React from "react",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+            </div>import React from "react";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+=======
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
             </div>
 ))}
         </CardContent>
@@ -325,6 +355,10 @@ import React from "react",;
 import React from "react",;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
 import { useJobMatches } from "@/hooks/useJobMatches",;
@@ -332,10 +366,20 @@ import { Skeleton } from "@/components/ui/skeleton",;
 interface JobMatchesProps {;
   jobId: string;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
   const { matches, isLoading, isProcessing, triggerAIMatching } =;
 
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
   const { matches, isLoading, isProcessing, triggerAIMatching } =;
     useJobMatches(jobId);

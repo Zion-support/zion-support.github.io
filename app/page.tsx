@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 
 <<<<<<< HEAD
@@ -102,9 +103,20 @@ import Link from "next/link";
 
 =======
 =======
+=======
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+
+=======
+
+import Link from 'next/link';
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
 import Link from 'next/link';
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
@@ -139,10 +151,14 @@ export const metadata: Metadata = {
     },
   },
 };
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Link from 'next/link';
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 interface CardProps {

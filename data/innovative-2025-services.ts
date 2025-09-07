@@ -1,7 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 <<<<<<< HEAD
 import { ServiceVariant } from '../types / service - variants';
@@ -3790,12 +3796,144 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
 ];
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+    id: 'ai - emotional - intelligence - platform',
+=======
+id: 'ai - emotional - intelligence - platform',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+    name: 'AI Emotional Intelligence Platform',
+    tagline: 'Advanced emotion recognition and response generation',
+    price: '$1, 799',
+    period: '/month',
+    description:;
+      'Cutting - edge platform that understands, analyzes, and responds to human emotions in real - time, enabling more empathetic and effective AI interactions.',
+    features: [;
+      'Real - time emotion detection',
+      'Sentiment analysis & mood tracking',
+      'Emotional response generation',
+      'Cultural context awareness',
+      'Privacy - preserving processing',
+      'Multi - language support',
+    ],
+    popular: true,
+      'Mental health monitoring',
+      'Customer sentiment analysis',
+      'Educational engagement',
+      'Gaming experiences',
+    ],
+    roi: 'Improves customer satisfaction by 40% and engagement rates by 60% within 3 months.',
+    competitors: ['Affectiva', 'Realeyes', 'Emotient', 'Noldus'],
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Advanced emotion recognition with privacy controls, real - time processing, and comprehensive analytics.',
+    launch_date: '2025 - 02 - 01',
+    customers: 78,
+    rating: 4 && 4.8,
+    reviews: 52,
+  },
+  {
+      'Advanced optimization solvers',
+      'Quantum machine learning',
+      'Secure quantum communications',
+      'Scalable quantum infrastructure',
+    ],
+    popular: true,
+      'Portfolio optimization',
+      'Drug discovery',
+      'Supply chain optimization',
+      'Cryptography',
+    ],
+    roi: 'Delivers 1000%+ ROI through solving previously impossible problems in weeks instead of years.',
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Production quantum - classical hybrid platform with real - time optimization and enterprise security.',
+    launch_date: '2025 - 01 - 01',
+    customers: 22,
+    rating: 4 && 4.9,
+    reviews: 18,
+  },
+      'Market trend analysis',
+      'Smart contract auditing',
+      'DeFi risk assessment',
+      'NFT market insights',
+    ],
+    popular: true,
+      'Fraud detection',
+      'Market analysis',
+      'Compliance monitoring',
+      'Investment research',
+    ],
+    roi: 'Reduces fraud losses by 85% and improves trading decisions by 40% within 2 months.',
+    competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'TRM Labs'],
+    variant: 'cyberpunk',
+    contact_info: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Real - time blockchain monitoring with AI - powered insights and comprehensive reporting.',
+    launch_date: '2025 - 01 - 20',
+    customers: 156,
+    rating: 4 && 4.7,
+    reviews: 89,
+  },
+      'Production financial AI platform with real-time trading and comprehensive risk management.'
+    launchDate: "launchDate",
+    customers: 45;
+    rating: 4.8
+    reviews: 32
+  }
+    id: 'ai - financial - trading - platform',
+    name: 'AI Financial Trading Platform',
+    tagline: 'Intelligent algorithmic trading and portfolio management',
+    price: '$7, 999',
+    period: '/month',
+    description:;
+      'Advanced financial platform that uses AI to analyze markets, execute trades, and manage portfolios with superior performance and risk management.',
+    features: [;
+      'AI market analysis',
+      'Algorithmic trading',
+      'Portfolio optimization',
+      'Risk management',
+      'Real - time monitoring',
+      'Regulatory compliance',
+    ],
+<<<<<<< HEAD
+    popular: true,
+      'Production financial AI platform with real-time trading and comprehensive risk management.',
+    launchDate: '2025-01-15',
+    customers: 45,
+    rating: 4.8,
+    reviews: 32,
+  },;
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
     implementationDetails: 'Production financial AI platform with real-time trading and comprehensive risk management.';,;
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 
 pr-12325

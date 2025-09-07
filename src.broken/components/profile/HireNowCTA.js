@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 =======
 import React, { useState } from 'react';
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 :src/components/profile/HireNowCTA.jsx
 import React, {useState} from 'react';
@@ -185,6 +186,8 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {};
     </Card>)}
 ;
 export default HireNowCTA;import React, { useState } from 'react';
+=======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [formData, setFormData] = useState({
@@ -193,6 +196,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         startDate: '',
         message: ''
         e.preventDefault();
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 :src/components/profile/HireNowCTA.jsx
     }
@@ -206,6 +210,8 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
         if (onHire) {
 =======
 
@@ -221,17 +227,26 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             startDate: '',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src/components/profile/HireNowCTA.jsx
             message: ''}
+=======
+    const handleChange = (e) => {
+=======
+:src/components/profile/HireNowCTA.jsx;
+    message: ''}
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     );
         setIsFormOpen(false)};
             message: ''
         });
         setIsFormOpen(false)
 };    const handleChange = (e) => {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
+<<<<<<< HEAD
         }))
 };
 =======
@@ -264,6 +279,10 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         }))
 };
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        }));
+    };
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
       <CardHeader>"
         <CardTitle className="text-white flex items-center gap-2">"
@@ -276,7 +295,57 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             {hourlyRate && (<div className="flex items-center gap-2 text-zion-slate-light">"
                 <DollarSign className="h-4 w-4"/>
                 <span>Starting at ${hourlyRate}/hour</span>
+<<<<<<< HEAD
               </div>)}"
+=======
+              </div>)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <p className="text-zion-slate-light text-sm">;
+              Ready to start your project? Send a message to discuss details and get started.;
+            </p>;
+            <Button onClick={() => setIsFormOpen(true)} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
+              Start Project Discussion;
+            </Button>;
+          </div>) : (<form onSubmit={handleSubmit} className="space-y-4">;
+            <div>;
+              <label htmlFor="projectDescription" className="block text-sm font-medium text-white mb-2">;
+                Project Description;
+              </label>;
+              <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>;
+            </div>;
+            <div className="grid grid-cols-2 gap-4">;
+              <div>;
+                <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">;
+                  Budget Range;
+                </label>;
+                <Input id="budget" name="budget" value={formData.budget} onChange={handleChange} placeholder="e.g., $1000-5000" className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>;
+              </div>;
+              <div>;
+                <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">;
+                  Start Date;
+                </label>;
+                <Input id="startDate" name="startDate" type="date" value={formData.startDate} onChange={handleChange} className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan" required/>;
+              </div>;
+            </div>;
+            <div>;
+              <label htmlFor="message" className="block text-sm font-medium text-white mb-2">;
+                Additional Message;
+              </label>;
+              <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Any additional details or questions..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" rows={3}/>;
+            </div>;
+            <div className="flex gap-3">;
+              <Button type="submit" className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
+                Send Message;
+              </Button>;
+              <Button type="button" variant="outline" onClick={() => setIsFormOpen(false)} className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">;
+                Cancel;
+              </Button>;
+            </div>;
+=======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
             <p className="text-zion-slate-light text-sm">
               Ready to start your project? Send a message to discuss details and get started.
             </p>"
@@ -290,7 +359,14 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
               </label>"
               <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>
             </div>
+<<<<<<< HEAD
 "
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
             <div className="grid grid-cols-2 gap-4">
               <div>"
                 <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
@@ -298,23 +374,45 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
                 </label>"
                 <Input id="budget" name="budget" value={formData.budget} onChange={handleChange} placeholder="e.g., $1000-5000" className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>
               </div>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
               <div>"
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+              <div>
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
                 <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">
                   Start Date;
                 </label>"
                 <Input id="startDate" name="startDate" type="date" value={formData.startDate} onChange={handleChange} className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan" required/>
               </div>
             </div>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
             <div>"
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+            <div>
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
               <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                 Additional Message;
               </label>"
               <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Any additional details or questions..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" rows={3}/>
             </div>
+<<<<<<< HEAD
 "
             <div className="flex gap-3">"
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+            <div className="flex gap-3">
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
               <Button type="submit" className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                 Send Message;
               </Button>"
@@ -322,6 +420,10 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
                 Cancel;
               </Button>
             </div>
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
           </form>)}
       </CardContent>
     </Card>);
@@ -334,6 +436,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -413,3 +516,8 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     );"
 pr-12325
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

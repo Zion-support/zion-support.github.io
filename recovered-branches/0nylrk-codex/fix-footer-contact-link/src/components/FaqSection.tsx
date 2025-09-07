@@ -272,6 +272,12 @@ export function FaqSection() {;
 
 export function FaqSection() {;
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { GradientHeading } from "./GradientHeading";
+=======
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
 export function FaqSection() {;
@@ -378,6 +384,10 @@ export function FaqSection() {;
   return (
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { GradientHeading } from "./GradientHeading",;
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import {;
   Accordion,;
   AccordionContent,;
@@ -542,6 +552,7 @@ export function FaqSection() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -585,6 +596,15 @@ answer: "Zion's Green IT initiative focuses on sustainable IT practices througho
 =======
 ;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+=======
+<<<<<<< HEAD>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+=======
+;
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 ;
   ),;}
@@ -695,6 +715,7 @@ import { FileText } from './lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -713,6 +734,9 @@ import { FileText } from './lucide-react';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 =======
 export /**
  * FaqSection - Function description;
@@ -818,4 +842,8 @@ function FaqSection() {
 pr-12325
 </AccordionTrigger>"
 
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

@@ -84,6 +84,7 @@ export default function RequestQuote() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -126,8 +127,11 @@ import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 
 export default function RequestQuote() {;
 =======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+=======
   );
   );
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   )
 
 import {Header} from "@/components/Header";
@@ -147,6 +151,13 @@ export default function RequestQuote() {;
       </div>;
       <Footer />;
     </>;  );
+<<<<<<< HEAD
+=======
+  );
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 }
 
 import { Header } from "@/components/Header";""

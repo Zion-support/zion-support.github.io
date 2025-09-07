@@ -1,9 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 main
 =======
+=======
+<<<<<<< HEAD
+
+;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+import React from 'react';
+import Head from 'next/head';
+
+<<<<<<< HEAD
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -16,6 +28,7 @@ interface LayoutProps {
   description?: string;
 }
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
 <<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
@@ -245,8 +258,19 @@ interface LayoutProps {
   ogTitle?: string;
   ogDescription?: string;
   ogUrl?: string;
+<<<<<<< HEAD
+=======
+interface LayoutProps {
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+}
+<<<<<<< HEAD
+=======
 }
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default function Layout({ 
   children, 
   title = "Zion Tech Group - Leading AI & Technology Solutions",
@@ -277,6 +301,7 @@ export default function Layout({
         <meta name="description" content={description} />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta name="keywords" content={keywords} />
         <meta property="og:title" content={ogTitle || title} />
         <meta property="og:description" content={ogDescription || description} />
@@ -304,6 +329,19 @@ export default function Layout({
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+=======
+
+export default function Layout({ children, title, description }: LayoutProps) {
+  return (
+    <>
+      <Head>
+        <title>{title || 'Zion Tech Group'}</title>
+        <meta name="description" content={description || 'Leading provider of AI-powered solutions and digital transformation services.'} />
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -316,6 +354,16 @@ export default function Layout({
       </div>
     </>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+        <meta name="description" content={description} />
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -400,4 +448,8 @@ pr-12243
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 }
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

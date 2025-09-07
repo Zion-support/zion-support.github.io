@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const metadata = {
   title: 'Ai Chatbot Builder | Zion Tech Group',
   description: 'Professional ai chatbot builder services for your business needs.',
   keywords: 'ai-chatbot-builder, services, business, technology'
 =======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+=======
 import Link from "next/link";
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 export const metadata = {
   title: "AI Chatbot Builder | Zion Tech Group",
@@ -26,6 +30,7 @@ export default function AIChatbotBuilderPage() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -35,6 +40,13 @@ export default function AIChatbotBuilderPage() {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Professional ai chatbot builder services for your business needs.
           </p>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+=======
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 =======
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="text-center mb-12">
@@ -47,6 +59,7 @@ export default function AIChatbotBuilderPage() {
           context and provide human-like responses.
         </p>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -235,6 +248,9 @@ export default function AIChatbotBuilderPage() {
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
 =======
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <FeatureCard
@@ -269,6 +285,47 @@ export default function AIChatbotBuilderPage() {
         />
       </div>
 
+<<<<<<< HEAD
+export default function AiChatbotBuilderPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Chatbot Builder
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai chatbot builder services for your business needs.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai chatbot builder solutions designed for your specific business requirements.
+            </p>
+          </div>
+<<<<<<< HEAD
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai chatbot builder solutions run smoothly.
+            </p>
+          </div>
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
       <PricingSection />
 
       <div className="mt-16 bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-xl p-8 text-center">
@@ -293,7 +350,11 @@ export default function AIChatbotBuilderPage() {
           >
             Email Us
           </a>
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
         </div>
       </div>
     </div>

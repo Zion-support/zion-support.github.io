@@ -29,4 +29,18 @@ export default async function handler(
     // Here we just echo back.
     res.status(200).json({ ok: true, received: { proof, optionId } });
   } catch (e: any) {
+<<<<<<< HEAD
     res.status(500).json({ error: e?.message || 'internal error' });
+<<<<<<< HEAD:components/api/dao/submit-zk-vote.ts
+  }
+}
+=======
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/api/dao/submit-zk-vote.ts
+=======
+    res.status(500).json({ error: e?.message || 'internal error' });
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

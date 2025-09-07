@@ -1,5 +1,99 @@
   onChange: (next: { category: string;, level: string;, isFree: string ;}) => void,
 return (
+<<<<<<< HEAD
+      <select
+        className='border rounded px-3 py-2 bg-white dark:bg-black'
+        value={category}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+  onChange: (next: { category: string, level: string, isFree: string }) => void
+
+        onChange={e => onChange({ category: e && e.target.value, level, isFree })}
+      >;
+        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {;
+  category: string,;
+  level: string,;
+  isFree: string,;
+  onChange: (next: { category: string, level: string, isFree: string }) => void;
+};
+<<<<<<< HEAD
+
+export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
+      <select
+        className="border rounded px-3 py-2 bg-white dark:bg-black"
+        value={category
+export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
+
+<<<<<<< HEAD:components/learn/FilterBar.tsx
+
+=======
+export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
+import React from 'react';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/learn/FilterBar.tsx
+type Props = {
+  category: string;
+  level: string;
+  isFree: string;
+  onChange: (next: { category: string; level: string; isFree: string }) => void;
+
+export default function FilterBar({
+  category
+  level
+  isFree
+  onChange
+}: Props) {
+  return (
+    <div className='grid grid-cols-1 sm:grid-cols-3 gap-3'>
+      <select
+        className='border rounded px-3 py-2 bg-white dark:bg-black'
+        value={category}
+        onChange={e => onChange({ category: e.target.value, level, isFree })}
+      >
+        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
+<<<<<<< HEAD
+  category: string
+  level: string
+  isFree: string
+  onChange: (next: { category: string, level: string, isFree: string }) => void
+
+  category: string,
+  level: string,
+  isFree: string,
+  onChange: (next: { category: string, level: string, isFree: string }) => void;
+};
+
+<<<<<<< HEAD:components/learn/FilterBar.tsx
+
+
+=======
+  onChange: (next: { category: string, level: string, isFree: string }) => void;
+};
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/learn/FilterBar.tsx
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+<<<<<<< HEAD:components/learn/FilterBar.tsx
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+=======
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/learn/FilterBar.tsx
+=======
       <select;
         className='border rounded px-3 py-2 bg-white dark:bg-black
         value={category;
@@ -16,6 +110,7 @@ type Props = {
 </div>
       <select;"
         className="border rounded px-3 py-2 bg-white dark:bg-black""
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return ("
 </select>"
@@ -41,10 +136,40 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
         <option value='true'>Free</option>
         <option value='false'>Paid</option>
     </div>;
+<<<<<<< HEAD
+    </div>
+  );        value={isFree}
+        onChange={(e) => onChange({ category, level, isFree: e.target.value })}
+      >
+        <option value="">All Pricing</option>
+        <option value="true">Free</option>
+        <option value="false">Paid</option>
+      </select>
+    </div>
+  );
+
+<<<<<<< HEAD:components/learn/FilterBar.tsx
+
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/learn/FilterBar.tsx
+  );
+  is_free: string;
+  on_change: (next: { category: string; level: string; is_free: string }) => void;
+
+;
+export default /**
+ * FilterBar - Function description
+ */
+function FilterBar() {
+  return (
+=======
         <option value="">All Pricing</option>""
         <option value="true">Free</option>""
         <option value="false">Paid</option>"
     </div>"
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     <div className='grid grid - cols - 1 sm:grid - cols - 3 gap - 3'>;
         className='border rounded px - 3 py - 2 bg - white dark:bg - black';
         on_change={e => on_change ({ category: e.target.value;, level, is_free })}
@@ -301,6 +426,17 @@ function FilterBar() {return (<div className=\"grid grid - cols - 1 sm:grid - co
       </select>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD:components/learn/FilterBar.tsx
+}
+}
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/learn/FilterBar.tsx
+=======
 }}ursor/fix-website-loading-errors-and-merge-6662;
 }
 }}
@@ -355,3 +491,4 @@ function FilterBar() {return (<div className=\"grid grid - cols - 1 sm:grid - co
 }
 }
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

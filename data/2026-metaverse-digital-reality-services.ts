@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   id: string;
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -11,8 +12,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
+
+;
+  id: string;
+export interface MetaverseDigitalRealityService2026  {id: string;name: string;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+  id: string;
+=======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+=======
   id: string;
 export interface MetaverseDigitalRealityService2026 {
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

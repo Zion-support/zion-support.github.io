@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export const metadata = { title: "AI Analytics Platform | Zion Tech Group" };
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+=======
+>>>>>>> 96a1f382319a97880a21e7ceb65ec0821c9ac17f
 
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -294,6 +302,7 @@ export default function ServicePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 }
 
@@ -463,3 +472,11 @@ function ContactSection() {}
 =======
 }
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

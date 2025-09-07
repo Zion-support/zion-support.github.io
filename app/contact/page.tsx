@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 
 import React, { useState } from 'react';
@@ -32,12 +33,24 @@ import {
 } from '@heroicons/react/24/outline';
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
+<<<<<<< HEAD
+import Link from 'next/link';
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+=======
 export const metadata = {
   title: "Contact | Zion Tech Group",
   description:
     "Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.",
 };
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

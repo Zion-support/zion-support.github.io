@@ -37,8 +37,21 @@ import React from 'react';
 interface 404.routeProps {
   // Add props here as needed
 
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+export default function 404.route({}: 404.routeProps) {
+=======
+export default function 404.route({ }: 404.routeProps) {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+export default function 404.route({ }: 404.routeProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
 export default function 404.route({ }: 404.routeProps) {
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -79,6 +92,17 @@ export default function 404 && 404.route({ }: 404 && 404.routeProps) {;
       <h1>404 && 404.route</h1>;
       <p>This component is currently under development.</p>;
     </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  )import * as React from 'react';
+export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\";
+module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'";
+ursor/automate-test-improve-and-merge-code-646c;
+interface 404.routeProps  {// Add props here as needed;
+=======
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -129,16 +153,31 @@ import React from 'react';
 
 import React from 'react';
 import * as React from 'react';
+<<<<<<< HEAD
+interface 404.routeProps {
+  // Add props here as needed
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+  );
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 import React from 'react';
 import React from 'react';
 import * as React from 'react';
 
 interface 404.routeProps {
   // Add props here as needed
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 }
 export default function 404.route({ }: 404.routeProps) {
   return (

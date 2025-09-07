@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,10 +141,15 @@ const { execSync } = require('child_process')
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+#!/usr/bin/env node
+
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -207,130 +213,36 @@ class PerformanceMonitor {
       if (!fs.existsSync(distDir)) {
         this.log('Dist directory not found, running build first...');
         await this.runCommand('npm run build', { silent: true });
+=======
+console.log('🔍 Performance Monitor Starting...');
+
+const performanceChecks = [
+  {
+    name: 'Bundle Size Check',
+    check: () => {
+      const buildDir = '.next';
+      if (!fs.existsSync(buildDir)) {
+        console.log('⚠️  Build directory not found. Running build...');
+        execSync('npm run build', { stdio: 'pipe' });
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       }
-      const getDirectorySize = (dir) => {
-        let totalSize = 0;
-        const files = fs.readdirSync(dir);
-        for (const file of files) {
-          const filePath = path.join(dir, file);
-          const stat = fs.statSync(filePath);
-          if (stat.isDirectory()) {
-            totalSize += getDirectorySize(filePath);
-          } else {
-            totalSize += stat.size;
+      
+      const staticDir = path.join(buildDir, 'static');
+      if (fs.existsSync(staticDir)) {
+        const files = fs.readdirSync(staticDir, { recursive: true });
+        const totalSize = files.reduce((size, file) => {
+          const filePath = path.join(staticDir, file);
+          if (fs.statSync(filePath).isFile()) {
+            return size + fs.statSync(filePath).size;
           }
-        }
-        return totalSize;
-      };
-      const bundleSize = getDirectorySize(distDir);
-      const bundleSizeKB = Math.round(bundleSize / 1024);
-      const bundleSizeMB = Math.round(bundleSize / (1024 * 1024) * 100) / 100;
-      this.metrics.push({
-        name: 'Bundle Size',
-        value: bundleSize,
-        unit: 'bytes',
-        displayValue: `${bundleSizeKB}KB (${bundleSizeMB}MB)`,
-        timestamp: new Date().toISOString()
-      });
-      this.log(`Bundle size: ${bundleSizeKB}KB (${bundleSizeMB}MB)`);
-      return bundleSize;
-    } catch (error) {
-      this.log(`Bundle size measurement failed: ${error.message}`, 'ERROR');
-      return null;
-    }
-  }
-
-  async measureMemoryUsage() {
-    this.log('Measuring memory usage...');
-    try {
-      const memUsage = process.memoryUsage();
-      this.metrics.push({
-        name: 'Memory Usage',
-        value: memUsage.heapUsed,
-        unit: 'bytes',
-        displayValue: `${Math.round(memUsage.heapUsed / 1024 / 1024)}MB`,
-        timestamp: new Date().toISOString()
-      });
-      this.log(`Memory usage: ${Math.round(memUsage.heapUsed / 1024 / 1024)}MB`);
-      return memUsage;
-    } catch (error) {
-      this.log(`Memory measurement failed: ${error.message}`, 'ERROR');
-      return null;
-    }
-  }
-
-  async measureFileCount() {
-    this.log('Counting source files...');
-    try {
-      const srcDir = path.join(this.projectRoot, 'src');
-      let fileCount = 0;
-      const countFiles = (dir) => {
-        const files = fs.readdirSync(dir);
-        for (const file of files) {
-          const filePath = path.join(dir, file);
-          const stat = fs.statSync(filePath);
-          if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-            countFiles(filePath);
-          } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js'))) {
-            fileCount++;
-          }
-        }
-      };
-      countFiles(srcDir);
-      this.metrics.push({
-        name: 'Source Files',
-        value: fileCount,
-        unit: 'files',
-        timestamp: new Date().toISOString()
-      });
-      this.log(`Source files: ${fileCount}`);
-      return fileCount;
-    } catch (error) {
-      this.log(`File count measurement failed: ${error.message}`, 'ERROR');
-      return null;
-    }
-  }
-
-  async checkDependencies() {
-    this.log('Checking dependencies...');
-    try {
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
-      const depCount = Object.keys(packageJson.dependencies || {}).length;
-      const devDepCount = Object.keys(packageJson.devDependencies || {}).length;
-      this.metrics.push({
-        name: 'Dependencies',
-        value: depCount,
-        unit: 'packages',
-        timestamp: new Date().toISOString()
-      });
-      this.metrics.push({
-        name: 'Dev Dependencies',
-        value: devDepCount,
-        unit: 'packages',
-        timestamp: new Date().toISOString()
-      });
-      this.log(`Dependencies: ${depCount}, Dev Dependencies: ${devDepCount}`);
-      return { dependencies: depCount, devDependencies: devDepCount };
-    } catch (error) {
-      this.log(`Dependency check failed: ${error.message}`, 'ERROR');
-      return null;
-    }
-  }
-
-  async generateReport() {
-    const endTime = new Date();
-    const duration = endTime - this.startTime;
-    const report = {
-      timestamp: endTime.toISOString(),
-      duration: `${Math.round(duration / 1000)}s`,
-      metrics: this.metrics,
-      summary: {
-        totalMetrics: this.metrics.length,
-        buildTime: this.metrics.find(m => m.name === 'Build Time')?.value || 'N/A',
-        bundleSize: this.metrics.find(m => m.name === 'Bundle Size')?.displayValue || 'N/A',
-        memoryUsage: this.metrics.find(m => m.name === 'Memory Usage')?.displayValue || 'N/A',
-        fileCount: this.metrics.find(m => m.name === 'Source Files')?.value || 'N/A'
+          return size;
+        }, 0);
+        
+        const sizeInMB = (totalSize / (1024 * 1024)).toFixed(2);
+        console.log(`📦 Bundle size: ${sizeInMB}MB`);
+        return totalSize < 50 * 1024 * 1024; // 50MB limit
       }
+<<<<<<< HEAD
     };
 
     const reportPath = path.join(this.projectRoot, 'performance-report.json');
@@ -388,22 +300,58 @@ function getDirectorySize(dirPath) {
   files.forEach(file => {)
 
       const filePath = path.join(dirPath, file);
+=======
+      return false;
+    }
+  },
+  {
+    name: 'Build Time Check',
+    check: () => {
+      const startTime = Date.now();
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       try {
-  // TODO: Implement
-}
-        const stats = fs.statSync(filePath);
-        if (stats.isFile()) {
-          totalSize += stats.size;
+        execSync('npm run build', { stdio: 'pipe' });
+        const endTime = Date.now();
+        const buildTime = (endTime - startTime) / 1000;
+        console.log(`⏱️  Build time: ${buildTime}s`);
+        return buildTime < 120; // 2 minutes limit
+      } catch (error) {
+        return false;
+      }
+    }
+  },
+  {
+    name: 'Memory Usage Check',
+    check: () => {
+      const memUsage = process.memoryUsage();
+      const memInMB = (memUsage.heapUsed / 1024 / 1024).toFixed(2);
+      console.log(`🧠 Memory usage: ${memInMB}MB`);
+      return memUsage.heapUsed < 500 * 1024 * 1024; // 500MB limit
+    }
+  }
+];
 
-  });
-  return totalSize;
+let passed = 0;
+let failed = 0;
 
-// Check .next directory;
-const nextDirSize = getDirectorySize('.next');
+performanceChecks.forEach(check => {
+  try {
+    if (check.check()) {
+      console.log(`✅ ${check.name}`);
+      passed++;
+    } else {
+      console.log(`❌ ${check.name}`);
+      failed++;
+    }
+  } catch (error) {
+    console.log(`❌ ${check.name} - Error: ${error.message}`);
+    failed++;
+  }
+});
 
-  size: nextDirSize,
-  sizeMB: (nextDirSize / 1024 / 1024).toFixed(2)
+console.log(`\n📊 Performance Results: ${passed} passed, ${failed} failed`);
 
+<<<<<<< HEAD
 // Check node_modules;
 const nodeModulesSize = getDirectorySize('node_modules');
 
@@ -647,3 +595,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+if (failed === 0) {
+  console.log('🎉 All performance checks passed!');
+  process.exit(0);
+} else {
+  console.log('⚠️  Some performance checks failed. Please review the issues.');
+  process.exit(1);
+}
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

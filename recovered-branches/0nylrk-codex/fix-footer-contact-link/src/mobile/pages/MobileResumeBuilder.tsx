@@ -1,8 +1,33 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from "react";
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {MobileHeader} from "../components/common/MobileHeader";
+import {BottomNavigation} from "../components/common/BottomNavigation";
+import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder";
+=======
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+import { MobileHeader } from "../components/common/MobileHeader";
+import { BottomNavigation } from "../components/common/BottomNavigation";
+import {
+  MobileResumeBuilder,
+  as,
+  ResumeBuilderComponent,
+} from "../components/resume/MobileResumeBuilder";
+export function MobileResumeBuilder() {
+import {MobileHeader} from "../components/common/MobileHeader";
+import {BottomNavigation} from "../components/common/BottomNavigation";
+import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder";
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 
@@ -80,6 +105,11 @@ export function MobileResumeBuilder() {
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 export function MobileResumeBuilder() {
   return (
 =======
@@ -133,6 +163,13 @@ import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder";
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -140,10 +177,16 @@ import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/res
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder",;
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export function MobileResumeBuilder() {
   return (
     <div className="min-h-screen">
       <MobileHeader title="Resume Builder" showBack />
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from "react";
+import { MobileHeader } from "../components/common/MobileHeader";
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,6 +233,7 @@ export function MobileResumeBuilder() {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder";
 export function MobileResumeBuilder() {;
@@ -228,6 +272,7 @@ export function MobileResumeBuilder() {;
 =======
       <BottomNavigation />;
     </div>;  );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     </div>;  );
@@ -241,6 +286,21 @@ export function MobileResumeBuilder() {;
       <BottomNavigation />;
     </div>;  );
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+<<<<<<< HEAD
+=======
+
+      <main className="py-4">
+        <ResumeBuilderComponent />
+      </main>
+
+      <BottomNavigation />
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 }
 import React from './react';'
 import { MobileHeader } from '../components / common / MobileHeader';'

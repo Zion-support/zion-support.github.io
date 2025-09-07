@@ -22,8 +22,16 @@ import {supabase} from "@/integrations/supabase/client";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+=======
+
+
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 <<<<<<< HEAD
 
@@ -130,7 +138,14 @@ const partnerFormSchema = z.object({
 =======
 
 const partnerFormSchema = z.object({
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
 =======
 const partnerFormSchema = z.object({"
@@ -147,7 +162,11 @@ const partnerFormSchema = z.object({"
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -278,6 +297,13 @@ export function PartnerRegistrationForm() {
 
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),
@@ -365,8 +391,16 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -403,6 +437,7 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
             bio: data.bio
             status: 'pending', // Partners need approval
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -419,6 +454,9 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
           }
         ])
         .select();
@@ -428,10 +466,17 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+import { useState } from "react";
+import { z } from "zod";
+=======
+
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 <<<<<<< HEAD
 
@@ -449,6 +494,12 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from "react",;
 import { z } from "zod",;
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+
+import { useState } from "react",;
+import { z } from "zod",;
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -1240,6 +1291,11 @@ console.error('Error submitting partner application:', error),
         ]);
         .select(),;
       if (error) throw error,;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1335,7 +1391,14 @@ console.error('Error submitting partner application:', error),
     }
 }
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
               twitter: data.twitter || null,
               instagram: data.instagram || null,
               youtube: data.youtube || null,
@@ -1943,7 +2006,15 @@ export function PartnerRegistrationForm() {;
                       <FormMessage />;
 
                 />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
                 <FormField
                   control={form && form.control}
                   name="instagram"
@@ -1981,6 +2052,17 @@ export function PartnerRegistrationForm() {;
                       </FormControl>;
                       <FormMessage />;
 
+<<<<<<< HEAD
+=======
+                />;
+              </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <div className="grid sm:grid-cols-2 gap-4">;                      <FormControl>;
+=======
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 <<<<<<< HEAD
 
@@ -2073,17 +2155,32 @@ export function PartnerRegistrationForm() {;
                       <FormLabel>LinkedIn (Optional)</FormLabel>;
                       <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
               <div className="grid sm:grid-cols-2 gap-4">;                      <FormControl>;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+              <div className="grid sm:grid-cols-2 gap-4">;                      <FormControl>;
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
                         <Input placeholder="Profile URL or username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
 
                 />;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
               <FormField
                 control={form && form.control}
                 name="niche"
@@ -2566,6 +2663,16 @@ export function PartnerRegistrationForm() {;
                     </FormDescription>;
                     <FormMessage />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <Button 
+              type="submit" 
+=======
+
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
             <Button 
               type="submit" 
@@ -2592,7 +2699,14 @@ export function PartnerRegistrationForm() {;
               disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : "Submit Application"}
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}>;"
               {isSubmitting ? "Submitting..." : "Submit Application"}
@@ -3037,7 +3151,15 @@ pr-12325
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 }
 <<<<<<< HEAD
 <<<<<<< HEAD

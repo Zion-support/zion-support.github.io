@@ -144,8 +144,40 @@ Automated code review and quality analysis powered by advanced AI.
             />
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Code Reviewer
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai code reviewer services for your business needs.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai code reviewer solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+
+=======
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+=======
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
             Ai Code Reviewer
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -161,6 +193,7 @@ Automated code review and quality analysis powered by advanced AI.
             </Link>
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="bg-gray-50 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
@@ -178,12 +211,89 @@ Automated code review and quality analysis powered by advanced AI.
           <div className="text-center p-6 bg-white rounded-lg shadow-md">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Enhanced Security</h3>
             <p className="text-gray-600">Proactive security scanning prevents vulnerabilities from reaching production environments.</p>
+=======
+        <div>
+<h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
+          <div className="space-y-6">
+            <PricingCard
+              plan="Starter"
+              price="$29"
+              period="per month"
+              description="Perfect for small teams and individual developers"
+              features={[
+                "Up to 5 repositories",
+                "Basic code analysis",
+                "Standard bug detection",
+                "Email support",
+                "GitHub/GitLab integration",
+              ]}
+              popular={false}
+            />
+            <PricingCard
+              plan="Professional"
+              price="$99"
+              period="per month"
+              description="Ideal for growing teams and mid-size projects"
+              features={[
+                "Up to 25 repositories",
+                "Advanced AI analysis",
+                "Custom rules engine",
+                "Priority support",
+                "All integrations",
+                "Team analytics dashboard",
+              ]}
+              popular={true}
+            />
+            <PricingCard
+              plan="Enterprise"
+              price="$299"
+              period="per month"
+              description="For large organizations with complex needs"
+              features={[
+                "Unlimited repositories",
+                "Advanced security scanning",
+                "Custom AI model training",
+                "Dedicated support",
+                "On-premise deployment",
+                "Custom integrations",
+              ]}
+              popular={false}
+            />
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
+=======
+<div className="bg-gray-50 rounded-xl p-8 mb-16">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+          How It Works
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <StepCard
+            step="1"
+            title="Connect Your Repository"
+            description="Integrate with GitHub, GitLab, or Bitbucket in just a few clicks. No complex setup required."
+          />
+          <StepCard
+            step="2"
+            title="AI Analysis"
+            description="Our AI analyzes your code for quality issues, bugs, security vulnerabilities, and adherence to best practices."
+          />
+          <StepCard
+            step="3"
+            title="Get Actionable Insights"
+            description="Receive detailed reports with specific recommendations to improve your code quality and team productivity."
+          />
+        </div>
+      </div>
+
+      <div className="text-center">
+<h2 className="text-2xl font-bold text-gray-900 mb-6">
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
           Ready to Improve Your Code Quality?
         </h2>
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -206,13 +316,69 @@ Automated code review and quality analysis powered by advanced AI.
         </div>
         <div className="mt-4 text-sm text-gray-500">
           <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+<<<<<<< HEAD
           <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+<<<<<<< HEAD
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">📈</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Scalable Solutions</h3>
+              <p className="text-gray-600">
+                Built to grow with your business and adapt to changing needs.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center bg-white rounded-xl shadow-lg p-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Contact us today to discuss your ai code reviewer requirements 
+              and get a custom solution tailored to your needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+              >
+                Get Started
+                <ArrowRightIcon className="h-5 w-5 ml-2" />
+              </Link>
+              <Link
+                href="/services"
+                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-c074
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+=======
+>>>>>>> 96a1f382319a97880a21e7ceb65ec0821c9ac17f
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
 }
 
 function FeatureItem({
@@ -306,3 +472,4 @@ function StepCard({
     </div>
   );
 }
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

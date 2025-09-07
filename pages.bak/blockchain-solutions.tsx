@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = default function BlockchainSolutions() { return null}
 =======
 <<<<<<< HEAD
@@ -23,10 +24,23 @@ module.exports = default function BlockchainSolutions() { return null}
 import React from 'react';
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+module.exports = default function BlockchainSolutions() { return null}import React from 'react';
+module.exports = default function BlockchainSolutions() { return null}
+interface BlockchainsolutionsProps  {// Add props here as needed;
+=======
+import React from 'react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+import React from 'react';
+=======
+import React from 'react';
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 module.exports = default function BlockchainSolutions() { return null}
 import React from 'react';
 interface BlockchainsolutionsProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 module.exports = default function BlockchainSolutions() { return null}
 module.exports = default function BlockchainSolutions() { return null}
@@ -92,9 +106,12 @@ import React from 'react';
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+=======
 module.exports = default function BlockchainSolutions() { return null}
 
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 module.exports = default function BlockchainSolutions() { return null}
 module.exports = default function BlockchainSolutions() { return null}
 import React from 'react';

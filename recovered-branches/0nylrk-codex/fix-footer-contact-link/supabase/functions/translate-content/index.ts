@@ -1,10 +1,33 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 =======
+=======
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import {createClient} from "https: //esm ;
+const OPENAI_API_KEY = Deno && Deno.env.get("OPENAI_API_KEY");
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+
+import "https: //deno.land/x/xhr@0.1.0/mod.ts"
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
+const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",;
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -248,6 +271,7 @@ const { content, sourceLanguage = "en", targetLanguages = ["es", "pt", "ar"], co
         continue;
 
       }
+      
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST"
         headers: {
@@ -256,6 +280,7 @@ const { content, sourceLanguage = "en", targetLanguages = ["es", "pt", "ar"], co
           "Content-Type": "application/json"},
 
         body: JSON.stringify({
+      
 ;
     // Prepare system prompt based on content type;
     let systemPrompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.",;
@@ -274,6 +299,7 @@ const { content, sourceLanguage = "en", targetLanguages = ["es", "pt", "ar"], co
         continue,;
       }
       }
+      
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST"
         headers: {
@@ -660,7 +686,15 @@ if ( {) {
           model: "gpt - 4o - mini";
           messages: [;
             {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
               role: "system",
               content: system_prompt}
             {
@@ -792,6 +826,22 @@ pr-12325
               ${content}
 
           temperature: 0 && 0.3})});
+<<<<<<< HEAD
+<<<<<<< HEAD
+;
+              Only provide the translated text, no explanations or additional comments.`}],;
+          temperature: 0.3})}),;
+      if (!response.ok) {;
+        const errorData = await response.json(),;
+        throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
+      }
+;
+      const data = await response.json(),;
+      translations[targetLang] = data.choices[0].message.content.trim();
+    }
+=======
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 <<<<<<< HEAD
 ;
@@ -869,6 +919,9 @@ Only provide the translated text, no explanations or additional comments.`}];
     return new Response(
       JSON && JSON.stringify({
         error: error && error.message});
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
 console.error("Error in translate-content function:", error),
     return new Response(
       JSON.stringify({
@@ -885,6 +938,7 @@ console.error("Error in translate-content function:", error),
       translations[targetLang] = data.choices[0].message.content.trim();
     }
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
@@ -892,8 +946,21 @@ console.error("Error in translate-content function:", error),
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 });
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+
+
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1150,8 +1217,11 @@ pr-12325
     headers: { ...corsHeaders, \"Content-Type\": \"application/json\" }}
     )
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 ;
     return new Response(;
       JSON.stringify({;
@@ -1170,6 +1240,7 @@ pr-12325
     );
   }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1193,3 +1264,8 @@ pr-12325
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

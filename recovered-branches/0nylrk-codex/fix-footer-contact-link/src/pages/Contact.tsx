@@ -514,6 +514,17 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        method: "method",
+    headers: {
+=======
+        method: "POST"
+        headers: {
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
         method: "POST"
         headers: {
 <<<<<<< HEAD
@@ -557,17 +568,30 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
         body: JSON.stringify({
           messages: [{ role: "user", content: message }]
         })});
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
           "Content-Type": "application/json"},
         body: JSON.stringify({ "
           messages: [{ role: "user", content: message }] 
         })}),
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -581,6 +605,9 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
@@ -1774,6 +1801,11 @@ export default function Contact() {;
                   disabled={isSubmitting}
                 >;
                   {isSubmitting ? "Sending..." : "Send Message"}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1807,6 +1839,7 @@ className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:fr
                   {isSubmitting ? "Sending..." : "Send Message"}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+<<<<<<< HEAD
 
 =======
 
@@ -2106,6 +2139,12 @@ export default function Contact() { return null; }
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
                 </Button>;
               </form>;
             </div>;
@@ -3306,6 +3345,18 @@ if ( {) {
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text-center">;
+            <h2 className="text - 3xl font - bold text - white mb-6">Need immediate assistance?</h2>;
+            <p className="text - zion - slate - light text - lg mb - 8 max - w-3xl mx-auto">;
+=======
+
+          <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text - center">;
+            <h2 className="text - 3xl font - bold text - white mb - 6">Need immediate assistance?</h2>;
+            <p className="text - zion - slate - light text - lg mb - 8 max - w-3xl mx - auto">;
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3313,6 +3364,7 @@ if ( {) {
           <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text-center">;
             <h2 className="text - 3xl font - bold text - white mb-6">Need immediate assistance?</h2>;
             <p className="text - zion - slate - light text - lg mb - 8 max - w-3xl mx-auto">;
+<<<<<<< HEAD
 =======
           <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text - center">;
             <h2 className="text - 3xl font - bold text - white mb - 6">Need immediate assistance?</h2>;
@@ -3323,6 +3375,9 @@ if ( {) {
             <h2 className="text - 3xl font - bold text - white mb-6">Need immediate assistance?</h2>;
             <p className="text - zion - slate - light text - lg mb - 8 max - w-3xl mx-auto">;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
               Our customer support team is available 24 / 7 to help you with any questions.;
             </p>;
             <div className="flex flex - col sm:flex - row justify - center gap-4">;

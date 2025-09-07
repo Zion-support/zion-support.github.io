@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -9,9 +10,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
 
+;
+export type Real2036InnovativeService = {id: string, name: string,tagline: string, description: string,category: string, price: string,export type Real2036InnovativeService = {id: string;export type Real2036InnovativeService = {id: string;
+export type Real2036InnovativeService = any;name: string;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+=======
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12325
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 export type Real2036InnovativeService = {
 =======
 
@@ -1921,6 +1934,12 @@ pr-12325
       'Risk assessment',
       'Real - time tracking',
       'Performance analytics',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       'Custom workflows',
     ],
 <<<<<<< HEAD
@@ -2332,6 +2351,19 @@ id: 'ai-business-intelligence-platform-pro',
     price: '$1,799',
     period: '/month',
     features: [
+<<<<<<< HEAD
+      'AI-powered quality control'
+      'Predictive maintenance'
+      'Autonomous robotics'
+      'Production optimization'
+      'Real-time monitoring'
+      'Supply chain integration'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+      'Custom workflows'
+=======
+      'Custom workflows',
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
 'AI-powered quality control',
       'Predictive maintenance',
       'Autonomous robotics',
@@ -2340,6 +2372,7 @@ id: 'ai-business-intelligence-platform-pro',
       'Supply chain integration',
       'Custom workflows',
       'Performance analytics',
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     ],
     link: 'https://ziontechgroup.com/services/autonomous-manufacturing-platform',
     launchDate: '2036-03-05',

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -265,6 +266,13 @@ exports.handler = async () => {}
 function run_node() { return null; }
   const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),'
 =======
+=======
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
 

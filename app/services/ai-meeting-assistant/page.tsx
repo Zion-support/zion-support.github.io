@@ -17,6 +17,21 @@ export const metadata = {
 =======
 export default function AIMeetingAssistantPage() {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Meeting Assistant
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai meeting assistant services for your business needs.
+          </p>
+=======
     <div className="animate-fade-in">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -66,6 +81,7 @@ export default function AIMeetingAssistantPage() {
               description="Works with Zoom, Teams, Google Meet, and in-person meetings"
             />
           </div>
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
         </div>
 
         <div>

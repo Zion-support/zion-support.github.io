@@ -22,7 +22,15 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+<<<<<<< HEAD
+<<<<<<< HEAD
 import nextPlugin from '@next/eslint-plugin-next';
+=======
+// import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+import nextPlugin from '@next/eslint-plugin-next';
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import globals from 'globals';
 
 const compat = new FlatCompat({
@@ -57,6 +65,251 @@ export default [
       'src.disabled/**',
       'components.disabled/**',
       'pages.disabled/**',
+<<<<<<< HEAD
+    ],
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+=======
+  js.configs.recommended,
+<<<<<<< HEAD
+  ...compat.extends(
+    'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended'
+  ),
+<<<<<<< HEAD
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+=======
+  {
+    ignores: [
+      '**/src.pages.disabled.auto/**',
+      '**/src.pages.disabled/**',
+      '**/src_backup/**',
+      '**/src.broken/**',
+      '**/src.corrupted/**',
+      '**/temp_*/**',
+      '**/backup*/**',
+      '**/corrupted*/**',
+      '**/test_build/**',
+      '**/zion-os.disabled/**',
+      '**/zion-ai-assistant/**',
+      '**/pages.bak/**',
+      '**/pages.disabled/**',
+      '**/pages.disabled_auto/**',
+      '**/pages_disabled/**',
+      '**/pages_api.disabled/**',
+      '**/pages_backup*/**',
+      '**/pages.__backup/**',
+      '**/pages-quarantine/**',
+      '**/pages.blog.disabled/**',
+      '**/recovered-branches/**',
+      '**/server/**',
+      '**/services/**',
+      '**/data/**',
+      '**/data_backup/**',
+      '**/data.disabled/**',
+      '**/hooks.disabled/**',
+      '**/lib.disabled/**',
+      '**/lib_backup/**',
+      '**/lint-target/**',
+      '**/node_modules/**',
+      '**/.next/**',
+      '**/dist/**',
+      '**/out/**',
+      '**/*.backup.*',
+      '**/*.disabled.*',
+      '**/*.temp.*',
+      '**/*.cjs',
+      '**/*.js',
+      '**/ecosystem.*.cjs',
+      '**/automation/**',
+      '**/scripts/**',
+      '**/tools/**',
+      '**/tests/**',
+      '**/__tests__/**',
+      '**/cypress/**',
+      '**/e2e/**',
+      '**/types/**',
+      '**/utils/**',
+      '**/providers/**',
+      '**/supabase/**',
+      '**/test-utils.jsx',
+      '**/setupTests.ts',
+      '**/playwright.config.ts',
+      '**/vite.config.ts',
+      '**/vitest.config.ts',
+      '**/jest.config.*',
+      '**/jest.setup.*',
+      '**/middleware.*',
+      '**/next.config.*',
+      '**/next-env.d.ts',
+      '**/fix-merge-conflicts.mjs',
+      '**/fix_typescript_syntax_errors.jsx',
+      '**/fix_utils_files.ts',
+      '**/components/**',
+      '**/hooks/**',
+      '**/lib/**',
+      '**/src/**',
+      '**/cypress.config.ts',
+      '**/api-backup/**',
+      '**/api-disabled/**',
+      '**/api.disabled/**',
+      '**/blog/**',
+      '**/contracts.disabled/**',
+      '**/browserstack.config.ts',
+      '**/api-documentation.tsx',
+      '**/api.tsx',
+      '**/pages.disabled_full/**',
+      '**/pages.old/**',
+      '**/pages_minimal/**',
+      '**/solutions.disabled/**',
+      '**/src_backup_temp/**',
+      '**/temp-backup/**',
+      '**/tests.disabled/**',
+      '**/vite.config-backup.ts',
+      '**/zion-os/**',
+      '**/zion_academy/**',
+      '**/services-broken.tsx',
+      '**/pages._quarantine/**',
+      '**/pages.broken/**',
+      '**/pages.corrupted.*/**',
+      '**/pages/**',
+      '**/src.disabled/**',
+      '**/components.disabled/**',
+      '**/components.disabled_full/**',
+      '**/pages-disabled/**',
+      '**/pages._archive_corrupted/**',
+      '**/automation_backup/**',
+      '**/broken_files_backup/**',
+      '**/lib.broken/**',
+      '**/ai-optimization-backups/**',
+      '**/.eslintrc.mjs',
+      '**/postcss.config.mjs',
+      '**/App.test.ts',
+      '**/EnhancedFooter.tsx',
+      '**/EnhancedHeader.tsx',
+      '**/EnhancedNavigation.tsx',
+      '**/ModernNavigation.tsx',
+      '**/SidebarNavigation.tsx',
+      '**/automation.tsx',
+      '**/blockchain-solutions.tsx',
+      '**/case-studies.tsx',
+      '**/component-library.tsx'
+    ]
+  },
+  {
+    files: ['app/**/*.{js,jsx,ts,tsx}'],
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+    languageOptions: {
+=======
+  {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn'
+    }
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2021,
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks,
+      '@next/next': nextPlugin
+    },
+    rules: {
+<<<<<<< HEAD
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...nextPlugin.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/no-unescaped-entities': 'off',
+      '@next/next/no-html-link-for-pages': 'off',
+      '@next/next/no-img-element': 'off',
+      'no-console': 'off',
+      'no-undef': 'off',
+    },
+  },
+  {
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**',
+      'automation_backup/**',
+      'apps.backup/**',
+      'backup-problematic-files/**',
+      'backup-merge-conflicts/**',
+      'corrupted_backup/**',
+      'corrupted-files-backup/**',
+      'src.disabled/**',
+      'components.disabled/**',
+      'pages.disabled/**',
+      'pages_backup/**',
+      'pages_backup_*/**',
+      'pages_backup_conflict/**',
+      'pages_backup_conflicts/**',
+      'pages_minimal/**',
+      'pages.broken/**',
+      'pages.corrupted.*/**',
+      'pages.disabled*/**',
+      'pages.disabled_*/**',
+      'pages.disabled_full/**',
+      'pages.old/**',
+      'pages_api.disabled/**',
+      'pages_disabled/**',
+      'pages.__backup/**',
+      'pages._archive_corrupted/**',
+      'pages._quarantine/**',
+      'pages.bak/**',
+      'pages.blog.disabled/**',
+      'solutions.disabled/**',
+      'src.corrupted/**',
+      'src.pages.disabled/**',
+      'src_backup/**',
+      'temp-backup/**',
+      'tests.disabled/**',
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       'zion-os/**',
       'zion-website/**',
       'zion_academy/**',
@@ -110,6 +363,37 @@ export default [
       'system-*.js',
       'ultimate-*.js',
       '*.js',
+<<<<<<< HEAD
+      'public/**',
+      'services-broken.tsx',
+      'services/**/*.ts',
+      'vitest.config.ts',
+      'playwright.config.ts',
+      'setupTests.ts',
+      'components/**',
+      'data/**',
+      'hooks/**',
+      'lib/**',
+      'middleware*',
+      'next.config.ts',
+      'cypress.config.ts',
+      'jest.*',
+      'fix_typescript_syntax_errors.jsx',
+      'contracts.disabled/**',
+      'data.disabled/**',
+      'hooks.disabled/**',
+      'lib.disabled/**',
+      'lib_backup/**',
+      'lint-target/**',
+      'pages-backup/**',
+      'pages-disabled/**',
+      'pages-quarantine/**',
+      'app/**'
+    ]
+=======
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+=======
       'src_backup_temp/**',
       'temp-backup/**',
       'temp_exclude/**',
@@ -169,6 +453,7 @@ ecmaVersion: 2020,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'no-unused-vars': 'warn',
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       'no-console': 'warn',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
@@ -476,6 +761,14 @@ screen: 'readonly',
       '@typescript-eslint/ban-ts-comment': 'off',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'no-unused-vars': 'off',
+<<<<<<< HEAD
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn'
+    }
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+  }
+];
+=======
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'prefer-const': 'error',
       'no-debugger': 'warn',
@@ -725,4 +1018,8 @@ screen: 'readonly',
     ],
   },
 ];
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

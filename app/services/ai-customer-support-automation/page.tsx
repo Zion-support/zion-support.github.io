@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from "react";
 import Link from "next/link";
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 export const metadata = {
   title: "AI Customer Support Automation | Zion Tech Group",
@@ -16,6 +21,20 @@ interface FeatureProps {
 }
 
 function Feature({ title, description, icon }: FeatureProps) {
+<<<<<<< HEAD
+=======
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+export const metadata = {
+  title: 'Ai Customer Support Automation - Zion Tech Group',
+  description: 'Professional ai customer support automation solutions for your business needs.',
+};
+
+export default function AiCustomerSupportAutomationPage() {
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
       <div className="text-3xl mb-4">{icon}</div>
@@ -23,6 +42,10 @@ function Feature({ title, description, icon }: FeatureProps) {
       <p className="text-gray-600">{description}</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 }
 
 interface PricingTierProps {
@@ -423,6 +446,11 @@ export default function AICustomerSupportAutomationPage() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
 import Link from 'next/link';
 
 
@@ -442,3 +470,4 @@ export default function ServicePage() {
     </div>
   );
 }
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

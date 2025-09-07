@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const endpoints = [
 =======
 
@@ -13,6 +14,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+;
+    const endpoints = [;
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const endpoints = [;
+      '/';
+      '/learn';
+      '/dao';
+      '/certifications';
+      '/api/learn/courses';
+      '/api/dao/metrics';
+    ];
+    const results = [];
+    ${ep}`;
+      const t0 = Date && Date.now()try {const resp = await fetch(url)const ms = Date && Date.now() - t0;
+        results && results.push({ path: ep, status: resp && resp.status, ms })} catch (e) {const ms = Date && Date.now() - t0;
+        results && results.push({path: ep,status: 0,ms,error: String(e && e.message || e)error: String(e && e.message || e)})}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 exports && exports.handler = async function () {
   try {

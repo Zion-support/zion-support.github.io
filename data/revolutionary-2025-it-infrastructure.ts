@@ -1,12 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+;
+import { ServiceVariant  } from '../types/service-variants';
+export interface Revolutionary2025ITService  {id: string;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 <<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants';
 export interface Revolutionary2025ITService {
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -16,6 +29,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+=======
+>>>>>>> 96a1f382319a97880a21e7ceb65ec0821c9ac17f
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   id: string;
   name: string;
   tagline: string;
@@ -48,6 +66,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration'
       'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration';
     ];
@@ -56,6 +77,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     color: 'from-red-600 to-pink-700';
     textColor: 'text-red-400';
     link: 'https://ziontechgroup.com/quantum-cybersecurity-platform';
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     website: string;
@@ -1822,6 +1844,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   customers: number;
   rating: number;
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    website: string;
+  }marketPosition: 'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.';
+    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors';trialDays: 30;
+    setupTime: '8 hours';category: 'Cybersecurity & Quantum Security';
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+    website: string;
+  }
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+=======
+>>>>>>> 96a1f382319a97880a21e7ceb65ec0821c9ac17f
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 }
 

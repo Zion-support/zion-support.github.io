@@ -4251,6 +4251,14 @@ function ITServiceCard({ title, description, icon, pricing, features }: {
       </div>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
 }
 <<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -4375,4 +4383,8 @@ function MetricCard({ number, label, description }: {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

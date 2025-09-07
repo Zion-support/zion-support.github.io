@@ -375,7 +375,31 @@ export default function BlockchainPage() {
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const metadata = { 
+title: 'Blockchain Services | Zion Tech Group',
+  description: 'Comprehensive blockchain development services including smart contracts, DeFi protocols, NFT platforms, and enterprise blockchain solutions.',
+  keywords: 'blockchain development, smart contracts, DeFi, NFT, Web3, cryptocurrency, enterprise blockchain, dApp development'
+=======
+// eslint-disable-next-line react-refresh/only-export-components
+export const metadata = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  title: 'Blockchain Solutions | Zion Tech Group',
+  description: 'Professional blockchain development services including smart contracts, DeFi, NFTs, and Web3 applications.',
+  keywords: 'blockchain, smart contracts, DeFi, NFTs, Web3, cryptocurrency, ethereum, polygon'
+=======
+  title: 'Blockchain - Zion Tech Group',
+  description: 'Professional blockchain solutions for your business needs.',
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+  title: 'Blockchain Solutions - Zion Tech Group',
+  description: 'Advanced blockchain solutions and services for modern businesses.',
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-c074
+=======
 
+>>>>>>> 96a1f382319a97880a21e7ceb65ec0821c9ac17f
 };
 
 export default function ServicePage() {
@@ -569,10 +593,26 @@ export default function ServicePage() {
 
 title: 'Blockchain Solutions | Zion Tech Group',
   description: 'Comprehensive blockchain development services including smart contracts, DeFi applications, NFT platforms, and enterprise blockchain solutions.'
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 };
 
 export default function BlockchainPage() {
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Blockchain Solutions
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Blockchain
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
     <div className="animate-fade-in">
       <section className="mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Blockchain Solutions</h1>
@@ -853,6 +893,7 @@ function BlockchainPricingCard({ name, price, duration, features, recommended }:
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Blockchain Solutions
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transform your business with our advanced blockchain solutions and services.

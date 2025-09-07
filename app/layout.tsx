@@ -1,15 +1,26 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+=======
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+const inter = Inter({ subsets: ['latin'] });
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
@@ -85,9 +96,13 @@ export default function RootLayout({
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+=======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 import React from "react";
 import Link from "next/link";
 import "./globals.css";
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 export const metadata = {
   title: "Zion Tech Group — AI, Micro SaaS, and IT Services",
@@ -138,9 +153,18 @@ googleBot: {
   },;
 };
 
+<<<<<<< HEAD
 function Header() {}
   return ("
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">"
+=======
+<<<<<<< HEAD
+=======
+=======
+function Header() {
+  return (
+    <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
         <Link"
           href="/""
@@ -408,6 +432,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
   keywords: 'AI, artificial intelligence, technology solutions, cloud computing, cybersecurity, data analytics, digital transformation',
@@ -424,7 +449,16 @@ export const metadata: Metadata = {
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
     description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
   },
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+<<<<<<< HEAD
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#000000'
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 };
 
 export default function RootLayout({
@@ -433,6 +467,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <html lang="en">
+      <body className={inter.className}>
+        <div className="min-h-screen bg-white flex flex-col">
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </div>
+=======
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} bg-black text-white antialiased`}>
+        <main className="min-h-screen">
+          {children}
+        </main>
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
     <html lang="en">
 <<<<<<< HEAD
       <body className={inter.className}>{children}</body>
@@ -442,4 +495,30 @@ export default function RootLayout({
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+<<<<<<< HEAD
+      <body className="min-h-screen bg-gray-50">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+      </body>
+    </html>
+  );
+}
+
+
+}
+=======
+      <body className={inter.className}>
+        {children}
+      </body>
+    </html>
+  );
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-c074
+=======
+>>>>>>> 96a1f382319a97880a21e7ceb65ec0821c9ac17f
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
