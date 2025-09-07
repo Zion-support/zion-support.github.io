@@ -410,7 +410,13 @@ export default function ComprehensiveServicesShowcase2025() {
       default:
         return 0;
     }
-  });
+    
+    if (activeCategory !== 'all') {
+      filtered = filtered.filter(service => service.category.toLowerCase().includes(activeCategory));
+    }
+    
+    return filtered;
+  }, [searchTerm, activeCategory]);
 
   const containerVariants = {
     hidden: { opacity: 0 },

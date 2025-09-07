@@ -137,8 +137,6 @@ export default function ITConsulting() {
               </motion.button>
               <motion.button 
                 className="px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-3"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 <Play className="w-5 h-5" />
                 Watch Case Study
