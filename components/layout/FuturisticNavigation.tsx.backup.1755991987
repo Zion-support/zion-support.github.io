@@ -100,15 +100,12 @@ export default function FuturisticNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
-=======
   const router = useRouter();
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-<<<<<<< HEAD
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

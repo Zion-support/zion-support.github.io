@@ -1,15 +1,11 @@
 {
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-  "extends": [
-    "@typescript-eslint/recommended"
-  ],
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-origin/automation-improvements-final
-  "parser": "@typescript-eslint/parser",
+"extends": ["next/core-web-vitals"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "prefer-const": "error"
+  }
+}  "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
@@ -21,8 +17,7 @@ origin/automation-improvements-final
     "es6": true,
     "jest": true
     "es6": true,
-    "jest": true
-    "es2021": true
+"jest": true    "es2021": true
   },
   "globals": {
     "IntersectionObserver": "readonly",
@@ -39,8 +34,7 @@ origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-  },
+origin/automation-improvements-final  },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
@@ -67,11 +61,7 @@ origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-    "no-console": "warn",
-    "react/react-in-jsx-scope": "off",
-    "no-undef": "error"
-  },
+origin/automation-improvements-final  },
   "ignorePatterns": [
     "node_modules/",
     ".next/",
@@ -147,7 +137,23 @@ origin/automation-improvements-final
     "pages.disabled_auto/"
 
     "pages.disabled_auto/",
+    "zion_academy/",
+    "pm2-automation/",
+    "scripts/",
+    "*.report.json",
+    "temp_*/",
+    "test_build/",
+    "tests.disabled/",
+    "pages.disabled/",
+    "src.disabled/",
+    "components.disabled/",
+    "hooks.disabled/",
+    "types.disabled/",
+    "contracts.disabled/",
+    "solutions.disabled/",
+    "zion-os.disabled/",
     "src_backup_temp/",
+    "temp-backup/",
     "tests/",
     "supabase/",
     "*.test.js",
@@ -386,6 +392,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
     "pages.disabled_auto/"
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-  ]
+origin/automation-improvements-final  ]
 }

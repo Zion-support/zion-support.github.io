@@ -98,7 +98,6 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-=======
       // Create gradient background
       const gradient = ctx.createRadialGradient(
         canvas.width / 2,
@@ -136,7 +135,6 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-71e4
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
@@ -276,7 +274,6 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
       }
       window.removeEventListener('resize', handleResize);
     };
-<<<<<<< HEAD
   }, [variant, intensity]);
 
   const backgroundVariants = {
@@ -331,7 +328,6 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
       <div className="relative z-10">
         {children}
       </div>
-<<<<<<< HEAD
 
       {/* Floating geometric shapes */}
       <motion.div
@@ -374,10 +370,7 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
           repeat: Infinity,
           ease: "easeInOut"
         }}
-      />
-=======
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-71e4
-    </div>
+      />    </div>
   );
 };
 

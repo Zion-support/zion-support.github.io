@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
     this.logFile = path.join(this.projectRoot, 'logs', 'file-extension-fixer.log')
@@ -9,6 +8,5 @@ const path = require('path')
       this.log(' File extension fixing logic to be implemented')
         "successRate"
         "version"
-
+console.error('Fatal "error")
   console.error('Fatal "error")
-

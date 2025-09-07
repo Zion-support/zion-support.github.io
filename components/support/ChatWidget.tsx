@@ -1,78 +1,64 @@
-
-  const [isOpen, setIsOpen] = useState(false);
-
-const [messages, setMessages] = useState<ChatMessage[]    />([]);
-
-const [input, setInput] = useState('');
-
-const [isLoading, setIsLoading] = useState(false);
-
-const [failedIntents, setFailedIntents] = useState(0);
-
-const [showEscalation, setShowEscalation] = useState(false);
-
-const sessionIdRef = useRef<string    />('');
-
-const messagesEndRef = useRef<HTMLDivElement | null    />(null);
-
+  const [isOpen, setIsOpen] = useState(false)
+const [messages, setMessages] = useState<ChatMessage[]    />([])
+const [input, setInput] = useState('')
+const [isLoading, setIsLoading] = useState(false)
+const [failedIntents, setFailedIntents] = useState(0)
+const [showEscalation, setShowEscalation] = useState(false)
+const sessionIdRef = useRef<string    />('')
+const messagesEndRef = useRef<HTMLDivElement | null    />(null)
   useEffect(() => {
-}
+
 sessionIdRef.current = generateSessionId();}
-  }, []);
+  }, [])
   useEffect(() => {
-
-    if (!isOpen && messages.length === 0) {
-      // Seed greeting;
+  if($2) {
+      // Seed greeting
 setMessages([
 {
           role: 'assistant',
   content: 'Hi! How can I help you?'}
           timestamp: Date.now()}
-        }
-      ]);
-    }
-  }, [isOpen, messages.length]);
-  useEffect(() => {
-}
-messagesEndRef.current?.scrollIntoView({ behavior: 'smooth'}
-});
-  }, [messages]);
 
+      ])
+  }, [isOpen, messages.length])
+  useEffect(() => {
+
+messagesEndRef.current?.scrollIntoView({ behavior: 'smooth'}
+})
+  }, [messages])
 const quickReplies = useMemo(
     () => ['How do I hire?', 'How do I get matched?', 'Billing help'],
     []
-  );
+  )
   async function logEvent(eventType: string, payload: any) {
     try {
       await fetch('/api/support/session', {
         method: 'POST'}
-  headers: { 'Content-Type': 'application/json'}
+  headers: { "Content-Type": "application/json"}
 },
 body: JSON.stringify({
           sessionId: sessionIdRef.current,
           eventType}
           payload}
         })
-      });
+      })
     } catch {}
-  }
 
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
 
         method: 'POST'}
-  headers: { 'Content-Type': 'application/json'}
+  headers: { "Content-Type": "application/json"}
 },
 body: JSON.stringify({
           sessionId: sessionIdRef.current,
           reason}
           tag: 'escalate'}
         })
-      });
-      setShowEscalation(true);
+      })
+      setShowEscalation(true)
     } catch {}
-  }
 
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' }
 }),
@@ -82,7 +68,6 @@ body: JSON.stringify({
 
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
     } catch {}
-  }
 
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' }
 }),
@@ -91,27 +76,25 @@ body: JSON.stringify({
       setShowEscalation(true);    } catch {}
 
     } catch {}
-  }
 
   async function onSend(messageText?: string) {
-    const text = (messageText ?? input).trim();
-    if (!text) return;
-
+    const text = (messageText ?? input).trim()
+    if (!text) return
 const newUserMessage: ChatMessage = {
       role: 'user',
   content: text}
       timestamp: Date.now()}
-    };
-    setMessages(prev => [...prev, newUserMessage]);
-    setInput('');
-    setIsLoading(true);
+    }
+    setMessages(prev => [...prev, newUserMessage])
+    setInput('')
+    setIsLoading(true)
     await logEvent('message/user', { content: text}
-});
+})
     try {
       const res = await fetch('/api/support/chat', {
         method: 'POST'}
-  headers: { 'Content-Type': 'application/json'}
-}
+  headers: { "Content-Type": "application/json"}
+
         body: JSON.stringify({}
           sessionId: sessionIdRef.current}
 messages: [...messages, newUserMessage].map(({ role, content }) => ({
@@ -119,76 +102,64 @@ messages: [...messages, newUserMessage].map(({ role, content }) => ({
             content}
           }))
         })
-      });
-
-const data = await res.json();
-      if (data?.assistantMessage) {
+      })
+const data = await res.json()
+  if($2) {
         const assistantMessage: ChatMessage = {
           role: 'assistant',
   content: data.assistantMessage}
 timestamp: Date.now()}
-        };
-        setMessages(prev => [...prev, assistantMessage]);
+        }
+        setMessages(prev => [...prev, assistantMessage])
         await logEvent('message/assistant', {
-          content: assistantMessage.content;
+          content: assistantMessage.content
 meta: data.meta}
-       }
-});
-      }
-      if (data?.meta?.intentMatched = == false) {
-        setFailedIntents(n => {
-         ;
-  const next = n + 1;
-          if (next >= 3) {;}
+
+})
+  if($2) {
+  setFailedIntents($2) {;}
             escalateSupport('Failed to match user intent 3+ times');}
-          }
-          return next;
-        });
+
+          return next
+        })
       } else if (data?.meta?.intentMatched === true) {;}
         setFailedIntents(0);}
-      }
 
     } catch (e) {
       setMessages(prev => [
-        ...prev;
+        ...prev
         {
           role: 'assistant',
   content:
             'Sorry, something went wrong. Please try again or contact support.'
           timestamp: Date.now()}
-       }
-}
-      ]);
+
+      ])
     } finally {}
       setIsLoading(false);}
-    }
 
-  }
-  return (<div className='fixed bottom-4 right-4 z-50'    />;
+  return (<div className='fixed bottom-4 right-4 z-50'    />
       {!isOpen && (<button;}
           aria-label='Open support chat';}
           onClick={() =    /> setIsOpen(true)}
           className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'>
 
-          ?;
-        </button>;
+          ?
+        </button>
       )}
 
                 key={idx}
                 className={'
                   m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'
-                }>;
-                <div;
+                }>
+                <div
                   className={'
                     m && m.role === 'assistant''
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (;'
-              <div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
-
+              <div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
-}
-                 }
-}
-                    />;
+
+                    />
                   {m.content}
 
                 </div>
@@ -218,46 +189,43 @@ key={q}
                 ))}
               </div>
             </div>
-          
-}
 
               <div className='flex gap-2'>
 '
-          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
+          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (;'
-              <div className='flex gap-2'>;
-                <input;
+              <div className='flex gap-2'>
+                <input
                   value={input}
                   onChange={e =    /> setInput(e && e.target.value)}
 
-                  onKeyDown={e => {;
-                    if (e && e.key === 'Enter' && !e && e.shiftKey) {;
+                  onKeyDown={e => {
+  if($2) {
                       e && e.preventDefault();}
                       onSend();}
-                    }
+
                   }}'
                   placeholder='Ask a question…';'
-                  className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'                />;
-                <button;
+                  className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'                />
+                <button
                   onClick={() => onSend()}
                   disabled={isLoading}"
               <div className="flex gap-2">
-                <input;
+                <input
                   value={input}
                   placeholder='Ask a question…'
                   className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
 
                       onSend()
-                    }
+
                   }}
                   placeholder=\"Ask a question…\"
                   className=\"flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500\"
                 />
-                <button;
-
+                <button
 className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'
                 >
-                  Send;
+                  Send
                 </button>
               </div>
             ) : (
@@ -266,36 +234,32 @@ className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-
                   We can escalate this to our team:
                 </div>
                 <div className='flex gap-2'    />
-                  <a;
+                  <a
 href='mailto:support@zion.ai'
                     className='rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
                       />
-                    Email Support;
+                    Email Support
                   </a>
-                  <a;
+                  <a
 href='/contact'
                     className='rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
                       />
-                    Chat with Live Agent;
+                    Chat with Live Agent
                   </a>
                 </div>
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
             )}
-          </div>;
-        </div>;
+          </div>
+        </div>
       )}
-}
-  );
-}
-useEffect ( () => {}
-  // Check condition;
-if ( {) {}
-  $2;
-}
 
+  )
+useEffect ( () => {}
+  // Check condition
+  if($2) {}
+  $2
     </div>
-  );
-}
+  )
 origin/cursor/automate-test-improve-and-merge-code-2533
 

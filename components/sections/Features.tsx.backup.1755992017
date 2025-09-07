@@ -7,14 +7,11 @@ interface Feature {
   description: string;
   color: string;
   gradient: string;
-=======
   pricing?: string;
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-a86c
 }
 
 interface FeaturesProps {
   features: Feature[];
-<<<<<<< HEAD
 }
 
 const Features: React.FC<FeaturesProps> = ({ features }) => {

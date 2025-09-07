@@ -1,5 +1,4 @@
-
-  Zap;
+  Zap
   Shield,
   BarChart3,
   Globe,
@@ -9,39 +8,32 @@
   Code,
   Database,
 
-import { Zap;
-
-  Shield;
-  BarChart3;
-  Globe;
-  Users;
-  Lock;
-  TrendingUp;
-  Code;
-  Database;
-
-  Cloud;
-  ArrowRight;
-  Star;
-  Check;
-
+import { Zap
+  Shield
+  BarChart3
+  Globe
+  Users
+  Lock
+  TrendingUp
+  Code
+  Database
+  Cloud
+  ArrowRight
+  Star
+  Check
         'Git integration'
       ]}
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']}
-    }
 
         'Git integration',
       ],
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
     },
-];
-
-
+]
   return (
-    <>;
-      <Head>;
-        <title>SaaS Marketplace - Zion Tech Group</title>;
-
+    <>
+      <Head>
+        <title>SaaS Marketplace - Zion Tech Group</title>
   return (
     <>
       <Head>
@@ -56,13 +48,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 style={{ animationDelay: '0.4s' ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
-                Get Recommendations;
+                Get Recommendations
               </Button>
             </div>
           </div>
           {/* Stats */}
 
-<div;
+<div
 className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
             style={{ animationDelay: '0.6s' }}
               />
@@ -74,7 +66,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-
             </div>
             <div className='text-center group'    />
               <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'    />
-                9;
+                9
               </div>
               <div className='text-gray-400 text-sm'    />Categories</div>
             </div>
@@ -102,8 +94,8 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-
               <button;}
 key={category}
                 onClick={() =    /> setSelectedCategory(category,}
-}
-                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category;
+
+                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category
                     ? 'bg-blue-600 text-white shadow-lg';}
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white';}
                 }`}>
@@ -121,19 +113,19 @@ key={category}
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredServices.map((service, index) => (
 
-                  <div className='relative'>;
-                    <div;
+                  <div className='relative'>
+                    <div
                       {service.icon}
-                    </div    />;
-                  </div>;
-                  <div className='flex-1'    />;
-                    <div className='flex items-center justify-between mb-2'    />;
-                      <h3 className='text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300'    />;
+                    </div    />
+                  </div>
+                  <div className='flex-1'    />
+                    <div className='flex items-center justify-between mb-2'    />
+                      <h3 className='text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300'    />
                         {service.name}
-                      </h3>;
-                      <div className='flex items-center space-x-2'    />;
-                        <Star className='w-4 h-4 text-yellow-400 fill-current'    />;
-                        <span className='text-sm text-gray-300'    />;
+                      </h3>
+                      <div className='flex items-center space-x-2'    />
+                        <Star className='w-4 h-4 text-yellow-400 fill-current'    />
+                        <span className='text-sm text-gray-300'    />
                           {service.rating}
                         </span>
                       </div>
@@ -153,98 +145,98 @@ key={category}
                         Key Features:
                       </h4>'
                       <div className='grid grid-cols-2 gap-2'>
-                        {service.features;
+                        {service.features
                           .slice(0, 4)
 
                       {service && service.icon}
-                    </div>;
+                    </div>
                   </div>;'
                   <div className='flex-1'>;'
                     <div className='flex items-center justify-between mb-2'>;'
-                      <h3 className='text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300'>;
+                      <h3 className='text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300'>
                         {service && service.name}
                       </h3>;'
                       <div className='flex items-center space-x-2'>;'
                         <Star className='w-4 h-4 text-yellow-400 fill-current' />;'
-                        <span className='text-sm text-gray-300'>;
+                        <span className='text-sm text-gray-300'>
                           {service && service.rating}
-                        </span>;
-                      </div>;
-                    </div>;
-                    <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'    />;
-                      <span className='px-2 py-1 bg-gray-800 rounded-full'    />;
+                        </span>
+                      </div>
+                    </div>
+                    <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'    />
+                      <span className='px-2 py-1 bg-gray-800 rounded-full'    />
                         {service.category}
-                      </span>;
-                      <span    />{service.users} users</span>;
-                      <span className='text-green-400'    />{service.pricing}</span>;
-                    </div>;
-                    <p className='text-gray-400 leading-relaxed mb-4'    />;
+                      </span>
+                      <span    />{service.users} users</span>
+                      <span className='text-green-400'    />{service.pricing}</span>
+                    </div>
+                    <p className='text-gray-400 leading-relaxed mb-4'    />
                       {service.description}
-                    </p>;
-                    <div className='mb-4'    />;
-                      <h4 className='text-sm font-semibold text-gray-300 mb-2'    />;
-                        Key Features:;
-                      </h4>;
-                      <div className='grid grid-cols-2 gap-2'    />;
+                    </p>
+                    <div className='mb-4'    />
+                      <h4 className='text-sm font-semibold text-gray-300 mb-2'    />
+                        Key Features:
+                      </h4>
+                      <div className='grid grid-cols-2 gap-2'    />
                         {service.features;}
                           .slice(0, 4).map((feature, featureIndex) => (className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service && service.color} shadow-xl group-hover: scale-110 transition-transform duration-300`}>
 
                       {service && service.ico,}
-}
-                    </div>;
-                  </div>;
-                  <div className='flex-1'    />;
-                    <div className='flex items-center justify-between mb-2'    />;
-                      <h3 className='text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300'    />;
+
+                    </div>
+                  </div>
+                  <div className='flex-1'    />
+                    <div className='flex items-center justify-between mb-2'    />
+                      <h3 className='text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300'    />
                         {service && service.name}
-                      </h3>;
-                      <div className='flex items-center space-x-2'    />;
-                        <Star className='w-4 h-4 text-yellow-400 fill-current'    />;
-                        <span className='text-sm text-gray-300'    />;
+                      </h3>
+                      <div className='flex items-center space-x-2'    />
+                        <Star className='w-4 h-4 text-yellow-400 fill-current'    />
+                        <span className='text-sm text-gray-300'    />
                           {service && service.rating}
-                        </span>;
-                      </div>;
-                    </div>;<div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'    />;
-                      <span className='px-2 py-1 bg-gray-800 rounded-full'    />;
+                        </span>
+                      </div>
+                    </div>;<div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'    />
+                      <span className='px-2 py-1 bg-gray-800 rounded-full'    />
                         {service && service.category}
-                      </span>;
-                      <span    />{service && service.users} users</span>;
-                      <span className='text-green-400'    />{service && service.pricing}</span>;
-                    </div>;<p className='text-gray-400 leading-relaxed mb-4'    />;
+                      </span>
+                      <span    />{service && service.users} users</span>
+                      <span className='text-green-400'    />{service && service.pricing}</span>
+                    </div>;<p className='text-gray-400 leading-relaxed mb-4'    />
                       {service && service.description}
-                    </p>;<div className='mb-4'    />;
-                      <h4 className='text-sm font-semibold text-gray-300 mb-2'    />;
-                        Key Features:;
-                      </h4>;
-                      <div className='grid grid-cols-2 gap-2'    />;
+                    </p>;<div className='mb-4'    />
+                      <h4 className='text-sm font-semibold text-gray-300 mb-2'    />
+                        Key Features:
+                      </h4>
+                      <div className='grid grid-cols-2 gap-2'    />
                         {service && service.features;}
                           .slice(0, 4).map((feature, featureIndex) => (<div;}
                               key={featureIndex}
-                              className='flex items-center text-sm text-gray-400'    />;
-                              <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0'    />;
+                              className='flex items-center text-sm text-gray-400'    />
+                              <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0'    />
                               {feature}
-                            </div>;
+                            </div>
                           ))}
 
-                        className='group-hover:border-blue-500 group-hover:text-blue-400'>;
+                        className='group-hover:border-blue-500 group-hover:text-blue-400'>
                         Visit Website;'
-                        <ExternalLink className='w-4 h-4 ml-2' />;
-                      </Button>;
+                        <ExternalLink className='w-4 h-4 ml-2' />
+                      </Button>
 '
                       <div className='text-right'>;'
-                        <div className='text-xs text-gray-500 mb-1'>;
-                          Use Case:;
+                        <div className='text-xs text-gray-500 mb-1'>
+                          Use Case:
                         </div>;'
-                        <div className='text-sm text-gray-300 max-w-xs'>;
+                        <div className='text-sm text-gray-300 max-w-xs'>
                           {service && service.useCase}
                         </div>                      </div>                      ;"
                       <div className="text-right">;"
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>;"
-                        <div className="text-sm text-gray-300 max-w-xs">{service && service.useCase}</div>;
-                    </div>;
-                  </div>;
-                </div>;
-              </Card>;
+                        <div className="text-sm text-gray-300 max-w-xs">{service && service.useCase}</div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
                         className='group-hover:border-blue-500 group-hover:text-blue-400'
                       >
                         Visit Website
@@ -264,125 +256,120 @@ key={category}
               </Card>
 
             ),
-}
-          </div>;
-        </div>;
+
+          </div>
+        </div>
       </section>;{/* CTA Section */}
-      <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'    />;
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10'    />;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'    />;
-          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'    />;
-          </h2>;
-          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'    />;
-                        </span>;
-                      </div>;
-                    </div>;
-                    <div className='flex items - center space - x-4 mb - 3 text - sm text - gray - 400'    />;
-                      <span className='px - 2 py - 1 bg - gray - 800 rounded - full'    />;
+      <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'    />
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10'    />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'    />
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'    />
+          </h2>
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'    />
+                        </span>
+                      </div>
+                    </div>
+                    <div className='flex items - center space - x-4 mb - 3 text - sm text - gray - 400'    />
+                      <span className='px - 2 py - 1 bg - gray - 800 rounded - full'    />
                         {service.category}
-                      </span>;
-                      <span    />{service.users} users</span>;
-                      <span className='text - green - 400'    />{service.pricing}</span>;
-                    </div>;
-                    <p className='text - gray - 400 leading - relaxed mb - 4'    />;
+                      </span>
+                      <span    />{service.users} users</span>
+                      <span className='text - green - 400'    />{service.pricing}</span>
+                    </div>
+                    <p className='text - gray - 400 leading - relaxed mb - 4'    />
                       {service.description}
-                    </p>;
-                    <div className='mb - 4'    />;
-                      <h4 className='text - sm font - semibold text - gray - 300 mb - 2'    />;
-                        Key Features:;
-                      </h4>;
-                      <div className='grid grid - cols - 2 gap - 2'    />;
+                    </p>
+                    <div className='mb - 4'    />
+                      <h4 className='text - sm font - semibold text - gray - 300 mb - 2'    />
+                        Key Features:
+                      </h4>
+                      <div className='grid grid - cols - 2 gap - 2'    />
                         {service.features;}
                           .slice (0, 4).map ((feature, feature_index) => (<div;}
                               key={feature_index}
                               className='flex items - center text - sm text - gray - 400'    />
 
-                              <Check className='w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0'    />;
+                              <Check className='w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0'    />
                               {feature}
                             </div>))}
-                      </div>;
-                    </div>;
-                    <div className='flex items - center justify - between'    />;
-                      <Button;
+                      </div>
+                    </div>
+                    <div className='flex items - center justify - between'    />
+                      <Button
                         href={service.website}
-                        variant='outline';
-                        size='sm';
+                        variant='outline'
+                        size='sm'
                         className='group - hover:border - blue - 500 group - hover:text - blue - 400'    />
 
-                        Visit Website;
-                        <ExternalLink className='w - 4 h - 4 ml - 2'    />;
-                      </Button>;
-                      <div className='text - right'    />;
-                        <div className='text - xs text - gray - 500 mb - 1'    />;
-                          Use Case:;
-                        </div>;
-                        <div className='text - sm text - gray - 300 max - w-xs'    />;
+                        Visit Website
+                        <ExternalLink className='w - 4 h - 4 ml - 2'    />
+                      </Button>
+                      <div className='text - right'    />
+                        <div className='text - xs text - gray - 500 mb - 1'    />
+                          Use Case:
+                        </div>
+                        <div className='text - sm text - gray - 300 max - w-xs'    />
                           {service.use_case}
 
-                    </div>;
-                  </div>;
-                </div>;
+                    </div>
+                  </div>
+                </div>
               </Card>))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
-      <section className='py - 24 bg - gradient - to - r from - blue - 600 to - blue - 700 relative overflow - hidden'    />;
-        <div className='absolute inset - 0 bg-[radial - gradient (circle, rgba (255, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:20px_20px] opacity - 10'    />;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center relative z - 10'    />;
-          <h2 className='text - 4xl sm:text - 5xl font - bold text - white mb - 8'    />;
-          </h2>;
-          <p className='text - xl text - blue - 100 mb - 12 max - w-4xl mx - auto leading - relaxed'    />;
-            Our team of experts can help you select the perfect SaaS tools for;
-            your business needs. Get personalized recommendations and;
-            implementation support.;
+      <section className='py - 24 bg - gradient - to - r from - blue - 600 to - blue - 700 relative overflow - hidden'    />
+        <div className='absolute inset - 0 bg-[radial - gradient (circle, rgba (255, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:20px_20px] opacity - 10'    />
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center relative z - 10'    />
+          <h2 className='text - 4xl sm:text - 5xl font - bold text - white mb - 8'    />
+          </h2>
+          <p className='text - xl text - blue - 100 mb - 12 max - w-4xl mx - auto leading - relaxed'    />
+            Our team of experts can help you select the perfect SaaS tools for
+            your business needs. Get personalized recommendations and
+            implementation support.
           </p>;{/* CTA Section */}
-<section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'    />;
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10'    />;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'    />;
-          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'    />;
-          </h2>;
-          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'    />;
-            Our team of experts can help you select the perfect SaaS tools for;
-            your business needs. Get personalized recommendations and;
-            implementation support.;
-          </p>;
-
+<section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'    />
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10'    />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'    />
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'    />
+          </h2>
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'    />
+            Our team of experts can help you select the perfect SaaS tools for
+            your business needs. Get personalized recommendations and
+            implementation support.
+          </p>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
           </h2>'
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
-            Our team of experts can help you select the perfect SaaS tools for;
-your business needs. Get personalized recommendations and;
+            Our team of experts can help you select the perfect SaaS tools for
+your business needs. Get personalized recommendations and
 implementation support.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'    />
-            <Button;
+            <Button
 href='/contact'
               variant='secondary'
               size='lg'
-            <Button;
+            <Button
 href='/services'
               variant='outline'
               size='lg'
-              View Our Services;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-  );
-}
-    </>);
-}
-
+              View Our Services
+            </Button>
+          </div>
+        </div>
+      </section>
+  )
+    </>)
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
                 />
-              View Our Services;
+              View Our Services
             </Button>
           </div>
         </div>
       </section>
     <   />
-  );
-}
+  )
 origin/cursor/automate-test-improve-and-merge-code-2533
 

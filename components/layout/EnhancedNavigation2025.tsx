@@ -1,168 +1,156 @@
-
-
-  service;
-}</span>) );
+  service
+}</span>) )
 }+ {}
-  subitem.services.length - 2;
-}more </span>);
-}</div>);
-}</div> </div> </a>) );
-}</div> </motion.div>);
-
-  /* Mobile Menu Button */;
+  subitem.services.length - 2
+}more </span>)
+}</div>)
+}</div> </div> </a>) )
+}</div> </motion.div>)
+  /* Mobile Menu Button */
 }<button </button> </div> </div> </nav> {}
-  /* Mobile Menu */;
+  /* Mobile Menu */
 }<AnimatePresence> {}
   is_open && (<motion.div {}
-  item.badge;
-}</span>);
+  item.badge
+}</span>)
 }</div> <ChevronDown className= {}`
   `w - 4 h - 4 transition - transform duration - 200 $ {'
   active_dropdown === item.name ? 'rotate - 180' : '';`
-}`;
+}`
 }/> </button> > {}
   item.children?.map ( (child) => (<Link key= {}
-  child.name;
-}</span> </a>) );
-}</motion.div>);
-
-}`;
+  child.name
+}</span> </a>) )
+}</motion.div>)
+}`
 }/> </button> {}
-  /* Mobile Submenu */;
+  /* Mobile Submenu */
 }<AnimatePresence> > {}
   item.submenu?.map ( (subitem) => (<Link key= {}
-  subitem.name;
-}) );
-}</motion.div>);
-}</AnimatePresence> </div>) );
-}</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion.div>);
-}</AnimatePresence> </>);
-}export default EnhancedNavigation2025;
-export default /**;
- * EnhancedNavigation2025 - Function description;
+  subitem.name
+}) )
+}</motion.div>)
+}</AnimatePresence> </div>) )
+}</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion.div>)
+}</AnimatePresence> </>)
+}export default EnhancedNavigation2025
+export default /**
+ * EnhancedNavigation2025 - Function description
  */
 function EnhancedNavigation2025() {}
-  const [is_open, setIsOpen] = useState (false);
-  const [active_submenu, setActiveSubmenu] = useState < string | null>(null);
-  const [is_scrolled, setIsScrolled] = useState (false);
-;
+  const [is_open, setIsOpen] = useState (false)
+  const [active_submenu, setActiveSubmenu] = useState < string | null>(null)
+  const [is_scrolled, setIsScrolled] = useState (false)
   useEffect (() => {}
     const handle_scroll = () =>: any {}
-      setIsScrolled (window.scroll_y > 20);
+      setIsScrolled (window.scroll_y > 20)
     }'
     window.addEventListener ('scroll', handle_scroll);'
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  }, []);
-;
-  const toggle_menu = () =>: any setIsOpen (!is_open);
-  const close_menu = () =>: any setIsOpen (false);
-;
+    return () => window.removeEventListener ('scroll', handle_scroll)
+  }, [])
+  const toggle_menu = () =>: any setIsOpen (!is_open)
+  const close_menu = () =>: any setIsOpen (false)
   return (
-    <>;
-
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-                    }`} />;
-                  </button>;
+    <>
+            </div>
+          </div>
+        </div>
+      </div>
+                    }`} />
+                  </button>
                   {/* Submenu */}
-                  <AnimatePresence>;
+                  <AnimatePresence>
                     {active_submenu === item.name && (
-                      <motion.div;
+                      <motion.div
                         initial={{ opacity: 0, coordinate_y: 10 }}
                         animate={{ opacity: 1, coordinate_y: 0 }}
                         exit={{ opacity: 0, coordinate_y: 10 }}
 
                           {item.submenu?.map ((subitem) => (
-                            <Link;
+                            <Link
                               key={subitem.name}
                               href={subitem.href}
 
-                                          +{subitem.services.length - 2} more;
+                                          +{subitem.services.length - 2} more
                                         </span>)}
                                     </div>)}
-                                </div>;
-                              </div>;
+                                </div>
+                              </div>
                             </Link>))}
-                        </div>;
+                        </div>
                       </motion.div>)}
-                  </AnimatePresence>;
+                  </AnimatePresence>
                 </div>))}
-            </div>;
-
-              >;
-                Get Started;
-              </Link>;
-            </div>;
+            </div>
+              >
+                Get Started
+              </Link>
+            </div>
             {/* Mobile Menu Button */}
-            <button;
-
-            </button>;
-          </div>;
-        </div>;
-      </nav>;
+            <button
+            </button>
+          </div>
+        </div>
+      </nav>
       {/* Mobile Menu */}
-      <AnimatePresence>;
-        {isOpen && (;
+      <AnimatePresence>
+        {isOpen && (
           <motion&& motion.div'
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}'
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0 && 0.3 }}
                       {item && item.badge && ("
-                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">;
+                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">
                           {item && item.badge}
-                        </span>;
+                        </span>
                       )}
                   {activeDropdown === item.name && (
-                    <motion.div;
+                    <motion.div
                     </div>;`
                     <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${'
                       activeDropdown === item && item.name ? 'rotate-180' : ''`
-                    }`} />;
-                  </button>;
-
-                  {activeDropdown === item && item.name && (;
-                    <motion&& motion.div;
+                    }`} />
+                  </button>
+                  {activeDropdown === item && item.name && (
+                    <motion&& motion.div
                       initial={{ opacity: 0, height: 0 }}'
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0 && 0.2 }}"
-                      className="ml-8 mt-2 space-y-2">;
-                      {item && item.children?.map((child) => (;
-                        <Link;
+                      className="ml-8 mt-2 space-y-2">
+                      {item && item.children?.map((child) => (
+                        <Link
                           key={child && child.name}
                           href={child && child.href}"
                           className="block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                           onClick={() => setIsOpen(false)}
                       ))}
-                    </motion && motion.div>;
+                    </motion && motion.div>
                   )}
-                </div>;
+                </div>
               ))}
               {/* Mobile CTA */}"
-              <div className="pt-4">;
+              <div className="pt-4">
                 <Link"
                   href="/contact""
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
                   onClick={() => setIsOpen(false)}
-                >;
-                  Get Started;
+                >
+                  Get Started
                 </Link>;"
-            className="fixed inset-0 z-50 lg:hidden";
-          >;
+            className="fixed inset-0 z-50 lg:hidden"
+          >
             {/* Backdrop */}
             <div"
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={closeMenu}
             {/* Menu Panel */}"
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;"
-              <div className="p-6">;
+              <div className="p-6">
                 {/* Close Button */}"
-                <div className="flex justify-end mb-6">;
-                  <button;
+                <div className="flex justify-end mb-6">
+                  <button
                     onClick={closeMenu}"
                     className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
                   >"
@@ -173,7 +161,7 @@ function EnhancedNavigation2025() {}
                 <div className="space-y-4">
                   {navigationItems.map((item) => (
                     <div key={item.name}>
-                      <button;
+                      <button
                         onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}"
                         className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
                       >"
@@ -186,62 +174,60 @@ function EnhancedNavigation2025() {}
                         }`} />
                       </button>
 
-            />;
-
-              <div className="p-6">;
+            />
+              <div className="p-6">
                 {/* Close Button */}"
-                <div className="flex justify-end mb-6">;
-                  <button;
+                <div className="flex justify-end mb-6">
+                  <button
                     onClick={closeMenu}
                 {/* Mobile Navigation Items */}"
-                <div className="space-y-4">;
-                  {navigationItems && navigationItems.map((item) => (;
-                    <div key={item && item.name}>;
-                      <button;
+                <div className="space-y-4">
+                  {navigationItems && navigationItems.map((item) => (
+                    <div key={item && item.name}>
+                      <button
                         onClick={() => setActiveSubmenu(activeSubmenu === item && item.name ? null : item && item.name)}"
-                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200";
+                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
                       >;"
                         <div className="flex items-center space-x-3">;"
                           <item && item.icon className="w-5 h-5 text-cyan-400" />;"
-                          <span className="text-white font-medium">{item && item.name}</span>;
+                          <span className="text-white font-medium">{item && item.name}</span>
                         </div>;`
                         <ChevronDownclassName={`w-4 h-4 text-gray-400 transition-transform duration-200 ${'
                           activeSubmenu === item && item.name ? 'rotate-180' : ''`
-                        }`} />;
-                      </button>;
-
+                        }`} />
+                      </button>
                       {/* Mobile Submenu */}
-                      <AnimatePresence>;
-                        {activeSubmenu === item && item.name && (;
-                          <motion&& motion.div;
+                      <AnimatePresence>
+                        {activeSubmenu === item && item.name && (
+                          <motion&& motion.div
                             initial={{ opacity: 0, height: 0 }}'
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0 && 0.2 }}"
-                            className="ml-8 space-y-2">;
-                            {item && item.submenu?.map((subitem) => (;
-                              <Link;
+                            className="ml-8 space-y-2">
+                            {item && item.submenu?.map((subitem) => (
+                              <Link
                                 key={subitem && subitem.name}
                                 href={subitem && subitem.href}
                                 onClick={closeMenu}"
                                 className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200">;"
                                 <h4 className="text-white font-medium">{subitem && subitem.name}</h4>;"
-                                <p className="text-sm text-gray-400 mt-1">{subitem && subitem.description}</p>;
-                              </Link>;
+                                <p className="text-sm text-gray-400 mt-1">{subitem && subitem.description}</p>
+                              </Link>
                             ))}
-                          </motion && motion.div>;
+                          </motion && motion.div>
                         )}
-                      </AnimatePresence>;
-                    </div>;
+                      </AnimatePresence>
+                    </div>
                   ))}
                 {/* Mobile CTA */}"
-                <div className="mt-8 space-y-4">;
+                <div className="mt-8 space-y-4">
                   <Link"
                     href="/pricing"
                     onClick={closeMenu}"
-                    className="block w-full text-center px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-200">;
-                    View Pricing;
-                  </Link>;
+                    className="block w-full text-center px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-200">
+                    View Pricing
+                  </Link>
                   <Link"
                     href="/contact"
                     onClick={closeMenu}
@@ -249,18 +235,18 @@ function EnhancedNavigation2025() {}
                 <div className="mt-8 pt-6 border-t border-gray-700/50">;"
                   <div className="space-y-3 text-sm">;"
                     <div className="flex items-center space-x-3 text-gray-400">;"
-                      <Phone className="w-4 h-4 text-cyan-400" />;
-                      <span>{contactInfo && contactInfo.phone}</span>;
+                      <Phone className="w-4 h-4 text-cyan-400" />
+                      <span>{contactInfo && contactInfo.phone}</span>
                     </div>;"
                     <div className="flex items-center space-x-3 text-gray-400">;"
-                      <Mail className="w-4 h-4 text-purple-400" />;
-                      <span>{contactInfo && contactInfo.email}</span>;
+                      <Mail className="w-4 h-4 text-purple-400" />
+                      <span>{contactInfo && contactInfo.email}</span>
                     </div>;"
                     <div className="flex items-start space-x-3 text-gray-400">;"
                       <MapPin className="w-4 h-4 text-green-400 mt-0 && 0.5" />;"
-                      <span className="text-xs">{contactInfo && contactInfo.address}</span>;
+                      <span className="text-xs">{contactInfo && contactInfo.address}</span>
       {/* Mobile Menu */}
-      <AnimatePresence>;
+      <AnimatePresence>
         {is_open && (
           <motion.div;'
             initial={{ opacity: 0, coordinate_x: '100%' }}
@@ -273,74 +259,67 @@ function EnhancedNavigation2025() {}
                     </div>;`
                     <ChevronDown className={`w - 4 h - 4 transition - transform duration - 200 ${'
                       active_dropdown === item.name ? 'rotate - 180' : '';`
-                    }`} />;
-                  </button>;
+                    }`} />
+                  </button>
                   {active_dropdown === item.name && (
-                    <motion.div;
+                    <motion.div
                       initial={{ opacity: 0, height: 0 }}'
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2 }}
-                    >;
+                    >
                       {item.children?.map ((child) => (
-                        <Link;
+                        <Link
                           key={child.name}
 
                             {sub_item.name}
-                          </span>;
+                          </span>
                         </Link>))}
                     </motion.div>)}
                 </div>))}
 
-                        }`} />;
-                      </button>;
+                        }`} />
+                      </button>
                       {/* Mobile Submenu */}
-                      <AnimatePresence>;
+                      <AnimatePresence>
                         {active_submenu === item.name && (
-                          <motion.div;
+                          <motion.div
                             initial={{ opacity: 0, height: 0 }}'
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
 
-                  >;
-                    View Pricing;
-                  </Link>;
+                  >
+                    View Pricing
+                  </Link>
                   <Link;"
-                    href="/contact";
+                    href="/contact"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      {/* Spacer for fixed navigation */}"
+      <div className="h-20" />
+    </>
+  )
 
-                  >;
-                    Contact Us;
-                  </Link>;
-                </div>;
-
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
+      </AnimatePresence>
       {/* Spacer for fixed navigation */}"
       <div className="h-20" />
     </>
   )
 }
-
-      </AnimatePresence>;
-
-      {/* Spacer for fixed navigation */}"
-      <div className="h-20" />;
-    </>;
-  )
-};
-
           </motion.div>)}
-      </AnimatePresence>;
-
-import { Menu, ChevronDown;
-  Brain, Rocket, Shield;
-  Zap;
-  Target, Atom;
-  BookOpen;
-  Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight;
-  Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb;
-
+      </AnimatePresence>
+import { Menu, ChevronDown
+  Brain, Rocket, Shield
+  Zap
+  Target, Atom
+  BookOpen
+  Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight
+  Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb

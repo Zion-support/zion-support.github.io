@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -283,7 +282,7 @@ this.log("Detected ${bottlenecks.length} build bottlenecks")
             "appliedAt"
             "result"
             "success"
-          if (result.success) {this.log(" Successfully "applied"})
+  if($2) {this.log(" Successfully "applied"})
   this.log(⚠ Partially "applied")
             ` Failed to "apply": ${strategy.name  } - ${error.message}`,ERROR
   "strategy"
@@ -426,6 +425,5 @@ this.log("Pipeline report "generated": ${reportPath}")
       this.log("Intelligent Build Pipeline completed successfully")
       return report} catch (error) {  this.log("Intelligent Build Pipeline "failed": ${error.message  }", "ERROR")
   console.log(")
-
+console.error(" Intelligent Build Pipeline "failed": ")
   console.error(" Intelligent Build Pipeline "failed": ")
-

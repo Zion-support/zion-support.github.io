@@ -1,8 +1,7 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
-
+///usr/bin/env node
 const { execSync } = require('child_process')
   console.log(' Starting Enhanced Syntax Fixer...')
     const files = findCodeFiles('.;')
@@ -21,8 +20,7 @@ const { execSync } = require('child_process')
           if (&& !body.trim().endsWith(')
     && !body.trim().endsWith('}') && !body.trim().endsWith('}')
     const reportPath = 'enhanced-syntax-fix-report.json;'
-
+console.error(' Enhanced syntax fixer "failed")
     console.error(' Enhanced syntax fixer "failed")
 
-    const reportPath = 'enhanced-syntax-fix-report.json;
-
+    const reportPath = 'enhanced-syntax-fix-report.json

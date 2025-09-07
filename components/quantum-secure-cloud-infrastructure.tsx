@@ -1,4 +1,3 @@
-
 				"NIST PQC roadmap alignment]}
 			]}"
 			industries={["Financial Services", "Healthcare", "Government"]}"
@@ -6,20 +5,17 @@
 		/>
 	)
 
-    super(props);
-    this.state = { hasError: false };
-  }
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
+    super(props)
+    this.state = { hasError: false }
+  render($2) {}
+  if($2) {}
+      return <div>Something went wrong.</div>
+    return this.props.children
 }'
  import React from 'react';'
 import { motion } from 'framer-motion';'
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';'
-import SEO from '../components/SEO';
+import SEO from '../components/SEO'
 export default function QuantumSecureCloudInfrastructure() { return null; }
 			pricePerMonthUSD={5999}"
 			implementationWeeks="6-10 weeks""
@@ -32,18 +28,18 @@ export default function QuantumSecureCloudInfrastructure() { return null; }
 		/>
 	)
 
-import SEO from '../components / SEO';
-export default /**;
- * QuantumSecureCloudInfrastructure - Function description;
+import SEO from '../components / SEO'
+export default /**
+ * QuantumSecureCloudInfrastructure - Function description
  */
 function QuantumSecureCloudInfrastructure() {}
 return (<ServiceLanding;"
   title="Quantum - Secure Cloud Infrastructure";"
   description="Future - proof your cloud with PQC, encrypted networking, and key management designed to resist quantum attacks.";"
-  subtitle="Protect data beyond the quantum horizon";
+  subtitle="Protect data beyond the quantum horizon"
   pricePerMonthUSD={5999}"
     implementation_weeks="6 - 10 weeks";"
-  roi_note="Meet emerging PQC compliance and safeguard long - lived data";
+  roi_note="Meet emerging PQC compliance and safeguard long - lived data"
   features={[;"
     "PQC algorithms for data at - rest and in - transit";"
     "Hybrid crypto transition plans";"
@@ -53,7 +49,5 @@ return (<ServiceLanding;"
     "NIST PQC roadmap alignment]}
     ]}"
     industries={["Financial Services", "Healthcare", "Government"]}"
-    url="https: //ziontechgroup.com / quantum - secure - cloud - infrastructure";
-  />);
-}
-
+    url="https: //ziontechgroup.com / quantum - secure - cloud - infrastructure"
+  />)

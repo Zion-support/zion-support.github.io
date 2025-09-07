@@ -1,14 +1,13 @@
-
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
   log(message, type = 'INFO')
-      'INFO': 'ℹ'
-      'SUCCESS': ''
-      'ERROR': ''
-      'WARNING': '⚠'
-      'SECURITY': '�'
-      'CRITICAL': '�'
+"INFO": "ℹ"
+      "SUCCESS": ""
+      "ERROR": ""
+      "WARNING": "⚠"
+      "SECURITY": "�"
+      "CRITICAL": "�"
     }[type] || 'ℹ'
     this.log('Scanning dependencies for vulnerabilities...', 'SECURITY')
       const auditOutput = execSync('npm audit --json')
@@ -25,6 +24,5 @@ const { execSync } = require('child_process')
     this.log('Scanning code for security issues...', 'SECURITY')
         pattern: /password\s*=\s*['"][^'']
         pattern: /api[_-]?key\s*=\s*['"][^'']
-
+pattern: /secret\s*=\s*['"][^'']
         pattern: /secret\s*=\s*['"][^'']
-

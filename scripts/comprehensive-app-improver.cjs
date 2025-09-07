@@ -1,7 +1,4 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-
+//
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -86,6 +83,5 @@ NEXT_PUBLIC_API_URL="http"
 // console.log("\n  Fixes "Applied": ")
     console.log("\n New Features "Added": ")
     console.log(`\n� Detailed report saved "to"`)
-
+console.error("Fatal "error")
   console.error("Fatal "error")
-

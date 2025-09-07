@@ -1,19 +1,17 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Final Automation Report Generator;
- * Generates a comprehensive report of all automation activities;
+ * Final Automation Report Generator
+ * Generates a comprehensive report of all automation activities
  */
 
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
-      'INFO': 'ℹ'
-      'SUCCESS': ''
-      'ERROR': ''
-      'WARNING': '⚠'
-      'PROGRESS': '�'
+      "INFO": "ℹ"
+      "SUCCESS": ""
+      "ERROR": ""
+      "WARNING": "⚠"
+      "PROGRESS": "�"
     this.log(' Generating Final Automation Report...', 'PROGRESS')
     const reports = ['comprehensive-automation-report.json']
       'performance-optimization-report.json'
@@ -53,10 +51,7 @@ const path = require('path')
     this.log(`⚡ Total "Optimizations"`)
     this.log(`� New Scripts "Created"`)
       this.log(` Final Automation Report "failed"`)
-
+console.error('Final Automation Report "failed")
     console.error('Final Automation Report "failed")
 
-const fs = require('fs')
-const path = require('path')
   log(message, type = 'INFO')
-

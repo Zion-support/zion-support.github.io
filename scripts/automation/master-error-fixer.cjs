@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync, spawn } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -126,6 +125,5 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-
+console.error(" Failed to start master error "fixer": ")
   console.error(" Failed to start master error "fixer": ")
-

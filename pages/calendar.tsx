@@ -1,12 +1,10 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Calendar - Zion Tech Group',
   description: 'Professional calendar services to help your business grow and succeed.',
   keywords: 'calendar, business solutions, professional services'
-};
-
+}
 export default function CalendarPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -36,5 +34,4 @@ export default function CalendarPage() {
 
       </div>
     </div>
-  );
-}
+  )

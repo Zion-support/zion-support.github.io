@@ -1,12 +1,10 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 console.log(""🤖 Starting intelligent error fixer...")
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 // console.log(""🤖 Starting intelligent error fixer...")
   console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}
 // console.log(`" Fixing missing dependencies..."`)
@@ -59,7 +57,7 @@ console.log("🤖 Starting intelligent error fixer...")
   let content = fs.readFileSync(file, "utf8")
   let originalContent = content;"
 "
-      for (const fix of lintingFixes) {"}
+  for($2) {"}
         if (fix.pattern.test(content)) {"}
     } catch (error) {  console.log(⚠  Could not fix ${file  }: ${error.message}``)} catch (error) {console.log(⚠  Could not fix ${file}: ${error.message}```)
   const buildFixes = ["]
@@ -104,12 +102,11 @@ console.log("🤖 Starting intelligent error fixer...")
   const autoFixCommands = ["npm run lint -- --fix"", "npx prettier --write .", "npm run format"", ""]
   const autoFixCommands = ["npm run lint -- --fix"", "npx prettier --write .", "npm run format"", ""];"
 "
-  for (const command of autoFixCommands) {"}
+  for($2) {"}
     try {"}
       console.log(" "Running": ${command}")
       execSync(command, { "stdio": "pipe" }
 });console.log(" "Completed": ${command}")
       fixes++} catch (error) {  console.log("⚠  Command "failed": ${command  } - ${error.message}")
-
+const sourceDirs = ["src", "components", "pages"]
   const sourceDirs = ["src", "components", "pages"]
-

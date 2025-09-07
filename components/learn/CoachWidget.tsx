@@ -1,69 +1,48 @@
-
-      });
-      const data = await resp.json();
-      setReply(data.text |'');
+      })
+      const data = await resp.json()
+      setReply(data.text |'')
     } finally {}
-  return (      });
+  return (      })
       const data = await resp.json();'
       setReply(data.text |'')
 
-    }
-  }
   return (
 
-  return (      });
-    }
-  }
-  );
+  return (      })
+  )
 }'
-import React, { useState } from 'react';
-export default /**;
- * CoachWidget - Function description;
+import React, { useState } from 'react'
+export default /**
+ * CoachWidget - Function description
  */
 function CoachWidget() { return null; }
 function ask() {}
     if () return) {}
-  $2;
-}
-    set_loading (true);
-
-      });
+  $2
+    set_loading (true)
+      })
       const data = await resp.json ();'
-      set_reply (data.text || '');
+      set_reply (data.text || '')
     } finally {}
       set_loading (false);    }
-  }
-  return (      });
+
+  return (      })
       const data = await resp.json ();'
-      set_reply (data.text || '');
+      set_reply (data.text || '')
     } finally {}
-      set_loading (false);
-    }
-  }
-  return ('
-    <div className='border rounded p - 3'>;'
-      <div className='font - medium mb - 2'>ZionGPT Coach</div>;'
-      <div className='flex gap - 2'>;
-        <input;'
-          className='flex - 1 border rounded px - 3 py - 2 bg - white dark:bg - black';'
-          placeholder='Ask for help...';
-
-export default function CoachWidget() {
-  const [input, setInput] = useState('');
-
+      set_loading (false)
+  return($2) {
+  const [input, setInput] = useState('')
 const [reply, setReply] = useState<string | null>(null),
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false)
   async function ask() {
-    if (!input.trim()) return;
-    setLoading(true);
+    if (!input.trim()) return
+    setLoading(true)
     try {
-
-    }
-  }
 
         </div>
       )}
     </div>
-  );
+  )
 origin/cursor/automate-test-improve-and-merge-code-2533
 

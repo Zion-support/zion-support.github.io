@@ -1,18 +1,12 @@
-
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-      <div className='absolute inset - 0'>;
+    return this.props.children
+import React from 'react'
+      <div className='absolute inset - 0'>
         {/* Floating Particles */}'
-        <div className='absolute inset - 0'>;
+        <div className='absolute inset - 0'>
           {[...Array (50)].map ((_, i) => (
-            <motion.div;
+            <motion.div
               key={i}'
-              className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30';
-
+              className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30'
               style={{}
           ))}
         </div>
@@ -34,14 +28,14 @@ import React from 'react';
                 repeat: Infinity,
                 delay: Math && Math.random() * 2,
               }}            />                delay: Math && Math.random() * 2}}
-            />;
+            />
           ))}
-        </div>;
+        </div>
         {/* Gradient Orbs */}'
         <div className='absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse' />;'
         <div className='absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse' />;'
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow' />;
-      </div>;
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow' />
+      </div>
         >"
           <Sparkles className="w-5 h-5 text-purple-400" />"
           <span className="text-purple-300 font-medium">🚀 2032 Revolutionary Technology</span>"
@@ -52,27 +46,27 @@ import React from 'react';
 
                 left: `${Math.random() * 100}%`
                 top: `${Math.random() * 100}%`
-              
+
 }              animate={{
                 y: [0, -20, 0]
                 opacity: [0.3, 0.8, 0.3]}
-}
+
               }}
               transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2}}
-               />;
+               />
           ))}
-        </div>;
+        </div>
         {/* Gradient Orbs */}
-<div className='absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse'    />;
-        <div className='absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse'    />;
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow'    />;
-      </div>;
+<div className='absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse'    />
+        <div className='absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse'    />
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow'    />
+      </div>
       {/* Main Content */}
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'    />;
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'    />
         {/* Hero Badge */}
-        <motion.div;
+        <motion.div
           initial={{ opacity: 0, y: 20 }
-}
+
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
 
@@ -80,20 +74,18 @@ className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
             />
           <Sparkles className='w-5 h-5 text-purple-400'    />
           <span className='text-purple-300 font-medium'    />
-            🚀 2032 Revolutionary Technology;
+            🚀 2032 Revolutionary Technology
           </span>
           <Sparkles className='w-5 h-5 text-cyan-400'    />
         </motion.div>
 
-
         {/* Main Heading *}
-}
-        <motion&& motion.h1;
+
+        <motion&& motion.h1
           initial={{ opacity: 0, y: 30 }
-}
 
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-            The Future of;
+            The Future of
           </span>
           <br    />
 
@@ -101,42 +93,41 @@ className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
         </motion.h1>
 
           transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }
-}
-          className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'>;
-          <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'    />;
-            The Future of;
-          </span>;
-          <br    />;
-          <span className='text-white'    />Technology is Here</span>        </motion && motion.h1>        >;
-          <span className=\"bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"    />;
-            The Future of;
-          </span>;
+
+          className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'>
+          <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'    />
+            The Future of
+          </span>
+          <br    />
+          <span className='text-white'    />Technology is Here</span>        </motion && motion.h1>        >
+          <span className=\"bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"    />
+            The Future of
+          </span>
           <br    />;"
-          <span className=\"text-white\"    />Technology is Here</span>;
+          <span className=\"text-white\"    />Technology is Here</span>
         </motion && motion.h1>;{/* Subheading */}
-        <motion&& motion.p;
+        <motion&& motion.p
           initial={{ opacity: 0, y: 30 }
-}
+
           animate={{ opacity: 1, y: 0 }
-}
+
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }
-}
-          className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'    />;
-          Experience the revolution with our cutting-edge AI consciousness,quantum computing, space technology, and emerging tech solutions.;
+
+          className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'    />
+          Experience the revolution with our cutting-edge AI consciousness,quantum computing, space technology, and emerging tech solutions.
           Transform your business with technologies that were once science;"
           fiction.        </motion && motion.p>          className=\"text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed\">
 
-          Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with ;
-          technologies that were once science fiction.;
+          Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with
+          technologies that were once science fiction.
           transition={{ duration: 0.8, delay: 0.4 }}"
           className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
         >
-          Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with;
-
+          Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with
           technologies that were once science fiction.
 
         {/* CTA Buttons */}
-        <motion&& motion.div;
+        <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
@@ -145,40 +136,37 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}'
-          className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'>;
+          className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'>
           <Link'
             href='/services'
 
-            <Phone className='w-5 h-5' />            <span>Call {contactInfo && contactInfo.mobile}</span>        >;
+            <Phone className='w-5 h-5' />            <span>Call {contactInfo && contactInfo.mobile}</span>        >
           <Link"
             href="/services"
 
           <Link;`
             href={`tel:${contactInfo && contactInfo.mobile}`}"
             className="group inline-flex items-center space-x-3 bg-transparent border-2 border-purple-500/50 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300">;"
-            <Phone className="w-5 h-5" />;
-            <span>Call {contactInfo && contactInfo.mobile}</span>;
-          </Link>;
-        </motion && motion.div>;
-
+            <Phone className="w-5 h-5" />
+            <span>Call {contactInfo && contactInfo.mobile}</span>
+          </Link>
+        </motion && motion.div>
             href={`tel:${contactInfo.mobile}`}
-        <motion&& motion.div;
+        <motion&& motion.div
           initial={{ opacity: 0, y: 30 }
-}
 
           animate={{ opacity: 1, y: 0 }
-}
 
           transition={{ duration: 0.8, delay: 0.6 }
-}
+
 className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'
             />
           transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }
-}
-          className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'>;
-          <Link;
+
+          className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'>
+          <Link
 href='/services'
-          <Link;
+          <Link
 href={`tel: ${contactInfo.mobile}`}
             className='group inline-flex items-center space-x-3 bg-transparent border-2 border-purple-500/50 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300'
               />
@@ -188,16 +176,14 @@ href={`tel: ${contactInfo.mobile}`}
         </motion.div>
 
         {/* Stats Grid *}
-}
-        <motion&& motion.div;
+
+        <motion&& motion.div
           initial={{ opacity: 0, y: 30 }
-}
 
           animate={{ opacity: 1, y: 0 }
-}
 
           transition={{ duration: 0.8, delay: 0.8 }
-}
+
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
             />
           {heroStats.map((stat, index) => (
@@ -210,29 +196,26 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
               }}               />                delay: Math.random () * 2}}
 
             />)
-}
-        </div>;
-        {/* Gradient Orbs */}
-        <div className='absolute top - 20 left - 10 w - 72 h - 72 bg - purple - 500 / 10 rounded - full blur - 3xl animate - pulse'    />;
-        <div className='absolute bottom - 20 right - 10 w - 96 h - 96 bg - cyan - 500 / 10 rounded - full blur - 3xl animate - pulse'    />;
-        <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w-[800px] h-[800px] bg - gradient - to - r from - purple - 500 / 5 via - cyan - 500 / 5 to - pink - 500 / 5 rounded - full blur - 3xl animate - spin - slow'    />;
-      </div>;
 
-        <motion.div;
+        </div>
+        {/* Gradient Orbs */}
+        <div className='absolute top - 20 left - 10 w - 72 h - 72 bg - purple - 500 / 10 rounded - full blur - 3xl animate - pulse'    />
+        <div className='absolute bottom - 20 right - 10 w - 96 h - 96 bg - cyan - 500 / 10 rounded - full blur - 3xl animate - pulse'    />
+        <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w-[800px] h-[800px] bg - gradient - to - r from - purple - 500 / 5 via - cyan - 500 / 5 to - pink - 500 / 5 rounded - full blur - 3xl animate - spin - slow'    />
+      </div>
+        <motion.div
           initial={{ opacity: 0, coordinate_y: 20 }
-}
+
           animate={{ opacity: 1, coordinate_y: 0 }}
 
-            </motion && motion.div>;
+            </motion && motion.div>
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }
-}
+
               animate={{ opacity: 1, scale: 1 }
-}
 
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
-        </motion && motion.div>;
-
+        </motion && motion.div>
 '
               className='text-center group'
 
@@ -256,7 +239,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 
             {featuredServices.map((service, index) => (
-              <motion.div;
+              <motion.div
                 key={service.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -275,22 +258,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h3 className='text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300'>                    {service.name}
                   </h3>
                   <p className='text-gray-400 text-sm mb-4 leading-relaxed'>
-                  className='block relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full transform transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50' />;
-
-                  <div;
+                  className='block relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full transform transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50' />
+                  <div
 className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover: shadow-lg hover:shadow-cyan-400/40
 }    />
 
-                    <service.icon className='w-8 h-8 text-white'    />;
-                  </div>;
+                    <service.icon className='w-8 h-8 text-white'    />
+                  </div>
                   <h3 className='text-xl font-bold text-white mb-3 group-hover: text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300'    />                    {service.nam}
-}
-                  </h3>;
-                  <p className='text-gray-400 text-sm mb-4 leading-relaxed'    />;
+
+                  </h3>
+                  <p className='text-gray-400 text-sm mb-4 leading-relaxed'    />
                     {service.description}
-                  </p>;
-                  <div className='flex items-center justify-between'    />;
-                    <div className='text-2xl font-bold text-cyan-400'    />;
+                  </p>
+                  <div className='flex items-center justify-between'    />
+                    <div className='text-2xl font-bold text-cyan-400'    />
                       {service.price}
 
                     </div>
@@ -303,17 +285,16 @@ className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-c
                 </Link>
               </motion.div>
 
-                </Link>;
-              </motion && motion.div>;
+                </Link>
+              </motion && motion.div>
             ))}
-          </div>;
+          </div>
         </motion && motion.div>;{/* Contact Information */}
-        <motion&& motion.div;
+        <motion&& motion.div
           initial={{ opacity: 0, y: 30 }
-}
 
         {/* Contact Information */}
-        <motion&& motion.div;
+        <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
@@ -324,10 +305,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>
           animate={{ opacity: 1, y: 0 }
-}
 
           transition={{ duration: 0.8, delay: 1.6 }
-}
+
 className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'
             />
           <h3 className='text-2xl font-bold text-white mb-6 text-center'    />
@@ -347,7 +327,7 @@ className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl b
               <Mail className="w-5 h-5 text-purple-400" />"`
               <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
 
-              <a;
+              <a
 href={`mailto: ${contactInfo.email}`}
                 className='hover:text-purple-400 transition-colors'    />
 
@@ -361,7 +341,7 @@ href={`mailto: ${contactInfo.email}`}
             </div>
           </div>
           <div className='text-center'    />
-            <Link;
+            <Link
 href='/contact'
               className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25'
                 />
@@ -371,39 +351,35 @@ href='/contact'
           </div>
         </motion.div>
 
-              <MapPin className='w-5 h-5 text-green-400' />;
-              <span />{contactInfo && contactInfo.address}</span>;
-            </div>;
-
-            </Link>;
-          </div>;
-        </motion && motion.div>;
+              <MapPin className='w-5 h-5 text-green-400' />
+              <span />{contactInfo && contactInfo.address}</span>
+            </div>
+            </Link>
+          </div>
+        </motion && motion.div>
       </div>;{/* Floating Action Button */}
-      <motion&& motion.div;
+      <motion&& motion.div
                 className='group'    />
 
-                </Link>;
+                </Link>
               </motion.div>))}
-          </div>;
-        </motion.div>;
+          </div>
+        </motion.div>
         {/* Contact Information */}
-        <motion.div;
-
-              <MapPin className='w - 5 h - 5 text - green - 400' />;
-              <span />{contact_info.address}</span>;
-            </div>;
-
-            </Link>;
-          </div>;
-        </motion.div>;
-      </div>;
+        <motion.div
+              <MapPin className='w - 5 h - 5 text - green - 400' />
+              <span />{contact_info.address}</span>
+            </div>
+            </Link>
+          </div>
+        </motion.div>
+      </div>
       {/* Floating Action Button */}
-      <motion.div;
+      <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
 
         initial={{ opacity: 0, scale: 0 }
-}
 
         transition={{ duration: 0.8, delay: 2 }}
 className='fixed bottom-8 right-8 z-50'
@@ -423,10 +399,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </motion.div>
     </section>
   )
-}
-    </section>
-  );
-  );
-    </section>
-  );
 
+    </section>
+  )
+  )
+    </section>
+  )

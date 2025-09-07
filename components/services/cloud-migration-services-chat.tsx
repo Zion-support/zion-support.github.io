@@ -1,39 +1,31 @@
-
-
-import type { NextPage } from "next";
-import Head from "next/head";
-
-import Link from "next/link";
-const CloudMigrationServicesChat: NextPage = () => {;
+import type { NextPage } from "next"
+import Head from "next/head"
+import Link from "next/link"
+const CloudMigrationServicesChat: NextPage = () => {
   return (
-    <div>;
-      <Head>;
-        <title>CloudMigrationServicesChat - Zion Tech Solutions</title>;
-
+    <div>
+      <Head>
+        <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
         <a href="/services">Back to Services</a>
       </main>
     </div>
-      </Head>;
-
-      <main>;
-        <h1>CloudMigrationServicesChat</h1>;
+      </Head>
+      <main>
+        <h1>CloudMigrationServicesChat</h1>
         <p>Service details coming soon...</p>;"
-        <a href="/services">Back to Services</a>;
-      </main>;
-    </div>;
-  );
-}
-export default CloudMigrationServicesChat;
-
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>
+  )
+export default CloudMigrationServicesChat
 "
 import type { NextPage } from "next";"
 import Head from "next/head";"
-import Link from "next/link";
+import Link from "next/link"
 import type { NextPage } from 'next';'
 import Head from 'next/head';'
 
-import Link from 'next/link';
-
+import Link from 'next/link'
 const CloudMigrationServicesChat: NextPage = () => {}
   return (
     <div>
@@ -45,31 +37,26 @@ const CloudMigrationServicesChat: NextPage = () => {}
 
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
 
-import type { NextPage } from './next';
-import Head from './next / head';
-
-import Link from './next / link';
+import type { NextPage } from './next'
+import Head from './next / head'
+import Link from './next / link'
 const CloudMigrationServicesChat: NextPage = () => {}
   return (
-    <div>;
-      <Head>;
-        <title > CloudMigrationServicesChat - Zion Tech Solutions</title>;
+    <div>
+      <Head>
+        <title > CloudMigrationServicesChat - Zion Tech Solutions</title>
         <meta;"
           name="description";"
           content="CloudMigrationServicesChat service";"
         />{" "}
-      </Head>;
-      <main>;
-        <h1 > CloudMigrationServicesChat</h1>;
+      </Head>
+      <main>
+        <h1 > CloudMigrationServicesChat</h1>
         <p > Service details coming soon...</p>;"
-        <a href="/services">Back to Services</a>;
-      </main>;
-    </div>);
-}
-;
-export default CloudMigrationServicesChat;
-;
-
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>)
+export default CloudMigrationServicesChat
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
     <div>
@@ -104,10 +91,8 @@ const CloudMigrationServicesChat: NextPage = () => {
         <a href="/services">Back to Services</a>
       </main>
     </div>
-  );
-}
-export default CloudMigrationServicesChat;
-
+  )
+export default CloudMigrationServicesChat
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
 

@@ -1,6 +1,4 @@
-
-#!/""usr/bin/env""
-#!/usr/bin/env
+//
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -11,7 +9,7 @@ const { execSync, spawn } = require("child_process")
         { "pattern"}
   vendor: ["react", "react-dom"]
           "ui": ["@radix-"ui/react-accordion"", "@radix-"ui/react-alert-dialog""]
-}
+
 });"
     if (!content.includes(""type": module")
   content = content.replace(/private":\s*true,/, """private": true,\n  "type": module",")
@@ -54,7 +52,6 @@ const { execSync, spawn } = require("child_process")
     this.log("Continuous mode started. Press Ctrl+C to stop.", "info")
   if (args.includes("--continuous") || args.includes("-c")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
-
+automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
     automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
         { "pattern": /<>\s*<Helmet>/g, "fix": "<>\n      <Helmet>"}"
-

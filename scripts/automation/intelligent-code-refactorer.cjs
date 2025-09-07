@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -10,8 +9,7 @@ console.log("" Starting Intelligent Code Refactorer...")
       "complexityReduction"
       "refactoringPatterns"
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 console.log("" Starting Intelligent Code Refactorer...")
 // Get automation interval from environment variable ("default")
 console.log(" Starting Intelligent Code Refactorer...")
@@ -216,6 +214,5 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-
+console.error(" Failed to start intelligent code "refactorer")
   console.error(" Failed to start intelligent code "refactorer")
-

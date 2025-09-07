@@ -1,19 +1,10 @@
-            // Simple conflict resolution - take the incoming change
+// Simple conflict resolution - take the incoming change
 
-            // Simple conflict resolution - take the incoming change
-            const resolved = content.replace(/\n<<<<<<<[\s\S]*?=======[\s\S]*?>>>>>>>\n/g, '\n');
-            // Simple conflict resolution - take the incoming change
-
-main
-
-            // Simple conflict resolution - take the incoming change;
+[\s\S]*?
             const resolved = content.replace(/\n<<<<<<<[\s\S]*?
 )
-            fs.writeFileSync(file, resolved);
-
-          }
-
-        // Commit the resolution;
+            fs.writeFileSync(file, resolved)
+        // Commit the resolution
         try {
   // TODO: Implement
 
@@ -25,56 +16,41 @@ main
       localBranches: await this.getLocalBranches(),
       remoteBranches: await this.getRemoteBranches(),
       recommendations: []
-    };
-
-    // Generate recommendations;
-
-      report.recommendations.push(`Branch is ${report.branchStatus.behind} commits behind origin. Consider pulling latest changes.`);
-
-    if (report.branchStatus && report.branchStatus.ahead > 0) {`;
-      report.recommendations.push(`Branch is ${report.branchStatus.ahead} commits ahead of origin. Consider pushing changes.`);
-
-    if (report.branchStatus && report.branchStatus.hasChanges) {
+}
+    // Generate recommendations
+      report.recommendations.push(`Branch is ${report.branchStatus.behind} commits behind origin. Consider pulling latest changes.`)
+  if($2) {`
+      report.recommendations.push(`Branch is ${report.branchStatus.ahead} commits ahead of origin. Consider pushing changes.`)
+  if($2) {
 
     const oldBranches = report.localBranches.filter(branch =>)
       !this.config.protectedBranches.includes(branch) &&
-      branch !== report.currentBranch;
-    );
-
-    if (oldBranches.length > 5) {`;
-      report.recommendations.push(`Many local branches (${oldBranches.length}). Consider cleaning up old branches.`);
-
-    return report;
-
+      branch !== report.currentBranch
+    )
+  if($2) {`
+      report.recommendations.push(`Many local branches (${oldBranches.length}). Consider cleaning up old branches.`)
+    return report
   async saveReport(report) {
 
-      const logsDir = path.dirname(this.reportFile);
+      const logsDir = path.dirname(this.reportFile)
       if (!fs.existsSync(logsDir)) {
-        fs.mkdirSync(logsDir, { recursive: true });
-
-      // Generate workflow report;
-      const report = await this.generateWorkflowReport();
-      await this.saveReport(report);
-
-      // Auto-cleanup if enabled;
-      if (this.config.cleanupOldBranches) {
-        await this.cleanupOldBranches();
-
-      // Resolve any merge conflicts;
-      await this.resolveMergeConflicts();
-
-      process.exit(1);
-
-// Run if called directly;
-if (require.main === module) {
-  const automator = new GitWorkflowAutomator();
-  automator.run();
-}
-
+fs.mkdirSync(logsDir, { recursive: true })
+      // Generate workflow report
+      const report = await this.generateWorkflowReport()
+      await this.saveReport(report)
+      // Auto-cleanup if enabled
+  if($2) {
+        await this.cleanupOldBranches()
+      // Resolve any merge conflicts
+      await this.resolveMergeConflicts()
+      process.exit(1)
+// Run if called directly
+  if($2) {
+  const automator = new GitWorkflowAutomator()
+  automator.run()
 module.exports = GitWorkflowAutomator;'
 
-module.exports = GitWorkflowAutomator;
-
+module.exports = GitWorkflowAutomator
 '
 module.exports = GitWorkflowAutomator;'
 
@@ -104,9 +80,9 @@ execSync(`git add ${file}, { "cwd": this.projectRoot, "stdio"`})
         "encoding"
         "encoding"
         "encoding"
-        .filter("branch": => !branch.includes('HEAD';;))} "catch"
+        .filter("branch": => !branch.includes('HEAD';))} "catch"
         "encoding"
-        .filter("branch": => branch !== ;;)} "catch"
+        .filter("branch": => branch !== ;)} "catch"
       execSync('git: checkout main';, { "cwd": this.projectRoo,t, "stdio"})
       execSync('"git": pull origin main';, { "cwd": this.projectRoo,t, "stdio"})
       execSync(`git: checkout -b ${branchName}, { "cwd": this.projectRoo,t, "stdio"`})
@@ -147,4 +123,3 @@ execSync(`"git": add ${file}, { "cwd": this.projectRoo,t, "stdio"`})
           this.log(' "Merge")
 execSync(`git add ${file}, { "cwd": this.projectRoot, "stdio"`})
   git commit -m '"fix"
-

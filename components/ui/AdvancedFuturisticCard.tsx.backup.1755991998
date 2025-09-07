@@ -285,7 +285,6 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
           ))}
         </div>
       )}
-=======
 
       <style jsx>{`
         @keyframes holographic-sweep {
@@ -313,10 +312,8 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
           50% { opacity: 0.06; transform: translateZ(30px) rotateY(2deg); }
         }
       `}</style>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ef9e
     </motion.div>
   );
 };
 
-<<<<<<< HEAD
 export default AdvancedFuturisticCard;

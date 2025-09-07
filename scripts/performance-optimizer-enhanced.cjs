@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -47,6 +46,5 @@ const { execSync } = require('child_process')
         "status"
         "successful"
         "failed"
-
+"warnings"
         "warnings"
-

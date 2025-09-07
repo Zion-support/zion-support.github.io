@@ -1,14 +1,11 @@
-
 import React, { useMemo, useState } from 'react',
 import Sidebar from './Sidebar',
 import EndpointDetail from './EndpointDetail',
-import v1 from '../../data/api-docs/v1';
-import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
-
+import v1 from '../../data/api-docs/v1'
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types'
 export default function ApiDocsPage() {
-  const spec: ApiDocsSpec;
+  const spec: ApiDocsSpec
     setMessage('Saved')
-  }
 
   return (
     <div className="space-y-2">
@@ -20,4 +17,4 @@ export default function ApiDocsPage() {
       <textarea className="w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={content} onChange={(e) => setContent(e.target.value)} placeholder="Add changelog entries here..." />
     </div>
   )
-};
+}

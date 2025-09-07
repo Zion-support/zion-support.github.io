@@ -1,21 +1,11 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'Service | Zion Tech Group',
-  description: 'Professional services for your business needs.',
-  keywords: 'services, business, technology',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Service | Zion Tech Group',
-    description: 'Professional services for your business needs.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Zion Tech Group',
-  },
-};
-
-export default function ServicePage() {
+title: 'Cloud Services - Zion Tech Group',
+  description: 'Professional cloud services services to help your business grow and succeed.',
+  keywords: 'cloud services, business solutions, professional services'
+}
+export default function CloudServicesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
@@ -48,5 +38,4 @@ export default function ServicePage() {
         </div>
       </section>
     </div>
-  );
-}
+)

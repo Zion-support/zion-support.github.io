@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -27,6 +26,5 @@ const { execSync } = require('child_process')
       execSync('npm run lint', { "cwd": this.projectRoot, "stdio"})
       execSync('npm run type-"check": fast', { "cwd": this.projectRoot, "stdio"})
       execSync('npm run "build": fast', { "cwd": this.projectRoot, "stdio"})
-
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-
+cursor/fix-lint-push-and-merge-to-main-f3c1
+cursor/fix-lint-push-and-merge-to-main-f3c1

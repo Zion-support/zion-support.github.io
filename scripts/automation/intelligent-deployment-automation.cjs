@@ -1,10 +1,8 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Intelligent Deployment Automation;
- * Advanced deployment system with blue-green, canary, and rollback capabilities;
- * Features: Automated testing, health checks, gradual rollouts, intelligent rollbacks;
+ * Intelligent Deployment Automation
+ * Advanced deployment system with blue-green, canary, and rollback capabilities
+ * Features: Automated testing, health checks, gradual rollouts, intelligent rollbacks
  */
 
 const pm2 = require('pm2')
@@ -116,6 +114,5 @@ const http = require('http')
       this.log(' Intelligent Deployment Automation is ready')
       process.on('SIGINT')
         this.log('� Shutting down Deployment Automation...')
-
+this.log(` Fatal error: ${error.message}`, 'ERROR'`)
       this.log(` Fatal error: ${error.message}`, 'ERROR'`)
-

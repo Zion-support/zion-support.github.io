@@ -1,25 +1,17 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
-const path = require('path')
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-
+const path = require('path')#!/usr/bin/env node
+///usr/bin/env node
 console.log('⚡ Starting Performance Optimization Automation...')
-    '.next': '43.33 MB
-    'node_modules': '782.66 MB
+    ".next": "43.33 MB
+    "node_modules': '782.66 MB
     '.tsx
     '.ts
     '.jsx
     '.js
     '.css
   console.log('�  Starting Image Optimization...')
-  const imagesDir = path.join(process.cwd(), 'public/images;
+  const imagesDir = path.join(process.cwd(), 'public/images
 // console.log('� Creating images directory...')
     console.log('� Creating images directory...')
 
@@ -32,38 +24,29 @@ console.log('⚡ Starting Performance Optimization Automation...')
       "recommendations"
     "nextSteps"
   console.log('� Performance improvements "created")
+console.error(' Performance optimization automation "failed")  console.error(' Performance optimization automation "failed")
 
-  console.error(' Performance optimization automation "failed")
-  console.error(' Performance optimization automation "failed")
-
-#!/usr/bin/env node
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
-
+///usr/bin/env node
+  log($2) {
+    const timestamp = new Date().toISOString()
+    const logMessage = `[${timestamp}] ${message}`
+    console.log(logMessage)
+    fs.appendFileSync(this.logFile, logMessage + '\n')
   async runCommand(command, description) {
-    this.log(`🚀 Starting: ${description}`);
+    this.log(`🚀 Starting: ${description}`)
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 300000, // 5 minutes timeout
-      });
-      this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result };
+      })
+      this.log(`✅ Completed: ${description}`)
+      return { success: true, output: result }
     } catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message };
-    }
-  }
-
+      this.log(`❌ Failed: ${description} - ${error.message}`)
+      return { success: false, error: error.message }
   async analyzeBundleSize() {
-    this.log('📦 Analyzing Bundle Size');
-
+    this.log('📦 Analyzing Bundle Size')
     const bundleAnalysis = [
       {
         command: 'npm run build',
@@ -73,46 +56,34 @@ console.log('⚡ Starting Performance Optimization Automation...')
         command: 'npm run analyze',
         description: 'Bundle Analysis',
       },
-    ];
-
-    const results = [];
-    for (const analysis of bundleAnalysis) {
+    ]
+    const results = []
+  for($2) {
       const result = await this.runCommand(
         analysis.command,
         analysis.description
-      );
-      results.push({ ...analysis, ...result });
-    }
-
-    return results;
-  }
-
+      )
+      results.push({ ...analysis, ...result })
+    return results
   async optimizeImages() {
-    this.log('🖼️ Optimizing Images');
-
+    this.log('🖼️ Optimizing Images')
     const imageOptimization = [
       {
         command:
           'find public -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" | head -10',
         description: 'Find Images to Optimize',
       },
-    ];
-
-    const results = [];
-    for (const optimization of imageOptimization) {
+    ]
+    const results = []
+  for($2) {
       const result = await this.runCommand(
         optimization.command,
         optimization.description
-      );
-      results.push({ ...optimization, ...result });
-    }
-
-    return results;
-  }
-
+      )
+      results.push({ ...optimization, ...result })
+    return results
   async optimizeCode() {
-    this.log('⚡ Optimizing Code');
-
+    this.log('⚡ Optimizing Code')
     const codeOptimization = [
       {
         command: 'npm run lint:fix',
@@ -122,23 +93,17 @@ console.log('⚡ Starting Performance Optimization Automation...')
         command: 'npm run format',
         description: 'Format Code',
       },
-    ];
-
-    const results = [];
-    for (const optimization of codeOptimization) {
+    ]
+    const results = []
+  for($2) {
       const result = await this.runCommand(
         optimization.command,
         optimization.description
-      );
-      results.push({ ...optimization, ...result });
-    }
-
-    return results;
-  }
-
+      )
+      results.push({ ...optimization, ...result })
+    return results
   async runPerformanceAudit() {
-    this.log('🔍 Running Performance Audit');
-
+    this.log('🔍 Running Performance Audit')
     const performanceAudit = [
       {
         command: 'npm run perf:monitor',
@@ -148,20 +113,14 @@ console.log('⚡ Starting Performance Optimization Automation...')
         command: 'npm run perf:lighthouse',
         description: 'Lighthouse Performance Audit',
       },
-    ];
-
-    const results = [];
-    for (const audit of performanceAudit) {
-      const result = await this.runCommand(audit.command, audit.description);
-      results.push({ ...audit, ...result });
-    }
-
-    return results;
-  }
-
+    ]
+    const results = []
+  for($2) {
+      const result = await this.runCommand(audit.command, audit.description)
+      results.push({ ...audit, ...result })
+    return results
   async optimizeDependencies() {
-    this.log('📚 Optimizing Dependencies');
-
+    this.log('📚 Optimizing Dependencies')
     const dependencyOptimization = [
       {
         command: 'npm audit fix',
@@ -171,23 +130,17 @@ console.log('⚡ Starting Performance Optimization Automation...')
         command: 'npm outdated',
         description: 'Check for Outdated Dependencies',
       },
-    ];
-
-    const results = [];
-    for (const optimization of dependencyOptimization) {
+    ]
+    const results = []
+  for($2) {
       const result = await this.runCommand(
         optimization.command,
         optimization.description
-      );
-      results.push({ ...optimization, ...result });
-    }
-
-    return results;
-  }
-
+      )
+      results.push({ ...optimization, ...result })
+    return results
   async generatePerformanceReport(results) {
-    this.log('📊 Generating Performance Report');
-
+    this.log('📊 Generating Performance Report')
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
@@ -221,76 +174,53 @@ console.log('⚡ Starting Performance Optimization Automation...')
         ),
       },
       details: results,
-    };
-
+    }
     const reportFile = path.join(
       this.reportsDir,
       'performance-optimization-report.json'
-    );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📄 Performance report saved to: ${reportFile}`);
-    return report;
-  }
-
+    )
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
+    this.log(`📄 Performance report saved to: ${reportFile}`)
+    return report
   async run() {
-    this.log('🎯 Starting Performance Optimization Automation');
-
+    this.log('🎯 Starting Performance Optimization Automation')
     try {
-      const allResults = [];
-
+      const allResults = []
       // Run all optimization categories
-      const bundleResults = await this.analyzeBundleSize();
-      allResults.push(...bundleResults);
-
-      const imageResults = await this.optimizeImages();
-      allResults.push(...imageResults);
-
-      const codeResults = await this.optimizeCode();
-      allResults.push(...codeResults);
-
-      const performanceResults = await this.runPerformanceAudit();
-      allResults.push(...performanceResults);
-
-      const dependencyResults = await this.optimizeDependencies();
-      allResults.push(...dependencyResults);
-
+      const bundleResults = await this.analyzeBundleSize()
+      allResults.push(...bundleResults)
+      const imageResults = await this.optimizeImages()
+      allResults.push(...imageResults)
+      const codeResults = await this.optimizeCode()
+      allResults.push(...codeResults)
+      const performanceResults = await this.runPerformanceAudit()
+      allResults.push(...performanceResults)
+      const dependencyResults = await this.optimizeDependencies()
+      allResults.push(...dependencyResults)
       // Generate comprehensive report
-      const report = await this.generatePerformanceReport(allResults);
-
+      const report = await this.generatePerformanceReport(allResults)
       // Check overall success
-      const failedOptimizations = allResults.filter(r => !r.success);
-      const success = failedOptimizations.length === 0;
-
-      if (success) {
-        this.log('🎉 Performance optimization completed successfully');
+      const failedOptimizations = allResults.filter(r => !r.success)
+      const success = failedOptimizations.length === 0
+  if($2) {
+        this.log('🎉 Performance optimization completed successfully')
       } else {
-        this.log(`❌ ${failedOptimizations.length} optimizations failed`);
-      }
-
-      return { success, report, failedOptimizations };
+        this.log(`❌ ${failedOptimizations.length} optimizations failed`)
+      return { success, report, failedOptimizations }
     } catch (error) {
       this.log(
         `❌ Performance optimization automation failed: ${error.message}`
-      );
-      return { success: false, error: error.message };
-    }
-  }
-}
-
+      )
+      return { success: false, error: error.message }
 // Run the automation
-if (require.main === module) {
-  const automation = new PerformanceOptimizationAutomation();
+  if($2) {
+  const automation = new PerformanceOptimizationAutomation()
   automation.run().then(result => {
-    if (result.success) {
-      console.log('✅ Performance optimization completed successfully');
-      process.exit(0);
+  if($2) {
+      console.log('✅ Performance optimization completed successfully')
+      process.exit(0)
     } else {
-      console.log('❌ Performance optimization failed');
-      process.exit(1);
-    }
-  });
-}
-
-module.exports = PerformanceOptimizationAutomation;
-
+console.log('❌ Performance optimization failed')
+      process.exit(1)
+  })
+module.exports = PerformanceOptimizationAutomation

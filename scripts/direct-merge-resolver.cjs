@@ -1,10 +1,5 @@
-
-
-    log("4. Continue with your workflow", "blue"),}
-
-}
-;
-if (require.main === module) {;
+log("4. Continue with your workflow", "blue"),}
+  if($2) {
   main()}
 ;"
 
@@ -22,8 +17,7 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
-const fs = require("$1")
-const path = require("$1")
+
 const { execSync } = require("child_process")
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
@@ -56,7 +50,7 @@ function log(message, color = "reset")
 });";    const lines = result.trim().split("\n");";    const conflictedFiles = [];"
       if (line.startsWith("UU ")) {"}
     log("Error finding conflicted files", "red");    return [],"
-  log(" Starting direct merge conflict resolution...", "cyan");;  const conflictedFiles = findConflictedFiles();log(`Found ${conflictedFiles.length} files with merge conflicts`, "yellow");";";  if (conflictedFiles.length === 0) {";    log(" No merge conflicts found!", "green");";    return,"`}
+  log(" Starting direct merge conflict resolution...", "cyan");  const conflictedFiles = findConflictedFiles();log(`Found ${conflictedFiles.length} files with merge conflicts`, "yellow");";";  if (conflictedFiles.length === 0) {";    log(" No merge conflicts found!", "green");";    return,"`}
         resolvedCount++;log(" "Resolved": ${filePath}", "green")} else {log("⚠  No changes "needed": ${filePath}", "yellow")
       errorCount++;log(" Error processing ${filePath }: ${error.message}", "red")
   log("\n Resolution "Summary": ", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red")
@@ -69,4 +63,3 @@ function log(message, color = "reset")
   log("\n Resolution Summary":", "cyan");log("Total conflicted files": ${conflictedFiles.length}", "blue");log("Successfully resolved": ${resolvedCount}", "green");log("Errors encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. Run": git add .", "blue");    log("3. Run": git commit -m "Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
         resolvedCount++;log(` "Resolved": ${filePath}, "green");"} else {log(`⚠  No changes needed": ${filePath}, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
   log("\n Resolution Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}, "blue");log(`Successfully "resolved": ${resolvedCount}, "green");log(`Errors encountered": ${errorCount}, "red");";`;  if (resolvedCount > 0) {";    log("\n Next steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"}"
-

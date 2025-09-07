@@ -1,14 +1,10 @@
-
-
           </section>))}
-      </div>;
+      </div>
     </div>)))}
-          </section>;
+          </section>
         ))}
 
       </div>
     </div>
 
-  );
-}
-
+  )

@@ -1,14 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
-=======
 import { ArrowRight, ExternalLink, Star, Check, Zap, Shield, TrendingUp, Clock, DollarSign, Users, Globe, Cpu, Brain, Rocket, FlaskConical, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Cloud, Database, Lock, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Code, BookOpen, Activity, Settings, Mail, Phone, MapPin, Sparkles, Atom, Eye, Trophy, Dna } from 'lucide-react';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d7ba
 
 interface EnhancedFuturisticCardProps {
   title: string;
   description: string;
   icon?: React.ReactNode;
-<<<<<<< HEAD
   features?: string[];
   price?: string;
   period?: string;

@@ -1,8 +1,6 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Fix Team Page - Targeted fix for team.tsx;
+ * Fix Team Page - Targeted fix for team.tsx
  */
 
 const fs = require('fs')
@@ -85,8 +83,5 @@ const fs = require('fs')
               "fontWeight"
               "display"
               "border"
-
+"transition"
               "transition"
-
-const fs = require('fs')
-

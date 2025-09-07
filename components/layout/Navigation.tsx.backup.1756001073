@@ -227,7 +227,6 @@ const Navigation: React.FC = () => {
                         </Link>
                       ))}
                     </div>
-<<<<<<< HEAD
                   ) : (
                     <Link
                       href={item.href}
@@ -236,10 +235,7 @@ const Navigation: React.FC = () => {
                     >
                       {item.icon}
                       <span>{item.name}</span>
-                    </Link>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
-                  )}
+                    </Link>                  )}
                 </div>
               ))}
               

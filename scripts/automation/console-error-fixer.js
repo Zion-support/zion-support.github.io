@@ -1,4 +1,4 @@
-#!/usr/bin/env node,"}),"})
+///usr/bin/env node,"}),"})
 import { execSync } from,"}),"})
   'child_process',"}),"})
 import fs from,"}),"})
@@ -63,7 +63,7 @@ async function runConsoleErrorFixer() {,"}),"})
   '🔍 Scanning for console statements in source code...'),"}),"})
     const consoleStatements = findConsoleStatements(,"}),"})
   './src),"}),"})
-    if (consoleStatements.length > 0) {,"}),"})
+  if($2) {,"}),"})
       // // // console.log(`⚠️  Found ${consoleStatements.length} console statements in source "code": `),"}),"})
       consoleStatements.forEach(stmt => {,"}),"})
         // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`),"}),"})
@@ -75,7 +75,7 @@ async function runConsoleErrorFixer() {,"}),"})
     // // // console.log(,"}),"})
   '🔍 Checking build output for console statements...'),"}),"})
     const buildConsoleStatements = findConsoleStatements(distPath),"}),"})
-    if (buildConsoleStatements.length > 0) {,"}),"})
+  if($2) {,"}),"})
       // // // console.log(`⚠️  Found ${buildConsoleStatements.length} console statements in build "output": `),"}),"})
       buildConsoleStatements.forEach(stmt => {,"}),"})
         // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`),"}),"})
@@ -88,7 +88,7 @@ async function runConsoleErrorFixer() {,"}),"})
   '🔍 Checking for potential error patterns...'),"}),"})
     const errorPatterns = findErrorPatterns(,"}),"})
   './src'),"}),"})
-    if (errorPatterns.length > 0) {,"}),"})
+  if($2) {,"}),"})
       // // // console.log(`⚠️  Found ${errorPatterns.length} potential error "patterns": `),"}),"})
       errorPatterns.forEach(pattern => {,"}),"})
         // // // console.log(`  - ${pattern.file}:${pattern.line}: ${pattern.pattern}`),"}),"})
@@ -116,7 +116,7 @@ async function runConsoleErrorFixer() {,"}),"})
   '🔍 Scanning for console statements in source code...'),"}),"})
     const consoleStatements = findConsoleStatements(,"}),"})
   './src'),"}),"})
-    if (consoleStatements.length > 0) {,"}),"})
+  if($2) {,"}),"})
       // // // // // // // console.log(`⚠️  Found ${consoleStatements.length} console statements in source "code": `),"}),"})
       consoleStatements.forEach(stmt => {,"}),"})
         // // // // // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`),"}),"})
@@ -129,7 +129,7 @@ async function runConsoleErrorFixer() {,"}),"})
     // // // // // // // console.log(,"}),"})
   '🔍 Checking build output for console statements...'),"}),"})
     const buildConsoleStatements = findConsoleStatements(distPath),"}),"})
-    if (buildConsoleStatements.length > 0) {,"}),"})
+  if($2) {,"}),"})
       // // // // // // // console.log(`⚠️  Found ${buildConsoleStatements.length} console statements in build "output": `),"}),"})
       buildConsoleStatements.forEach(stmt => {,"}),"})
         // // // // // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`),"}),"})
@@ -143,7 +143,7 @@ async function runConsoleErrorFixer() {,"}),"})
   '🔍 Checking for potential error patterns...'),"}),"})
     const errorPatterns = findErrorPatterns(,"}),"})
   './src'),"}),"})
-    if (errorPatterns.length > 0) {,"}),"})
+  if($2) {,"}),"})
       // // // // // // // console.log(`⚠️  Found ${errorPatterns.length} potential error "patterns": `),"}),"})
       errorPatterns.forEach(pattern => {,"}),"})
         // // // // // // // console.log(`  - ${pattern.file}:${pattern.line}: ${pattern.pattern}`),"}),"})
@@ -221,7 +221,7 @@ function findConsoleStatements(dir) {,"}),"})
               if (line.includes('console.,"}),"})
   ')) {,"}),"})
                 const match = line.match(/console\.\w+/),"}),"})
-                if (match) {,"}),"})
+  if($2) {,"}),"})
                   consoleStatements.push({,"}),"})
                     "file": path.relative(process.cwd(), fullPath),,"}),"})
                     "line": index + 1,,"}),"})
@@ -336,9 +336,8 @@ runContinuous().catch(error => {,"}),"})
 }),"}),"})
 }}}}}}}}}}}}}}}}}}}}}}}}}))),"}),"})
 
-// Get automation interval from environment variable ("default": 15 minutes);
-#!/usr/bin/env node,"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🔧 Starting continuous console error fixer automation...'),"}),"}) ,"}),"}) '🔧 Starting continuous console error fixer automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000; async function runConsoleErrorFixer() {,"}),"}) try {,"}),"}) 🏗️ Building project for console error detection...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit,cwd: process.cwd() }),"}),"}) '✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) 'Build error: ,"}),"}) ,error.message),"}),"}) '🏗️ Building project for console error detection...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit,cwd: process.cwd() }),"}),"}) '✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) 'Build error: ,"}),"}) ,error.message),"}),"}) ,"}),"}) return,"}),"}) const distPath = path.join(process.cwd(),,"}),"}) 'dist'),"}),"}) if (!fs.existsSync(distPath)) {,"}),"}) '⚠️ Build verification failed: dist folder not found'),"}),"}) return,"}),"}) '⚠️ Build verification failed: dist folder not found'),"}),"}) return,"}),"}) '🔍 Scanning for console statements in source code...'),"}),"}) const consoleStatements = findConsoleStatements(,"}),"}) './src),"}),"}) if (consoleStatements.length > 0) {,"}),"}) consoleStatements.forEach(stmt => {,"}),"}) }),"}),"}) } else {,"}),"}) '✅ No console statements found in source code'),"}),"}) '🔍 Checking build output for console statements...'),"}),"}) const buildConsoleStatements = findConsoleStatements(distPath),"}),"}) if (buildConsoleStatements.length > 0) {,"}),"}) buildConsoleStatements.forEach(stmt => {,"}),"}) }),"}),"}) } else {,"}),"}) '✅ No console statements found in build output'),"}),"}) '🔍 Checking for potential error patterns...'),"}),"}) const errorPatterns = findErrorPatterns(,"}),"}) './src'),"}),"}) if (errorPatterns.length > 0) {,"}),"}) errorPatterns.forEach(pattern => {,"}),"}) }),"}),"}) } else {,"}),"}) ✅ No potential error patterns found'),"}),"}) '🔍 Running linting for console errors...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'pipe }),"}),"}) '✅ Linting completed - no console errors found'),"}),"}) } catch (error) {,"}),"}) '⚠️ Linting found issues,checking for console errors...'),"}),"}) const lintOutput = error.message,"}),"}) if (lintOutput.includes(,"}),"}) 'console.')) {,"}),"}) '⚠️ Console statements detected in linting output'),"}),"}) '🔍 Scanning for console statements in source code...'),"}),"}) const consoleStatements = findConsoleStatements(,"}),"}) './src'),"}),"}) if (consoleStatements.length > 0) {,"}),"}) consoleStatements.forEach(stmt => {,"}),"}) }),"}),"}) } else {,"}),"}) '✅ No console statements found in source code'),"}),"}) }"}),"}) '🔍 Checking build output for console statements...'),"}),"}) const buildConsoleStatements = findConsoleStatements(distPath),"}),"}) if (buildConsoleStatements.length > 0) {,"}),"}) buildConsoleStatements.forEach(stmt => {,"}),"}) }),"}),"}) } else {,"}),"}) '✅ No console statements found in build output'),"}),"}) }"}),"}) '🔍 Checking for potential error patterns...'),"}),"}) const errorPatterns = findErrorPatterns(,"}),"}) './src'),"}),"}) if (errorPatterns.length > 0) {,"}),"}) errorPatterns.forEach(pattern => {,"}),"}) }),"}),"}) } else {,"}),"}) ✅ No potential error patterns found'),"}),"}) }"}),"}) '🔍 Running linting for console errors...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'pipe }),"}),"}) ✅ Linting completed - no console errors found'),"}),"}) } catch (error) {,"}),"}) '⚠️ Linting found issues,checking for console errors...'),"}),"}) const lintOutput = error.message,"}),"}) if (lintOutput.includes(,"}),"}) 'console.')) {,"}),"}) '⚠️ Console statements detected in linting output'),"}),"}) }"}),"}) }"}),"}) '📊 Generating console error fixer report...'),"}),"}) ,"}),"}) status: 'completed,"}),"}) },"}),"}) ,"}),"}) ,"}) '📊 Generating console error fixer report...'),"}),"}) const reportPath = path.join(process.cwd(),,"}),"}) 'console-error-fixer-report.json'),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) '✅ Continuous console error fixer completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous console error fixer failed:',error.message),"}),"}) '✅ Continuous console error fixer completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous console error fixer failed:',error.message),"}),"}) ,"}),"}) 't exit,just log the error and continue,"}),"}) function findConsoleStatements(dir) {,"}),"}) const consoleStatements = [],"}),"}) function scanDirectory(currentDir) {,"}),"}) try {,"}),"}) const items = fs.readdirSync(currentDir),"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(currentDir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) if (stat.isDirectory()) {,"}),"}) scanDirectory(fullPath),"}),"}) } else if (item.endsWith('.js,"}),"}) ') || item.endsWith('.jsx,"}),"}) ') || item.endsWith('.ts,"}),"}) ') || item.endsWith('.tsx,"}),"}) ')) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(fullPath,'utf8,"}),"}) '),"}),"}) const lines = content.split('\n,"}),"}) '),"}),"}) lines.forEach((line,index) => {,"}),"}) if (line.includes('console.,"}),"}) ')) {,"}),"}) const match = line.match(/console\.\w+/),"}),"}) if (match) {,"}),"}) consoleStatements.push({,"}),"}) file: path.relative(process.cwd(),fullPath),,"}),"}) line: index + 1,,"}),"}) statement: match[0],"}),"}) }),"}),"}) }),"}),"}) } catch (error) {,"}),"}) } catch (error) {,"}),"}) 't be accessed,"}),"}) scanDirectory(dir),"}),"}) return consoleStatements,"}),"}) function findErrorPatterns(dir) {,"}),"}) const errorPatterns = [],"}),"}) function scanDirectory(currentDir) {,"}),"}) try {,"}),"}) const items = fs.readdirSync(currentDir),"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(currentDir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) if (stat.isDirectory()) {,"}),"}) scanDirectory(fullPath),"}),"}) } else if (item.endsWith('.js,"}),"}) ') || item.endsWith('.jsx,"}),"}) ') || item.endsWith('.ts,"}),"}) ') || item.endsWith('.tsx,"}),"}) ')) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(fullPath,'utf8,"}),"}) '),"}),"}) const lines = content.split('\n,"}),"}) '),"}),"}) lines.forEach((line,index) => {,"}),"}) const patterns = [,"}),"}) 'throw new Error,"}),"}) ',,"}),"}) 'throw Error,"}),"}) ',,"}),"}) 'console.error,"}),"}) ',,"}),"}) 'console.warn,"}),"}) ',,"}),"}) 'debugger,"}),"}) ',,"}),"}) 'alert(,"}),"}) ',,"}),"}) 'confirm(,"}),"}) ',,"}),"}) 'prompt(,"}),"}) ',"}),"}) ],"}),"}) patterns.forEach(pattern => {,"}),"}) if (line.includes(pattern)) {,"}),"}) errorPatterns.push({,"}),"}) file: path.relative(process.cwd(),fullPath),,"}),"}) line: index + 1,,"}),"}) pattern: pattern,"}),"}) }),"}),"}) }),"}),"}) }),"}),"}) } catch (error) {,"}),"}) t be read,"}),"}) } catch (error) {,"}),"}) 't be accessed,"}),"}) scanDirectory(dir),"}),"}) return errorPatterns,"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await runConsoleErrorFixer(),"}),"}) setInterval(async () => {,"}),"}) await runConsoleErrorFixer(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on('SIGTERM,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) ,"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}}}}}}}}}}}}}}}}}}))),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000 async function runConsoleErrorFixer() { try {',🏗️ Building project for console error detection...`); try { execSync( `npm run build`,{ stdio: `inherit,cwd: process.cwd() }) '✅ Build completed`)} catch (error) { `⚠️ Build failed but continuing...`); `Build error: error.message); `🏗️ Building project for console error detection...`); try { execSync( `npm run build`,{ stdio: 'inherit,cwd: process.cwd() }) '✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...'); 'Build error: error.message); return; const distPath = path.join(process.cwd(),';dist'); if (!fs.existsSync(distPath)) { '⚠️ Build verification failed: dist folder not found'); return; '⚠️ Build verification failed: dist folder not found`); return;
-#!/usr/bin/env node,"}),"})""
+//
+///usr/bin/env node,"}),"})""
 import { execSync } from,"}),"})""
   'child_process',"}),"})""
 import fs from,"}),"})""
@@ -353,7 +352,7 @@ const __dirname = path.dirname(__filename),"}),"})""
 ,"}),"})""
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000; // 15 minutes,"}),"})""
 async function runConsoleErrorFixer() {,"}),"})""
-  try {,"}),"})""`;
+  try {,"}),"})""`
     // // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`),"}),"})""
     // Build the project first,"}),"})""
     // // // console.log(,,"}),"})""
@@ -368,7 +367,7 @@ async function runConsoleErrorFixer() {,"}),"})""
   '⚠️  Build failed but continuing...'),"}),"})""
       // // // console.log(,"}),"})""
   'Build "error":  ,"}),"})""
-  , error.message),"}),"})""`;
+  , error.message),"}),"})""`
     // // // // // // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`),"}),"})""
     // Build the project first,"}),"})""
     // // // // // // // console.log(,"}),"})""
@@ -391,9 +390,9 @@ async function runConsoleErrorFixer() {,"}),"})""
   '🔍 Scanning for console statements in source code...'),"}),"})""
     const consoleStatements = findConsoleStatements(,"}),"})""
   './src),"}),"})""
-    if (consoleStatements.length > 0) {,"}),"})""`;
+  if($2) {,"}),"})""`
       // // // console.log(`⚠️  Found ${consoleStatements.length} console statements in source "code": `),"}),"})""
-      consoleStatements.forEach(stmt => {,"}),"})""`;
+      consoleStatements.forEach(stmt => {,"}),"})""`
         // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`),"}),"})""
       }),"}),"})""
     } else {,"}),"})""
@@ -403,9 +402,9 @@ async function runConsoleErrorFixer() {,"}),"})""
     // // // console.log(,"}),"})""
   '🔍 Checking build output for console statements...'),"}),"})""
     const buildConsoleStatements = findConsoleStatements(distPath),"}),"})""
-    if (buildConsoleStatements.length > 0) {,"}),"})""`;
+  if($2) {,"}),"})""`
       // // // console.log(`⚠️  Found ${buildConsoleStatements.length} console statements in build "output": `),"}),"})""
-      buildConsoleStatements.forEach(stmt => {,"}),"})""`;
+      buildConsoleStatements.forEach(stmt => {,"}),"})""`
         // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`),"}),"})""
       // // // console.log(,"}),"})""
   '✅ No console statements found in build output'),"}),"})""
@@ -414,9 +413,9 @@ async function runConsoleErrorFixer() {,"}),"})""
   '🔍 Checking for potential error patterns...'),"}),"})""
     const errorPatterns = findErrorPatterns(,"}),"})""
   './src'),"}),"})""
-    if (errorPatterns.length > 0) {,"}),"})""`;
+  if($2) {,"}),"})""`
       // // // console.log(`⚠️  Found ${errorPatterns.length} potential error "patterns": `),"}),"})""
-      errorPatterns.forEach(pattern => {,"}),"})""`;
+      errorPatterns.forEach(pattern => {,"}),"})""`
         // // // console.log(`  - ${pattern.file}:${pattern.line}: ${pattern.pattern}`),"}),"})""
       // // // console.log(,,"}),"})""
   ✅ No potential error patterns found'),"}),"})""
@@ -463,12 +462,12 @@ async function runConsoleErrorFixer() {,"}),"})""
     console.log(,"}),"})""
     const reportPath = path.join(process.cwd(),,"}),"})""
   'console-error-fixer-report.json'),"}),"})""
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),"}),"})""`;
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),"}),"})""`
     // // // console.log(`✅ Console error fixer report saved to ${reportPath}`),"}),"})""
     // // // console.log(,"}),"})""
   '✅ Continuous console error fixer completed successfully'),"}),"})""
     // // // console.error(,"}),"})""
-  '❌ Continuous console error fixer "failed": ', error.message),"}),"})""`;
+  '❌ Continuous console error fixer "failed": ', error.message),"}),"})""`
     // // // // // // // console.log(`✅ Console error fixer report saved to ${reportPath}`),"}),"})""
     // // // // // // // console.log(,"}),"})""
     // // // // // // // console.error(,"}),"})""
@@ -493,7 +492,7 @@ function findConsoleStatements(dir) {,"}),"})""
             lines.forEach((line, index) => {,"}),"})""
               if (line.includes('console.,"}),"})""
                 const match = line.match(/console\.\w+/),"}),"})""
-                if (match) {,"}),"})""
+  if($2) {,"}),"})""
                   consoleStatements.push({,"}),"})""
                     "file": path.relative(process.cwd(), fullPath),,"}),"})""
                     "line": index + 1,,"}),"})""
@@ -527,27 +526,27 @@ function findErrorPatterns(dir) {,"}),"})""
       // Skip directories that can,"}),"})""
   return errorPatterns,"}),"})""
 // Main continuous loop,"}),"})""
-async function runContinuous() {,"}),"})""`;
+async function runContinuous() {,"}),"})""`
   // // // // // // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`),"}),"})""
-,"}),"})""`;
+,"}),"})""`
   // // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`),"}),"})""
   // Run initial console error fixer,"}),"})""
   await runConsoleErrorFixer(),"}),"})""
   // Set up continuous execution,"}),"})""
   setInterval(async () => {,"}),"})""
-  }, AUTOMATION_INTERVAL),"}),"})""`;
+  }, AUTOMATION_INTERVAL),"}),"})""`
   // // // // // // // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`),"}),"})""
 // Handle graceful shutdown,"}),"})""
 process.on('SIGINT,"}),"})""
   ', () => {,"}),"})""
-  // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...,"}),"})""');
+  // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...,"}),"})""')
   // // // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`),"}),"})""
 // Handle graceful shutdown,"}),"})""
-  // // // console.log('🛑 Received SIGINT, shutting down gracefully...,"}),"})""');
+  // // // console.log('🛑 Received SIGINT, shutting down gracefully...,"}),"})""')
   process.exit(0),"}),"})""
 process.on('SIGTERM,"}),"})""
-  // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...,"}),"})""');
-  // // // console.log('🛑 Received SIGTERM, shutting down gracefully...,"}),"})""');
+  // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...,"}),"})""')
+  // // // console.log('🛑 Received SIGTERM, shutting down gracefully...,"}),"})""')
 // Start the continuous console error fixer,"}),"})""
 runContinuous().catch(error => {,"}),"})""
   // // // // // // // console.error('❌ Failed to start continuous console error "fixer": error),"}),"})""
@@ -555,30 +554,28 @@ runContinuous().catch(error => {,"}),"})""
   process.exit(1),"}),"})""
 }}}}}}}}}}}}}}}}}}}}}}}}}))),"}),"})""
 // Get automation interval from environment variable ("default": 15 minutes);"
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000 // 15 minutes;
-
-  "⚠️  Build failed but continuing...");
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000 // 15 minutes
+  "⚠️  Build failed but continuing...")
       // // // console.log("
   "Build "error": error.message);`
-    // // // // // // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()  }`);
-    // Build the project first;
+    // // // // // // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()  }`)
+    // Build the project first
     // // // // // // // console.log("
-  "🏗️ Building project for console error detection...");
+  "🏗️ Building project for console error detection...")
     try {}
       execSync('"
   "npm run build", { "stdio": 'inherit, "cwd": process.cwd() })
 
-      'Build "error": error.message);
-      return;
+      'Build "error": error.message)
+      return
     // Check if dist folder exists;'
-    const distPath = path.join(process.cwd(), ';dist');
+    const distPath = path.join(process.cwd(), ';dist')
     if (!fs.existsSync(distPath)) {'
       // // // // // // // console.log(','"
 
-      '⚠️  Build verification "failed": dist folder not found');
-      return;
-    // Scan for console statements in source code;
-
-  '⚠️  Build verification failed: dist folder not found`);
-    // Scan: for console statements in source code;
+      '⚠️  Build verification "failed": dist folder not found')
+      return
+    // Scan for console statements in source code
+  '⚠️  Build verification failed: dist folder not found`)
+    // Scan: for console statements in source code
     // // // console.log(

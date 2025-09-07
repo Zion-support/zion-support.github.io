@@ -1,39 +1,31 @@
-
-
-import type { NextPage } from "next";
-import Head from "next/head";
-
-import Link from "next/link";
-const CloudArchitectureChat: NextPage = () => {;
+import type { NextPage } from "next"
+import Head from "next/head"
+import Link from "next/link"
+const CloudArchitectureChat: NextPage = () => {
   return (
-    <div>;
-      <Head>;
-        <title>CloudArchitectureChat - Zion Tech Solutions</title>;
-
+    <div>
+      <Head>
+        <title>CloudArchitectureChat - Zion Tech Solutions</title>
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-      </Head>;
-
-      <main>;
-        <h1>CloudArchitectureChat</h1>;
+      </Head>
+      <main>
+        <h1>CloudArchitectureChat</h1>
         <p>Blog content coming soon...</p>;"
-        <a href="/blog">Back to Blog</a>;
-      </main>;
-    </div>;
-  );
-}
-export default CloudArchitectureChat;
-
+        <a href="/blog">Back to Blog</a>
+      </main>
+    </div>
+  )
+export default CloudArchitectureChat
 "
 import type { NextPage } from "next";"
 import Head from "next/head";"
-import Link from "next/link";
+import Link from "next/link"
 import type { NextPage } from 'next';'
 import Head from 'next/head';'
 
-import Link from 'next/link';
-
+import Link from 'next/link'
 const CloudArchitectureChat: NextPage = () => {}
   return (
     <div>
@@ -45,31 +37,26 @@ const CloudArchitectureChat: NextPage = () => {}
 
         <title>CloudArchitectureChat - Zion Tech Solutions</title>
 
-import type { NextPage } from './next';
-import Head from './next / head';
-
-import Link from './next / link';
+import type { NextPage } from './next'
+import Head from './next / head'
+import Link from './next / link'
 const CloudArchitectureChat: NextPage = () => {}
   return (
-    <div>;
-      <Head>;
-        <title > CloudArchitectureChat - Zion Tech Solutions</title>;
+    <div>
+      <Head>
+        <title > CloudArchitectureChat - Zion Tech Solutions</title>
         <meta;"
           name="description";"
           content="CloudArchitectureChat blog post";"
         />{" "}
-      </Head>;
-      <main>;
-        <h1 > CloudArchitectureChat</h1>;
+      </Head>
+      <main>
+        <h1 > CloudArchitectureChat</h1>
         <p > Blog content coming soon...</p>;"
-        <a href="/blog">Back to Blog</a>;
-      </main>;
-    </div>);
-}
-;
-export default CloudArchitectureChat;
-;
-
+        <a href="/blog">Back to Blog</a>
+      </main>
+    </div>)
+export default CloudArchitectureChat
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
     <div>
@@ -104,10 +91,8 @@ const CloudArchitectureChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-}
-export default CloudArchitectureChat;
-
+  )
+export default CloudArchitectureChat
         <title>CloudArchitectureChat - Zion Tech Solutions</title>
         <title>CloudArchitectureChat - Zion Tech Solutions</title>
 

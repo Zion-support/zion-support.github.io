@@ -1,12 +1,10 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Docs - Zion Tech Group',
   description: 'Professional docs services to help your business grow and succeed.',
   keywords: 'docs, business solutions, professional services'
-};
-
+}
 export default function DocsPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -36,5 +34,4 @@ export default function DocsPage() {
       </div>
 
     </div>
-  );
-}
+  )

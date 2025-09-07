@@ -1,14 +1,10 @@
-
-
 interface SEOProps {
-  title?: string;
-  description?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
+  title?: string
+  description?: string
+  canonical?: string
+  ogImage?: string
+  ogType?: string
   twitterCard?: string;}
-}
-}
 
 export default function SEO({
   title = "Zion Tech Group",
@@ -32,8 +28,6 @@ export default function SEO({
       <meta name="twitter: description" content={description;} />
       <meta name="twitter: image" content={ogImage;} />
     </Head>
-  );
-}
-
+  )
 pr-12243
 

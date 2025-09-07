@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -38,6 +37,5 @@ const { execSync } = require('child_process')
       this.log(`� Build "status"`)
       this.log(`🧪 "Tests"`)
       console.log(`� Build "status"`)
-
+console.error('\n� Build Monitor "failed")
       console.error('\n� Build Monitor "failed")
-

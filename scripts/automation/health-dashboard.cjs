@@ -1,9 +1,7 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Real-time Health Dashboard;
- * Comprehensive monitoring dashboard for PM2 processes;
+ * Real-time Health Dashboard
+ * Comprehensive monitoring dashboard for PM2 processes
  */
 
 const pm2 = require('pm2')
@@ -58,6 +56,5 @@ const { execSync } = require('child_process')
             \"
                     "onlineProcesses"
                 console.error('Failed to refresh "data")
-
+this.log(` Fatal "error"`)
       this.log(` Fatal "error"`)
-

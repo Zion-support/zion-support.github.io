@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -20,6 +19,5 @@ console.log(' Starting JSX/TSX syntax fixer...')
       execSync('npm run type-check', { "stdio"})
       "summary"
       "status"
-
+console.error(' JSX/TSX syntax fixer failed to "start")
   console.error(' JSX/TSX syntax fixer failed to "start")
-

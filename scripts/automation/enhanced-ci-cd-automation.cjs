@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -218,8 +217,8 @@ console.log(` Quality checks completed. "Score"`)
       path.join(this.reportDir, "ci-cd-report.json")
       path.join(this.reportDir, "CI_CD_REPORT.md")
     console.log(""� "CI/CD" report generated successfully")
-  generateMarkdownReport(report) {return # ""CI/CD""}
-  generateMarkdownReport(report) {return # "CI/CD"}
+  generateMarkdownReport($2) {return # ""CI/CD""}
+  generateMarkdownReport($2) {return # "CI/CD"}
 - **Status**: ${this.ciResults.dependencies.status === "success" ? " Success" : " Failed"}
 - **Duration**: ${this.ciResults.dependencies.result?.duration || """N/A"""}
 ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResults.dependencies.result?.error || "Unknown error"} : ""
@@ -286,7 +285,5 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
   console.error(" Pipeline "failed": ")
   console.error(" Pipeline "failed": ")
   console.error(" ""CI/CD"" automation "failed": ")
-// Start the ""CI/CD""
-
+//
 // Start the "
-

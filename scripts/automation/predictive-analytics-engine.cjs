@@ -1,9 +1,7 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Predictive Analytics Engine;
- * Advanced ML-powered prediction system for system failures and optimization;
+ * Predictive Analytics Engine
+ * Advanced ML-powered prediction system for system failures and optimization
  */
 
 const pm2 = require('pm2')
@@ -45,35 +43,34 @@ const { execSync } = require('child_process')
       return { "message"}
       "level"
       this.log(` ML model update "failed"`)
-
+this.log(` Fatal "error"`)
       this.log(` Fatal "error"`)
 
       this.log(` Fatal "error"`)
         "features"""
-      this.log(` Failed to save historical "data"`)""`;
-          this.log(` Failed to connect to "PM2"`)""`;
+      this.log(` Failed to save historical "data"`)""`
+          this.log(` Failed to connect to "PM2"`)""`
       this.log(` Metrics collection "failed"`)""
       const result = execSync('free -m', { "encoding"})""
       const result = execSync('top -bn1 | grep "Cpu(s)"', { "encoding"}""
-      const result = execSync('uptime', { "encoding"})""`;
+      const result = execSync('uptime', { "encoding"})""`
       this.log(` Pattern analysis "failed"`)""
       "direction"""
       "trend"""
       "risk"""
-      "trend"""`;
+      "trend"""`
       this.log(` Prediction generation "failed"`)""
       "level"""
         "recommendation"""
         "urgency"""
-      "urgency"""`;
-      this.log(`� HIGH FAILURE RISK "ALERT"`)""`;
+      "urgency"""`
+      this.log(`� HIGH FAILURE RISK "ALERT"`)""`
       this.log(`⚠ PERFORMANCE "ALERT"`)""
       this.log(" RESOURCE "ALERT": Memory/CPU needs attention")""
-        "severity"""`;
-      this.log(` Failed to send "alert"`)""`;
-      this.log(` Failed to save "predictions"`)""`;
+        "severity"""`
+      this.log(` Failed to send "alert"`)""`
+      this.log(` Failed to save "predictions"`)""`
       this.log(` Deep analysis "failed"`)""
       return { "message"}""
-      "level"""`;
-      this.log(` ML model update "failed"`)""`;
-
+"level"""`
+      this.log(` ML model update "failed"`)""`

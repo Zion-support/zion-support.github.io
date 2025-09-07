@@ -1,4 +1,3 @@
-
 const { execSync } = require('child_process')
 const fs = require('fs')
 console.log(' Deployment Automator Starting...')
@@ -10,6 +9,5 @@ console.log(' Deployment Automator Starting...')
         "command"
         "name"
         "command"
-
+execSync(step.command, { "stdio"})
         execSync(step.command, { "stdio"})
-

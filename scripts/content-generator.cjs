@@ -1,9 +1,7 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Content Generator Script;
- * Generates meaningful content for placeholder pages;
+ * Content Generator Script
+ * Generates meaningful content for placeholder pages
  */
 const fs = require("child_process")
 const path = require("path")
@@ -31,6 +29,5 @@ const path = require("path")
         "
     const report = {"timestamp": new Date().toISOString(),"generatedContent": Object.fromEntries(this.generatedContent),"totalPages"}
     const reportPath = path.join(this.projectRoot, "content-generation-report.json")
-
+console.log(`� Report saved "to"`)
     console.log(`� Report saved "to"`)
-

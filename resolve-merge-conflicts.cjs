@@ -75,20 +75,20 @@ class MergeConflictResolver {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') || !content.includes('>>>>>>>')) {
+    if (!content.includes('') || !content.includes('>>>>>>>')) {
       this.log(`  ℹ️ No conflicts in ${filePath}, skipping`, 'INFO');
       return;
     }
 
     // Strategy: Choose incoming changes (from remote) for most files
-    // This means we'll take the version after ======= and before >>>>>>>
+    // This means we'll take the version after  and before >>>>>>>
     let resolvedContent = content;
     
     // Handle different conflict patterns
     const conflictPatterns = [
       // Standard conflict markers
-      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)      // Modified/delete conflicts
-      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)    ];
+      /[\s\S]*?([\s\S]*?)      // Modified/delete conflicts
+      /[\s\S]*?([\s\S]*?)    ];
 
     for (const pattern of conflictPatterns) {
       resolvedContent = resolvedContent.replace(pattern, (match, incoming) => {
@@ -98,9 +98,9 @@ class MergeConflictResolver {
 
     // Clean up any remaining conflict markers
     resolvedContent = resolvedContent
-      .replace(/<<<<<<< HEAD[\s\S]*?=======/g, '')
-      .replace(/      .replace(/^<<<<<<< HEAD$/gm, '')
-      .replace(/^=======$/gm, '')
+      .replace(/[\s\S]*?/g, '')
+      .replace(/      .replace(/^$/gm, '')
+      .replace(/^$/gm, '')
       .replace(/^
     // Write resolved content
     fs.writeFileSync(filePath, resolvedContent, 'utf8');

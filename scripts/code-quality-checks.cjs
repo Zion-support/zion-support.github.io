@@ -1,7 +1,8 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync } = require("child_process")
 const fs = require("fs")
+///usr/bin/env node
+const { execSync } = require("child_process")
 
       "timestamp"
       summary: { passed: 0, "failed": 0, "warnings"}
@@ -37,6 +38,5 @@ const fs = require("fs")
     console.log(`"Failed"`)
 // console.log(`"Warnings"`)
     console.log("=")
-
+console.log(`� Report saved "to"`)
     console.log(`� Report saved "to"`)
-

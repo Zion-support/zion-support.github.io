@@ -1,14 +1,11 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 /**
- * Intelligent Repository Manager;
+ * Intelligent Repository Manager
  *
-
-#!/usr/bin/env node;
+///usr/bin/env node
 /**
- * Intelligent Repository Manager;
- * 
-* This automation "handles"
+ * Intelligent Repository Manager
+ *
             console.error('Failed to write to log "file")
                 "stdio"
             const result = await this.executeCommand('git', { "args"})
@@ -44,7 +41,7 @@
             return { "percentage": 0, "status"}
             const auditResult = await this.executeCommand('npm', { "args"})
             this.log(`Failed to check security "vulnerabilities"`)
-            return { "vulnerabilities": {}, "riskLevel"
+            return { "vulnerabilities":  "riskLevel"
                 "args"
             this.log(`PR created "successfully"`)
             this.log(`Failed to create "PR"`)
@@ -78,10 +75,9 @@
       this.log(`Error resolving "conflicts"`)
           this.log(`Error in monitoring "loop"`)
       this.log(`Error starting Intelligent Repository "Manager"`)
-
+console.error('Failed to start Intelligent Repository "Manager")
     console.error('Failed to start Intelligent Repository "Manager")
-#!/usr/bin/env node
+///usr/bin/env node
 /**
- * Intelligent Repository Manager;
- * 
-
+ * Intelligent Repository Manager
+ *

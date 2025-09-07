@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -48,8 +47,7 @@ const { execSync } = require("child_process")
   console.log(" Running comprehensive fixes...")
 // console.log("🧹 Running deep cleanup...")
   console.log("� Fixing import issues...")
-        const fs = require("fs")
-        const path = require("path")
+
             .replace(/from\\s+[""]([^"]+)\\.ts["]/g, from "$1"
             .replace(/require\\s*\\(\\s*["]([^"]+)\\.ts[""]\\s*\\)/g, "require("child_process")"
         const srcDir = path.join(process.cwd(), "src"
@@ -134,6 +132,5 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
-
+console.log(")
   console.log(")
-

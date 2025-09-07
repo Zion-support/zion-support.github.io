@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -32,6 +31,5 @@ console.log(' Starting master error fixing orchestrator...')
             execSync(`pm2 restart ${fixer}`, { "stdio"`})
       console.log('⚠  Critical fixes "failed")
         execSync(`pm2 restart ${fixerName}`, { "stdio"`})
-
+console.error(' Master error fixing orchestrator failed to "start")
   console.error(' Master error fixing orchestrator failed to "start")
-

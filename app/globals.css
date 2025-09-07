@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind components;
+<<<<<<< HEAD
 @tailwind utilities;
 
 @layer base {
@@ -66,6 +67,9 @@
 }
 
 @layer utilities {
+=======
+@tailwind utilities;@layer utilities {
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
   .focus-visible:focus {
     @apply outline-none ring-2 ring-blue-500 ring-offset-2;
   }
@@ -233,4 +237,7 @@
     transform: rotateZ(0);
   }
 }
+<<<<<<< HEAD
 @tailwind utilities;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

@@ -1,12 +1,10 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Community - Zion Tech Group',
   description: 'Community forum and resources for Zion Tech Group users',
   keywords: 'community, forum, resources, Zion Tech Group'
-};
-
+}
 export default function CommunityPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -35,6 +33,4 @@ export default function CommunityPage() {
         </a>
       </div>
     </div>
-  );
-}
-
+  )

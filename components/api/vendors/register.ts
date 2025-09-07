@@ -1,7 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getVendorBySlug, register_vendor } from '../../../utils / vendor - store';
-
-import {getVendorBySlug, register_vendor} from '../../../utils / vendor - store';
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { getVendorBySlug, register_vendor } from '../../../utils / vendor - store'
+import {getVendorBySlug, register_vendor} from '../../../utils / vendor - store'
 export default /**
  * handler - Function description
  */
@@ -9,24 +8,21 @@ function handler() {
   if (
     return res.status (405).json ({ error: 'Method not allowed' })) {
   $2
-}
 
-import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
+import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== 'POST')
-  if (req.method !== 'POST');
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {},
-  if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
-  if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
-  try {
-    const vendor = null;
-
   if (req.method !== 'POST')
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body ||
+  if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' })
+  if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' })
+  try {
+    const vendor = null
+  if (req.method !== 'POST')
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' })
   const {
     slug
     name
@@ -38,11 +34,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   } = req.body |{}
   if (!slug |!name)'
-    return res.status(400).json({ error: 'Missing required fields' });
-
+    return res.status(400).json({ error: 'Missing required fields' })
   if (req && req.method !== 'POST')
 
-    return res && res.status(405).json({ error: 'Method not allowed' });
+    return res && res.status(405).json({ error: 'Method not allowed' })
   const {}
     slug,
     name,
@@ -57,100 +52,84 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
       about,  try {
 
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {};'
   if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });'
-  if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
-
+  if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' })
     const vendor = registerVendor({
-      slug;
-      name;
-
+      slug
+      name
     const vendor = registerVendor({
-      slug;
-      name;
-
-      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
-      teamSize: Number(teamSize || 0);
-      about;
+      slug
+      name
+      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : []
+      teamSize: Number(teamSize || 0)
+      about
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
-      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
+      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []})
     res && res.status(201).json({ vendor })
 
   } catch (e: any) {
 
-    res && res.status(500).json({ error: e && e.message });
+    res && res.status(500).json({ error: e && e.message })
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],}
       caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [,}
-});
+})
     res && res.status(201).json({ vendor })
 
   } catch (e) {
     res && res.status(500).json({ error: e && e.message,}
-});
-  }
-    });
-    res && res.status(201).json({ vendor });
-
-    res && res.status(500).json({ error: e && e.message });
-}
+})
+    })
+    res && res.status(201).json({ vendor })
+    res && res.status(500).json({ error: e && e.message })
     res && res.status(500).json({ error: e && e.message,}
-});
+})
   }    res && res.status(500).json({ error: e && e.message })
- }
-}
 
   } catch (e: any) {
-    res && res.status(500).json({ error: e && e.message });
-  }
+    res && res.status(500).json({ error: e && e.message })
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
       caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [],
-    });
-    res && res.status(201).json({ vendor });
+    })
+    res && res.status(201).json({ vendor })
   } catch (e: any) {
 
     verification_docs,
-    case_studies;
+    case_studies
   } = req.body || {}
 
-      name;
+      name
       services_offered: Array.is_array (services_offered) ? services_offered : [];}
       team_size: Number (team_size || 0)about;}
       verification_docs: Array.is_array (verification_docs) ? verification_docs : [],case_studies: Array.is_array (case_studies) ? case_studies : []})res.status (201).json ({ vendor })} catch (e: any) {res.status (500).json ({ error: e.message },
-}
-verification_docs: Array.is_array (verification_docs) ? verification_docs : [],case_studies: Array.is_array (case_studies) ? case_studies : [];
-      case_studies: Array.is_array (case_studies) ? case_studies : [];
-      case_studies: Array.is_array (case_studies) ? case_studies : [];
+
+verification_docs: Array.is_array (verification_docs) ? verification_docs : [],case_studies: Array.is_array (case_studies) ? case_studies : []
+      case_studies: Array.is_array (case_studies) ? case_studies : []
+      case_studies: Array.is_array (case_studies) ? case_studies : []
     })res.status (201).json ({ vendor })} catch (e: any) {res.status (500).json ({ error: e.message })}    res.status (500).json ({ error: e.message })}
 }res.status(500).json({ error: e.message })}    res.status(500).json({ error: e.message })}
 }}
-}
-}
+
   },
-}
-      team_size: Number (team_size || 0);
-      about;
+
+      team_size: Number (team_size || 0)
+      about
       verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
       case_studies: Array.is_array (case_studies) ? case_studies : [,
-});
-    res.status (201).json ({ vendor });
+})
+    res.status (201).json ({ vendor })
   } catch (e: any) {}
 
-  }
 verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
       case_studies: Array.is_array (case_studies) ? case_studies : []
    ,
-});
-    res.status (201).json ({ vendor });
+})
+    res.status (201).json ({ vendor })
   } catch (e: any) {}
-    res.status (500).json ({ error: e.message });
-  }    res.status (500).json ({ error: e.message });
-
+    res.status (500).json ({ error: e.message })
+  }    res.status (500).json ({ error: e.message })
     res.status(500).json({ error: e.message,}
-});
+})
   }    res.status(500).json({ error: e.message })
-  }
-
-  }
-}
 

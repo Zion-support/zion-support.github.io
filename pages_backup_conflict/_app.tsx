@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 
 ;
+=======
+<<<<<<< HEAD
+=======
+
+;
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
 import React from \'react\'; import type { AppProps } from \'next/app\'; import \'../src/index.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
 const React from "react"; import type { AppProps } from "next/app"; import "./src/index.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''";
 import _React from 'react'; import type { AppProps } from 'next/app'; import '../src/index.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
@@ -19,4 +27,12 @@ const React from "react"; import type { AppProps } from "next/app"; import "./sr
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 const React from "react"; import type { AppProps } from "next/app"; import "./src/index.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+import _React from 'react'; import type { AppProps } from 'next/app'; import '../src/index.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

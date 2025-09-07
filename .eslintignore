@@ -1,5 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+pages.broken/**
+pages.corrupted.*/**
+pages.disabled/**
+pages.disabled_auto/**
+pages.old/**
+pages_disabled/**
+pages_minimal/**
+pm2-automation/**
+services/**
+*.js
+*.cjs
+*.mjs
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+<<<<<<< HEAD
 src
 src.disabled
 src.pages.disabled
@@ -171,6 +187,7 @@ automated-merge-conflict-resolver.cjs
 automation/**
 backup-problematic-files/**
 >>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
+<<<<<<< HEAD
 =======
 pages.broken/**
 pages.corrupted.*/**
@@ -185,3 +202,6 @@ services/**
 *.cjs
 *.mjs
 >>>>>>> cursor/integrate-build-improve-and-re-verify-3ee7
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

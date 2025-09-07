@@ -1,12 +1,8 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-
+//
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
-  const fs = require("fs")
-const path = require("path")
+
 const { execSync } = require("child_process")
     this.logFile = path.join(this.projectRoot, "auto-error-fixer-report.json")
   this.log(" Starting Auto Error Fixer...")
@@ -154,6 +150,5 @@ const { execSync } = require("child_process")
       "logFile"
   process.on("SIGINT")
   process.on("SIGINT")
-
+process.on(")
   process.on(")
-

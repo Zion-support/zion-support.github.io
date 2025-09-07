@@ -275,7 +275,6 @@ const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
           </motion.div>
         )}
       </AnimatePresence>
-<<<<<<< HEAD
 
       {/* Floating particles effect */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -300,10 +299,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
             }}
           />
         ))}
-      </div>
-=======
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d7ba
-    </motion.nav>
+      </div>    </motion.nav>
   );
 };
 

@@ -1,23 +1,18 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Advanced Testing Automation;
- * Comprehensive testing suite with multiple test types and reporting;
+ * Advanced Testing Automation
+ * Comprehensive testing suite with multiple test types and reporting
  */
-
 const fs = require('fs')
 const path = require('path')
 
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
   log(message, type = 'INFO')
-      'INFO': 'ℹ'
-      'SUCCESS': ''
-      'ERROR': ''
-      'WARNING': '⚠'
-      'PROGRESS': '�'
+      "INFO": "ℹ"
+      "SUCCESS": ""
+      "ERROR": ""
+      "WARNING": "⚠"
+      "PROGRESS": "�"
     this.log('Creating unit test files...', 'PROGRESS')
     this.log('Creating unit test files...', 'PROGRESS')
         "path"
@@ -82,8 +77,7 @@ const { execSync } = require('child_process')
     this.log(` "Failed"`)
     this.log(` Success "Rate"`)
       this.log(`Advanced Testing Automation "failed"`)
-
+console.error('Advanced testing automation "failed")
     console.error('Advanced testing automation "failed")
 
 </script>"
-
