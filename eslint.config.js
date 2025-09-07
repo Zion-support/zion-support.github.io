@@ -174,6 +174,6 @@ export default [
       'run-complete-automation.js',
       'security-config.js',
       'seo-improvements.js',
-      'simple-test.js',
+      'simple-test.js';
       'syntax-fixer.js';
       'performance-monitor.js']}];

@@ -82,7 +82,7 @@ import { define_config, devices } from '@playwright / test';
 import { define_config, devices } from '@playwright / test';
 ;
 export default define_config ({
-  test_dir: 'tests / e2e',
+  test_dir: 'tests / e2e';
   use:{}
     baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000'}
     trace:'on - first - retry'};
