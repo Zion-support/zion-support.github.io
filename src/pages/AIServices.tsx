@@ -1,12 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Brain, Zap, Target, CheckCircle } from 'lucide-react';
+import { Metadata } from 'next';
 import Card from '../components/Card';
 import Button from '../components/Button';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import SEO from '../components/SEO';
 import ScrollAnimation from '../components/ScrollAnimation';
+
+export const metadata: Metadata = {
+  title: 'AI Services | Zion Tech Group',
+  description: 'Comprehensive AI services including machine learning, natural language processing, computer vision, and custom AI solutions for your business.',
+  keywords: 'AI services, machine learning, NLP, computer vision, artificial intelligence, AI consulting',
+  openGraph: {
+    title: 'AI Services | Zion Tech Group',
+    description: 'Comprehensive AI services including machine learning, natural language processing, computer vision, and custom AI solutions for your business.',
+    type: 'website',
+  },
+};
 
 const AIServices: React.FC = () => {
   const services = [
@@ -28,18 +37,8 @@ const AIServices: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEO
-        title="AI Services - Zion Tech Group"
-        description="Transform your business with our cutting-edge AI services including machine learning, NLP, computer vision, and more."
-        keywords="AI services, machine learning, NLP, computer vision, artificial intelligence, automation"
-        url="/services/ai-services"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Header />
-        
-        <main>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main>
           <section className="pt-20 pb-16 px-4">
             <div className="max-w-7xl mx-auto">
               <ScrollAnimation animation="slideUp" delay={0.2}>
@@ -81,11 +80,8 @@ const AIServices: React.FC = () => {
               </div>
             </div>
           </section>
-        </main>
-
-        <Footer />
-      </div>
-    </>
+      </main>
+    </div>
   );
 };
 

@@ -1,10 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Code, Database, Smartphone, Shield, Cloud, Globe, Zap, Brain, Cpu, Lock, BarChart3, Users, Phone, Mail, MapPin } from 'lucide-react';
+import { Metadata } from 'next';
 import Card from '../components/Card';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import SEO from '../components/SEO';
+
+export const metadata: Metadata = {
+  title: 'Services | Zion Tech Group',
+  description: 'Comprehensive technology services including AI solutions, IT consulting, cybersecurity, cloud services, and digital transformation.',
+  keywords: 'services, AI services, IT consulting, cybersecurity, cloud services, digital transformation',
+  openGraph: {
+    title: 'Services | Zion Tech Group',
+    description: 'Comprehensive technology services including AI solutions, IT consulting, cybersecurity, cloud services, and digital transformation.',
+    type: 'website',
+  },
+};
 
 const Services: React.FC = () => {
   const services = [
@@ -140,18 +149,8 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEO
-        title="Our Services - Zion Tech Group"
-        description="Discover our comprehensive range of technology services including AI solutions, IT services, cybersecurity, cloud solutions, and more."
-        keywords="AI services, IT services, cybersecurity, cloud solutions, data analytics, micro SaaS, technology consulting"
-        url="/services"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Header />
-        
-        <main>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main>
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -207,7 +206,7 @@ const Services: React.FC = () => {
                   </div>
 
                   <Link
-                    to={service.href}
+                    href={service.href}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
                   >
                     Learn More
@@ -309,14 +308,14 @@ const Services: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
               >
                 Get Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                to="/pricing"
+                href="/pricing"
                 className="inline-flex items-center justify-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
               >
                 View Pricing
@@ -324,11 +323,8 @@ const Services: React.FC = () => {
             </div>
           </div>
         </section>
-        </main>
-
-        <Footer />
-      </div>
-    </>
+      </main>
+    </div>
   );
 };
 

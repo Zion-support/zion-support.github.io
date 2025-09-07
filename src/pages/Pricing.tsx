@@ -1,5 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Pricing | Zion Tech Group',
+  description: 'Transparent pricing for AI services, IT solutions, and technology consulting. Choose the plan that fits your business needs.',
+  keywords: 'pricing, AI services pricing, IT consulting rates, technology solutions cost',
+  openGraph: {
+    title: 'Pricing | Zion Tech Group',
+    description: 'Transparent pricing for AI services, IT solutions, and technology consulting. Choose the plan that fits your business needs.',
+    type: 'website',
+  },
+};
 
 const Pricing: React.FC = () => {
   const plans = [
@@ -126,7 +138,7 @@ const Pricing: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
             >
               Get Free Consultation
@@ -174,7 +186,7 @@ function PricingCard({ name, price, period, description, features, popular }: {
         ))}
       </ul>
       <Link
-        to="/contact"
+        href="/contact"
         className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
           popular
             ? 'bg-blue-600 text-white hover:bg-blue-700'

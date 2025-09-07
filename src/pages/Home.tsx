@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { 
   ArrowRight, 
@@ -18,16 +18,25 @@ import {
   Mail,
   MapPin
 } from "lucide-react";
+import { Metadata } from "next";
 import Card from "../components/Card";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import SEO from "../components/SEO";
 import ParticleBackground from "../components/ParticleBackground";
 import TypingAnimation from "../components/TypingAnimation";
 import ScrollAnimation from "../components/ScrollAnimation";
 import ParallaxSection from "../components/ParallaxSection";
 import Testimonials from "../components/Testimonials";
 import BlogSection from "../components/BlogSection";
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - AI-Powered Technology Solutions',
+  description: 'Leading provider of AI services, IT solutions, and technology consulting. Transform your business with cutting-edge AI and cloud technologies.',
+  keywords: 'AI services, IT solutions, technology consulting, artificial intelligence, cloud solutions, cybersecurity',
+  openGraph: {
+    title: 'Zion Tech Group - AI-Powered Technology Solutions',
+    description: 'Leading provider of AI services, IT solutions, and technology consulting. Transform your business with cutting-edge AI and cloud technologies.',
+    type: 'website',
+  },
+};
 
 // Track scroll depth function
 const trackScrollDepth = (depth: number) => {
@@ -155,14 +164,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <SEO
-        title="Zion Tech Group - AI & Technology Solutions"
-        description="Leading AI-powered technology solutions for modern businesses. Transform your digital future with cutting-edge innovation and enterprise-grade reliability."
-        keywords="AI, artificial intelligence, technology solutions, digital transformation, enterprise software, cloud computing, cybersecurity, automation"
-        url="/"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative">
         {/* Particle Background */}
         <ParticleBackground particleCount={30} />
         
@@ -208,7 +210,7 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
               <Link
-                to="/services"
+                href="/services"
                 onClick={() => trackButtonClick('explore_services', 'hero')}
                 className="group bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
               >
@@ -216,7 +218,7 @@ const Home: React.FC = () => {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/contact"
+                href="/contact"
                 onClick={() => trackButtonClick('get_consultation', 'hero')}
                 className="group border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
               >
@@ -279,7 +281,7 @@ const Home: React.FC = () => {
                     {service.description}
                   </p>
                   <Link
-                    to={service.href}
+                    href={service.href}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
                   >
                     Learn More
@@ -382,14 +384,14 @@ const Home: React.FC = () => {
             <div className="text-center">
               <div className="inline-flex flex-col sm:flex-row gap-4">
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="group bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
                 >
                   Get Free Consultation
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  to="/services"
+                  href="/services"
                   className="group border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
                 >
                   View Our Services
@@ -417,14 +419,14 @@ const Home: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="group bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
                 >
                   Start Your Project
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  to="/pricing"
+                  href="/pricing"
                   className="group border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
                 >
                   View Pricing
@@ -435,7 +437,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 

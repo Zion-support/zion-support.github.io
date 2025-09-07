@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Clock, MessageCircle, Calendar } from 'lucide-react';
+import { Metadata } from 'next';
 import Card from '../components/Card';
 import Button from '../components/Button';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import SEO from '../components/SEO';
 import ScrollAnimation from '../components/ScrollAnimation';
+
+export const metadata: Metadata = {
+  title: 'Contact Us - Zion Tech Group',
+  description: 'Get in touch with Zion Tech Group for AI and technology solutions. Contact our expert team for a free consultation.',
+  keywords: 'contact, consultation, AI services, technology solutions, get in touch',
+  openGraph: {
+    title: 'Contact Us - Zion Tech Group',
+    description: 'Get in touch with Zion Tech Group for AI and technology solutions. Contact our expert team for a free consultation.',
+    type: 'website',
+  },
+};
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -58,16 +67,7 @@ ${formData.message}
   };
 
   return (
-    <>
-      <SEO
-        title="Contact Us - Zion Tech Group"
-        description="Get in touch with Zion Tech Group for AI and technology solutions. Contact our expert team for a free consultation."
-        keywords="contact, consultation, AI services, technology solutions, get in touch"
-        url="/contact"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Header />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         
         <main>
           {/* Hero Section */}
@@ -353,10 +353,7 @@ ${formData.message}
             </div>
           </section>
         </main>
-
-        <Footer />
-      </div>
-    </>
+    </div>
   );
 };
 
