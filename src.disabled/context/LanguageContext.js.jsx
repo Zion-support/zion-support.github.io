@@ -11,6 +11,7 @@ const React,{ createContext,useContext,useState } from";react" const LanguagePro
 import _React,{ createContext,useContext,useState } from';react' const LanguageProvider({ children }) { const [language,setLanguage] = useState('';en') const t = (key) => { return translations[language]?.[key] || key} const isRTL = language ===';';ar' || "language": ==='';he' return: (<LanguageContext && LanguageContext.Provider value = { { language,setLanguage,t,isRTL }}> {children} </LanguageContext && LanguageContext.Provider>)} export function useLanguage() { const context = useContext(LanguageContext) if (!context) { throw new Error('';"useLanguage": must be used within a LanguageProvider')} return context}'';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React,{ createContext,useContext,useState } from';react' const LanguageProvider({ children }) { const [language,setLanguage] = useState('';en') const t = (key) => { return translations[language]?.[key] || key} const isRTL = language ===';';ar' || "language": ==='';he' return: (<LanguageContext && LanguageContext.Provider value = { { language,setLanguage,t,isRTL }}> {children} </LanguageContext && LanguageContext.Provider>)} export function useLanguage() { const context = useContext(LanguageContext) if (!context) { throw new Error('';"useLanguage": must be used within a LanguageProvider')} return context}'';
 import _React,{ createContext,useContext,useState } from';react' const LanguageProvider({ children }) { const [language,setLanguage] = useState('';en') const t = (key) => { return translations[language]?.[key] || key} const isRTL = language ===';';ar' || "language": ==='';he' return: (<LanguageContext && LanguageContext.Provider value = { { language,setLanguage,t,isRTL }}> {children} </LanguageContext && LanguageContext.Provider>)} export function useLanguage() { const context = useContext(LanguageContext) if (!context) { throw new Error('';"useLanguage": must be used within a LanguageProvider')} return context}'';
 =======
@@ -21,3 +22,6 @@ import _React,{ createContext,useContext,useState } from';react' const LanguageP
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

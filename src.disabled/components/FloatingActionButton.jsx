@@ -25,6 +25,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
 =======
@@ -37,3 +38,8 @@ ursor/automate-test-improve-and-merge-code-646c;
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window.open("https:")]"}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+"import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
+"import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window.open("https:")]"}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

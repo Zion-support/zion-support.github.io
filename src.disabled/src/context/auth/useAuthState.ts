@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react'; ; interface User { id: string; emai
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState,useEffect } from 'react'; ; interface User { id: 'string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string' }; interface AuthTokens { accessToken: 'string | null; refreshToken: string | null' }; export const useAuthState[,React.Dispatch<React.SetStateAction<any>>] = () => {; const [user,setUser] = useState<any>(null); const [isLoading,setIsLoading] = useState(true); const [onboardingStep,setOnboardingStep] = useState(0); const [tokens,setTokens] = useState<any>({; accessToken: 'null',; refreshToken: 'null;' }); ; useEffect(() => {}})
 import { useState, useEffect } from 'react'; interface User { "id": string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string  }; interface AuthTokens { "accessToken": string | null; refreshToken: string | null  }; export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {; const [user, setUser] = useState<any>(null); const [isLoading, setIsLoading] = useState(true); const [onboardingStep, setOnboardingStep] = useState(0); const [tokens, setTokens] = useState<any>({; "accessToken": null, "refreshToken": null}); useEffect(() => {}})
@@ -16,3 +17,5 @@ import { useState,useEffect } from 'react'; ; interface User { id: string; email
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import _React from 'react'; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = ""https": ';' })
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 import _React from 'react'; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = ""https": ';' })
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import _React from 'react'; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = ""https": ';' })
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 import _React from 'react'; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = ""https": ';' })class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
@@ -22,10 +26,13 @@ import _React from 'react'; "export default function EnhancedSEO({" title = "Zio
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import _React from 'react'; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = ""https": ';' })
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import React from \'react\'; \"export default function EnhancedSEO({\" title = \"Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions\",\" description = \"Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions.Transform your business with cutting-edge technology services.\",\" keywords = \"AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation\",canonical,\" ogImage = \""https\": \';\' })
 const React from "react"; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = "https: ";" })'"'"

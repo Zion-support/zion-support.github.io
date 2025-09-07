@@ -17,11 +17,14 @@ ursor/add-new-services-and-deploy-updates-0462;
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = ' }) => {' const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 :temp_exclude/src.disabled/components/EnhancedLoading.jsx
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 :temp_exclude/src.disabled/components/EnhancedLoading.jsx;
 :temp_exclude/src.disabled/components/EnhancedLoading.jsx;
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
@@ -31,4 +34,7 @@ ursor/add-new-services-and-deploy-updates-0462;
 :temp_exclude/src.disabled/components/EnhancedLoading.jsx;
 :temp_exclude/src.disabled/components/EnhancedLoading.jsx
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

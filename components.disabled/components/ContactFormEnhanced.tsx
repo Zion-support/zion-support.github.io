@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 <<<<<<< HEAD
@@ -44,6 +45,8 @@ import {
 } from 'lucide-react';
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 ;
 // Auto-generated module;
@@ -222,7 +225,10 @@ export {};
     </div>;
   )}export default ContactFormEnhanced;// Auto-generated module;
 export {}
+<<<<<<< HEAD
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 // Auto-generated module
 export {};
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

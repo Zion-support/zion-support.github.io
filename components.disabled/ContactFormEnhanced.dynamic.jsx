@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 const ContactFormEnhanced = dynamic(() => import(\"./ContactFormEnhanced\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default ContactFormEnhanced\' ,const ContactFormEnhanced = dynamic(() => import("./ContactFormEnhanced"),{"; loading: () => <p>Loading.</p,>}) export: "default ContactFormEnhanced" ,""";
 const ContactFormEnhanced = dynamic(() => import("./ContactFormEnhanced"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ContactFormEnhanced' ,';
 </p>';
@@ -37,7 +40,10 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 </p>';
+<<<<<<< HEAD
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 const ContactFormEnhanced = dynamic(() => import("./ContactFormEnhanced"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ContactFormEnhanced' ,'
 </p>'
 <<<<<<< HEAD

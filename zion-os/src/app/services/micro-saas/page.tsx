@@ -198,12 +198,16 @@ function MicroSAASPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
       <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
+<<<<<<< HEAD
         {microSAASServices.map (service => (
           <div;
 =======
       <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
         {microSAASServices.map (service => (<div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        {microSAASServices.map (service => (<div;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             key={service.id}
             className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space - y-6";
           >;
@@ -219,6 +223,33 @@ function MicroSAASPage() {
               <h3 className="font - semibold mb - 3 text - blue - 400">Target Markets</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                {service.target_market.map ((market, index) => (<div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - green - 400">🎯</span>;
+      <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-8">;
+        {microSAASServices.map (service => (<div;
+        {microSAASServices.map (service => (
+          <div;
+            key={service.id}
+            className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space - y-6";
+          >;
+            {/* Service Header */}
+            <div className="text - center space - y-3">;
+              <div className="text - 4xl">{service.icon}</div>;
+              <h2 className="text - 2xl font - bold">{service.name}</h2>;
+              <p className="opacity - 80">{service.description}</p>;
+              <div className="text - 2xl font - bold text - blue - 400">{service.pricing}</div>;
+            </div>;
+            {/* Target Market */}
+            <div>;
+              <h3 className="font - semibold mb - 3 text - blue-400">Target Markets</h3>;
+              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
+                {service.target_market.map ((market, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
+                    <span className="text - green-400">🎯</span>;
+              <h3 className="font - semibold mb - 3 text - blue - 400">Target Markets</h3>;
+              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 {service.target_market.map ((market, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - green - 400">🎯</span>;
@@ -266,6 +297,12 @@ function MicroSAASPage() {
 <<<<<<< HEAD
               <h3 className="font - semibold mb - 3 text - purple - 400">Key Features</h3>;
               <div className="grid grid - cols - 1 gap - 2">;
+                {service.features.map ((feature, index) => (<div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - blue - 400">✓</span>;
+              <h3 className="font - semibold mb - 3 text - purple-400">Key Features</h3>;
+              <div className="grid grid - cols - 1 gap-2">;
+                {service.features.map ((feature, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
+                    <span className="text - blue-400">✓</span>;
                 {service.features.map ((feature, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - blue - 400">✓</span>;
@@ -297,6 +334,12 @@ function MicroSAASPage() {
 <<<<<<< HEAD
               <h3 className="font - semibold mb - 3 text - green - 400">Business Benefits</h3>;
               <div className="grid grid - cols - 1 gap - 2">;
+                {service.benefits.map ((benefit, index) => (<div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - yellow - 400">💡</span>;
+              <h3 className="font - semibold mb - 3 text - green-400">Business Benefits</h3>;
+              <div className="grid grid - cols - 1 gap-2">;
+                {service.benefits.map ((benefit, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
+                    <span className="text - yellow-400">💡</span>;
                 {service.benefits.map ((benefit, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - yellow - 400">💡</span>;
@@ -328,6 +371,12 @@ function MicroSAASPage() {
 <<<<<<< HEAD
               <h3 className="font - semibold mb - 3 text - orange - 400">Integrations</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
+                {service.integrations.map ((integration, index) => (<div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - purple - 400">🔗</span>;
+              <h3 className="font - semibold mb - 3 text - orange-400">Integrations</h3>;
+              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
+                {service.integrations.map ((integration, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;
+                    <span className="text - purple-400">🔗</span>;
                 {service.integrations.map ((integration, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
                     <span className="text - purple - 400">🔗</span>;
@@ -368,9 +417,12 @@ function MicroSAASPage() {
                 href={service.contact_link}
                 className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <h3 className="font - semibold mb - 3 text - cyan-400">Deployment</h3>;
               <div className="text - sm opacity-80">{service.deployment}</div>;
             </div>;
@@ -379,11 +431,15 @@ function MicroSAASPage() {
               <a;
                 href={service.contact_link}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font-semibold";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
                 className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               >;
                 Get Started;
               </a>;
@@ -392,12 +448,16 @@ function MicroSAASPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
                 className="w - full block text - center text - blue - 400 hover:text - blue - 300 text - sm underline";
+<<<<<<< HEAD
 =======
 =======
                 className="w - full block text - center text - blue - 400 hover:text - blue - 300 text - sm underline";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 className="w - full block text - center text - blue - 400 hover:text - blue - 300 text-sm underline";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                className="w - full block text - center text - blue - 400 hover:text - blue - 300 text-sm underline";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               >;
                 Learn More;
               </a>;
@@ -432,9 +492,12 @@ function MicroSAASPage() {
             <h3 className="font - semibold mb - 2">Integrations</h3>;
             <p className="text - sm opacity - 80">Connect with your existing tools</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="space-y-6">;
         <h2 className="text - 3xl font - bold text-center">SAAS Capabilities Overview</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 4 gap-6">;
@@ -454,17 +517,23 @@ function MicroSAASPage() {
             <p className="text - sm opacity - 80">Built - in analytics and reporting</p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
             <div className="text - 3xl mb-3">🔌</div>;
             <h3 className="font - semibold mb-2">Integrations</h3>;
             <p className="text - sm opacity-80">Connect with your existing tools</p>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
             <div className="text - 3xl mb - 3">🔌</div>;
             <h3 className="font - semibold mb - 2">Integrations</h3>;
             <p className="text - sm opacity - 80">Connect with your existing tools</p>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           </div>;
         </div>;
       </div>;
@@ -484,9 +553,12 @@ function MicroSAASPage() {
             href="mailto:kleber@ziontechgroup.com?subject = Micro%20SAAS%20Consultation";
             className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text - lg";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="text - center space - y-6 py - 12 bg - gradient - to - r from - blue - 600 / 10 to - purple - 600 / 10 rounded - lg border border-white / 10">;
         <h2 className="text - 3xl font-bold">Ready to Accelerate Your Business?</h2>;
         <p className="text - xl opacity - 80 max - w-2xl mx-auto">;
@@ -497,11 +569,15 @@ function MicroSAASPage() {
           <a;
             href="mailto:kleber@ziontechgroup.com?subject = Micro%20SAAS%20Consultation";
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text-lg";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
             className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text - lg";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text - lg";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           >;
             Schedule SAAS Consultation;
           </a>;
@@ -510,12 +586,16 @@ function MicroSAASPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
             className="border border - white / 20 text - white px - 8 py - 3 rounded - lg hover:bg - white / 10 transition - all font - semibold text - lg";
+<<<<<<< HEAD
 =======
 =======
             className="border border - white / 20 text - white px - 8 py - 3 rounded - lg hover:bg - white / 10 transition - all font - semibold text - lg";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             className="border border - white / 20 text - white px - 8 py - 3 rounded - lg hover:bg - white / 10 transition - all font - semibold text-lg";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+            className="border border - white / 20 text - white px - 8 py - 3 rounded - lg hover:bg - white / 10 transition - all font - semibold text-lg";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           >;
             Call: +1 302 464 0950;
           </a>;
@@ -531,6 +611,7 @@ function MicroSAASPage() {
           href="/services";
           className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font - semibold";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <div className="text-center">;
         <a;
@@ -538,11 +619,16 @@ function MicroSAASPage() {
           className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font-semibold";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="text-center">;
         <a;
           href="/services";
           className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font - semibold";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         >;
           ← Back to All Services;
         </a>;

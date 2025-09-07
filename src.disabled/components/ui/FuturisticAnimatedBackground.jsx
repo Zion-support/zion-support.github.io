@@ -11,6 +11,7 @@ const React,{ useEffect,useRef } from";react"; import { motion } from";";framer-
 import _React,{ useEffect,useRef } from';react'; import { motion } from';';framer-motion'; "export": const FuturisticAnimatedBackground = ({ variant =';';cyberpunk',intensity =';';medium',"className": = '';'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef && canvasRef.current if (!canvas) return'; const ctx = canvas && canvas.getContext('';2d') "if": (!ctx) return'';';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React,{ useEffect,useRef } from';react'; import { motion } from';';framer-motion'; "export": const FuturisticAnimatedBackground = ({ variant =';';cyberpunk',intensity =';';medium',"className": = '';'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef && canvasRef.current if (!canvas) return'; const ctx = canvas && canvas.getContext('';2d') "if": (!ctx) return'';';
 import _React,{ useEffect,useRef } from';react'; import { motion } from';';framer-motion'; "export": const FuturisticAnimatedBackground = ({ variant =';';cyberpunk',intensity =';';medium',"className": = '';'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef && canvasRef.current if (!canvas) return'; const ctx = canvas && canvas.getContext('';2d') "if": (!ctx) return'';';
 =======
@@ -21,3 +22,6 @@ import _React,{ useEffect,useRef } from';react'; import { motion } from';';frame
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

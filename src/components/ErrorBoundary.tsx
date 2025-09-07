@@ -23,10 +23,15 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
+=======
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     this.setState({
       error,
       errorInfo
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -89,6 +94,11 @@ class ErrorBoundary extends Component<Props, State> {
               )}
 =======
   handleRefresh = () => {
+=======
+  }
+
+  handleReload = () => {
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     window.location.reload();
   };
 
@@ -100,16 +110,26 @@ class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+<<<<<<< HEAD
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-600" />
             </div>
             
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
+=======
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
+            <div className="flex justify-center mb-4">
+              <AlertTriangle className="h-16 w-16 text-red-500" />
+            </div>
+            
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               Oops! Something went wrong
             </h1>
             
             <p className="text-gray-600 mb-6">
+<<<<<<< HEAD
               We're sorry, but something unexpected happened. Please try refreshing the page or go back to the homepage.
             </p>
 
@@ -140,11 +160,37 @@ class ErrorBoundary extends Component<Props, State> {
                 className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
+=======
+              We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.
+            </p>
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-left">
+                <h3 className="font-semibold text-red-800 mb-2">Error Details:</h3>
+                <pre className="text-xs text-red-700 whitespace-pre-wrap">
+                  {this.state.error.toString()}
+                </pre>
+                {this.state.errorInfo && (
+                  <pre className="text-xs text-red-700 whitespace-pre-wrap mt-2">
+                    {this.state.errorInfo.componentStack}
+                  </pre>
+                )}
+              </div>
+            )}
+
+            <div className="flex space-x-4 justify-center">
+              <button
+                onClick={this.handleReload}
+                className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                <RefreshCw className="h-4 w-4 mr-2" />
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Refresh Page
               </button>
               
               <button
                 onClick={this.handleGoHome}
+<<<<<<< HEAD
                 className="inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
               >
                 <Home className="w-4 h-4 mr-2" />
@@ -164,6 +210,14 @@ class ErrorBoundary extends Component<Props, State> {
               </p>
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </div>
+=======
+                className="flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                <Home className="h-4 w-4 mr-2" />
+                Go Home
+              </button>
+            </div>
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           </div>
         </div>
       );
@@ -223,4 +277,8 @@ interface Props  {children: ReactNode;
       )}return this.props.children;
   }
 }export default ErrorBoundary;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-e77d
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

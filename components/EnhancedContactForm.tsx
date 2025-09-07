@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -96,6 +97,19 @@ setIsSubmitting (true)const handleInputBlur = (name: keyof FormData) => {//Valid
 import { motion  } from 'framer-motion';
 import { Send,CheckCircle,AlertCircle,User,Mail,Phone,Building,MapPin,MessageSquare,Clock,Calendar,Globe,} from 'lucide-react';
 import Link from 'next/link';
+=======
+
+;
+ setErrors (newErrors)}
+setIsSubmitting (true)const handleInputBlur = (name: keyof FormData) => {//Validate individual field on blur if (formData[name] && errors[name]) {}> <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center" > <CheckCircle className="w-10 h-10 text-green-400" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Message Sent Successfully!</h3> <p className="text-white/70 mb-6" > Thank you for reaching out. We'll get back to you within 24 hours. </p> <button;
+}return (<div> <h3 className="text-2xl font-bold text-white mb-6" >Get in Touch</h3> <p className="text-white/70 leading-relaxed mb-8" > Ready to transform your business with cutting-edge technology? Let's discuss your project and explore how our solutions can drive innovation and growth. </p> </div> <div className="space-y-6" > <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-3 flex items-center justify-center" > <Mail className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Email</h4> <p className="text-white/70" >contact@ziontechgroup && ziontechgroup.com</p> </div> </div> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-3 flex items-center justify-center" > <Phone className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Phone</h4> <p className="text-white/70" >+1 (555) 123-4567</p> </div> </div> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 p-3 flex items-center justify-center" > <MapPin className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Location</h4> <p className="text-white/70" >San Francisco, CA</p> </div> </div> </div> </div> <div> <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2" > Full Name * </label> <input /> {errors && errors.name && (<motion && motion.p </motion && motion.p>)}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2" > Email Address * </label> <input /> {errors && errors.email && (<motion && motion.p </motion && motion.p>)}</div> </div> <div className="grid grid-cols-1 sm:grid-cols-2 gap-6" > <div> <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2" > Company </label> <input /> </div> <div> <label htmlFor="service" className="block text-sm font-medium text-white/80 mb-2" > Service Interest </label> <select </option>) )}</select> </div> </div> <div> <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2" > Message * </label> <textareaerrors && errors.message ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10';
+}text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`;
+}placeholder="Tell us about your project and requirements..." /> {errors && errors.message && (<motion&& motion.p initial= {{opacity: 0, y: -10;
+}animate= {{import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { Send,CheckCircle,AlertCircle,User,Mail,Phone,Building,MapPin,MessageSquare,Clock,Calendar,Globe,} from 'lucide-react';
+import Link from 'next/link';
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 const EnhancedContactForm: React.FC = () => {const [formData, setFormData] = useState({name: '',email: '',company: '',phone: '',service: '',budget: '',timeline: '',message: '',})const [errors, setErrors] = useState<Record<string, string>>({})const [isSubmitting, setIsSubmitting] = useState(false)const [isSubmitted, setIsSubmitted] = useState(false)const [selectedService, setSelectedService]  = useState('')const services = [;
     {id: 'ai-development',name: 'AI Development',icon: Globe,color: 'from-purple-500 to-pink-500',},{id: 'cloud-architecture',name: 'Cloud Architecture',icon: Globe,color: 'from-blue-500 to-cyan-500',},{id: 'web-development',name: 'Web Development',icon: Globe,color: 'from-green-500 to-emerald-500',},{id: 'cybersecurity',name: 'Cybersecurity',icon: Globe,color: 'from-red-500 to-orange-500',},{id: 'iot-platforms',name: 'IoT Platforms',icon: Globe,color: 'from-indigo-500 to-purple-500',},{id: 'digital-transformation',name: 'Digital Transformation',icon: Globe,color: 'from-yellow-500 to-orange-500',},{id: 'custom',name: 'Custom Solution',icon: Globe,color: 'from-gray-500 to-slate-500',},];
   const validateForm = (): boolean => {const newErrors: FormErrors = {}
@@ -103,6 +117,7 @@ const EnhancedContactForm: React.FC = () => {const [formData, setFormData] = use
     } else if (formData.name.trim().length < 2) {newErrors.name = 'Name must be at least 2 characters long';
     }if (!formData.email.trim()) {newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {newErrors.email = 'Please enter a valid email address';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
     if (!formData.message.trim()) {newErrors.message = 'Message is required';
@@ -257,6 +272,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (errors[name]) {setErrors(prev => ({ ...prev, [name]: '' }))}
   }const containerVariants = {hidden: { opacity: 0 },visible: {opacity: 1,transition: {staggerChildren: 0.1,delayChildren: 0.2,},},}const itemVariants = {hidden: { opacity: 0, y: 30 },visible: {opacity: 1,y: 0,transition: { duration: 0.6 },},}if (isSubmitted) {return (<motion&& motion.div;
         initial={{ opacity: 0, scale: 0 && 0.9 }}
+=======
+    }
+    if (!formData.message.trim()) {newErrors.message = 'Message is required';
+    } else if (formData.message.trim().length < 10) {newErrors.message = 'Message must be at least 10 characters long';
+    } else if (formData.message.trim().length > 1000) {newErrors.message = 'Message must be less than 1000 characters';
+    setErrors(newErrors)return Object && Object.keys(newErrors).length === 0;
+}const handleSubmit = async (e: React && React.FormEvent) => {e && e.preventDefault()if (!validateForm()) {showError('Validation ErrorPlease fix the errors in the form')return;
+    }
+    setIsSubmitting(true)})setErrors({})} catch (error) {console && console.error('Error submitting form:', error)showError('Submission FailedThere was an error sending your message. Please try again.')} finally {setIsSubmitting(false)}// Simulate API call;
+    await new Promise(resolve => setTimeout(resolve, 2000))setIsSubmitting(false)setIsSubmitted(true)// Reset form after successful submission;
+    setTimeout(() => {setIsSubmitted(false)setFormData({name: '',email: '',company: '',phone: '',service: '',budget: '',timeline: '',message: '',})setSelectedService('')}, 5000)}const handleChange = (e: React.ChangeEvent<;
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+    >;
+  ) => {const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }))// Clear error when user starts typing;
+    if (errors[name]) {setErrors(prev => ({ ...prev, [name]: '' }))}
+  }const containerVariants = {hidden: { opacity: 0 },visible: {opacity: 1,transition: {staggerChildren: 0.1,delayChildren: 0.2,},},}const itemVariants = {hidden: { opacity: 0, y: 30 },visible: {opacity: 1,y: 0,transition: { duration: 0.6 },},}if (isSubmitted) {return (<motion&& motion.div;
+        initial={{ opacity: 0, scale: 0 && 0.9 }}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         animate={{ opacity: 1, scale: 1 }}className="text-center py-12">;
         <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center">;
           <CheckCircle className="w-10 h-10 text-green-400" />;
@@ -416,7 +450,10 @@ import { useToast  } from './ui/Toast';
 const EnhancedContactForm: React.FC;<section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">;
       <div className="container mx-auto px-4">;
         <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           variants={containerVariants}
           initial="hidden";
           whileInView="visible";
@@ -749,6 +786,7 @@ const EnhancedContactForm: React.FC;<section className="py-20 bg-gradient-to-br 
                 <p className="text-sm text-gray-500 text-center mt-4">;
                   By submitting this form, you agree to our{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Link
                     href="/privacy"
                     className="text-blue-600 hover: text-blue-700 underline"
@@ -768,6 +806,8 @@ const EnhancedContactForm: React.FC;<section className="py-20 bg-gradient-to-br 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 export default EnhancedContactForm;
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   <Link;
                     href="/privacy";
                     className="text-blue-600 hover: text-blue-700 underline";
@@ -781,5 +821,9 @@ export default EnhancedContactForm;
         </motion.div>;
       </div>;
     </section>;
+<<<<<<< HEAD
   )}export default EnhancedContactForm;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  )}export default EnhancedContactForm;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

@@ -11,6 +11,7 @@ const React from";react" const ContactForm = () => { const [formData,setFormData
 import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e && e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e && e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e && e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e && e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
 import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e && e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e && e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
 =======
@@ -21,3 +22,6 @@ import _React from';react' const ContactForm = () => { const [formData,setFormDa
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

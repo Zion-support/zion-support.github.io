@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "export\": const ErrorPage = ({ ;
 export: const ErrorPage = ({ ;""
 =======
 "export const ErrorPage = ({"; statusCode = 404,title = "Page Not Found"," message = "The page you are looking for does not exist."}) => {" return (); <div className="min-h-screen bg-zion-blue flex items-center justify-center">" <div className="text-center text-white">" <h1 className="text-6xl font-bold mb-4">{statusCode}</h1>" <h2 className="text-2xl font-semibold mb-4">{title}</h2>" <p className="text-lg mb-8 max-w-md mx-auto">{message}</p>" <div className="space-x-4">" <Button asChild>" <Link to="/">Go Home</Link>" </Button>" <Button variant="outline" asChild>" <Link to="/contact">Contact Support</Link>" </Button>" </div> ";"""
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 "export\": const ErrorPage = ({export: const ErrorPage = ({"";
 "export const ErrorPage = ({"; statusCode = 404,title = "Page Not Found"," message = "The page you are looking for does not exist."}) => {" return ()<div className="min-h-screen bg-zion-blue flex items-center justify-center">" <div className="text-center text-white">" <h1 className="text-6xl font-bold mb-4">{statusCode}</h1>" <h2 className="text-2xl font-semibold mb-4">{title}</h2>" <p className="text-lg mb-8 max-w-md mx-auto">{message}</p>" <div className="space-x-4">" <Button asChild>" <Link to="/">Go Home</Link>" </Button>" <Button variant="outline" asChild>" <Link to="/contact">Contact Support</Link>" </Button>" </div> ";""";
@@ -30,7 +33,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 "export\": const ErrorPage = ({export: const ErrorPage = ({"";
 "export const ErrorPage = ({"; statusCode = 404,title = "Page Not Found"," message = "The page you are looking for does not exist."}) => {" return ()<div className="min-h-screen bg-zion-blue flex items-center justify-center">" <div className="text-center text-white">" <h1 className="text-6xl font-bold mb-4">{statusCode}</h1>" <h2 className="text-2xl font-semibold mb-4">{title}</h2>" <p className="text-lg mb-8 max-w-md mx-auto">{message}</p>" <div className="space-x-4">" <Button asChild>" <Link to="/">Go Home</Link>" </Button>" <Button variant="outline" asChild>" <Link to="/contact">Contact Support</Link>" </Button>" </div> ";""";
 "export const ErrorPage = ({"; statusCode = 404,title = "Page Not Found"," message = "The page you are looking for does not exist."}) => {" return (); <div className="min-h-screen bg-zion-blue flex items-center justify-center">" <div className="text-center text-white">" <h1 className="text-6xl font-bold mb-4">{statusCode}</h1>" <h2 className="text-2xl font-semibold mb-4">{title}</h2>" <p className="text-lg mb-8 max-w-md mx-auto">{message}</p>" <div className="space-x-4">" <Button asChild>" <Link to="/">Go Home</Link>" </Button>" <Button variant="outline" asChild>" <Link to="/contact">Contact Support</Link>" </Button>" </div> ";"""
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 
 "export\": const ErrorPage = ({ ;
@@ -47,14 +53,20 @@ export: const ErrorPage = ({ ;""
 "export const ErrorPage = ({"; statusCode = 404,title = "Page Not Found"," message = "The page you are looking for does not exist."}) => {" return (); <div className="min-h-screen bg-zion-blue flex items-center justify-center">" <div className="text-center text-white">" <h1 className="text-6xl font-bold mb-4">{statusCode}</h1>" <h2 className="text-2xl font-semibold mb-4">{title}</h2>" <p className="text-lg mb-8 max-w-md mx-auto">{message}</p>" <div className="space-x-4">" <Button asChild>" <Link to="/">Go Home</Link>" </Button>" <Button variant="outline" asChild>" <Link to="/contact">Contact Support</Link>" </Button>" </div> ";"""
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 "export const ErrorPage = ({"; statusCode = 404,title = "Page Not Found"," message = "The page you are looking for does not exist."}) => {" return (); <div className="min-h-screen bg-zion-blue flex items-center justify-center">" <div className="text-center text-white">" <h1 className="text-6xl font-bold mb-4">{statusCode}</h1>" <h2 className="text-2xl font-semibold mb-4">{title}</h2>" <p className="text-lg mb-8 max-w-md mx-auto">{message}</p>" <div className="space-x-4">" <Button asChild>" <Link to="/">Go Home</Link>" </Button>" <Button variant="outline" asChild>" <Link to="/contact">Contact Support</Link>" </Button>" </div> ";"""
 "export\": const ErrorPage = ({ ;
 export: const ErrorPage = ({ ;""
 "export const ErrorPage = ({"; statusCode = 404,title = "Page Not Found"," message = "The page you are looking for does not exist."}) => {" return (); <div className="min-h-screen bg-zion-blue flex items-center justify-center">" <div className="text-center text-white">" <h1 className="text-6xl font-bold mb-4">{statusCode}</h1>" <h2 className="text-2xl font-semibold mb-4">{title}</h2>" <p className="text-lg mb-8 max-w-md mx-auto">{message}</p>" <div className="space-x-4">" <Button asChild>" <Link to="/">Go Home</Link>" </Button>" <Button variant="outline" asChild>" <Link to="/contact">Contact Support</Link>" </Button>" </div> ";"""
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

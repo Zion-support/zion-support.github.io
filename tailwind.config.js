@@ -3,6 +3,7 @@ export default {
   content: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -11,14 +12,22 @@ export default {
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}'
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   ],
   theme: {
     extend: {
@@ -75,12 +84,17 @@ export default {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
+<<<<<<< HEAD
         },
 <<<<<<< HEAD
         'zion-slate-dark': '#1e293b',
         'zion-slate': '#334155',
         'zion-slate-light': '#475569',
 =======
+=======
+          950: '#030712'
+        }
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -93,9 +107,12 @@ export default {
         'slide-up': 'slideUp 0.5s ease-out',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         'slide-down': 'slideDown 0.5s ease-out',
         'slide-left': 'slideLeft 0.5s ease-out',
         'slide-right': 'slideRight 0.5s ease-out',
@@ -107,6 +124,7 @@ export default {
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -115,10 +133,13 @@ export default {
         'wiggle': 'wiggle 1s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
+<<<<<<< HEAD
 <<<<<<< HEAD
           '100%': { opacity: '1' },
         },
@@ -139,23 +160,34 @@ export default {
           '100%': { transform: 'translateY(0px)', opacity: '1' }
 =======
           '100%': { transform: 'translateY(0)', opacity: '1' },
+=======
+          '100%': { opacity: '1' }
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' }
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         },
         slideDown: {
           '0%': { transform: 'translateY(-20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' }
         },
         slideLeft: {
           '0%': { transform: 'translateX(20px)', opacity: '0' },
-          '100%': { transform: 'translateX(0)', opacity: '1' },
+          '100%': { transform: 'translateX(0px)', opacity: '1' }
         },
         slideRight: {
           '0%': { transform: 'translateX(-20px)', opacity: '0' },
+<<<<<<< HEAD
           '100%': { transform: 'translateX(0)', opacity: '1' },
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          '100%': { transform: 'translateX(0px)', opacity: '1' }
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         },
         scaleIn: {
           '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1)' }
         },
         bounceIn: {
           '0%': { transform: 'scale(0.3)', opacity: '0' },
@@ -178,31 +210,31 @@ export default {
         'gradient-x': {
           '0%, 100%': {
             'background-size': '200% 200%',
-            'background-position': 'left center',
+            'background-position': 'left center'
           },
           '50%': {
             'background-size': '200% 200%',
-            'background-position': 'right center',
+            'background-position': 'right center'
           },
         },
         'gradient-y': {
           '0%, 100%': {
             'background-size': '200% 200%',
-            'background-position': 'center top',
+            'background-position': 'center top'
           },
           '50%': {
             'background-size': '200% 200%',
-            'background-position': 'center bottom',
+            'background-position': 'center bottom'
           },
         },
         'gradient-xy': {
           '0%, 100%': {
             'background-size': '400% 400%',
-            'background-position': 'left center',
+            'background-position': 'left center'
           },
           '50%': {
             'background-size': '400% 400%',
-            'background-position': 'right center',
+            'background-position': 'right center'
           },
         },
       },
@@ -221,11 +253,11 @@ export default {
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
-        '128': '32rem',
+        '128': '32rem'
       },
       borderRadius: {
         '4xl': '2rem',
-        '5xl': '2.5rem',
+        '5xl': '2.5rem'
       },
     },
   },
@@ -235,8 +267,12 @@ export default {
     require('@tailwindcss/aspect-ratio'),
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 };
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+};
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

@@ -11,6 +11,7 @@ const React,{ useState,useRef,useEffect } from";react"; import { cn } from";";@/
 import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder && placeholder.svg',fallback =';';/images/fallback && fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder && placeholder.svg',fallback =';';/images/fallback && fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
 import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder && placeholder.svg',fallback =';';/images/fallback && fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
 =======
@@ -21,3 +22,6 @@ import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

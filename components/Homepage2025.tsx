@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, Suspense } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { innovativeRealMicroSaasServices2025 
@@ -7,6 +8,11 @@ import { innovativeRealMicroSaasServices2025
 ;
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {innovativeRealMicroSaasServices2025 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+;
+import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {innovativeRealMicroSaasServices2025 ;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
  } from '../data/2025-innovative-real-micro-saas-services';
 import {innovativeAIServicesEnhanced2025 ;
  } from '../data/2025-innovative-ai-services-enhanced';
@@ -46,6 +52,7 @@ import { quantumCybersecurityServices  } from '../data/2026-quantum-cybersecurit
 import { innovativeMicroSaasServices2026  } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026  } from '../data/2026-specialized-it-solutions';
 import { emergingTechServices2026  } from '../data/2026-emerging-tech-services';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026',
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
@@ -236,6 +243,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <>;
 =======
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
+=======
+import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   ArrowRight,Star,Brain,Atom,Shield,Zap,Users,Globe,TrendingUp,Rocket,Cpu,Lock,import {} from 'lucide-react';
 interface Homepage2025Props  {showInternalNav?: boolean;
 const Homepage2025: React.FC<Homepage2025Props> = ({showInternalNav = true,}) => {const [activeSection, setActiveSection] = useState('hero')const [currentServiceIndex, setCurrentServiceIndex] = useState(0)const [isVisible, setIsVisible] = useState(false)const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)setIsVisible(true)const interval = setInterval(() => {setCurrentServiceIndex(prev => (prev + 1) % innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.length;
@@ -297,13 +307,17 @@ if ( {) {$2;
     }'Intelligent automation that streamlines operations and enhances productivity',icon: Zap,},];const itemVariants = {initial: { opacity: 0, y: 20 },animate: { opacity: 1, y: 0 },transition: { duration: 0.6 },}const staggerContainer = {initial: {}
     animate: {transition: {staggerChildren: 0.1,},},}return (<UltraFuturisticBackground2026 intensity='medium' theme='quantum'>;
       {showInternalNav && (<>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           {/* Navigation */}
           <nav className='fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10'>;
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
               <div className='flex justify-between items-center h-16'>;
                 <motion&& motion.div;
                   initial={{ opacity: 0, x: -20 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   animate={{ opacity: 1, x: 0 }}
 
@@ -347,13 +361,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span className="text-white font-bold text-xl">ZionTech Group</span>;
                 </motion.div>;
                 {/* Desktop Navigation */}
+=======
+                  animate={{ opacity: 1, x: 0 }}{/* Desktop Navigation */}<div className='hidden lg:flex space-x-8'>;
+                  {navigationSections && navigationSections.map(section => (                    <button}
+  return (<UltraFuturisticBackground2026 intensity="medium" theme="quantum">;
+      {showInternalNav && (<>;
+          {/* Navigation */}
+          <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">;
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+              <div className="flex justify-between items-center h-16">;
+                <motion&& motion.div;
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                {/* Desktop Navigation */}
+                <div className="hidden lg:flex space - x-8">;
+                  {navigation_sections.map ((section) => (<button;{navigationSections.map(section => (                    <button  }return (<UltraFuturisticBackground2026 intensity="medium" theme="quantum">;
+      {showInternalNav && (<>;
+          {/* Navigation */}
+          <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">;
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+              <div className="flex justify-between items-center h-16">;
+                <motion.div;
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className="flex items-center space-x-2";
+                >;
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>;
+                  <span className="text-white font-bold text-xl">ZionTech Group</span>;
+                </motion.div>;
+                {/* Desktop Navigation */}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <div className="hidden lg:flex space-x-8">;
                   {navigationSections.map((section) => (<div className='hidden lg:flex space-x-8'>;
                   {navigationSections.map(section => (<button;
                   {navigationSections.map(section => (                    <button;
                     <button;
                     <button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                       key={section.id}
                       on_click={() => scrollToSection (section.id)}
                       className={`flex items - center space - x-2 text - sm font - medium transition - all duration - 300 ${active_section === section.id;
@@ -378,6 +425,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion&& motion.div;
                   initial={{ opacity: 0, x: 20 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   animate={{ opacity: 1, x: 0 }}
 className='hidden md:flex items-center space-x-4'
                 >
@@ -395,6 +443,8 @@ href='mailto:kleber@ziontechgroup.com'
                   </a>
                 </motion.div>
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   animate={{ opacity: 1, x: 0 }}>;
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />;
@@ -414,7 +464,10 @@ href='mailto:kleber@ziontechgroup.com';
                     Contact Us;
                   </a>;
                 </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 {/* Mobile Menu Button */}
                 <button;
 className='lg:hidden text-white p-2';
@@ -431,6 +484,7 @@ className='lg:hidden text-white p-2';
                       strokeLinejoin='round';
                       strokeWidth={2}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       d='M4 6h16M4 12h16M4 18h16'
                     />
                   </svg>
@@ -438,17 +492,23 @@ className='lg:hidden text-white p-2';
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                       d='M4 6h16M4 12h16M4 18h16';
                     />;
                   </svg>;
                 </button>;
               </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               {/* Mobile Navigation Menu */}
               <AnimatePresence>;
                 {isMobileMenuOpen && (<motion&& motion.div;
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     exit={{ opacity: 0, height: 0 }}
 className='lg:hidden border-t border-white/10'
@@ -458,11 +518,16 @@ className='lg:hidden border-t border-white/10'
                         <button
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     exit={{ opacity: 0, height: 0 }}className='lg:hidden border-t border-white/10';
                   >;
                     <div className='py-4 space-y-2'>;
                       {navigationSections.map(section => (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                           key={section.id}
                           onClick={() => scrollToSection(section.id)}
                           className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${activeSection === section.id;
@@ -473,6 +538,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <span>{section && section.icon}</span>;
                           <span>{section && section.label}</span>;
                         </button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       ))}
 <div className='pt-4 border-t border-white/10'>
@@ -495,6 +561,8 @@ href='mailto:kleber@ziontechgroup.com'
                   </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                       ))}<div className='pt-4 border-t border-white/10'>;
                         <a;
                           href='tel:+13024640950';
@@ -513,12 +581,16 @@ href='mailto:kleber@ziontechgroup.com';
                       </div>;
                     </div>;
                   </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 )}
               </AnimatePresence>;
             </div>;
           </nav>;
         </>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       )}
       {/* Hero Section */}
@@ -559,6 +631,8 @@ className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cy
               </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       )}<section;
         id='hero';
         className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16'>;
@@ -731,6 +805,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Pioneering the future of technology with innovative solutions;
                 that drive business transformation;
               </p>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               {/* Enhanced CTA Section */}
               <motion.div;
@@ -761,6 +836,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+              {/* Enhanced CTA Section */}
+              <motion.div;
+                variants={itemVariants}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 className='flex flex-col sm:flex-row gap-4 justify-center mb-8';
               >;
                 <Link href='/comprehensive-services-showcase-2026'>;
@@ -818,6 +898,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </button>;
                 </Link>;
               </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               {/* Trust Indicators */}
               <motion&& motion.div;
@@ -829,6 +910,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section className="py-20 px-4 relative">;
         <div className="max-w-7xl mx-auto">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              {/* Trust Indicators */}
+              <motion&& motion.div;
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}{/* Features Section */}
+      <section className="py-20 px-4 relative">;
+        <div className="max-w-7xl mx-auto">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 transition={{ duration: 0.8, delay: 0.4 }}
 className='flex items-center justify-center space-x-6 text-sm text-gray-400';
               >;
@@ -850,6 +939,7 @@ className='flex items-center justify-center space-x-6 text-sm text-gray-400';
         </div>;
       </section>;
       {/* Features Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <section className='py-20 px-4 relative'>
         <div className='max-w-7xl mx-auto'>
@@ -895,6 +985,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
+=======
+<section className='py-20 px-4 relative'>;
+        <div className='max-w-7xl mx-auto'>;
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             viewport={{ once: true }}className='text-center mb-20';
           >;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -963,7 +1061,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <feature.icon className='w-full h-full text-white' />;
                   </div>;
                   <h3 className='text-xl font-semibold text-white mb-4'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     {feature.title}
                   </h3>;
                   <p className='text-gray-300 leading-relaxed'>;
@@ -972,6 +1073,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </motion.div>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         </div>
@@ -987,6 +1089,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
       {/* Enhanced Services Preview */}
+=======
+          </div>;
+        </div>;
+      </section>;
+      {/* Enhanced Services Preview */}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 <section className='py-20 px-4'>;
         <div className='max-w-6xl mx-auto'>;
           <motion.div;
@@ -1041,7 +1149,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer";
             className='text-center mb-16';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -1099,11 +1210,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ].map((service, index) => (<motion.div;
                 key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer';
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -1138,20 +1253,27 @@ onClick={() => (window.location.href = service.link)}
           </div>;
           {/* Call to Action for Services Showcase */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <motion.div
 className='text-center mt-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <motion.div;
             className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16";
             ))}
           </div>;
           {/* Call to Action for Services Showcase */}className='text-center mt-16';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
             viewport={{ once: true }}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <a
 href='/comprehensive-services-showcase-2026'
@@ -1165,6 +1287,8 @@ href='/comprehensive-services-showcase-2026'
         </div>
       </section>
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <a;
             whileInView={{ opacity: 1, y: 0 }}
             </h2>;
@@ -1206,7 +1330,10 @@ href='/comprehensive-services-showcase-2026';
           </motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       {/* Contact Section */}
 <section id='contact' className='py-20 px-4'>;
         <div className='max-w-6xl mx-auto'>;
@@ -1216,6 +1343,7 @@ href='/comprehensive-services-showcase-2026';
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           >
 <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
@@ -1265,6 +1393,8 @@ href='/comprehensive-services-showcase-2026';
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           >;
 <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
               Ready to Transform Your Business?;
@@ -1311,11 +1441,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <motion.div;
 className='text-center';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           >
 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -1435,6 +1569,66 @@ href='tel:+13024640950';
             </a>;
             <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
       {/* Footer */}
+=======
+          >;
+              <a;
+                href="mailto:kleber@ziontechgroup.com";
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300";
+<div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <a;
+                href='mailto:kleber@ziontechgroup.com';
+                className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300';
+              >;
+                Email Us;
+              </a>;
+              <a;
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+            viewport={{ once: true }}>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <a;
+                href='mailto:kleber@ziontechgroup && ziontechgroup.com';
+                className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'>;
+                Email Us;
+              </a>;
+              <a;
+                href='tel:+13024640950';
+                className='bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'>            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <a;
+                href="mailto:kleber@ziontechgroup && ziontechgroup.com";
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">;
+                Email Us;
+              </a>;
+              <a;
+                href='tel:+13024640950';
+                className='bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'                href="tel:+13024640950";
+                className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300";
+href='tel:+13024640950';
+                className='bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300';
+              >;
+                Call Us;
+              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+            <p className="mt-2">;
+              Address: 364 E Main St STE 1008 Middletown DE 19709;
+              Phone: +1 302 464 0950;
+              Email: kleber@ziontechgroup.com;
+            </p>;
+          </div>;
+          <div className="flex justify-center space-x-6">;
+            <a href="/comprehensive-services-showcase-2026" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
+              2026 Services;
+            </a>;
+            <a href="/comprehensive-services-showcase-2025" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
+              2025 Services;
+            </a>;
+            <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
+      {/* Footer */}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 <footer className='py-12 px-4 border-t border-white/10'>;
         <div className='max-w-6xl mx-auto text-center'>;
           <div className='text-gray-400 mb-4'>;
@@ -1473,5 +1667,9 @@ href='tel:+13024640950';
         </div>;
       </footer>;
 export default Homepage2025;export default Homepage2025;}export default Homepage2025;
+<<<<<<< HEAD
     </UltraFuturisticBackground2026>)}export default Homepage2025)}export default Homepage2025;)}export default Homepage2025;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </UltraFuturisticBackground2026>)}export default Homepage2025)}export default Homepage2025;)}export default Homepage2025;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

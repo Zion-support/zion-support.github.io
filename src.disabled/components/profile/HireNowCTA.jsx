@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 '\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
 "export: function HireNowCTA({ talentName,hourlyRate,onHire }) {" const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ projectDescription: ",budget: ",",startDate: ",message: "})" const handleSubmit = e => {""";"""";"""
 =======
@@ -8,6 +9,9 @@
 =======
 '"export": function HireNowCTA({ talentName,hourlyRate,onHire }) {' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ "projectDescription": ',"budget": ',',"startDate": ',"message": '})' const handleSubmit = e => {''';''"";""}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+'"export": function HireNowCTA({ talentName,hourlyRate,onHire }) {' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ "projectDescription": ',"budget": ',',"startDate": ',"message": '})' const handleSubmit = e => {''';''"";""}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 
 '\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";

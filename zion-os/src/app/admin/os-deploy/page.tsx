@@ -4,11 +4,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 ursor/automate-test-improve-and-merge-code-646c;
 "use client";import React, { useState } from 'react';
@@ -17,12 +20,16 @@ import { useState  } from 'react';
 export default function OSDeployPage() {export default function OSDeployPage() {const [loading, setLoading] = useState(false)const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setLoading(true)// Simulate deployment;
     setTimeout(() => {setLoading(false)}, 3000)}
   const [message, setMessage] = useState('')const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success')// Mock feature keys and functions;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 "use client";
 
 import React, { useState } from "react";
 "use client";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from "react";
 <<<<<<< HEAD
@@ -50,6 +57,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { useState } from 'react';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 export default function OSDeployPage() {
 
 export default function OSDeployPage() {;
@@ -224,6 +233,7 @@ main
             Deploy your custom Zion OS instance with advanced features and configurations;
           </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -255,6 +265,8 @@ main
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         </div>;<form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">;
@@ -269,7 +281,10 @@ main
                 <label className="block text-sm font-medium text-white/90">;
                   Instance Name *;
                 </label>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">;
@@ -279,6 +294,7 @@ main
             </h2>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <label className="block text-sm font-medium text-white/90">Instance Name *</label>;
 
@@ -374,6 +390,8 @@ main
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <label className="block text-sm font-medium text-white/90">Instance Name *</label>;ursor/automate-test-improve-and-merge-code-646c;
                 <input;
                   id="instanceName";
@@ -407,7 +425,10 @@ main
                 <label className="block text-sm font-medium text-white/90">;
                   Subdomain;
                 </label>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
   }const getFeatureDescription = (key: string) =>: any {const descriptions: { [key: string]: string } = {ai: 'Advanced AI capabilities and automation',blockchain: 'Secure blockchain infrastructure',governance: 'Decentralized governance mechanisms',treasury: 'Automated treasury management';
     }
@@ -520,6 +541,99 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                   <option value="TECH">Technology</option>;
                 </select>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              </div>;placeholder="zion && zion.example.com";
+                />;
+              </div>;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">Subdomain</label>;ursor/automate-test-improve-and-merge-code-646c;
+                <input;
+                  id="subdomain";
+                  name="subdomain";
+                  type="text";
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all";
+                  placeholder="latam";
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Default Language;
+                </label>;
+                />;
+              </div>;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">Default Language</label>;ursor/automate-test-improve-and-merge-code-646c;
+                <input;
+                  id="defaultLanguage";
+                  name="defaultLanguage";
+                  type="text";
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all";
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Region;
+                </label>;
+                />;
+              </div>;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">Region</label>;ursor/automate-test-improve-and-merge-code-646c;
+                <input;
+                  id="region";
+                  name="region";
+                  type="text";
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all";
+                  placeholder="North America";
+                />;
+              </div>;
+            </div>;
+          </div>;{/* Economic Configuration */}
+          <div className="glass-effect rounded-2xl p-8">;
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
+              <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">;
+                💰;
+              </span>;
+              Economic Configuration;
+            </h2>;
+ursor/automate-test-improve-and-merge-code-646c;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Token System;
+                </label>;
+                <select;
+                  id="tokenSystem";
+                  name="tokenSystem";
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Governance Type;
+                </label>;
+                <select;
+                  name="governanceType";
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all";
+                >;
+                  <option value="ADMIN">Admin Control</option>;
+                  <option value="DAO LITE">DAO-lite</option>;
+                  <option value="DAO FULL">Full DAO</option>;
+                  <option value="HYBRID">Hybrid Governance</option>;
+                </select>;
+              </div>;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Country;
+                </label>;
+                <input;
+                  name="country";
+                  type="text";
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all";
+                  placeholder="United States";
+                />;
+              </div>;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">;
+                  Payment Gateway;
+                </label>;
+                <select;
+                  id="paymentGateway";
+                  name="paymentGateway";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -996,6 +1110,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                   name="token_system";
                   className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";
 <<<<<<< HEAD
+<<<<<<< HEAD
                 >;
 
 <<<<<<< HEAD
@@ -1029,12 +1144,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 >;<option value="SHARED">ZION$ Shared</option>;
                   <option value="LOCAL">Local Token</option>;
                   <option value="HYBRID">Hybrid System</option>;
                 </select>;
               </div>;className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   <option value="ADMIN">Admin Control</option>;
                   <option value="DAO LITE">DAO-lite</option>;
               <div className="space - y-2">;
@@ -1045,6 +1165,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";
                 >;
                   <option value="ADMIN">Admin Control</option>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <option value="DAO LITE">DAO - lite</option>;
 
@@ -1077,11 +1198,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
                 />;
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   <option value="DAO LITE">DAO - lite</option>;<option value="DAO FULL">Full DAO</option>;
                   <option value="HYBRID">Hybrid Governance</option>;
                 </select>;
               </div>;/>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </div>;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Payment Gateway</label>;<select;
@@ -1103,6 +1229,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">🔧</span>;
               Feature Selection;
 <<<<<<< HEAD
+<<<<<<< HEAD
             </h2>;
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -1114,6 +1241,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             </h2>;<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">;
               {FeatureKeys && FeatureKeys.map((k) => (<label;
                   key={k}
@@ -1249,6 +1378,43 @@ main
           </div>;
           {/* Additional Features */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          <div className="glass-effect rounded-2xl p-8">;
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
+              <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">;
+                🚀;
+              </span>;
+              Additional Features;
+            </h2>;
+            </div>;
+          </div>;
+          {/* Additional Features */}
+          <div className="glass-effect rounded-2xl p-8">;
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
+              <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">🚀</span>;
+              Additional Features;
+            </h2>;
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
+              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;ursor/automate-test-improve-and-merge-code-646c;
+                <input;
+                  id="treasury";
+                  type="checkbox";
+                  name="treasury";
+                  aria-label="Treasury Management";
+                  className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2";
+ursor/automate-test-improve-and-merge-code-646c;
+                />;
+                <div>;
+                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
+                    Treasury Management;
+                  </div>;
+                  <div className="text-sm text-white/60">;
+                    Manage community funds with transparency;
+                  </div>;
+                </div>;
+              </label>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">
@@ -1666,6 +1832,113 @@ main
             >;
               {loading ? "Deploying..." : "Deploy Digital Economy"}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            </button>;
+              <div;
+                className={`mt-6 p-4 rounded-lg ${messageType === "success";
+                    ? "bg-green-900/20 border border-green-500/20 text-green-400";
+                    : "bg-red-900/20 border border-red-500/20 text-red-400";
+                />;
+                <div>;
+                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
+                    Partnership Management;
+                  </div>;
+                  <div className="text-sm text-white/60">Institutional partnership management</div>;
+                    aria - label={label_for (k)}
+                    className="w - 4 h - 4 text - blue - 600 bg - zinc - 900 border - white / 20 rounded focus:ring - blue - 500 focus:ring - 2";
+                  />;
+                  <div>;
+                    <div className="font - medium text - white group - hover:text - blue - 400 transition - colors">;
+                      {label_for (k)}
+                    </div>;
+                    <div className="text - sm text - white / 60">{getFeatureDescription (k)}</div>;
+                  </div>;
+                </label>))}
+            </div>;
+          </div>;
+          {/* Additional Features */}
+          <div className="glass - effect rounded - 2xl p - 8">;
+            <h2 className="text - 2xl font - semibold mb - 6 flex items - center gap - 3">;
+              <span className="w - 8 h - 8 bg - orange - 600 rounded - lg flex items - center justify - center text - white text - sm">🚀</span>;
+              Additional Features;
+            </h2>;
+            <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 4">;
+              <label html_for="treasury" className="flex items - center gap - 3 p - 4 rounded - lg border border - white / 10 hover:border - white / 20 transition - colors cursor - pointer group">;
+                <input;
+                  id="treasury";
+                  type="checkbox";
+                  name="treasury";
+                  aria - label="Treasury Management";
+                  className="w - 4 h - 4 text - blue - 600 bg - zinc - 900 border - white / 20 rounded focus:ring - blue - 500 focus:ring - 2";
+                />;
+                <div>;
+                  <div className="font - medium text - white group - hover:text - blue - 400 transition - colors">;
+                    Treasury Management;
+                  </div>;
+                  <div className="text - sm text - white / 60">Manage community funds with transparency</div>;
+                </div>;
+              </label>;
+              <label html_for="governance" className="flex items - center gap - 3 p - 4 rounded - lg border border - white / 10 hover:border - white / 20 transition - colors cursor - pointer group">;
+                <input;
+                  id="governance";
+                  type="checkbox";
+                  name="governance";
+                  aria - label="Governance System";
+                  className="w - 4 h - 4 text - blue - 600 bg - zinc - 900 border - white / 20 rounded focus:ring - blue - 500 focus:ring - 2";
+                />;
+                <div>;
+                  <div className="font - medium text - white group - hover:text - blue - 400 transition - colors">;
+                    Governance System;
+                  </div>;
+                  <div className="text - sm text - white / 60">Local + global decision making</div>;
+                </div>;
+              </label>;
+              <label html_for="moderation" className="flex items - center gap - 3 p - 4 rounded - lg border border - white / 10 hover:border - white / 20 transition - colors cursor - pointer group">;
+                <input;
+                  id="moderation";
+                  type="checkbox";
+                  name="moderation";
+                  aria - label="Content Moderation";
+                  className="w - 4 h - 4 text - blue - 600 bg - zinc - 900 border - white / 20 rounded focus:ring - blue - 500 focus:ring - 2";
+                />;
+                <div>;
+                  <div className="font - medium text - white group - hover:text - blue - 400 transition - colors">;
+                    Content Moderation;
+                  </div>;
+                  <div className="text - sm text - white / 60">Automated content and behavior monitoring</div>;
+                </div>;
+              </label>;
+              <label html_for="partnerships" className="flex items - center gap - 3 p - 4 rounded - lg border border - white / 10 hover:border - white / 20 transition - colors cursor - pointer group">;
+                <input;
+                  id="partnerships";
+                  type="checkbox";
+                  name="partnerships";
+                  aria - label="Partnership Management";
+                  className="w - 4 h - 4 text - blue - 600 bg - zinc - 900 border - white / 20 rounded focus:ring - blue - 500 focus:ring - 2";
+                />;
+                <div>;
+                  <div className="font - medium text - white group - hover:text - blue - 400 transition - colors">;
+                    Partnership Management;
+                  </div>;
+                  <div className="text - sm text - white / 60">Institutional partnership management</div>;</div>;
+              </label>;
+            </div>;
+          </div>;</button>;
+            {message && (<div;
+                className={`mt-6 p-4 rounded-lg ${messageType === 'success';
+                    ? 'bg-green-900/20 border border-green-500/20 text-green-400';
+                    : 'bg-red-900/20 border border-red-500/20 text-red-400';
+                }`}
+              >;
+                }`}
+              >;
+                }`}
+              >;
+"use client",import { useState } from "react",import { FeatureKeys } from "@/lib/zod",import LoadingSpinner from "@/app/components/LoadingSpinner",export default function AdminDeployPage() {const [loading, setLoading] = useState(false),const [message, setMessage] = useState<string | null>(null),const [messageType, setMessageType] = useState<'success' | 'error'>('success'),async function onSubmit() {event.preventDefault(),setLoading(true),setMessage(null),const formData = new FormData(event.currentTarget)const formData = new FormData(event.currentTarget)const formData = new FormData(event.currentTarget)const features: Record<string boolean> = {},FeatureKeys.forEach((k) => (features[k] = formData.get(k) === "on")),const payload = {instanceName: String(formData.get("instanceName") || ""),domain: String(formData.get("domain") || "" ) || undefined,subdomain: String(formData.get("subdomain") || "" ) || undefined,vertical: String(formData.get("vertical") || "GENERAL"),defaultLanguage: String(formData.get("defaultLanguage") || "en"),tokenSystem: String(formData.get("tokenSystem") || "SHARED"),governanceType: String(formData.get("governanceType") || "ADMIN"),region: String(formData.get("region") || "") || undefined,country: String(formData.get("country") || "") || undefined,features,addons: {paymentGateway: String(formData.get("paymentGateway") || "") || undefined,sovereignTreasury: formData.get("sovereignTreasury") === "on",dualGovernance: formData.get("dualGovernance") === "on",aiModeration: formData.get("aiModeration") === "on",affiliatePanel: formData.get("affiliatePanel") === "on"}},try {const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) })const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) }),const data = await res.json(),if (!res.ok) {setMessageType('error'),setMessage(data.error || "Deployment failed"),return;
+      }setMessageType('success'),setMessage(`✅ Deployment queued successfully! ID: ${data.deploymentId}`),(event.target as HTMLFormElement).reset()} catch (error) {setMessageType('error'),setMessage("Network error occurred. Please try again.")} finally {setLoading(false)}
+  }const getVerticalIcon = (vertical: string) => {switch (vertical) {case "HEALTH": return <Shield className="w-5 h-5 text-blue-400" />,case "EDUCATION": return <Building2 className="w-5 h-5 text-green-400" />,case "LAW": return <Shield className="w-5 h-5 text-purple-400" />,case "GOV": return <Users className="w-5 h-5 text-red-400" />,default: return <Globe className="w-5 h-5 text-gray-400" />;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             </button>
 
               <div
@@ -2246,6 +2519,7 @@ export default function AdminDeployPage() {;
                   ? 'bg-green-900/20 border border-green-500/20 text-green-400';
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
 <<<<<<< HEAD
+<<<<<<< HEAD
               }`}>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2295,6 +2569,8 @@ export default function AdminDeployPage() {;
                   name="description" 
                   className="input-field" 
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               }`}>;{message}
               </div>;
             )}
@@ -2327,7 +2603,10 @@ export default function AdminDeployPage() {;
                 <textarea;
                   name="description";
                   className="input-field";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   rows={3}
                   placeholder="Describe your digital economy's purpose and goals";
                 />;
@@ -2362,6 +2641,7 @@ export default function AdminDeployPage() {;
             >;
               {loading ? "Deploying..." : "🚀 Deploy Instance"}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </button>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -2389,13 +2669,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 }`}>;
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             </button>;
           </div>;
         </form>;
       </div>;
     </div>;
   )}}`}>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 {message}
               </div>;
             )}
@@ -2419,6 +2704,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >;
                 {message}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>)}
 
 
@@ -2431,6 +2717,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </div>)}ursor/fix-website-loading-errors-and-merge-6662;
 ursor/fix-website-loading-errors-and-merge-6662;
                 {message}

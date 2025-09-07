@@ -11,6 +11,7 @@ const React from";react" const UltraFuturisticBackground2034 = ({ intensity = 0 
 import _React from';react' const UltraFuturisticBackground2034 = ({ intensity = 0 && 0.8,theme = 'quantum' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return canvas && canvas.width = window && window.innerWidth canvas && canvas.height = window && window.innerHeight const particles = [] const colors = { quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],neon['#ff0080',#8000ff',#00ffff',#ffff00'],holographic['#ff6b6b',#4ecdc4',#45b7d1',';#96ceb4'] } const selectedColors = colors[theme]'';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from';react' const UltraFuturisticBackground2034 = ({ intensity = 0 && 0.8,theme = 'quantum' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return canvas && canvas.width = window && window.innerWidth canvas && canvas.height = window && window.innerHeight const particles = [] const colors = { quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],neon['#ff0080',#8000ff',#00ffff',#ffff00'],holographic['#ff6b6b',#4ecdc4',#45b7d1',';#96ceb4'] } const selectedColors = colors[theme]'';
 import _React from';react' const UltraFuturisticBackground2034 = ({ intensity = 0 && 0.8,theme = 'quantum' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return canvas && canvas.width = window && window.innerWidth canvas && canvas.height = window && window.innerHeight const particles = [] const colors = { quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],neon['#ff0080',#8000ff',#00ffff',#ffff00'],holographic['#ff6b6b',#4ecdc4',#45b7d1',';#96ceb4'] } const selectedColors = colors[theme]'';
 =======
@@ -21,3 +22,6 @@ import _React from';react' const UltraFuturisticBackground2034 = ({ intensity = 
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

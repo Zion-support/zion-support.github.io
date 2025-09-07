@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React,{ useState,useEffect } from\';react\' import { motion } from\';\';framer-motion\' import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from\';\';lucide-react\' \"export\": function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ \"visitors\": \'0\',\"conversions\": \'0\',\"revenue\": \'0\',\"bounceRate\": \'0\',\"avgSessionDuration\": \'0\',\"topPages\": \'[]\',\"trafficSources\": \'[]\',\"deviceTypes\": \'[]\'}) const [timeRange,setTimeRange] = useState(\'';7d\') const [isLoading,setIsLoading] = useState(true) useEffect(() => {\'';
 const React,{ useState,useEffect } from";react" import { motion } from";";framer-motion" import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from";";lucide-react" export: function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ visitors: "0",conversions: "0",revenue: "0",bounceRate: "0",avgSessionDuration: "0",topPages: "[]",trafficSources: "[]",deviceTypes: "[]"}) const [timeRange,setTimeRange] = useState("";7d") const [isLoading,setIsLoading] = useState(true) useEffect(() => {"";"""
 =======
@@ -8,6 +9,9 @@ import _React,{ useState,useEffect } from';react' import { motion } from';';fram
 =======
 import _React,{ useState,useEffect } from';react' import { motion } from';';framer-motion' import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from';';lucide-react' "export": function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ "visitors": '0',"conversions": '0',"revenue": '0',"bounceRate": '0',"avgSessionDuration": '0',"topPages": '[]',"trafficSources": '[]',"deviceTypes": '[]'}) const [timeRange,setTimeRange] = useState('';7d') const [isLoading,setIsLoading] = useState(true) useEffect(() => {'';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import _React,{ useState,useEffect } from';react' import { motion } from';';framer-motion' import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from';';lucide-react' "export": function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ "visitors": '0',"conversions": '0',"revenue": '0',"bounceRate": '0',"avgSessionDuration": '0',"topPages": '[]',"trafficSources": '[]',"deviceTypes": '[]'}) const [timeRange,setTimeRange] = useState('';7d') const [isLoading,setIsLoading] = useState(true) useEffect(() => {'';
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 
 import React,{ useState,useEffect } from\';react\' import { motion } from\';\';framer-motion\' import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from\';\';lucide-react\' \"export\": function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ \"visitors\": \'0\',\"conversions\": \'0\',\"revenue\": \'0\',\"bounceRate\": \'0\',\"avgSessionDuration\": \'0\',\"topPages\": \'[]\',\"trafficSources\": \'[]\',\"deviceTypes\": \'[]\'}) const [timeRange,setTimeRange] = useState(\'';7d\') const [isLoading,setIsLoading] = useState(true) useEffect(() => {\'';
@@ -26,6 +30,7 @@ const React,{ useState,useEffect } from";react" import { motion } from";";framer
 const React,{ useState,useEffect } from";react" import { motion } from";";framer-motion" import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from";";lucide-react" export: function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ visitors: "0",conversions: "0",revenue: "0",bounceRate: "0",avgSessionDuration: "0",topPages: "[]",trafficSources: "[]",deviceTypes: "[]"}) const [timeRange,setTimeRange] = useState("";7d") const [isLoading,setIsLoading] = useState(true) useEffect(() => {"";""";
 const React,{ useState,useEffect } from";react" import { motion } from";";framer-motion" import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from";";lucide-react" export: function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ visitors: "0",conversions: "0",revenue: "0",bounceRate: "0",avgSessionDuration: "0",topPages: "[]",trafficSources: "[]",deviceTypes: "[]"}) const [timeRange,setTimeRange] = useState("";7d") const [isLoading,setIsLoading] = useState(true) useEffect(() => {"";""";
 const React,{ useState,useEffect } from";react" import { motion } from";";framer-motion" import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from";";lucide-react" export: function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ visitors: "0",conversions: "0",revenue: "0",bounceRate: "0",avgSessionDuration: "0",topPages: "[]",trafficSources: "[]",deviceTypes: "[]"}) const [timeRange,setTimeRange] = useState("";7d") const [isLoading,setIsLoading] = useState(true) useEffect(() => {"";"""
+<<<<<<< HEAD
 <<<<<<< HEAD
 :src.disabled/components/disabled/AdvancedAnalytics.js.jsx
 import React,{ useState,useEffect } from\';react\' import { motion } from\';\';framer-motion\' import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from\';\';lucide-react\' \"export\": function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ \"visitors\": \'0\',\"conversions\": \'0\',\"revenue\": \'0\',\"bounceRate\": \'0\',\"avgSessionDuration\": \'0\',\"topPages\": \'[]\',\"trafficSources\": \'[]\',\"deviceTypes\": \'[]\'}) const [timeRange,setTimeRange] = useState(\'';7d\') const [isLoading,setIsLoading] = useState(true) useEffect(() => {\'';
@@ -46,3 +51,5 @@ import _React,{ useState,useEffect } from';react' import { motion } from';';fram
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

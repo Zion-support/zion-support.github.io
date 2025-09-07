@@ -236,9 +236,12 @@ if (return null, ) {$2;
               </h4>;
               <p className="text - white / 80 text - xs leading - relaxed">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <div className="flex items - start gap - 3 mb-3">;
             <div className="p - 2 bg - white / 20 rounded-lg">;
               {getUpdateIcon (update.type)}
@@ -248,11 +251,15 @@ if (return null, ) {$2;
                 {update.title}
               </h4>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <p className="text - white / 80 text - xs leading-relaxed">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <p className="text - white / 80 text - xs leading - relaxed">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <p className="text - white / 80 text - xs leading - relaxed">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 {update.message}
               </p>;
             </div>;
@@ -265,12 +272,15 @@ if (return null, ) {$2;
               <X className="w - 4 h - 4" />;
             </button>;
           </div>;
+<<<<<<< HEAD
 =======
               className="p - 1 text - white / 60 hover:text - white / 80 transition - colors";
             >;
               <X className="w - 4 h - 4" />;
             </button>;
           </div>;
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           {/* Instance Details (if available) */}{update.instance_name && (<div className="mb - 3 p - 3 bg - white / 10 rounded - lg border border - white / 20">;
               <div className="flex items - center gap - 2 mb - 2">;
                 <div className="p - 1 bg - white / 20 rounded">;
@@ -311,7 +321,10 @@ if (return null, ) {$2;
           {/* Instance Details (if available) */}          {/* Progress Bar (for deployment updates) */}
           {update.progress !== undefined && (<div className="mb - 3 space-y-2">;
               <div className="flex justify - between text - xs text-white / 70">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           {/* Instance Details (if available) */}
                 </div>;
                 <span className="font - medium text - white text - sm">;
@@ -410,6 +423,16 @@ if (return null, ) {$2;
                   {action.action === 'retry' && <Rocket className="w - 3 h - 3" />}
                   {action.action === 'configure' && <Settings className="w - 3 h - 3" />}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                  <span>{action.label}</span>;</button>))}
+            </div>)}{/* Timestamp */}
+          <div className="absolute bottom - 2 right - 4 text - xs text - white / 60">;
+                  {action.action === 'deploy' && <Play className="w - 3 h-3" />}
+                  {action.action === 'view' && <Eye className="w - 3 h-3" />}
+                  {action.action === 'retry' && <Rocket className="w - 3 h-3" />}
+                  {action.action === 'configure' && <Settings className="w - 3 h-3" />}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   <span>{action.label}</span>;
           {/* Timestamp */}
           <div className="absolute bottom - 2 right - 4 text - xs text - white / 60">;

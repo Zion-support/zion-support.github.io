@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./src/App"; describe('App', () => { it('renders without crashing', () => { render(<App />)expect(screen.getByRole("main")).toBeInTheDocument()})it('displays correct content', () => { render(<App />)})it('handles user interactions', () => { render(<App />)})})''";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./src/App"; describe("App",() => { it("renders without crashing",() => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => { render(<App />)}); it("handles user interactions",() => { render(<App />)})});''"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======

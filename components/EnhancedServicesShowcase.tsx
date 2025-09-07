@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Brain, Shield, Rocket, Cpu, Database, Atom, Users;
   CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
@@ -61,6 +62,30 @@ import { Brain;
 interface Service  {Brain,Shield,Rocket,Cpu,Database,Atom,Users,CheckCircle,TrendingUp,Clock,Star,} from 'lucide-react';;
 interface Service  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+;
+import React, { useState } from 'react';
+import { Brain, Shield, Rocket, Cpu, Database, Atom, Users;
+  CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown;
+  } from 'lucide-react';
+import { Brain;
+  Shield;
+  Rocket;
+  Cpu;
+  Database;
+  Atom;
+  Users;
+  CheckCircle;
+  TrendingUp;
+  Clock;
+  Star;
+  Filter;
+  ChevronDown;
+  Brain,Shield,Rocket,Cpu,Database,Atom,Users,CheckCircle,TrendingUp,Clock,Star,Filter,ChevronDown,} from 'lucide-react';
+interface Service  {Brain,Shield,Rocket,Cpu,Database,Atom,Users,CheckCircle,TrendingUp,Clock,Star,} from 'lucide-react';;
+interface Service  {id: string;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   name: string;
   tagline: string;
   category: string;
@@ -74,6 +99,7 @@ interface Service  {id: string;
   market_size: string;
   growth_rate: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   popular?: boolean;
   icon: React.ComponentType<any>;
   color: string
@@ -85,6 +111,11 @@ const EnhancedServicesShowcase: React.FC;
   color: string;
 }const EnhancedServicesShowcase: React.FC;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  popular?: boolean;];icon: React.ComponentType<any>;
+  color: string;
+}const EnhancedServicesShowcase: React.FC;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   color: string;} from 'lucide-react';
 interface Service  {id: string;
   name: string;
@@ -116,6 +147,7 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
         '50% latency reduction','Improved reliability','Cost optimization',],roi: 'Average 2.8x ROI within 4 months',marketSize: '$12B',growthRate: '28% YoY',popular: false,icon: Cpu,color: 'from-emerald-500 to-teal-500',},{id: 'space-tech',name: 'Space Technology Innovation',tagline:;
         'Deploy and manage applications at the edge with intelligent orchestration',      category: 'Infrastructure',      color: 'from-red-500 to-orange-500';
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
       id: 'edge-computing'
@@ -263,6 +295,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Unprecedented AI capabilities','Breakthrough research','Competitive advantage',],roi: 'Average 8.5x ROI within 24 months',marketSize: '$2B',growthRate: '89% YoY',popular: true,icon: Atom,color: 'from-blue-500 to-cyan-500',},];const categories = [;
     'all',...Array.from(new Set(services.map(s => s.category))),];const filteredServices = services.filter(service => {const matchesCategory =;
       selectedCategory === 'all' || service.category === selectedCategory;
+=======
+    {id: 'edge-computing';
+      name: 'Edge Computing Orchestration';
+      tagline: 'Deploy and manage applications at the edge with intelligent orchestration';
+      price: '$349';
+      period: '/month';
+      setupTime: '1-2 weeks';
+      customers: '200+';
+      features: [;
+        'Edge node management';
+        'IoT device management';
+        'Real-time monitoring';
+        'Auto-scaling';
+      ];
+      benefits: [;
+        'Mission success rate 95%+','Reduced launch costs','Advanced capabilities',],roi: 'Average 5.2x ROI within 12 months',marketSize: '$8B',growthRate: '45% YoY',popular: true,icon: Rocket,color: 'from-violet-500 to-purple-500',},{id: 'neural-interface',name: 'Neural Interface Development',tagline:;
+        'Build the future of human-computer interaction with neural interfaces',category: 'Emerging Tech',price: '$899',period: '/month',setupTime: '6-8 weeks',customers: '40+',features: [;
+        'BCI development tools','Neural signal processing','AI pattern recognition','Safety protocols',],benefits: [;
+        'Revolutionary UX','Accessibility improvements','Research advancement',],roi: 'Average 6.8x ROI within 18 months',marketSize: '$3B',growthRate: '67% YoY',popular: false,icon: Brain,color: 'from-pink-500 to-rose-500',},{id: 'quantum-ai',name: 'Quantum AI Neural Networks',tagline: 'Quantum-powered AI with advanced consciousness capabilities',category: 'Quantum AI',price: '$1,299',period: '/month',setupTime: '10-14 weeks',customers: '15+',features: [;
+        'Quantum neural networks';
+        'Consciousness simulation';
+        'Advanced learning';
+        'Quantum optimization';
+      ];
+      benefits: [;
+        'Unprecedented AI capabilities','Breakthrough research','Competitive advantage',],roi: 'Average 8.5x ROI within 24 months',marketSize: '$2B',growthRate: '89% YoY',popular: true,icon: Atom,color: 'from-blue-500 to-cyan-500',},];const categories = [;
+    'all',...Array.from(new Set(services.map(s => s.category))),];const filteredServices = services.filter(service => {const matchesCategory =;
+      selectedCategory === 'all' || service.category === selectedCategory;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     const matchesSearch =;
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())return matchesCategory && matchesSearch;
@@ -270,6 +331,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }return (<section id='services' className='py-24 px-6 relative overflow-hidden'>;
       {/* Background */}}return (<section id="services" className="py-24 px-6 relative overflow-hidden">;
       {/* Background */}
+<<<<<<< HEAD
         {/* Filters */}
           {/* Category Filter */}
           <div className="relative">;
@@ -300,6 +362,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Filters */}
 <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>;
           {/* Category Filter */}
+=======
+        {/* Filters */}
+          {/* Category Filter */}
+          <div className="relative">;
+            <select;
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12";
+            >;
+              {categories.map((category) => (<option key={category} value={category} className="bg-slate-800 text-white">;
+      <div className='absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]' />;
+      </div>;
+      <div className='max-w-7xl mx-auto relative z-10'>;
+        {/* Header */}
+        <div className='text-center mb-16'>;
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
+              Our Services;
+            </span>;
+          </h2>;
+          <p className='text-xl text-white/70 max-w-3xl mx-auto leading-relaxed'>;
+            Cutting-edge technology solutions designed to transform your;
+            business and accelerate innovation;
+          </p>;
+        </div>;
+        {/* Filters */}
+<div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>;
+          {/* Category Filter */}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <div className='relative'>;
             <select;
               value={selectedCategory}
@@ -309,6 +402,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {categories.map(category => (<option;
                   key={category}
                   value={category}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className='bg-slate-800 text-white'
                 >
@@ -358,12 +452,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             />;
             <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />;
               onChange={e => setSearchTerm(e.target.value)}
+=======
+                  className='bg-slate-800 text-white';
+                >;
+                  {category === 'all' ? 'All Categories' : category}
+                </option>;
+              ))}</select>;
+            <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />;
+          </div>;</select>;
+<ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />;
+          </div>;
+          {/* Search */}
+          <div className='relative'>;
+            <input;
+              type='text';
+              placeholder='Search services...';
+              value={searchTerm}{/* Search */}
+          <div className="relative">;
+            <input;
+              type="text";
+              placeholder="Search services...";
+              value={searchTerm}onChange={(e) => setSearchTerm(e.target.value)}
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64";
+            />;
+            <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />;
+              onChange={e => setSearchTerm(e.target.value)}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64';
             />;
             <Filter className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50' />;
           </div>;
         </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         {/* Services Grid */}
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {filteredServices.map((service, index) => (<div;
@@ -371,6 +494,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
             >;
               {/* Popular Badge */}
+<<<<<<< HEAD
 <<<<<<< HEAD
               {service.popular && (
                 <div className='absolute top-4 right-4 z-20'>
@@ -385,6 +509,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='p-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               {service.popular && (<div className='absolute top-4 right-4 z-20'>;
                   <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>;
                     <Star className='w-3 h-3' />;
@@ -413,7 +539,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               )}
               {/* Service Content */}<div className='p-8'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 {/* Icon and Category */}
                 <div className='flex items-center justify-between mb-4'>;
                   <div;
@@ -544,6 +673,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='p - 8'>;
               {/* Service Content */}
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className='p-8'>
         </div>
 
@@ -557,6 +687,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {getCategoryIcon(service.category)({
                         className: 'w-3 h-3'
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className='p-8'>;
         </div>;
         {/* Services Grid */}Popular;
@@ -611,11 +743,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='text-right'>;
                     <div className='text-xs text-white/60 mb-1'>;
                       {getCategoryIcon(service.category)({className: 'w-3 h-3';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                       })}
                     </div>;
                     <div className='text-xs text-white/40'>;
                       {service.category}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </div>
                   </div>
@@ -682,6 +818,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                     </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    </div>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;
                 </div>;
                 {/* Service Info */}
@@ -724,6 +863,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {feature}
                       </div>;
                     ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </div>
                 </div>
@@ -771,11 +911,45 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                   <div className='text-xs text-white/80 leading-relaxed'>;
                     {service.roi}
+=======
+                  </div>;
+                </div>;
+                {/* Benefits */}
+<div className='mb-6'>;
+                  <h4 className='text-sm font-semibold text-white mb-3'>;
+                    Key Benefits:;
+                  </h4>;
+                  <div className='space-y-2'>;
+                    {service.benefits.slice(0, 2).map((benefit, idx) => (<div;
+                        key={idx}
+                        className='flex items-center gap-2 text-xs text-white/70';
+                      >;
+                        <TrendingUp className='w-3 h-3 text-blue-400' />;
+                        {benefit}
+                      </div>;
+                  </div>;
+                </div>;{/* Benefits */}))}
+                  </div>;
+                </div>;
+                {/* ROI and Market Info */}<div className="mb-6 p-4 bg-white/5 rounded-lg">;
+                  <div className="text-xs text-white/60 mb-2">ROI & Market Position</div>;
+                  <div className="text-xs text-white/80 leading-relaxed">{service.roi}</div>;
+                  <div className="mt-2 text-xs text-white/60">;
+                    Market: {service.marketSize} • Growth: {service.growthRate}{/* Benefits */}))}<div className='mb-6 p-4 bg-white/5 rounded-lg'>;
+                  <div className='text-xs text-white/60 mb-2'>;
+                    ROI & Market Position;
+                  </div>;
+                  <div className='text-xs text-white/80 leading-relaxed'>;
+                    {service.roi}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;
                   <div className='mt-2 text-xs text-white/60'>;
                     Market: {service.marketSize} • Growth: {service.growthRate}</div>;
                 </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;
                 </div>;
                 {/* ROI and Market Info */}
@@ -792,6 +966,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="mt-2 text-xs text-white/60">;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {/* Action Buttons */}
 <div className='flex gap-3'>
@@ -817,6 +992,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 {/* Action Buttons */}>;
                     Demo;
                   </button>;
@@ -845,7 +1022,10 @@ onClick={() =>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           ))}
         </div>;
         </div>;{/* CTA Section */}{/* CTA Section */}
@@ -872,6 +1052,7 @@ onClick={() =>;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a
                 href='mailto:kleber@ziontechgroup.com?subject=Consultation Request'
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -895,6 +1076,8 @@ href='tel:+13024640950'
 export default EnhancedServicesShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <a;
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Consultation Request';
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -979,5 +1162,9 @@ href='tel:+13024640950';
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
 )}export default EnhancedServicesShowcase;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+)}export default EnhancedServicesShowcase;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

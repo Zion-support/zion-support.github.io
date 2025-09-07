@@ -2,6 +2,7 @@
   "compilerOptions": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "target": "ES2020",
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -22,30 +23,42 @@
       "es2021",
       "es2022"
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
+    "strict": false,
     "noEmit": true,
 <<<<<<< HEAD
+    "esModuleInterop": true,
+    "module": "ESNext",
+=======
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
+<<<<<<< HEAD
 =======
     "esModuleInterop": true,
     "module": "esnext",
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-e77d
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
     "baseUrl": ".",
     "paths": {
@@ -77,6 +90,11 @@
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    "baseUrl": ".",
+    "paths": {
+<<<<<<< HEAD
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
@@ -89,11 +107,45 @@
     "allowSyntheticDefaultImports": true
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+=======
+      "@/*": [
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"
+      ],
+      "@/assets/*": [
+        "./src/assets/*"
+      ]
+    },
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2017"
+  },
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -143,20 +195,28 @@
   ],
   "exclude": [
     "node_modules",
-    "apps",
-    "temp_conflicts",
-    "pages_backup*",
-    "pages.*",
-    "pages-*",
-    "pages_disabled*",
-    "pages.disabled*",
-    "pages.broken*",
-    "pages.corrupted*",
-    "pages.old*",
-    "pages._*",
-    "pages.__*",
+    ".next",
+    "out",
+    "dist",
+    "api-backup",
+    "pages.disabled",
     "backup-pages",
+    "automation/backups",
+    "automation_backup",
+    "broken_files_backup",
+    "contracts",
+    "cypress",
+    "temp_working",
+    "supabase/functions",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.backup",
+    "**/*.disabled",
+    "src",
     "src.pages.disabled",
+<<<<<<< HEAD
     "lib_backup*",
     "src_backup*",
     "corrupted-files-backup*",
@@ -174,3 +234,12 @@
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    "src.pages.disabled.auto",
+    "components.disabled",
+    "src.disabled",
+    "src.pages.disabled"
+  ]
+>>>>>>> cursor/expand-services-advertise-and-build-project-e77d
+}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

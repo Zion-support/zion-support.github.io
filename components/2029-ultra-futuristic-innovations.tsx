@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
@@ -7,20 +8,28 @@ import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturi
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 ;
   Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Star,TrendingUp,Eye,Timer,import { motion  } from 'framer-motion';
 import {Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Star,TrendingUp,Eye,Timer,} from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer  } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { cuttingEdge2029Services  } from '../data/2029-cutting-edge-innovations';
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
   const contactInfo = null;
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import { cuttingEdge2029Services   } from '../data/2029-cutting-edge-innovations';
 import { ultimateMicroSaasServices  } from '../data/ultimate-micro-saas-services';
   const contactInfo = {const all2029Services = [;
@@ -50,7 +59,10 @@ export default function UltraFuturistic2029InnovationsPage() {const contactInfo 
 import { motion   } from 'framer-motion';
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer   } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',const contactInfo = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 { label: 'Average Rating', value: (all2029Services.reduce((sum, s) => sum + s.rating, 0) / all2029Services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
               ].map((stat, index) => (<motion.div;
                   key={index}
@@ -460,6 +472,7 @@ import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturi
 {label: 'Total Customers', value: all2029Services.reduce ( (sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500';
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
   title: '🏠 Space Architecture & Energy', description: 'Advanced habitat design and space-based energy harvesting platforms', icon: Globe, color: 'from-green-600 to-teal-600', services: cuttingEdge2029Services.filter (s => s.category.includes ('Architecture') |s.category.includes ('Energy') )
 }
@@ -571,6 +584,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 {label: 'Average Rating', value: (all2029Services.reduce ( (sum, s) => sum + s.rating, 0) / all2029Services.length) .toFixed (1), icon: TrendingUp, color: 'from-green-500 to-teal-500';
 }].map ( (stat, index) => (<motion.div key= {index;
 }initial= {{opacity: 0, y: 20;
@@ -723,5 +738,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }<UltraFuturisticFooter2029 /> </>)/* Footer */;
 }<UltraFuturisticFooter2029 /> </>)/* Footer */;
+<<<<<<< HEAD
 }<UltraFuturisticFooter2029 /> </>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}<UltraFuturisticFooter2029 /> </>)}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

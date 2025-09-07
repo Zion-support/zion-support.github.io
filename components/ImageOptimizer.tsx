@@ -1,5 +1,6 @@
 import Image from 'next/image';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react';
 
 interface ImageOptimizerProps {
@@ -7,6 +8,9 @@ interface ImageOptimizerProps {
 =======
 interface OptimizedImageProps  {src: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+interface OptimizedImageProps  {src: string;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   alt: string;
   width?: number;
   height?: number;
@@ -15,6 +19,7 @@ interface OptimizedImageProps  {src: string;
   quality?: number;
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -85,6 +90,8 @@ export default function ImageOptimizer({
   );
 }
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 }const OptimizedImage: React.FC<OptimizedImageProps> = ({src,alt,width = 800,height = 600,className = '',priority = false,quality = 85,placeholder = 'blur',blurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==';
 }) => {return (<Image;
       src={src}
@@ -99,5 +106,9 @@ export default function ImageOptimizer({
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
       style={{objectFit: 'cover',}}
     />;
+<<<<<<< HEAD
   )}export default OptimizedImage;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  )}export default OptimizedImage;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

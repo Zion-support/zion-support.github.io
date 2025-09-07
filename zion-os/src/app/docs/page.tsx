@@ -1,5 +1,16 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import Link from "next/link",export const metadata = {title: "Documentation - Zion Tech Group | Technical Guides & Resources",description: "Access comprehensive technical documentation, guides, and resources for Zion Tech Group's products and services. Find API docs, tutorials, and best practices.",export const metadata = {title: "Documentation - Zion Tech Group | Technical Guides & Resources",,description: "Access comprehensive technical documentation, guides, and resources for Zion Tech Group's products and services. Find API docs, tutorials, and best practices.",,keywords: "documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources"}export default function DocumentationPage() {return (<div className="min-h-screen">;{/* Hero Section */}
+      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
+        <div className="max - w-7xl mx - auto text - center">;
+          <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
+            <span className="gradient - text">Documentation</span>;
+          </h1>;
+          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
+    <div className="min-h-screen">;    <div className="min-h-screen">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import Link from "next/link",;
 <<<<<<< HEAD
 =======
@@ -130,9 +141,12 @@ export default function DocumentationPage() {return (;
                 </p>;
                 <Link href="/docs / api / quickstart" className="btn - primary">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
         <div className="max - w-7xl mx-auto">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue-500 / 30">;
@@ -184,11 +198,15 @@ export default function DocumentationPage() {return (;
                   Connect to our services via REST APIs;
                 </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link href="/docs / api / quickstart" className="btn-primary">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
                 <Link href="/docs / api / quickstart" className="btn - primary">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                <Link href="/docs / api / quickstart" className="btn - primary">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   Get Started;
                 </Link>;
               </div>;
@@ -225,9 +243,12 @@ export default function DocumentationPage() {return (;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
         <div className="max - w-7xl mx-auto">;
           <div className="text - center mb-16">;
@@ -251,11 +272,15 @@ export default function DocumentationPage() {return (;
                 Complete documentation for the Zion OS digital economy platform;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <ul className="space - y-2 mb - 6 text - sm text - gray-400">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Platform Overview</li>;
                 <li>• Installation & Setup</li>;
                 <li>• Configuration Guide</li>;
@@ -265,12 +290,16 @@ export default function DocumentationPage() {return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/docs / zion - os" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
+<<<<<<< HEAD
 =======
 =======
               <Link href="/docs / zion - os" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <Link href="/docs / zion - os" className="text - blue - 400 hover:text - blue - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <Link href="/docs / zion - os" className="text - blue - 400 hover:text - blue - 300 text - sm font-medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 View Documentation →;
               </Link>;
             </div>;
@@ -291,9 +320,12 @@ export default function DocumentationPage() {return (;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="card group hover:bg - purple - 500 / 10 transition-colors">;
               <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - purple-500 / 30">;
                 <svg className="w - 8 h - 8 text - purple-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -305,11 +337,15 @@ export default function DocumentationPage() {return (;
                 Documentation for AI and machine learning services;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <ul className="space - y-2 mb - 6 text - sm text - gray-400">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• AI Services Overview</li>;
                 <li>• Content Generation</li>;
                 <li>• Business Intelligence</li>;
@@ -319,12 +355,16 @@ export default function DocumentationPage() {return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/docs / ai - services" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
+<<<<<<< HEAD
 =======
 =======
               <Link href="/docs / ai - services" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <Link href="/docs / ai - services" className="text - purple - 400 hover:text - purple - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <Link href="/docs / ai - services" className="text - purple - 400 hover:text - purple - 300 text - sm font-medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 View Documentation →;
               </Link>;
             </div>;
@@ -345,9 +385,12 @@ export default function DocumentationPage() {return (;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="card group hover:bg - indigo - 500 / 10 transition-colors">;
               <div className="w - 16 h - 16 bg - indigo - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - indigo-500 / 30">;
                 <svg className="w - 8 h - 8 text - indigo-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -359,11 +402,15 @@ export default function DocumentationPage() {return (;
                 Guides for quantum computing and quantum algorithms;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <ul className="space - y-2 mb - 6 text - sm text - gray-400">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Quantum Computing Basics</li>;
                 <li>• Algorithm Implementation</li>;
                 <li>• Quantum Error Correction</li>;
@@ -373,12 +420,16 @@ export default function DocumentationPage() {return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/docs / quantum - services" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
+<<<<<<< HEAD
 =======
 =======
               <Link href="/docs / quantum - services" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <Link href="/docs / quantum - services" className="text - indigo - 400 hover:text - indigo - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <Link href="/docs / quantum - services" className="text - indigo - 400 hover:text - indigo - 300 text - sm font-medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 View Documentation →;
               </Link>;
             </div>;
@@ -399,9 +450,12 @@ export default function DocumentationPage() {return (;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="card group hover:bg - green - 500 / 10 transition-colors">;
               <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - green-500 / 30">;
                 <svg className="w - 8 h - 8 text - green-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -413,11 +467,15 @@ export default function DocumentationPage() {return (;
                 Security implementation and best practices;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <ul className="space - y-2 mb - 6 text - sm text - gray-400">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Security Framework</li>;
                 <li>• Threat Detection</li>;
                 <li>• Compliance Guidelines</li>;
@@ -427,12 +485,16 @@ export default function DocumentationPage() {return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/docs / cybersecurity" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
+<<<<<<< HEAD
 =======
 =======
               <Link href="/docs / cybersecurity" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <Link href="/docs / cybersecurity" className="text - green - 400 hover:text - green - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <Link href="/docs / cybersecurity" className="text - green - 400 hover:text - green - 300 text - sm font-medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 View Documentation →;
               </Link>;
             </div>;
@@ -453,9 +515,12 @@ export default function DocumentationPage() {return (;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="card group hover:bg - red - 500 / 10 transition-colors">;
               <div className="w - 16 h - 16 bg - red - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - red-500 / 30">;
                 <svg className="w - 8 h - 8 text - red-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -467,11 +532,15 @@ export default function DocumentationPage() {return (;
                 Infrastructure and enterprise solutions guides;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <ul className="space - y-2 mb - 6 text - sm text - gray-400">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Infrastructure Setup</li>;
                 <li>• Cloud Migration</li>;
                 <li>• DevOps Practices</li>;
@@ -481,12 +550,16 @@ export default function DocumentationPage() {return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/docs / enterprise - it" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
+<<<<<<< HEAD
 =======
 =======
               <Link href="/docs / enterprise - it" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <Link href="/docs / enterprise - it" className="text - red - 400 hover:text - red - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <Link href="/docs / enterprise - it" className="text - red - 400 hover:text - red - 300 text - sm font-medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 View Documentation →;
               </Link>;
             </div>;
@@ -507,9 +580,12 @@ export default function DocumentationPage() {return (;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="card group hover:bg - yellow - 500 / 10 transition-colors">;
               <div className="w - 16 h - 16 bg - yellow - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - yellow-500 / 30">;
                 <svg className="w - 8 h - 8 text - yellow-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -521,11 +597,15 @@ export default function DocumentationPage() {return (;
                 Satellite and space technology documentation;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <ul className="space - y-2 mb - 6 text - sm text - gray-400">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Satellite Systems</li>;
                 <li>• Ground Station Setup</li>;
                 <li>• Communication Protocols</li>;
@@ -535,12 +615,16 @@ export default function DocumentationPage() {return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/docs / space - technology" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
+<<<<<<< HEAD
 =======
 =======
               <Link href="/docs / space - technology" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <Link href="/docs / space - technology" className="text - yellow - 400 hover:text - yellow - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <Link href="/docs / space - technology" className="text - yellow - 400 hover:text - yellow - 300 text - sm font-medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 View Documentation →;
               </Link>;
             </div>;
@@ -571,9 +655,12 @@ export default function DocumentationPage() {return (;
               </p>;
               <div className="space - y-2 mb - 6 text - sm text - gray - 400">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - blue - 600 / 10 to - purple-600 / 10">;
         <div className="max - w-7xl mx-auto">;
           <div className="text - center mb-16">;
@@ -592,11 +679,15 @@ export default function DocumentationPage() {return (;
                 and error handling for all Zion Tech Group services.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="space - y-2 mb - 6 text - sm text - gray-400">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <div className="space - y-2 mb - 6 text - sm text - gray - 400">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <div className="space - y-2 mb - 6 text - sm text - gray - 400">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <div>• Authentication & Authorization</div>;
                 <div>• Request / Response Formats</div>;
                 <div>• Rate Limiting</div>;
@@ -606,12 +697,16 @@ export default function DocumentationPage() {return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/docs / api / rest" className="btn - primary">;
+<<<<<<< HEAD
 =======
 =======
               <Link href="/docs / api / rest" className="btn - primary">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <Link href="/docs / api / rest" className="btn-primary">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <Link href="/docs / api / rest" className="btn-primary">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 View REST API Docs;
               </Link>;
             </div>;
@@ -627,20 +722,27 @@ export default function DocumentationPage() {return (;
               </p>;
               <div className="space - y-2 mb - 6 text - sm text - gray - 400">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <h3 className="text - xl font - semibold mb-4">GraphQL API</h3>;
               <p className="text - gray - 400 mb-4">;
                 GraphQL API documentation for flexible data querying and;
                 real - time subscriptions across our services.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="space - y-2 mb - 6 text - sm text - gray-400">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <div className="space - y-2 mb - 6 text - sm text - gray - 400">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <div className="space - y-2 mb - 6 text - sm text - gray - 400">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <div>• Schema Documentation</div>;
                 <div>• Query Examples</div>;
                 <div>• Mutations & Subscriptions</div>;
@@ -650,12 +752,16 @@ export default function DocumentationPage() {return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/docs / api / graphql" className="btn - primary">;
+<<<<<<< HEAD
 =======
 =======
               <Link href="/docs / api / graphql" className="btn - primary">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <Link href="/docs / api / graphql" className="btn-primary">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <Link href="/docs / api / graphql" className="btn-primary">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 View GraphQL Docs;
               </Link>;
             </div>;
@@ -697,9 +803,12 @@ export default function DocumentationPage() {return (;
               </div>;
               <Link href="/docs / tutorials / ai - chatbot" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
         <div className="max - w-7xl mx-auto">;
           <div className="text - center mb-16">;
@@ -729,11 +838,15 @@ export default function DocumentationPage() {return (;
                 15 min read;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/docs / tutorials / ai - chatbot" className="text - blue - 400 hover:text - blue - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/docs / tutorials / ai - chatbot" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/docs / tutorials / ai - chatbot" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read Tutorial →;
               </Link>;
             </div>;
@@ -760,9 +873,12 @@ export default function DocumentationPage() {return (;
               </div>;
               <Link href="/docs / tutorials / quantum - algorithm" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - full h - 32 bg - gradient - to - br from - purple - 500 / 20 to - blue - 500 / 20 rounded - xl mb - 6 flex items - center justify-center">;
                 <svg className="w - 12 h - 12 text - purple-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9 - 11h - 7z" />;
@@ -780,11 +896,15 @@ export default function DocumentationPage() {return (;
                 25 min read;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/docs / tutorials / quantum - algorithm" className="text - purple - 400 hover:text - purple - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/docs / tutorials / quantum - algorithm" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/docs / tutorials / quantum - algorithm" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read Tutorial →;
               </Link>;
             </div>;
@@ -811,9 +931,12 @@ export default function DocumentationPage() {return (;
               </div>;
               <Link href="/docs / tutorials / security - best - practices" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - full h - 32 bg - gradient - to - br from - green - 500 / 20 to - blue - 500 / 20 rounded - xl mb - 6 flex items - center justify-center">;
                 <svg className="w - 12 h - 12 text - green-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4 - 4m5.618 - 4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01 - 8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176 - 1.332 9 - 6.03 9 - 11.622 0 - 1.042-.133 - 2.052-.382 - 3.016z" />;
@@ -831,11 +954,15 @@ export default function DocumentationPage() {return (;
                 20 min read;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/docs / tutorials / security - best - practices" className="text - green - 400 hover:text - green - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/docs / tutorials / security - best - practices" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/docs / tutorials / security - best - practices" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read Tutorial →;
               </Link>;
             </div>;
@@ -912,9 +1039,12 @@ export default function DocumentationPage() {return (;
               </p>;
               <Link href="/status" className="text - red - 400 hover:text - red - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - gray - 800 / 20 to - gray-900 / 20">;
         <div className="max - w-7xl mx-auto">;
           <div className="text - center mb-16">;
@@ -979,11 +1109,15 @@ export default function DocumentationPage() {return (;
                 Service status and uptime information;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/status" className="text - red - 400 hover:text - red - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/status" className="text - red - 400 hover:text - red - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/status" className="text - red - 400 hover:text - red - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Check Status →;
               </Link>;
             </div>;
@@ -1010,9 +1144,12 @@ export default function DocumentationPage() {return (;
               </Link>;
               <Link href="/docs / faq" className="btn - secondary text - lg px - 8 py - 4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 px - 4 sm: px - 6 lg:px-8">;
         <div className="max - w-4xl mx - auto text-center">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue-500 / 30">;
@@ -1027,11 +1164,15 @@ export default function DocumentationPage() {return (;
                 Contact Support;
               </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/docs / faq" className="btn - secondary text - lg px - 8 py-4">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/docs / faq" className="btn - secondary text - lg px - 8 py - 4">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/docs / faq" className="btn - secondary text - lg px - 8 py - 4">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 View FAQ;
               </Link>;
             </div>;

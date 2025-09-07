@@ -12,6 +12,7 @@ const React,{ useState } from "react";"""; import { EXPANDED_SERVICES,EXPANDED_S
 ursor/automate-test-improve-and-merge-code-646c;
 import _React,{ useState } from 'react';'''; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';'''; import { Button } from '@/components/ui/button';'''; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card';'''; import { Badge } from '@/components/ui/badge';'''; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from 'lucide-react';'''; import SEO from '@/components/SEO'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React,{ useState } from 'react';'''; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';'''; import { Button } from '@/components/ui/button';'''; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card';'''; import { Badge } from '@/components/ui/badge';'''; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from 'lucide-react';'''; import SEO from '@/components/SEO'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
 <<<<<<< HEAD
 =======
@@ -19,3 +20,5 @@ import _React,{ useState } from 'react';'''; import { EXPANDED_SERVICES,EXPANDED
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const SEO = dynamic(() => import("./SEO"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEO' ,'
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 const SEO = dynamic(() => import("./SEO"),{'; loading: () => <p>Loading...</p,>}) export: 'default SEO' ,';
 </p>';
 </p>';
@@ -25,7 +28,10 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 const SEO = dynamic(() => import("./SEO"),{'; loading: () => <p>Loading...</p,>}) export: 'default SEO' ,'
+<<<<<<< HEAD
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 </p>'
 </p>'
 <<<<<<< HEAD

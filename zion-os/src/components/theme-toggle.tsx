@@ -43,9 +43,13 @@ function ThemeToggle() {
               : "text - zinc - 400 hover:text - zinc - 100";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return (<div className="flex items-center gap-2">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  return (<div className="flex items-center gap-2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 "use client";
 import { useTheme } from "@/components/theme-provider";
 import { Moon, Sun, Monitor } from "lucide-react";
@@ -93,6 +97,11 @@ export function ThemeToggle() {const { theme, setTheme } = useTheme();
               : "text - zinc - 400 hover:text - zinc - 100";<Sun className="h - 4 w-4" />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         </button>;
+        <button;on_click={() => set_theme ("system")}
+          className={`rounded px - 2 py - 1 text - sm transition - colors ${theme === "system";
+              ? "bg - zion - blue text - white";
+              : "text - zinc - 400 hover:text - zinc - 100";<Sun className="h - 4 w-4" />;
+        </button>;
         <button;
           }`}
           aria - label="Switch to system theme";
@@ -113,6 +122,11 @@ export function ThemeToggle() {const { theme, setTheme } = useTheme();
               : "text - zinc - 400 hover:text - zinc - 100";<Monitor className="h - 4 w-4" />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         </button>;
+        <button;on_click={() => set_theme ("dark")}
+          className={`rounded px - 2 py - 1 text - sm transition - colors ${theme === "dark";
+              ? "bg - zion - blue text - white";
+              : "text - zinc - 400 hover:text - zinc - 100";<Monitor className="h - 4 w-4" />;
+        </button>;
         <button;
           }`}
           aria - label="Switch to dark theme";
@@ -121,12 +135,16 @@ export function ThemeToggle() {const { theme, setTheme } = useTheme();
 <<<<<<< HEAD
 <<<<<<< HEAD
           <Moon className="h - 4 w - 4" />;
+<<<<<<< HEAD
 =======
 =======
           <Moon className="h - 4 w - 4" />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <Moon className="h - 4 w-4" />;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          <Moon className="h - 4 w-4" />;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         </button>;
       </div>;
     </div>)}

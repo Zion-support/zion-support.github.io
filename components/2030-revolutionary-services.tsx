@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
@@ -46,6 +47,15 @@ import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFoote
 import { innovative2030Services } from '../data/2030-innovative-services';import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin  } from 'lucide-react';
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin  } from 'lucide-react';
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
+=======
+
+} from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import { innovative2030Services } from '../data/2030-innovative-services';import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin  } from 'lucide-react';
+import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin  } from 'lucide-react';
+import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import { innovative2030Services  } from '../data/2030-innovative-services';
   }return (ArrowRight,Star,Zap,TrendingUp,Users,Award,Phone,Mail,MapPin,import { motion  } from 'framer-motion';
 import {ArrowRight,Star,Zap,TrendingUp,Users,Award,Phone,Mail,MapPin,} from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
@@ -64,7 +74,10 @@ import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturi
         <meta;
           name='description';
           content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing, we're building tomorrow's solutions today.";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         />;
         <meta;
           name='keywords';
@@ -153,6 +166,7 @@ import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturi
         {/* Structured Data */}
         <script;
           type='application / ld + json';
+<<<<<<< HEAD
 <<<<<<< HEAD
           dangerouslySetInnerHTML={{
               '@type': 'Organization',
@@ -321,6 +335,80 @@ className='text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-ti
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+=======
+          dangerouslySetInnerHTML={{'@type': 'Organization',name: 'Zion Tech Group',description:;
+                'Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing',},address: {'@type': 'PostalAddress',street_address: '364 E Main St STE 1008',address_locality: 'Middletown',address_region: 'DE',postal_code: '19709',address_country: 'US',},"address": {"@type": "PostalAddress";
+                "streetAddress": "364 E Main St STE 1008";
+                "addressLocality": "Middletown";
+                "addressRegion": "DE";
+                "postalCode": "19709";
+                "addressCountry": "US";
+              }streetAddress: '364 E Main St STE 1008',addressLocality: 'Middletown',addressRegion: 'DE',postalCode: '19709',addressCountry: 'US',},sameAs: ['https://github.com/Zion-Holdings'],}),}}"sameAs": [;
+                "https://github && github.com/Zion-Holdings";
+              ];
+            })/>;
+      </Head>;
+      {/* Navigation */}
+      <UltraFuturisticNavigation2030 />;
+      {/* Hero Section */}<section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
+        <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div;
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}      <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
+        <div className="max-w-7xl mx-auto text-center">;
+          <motion&& motion.div;
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+          >;
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6">;
+              <Zap className="w-4 h-4 text-cyan-400 mr-2" />;
+              <span className="text-cyan-400 text-sm font-medium">;
+<section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
+        <div className='max-w-7xl mx-auto text-center'>;
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+className='mb-8';
+          >;
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6'>;
+              <Zap className='w-4 h-4 text-cyan-400 mr-2' />;
+              <span className='text-cyan-400 text-sm font-medium'>;
+                2030 Revolutionary Technology Services;
+              </span>;
+            </div>;
+          </motion.div>;
+          <motion.h1;
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}<span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+              2030 Revolutionary;
+            </span>;
+            <br />;
+            <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">;
+className='text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight';
+          >;
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+              2030 Revolutionary;
+            </span>;
+            <br />;
+            <span className='bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>;
+              Technology Services;
+            </span>;
+          </motion.h1>;
+          <motion.p;
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed';
+          >;
+            Experience the next generation of revolutionary technology services.;
+            From AI consciousness and quantum computing to space mining and DNA;
+            computing, we're building the future today.;
+          </motion.p>;
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             transition={{ duration: 0.8, delay: 0.6 }}<button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group">;
               Schedule Consultation;
               <ArrowRight className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" />;
@@ -342,10 +430,21 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center';
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div;
+<<<<<<< HEAD
+=======
       {/* Services Showcase */}
       <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
         <div className="max-w-7xl mx-auto">;
+<section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
+        <div className='max-w-7xl mx-auto'>;
+          <motion.div;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+      {/* Services Showcase */}
+      <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
+        <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
+        <div className="max-w-7xl mx-auto">;
+<<<<<<< HEAD
 <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto'>;
           <motion.div;
@@ -354,10 +453,13 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center';
       <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
         <div className="max-w-7xl mx-auto">;
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             viewport={{ once: true }}
 className='text-center mb-20'
@@ -420,6 +522,35 @@ className='group cursor-pointer'
               >;
                 <div className='p-8 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            viewport={{ once: true }}className='text-center mb-20';
+          >;
+            <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>;
+              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+                Revolutionary;
+              </span>;
+              <br />;
+              <span className='bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>;
+                2030 Services;
+              </span>;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Discover our comprehensive range of cutting-edge 2030 technology;
+              services that will transform your business and propel you into the;
+              future.;
+            </p>;
+          </motion.div>;
+          {/* Services Grid */}
+<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20'>;
+            {innovative2030Services.map((service, index) => (<motion.div;
+                key={service.id}initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}className='group cursor-pointer';
+              >;
+                <div className='p-8 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm'>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   {/* Service Header */}
                   <div className='flex items-start justify-between mb-6'>;
                     <div className='flex items-center space-x-4'>;
@@ -444,11 +575,15 @@ className='group cursor-pointer'
 <p className='text-gray-300 leading-relaxed mb-6'>;
                     {service.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                   </p>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  </p>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   {/* Features */}
                   <div className='grid grid-cols-2 gap-3 mb-6'>;
                     {service && service.features;
@@ -460,6 +595,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       ))}
                     )}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </div>
                   {/* Service Details */}
@@ -480,6 +616,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <TrendingUp className='w-4 h-4 text-green-400' />
                       <span className='text-gray-300'>
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;
                   {/* Description */}
                   {/* Features */}
@@ -563,7 +701,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='flex items-center space-x-2'>;
                       <TrendingUp className='w-4 h-4 text-green-400' />;
                       <span className='text-gray-300'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                         {service.growthRate}
                       </span>;
                     </div>;
@@ -582,6 +723,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
                       <div className='text-gray-400 text-sm'>;
                         {service.period}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       </div>
                     </div>
@@ -640,6 +782,22 @@ className='text-center'
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
+=======
+                      </div>;
+                    </div>;
+                    <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group'>;
+                      Learn More;
+                      <ArrowRight className='w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform' />;
+                    </button>;
+                  </div>;
+                </div>;
+              </motion.div>;
+            ))}{/* Call to Action */}
+          <motion&& motion.div;
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             viewport={{ once: true }}initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -701,7 +859,10 @@ className='text-center';
           </motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       {/* Contact Section */}
 <section className='py-24 px-4 sm:px-6 lg:px-8'>;
         <div className='max-w-4xl mx-auto text-center'>;
@@ -715,6 +876,7 @@ className='text-center';
               Ready to Transform Your Business with;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 {' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 2030 Technology?
               </span>
@@ -754,6 +916,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 2030 Technology?;
               </span>;
             </h2>;
@@ -842,6 +1006,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion && motion.div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       </section>;
 
       {/* Footer */}
@@ -850,6 +1015,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       </section>;{/* Footer */}<UltraFuturisticFooter2030 />;
     </UltraFuturisticBackground2030>;
   ))</motion.div>;
@@ -932,5 +1099,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <UltraFuturisticFooter2030 />;
     </UltraFuturisticBackground2030>))}<UltraFuturisticFooter2030 />;
     </UltraFuturisticBackground2030>;
+<<<<<<< HEAD
 )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+)
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

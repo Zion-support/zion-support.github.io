@@ -11,6 +11,7 @@ const React from";react" export: const InteractiveHero = ({ title,subtitle,descr
 import _React from';react' "export": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [' { "value": '500+,',"label": 'Happy: Clients,',"color": 'text-blue-400'},{ "value": '1000+,',"label": 'Projects: Delivered,',"color": 'text-green-400'},{ "value": '99 && 99.9%,',"label": 'Uptime: SLA,',"color": 'text-purple-400'},{ "value": '24/7,',"label": 'Support: Available,',"color": 'text-cyan-400'} ] }) => { const [mousePosition,setMousePosition] = useState({ "x": '0',"y": '0'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ "x": 'e && e.client',X,"y": 'e && e.clientY'})} window && window.addEventListener('mousemove',handleMouseMove)'';';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from';react' "export": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [' { "value": '500+,',"label": 'Happy: Clients,',"color": 'text-blue-400'},{ "value": '1000+,',"label": 'Projects: Delivered,',"color": 'text-green-400'},{ "value": '99 && 99.9%,',"label": 'Uptime: SLA,',"color": 'text-purple-400'},{ "value": '24/7,',"label": 'Support: Available,',"color": 'text-cyan-400'} ] }) => { const [mousePosition,setMousePosition] = useState({ "x": '0',"y": '0'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ "x": 'e && e.client',X,"y": 'e && e.clientY'})} window && window.addEventListener('mousemove',handleMouseMove)'';';
 import _React from';react' "export": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [' { "value": '500+,',"label": 'Happy: Clients,',"color": 'text-blue-400'},{ "value": '1000+,',"label": 'Projects: Delivered,',"color": 'text-green-400'},{ "value": '99 && 99.9%,',"label": 'Uptime: SLA,',"color": 'text-purple-400'},{ "value": '24/7,',"label": 'Support: Available,',"color": 'text-cyan-400'} ] }) => { const [mousePosition,setMousePosition] = useState({ "x": '0',"y": '0'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ "x": 'e && e.client',X,"y": 'e && e.clientY'})} window && window.addEventListener('mousemove',handleMouseMove)'';';
 =======
@@ -21,3 +22,6 @@ import _React from';react' "export": const InteractiveHero = ({ title,subtitle,d
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

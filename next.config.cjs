@@ -94,8 +94,12 @@ const nextConfig = {
 =======
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
@@ -125,10 +129,17 @@ module.exports = nextConfig;
     ignoreDuringBuilds: true,
   reactStrictMode: false,
   swcMinify: false,
+=======
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+>>>>>>> origin/chore/fix-automation-and-build
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+<<<<<<< HEAD
   experimental: {
     forceSwcTransforms: false},
   // Ensure standard Next.js page extensions are recognized alongside any custom route files
@@ -204,6 +215,9 @@ const nextConfig = {
 module.exports = nextConfig;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 =======
 
@@ -242,7 +256,38 @@ export default nextConfig;
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 =======
+<<<<<<< HEAD
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+=======
+  images: {
+    domains: ["localhost", "ziontechgroup.com"],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+  experimental: {
+    // Remove optimizePackageImports to satisfy Next 12 validation
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' }
+        ]
+      }
+    ];
+  }
+};
+
+module.exports = nextConfig;
+>>>>>>> origin/chore/fix-automation-and-build
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

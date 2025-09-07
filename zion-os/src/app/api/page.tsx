@@ -1,5 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+;
+export default function APIPage() {return (<div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-6xl mx-auto">;{/* Header */}
+        <div className="text - center mb - 16">;
+          <h1 className="text - 4xl md:text - 5xl font - bold mb - 6">;
+            <span className="gradient - text">API Reference</span>;
+          </h1>;
+          <p className="text - xl text - gray - 300 max - w-2xl mx - auto">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 export default function APIPage() {return (;
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-6xl mx-auto">;
@@ -63,9 +75,12 @@ export default function APIPage() {return (;
               <div className="text - sm text - gray - 400 mb - 2">3. Explore our SDKs</div>;
               <code className="text - blue - 400">npm install @zion - os / sdk</code>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <div className="card mb-12">;
           <h2 className="text - 2xl font - bold mb-4">Quick Start</h2>;
           <div className="space-y-4">;
@@ -81,6 +96,7 @@ export default function APIPage() {return (;
               <code className="text - blue - 400">curl -H "Authorization: Bearer YOUR_API_KEY" https://api.ziontechgroup.com / v1 / economies</code>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="bg - gray - 900 / 50 rounded - lg p-4">;
               <div className="text - sm text - gray - 400 mb-2">3. Explore our SDKs</div>;
               <code className="text - blue-400">npm install @zion - os / sdk</code>;
@@ -90,6 +106,11 @@ export default function APIPage() {return (;
               <div className="text - sm text - gray - 400 mb - 2">3. Explore our SDKs</div>;
               <code className="text - blue - 400">npm install @zion - os / sdk</code>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <div className="bg - gray - 900 / 50 rounded - lg p - 4">;
+              <div className="text - sm text - gray - 400 mb - 2">3. Explore our SDKs</div>;
+              <code className="text - blue - 400">npm install @zion - os / sdk</code>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             </div>;
           </div>;
         </div>;
@@ -118,9 +139,12 @@ export default function APIPage() {return (;
                     <div className="font - semibold text - white">POST /api / v1 / auth / logout</div>;
                     <div className="text - gray - 400">User logout</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <div className="mb-12">;
           <h2 className="text - 3xl font - bold mb - 8 text-center">API Endpoints</h2>;
           <div className="space-y-6">;
@@ -139,6 +163,7 @@ export default function APIPage() {return (;
                   </div>;
                   <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div className="font - semibold text-white">POST /api / v1 / auth / logout</div>;
                     <div className="text - gray-400">User logout</div>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -146,6 +171,10 @@ export default function APIPage() {return (;
                     <div className="font - semibold text - white">POST /api / v1 / auth / logout</div>;
                     <div className="text - gray - 400">User logout</div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    <div className="font - semibold text - white">POST /api / v1 / auth / logout</div>;
+                    <div className="text - gray - 400">User logout</div>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;
                 </div>;
               </div>;
@@ -185,9 +214,12 @@ export default function APIPage() {return (;
                     <div className="font - semibold text - white">POST /api / v1 / economies/{'{id}'}/deploy</div>;
                     <div className="text - gray - 400">Deploy economy</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <h3 className="text - xl font - semibold mb - 4 text - blue-400">🌍 Digital Economies</h3>;
               <div className="space-y-4">;
                 <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text-sm">;
@@ -215,6 +247,7 @@ export default function APIPage() {return (;
                   </div>;
                   <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div className="font - semibold text-white">POST /api / v1 / economies/{'{id}'}/deploy</div>;
                     <div className="text - gray-400">Deploy economy</div>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -222,6 +255,10 @@ export default function APIPage() {return (;
                     <div className="font - semibold text - white">POST /api / v1 / economies/{'{id}'}/deploy</div>;
                     <div className="text - gray - 400">Deploy economy</div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    <div className="font - semibold text - white">POST /api / v1 / economies/{'{id}'}/deploy</div>;
+                    <div className="text - gray - 400">Deploy economy</div>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;
                 </div>;
               </div>;
@@ -247,9 +284,12 @@ export default function APIPage() {return (;
                     <div className="font - semibold text - white">POST /api / v1 / governance / vote</div>;
                     <div className="text - gray - 400">Cast vote</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <h3 className="text - xl font - semibold mb - 4 text - purple-400">🏛️ AI Governance</h3>;
               <div className="space-y-4">;
                 <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text-sm">;
@@ -263,6 +303,7 @@ export default function APIPage() {return (;
                   </div>;
                   <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div className="font - semibold text-white">POST /api / v1 / governance / vote</div>;
                     <div className="text - gray-400">Cast vote</div>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -270,6 +311,10 @@ export default function APIPage() {return (;
                     <div className="font - semibold text - white">POST /api / v1 / governance / vote</div>;
                     <div className="text - gray - 400">Cast vote</div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    <div className="font - semibold text - white">POST /api / v1 / governance / vote</div>;
+                    <div className="text - gray - 400">Cast vote</div>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;
                 </div>;
               </div>;
@@ -295,9 +340,12 @@ export default function APIPage() {return (;
                     <div className="font - semibold text - white">GET /api / v1 / marketplace / services</div>;
                     <div className="text - gray - 400">List services</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <h3 className="text - xl font - semibold mb - 4 text - yellow-400">🛒 Marketplace</h3>;
               <div className="space-y-4">;
                 <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text-sm">;
@@ -311,6 +359,7 @@ export default function APIPage() {return (;
                   </div>;
                   <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div className="font - semibold text-white">GET /api / v1 / marketplace / services</div>;
                     <div className="text - gray-400">List services</div>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -318,6 +367,10 @@ export default function APIPage() {return (;
                     <div className="font - semibold text - white">GET /api / v1 / marketplace / services</div>;
                     <div className="text - gray - 400">List services</div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    <div className="font - semibold text - white">GET /api / v1 / marketplace / services</div>;
+                    <div className="text - gray - 400">List services</div>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;
                 </div>;
               </div>;
@@ -343,9 +396,12 @@ export default function APIPage() {return (;
                     <div className="font - semibold text - white">POST /api / v1 / identity / kyc</div>;
                     <div className="text - gray - 400">Submit KYC documents</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <h3 className="text - xl font - semibold mb - 4 text - red-400">🆔 Identity & KYC</h3>;
               <div className="space-y-4">;
                 <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text-sm">;
@@ -359,6 +415,7 @@ export default function APIPage() {return (;
                   </div>;
                   <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div className="font - semibold text-white">POST /api / v1 / identity / kyc</div>;
                     <div className="text - gray-400">Submit KYC documents</div>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -366,6 +423,10 @@ export default function APIPage() {return (;
                     <div className="font - semibold text - white">POST /api / v1 / identity / kyc</div>;
                     <div className="text - gray - 400">Submit KYC documents</div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    <div className="font - semibold text - white">POST /api / v1 / identity / kyc</div>;
+                    <div className="text - gray - 400">Submit KYC documents</div>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;
                 </div>;
               </div>;
@@ -418,9 +479,12 @@ export default function APIPage() {return (;
                 <code className="text - sm text - blue - 400 block">composer require zion - os / sdk</code>;
                 <a href="#" className="text - blue - 400 hover:text - blue - 300 text - sm">View Documentation →</a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <div className="mb-12">;
           <h2 className="text - 3xl font - bold mb - 8 text-center">SDKs & Libraries</h2>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">;
@@ -457,6 +521,7 @@ export default function APIPage() {return (;
                 </svg>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h3 className="text - lg font - semibold mb-2">PHP SDK</h3>;
               <p className="text - gray - 400 mb-4">PHP client library for web applications</p>;
               <div className="space-y-2">;
@@ -464,12 +529,17 @@ export default function APIPage() {return (;
                 <a href="#" className="text - blue - 400 hover:text - blue - 300 text-sm">View Documentation →</a>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <h3 className="text - lg font - semibold mb - 2">PHP SDK</h3>;
               <p className="text - gray - 400 mb - 4">PHP client library for web applications</p>;
               <div className="space - y-2">;
                 <code className="text - sm text - blue - 400 block">composer require zion - os / sdk</code>;
                 <a href="#" className="text - blue - 400 hover:text - blue - 300 text - sm">View Documentation →</a>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </div>;
             </div>;
           </div>;
@@ -480,21 +550,29 @@ export default function APIPage() {return (;
         <div className="mb - 12">;
           <h2 className="text - 3xl font - bold mb - 8 text - center">Code Examples</h2>;
           <div className="space - y-6">;
+<<<<<<< HEAD
 =======
         <div className="mb-12">;
 =======
         <div className="mb - 12">;
           <h2 className="text - 3xl font - bold mb - 8 text - center">Code Examples</h2>;
           <div className="space - y-6">;
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="card">;<h3 className="text - xl font - semibold mb - 4">Create a Digital Economy</h3>;
               <div className="bg - gray - 900 / 50 rounded - lg p - 4">;
                 <div className="text - sm text - gray - 400 mb - 2">Node.js</div>;
                 <pre className="text - sm text - gray - 300 overflow - x-auto">;
 {`const { ZionOS } = require ('@zion - os / sdk'),const client = new ZionOS ('YOUR_API_KEY'),const economy = await client.economies.create ({name: 'My Digital Economy',description: 'A sovereign digital economy',features: ['marketplacegovernancetokens'],<div className="mb-12">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <h2 className="text - 3xl font - bold mb - 8 text-center">Code Examples</h2>;
           <div className="space-y-6">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          <h2 className="text - 3xl font - bold mb - 8 text-center">Code Examples</h2>;
+          <div className="space-y-6">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="card">;
   blockchain: 'ethereum';
 })// // // console.log ('Economy created:', economy.id), `}
@@ -511,14 +589,20 @@ export default function APIPage() {return (;
                 <div className="text - sm text - gray - 400 mb - 2">Python</div>;
                 <pre className="text - sm text - gray - 300 overflow - x-auto">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <h3 className="text - xl font - semibold mb-4">Deploy an Economy</h3>;
               <div className="bg - gray - 900 / 50 rounded - lg p-4">;
                 <div className="text - sm text - gray - 400 mb-2">Python</div>;
                 <pre className="text - sm text - gray - 300 overflow-x-auto">;
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 {`from zion_os import ZionOS;
 client = ZionOS ('YOUR_API_KEY')# Deploy the economy;
 deployment = client.economies.deploy ('economy_id')# Wait for deployment to complete;
@@ -553,9 +637,12 @@ deployment.wait_for_completion ()print (f"Economy deployed at: {deployment.url}"
                 <p><strong > Webhooks:</strong> HMAC signature verification</p>;
                 <p className="text - sm text - gray - 400">All requests must be authenticated</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <div className="mb-12">;
           <h2 className="text - 3xl font - bold mb - 8 text-center">Rate Limits & Authentication</h2>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
@@ -575,11 +662,15 @@ deployment.wait_for_completion ()print (f"Economy deployed at: {deployment.url}"
                 <p><strong > JWT Tokens:</strong> For user - specific operations</p>;
                 <p><strong > Webhooks:</strong> HMAC signature verification</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <p className="text - sm text - gray-400">All requests must be authenticated</p>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
                 <p className="text - sm text - gray - 400">All requests must be authenticated</p>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                <p className="text - sm text - gray - 400">All requests must be authenticated</p>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </div>;
             </div>;
           </div>;
@@ -601,9 +692,12 @@ deployment.wait_for_completion ()print (f"Economy deployed at: {deployment.url}"
               </a>;
               <a href="/community" className="btn - secondary text - lg px - 8 py - 4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <div className="text-center">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue-500 / 30">;
             <h2 className="text - 3xl font - bold mb-4">Need Help?</h2>;
@@ -615,11 +709,15 @@ deployment.wait_for_completion ()print (f"Economy deployed at: {deployment.url}"
                 Contact Support;
               </a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/community" className="btn - secondary text - lg px - 8 py-4">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/community" className="btn - secondary text - lg px - 8 py - 4">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/community" className="btn - secondary text - lg px - 8 py - 4">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Join Community;
               </a>;
             </div>;

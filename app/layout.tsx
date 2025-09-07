@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -15,6 +16,10 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
+=======
+import type { Metadata } from 'next';
+import './globals.css';
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 export const metadata: Metadata = {
   title: {
@@ -102,6 +107,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <body className={inter.className}>
 <<<<<<< HEAD
         <header className="bg-white shadow-sm">
@@ -174,11 +180,17 @@ export default function RootLayout({
     </html>
   )
 =======
+=======
+      <body>
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <div className="min-h-screen bg-white">
           {children}
         </div>
       </body>
     </html>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 }

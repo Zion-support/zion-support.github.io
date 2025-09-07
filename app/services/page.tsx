@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from "next/link";
 import React from 'react';
@@ -360,10 +361,18 @@ export default function ServicesPage() {
   title: 'Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions',
   description: 'Comprehensive technology services including AI development, micro SaaS solutions, financial technology, healthcare technology, and educational technology. Transform your business with cutting-edge solutions.',
   keywords: 'AI services, micro SaaS, FinTech, HealthTech, EdTech, technology solutions, software development, digital transformation'
+=======
+import Link from "next/link";
+
+export const metadata = {
+  title: "Services | Zion Tech Group",
+  description: "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 };
 
 export default function ServicePage() {
   return (
+<<<<<<< HEAD
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -389,6 +398,285 @@ export default function ServicePage() {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         </div>
       </section>
+=======
+    <div className="animate-fade-in">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Our Services
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
+          we deliver measurable outcomes with 99.9% uptime, bank-grade security, and 24/7 expert support.
+        </p>
+      </div>
+
+      {/* Statistics Section */}
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <StatCard 
+            number="500+" 
+            label="Successful Projects" 
+            description="Delivered worldwide" 
+          />
+          <StatCard 
+            number="$2B+" 
+            label="Combined Market Value" 
+            description="Generated for clients" 
+          />
+          <StatCard 
+            number="99.9%" 
+            label="Uptime Guarantee" 
+            description="Enterprise reliability" 
+          />
+          <StatCard 
+            number="300%" 
+            label="Average ROI" 
+            description="Client return on investment" 
+          />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <ServiceCard
+          href="/services/micro-saas"
+          title="Micro SaaS Solutions"
+          description="Complete micro SaaS development from MVP to scale with billing, analytics, and growth optimization"
+          bullets={[
+            "Foundational architecture",
+            "Billing + subscriptions", 
+            "Growth analytics"
+          ]}
+          icon="🚀"
+          pricing="From $2,999/month"
+        />
+        <ServiceCard
+          href="/services/ai-services"
+          title="AI Services"
+          description="LLM applications, RAG systems, and MLOps pipelines"
+          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
+          icon="🤖"
+          pricing="From $5,000/project"
+        />
+        <ServiceCard
+          href="/services/it-services"
+          title="IT Services"
+          description="Cloud migration, DevOps, and security solutions"
+          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
+          icon="⚙️"
+          pricing="From $3,000/month"
+        />
+        <ServiceCard
+          href="/services/blockchain-solutions"
+          title="Blockchain Solutions"
+          description="Comprehensive blockchain development, DeFi solutions, NFT platforms, and Web3 integration"
+          bullets={[
+            "Smart contract development",
+            "DeFi protocol creation",
+            "NFT marketplace platforms",
+            "Cross-chain solutions"
+          ]}
+          icon="⛓️"
+          pricing="From $5,000/project"
+        />
+        <ServiceCard
+          href="/services/ai-automation-suite"
+          title="AI Automation Suite"
+          description="Intelligent automation solutions including RPA, workflow automation, and process optimization"
+          bullets={[
+            "80% manual task reduction",
+            "300% productivity increase",
+            "RPA implementation",
+            "Workflow orchestration"
+          ]}
+          icon="🤖"
+          pricing="From $2,500/month"
+        />
+        <ServiceCard
+          href="/services/cybersecurity-solutions"
+          title="Cybersecurity Solutions"
+          description="Comprehensive security services including threat detection, compliance, and 24/7 monitoring"
+          bullets={[
+            "99.9% security uptime",
+            "Threat detection & response",
+            "Compliance management",
+            "24/7 monitoring"
+          ]}
+          icon="🛡️"
+          pricing="From $2,500/month"
+        />
+        <ServiceCard
+          href="/services/cloud-solutions"
+          title="Cloud Solutions"
+          description="Cloud migration, optimization, and management services for AWS, Azure, and GCP"
+          bullets={[
+            "99.9% cloud uptime",
+            "40% cost reduction",
+            "Multi-cloud support",
+            "24/7 monitoring"
+          ]}
+          icon="☁️"
+          pricing="From $3,000/month"
+        />
+        <ServiceCard
+          href="/services/data-analytics"
+          title="Data Analytics & BI"
+          description="Advanced analytics, business intelligence, and machine learning solutions"
+          bullets={[
+            "95% data accuracy",
+            "300% faster insights",
+            "Machine learning models",
+            "Real-time dashboards"
+          ]}
+          icon="📊"
+          pricing="From $3,500/month"
+        />
+        <ServiceCard
+          href="/services/ai-content-generator"
+          title="AI Content Generator Pro"
+          description="Advanced AI-powered content creation platform for blogs, social media, and marketing materials"
+          bullets={[
+            "Multi-language support",
+            "SEO optimization",
+            "Brand voice consistency",
+            "Plagiarism detection"
+          ]}
+          icon="✍️"
+          pricing="From $199/month"
+        />
+        <ServiceCard
+          href="/services/smart-invoice-generator"
+          title="Smart Invoice Generator"
+          description="Automated invoice creation with AI-powered expense categorization and payment tracking"
+          bullets={[
+            "Auto-expense categorization",
+            "Payment reminders",
+            "Multi-currency support",
+            "Tax compliance"
+          ]}
+          icon="🧾"
+          pricing="From $149/month"
+        />
+        <ServiceCard
+          href="/services/ai-social-scheduler"
+          title="AI Social Media Scheduler"
+          description="Intelligent social media management with optimal posting times and content suggestions"
+          bullets={[
+            "Optimal timing AI",
+            "Content suggestions",
+            "Multi-platform posting",
+            "Analytics dashboard"
+          ]}
+          icon="📱"
+          pricing="From $99/month"
+        />
+        <ServiceCard
+          href="/services/ai-meeting-assistant"
+          title="AI Meeting Assistant"
+          description="Automated meeting transcription, action item extraction, and follow-up management"
+          bullets={[
+            "Real-time transcription",
+            "Action item extraction",
+            "Meeting summaries",
+            "Calendar integration"
+          ]}
+          icon="🎤"
+          pricing="From $179/month"
+        />
+        <ServiceCard
+          href="/services/ai-customer-insights"
+          title="AI Customer Insights Platform"
+          description="Advanced customer behavior analysis and predictive insights for business growth"
+          bullets={[
+            "Behavioral analytics",
+            "Churn prediction",
+            "Personalization engine",
+            "ROI tracking"
+          ]}
+          icon="👥"
+          pricing="From $299/month"
+        />
+        <ServiceCard
+          href="/services/ai-project-manager"
+          title="AI Project Manager"
+          description="Intelligent project management with automated task assignment and progress tracking"
+          bullets={[
+            "Smart task assignment",
+            "Progress prediction",
+            "Resource optimization",
+            "Risk assessment"
+          ]}
+          icon="📋"
+          pricing="From $249/month"
+        />
+        <ServiceCard
+          href="/services/ai-finance-analyzer"
+          title="AI Finance Analyzer"
+          description="Automated financial analysis, budgeting, and investment recommendations"
+          bullets={[
+            "Expense categorization",
+            "Budget optimization",
+            "Investment insights",
+            "Financial forecasting"
+          ]}
+          icon="💰"
+          pricing="From $199/month"
+        />
+        <ServiceCard
+          href="/services/ai-email-optimizer"
+          title="AI Email Optimizer"
+          description="Email marketing optimization with AI-powered subject lines and content suggestions"
+          bullets={[
+            "Subject line optimization",
+            "Send time optimization",
+            "A/B testing automation",
+            "Open rate improvement"
+          ]}
+          icon="📧"
+          pricing="From $129/month"
+        />
+        <ServiceCard
+          href="/services/ai-seo-analyzer"
+          title="AI SEO Analyzer"
+          description="Comprehensive SEO analysis and optimization recommendations powered by AI"
+          bullets={[
+            "Keyword research",
+            "Content optimization",
+            "Competitor analysis",
+            "Ranking predictions"
+          ]}
+          icon="🔍"
+          pricing="From $179/month"
+        />
+        <ServiceCard
+          href="/services/ai-inventory-manager"
+          title="AI Inventory Manager"
+          description="Smart inventory management with demand forecasting and automated reordering"
+          bullets={[
+            "Demand forecasting",
+            "Automated reordering",
+            "Waste reduction",
+            "Cost optimization"
+          ]}
+          icon="📦"
+          pricing="From $299/month"
+        />
+        <ServiceCard
+          href="/services/ai-hr-assistant"
+          title="AI HR Assistant"
+          description="Automated HR processes including resume screening, interview scheduling, and employee analytics"
+          bullets={[
+            "Resume screening",
+            "Interview scheduling",
+            "Employee analytics",
+            "Performance tracking"
+          ]}
+          icon="👔"
+          pricing="From $229/month"
+        />
+      </div>
+      
+      <CTA />
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     </div>
   );
 <<<<<<< HEAD
@@ -439,7 +727,14 @@ function ServiceCard({
           ))}
         </ul>
       </div>
+<<<<<<< HEAD
     </Link>
+=======
+      <div className="mt-6 text-sm text-gray-600">
+        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+      </div>
+    </div>
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   );
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import _React from 'react'; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = e => { e.preventDefault(); setDeferred(e)}; window.addEventListener("beforeinstallprompt",handler); return () => window.removeEventListener("beforeinstallprompt",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred.prompt(); const result = await deferred.userChoice; if(result.outcome !== "accepted") {}}}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import _React from 'react'; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null)useEffect(() => { const handler = e => { e.preventDefault()setDeferred(e)}window.addEventListener("beforeinstallprompt",handler)return () => window.removeEventListener("beforeinstallprompt",handler)},[])if(!deferred) return null; const onClick = async () => { deferred.prompt()const result = await deferred.userChoice; if(result.outcome !== "accepted") {}}}
 import React from \'react\'; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null)useEffect(() => { const handler = e => { e && e.preventDefault()setDeferred(e)}window && window.addEventListener(\"beforeinstallprompt\",handler)return () => window && window.removeEventListener(\"beforeinstallprompt\",handler)},[])if(!deferred) return null; const onClick = async () => { deferred && deferred.prompt()const result = await deferred && deferred.userChoice; if(result && result.outcome !== \"accepted\") {}}}
 const React from "react"; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null)useEffect(() => { const handler = e => { e && e.preventDefault()setDeferred(e)}window && window.addEventListener("beforeinstallprompt",handler)return () => window && window.removeEventListener("beforeinstallprompt",handler)},[])if(!deferred) return null; const onClick = async () => { deferred && deferred.prompt()const result = await deferred && deferred.userChoice; if(result && result.outcome !== "accepted") {}}}'"'";
@@ -13,7 +16,10 @@ const React from "react"; export const InstallPrompt = () => { const [deferred,s
 ursor/automate-test-improve-and-merge-code-646c;
 const React from "react"; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null)useEffect(() => { const handler = e => { e.preventDefault()setDeferred(e)}window.addEventListener("beforeinstallprompt",handler)return () => window.removeEventListener("beforeinstallprompt",handler)},[])if(!deferred) return null; const onClick = async () => { deferred.prompt()const result = await deferred.userChoice; if(result.outcome !== "accepted") {}}}'"'";
 import _React from 'react'; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = e => { e.preventDefault(); setDeferred(e)}; window.addEventListener("beforeinstallprompt",handler); return () => window.removeEventListener("beforeinstallprompt",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred.prompt(); const result = await deferred.userChoice; if(result.outcome !== "accepted") {}}}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import React from \'react\'; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = e => { e && e.preventDefault(); setDeferred(e)}; window && window.addEventListener(\"beforeinstallprompt\",handler); return () => window && window.removeEventListener(\"beforeinstallprompt\",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred && deferred.prompt(); const result = await deferred && deferred.userChoice; if(result && result.outcome !== \"accepted\") {}}}
 const React from "react"; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = e => { e && e.preventDefault(); setDeferred(e)}; window && window.addEventListener("beforeinstallprompt",handler); return () => window && window.removeEventListener("beforeinstallprompt",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred && deferred.prompt(); const result = await deferred && deferred.userChoice; if(result && result.outcome !== "accepted") {}}}'"'"
 
@@ -21,10 +27,13 @@ import _React from 'react'; export const InstallPrompt = () => { const [deferred
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import _React from 'react'; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = e => { e.preventDefault(); setDeferred(e)}; window.addEventListener("beforeinstallprompt",handler); return () => window.removeEventListener("beforeinstallprompt",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred.prompt(); const result = await deferred.userChoice; if(result.outcome !== "accepted") {}}}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import React from \'react\'; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = e => { e.preventDefault(); setDeferred(e)}; window.addEventListener(\"beforeinstallprompt\",handler); return () => window.removeEventListener(\"beforeinstallprompt\",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred.prompt(); const result = await deferred.userChoice; if(result.outcome !== \"accepted\") {}}}
 const React from "react"; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = e => { e.preventDefault(); setDeferred(e)}; window.addEventListener("beforeinstallprompt",handler); return () => window.removeEventListener("beforeinstallprompt",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred.prompt(); const result = await deferred.userChoice; if(result.outcome !== "accepted") {}}}'"'"

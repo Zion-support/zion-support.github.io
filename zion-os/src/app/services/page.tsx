@@ -1,5 +1,25 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import Link from 'next/link';
+export default function ServicesPage() {return (export default function ServicesPage() {return (<div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;{/* Hero Section */}
+      <div className="bg - gradient - to - r from - blue - 600 to - purple - 600 py - 20">;
+        <div className="container mx - auto px - 6 text - center">;
+          <h1 className="text - 5xl font - bold mb - 6">Zion Tech Group Services</h1>;
+          <p className="text - xl text - blue - 100 max - w-3xl mx - auto">;
+            Comprehensive technology solutions for modern businesses. From AI - powered automation to enterprise IT infrastructure.;
+          </p>;
+          <div className="mt - 8">;
+            <a href="tel:+13024640950" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 50 transition - colors mr - 4">;
+              Call Now: +1 302 464 0950;
+            </a>;
+            <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
+export default /**;
+ * ServicesPage - Function description;
+ */;
+function ServicesPage() {return (<div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text-white">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import Link from 'next / link';
 =======
 import Link from 'next/link';
@@ -85,14 +105,20 @@ function ServicesPage() {
           <span className="mr - 8">📱 +1 302 464 0950</span>;
           <span className="mr - 8">✉️ kleber@ziontechgroup.com</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="bg - zinc - 800 py-4">;
         <div className="container mx - auto px - 6 text - center text-sm">;
           <span className="mr-8">📱 +1 302 464 0950</span>;
           <span className="mr-8">✉️ kleber@ziontechgroup.com</span>;
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>;
         </div>;
       </div>;
@@ -127,9 +153,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py-20">;
         <div className="container mx - auto px-6">;
           <div className="text - center mb-16">;
@@ -155,11 +184,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -184,9 +217,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition-all">;
               <div className="text - 3xl mb-4">✍️</div>;
               <h3 className="text - xl font - semibold mb-3">AI Content Generation</h3>;
@@ -202,11 +238,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -231,9 +271,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition-all">;
               <div className="text - 3xl mb-4">📊</div>;
               <h3 className="text - xl font - semibold mb-3">AI - Powered Analytics</h3>;
@@ -249,11 +292,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -278,9 +325,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition-all">;
               <div className="text - 3xl mb-4">💬</div>;
               <h3 className="text - xl font - semibold mb-3">AI Customer Support</h3>;
@@ -296,11 +346,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -325,9 +379,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition-all">;
               <div className="text - 3xl mb-4">⚙️</div>;
               <h3 className="text - xl font - semibold mb-3">AI Process Automation</h3>;
@@ -343,11 +400,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -372,9 +433,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition-all">;
               <div className="text - 3xl mb-4">🔒</div>;
               <h3 className="text - xl font - semibold mb-3">AI Security & Compliance</h3>;
@@ -390,11 +454,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -403,6 +471,7 @@ function ServicesPage() {
 <<<<<<< HEAD
           <div className="text - center mt - 12">;
             <a href="/services / ai" className="inline - block bg - blue - 600 hover:bg - blue - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
 =======
 =======
           <div className="text - center mt - 12">;
@@ -411,6 +480,10 @@ function ServicesPage() {
           <div className="text - center mt-12">;
             <a href="/services / ai" className="inline - block bg - blue - 600 hover:bg - blue - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition-colors">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          <div className="text - center mt-12">;
+            <a href="/services / ai" className="inline - block bg - blue - 600 hover:bg - blue - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               View All AI Services;
             </a>;
           </div>;
@@ -447,9 +520,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - zinc-800">;
         <div className="container mx - auto px-6">;
           <div className="text - center mb-16">;
@@ -475,11 +551,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -504,9 +584,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition-all">;
               <div className="text - 3xl mb-4">🚀</div>;
               <h3 className="text - xl font - semibold mb-3">DevOps & CI / CD</h3>;
@@ -522,11 +605,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -551,9 +638,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition-all">;
               <div className="text - 3xl mb-4">🛡️</div>;
               <h3 className="text - xl font - semibold mb-3">Cybersecurity</h3>;
@@ -569,11 +659,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -598,9 +692,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition-all">;
               <div className="text - 3xl mb-4">📈</div>;
               <h3 className="text - xl font - semibold mb-3">Data Engineering</h3>;
@@ -616,11 +713,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -645,9 +746,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition-all">;
               <div className="text - 3xl mb-4">🔌</div>;
               <h3 className="text - xl font - semibold mb-3">API Development</h3>;
@@ -663,11 +767,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -692,9 +800,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition-all">;
               <div className="text - 3xl mb-4">🔄</div>;
               <h3 className="text - xl font - semibold mb-3">Digital Transformation</h3>;
@@ -710,11 +821,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -723,6 +838,7 @@ function ServicesPage() {
 <<<<<<< HEAD
           <div className="text - center mt - 12">;
             <a href="/services / it" className="inline - block bg - green - 600 hover:bg - green - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
 =======
 =======
           <div className="text - center mt - 12">;
@@ -731,6 +847,10 @@ function ServicesPage() {
           <div className="text - center mt-12">;
             <a href="/services / it" className="inline - block bg - green - 600 hover:bg - green - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition-colors">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          <div className="text - center mt-12">;
+            <a href="/services / it" className="inline - block bg - green - 600 hover:bg - green - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               View All IT Services;
             </a>;
           </div>;
@@ -767,9 +887,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py-20">;
         <div className="container mx - auto px-6">;
           <div className="text - center mb-16">;
@@ -795,11 +918,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -824,9 +951,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition-all">;
               <div className="text - 3xl mb-4">🎨</div>;
               <h3 className="text - xl font - semibold mb-3">NFT Marketplace Development</h3>;
@@ -842,11 +972,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -871,9 +1005,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition-all">;
               <div className="text - 3xl mb-4">📜</div>;
               <h3 className="text - xl font - semibold mb-3">Smart Contract Development</h3>;
@@ -889,11 +1026,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -918,9 +1059,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition-all">;
               <div className="text - 3xl mb-4">🌐</div>;
               <h3 className="text - xl font - semibold mb-3">Web3 Infrastructure</h3>;
@@ -936,11 +1080,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -965,9 +1113,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition-all">;
               <div className="text - 3xl mb-4">🏛️</div>;
               <h3 className="text - xl font - semibold mb-3">DAO Development</h3>;
@@ -983,11 +1134,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -1012,9 +1167,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition-all">;
               <div className="text - 3xl mb-4">💡</div>;
               <h3 className="text - xl font - semibold mb-3">Blockchain Consulting</h3>;
@@ -1030,11 +1188,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -1043,6 +1205,7 @@ function ServicesPage() {
 <<<<<<< HEAD
           <div className="text - center mt - 12">;
             <a href="/services / blockchain" className="inline - block bg - orange - 600 hover:bg - orange - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
 =======
 =======
           <div className="text - center mt - 12">;
@@ -1051,6 +1214,10 @@ function ServicesPage() {
           <div className="text - center mt-12">;
             <a href="/services / blockchain" className="inline - block bg - orange - 600 hover:bg - orange - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition-colors">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          <div className="text - center mt-12">;
+            <a href="/services / blockchain" className="inline - block bg - orange - 600 hover:bg - orange - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               View All Blockchain Services;
             </a>;
           </div>;
@@ -1087,9 +1254,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - zinc-800">;
         <div className="container mx - auto px-6">;
           <div className="text - center mb-16">;
@@ -1115,11 +1285,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -1144,9 +1318,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition-all">;
               <div className="text - 3xl mb-4">📝</div>;
               <h3 className="text - xl font - semibold mb-3">Resume AI Builder</h3>;
@@ -1162,11 +1339,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -1191,9 +1372,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition-all">;
               <div className="text - 3xl mb-4">🪙</div>;
               <h3 className="text - xl font - semibold mb-3">Token Rewards System</h3>;
@@ -1209,11 +1393,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -1238,9 +1426,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition-all">;
               <div className="text - 3xl mb-4">✅</div>;
               <h3 className="text - xl font - semibold mb-3">KYC / AML Verification</h3>;
@@ -1256,11 +1447,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -1285,9 +1480,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition-all">;
               <div className="text - 3xl mb-4">🗳️</div>;
               <h3 className="text - xl font - semibold mb-3">DAO Governance Platform</h3>;
@@ -1303,11 +1501,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -1332,9 +1534,12 @@ function ServicesPage() {
               </div>;
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition-all">;
               <div className="text - 3xl mb-4">🎓</div>;
               <h3 className="text - xl font - semibold mb-3">Zion Academy</h3>;
@@ -1350,11 +1555,15 @@ function ServicesPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -1363,6 +1572,7 @@ function ServicesPage() {
 <<<<<<< HEAD
           <div className="text - center mt - 12">;
             <a href="/services / saas" className="inline - block bg - purple - 600 hover:bg - purple - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
 =======
 =======
           <div className="text - center mt - 12">;
@@ -1371,6 +1581,10 @@ function ServicesPage() {
           <div className="text - center mt-12">;
             <a href="/services / saas" className="inline - block bg - purple - 600 hover:bg - purple - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition-colors">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          <div className="text - center mt-12">;
+            <a href="/services / saas" className="inline - block bg - purple - 600 hover:bg - purple - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               View All SAAS Services;
             </a>;
           </div>;
@@ -1398,9 +1612,12 @@ function ServicesPage() {
             </div>;
             <p className="text - blue - 100 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple-600">;
         <div className="container mx - auto px - 6 text-center">;
           <h2 className="text - 4xl font - bold mb-6">Ready to Transform Your Business?</h2>;
@@ -1417,11 +1634,15 @@ function ServicesPage() {
               </a>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <p className="text - blue - 100 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
             <p className="text - blue - 100 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <p className="text - blue - 100 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com;
             </p>;
           </div>;

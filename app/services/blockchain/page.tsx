@@ -1,15 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
 export const metadata: Metadata = { 
+<<<<<<< HEAD
 =======
 import React from 'react';
 
 
 export const metadata = { 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   title: 'Blockchain Services | Zion Tech Group',
   description: 'Comprehensive blockchain development services including smart contracts, DeFi protocols, NFT platforms, and enterprise blockchain solutions.',
   keywords: 'blockchain development, smart contracts, DeFi, NFT, Web3, cryptocurrency, enterprise blockchain, dApp development'
@@ -17,6 +23,7 @@ export const metadata = {
 
 export default function BlockchainPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="animate-fade-in">
       <section className="text-center mb-16">
@@ -33,6 +40,17 @@ export default function BlockchainPage() {
           From smart contracts to DeFi protocols, we help you create secure, scalable Web3 solutions.
         </p>
 <<<<<<< HEAD
+=======
+    <div className="animate-fade-in">
+      <section className="text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Blockchain Services
+        </h1>
+        <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          Build the future of decentralized applications with our comprehensive blockchain development services. 
+          From smart contracts to DeFi protocols, we help you create secure, scalable Web3 solutions.
+        </p>
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       </section>
 
       <section className="mb-16">

@@ -18,6 +18,7 @@ const React from "react"; import SEO from "./components/SEO"; import { Footer } 
 import _React from 'react'; import SEO from '../components/SEO'; import { Footer } from '../components/Footer'; import { MobileFeatureShowcase } from '../components/mobile-app/MobileFeatureShowcase ; import { AppTestimonials } from '../components/mobile-app/AppTestimonials ; import { MobileEmailCapture } from '../components/mobile-app/MobileEmailCapture ; import { AppStoreBanner } from '../components/mobile-app/AppStoreBanner ; import { QrCodeDownload } from '../components/mobile-app/QrCodeDownload ; import { CommunityTrust } from '../components/mobile-app/CommunityTrust ; export {}; return <div>Component></div> }; return (); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};'"; '"'"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react'; import SEO from '../components/SEO'; import { Footer } from '../components/Footer'; import { MobileFeatureShowcase } from '../components/mobile-app/MobileFeatureShowcase ; import { AppTestimonials } from '../components/mobile-app/AppTestimonials ; import { MobileEmailCapture } from '../components/mobile-app/MobileEmailCapture ; import { AppStoreBanner } from '../components/mobile-app/AppStoreBanner ; import { QrCodeDownload } from '../components/mobile-app/QrCodeDownload ; import { CommunityTrust } from '../components/mobile-app/CommunityTrust ; export {}; return <div>Component></div> }; return (); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};'"; '"'"
 import _React from 'react'; import SEO from '../components/SEO'; import { Footer } from '../components/Footer'; import { MobileFeatureShowcase } from '../components/mobile-app/MobileFeatureShowcase ; import { AppTestimonials } from '../components/mobile-app/AppTestimonials ; import { MobileEmailCapture } from '../components/mobile-app/MobileEmailCapture ; import { AppStoreBanner } from '../components/mobile-app/AppStoreBanner ; import { QrCodeDownload } from '../components/mobile-app/QrCodeDownload ; import { CommunityTrust } from '../components/mobile-app/CommunityTrust ; export {}; return <div>Component></div> }; return (); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};'"; '"'"
 =======
@@ -28,3 +29,6 @@ import _React from 'react'; import SEO from '../components/SEO'; import { Footer
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

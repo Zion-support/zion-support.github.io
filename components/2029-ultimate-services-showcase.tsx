@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -52,6 +53,52 @@ import {Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,Rocket;
   Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Crown,Star,TrendingUp,ArrowRight,CheckCircle,DollarSign,Users,Clock,Award,Zap as ZapIcon,Search,Phone,Mail,MapPin,Heart,Leaf,Car,GraduationCap,Scale,Building,Factory,Camera,Video,Music,Gamepad2,Eye,Globe2,Satellite,Dna,Battery,Gamepad,Cpu as CpuIcon,} from 'lucide-react';import {Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
+=======
+import { motion, AnimatePresence  } from 'framer-motion';
+import {Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,Rocket;
+  Brain;
+  Atom;
+  Globe;
+  Zap;
+  Sparkles;
+  Shield;
+  Target;
+  Crown;
+  Star;
+  TrendingUp;
+  ArrowRight;
+  CheckCircle;
+  DollarSign;
+  Users;
+  Clock;
+  Award;
+  Zap as ZapIcon;
+  Search;
+  Phone;
+  Mail;
+  MapPin;
+  Heart;
+  Leaf;
+  Car;
+  GraduationCap;
+  Scale;
+  Building;
+  Factory;
+  Camera;
+  Video;
+  Music;
+  Gamepad2;
+  Eye;
+  Globe2;
+  Satellite;
+  Dna;
+  Battery;
+  Gamepad;
+  Cpu as CpuIcon;} from 'lucide-react';import {Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Crown,Star,TrendingUp,ArrowRight,CheckCircle,DollarSign,Users,Clock,Award,Zap as ZapIcon,Search,Phone,Mail,MapPin,Heart,Leaf,Car,GraduationCap,Scale,Building,Factory,Camera,Video,Music,Gamepad2,Eye,Globe2,Satellite,Dna,Battery,Gamepad,Cpu as CpuIcon,} from 'lucide-react';import {Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;Target, Crown, Star, TrendingUp, ArrowRight;
+  CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
+  Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   Building, Factory, Camera, Video, Music, Gamepad2, Eye;transition: {const allServices = [;
     ...cuttingEdge2028MicroSaas,...practicalBusinessSolutions2028,...advancedAIAutonomousServices2028,...quantumSpaceInnovations2028,];
   const categories = [;
@@ -61,7 +108,10 @@ import {Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,Rocket;
         s && s.category.some(c => c && c.includes('Enterprise'))).length,color: 'from-blue-600 to-cyan-600',},    { id: 'all', name: '🚀 All Services', icon: Rocket, count: allServices && allServices.length, color: 'from-violet-600 to-purple-600' },{ id: 'cutting-edge', name: '⚡ Cutting-Edge', icon: Zap, count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length, color: 'from-cyan-600 to-blue-600' },{ id: 'business', name: '🎯 Business Solutions', icon: Target, count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length, color: 'from-green-600 to-emerald-600' },{ id: 'ai-autonomous', name: '🤖 AI & Autonomous', icon: Brain, count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length, color: 'from-emerald-600 to-teal-600' },{ id: 'quantum-space', name: '⚛️ Quantum & Space', icon: Atom, count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length, color: 'from-indigo-600 to-blue-600' },{ id: 'ai', name: '🧠 AI & ML', icon: Brain, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))).length, color: 'from-pink-600 to-rose-600' },{ id: 'quantum', name: '🔮 Quantum Tech', icon: Atom, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Quantum'))).length, color: 'from-purple-600 to-violet-600' },{ id: 'enterprise', name: '🏢 Enterprise', icon: Shield, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Enterprise'))).length, color: 'from-blue-600 to-cyan-600' }
   const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' },{ id: 'low', name: 'Under $5K', range: 'Under $5,000' },{ id: 'medium', name: '$5K - $15K', range: '$5,000 - $15,000' },{ id: 'high', name: '$15K - $30K', range: '$15,000 - $30,000' },{ id: 'premium', name: 'Over $30K', range: 'Over $30,000' },Globe2, Satellite, Dna, Battery, Gamepad, Cpu as CpuIcon;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
  } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { cuttingEdge2028MicroSaas   } from '../data/2028-cutting-edge-micro-saas';
@@ -69,6 +119,7 @@ import { practicalBusinessSolutions2028   } from '../data/2028-practical-busines
 import { advancedAIAutonomousServices2028   } from '../data/2028-advanced-ai-autonomous-services';
 import { quantumSpaceInnovations2028  } from '../data/2028-quantum-space-innovations';
   const allServices = null;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   setSelectedPriceRange('all')
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -79,6 +130,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   setSelectedPriceRange('all')];
   const filteredServices = allServices && allServices.filter(service => {const matchesCategory =;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  setSelectedPriceRange('all')];
+  const filteredServices = allServices && allServices.filter(service => {const matchesCategory =;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       selectedCategory === 'all' ||;
       (selectedCategory === 'cutting-edge' &&;
         cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.includes(service)) ||;
@@ -97,6 +152,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
       service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
       service && service.category.some(c =>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         c && c.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
       );
@@ -166,6 +222,8 @@ website: 'https://ziontechgroup.com',
         />
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         c && c.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()))const matchesPrice =;
       selectedPriceRange === 'all' ||;
       (selectedPriceRange === 'low' &&;
@@ -232,7 +290,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           rel='canonical';
           href='https://ziontechgroup.com/2029-ultimate-services-showcase';
         />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         {/* Open Graph */}
         <meta;
           property='og:title';
@@ -251,6 +312,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           content='2029 Ultimate Services Showcase - Zion Tech Group';
         />;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta
           name='twitter:description'
           content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.'
@@ -258,6 +320,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       <UltraFuturisticNavigation2029 />
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <meta;
           name='twitter:description';
           content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.';
@@ -311,7 +375,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>;/>;
       </Head>;
       <UltraFuturisticNavigation2029 />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       {/* Hero Section */}
 <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black'>;
         {/* Animated Background */}
@@ -325,6 +392,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className='max-w-4xl mx-auto'
           >
@@ -445,6 +513,46 @@ className='max-w-4xl mx-auto';
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg">;
                 Get Started Today;
               </Link>;
+=======
+className='max-w-4xl mx-auto';
+          >;
+            <div className='flex items-center justify-center space-x-2 mb-6'>;
+              <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl'>;
+                <Rocket className='w-9 h-9 text-white' />;
+              </div>;
+              <div className='w-16 h-16 bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center shadow-2xl'>;
+                <Brain className='w-9 h-9 text-white' />;
+              </div>;
+              <div className='w-16 h-16 bg-gradient-to-br from-indigo-400 via-purple-500 to-violet-600 rounded-2xl flex items-center justify-center shadow-2xl'>;
+                <Atom className='w-9 h-9 text-white' />;
+              </div>;
+            </div>;
+            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>;
+              <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>;
+                2029 Ultimate;
+              </span>;
+              <br />;
+              <span className='bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-600 bg-clip-text text-transparent'>;
+                Services Showcase;
+              </span>;
+            </h1>;
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>;
+              Experience the future of technology with our revolutionary AI;
+              consciousness, quantum computing, space technology, and autonomous;
+              systems. Transform your business with innovations that define;
+              tomorrow.;
+            </p>;
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
+              <Link;
+                href='/contact';
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg';
+              >;
+                Get Started Today;
+              </Link>;
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg">;
+                Get Started Today;
+              </Link>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <Link;
 href='/pricing';
                 className='px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg';
@@ -544,7 +652,10 @@ href='/pricing';
 <section className='py-16 bg-gray-900/50 border-b border-cyan-500/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex flex-col lg:flex-row items-center justify-between space-y-6 lg:space-y-0'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             {/* Search */}
             <div className='relative w-full lg:w-96'>;
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400' />;
@@ -553,6 +664,7 @@ href='/pricing';
                 placeholder='Search services...';
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200'
               />
@@ -563,11 +675,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               />;
             </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                className='w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200';
+              />;
+            </div>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             {/* Category Filter */}
 <div className='flex flex-wrap items-center space-x-2'>;
               {categories.map(category => (<button;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedCategory === category.id
@@ -585,6 +703,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${selectedCategory === category.id;
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`;
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
@@ -596,7 +716,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ({category.count})</span>;
                   </div>;
                 </button>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               ))}
             </div>;
               ))}
@@ -622,11 +745,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Services Grid */}
 <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             </div>;
           </div>;
         </div>;
@@ -642,7 +768,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             variants={containerVariants}
             initial='hidden';
             animate='visible';
@@ -680,6 +809,7 @@ className='group relative';
                       {service.category.slice(0, 3).map(cat => (<span;
                           key={cat}
 <<<<<<< HEAD
+<<<<<<< HEAD
                           className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'
                         >
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -687,6 +817,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20';
                         >;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                          className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20';
+                        >;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                           {cat}
                         </span>;
                       ))}
@@ -752,12 +886,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </li>;
                       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {/* Market Info */}
 <div className='mb-6 space-y-2'>
                     <div className='flex items-center justify-between text-sm'>
                       <span className='text-gray-400'>Market Size:</span>
                       <span className='text-emerald-400 font-medium'>
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   {/* Market Info */}<div className="mb-6 space-y-2">;
                     <div className="flex items-center justify-between text-sm">;
                       <span className="text-gray-400">Market Size: </span>;
@@ -795,7 +932,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='flex items-center justify-between text-sm'>;
                       <span className='text-gray-400'>Market Size:</span>;
                       <span className='text-emerald-400 font-medium'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                         {service.marketSize}
                       </span>;
                     </div>;
@@ -817,6 +957,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </Link>;
                   </div>;
                   {/* Hover Effect */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -901,6 +1042,45 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           )}
           )}
+=======
+<div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />;
+                </div>;
+              </motion.div>;
+            ))}
+          </motion.div>;
+          </motion && motion.div>;
+                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />;
+          {/* No Results */}{filteredServices && filteredServices.length === 0 && (<div className='text-center py-20'>;
+              <div className='w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6'>;
+                <Search className='w-12 h-12 text-gray-400' />;
+              </div>;
+              <h3 className='text-2xl font-bold text-white mb-4'>;
+                No services found;
+              </h3>;
+              <p className='text-gray-400 mb-8'>;
+                Try adjusting your search criteria or browse all services;
+              </p>              <button;
+                onClick={() => {{filteredServices.length === 0 && (<div className='text-center py-20'>;
+              <div className='w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6'>;
+                <Search className='w-12 h-12 text-gray-400' />;
+              </div>;
+              <h3 className='text-2xl font-bold text-white mb-4'>;
+                No services found;
+              </h3>;
+              <p className='text-gray-400 mb-8'>;
+                Try adjusting your search criteria or browse all services;
+              </p>;
+              <button;
+                onClick={() => {setSelectedCategory('all')setSearchTerm('')setSelectedPriceRange('all')}}onClick={() => {setSelectedCategory('all')setSearchTerm('')setSelectedPriceRange('all')className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200';
+                }}
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200";
+              >;
+                Reset Filters;
+              </button>;
+            </div>;
+          )}
+          )}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       {/* Contact CTA */}<section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">;
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
@@ -933,11 +1113,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>;
           <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           >
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -975,6 +1159,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           >;
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
@@ -1052,5 +1238,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <UltraFuturisticFooter2029 />;
     </>))}<UltraFuturisticFooter2029 />;
     </>;
+<<<<<<< HEAD
 )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+)
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

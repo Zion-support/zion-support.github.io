@@ -85,9 +85,12 @@ export default function SolutionsPage() {return (;
                   </a>;
                   <span className="text - sm text - gray - 500">Research Platform</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py-20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
@@ -116,11 +119,15 @@ export default function SolutionsPage() {return (;
                     Learn More →;
                   </a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <span className="text - sm text - gray-500">Research Platform</span>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
                   <span className="text - sm text - gray - 500">Research Platform</span>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <span className="text - sm text - gray - 500">Research Platform</span>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 </div>;
               </div>;
             </div>;
@@ -146,9 +153,12 @@ export default function SolutionsPage() {return (;
                   </a>;
                   <span className="text - sm text - gray - 500">Quantum Platform</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white border border - gray - 200 rounded - xl overflow - hidden shadow - sm hover:shadow - lg transition-shadow">;
               <div className="h - 48 bg - gradient - to - br from - purple - 500 to - indigo - 500 flex items - center justify-center">;
                 <svg className="w - 20 h - 20 text-white" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -165,11 +175,15 @@ export default function SolutionsPage() {return (;
                     Learn More →;
                   </a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <span className="text - sm text - gray-500">Quantum Platform</span>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
                   <span className="text - sm text - gray - 500">Quantum Platform</span>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <span className="text - sm text - gray - 500">Quantum Platform</span>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 </div>;
               </div>;
             </div>;
@@ -195,9 +209,12 @@ export default function SolutionsPage() {return (;
                   </a>;
                   <span className="text - sm text - gray - 500">Business Platform</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white border border - gray - 200 rounded - xl overflow - hidden shadow - sm hover:shadow - lg transition-shadow">;
               <div className="h - 48 bg - gradient - to - br from - indigo - 500 to - blue - 500 flex items - center justify-center">;
                 <svg className="w - 20 h - 20 text-white" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -214,11 +231,15 @@ export default function SolutionsPage() {return (;
                     Learn More →;
                   </a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <span className="text - sm text - gray-500">Business Platform</span>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
                   <span className="text - sm text - gray - 500">Business Platform</span>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <span className="text - sm text - gray - 500">Business Platform</span>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 </div>;
               </div>;
             </div>;
@@ -244,9 +265,12 @@ export default function SolutionsPage() {return (;
                   </a>;
                   <span className="text - sm text - gray - 500">IT Platform</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white border border - gray - 200 rounded - xl overflow - hidden shadow - sm hover:shadow - lg transition-shadow">;
               <div className="h - 48 bg - gradient - to - br from - orange - 500 to - red - 500 flex items - center justify-center">;
                 <svg className="w - 20 h - 20 text-white" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -263,11 +287,15 @@ export default function SolutionsPage() {return (;
                     Learn More →;
                   </a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <span className="text - sm text - gray-500">IT Platform</span>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
                   <span className="text - sm text - gray - 500">IT Platform</span>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <span className="text - sm text - gray - 500">IT Platform</span>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 </div>;
               </div>;
             </div>;
@@ -293,9 +321,12 @@ export default function SolutionsPage() {return (;
                   </a>;
                   <span className="text - sm text - gray - 500">Security Platform</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white border border - gray - 200 rounded - xl overflow - hidden shadow - sm hover:shadow - lg transition-shadow">;
               <div className="h - 48 bg - gradient - to - br from - green - 500 to - teal - 500 flex items - center justify-center">;
                 <svg className="w - 20 h - 20 text-white" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -312,11 +343,15 @@ export default function SolutionsPage() {return (;
                     Learn More →;
                   </a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <span className="text - sm text - gray-500">Security Platform</span>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
                   <span className="text - sm text - gray - 500">Security Platform</span>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <span className="text - sm text - gray - 500">Security Platform</span>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 </div>;
               </div>;
             </div>;
@@ -342,9 +377,12 @@ export default function SolutionsPage() {return (;
                   </a>;
                   <span className="text - sm text - gray - 500">Automation Platform</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white border border - gray - 200 rounded - xl overflow - hidden shadow - sm hover:shadow - lg transition-shadow">;
               <div className="h - 48 bg - gradient - to - br from - blue - 500 to - cyan - 500 flex items - center justify-center">;
                 <svg className="w - 20 h - 20 text-white" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -361,11 +399,15 @@ export default function SolutionsPage() {return (;
                     Learn More →;
                   </a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <span className="text - sm text - gray-500">Automation Platform</span>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
                   <span className="text - sm text - gray - 500">Automation Platform</span>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <span className="text - sm text - gray - 500">Automation Platform</span>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 </div>;
               </div>;
             </div>;
@@ -430,9 +472,12 @@ export default function SolutionsPage() {return (;
               <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Business Operations</h3>;
               <p className="text - gray - 600 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - gray-50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
@@ -484,6 +529,7 @@ export default function SolutionsPage() {return (;
                 </svg>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h3 className="text - lg font - semibold text - gray - 900 mb-2">Business Operations</h3>;
               <p className="text - gray - 600 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -491,6 +537,10 @@ export default function SolutionsPage() {return (;
               <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Business Operations</h3>;
               <p className="text - gray - 600 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Business Operations</h3>;
+              <p className="text - gray - 600 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Process automation and operational optimization;
               </p>;
             </div>;
@@ -577,9 +627,12 @@ export default function SolutionsPage() {return (;
               <h3 className="text - xl font - semibold text - gray - 900 mb - 3">Energy</h3>;
               <p className="text - gray - 600">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg-white">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
@@ -653,6 +706,7 @@ export default function SolutionsPage() {return (;
                 </svg>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h3 className="text - xl font - semibold text - gray - 900 mb-3">Energy</h3>;
               <p className="text - gray-600">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -660,6 +714,10 @@ export default function SolutionsPage() {return (;
               <h3 className="text - xl font - semibold text - gray - 900 mb - 3">Energy</h3>;
               <p className="text - gray - 600">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <h3 className="text - xl font - semibold text - gray - 900 mb - 3">Energy</h3>;
+              <p className="text - gray - 600">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Grid optimization, renewable energy forecasting, demand response, and sustainability analysis;
               </p>;
             </div>;
@@ -685,9 +743,12 @@ export default function SolutionsPage() {return (;
             </a>;
             <a href="/services" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - purple - 600 transition - colors">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - purple - 600 text-white">;
         <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
           <h2 className="text - 3xl md:text - 4xl font - bold mb-6">;
@@ -701,11 +762,15 @@ export default function SolutionsPage() {return (;
               Schedule a Consultation;
             </a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <a href="/services" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - purple - 600 transition-colors">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
             <a href="/services" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - purple - 600 transition - colors">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <a href="/services" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - purple - 600 transition - colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               View All Services;
             </a>;
           </div>;

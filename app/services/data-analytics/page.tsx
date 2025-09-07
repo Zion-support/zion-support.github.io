@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
@@ -86,3 +87,12 @@ export default function ServicePage() {
     </div>
   );
 }
+=======
+import Link from "next/link";
+
+export const metadata = {
+  title: "Data Analytics & BI | Zion Tech Group",
+  description: "Advanced data analytics, business intelligence, and machine learning solutions to transform raw data into actionable insights.",
+  keywords: 'data-analytics, services, business, technology'
+};
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

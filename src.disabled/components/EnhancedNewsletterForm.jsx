@@ -17,6 +17,7 @@ ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ' \' \"export\": function EnhancedNewsletterForm () { \' const [email,setEmail] = useState (\') const [isSubmitting,setIsSubmitting] = useState (false) const [isSubmitted,setIsSubmitted] = useState (false) const { toast } = useToast () \'';\'";\";
 " " export: function EnhancedNewsletterForm () { " const [email,setEmail] = useState (") const [isSubmitting,setIsSubmitting] = useState (false) const [isSubmitted,setIsSubmitted] = useState (false) const { toast } = useToast () "";"";";"""
@@ -25,3 +26,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ' \' \"export\": function EnhancedNewsletterForm () { \' const [email,setEmail] = useState (\') const [isSubmitting,setIsSubmitting] = useState (false) const [isSubmitted,setIsSubmitted] = useState (false) const { toast } = useToast () \'';\'";\";
 " " export: function EnhancedNewsletterForm () { " const [email,setEmail] = useState (") const [isSubmitting,setIsSubmitting] = useState (false) const [isSubmitted,setIsSubmitted] = useState (false) const { toast } = useToast () "";"";";"""
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+' \' \"export\": function EnhancedNewsletterForm () { \' const [email,setEmail] = useState (\') const [isSubmitting,setIsSubmitting] = useState (false) const [isSubmitted,setIsSubmitted] = useState (false) const { toast } = useToast () \'';\'";\";
+" " export: function EnhancedNewsletterForm () { " const [email,setEmail] = useState (") const [isSubmitting,setIsSubmitting] = useState (false) const [isSubmitted,setIsSubmitted] = useState (false) const { toast } = useToast () "";"";";"""
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

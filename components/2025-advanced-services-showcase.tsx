@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,11 +13,16 @@
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
   website: 'https://ziontechgroup.com';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
   website: 'https://ziontechgroup.com'
@@ -33,8 +39,11 @@ const allServices = [;
     description: 'Complete portfolio of advanced services';
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   {id: 'enterprise';
     name: 'Enterprise Solutions';
     icon: <Building className="w-6 h-6" />;
@@ -60,7 +69,10 @@ import React, { useState, useEffect } from 'react',
     description: 'Advanced AI and ML platforms';
   }
   {import React, { useState, useEffect } from 'react',import SEO from '../components/SEO';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
@@ -198,8 +210,11 @@ icon: <Grid className='w-6 h-6' />,
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     description: 'Complete portfolio of advanced services'},
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   {
     id: 'enterprise',
     name: 'Enterprise Solutions',
@@ -228,14 +243,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     id: 'quantum'
     name: 'Quantum Computing'
     icon: <Atom className="w-6 h-6" />
     color: 'from-violet-500 to-indigo-500'
     description: 'Quantum computing solutions'
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -251,6 +270,8 @@ import SEO from './seo/Seo';
 import { motion, AnimatePresence } from 'framer-motion';
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import {
   Search, LayoutGrid, List, Star, CheckCircle, ArrowRight, Check;
   Brain, Zap, Shield, Building, Globe;
@@ -326,8 +347,11 @@ const categories = [
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     description: 'Quantum computing solutions'},
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 ];
 
 const getServiceCategory = (service: any) => {
@@ -340,6 +364,7 @@ const getServiceCategory = (service: any) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -350,6 +375,8 @@ import { motion, AnimatePresence } from "framer-motion";
 };
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   website: 'https://ziontechgroup.com'
 }
 const allServices = [
@@ -358,54 +385,76 @@ const allServices = [
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com'
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 const allServices = [
+=======
+const allServices = [;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
-  ...cuttingEdgeITInfrastructureServices
-    description: 'Complete portfolio of advanced services'
+  ...cuttingEdgeITInfrastructureServices;
+    description: 'Complete portfolio of advanced services';
   }
-  {
-    id: 'enterprise'
-    name: 'Enterprise Solutions'
-    icon: <Building className="w-6 h-6" />
-    color: 'from-blue-500 to-purple-500'
-    description: 'Enterprise-grade AI and IT solutions'
+  {id: 'enterprise';
+    name: 'Enterprise Solutions';
+    icon: <Building className="w-6 h-6" />;
+    color: 'from-blue-500 to-purple-500';
+    description: 'Enterprise-grade AI and IT solutions';
   }
-  {
-    id: 'micro-saas'
-    name: 'Micro SAAS'
-    icon: <Globe className="w-6 h-6" />
-    color: 'from-green-500 to-emerald-500'
-    description: 'Innovative micro SAAS solutions'
+  {id: 'micro-saas';
+    name: 'Micro SAAS';
+    icon: <Globe className="w-6 h-6" />;
+    color: 'from-green-500 to-emerald-500';
+    description: 'Innovative micro SAAS solutions';
   }
-  {
-    id: 'infrastructure'
-    name: 'IT Infrastructure'
-    icon: <Shield className="w-6 h-6" />
-    color: 'from-orange-500 to-red-500'
-    description: 'Cutting-edge infrastructure services'
+  {id: 'infrastructure';
+    name: 'IT Infrastructure';
+    icon: <Shield className="w-6 h-6" />;
+    color: 'from-orange-500 to-red-500';
+    description: 'Cutting-edge infrastructure services';
   }
-  {
-    id: 'ai-ml'
-    name: 'AI & Machine Learning'
-    icon: <Brain className="w-6 h-6" />
-    color: 'from-purple-500 to-pink-500'
-    description: 'Advanced AI and ML platforms'
+  {id: 'ai-ml';
+    name: 'AI & Machine Learning';
+    icon: <Brain className="w-6 h-6" />;
+    color: 'from-purple-500 to-pink-500';
+    description: 'Advanced AI and ML platforms';
   }
-  {
-    id: 'quantum'
-    name: 'Quantum Computing'
-    icon: <Atom className="w-6 h-6" />
-    color: 'from-violet-500 to-indigo-500'
-    description: 'Quantum computing solutions'
+  {id: 'quantum';
+    name: 'Quantum Computing';
+    icon: <Atom className="w-6 h-6" />;
+    color: 'from-violet-500 to-indigo-500';
+    description: 'Quantum computing solutions';
   }
+<<<<<<< HEAD
 ursor/fix-netlify-build-and-merge-to-main-9571
 main
 
 
+=======
+ursor/fix-netlify-build-and-merge-to-main-9571;
+ursor/automate-test-improve-and-merge-code-646c;
+ursor/fix-netlify-build-and-merge-to-main-9571;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 return 'Other';
+}const getServicePricing = (service: any) => {if (service.price) return `${service.price}${service.period}`;
+  if (service.pricing?.starter) return service.pricing.starter;
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;const allServices = [;
+  ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
+}const allServices = [;
+  ...advancedEnterpriseServices2025;
+      ...innovativeMicroSaasExpansion2025;
+  ...cuttingEdgeITInfrastructureServices;
+ursor/automate-test-improve-and-merge-code-646c;
+  return 'Contact for pricing';
+  return 'Contact for pricing';
+return 'Contact for pricing';}const getServiceFeatures = (service: any) => {if (service.features) return service.features;
+  if (service.keyFeatures) return service.keyFeatures;
+  return [];
+}export default function AdvancedServicesShowcase() {const allServices = [;
+  ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -510,6 +559,8 @@ return 'Contact for pricing';}const getServiceFeatures = (service: any) => {if (
 };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
@@ -535,11 +586,14 @@ export default function AdvancedServicesShowcase() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;
@@ -552,6 +606,7 @@ const allServices = [;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-netlify-build-and-merge-to-main-9571
 main
 
@@ -561,6 +616,11 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+ursor/fix-netlify-build-and-merge-to-main-9571;
+ursor/automate-test-improve-and-merge-code-646c;
+ursor/fix-netlify-build-and-merge-to-main-9571;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 return [];
 }export default function AdvancedServicesShowcase() {const [selectedCategory, setSelectedCategory] = useState('all')const [searchTerm, setSearchTerm] = useState('')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')const [filteredServices, setFilteredServices]  = useState(allServices)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { service: any }) => (<motion&& motion.div;
       initial={{ opacity: 0, y: 20 }}
@@ -601,6 +661,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 };
 export default function AdvancedServicesShowcase() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 =======
@@ -610,6 +671,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -1234,11 +1297,78 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <p className='text-gray-600 dark:text-gray-300 mb-3'>
                   {service.tagline}
+<<<<<<< HEAD
                 </p>
               </div>
               <div className='text-right'>
                 <div className='text-2xl font-bold text-gray-900 dark:text-white'>
+=======
+                </p>;
+              </div>;
+              <div className="text-right">;
+                <div className="text-2xl font-bold text-gray-900 dark:text-white">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   {getServicePricing(service)}
+                </div>;
+                <div className="text-sm text-gray-500 dark:text-gray-400">;
+<p className='text-gray-600 dark:text-gray-300 mb-3'>;
+                  {service.tagline}
+                </p>;
+              </div>;
+              <div className='text-right'>;
+                <div className='text-2xl font-bold text-gray-900 dark:text-white'>;
+                  {getServicePricing(service)}
+                </div>;
+                <div className='text-sm text-gray-500 dark:text-gray-400'>;
+                  {service.trialDays} day trial;
+                </div>;
+              </div>;
+            </div>;
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">;
+              <div className="flex items-center gap-2">;
+                <CheckCircle className="w-4 h-4 text-green-500" />;
+                <span className="text-sm text-gray-600 dark:text-gray-400">;
+                  {service.setupTime} setup;
+                </span>;
+              </div>;
+              <div className="flex items-center gap-2">;
+                <Users className="w-4 h-4 text-blue-500" />;
+                <span className="text-sm text-gray-600 dark:text-gray-400">;
+                  {service.customers ? service.customers.toLocaleString() : '1000'}+ customers;
+                </span>;
+              </div>;
+              <div className="flex items-center gap-2">;
+                <Star className="w-4 h-4 text-yellow-500" />;
+                <span className="text-sm text-gray-600 dark:text-gray-400">;
+<div className='grid grid-cols-1 md:grid-cols-3 gap-4 mb-4'>;
+              <div className='flex items-center gap-2'>;
+                <CheckCircle className='w-4 h-4 text-green-500' />;
+                <span className='text-sm text-gray-600 dark:text-gray-400'>;
+                  {service.setupTime} setup;
+                </span>;
+              </div>;
+              <div className='flex items-center gap-2'>;
+                <Users className='w-4 h-4 text-blue-500' />;
+                <span className='text-sm text-gray-600 dark:text-gray-400'>;
+                  {service.customers;
+                    ? service.customers.toLocaleString(): '1000'}
+                  + customers;
+                </span>;
+              </div>;
+              <div className='flex items-center gap-2'>;
+                <Star className='w-4 h-4 text-yellow-500' />;
+                <span className='text-sm text-gray-600 dark:text-gray-400'>;
+                  {service.rating}/5 ({service.reviews} reviews)</span>;
+              </div>;
+            </div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">;
+              <div>;
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>;
+                <div className="space-y-1">;
+                  {getServiceFeatures(service).slice(0, 4).map((feature: string, index: number) => (<div key={index} className="flex items-center gap-2">;
+                      <Check className="w-3 h-3 text-green-500" />;
+                      <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>;
+                    </div>;
                 </div>
                 <div className='text-sm text-gray-500 dark:text-gray-400'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1472,7 +1602,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300";
 <div className='flex items-center gap-4'>;
               <a;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 href={service.link}
                 className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105';
               >;
@@ -1482,9 +1615,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <a;
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300';
               >;
                 Contact Sales;
@@ -2366,9 +2502,13 @@ if ( {) {$2;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               <a;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <a
                 href={`mailto:${contactInfo && contactInfo.email}?subject=Services Inquiry`}
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300">;
@@ -2621,7 +2761,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               <a;
                 href={contactInfo.website}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 target="_blank";
                 rel="noopener noreferrer";
                 Visit Website;
@@ -2638,7 +2781,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
@@ -2688,6 +2834,23 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
                   }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                >;
+                  <LayoutGrid className="w-5 h-5" />;
+                </button>;
+                >;
+                  <Grid className='w-5 h-5' />                </button>                <button;
+                  onClick={() => setViewMode('list')}
+                  }`}
+                >;
+                  <Grid className="w-5 h-5" />;
+                </button>;
+                >;
+                  <LayoutGrid className="w-5 h-5" />;
+                </button>;
+                <button;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 >
                   <LayoutGrid className="w-5 h-5" />
                 </button>
@@ -2716,6 +2879,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                   className={`p-2 rounded-lg transition-all duration-300 ${viewMode === 'list';
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400';
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
+<<<<<<< HEAD
                   }`}
 <<<<<<< HEAD
                 >
@@ -2734,7 +2898,67 @@ main
 viewMode === 'list'
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   }`}
+                >;
+                  <List className="w-5 h-5" />;
+ursor/automate-test-improve-and-merge-code-646c;
+          {/* Category Filters */}
+          <div className="mt-6">;
+            <div className="flex flex-wrap gap-3">;
+              {categories && categories.map((category) => (key={category && category.id}
+                  onClick={() => setSelectedCategory(category && category.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${selectedCategory === category && category.id;
+                      ? 'bg-gradient-to-r text-white shadow-lg';
+                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700';
+                  } ${category && category.color}`}
+                >;
+                  {category && category.icon}
+                  {category && category.name}
+                </button>;
+                >;
+                  <List className="w-5 h-5" />;
+viewMode === 'list';
+                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400';
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
+                  }`}
+                >;
+                  <List className='w-5 h-5' />;
+                </button>;
+              </div>;
+            </div>;
+          </div>;
+                  key={category.id}
+                  on_click={() => setSelectedCategory (category.id)}
+                  className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${selected_category === category.id;
+                      ? 'bg - gradient - to - r text - white shadow - lg';
+                      : 'bg - white dark:bg - gray - 800 text - gray - 700 dark:text - gray - 300 border border - gray - 200 dark:border - gray - 600 hover:bg - gray - 50 dark:hover:bg - gray - 700';
+                  } ${category.color}`}
+                >;
+                  {category.icon}
+                  {category.name}
+              ))}
+        {/* Results Summary */}
+        <div className='mb-8'>;
+          <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>;
+            <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>;
+              <div>;
+                <h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-2'>;
+                  {filteredServices && filteredServices.length} Services Found;
+                </h2>;
+                <p className='text-gray-600 dark:text-gray-400'>;
+                  {selectedCategory !== 'all' &&;
+                    `Filtered by: ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}
+                  {searchTerm && ` • Search: "${searchTerm}"`}
+ursor/automate-test-improve-and-merge-code-646c;
+          {/* Category Filters */}
+          <div className="mt-6">;
+            <div className="flex flex-wrap gap-3">;
+              {categories.map((category) => ({/* Category Filters */}
+          <div className='mt-6'>;
+            <div className='flex flex-wrap gap-3'>;
+              {categories.map(category => (<button;
                 >
                   <List className='w-5 h-5' />
 <<<<<<< HEAD
@@ -2867,6 +3091,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
         {/* Results Summary */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div className='mb-8'>
           <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>
             <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>
@@ -2879,6 +3104,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <div className="mb-8">;
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">;
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">;
@@ -2890,7 +3117,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>;
             <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>;
               <div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${selected_category === category.id;
@@ -2916,6 +3146,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 =======
 >>>>>>> main
@@ -2927,6 +3158,8 @@ main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
@@ -3079,6 +3312,21 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                   <Award className="w-4 h-4 text-blue-500" />;
                 </p>;
               </div>;
+<<<<<<< HEAD
+=======
+ursor/fix-netlify-build-and-merge-to-main-9571;
+ursor/automate-test-improve-and-merge-code-646c;
+ursor/fix-netlify-build-and-merge-to-main-9571;
+              <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">;
+                <div className="flex items-center gap-2">;
+                  <TrendingUp className="w-4 h-4 text-green-500" />;
+                  <span>Market Growth: 150%+ YoY</span>;
+                </div>;
+                <div className="flex items-center gap-2">;
+                  <Award className="w-4 h-4 text-blue-500" />;
+                </p>;
+              </div>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className='flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400'>;
                 <div className='flex items-center gap-2'>;
                   <TrendingUp className='w-4 h-4 text-green-500' />;

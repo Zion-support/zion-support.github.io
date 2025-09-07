@@ -1,19 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import React from 'react';
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 export const metadata = {
   title: 'AI Marketing Automation | Zion Tech Group',
   description: 'Professional AI marketing automation services for your business needs.',
   keywords: 'ai-marketing-automation, services, business, technology'
 };
 
-export default function ServicePage() {
+export default function AIMarketingAutomationPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
+<<<<<<< HEAD
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Marketing Automation
           </h1>
@@ -92,127 +99,87 @@ export default function ServicePage() {
           />
         </div>
       </section>
-
-      {/* Pricing */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that scales with your marketing needs. All plans include our core AI features.
+=======
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            AI Marketing Automation
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your marketing with AI-powered automation that delivers personalized experiences, 
+            optimizes campaigns, and drives measurable results.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <PricingCard
-            name="Starter"
-            price="$199"
-            period="per month"
-            description="Perfect for small businesses and startups"
-            features={[
-              "Up to 10,000 contacts",
-              "Basic AI personalization",
-              "Email automation",
-              "Social media scheduling",
-              "Basic analytics",
-              "Email support"
-            ]}
-            popular={false}
-          />
-          <PricingCard
-            name="Professional"
-            price="$499"
-            period="per month"
-            description="Most popular for growing businesses"
-            features={[
-              "Up to 50,000 contacts",
-              "Advanced AI features",
-              "Multi-channel campaigns",
-              "Lead scoring",
-              "Priority support",
-              "API access",
-              "Advanced analytics"
-            ]}
-            popular={true}
-          />
-          <PricingCard
-            name="Enterprise"
-            price="$1,299"
-            period="per month"
-            description="For large organizations"
-            features={[
-              "Unlimited contacts",
-              "All AI features",
-              "Custom AI models",
-              "White-label options",
-              "Dedicated support",
-              "Custom integrations",
-              "SLA guarantee"
-            ]}
-            popular={false}
-          />
-        </div>
-      </section>
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
-      {/* Success Stories */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Marketing Results</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            See how our AI-powered marketing automation has transformed businesses across industries.
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <span className="text-green-500 text-xl mr-3">✓</span>
+                <span className="text-gray-700">AI-powered customer segmentation and targeting</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-500 text-xl mr-3">✓</span>
+                <span className="text-gray-700">Automated email marketing campaigns</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-500 text-xl mr-3">✓</span>
+                <span className="text-gray-700">Social media content generation and scheduling</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-500 text-xl mr-3">✓</span>
+                <span className="text-gray-700">Predictive analytics for campaign optimization</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-500 text-xl mr-3">✓</span>
+                <span className="text-gray-700">Multi-channel marketing orchestration</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Benefits</h2>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <span className="text-blue-500 text-xl mr-3">→</span>
+                <span className="text-gray-700">Increase marketing ROI by up to 300%</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 text-xl mr-3">→</span>
+                <span className="text-gray-700">Reduce manual work by 80%</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 text-xl mr-3">→</span>
+                <span className="text-gray-700">Improve customer engagement by 150%</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 text-xl mr-3">→</span>
+                <span className="text-gray-700">Scale campaigns across multiple channels</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 text-xl mr-3">→</span>
+                <span className="text-gray-700">Real-time performance optimization</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <CaseStudy
-            company="E-commerce Plus"
-            industry="E-commerce"
-            result="60% increase in conversion rates"
-            description="Implemented AI personalization and automated email campaigns, resulting in 60% higher conversion rates and 45% increase in average order value."
-            metrics={["60% conversion increase", "45% higher AOV", "50% more engaged users"]}
-          />
-          <CaseStudy
-            company="SaaS Startup"
-            industry="Software"
-            result="70% improvement in lead quality"
-            description="Used AI lead scoring and automated nurturing to improve lead quality and reduce sales cycle time by 40%."
-            metrics={["70% better lead quality", "40% faster sales cycle", "80% more qualified leads"]}
-          />
-          <CaseStudy
-            company="Retail Chain"
-            industry="Retail"
-            result="50% reduction in marketing costs"
-            description="Deployed AI budget optimization and predictive analytics to reduce marketing costs while maintaining the same level of performance."
-            metrics={["50% cost reduction", "35% better ROI", "60% more efficient campaigns"]}
-          />
-        </div>
-      </section>
 
-      {/* Technology Stack */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Built for Marketing Scale</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our platform is built on enterprise-grade technology for maximum performance and reliability.
-          </p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          {[
-            { name: "React", icon: "⚛️", description: "Frontend framework" },
-            { name: "Node.js", icon: "🟢", description: "Backend runtime" },
-            { name: "PostgreSQL", icon: "🐘", description: "Primary database" },
-            { name: "Redis", icon: "🔴", description: "Caching layer" },
-            { name: "OpenAI GPT-4", icon: "🧠", description: "AI engine" },
-            { name: "AWS", icon: "☁️", description: "Cloud platform" },
-            { name: "Docker", icon: "🐳", description: "Containerization" },
-            { name: "Kubernetes", icon: "⚙️", description: "Orchestration" },
-            { name: "SendGrid", icon: "📧", description: "Email delivery" },
-            { name: "HubSpot", icon: "🔗", description: "CRM integration" },
-            { name: "MongoDB", icon: "🍃", description: "Document store" },
-            { name: "Grafana", icon: "📊", description: "Monitoring" }
-          ].map((tech, index) => (
-            <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-              <div className="text-2xl mb-2">{tech.icon}</div>
-              <h3 className="font-semibold text-gray-900 mb-1">{tech.name}</h3>
-              <p className="text-xs text-gray-600">{tech.description}</p>
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Pricing Plans</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-6">$299/month</div>
+              <ul className="space-y-3 mb-8">
+                <li>Up to 10,000 contacts</li>
+                <li>5 automated campaigns</li>
+                <li>Basic AI content generation</li>
+                <li>Email support</li>
+              </ul>
+              <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
+                Get Started
+              </button>
             </div>
+<<<<<<< HEAD
           ))}
         </div>
       </section>
@@ -399,6 +366,58 @@ function CaseStudy({ company, industry, result, description, metrics }: {
             </a>
           </div>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <div className="bg-white rounded-lg shadow-lg p-8 border-2 border-blue-600">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-6">$799/month</div>
+              <ul className="space-y-3 mb-8">
+                <li>Up to 50,000 contacts</li>
+                <li>Unlimited campaigns</li>
+                <li>Advanced AI features</li>
+                <li>Multi-channel automation</li>
+                <li>Priority support</li>
+              </ul>
+              <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
+                Get Started
+              </button>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-6">Custom</div>
+              <ul className="space-y-3 mb-8">
+                <li>Unlimited contacts</li>
+                <li>Custom integrations</li>
+                <li>Dedicated account manager</li>
+                <li>24/7 support</li>
+                <li>Custom AI models</li>
+              </ul>
+              <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Ready to Transform Your Marketing?</h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Contact our team to discuss your marketing automation needs and get a free consultation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-green-600 text-white py-3 px-8 rounded-lg hover:bg-green-700 transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Email Us
+            </a>
+          </div>
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         </div>
       </div>
     </div>

@@ -1,10 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
 "use client",import { useWalkthroughTarget } from "./OnboardingWalkthrough",import { useAuth } from "@/contexts/AuthContext",import Link from "next/link",export function LayoutWrapper() {const { user, isAuthenticated, logout }  = useAuth()return (<>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+;
+"use client",import { useWalkthroughTarget } from "./OnboardingWalkthrough",import { useAuth } from "@/contexts/AuthContext",import Link from "next/link",export function LayoutWrapper() {const { user, isAuthenticated, logout }  = useAuth()return (<>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 "use client";
 import { useWalkthroughTarget } from "./OnboardingWalkthrough";
 import { useAuth } from "@/contexts/AuthContext";
@@ -25,6 +31,7 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {cons
                 Admin Deploy;
               </Link>;
               <Link href="/admin / instances" className="text - sm opacity - 80 hover:opacity - 100 transition - opacity">;
+<<<<<<< HEAD
 =======
   return (;  return (;
 =======
@@ -42,6 +49,8 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {cons
                 Admin Deploy;
               </Link>;
               <Link href="/admin / instances" className="text - sm opacity - 80 hover:opacity - 100 transition - opacity">;
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   return (return (<>;
       <nav className="border - b border - white / 10 sticky top - 0 z - 50 bg - zinc - 900 / 50 backdrop-blur" {...useWalkthroughTarget ("nav - menu")}>;
         <div className="max - w-6xl mx - auto px - 4 py - 3 flex items - center justify-between">;
@@ -55,11 +64,15 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {cons
                 Admin Deploy;
               </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/admin / instances" className="text - sm opacity - 80 hover:opacity - 100 transition-opacity">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/admin / instances" className="text - sm opacity - 80 hover:opacity - 100 transition - opacity">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/admin / instances" className="text - sm opacity - 80 hover:opacity - 100 transition - opacity">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Instances;
               </Link>;
             </div>;
@@ -67,11 +80,14 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {cons
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className="flex items - center gap - 4">;
+<<<<<<< HEAD
 =======
           <div className="flex items - center gap-4">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
           <div className="flex items - center gap - 4">;
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <div className="flex items - center gap-4">;
             {is_authenticated ? (<>;
                 <Link;
@@ -86,7 +102,10 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {cons
                     on_click={logout}
                     className="text - sm text - zinc - 400 hover:text - white transition - colors";
                   className="text - sm text - zinc - 300 hover:text - white transition-colors";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             {is_authenticated ? (
               <>;
                 <Link;
@@ -120,6 +139,7 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {cons
                   </button>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               </>) : (
 <<<<<<< HEAD
               <div className="flex items - center gap - 3">;
@@ -133,6 +153,8 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {cons
                   className="text - sm text - zinc - 400 hover:text - white transition-colors";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </>) : (<div className="flex items - center gap - 3">;
                 <Link;
                   href="/auth / signin";
@@ -152,12 +174,16 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {cons
 <<<<<<< HEAD
 <<<<<<< HEAD
                   className="px - 4 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors";
+<<<<<<< HEAD
 =======
 =======
                   className="px - 4 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   className="px - 4 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition-colors";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                  className="px - 4 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition-colors";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 >;
                   Start Free Trial;
                 </Link>;

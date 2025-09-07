@@ -59,7 +59,10 @@ export interface Service {id: string;
 export const services: Service[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   // AI Services;{id: 'ai - code - assistant',name: 'ZionAI Code Assistant',category: 'AI Services',description: 'Advanced AI - powered code generation, review, and optimization platform with context - aware suggestions and multi - language support.',export interface Service  {id: string,name: string,category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics',description: string,features: string[],pricing: {starter: string,professional: string,enterprise: string,custom?: string;
   },technologyStack: string[],benefits: string[],useCases: string[],status: 'active' | 'beta' | 'coming-soon',priority: number,demoUrl?: string,documentationUrl?: string,contactInfo: {email: string,phone: string,address: string;
   }
@@ -171,7 +174,10 @@ export const services: Service[] = [;
     ],status: 'active',priority: 11,demo_url: 'https://ziontechgroup.com / demo / data - vault',contact_info: {email: 'kleber@ziontechgroup.com',phone: '+1 302 464 0950',address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }],export const getServicesByCategory = (category: Service['category']) => {return services.filter(service => service.category === category)},export const getServiceById = (id: string) => {return services.find(service => service.id === id)},export const getCategories = () => {return Array.from(new Set(services.map(service => service.category)))}// AI Services;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   // AI Services;
 
   {

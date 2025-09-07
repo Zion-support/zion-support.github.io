@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === "top-left" ? "top-4 left-4" :" position === "top-right" ? "top-4 right-4" :" position === "bottom-left" ? "bottom-4 left-4" :"` "bottom-4 right-4"} z-50`}> {} </div>)} export const toast = {}}"`"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === "top-left" ? "top-4 left-4" :" position === "top-right" ? "top-4 right-4" :" position === "bottom-left" ? "bottom-4 left-4" :"` "bottom-4 right-4"} z-50`}> {} </div>)} export const toast = {}}"`"`;
 export function Sonner({ position = \"bottom-right\",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === \"top-left\" ? \"top-4 left-4\" :\" position === \"top-right\" ? \"top-4 right-4\" :\" position === \"bottom-left\" ? \"bottom-4 left-4\" :\"` \"bottom-4 right-4\"} z-50`}> {} </div>)} export const toast = {}}
 module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === "top-left" ? "top-4 left-4" :" position === "top-right" ? "top-4 right-4" :" position === "bottom-left" ? "bottom-4 left-4" :"` "bottom-4 right-4"} z-50`}> {} </div>)} export const toast = {}}"`"`;
@@ -20,11 +23,15 @@ module.exports = function Sonner({ position = "bottom-right",richColors = true,c
 export function Sonner({ position = \"bottom-right\",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === \"top-left\" ? \"top-4 left-4\" :\" position === \"top-right\" ? \"top-4 right-4\" :\" position === \"bottom-left\" ? \"bottom-4 left-4\" :\"` \"bottom-4 right-4\"} z-50`}> {} </div>)} export const toast = {}}
 module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === "top-left" ? "top-4 left-4" :" position === "top-right" ? "top-4 right-4" :" position === "bottom-left" ? "bottom-4 left-4" :"` "bottom-4 right-4"} z-50`}> {} </div>)} export const toast = {}}"`"`;
 module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === "top-left" ? "top-4 left-4" :" position === "top-right" ? "top-4 right-4" :" position === "bottom-left" ? "bottom-4 left-4" :"` "bottom-4 right-4"} z-50`}> {} </div>)} export const toast = {}}"`"`
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 export function Sonner({ position = \"bottom-right\",richColors = true,closeButton = true }) { return (<div className={`fixed ${position === \"top-left\" ? \"top-4 left-4\" :\" position === \"top-right\" ? \"top-4 right-4\" :\" position === \"bottom-left\" ? \"bottom-4 left-4\" :\"` \"bottom-4 right-4\"} z-50`}> {} </div>)} export const toast = {}}
 
 module && module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) { return (<div className={`fixed ${position === "top-left" ? "top-4 left-4" :" position === "top-right" ? "top-4 right-4" :" position === "bottom-left" ? "bottom-4 left-4" :"` "bottom-4 right-4"} z-50`}> {} </div>)} export const toast = {}}"`"`
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -37,3 +44,8 @@ module.exports = function Sonner({ position = "bottom-right",richColors = true,c
 export function Sonner({ position = \"bottom-right\",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === \"top-left\" ? \"top-4 left-4\" :\" position === \"top-right\" ? \"top-4 right-4\" :\" position === \"bottom-left\" ? \"bottom-4 left-4\" :\"` \"bottom-4 right-4\"} z-50`}> {} </div>)} export const toast = {}}
 module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === "top-left" ? "top-4 left-4" :" position === "top-right" ? "top-4 right-4" :" position === "bottom-left" ? "bottom-4 left-4" :"` "bottom-4 right-4"} z-50`}> {} </div>)} export const toast = {}}"`"`
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === "top-left" ? "top-4 left-4" :" position === "top-right" ? "top-4 right-4" :" position === "bottom-left" ? "bottom-4 left-4" :"` "bottom-4 right-4"} z-50`}> {} </div>)} export const toast = {}}"`"`
+export function Sonner({ position = \"bottom-right\",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === \"top-left\" ? \"top-4 left-4\" :\" position === \"top-right\" ? \"top-4 right-4\" :\" position === \"bottom-left\" ? \"bottom-4 left-4\" :\"` \"bottom-4 right-4\"} z-50`}> {} </div>)} export const toast = {}}
+module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === "top-left" ? "top-4 left-4" :" position === "top-right" ? "top-4 right-4" :" position === "bottom-left" ? "bottom-4 left-4" :"` "bottom-4 right-4"} z-50`}> {} </div>)} export const toast = {}}"`"`
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

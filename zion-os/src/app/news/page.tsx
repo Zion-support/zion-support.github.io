@@ -1,5 +1,16 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import Link from "next/link",export const metadata = {title: "News & Insights - Zion Tech Group | Latest Technology Updates",description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.",export const metadata = {title: "News & Insights - Zion Tech Group | Latest Technology Updates",,description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.",,keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"}export default function NewsPage() {return (<div className="min-h-screen">;{/* Hero Section */}
+      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
+        <div className="max - w-7xl mx - auto text - center">;
+          <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
+            <span className="gradient - text">News & Insights</span>;
+          </h1>;
+          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
+    <div className="min-h-screen">;    <div className="min-h-screen">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import Link from "next/link",;
 <<<<<<< HEAD
 =======
@@ -94,9 +105,12 @@ export default function NewsPage() {return (;
                 </h2>;
                 <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
         <div className="max - w-7xl mx-auto">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue-500 / 30">;
@@ -112,11 +126,15 @@ export default function NewsPage() {return (;
                   Zion Tech Group Launches Revolutionary AI - Powered Business Intelligence Platform;
                 </h2>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <p className="text - gray - 300 text - lg mb - 6 leading-relaxed">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
                 <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   Our new AI platform transforms how businesses analyze data and make decisions.;
                   Using advanced machine learning algorithms, it provides real - time insights and;
                   predictive analytics that drive strategic growth.;
@@ -132,20 +150,27 @@ export default function NewsPage() {return (;
                 </div>;
                 <Link href="/news / ai - business - intelligence - platform - launch" className="btn - primary">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <div className="flex flex - wrap gap - 3 mb-6">;
                   <span className="bg - blue - 500 / 20 text - blue - 400 px - 3 py - 1 rounded - full text-sm">AI</span>;
                   <span className="bg - purple - 500 / 20 text - purple - 400 px - 3 py - 1 rounded - full text-sm">Business Intelligence</span>;
                   <span className="bg - green - 500 / 20 text - green - 400 px - 3 py - 1 rounded - full text-sm">Platform Launch</span>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link href="/news / ai - business - intelligence - platform - launch" className="btn-primary">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
                 <Link href="/news / ai - business - intelligence - platform - launch" className="btn - primary">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                <Link href="/news / ai - business - intelligence - platform - launch" className="btn - primary">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   Read Full Article;
                 </Link>;
               </div>;
@@ -155,6 +180,7 @@ export default function NewsPage() {return (;
                 <div className="w - full h - 64 lg:h - 80 bg - gradient - to - br from - blue - 500 / 20 to - purple - 500 / 20 rounded - xl flex items - center justify - center">;
                   <svg className="w - 24 h - 24 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                     <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h - 1M4 12H3m3.343 - 5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11 - 4 0v-.531c0-.895-.356 - 1.754-.988 - 2.386l-.548-.547z" />;
+<<<<<<< HEAD
 =======
 =======
                 <div className="w - full h - 64 lg:h - 80 bg - gradient - to - br from - blue - 500 / 20 to - purple - 500 / 20 rounded - xl flex items - center justify - center">;
@@ -165,6 +191,11 @@ export default function NewsPage() {return (;
                   <svg className="w - 24 h - 24 text - blue-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h - 1M4 12H3m3.343 - 5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11 - 4 0v-.531c0-.895-.356 - 1.754-.988 - 2.386l-.548-.547z" />;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                <div className="w - full h - 64 lg:h - 80 bg - gradient - to - br from - blue - 500 / 20 to - purple - 500 / 20 rounded - xl flex items - center justify-center">;
+                  <svg className="w - 24 h - 24 text - blue-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h - 1M4 12H3m3.343 - 5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11 - 4 0v-.531c0-.895-.356 - 1.754-.988 - 2.386l-.548-.547z" />;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </svg>;
                 </div>;
               </div>;
@@ -224,9 +255,12 @@ export default function NewsPage() {return (;
               <h3 className="font - semibold mb - 2">Company News</h3>;
               <p className="text - gray - 400 text - sm">Updates about Zion Tech Group</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
         <div className="max - w-7xl mx-auto">;
           <div className="text - center mb-16">;
@@ -272,6 +306,7 @@ export default function NewsPage() {return (;
                 </svg>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h3 className="font - semibold mb-2">Company News</h3>;
               <p className="text - gray - 400 text-sm">Updates about Zion Tech Group</p>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -279,6 +314,10 @@ export default function NewsPage() {return (;
               <h3 className="font - semibold mb - 2">Company News</h3>;
               <p className="text - gray - 400 text - sm">Updates about Zion Tech Group</p>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <h3 className="font - semibold mb - 2">Company News</h3>;
+              <p className="text - gray - 400 text - sm">Updates about Zion Tech Group</p>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             </Link>;
           </div>;
         </div>;
@@ -321,9 +360,12 @@ export default function NewsPage() {return (;
               </p>;
               <Link href="/news / quantum - error - correction - breakthrough" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
         <div className="max - w-7xl mx-auto">;
           <div className="text - center mb-16">;
@@ -356,11 +398,15 @@ export default function NewsPage() {return (;
                 that significantly improves the reliability of quantum computations.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/news / quantum - error - correction - breakthrough" className="text - blue - 400 hover:text - blue - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/news / quantum - error - correction - breakthrough" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/news / quantum - error - correction - breakthrough" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read More →;
               </Link>;
             </article>;
@@ -390,9 +436,12 @@ export default function NewsPage() {return (;
               </p>;
               <Link href="/news / ai - cybersecurity - framework" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - full h - 48 bg - gradient - to - br from - green - 500 / 20 to - blue - 500 / 20 rounded - xl mb - 6 flex items - center justify-center">;
                 <svg className="w - 16 h - 16 text - green-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4 - 4m5.618 - 4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01 - 8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176 - 1.332 9 - 6.03 9 - 11.622 0 - 1.042-.133 - 2.052-.382 - 3.016z" />;
@@ -412,11 +461,15 @@ export default function NewsPage() {return (;
                 organizations from increasingly sophisticated AI - generated cyber attacks.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/news / ai - cybersecurity - framework" className="text - blue - 400 hover:text - blue - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/news / ai - cybersecurity - framework" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/news / ai - cybersecurity - framework" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read More →;
               </Link>;
             </article>;
@@ -446,9 +499,12 @@ export default function NewsPage() {return (;
               </p>;
               <Link href="/news / european - market - expansion" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - full h - 48 bg - gradient - to - br from - red - 500 / 20 to - yellow - 500 / 20 rounded - xl mb - 6 flex items - center justify-center">;
                 <svg className="w - 16 h - 16 text - red-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
@@ -468,11 +524,15 @@ export default function NewsPage() {return (;
                 offices in London, Berlin, and Paris to better serve our international clients.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/news / european - market - expansion" className="text - blue - 400 hover:text - blue - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/news / european - market - expansion" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/news / european - market - expansion" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read More →;
               </Link>;
             </article>;
@@ -502,9 +562,12 @@ export default function NewsPage() {return (;
               </p>;
               <Link href="/news / satellite - communication - advances" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - full h - 48 bg - gradient - to - br from - blue - 500 / 20 to - indigo - 500 / 20 rounded - xl mb - 6 flex items - center justify-center">;
                 <svg className="w - 16 h - 16 text - blue-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2 - 9-18 - 9 18 9 - 2zm0 0v - 8" />;
@@ -524,11 +587,15 @@ export default function NewsPage() {return (;
                 communication systems with improved bandwidth and reliability.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/news / satellite - communication - advances" className="text - blue - 400 hover:text - blue - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/news / satellite - communication - advances" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/news / satellite - communication - advances" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read More →;
               </Link>;
             </article>;
@@ -558,9 +625,12 @@ export default function NewsPage() {return (;
               </p>;
               <Link href="/news / ai - content - generation - ethics" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - full h - 48 bg - gradient - to - br from - indigo - 500 / 20 to - purple - 500 / 20 rounded - xl mb - 6 flex items - center justify-center">;
                 <svg className="w - 16 h - 16 text - indigo-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00 - 2 2v11a2 2 0 002 2h11a2 2 0 002 - 2v - 5m - 1.414 - 9.414a2 2 0 112.828 2.828L11.828 15H9v - 2.828l8.586 - 8.586z" />;
@@ -580,11 +650,15 @@ export default function NewsPage() {return (;
                 content, ensuring responsible development and deployment.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/news / ai - content - generation - ethics" className="text - blue - 400 hover:text - blue - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/news / ai - content - generation - ethics" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/news / ai - content - generation - ethics" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read More →;
               </Link>;
             </article>;
@@ -614,9 +688,12 @@ export default function NewsPage() {return (;
               </p>;
               <Link href="/news / university - research - partnerships" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - full h - 48 bg - gradient - to - br from - yellow - 500 / 20 to - orange - 500 / 20 rounded - xl mb - 6 flex items - center justify-center">;
                 <svg className="w - 16 h - 16 text - yellow-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01 - 2 2H5a2 2 0 01 - 2-2v - 6a2 2 0 012 - 2m14 0V9a2 2 0 00 - 2-2M5 11V9a2 2 0 012 - 2m0 0V5a2 2 0 012 - 2h6a2 2 0 012 2v2M7 7h10" />;
@@ -636,11 +713,15 @@ export default function NewsPage() {return (;
                 and Cambridge to advance AI and quantum computing technologies.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/news / university - research - partnerships" className="text - blue - 400 hover:text - blue - 300 text - sm font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/news / university - research - partnerships" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/news / university - research - partnerships" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read More →;
               </Link>;
             </article>;
@@ -673,9 +754,12 @@ export default function NewsPage() {return (;
             </div>;
             <p className="text - gray - 400 text - sm mt - 4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - blue - 600 / 10 to - purple-600 / 10">;
         <div className="max - w-4xl mx - auto text-center">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue-500 / 30">;
@@ -696,11 +780,15 @@ export default function NewsPage() {return (;
               </button>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <p className="text - gray - 400 text - sm mt-4">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
             <p className="text - gray - 400 text - sm mt - 4">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <p className="text - gray - 400 text - sm mt - 4">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               We respect your privacy. Unsubscribe at any time.;
             </p>;
           </div>;
@@ -724,6 +812,7 @@ export default function NewsPage() {return (;
                 Contact Media Relations;
               </Link>;
               <Link href="/about" className="btn - secondary text - lg px - 8 py - 4">;
+<<<<<<< HEAD
 =======
       <section className="py - 20 px - 4 sm: px - 6 lg:px-8">;
         <div className="max - w-4xl mx - auto text-center">;
@@ -748,6 +837,8 @@ export default function NewsPage() {return (;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/about" className="btn - secondary text - lg px - 8 py - 4">;
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 px - 4 sm: px - 6 lg:px-8">;
         <div className="max - w-4xl mx - auto text-center">;
           <div className="card">;
@@ -763,7 +854,10 @@ export default function NewsPage() {return (;
                 Contact Media Relations;
               </Link>;
               <Link href="/about" className="btn - secondary text - lg px - 8 py - 4">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn About Zion Tech Group;
               </Link>;
             </div>;

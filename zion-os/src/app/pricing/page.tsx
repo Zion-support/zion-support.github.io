@@ -133,6 +133,13 @@ const service_pricing: ServicePricing[] = [;
 function PricingPage() {const [selected_category, setSelectedCategory] = useState ("All")const filtered_services = selected_category === "All";
     ? service_pricing;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    : service_pricing.filter (service => service.category === selected_category)return (<div className="space-y-8">;
+      <div className="text - center space-y-4">;
+        <h1 className="text - 4xl font-bold">Pricing & Plans</h1>;
+        <p className="text - xl opacity - 80 max - w-3xl mx-auto">;  const filteredServices = selectedCategory === "All";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     : service_pricing.filter (service => service.category === selected_category);
   return (
 <<<<<<< HEAD
@@ -150,6 +157,7 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
   const filteredServices = selectedCategory === "All";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <div className="space-y-8">;
       <div className="text - center space-y-4">;
@@ -158,6 +166,8 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     ? servicePricing;
     : servicePricing.filter(service => service.category === selectedCategory)return (<div className="space-y-8">;
       <div className="text-center space-y-4">;
@@ -171,6 +181,7 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
 <<<<<<< HEAD
       <div className="flex justify - center">;
         <div className="flex flex - wrap gap - 2 bg - zinc - 800 rounded - lg p - 1">;
+<<<<<<< HEAD
 =======
       <div className="flex justify-center">;
         <div className="flex flex - wrap gap - 2 bg - zinc - 800 rounded - lg p-1">;
@@ -178,6 +189,8 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
 =======
       <div className="flex justify - center">;
         <div className="flex flex - wrap gap - 2 bg - zinc - 800 rounded - lg p - 1">;
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           {categories.map (category => (<button;
               key={category}on_click={() => setSelectedCategory (category)}
               className={`px - 4 py - 2 rounded - md text - sm font - medium transition - colors ${selected_category === category;
@@ -185,7 +198,10 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
                   : 'text - gray - 300 hover:text - white hover:bg - zinc - 700';<div className="flex justify-center">;
         <div className="flex flex - wrap gap - 2 bg - zinc - 800 rounded - lg p-1">;
           {categories.map (category => (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           {categories.map (category => (
             <button;
               key={category}
@@ -199,6 +215,23 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
 <<<<<<< HEAD
 <<<<<<< HEAD
       <div className="space - y-12">;
+        {filtered_services.map ((service, service_index) => (<div key={service_index} className="space - y-6">;
+            <div className="text - center space - y-2">;
+              <h2 className="text - 2xl font - bold">{service.service_name}</h2>;
+              <p className="text - lg opacity - 80">{service.description}</p>;
+            </div>;
+            {/* Features & Benefits */}
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+              <div>;
+                <h3 className="text - lg font - semibold mb - 3">Key Features</h3>;
+                <ul className="space - y-2">;
+                  {service.features.map ((feature, index) => (<li key={index} className="flex items - center gap - 2">;
+                      <span className="w - 2 h - 2 bg - blue - 500 rounded - full"></span>;
+      <div className="space-y-12">;
+        {filtered_services.map ((service, service_index) => (<div key={service_index} className="space-y-6">;
+            <div className="text - center space-y-2">;
+              <h2 className="text - 2xl font-bold">{service.service_name}</h2>;
+              <p className="text - lg opacity-80">{service.description}</p>;
         {filtered_services.map ((service, service_index) => (
           <div key={service_index} className="space - y-6">;
 =======
@@ -212,6 +245,10 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
             {/* Features & Benefits */}
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
               <div>;
+                <h3 className="text - lg font - semibold mb-3">Key Features</h3>;
+                <ul className="space-y-2">;
+                  {service.features.map ((feature, index) => (<li key={index} className="flex items - center gap-2">;
+                      <span className="w - 2 h - 2 bg - blue - 500 rounded-full"></span>;
                 <h3 className="text - lg font - semibold mb - 3">Key Features</h3>;
                 <ul className="space - y-2">;
 <<<<<<< HEAD
@@ -259,6 +296,12 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
 <<<<<<< HEAD
                 <h3 className="text - lg font - semibold mb - 3">Benefits</h3>;
                 <ul className="space - y-2">;
+                  {service.benefits.map ((benefit, index) => (<li key={index} className="flex items - center gap - 2">;
+                      <span className="w - 2 h - 2 bg - green - 500 rounded - full"></span>;
+                <h3 className="text - lg font - semibold mb-3">Benefits</h3>;
+                <ul className="space-y-2">;
+                  {service.benefits.map ((benefit, index) => (<li key={index} className="flex items - center gap-2">;
+                      <span className="w - 2 h - 2 bg - green - 500 rounded-full"></span>;
                   {service.benefits.map ((benefit, index) => (
                     <li key={index} className="flex items - center gap - 2">;
                       <span className="w - 2 h - 2 bg - green - 500 rounded - full"></span>;
@@ -289,11 +332,14 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
 <<<<<<< HEAD
 <<<<<<< HEAD
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
+<<<<<<< HEAD
 =======
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               {service.tiers.map ((tier, tier_index) => (<div;key={tier_index}
                   className={`relative border rounded - lg p - 6 ${tier.popular;
                       ? 'border - blue - 500 bg - blue - 500 / 10';
@@ -326,7 +372,10 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
                 >;
                   {tier.popular && (<div className="absolute -top - 3 left - 1/2 transform -translate-x-1 / 2">;
                       <span className="bg - blue - 500 text - white px - 3 py - 1 rounded - full text - xs font-medium">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               {service.tiers.map ((tier, tier_index) => (
                 <div;
                   }`}
@@ -344,6 +393,9 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
                     </div>;
                     <p className="text - sm opacity - 80">{tier.description}</p>;
                   </div>;
+                  <ul className="space - y-3 mt-6">;
+                    {tier.features.map ((feature, index) => (<li key={index} className="flex items - center gap - 2 text-sm">;
+                        <span className="w - 2 h - 2 bg - green - 500 rounded-full"></span>;
                   <ul className="space - y-3 mt - 6">;
                     {tier.features.map ((feature, index) => (
                       <li key={index} className="flex items - center gap - 2 text - sm">;
@@ -417,9 +469,12 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
               <h3 className="font - semibold">Consulting Services</h3>;
               <p className="text - sm opacity - 90">Strategic guidance from $150 / hour</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - lg p - 8 text-white">;
         <div className="text - center space-y-4">;
           <h2 className="text - 2xl font-bold">Need Custom Solutions?</h2>;
@@ -437,6 +492,7 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
             </div>;
             <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h3 className="font-semibold">Consulting Services</h3>;
               <p className="text - sm opacity-90">Strategic guidance from $150 / hour</p>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -444,6 +500,10 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
               <h3 className="font - semibold">Consulting Services</h3>;
               <p className="text - sm opacity - 90">Strategic guidance from $150 / hour</p>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <h3 className="font - semibold">Consulting Services</h3>;
+              <p className="text - sm opacity - 90">Strategic guidance from $150 / hour</p>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             </div>;
           </div>;
           <a;
@@ -451,12 +511,16 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
 <<<<<<< HEAD
 <<<<<<< HEAD
             className="inline - block px - 6 py - 3 bg - white text - purple - 600 rounded - lg font - semibold hover:bg - gray - 100 transition - colors";
+<<<<<<< HEAD
 =======
 =======
             className="inline - block px - 6 py - 3 bg - white text - purple - 600 rounded - lg font - semibold hover:bg - gray - 100 transition - colors";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             className="inline - block px - 6 py - 3 bg - white text - purple - 600 rounded - lg font - semibold hover:bg - gray - 100 transition-colors";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+            className="inline - block px - 6 py - 3 bg - white text - purple - 600 rounded - lg font - semibold hover:bg - gray - 100 transition-colors";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           >;
             Get Custom Quote;
           </a>;
@@ -485,9 +549,12 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
             <h3 className="font - semibold">Address</h3>;
             <p className="opacity - 80">364 E Main St STE 1008 < br />Middletown DE 19709</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="text - center space-y-4">;
         <h2 className="text - 2xl font-bold">Questions About Pricing?</h2>;
         <p className="opacity-80">;
@@ -504,6 +571,7 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
           </div>;
           <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="font-semibold">Address</h3>;
             <p className="opacity-80">364 E Main St STE 1008 < br />Middletown DE 19709</p>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -511,6 +579,10 @@ function PricingPage() {const [selected_category, setSelectedCategory] = useStat
             <h3 className="font - semibold">Address</h3>;
             <p className="opacity - 80">364 E Main St STE 1008 < br />Middletown DE 19709</p>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <h3 className="font - semibold">Address</h3>;
+            <p className="opacity - 80">364 E Main St STE 1008 < br />Middletown DE 19709</p>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           </div>;
         </div>;
       </div>;

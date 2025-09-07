@@ -543,9 +543,13 @@ export default defineConfig({
   reporter: [
     ['list'],
 <<<<<<< HEAD
+<<<<<<< HEAD
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }],
   ],
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]],
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       use: {
 <<<<<<< HEAD
 <<<<<<< HEAD

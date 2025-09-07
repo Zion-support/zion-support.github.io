@@ -131,12 +131,18 @@ function Header() {const [isMenuOpen, setIsMenuOpen] = useState (false),const [i
                       </div>;
                     </Link>))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 role=&quot;banner&quot;
       aria-label=&quot;Main navigation&quot;    >;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex justify-between items-center py-4">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       role="banner"
       aria-label="Main navigation"
 role=&quot;banner&quot;
@@ -187,7 +193,10 @@ role=&quot;banner&quot;
                 aria-haspopup=&quot;true&quot;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 aria-label=&quot;Services menu&quot;              </Link>;
             ))}{/* Services Dropdown */}
             <div className="relative group">              <button;
@@ -204,7 +213,10 @@ role=&quot;banner&quot;
               <div className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
                 <div className="p-6 grid grid-cols-1 gap-3">;
                   {services.map((service) => (<Link;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 aria-label=&quot;Services menu&quot;
               </Link>
             ))}
@@ -256,7 +268,10 @@ role=&quot;banner&quot;
           </nav>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           {/* CTA Button */}{isMenuOpen ? (<path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (<path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}{/* CTA Button */}            <Link;
               href="/contact";
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl";
@@ -265,7 +280,10 @@ role=&quot;banner&quot;
               Get Started;
             </Link>;
           </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           {/* CTA Button */}
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}

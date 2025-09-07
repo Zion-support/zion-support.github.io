@@ -11,6 +11,7 @@ const React from";react" const ContentQualityDashboard = ({ className = " }) => 
 import _React from';react' const ContentQualityDashboard = ({ className = ' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(') const [filterStatus,setFilterStatus] = useState('all') const contentAnalyzer = ContentQualityAnalyzer && ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {''';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from';react' const ContentQualityDashboard = ({ className = ' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(') const [filterStatus,setFilterStatus] = useState('all') const contentAnalyzer = ContentQualityAnalyzer && ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {''';
 import _React from';react' const ContentQualityDashboard = ({ className = ' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(') const [filterStatus,setFilterStatus] = useState('all') const contentAnalyzer = ContentQualityAnalyzer && ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {''';
 =======
@@ -21,3 +22,6 @@ import _React from';react' const ContentQualityDashboard = ({ className = ' }) =
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

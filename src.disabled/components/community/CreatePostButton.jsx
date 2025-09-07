@@ -11,6 +11,7 @@ const React from";react"";export: { function }";export: default function CreateP
 import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return () <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return () <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
 import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return () <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
 =======
@@ -21,3 +22,6 @@ import _React from';react'';"export": { function }';"export": default function C
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

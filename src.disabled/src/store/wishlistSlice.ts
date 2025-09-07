@@ -31,6 +31,7 @@ import React from "react"; ); export default function Wishlistslice() {; return 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from "react"; ); export default function Wishlistslice() {; return (; <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice></div> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for wishlistslice.; ></div> ></div> );,}
   )}
@@ -41,3 +42,7 @@ import React from "react"; ); export default function Wishlistslice() {; return 
 import React from "react"; ); export default function Wishlistslice() {; return (; <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice></div> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for wishlistslice.; ></div> ></div> );}
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import React from "react"; ); export default function Wishlistslice() {; return (; <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice></div> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for wishlistslice.; ></div> ></div> );}
+  )}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

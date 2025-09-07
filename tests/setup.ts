@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 <<<<<<< HEAD
@@ -31,6 +32,9 @@ jest.mock('next/router', () => ({
   },
 }));
 =======
+import React from 'react';
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
 <<<<<<< HEAD
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
@@ -47,38 +51,12 @@ jest.mock('next/router', () => ({
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react';
->>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
-=======
-import React from 'react';
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 
 interface SetupProps {
   // Add props here as needed
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Mock IntersectionObserver
-// @ts-ignore
-global.IntersectionObserver = class IntersectionObserver {
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock ResizeObserver
-// @ts-ignore
-global.ResizeObserver = class ResizeObserver {
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock window.scrollTo
-global.window.scrollTo = jest.fn();
 =======
-=======
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 export default function Setup({ }: SetupProps) {
   return (
     <div>
@@ -91,6 +69,7 @@ export default function Setup({ }: SetupProps) {
 // Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {
   observe () { /* do nothing */ }
+<<<<<<< HEAD
 =======
 
 import React from 'react';
@@ -102,9 +81,12 @@ interface SetupProps  {// Add props here as needed;
   )}// Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {observe () { /* do nothing */ }
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   unobserve () { /* do nothing */ }
   disconnect () { /* do nothing */ }
-},// Mock window.scroll_to;
+},
+// Mock window.scroll_to;
 global.window.scroll_to = vi.fn (), // vi should be globally available;
 // Ensure React Testing Library cleans up and mocks are restored between tests;
 // -----------------------------------------------------------------------------;
@@ -117,21 +99,6 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
 // deliberately attaching to global for test environment setup;
   SnapshotSerializer: () => {}}
 // eslint - disable - next - line @typescript - eslint / no - explicit - any;
-(global_this as any).jest = {// Core mocking utilities;
-  fn: vi.fn.bind (vi),mock: vi.mock.bind (vi),spy_on: vi.spy_on.bind (vi),// Timing helpers;
-  useFakeTimers: vi.useFakeTimers.bind (vi),useRealTimers: vi.useRealTimers.bind (vi),advanceTimersByTime: vi.advanceTimersByTime.bind (vi),runAllTimers: vi.runAllTimers.bind (vi),// Reset / clear mocks;
-ursor/automate-test-improve-and-merge-code-646c;
-interface SetupProps  {// Add props here as needed;
-}export default function Setup() {export default function Setup() {export default function Setup() {return (<div>;
-      <h1>Setup</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  )}ursor/automate-test-improve-and-merge-code-646c;
-import '@testing-library/jest-dom';
-import { cleanup  } from '@testing-library/react';
-import { afterEach, vi  } from 'vitest';
-// Ensure React Testing Library cleans up and mocks are restored between tests;
-afterEach(() => {cleanup()vi.restoreAllMocks()})
 (global_this as any).jest = {
   // Core mocking utilities;
   fn: vi.fn.bind (vi),
@@ -143,6 +110,7 @@ afterEach(() => {cleanup()vi.restoreAllMocks()})
   advanceTimersByTime: vi.advanceTimersByTime.bind (vi),
   runAllTimers: vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -165,10 +133,17 @@ import React from 'react';
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+import React from 'react';
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Setup({}: SetupProps) {
+=======
+export default function Setup({ }: SetupProps) {
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   return (
     <div>
       <h1>Setup</h1>
@@ -176,6 +151,7 @@ export default function Setup({}: SetupProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -216,3 +192,5 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

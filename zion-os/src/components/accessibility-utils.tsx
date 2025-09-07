@@ -5,6 +5,12 @@ export /**;
  * SkipLink - Function description;
  */;
 function SkipLink() {return (<a;
+<<<<<<< HEAD
+=======
+      href={`#${target_id}`}
+      className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
+    <a;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       href={`#${target_id}`}
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
     <a;
@@ -24,6 +30,13 @@ function SkipLink() {return (<a;
  * LiveRegion - Function description;
  */;
 function LiveRegion() {return (<div;
+<<<<<<< HEAD
+=======
+      role={role}
+      aria - live={aria_live}
+      className="sr - only";
+    <div;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       role={role}
       aria - live={aria_live}
       className="sr - only";
@@ -237,6 +250,13 @@ export function CollapsibleSection() {const [isExpanded, setIsExpanded] = useSta
       <div;id={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
         ref={content_ref}
         className={`overflow - hidden transition - all duration - 300 ${is_expanded ? "max - h-96 opacity - 100" : "max - h-0 opacity - 0";}`}
+<<<<<<< HEAD
+=======
+        aria - hidden={!is_expanded}
+      >;
+        <div className="px - 4 pb - 3">;
+        }`}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         aria - hidden={!is_expanded}
       >;
         <div className="px - 4 pb - 3">;
@@ -295,11 +315,15 @@ export function Tooltip() {const [isVisible, setIsVisible] = useState(false),con
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate - 45" />;
+<<<<<<< HEAD
 =======
 =======
           <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate - 45" />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate-45" />;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate-45" />;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         </div>)}
     </div>)}

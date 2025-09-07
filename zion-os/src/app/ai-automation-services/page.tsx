@@ -93,6 +93,7 @@ export default function AIAutomationServicesPage() {return (;
                   Get Started;
                 </Link>;
                 <Link href="/case - studies" className="btn - secondary">;
+<<<<<<< HEAD
 =======
         <section className="mb-20">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items-center">;
@@ -119,6 +120,8 @@ export default function AIAutomationServicesPage() {return (;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
                 <Link href="/case - studies" className="btn - secondary">;
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <section className="mb-20">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items-center">;
             <div>;
@@ -136,7 +139,10 @@ export default function AIAutomationServicesPage() {return (;
                   Get Started;
                 </Link>;
                 <Link href="/case - studies" className="btn - secondary">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   View Case Studies;
                 </Link>;
               </div>;
@@ -170,9 +176,12 @@ export default function AIAutomationServicesPage() {return (;
                   <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="none" stroke="current_color" view_box="0 0 24 24">;
                     <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M5 13l4 4L19 7" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30 p-8">;
               <h3 className="text - 2xl font - bold mb-4">Key Benefits</h3>;
               <ul className="space - y-3 text - gray-300">;
@@ -195,6 +204,7 @@ export default function AIAutomationServicesPage() {return (;
                   Improved accuracy and compliance;
                 </li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <li className="flex items-center">;
                   <svg className="w - 5 h - 5 text - green - 400 mr-3" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />;
@@ -204,6 +214,11 @@ export default function AIAutomationServicesPage() {return (;
                   <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="none" stroke="current_color" view_box="0 0 24 24">;
                     <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M5 13l4 4L19 7" />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                <li className="flex items - center">;
+                  <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="none" stroke="current_color" view_box="0 0 24 24">;
+                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M5 13l4 4L19 7" />;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </svg>;
                   Scalable and adaptive solutions;
                 </li>;
@@ -232,9 +247,12 @@ export default function AIAutomationServicesPage() {return (;
               </p>;
               <Link href="/ai - autonomous - business - process - automation" className="text - blue - 400 hover:text - blue - 300 transition - colors text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <section className="mb-20">;
           <h2 className="text - 3xl font - bold text - center mb-12">Our AI Automation Solutions</h2>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
@@ -250,11 +268,15 @@ export default function AIAutomationServicesPage() {return (;
                 Automate repetitive business processes with intelligent workflows that adapt to changing conditions.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/ai - autonomous - business - process - automation" className="text - blue - 400 hover:text - blue - 300 transition - colors text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/ai - autonomous - business - process - automation" className="text - blue - 400 hover:text - blue - 300 transition - colors text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/ai - autonomous - business - process - automation" className="text - blue - 400 hover:text - blue - 300 transition - colors text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </Link>;
             </div>;
@@ -275,9 +297,12 @@ export default function AIAutomationServicesPage() {return (;
               </p>;
               <Link href="/ai - content - generation" className="text - green - 400 hover:text - green - 300 transition - colors text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - 12 h - 12 bg - green - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - green - 500 / 30 transition-colors">;
                 <svg className="w - 6 h - 6 text - green-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m - 6 4h6m2 5H7a2 2 0 01 - 2-2V5a2 2 0 012 - 2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01 - 2 2z" />;
@@ -288,11 +313,15 @@ export default function AIAutomationServicesPage() {return (;
                 Extract, classify, and process documents automatically with advanced OCR and NLP capabilities.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/ai - content - generation" className="text - green - 400 hover:text - green - 300 transition - colors text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/ai - content - generation" className="text - green - 400 hover:text - green - 300 transition - colors text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/ai - content - generation" className="text - green - 400 hover:text - green - 300 transition - colors text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </Link>;
             </div>;
@@ -313,9 +342,12 @@ export default function AIAutomationServicesPage() {return (;
               </p>;
               <Link href="/ai - assistant" className="text - purple - 400 hover:text - purple - 300 transition - colors text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - 12 h - 12 bg - purple - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - purple - 500 / 30 transition-colors">;
                 <svg className="w - 6 h - 6 text - purple-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418 - 4.03 8 - 9 8a9.863 9.863 0 01 - 4.255-.949L3 20l1.395 - 3.72C3.512 15.042 3 13.574 3 12c0 - 4.418 4.03 - 8 9 - 8s9 3.582 9 8z" />;
@@ -326,11 +358,15 @@ export default function AIAutomationServicesPage() {return (;
                 Provide instant, intelligent customer support with AI - powered chatbots and automated response systems.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/ai - assistant" className="text - purple - 400 hover:text - purple - 300 transition - colors text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/ai - assistant" className="text - purple - 400 hover:text - purple - 300 transition - colors text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/ai - assistant" className="text - purple - 400 hover:text - purple - 300 transition - colors text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </Link>;
             </div>;
@@ -351,9 +387,12 @@ export default function AIAutomationServicesPage() {return (;
               </p>;
               <Link href="/ai - business - intelligence" className="text - yellow - 400 hover:text - yellow - 300 transition - colors text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - 12 h - 12 bg - yellow - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - yellow - 500 / 30 transition-colors">;
                 <svg className="w - 6 h - 6 text - yellow-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v - 6a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v6a2 2 0 002 2h2a2 2 0 002 - 2zm0 0V9a2 2 0 012 - 2h2a2 2 0 012 2v10m - 6 0a2 2 0 002 2h2a2 2 0 002 - 2m0 0V5a2 2 0 012 - 2h2a2 2 0 012 2v14a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2z" />;
@@ -364,11 +403,15 @@ export default function AIAutomationServicesPage() {return (;
                 Automate data collection, processing, and analysis to generate actionable insights in real - time.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/ai - business - intelligence" className="text - yellow - 400 hover:text - yellow - 300 transition - colors text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/ai - business - intelligence" className="text - yellow - 400 hover:text - yellow - 300 transition - colors text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/ai - business - intelligence" className="text - yellow - 400 hover:text - yellow - 300 transition - colors text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </Link>;
             </div>;
@@ -389,9 +432,12 @@ export default function AIAutomationServicesPage() {return (;
               </p>;
               <Link href="/ai - autonomous - logistics" className="text - red - 400 hover:text - red - 300 transition - colors text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - 12 h - 12 bg - red - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - red - 500 / 30 transition-colors">;
                 <svg className="w - 6 h - 6 text - red-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l - 8-4 - 8 4m16 0l - 8 4m8 - 4v10l - 8 4m0 - 10L4 7m8 4v10M4 7v10l8 4" />;
@@ -402,11 +448,15 @@ export default function AIAutomationServicesPage() {return (;
                 Optimize inventory management, demand forecasting, and logistics with intelligent automation.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/ai - autonomous - logistics" className="text - red - 400 hover:text - red - 300 transition - colors text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/ai - autonomous - logistics" className="text - red - 400 hover:text - red - 300 transition - colors text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/ai - autonomous - logistics" className="text - red - 400 hover:text - red - 300 transition - colors text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </Link>;
             </div>;
@@ -427,9 +477,12 @@ export default function AIAutomationServicesPage() {return (;
               </p>;
               <Link href="/ai - compliance - automation" className="text - indigo - 400 hover:text - indigo - 300 transition - colors text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - 12 h - 12 bg - indigo - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - indigo - 500 / 30 transition-colors">;
                 <svg className="w - 6 h - 6 text - indigo-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4 - 4m5.618 - 4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01 - 8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176 - 1.332 9 - 6.03 9 - 11.622 0 - 1.042-.133 - 2.052-.382 - 3.016z" />;
@@ -440,11 +493,15 @@ export default function AIAutomationServicesPage() {return (;
                 Ensure regulatory compliance with automated monitoring, reporting, and audit trail systems.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/ai - compliance - automation" className="text - indigo - 400 hover:text - indigo - 300 transition - colors text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/ai - compliance - automation" className="text - indigo - 400 hover:text - indigo - 300 transition - colors text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/ai - compliance - automation" className="text - indigo - 400 hover:text - indigo - 300 transition - colors text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </Link>;
             </div>;
@@ -474,9 +531,12 @@ export default function AIAutomationServicesPage() {return (;
               <h4 className="font - semibold mb - 2">Robotic Process Automation</h4>;
               <p className="text - sm text - gray - 400">Automating repetitive digital tasks and workflows</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <section className="mb-20">;
           <h2 className="text - 3xl font - bold text - center mb-12">Advanced Technology Stack</h2>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-6">;
@@ -493,6 +553,7 @@ export default function AIAutomationServicesPage() {return (;
               <p className="text - sm text - gray - 400">Visual recognition and image processing capabilities</p>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="card text - center p-6">;
               <h4 className="font - semibold mb-2">Robotic Process Automation</h4>;
               <p className="text - sm text - gray-400">Automating repetitive digital tasks and workflows</p>;
@@ -502,6 +563,11 @@ export default function AIAutomationServicesPage() {return (;
               <h4 className="font - semibold mb - 2">Robotic Process Automation</h4>;
               <p className="text - sm text - gray - 400">Automating repetitive digital tasks and workflows</p>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <div className="card text - center p - 6">;
+              <h4 className="font - semibold mb - 2">Robotic Process Automation</h4>;
+              <p className="text - sm text - gray - 400">Automating repetitive digital tasks and workflows</p>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             </div>;
           </div>;
         </section>;
@@ -522,9 +588,12 @@ export default function AIAutomationServicesPage() {return (;
               </Link>;
               <Link href="/case - studies" className="btn - secondary">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <section className="text-center">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30 max - w-4xl mx-auto">;
             <h2 className="text - 3xl font - bold mb-4">Ready to Automate Your Business?</h2>;
@@ -536,11 +605,15 @@ export default function AIAutomationServicesPage() {return (;
                 Start Your Automation Journey;
               </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/case - studies" className="btn-secondary">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/case - studies" className="btn - secondary">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/case - studies" className="btn - secondary">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 View Success Stories;
               </Link>;
             </div>;

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -21,6 +22,8 @@ const PricingCard = ({ title, price, features, isPopular }) => (
   </div>
 );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 export const metadata = {
   title: 'Ai Code Reviewer | Zion Tech Group',
   description: 'Professional ai code reviewer services for your business needs.',
@@ -66,6 +69,7 @@ export default function ServicePage() {
     </div>
   );
 }
+<<<<<<< HEAD
 
 function FeatureItem({
   icon: _icon,
@@ -132,3 +136,5 @@ function PricingCard({
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

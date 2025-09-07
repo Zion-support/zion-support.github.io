@@ -11,6 +11,7 @@ const React from";react" export: const InstallPrompt = () => { const [deferred,s
 import _React from';react' "export": const InstallPrompt = () => { const [deferred,setDeferred] = useState(null) useEffect(() => { const handler = e => { e && e.preventDefault() setDeferred(e) } window && window.addEventListener('beforeinstallprompt',handler) return () => window && window.removeEventListener('beforeinstallprompt',handler) },[]) if (!deferred) return null const onClick = async () => { deferred && deferred.prompt() const result = await deferred && deferred.userChoice if (result && result.outcome !== 'accepted') {''';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from';react' "export": const InstallPrompt = () => { const [deferred,setDeferred] = useState(null) useEffect(() => { const handler = e => { e && e.preventDefault() setDeferred(e) } window && window.addEventListener('beforeinstallprompt',handler) return () => window && window.removeEventListener('beforeinstallprompt',handler) },[]) if (!deferred) return null const onClick = async () => { deferred && deferred.prompt() const result = await deferred && deferred.userChoice if (result && result.outcome !== 'accepted') {''';
 import _React from';react' "export": const InstallPrompt = () => { const [deferred,setDeferred] = useState(null) useEffect(() => { const handler = e => { e && e.preventDefault() setDeferred(e) } window && window.addEventListener('beforeinstallprompt',handler) return () => window && window.removeEventListener('beforeinstallprompt',handler) },[]) if (!deferred) return null const onClick = async () => { deferred && deferred.prompt() const result = await deferred && deferred.userChoice if (result && result.outcome !== 'accepted') {''';
 =======
@@ -21,3 +22,6 @@ import _React from';react' "export": const InstallPrompt = () => { const [deferr
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

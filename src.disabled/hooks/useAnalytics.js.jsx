@@ -31,12 +31,15 @@ const { useState,useEffect,useCallback,useRef } from";react" export: const useAn
 const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date.now()) const flushTimerRef = useRef(null)"";"""
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date && Date.now()) const flushTimerRef = useRef(null)"";"""
 const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date && Date.now()) const flushTimerRef = useRef(null)"";"""
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("", ") const lastActivityRef = useRef(Date && Date.now()) const flushTimerRef = useRef(null)"";"""
 
@@ -59,6 +62,7 @@ const { useState,useEffect,useCallback,useRef } from";react" export: const useAn
 const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date && Date.now()) const flushTimerRef = useRef(null)"";"""
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -68,3 +72,7 @@ const { useState,useEffect,useCallback,useRef } from";react" export: const useAn
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date.now()) const flushTimerRef = useRef(null)"";"""
+const { useState,useEffect,useCallback,useRef } from";react" export: const useAnalytics = (config = {}) => { const { enableTracking = true,enablePerformanceTracking = true,enableUserBehaviorTracking = true,enableHeatmapTracking = false,sessionTimeout = 30,batchSize = 10,flushInterval = 5000 } = config const [events,setEvents] = useState([]) const [currentSession,setCurrentSession] = useState(null) const [isTracking,setIsTracking] = useState(false) const [performanceMetrics,setPerformanceMetrics] = useState(null) const sessionRef = useRef("";";) const lastActivityRef = useRef(Date.now()) const flushTimerRef = useRef(null)"";"""
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

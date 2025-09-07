@@ -49,6 +49,7 @@ describe('App', () => {
     render(<App />);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     // Add interaction tests here
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -65,6 +66,8 @@ describe('App', () => {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     // Add interaction tests here
     expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });

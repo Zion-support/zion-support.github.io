@@ -1,14 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function AdminLayout({ children }: { children: ReactNode }) {return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
       {/* Admin Header */}
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 ;
 import { ReactNode  } from 'react';
 export default function AdminLayout() {return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;{/* Admin Header */}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="glass border - b border - white / 10">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="flex items - center justify - between h - 16">;
@@ -16,6 +22,9 @@ export default function AdminLayout() {return (<div className="min-h-screen bg-g
               <div className="w - 8 h - 8 bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - lg flex items - center justify - center">;
                 <span className="text - white font - bold text - sm">A</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </div>;
               <h1 className="text - xl font - bold text - white">Admin Dashboard</h1>;
             </div>;
@@ -23,6 +32,7 @@ export default function AdminLayout() {return (<div className="min-h-screen bg-g
               <a;
                 href="/admin / instances";
                 className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
+<<<<<<< HEAD
 =======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
       {/* Admin Header */}
@@ -45,6 +55,8 @@ export default function AdminLayout() {return (<div className="min-h-screen bg-g
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
                 className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
 export default function AdminLayout({ children }: { children: ReactNode }) {return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
@@ -71,12 +83,16 @@ export default function AdminLayout({ children }: { children: ReactNode }) {retu
 <<<<<<< HEAD
 <<<<<<< HEAD
                 className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
+<<<<<<< HEAD
 =======
 =======
                 className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 className="text - white / 70 hover:text - white transition - colors duration - 200 font-medium";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                className="text - white / 70 hover:text - white transition - colors duration - 200 font-medium";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               >;
                 Deploy;
               </a>;
@@ -85,12 +101,16 @@ export default function AdminLayout({ children }: { children: ReactNode }) {retu
 <<<<<<< HEAD
 <<<<<<< HEAD
                 className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
+<<<<<<< HEAD
 =======
 =======
                 className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 className="text - white / 70 hover:text - white transition - colors duration - 200 font-medium";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                className="text - white / 70 hover:text - white transition - colors duration - 200 font-medium";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               >;
                 ← Back to Dashboard;
               </a>;

@@ -11,6 +11,7 @@ const React from react" import { cn } from "././lib/utils" const Textarea = Reac
 import _React from react' import { cn } from '../../lib/utils' const Textarea = _React ;"flex": 'min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: text-muted-foreground: focus-visible:outline-none: focus-visible:ring-2: focus-visible:ring-ring: focus-visible:ring-offset-2: disabled:cursor-not-allowed: disabled:opacity-5,0,"className": ')' } ref={ref} {...props} /> ) }) Textarea && Textarea.displayName =';';Textarea' "export": { Textarea }'';';'';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from react' import { cn } from '../../lib/utils' const Textarea = _React ;"flex": 'min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: text-muted-foreground: focus-visible:outline-none: focus-visible:ring-2: focus-visible:ring-ring: focus-visible:ring-offset-2: disabled:cursor-not-allowed: disabled:opacity-5,0,"className": ')' } ref={ref} {...props} /> ) }) Textarea && Textarea.displayName =';';Textarea' "export": { Textarea }'';';'';
 import _React from react' import { cn } from '../../lib/utils' const Textarea = _React ;"flex": 'min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: text-muted-foreground: focus-visible:outline-none: focus-visible:ring-2: focus-visible:ring-ring: focus-visible:ring-offset-2: disabled:cursor-not-allowed: disabled:opacity-5,0,"className": ')' } ref={ref} {...props} /> ) }) Textarea && Textarea.displayName =';';Textarea' "export": { Textarea }'';';'';
 =======
@@ -21,3 +22,6 @@ import _React from react' import { cn } from '../../lib/utils' const Textarea = 
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

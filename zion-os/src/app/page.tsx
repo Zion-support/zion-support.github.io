@@ -1,12 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 ;
     {title: &quot;Enterprise Infrastructure&quot;
       description: &quot;Built for scale with regional dashboards, partner APIs, and white-label solutions.&quot;
       features: [;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   const features = [;
     {;
       icon: &quot;🤖&quot;,

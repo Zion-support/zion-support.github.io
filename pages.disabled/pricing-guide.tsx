@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,8 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
@@ -301,11 +304,15 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {pricingFactors.map((factor, index) => (<motion.div;
+<<<<<<< HEAD
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 key={factor.factor}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               >
                 <Card className="p-8 h-full">
@@ -359,6 +366,8 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
             {pricingExamples.map((example, index) => (
               <motion.div
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               >;
                 <Card className="p-8 h-full">;
                   <div className="flex items-start mb-6">;
@@ -408,11 +417,15 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           </motion.div>;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {pricingExamples.map((example, index) => (<motion.div;
+<<<<<<< HEAD
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 key={example.scenario}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               >
                 <Card className="p-8 h-full">
@@ -473,6 +486,8 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
             {costSavingTips.map((tip, index) => (
               <motion.div
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               >;
                 <Card className="p-8 h-full">;
                   <div className="text-center mb-6">;
@@ -529,11 +544,15 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {costSavingTips.map((tip, index) => (<motion.div;
+<<<<<<< HEAD
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 key={tip.tip}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               >
                 <Card className="p-6">
@@ -599,6 +618,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               >;
                 <Card className="p-6">;
                   <div className="flex items-start">;
@@ -654,7 +675,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       </section>;
     </div>;
   )}export default PricingGuide;
+<<<<<<< HEAD
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

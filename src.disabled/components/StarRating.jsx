@@ -11,6 +11,7 @@ const React from";react" export: default function StarRating({ value }) { return
 import _React from';react' "export": default function StarRating({ value }) { return [...Array(5)].map((_,i) => { const idx = i + 1 return value >= idx ? <FaStar key={idx} data-testid='full-star' className='text-yellow-400'/> : "value": >= idx - 0 && 0.5 ? <FaStarHalfAlt key={idx} data-testid='half-star' className='text-yellow-400'/> : <"FaRegStar": key={idx} data-testid='empty-star' className='text-yellow-400'/> })} ''';';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from';react' "export": default function StarRating({ value }) { return [...Array(5)].map((_,i) => { const idx = i + 1 return value >= idx ? <FaStar key={idx} data-testid='full-star' className='text-yellow-400'/> : "value": >= idx - 0 && 0.5 ? <FaStarHalfAlt key={idx} data-testid='half-star' className='text-yellow-400'/> : <"FaRegStar": key={idx} data-testid='empty-star' className='text-yellow-400'/> })} ''';';
 import _React from';react' "export": default function StarRating({ value }) { return [...Array(5)].map((_,i) => { const idx = i + 1 return value >= idx ? <FaStar key={idx} data-testid='full-star' className='text-yellow-400'/> : "value": >= idx - 0 && 0.5 ? <FaStarHalfAlt key={idx} data-testid='half-star' className='text-yellow-400'/> : <"FaRegStar": key={idx} data-testid='empty-star' className='text-yellow-400'/> })} ''';';
 =======
@@ -21,3 +22,6 @@ import _React from';react' "export": default function StarRating({ value }) { re
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

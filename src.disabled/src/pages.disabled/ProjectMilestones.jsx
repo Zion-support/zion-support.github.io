@@ -11,6 +11,7 @@ const React from "react";"""; import SEO from "@/components/SEO";"""; import { P
 ursor/automate-test-improve-and-merge-code-646c;
 import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent'; function ProjectMilestones() {} return null} return (<ProtectedRoute> <> <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables"/> <ProjectMilestonesContent /> ></div> </ProtectedRoute>)} export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones };
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent'; function ProjectMilestones() {} return null} return (<ProtectedRoute> <> <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables"/> <ProjectMilestonesContent /> ></div> </ProtectedRoute>)} export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones };
 <<<<<<< HEAD
 =======
@@ -18,3 +19,5 @@ import _React from 'react';'''; import SEO from '@/components/SEO';'''; import {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

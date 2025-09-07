@@ -600,7 +600,12 @@ export default function HomePage() {
           </h2>
           <p className="text-2xl text-blue-100 mb-4 max-w-4xl mx-auto animate-slide-up font-medium">
             Let&apos;s discuss your project and create a custom solution that drives
+<<<<<<< HEAD
             real business value.
+=======
+            real business value. Our team has delivered 1000+ successful
+            projects across various industries. Contact us today for a free consultation.
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           </p>
           <p className="text-lg text-blue-200 mb-12 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s' }}>
             Our team has delivered 1000+ successful projects across various industries.
@@ -649,6 +654,7 @@ export default function HomePage() {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -684,6 +690,64 @@ export default function HomePage() {
         </div>
       </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-16 bg-gray-50 rounded-lg" aria-labelledby="contact-heading">
+        <div className="text-center mb-12">
+          <h2 id="contact-heading" className="text-3xl font-bold text-gray-900 mb-4">
+            Get In Touch
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Ready to start your next project? Contact our team of experts for a free consultation.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <ContactCard
+            icon="📞"
+            title="Phone"
+            content="+1 302 464 0950"
+            description="Call us for immediate assistance"
+            href="tel:+13024640950"
+          />
+          <ContactCard
+            icon="📧"
+            title="Email"
+            content="kleber@ziontechgroup.com"
+            description="Send us your project details"
+            href="mailto:kleber@ziontechgroup.com"
+          />
+          <ContactCard
+            icon="📍"
+            title="Address"
+            content="364 E Main St STE 1008"
+            description="Middletown, DE 19709"
+            href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+          />
+        </div>
+      </section>
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     </div>
+  );
+}
+
+function ContactCard({ icon, title, content, description, href }: {
+  icon: string;
+  title: string;
+  content: string;
+  description: string;
+  href: string;
+}) {
+  return (
+    <a
+      href={href}
+      className="group p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 text-center"
+    >
+      <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">{title}</h3>
+      <p className="text-lg font-medium text-gray-700 mb-2 group-hover:text-gray-900 transition-colors duration-300">{content}</p>
+      <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{description}</p>
+    </a>
   );
 }

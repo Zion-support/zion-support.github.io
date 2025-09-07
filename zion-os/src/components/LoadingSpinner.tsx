@@ -95,6 +95,7 @@ function LoadingSpinner() {
         <path;
           className="opacity - 75";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           strokeWidth="4";
         />;
@@ -102,11 +103,16 @@ function LoadingSpinner() {
           className="opacity-75";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           strokeWidth="4";
         />;
         <path;
           className="opacity - 75";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           fill="current_color";
           d="M4 12a8 8 0 018 - 8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3 - 2.647z";
         />;
@@ -114,6 +120,7 @@ function LoadingSpinner() {
 <<<<<<< HEAD
 <<<<<<< HEAD
       <span className="sr - only">Loading...</span>;
+<<<<<<< HEAD
 =======
       <span className="sr-only">Loading...</span>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -122,5 +129,9 @@ function LoadingSpinner() {
       <span className="sr-only">Loading...</span>;
     </div>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      <span className="sr-only">Loading...</span>;
+    </div>)}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     </div>);
 }

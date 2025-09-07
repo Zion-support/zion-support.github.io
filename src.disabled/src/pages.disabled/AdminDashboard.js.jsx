@@ -14,6 +14,7 @@ const React from "react";"""; import AdminLayout from "@/components/admin/AdminL
 import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
 import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
 =======
@@ -24,3 +25,6 @@ import _React from 'react';'''; import AdminLayout from '@/components/admin/Admi
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

@@ -11,6 +11,7 @@ const React from";react" export: default function SitemapPage() { const publicRo
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap && completeSitemap.filter(route => !route && route.requiredAuth) const talentRoutes = completeSitemap && completeSitemap.filter() route =>'';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap && completeSitemap.filter(route => !route && route.requiredAuth) const talentRoutes = completeSitemap && completeSitemap.filter() route =>'';
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap && completeSitemap.filter(route => !route && route.requiredAuth) const talentRoutes = completeSitemap && completeSitemap.filter() route =>'';
 =======
@@ -21,3 +22,6 @@ import _React from';react' "export": default function SitemapPage() { const publ
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

@@ -46,7 +46,10 @@
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import { motion  } from 'framer-motion';
 import { MapPin,Phone,Mail,Facebook,Twitter,Linkedin,Instagram,Github;
  } from 'lucide-react';
@@ -198,7 +201,10 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } f
                   <br />;
                   Middletown DE 19709;
                 </span>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import { motion } from 'framer-motion';
 import { 
   MapPin, 
@@ -497,6 +503,7 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -530,6 +537,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 ursor/automate-test-improve-and-merge-code-646c;
 import React from 'react';
   MapPin,Phone,Mail,Facebook,Twitter,Linkedin,Instagram,Github;
@@ -589,7 +598,10 @@ ursor/automate-test-improve-and-merge-code-646c;
                     ))}
                   </ul>;
                 </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">

@@ -1,6 +1,22 @@
 import React from 'react';
 interface CardProps  {children: React.ReactNode;
   className?: string;
+<<<<<<< HEAD
+  onClick?: () => void;
+  title?: string;
+  description?: string;
+}
+
+const Card: React.FC<CardProps> = ({ 
+  children, 
+  className = '', 
+  onClick,
+  title,
+  description 
+}) => {
+  return (
+    <div 
+=======
 }const Card: React.FC<CardProps> = ({ children, className = '' }) => {return (<div;
       className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 ${className}`}
     >;
@@ -32,6 +48,7 @@ const Card: React.FC<CardProps> = ({
 =======
 }const Card: React.FC<CardProps> = ({children,title,description,className = '',onClick;
 }) => {return (<div;
+>>>>>>> cursor/expand-services-advertise-and-build-project-e77d
       className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 ${className}`}
       onClick={onClick}
     >;

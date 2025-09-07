@@ -9,6 +9,7 @@ import React from
   react' interface ImportMetaEnv { readonly "VITE_APP_TITLE": string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -22,3 +23,8 @@ import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: stri
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
+
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

@@ -107,9 +107,12 @@ export default function ResearchPage() {return (;
                     <h3 className="font - semibold text - gray - 900">25+ Partners</h3>;
                     <p className="text - gray - 600">Academic and industry collaborations</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py-20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items-center">;
@@ -159,6 +162,7 @@ export default function ResearchPage() {return (;
                   </div>;
                   <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <h3 className="font - semibold text - gray-900">25+ Partners</h3>;
                     <p className="text - gray-600">Academic and industry collaborations</p>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -166,6 +170,10 @@ export default function ResearchPage() {return (;
                     <h3 className="font - semibold text - gray - 900">25+ Partners</h3>;
                     <p className="text - gray - 600">Academic and industry collaborations</p>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    <h3 className="font - semibold text - gray - 900">25+ Partners</h3>;
+                    <p className="text - gray - 600">Academic and industry collaborations</p>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;
                 </div>;
               </div>;
@@ -201,9 +209,12 @@ export default function ResearchPage() {return (;
               </p>;
               <ul className="space - y-2 text - sm text - gray - 600">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - gray-50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
@@ -226,11 +237,15 @@ export default function ResearchPage() {return (;
                 Advanced machine learning, natural language processing, computer vision, and autonomous decision - making systems.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <ul className="space - y-2 text - sm text - gray-600">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <ul className="space - y-2 text - sm text - gray - 600">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 text - sm text - gray - 600">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Large Language Models</li>;
                 <li>• Reinforcement Learning</li>;
                 <li>• Neural Architecture Search</li>;
@@ -253,9 +268,12 @@ export default function ResearchPage() {return (;
               </p>;
               <ul className="space - y-2 text - sm text - gray - 600">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white p - 8 rounded - xl shadow-sm">;
               <div className="w - 16 h - 16 bg - purple - 100 rounded - lg flex items - center justify - center mb-6">;
                 <svg className="w - 8 h - 8 text - purple-600" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -267,11 +285,15 @@ export default function ResearchPage() {return (;
                 Quantum algorithms, quantum machine learning, quantum cryptography, and quantum error correction.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <ul className="space - y-2 text - sm text - gray-600">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <ul className="space - y-2 text - sm text - gray - 600">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 text - sm text - gray - 600">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Quantum Neural Networks</li>;
                 <li>• Quantum Optimization</li>;
                 <li>• Quantum Machine Learning</li>;
@@ -294,9 +316,12 @@ export default function ResearchPage() {return (;
               </p>;
               <ul className="space - y-2 text - sm text - gray - 600">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white p - 8 rounded - xl shadow-sm">;
               <div className="w - 16 h - 16 bg - blue - 100 rounded - lg flex items - center justify - center mb-6">;
                 <svg className="w - 8 h - 8 text - blue-600" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -308,11 +333,15 @@ export default function ResearchPage() {return (;
                 Self - driving vehicles, robotic systems, autonomous drones, and intelligent automation platforms.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <ul className="space - y-2 text - sm text - gray-600">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <ul className="space - y-2 text - sm text - gray - 600">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 text - sm text - gray - 600">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Autonomous Vehicles</li>;
                 <li>• Robotic Process Automation</li>;
                 <li>• Swarm Robotics</li>;
@@ -335,9 +364,12 @@ export default function ResearchPage() {return (;
               </p>;
               <ul className="space - y-2 text - sm text - gray - 600">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white p - 8 rounded - xl shadow-sm">;
               <div className="w - 16 h - 16 bg - green - 100 rounded - lg flex items - center justify - center mb-6">;
                 <svg className="w - 8 h - 8 text - green-600" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -349,11 +381,15 @@ export default function ResearchPage() {return (;
                 AI - powered threat detection, zero - trust architectures, blockchain security, and privacy - preserving technologies.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <ul className="space - y-2 text - sm text - gray-600">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <ul className="space - y-2 text - sm text - gray - 600">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 text - sm text - gray - 600">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• AI Threat Detection</li>;
                 <li>• Zero - Trust Security</li>;
                 <li>• Blockchain Security</li>;
@@ -376,9 +412,12 @@ export default function ResearchPage() {return (;
               </p>;
               <ul className="space - y-2 text - sm text - gray - 600">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white p - 8 rounded - xl shadow-sm">;
               <div className="w - 16 h - 16 bg - orange - 100 rounded - lg flex items - center justify - center mb-6">;
                 <svg className="w - 8 h - 8 text - orange-600" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -390,11 +429,15 @@ export default function ResearchPage() {return (;
                 Green computing, renewable energy optimization, carbon capture, and sustainable AI development.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <ul className="space - y-2 text - sm text - gray-600">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <ul className="space - y-2 text - sm text - gray - 600">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 text - sm text - gray - 600">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Green AI</li>;
                 <li>• Energy Optimization</li>;
                 <li>• Carbon Footprint Reduction</li>;
@@ -417,9 +460,12 @@ export default function ResearchPage() {return (;
               </p>;
               <ul className="space - y-2 text - sm text - gray - 600">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white p - 8 rounded - xl shadow-sm">;
               <div className="w - 16 h - 16 bg - indigo - 100 rounded - lg flex items - center justify - center mb-6">;
                 <svg className="w - 8 h - 8 text - indigo-600" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -431,11 +477,15 @@ export default function ResearchPage() {return (;
                 Augmented intelligence, human - AI interfaces, collaborative robotics, and AI - assisted decision making.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <ul className="space - y-2 text - sm text - gray-600">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <ul className="space - y-2 text - sm text - gray - 600">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 text - sm text - gray - 600">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Augmented Intelligence</li>;
                 <li>• Human - AI Interfaces</li>;
                 <li>• Collaborative AI</li>;
@@ -505,9 +555,12 @@ export default function ResearchPage() {return (;
               </div>;
               <a href="/quantum - neural - network - platform" className="text - emerald - 600 hover:text - emerald - 700 font - medium">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg-white">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
@@ -562,11 +615,15 @@ export default function ResearchPage() {return (;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/quantum - neural - network - platform" className="text - emerald - 600 hover:text - emerald - 700 font-medium">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/quantum - neural - network - platform" className="text - emerald - 600 hover:text - emerald - 700 font - medium">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/quantum - neural - network - platform" className="text - emerald - 600 hover:text - emerald - 700 font - medium">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </a>;
             </div>;
@@ -631,9 +688,12 @@ export default function ResearchPage() {return (;
               <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Government Agencies</h3>;
               <p className="text - gray - 600 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - gray-50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
@@ -685,6 +745,7 @@ export default function ResearchPage() {return (;
                 </svg>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h3 className="text - lg font - semibold text - gray - 900 mb-2">Government Agencies</h3>;
               <p className="text - gray - 600 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -692,6 +753,10 @@ export default function ResearchPage() {return (;
               <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Government Agencies</h3>;
               <p className="text - gray - 600 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Government Agencies</h3>;
+              <p className="text - gray - 600 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 DARPA, NSF, DOE, and other government research funding agencies;
               </p>;
             </div>;
@@ -717,9 +782,12 @@ export default function ResearchPage() {return (;
             </a>;
             <a href="/careers" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - emerald - 600 transition - colors">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - emerald - 600 text-white">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text-center">;
           <h2 className="text - 3xl md:text - 4xl font - bold mb-6">;
@@ -733,11 +801,15 @@ export default function ResearchPage() {return (;
               Collaborate With Us;
             </a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <a href="/careers" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - emerald - 600 transition-colors">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
             <a href="/careers" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - emerald - 600 transition - colors">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <a href="/careers" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - emerald - 600 transition - colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               Research Careers;
             </a>;
           </div>;

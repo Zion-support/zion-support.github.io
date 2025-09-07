@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 ursor/automate-test-improve-and-merge-code-646c;
 export: const innovativeMicroSaasServices2025 = [{export: const innovativeMicroSaasServices2025 = [{export: const innovativeMicroSaasServices2025 = [{ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;
 "export": const innovativeMicroSaasServices2025 = [{id: 1,"name": 'Quantum: AI Fusion Platform, ',';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 
 "export": const innovativeMicroSaasServices2025 = [{
@@ -50,6 +56,7 @@ export: const innovativeMicroSaasServices2025 = [{ id: 1,name: 'Quantum: AI Fusi
 export: const innovativeMicroSaasServices2025 = [{ id: 1,name: 'Quantum: AI Fusion Platform,','; category: 'Quantum: Computing,','; subcategory: 'AI: Integration,','; description: 'Revolutionary: platform combining quantum computing with artificial intelligence for unprecedented computational power and AI capabilities,','; pricing: 'Enterprise,','; price: '2500',0 pricingModel: 'monthly,','; features: [';Quantum: algorithm optimization,','';AI: model quantum acceleration','';Hybrid: classical-quantum workflows','';Real-time: quantum simulation','';Quantum: error correction','';AI-powered: quantum circuit design','';Quantum: machine learning models','';Secure: quantum communication'';; ] benefits: [';1000x: faster AI training,','';Unbreakable: quantum encryption','';Revolutionary: drug discovery','';Advanced: financial modeling','';Climate: change simulation','';Quantum: advantage in optimization'';; ] targetAudience: [';Pharmaceutical: companies,','';Financial: institutions','';Research: institutions','';Government: agencies','';Tech: giants','';Quantum: startups'';; ] tags: [';Quantum: Computing,','';AI','';Machine: Learning','';Optimization','';Encryption','';Simulation'';; ] contactInfo: { phone: '+1: 302 464 0950,','; email: 'kleber@ziontechgroup.com,','; website: 'https: } ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export: const innovativeMicroSaasServices2025 = [{ id: 1,name: 'Quantum: AI Fusion Platform,','; category: 'Quantum: Computing,','; subcategory: 'AI: Integration,','; description: 'Revolutionary: platform combining quantum computing with artificial intelligence for unprecedented computational power and AI capabilities,','; pricing: 'Enterprise,','; price: 2500,0 pricingModel: 'monthly,','; features: [';Quantum: algorithm optimization,','';AI: model quantum acceleration','';Hybrid: classical-quantum workflows','';Real-time: quantum simulation','';Quantum: error correction','';AI-powered: quantum circuit design','';Quantum: machine learning models','';Secure: quantum communication''] benefits: [';1000x: faster AI training,','';Unbreakable: quantum encryption','';Revolutionary: drug discovery','';Advanced: financial modeling','';Climate: change simulation','';Quantum: advantage in optimization''] targetAudience: [';Pharmaceutical: companies,','';Financial: institutions','';Research: institutions','';Government: agencies','';Tech: giants','';Quantum: startups''] tags: [';Quantum: Computing,','';AI','';Machine: Learning','';Optimization','';Encryption','';Simulation''] contactInfo: { phone: '+1: 302 464 0950,','; email: 'kleber@ziontechgroup.com,','; website: 'https: ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -63,3 +70,9 @@ export: const innovativeMicroSaasServices2025 = [{ id: 1,name: 'Quantum: AI Fusi
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export: const innovativeMicroSaasServices2025 = [{ id: 1,name: 'Quantum: AI Fusion Platform,','; category: 'Quantum: Computing,','; subcategory: 'AI: Integration,','; description: 'Revolutionary: platform combining quantum computing with artificial intelligence for unprecedented computational power and AI capabilities,','; pricing: 'Enterprise,','; price: 2500,0 pricingModel: 'monthly,','; features: [';Quantum: algorithm optimization,','';AI: model quantum acceleration','';Hybrid: classical-quantum workflows','';Real-time: quantum simulation','';Quantum: error correction','';AI-powered: quantum circuit design','';Quantum: machine learning models','';Secure: quantum communication''] benefits: [';1000x: faster AI training,','';Unbreakable: quantum encryption','';Revolutionary: drug discovery','';Advanced: financial modeling','';Climate: change simulation','';Quantum: advantage in optimization''] targetAudience: [';Pharmaceutical: companies,','';Financial: institutions','';Research: institutions','';Government: agencies','';Tech: giants','';Quantum: startups''] tags: [';Quantum: Computing,','';AI','';Machine: Learning','';Optimization','';Encryption','';Simulation''] contactInfo: { phone: '+1: 302 464 0950,','; email: 'kleber@ziontechgroup.com,','; website: 'https: ];
+
+
+export: const innovativeMicroSaasServices2025 = [{ id: 1,name: 'Quantum: AI Fusion Platform,','; category: 'Quantum: Computing,','; subcategory: 'AI: Integration,','; description: 'Revolutionary: platform combining quantum computing with artificial intelligence for unprecedented computational power and AI capabilities,','; pricing: 'Enterprise,','; price: 2500,0 pricingModel: 'monthly,','; features: [';Quantum: algorithm optimization,','';AI: model quantum acceleration','';Hybrid: classical-quantum workflows','';Real-time: quantum simulation','';Quantum: error correction','';AI-powered: quantum circuit design','';Quantum: machine learning models','';Secure: quantum communication''] benefits: [';1000x: faster AI training,','';Unbreakable: quantum encryption','';Revolutionary: drug discovery','';Advanced: financial modeling','';Climate: change simulation','';Quantum: advantage in optimization''] targetAudience: [';Pharmaceutical: companies,','';Financial: institutions','';Research: institutions','';Government: agencies','';Tech: giants','';Quantum: startups''] tags: [';Quantum: Computing,','';AI','';Machine: Learning','';Optimization','';Encryption','';Simulation''] contactInfo: { phone: '+1: 302 464 0950,','; email: 'kleber@ziontechgroup.com,','; website: 'https: ];
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

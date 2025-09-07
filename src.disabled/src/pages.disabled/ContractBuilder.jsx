@@ -11,6 +11,7 @@ const React from "react";"""; import SEO from "@/components/SEO";"""; import { P
 ursor/automate-test-improve-and-merge-code-646c;
 import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };
 <<<<<<< HEAD
 =======
@@ -18,3 +19,5 @@ import _React from 'react';'''; import SEO from '@/components/SEO';'''; import {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

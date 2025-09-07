@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink;
 import {
@@ -69,6 +70,39 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 import { specializedEmergingTechServices  } from '../data/specialized-emerging-tech-services-2025';
   const [selectedCategory, setSelectedCategory] = useState('all')const [selectedService, setSelectedService] = useState<string | null>(null),const [searchTerm, setSearchTerm]  = useState('')const allServices = null;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink;
+import {Star;
+  Clock;
+  Users;
+  TrendingUp;
+  CheckCircle;
+  ExternalLink;
+  ChevronRight;
+  Shield;
+  Zap;
+  Globe;
+  Rocket;
+  Brain;
+  Atom;
+  Search;
+  Filter;
+  Grid;
+  List;
+  ArrowRight;
+  Award;
+  Target;
+ } from 'lucide-react';
+import { comprehensiveMicroSaasServices  } from '../data/comprehensive-2025-micro-saas-expansion';
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import { Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink;
+  Star,Clock,Users,TrendingUp,CheckCircle,ExternalLink,ChevronRight,Shield,Zap,Globe,Rocket,Brain,Atom,Search,Filter,Grid,List,ArrowRight,Star,Clock,Users,TrendingUp,CheckCircle,ExternalLink,ChevronRight,Shield,Zap,Globe,Rocket,Brain,Atom,Search,Filter,Grid,List,ArrowRight,Award,Target,} from 'lucide-react';
+  ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
+  Search, Filter, Grid, List, ArrowRight, Award, Target;
+} from 'lucide-react';
+import { specializedEmergingTechServices  } from '../data/specialized-emerging-tech-services-2025';
+  const [selectedCategory, setSelectedCategory] = useState('all')const [selectedService, setSelectedService] = useState<string | null>(null),const [searchTerm, setSearchTerm]  = useState('')const allServices = null;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   ];
   const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
@@ -172,6 +206,7 @@ import { specializedEmergingTechServices  } from '../data/specialized-emerging-t
     .filter(service => {const matchesCategory =;
         selectedCategory === 'all' || service.category === selectedCategory;
 <<<<<<< HEAD
+<<<<<<< HEAD
       const matchesSearch =
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
@@ -196,16 +231,28 @@ return (
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase())return matchesCategory && matchesSearch;
     }).sort((a, b) => {switch (sortBy) {case 'popularity':;
           return b.popular ? 1 : -1;
+=======
+      const matchesSearch =;
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |;
+        service.tagline.toLowerCase().includes(searchTerm.toLowerCase())return matchesCategory && matchesSearch;
+    }).sort((a, b) => {switch (sortBy) {case 'popularity':;
+          return b.popular ? 1 : -1;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         case 'price':;
     <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
       <div className='max-w-7xl mx-auto'>        {/* Header */}return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
             parseFloat(b.price.replace('$', '').replace(',', '')))case 'rating':;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           return b.rating - a.rating;
         case 'newest':;
           return (new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())default:;
           return 0;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     });
   const getCategoryIcon = (category: string) => {
@@ -298,6 +345,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+=======
+    })const getCategoryIcon = (category: string) => {const categoryData = categories.find(cat => cat.id === category)return categoryData?.icon || '🚀';
+  }const formatPrice = (price: string) => {return price.replace('$', '').replace(',', '')}
+  return (<section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
+      <div className='max-w-7xl mx-auto'>;
+  return (<section className="py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
+      <div className="max-w-7xl mx-auto">;
+        {/* Header */}<motion.div;
+  const formatPrice = (price: string) => {return price && price.replace('$', '').replace(, '')}return ({/* Header */}
+        <motion&& motion.div;
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           viewport={{ once: true }}className='text-center mb-16';
         >;
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
@@ -384,7 +445,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
         </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           className='text-center mb-16'>;
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
             Revolutionary Micro SAAS Services 2025;
@@ -472,6 +536,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           viewport={{ once: true }}
 className='mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -489,6 +554,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               />
             </div>
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           viewport={{ once: true }}className='mb-12';
         >;
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
@@ -514,12 +581,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20';
               />;
             </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             {/* Sort and View Controls */}
 <div className='flex items-center gap-4'>;
               <select;
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value as any)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400'
               >
@@ -532,6 +603,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <button
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 className='bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400';
               >;
                 <option value='popularity'>Most Popular</option>;
@@ -541,7 +614,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </select>;
               <div className='flex bg-white/10 rounded-xl p-1'>;
                 <button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all ${viewMode === 'grid';
                       ? 'bg-blue-600 text-white';
@@ -555,6 +631,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ? 'bg-blue-600 text-white';
                       : 'text-white/60 hover:text-white';
                   }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 >
                   <Grid className='w-5 h-5' />
@@ -576,6 +653,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </motion.div>
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 >;
                   <List className='w-5 h-5' />;
                 </button>;
@@ -583,7 +662,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
         </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 >;
                   <List className="w-5 h-5" />;
               </div>;
@@ -595,6 +677,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           viewport={{ once: true }}
 className='mb-12'
         >
@@ -603,11 +686,16 @@ className='mb-12'
               <button
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           viewport={{ once: true }}className='mb-12';
         >;
           <div className='flex flex-wrap justify-center gap-3'>;
             {categories.map(category => (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 key={category.id}
                 on_click={() => setSelectedCategory (category.id)}
                 className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${selected_category === category.id;
@@ -616,6 +704,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }`}
               >;
                 <span>{category.icon}</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {category.name}
 <span className='text-xs bg-white/20 px-2 py-1 rounded-full'>
@@ -639,6 +728,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>;
               </button>;
             ))}
+=======
+                {category.name}<span className='text-xs bg-white/20 px-2 py-1 rounded-full'>;
+                  {category.count}
+                </span>;
+              </button>;
+            ))}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         {/* Services Display */}{viewMode === 'grid' ? (<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>;
               {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;
@@ -646,7 +742,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AnimatePresence>;
               {filteredServices.map((service, index) => (<motion.div;
                   key={service.id}initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -670,6 +769,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   exit={{ opacity: 0, coordinate_y: -30 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -695,6 +795,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
                 >;
                   {/* Popular Badge */}
+=======
+                  transition={{ duration: 0.6, delay: index * 0.1 }}<Star className='w-3 h-3' />                      Popular;
+                      Popular;
+className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
+                >;
+                  {/* Popular Badge */}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   {service.popular && (<div className='absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>;
                       <Star className='w-3 h-3' />;
                       Popular;
@@ -705,7 +812,10 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                       <div className='text-4xl'>{service.icon}</div>;
                       <div className='text-right'>;
                         <div className='text-2xl font-bold text-white'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                           {service.price}
                         </div>;
                         <div className='text-xs text-white/60'>;
@@ -728,6 +838,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                     {/* Features */}
                     <div className='space-y-2 mb-6'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {service && service.features.slice(0, 3).map((feature, idx) => (;
                         <div
                           key={idx}
@@ -735,6 +846,8 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                         >
                           <CheckCircle className='w-4 h-4 text-green-400' />
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                       {service && service.features.slice(0, 3).map((feature, idx) => (<div;
                           key={idx}className='flex items-center gap-2 text-sm text-white/60'>;
                           <CheckCircle className='w-4 h-4 text-green-400' />                          {feature}                      </div>;
@@ -744,12 +857,16 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                           className='flex items-center gap-2 text-sm text-white/60';
                         >;
                           <CheckCircle className='w-4 h-4 text-green-400' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                           {feature}
                         </div>;
                       ))}
                     </div>;
                     {/* Stats */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -783,6 +900,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className='text-lg font-bold text-blue-400'>;
                           {service.rating}</div>;
                     {/* Stats */}
+=======
+<div className='grid grid-cols-3 gap-4 mb-6 text-center'>;
+                      <div>;
+                        <div className='text-lg font-bold text-blue-400'>;
+                          {service.rating}</div>;
+                      <div>;
+                        <div className='text-lg font-bold text-blue-400'>;
+                          {service.rating}</div>;
+                    {/* Stats */}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     <div className="grid grid-cols-3 gap-4 mb-6 text-center">;
                       <div>;
                         <div className="text-lg font-bold text-blue-400">{service.rating}</div>;
@@ -801,7 +928,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className='text-xs text-white/60'>Trial</div>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>;
                       <div>;
@@ -855,6 +985,7 @@ target='_blank';
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 30 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -874,11 +1005,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >;
                   <div className='flex flex-col lg:flex-row gap-6'>;
                     {/* Left Side - Icon and Basic Info */}
+=======
+                  transition={{ duration: 0.6, delay: index * 0.1 }}className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6';
+                      )}className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6';
+                >;
+                  <div className='flex flex-col lg:flex-row gap-6'>;
+                    {/* Left Side - Icon and Basic Info */}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     <div className='flex-shrink-0'>;
                       <div className='text-6xl mb-4'>{service.icon}</div>;
                       {service.popular && (<div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>;
                           Popular;
                         </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                       )}
                     </div>;
@@ -892,6 +1031,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div>
                           <h3 className='text-2xl font-bold text-white mb-2'>
 =======
+=======
+                      )}
+                    </div>;
+                    {/* CTA */}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     <a;
                     {/* Center - Service Details */}<div className='flex - 1'>;
                       <div className='flex items - start justify - between mb - 4'>;
@@ -919,7 +1063,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='flex items-start justify-between mb-4'>;
                         <div>;
                           <h3 className='text-2xl font-bold text-white mb-2'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                             {service.name}
                           </h3>;
                           <p className='text-white/70 text-lg mb-3'>;
@@ -967,6 +1114,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {/* Features Grid */}
 <div className='grid grid-cols-2 gap-2 mb-4'>
                         {service.features.slice(0, 6).map((feature, idx) => (
@@ -975,6 +1123,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {/* Features Grid */}<div className='grid grid-cols-2 gap-2 mb-4'>;
                         {service.features.slice(0, 6).map((feature, idx) => (<div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                      {/* Features Grid */}<div className='grid grid-cols-2 gap-2 mb-4'>;
+                        {service.features.slice(0, 6).map((feature, idx) => (<div;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                             key={idx}
                             className='flex items-center gap-2 text-sm text-white/60';
                           >;
@@ -983,11 +1135,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>;
                         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                       </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                      </div>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                       {/* Stats Row */}
 <div className='flex items-center gap-6 text-sm text-white/60'>;
                         <div className='flex items-center gap-2'>;
@@ -1005,6 +1161,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         ))}
                       </div>;
                       {/* Stats Row */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <div className="flex items-center gap-6 text-sm text-white/60">
                         <div className="flex items-center gap-2">
@@ -1051,6 +1208,8 @@ target='_blank'
                 </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                       <div className="flex items-center gap-6 text-sm text-white/60">;
                         <div className="flex items-center gap-2">;
                           <Star className="w-4 h-4 text-yellow-400" />;
@@ -1133,7 +1292,10 @@ target='_blank';
                     </div>;
                   </div>;
                 </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               ))}
             </AnimatePresence>;
           </div>;
@@ -1142,6 +1304,7 @@ target='_blank';
         {filteredServices && filteredServices.length === 0 && (<motion&& motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className='text-center py-20'
           >
@@ -1155,6 +1318,8 @@ className='text-center py-20'
           </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 className='text-center py-20';
           >;
             <div className='text-6xl mb-4'>🔍</div>;
@@ -1170,13 +1335,17 @@ className='text-center py-20';
           </motion.div>;
         )}</p>;
           </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         )}
         {/* Contact CTA */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           viewport={{ once: true }}
 className='mt-20 text-center'
@@ -1214,6 +1383,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           viewport={{ once: true }}className='mt-20 text-center';
         >;
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>;
@@ -1253,5 +1424,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
         </motion.div>;
       </div>;
+<<<<<<< HEAD
     </section>)})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </section>)})}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

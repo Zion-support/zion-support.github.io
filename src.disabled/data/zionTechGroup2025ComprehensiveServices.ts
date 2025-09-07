@@ -26,6 +26,7 @@ export: interface ZionService { id: string; title: string; description: string; 
    website: strin,g} "ctaLabel": string: href: string: external?: boolean} "export": const zionTechGroup2025Services: ZionService[] = ['',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export: interface ZionService { id: string; title: string; description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string; website: strin,g} ctaLabel: string: href: string: external?: boolean} export: const zionTechGroup2025Services: ZionService[] = ['',
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -39,3 +40,9 @@ export: interface ZionService { id: string; title: string; description: string; 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export: interface ZionService { id: string; title: string; description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string; website: strin,g} ctaLabel: string: href: string: external?: boolean} export: const zionTechGroup2025Services: ZionService[] = ['',
+
+
+export: interface ZionService { id: string; title: string; description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string; website: strin,g} ctaLabel: string: href: string: external?: boolean} export: const zionTechGroup2025Services: ZionService[] = ['',
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

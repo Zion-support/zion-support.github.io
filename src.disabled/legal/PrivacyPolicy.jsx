@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import _React from';react' const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title='Privacy Policy' description='Learn how Zion Tech Group handles your data and protects your privacy.' canonical='"https": '''";
 import React from\';react\' const markdown = \" # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision.\" \" const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title=\'Privacy Policy\' description=\'Learn how Zion Tech Group handles your data and protects your privacy.\' canonical=\'"https\": \''\'";
 const React from";react" const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https: """";'"'";
@@ -20,6 +23,7 @@ const React from"react" const markdown = " # Privacy Policy Your privacy is impo
 const React from";react" const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https: """",'"'";
 ursor/automate-test-improve-and-merge-code-646c;
 const React from";react" const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https: """",'"'";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
@@ -35,6 +39,12 @@ import _React from';react' const markdown = " # Privacy Policy Your privacy is i
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+import _React from';react' const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title='Privacy Policy' description='Learn how Zion Tech Group handles your data and protects your privacy.' canonical='"https": '''",;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import React from\';react\' const markdown = \" # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision.\" \" const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title=\'Privacy Policy\' description=\'Learn how Zion Tech Group handles your data and protects your privacy.\' canonical=\'"https\": \''\'",;
 const React from";react" const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https: """",;'"'"
 :src.disabled/legal/PrivacyPolicy.jsx
@@ -71,6 +81,7 @@ class ErrorBoundary extends React.Component {
 const React from"react" const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return () <> <SEOtitle="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https: """",'"'"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import _React from';react' const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title='Privacy Policy' description='Learn how Zion Tech Group handles your data and protects your privacy.' canonical='"https": '''",;
 import React from\';react\' const markdown = \" # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision.\" \" const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title=\'Privacy Policy\' description=\'Learn how Zion Tech Group handles your data and protects your privacy.\' canonical=\'"https\": \''\'",;
@@ -80,3 +91,6 @@ import _React from';react' const markdown = " # Privacy Policy Your privacy is i
 =======
 const React from";react" const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https: """",;'"'"
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+const React from";react" const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https: """",;'"'"
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

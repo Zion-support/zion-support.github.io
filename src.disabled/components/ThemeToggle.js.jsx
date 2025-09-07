@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from\';react\' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {\''\';
 const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {""";""
 =======
@@ -8,6 +9,9 @@ import _React from';react' const ThemeToggle = () => { const [isDark,setIsDark] 
 =======
 import _React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import _React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 
 import React from\';react\' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {\''\';
@@ -26,6 +30,7 @@ const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = 
 const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {""";"";
 const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {""";"";
 const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {""";""
+<<<<<<< HEAD
 <<<<<<< HEAD
 :src.disabled/components/ThemeToggle.js.jsx
 import React from\';react\' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {\''\';
@@ -46,3 +51,5 @@ import _React from';react' const ThemeToggle = () => { const [isDark,setIsDark] 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

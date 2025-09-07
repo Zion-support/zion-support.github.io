@@ -60,10 +60,13 @@ export default function FiveHundred() {;
 }
 export default function FiveHundred(){
   return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>
+<<<<<<< HEAD
 
 =======
 export default function FiveHundred(){
   return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>,
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

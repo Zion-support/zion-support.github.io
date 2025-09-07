@@ -32,8 +32,11 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { injectAxe,checkA11y } from '@axe-core/playwright'; export const a11yTestUtils = { runA11yTests: async (page) => { await injectAxe(page); await checkA11y(page,null,{ detailedReport: true,detailedReportOptions: { html: true } })},checkColorContrast: async (page) => { const contrastIssues = await page.evaluate(() => { const elements = document.querySelectorAll('*'); const issues = []; elements.forEach(element => { const styles = window.getComputedStyle(element); const color = styles.color; const backgroundColor = styles.backgroundColor; if (color && backgroundColor) { } }); return issues}); return contrastIssues} };
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

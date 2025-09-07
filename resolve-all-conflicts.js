@@ -62,19 +62,25 @@ function resolveMergeConflicts(filePath) {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         
         // Remove any remaining conflict markers
+<<<<<<< HEAD
         content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
 =======
         content = content.replace(/
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         
         // Remove any remaining conflict markers
         content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
         content = content.replace(/\n?/g, '');
 <<<<<<< HEAD
+<<<<<<< HEAD
         content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
 =======
         content = content.replace(/
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

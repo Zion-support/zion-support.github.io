@@ -30,6 +30,7 @@ document.addEventListener( DOMContentLoaded',function() {'; const summarizeButto
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -38,6 +39,8 @@ document.addEventListener( DOMContentLoaded',function() {'; const summarizeButto
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 }
 }
 }

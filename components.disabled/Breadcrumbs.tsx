@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+=======
+
+;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import React from 'react';
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
@@ -43,6 +48,7 @@ export default function Breadcrumbs(): any {const router = useRouter()const asPa
           )})}{' '}
       </ol>{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </nav>
   );
 }
@@ -52,3 +58,8 @@ import React from 'react'; import Link from 'next/link'; import { useRouter } fr
   )}
 import React from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; function toTitleCase(slug: string): string { return slug.replace(/[-_]+/g,' ').replace(/\b\w/g,c => c.toUpperCase())} export default function Breadcrumbs(): any { const router = useRouter()const asPath = router.asPath || '/'; const pathWithoutQuery = asPath.split('?')[0].split('#')[0]; const segments = pathWithoutQuery.split('/').filter(Boolean)const crumbs = [ { href: '/',label: 'Home' },...segments.map((seg,idx) => { const href = '/' + segments.slice(0,idx + 1).join('/')return { href,label: toTitleCase(seg) }})]; return ( <nav aria-label="Breadcrumb" style={{ padding: '8px 20px',background: '#f8fafc',borderBottom: '1px solid #e2e8f0'}} > {' '} <ol style={{ display: 'flex',flexWrap: 'wrap',gap: '8',listStyle: 'none',margin: '0',padding: '0',fontSize: '0.9rem'}} > {' '} {crumbs.map((crumb,idx) => { const isLast = idx === crumbs.length - 1; return ( <li key={crumb.href} style={{ display: 'flex',alignItems: 'center',gap: '8' }} > {' '} {idx > 0 && ( <span aria-hidden="true" style={{ color: '#94a3b8' }}> {' '} /{' '} </span> )}{' '} {isLast ? ( <span style={{ color: '#334155',fontWeight: '600' }}> {' '} {crumb.label}{' '} </span> ) : ( <Link href={crumb.href} style={{ color: '#2563eb',textDecoration: 'none' }} > {' '} {crumb.label}{' '} </Link> )}{' '} </li> )})}{' '} </ol>{' '} </nav> )}
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+=======
+    </nav>;
+  )}
+import React from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; function toTitleCase(slug: string): string { return slug.replace(/[-_]+/g,' ').replace(/\b\w/g,c => c.toUpperCase())} export default function Breadcrumbs(): any { const router = useRouter()const asPath = router.asPath || '/'; const pathWithoutQuery = asPath.split('?')[0].split('#')[0]; const segments = pathWithoutQuery.split('/').filter(Boolean)const crumbs = [ { href: '/',label: 'Home' },...segments.map((seg,idx) => { const href = '/' + segments.slice(0,idx + 1).join('/')return { href,label: toTitleCase(seg) }})]; return ( <nav aria-label="Breadcrumb" style={{ padding: '8px 20px',background: '#f8fafc',borderBottom: '1px solid #e2e8f0'}} > {' '} <ol style={{ display: 'flex',flexWrap: 'wrap',gap: '8',listStyle: 'none',margin: '0',padding: '0',fontSize: '0.9rem'}} > {' '} {crumbs.map((crumb,idx) => { const isLast = idx === crumbs.length - 1; return ( <li key={crumb.href} style={{ display: 'flex',alignItems: 'center',gap: '8' }} > {' '} {idx > 0 && ( <span aria-hidden="true" style={{ color: '#94a3b8' }}> {' '} /{' '} </span> )}{' '} {isLast ? ( <span style={{ color: '#334155',fontWeight: '600' }}> {' '} {crumb.label}{' '} </span> ) : ( <Link href={crumb.href} style={{ color: '#2563eb',textDecoration: 'none' }} > {' '} {crumb.label}{' '} </Link> )}{' '} </li> )})}{' '} </ol>{' '} </nav> )}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

@@ -382,10 +382,23 @@ export default function ContactPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
+<<<<<<< HEAD
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We're here to help you succeed. Reach out to us through any of these channels.
             </p>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Let's discuss how Zion Tech Group can help you achieve your goals.
+            </p>
+            <Link
+              href="/services"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center"
+            >
+              View Our Services
+              <ArrowRightIcon className="h-5 w-5 ml-2" />
+            </Link>
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -20,6 +21,8 @@ main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 ;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -302,7 +305,10 @@ ursor/automate-test-improve-and-merge-code-646c;
   }
 }export default ErrorBoundary;</div>;
         ))}return this.props.children;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';

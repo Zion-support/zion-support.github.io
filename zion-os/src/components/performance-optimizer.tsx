@@ -121,6 +121,12 @@ function Skeleton() {
           className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb - 0";
           style={{ width: `${Math.random () * 40 + 60}%` }}
         />))}
+    </div>)}      // Log performance metrics in development;
+      // Check condition;
+if ( {) {$2;
+}
+        // // // console.log (`${component_name} render time: ${duration.to_fixed (2)}ms`)}// Send to analytics in production;
+      if (process.env.NODE_ENV === "production" && duration > 100) {// Could send to analytics service here;console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`)console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`)console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`)console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`)}
     </div>);
 }
       // Log performance metrics in development;

@@ -104,9 +104,12 @@ if ( {) {$2;
           href={href}
           className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 rounded";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="w - 12 h - 12 rounded - lg flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration-200">;
         {icon}
       </div>;
@@ -120,11 +123,15 @@ if ( {) {$2;
         <Link;
           href={href}
 <<<<<<< HEAD
+<<<<<<< HEAD
           className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue-500 rounded";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
           className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 rounded";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 rounded";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           on_click={(e) => e.stop_propagation ()}
         >;
           Learn more →;

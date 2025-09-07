@@ -52,6 +52,25 @@ export default defineConfig({
 =======
         }
       }
+<<<<<<< HEAD
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom'],
+  },
+});
+=======
     }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   },
@@ -59,3 +78,4 @@ export default defineConfig({
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
   }
 });
+>>>>>>> cursor/expand-services-advertise-and-build-project-e77d

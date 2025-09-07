@@ -91,9 +91,12 @@ export default function CaseStudiesPage() {return (;
                     <div className="text - 2xl font - bold text - white mb - 1">50K+</div>;
                     <div className="text - white / 70 text - sm">Patients Served</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="mb-20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="bg - gradient - to - r from - purple - 900 / 30 to - cyan - 900 / 30 rounded - 2xl p - 8 border border-white / 10">;
@@ -123,6 +126,7 @@ export default function CaseStudiesPage() {return (;
                   </div>;
                   <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div className="text - 2xl font - bold text - white mb-1">50K+</div>;
                     <div className="text - white / 70 text-sm">Patients Served</div>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -130,6 +134,10 @@ export default function CaseStudiesPage() {return (;
                     <div className="text - 2xl font - bold text - white mb - 1">50K+</div>;
                     <div className="text - white / 70 text - sm">Patients Served</div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    <div className="text - 2xl font - bold text - white mb - 1">50K+</div>;
+                    <div className="text - white / 70 text - sm">Patients Served</div>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;
                 </div>;
                 <a;
@@ -137,12 +145,16 @@ export default function CaseStudiesPage() {return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
                   className="inline - flex items - center text - purple - 400 hover:text - purple - 300 font - medium";
+<<<<<<< HEAD
 =======
 =======
                   className="inline - flex items - center text - purple - 400 hover:text - purple - 300 font - medium";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   className="inline - flex items - center text - purple - 400 hover:text - purple - 300 font-medium";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                  className="inline - flex items - center text - purple - 400 hover:text - purple - 300 font-medium";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 >;
                   Read Full Case Study →;
                 </a>;
@@ -170,9 +182,12 @@ export default function CaseStudiesPage() {return (;
                     <div className="w - 2 h - 2 bg - yellow - 400 rounded - full"></div>;
                     <span className="text - white / 80">Natural Language Processing</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 6 border border-white / 10">;
                 <h3 className="text - xl font - semibold text - white mb-4">Key Technologies Used</h3>;
                 <div className="space-y-3">;
@@ -189,6 +204,7 @@ export default function CaseStudiesPage() {return (;
                     <span className="text - white / 80">Machine Learning</span>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className="flex items - center space-x-3">;
                     <div className="w - 2 h - 2 bg - yellow - 400 rounded-full"></div>;
                     <span className="text-white / 80">Natural Language Processing</span>;
@@ -198,6 +214,11 @@ export default function CaseStudiesPage() {return (;
                     <div className="w - 2 h - 2 bg - yellow - 400 rounded - full"></div>;
                     <span className="text - white / 80">Natural Language Processing</span>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <div className="flex items - center space - x-3">;
+                    <div className="w - 2 h - 2 bg - yellow - 400 rounded - full"></div>;
+                    <span className="text - white / 80">Natural Language Processing</span>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;
                 </div>;
               </div>;
@@ -241,9 +262,12 @@ export default function CaseStudiesPage() {return (;
               </div>;
               <a href="/case - studies / ai - trading - system" className="text - cyan - 400 hover:text - cyan - 300 font - medium text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="mb-20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <h2 className="text - 3xl font - bold text - white text - center mb-12">Success Stories</h2>;
@@ -274,11 +298,15 @@ export default function CaseStudiesPage() {return (;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/case - studies / ai - trading - system" className="text - cyan - 400 hover:text - cyan - 300 font - medium text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/case - studies / ai - trading - system" className="text - cyan - 400 hover:text - cyan - 300 font - medium text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/case - studies / ai - trading - system" className="text - cyan - 400 hover:text - cyan - 300 font - medium text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read More →;
               </a>;
             </div>;
@@ -313,9 +341,12 @@ export default function CaseStudiesPage() {return (;
               </div>;
               <a href="/case - studies / smart - factory - automation" className="text - green - 400 hover:text - green - 300 font - medium text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 6 border border - white / 10 hover:border - green - 500 / 50 transition - all duration-300">;
               <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - lg flex items - center justify - center mb-4">;
                 <svg className="w - 8 h - 8 text-white" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -341,11 +372,15 @@ export default function CaseStudiesPage() {return (;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/case - studies / smart - factory - automation" className="text - green - 400 hover:text - green - 300 font - medium text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/case - studies / smart - factory - automation" className="text - green - 400 hover:text - green - 300 font - medium text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/case - studies / smart - factory - automation" className="text - green - 400 hover:text - green - 300 font - medium text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read More →;
               </a>;
             </div>;
@@ -380,9 +415,12 @@ export default function CaseStudiesPage() {return (;
               </div>;
               <a href="/case - studies / personalized - shopping" className="text - yellow - 400 hover:text - yellow - 300 font - medium text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 6 border border - white / 10 hover:border - yellow - 500 / 50 transition - all duration-300">;
               <div className="w - 16 h - 16 bg - gradient - to - r from - yellow - 500 to - orange - 500 rounded - lg flex items - center justify - center mb-4">;
                 <svg className="w - 8 h - 8 text-white" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -408,11 +446,15 @@ export default function CaseStudiesPage() {return (;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/case - studies / personalized - shopping" className="text - yellow - 400 hover:text - yellow - 300 font - medium text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/case - studies / personalized - shopping" className="text - yellow - 400 hover:text - yellow - 300 font - medium text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/case - studies / personalized - shopping" className="text - yellow - 400 hover:text - yellow - 300 font - medium text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read More →;
               </a>;
             </div>;
@@ -447,9 +489,12 @@ export default function CaseStudiesPage() {return (;
               </div>;
               <a href="/case - studies / autonomous - fleet" className="text - red - 400 hover:text - red - 300 font - medium text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 6 border border - white / 10 hover:border - red - 500 / 50 transition - all duration-300">;
               <div className="w - 16 h - 16 bg - gradient - to - r from - red - 500 to - pink - 500 rounded - lg flex items - center justify - center mb-4">;
                 <svg className="w - 8 h - 8 text-white" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -475,11 +520,15 @@ export default function CaseStudiesPage() {return (;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/case - studies / autonomous - fleet" className="text - red - 400 hover:text - red - 300 font - medium text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/case - studies / autonomous - fleet" className="text - red - 400 hover:text - red - 300 font - medium text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/case - studies / autonomous - fleet" className="text - red - 400 hover:text - red - 300 font - medium text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read More →;
               </a>;
             </div>;
@@ -514,9 +563,12 @@ export default function CaseStudiesPage() {return (;
               </div>;
               <a href="/case - studies / smart - grid - optimization" className="text - indigo - 400 hover:text - indigo - 300 font - medium text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 6 border border - white / 10 hover:border - indigo - 500 / 50 transition - all duration-300">;
               <div className="w - 16 h - 16 bg - gradient - to - r from - indigo - 500 to - purple - 500 rounded - lg flex items - center justify - center mb-4">;
                 <svg className="w - 8 h - 8 text-white" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -542,11 +594,15 @@ export default function CaseStudiesPage() {return (;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/case - studies / smart - grid - optimization" className="text - indigo - 400 hover:text - indigo - 300 font - medium text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/case - studies / smart - grid - optimization" className="text - indigo - 400 hover:text - indigo - 300 font - medium text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/case - studies / smart - grid - optimization" className="text - indigo - 400 hover:text - indigo - 300 font - medium text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read More →;
               </a>;
             </div>;
@@ -581,9 +637,12 @@ export default function CaseStudiesPage() {return (;
               </div>;
               <a href="/case - studies / ai - threat - detection" className="text - purple - 400 hover:text - purple - 300 font - medium text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 6 border border - white / 10 hover:border - purple - 500 / 50 transition - all duration-300">;
               <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 to - pink - 500 rounded - lg flex items - center justify - center mb-4">;
                 <svg className="w - 8 h - 8 text-white" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -609,11 +668,15 @@ export default function CaseStudiesPage() {return (;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/case - studies / ai - threat - detection" className="text - purple - 400 hover:text - purple - 300 font - medium text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <a href="/case - studies / ai - threat - detection" className="text - purple - 400 hover:text - purple - 300 font - medium text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/case - studies / ai - threat - detection" className="text - purple - 400 hover:text - purple - 300 font - medium text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Read More →;
               </a>;
             </div>;
@@ -669,9 +732,12 @@ export default function CaseStudiesPage() {return (;
               </div>;
               <p className="text - white / 80 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="mb-20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <h2 className="text - 3xl font - bold text - white text - center mb-12">What Our Clients Say</h2>;
@@ -715,11 +781,15 @@ export default function CaseStudiesPage() {return (;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <p className="text - white / 80 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <p className="text - white / 80 text - sm">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <p className="text - white / 80 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 "Smart factory automation has revolutionized our production line. Downtime is down 70% and efficiency is through the roof.";
               </p>;
             </div>;
@@ -742,9 +812,12 @@ export default function CaseStudiesPage() {return (;
               href="/contact";
               className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <div className="max - w-4xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
           <h2 className="text - 3xl font - bold text - white mb-6">Ready to Create Your Success Story?</h2>;
           <p className="text - xl text - white / 70 mb-8">;
@@ -754,11 +827,15 @@ export default function CaseStudiesPage() {return (;
             <a;
               href="/contact";
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration-200";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             >;
               Start Your Project;
             </a>;
@@ -767,12 +844,16 @@ export default function CaseStudiesPage() {return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
               className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration - 200";
+<<<<<<< HEAD
 =======
 =======
               className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration - 200";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration-200";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration-200";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             >;
               Explore Services;
             </a>;

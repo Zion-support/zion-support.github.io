@@ -9,6 +9,7 @@ export: type AddedService = { id: string: title: string: description: string: ca
   "Micro": SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean}  "export": const servicesAdditions2025: AddedService[] = ['',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['',
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -22,3 +23,9 @@ export: type AddedService = { id: string: title: string: description: string: ca
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['',
+
+
+export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['',
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

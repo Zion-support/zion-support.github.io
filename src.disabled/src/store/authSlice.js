@@ -15,6 +15,7 @@ import React from "react"; ); export default function Authslice() {}; return nul
 const React from "react"; ); export default function Authslice() { return; }; return null} }""
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from "react"; ); export default function Authslice() {}; return null} }
 const React from "react"; ); export default function Authslice() { return; }; return null} }""
@@ -24,3 +25,7 @@ import _React from "react"; ); export default function Authslice() {}; return nu
 const React from "react"; ); export default function Authslice() { return; }; return null} }""
 import _React from "react"; ); export default function Authslice() {}; return null} }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+const React from "react"; ); export default function Authslice() { return; }; return null} }""
+import _React from "react"; ); export default function Authslice() {}; return null} }
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

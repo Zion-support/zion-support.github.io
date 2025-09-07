@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 ;
 import Link from "next/link",export const metadata = {title: "AI Autonomous Business Manager - Zion Tech Group",description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.",keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"},export default function AIBusinessManagerPage() {return (<div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
@@ -10,7 +13,10 @@ import Link from "next/link",export const metadata = {title: "AI Autonomous Busi
             AI Autonomous <span className="gradient - text">Business Manager</span>;
           </h1>;
           <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import Link from "next/link";
 export const metadata = {title: "AI Autonomous Business Manager - Zion Tech Group";
   description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.";
@@ -57,6 +63,7 @@ export default function AIBusinessManagerPage() {return (;
               <h2 className="text - 3xl font - bold mb - 6">Revolutionary Business Management</h2>;
               <p className="text - lg text - gray - 300 mb - 6 leading - relaxed">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <section className="mb-20">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items-center">;
@@ -65,12 +72,17 @@ export default function AIBusinessManagerPage() {return (;
               <p className="text - lg text - gray - 300 mb - 6 leading-relaxed">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <section className="mb-20">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items-center">;
             <div>;
               <h2 className="text - 3xl font - bold mb - 6">Revolutionary Business Management</h2>;
               <p className="text - lg text - gray - 300 mb - 6 leading - relaxed">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Our AI Autonomous Business Manager represents the next evolution in business;
                 management technology. It combines advanced artificial intelligence, machine;
                 learning, and autonomous decision - making to manage your business operations;
@@ -90,15 +102,21 @@ export default function AIBusinessManagerPage() {return (;
                 <li className="flex items - center">;
                   <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="current_color" view_box="0 0 20 20">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="card bg - gradient - to - br from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30 p-8">;
               <h3 className="text - 2xl font - bold mb-4">Key Benefits</h3>;
               <ul className="space - y-3 text - gray-300">;
                 <li className="flex items-center">;
                   <svg className="w - 5 h - 5 text - green - 400 mr-3" fill="current_color" viewBox="0 0 20 20">;
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     <path fill_rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l - 8 8a1 1 0 01 - 1.414 0l - 4-4a1 1 0 011.414 - 1.414L8 12.586l7.293 - 7.293a1 1 0 011.414 0z" clip_rule="evenodd" />;
                   </svg>;
                   24 / 7 Autonomous Operation;
@@ -107,6 +125,7 @@ export default function AIBusinessManagerPage() {return (;
 <<<<<<< HEAD
                 <li className="flex items - center">;
                   <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="current_color" view_box="0 0 20 20">;
+<<<<<<< HEAD
 =======
 =======
                 <li className="flex items - center">;
@@ -115,6 +134,10 @@ export default function AIBusinessManagerPage() {return (;
                 <li className="flex items-center">;
                   <svg className="w - 5 h - 5 text - green - 400 mr-3" fill="current_color" viewBox="0 0 20 20">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                <li className="flex items-center">;
+                  <svg className="w - 5 h - 5 text - green - 400 mr-3" fill="current_color" viewBox="0 0 20 20">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     <path fill_rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l - 8 8a1 1 0 01 - 1.414 0l - 4-4a1 1 0 011.414 - 1.414L8 12.586l7.293 - 7.293a1 1 0 011.414 0z" clip_rule="evenodd" />;
                   </svg>;
                   Real - time Decision Making;
@@ -123,6 +146,7 @@ export default function AIBusinessManagerPage() {return (;
 <<<<<<< HEAD
                 <li className="flex items - center">;
                   <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="current_color" view_box="0 0 20 20">;
+<<<<<<< HEAD
 =======
 =======
                 <li className="flex items - center">;
@@ -131,6 +155,10 @@ export default function AIBusinessManagerPage() {return (;
                 <li className="flex items-center">;
                   <svg className="w - 5 h - 5 text - green - 400 mr-3" fill="current_color" viewBox="0 0 20 20">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                <li className="flex items-center">;
+                  <svg className="w - 5 h - 5 text - green - 400 mr-3" fill="current_color" viewBox="0 0 20 20">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     <path fill_rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l - 8 8a1 1 0 01 - 1.414 0l - 4-4a1 1 0 011.414 - 1.414L8 12.586l7.293 - 7.293a1 1 0 011.414 0z" clip_rule="evenodd" />;
                   </svg>;
                   Continuous Learning & Optimization;
@@ -139,6 +167,7 @@ export default function AIBusinessManagerPage() {return (;
 <<<<<<< HEAD
                 <li className="flex items - center">;
                   <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="current_color" view_box="0 0 20 20">;
+<<<<<<< HEAD
 =======
 =======
                 <li className="flex items - center">;
@@ -147,6 +176,10 @@ export default function AIBusinessManagerPage() {return (;
                 <li className="flex items-center">;
                   <svg className="w - 5 h - 5 text - green - 400 mr-3" fill="current_color" viewBox="0 0 20 20">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                <li className="flex items-center">;
+                  <svg className="w - 5 h - 5 text - green - 400 mr-3" fill="current_color" viewBox="0 0 20 20">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     <path fill_rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l - 8 8a1 1 0 01 - 1.414 0l - 4-4a1 1 0 011.414 - 1.414L8 12.586l7.293 - 7.293a1 1 0 011.414 0z" clip_rule="evenodd" />;
                   </svg>;
                   Predictive Analytics;
@@ -200,6 +233,21 @@ export default function AIBusinessManagerPage() {return (;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 19v - 6a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v6a2 2 0 002 2h2a2 2 0 002 - 2zm0 0V9a2 2 0 012 - 2h2a2 2 0 012 2v10m - 6 0a2 2 0 002 2h2a2 2 0 002 - 2m0 0V5a2 2 0 012 - 2h2a2 2 0 012 2v14a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2z" />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 </svg>;
+              </div>;<h3 className="text - xl font - semibold mb - 2">Strategic Planning</h3>;
+              <p className="text - gray - 400">;
+                AI - powered strategic planning that analyzes market conditions,<section className="mb-20">;
+          <div className="text - center mb-12">;
+            <h2 className="text - 3xl font - bold mb-4">Core Features</h2>;
+            <p className="text - xl text - gray - 400 max - w-3xl mx-auto">;
+              Comprehensive autonomous business management capabilities;
+            </p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+            <div className="card group">;
+              <div className="w - 12 h - 12 bg - blue - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - blue - 500 / 30 transition - colors">;
+                <svg className="w - 6 h - 6 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
+                  <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 19v - 6a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v6a2 2 0 002 2h2a2 2 0 002 - 2zm0 0V9a2 2 0 012 - 2h2a2 2 0 012 2v10m - 6 0a2 2 0 002 2h2a2 2 0 002 - 2m0 0V5a2 2 0 012 - 2h2a2 2 0 012 2v14a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2z" />;
+                </svg>;
               </div>;
                 competitive landscape, and internal capabilities to develop optimal strategies.;
               </p>;
@@ -217,14 +265,18 @@ export default function AIBusinessManagerPage() {return (;
               <h3 className="text - xl font - semibold mb - 2">Resource Optimization</h3>;
               <p className="text - gray - 400">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - 12 h - 12 bg - purple - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - purple - 500 / 30 transition-colors">;
                 <svg className="w - 6 h - 6 text - purple-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9 - 11h - 7z" />;
                 </svg>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h3 className="text - xl font - semibold mb-2">Resource Optimization</h3>;
               <p className="text - gray-400">;
@@ -233,6 +285,10 @@ export default function AIBusinessManagerPage() {return (;
               <h3 className="text - xl font - semibold mb - 2">Resource Optimization</h3>;
               <p className="text - gray - 400">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <h3 className="text - xl font - semibold mb - 2">Resource Optimization</h3>;
+              <p className="text - gray - 400">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Intelligent allocation and optimization of human, financial, and;
                 technological resources for maximum efficiency and ROI.;
               </p>;
@@ -250,14 +306,18 @@ export default function AIBusinessManagerPage() {return (;
               <h3 className="text - xl font - semibold mb - 2">Performance Monitoring</h3>;
               <p className="text - gray - 400">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - 12 h - 12 bg - green - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - green - 500 / 30 transition-colors">;
                 <svg className="w - 6 h - 6 text - green-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4 - 4m6 2a9 9 0 11 - 18 0 9 9 0 0118 0z" />;
                 </svg>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h3 className="text - xl font - semibold mb-2">Performance Monitoring</h3>;
               <p className="text - gray-400">;
@@ -266,6 +326,10 @@ export default function AIBusinessManagerPage() {return (;
               <h3 className="text - xl font - semibold mb - 2">Performance Monitoring</h3>;
               <p className="text - gray - 400">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <h3 className="text - xl font - semibold mb - 2">Performance Monitoring</h3>;
+              <p className="text - gray - 400">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Real - time monitoring of all business metrics with automated;
                 alerts and proactive intervention when needed.;
               </p>;
@@ -283,14 +347,18 @@ export default function AIBusinessManagerPage() {return (;
               <h3 className="text - xl font - semibold mb - 2">Risk Management</h3>;
               <p className="text - gray - 400">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - 12 h - 12 bg - yellow - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - yellow - 500 / 30 transition-colors">;
                 <svg className="w - 6 h - 6 text - yellow-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h - 1M4 12H3m3.343 - 5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11 - 4 0v-.531c0-.895-.356 - 1.754-.988 - 2.386l-.548-.547z" />;
                 </svg>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h3 className="text - xl font - semibold mb-2">Risk Management</h3>;
               <p className="text - gray-400">;
@@ -299,6 +367,10 @@ export default function AIBusinessManagerPage() {return (;
               <h3 className="text - xl font - semibold mb - 2">Risk Management</h3>;
               <p className="text - gray - 400">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <h3 className="text - xl font - semibold mb - 2">Risk Management</h3>;
+              <p className="text - gray - 400">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Advanced risk assessment and mitigation strategies with;
                 continuous monitoring and automated response systems.;
               </p>;
@@ -316,14 +388,18 @@ export default function AIBusinessManagerPage() {return (;
               <h3 className="text - xl font - semibold mb - 2">Team Management</h3>;
               <p className="text - gray - 400">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="w - 12 h - 12 bg - indigo - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - indigo - 500 / 30 transition-colors">;
                 <svg className="w - 6 h - 6 text - indigo-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v - 2a3 3 0 00 - 5.356 - 1.857M17 20H7m10 0v - 2c0-.656-.126 - 1.283-.356 - 1.857M7 20H2v - 2a3 3 0 015.356 - 1.857M7 20v - 2c0-.656.126 - 1.283.356 - 1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11 - 6 0 3 3 0 016 0zm6 3a2 2 0 11 - 4 0 2 2 0 014 0zM7 10a2 2 0 11 - 4 0 2 2 0 014 0z" />;
                 </svg>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h3 className="text - xl font - semibold mb-2">Team Management</h3>;
               <p className="text - gray-400">;
@@ -332,6 +408,10 @@ export default function AIBusinessManagerPage() {return (;
               <h3 className="text - xl font - semibold mb - 2">Team Management</h3>;
               <p className="text - gray - 400">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <h3 className="text - xl font - semibold mb - 2">Team Management</h3>;
+              <p className="text - gray - 400">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Intelligent team coordination, task assignment, and performance;
                 optimization based on individual strengths and workload.;
               </p>;
@@ -357,6 +437,12 @@ export default function AIBusinessManagerPage() {return (;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0 - 8l - 8 8 - 4-4 - 6 6" />;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </svg>;
+              </div>;<h3 className="text - xl font - semibold mb - 2">Growth Optimization</h3>;
+              <p className="text - gray - 400">;
+                Data - driven growth strategies with market expansion analysis,<div className="w - 12 h - 12 bg - red - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - red - 500 / 30 transition-colors">;
+                <svg className="w - 6 h - 6 text - red-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0 - 8l - 8 8 - 4-4 - 6 6" />;
+                </svg>;
               </div>;
                 customer acquisition optimization, and revenue maximization.;
               </p>;
@@ -380,11 +466,54 @@ export default function AIBusinessManagerPage() {return (;
               <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - blue - 400">1</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
               </div>;<h3 className="text - lg font - semibold mb - 2">Data Collection</h3>;
               <p className="text - gray - 400 text - sm">;
                 Continuously gathers data from all business systems,market sources, and external factors.;
+=======
+              </div>;<h3 className="text - lg font - semibold mb - 2">Data Collection</h3>;
+              <p className="text - gray - 400 text - sm">;
+                Continuously gathers data from all business systems,market sources, and external factors.;
+              </p>;
+            </div>;
+            <div className="text - center">;
+              <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                <span className="text - 2xl font - bold text - purple - 400">2</span>;
+              </div>;<h3 className="text - lg font - semibold mb - 2">Analysis & Learning</h3>;
+              <p className="text - gray - 400 text - sm">;
+                AI algorithms analyze patterns, learn from outcomes,and identify optimization opportunities.;
+              </p>;
+            </div>;
+            <div className="text - center">;
+              <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                <span className="text - 2xl font - bold text - green - 400">3</span>;
+              </div>;<h3 className="text - lg font - semibold mb - 2">Decision Making</h3>;
+              <p className="text - gray - 400 text - sm">;
+                Autonomous decisions are made based on data analysis,business rules, and predictive models.;
+              </p>;
+            </div>;
+            <div className="text - center">;
+              <div className="w - 16 h - 16 bg - yellow - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                <span className="text - 2xl font - bold text - yellow - 400">4</span>;
+              </div>;
+              <h3 className="text - lg font - semibold mb - 2">Execution & Monitoring</h3>;
+              <p className="text - gray - 400 text - sm">;
+        <section className="mb-20">;
+          <div className="text - center mb-12">;
+            <h2 className="text - 3xl font - bold mb-4">How It Works</h2>;
+            <p className="text - xl text - gray - 400 max - w-3xl mx-auto">;
+              The autonomous business management process;
+            </p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 8">;
+            <div className="text - center">;
+              <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                <span className="text - 2xl font - bold text - blue - 400">1</span>;
+              </div>;
+                market sources, and external factors.;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </p>;
             </div>;
             <div className="text - center">;
@@ -515,6 +644,7 @@ export default function AIBusinessManagerPage() {return (;
           </div>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <section className="mb-20">;
 =======
@@ -522,6 +652,11 @@ export default function AIBusinessManagerPage() {return (;
               <p className="text - gray - 400 text - sm">;
                 Inventory management, pricing optimization, customer service automation,<section className="mb-20">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <div className="card">;<h3 className="text - lg font - semibold mb - 2">E - commerce & Retail</h3>;
+              <p className="text - gray - 400 text - sm">;
+                Inventory management, pricing optimization, customer service automation,<section className="mb-20">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <div className="text - center mb-12">;
             <h2 className="text - 3xl font - bold mb-4">Use Cases</h2>;
             <p className="text - xl text - gray - 400 max - w-3xl mx-auto">;
@@ -529,11 +664,15 @@ export default function AIBusinessManagerPage() {return (;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="card">;
                 and supply chain optimization.;
               </p>;
@@ -558,6 +697,7 @@ export default function AIBusinessManagerPage() {return (;
 <<<<<<< HEAD
               <h3 className="text - lg font - semibold mb - 2">Technology Companies</h3>;
               <p className="text - gray - 400 text - sm">;
+<<<<<<< HEAD
 =======
 =======
               <h3 className="text - lg font - semibold mb - 2">Technology Companies</h3>;
@@ -566,6 +706,10 @@ export default function AIBusinessManagerPage() {return (;
               <h3 className="text - lg font - semibold mb-2">Technology Companies</h3>;
               <p className="text - gray - 400 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <h3 className="text - lg font - semibold mb-2">Technology Companies</h3>;
+              <p className="text - gray - 400 text-sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Product development prioritization, customer success optimization;
                 and operational scaling.;
               </p>;
@@ -575,6 +719,7 @@ export default function AIBusinessManagerPage() {return (;
 <<<<<<< HEAD
               <h3 className="text - lg font - semibold mb - 2">Consulting Firms</h3>;
               <p className="text - gray - 400 text - sm">;
+<<<<<<< HEAD
 =======
 =======
               <h3 className="text - lg font - semibold mb - 2">Consulting Firms</h3>;
@@ -583,6 +728,10 @@ export default function AIBusinessManagerPage() {return (;
               <h3 className="text - lg font - semibold mb-2">Consulting Firms</h3>;
               <p className="text - gray - 400 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <h3 className="text - lg font - semibold mb-2">Consulting Firms</h3>;
+              <p className="text - gray - 400 text-sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Project management, resource allocation, client relationship management;
                 and knowledge management.;
               </p>;
@@ -609,9 +758,12 @@ export default function AIBusinessManagerPage() {return (;
               </Link>;
               <Link href="/ai - services" className="btn - secondary text - lg px - 8 py - 4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <section className="text-center">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30 p-12">;
             <h2 className="text - 3xl md: text - 4xl font - bold mb-4">;
@@ -626,11 +778,15 @@ export default function AIBusinessManagerPage() {return (;
                 Get Started;
               </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/ai - services" className="btn - secondary text - lg px - 8 py-4">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
               <Link href="/ai - services" className="btn - secondary text - lg px - 8 py - 4">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Link href="/ai - services" className="btn - secondary text - lg px - 8 py - 4">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 View All AI Services;
               </Link>;
             </div>;

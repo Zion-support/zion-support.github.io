@@ -196,7 +196,10 @@ function TestimonialCard() {return (<div className={`bg - black / 30 backdrop - 
       {/* Quote */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       </blockquote>      </blockquote>      </blockquote>;
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">;
@@ -206,7 +209,10 @@ function TestimonialCard() {return (<div className={`bg - black / 30 backdrop - 
       </div>;
     </div>;
   )}}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       </blockquote>
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
