@@ -10,7 +10,6 @@ export default function TermsOfService() {
           Last updated: {new Date().toLocaleDateString()}
         </p>
       </div>
-=======
       <div className="space-y-6 text-zion-slate-light">
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>
@@ -78,7 +77,6 @@ export default function TermsOfService() {
             <a href="mailto:legal@ziontechgroup.com" className="text-zion-cyan hover:underline">
               legal@ziontechgroup.com
             </a>
-=======
           </p>
         </section>
       </div>

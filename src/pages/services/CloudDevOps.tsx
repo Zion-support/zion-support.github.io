@@ -1,20 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-=======
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-=======
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-const CloudDevOps: React.FC = () => {
   const features = [
     {
       icon: Cloud,
       title: "Cloud Migration",
-=======
       description: "Seamless migration to cloud platforms with minimal downtime",
       features: ["AWS Migration", "Azure Migration", "Google Cloud Migration", "Multi-cloud Strategy"],
       icon: "☁️"
@@ -30,7 +20,6 @@ const CloudDevOps: React.FC = () => {
       description: "Manage and scale containerized applications efficiently",
       features: ["Kubernetes", "Docker", "Service Mesh", "Microservices Architecture"],
       icon: "📦"
-=======
 import { Link } from 'react-router-dom';
 import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from 'lucide-react';
 const CloudDevOps: React.FC = () => {
@@ -46,7 +35,6 @@ const CloudDevOps: React.FC = () => {
       title: "Infrastructure as Code",
       description: "Automated infrastructure provisioning and management using modern DevOps practices.",
       features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
-=======
       description: "Automated infrastructure provisioning and management using modern DevOps practices.",
       features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
     },
@@ -81,7 +69,6 @@ const CloudDevOps: React.FC = () => {
     }
   ];
   const cloudPlatforms = [
-=======
     { name: "AWS", features: ["EC2", "S3", "Lambda", "RDS", "CloudFormation"] },
     { name: "Azure", features: ["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "ARM Templates"] },
     { name: "Google Cloud", features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "Deployment Manager"] }
@@ -92,7 +79,6 @@ const CloudDevOps: React.FC = () => {
     { category: "Monitoring", tools: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"] },
     { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
   ];
-=======
   return (
     <>
       <Helmet>
@@ -103,7 +89,6 @@ const CloudDevOps: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/cloud-devops" />
         <link rel="canonical" href="https://ziontechgroup.com/services/cloud-devops" />
       </Helmet>
-=======
       description: "Automated build, test, and deployment pipelines for faster, more reliable releases.",
       features: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
     },
@@ -231,7 +216,6 @@ const CloudDevOps: React.FC = () => {
         </div>
       </section>
       {/* Benefits Section */}
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -292,7 +276,6 @@ const CloudDevOps: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -359,7 +342,6 @@ const CloudDevOps: React.FC = () => {
             </div>
           </div>
         </section>
-=======
         {/* Cloud Platforms */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -523,7 +505,6 @@ const CloudDevOps: React.FC = () => {
               Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-=======
               Let's discuss how cloud migration and DevOps can accelerate your business
             </p>
             <Link
@@ -536,8 +517,6 @@ const CloudDevOps: React.FC = () => {
         </section>
       </div>
     </>
-=======
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

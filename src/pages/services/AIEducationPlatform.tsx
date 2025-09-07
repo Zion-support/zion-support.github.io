@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, Users, Brain, TrendingUp, Phone } from 'lucide-react';
 import { SEO } from '../../components/SEO';

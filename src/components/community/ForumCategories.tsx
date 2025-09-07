@@ -40,7 +40,6 @@ export default function ForumCategories() {
             {category.lastPost && (
               <span>Last: {category.lastPost.title} by {category.lastPost.author}</span>
             )}
-=======
 interface ForumCategoriesProps {
   categories: Array<{
     id: string;
@@ -67,5 +66,4 @@ const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
   );
 };
 export default ForumCategories;
-=======
 }

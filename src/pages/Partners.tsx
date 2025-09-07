@@ -1,5 +1,4 @@
 import React from 'react';
-=======
 import { 
   Building, 
   Globe, 
@@ -29,7 +28,6 @@ const Partners: React.FC = () => {
   const partnershipTypes = [
     {
       icon: Building,
-=======
       title: 'Technology Partners',
       description: 'Strategic partnerships with leading technology companies to deliver comprehensive solutions.',
       benefits: [
@@ -363,7 +361,6 @@ const Partners: React.FC = () => {
                 We're proud to work with leading technology companies and organizations worldwide.
               </p>
             </div>
-=======
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
             >
               Start Partnership Discussion
@@ -372,7 +369,6 @@ const Partners: React.FC = () => {
             <button className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
               Download Partner Kit
             </button>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {currentPartners.map((partner, index) => (
                 <div key={index} className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">

@@ -24,9 +24,6 @@ export default function PostCard({ post }: PostCardProps) {
             <span>{post.likes} likes</span>
             <span>{post.views} views</span>
           </div>
-=======
-interface PostCardProps {
-  post: {
     id: string;
     title: string;
     content: string;
@@ -53,5 +50,4 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
   );
 };
 export default PostCard;
-=======
 }

@@ -855,7 +855,6 @@ const PerformanceMonitor: React.FC = () => {
 import React, { useEffect, useState, useCallback } from 'react';
 import { Zap, Clock, HardDrive, Wifi, AlertTriangle } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
-=======
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -2090,7 +2089,5 @@ export const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
-=======
 export default PerformanceMonitor;
-=======
 export default PerformanceMonitor;

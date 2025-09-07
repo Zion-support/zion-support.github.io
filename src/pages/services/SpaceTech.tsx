@@ -302,8 +302,6 @@ import React from 'react';
               View Solutions
             </a>
           </div>
-=======
-=======
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
 const $service: React.FC = () => {
@@ -334,5 +332,4 @@ const $service: React.FC = () => {
   );
 };
 export default $service;
-=======
 export default $service;

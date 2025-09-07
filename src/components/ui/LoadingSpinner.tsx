@@ -1,6 +1,4 @@
 import React from 'react';
-=======
-import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -82,7 +80,6 @@ export function LoadingSpinner({
         style={{
           borderTopColor: customColor && color === 'custom' ? customColor : undefined
         }}
-=======
       />
       {showText && (
         <motion.p
@@ -94,7 +91,6 @@ export function LoadingSpinner({
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.3 }}
           className={`mt-3 text-zion-slate-light ${textSizes[size]} font-medium`}
-=======
         >
           {text}
         </motion.p>
@@ -143,7 +139,6 @@ export function SkeletonLoader({
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1, duration: 0.3 }}
           className={`${height} bg-white/10 rounded-lg animate-pulse`}
-=======
         />
       ))}
     </div>
@@ -282,7 +277,6 @@ export function ContentPlaceholder({
           />
         ))
       )}
-=======
     </div>
   );
 }

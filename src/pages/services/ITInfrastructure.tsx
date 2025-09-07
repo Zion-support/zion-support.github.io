@@ -1,18 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-=======
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-=======
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-const ITInfrastructure: React.FC = () => {
   const features = [
     {
-=======
       title: "Network Management",
       description: "Comprehensive network infrastructure design, implementation, and maintenance",
       features: ["Network Design", "Performance Optimization", "Security Implementation", "24/7 Monitoring"],
@@ -51,7 +41,6 @@ const ITInfrastructure: React.FC = () => {
         keywords="IT infrastructure, server management, network design, data centers, infrastructure security"
         canonical="https://ziontechgroup.com/services/infrastructure"
       />
-=======
       title: "Network Infrastructure",
       description: "Design, implement, and maintain robust network solutions",
       features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
@@ -82,7 +71,6 @@ const ITInfrastructure: React.FC = () => {
     { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
     { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
-=======
   return (
     <>
       <Helmet>
@@ -93,7 +81,6 @@ const ITInfrastructure: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure" />
         <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure" />
       </Helmet>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -124,7 +111,6 @@ const ITInfrastructure: React.FC = () => {
             </div>
           </div>
         </section>
-=======
         {/* Infrastructure Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -161,7 +147,6 @@ const ITInfrastructure: React.FC = () => {
             </div>
           </div>
         </section>
-=======
         {/* Infrastructure Areas */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -175,7 +160,6 @@ const ITInfrastructure: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureAreas.map((area, index) => (
-=======
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
@@ -194,7 +178,6 @@ const ITInfrastructure: React.FC = () => {
             </div>
           </div>
         </section>
-=======
         {/* Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -238,7 +221,6 @@ const ITInfrastructure: React.FC = () => {
           </div>
         </section>
         {/* CTA Section */}
-=======
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -257,7 +239,6 @@ const ITInfrastructure: React.FC = () => {
         </section>
       </div>
     </>
-=======
   );
 };
 export default ITInfrastructure;

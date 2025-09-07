@@ -48,4 +48,4 @@ export function ChatAssistant() {
       </div>
     </div>
   );
-};
+}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { DollarSign, TrendingUp, Shield, Activity, Phone } from 'lucide-react';
 import { SEO } from '../../components/SEO';

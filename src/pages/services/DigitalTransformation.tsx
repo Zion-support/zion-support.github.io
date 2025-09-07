@@ -1,6 +1,4 @@
 import React from 'react';
-=======
-import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, RefreshCw, Target, Users, Zap, Globe } from 'lucide-react';
@@ -29,7 +27,6 @@ const DigitalTransformation: React.FC = () => {
       description: "Streamline operations and improve efficiency through digital workflows",
       features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
       icon: "⚡"
-=======
       features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
       icon: "⚡"
     },
@@ -38,7 +35,6 @@ const DigitalTransformation: React.FC = () => {
       description: "Create seamless digital experiences that delight your customers",
       features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
       icon: "🎯"
-=======
       features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
       icon: "🎯"
     },
@@ -47,14 +43,12 @@ const DigitalTransformation: React.FC = () => {
       description: "Leverage data insights to drive informed business decisions",
       features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
       icon: "📊"
-=======
       features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
       icon: "📊"
     },
     {
       title: "Technology Infrastructure",
       description: "Modernize your technology stack for scalability and performance",
-=======
       features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],
       icon: "🏗️"
     }
@@ -73,7 +67,6 @@ const DigitalTransformation: React.FC = () => {
     { step: "Optimization", icon: "📈", description: "Continuous improvement and scaling" }
   ];
   return (
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       <SEO 
         title="Digital Transformation - Zion Tech Group"
@@ -120,7 +113,6 @@ const DigitalTransformation: React.FC = () => {
         </div>
       </section>
       {/* Services Section */}
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -160,7 +152,6 @@ const DigitalTransformation: React.FC = () => {
           </div>
         </div>
       </section>
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -252,7 +243,6 @@ const DigitalTransformation: React.FC = () => {
           </div>
         </div>
       </section>
-=======
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -275,6 +265,5 @@ const DigitalTransformation: React.FC = () => {
   );
 };
 export default DigitalTransformation;
-=======
 };
 export default DigitalTransformation;

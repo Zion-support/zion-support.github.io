@@ -321,12 +321,10 @@ export default function ServicesPricingPage() {
               <div className="text-3xl font-bold text-zion-cyan">25+</div>
               <div className="text-sm">Services Available</div>
             </div>
-=======
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">
               <Mail className="mr-2 h-5 w-5" />
               Contact Sales
             </Button>
-=======
           </div>
         </div>
       </div>
@@ -373,7 +371,6 @@ export default function ServicesPricingPage() {
             <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <Award className="w-8 h-8 text-white" />
             </div>
-=======
           </div>
         </div>
       </div>
@@ -395,7 +392,6 @@ export default function ServicesPricingPage() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Flexible pricing options designed to scale with your business needs
-=======
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -453,7 +449,6 @@ export default function ServicesPricingPage() {
                     ))}
                   </ul>
                   <Button className="w-full mt-6" variant={index === 1 ? "default" : "outline"}>
-=======
                     Get Started
                   </Button>
                 </CardContent>
@@ -898,7 +893,6 @@ export default function ServicesPricingPage() {
                 </p>
               </CardContent>
             </Card>
-=======
           </div>
         </div>
       </div>
@@ -954,7 +948,6 @@ export default function ServicesPricingPage() {
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue text-lg px-8 py-6">
               <Phone className="mr-3 h-6 w-6" />
-=======
               Schedule Consultation
             </Button>
           </div>
@@ -963,7 +956,6 @@ export default function ServicesPricingPage() {
             <p>Email: kleber@ziontechgroup.com</p>
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
-=======
       {/* Contact Information Banner */}
       <div className="bg-zion-purple/20 border-b border-zion-purple/30">
         <div className="container mx-auto px-4 py-6">

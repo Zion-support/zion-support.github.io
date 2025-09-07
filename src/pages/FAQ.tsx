@@ -2,8 +2,6 @@ import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
-=======
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -26,7 +24,6 @@ import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-=======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 export default function FAQ() {
@@ -126,7 +123,6 @@ export default function FAQ() {
         {
           question: "How do I ensure quality work?",
           answer: "Review talent profiles, check ratings and reviews, request portfolios, and start with smaller projects to test the relationship. Our dispute resolution system also protects both parties."
-=======
       title: "For Clients",
       icon: Users,
       questions: [
@@ -176,7 +172,6 @@ export default function FAQ() {
         {
           question: "Are there any guarantees on services?",
           answer: "Yes, we offer satisfaction guarantees and our dispute resolution system ensures fair outcomes. Most professionals also offer revisions and support to ensure your complete satisfaction."
-=======
       title: "Platform Features",
       icon: ShoppingCart,
       questions: [
@@ -227,7 +222,6 @@ export default function FAQ() {
           answer: "We maintain compliance with major regulations including GDPR, SOC 2, and industry-specific requirements. Our legal team ensures all contracts and terms meet your business needs."
         }
       ]
-=======
       question: "What is Zion Tech Group?",
       answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect businesses with top AI and tech talent, services, and equipment in one comprehensive platform."
     },
@@ -266,7 +260,6 @@ export default function FAQ() {
     {
       question: "Can I rent equipment through Zion?",
       answer: "Absolutely! Our equipment marketplace offers a wide range of tech equipment for rent, from development hardware to specialized AI computing resources, making it easier for businesses to access what they need without large capital investments."
-=======
       title: "Security & Trust",
       icon: Shield,
       questions: [
@@ -297,7 +290,6 @@ export default function FAQ() {
       description: "For business partnerships",
       contact: "commercial@ziontechgroup.com",
       icon: Users
-=======
     }
   ];
   return (
@@ -557,7 +549,6 @@ export default function FAQ() {
               </a>
             </div>
 }
-=======
     <>
       <SEO
         title="FAQ - Frequently Asked Questions | Zion Tech Group"
@@ -570,7 +561,6 @@ export default function FAQ() {
         keywords="FAQ, help, support, Zion marketplace, AI services, tech talent"
         canonical="https://ziontechgroup.com/faq"
       />
-=======
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -709,7 +699,6 @@ export default function FAQ() {
                   <Link to="/terms" className="block text-zion-cyan hover:text-zion-purple transition-colors">Terms of Service</Link>
                   <Link to="/privacy" className="block text-zion-cyan hover:text-zion-purple transition-colors">Privacy Policy</Link>
                 </div>
-=======
               </div>
             </div>
           </div>
@@ -728,7 +717,6 @@ export default function FAQ() {
     </div>
   );
 }
-=======
     <div className="min-h-screen bg-background">
       <SEO 
         title="FAQ - Zion Tech Group" 
@@ -799,6 +787,4 @@ export default function FAQ() {
     </div>
   );
 }
-=======
 }
-=======

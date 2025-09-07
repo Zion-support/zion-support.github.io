@@ -1,10 +1,4 @@
 import React from 'react';
-=======
-=======
-      title: "Threat Detection & Response",
-      description: "Advanced threat detection and rapid incident response capabilities",
-      features: ["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],
-      icon: "🛡️"
     },
     {
       icon: Lock,
@@ -224,7 +218,6 @@ const Cybersecurity: React.FC = () => {
             </div>
           </div>
         </section>
-=======
         {/* Security Features */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -286,7 +279,6 @@ const Cybersecurity: React.FC = () => {
             </div>
           </div>
         </section>
-=======
         {/* Security Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -336,7 +328,6 @@ const Cybersecurity: React.FC = () => {
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-=======
               Let's discuss how our cybersecurity solutions can protect your digital assets
             </p>
             <Link
@@ -349,8 +340,6 @@ const Cybersecurity: React.FC = () => {
         </section>
       </div>
     </>
-=======
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

@@ -1,19 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-=======
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  MessageSquare, 
-  ArrowRight,
-  Globe,
-  Shield,
-  Users
-} from 'lucide-react';
-export function ContactSection() {
-  const contactMethods = [
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
