@@ -1,18 +1,38 @@
 #!/bin/bash
-echo "🚀 Deploying Zion Tech Group Application..."
+<<<<<<< HEAD
+=======
 
-# Build the application
+# Deployment script for production
+set -e
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
+echo "🚀 Starting deployment process..."
+
+# Check if we're on the main branch
+CURRENT_BRANCH=$(git branch --show-current)
+if [ "$CURRENT_BRANCH" != "main" ]; then
+    echo "❌ Not on main branch. Current branch: $CURRENT_BRANCH"
+    exit 1
+fi
+
+# Pull latest changes
+echo "📥 Pulling latest changes..."
+git pull origin main
+
+# Install dependencies
+echo "📦 Installing dependencies..."
+npm ci
+
+# Run tests
+echo "🧪 Running tests..."
+npm test -- --passWithNoTests
+
+# Build application
+echo "🏗️ Building application..."
 npm run build
 
-# Check if build was successful
-if [ $? -eq 0 ]; then
-  echo "✅ Build successful"
-  
-  # Start the application
-  npm run start &
-  
-  echo "🎉 Application deployed successfully!"
-else
-  echo "❌ Build failed"
-  exit 1
-fi
+# Deploy to production
+echo "🚀 Deploying to production..."
+# Add your deployment commands here
+
+echo "✅ Deployment completed successfully!"

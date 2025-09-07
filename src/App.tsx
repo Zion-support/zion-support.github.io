@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -52,12 +53,34 @@ const LoadingSpinner = () => (
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>
   </div>
 );
+=======
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Button from './components/Button';
+import Card from './components/Card';
+import ServiceCard from './components/ServiceCard';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ErrorBoundary from './components/ErrorBoundary';
+import ToastContainer from './components/ToastContainer';
+import { ThemeProvider } from './components/ThemeProvider';
+import ScrollToTop from './components/ScrollToTop';
+import BackToTop from './components/BackToTop';
+import SEO from './components/SEO';
+import Analytics from './components/Analytics';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Pricing from './pages/Pricing';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-f9ca
 
 function App() {
   return (
     <ThemeProvider>
       <ErrorBoundary>
         <Router>
+<<<<<<< HEAD
           <div className="min-h-screen bg-background">
             <Header />
             <main className="flex-1">
@@ -75,6 +98,27 @@ function App() {
             <Footer />
             <PerformanceMonitor />
           </div>
+=======
+          <SEO />
+          <Analytics />
+          <ScrollToTop />
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/pricing" element={<Pricing />} />
+              </Routes>
+            </main>
+            <Footer />
+            <ToastContainer />
+            <BackToTop />
+          </div>
+          <PerformanceMonitor />
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-f9ca
         </Router>
       </ErrorBoundary>
     </ThemeProvider>
