@@ -1,29 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 function fixMergeConflicts(filePath) {
   try {
-<<<<<<< HEAD
 
-=======
-    const content = fs.readFileSync(filePath, 'utf8');
-    
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     // Check if file has merge conflict markers
     if (
-<<<<<<< HEAD
-=======
-      content.includes('
-      content.includes('') ||
-      content.includes('>>>>>>>')
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+
     ) {
       console.log(`Fixing merge conflicts: in: ${filePath}`);
 
-<<<<<<< HEAD
-=======
-      // Remove merge conflict markers and keep the content after 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
       const lines = content.split('\n');
       const fixedLines = [];
       let inConflict = false;
@@ -32,24 +19,11 @@ function fixMergeConflicts(filePath) {
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
 
-<<<<<<< HEAD
-=======
-        if (line.includes('
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
           inConflict = true;
           keepContent = false;
           continue;
         }
 
-<<<<<<< HEAD
-=======
-        if (line.includes('')) {
-          keepContent = true;
-          continue;
-        }
-
-        if (line.includes('>>>>>>>')) {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
           inConflict = false;
           keepContent = false;
           continue;
@@ -62,38 +36,52 @@ function fixMergeConflicts(filePath) {
 
       fs.writeFileSync(filePath, fixedLines.join('\n'), 'utf8');
       return true;
-    }
+=======
+function resolveConflictsInFile(filePath) {
+    try {
+        let content = fs.readFileSync(filePath, 'utf8');
+        const conflictPattern = /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [a-f0-9]+.*/g;
+        let hasConflicts = false;
 
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+        // Attempt to resolve conflicts by preferring "HEAD" changes
+        content = content.replace(conflictPattern, (match, headContent, incomingContent) => {
+            hasConflicts = true;
+            // Simple strategy: prefer HEAD's version.
+            return headContent.trim();
+        });
+
+        if (hasConflicts) {
+            fs.writeFileSync(filePath, content, 'utf8');
+            console.log(`✅ Resolved conflicts in ${filePath}`);
+            return true;
+        }
+        return false;
+    } catch (error) {
+        console.log(`❌ Error processing ${filePath}: ${error.message}`);
+        return false;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+    }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
+function resolveConflictsInDirectory(directory) {
+    let resolvedCount = 0;
+    const files = fs.readdirSync(directory);
 
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
+    for (const file of files) {
+        const filePath = path.join(directory, file);
+        const stat = fs.statSync(filePath);
 
-    if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath);
-    } else if (
-      file.endsWith('.tsx') ||
-      file.endsWith('.ts') ||
-      file.endsWith('.jsx') ||
-      file.endsWith('.js')
-    ) {
-      if (fixMergeConflicts(filePath)) fixedCount++;
+        if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+            resolvedCount += resolveConflictsInDirectory(filePath);
+        } else if (stat.isFile() && /\.(js|cjs|ts|tsx|json)$/.test(file)) {
+            if (resolveConflictsInFile(filePath)) {
+                resolvedCount++;
+            }
+        }
     }
-  }
-
-  return fixedCount;
+    return resolvedCount;
 }
 
-console.log('Starting comprehensive merge conflict fixes...');
-const fixedCount = processDirectory('.');
-console.log(`Fixed ${fixedCount} files`);
+console.log('🔧 Starting comprehensive merge conflict resolution...');
+const resolvedConflicts = resolveConflictsInDirectory('/workspace');
+console.log(`✅ Finished resolving merge conflicts. Resolved ${resolvedConflicts} files.`);

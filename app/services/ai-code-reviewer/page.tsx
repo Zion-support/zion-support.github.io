@@ -1,68 +1,67 @@
+<<<<<<< HEAD
 export const metadata = {
-  title: "AI Code Reviewer | Zion Tech Group",
-  description: "Automated code review and quality analysis powered by AI. Improve code quality, catch bugs early, and maintain coding standards.",
+  title: 'Ai Code Reviewer | Zion Tech Group',
+  description: 'Professional ai code reviewer services for your business needs.',
+  keywords: 'ai-code-reviewer, services, business, technology'
 };
 
-export default function AICodeReviewerPage() {
+export default function ServicePage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-purple-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Code Reviewer
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Automated code review and quality analysis powered by advanced AI.
-              Improve code quality, catch bugs early, and maintain consistent coding standards across your team.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+=======
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+export const metadata = {
+  title: 'Ai Code Reviewer - Zion Tech Group',
+  description: 'Professional ai code reviewer solutions for your business needs.',
+};
+
+export default function AiCodeReviewerPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Code Reviewer
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai code reviewer services for your business needs.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai code reviewer solutions designed for your specific business requirements.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="text-4xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Automated Analysis</h3>
-              <p className="text-gray-600 mb-4">AI-powered code analysis that catches bugs and quality issues automatically.</p>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Real-time Feedback</h3>
-              <p className="text-gray-600 mb-4">Get instant feedback on code quality and suggestions for improvements.</p>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Quality Metrics</h3>
-              <p className="text-gray-600 mb-4">Track code quality metrics and maintain consistent standards across your team.</p>
-            </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
           </div>
+<<<<<<< HEAD
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai code reviewer solutions run smoothly.
+            </p>
+          </div>
+=======
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-gray-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Improve Your Code Quality?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how AI can revolutionize your code review process.
-          </p>
-          <a
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
-          >
-            Get Started
-          </a>
-        </div>
-      </section>
+      </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a

@@ -2,13 +2,8 @@ import { Config } from "tailwindcss",
 import { fontFamily } from "tailwindcss/defaultTheme",
 import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
-
 import plugin from "tailwindcss/plugin",
 import animatePlugin from "tailwindcss-animate",
-
-
-
-
 const config: Config = {
   darkMode: ["class"]
   content: [
@@ -17,12 +12,6 @@ const config: Config = {
     "./app/**/*.{ts,tsx}";
     "./src/**/*.{ts,tsx}"];
   safelist: ['border-border'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import { Config } from './tailwindcss';
 import { font_family } from './tailwindcss / default_theme';
 import plugin from './tailwindcss / plugin';
 import animate_plugin from './tailwindcss - animate';
@@ -34,62 +23,18 @@ const config: Config = {
     "./app/**/*.{ts, tsx}";
     "./src/**/*.{ts, tsx}"];
   safelist: ['border - border'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  theme: {
-    container: {
-<<<<<<< HEAD
-      center: true;
-      padding: "2rem"
-=======
-
-
-<<<<<<< HEAD
-=======
-import {Config} from "tailwindcss";
-import {fontFamily} from "tailwindcss/defaultTheme";
-import plugin from "tailwindcss/plugin";
-import animatePlugin from "tailwindcss-animate";
-import { Config } from "tailwindcss",
-import { fontFamily } from "tailwindcss/defaultTheme",
-import plugin from "tailwindcss/plugin";
-import animatePlugin from "tailwindcss-animate";
-
-import plugin from "tailwindcss/plugin",
-import animatePlugin from "tailwindcss-animate",
-const config: Config = {
-  darkMode: ["class"]
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}"],
-  safelist: ['border-border'],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   theme: {
     container: {
       center: true;
-      padding: "2rem"
-<<<<<<< HEAD
-      screens: {
+      padding: "2rem"  theme: {
+    container: {
+      center: true;
+      padding: "padding",
+    screens: {
         "2xl": "1400px"}}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      center: true,
       padding: "2rem",
       screens: {
         "2xl": "1400px"}},
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     extend: {
       colors: {
         border: "hsl (var (--border))";
@@ -97,440 +42,21 @@ const config: Config = {
         ring: "hsl (var (--ring))";
         background: "hsl (var (--background))";
         foreground: "hsl (var (--foreground))";
-        primary: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-        sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
-
-=======
-        sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
-
-    extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))"
-          foreground: "hsl(var(--primary-foreground))"}
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))"
-          foreground: "hsl(var(--secondary-foreground))"}
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))"
-          foreground: "hsl(var(--destructive-foreground))"}
-        muted: {
-          DEFAULT: "hsl(var(--muted))"
-          foreground: "hsl(var(--muted-foreground))"}
-        accent: {
-          DEFAULT: "hsl(var(--accent))"
-          foreground: "hsl(var(--accent-foreground))"}
-        popover: {
-          DEFAULT: "hsl(var(--popover))"
-          foreground: "hsl(var(--popover-foreground))"}
-        card: {
-          DEFAULT: "hsl(var(--card))"
-          foreground: "hsl(var(--card-foreground))"}
-        // Custom Zion colors
-        "zion-blue": {
-          DEFAULT: "#0a0f1f";
-          light: "#1e263b"
-          dark: "#090c1a"}
-        "zion-purple": {
-          DEFAULT: "#a855f7";
-          light: "#d8b4fe"
-          dark: "#9333ea"}
-        "zion-cyan": {
-          DEFAULT: "#00e5ff";
-          light: "#7df9ff"
-          dark: "#00c4cc"}
-        "zion-slate": {
-          DEFAULT: "#94A3B8";
-          light: "#CBD5E1"
-          dark: "#64748B"}}
-      borderRadius: {
-        lg: "var(--radius)";
-        md: "calc(var(--radius) - 2px)"
-        sm: "calc(var(--radius) - 4px)"}
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans]}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      keyframes: {
+        primary: {      keyframes: {
         "accordion-down": {
           from: { height: "0" }
           to: { height: "var(--radix-accordion-content-height)" }}
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" }
           to: { height: "0" }}}
-      animation: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        "accordion-down": "accordion-down 0 && 0.2s ease-out",
-        "accordion-up": "accordion-up 0 && 0.2s ease-out"}}};
-
-=======
-
-=======
-        "accordion-down": "accordion-down 0.2s ease-out"
-        "accordion-up": "accordion-up 0.2s ease-out"}}}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))"},
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))"},
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))"},
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))"},
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))"},
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))"},
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))"},
-        // Custom Zion colors
-        "zion-blue": {
-          DEFAULT: "#0a0f1f",
-          light: "#1e263b",
-          dark: "#090c1a"},
-        "zion-purple": {
-          DEFAULT: "#a855f7",
-          light: "#d8b4fe",
-          dark: "#9333ea"},
-        "zion-cyan": {
-          DEFAULT: "#00e5ff",
-          light: "#7df9ff",
-          dark: "#00c4cc"},
-        "zion-slate": {
-          DEFAULT: "#94A3B8",
-          light: "#CBD5E1",
-          dark: "#64748B"}},
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)"},
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans]},
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" }},
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" }}},
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out"}}},
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  plugins: [
+      animation: {  plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          DEFAULT: "hsl (var (--primary))",
-          foreground: "hsl (var (--primary - foreground))"}
-        secondary: {
-          DEFAULT: "hsl (var (--secondary))",
-          foreground: "hsl (var (--secondary - foreground))"}
-        destructive: {
-          DEFAULT: "hsl (var (--destructive))",
-          foreground: "hsl (var (--destructive - foreground))"}
-        muted: {
-          DEFAULT: "hsl (var (--muted))",
-          foreground: "hsl (var (--muted - foreground))"}
-        accent: {
-          DEFAULT: "hsl (var (--accent))",
-          foreground: "hsl (var (--accent - foreground))"}
-        popover: {
-          DEFAULT: "hsl (var (--popover))",
-          foreground: "hsl (var (--popover - foreground))"}
-        card: {
-          DEFAULT: "hsl (var (--card))",
-          foreground: "hsl (var (--card - foreground))"}
-        // Custom Zion colors;
-        "zion - blue": {
-          DEFAULT: "#0a0f1f";
-          light: "#1e263b",
-          dark: "#090c1a"}
-        "zion - purple": {
-          DEFAULT: "#a855f7";
-          light: "#d8b4fe",
-          dark: "#9333ea"}
-        "zion - cyan": {
-          DEFAULT: "#00e5ff";
-          light: "#7df9ff",
-          dark: "#00c4cc"}
-        "zion - slate": {
-          DEFAULT: "#94A3B8";
-          light: "#CBD5E1",
-          dark: "#64748B"}}
-      border_radius: {
-        lg: "var (--radius)";
-        md: "calc (var (--radius) - 2px)",
-        sm: "calc (var (--radius) - 4px)"}
-      font_family: {
-        sans: ["var (--font - sans)", ...font_family.sans]}
-      keyframes: {
-        "accordion - down": {
-          from: { height: "0" }
-          to: { height: "var (--radix - accordion - content - height)" }}
-        "accordion - up": {
-          from: { height: "var (--radix - accordion - content - height)" }
-          to: { height: "0" }}}
-      animation: {
-        "accordion - down": "accordion - down 0.2s ease - out",
-        "accordion - up": "accordion - up 0.2s ease - out"}}}
-  plugins: [;
-    animate_plugin,
-    plugin (function ({ add_utilities }) {
-      const new_utilities = {
-        '.rtl': {
-=======
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-          direction: 'rtl',
-          text_align: 'right'}
-        '.ltr': {
-          direction: 'ltr',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-          direction: 'rtl'
-          textAlign: 'right'}
-        '.ltr': {
-          direction: 'ltr'
-          textAlign: 'left'}}
-      addUtilities(newUtilities)
-    })]}
-export default config;
-
-          direction: 'rtl',
-          textAlign: 'right'},
-        '.ltr': {
-          direction: 'ltr',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          textAlign: 'left'}},
-      addUtilities(newUtilities)
-    })]},
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-export default config,
-import { Config } from "tailwindcss",;
-import { fontFamily } from "tailwindcss/defaultTheme",;
-import plugin from "tailwindcss/plugin",;
-import animatePlugin from "tailwindcss-animate",;
-const config: Config = {;
-  darkMode: ["class"],;
-  content: [;
-    "./pages/**/*.{ts,tsx}",;
-    "./components/**/*.{ts,tsx}",;
-    "./app/**/*.{ts,tsx}",;
-    "./src/**/*.{ts,tsx}"],;
-  safelist: ['border-border'],;
-  theme: {;
-    container: {;
-      center: true,;
-      padding: "2rem",;
-      screens: {;
-        "2xl": "1400px"}},;
-    extend: {;
-      colors: {;
-        border: "hsl(var(--border))",;
-        input: "hsl(var(--input))",;
-        ring: "hsl(var(--ring))",;
-        background: "hsl(var(--background))",;
-        foreground: "hsl(var(--foreground))",;
-        primary: {;
-          DEFAULT: "hsl(var(--primary))",;
-          foreground: "hsl(var(--primary-foreground))"},;
-        secondary: {;
-          DEFAULT: "hsl(var(--secondary))",;
-          foreground: "hsl(var(--secondary-foreground))"},;
-        destructive: {;
-          DEFAULT: "hsl(var(--destructive))",;
-          foreground: "hsl(var(--destructive-foreground))"},;
-        muted: {;
-          DEFAULT: "hsl(var(--muted))",;
-          foreground: "hsl(var(--muted-foreground))"},;
-        accent: {;
-          DEFAULT: "hsl(var(--accent))",;
-          foreground: "hsl(var(--accent-foreground))"},;
-        popover: {;
-          DEFAULT: "hsl(var(--popover))",;
-          foreground: "hsl(var(--popover-foreground))"},;
-        card: {;
-          DEFAULT: "hsl(var(--card))",;
-          foreground: "hsl(var(--card-foreground))"},;
-        // Custom Zion colors;
-        "zion-blue": {;
-          DEFAULT: "#0a0f1f",;
-          light: "#1e263b",;
-          dark: "#090c1a"},;
-        "zion-purple": {;
-          DEFAULT: "#a855f7",;
-          light: "#d8b4fe",;
-          dark: "#9333ea"},;
-        "zion-cyan": {;
-          DEFAULT: "#00e5ff",;
-          light: "#7df9ff",;
-          dark: "#00c4cc"},;
-        "zion-slate": {;
-          DEFAULT: "#94A3B8",;
-          light: "#CBD5E1",;
-          dark: "#64748B"}},;
-      borderRadius: {;
-        lg: "var(--radius)",;
-        md: "calc(var(--radius) - 2px)",;
-        sm: "calc(var(--radius) - 4px)"},;
-      fontFamily: {;
-        sans: ["var(--font-sans)", ...fontFamily.sans]},;
-      keyframes: {;
-        "accordion-down": {;
-          from: { height: "0" },;
-          to: { height: "var(--radix-accordion-content-height)" }},;
-        "accordion-up": {;
-          from: { height: "var(--radix-accordion-content-height)" },;
-          to: { height: "0" }}},;
-      animation: {;
-        "accordion-down": "accordion-down 0.2s ease-out",;
-        "accordion-up": "accordion-up 0.2s ease-out"}}},;
-  plugins: [;
-    animatePlugin,;
-    plugin(function({ addUtilities }) {;
-      const newUtilities = {;
-        '.rtl': {;
-          direction: 'rtl',;
-          textAlign: 'right'},;
-        '.ltr': {;
-          direction: 'ltr',;
-          textAlign: 'left'}},;
-      addUtilities(newUtilities);
-    })]},;
-<<<<<<< HEAD
-          DEFAULT: "hsl (var (--primary))",
-          foreground: "hsl (var (--primary - foreground))"}
-        secondary: {
-          DEFAULT: "hsl (var (--secondary))",
-          foreground: "hsl (var (--secondary - foreground))"}
-        destructive: {
-          DEFAULT: "hsl (var (--destructive))",
-          foreground: "hsl (var (--destructive - foreground))"}
-        muted: {
-          DEFAULT: "hsl (var (--muted))",
-          foreground: "hsl (var (--muted - foreground))"}
-        accent: {
-          DEFAULT: "hsl (var (--accent))",
-          foreground: "hsl (var (--accent - foreground))"}
-        popover: {
-          DEFAULT: "hsl (var (--popover))",
-          foreground: "hsl (var (--popover - foreground))"}
-        card: {
-          DEFAULT: "hsl (var (--card))",
-          foreground: "hsl (var (--card - foreground))"}
-        // Custom Zion colors;
-        "zion - blue": {
-          DEFAULT: "#0a0f1f";
-          light: "#1e263b",
-          dark: "#090c1a"}
-        "zion - purple": {
-          DEFAULT: "#a855f7";
-          light: "#d8b4fe",
-          dark: "#9333ea"}
-        "zion - cyan": {
-          DEFAULT: "#00e5ff";
-          light: "#7df9ff",
-          dark: "#00c4cc"}
-        "zion - slate": {
-          DEFAULT: "#94A3B8";
-          light: "#CBD5E1",
-          dark: "#64748B"}}
-      border_radius: {
-        lg: "var (--radius)";
-        md: "calc (var (--radius) - 2px)",
-        sm: "calc (var (--radius) - 4px)"}
-      font_family: {
-        sans: ["var (--font - sans)", ...font_family.sans]}
-      keyframes: {
-        "accordion - down": {
-          from: { height: "0" }
-          to: { height: "var (--radix - accordion - content - height)" }}
-        "accordion - up": {
-          from: { height: "var (--radix - accordion - content - height)" }
-          to: { height: "0" }}}
-      animation: {
-        "accordion - down": "accordion - down 0.2s ease - out",
-        "accordion - up": "accordion - up 0.2s ease - out"}}}
-  plugins: [;
-    animate_plugin,
-    plugin (function ({ add_utilities }) {
-      const new_utilities = {
-        '.rtl': {
-
-
-          direction: 'rtl',
-          text_align: 'right'}
-        '.ltr': {
-          direction: 'ltr',
-
-          textAlign: 'left'}},
-      addUtilities(newUtilities)
-    })]},
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
 export default config;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-export default config;
-export default config;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          text_align: 'left'}}
       add_utilities (new_utilities);
     })]}
 ;
 export default config;
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

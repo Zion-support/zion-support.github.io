@@ -7,4 +7,4 @@ export export export default function ResetPassword()      {;
     </div>;
   );
 }
-;
+}

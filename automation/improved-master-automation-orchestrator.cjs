@@ -1,17 +1,6 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -75,24 +64,10 @@ class ImprovedMasterAutomationOrchestrator {
         errors: [error.message],
         fixes: 0,
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync, spawn } = require("child_process");class ImprovedMasterAutomationOrchestrator { constructor() { this.projectRoot = process.cwd(); this.startTime = new Date(); this.results = { dependencyFix: { success: false, duration: 0, errors: [] }, typescriptFix: { success: false, duration: 0, errors: [] }, syntaxValidation: { success: false, duration: 0, errors: [] }, healthCheck: { success: false, duration: 0, errors: [] }, securityScan: { success: false, duration: 0, errors: [] }, performanceOptimize: { success: false, duration: 0, errors: [] }, buildTest: { success: false, duration: 0, errors: [] } }; this.totalFixes = 0; this.totalErrors = 0; }" log(message, type = "INFO") { const timestamp = new Date().toISOString(); const emoji = {" INFO: ""," SUCCESS: ""," ERROR: ""," WARNING: ""," PHASE: """ }[type] | ""; console.log(`[${timestamp}] [${type}] ${emoji} ${message}`); } async runScript(scriptName, scriptPath, options = {}) { const startTime = Date.now();"` this.log(`Running ${scriptName}.`, "PHASE"); try {` const result = execSync(`node ${scriptPath}`, { cwd: this.projectRoot," stdio: "pipe"," encoding: "utf8", timeout: options.timeout | 300000 / 5 minutes default timeout }); const duration = Date.now() - startTime;"` this.log(`${scriptName} completed successfully in ${duration}ms`, "SUCCESS"); / Parse output for fixes and errors const fixes = (result.match(/|Fixed|Fixes Applied/g) | []).length; const errors = (result.match(/|Error|Failed/g) | []).length; this.totalFixes += fixes; this.totalErrors += errors; return { success: true, duration, errors: [], fixes, output: result }; } catch (error) { const duration = Date.now() - startTime;"` this.log(`${scriptName} failed: ${error.message}`, "ERROR"); return { success: false, duration, errors: [error.message], fixes: 0," output: error.stdout | error.stderr | "" }; } } async runDependencyFix() {" this.log("\n PHASE 1: DEPENDENCY FIXING", "PHASE");" this.log("=" .repeat(50)); " const result = await this.runScript("Dependency Fixer", "./automation/dependency-fixer.cjs"); this.results.dependencyFix = result; if (result.success) {"` this.log(`Dependencies fixed: ${result.fixes} issues resolved`, "SUCCESS"); } else {"` this.log(`Dependency fixing failed: ${result.errors.join(", ")}`, "ERROR"); } return result; } async runTypeScriptFix() {" this.log("\n PHASE 2: TYPESCRIPT FIXING", "PHASE");" this.log("=" .repeat(50)); " const result = await this.runScript("TypeScript Fixer", "./automation/typescript-fixer.cjs"); this.results.typescriptFix = result; if (result.success) {"` this.log(`TypeScript issues fixed: ${result.fixes} issues resolved`, "SUCCESS"); } else {"` this.log(`TypeScript fixing failed: ${result.errors.join(", ")}`, "ERROR"); } return result; } async runSyntaxValidation() {" this.log("\n PHASE 3: SYNTAX VALIDATION", "PHASE");" this.log("=" .repeat(50)); " const result = await this.runScript("Syntax Validator", "./scripts/comprehensive-syntax-fixer.cjs"); this.results.syntaxValidation = result; if (result.success) {"` this.log(`Syntax validation completed: ${result.fixes} issues resolved`, "SUCCESS"); } else {"` this.log(`Syntax validation failed: ${result.errors.join(", ")}`, "ERROR"); } return result; } async runHealthCheck() {" this.log("\n PHASE 4: HEALTH CHECK", "PHASE");" this.log("=" .repeat(50)); " const result = await this.runScript("Health Check", "./automation/health-check.cjs"); this.results.healthCheck = result; if (result.success) {" this.log("Health check passed", "SUCCESS"); } else {"` this.log(`Health check failed: ${result.errors.join(", ")}`, "ERROR"); } return result; } async runSecurityScan() {" this.log("\n PHASE 5: SECURITY SCAN", "PHASE");" this.log("=" .repeat(50)); " const result = await this.runScript("Security Scanner", "./automation/security-scanner.cjs"); this.results.securityScan = result; if (result.success) {" this.log("Security scan completed", "SUCCESS"); } else {"` this.log(`Security scan failed: ${result.errors.join(", ")}`, "ERROR"); } return result; } async runPerformanceOptimization() {" this.log("\n PHASE 6: PERFORMANCE OPTIMIZATION", "PHASE");" this.log("=" .repeat(50)); " const result = await this.runScript("Performance Optimizer", "./automation/performance-optimizer.cjs"); this.results.performanceOptimize = result; if (result.success) {" this.log("Performance optimization completed", "SUCCESS"); } else {"` this.log(`Performance optimization failed: ${result.errors.join(", ")}`, "ERROR"); } return result; } async runBuildTest() {" this.log("\n PHASE 7: BUILD TEST", "PHASE");" this.log("=" .repeat(50)); try { const startTime = Date.now();" this.log("Running build test.", "INFO"); " const result = execSync("npm run build", { cwd: this.projectRoot," stdio: "pipe"," encoding: "utf8", timeout: 600000 / 10 minutes timeout for build }); const duration = Date.now() - startTime;" this.log("Build test completed successfully", "SUCCESS"); this.results.buildTest = { success: true, duration, errors: [], output: result }; return this.results.buildTest; } catch (error) { const duration = Date.now() - Date.now();"` this.log(`Build test failed: ${error.message}`, "ERROR"); this.results.buildTest = { success: false, duration, errors: [error.message]," output: error.stdout | error.stderr | "" }; return this.results.buildTest; } } generateReport() { const endTime = new Date(); const totalDuration = endTime - this.startTime; " this.log("\n AUTOMATION REPORT", "PHASE");" this.log("=" .repeat(50));` console.log(`\n Total Duration: ${Math.round(totalDuration / 1000)}s`);` console.log(` Total Fixes Applied: ${this.totalFixes}`);` console.log(` Total Errors Found: ${this.totalErrors}`); " console.log("\n Phase Results:"); Object.entries(this.results).forEach(([phase, result]) => {" const status = result.success ? "" : ""; const duration = Math.round(result.duration / 1000);` console.log(` ${status} ${phase}: ${duration}s`); if (result.errors.length > 0) {"` console.log(` Errors: ${result.errors.join(", ")}`); } if (result.fixes > 0) {` console.log(` Fixes: ${result.fixes}`); } }); const successCount = Object.values(this.results).filter(r => r.success).length; const totalPhases = Object.keys(this.results).length;` console.log(`\n Overall Success Rate: ${successCount}/${totalPhases} (${Math.round(successCount/totalPhases*100)}%)`); if (this.results.buildTest.success) {" this.log(" All automation phases completed successfully!", "SUCCESS"); } else {" this.log(" Some automation phases failed. Check the report above.", "WARNING"); } } async run() {" this.log(" Starting Improved Master Automation Orchestrator", "PHASE");` this.log(`Project Root: ${this.projectRoot}`);` this.log(`Start Time: ${this.startTime.toISOString()}`); try { await this.runDependencyFix(); await this.runTypeScriptFix(); await this.runSyntaxValidation(); await this.runHealthCheck(); await this.runSecurityScan(); await this.runPerformanceOptimization(); await this.runBuildTest(); this.generateReport(); } catch (error) {"` this.log(`Fatal error in automation: ${error.message}`, "ERROR"); process.exit(1); } }}/ Run the orchestratorif (require.main === module) { const orchestrator = new ImprovedMasterAutomationOrchestrator(); orchestrator.run().catch(console.error);}module.exports = ImprovedMasterAutomationOrchestrator;"`"`
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 =======
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -105,8 +80,8 @@ const { execSync, spawn } = require('child_process')
       'PHASE': ''
     }[type] || 'ℹ'
     this.log(`Running ${scriptName}...`, 'PHASE'`)
-        stdio: 'pipe'
-        encoding: 'utf8'
+        stdio: "stdio",
+    encoding: 'utf8'
       this.log(`${scriptName} completed successfully in ${duration}ms`, 'SUCCESS'`)
       this.log(`${scriptName} failed: ${error.message}`, 'ERROR'`)
         output: error.stdout || error.stderr || ''
@@ -150,19 +125,7 @@ const { execSync, spawn } = require('child_process')
       this.log(`Build test failed: ${error.message}`, 'ERROR'`)
         output: error.stdout || error.stderr || ''
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       };
       return this.results.buildTest;
     }
@@ -216,24 +179,10 @@ if (require.main === module) {
   orchestrator.run().catch(console.error);
 }
 module.exports = ImprovedMasterAutomationOrchestrator;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 =======
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     this.log('\n AUTOMATION REPORT', 'PHASE')
     this.log('=')
     console.log('\n� Phase Results:')
@@ -244,32 +193,19 @@ module.exports = ImprovedMasterAutomationOrchestrator;
     this.log(' Starting Improved Master Automation Orchestrator', 'PHASE')
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
 <<<<<<< HEAD
+
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
-      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
-<<<<<<< HEAD
+      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -278,3 +214,4 @@ module.exports = ImprovedMasterAutomationOrchestrator;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

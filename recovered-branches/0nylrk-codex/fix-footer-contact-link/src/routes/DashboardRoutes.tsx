@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
@@ -22,12 +20,7 @@ import Referrals from "@/pages/Referrals";
 import DeveloperPortal from "@/pages/DeveloperPortal";
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
-const DashboardRoutes = () => {
-=======
-const DashboardRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import {Fragment} from "react";
+const DashboardRoutes = () => {import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import Dashboard from "@/pages/Dashboard";
@@ -49,9 +42,6 @@ import Referrals from "@/pages/Referrals";
 import DeveloperPortal from "@/pages/DeveloperPortal";
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -74,7 +64,6 @@ import Referrals from "@/pages/Referrals",
 import DeveloperPortal from "@/pages/DeveloperPortal",
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
-
 import WalletPage from "@/pages/Wallet",
 import ContractBuilder from "@/pages/ContractBuilder",
 const DashboardRoutes = () => {
@@ -253,96 +242,32 @@ const DashboardRoutes = () => {
   )
 }
 export default DashboardRoutes;
-
 },
-
 export default DashboardRoutes,
-import { Fragment } from "react",;
-import { Route, Routes } from "react-router-dom",;
+import { Fragment } from "react";
+import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import Dashboard from "@/pages/Dashboard",;
-import ClientDashboard from "@/pages/ClientDashboard",;
-import TalentDashboard from "@/pages/TalentDashboard",;
-import CreatorDashboard from "@/pages/CreatorDashboard",;
-import Analytics from "@/pages/Analytics",;
-import ProjectMilestones from "@/pages/ProjectMilestones",;
-import ProjectDetails from "@/pages/ProjectDetails",;
-import ProjectRoom from "@/pages/ProjectRoom",;
-import MessagingInbox from "@/pages/MessagingInbox",;
-import Payments from "@/pages/Payments",;
-import Interviews from "@/pages/Interviews",;
-import Notifications from "@/pages/Notifications",;
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker",;
-import HiringTracker from "@/pages/HiringTracker",;
-import PortfolioBuilder from "@/pages/PortfolioBuilder",;
-import Referrals from "@/pages/Referrals",;
-import DeveloperPortal from "@/pages/DeveloperPortal",;
-import WalletPage from "@/pages/Wallet",;
-import ContractBuilder from "@/pages/ContractBuilder",;
+import Dashboard from "Dashboard";
+import ClientDashboard from "ClientDashboard";
+import TalentDashboard from "TalentDashboard";
+import CreatorDashboard from "CreatorDashboard";
+import Analytics from "Analytics";
+import ProjectMilestones from "ProjectMilestones";
+import ProjectDetails from "ProjectDetails";
+import ProjectRoom from "ProjectRoom";
+import MessagingInbox from "MessagingInbox";
+import Payments from "Payments";
+import Interviews from "Interviews";
+import Notifications from "Notifications";
+import ApplicationStatusTracker from "ApplicationStatusTracker";
+import HiringTracker from "HiringTracker";
+import PortfolioBuilder from "PortfolioBuilder";
+import Referrals from "Referrals";
+import DeveloperPortal from "DeveloperPortal";
+import WalletPage from "WalletPage";
+import ContractBuilder from "ContractBuilder";
 const DashboardRoutes = () => {
 const DashboardRoutes = () => {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return (
-    <Routes>;
-      {/* Dashboard Routes */}
-      <Route
-        path="/dashboard"
-        element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/client-dashboard"
-        element={
-          <ProtectedRoute>
-            <ClientDashboard />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/talent-dashboard"
-        element={
-          <ProtectedRoute>;
-            <TalentDashboard />;
-          </ProtectedRoute>;
-        }
-<<<<<<< HEAD
-=======
-      />
-      <Route
-        path="/creator-dashboard"
-        element={
-          <ProtectedRoute>
-            <CreatorDashboard />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/analytics"
-        element={
-          <ProtectedRoute>
-            <Analytics />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/project/:id/milestones"
-        element={
-          <ProtectedRoute>
-            <ProjectMilestones />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/project/:id"
-        element={
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-          <ProtectedRoute>;
             <ProjectDetails />;
           </ProtectedRoute>;
         }
@@ -352,9 +277,6 @@ const DashboardRoutes = () => {;
           </ProtectedRoute>;
         }
       />;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       <Route
         path="/messages"
         element={
@@ -429,11 +351,7 @@ const DashboardRoutes = () => {;
       />
       <Route
         path="/developers"
-        element={
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-          <ProtectedRoute>;
+        element={          <ProtectedRoute>;
             <DeveloperPortal />;
           </ProtectedRoute>;
         }
@@ -442,7 +360,6 @@ const DashboardRoutes = () => {;
           </ProtectedRoute>;
         }
       />;
-<<<<<<< HEAD
       <Route
         path="/dashboard/api-access"
         element={
@@ -452,97 +369,10 @@ const DashboardRoutes = () => {;
         }
       />
       <Route
-        path="/contract-builder"
-=======
-import { Fragment } from './react';
-import { Route, Routes } from './react-router-dom';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import Dashboard from "@/pages / Dashboard";
-import ClientDashboard from "@/pages / ClientDashboard";
-import TalentDashboard from "@/pages / TalentDashboard";
-import CreatorDashboard from "@/pages / CreatorDashboard";
-import Analytics from "@/pages / Analytics";
-import ProjectMilestones from "@/pages / ProjectMilestones";
-import ProjectDetails from "@/pages / ProjectDetails";
-import ProjectRoom from "@/pages / ProjectRoom";
-import MessagingInbox from "@/pages / MessagingInbox";
-import Payments from "@/pages / Payments";
-import Interviews from "@/pages / Interviews";
-import Notifications from "@/pages / Notifications";
-import ApplicationStatusTracker from "@/pages / ApplicationStatusTracker";
-import HiringTracker from "@/pages / HiringTracker";
-import PortfolioBuilder from "@/pages / PortfolioBuilder";
-import Referrals from "@/pages / Referrals";
-import DeveloperPortal from "@/pages / DeveloperPortal";
-import WalletPage from "@/pages / Wallet";
-import ContractBuilder from "@/pages / ContractBuilder";
-const DashboardRoutes = () =>: any {
-  return (
-const DashboardRoutes = () => {;
-  return (;
-    <Routes>;
-      {/* Dashboard Routes */}
-      <Route;
-        path="/dashboard";
-        element={
-          <ProtectedRoute>
-            <ContractBuilder />
-          </ProtectedRoute>
-        }
-      />
-    </Routes>
-  );
-};
-
-export default DashboardRoutes;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        }
+        path="/contract-builder"        }
       />;
     </Routes>);
 }
 ;
 export default DashboardRoutes;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-      />
-      <Route
-        path="/wallet"
-        element={
-          <ProtectedRoute>
-            <WalletPage />
-          </ProtectedRoute>
-        }
-      />;
-      <Route;
-        path="/dashboard/api-access";
-        element={;
-          <ProtectedRoute>;
-            <DeveloperPortal />;
-          </ProtectedRoute>;
-        } ;
-      />;
-      <Route;
-        path="/contract-builder";
-        element={;
-          <ProtectedRoute>;
-            <ContractBuilder />;
-          </ProtectedRoute>;
-        } ;
-      />;
-    </Routes>;
-  );
-},;
-export default DashboardRoutes;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

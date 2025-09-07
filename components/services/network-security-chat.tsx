@@ -1,27 +1,32 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
+;
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+const NetworkSecurityChat: NextPage = () => {return (<div>;
+      <Head>;
+const NetworkSecurityChat: NextPage = () => {return (<div>;
+      <Head>;
+        <title>NetworkSecurityChat - Zion Tech Solutions</title>;
+        <meta name="description" content="NetworkSecurityChat service" />{" "}const NetworkSecurityChat: NextPage = () => {return (<div>;
+      <Head></Head>;<meta name="description" content="NetworkSecurityChat service" />;
+      </Head>;
+      </Head>;<meta name="description" content="NetworkSecurityChat service" />;
+      </Head>;
+
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
 
 
 const NetworkSecurityChat: NextPage = () => {
   return (
     <div>
       <Head>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
 const NetworkSecurityChat: NextPage = () => {;
   return (
     <div>;
@@ -29,28 +34,19 @@ const NetworkSecurityChat: NextPage = () => {;
         <title>NetworkSecurityChat - Zion Tech Solutions</title>;
         <meta name="description" content="NetworkSecurityChat service" />{" "}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 const NetworkSecurityChat: NextPage = () => {
   return (
     <div>
       <Head>
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       </Head>;
 
 
-<<<<<<< HEAD
 =======
-        <meta name="description" content="NetworkSecurityChat service" />
-      </Head>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      </Head>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <main>
         <h1>NetworkSecurityChat</h1>
         <p>Service details coming soon...</p>
@@ -58,49 +54,38 @@ const NetworkSecurityChat: NextPage = () => {
       </main>
     </div>
       </Head>;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <main>;
         <h1>NetworkSecurityChat</h1>;
         <p>Service details coming soon...</p>;
         <a href="/services">Back to Services</a>;
       </main>;
     </div>;
+      </Head>;<main>;
+        <h1>NetworkSecurityChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  )}
+export default NetworkSecurityChat;<title>NetworkSecurityChat - Zion Tech Solutions</title>;
+        <title>NetworkSecurityChat - Zion Tech Solutions</title>;
+ursor/fix-website-loading-errors-and-merge-6662;
+        <title>NetworkSecurityChat - Zion Tech Solutions</title>;
   );
 }
 export default NetworkSecurityChat;
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
 
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-=======
-
-        <title>NetworkSecurityChat - Zion Tech Solutions</title>
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
-const NetworkSecurityChat: NextPage = () => {
-  return (
-    <div>;
+const NetworkSecurityChat: NextPage = () => {return (<div>;
       <Head>;
         <title > NetworkSecurityChat - Zion Tech Solutions</title>;
         <meta name="description" content="NetworkSecurityChat service" />{" "}
@@ -110,17 +95,38 @@ const NetworkSecurityChat: NextPage = () => {
         <p > Service details coming soon...</p>;
         <a href="/services">Back to Services</a>;
       </main>;
+    </div>)}export default NetworkSecurityChat;<div>;
+      <Head>;
+        <title>NetworkSecurityChat - Zion Tech Solutions</title>;
+        <meta name=&quot;description&quot; content=&quot;NetworkSecurityChat service&quot; />;
+      </Head>;
+      <main>;
+        <h1>NetworkSecurityChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href=&quot;/services&quot;>Back to Services</a>;
+      </main>;
+    </div>;
+  )},export default NetworkSecurityChat;
+const NetworkSecurityChat: NextPage = () => {return (<div>;
+      <Head>;
+        <title>NetworkSecurityChat - Zion Tech Solutions</title>;
+        <meta name="description" content="NetworkSecurityChat service" />{" "}
+      </Head>;
+      <main>;
+        <h1>NetworkSecurityChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  )}
+export default NetworkSecurityChat;<title>NetworkSecurityChat - Zion Tech Solutions</title>;
+        <title>NetworkSecurityChat - Zion Tech Solutions</title>;
     </div>);
 }
 ;
 export default NetworkSecurityChat;
+<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     <div>
       <Head>
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
@@ -139,33 +145,10 @@ export default NetworkSecurityChat;
 export default NetworkSecurityChat
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-const NetworkSecurityChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>NetworkSecurityChat - Zion Tech Solutions</title>
-        <meta name="description" content="NetworkSecurityChat service" />{" "}
-      </Head>
-      <main>
-        <h1>NetworkSecurityChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-    </div>
-  );
-}
-export default NetworkSecurityChat;
 
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

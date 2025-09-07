@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-=======
 import React from "react";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { cn } from "@/lib/utils";
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
   className?: string;
   children?: React.ReactNode;
 }
-
 export function SidebarMenu({
   className,
   children,
@@ -19,16 +15,8 @@ export function SidebarMenu({
     </ul>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </ul>);
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-import React from "react",;
-import { cn } from "@/lib/utils",;
+import React from "react";
+import { cn } from "@/lib/utils";
 ;
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
   className?:string,;
@@ -38,8 +26,6 @@ interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
 export function SidebarMenu({ className, children, ...props } SidebarMenuProps) {;
   return (;
     <ul ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <ul className={cn("space-y-1", className)} {...props}>
       {children}
     </ul>
@@ -52,15 +38,11 @@ export function SidebarMenu({ className, children, ...props } SidebarMenuProps) 
       {children}
     </ul>
   )
-import React from "react",;
+import React from "React";
 import { cn } from "@/lib/utils",;
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
-
-
 import React from "react",
 import { cn } from "@/lib/utils",
-
-
 import {cn} from "@/lib/utils";
 interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElement> {;
   className?: string;
@@ -71,12 +53,6 @@ interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElemen
       {children}
     </ul>);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

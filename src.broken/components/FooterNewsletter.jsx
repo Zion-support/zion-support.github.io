@@ -1,5 +1,5 @@
-import { useState } from 'react',;
-import { Input } from '@/components/ui/input',;
+import { useState } from 'react';
+import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button',;
 import { useToast } from '@/hooks/use-toast',;
 import { apiClient } from '@/utils/apiClient',;
@@ -71,4 +71,4 @@ export function FooterNewsletter() {;
     </form>;
   );
 }
-;
+}

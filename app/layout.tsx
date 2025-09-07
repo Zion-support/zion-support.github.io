@@ -1,25 +1,61 @@
+<<<<<<< HEAD
 import React from 'react';
-import Link from 'next/link';
-import './global-styles.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+=======
+import type { Metadata } from 'next';
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+import './globals.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software',
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+<<<<<<< HEAD
+  title: {
+    default: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
+    template: '%s | Zion Tech Group'
+  },
+  description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services. Transform your business with cutting-edge technology and expert consulting.',
+  keywords: 'AI solutions, micro SaaS, enterprise IT, cloud migration, DevOps, cybersecurity, business automation, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://ziontechgroup.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
     type: 'website',
+    locale: 'en_US',
+    url: 'https://ziontechgroup.com',
+    title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
+    description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services. Transform your business with cutting-edge technology.',
+    siteName: 'Zion Tech Group',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+    title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
+    description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
+    images: ['/og-image.jpg'],
+    creator: '@ziontechgroup',
   },
+=======
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
   robots: {
     index: true,
     follow: true,
@@ -34,27 +70,32 @@ export const metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  category: 'technology',
+  classification: 'Business Technology Services',
+  referrer: 'origin-when-cross-origin',
+  colorScheme: 'light',
+  themeColor: '#000000',
+<<<<<<< HEAD
+=======
+  title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
+  description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.'
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
 };
 
 export default function RootLayout({
-  children,
+  children
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#1f2937" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
-      <body className="min-h-screen bg-gray-50 text-gray-900 antialiased">
-        <div id="root">
-          {children}
+    <html lang="en">
+      <body className={inter.className}>
+        <div className="min-h-screen bg-white flex flex-col">
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
         </div>
       </body>
     </html>

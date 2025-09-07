@@ -1,65 +1,31 @@
-<<<<<<< HEAD
-
-=======
-import {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  FormField,
-=======
-<<<<<<< HEAD
-
-
+FormField,
   FormField,
 FormField,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-  FormField,
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  FormItem,
   FormLabel,
   FormControl,
   FormMessage,
-<<<<<<< HEAD
 } from '@/components / ui / form';
 import { Input  } from '@/components / ui / input';
 import { UseFormReturn  } from './react - hook - form';
 import { FormValues  } from './useHireRequestForm';
-
 interface PersonalInfoFieldsProps {
   form: UseFormReturn < FormValues>;
 }
-
-
-
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {UseFormReturn} from "react-hook-form";
 import {FormValues} from "./useHireRequestForm";
-
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>
-
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { UseFormReturn } from "react-hook-form",
 import { FormValues } from "./useHireRequestForm",
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { UseFormReturn } from "react-hook-form",;
-=======
-} from "@/components/ui/form";
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { UseFormReturn } from "react-hook-form";
-import { FormValues } from "./useHireRequestForm";
-interface PersonalInfoFieldsProps {
-  form: UseFormReturn<FormValues>;
-}
-
-export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  return (
+import { UseFormReturn } from "react-hook-form",;  return (
     <>;
       <FormField
         control={form && form.control}
@@ -78,7 +44,6 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
           </FormItem>;
         )}
       />
-
       <FormField
         control={form && form.control}
         name="requesterEmail"
@@ -101,17 +66,9 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
   );
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {
   FormField,
   FormItem,
@@ -125,7 +82,6 @@ import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
 }
-
 export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
   return (
     <>;
@@ -146,10 +102,6 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
         )}
 }
 ;
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   ),;}
  interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues> 
@@ -173,7 +125,6 @@ import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
-
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {UseFormReturn} from "react-hook-form";
@@ -213,7 +164,6 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
           </FormItem>
         )}
       />
-
       <FormField
         control={form.control}
         name="requesterEmail"
@@ -239,6 +189,3 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

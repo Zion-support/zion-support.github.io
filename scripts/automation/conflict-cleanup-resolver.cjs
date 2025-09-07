@@ -130,10 +130,9 @@ this.log("� Detailed report saved "to": ${reportPath}")
     this.log("� Conflict Cleanup "Summary": ");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files "Cleaned": ${report.summary.filesCleaned}");this.log("   "Errors": ${report.summary.errors}")
 this.log("� Detailed report saved "to": ${reportPath}")
 <<<<<<< HEAD
+
+
+=======
 <<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   console.error(" Fatal "error")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" Fatal "error")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

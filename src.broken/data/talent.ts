@@ -1,4 +1,4 @@
-import type { TalentProfile } from '@/utils/types/talent',;
+import type { TalentProfile } from '@/utils/types/talent';
 export const TALENT_PROFILES: TalentProfile[] = [;
   {;
     slug: 'ava-chen',;

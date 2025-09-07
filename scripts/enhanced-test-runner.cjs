@@ -1,23 +1,20 @@
 <<<<<<< HEAD
+
+
+
+
+
+
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
-
 console.log('🧪 Enhanced Test Runner v2.0');
 console.log('');
-
 const testReport = {}
   "timestamp": new Date().toISOString(),
   "sessionId": Date.now().toString(),
@@ -32,13 +29,11 @@ const testReport = {}
   },
   "recommendations": [];
 };
-
 function log(level, message) {}
   const timestamp = new Date().toISOString();
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)};
 async function runJestTests() {}
   log('info', 'Running Jest tests');
-  
   try {}
     const startTime = Date.now();
     const output = execSync('npm test -- --coverage --json', { })
@@ -47,22 +42,18 @@ async function runJestTests() {}
     }
 });
     const endTime = Date.now();
-    
     const result = JSON.parse(output);
-    
     testReport.tests.push({})
       "framework": 'jest',
       "duration": endTime - startTime,
       "result": result;
     }
 });
-    
     testReport.summary.total += result.numTotalTests;
     testReport.summary.passed += result.numPassedTests;
     testReport.summary.failed += result.numFailedTests;
     testReport.summary.skipped += result.numPendingTests;
     testReport.summary.duration += endTime - startTime;
-    
     if (result.coverageMap) {}
       testReport.summary.coverage = result.coverageMap.getCoverageSummary().lines.pct};
     log('info', `Jest tests "completed": ${result.numPassedTests}/${result.numTotalTests} passed`)} catch (error) {`}
@@ -70,7 +61,6 @@ async function runJestTests() {}
 };
 async function runPlaywrightTests() {}
   log('info', 'Running Playwright tests');
-  
   try {}
     const startTime = Date.now();
     const output = execSync('npx playwright test --reporter=json', { })
@@ -79,27 +69,22 @@ async function runPlaywrightTests() {}
     }
 });
     const endTime = Date.now();
-    
     const result = JSON.parse(output);
-    
     testReport.tests.push({})
       "framework": 'playwright',
       "duration": endTime - startTime,
       "result": result;
     }
 });
-    
     testReport.summary.total += result.total;
     testReport.summary.passed += result.passed;
     testReport.summary.failed += result.failed;
     testReport.summary.duration += endTime - startTime;
-    
     log('info', `Playwright tests "completed": ${result.passed}/${result.total} passed`)} catch (error) {`}
     log('warn', 'Playwright tests failed or not configured', error.message)};
 };
 async function runCypressTests() {}
   log('info', 'Running Cypress tests');
-  
   try {}
     const startTime = Date.now();
     const output = execSync('npx cypress run --reporter json', { })
@@ -108,27 +93,22 @@ async function runCypressTests() {}
     }
 });
     const endTime = Date.now();
-    
     const result = JSON.parse(output);
-    
     testReport.tests.push({})
       "framework": 'cypress',
       "duration": endTime - startTime,
       "result": result;
     }
 });
-    
     testReport.summary.total += result.total;
     testReport.summary.passed += result.passed;
     testReport.summary.failed += result.failed;
     testReport.summary.duration += endTime - startTime;
-    
     log('info', `Cypress tests "completed": ${result.passed}/${result.total} passed`)} catch (error) {`}
     log('warn', 'Cypress tests failed or not configured', error.message)};
 };
 async function runLintTests() {}
   log('info', 'Running linting tests');
-  
   try {}
     const startTime = Date.now();
     const output = execSync('npm run lint', { })
@@ -137,17 +117,14 @@ async function runLintTests() {}
     }
 });
     const endTime = Date.now();
-    
     testReport.tests.push({})
       "framework": 'eslint',
       "duration": endTime - startTime,
       "result": { passed: true, output };
     }
 });
-    
     testReport.summary.passed++;
     testReport.summary.duration += endTime - startTime;
-    
     log('info', 'Linting tests completed successfully')} catch (error) {}
     testReport.tests.push({})
       "framework": 'eslint',
@@ -155,13 +132,11 @@ async function runLintTests() {}
       "result": { passed: false, "error": error.message };
     }
 });
-    
     testReport.summary.failed++;
     log('warn', 'Linting tests failed', error.message)};
 };
 async function runTypeTests() {}
   log('info', 'Running TypeScript type tests');
-  
   try {}
     const startTime = Date.now();
     const output = execSync('npx tsc --noEmit', { })
@@ -170,17 +145,14 @@ async function runTypeTests() {}
     }
 });
     const endTime = Date.now();
-    
     testReport.tests.push({})
       "framework": 'typescript',
       "duration": endTime - startTime,
       "result": { passed: true, output };
     }
 });
-    
     testReport.summary.passed++;
     testReport.summary.duration += endTime - startTime;
-    
     log('info', 'TypeScript type tests completed successfully')} catch (error) {}
     testReport.tests.push({})
       "framework": 'typescript',
@@ -188,14 +160,12 @@ async function runTypeTests() {}
       "result": { passed: false, "error": error.message };
     }
 });
-    
     testReport.summary.failed++;
     log('warn', 'TypeScript type tests failed', error.message)};
 };
 function generateRecommendations() {}
   const recommendations = [];
   const { total, passed, failed, coverage } = testReport.summary;
-  
   if (total === 0) {}
     recommendations.push({})
       "priority": 'high',
@@ -226,21 +196,17 @@ function generateRecommendations() {}
     "action": 'Set up CI/CD with automated test execution'
   }
 });
-  
   return recommendations};
 async function main() {}
   try {}
     log('info', 'Starting enhanced test runner');
-    
     await runJestTests();
     await runPlaywrightTests();
     await runCypressTests();
     await runLintTests();
     await runTypeTests();
-    
     testReport.summary.total = testReport.tests.reduce((sum, test) => sum + (test.result.total || 1), 0);
     testReport.recommendations = generateRecommendations();
-    
     // Display summary;
     log('info', 'Enhanced Test Runner Summary');
     log('info', '');
@@ -250,7 +216,6 @@ async function main() {}
     log('info', `"Skipped": ${testReport.summary.skipped}`);
     log('info', `"Coverage": ${testReport.summary.coverage}%`);
     log('info', `"Duration": ${testReport.summary.duration}ms`);
-    
     if (testReport.recommendations.length > 0) {}
       log('info', 'Test "Recommendations": ');
       testReport.recommendations.forEach(rec => {})
@@ -259,9 +224,7 @@ async function main() {}
     // Save report;
     const reportPath = path.join(process.cwd(), `enhanced-test-report-${testReport.sessionId}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(testReport, null, 2));
-    
     log('info', `Enhanced test report saved "to": enhanced-test-report-${testReport.sessionId}.json`);
-    
     // Exit with appropriate status;
     if (testReport.summary.failed > 0) {}
       log('error', 'Some tests failed');

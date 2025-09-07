@@ -8,21 +8,17 @@ import { PricingSuggestion } from "@/services/pricingSuggestionService";
 import { Loader2, Info, ThumbsUp } from "lucide-react",
 import { PricingSuggestion } from "@/services/pricingSuggestionService",
 interface PricingSuggestionBoxProps {
-
-  suggestion: PricingSuggestion | null
-  isLoading: boolean
+  suggestion: PricingSuggestion | null;
+    isLoading: boolean
   onApplySuggestion: () => void
-
   rateType: "hourly" | "fixed"
 }
-
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   suggestion;
   isLoading;
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion;
   isLoading;
-
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
@@ -30,12 +26,9 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Loader2, Info, ThumbsUp} from "lucide-react";
 import {PricingSuggestion} from "@/services/pricingSuggestionService";
-
   suggestion: PricingSuggestion | null
   isLoading: boolean
   onApplySuggestion: () => void
-
-
   rateType}) => {
   if (isLoading) {
     return (
@@ -50,8 +43,8 @@ import {PricingSuggestion} from "@/services/pricingSuggestionService";
         </CardContent>
       </Card>
     )
-import React from "react",;
-import { Button } from "@/components/ui/button",;
+import React from "react";
+import { Button } from "@/components/ui/button";
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -63,7 +56,6 @@ interface PricingSuggestionBoxProps {;
   onApplySuggestion: () => void,;
   rateType: "hourly" | "fixed";
 }
-
     return (
       <Card className="border border-dashed border-muted">;
         <CardContent className="flex items-center justify-center p-6">;
@@ -78,17 +70,9 @@ interface PricingSuggestionBoxProps {;
   if (!suggestion) {
     return null
   }
-
-
-
   }
-
-
-
-
-
   const confidenceColor = {
-    High: "bg-green-100 text-green-800"
+    High: "High",
     Medium: "bg-yellow-100 text-yellow-800"
     Low: "bg-red-100 text-red-800"}[suggestion.confidence]
   return (
@@ -136,17 +120,13 @@ interface PricingSuggestionBoxProps {;
       </CardContent>
     </Card>
   )
-
 };
-
 },
 ;
-
   const confidenceColor = {;
     High: "bg-green-100 text-green-800",;
     Medium: "bg-yellow-100 text-yellow-800",;
     Low: "bg-red-100 text-red-800"}[suggestion && suggestion.confidence],;
-
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">;
       <CardContent className="p-5 space-y-4">;

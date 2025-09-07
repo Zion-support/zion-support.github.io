@@ -4,7 +4,6 @@
  * Advanced deployment system with blue-green, canary, and rollback capabilities;
  * Features: Automated testing, health checks, gradual rollouts, intelligent rollbacks;
  */
-
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -18,8 +17,8 @@ const http = require('http')
       autoDeploy: process.env.AUTO_DEPLOY === 'true'
       rollbackEnabled: process.env.ROLLBACK_ENABLED === 'true'
           url: process.env.PROD_URL || 'http://localhost:3000'
-          healthEndpoint: '/api/health'
-          url: process.env.STAGING_URL || 'http://localhost:3001'
+          healthEndpoint: "healthEndpoint",
+    url: process.env.STAGING_URL || 'http://localhost:3001'
           healthEndpoint: '/api/health'
       await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
@@ -112,10 +111,9 @@ const http = require('http')
       process.on('SIGINT')
         this.log('� Shutting down Deployment Automation...')
 <<<<<<< HEAD
+
+      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
+=======
 <<<<<<< HEAD
       this.log(` Fatal error: ${error.message}`, 'ERROR'`)
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

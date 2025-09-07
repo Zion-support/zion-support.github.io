@@ -1,150 +1,240 @@
-import Link from "next/link";
+<<<<<<< HEAD
+import React from 'react';
+import Link from 'next/link';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: "Services | Zion Tech Group - AI, Micro SaaS, and IT Solutions",
-  description: "Comprehensive technology services including AI solutions, micro SaaS development, IT services, mobile development, data analytics, and cybersecurity.",
+export const metadata: Metadata = {
+  title: 'Services | Zion Tech Group',
+  description: 'Comprehensive AI solutions, micro SaaS development, and enterprise IT services.',
+  keywords: 'AI solutions, micro SaaS, IT services, enterprise software, blockchain, cloud computing',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Services | Zion Tech Group',
+    description: 'Comprehensive AI solutions, micro SaaS development, and enterprise IT services.',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Zion Tech Group',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Services | Zion Tech Group',
+    description: 'Comprehensive AI solutions, micro SaaS development, and enterprise IT services.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
-export default function ServicesOverviewPage() {
+interface ServiceCardProps {
+  title: string;
+  href: string;
+  description: string;
+  icon: string;
+  category: string;
+}
+=======
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+
+function ServiceCard({ title, href, description, icon, category }: ServiceCardProps) {
+  return (
+    <Link
+      href={href}
+      className="group block p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transform hover:-translate-y-1"
+    >
+      <div className="flex items-center mb-4">
+        <span className="text-3xl mr-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">{icon}</span>
+        <div>
+          <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">{title}</h3>
+          <span className="text-sm text-blue-600 font-medium">{category}</span>
+        </div>
+      </div>
+      <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{description}</p>
+      <div className="mt-4 text-blue-600 font-medium text-sm group-hover:text-blue-700 transition-colors duration-300">
+        Learn more →
+      </div>
+    </Link>
+  );
+}
+
+export default function ServicesPage() {
   const services = [
+    // AI Services
     {
-      title: "AI Services",
-      href: "/services/ai-services",
-      description: "Cutting-edge artificial intelligence solutions for your business needs.",
-      icon: "🤖",
-      features: [
-        "Machine Learning Models",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Predictive Analytics"
-      ]
+      title: 'AI Analytics Platform',
+      href: '/services/ai-analytics-platform',
+      description: 'Advanced AI-powered analytics platform for data-driven business insights and decision making.',
+      icon: '📊',
+      category: 'AI Services'
     },
     {
-      title: "Micro SaaS",
-      href: "/services/micro-saas",
-      description: "Scalable software-as-a-service solutions for modern businesses.",
-      icon: "☁️",
-      features: [
-        "Custom Web Applications",
-        "API Development",
-        "Database Design",
-        "Cloud Integration"
-      ]
+      title: 'AI Chatbot Builder',
+      href: '/services/ai-chatbot-builder',
+      description: 'Create intelligent chatbots and virtual assistants for customer service and support.',
+      icon: '🤖',
+      category: 'AI Services'
     },
     {
-      title: "IT Services",
-      href: "/services/it-services",
-      description: "Comprehensive IT infrastructure and support services.",
-      icon: "💻",
-      features: [
-        "Cloud Migration",
-        "DevOps & SRE",
-        "System Administration",
-        "Network Security"
-      ]
+      title: 'AI Code Reviewer',
+      href: '/services/ai-code-reviewer',
+      description: 'Automated code review and quality assurance using advanced AI algorithms.',
+      icon: '🔍',
+      category: 'AI Services'
     },
     {
-      title: "Mobile Development",
-      href: "/services/mobile-development",
-      description: "Cross-platform mobile applications for iOS and Android.",
-      icon: "📱",
-      features: [
-        "React Native Apps",
-        "Native iOS/Android",
-        "Progressive Web Apps",
-        "App Store Optimization"
-      ]
+      title: 'AI Content Generator',
+      href: '/services/ai-content-generator',
+      description: 'Generate high-quality content automatically using cutting-edge AI technology.',
+      icon: '✍️',
+      category: 'AI Services'
     },
     {
-      title: "Data Analytics",
-      href: "/services/data-analytics",
-      description: "Transform your data into actionable business insights.",
-      icon: "📊",
-      features: [
-        "Business Intelligence",
-        "Data Visualization",
-        "ETL Pipelines",
-        "Real-time Analytics"
-      ]
+      title: 'AI Customer Support',
+      href: '/services/ai-customer-support',
+      description: 'Intelligent customer support solutions powered by AI and machine learning.',
+      icon: '🎧',
+      category: 'AI Services'
     },
     {
-      title: "Cybersecurity",
-      href: "/services/cybersecurity",
-      description: "Protect your business with advanced security solutions.",
-      icon: "🔒",
-      features: [
-        "Security Audits",
-        "Penetration Testing",
-        "Compliance Management",
-        "Incident Response"
-      ]
+      title: 'AI Marketing Automation',
+      href: '/services/ai-marketing-automation',
+      description: 'Automate marketing campaigns and optimize customer engagement with AI.',
+      icon: '📈',
+      category: 'AI Services'
+    },
+    
+    // Micro SaaS
+    {
+      title: 'Micro SaaS Solutions',
+      href: '/services/micro-saas',
+      description: 'Scalable micro SaaS applications built for modern businesses and startups.',
+      icon: '🚀',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'Smart Invoice Generator',
+      href: '/services/smart-invoice-generator',
+      description: 'Automated invoice generation and management system for businesses.',
+      icon: '🧾',
+      category: 'Micro SaaS'
+    },
+    
+    // IT Services
+    {
+      title: 'IT Services',
+      href: '/services/it-services',
+      description: 'Comprehensive IT infrastructure and support services for enterprises.',
+      icon: '💻',
+      category: 'IT Services'
+    },
+    {
+      title: 'DevOps Automation',
+      href: '/services/devops-automation',
+      description: 'Automate your development and deployment processes with modern DevOps practices.',
+      icon: '⚙️',
+      category: 'IT Services'
+    },
+    
+    // Blockchain
+    {
+      title: 'Blockchain Solutions',
+      href: '/services/blockchain',
+      description: 'Secure blockchain applications and smart contract development services.',
+      icon: '⛓️',
+      category: 'Blockchain'
+    },
+    
+    // Cybersecurity
+    {
+      title: 'Cybersecurity Suite',
+      href: '/services/cybersecurity',
+      description: 'Comprehensive cybersecurity solutions to protect your digital assets.',
+      icon: '🔒',
+      category: 'Security'
+    },
+    
+    // Data Analytics
+    {
+      title: 'Data Analytics',
+      href: '/services/data-analytics',
+      description: 'Transform raw data into actionable insights with advanced analytics tools.',
+      icon: '📈',
+      category: 'Analytics'
     }
   ];
 
+  const categories = [...new Set(services.map(service => service.category))];
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-purple-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Comprehensive technology solutions tailored to your business needs
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow p-8">
-                <div className="flex items-center mb-6">
-                  <span className="text-4xl mr-4">{service.icon}</span>
-                  <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
-                </div>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                      <span className="text-green-500 mr-2">✓</span>
-                      <span className="text-sm text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href={service.href}
-                  className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                >
-                  Learn More
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-gray-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our services can help transform your business.
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive AI solutions, micro SaaS development, and enterprise IT services
+            designed to transform your business and drive growth.
           </p>
-          <Link
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
-          >
-            Contact Us Today
-          </Link>
         </div>
-      </section>
+
+        <div className="max-w-7xl mx-auto">
+          {/* Service Categories */}
+          {categories.map((category) => (
+            <div key={category} className="mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{category}</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services
+                  .filter(service => service.category === category)
+                  .map((service, index) => (
+                    <ServiceCard
+                      key={index}
+                      title={service.title}
+                      href={service.href}
+                      description={service.description}
+                      icon={service.icon}
+                      category={service.category}
+                    />
+                  ))}
+              </div>
+            </div>
+          ))}
+
+          {/* CTA Section */}
+          <div className="text-center bg-white rounded-xl shadow-lg p-12 mt-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Need a Custom Solution?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Don't see what you're looking for? We specialize in creating custom solutions
+              tailored to your specific business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+              >
+                Get Custom Quote
+              </Link>
+              <Link
+                href="/about"
+                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
+              >
+                Learn More About Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

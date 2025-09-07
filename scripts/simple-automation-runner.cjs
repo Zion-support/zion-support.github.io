@@ -1,14 +1,6 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -115,36 +107,23 @@ const path = require('path')
       await this.runBuild();
       await this.runSecurityAudit();
       await this.applyImprovements();
-      
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 =======
 =======
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       return size}}
-
     totalSize = getDirectorySize(buildDir);
-
     const recommendations = [];
     if ( { // > 1MB
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (jsSize > 512 * 1024) { // > 512KB
       recommendations.push('JavaScript bundle is large, consider optimization')}
-
     return {) {
      { // > 1MB
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (jsSize > 512 * 1024) { // > 512KB
       recommendations.push('JavaScript bundle is large, consider optimization')}
-
     return {}
       "totalSize": totalSize,
       "jsSize": jsSize,
@@ -152,7 +131,6 @@ const path = require('path')
       "recommendations": recommendations
     }}
 }
-
 if (require.main === module) {
   const runner = new SimpleAutomationRunner();
   runner.run().catch(error => {
@@ -160,16 +138,14 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
-
 module.exports = { runSimpleAutomation }}
 <<<<<<< HEAD
+
 =======
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
     "overallStatus"

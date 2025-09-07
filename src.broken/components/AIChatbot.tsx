@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect, Dispatch, SetStateAction } from 'react',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState, useRef, useEffect, Dispatch, SetStateAction } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, Bot, User, Sparkles, ChevronUp, ChevronDown } from 'lucide-react',;
 interface ChatMessage {;
   id: string,;
@@ -12,7 +12,6 @@ interface ChatMessage {;
 interface AIChatbotProps {;
   className?: string;
 }
-
 const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   const [isOpen, setIsOpen] = useState(false),
   const [isMinimized, setIsMinimized] = useState(false),
@@ -28,22 +27,17 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   const [isTyping, setIsTyping] = useState(false),
   const messagesEndRef = useRef<HTMLDivElement>(null),
   const inputRef = useRef<HTMLInputElement>(null),
-
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
-
   useEffect(() => {
     scrollToBottom()
   }, [messages]),
-
   // AI response simulation
   const generateAIResponse = async (userMessage: string): Promise<string> => {
     setIsTyping(true),
-    
     // Simulate AI processing time
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000)),
-    
     const responses = [
       "That's a great question! Let me help you with that. Our AI solutions are designed to transform your business operations and drive innovation.",
       "I understand you're interested in our services. We offer cutting-edge AI, quantum computing, and autonomous solutions that can revolutionize your business.",
@@ -52,9 +46,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       "That's exactly what we specialize in! Our autonomous systems can streamline your operations and provide 24/7 intelligent monitoring.",
       "Great question! Our pricing is competitive and we offer flexible plans to meet your specific needs. Let me get you in touch with our sales team."
     ],
-    
     const randomResponse = responses[Math.floor(Math.random() * responses.length)] || responses[0],
-    
     // Add some context-aware responses
     let finalResponse: string = randomResponse,
     if (userMessage.toLowerCase().includes('price') || userMessage.toLowerCase().includes('cost')) {
@@ -138,7 +130,6 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {;
       handleSendMessage();
     }
   },
-
   const quickReplies = [
     "Tell me about AI services",
     "Quantum computing pricing",
@@ -146,12 +137,10 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {;
     "Contact sales team",
     "Technical support"
   ],
-
   const handleQuickReply = (reply: string) => {
     setInputValue(reply),
     setTimeout(() => handleSendMessage(), 100)
   },
-
   return (
     <div className={`fixed bottom-4 right-4 z-50 ${className}`}>
   },;

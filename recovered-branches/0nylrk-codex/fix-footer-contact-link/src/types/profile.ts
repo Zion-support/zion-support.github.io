@@ -1,22 +1,14 @@
-<<<<<<< HEAD
-=======
 export interface ProfileSkill {
   name: string;
   level: number; // 1-5
   endorsements?: number;
 }
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
   id: string;
-  title: string;
+  title: string,
   description: string;
   image_url?: string;
   tags?: string[];
-<<<<<<< HEAD
-=======
   url?: string;
   date: string;
 }
@@ -26,62 +18,14 @@ export interface ProfileSkill {
 
 }
 export interface ProfileExperience {
-<<<<<<< HEAD
-=======
-export interface ProfileSkill {
-
-  name: string
-
-  level: number, // 1-5
-  endorsements?: number
-}
-export interface ProfileProject {
-
-export interface ProfileProject {;
-  id: string;
-  title: string;
-  description: string;
-  imageUrl?: string;
-  tags?: string[];
-
-  url?: string
-
-  date: string
-}
-export interface ProfileExperience {
-
-export interface ProfileExperience {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   role: string;
-  company: string;
+  company: string,
   description: string;
-<<<<<<< HEAD
   status: 'available' | 'limited' | 'unavailable';
   next_available?: string;
   message?: string,
   available_hours?: { day: string, hours: string }[];
-=======
-  startDate: string;
-  endDate?: string;
-  current?: boolean;
-}
-
-  start_date: string;
-  end_date?: string,
-  current?: boolean;
-}
-export interface Availability {
-  status: "available" | "limited" | "unavailable";
-  nextAvailable?: string;
-  message?: string;
-  availableHours?: { day: string; hours: string }[];
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
 }
 export interface ProfileData {
   id: string;
@@ -111,9 +55,6 @@ export interface ProfileData {;
   name: string;
   title: string;
   avatarUrl: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   coverImageUrl?: string;
   bio: string;
   location?: string;
@@ -125,30 +66,12 @@ export interface ProfileData {;
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
-<<<<<<< HEAD
-=======
   hourlyRate?: number;
-  contactEmail?: string;
-}
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  hourlyRate?: number
-
   contactEmail?: string
-}
-export interface ProfileSkill {;
-  name: string,;
-  level: number, // 1-5;
-  endorsements?: number;
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-;
+};
 export interface ProfileProject {;
   id: string,;
-  title: string,;
+  title: string,,
   description: string,;
   imageUrl?: string,;
   tags?: string[],;
@@ -159,7 +82,7 @@ export interface ProfileProject {;
 export interface ProfileExperience {;
   id: string,;
   role: string,;
-  company: string,;
+  company: string,,
   description: string,;
   startDate: string,;
   endDate?: string,;
@@ -192,12 +115,4 @@ export interface ProfileData {;
   hourlyRate?: number;
   contactEmail?: string;
 }
-;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

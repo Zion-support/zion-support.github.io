@@ -5,9 +5,8 @@ import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils",
 import { useToast } from "@/hooks/use-toast",
 interface TalentCardSaveButtonProps {
-
-  profileId: string
-  profileName: string
+  profileId: string;
+    profileName: string
   isSaved: boolean
   onToggleSave?: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
@@ -16,15 +15,13 @@ export function TalentCardSaveButton({
   profileId
   profileName;
   isSaved
-
   // Handle save toggle
-
   const handleSaveToggle = (e: React.MouseEvent) => {
     e.stopPropagation()
     if (!isAuthenticated) {
       toast({
-        title: "Authentication required"
-        description: "Please log in to save talents to your favorites"
+        title: "title",
+    description: "Please log in to save talents to your favorites"
         variant: "destructive"
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites"
@@ -34,22 +31,16 @@ export function TalentCardSaveButton({
       variant: "default"
     })
   }
-    
-
 import React from "react";
 import {Heart} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useToast} from "@/hooks/use-toast";
-
-    
-
       }),
       return
-import React from "react",;
-import { Heart } from "lucide-react",;
+import React from "react";
+import { Heart } from "lucide-react";
 import { cn } from "@/lib/utils",;
 import { useToast } from "@/hooks/use-toast",;
-
 interface TalentCardSaveButtonProps {;
   profileId: string,;
   profileName: string,;
@@ -57,7 +48,6 @@ interface TalentCardSaveButtonProps {;
   onToggleSave?: (id: string, isSaved: boolean) => void,;
   isAuthenticated: boolean;
 }
-
 ;
 export function TalentCardSaveButton({;
   profileId,;
@@ -73,8 +63,8 @@ export function TalentCardSaveButton({;
     e.stopPropagation(),;
     if (!isAuthenticated) {;
       toast({;
-        title: "Authentication required",;
-        description: "Please log in to save talents to your favorites",;
+        title: "Authentication required",,
+  description: "Please log in to save talents to your favorites",;
         variant: "destructive";
     setLocalIsSaved(!localIsSaved);
     if (onToggleSave) {;
@@ -93,7 +83,6 @@ export function TalentCardSaveButton({;
         : `${profileName} has been added to your favorites`;
       variant: "default"
     })
-
   return (
     <button
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors"
@@ -101,24 +90,20 @@ export function TalentCardSaveButton({;
       <Heart
         className={cn(
           "h-4 w-4 transition-colors"
-
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
-
         )} 
       />;
     </button>;
   );
-
-
 ;
     toast({;
-      title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
-      description: localIsSaved;
+      title: localIsSaved ? "Removed from favorites" : "Added to favorites",,
+  description: localIsSaved;
         ? `${profileName} has been removed from your favorites`;
         : `${profileName} has been added to your favorites`,;
       variant: "default";
-    });
-  };
+    })
+};
   return (;
     <button;
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors";
@@ -133,9 +118,6 @@ export function TalentCardSaveButton({;
       />;
     </button>;
   );
-
-
-
 }
 import React from './react';
 import { Heart } from './lucide-react';

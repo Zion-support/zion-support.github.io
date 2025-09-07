@@ -37,4 +37,4 @@ export function CurrencySelector() {
     </DropdownMenu>;
   );
 }
-;
+}

@@ -12,13 +12,9 @@ import { DropdownMenu;
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
-
-
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
-
-
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download  } from '@/components/icons';
 import { Resume  } from '@/types/resume';
@@ -28,16 +24,13 @@ import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
   resume: Resume
 }
-
-
-
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [isExporting, setIsExporting] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [includePortfolio, setIncludePortfolio] = useState(true);
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -48,7 +41,6 @@ import {;
   DropdownMenuRadioGroup,;
   DropdownMenuRadioItem,;
   DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu',;
-
 // Use the centralized icon wrapper to avoid missing icon issues;
 import {FileText, ChevronDown, Loader2, Download} from '@/components/icons';
 import {Resume} from '@/types/resume';
@@ -58,18 +50,10 @@ import {FontFamily} from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {;
   resume: Resume;
 }
-
   const [isExporting, setIsExporting] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
-
   const [includePortfolio, setIncludePortfolio] = useState(true),
   const [fontFamily, setFontFamily] = useState<FontFamily>('default'),
-
-
-
-
-
-
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
   const handleExport = async () => {
     if (isExporting) return;
@@ -77,8 +61,8 @@ interface PdfExportButtonProps {;
     try {
       const options: ExportOptions = {
         theme;
-        includePortfolio
-        maxProjects: 3
+        includePortfolio;
+    maxProjects: 3
         fontFamily
       }
       const pdfBlob = await exportResumeToPDF(resume, options);
@@ -93,9 +77,7 @@ interface PdfExportButtonProps {;
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
     if (isExporting) return,
-    
     setIsExporting(true),
-    
     try {
       const options: ExportOptions = {
         theme,
@@ -103,9 +85,7 @@ interface PdfExportButtonProps {;
         maxProjects: 3,
         fontFamily
       },
-      
       const pdfBlob = await exportResumeToPDF(resume, options),
-      
       // Create download link and trigger download
       const url = URL.createObjectURL(pdfBlob),
       const link = document.createElement('a'),
@@ -113,14 +93,12 @@ interface PdfExportButtonProps {;
       link.download = `${resume.basic_info.title || 'Resume'}.pdf`,
       document.body.appendChild(link),
       link.click(),
-      
       // Clean up
       document.body.removeChild(link),
       URL.revokeObjectURL(url),
-      
       toast({
-        title: "Success!"
-        description: "Your resume has been downloaded as a PDF."})
+        title: "title",
+    description: "Your resume has been downloaded as a PDF."})
     } catch (error) {
       console.error('Error exporting PDF:', error),
       toast({
@@ -130,7 +108,6 @@ interface PdfExportButtonProps {;
       })
     } finally {
       setIsExporting(false)
-
   return (
           className="gap-2"
           disabled={isExporting}>;
@@ -139,9 +116,6 @@ interface PdfExportButtonProps {;
           ) : (;
             <FileText className="h-4 w-4" />;
           )}
-
-
-
 ;
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [isExporting, setIsExporting] = useState(false),;
@@ -170,13 +144,13 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
       document.body.removeChild(link),;
       URL.revokeObjectURL(url),;
       toast({;
-        title: "Success!",;
-        description: "Your resume has been downloaded as a PDF."});
+        title: "Success!",,
+  description: "Your resume has been downloaded as a PDF."});
     } catch (error) {;
       console.error('Error exporting PDF:', error),;
       toast({;
-        title: "Export failed",;
-        description: "There was an error exporting your resume to PDF.";
+        title: "Export failed",,
+  description: "There was an error exporting your resume to PDF.";
         variant: "destructive";
       });
     } finally {;
@@ -224,10 +198,6 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
-
-
-
-
 }
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';

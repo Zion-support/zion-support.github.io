@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+export default {}export default {}export default {}ursor/automate-test-improve-and-merge-code-646c;
 
 export default {};
 
+<<<<<<< HEAD
 =======
-export default {};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+export default {}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

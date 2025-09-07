@@ -1,28 +1,18 @@
 const nextJest = require('next/jest');
 
 const createJestConfig = nextJest({
-  dir: './',
+  dir: './'
 });
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-const config = {
-  testEnvironment: 'jsdom',
 =======
 const customJestConfig = {
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-const customJestConfig = {
-=======
-const config = {
-  testEnvironment: 'jsdom',
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
   },
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', {
@@ -48,42 +38,106 @@ const config = {
     '<rootDir>/temp_components/',
     '<rootDir>/temp_conflicts/',
     '<rootDir>/temp_working/',
+<<<<<<< HEAD
+    '<rootDir>/backup*/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/temp_*/',
+    '<rootDir>/zion-os/',
+    '<rootDir>/zion-website/',
+    '<rootDir>/zion-ai-assistant/',
+    '<rootDir>/zion_academy/',
+    '<rootDir>/apps/',
+    '<rootDir>/pages_backup*/',
+    '<rootDir>/pages.*/',
+    '<rootDir>/pages-*/',
+    '<rootDir>/pages_disabled*/',
+    '<rootDir>/pages.disabled*/',
+    '<rootDir>/pages.broken*/',
+    '<rootDir>/pages.corrupted*/',
+    '<rootDir>/pages.old*/',
+    '<rootDir>/pages._*/',
+    '<rootDir>/pages.__*/',
+    '<rootDir>/backup-pages/',
+    '<rootDir>/src.pages.disabled/',
+    '<rootDir>/lib_backup*/',
+    '<rootDir>/corrupted-files-backup*/',
+    '<rootDir>/performance-reports*/',
+    '<rootDir>/log-analysis-reports*/',
+    '<rootDir>/link-reports*/',
+    '<rootDir>/lint-target*/',
+    '<rootDir>/monitoring*/',
+    '<rootDir>/pm2-automation*/',
+    '<rootDir>/automation/logs*/',
+    '<rootDir>/automation/backup*/'
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
+  modulePathIgnorePatterns: [
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/temp_exclude/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/temp_backup/',
+    '<rootDir>/temp_components/',
+    '<rootDir>/temp_conflicts/',
+    '<rootDir>/temp_working/',
+    '<rootDir>/backup*/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/temp_*/',
+    '<rootDir>/zion-os/',
+    '<rootDir>/zion-website/',
+    '<rootDir>/zion-ai-assistant/',
+    '<rootDir>/zion_academy/',
+    '<rootDir>/apps/',
+    '<rootDir>/pages_backup*/',
+    '<rootDir>/pages.*/',
+    '<rootDir>/pages-*/',
+    '<rootDir>/pages_disabled*/',
+    '<rootDir>/pages.disabled*/',
+    '<rootDir>/pages.broken*/',
+    '<rootDir>/pages.corrupted*/',
+    '<rootDir>/pages.old*/',
+    '<rootDir>/pages._*/',
+    '<rootDir>/pages.__*/',
+    '<rootDir>/backup-pages/',
+    '<rootDir>/src.pages.disabled/',
+    '<rootDir>/lib_backup*/',
+    '<rootDir>/corrupted-files-backup*/',
+    '<rootDir>/performance-reports*/',
+    '<rootDir>/log-analysis-reports*/',
+    '<rootDir>/link-reports*/',
+    '<rootDir>/lint-target*/',
+    '<rootDir>/monitoring*/',
+    '<rootDir>/pm2-automation*/',
+    '<rootDir>/automation/logs*/',
+    '<rootDir>/automation/backup*/'
+  ],
+
 =======
+    '<rootDir>/.next/',
+  ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   verbose: true,
   collectCoverage: false,
   testTimeout: 30000,
-};
-
-module.exports = createJestConfig(customJestConfig);
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   coverageThreshold: {
     global: {
       branches: 70,
       functions: 70,
       lines: 70,
-      statements: 70,
-    },
+      statements: 70
+    }
   },
+<<<<<<< HEAD
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  verbose: true,
+  collectCoverage: false,
+  testTimeout: 30000
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
 };
 
 module.exports = createJestConfig(config);
-<<<<<<< HEAD
+
 =======
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  verbose: true,
-  collectCoverage: false,
-  testTimeout: 30000,
 };
 
 module.exports = createJestConfig(customJestConfig);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

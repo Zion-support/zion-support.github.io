@@ -1,25 +1,17 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ;
-const PageTransition = () =>: any {
-  return (
-    <div data - testid="pagetransition">;
+import React from './react';const PageTransition = () =>: any {return (<div data - testid="pagetransition">;
       <h1 > PageTransition</h1>;
+<<<<<<< HEAD
+    </div>)}export default PageTransition;
+=======
     </div>);
 }
 ;
 export default PageTransition;
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 <<<<<<< HEAD
+function fixFile(filePath) {
+
+=======
 console.log('🔧 Fixing remaining syntax errors...');
 
 // Fix specific files with known issues
@@ -13,16 +16,7 @@ const filesToFix = [
     'src/components/talent/TalentCard.jsx'
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 ];
-
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-function fixFile(filePath) {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 // Function to fix remaining syntax errors in a file;
 function fixRemainingSyntax(filePath) {}
   try {}
@@ -156,97 +150,4 @@ function fixFilesInDirectory(dirPath) {}
     
     const handleRequestHire = (talentId) => {
         // Handle hire request logic here
-=======
-    if (stat.isDirectory()) {}
-      fixedCount += fixFilesInDirectory(filePath);
-    } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {}
-      if (fixRemainingSyntax(filePath)) {}
-        fixedCount++;
-      };
-    };
-  };
-  return fixedCount;
-// Main execution
 
-const fixedCount = fixFilesInDirectory('./src');
-=======
-};
-// Main execution;
-console.log('Starting remaining syntax error fixing...');
-const fixedCount = fixFilesInDirectory('./src');
-console.log(`Fixed ${fixedCount} files with remaining syntax errors.`);
-=======
-    let content = fs.readFileSync(filePath, 'utf8');
-
-    // More comprehensive fixes
-    content = content
-      // Remove semicolons after function declarations
-      .replace(/function\s+([^{]+)\s*\{;/g, 'function $1 {')
-      // Remove semicolons after arrow functions
-      .replace(/=>\s*\{;/g, '=> {')
-      // Remove semicolons after if statements
-      .replace(/if\s*\([^)]+\)\s*\{;/g, match => match.replace('{;', '{'))
-      // Remove semicolons after object properties
-      .replace(/(\w+):\s*([^}]+);/g, '$1: $2,')
-      // Fix object syntax
-      .replace(/\{([^}]+);(\s*)\}/g, '{$1$2}')
-      // Remove semicolons in JSX
-      .replace(/<([^>]+);>/g, '<$1>')
-      // Fix array syntax
-      .replace(/\[([^\]]+);\]/g, '[$1]')
-      // Remove standalone semicolons
-      .replace(/^;$/gm, '')
-      // Fix function calls
-      .replace(/(\w+)\s*\(([^)]+);\)/g, '$1($2)')
-      // Fix object method calls
-      .replace(/(\w+)\.(\w+)\s*\(([^)]+);\)/g, '$1.$2($3)')
-      // Clean up multiple semicolons
-      .replace(/;+/g, ';')
-      // Remove trailing semicolons before closing braces
-      .replace(/;(\s*[}\]])/g, '$1')
-      // Fix template literals
-      .replace(/`([^`]+);([^`]+)`/g, '`$1$2`')
-      // Remove semicolons from JSX attributes
-      .replace(/(\w+)=([^>]+);/g, '$1=$2')
-      // Clean up empty lines
-      .replace(/^\s*$\n/gm, '');
-
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixe: d: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-}
-
-function walkDir(dir) {
-  const files = fs.readdirSync(dir);
-
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-
-    if (
-      stat.isDirectory() &&
-      !file.startsWith('.') &&
-      file !== 'node_modules'
-    ) {
-      walkDir(filePath);
-    } else if (
-      file.endsWith('.tsx') ||
-      file.endsWith('.ts') ||
-      file.endsWith('.jsx') ||
-      file.endsWith('.js')
-    ) {
-      fixFile(filePath);
-    }
-  });
-}
-
-// Start fixing from components directory
-walkDir('./components');
-walkDir('./hooks');
-walkDir('./lib');
-walkDir('./pages');
-
-console.log('Remaining syntax error fixing completed!');
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

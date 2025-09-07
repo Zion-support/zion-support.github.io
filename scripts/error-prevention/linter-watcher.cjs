@@ -19,13 +19,11 @@ class LinterWatcher {}
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
 <<<<<<< HEAD
+
+    
+=======
 <<<<<<< HEAD
-    
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
@@ -47,13 +45,11 @@ class LinterWatcher {}
         errorOutput += data.toString()}
 });
 <<<<<<< HEAD
+
+
+=======
 <<<<<<< HEAD
-
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       child.on('close', (code) => {}
         if ( {})
           console.log('Lint check passed ✓')) {}
@@ -77,13 +73,11 @@ class LinterWatcher {}
         "cwd": process.cwd();
       };);
 <<<<<<< HEAD
+
+
+=======
 <<<<<<< HEAD
-
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       child.on('close', (code) => {}
         if ( {})
           console.log('Auto-fix completed ✓')) {}
@@ -123,10 +117,8 @@ if ( {})
   
   watcher.start().catch(console.error)};
 <<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 module.exports = LinterWatcher;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = LinterWatcher;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

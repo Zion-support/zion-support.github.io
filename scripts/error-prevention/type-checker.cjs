@@ -18,13 +18,11 @@ class TypeChecker {}
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
 <<<<<<< HEAD
+
+    
+=======
 <<<<<<< HEAD
-    
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
@@ -46,13 +44,11 @@ class TypeChecker {}
         errorOutput += data.toString()}
 });
 <<<<<<< HEAD
+
+
+=======
 <<<<<<< HEAD
-
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       child.on('close', (code) => {}
         if ( {})
           console.log('Type check passed ✓')) {}
@@ -73,13 +69,11 @@ class TypeChecker {}
       line.includes('error TS') || line.includes('Type error');
    ;);
 <<<<<<< HEAD
+
+    
+=======
 <<<<<<< HEAD
-    
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     if ( {})
       console.log('TypeScript errors "found": ')) {}
      {}
@@ -117,10 +111,8 @@ if ( {})
   
   checker.start().catch(console.error)};
 <<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 module.exports = TypeChecker;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = TypeChecker;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

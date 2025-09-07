@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -13,9 +11,51 @@ interface SEOHeadProps {
   ogType?: string;
   twitterCard?: string;
   structuredData?: any;
+=======
+title?: string;
+  description?: string;
+  keywords?: string;
+  canonical_url?: string;
+  og_image?: string;
+  og_type?: string;
+  twitter_card?: string;
+  structured_data?: object;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   noindex?: boolean;
   nofollow?: boolean;
 }
+      <meta name="twitter:title" content={title} />;
+      <meta name="twitter:description" content={description} />;
+      <meta name="twitter:image" content={fullOgImage} />;
+      <meta name="twitter:site" content="@ziontechgroup" />;
+      <meta name="twitter:creator" content="@ziontechgroup" />;
+      {/* Structured Data */}
+      <script;
+        type="application / ld + json";
+<<<<<<< HEAD
+        dangerouslySetInnerHTML={{{/* Preconnect to external domains */}
+=======
+        dangerouslySetInnerHTML={{
+      {/* Preconnect to external domains */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+      <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
+      <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
+      <link rel="preconnect" href="https://images && images.unsplash.com" />;
+    </Head>;
+<<<<<<< HEAD
+  )__html: JSON.stringify (structured_data || defaultStructuredData)}}
+=======
+  );
+          __html: JSON.stringify (structured_data || defaultStructuredData);
+        }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+      />;
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />;
+      <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="anonymous" />;
+      <link rel="preconnect" href="https://images.unsplash.com" />;
+<<<<<<< HEAD
+    </Head>)}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions',
@@ -27,7 +67,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image',
   structuredData,
   noindex = false,
-  nofollow = false,
+  nofollow = false
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
@@ -42,17 +82,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     description: 'Leading provider of AI services, IT solutions, and micro SaaS development',
     address: {
       '@type': 'PostalAddress',
-      addressCountry: 'US',
+      addressCountry: 'US'
     },
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-123-4567',
-      contactType: 'customer service',
+      contactType: 'customer service'
     },
     sameAs: [
       'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-    ],
+      'https://twitter.com/ziontechgroup'
+    ]
   };
 
   const mergedStructuredData = structuredData || defaultStructuredData;
@@ -108,7 +148,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(mergedStructuredData),
+          __html: JSON.stringify(mergedStructuredData)
         }}
       />
       {/* Additional SEO Meta Tags */}
@@ -132,44 +172,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
 export default SEOHead;
 =======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical_url?: string;
-  og_image?: string;
-  og_type?: string;
-  twitter_card?: string;
-  structured_data?: object;
-  noindex?: boolean;
-  nofollow?: boolean;
-}
-      <meta name="twitter:title" content={title} />;
-      <meta name="twitter:description" content={description} />;
-      <meta name="twitter:image" content={fullOgImage} />;
-      <meta name="twitter:site" content="@ziontechgroup" />;
-      <meta name="twitter:creator" content="@ziontechgroup" />;
-      {/* Structured Data */}
-      <script;
-        type="application / ld + json";
-        dangerouslySetInnerHTML={{
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
-      <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
-      <link rel="preconnect" href="https://images && images.unsplash.com" />;
-    </Head>;
-  );
-          __html: JSON.stringify (structured_data || defaultStructuredData);
-        }}
-      />;
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />;
-      <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="anonymous" />;
-      <link rel="preconnect" href="https://images.unsplash.com" />;
     </Head>);
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

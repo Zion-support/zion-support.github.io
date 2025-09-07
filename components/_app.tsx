@@ -1,29 +1,25 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+;
+import type { AppProps } from 'next / app',import '../styles / globals.css',/**;
+ * MyApp - Function description;
+ */;
+function MyApp() {return <Component {...page_props} />;}
+export default MyApp;
+}export default MyApp;
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { AppProps } from 'next / app',
 import '../styles / globals.css',
 /**
  * MyApp - Function description
  */
 function MyApp() {
-  return <Component {...page_props} />;
 <<<<<<< HEAD
+  return <Component {...page_props} />;
 
 }
 export default MyApp;
 =======
-}
-export default MyApp;
-}
-
-export default MyApp
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  return <Component {...page_props} />;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

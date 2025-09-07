@@ -645,10 +645,8 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 <<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 module.exports = TypeScriptErrorMonitor
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = TypeScriptErrorMonitor
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

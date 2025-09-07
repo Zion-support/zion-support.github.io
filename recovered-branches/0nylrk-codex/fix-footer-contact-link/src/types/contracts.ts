@@ -1,19 +1,11 @@
-<<<<<<< HEAD
 export interface ContractTemplate {
 
 import {ContractFormValues} from "@/components/contracts/components/ContractForm";
 export interface ContractTemplate {;
-export interface ContractTemplate {
-=======
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
-export interface ContractTemplate {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  id: string;
+export interface ContractTemplate {  id: string;
   title: string;
   template_data: ContractFormValues;
   is_default: boolean;
-<<<<<<< HEAD
-
 
   created_at: string,
   updated_at: string;
@@ -29,7 +21,7 @@ export interface ContractTemplate {
   is_default: boolean,
   created_at: string,
   updated_at: string
-import { ContractFormValues } from "@/components/contracts/components/ContractForm",;
+import { ContractFormValues } from "@/components/contracts/components/ContractForm";
 export interface ContractTemplate {;
   id: string,;
   title: string,;
@@ -39,23 +31,10 @@ export interface ContractTemplate {;
   updated_at: string;
 }
 ;
-}
-=======
-  created_at: string;
-  updated_at: string;
-}
+}}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 ;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
-;
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

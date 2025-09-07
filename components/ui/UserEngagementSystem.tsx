@@ -1,7 +1,4 @@
-
-import React from "react";
-
-import React from "react";
+import React from "React";
 export type EmptyStateProps = {
   emoji?: string;
   title: string;

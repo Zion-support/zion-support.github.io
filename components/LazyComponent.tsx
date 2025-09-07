@@ -1,33 +1,24 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+;
+import React, { Suspense, lazy } from 'react',interface LazyComponentProps  {component: () => Promise<{ default: React.ComponentType < any> }>,fallback?: React.ReactNode,[key: string]: any;
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { Suspense, lazy } from 'react',
 interface LazyComponentProps {
   component: () => Promise<{ default: React.ComponentType < any> }>,
   fallback?: React.ReactNode,
   [key: string]: any;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
-const LazyComponent: React.FC < LazyComponentProps> = ({
-  component,
-  fallback = <div > Loading...</div>,
-  ...props;
-}) => {
-  const LazyLoadedComponent = lazy (component),
-  return (
-    <Suspense fallback={fallback}>;
+const LazyComponent: React.FC < LazyComponentProps> = ({component,fallback = <div > Loading...</div>,...props;
+}) => {const LazyLoadedComponent = lazy (component),return (<Suspense fallback={fallback}>;
       <LazyLoadedComponent {...props} />;
+    </Suspense>)},export default LazyComponent;
     </Suspense>);
-},
 <<<<<<< HEAD
+},
 
 export default LazyComponent;
 =======
-export default LazyComponent;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+},
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

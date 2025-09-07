@@ -256,7 +256,7 @@ const TIMEOUT = 10000;
 class WebsiteAnalyzer {
   constructor() {
     this.results = {
-      timestam
+      timestam;
     p: new Date().toISOString()
       baseUrl: BASE_URL,
       "summary": {

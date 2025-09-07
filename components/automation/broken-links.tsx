@@ -1,26 +1,24 @@
 <<<<<<< HEAD
-  return (
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-  return (
-
-}
-
-=======
-    <div className="py - 10">;
+  return (return (}<div className="py - 10">;
       <h1 className="text - 2xl font - semibold text - white">Broken Links Report</h1>;
       <p className="text - white / 80 mt - 2">External link status report is written to <code className="text - white / 90">data / reports / broken - links.json</code>.</p>;
       <p className="text - white / 70 mt - 2">This runs twice daily and auto - PRs updates.</p>;
-    </div>);
+    </div>)}ursor/fix-website-loading-errors-and-merge-6662;
+}return (<div className="py-10">;
+      <h1 className="text-2xl font-semibold text-white">Broken Links Report</h1>;
+      <p className="text-white/80 mt-2">External link status report is written to <code className="text-white/90">data/reports/broken-links.json</code>.</p>;
+      <p className="text-white/70 mt-2">This runs twice daily and auto-PRs updates.</p>;
+    </div>;
+  )}
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+  return (return (
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+  return (
+
+}
+
+
 
 }
 
@@ -35,8 +33,6 @@
   );
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
 import {AppSidebar} from "@/components/creator/CreatorSidebar";
 import {Header} from "@/components/Header";
@@ -8,14 +7,7 @@ import { AppSidebar } from "@/components/creator/CreatorSidebar",
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-=======
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/creator/CreatorSidebar";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-export default function CreatorDashboard() {
+import { Footer } from "@/components/Footer",export default function CreatorDashboard() {
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full bg-zion-blue">
@@ -73,12 +65,9 @@ export default function CreatorDashboard() {
                 Create new content, monitor your analytics, or manage your
                 account using the sidebar menu.
               </p>
-<<<<<<< HEAD
 }
-
-
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
-import { AppSidebar } from "@/components/creator/CreatorSidebar",;
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/creator/CreatorSidebar";
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer";
 export default function CreatorDashboard() {;
@@ -91,7 +80,6 @@ export default function CreatorDashboard() {;
           <main className="flex-1 p-6 md:p-10 bg-zion-blue">;
             <h1 className="text-2xl font-bold text-white mb-8">Creator Dashboard</h1>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">;
-
 import { SidebarProvider, SidebarTrigger } from '@/components / ui / sidebar';
 import { AppSidebar } from '@/components / creator / CreatorSidebar';
 import { Header } from '@/components / Header';
@@ -102,13 +90,13 @@ export default /**
 function CreatorDashboard() {
   return (
     <SidebarProvider>;
-      <div className="min - h-screen flex w - full bg - zion - blue">;
+      <div className="min - h-screen flex w - full bg - zion-blue">;
         <AppSidebar />;
-        <div className="flex flex - col w - full">;
+        <div className="flex flex - col w-full">;
           <Header />;
-          <main className="flex - 1 p - 6 md:p - 10 bg - zion - blue">;
-            <h1 className="text - 2xl font - bold text - white mb - 8">Creator Dashboard</h1>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 8">;
+          <main className="flex - 1 p - 6 md:p - 10 bg - zion-blue">;
+            <h1 className="text - 2xl font - bold text - white mb-8">Creator Dashboard</h1>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb-8">;
               {/* Example Stat Card */}
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg">;
                 <div className="flex items-center gap-3 mb-2">;
@@ -144,24 +132,8 @@ function CreatorDashboard() {
           <Footer />;
         </div>;
       </div>;
-      <SidebarTrigger />;
-=======
-              {/* Placeholder for more creator-specific content */}
-            </div>
-          </main>
-          <Footer />
-        </div>
-      </div>
-      <SidebarTrigger />
-    </SidebarProvider>
-  );
+      <SidebarTrigger />;    </SidebarProvider>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </SidebarProvider>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </SidebarProvider>);
 }
     </SidebarProvider>;
@@ -176,8 +148,4 @@ function CreatorDashboard() {
 }
 ;
 }
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}

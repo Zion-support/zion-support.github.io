@@ -1,18 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+const allowlist  = null;const allowlist = new Set<string>([(process.env.EXPO_VIP_ADDRESS |'').toLowerCase()].filter(Boolean))export default async function handler(req: NextApiRequest;
+  res: NextApiResponse;const allowlist = new Set < string>([(process.env.EXPO_VIP_ADDRESS || '').toLowerCase ()].filter (Boolean))export default async /**;
+ * handler - Function description;
+ */;
+function handler() {const address = String (req.query.address || '').toLowerCase ()if (return res.status (400).json ({ allowed: false })) {$2;
+
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const allowlist = new Set<string>(
   [(process.env.EXPO_VIP_ADDRESS |'').toLowerCase()].filter(Boolean)
 );
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
+  req: NextApiRequest;
+    res: NextApiResponse
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ;
 const allowlist = new Set < string>(
   [(process.env.EXPO_VIP_ADDRESS || '').toLowerCase ()].filter (Boolean));
@@ -25,24 +26,17 @@ function handler() {
   if (return res.status (400).json ({ allowed: false })) {
   $2
 }
-  res.status (200).json ({ allowed: allowlist.has (address) });
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const address = String (req.query.address || '').toLowerCase ();
-  if (return res.status (400).json ({ allowed: false })) {
-  $2
-}
-  res.status (200).json ({ allowed: allowlist.has (address) });
-
+  res.status (200).json ({ allowed: allowlist.has (address) })export default async /**;
+ * handler - Function description;
+ */;
+function handler() {const address = String (req.query.address || '').toLowerCase ()if (return res.status (400).json ({ allowed: false })) {$2;
 }
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
+  res.status (200).json ({ allowed: allowlist.has (address) })}[(process && process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean))export default async function handler() {const allowlist = new Set<string>([(process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean))export default async function handler() {const address = String(req.query.address |'').toLowerCase()) {const address = String(req.query.address || '').toLowerCase()if (!address) return res.status(400).json({ allowed: false })res.status(200).json({ allowed: allowlist.has(address) })export default async function handler() {const address = String(req.query.address || '').toLowerCase()if (!address) return res.status(400).json({ allowed: false })res.status(200).json({ allowed: allowlist.has(address) })) {const address = String(req.query.address || '').toLowerCase()if (!address) return res.status(400).json({ allowed: false })res.status(200).json({ allowed: allowlist.has(address) })export default async function handler() {const address = String(req.query.address || '').toLowerCase()if (!address) return res.status(400).json({ allowed: false })res.status(200).json({ allowed: allowlist.has(address) })}ursor/fix-website-loading-errors-and-merge-6662;
+}
+}}
+}}if (!address) return res.status(400).json({ allowed: false })res.status(200).json({ allowed: allowlist.has(address) })}
+  const address = String(req.query.address |'').toLowerCase()if (!address) return res.status(400).json({ allowed: false })res.status(200).json({ allowed: allowlist.has(address) })res.status(200).json({ allowed: allowlist.has(address) })}
   [(process && process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean)
 );
 export default async function handler(
@@ -61,11 +55,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const address = String(req.query.address || '').toLowerCase();
   if (!address) return res.status(400).json({ allowed: false });
   res.status(200).json({ allowed: allowlist.has(address) })
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
+=======
+  res.status (200).json ({ allowed: allowlist.has (address) });
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ) {;
   const address = String(req.query.address || '').toLowerCase();
   if (!address) return res.status(400).json({ allowed: false });
@@ -73,23 +67,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const address = String(req.query.address || '').toLowerCase();
   if (!address) return res.status(400).json({ allowed: false });
-
   res.status(200).json({ allowed: allowlist.has(address) })
-}
 <<<<<<< HEAD
+}
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 }
 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 
 }
@@ -99,7 +86,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ allowed: allowlist.has(address) })
 
 }
-<<<<<<< HEAD
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

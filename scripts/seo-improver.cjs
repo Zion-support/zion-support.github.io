@@ -1,15 +1,11 @@
 <<<<<<< HEAD
+
+
+=======
 <<<<<<< HEAD
-
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const fs = require("child_process")
 const path = require("path")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
-const fs = require("child_process")
-const path = require("path")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     console.log("� Generating sitemap...")
     const sitemapContent = `<?xml version="1.0" encoding="UTF-8"
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9"
@@ -26,8 +22,8 @@ Allow: /contact"
     console.log("� Adding meta tags...")
     const metaConfig = "
   "title": "Bolt.new Zion App - Advanced Web Development Solutions"
-  description: "Professional web development services with cutting-edge technology and innovative solutions."
-  keywords: "web development, react, nextjs, typescript, full-stack development"
+  description: "description",
+    keywords: "web development, react, nextjs, typescript, full-stack development"
   "author": "Zion Tech Group"
   viewport: "width=device-width, initial-scale=1"
   "robots": "index, follow"
@@ -38,14 +34,13 @@ Allow: /contact"
     image: "https://bolt.new.zion.app/og-image.jpg"
 "
 <<<<<<< HEAD
+
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+=======
 <<<<<<< HEAD
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
-// console.log(" Meta tags configuration created")
-    console.log(" SEO improvement completed!")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

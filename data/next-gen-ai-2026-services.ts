@@ -1,18 +1,67 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-export interface NextGenAi2026Service {;
-export interface NextGenAi2026Service {
-export interface NextGenAi2026Service {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+export interface NextGenAi2026Service  {export interface NextGenAi2026Service  {export interface NextGenAi2026Service  {id: string;
+  name: string;
+  tagline: string;
+  price: string;
   id: string;
+  name: string;
+  tagline: string;
+  price: string,description: string;
+  features: string[];
+  link: string;
+  category: string;address: string;
+  }
+export const nextGenAI2026Services: NextGenAi2026Service[] = [;
+  {id: '2026-next-gen-ai';
+    name: '2026 Next-Gen AI Platform';
+    tagline: 'Next-generation AI for 2026';
+    price: '$299/month';
+    description:;
+      'Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.';
+    features: [;
+      'Next-gen AI capabilities';
+      'Advanced algorithms';
+      'Future-ready features';
+      'Innovation platform';
+      'Expert support';
+    ];
+    link: '/services/2026-next-gen-ai';
+    category: 'Next-Gen AI 2026';
+    realImplementation: true;
+    contactInfo: {mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  }
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    id: "2026-next-gen-ai",name: "2026 Next-Gen AI Platform",tagline: "Next-generation AI for 2026",price: "$299/month",description: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.",features: [;
+      "Next-gen AI capabilities","Advanced algorithms","Future-ready features","Innovation platform","Expert support";
+    ],link: "/services/2026-next-gen-ai",category: "Next-Gen AI 2026",realImplementation: true,contactInfo: {email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709";}
+  }];
+];
+      email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }],mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+      address: "364 E Main St STE 1008 Middletown DE 19709"];
+],mobile: "+1 302 464 0950",      mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  }];      mobile: "+1 302 464 0950",mobile: "+1 302 464 0950",mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
+];];
+],mobile: "+1 302 464 0950";
+];
+];
+
+  id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -20,12 +69,11 @@ export interface NextGenAi2026Service {;
   features: string[];
   link: string;
   category: string;
-
     address: string;
   }
 export const nextGenAI2026Services: NextGenAi2026Service[] = [
   {
-    id: '2026-next-gen-ai'
+    id: "id",
     name: '2026 Next-Gen AI Platform'
     tagline: 'Next-generation AI for 2026'
     price: '$299/month'
@@ -40,7 +88,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
     ]
     link: '/services/2026-next-gen-ai'
     category: 'Next-Gen AI 2026'
-    realImplementation: true
+    realImplementation: true;
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -49,22 +97,14 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
   }
 ];      mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
+<<<<<<< HEAD
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
   }
 ]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: "2026-next-gen-ai",
     name: "2026 Next-Gen AI Platform",
     tagline: "Next-generation AI for 2026",
@@ -81,43 +121,25 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
     category: "Next-Gen AI 2026",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709";
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
 
-],
-
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"],
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ],
 
 
 
-],
-      mobile: "+1 302 464 0950",
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
   },;
 ];      mobile: "+1 302 464 0950",
       mobile: "+1 302 464 0950",
@@ -126,20 +148,16 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
+<<<<<<< HEAD
+]
+];
+
+]
+
+
+
+],
+=======
 ],
 ];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-],
-
-
-
-],
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

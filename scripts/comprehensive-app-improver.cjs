@@ -1,11 +1,9 @@
 <<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-#!/usr/bin/env node;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -91,10 +89,8 @@ NEXT_PUBLIC_API_URL="http"
     console.log("\n New Features "Added": ")
     console.log(`\n� Detailed report saved "to"`)
 <<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   console.error("Fatal "error")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error("Fatal "error")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

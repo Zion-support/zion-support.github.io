@@ -1,31 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            // Simple conflict resolution - take the incoming change
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-            // Simple conflict resolution - take the incoming change
-            const resolved = content.replace(/\n<<<<<<<[\s\S]*?=======[\s\S]*?>>>>>>>\n/g, '\n');
-<<<<<<< HEAD
-=======
-            // Simple conflict resolution - take the incoming change
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-            fs.writeFileSync(file, resolved);
+fs.writeFileSync(file, resolved);
             execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
             this.log(`✅ Auto-resolved conflicts in: ${file}`);
           }
         }
-
         // Commit the resolution
         try {
           execSync('git commit -m "fix: resolve merge conflicts"', {
@@ -38,14 +15,12 @@
           this.log(`Warning: Could not commit conflict resolution: ${error.message}`);
         }
       }
-
       return false;
     } catch (error) {
       this.log(`❌ Error resolving merge conflicts: ${error.message}`);
       return false;
     }
   }
-
   async generateWorkflowReport() {
     const report = {
       timestamp: new Date().toISOString(),
@@ -55,70 +30,55 @@
       remoteBranches: await this.getRemoteBranches(),
       recommendations: []
     };
-
     // Generate recommendations
     if (report.branchStatus && report.branchStatus.behind > 0) {
       report.recommendations.push(`Branch is ${report.branchStatus.behind} commits behind origin. Consider pulling latest changes.`);
     }
-
     if (report.branchStatus && report.branchStatus.ahead > 0) {
       report.recommendations.push(`Branch is ${report.branchStatus.ahead} commits ahead of origin. Consider pushing changes.`);
     }
-
     if (report.branchStatus && report.branchStatus.hasChanges) {
       report.recommendations.push('Working directory has uncommitted changes. Consider committing or stashing them.');
     }
-
     const oldBranches = report.localBranches.filter(branch =>
       !this.config.protectedBranches.includes(branch) &&
       branch !== report.currentBranch
     );
-
     if (oldBranches.length > 5) {
       report.recommendations.push(`Many local branches (${oldBranches.length}). Consider cleaning up old branches.`);
     }
-
     return report;
   }
-
   async saveReport(report) {
     try {
       const logsDir = path.dirname(this.reportFile);
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
       }
-
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`📊 Workflow report saved: ${this.reportFile}`);
     } catch (error) {
       this.log(`Error saving report: ${error.message}`);
     }
   }
-
   async run() {
     this.log('🚀 Git Workflow Automator starting...');
-
     try {
       // Generate workflow report
       const report = await this.generateWorkflowReport();
       await this.saveReport(report);
-
       // Auto-cleanup if enabled
       if (this.config.cleanupOldBranches) {
         await this.cleanupOldBranches();
       }
-
       // Resolve any merge conflicts
       await this.resolveMergeConflicts();
-
       // Log summary
       this.log(`📊 Workflow report generated for branch: ${report.currentBranch}`);
-
       if (report.recommendations.length > 0) {
         this.log('💡 Recommendations:');
         report.recommendations.forEach(rec => this.log(`   - ${rec}`));
       }
-
       this.log('✅ Git Workflow Automator completed successfully');
     } catch (error) {
       this.log(`❌ Git Workflow Automator failed: ${error.message}`);
@@ -126,36 +86,17 @@
     }
   }
 }
-
 // Run if called directly
 if (require.main === module) {
   const automator = new GitWorkflowAutomator();
   automator.run();
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-module.exports = GitWorkflowAutomator;'
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-module.exports = GitWorkflowAutomator;
-=======
-<<<<<<< HEAD
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 '
-<<<<<<< HEAD
 =======
 module.exports = GitWorkflowAutomator;'
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
         "encoding"

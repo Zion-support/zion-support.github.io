@@ -27,16 +27,14 @@ import { toast } from "@/hooks/use-toast",
 import { Check, Flag, Search, Settings, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 interface PartnerProfile {
-
-  id: string
-  user_id: string
+  id: string;
+    user_id: string
   name: string
   status: 'pending' | 'approved' | 'rejected'
   created_at: string
   niche: string
   audience_size: string
   social_media?: Record<string, string>;
-
   website?: string;
   bio?: string;
   payout_method?: string;
@@ -56,22 +54,17 @@ interface PartnerProfile {
   bio?: string,
   payout_method?: string,
   fraud_flags?: number,
-
   commission_rate?: number
 }
-
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
-
   const navigate = useNavigate();
   const navigate = useNavigate();
-
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
-
       navigate("/login");
       return;
     }
@@ -90,8 +83,8 @@ interface PartnerProfile {
       if (!data |data.length === 0) {
         const mockData: PartnerProfile[] = [
           {
-            id: '1'
-            user_id: 'user1'
+            id: "id",
+    user_id: 'user1'
             name: 'AI Bytes'
             status: 'pending'
             created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString()
@@ -170,11 +163,10 @@ interface PartnerProfile {
       } else {
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery)
-
       navigate("/login"),
       return
-import { useState, useEffect } from "react",;
-import { useAuth } from "@/hooks/useAuth",;
+import { useState, useEffect } from "react";
+import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -195,9 +187,7 @@ interface PartnerProfile {;
   created_at: string,;
   niche: string,;
   audience_size: string,;
-
   social_media?: Record<string, string>;
-
 import { useState, useEffect } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { use_navigate } from './react-router-dom';
@@ -235,7 +225,6 @@ interface PartnerProfile {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
-
         setPartners(mockData);
         filterPartners(mockData, activeTab, searchQuery);
       } else {;
@@ -378,29 +367,22 @@ if ( {) {
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
-
-
-
-
     } catch (error) {;
       console.error("Error fetching partners:", error),;
       toast({;
-        title: "Error",;
-        description: "Failed to load partner data",;
+        title: "Error",,
+  description: "Failed to load partner data",;
         variant: "destructive"});
     } finally {;
       setIsLoading(false);
     }
   };
-
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {;
     let filtered = partners,;
-
     // Filter by status;
     if (status !== "all") {;
       filtered = filtered && filtered.filter(p => p && p.status === status);
     }
-
     // Filter by search query;
     if (query) {;
       const lowerQuery = query && query.toLowerCase();
@@ -411,25 +393,17 @@ if ( {) {
         p && p.website?.toLowerCase().includes(lowerQuery);
       );
     }
-
-
-
-
-    
     setFilteredPartners(filtered)
   },
-
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value)
     filterPartners(partners, activeTab, e.target.value)
   },
-
   const handleTabChange = (value: string) => {
     setActiveTab(value)
     filterPartners(partners, value, searchQuery)
   }
   },
-
   const handleViewDetails = (partner: PartnerProfile) => {
     setSelectedPartner(partner)
     setIsDetailsOpen(true)
@@ -473,11 +447,7 @@ if ( {) {
         title: "Error"
         description: "Failed to update partner settings"
         variant: "destructive"})
-
-
-
   };
-
 ;
     setFilteredPartners(filtered);
   },;
@@ -518,10 +488,6 @@ if ( {) {
       case 'over100k': return 'Over 100,000';
       default: return size;
     }
-
-
-
-
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
@@ -535,9 +501,6 @@ if ( {) {
     }
   }
   },
-
-
-
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null
       case 'rejected':;
@@ -546,7 +509,6 @@ if ( {) {
         return <Badge variant="outline">{status}</Badge>;
     }
     return (
-
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
         <Flag className="h-3 w-3" />
   },;
@@ -654,7 +616,7 @@ if ( {) {
               <TabsTrigger value="all">All</TabsTrigger>;
             </TabsList>;
                 isLoading={isLoading}
-            <TabsContent value="pending" className="space - y-4">;
+            <TabsContent value="pending" className="space-y-4">;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
@@ -666,7 +628,7 @@ if ( {) {
                 isLoading={isLoading}
               />;
             </TabsContent>;
-            <TabsContent value="approved" className="space - y-4">;
+            <TabsContent value="approved" className="space-y-4">;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
@@ -678,7 +640,7 @@ if ( {) {
                 isLoading={isLoading}
               />;
             </TabsContent>;
-            <TabsContent value="rejected" className="space - y-4">;
+            <TabsContent value="rejected" className="space-y-4">;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
@@ -687,7 +649,7 @@ if ( {) {
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-            <TabsContent value="all" className="space - y-4">;
+            <TabsContent value="all" className="space-y-4">;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
@@ -736,8 +698,6 @@ if ( {) {
                   <Button 
                     variant="destructive" 
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
-
-
               <div className="grid grid-cols-2 gap-2">;
                 <div>;
                   <p className="text-xs text-zion-slate-light">Payout Method</p>;
@@ -748,50 +708,49 @@ if ( {) {
                   <p className="text-white">{selectedPartner && selectedPartner.commission_rate || 25}%</p>;
                 </div>;
               </div>;
-
               {selectedPartner && selectedPartner.fraud_flags && selectedPartner && selectedPartner.fraud_flags > 0 && (;
                 <Alert className="bg-red-900/20 border-red-900/50 text-red-500">;
                   <AlertTitle className="flex items-center gap-2">;
                     <Flag className="h-4 w-4" />;
                     Potential Fraud Detected ({selectedPartner && selectedPartner.fraud_flags});
           {selected_partner && (
-            <div className="space - y-4">;
-              <div className="grid grid - cols - 2 gap - 2">;
+            <div className="space-y-4">;
+              <div className="grid grid - cols - 2 gap-2">;
                 <div>;
-                  <p className="text - xs text - zion - slate - light">Name</p>;
-                  <p className="font - medium text - white">{selected_partner.name}</p>;
+                  <p className="text - xs text - zion - slate-light">Name</p>;
+                  <p className="font - medium text-white">{selected_partner.name}</p>;
                 </div>;
                 <div>;
-                  <p className="text - xs text - zion - slate - light">Status</p>;
+                  <p className="text - xs text - zion - slate-light">Status</p>;
                   <div>{getStatusBadge (selected_partner.status)}</div>;
                 </div>;
               </div>;
               <div>;
-                <p className="text - xs text - zion - slate - light">Bio</p>;
-                <p className="text - white">{selected_partner.bio || "No bio provided"}</p>;
+                <p className="text - xs text - zion - slate-light">Bio</p>;
+                <p className="text-white">{selected_partner.bio || "No bio provided"}</p>;
               </div>;
-              <div className="grid grid - cols - 2 gap - 2">;
+              <div className="grid grid - cols - 2 gap-2">;
                 <div>;
-                  <p className="text - xs text - zion - slate - light">Niche</p>;
-                  <p className="text - white">{selected_partner.niche}</p>;
+                  <p className="text - xs text - zion - slate-light">Niche</p>;
+                  <p className="text-white">{selected_partner.niche}</p>;
                 </div>;
                 <div>;
-                  <p className="text - xs text - zion - slate - light">Audience Size</p>;
-                  <p className="text - white">{getAudienceSizeLabel (selected_partner.audience_size)}</p>;
+                  <p className="text - xs text - zion - slate-light">Audience Size</p>;
+                  <p className="text-white">{getAudienceSizeLabel (selected_partner.audience_size)}</p>;
                 </div>;
               </div>;
               {selected_partner.website && (
                 <div>;
-                  <p className="text - xs text - zion - slate - light">Website</p>;
-                  <p className="text - zion - cyan">{selected_partner.website}</p>;
+                  <p className="text - xs text - zion - slate-light">Website</p>;
+                  <p className="text - zion-cyan">{selected_partner.website}</p>;
                 </div>)}
               {selected_partner.social_media && Object.keys (selected_partner.social_media).length > 0 && (
                 <div>;
-                  <p className="text - xs text - zion - slate - light">Social Media</p>;
-                  <div className="grid grid - cols - 2 gap - 2">;
+                  <p className="text - xs text - zion - slate-light">Social Media</p>;
+                  <div className="grid grid - cols - 2 gap-2">;
                     {Object.entries (selected_partner.social_media).map (([platform, handle]) => (
-                      <p key={platform} className="text - white">;
-                        <span className="font - medium">{platform}: </span>;
+                      <p key={platform} className="text-white">;
+                        <span className="font-medium">{platform}: </span>;
               />;
             </TabsContent>;
           </Tabs>;
@@ -833,7 +792,6 @@ function PartnerTable({
   partners
   isLoading
   onViewDetails
-
 function PartnerTable({ 
   partners, 
   isLoading, 
@@ -841,7 +799,6 @@ function PartnerTable({
   onUpdateStatus;
   onOpenSettings;
   getStatusBadge;
-
   getFraudFlagBadge
 }: PartnerTableProps) {
   if (isLoading) {
@@ -850,10 +807,6 @@ function PartnerTable({
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
     );
-
-
-
-
   }
     return (
       <div className="text-center py-8">;
@@ -864,20 +817,20 @@ function PartnerTable({
   return (
     <Table>;
       <TableHeader>;
-        <TableRow className="hover:bg - transparent">;
+        <TableRow className="hover:bg-transparent">;
           <TableHead > Name</TableHead>;
           <TableHead > Niche</TableHead>;
           <TableHead > Audience</TableHead>;
           <TableHead > Status</TableHead>;
           <TableHead > Date</TableHead>;
-          <TableHead className="text - right">Actions</TableHead>;
+          <TableHead className="text-right">Actions</TableHead>;
         </TableRow>;
       </TableHeader>;
       <TableBody>;
         {partners.map ((partner) => (
-          <TableRow key={partner.id} className="border - zion - blue - light hover:bg - zion - blue - light / 10">;
-            <TableCell className="font - medium text - white">;
-              <div className="flex items - center gap - 2">;
+          <TableRow key={partner.id} className="border - zion - blue - light hover:bg - zion - blue-light / 10">;
+            <TableCell className="font - medium text-white">;
+              <div className="flex items - center gap-2">;
                 {partner.name}
                 {getFraudFlagBadge (partner.fraud_flags)}
               </div>;
@@ -899,9 +852,7 @@ function PartnerTable({
                 )}
                 <Button
                   variant="outline"
-                
                 <Button 
-
                   variant="outline" 
                   size="sm"
                   onClick={() => onViewDetails(partner)}
@@ -910,29 +861,29 @@ function PartnerTable({
                       variant="ghost";
                       size="sm";
                       on_click={() => onUpdateStatus (partner.id, 'rejected')}
-                      className="text - red - 500 hover:text - red - 600 hover:bg - red - 900 / 20";
+                      className="text - red - 500 hover:text - red - 600 hover:bg - red-900 / 20";
                     >;
-                      <X className="h - 4 w - 4" />;
-                      <span className="sr - only">Reject</span>;
+                      <X className="h - 4 w-4" />;
+                      <span className="sr-only">Reject</span>;
                     </Button>;
                     <Button;
                       variant="ghost";
                       size="sm";
                       on_click={() => onUpdateStatus (partner.id, 'approved')}
-                      className="text - green - 500 hover:text - green - 600 hover:bg - green - 900 / 20";
+                      className="text - green - 500 hover:text - green - 600 hover:bg - green-900 / 20";
                     >;
-                      <Check className="h - 4 w - 4" />;
-                      <span className="sr - only">Approve</span>;
+                      <Check className="h - 4 w-4" />;
+                      <span className="sr-only">Approve</span>;
                     </Button>;
                   </>)}
                 <Button;
                   variant="ghost";
                   size="sm";
                   on_click={() => onOpenSettings (partner)}
-                  className="text - zion - slate - light hover:text - white";
+                  className="text - zion - slate - light hover:text-white";
                 >;
-                  <Settings className="h - 4 w - 4" />;
-                  <span className="sr - only">Settings</span>;
+                  <Settings className="h - 4 w-4" />;
+                  <span className="sr-only">Settings</span>;
                 </Button>;
                 <Button;
                   variant="outline";

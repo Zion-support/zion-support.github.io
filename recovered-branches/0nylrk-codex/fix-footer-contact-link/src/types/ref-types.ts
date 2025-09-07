@@ -7,48 +7,13 @@ import { LegacyRef, Ref } from './react';
 // A type that safely handles all possible reference types;
 export type SafeRef < T> = LegacyRef < T> | Ref < T>;
 
-
 import {LegacyRef, Ref} from "react";
 // A type that safely handles all possible reference types
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-import { LegacyRef, Ref } from "react";
-// A type that safely handles all possible reference types
-export type SafeRef<T> = LegacyRef<T> | Ref<T>;
-import {LegacyRef, Ref} from "react";
-// A type that safely handles all possible reference types
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { LegacyRef, Ref } from "react",
 
 // A type that safely handles all possible reference types
 export type SafeRef<T> = LegacyRef<T> | Ref<T>,
-import { LegacyRef, Ref } from "react",;
+import { LegacyRef, Ref } from "react";
 // A type that safely handles all possible reference types;
-<<<<<<< HEAD
-export type SafeRef<T> = LegacyRef<T> | Ref<T>;
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export type SafeRef<T> = LegacyRef<T> | Ref<T>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-export type SafeRef<T> = LegacyRef<T> | Ref<T>;
-export type SafeRef<T> = LegacyRef<T> | Ref<T>;
-export type SafeRef<T> = LegacyRef<T> | Ref<T>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export type SafeRef<T> = LegacyRef<T> | Ref<T>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+export type SafeRef<T> = LegacyRef<T> | Ref<T>;export type SafeRef<T> = LegacyRef<T> | Ref<T>;

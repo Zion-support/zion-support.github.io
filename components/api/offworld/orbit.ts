@@ -1,25 +1,46 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { connectOrbit,appendChatMessage,recordVote,editConstitution,} from '@/utils/offworld/orbitdb';
+import { connectOrbit;
+  appendChatMessage;
+  recordVote;
+=======
 import {
   connectOrbit,
   appendChatMessage,
   recordVote,
   editConstitution,;
 } from '@/utils/offworld/orbitdb';
-
 import {
   connectOrbit
   appendChatMessage
   recordVote
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   editConstitution;
-} from '@/utils/offworld/orbitdb';
-export default async function handler(
-) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
-  req: NextApiRequest,
+ } from '@/utils/offworld/orbitdb';
+export default async function handler() {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution  } from '@/utils/offworld/orbitdb';
+  req: NextApiRequest,res: NextApiResponse;
+) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution  } from '@/utils/offworld/orbitdb';
+export default async function handler() {req: NextApiRequest;
   res: NextApiResponse;
+<<<<<<< HEAD
+export default async function handler() {import { connectOrbit, appendChatMessage, recordVote, editConstitution  } from '@/utils/offworld/orbitdb';
+export default async function handler() {const { action } = req.query;
+  const body  = null;const { action } = req.query;
+  const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+  const { stores } = await connectOrbit()if (!stores) return res.status(503).json({ error: 'OrbitDB unavailable' })try {if (action === 'chat' && req && req.method === 'POST') {await appendChatMessage(stores, body)return res && res.status(200).json({ ok: true })try {if (action === 'chat' && req.method === 'POST') {await appendChatMessage(stores, body)return res.status(200).json({ ok: true })return res.status(200).json({ ok: true })}
+    if (action === 'vote' && req && req.method === 'POST') {await recordVote(stores, body)return res && res.status(200).json({ ok: true })}
+    if (action === 'constitution' && req && req.method === 'POST') {await editConstitution(stores, body)return res && res.status(200).json({ ok: true })}
+    return res && res.status(400).json({ error: 'Unsupported action' })} catch (e: any) {return res && res.status(500).json({ error: e && e.message })}    }
+    if (action === 'vote' && req && req.method === 'POST') {await recordVote(stores, body)return res && res.status(200).json({ ok: true })}
+    if (action === 'constitution' && req && req.method === 'POST') {await editConstitution(stores, body)return res.status(500).json({ error: e.message })}
+      return res.status(200).json({ ok: true })}
+    return res.status(400).json({ error: 'Unsupported action' })} catch (e: any) {return res.status(500).json({ error: e.message })}
+=======
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+    res: NextApiResponse
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
@@ -29,7 +50,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (action === 'chat' && req && req.method === 'POST') {
       await appendChatMessage(stores, body);
       return res && res.status(200).json({ ok: true });
-
   try {
     if (action === 'chat' && req.method === 'POST') {
       await appendChatMessage(stores, body);
@@ -54,4 +74,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (action === 'constitution' && req && req.method === 'POST') {
       await editConstitution(stores, body);
 }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }

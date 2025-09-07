@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
@@ -6,18 +5,12 @@ import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationFor
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
 
-
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
 
 import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
-
-=======
-import React from "react";
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function CreateTalentProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -36,9 +29,8 @@ export default function CreateTalentProfile() {
         <TalentRegistrationForm />
       </div>
     </div>
-<<<<<<< HEAD
   )
-import React from "react",;
+import React from "react";
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
 
 export default function CreateTalentProfile() {;
@@ -51,22 +43,10 @@ export default function CreateTalentProfile() {;
             Showcase your skills to top clients and employers. Create a professional profile;
             to get discovered for AI and tech projects on the Zion Marketplace.;
           </p>;
-        </div>;
-=======
-  );
-}
-
-=======
-;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    </div>);
+        </div>;    </div>);
 }
 
 ;
-
 
         ;
         <TalentRegistrationForm />;
@@ -76,8 +56,4 @@ export default function CreateTalentProfile() {;
 }
 ;
 }
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}

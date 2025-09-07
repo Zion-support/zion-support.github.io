@@ -1,40 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {
       },
     ],
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
-      {
 
-          'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
-        title: 'Real - Time Analytics Dashboard',
-        description:;
-          'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
 
-      },
-    ],
-  },
-import { TalentProfile } from '@/types/talent';
-
-import { TalentProfile } from "@/types/talent";
-// Sample talent profiles with realistic data for the talent directory
-export const TALENT_PROFILES: TalentProfile[] = [
-  {
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
     id: 't - 006',
     user_id: 'user - 006',
@@ -43,9 +15,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
     profile_picture_url:;
       'https://images.unsplash.com / photo - 1494790108377 - be9c29b29330?auto = format & fit = crop & w=200 & h=200',
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
     location: 'Washington, DC',
     skills: [;
@@ -176,23 +147,16 @@ export const TALENT_PROFILES: TalentProfile[] = [
     rating_count: 27,
     availability_type: 'project',
     is_verified: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
     id: "t-001", user_id: "user-001",
     full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import { TalentProfile } from "@/types/talent",
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -227,28 +191,26 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
   },
 ];
-<<<<<<< HEAD
 ;
-=======
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
+
 ;
 
 
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
+
+    id: "t-001";
+    user_id: "user-001";
+    full_name: "Alexandra Chen";
+    professional_title: "Senior AI Engineer & Machine Learning Expert";
+    profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto;
+

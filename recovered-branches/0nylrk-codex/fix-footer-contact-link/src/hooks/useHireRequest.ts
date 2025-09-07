@@ -6,7 +6,6 @@ import {useState} from 'react';
 import { supabase } from '@/integrations / supabase / client';
 import { toast } from '@/hooks / use - toast';
 import { TalentProfile } from '@/types / talent';
-
 export interface HireRequestData {
   talent: {
     id: string;
@@ -45,18 +44,14 @@ export interface HireRequestData {
     budgetMax: number
   }
 }
-
-
 export function useHireRequest() {;
-
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const [error, setError] = useState<string | null>(null);
   const submitHireRequest = async (requestData: HireRequestData) => {
     setIsSubmitting(true);
     setError(null)
     try {
-      // Call the edge function to process the hire request
+      // Call the edge function to process the hire request;
     budget_min: number,
     budget_max: number;
   }
@@ -97,8 +92,8 @@ if (throw error) {
       set_error (error_message);
 ;
       toast ({
-        title: "Error";
-        description: error_message,
+        title: "Error",
+  description: error_message,
         variant: "destructive"});
 ;
       return { success: false, error: error_message }
@@ -109,7 +104,6 @@ if (throw error) {
         title: "Error",
         description: errorMessage,
         variant: "destructive"}),
-      
       return { success: false, error: errorMessage }
     } finally {
       setIsSubmitting(false)
@@ -118,15 +112,13 @@ if (throw error) {
   return {
     submitHireRequest;
     isSubmitting;
-
   }
 }
         title: "Error",
         description: errorMessage,
         variant: "destructive"}),
-      
-import { useState } from 'react',;
-import { supabase } from "@/integrations/supabase/client",;
+import { useState } from 'react';
+import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast",;
 import { TalentProfile } from "@/types/talent",;
 export interface HireRequestData {;
@@ -163,8 +155,8 @@ export function useHireRequest() {;
       if (error) throw error,;
       // Show success message;
       toast({;
-        title: "Request Submitted",;
-        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),;
+        title: "Request Submitted",,
+  description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),;
       return { success: true, requestId: response?.request_id }
     } catch (error) {;
       console.error("Error submitting hire request:", error),;
@@ -173,8 +165,8 @@ export function useHireRequest() {;
         : "There was a problem submitting your request. Please try again.",;
       setError(errorMessage),;
       toast({;
-        title: "Error",;
-        description: errorMessage,;
+        title: "Error",,
+  description: errorMessage,;
         variant: "destructive"}),;
       return { success: false, error: errorMessage }
     } finally {;
@@ -185,7 +177,6 @@ export function useHireRequest() {;
     submitHireRequest;
     isSubmitting;
     error;
-
   }
 }
 ;

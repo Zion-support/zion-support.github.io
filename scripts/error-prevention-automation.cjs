@@ -1,11 +1,9 @@
 <<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-#!/usr/bin/env node;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const { execSync, spawn } = require("$1")
 const fs = require("$1")
 const path = require("path")
@@ -17,10 +15,8 @@ const path = require("path")";console.log("� Error Prevention & Automation Sys
         "encoding"
         "stdio"
 <<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       this.log(` ${description} "failed"`)
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      this.log(` ${description} "failed"`)
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
