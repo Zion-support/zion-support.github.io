@@ -15,5 +15,3 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
 }
 
 }
-
-}

@@ -1,184 +1,156 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-;
-console.log('🚀 Starting Advanced Syntax Fixer');
-;
-// Fix specific syntax issues;
-function fixAdvancedSyntaxIssues(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, 'utf8');
-    let fixed = false;
-;
-    // Fix HTML entity issues;
-    content = content.replace(/&amp;apos;/g, "'");
-    content = content.replace(/&amp;quot;/g, '"');
-    content = content.replace(/&amp;lt;/g, '<');
-    content = content.replace(/&amp;gt;/g, '>');
-    content = content.replace(/&apos;/g, "'");
-    content = content.replace(/&quot;/g, '"');
-    content = content.replace(/&lt;/g, '<');
-    content = content.replace(/&gt;/g, '>');
 
-    // Fix import statements
-    content = content.replace(
-      /import React from 'react',/g,
-      "import React from 'react';"
-    );
-    content = content.replace(
-      /import React from "react",/g,
-      'import React from "react";'
-    );
-    content = content.replace(
-      /import { JSX } from 'react',/g,
-      "import { JSX } from 'react';"
-    );
-
-    // Fix export statements
-    content = content.replace(
-      /export default function (\w+)\(\): JSX\.Element \{/g,
-
-    );
-    content = content.replace(
-      /export interface (\w+) \{;/g,
-
-    );
-    content = content.replace(
-      /export const (\w+): (\w+)\[\] = \[;/g,
-
-    );
-
-    // Fix JSX syntax
-    content = content.replace(/&lt;main&gt;/g, '<main>');
-    content = content.replace(/&lt;\/main&gt;/g, '</main>');
-    content = content.replace(/&lt;div&gt;/g, '<div>');
-    content = content.replace(/&lt;\/div&gt;/g, '</div>');
-;
-    // Fix object syntax issues;
-    content = content.replace(/\{\s*,/g, '{');
-    content = content.replace(/,\s*\}/g, '}');
-    content = content.replace(/,\s*,/g, ',');
-;
-    // Fix array syntax issues;
-    content = content.replace(/\[\s*,/g, '[');
-    content = content.replace(/,\s*\]/g, ']');
-;
-    // Fix function parameter issues;
-    content = content.replace(/\(\s*,/g, '(');
-    content = content.replace(/,\s*\)/g, ')');
-;
-    // Fix semicolon issues;
-    content = content.replace(/;\s*,/g, ';');
-    content = content.replace(/,\s*;/g, ';');
-
-    // Fix React component syntax
-    content = content.replace(
-      /const (\w+) = \(\) => \{/g,
-
-    );
-    content = content.replace(/export default (\w+),/g, 'export default $1;');
-;
-    // Fix TypeScript interface syntax;
-    content = content.replace(/interface (\w+) \{;/g, 'interface $1 {');
-    content = content.replace(/type (\w+) = \{;/g, 'type $1 = {');
-;
-    // Fix JSX syntax;
-    content = content.replace(/<(\w+)\s*,/g, '<$1');
-    content = content.replace(/,\s*>/g, '>');
-;
-    // Fix performance API issues;
-    if (content.includes('performance.')) {;
-      content = content.replace(/performance\./g, 'window.performance.');
-    }
-;
-    // Fix React hooks issues;
-    content = content.replace(/useEffect\(\(\) => \{/g, 'useEffect(() => {');
-;
-    // Fix console statements;
-    content = content.replace(/console\.log\(/g, '// console.log(');
-
-    // Fix specific parsing errors
-    content = content.replace(
-      /import React from 'react',/g,
-      "import React from 'react';"
-    );
-    content = content.replace(
-      /import { JSX } from 'react',/g,
-      "import { JSX } from 'react';"
-    );
-    content = content.replace(
-      /export default function App\(\): JSX\.Element \{/g,
-
-    );
-
-    // Fix vite config issues
-    if (filePath.includes('vite.config.ts')) {
-      content = content.replace(
-        /import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from 'node: path', export default defineConfig\(\{/g,
-        `import { defineConfig, splitVendorChunkPlugin } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from '"node": path';
-;
-export default defineConfig({`);
-;
-      content = content.replace(/"plugins": \[ react\(\{ "include": '\*\*\/\*\.\{jsx,js,ts,tsx\}',"fastRefresh": true,"jsxRuntime": 'automatic'\}\),splitVendorChunkPlugin\(\) \]/g,
-        `"plugins": [;
-    react({;
-      "include": '**/*.{jsx,js,ts,tsx}',
-      "fastRefresh": true,
-      "jsxRuntime": 'automatic';
-    }),
-    splitVendorChunkPlugin();
-  ]`);
-    }
-;
-    if (fixed || content !== fs.readFileSync(filePath, 'utf8')) {;
-      fs.writeFileSync(filePath, content);
-      return true;
-    }
-    return false;
-  } catch (error) {;
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+class AdvancedSyntaxFixer {
+  constructor() {
+    this.fixedFiles = [];
+    this.errors = [];
   }
-}
-;
-// Get all TypeScript/JavaScript files;
-function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;
-  let files = [];
-  const items = fs.readdirSync(dir);
-;
-  for (const item of items) {;
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-;
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
-      files = files.concat(getAllFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {;
-      files.push(fullPath);
+
+  log(message, type = 'INFO') {
+    const prefix = { 'INFO': 'ℹ️', 'SUCCESS': '✅', 'ERROR': '❌', 'WARNING': '⚠️' }[type] || 'ℹ️';
+    console.log(`${prefix} ${message}`);
+  }
+
+  fixFile(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
+      
+      // Fix common syntax patterns
+      content = this.fixCommonPatterns(content);
+      
+      // Fix merge conflicts
+      content = this.fixMergeConflicts(content);
+      
+      // Fix malformed imports
+      content = this.fixImports(content);
+      
+      // Fix JSX issues
+      content = this.fixJSX(content);
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        this.fixedFiles.push(filePath);
+        this.log(`Fixed: ${filePath}`, 'SUCCESS');
+        return true;
+      }
+      
+      return false;
+    } catch (error) {
+      this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
+      this.errors.push({ file: filePath, error: error.message });
+      return false;
     }
   }
-;
-  return files;
-}
-;
-// Main execution;
-try {;
-  const files = getAllFiles('/workspace');
-  let fixedCount = 0;
-;
-  console.log(`Found ${files.length} files to check`);
-;
-  for (const file of files) {;
-    if (fixAdvancedSyntaxIssues(file)) {;
-      fixedCount++;
-      console.log(`✅ "Fixed": ${file}`);
+
+  fixCommonPatterns(content) {
+    const fixes = [
+      // Fix malformed object properties
+      { pattern: /(\w+): s: /g, replacement: '$1: ' },
+      { pattern: /(\w+): n: /g, replacement: '$1: ' },
+      { pattern: /(\w+): p: /g, replacement: '$1: ' },
+      
+      // Fix malformed strings
+      { pattern: /Erro: r:/g, replacement: 'Error:' },
+      { pattern: /Warnin: g:/g, replacement: 'Warning:' },
+      { pattern: /Runnin: g:/g, replacement: 'Running:' },
+      { pattern: /faile: d:/g, replacement: 'failed:' },
+      { pattern: /outpu: t:/g, replacement: 'output:' },
+      { pattern: /erro: r:/g, replacement: 'error:' },
+      
+      // Fix semicolon issues
+      { pattern: /npm run: /g, replacement: 'npm run ' },
+      { pattern: /npm run build;/g, replacement: 'npm run build' },
+      { pattern: /npm run clean;/g, replacement: 'npm run clean' },
+      { pattern: /npm install;/g, replacement: 'npm install' },
+      
+      // Fix malformed function calls
+      { pattern: /(\w+): (\w+): /g, replacement: '$1: ' },
+      
+      // Fix unterminated strings
+      { pattern: /'([^']*)$/gm, replacement: "'$1'" },
+      { pattern: /"([^"]*)$/gm, replacement: '"$1"' },
+    ];
+    
+    for (const fix of fixes) {
+      content = content.replace(fix.pattern, fix.replacement);
+    }
+    
+    return content;
+  }
+
+  fixMergeConflicts(content) {
+    return content
+      .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
+      .replace(/<<<<<<< HEAD[\s\S]*?=======/g, '')
+      .replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+  }
+
+  fixImports(content) {
+    // Fix malformed import statements
+    return content
+      .replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1 } from "$2";')
+      .replace(/import\s+([^{][^;]+);?/g, 'import $1;');
+  }
+
+  fixJSX(content) {
+    // Fix common JSX issues
+    return content
+      .replace(/jsx-a11y\/alt-tex: t: warn/g, 'jsx-a11y/alt-text: warn')
+      .replace(/jsx-a11y\/aria-rol: e: warn/g, 'jsx-a11y/aria-role: warn')
+      .replace(/jsx-a11y\/tabindex-no-positiv: e: warn/g, 'jsx-a11y/tabindex-no-positive: warn');
+  }
+
+  async run() {
+    this.log('🚀 Starting Advanced Syntax Fixer', 'INFO');
+    
+    const srcDir = path.join(process.cwd(), 'src');
+    const files = this.getAllTsxFiles(srcDir);
+    
+    this.log(`Found ${files.length} files to process`, 'INFO');
+    
+    for (const file of files) {
+      this.fixFile(file);
+    }
+    
+    this.log(`\n📊 Fixed ${this.fixedFiles.length} files`, 'SUCCESS');
+    if (this.errors.length > 0) {
+      this.log(`❌ ${this.errors.length} errors occurred`, 'ERROR');
     }
   }
-;
-  console.log(`\n🎯 Fixed ${fixedCount} files`);
-;
-} catch (error) {;
-  console.error('"Error": ', error.message);
-  process.exit(1);
+
+  getAllTsxFiles(dir) {
+    const files = [];
+    const walkDir = (currentDir) => {
+      try {
+        const items = fs.readdirSync(currentDir);
+        for (const item of items) {
+          const fullPath = path.join(currentDir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+            walkDir(fullPath);
+          } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+            files.push(fullPath);
+          }
+        }
+      } catch (error) {
+        // Skip directories that can't be read
+      }
+    };
+    
+    walkDir(dir);
+    return files;
+  }
 }
+
+// Run the fixer
+if (require.main === module) {
+  const fixer = new AdvancedSyntaxFixer();
+  fixer.run().catch(console.error);
+}
+
+module.exports = AdvancedSyntaxFixer;

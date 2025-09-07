@@ -43,16 +43,23 @@ interface TalentProfileData {;
   skills: string[],;
   location?: string;
 }
-;
-interface EnhancedProfile {;
-  summary: string,;
-  categorizedSkills: {;
-    programming: string[],;
-    devops: string[],;
-    platforms: string[],;
-    softSkills: string[],;
-    other: string[];
-  }
+}serve (async (req) => {
+  //Handle CORS preflight requests if (req.method === 'OPTIONS') {
+  
+}//Create a request to OpenAI API const openAIResponse = await fetch ('https://api.openai.com/v1/chat/completions', {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  OPENAI API KEY 
+}`;
+'Content-Type': 'application/json' 
+};
+body: JSON.stringify ({
+  model: 'gpt-4o-mini', messages: [ {
+  role: 'system', content: `You are an expert HR assistant. Based on the user's bio and experience, write a professional and engaging 100–150 word summary for their profile. Then extract up to 8 clear skill tags, categorized by type for better filtering.` 
+};
+{
+  role: 'user', content: `Create a professional profile summary and categorize skills based on this information: $ {
+  talentData.name 
 }
 serve(async (req) => {
   // Handle CORS preflight requests

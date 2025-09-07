@@ -15,5 +15,3 @@ export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
 }
 
 }
-
-}

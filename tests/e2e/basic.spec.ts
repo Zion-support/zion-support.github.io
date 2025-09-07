@@ -17,5 +17,3 @@ export default function Basic.spec({ }: Basic.specProps) {
 }
 
 }
-
-}
