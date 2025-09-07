@@ -571,32 +571,20 @@ export default function Layout({
 =======
 =======
 
-export default function Layout({ children, title, description }: LayoutProps) {
+const Layout = ({ 
+  children, 
+  title = "Zion Tech Group - Leading AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation",
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  ogTitle,
+  ogDescription,
+  ogUrl
+}: LayoutProps) => {
   return (
     <>
       <Head>
-        <title>{title || 'Zion Tech Group'}</title>
-        <meta name="description" content={description || 'Leading provider of AI-powered solutions and digital transformation services.'} />
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        {children}
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      </div>
-    </>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
+        <title>{title}</title>
         <meta name="description" content={description} />
 >>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 =======
@@ -636,142 +624,11 @@ export default function Layout({ children, title, description }: LayoutProps) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href={ogUrl || "https://ziontechgroup.com"} />
       </Head>
-      
-      <div className="min-h-screen flex flex-col bg-gray-50">
-        <Header />
-        
-        <main className="flex-1">
-          {children}
-        </main>
-        
-        <Footer />
-        
-        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <div className="min-h-screen bg-gray-50">
+        {children}
       </div>
     </>
   );
-}
-<<<<<<< HEAD
-import React, { ReactNode } from 'react';
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import React, { ReactNode } from 'react';
-
-}
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-interface LayoutProps {
-  children: ReactNode;
-}
-
-<<<<<<< HEAD
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-=======
-  children: React.ReactNode
-  title?: string
-  description?: string
-class ErrorBoundary extends React.Component<
-  { children: React.ReactNode },
-  { hasError: boolean }
-> {
-  constructor($2) {
-    super(props)
-    this.state = { hasError: false }
-  static getDerivedStateFromError(error: Error) {
-    return { hasError: true }
-  componentDidCatch($2) {
-    console.error('Error caught by boundary:', error, errorInfo)
-  render($2) {
-  if($2) {
-      return <div>Something went wrong.</div>
-    return this.props.children
-export default function Layout({ children, title, description }: LayoutProps) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  return (
-=======
-const Layout: React.FC<LayoutProps> = ({ children ;}) => {
-  return (
-    <main className="min-h-screen">
-      {children}
-    </main>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-      <main className="flex-1">{children}</main>
-      <Footer />
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-  );
 };
 
 export default Layout;
-<<<<<<< HEAD
-main
-
-main
-
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-=======
-  );
-}
-<<<<<<< HEAD
-=======
-import React, { ReactNode } from "react"
-interface LayoutProps {
-  children: ReactNode
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <main className="min-h-screen">
-      {children}
-    </main>
-  )
-}
-export default Layout
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-export default Layout;
-  );
-};
-export default Layout;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-main
-main
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-<<<<<<< HEAD
-pr-12243
-<<<<<<< HEAD
-=======
-
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-}
-<<<<<<< HEAD
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

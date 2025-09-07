@@ -14,8 +14,8 @@ export function middleware() {
     "camera=(), microphone=(), geolocation=()"
   );
 
-  // Content Security Policy;
-const csp = [
+  // Content Security Policy
+  const csp = [
     "default-src 'self'",
     "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
     "style-src 'self' 'unsafe-inline'",
