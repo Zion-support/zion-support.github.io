@@ -154,7 +154,6 @@ export default function Team() {
           </div>
         </div>
       </section>
-
       {/* Leadership Team */}
       <section className="py-20 bg-zion-slate">
         <div className="max-w-7xl mx-auto px-6">

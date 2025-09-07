@@ -1239,7 +1239,6 @@ className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-b
             </div>
           </motion.div>
         </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-white/10 bg-black/50 backdrop-blur-sm>
           <div className=max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
@@ -1258,6 +1257,21 @@ className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-b
           </div>
         </div>
       </div>
+      {/* Floating Action Button */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="fixed bottom-8 right-8 z-50"
+      >
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/25 flex items-center justify-center text-white hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+        >
+          <ArrowRight className="w-6 h-6" />
+        </motion.button>
+      </motion.div>
     </footer>
 );
 }

@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
@@ -11,13 +10,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
 interface MainNavigationProps {
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
 }
-
 interface NavigationLink {
   key: string;
   href: string;
@@ -25,7 +22,6 @@ interface NavigationLink {
   matches: (path: string) => boolean;
   dropdown?: { href: string; name: string; }[];
 }
-
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
   const { user } = useAuth();
   const isAuthenticated = !!user;
@@ -44,7 +40,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         setDropdownOpen(false);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);

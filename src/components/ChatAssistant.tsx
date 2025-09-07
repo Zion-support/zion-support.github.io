@@ -13,7 +13,6 @@ export function ChatAssistant() {
       </button>
     );
   }
-
   return (
     <div className="fixed bottom-6 right-6 w-80 bg-zion-slate-dark border border-zion-purple/20 rounded-lg shadow-2xl z-50">
       <div className="p-4 border-b border-zion-purple/20">
@@ -49,4 +48,4 @@ export function ChatAssistant() {
       </div>
     </div>
   );
-}
+};

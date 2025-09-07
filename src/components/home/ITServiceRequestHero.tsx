@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 export function ITServiceRequestHero() {
   const [location, setLocation] = useState("");
   const navigate = useNavigate();
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (location.trim()) {
@@ -18,7 +17,6 @@ export function ITServiceRequestHero() {
     { icon: "🔒", text: "Certified Technicians", color: "text-zion-cyan" },
     { icon: "⚡", text: "Fast Response", color: "text-zion-purple" }
   ];
-
   return (
     <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 md:py-28 border-b border-zion-purple/20 relative overflow-hidden">
       {/* Background decorative elements */}

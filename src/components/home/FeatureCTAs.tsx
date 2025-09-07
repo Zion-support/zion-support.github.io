@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -45,7 +44,6 @@ export function FeatureCTAs() {
       link: "/talent"
     }
   ];
-
   return (
     <section className="py-20 bg-zion-slate-dark">
       <div className="max-w-7xl mx-auto px-6">
