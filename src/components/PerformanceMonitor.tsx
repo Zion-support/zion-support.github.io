@@ -880,9 +880,7 @@ const PerformanceMonitor: React.FC = () => {
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null,
-    domLoad: null,
-    windowLoad: null
+    ttfb: null
   });
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {

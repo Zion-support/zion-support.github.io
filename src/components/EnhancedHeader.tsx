@@ -24,11 +24,11 @@ export const EnhancedHeader: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
+  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -320,6 +320,8 @@ export const EnhancedHeader: React.FC = () => {
                   <span className="text-sm">{contactInfo.website}</span>
                 </div>
               </div>
+            ))}
+          </nav>
 
               {/* Mobile CTA */}
               <div className="mt-6">

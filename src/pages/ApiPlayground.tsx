@@ -294,15 +294,14 @@ export default function ApiPlayground() {
             <div className="p-4 bg-zion-cyan/20 rounded-full">
               <Code className="w-16 h-16 text-zion-cyan" />
             </div>
+            <h1 className="text-5xl font-bold text-white mb-6">
+              API Playground
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Explore, test, and integrate with our powerful APIs. Build amazing applications with our comprehensive developer tools.
+            </p>
           </div>
-          <h1 className="text-5xl font-bold text-white mb-6">
-            API Playground
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Explore, test, and integrate with our powerful APIs. Build amazing applications with our comprehensive developer tools.
-          </p>
         </div>
-      </div>
 
       <div className="py-12">
         <div className="container mx-auto px-4">
@@ -438,21 +437,29 @@ export default function ApiPlayground() {
                     {/* Tabs */}
                     <div className="flex border-b border-zion-slate-light">
                       <button
-                        onClick={() => setActiveTab('playground')}
-                        className={`px-6 py-3 font-medium transition-colors ${
-                          activeTab === 'playground'
-                            ? 'text-zion-cyan border-b-2 border-zion-cyan'
-                            : 'text-zion-slate-light hover:text-white'
+                        key={category.id}
+                        onClick={() => setActiveCategory(category.id)}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
+                          activeCategory === category.id
+                            ? 'bg-zion-cyan text-zion-slate-dark'
+                            : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                         }`}
                       >
                         Playground
                       </button>
+                    ))}
+                  </div>
+
+                  {/* Methods */}
+                  <div className="flex flex-wrap gap-2">
+                    {methods.map((method) => (
                       <button
-                        onClick={() => setActiveTab('docs')}
-                        className={`px-6 py-3 font-medium transition-colors ${
-                          activeTab === 'docs'
-                            ? 'text-zion-cyan border-b-2 border-zion-cyan'
-                            : 'text-zion-slate-light hover:text-white'
+                        key={method.id}
+                        onClick={() => setActiveMethod(method.id)}
+                        className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                          activeMethod === method.id
+                            ? 'bg-zion-purple text-white'
+                            : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                         }`}
                       >
                         Documentation
@@ -494,6 +501,7 @@ export default function ApiPlayground() {
                               />
                             </div>
                           </div>
+                        </div>
 
                           {/* Test Button */}
                           <div className="flex justify-center">
@@ -515,11 +523,80 @@ export default function ApiPlayground() {
                               )}
                             </button>
                           </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
-                          {/* Response */}
-                          {responseData && (
+                {/* API Playground */}
+                <div className="lg:col-span-2">
+                  {selectedApi ? (
+                    <div className="bg-zion-slate border border-zion-slate-light rounded-lg">
+                      {/* API Header */}
+                      <div className="p-6 border-b border-zion-slate-light">
+                        <div className="flex items-center justify-between mb-4">
+                          <div>
+                            <h2 className="text-2xl font-bold text-white">{selectedApi.name}</h2>
+                            <p className="text-zion-slate-light">{selectedApi.description}</p>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className={`px-3 py-1 rounded-full text-sm font-medium ${getMethodColor(selectedApi.method)}`}>
+                              {selectedApi.method}
+                            </span>
+                            <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedApi.status)}`}>
+                              {selectedApi.status}
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="bg-zion-slate-dark p-4 rounded-lg font-mono text-sm">
+                          <div className="text-zion-slate-light mb-2">Endpoint:</div>
+                          <div className="text-white">{selectedApi.baseUrl}{selectedApi.endpoint}</div>
+                        </div>
+                      </div>
+
+                      {/* Tabs */}
+                      <div className="flex border-b border-zion-slate-light">
+                        <button
+                          onClick={() => setActiveTab('playground')}
+                          className={`px-6 py-3 font-medium transition-colors ${
+                            activeTab === 'playground'
+                              ? 'text-zion-cyan border-b-2 border-zion-cyan'
+                              : 'text-zion-slate-light hover:text-white'
+                          }`}
+                        >
+                          Playground
+                        </button>
+                        <button
+                          onClick={() => setActiveTab('docs')}
+                          className={`px-6 py-3 font-medium transition-colors ${
+                            activeTab === 'docs'
+                              ? 'text-zion-cyan border-b-2 border-zion-cyan'
+                              : 'text-zion-slate-light hover:text-white'
+                          }`}
+                        >
+                          Documentation
+                        </button>
+                        <button
+                          onClick={() => setActiveTab('sdk')}
+                          className={`px-6 py-3 font-medium transition-colors ${
+                            activeTab === 'sdk'
+                              ? 'text-zion-cyan border-b-2 border-zion-cyan'
+                              : 'text-zion-slate-light hover:text-white'
+                          }`}
+                        >
+                          SDK
+                        </button>
+                      </div>
+
+                      {/* Tab Content */}
+                      <div className="p-6">
+                        {activeTab === 'playground' && (
+                          <div className="space-y-6">
+                            {/* Request */}
                             <div>
-                              <h3 className="text-lg font-semibold text-white mb-3">Response</h3>
+                              <h3 className="text-lg font-semibold text-white mb-3">Request</h3>
                               <div className="bg-zion-slate-dark p-4 rounded-lg">
                                 <div className="flex items-center justify-between mb-2">
                                   <span className="text-zion-slate-light text-sm">Response Data</span>
@@ -538,38 +615,104 @@ export default function ApiPlayground() {
                                     </button>
                                   </div>
                                 </div>
-                                <pre className="text-white font-mono text-sm overflow-x-auto">
-                                  {responseData}
-                                </pre>
+                                <textarea
+                                  value={requestBody}
+                                  onChange={(e) => setRequestBody(e.target.value)}
+                                  className="w-full h-32 bg-zion-slate border border-zion-slate-light rounded p-3 text-white font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                                  placeholder="Enter request body..."
+                                />
                               </div>
                             </div>
-                          )}
-                        </div>
-                      )}
 
-                      {activeTab === 'docs' && (
-                        <div className="space-y-6">
-                          <div>
-                            <h3 className="text-lg font-semibold text-white mb-3">Parameters</h3>
-                            <div className="space-y-3">
-                              {selectedApi.parameters.map((param, index) => (
-                                <div key={index} className="bg-zion-slate-dark p-4 rounded-lg">
+                            {/* Test Button */}
+                            <div className="flex justify-center">
+                              <button
+                                onClick={handleTestApi}
+                                disabled={isLoading}
+                                className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2"
+                              >
+                                {isLoading ? (
+                                  <>
+                                    <RefreshCw className="w-5 h-5 animate-spin" />
+                                    Testing...
+                                  </>
+                                ) : (
+                                  <>
+                                    <Play className="w-5 h-5" />
+                                    Test API
+                                  </>
+                                )}
+                              </button>
+                            </div>
+
+                            {/* Response */}
+                            {responseData && (
+                              <div>
+                                <h3 className="text-lg font-semibold text-white mb-3">Response</h3>
+                                <div className="bg-zion-slate-dark p-4 rounded-lg">
                                   <div className="flex items-center justify-between mb-2">
-                                    <span className="text-white font-medium">{param.name}</span>
+                                    <span className="text-zion-slate-light text-sm">Response Data</span>
                                     <div className="flex items-center gap-2">
-                                      <span className={`px-2 py-1 rounded text-xs ${
-                                        param.required ? 'bg-red-500/20 text-red-400' : 'bg-green-500/20 text-green-400'
-                                      }`}>
-                                        {param.required ? 'Required' : 'Optional'}
-                                      </span>
-                                      <span className="text-zion-slate-light text-sm">{param.type}</span>
+                                      <button
+                                        onClick={() => copyToClipboard(responseData)}
+                                        className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
+                                      >
+                                        <Copy className="w-4 h-4" />
+                                      </button>
+                                      <button
+                                        onClick={downloadResponse}
+                                        className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
+                                      >
+                                        <Download className="w-4 h-4" />
+                                      </button>
                                     </div>
                                   </div>
-                                  <p className="text-zion-slate-light text-sm">{param.description}</p>
+                                  <pre className="text-white font-mono text-sm overflow-x-auto">
+                                    {responseData}
+                                  </pre>
                                 </div>
-                              ))}
+                              </div>
+                            )}
+                          </div>
+                        )}
+
+                        {activeTab === 'docs' && (
+                          <div className="space-y-6">
+                            <div>
+                              <h3 className="text-lg font-semibold text-white mb-3">Parameters</h3>
+                              <div className="space-y-3">
+                                {selectedApi.parameters.map((param, index) => (
+                                  <div key={index} className="bg-zion-slate-dark p-4 rounded-lg">
+                                    <div className="flex items-center justify-between mb-2">
+                                      <span className="text-white font-medium">{param.name}</span>
+                                      <div className="flex items-center gap-2">
+                                        <span className={`px-2 py-1 rounded text-xs ${
+                                          param.required ? 'bg-red-500/20 text-red-400' : 'bg-green-500/20 text-green-400'
+                                        }`}>
+                                          {param.required ? 'Required' : 'Optional'}
+                                        </span>
+                                        <span className="text-zion-slate-light text-sm">{param.type}</span>
+                                      </div>
+                                    </div>
+                                    <p className="text-zion-slate-light text-sm">{param.description}</p>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+
+                            <div className="flex justify-center">
+                              <a
+                                href={selectedApi.documentation}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-zion-purple text-white px-6 py-3 rounded-lg font-semibold hover:bg-zion-purple-light transition-colors inline-flex items-center gap-2"
+                              >
+                                <BookOpen className="w-5 h-5" />
+                                View Full Documentation
+                              </a>
                             </div>
                           </div>
+                        )}
 
                           <div className="flex justify-center">
                             <a
@@ -608,24 +751,23 @@ export default function ApiPlayground() {
                               </div>
                             </div>
                           </div>
-                        </div>
-                      )}
+                        )}
+                      </div>
                     </div>
-                  </div>
-                ) : (
-                  <div className="bg-zion-slate border border-zion-slate-light rounded-lg p-12 text-center">
-                    <Code className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-white mb-2">Select an API</h3>
-                    <p className="text-zion-slate-light">
-                      Choose an API from the list to start testing and exploring
-                    </p>
-                  </div>
-                )}
+                  ) : (
+                    <div className="bg-zion-slate border border-zion-slate-light rounded-lg p-12 text-center">
+                      <Code className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
+                      <h3 className="text-xl font-semibold text-white mb-2">Select an API</h3>
+                      <p className="text-zion-slate-light">
+                        Choose an API from the list to start testing and exploring
+                      </p>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
       {/* CTA Section */}
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">

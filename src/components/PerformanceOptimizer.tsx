@@ -259,10 +259,96 @@ export function PerformanceOptimizer() {
                 {metrics.overall}
               </span>
             </div>
+
+            <div className="bg-white/5 rounded-lg p-3">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-400">CPU</span>
+                <Cpu className="w-4 h-4 text-yellow-400" />
+              </div>
+              <p className="text-lg font-semibold text-white">
+                {Math.round(metrics.cpuUsage)}%
+              </p>
+            </div>
+
+            <div className="bg-white/5 rounded-lg p-3">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-400">Score</span>
+                <TrendingUp className="w-4 h-4 text-cyan-400" />
+              </div>
+              <p className="text-lg font-semibold text-white">
+                {Math.round(metrics.score)}/100
+              </p>
+            </div>
+          </div>
+
+          {/* Performance Score Bar */}
+          <div className="mb-4">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm text-gray-400">Performance Score</span>
+              <span className="text-sm font-medium text-white">{Math.round(metrics.score)}/100</span>
+            </div>
+            <div className="w-full bg-white/10 rounded-full h-2">
+              <div
+                className={`h-2 rounded-full transition-all duration-500 ${
+                  metrics.score >= 80 ? 'bg-green-500' :
+                  metrics.score >= 60 ? 'bg-yellow-500' : 'bg-red-500'
+                }`}
+                style={{ width: `${Math.max(0, Math.min(100, metrics.score))}%` }}
+              />
+            </div>
+          </div>
+
+          {/* Recommendations */}
+          {recommendations.length > 0 && (
+            <div className="mb-4">
+              <h4 className="text-sm font-medium text-white mb-2">Recommendations</h4>
+              <div className="space-y-2">
+                {recommendations.map((rec, index) => (
+                  <div key={index} className="flex items-start space-x-2 text-sm">
+                    <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-300">{rec}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Optimizations Applied */}
+          {optimizations.length > 0 && (
+            <div className="mb-4">
+              <h4 className="text-sm font-medium text-white mb-2">Optimizations Applied</h4>
+              <div className="space-y-2">
+                {optimizations.map((opt, index) => (
+                  <div key={index} className="flex items-center space-x-2 text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <span className="text-gray-300">{opt}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Action Buttons */}
+          <div className="flex space-x-2">
+            <button
+              onClick={measurePerformance}
+              disabled={isOptimizing}
+              className="flex-1 flex items-center justify-center space-x-2 px-3 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-400 rounded-lg transition-colors duration-200 disabled:opacity-50"
+            >
+              <RefreshCw className={`w-4 h-4 ${isOptimizing ? 'animate-spin' : ''}`} />
+              <span>Refresh</span>
+            </button>
+            <button
+              onClick={performOptimizations}
+              disabled={isOptimizing}
+              className="flex-1 flex items-center justify-center space-x-2 px-3 py-2 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 rounded-lg transition-colors duration-200 disabled:opacity-50"
+            >
+              <Zap className="w-4 h-4" />
+              <span>Optimize</span>
+            </button>
           </div>
         </div>
       </CardContent>
     </Card>
   );
 }
-=======

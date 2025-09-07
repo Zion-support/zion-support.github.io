@@ -1,7 +1,4 @@
 import React from 'react';
-=======
-import { Eye, Ear, Hand, Brain, Shield, Users, Globe, Zap, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
-const Accessibility: React.FC = () => {
   const accessibilityFeatures = [
     {
       icon: Eye,

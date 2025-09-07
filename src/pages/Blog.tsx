@@ -486,6 +486,3 @@ export default function Blog() {
       day: 'numeric' 
     });
   };
-=======
-}
-=======

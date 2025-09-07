@@ -1,4 +1,6 @@
                 </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-300">{stat.label}</div>
               </motion.div>
             ))}
           </div>
