@@ -5,7 +5,49 @@ const typescriptEslint = require('@typescript-eslint/eslint-plugin');
 
 module.exports = [
   {
-    ignores: ['**/*'],
+    ignores: [
+      'node_modules/**/*',
+      '.next/**/*',
+      'out/**/*',
+      'dist/**/*',
+      'build/**/*',
+      'automation/**/*',
+      'scripts/**/*',
+      // Heavily corrupted/backup directories that should not be linted
+      'src_backup/**/*',
+      'backup/**/*',
+      'backup-merge-conflicts/**/*',
+      'backup-problematic-files/**/*',
+      'broken_files_backup/**/*',
+      'corrupted_backup/**/*',
+      '_conflicted_disabled/**/*',
+      'apps.backup/**/*',
+      'components-disabled/**/*',
+      'components.disabled/**/*',
+      'components.disabled_full/**/*',
+      'api-backup/**/*',
+      'api-disabled/**/*',
+      'api.disabled/**/*',
+      'api.disabled.temp/**/*',
+      // Generated reports and logs
+      '**/*.report.json',
+      '**/*report.json',
+      'automation_logs/**/*',
+      'automation-reports/**/*',
+      'enhancement-reports/**/*',
+      'health-reports/**/*',
+      'error-reports/**/*',
+      // Large utility folder known to contain many experimental files
+      'utils/**/*',
+      '*.cjs',
+      '*.mjs',
+      '*.js',
+      '*.report.json',
+      'test_build/**/*',
+      'tests/**/*',
+      'pages/**/*',
+      'api/**/*'
+    ],
   },
   js.configs.recommended,
   {
