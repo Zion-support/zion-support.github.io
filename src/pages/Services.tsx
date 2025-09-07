@@ -329,6 +329,89 @@ export default function Services() {
                 <div>Middletown DE 19709</div>
               </div>
             </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/request-quote"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/pricing-guide-2030"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-600 transition-all duration-200 hover:scale-105"
+              >
+                View Pricing Guide
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+              >
+                Schedule Consultation
+              </Link>
+            </div>
+            
+            {/* Quick Contact Buttons */}
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center px-6 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-all duration-200"
+              >
+                📞 Call Now
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry&body=Hi, I'm interested in your services. Please provide more information."
+                className="inline-flex items-center px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200"
+              >
+                📧 Email Us
+              </a>
+              <a
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-all duration-200"
+              >
+                🌐 Visit Website
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information Footer */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                +1 302 464 0950
+              </a>
+            </div>
+            <div>
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <MailIcon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div>
+              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
+              <p className="text-slate-300">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </p>
+            </div>
           </div>
         </div>
       </section>
