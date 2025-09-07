@@ -1,180 +1,147 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Micro SaaS Solutions | Zion Tech Group',
-  description: 'Professional micro SaaS solutions for your business needs.',
-  keywords: 'micro saas, software as a service, business solutions, technology',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Micro SaaS Solutions | Zion Tech Group',
-    description: 'Professional micro SaaS solutions for your business needs.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Zion Tech Group',
-  },
-=======
-export const metadata = { 
+export const metadata: Metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, analytics platforms, and automation solutions. From MVP to scale.'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09
 };
 
 export default function MicroSaaSPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6">Micro SaaS Solutions</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Innovative micro SaaS products designed to solve specific business challenges 
-            with powerful, focused solutions.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-3">AI-Powered Tools</h3>
-            <p className="text-gray-600 mb-4">
-              Intelligent automation tools that streamline your workflows.
-            </p>
-            <a href="/contact" className="text-blue-600 hover:text-blue-800">
-              Learn More →
-            </a>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-3">Business Analytics</h3>
-            <p className="text-gray-600 mb-4">
-              Data-driven insights to help you make better decisions.
-            </p>
-            <a href="/contact" className="text-blue-600 hover:text-blue-800">
-              Learn More →
-            </a>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-3">Process Automation</h3>
-            <p className="text-gray-600 mb-4">
-              Automate repetitive tasks and boost productivity.
-            </p>
-            <a href="/contact" className="text-blue-600 hover:text-blue-800">
-              Learn More →
-            </a>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-8">Ready to Get Started?</h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Contact us to discuss your micro SaaS needs and discover how we can help.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-          </a>
-        </div>
-=======
     <div className="animate-fade-in">
       <section className="text-center py-12">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           Micro SaaS Development
         </h1>
         <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
-          We design, build, launch and operate revenue-generating micro SaaS products end-to-end. 
-          From AI-powered tools to productivity apps, we create solutions that solve real problems and generate sustainable revenue.
+          Complete micro SaaS development services including AI-powered tools, productivity apps, 
+          analytics platforms, and automation solutions. From MVP to scale.
         </p>
       </section>
 
-      {/* Featured Micro SaaS Solutions */}
+      {/* Micro SaaS Solutions Showcase */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Micro SaaS Solutions</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <MicroSaaSProduct
-            title="AI Content Generator"
-            description="AI-powered content creation tool with templates, brand voice training, and multi-platform publishing"
-            features={["GPT-4 integration", "Brand voice training", "SEO optimization", "Multi-platform publishing", "Analytics dashboard"]}
-            pricing="$29-199/month"
-            icon="✍️"
-          />
-          <MicroSaaSProduct
-            title="Social Media Scheduler"
-            description="Advanced social media management with AI-powered optimal posting times and content suggestions"
-            features={["Multi-platform posting", "AI timing optimization", "Content calendar", "Analytics & insights", "Team collaboration"]}
-            pricing="$19-149/month"
-            icon="📱"
-          />
-          <MicroSaaSProduct
-            title="Email Marketing Automation"
-            description="Intelligent email marketing platform with behavioral triggers and advanced segmentation"
-            features={["Behavioral triggers", "Advanced segmentation", "A/B testing", "Template library", "Deliverability optimization"]}
-            pricing="$39-299/month"
-            icon="📧"
-          />
-          <MicroSaaSProduct
-            title="Project Management AI"
-            description="AI-enhanced project management with predictive analytics and automated resource allocation"
-            features={["AI task prioritization", "Resource optimization", "Risk prediction", "Time tracking", "Team performance insights"]}
-            pricing="$49-249/month"
-            icon="📊"
-          />
-          <MicroSaaSProduct
-            title="Customer Support Bot"
-            description="Intelligent customer support automation with multi-language support and escalation management"
-            features={["Multi-language support", "Ticket routing", "Knowledge base", "Sentiment analysis", "Performance metrics"]}
-            pricing="$79-399/month"
+          <MicroSaaSSolution
+            title="AI-Powered Tools"
+            description="Intelligent automation tools that solve specific business problems with AI"
+            features={["Custom AI models", "API integration", "User-friendly interface", "Scalable architecture", "Analytics dashboard"]}
+            pricing="$15k-75k"
             icon="🤖"
           />
-          <MicroSaaSProduct
-            title="Analytics Dashboard"
-            description="Custom business intelligence platform with real-time data visualization and predictive insights"
-            features={["Real-time dashboards", "Custom metrics", "Data integration", "Predictive analytics", "Export capabilities"]}
-            pricing="$99-499/month"
-            icon="📈"
+          <MicroSaaSSolution
+            title="Productivity Apps"
+            description="Focused productivity applications that streamline specific workflows"
+            features={["Task management", "Team collaboration", "Time tracking", "Reporting", "Mobile apps"]}
+            pricing="$10k-50k"
+            icon="⚡"
+          />
+          <MicroSaaSSolution
+            title="Analytics Platforms"
+            description="Data visualization and analytics tools for business insights"
+            features={["Real-time dashboards", "Custom reports", "Data integration", "Export capabilities", "User management"]}
+            pricing="$20k-100k"
+            icon="📊"
+          />
+          <MicroSaaSSolution
+            title="Automation Solutions"
+            description="Workflow automation tools that eliminate manual processes"
+            features={["Process automation", "Integration APIs", "Custom triggers", "Monitoring", "Error handling"]}
+            pricing="$12k-60k"
+            icon="🔧"
+          />
+          <MicroSaaSSolution
+            title="Communication Tools"
+            description="Specialized communication and collaboration platforms"
+            features={["Messaging systems", "Video conferencing", "File sharing", "Notifications", "Mobile support"]}
+            pricing="$18k-80k"
+            icon="💬"
+          />
+          <MicroSaaSSolution
+            title="E-commerce Tools"
+            description="Specialized tools for online businesses and marketplaces"
+            features={["Inventory management", "Order processing", "Payment integration", "Customer support", "Analytics"]}
+            pricing="$25k-120k"
+            icon="🛒"
           />
         </div>
       </section>
 
-      {/* Core Development Services */}
+      {/* Development Process */}
       <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Development Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <ServiceItem 
-            title="Core Features" 
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Development Process</h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <ProcessStep 
+            title="Discovery & Planning" 
             details={[
-              "Multi-tenant architecture",
-              "Authentication (email, OAuth, SSO)",
-              "Payment processing (Stripe, PayPal)",
-              "Admin dashboard & analytics",
-              "In-app onboarding & tutorials",
-              "API development & documentation"
+              "Market research",
+              "User persona development",
+              "Feature prioritization",
+              "Technical architecture",
+              "Project timeline"
             ]} 
+            step="1"
           />
-          <ServiceItem 
-            title="Growth Stack" 
+          <ProcessStep 
+            title="MVP Development" 
             details={[
-              "SEO-optimized marketing site",
-              "Blog & documentation system",
-              "Email marketing automation",
-              "Referral & affiliate programs",
-              "A/B testing framework",
-              "User feedback collection"
+              "Core feature development",
+              "UI/UX design",
+              "Database design",
+              "API development",
+              "Basic testing"
             ]} 
+            step="2"
           />
-          <ServiceItem 
-            title="Operations & Reliability" 
+          <ProcessStep 
+            title="Testing & Launch" 
             details={[
-              "CI/CD pipeline setup",
-              "Monitoring & observability",
-              "Error tracking & alerting",
+              "Quality assurance",
+              "User acceptance testing",
               "Performance optimization",
-              "Security hardening",
-              "Backup & disaster recovery"
+              "Security audit",
+              "Production deployment"
             ]} 
+            step="3"
+          />
+          <ProcessStep 
+            title="Scale & Maintain" 
+            details={[
+              "User feedback integration",
+              "Feature enhancements",
+              "Performance monitoring",
+              "Security updates",
+              "Ongoing support"
+            ]} 
+            step="4"
+          />
+        </div>
+      </section>
+
+      {/* Technology Stack */}
+      <section className="py-12">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Technology Stack</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <TechCard
+            title="Frontend"
+            description="React, Next.js, TypeScript, Tailwind CSS"
+            icon="🎨"
+          />
+          <TechCard
+            title="Backend"
+            description="Node.js, Python, PostgreSQL, Redis"
+            icon="⚙️"
+          />
+          <TechCard
+            title="Cloud"
+            description="AWS, Vercel, Railway, Supabase"
+            icon="☁️"
+          />
+          <TechCard
+            title="AI/ML"
+            description="OpenAI API, LangChain, Vector DBs"
+            icon="🧠"
           />
         </div>
       </section>
@@ -183,45 +150,44 @@ export default function MicroSaaSPage() {
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <PricingPlan 
-            name="MVP Sprint" 
-            price="$8k–$20k" 
-            duration="2–4 weeks"
+          <MicroSaaSPricingPlan 
+            name="MVP Development" 
+            price="$15k–$35k" 
+            duration="6–10 weeks"
             features={[
-              "MVP scope definition",
-              "Core functionality development",
-              "Stripe billing integration",
-              "Basic analytics dashboard",
-              "Deployment & hosting setup",
-              "30 days post-launch support"
+              "Core features only",
+              "Basic UI/UX",
+              "Single user type",
+              "Essential integrations",
+              "3 months support"
             ]}
             popular={false}
           />
-          <PricingPlan 
-            name="Growth Platform" 
-            price="$20k–$60k" 
-            duration="6–10 weeks"
+          <MicroSaaSPricingPlan 
+            name="Full SaaS Platform" 
+            price="$35k–$75k" 
+            duration="12–20 weeks"
             features={[
-              "Full feature development",
-              "SEO-optimized marketing site",
-              "Advanced analytics & reporting",
-              "Email marketing integration",
-              "User management system",
-              "3 months post-launch support"
+              "Complete feature set",
+              "Advanced UI/UX",
+              "Multi-user system",
+              "Advanced integrations",
+              "Analytics dashboard",
+              "6 months support"
             ]}
             popular={true}
           />
-          <PricingPlan 
-            name="Enterprise Scale" 
-            price="$60k+" 
-            duration="Custom timeline"
+          <MicroSaaSPricingPlan 
+            name="Enterprise SaaS" 
+            price="$75k+" 
+            duration="20+ weeks"
             features={[
-              "Custom roadmap development",
-              "Advanced security features",
-              "Multi-region deployment",
-              "SLA guarantees",
-              "Dedicated support team",
-              "Ongoing maintenance & updates"
+              "Custom enterprise features",
+              "White-label solution",
+              "Advanced security",
+              "Custom integrations",
+              "Dedicated support",
+              "12 months support"
             ]}
             popular={false}
           />
@@ -234,7 +200,7 @@ export default function MicroSaaSPage() {
   );
 }
 
-function MicroSaaSProduct({ title, description, features, pricing, icon }: {
+function MicroSaaSSolution({ title, description, features, pricing, icon }: {
   title: string;
   description: string;
   features: string[];
@@ -259,18 +225,22 @@ function MicroSaaSProduct({ title, description, features, pricing, icon }: {
   );
 }
 
-function ServiceItem({ title, details }: { 
+function ProcessStep({ title, details, step }: { 
   title: string; 
   details: string[]; 
+  step: string;
 }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6">
+    <div className="bg-white border border-gray-200 rounded-xl p-6 text-center">
+      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+        {step}
+      </div>
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2">
+      <ul className="space-y-2 text-left">
         {details.map((detail, index) => (
           <li key={index} className="flex items-start">
             <span className="text-blue-500 mr-2 mt-1">•</span>
-            <span className="text-gray-600">{detail}</span>
+            <span className="text-gray-600 text-sm">{detail}</span>
           </li>
         ))}
       </ul>
@@ -278,7 +248,21 @@ function ServiceItem({ title, details }: {
   );
 }
 
-function PricingPlan({ name, price, duration, features, popular }: {
+function TechCard({ title, description, icon }: {
+  title: string;
+  description: string;
+  icon: string;
+}) {
+  return (
+    <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
+      <div className="text-3xl mb-3">{icon}</div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 text-sm">{description}</p>
+    </div>
+  );
+}
+
+function MicroSaaSPricingPlan({ name, price, duration, features, popular }: {
   name: string;
   price: string;
   duration: string;
@@ -326,7 +310,7 @@ function ContactCTA() {
         Ready to Build Your Micro SaaS?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your idea and create a custom solution that generates revenue from day one. 
+        Let's discuss your micro SaaS idea and create a profitable, scalable solution. 
         Our team has launched 50+ successful micro SaaS products.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -345,7 +329,6 @@ function ContactCTA() {
       </div>
       <div className="mt-6 text-sm text-gray-600">
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09
       </div>
     </div>
   );

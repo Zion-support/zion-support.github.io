@@ -1,28 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD
-
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto py-8">
-        <h1 className="text-2xl font-bold mb-6">Page</h1>
-        <div className="bg-white rounded-lg shadow p-6">
-          <p className="text-gray-600">Content coming soon.</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Guides - Zion Tech Group',
-  description: 'Professional guides services to help your business grow and succeed.',
-  keywords: 'guides, business solutions, professional services'
+  description: 'Professional Guides services to help your business grow and succeed.',
+  keywords: 'Guides, business solutions, professional services'
 };
 
-export default function GuidesPage() {
+export default function guidesPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
@@ -30,7 +15,7 @@ export default function GuidesPage() {
           Guides
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Professional guides services to help your business grow and succeed.
+          Professional Guides services to help your business grow and succeed.
         </p>
       </div>
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
@@ -38,7 +23,7 @@ export default function GuidesPage() {
           Coming Soon
         </h2>
         <p className="text-lg text-gray-600 text-center">
-          This page is currently under development. Please contact us for more information.
+          This service is currently under development. Please contact us for more information.
         </p>
       </div>
       <div className="text-center">
@@ -52,4 +37,3 @@ export default function GuidesPage() {
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09
