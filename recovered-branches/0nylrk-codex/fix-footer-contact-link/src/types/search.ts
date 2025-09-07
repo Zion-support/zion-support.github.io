@@ -1,48 +1,53 @@
 export interface SearchSuggestion {
-  // TODO: Implement
-}
-  text: string;,
-  type: "product" | "category" | "tag" | "skill" | "person" | "recent";"
-  iconUrl?: string;
-}
-export interface SearchHighlight {
-  // TODO: Implement
-}
-  before: string;,
+export interface SearchSuggestion {;
+
+  text: string;
+
+  type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent'
+
+  iconUrl?: string
+
+  text: string;
+
+  before: string;
   match: string;
+
   after: string;
 }
-export interface FilterOptions {
-  // TODO: Implement
-}
-  productTypes: {,
-  label: string;
+export interface FilterOptions {}
+  productTypes: {};
+    label: string;
     value: string;
   }[];
-  locations: {,
-  label: string;
+
+;
+export interface SearchHighlight {;
+  before: string,;
+  match: string,;
+  type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',
+  icon_url?: string;
+}  }[];
+
+  locations: {
+
+    label: string;
     value: string;
   }[];
-  availabilityOptions: {,
-  label: string;
+  availabilityOptions: {}
+    label: string;
     value: string;
   }[];
   ratingOptions: number[];
 }
 
-
 export interface SearchSuggestion {;
 
 }
 ;
-}
 
-export interface SearchSuggestion {;
-  text:string,;"
-  type:'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',;'
-  iconUrl?:string;
 }
 ;
+
 export interface SearchHighlight {;
   before:string,;
   match:string,;
@@ -50,16 +55,16 @@ export interface SearchHighlight {;
 }
 ;
 export interface FilterOptions {;
-  productTypes: {;,
-  label:string,;
+  productTypes:{;
+    label:string,;
     value:string;
   }[],;
-  locations: {;,
-  label:string,;
+  locations:{;
+    label:string,;
     value:string;
   }[],;
-  availabilityOptions: {;,
-  label:string,;
+  availabilityOptions:{;
+    label:string,;
     value:string;
   }[],;
   ratingOptions:number[];
@@ -69,26 +74,23 @@ export interface FilterOptions {;
 }
 ;
 export interface FilterOptions {;
-  productTypes: {;,
-  label: string,;
+  productTypes: {;
+    label: string,;
     value: string;
   }[],;
-  locations: {;,
-  label: string,;
+  locations: {;
+    label: string,;
     value: string;
   }[],;
-  availabilityOptions: {;,
-  label: string,;
+  availabilityOptions: {;
+    label: string,;
     value: string;
   }[];
   ratingOptions: number[];
 }
 ;
-}
+
 ;
 export interface SearchSuggestion {
-  // TODO: Implement
-}
   text: string;
 }
-'

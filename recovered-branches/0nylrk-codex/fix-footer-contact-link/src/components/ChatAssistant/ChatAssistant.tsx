@@ -1,142 +1,272 @@
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
 
+import { ChatMessage  } from './ChatMessage';
 
-import { ChatMessage  } from './ChatMessage';''
-import { ChatInput  } from './ChatInput';''
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",""
-import { Button } from "@/components/ui/button";""
-import { X } from "lucide-react";"
+import { ChatInput  } from './ChatInput';
+
+import {ChatMessage} from './ChatMessage';
+import {ChatInput} from './ChatInput';
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {X} from "lucide-react";
+
+import React, { useState, useEffect, useRef, ReactNode } from 'react',
+import { ChatMessage } from './ChatMessage',
+import { ChatInput } from './ChatInput',
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { X } from "lucide-react",
+
 export interface Message {
-  // TODO: Implement
-}"
-import {ChatMessage} from './ChatMessage';''
-import {ChatInput} from './ChatInput';''
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";""
-import {Button} from "@/components/ui/button";""
-import {X} from "lucide-react";""
-import React, { useState, useEffect, useRef, ReactNode } from 'react',''
-import { ChatMessage } from './ChatMessage',''
-import { ChatInput } from './ChatInput',''
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",""
-import { Button } from "@/components/ui/button",""
-import { X } from "lucide-react","
-export interface Message {
-  // TODO: Implement
-}
-  id: string,"
-  role: 'user' | 'assistant','
+
+  id: string,
+  role: 'user' | 'assistant',
   message: string,
   timestamp: Date,
-  read?: boolean;
+
+  read?: boolean
+
     id: string,
     name: string,;
 
-
 }
-
 
   read?: boolean;
 }
-export interface ChatAssistantProps {
-  // TODO: Implement
-}
-    id: string,
-    name: string,;
-
 
     avatarUrl?: string;
-    role?: string;
+
+    role?: string
+
   }
 
   conversationId?: string;
   initialMessages?: Message[],
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
-</void>
+
+}
+<<<<<<< HEAD
+=======
+
+'
+import {ChatMessage} from './ChatMessage';'
+import {ChatInput} from './ChatInput';
+
+'
+
+>>>>>>> origin/chore/fix-lint-and-merge
+  isOpen;
+  onClose;
+  recipient;
+  conversationId;
+
+    scrollToBottom()
+  }, [messages]);
+  const scrollToBottom = () => {'
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+
+<<<<<<< HEAD
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  },
+  
+export function ChatAssistant({
+  isOpen,
+  onClose,
+  recipient,
+  conversationId,
+  initialMessages = $2;
+  onSendMessage,
+  contextHeader
+}: ChatAssistantProps) {
+  const [messages, setMessages] = useState<Message[]>(initialMessages),
+  const messagesEndRef = $2;
+  useEffect(() => {
+    if (initialMessages.length > 0) {
+      setMessages(initialMessages)
+=======
+import { X } from "lucide-react",
+export interface Message {}
+  id: string,'
+  role: 'user' | 'assistant',
+  message: string,
+
+import { X } from "lucide-react",;
+export interface Message {;
+  id: string,;'
+  role: 'user' | 'assistant',;
+  message: string,;
+  timestamp: Date,;
+  read?: boolean;
+}
+;
+export interface ChatAssistantProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  recipient: {;
+    id: string,;
+    name: string,;
+    avatarUrl?: string,;
+    role?: string;
+  },;
+  conversationId?: string,;
+  initialMessages?: Message[],;
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,;
-</void>
+  contextHeader?: ReactNode;
+}
+;
+
   const [messages, setMessages] = useState<Message[]>(initialMessages),;
-</Message>
   const messagesEndRef = useRef<HTMLDivElement | null>(null),;
-</HTMLDivElement>'
+  useEffect(() => {;
+    if (initialMessages.length > 0) {;
+      setMessages(initialMessages);
+
+>>>>>>> origin/chore/fix-lint-and-merge
+    }
+  }, [initialMessages]),
+
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages]);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  useEffect(() => {
+
+    scrollToBottom()
+  }, [messages]),
+
+  const scrollToBottom = () => {'
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+
+  const handleSendMessage = async (message: string) => {
+    if (!message.trim()) return
+    // Add user message to the chat
+    const newMessage: Message = {
+
+  const handleSendMessage = async (message: string) => {}
+    if (!message.trim()) return;
+    // Add user message to the chat;
+    const newMessage: Message = {}
+      id: Date.now().toString(),'
+      role: 'user',
+      message,
+      timestamp: new Date()
+    },
+    
+    setMessages((prev: Message[]) => [...prev, newMessage]),
+    
+    // Send message to recipient via the provided handler;
+    await onSendMessage(message, conversationId)
+  },
+
+  if (!isOpen) return null,
+
+  return ("
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;"
-</div>"
-      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;"
-</div>"
+      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;
+        {/* Header */}"
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">;"
-</div>"
           <div className="flex items-center space-x-3">;"
-</div>"
-            <Avatar className="h-10 w-10 border border-zion-purple/20">;"
-</Avatar>
-              <AvatarImage src={recipient && recipient.avatarUrl} alt={recipient && recipient.name} />;
-</AvatarImage>"
-              <AvatarFallback className="bg-zion-purple/20 text-white">;"
-</AvatarFallback>
+            <Avatar className="h-10 w-10 border border-zion-purple/20">;
+              <AvatarImage src={recipient && recipient.avatarUrl} alt={recipient && recipient.name} />;"
+              <AvatarFallback className="bg-zion-purple/20 text-white">;
+                {recipient && recipient.name.charAt(0).toUpperCase()}
               </AvatarFallback>;
             </Avatar>;
-            <div>;
-</div>"
-              <div className="font-medium text-white">{recipient && recipient.name}</div>;""
-                <div className="text-xs text-zion-slate">{recipient && recipient.role}</div>;""
-          <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;"
-</div>
-          </div>;"
-        <div className="flex-1 overflow-y-auto p-4 space-y-4">;"
-</div>"
-            <div className="text-center text-zion-slate py-8">;"
-</div>
+            <div>;"
+              <div className="font-medium text-white">{recipient && recipient.name}</div>;
+              {recipient && recipient.role && (;"
+                <div className="text-xs text-zion-slate">{recipient && recipient.role}</div>;
+              )}
+        {/* Context Header (Optional) */}
+        {contextHeader && (;"
+          <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
+            {contextHeader}
+          </div>;
+        )}
+        {/* Messages */}"
+        <div className="flex-1 overflow-y-auto p-4 space-y-4">;
+          {messages && messages.length === 0 ? (;"
+            <div className="text-center text-zion-slate py-8">;
               <p>Start a conversation with {recipient && recipient.name}</p>;
             </div>;
-              <ChatMessage;
-                key={msg.id} 
-
+          ) : (;
+            messages && messages.map((msg) => (;
 
                 role={msg.role}
+
                 message={msg.message}
               />
-</ChatMessage>
+            ))
+          )}
           <div ref={messagesEndRef} />
-</div>
         </div>
+
+                key={msg && msg.id} 
+                role={msg && msg.role}
+                message={msg && msg.message}
+              />;
+            ));
+          )}
           <div ref={messagesEndRef} />;
-</div>
         </div>;
+
+        {/* Input */}
+
+import { X } from './lucide-react';
+
+  role: 'user' | 'assistant',
+  message: string,
+  timestamp: Date,;
+  read?: boolean;
+}
+export interface ChatAssistantProps {}
+  is_open: boolean,
+  on_close: () => void,
+  recipient: {}
+    id: string,
+    name: string,;
+    avatar_url?: string;
+    role?: string;
+  }
+  conversation_id?: string;
+  initial_messages?: Message[];
   onSendMessage: (message: string, conversation_id?: string) => Promise < void>;
   context_header?: ReactNode;
 }
-export /**
- * ChatAssistant - Function description;
+
  */
-function ChatAssistant() {
+function ChatAssistant() {}
   const [messages, set_messages] = useState < Message[]>(initial_messages);
   const messagesEndRef = useRef < HTMLDivElement | null>(null);
 ;
-  useEffect (() => {
+  useEffect (() => {}
     // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
       set_messages (initial_messages);
     }
   }, [initial_messages]);
 ;
-  useEffect (() => {
+  useEffect (() => {}
     scrollToBottom ();
   }, [messages]);
 ;
-  const scrollToBottom = () =>: any {
-  // TODO: Implement
-}"
-    messagesEndRef.current?.scrollIntoView ({ behavior: 'smooth' });'
+  const scrollToBottom = () =>: any {'
+    messagesEndRef.current?.scrollIntoView ({ behavior: 'smooth' });
   }
 ;
-  const handleSendMessage = async (message: string) => {
-    if () return, ) {
+  const handleSendMessage = async (message: string) => {}
+    if () return, ) {}
   $2;
 }
     // Add user message to the chat;
-    const new_message: Message = {,
-  id: Date.now ().to_string (),'
-      role: 'user','
+    const new_message: Message = {}
+      id: Date.now ().to_string (),'
+      role: 'user',
       message;
       timestamp: new Date ();
     }
@@ -148,163 +278,17 @@ if ( {) {
   }
 ;
   // Check condition;
-if (return null) {
+if (return null) {}
   $2;
 }
-  return ('
-    <div className="fixed inset - 0 bg - black / 50 z - 50 flex items - center justify - center p - 4">;"
-</div>"
-      <div className="w - full max - w-xl bg - zion - blue rounded - lg shadow - xl overflow - hidden flex flex - col max - h-[80vh]">;"
-</div>"
-        <div className="bg - zion - blue - dark p - 3 flex items - center justify - between border - b border - zion - purple / 20">;"
-</div>"
-          <div className="flex items - center space - x-3">;"
-</div>"
-            <Avatar className="h - 10 w - 10 border border - zion - purple / 20">;"
-</Avatar>
-              <AvatarImage src={recipient.avatar_url} alt={recipient.name} />;
-</AvatarImage>"
-              <AvatarFallback className="bg - zion - purple / 20 text - white">;"
-</AvatarFallback>
-              </AvatarFallback>;
-            </Avatar>;
-            <div>;
-</div>"
-              <div className="font - medium text - white">{recipient.name}</div>;")"
-                <div className="text - xs text - zion - slate">{recipient.role}</div>)}"
-            </div>;
-          </div>;
-          <Button;"
-            variant="ghost";""
-            size="icon";""
-            className="text - white hover:bg - zion - purple / 10 rounded - full";"
-            on_click={on_close}
-          >;
-</Button>"
-            <X className="h - 5 w - 5" />;"
-</X>
-          </Button>;
-        </div>;"
-          <div className="border - b border - zion - purple / 20 bg - zion - blue - dark / 50 p - 3">;"
-</div>
-          </div>)}"
-        <div className="flex - 1 overflow - y-auto p - 4 space - y-4">;"
-</div>"
-            <div className="text - center text - zion - slate py - 8">;"
-</div>
+
               <p > Start a conversation with {recipient.name}</p>;
             </div>) : (
+            messages.map ((msg) => (
               <ChatMessage;
                 key={msg.id}
                 role={msg.role}
-                message={msg.message})
-              />)))}
-</ChatMessage>
-          <div ref={messagesEndRef} />;
-</div>
-        </div>;"
-        <div className="p - 3 border - t border - zion - purple / 20 bg - zion - blue - dark / 30">;"
-</div>
-          <ChatInput on_send={handleSendMessage} />;
-</ChatInput>
-        </div>;
-      </div>;
-    </div>);"
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">"
-</div>
-          <ChatInput onSend={handleSendMessage} />
-</ChatInput>
-        </div>
-      </div>
-    </div>"
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">"
-</div>
-          <ChatInput onSend={handleSendMessage} />
-</ChatInput>
-        </div>
-      </div>
-    </div>
-  onSendMessage:(message:string, conversationId?:string) => Promise<void>,;
-</void>
-  const [messages, setMessages] = useState<Message[]>(initialMessages),;
-</Message>
-  const messagesEndRef = useRef<HTMLDivElement | null>(null),;
-</HTMLDivElement>"
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;"
-</div>"
-      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;"
-</div>"
-        <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">;"
-</div>"
-          <div className="flex items-center space-x-3">;"
-</div>"
-            <Avatar className="h-10 w-10 border border-zion-purple/20">;"
-</Avatar>
-              <AvatarImage src={recipient.avatarUrl} alt={recipient.name} />;
-</AvatarImage>"
-              <AvatarFallback className="bg-zion-purple/20 text-white">;"
-</AvatarFallback>
-              </AvatarFallback>;
-            </Avatar>;
-            <div>;
-</div>"
-              <div className="font-medium text-white">{recipient.name}</div>;""
-                <div className="text-xs text-zion-slate">{recipient.role}</div>;"
-            </div>;
-          </div>;
-          <Button ;"
-            variant="ghost" ;""
-            size="icon";""
-            className="text-white hover:bg-zion-purple/10 rounded-full";"
-            onClick={onClose}
-          >;
-</Button>"
-            <X className="h-5 w-5" />;"
-</X>
-          </Button>;
-        </div>;"
-          <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;"
-</div>
-          </div>;        )}"
-        <div className="flex-1 overflow-y-auto p-4 space-y-4">;"
-</div>"
-            <div className="text-center text-zion-slate py-8">;"
-</div>
-              <p>Start a conversation with {recipient.name}</p>;
-            </div>;
-              <ChatMessage;
-                key={msg.id} ;                role={msg.role}
                 message={msg.message}
-              />;
-</ChatMessage>
+              />)))}
           <div ref={messagesEndRef} />;
-</div>
-        </div>;"
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;"
-</div>
-          <ChatInput onSend={handleSendMessage} />;
-</ChatInput>
         </div>;
-      </div>;
-    </div>;
-onSendMessage: (message: string, conversationId?: string) => Promise<void>;
-</void>
-  const [messages, setMessages] = useState<Message[]> (initialMessages);
-</Message>
-const messagesEndRef = useRef<HTMLDivElement | null> (null);
-</HTMLDivElement>"
-}</div> </div> <Button > <X className="h-5 w-5" /> </Button> </div> {"
-}</div>) 
-}<p>Start a conversation with {
-</p>
-}</p> </div>) : (messages.map ( (msg) => (<ChatMessage key= {
-  msg.id;
-}role= {
-  msg.role;
-}message= {
-  msg.message;)
-}/>) ) ) 
-</ChatMessage>
-}<div ref= {
-  messagesEndRef;
-}/> </div> </div> </div> </div>) "

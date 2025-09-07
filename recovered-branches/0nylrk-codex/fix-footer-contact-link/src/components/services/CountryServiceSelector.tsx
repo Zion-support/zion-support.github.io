@@ -1,67 +1,117 @@
 import {
-  // TODO: Implement
-}
-  onsiteServicePricing,
-  CountryPricing,
-} from "@/data/onsiteServicePricing";""
-import { CountrySelector } from "./CountrySelector";""
-import { PaymentSection } from "./PaymentSection";""
-import { ServiceDetails } from "./ServiceDetails";"
+  onsiteServicePricing
+  CountryPricing
+} from "@/data/onsiteServicePricing";
+import { CountrySelector } from "./CountrySelector";
+
+import { PaymentSection } from "./PaymentSection";
+import { ServiceDetails } from "./ServiceDetails";
+
+import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
+import {CountrySelector} from "./CountrySelector";
+import {PaymentSection} from "./PaymentSection";
+import {ServiceDetails} from "./ServiceDetails";
+
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { CountrySelector } from "./CountrySelector",
+import { PaymentSection } from "./PaymentSection",
+import { ServiceDetails } from "./ServiceDetails",
+
 interface CountryServiceSelectorProps {
-  // TODO: Implement
+  onCountryChange?: (country: CountryPricing | null) => void;
+  selectedCountry?: CountryPricing | null
 }
+export function CountryServiceSelector({
+  onCountryChange
+  selectedCountry: initialCountry
+
+import {
+
+  onsiteServicePricing,
+  CountryPricing,;
+} from "@/data/onsiteServicePricing";"
+import { CountrySelector } from "./CountrySelector";"
+import { PaymentSection } from "./PaymentSection";"
+import { ServiceDetails } from "./ServiceDetails";
+interface CountryServiceSelectorProps {}
   onCountryChange?: (country: CountryPricing | null) => void;
   selectedCountry?: CountryPricing | null;
 }
 
-export function CountryServiceSelector({
+export function CountryServiceSelector({}
   onCountryChange,
-  selectedCountry: initialCountry,)
-}: CountryServiceSelectorProps) {
-  return ("
-    <div className="space-y-6">"
-</div>"
-      <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">"
-</div>
-        <CountrySelector;)
+  selectedCountry: initialCountry,
+
           onCountryChange={onCountryChange || (() => {})}
-</CountrySelector>
+          selectedCountry={initialCountry || null}
+        />
+
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
-</PaymentSection>
       </div>
 
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
-</ServiceDetails>
     </div>
+
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
-</PaymentSection>
+      </div>;
+
+  );
+}
+;
+
+        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
 
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
-</ServiceDetails>
-    </div>"
-    <div className="space-y-6">;"
-</div>"
-      <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;"
-</div>
-        <CountrySelector ;
+    </div>
+  );
+}
+;
+
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
+import { CountrySelector } from "./CountrySelector",;
+import { PaymentSection } from "./PaymentSection",;
+
+import { ServiceDetails } from "./ServiceDetails",;
+;
+interface CountryServiceSelectorProps {;
+  onCountryChange?:(country:CountryPricing | null) => void,;
+  selectedCountry?:CountryPricing | null;
+}
+;
+export function CountryServiceSelector() { return null; }
           onCountryChange={onCountryChange || (() => {})} ;
-</CountrySelector>
+          selectedCountry={initialCountry || null} ;
+        />;
+        ;
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
-</PaymentSection>
       </div>;
+      ;
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
-</ServiceDetails>
-    </div>;"
-  return (<div className="space-y-6" > <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light" > onCountryChange || ( () => {"
-</div>
-  initialCountry && <PaymentSection selectedCountry= {
+    </div>;
+  ),;}
+ interface CountryServiceSelectorProps {}
+  onCountryChange?: (country: CountryPricing | null) => void;
+
+}) 
+}selectedCountry= {}
+  initialCountry || null;
+}/> {}
+  initialCountry && <PaymentSection selectedCountry= {}
   initialCountry;
 }/> 
-</PaymentSection>
-}</div> {
-  initialCountry && <ServiceDetails country= {
+}</div> {}
+  initialCountry && <ServiceDetails country= {}
   initialCountry.country;
 }/> 
-</ServiceDetails>
-}</div>) "
+}</div>) 
+});
+}
+}
+;
+
+  );
+}
+  )
+}
+;

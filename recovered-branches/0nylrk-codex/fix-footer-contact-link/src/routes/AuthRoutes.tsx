@@ -1,129 +1,214 @@
-import { Fragment } from "react";""
-import { Route, Routes } from "react-router-dom";""
-import Login from "@/pages/Login";""
-import Signup from "@/pages/Signup";""
-import ForgotPassword from "@/pages/ForgotPassword";""
-import UpdatePassword from "@/pages/UpdatePassword";""
-import { ProtectedRoute } from "@/components/ProtectedRoute";""
-import Onboarding from "@/pages/Onboarding";""
-import TalentOnboarding from "@/pages/TalentOnboarding";""
+<<<<<<< HEAD
+import { Fragment } from "react";"
+import { Route, Routes } from "react-router-dom";"
+import Login from "@/pages/Login";"
+import Signup from "@/pages/Signup";"
+import ForgotPassword from "@/pages/ForgotPassword";"
+import UpdatePassword from "@/pages/UpdatePassword";"
+import { ProtectedRoute } from "@/components/ProtectedRoute";"
+import Onboarding from "@/pages/Onboarding";"
+import TalentOnboarding from "@/pages/TalentOnboarding";"
 import ServiceOnboarding from "@/pages/ServiceOnboarding";"
-const AuthRoutes = () => {
-const AuthRoutes = () => {;"
-import {Fragment} from "react";""
-import {Route, Routes} from "react-router-dom";""
-import Login from "@/pages/Login";""
-import Signup from "@/pages/Signup";""
-import ForgotPassword from "@/pages/ForgotPassword";""
-import UpdatePassword from "@/pages/UpdatePassword";""
-import {ProtectedRoute} from "@/components/ProtectedRoute";""
-import Onboarding from "@/pages/Onboarding";""
-import TalentOnboarding from "@/pages/TalentOnboarding";""
-import ServiceOnboarding from "@/pages/ServiceOnboarding";""
-import { Fragment } from "react",""
-import { Route, Routes } from "react-router-dom",""
-import Login from "@/pages/Login",""
-import Signup from "@/pages/Signup",""
-import ForgotPassword from "@/pages/ForgotPassword",""
-import UpdatePassword from "@/pages/UpdatePassword",""
-import { ProtectedRoute } from "@/components/ProtectedRoute",""
-import Onboarding from "@/pages/Onboarding",""
-import TalentOnboarding from "@/pages/TalentOnboarding";""
-import ServiceOnboarding from "@/pages/ServiceOnboarding";""
-import TalentOnboarding from "@/pages/TalentOnboarding",""
-import ServiceOnboarding from "@/pages/ServiceOnboarding","
-const AuthRoutes = () => {
+const AuthRoutes = () => {import {Fragment} from "react";"
+import {Route, Routes} from "react-router-dom";"
+import {ProtectedRoute} from "@/components/ProtectedRoute";"
+=======
+import { Fragment } from "react";
+import { Route, Routes } from "react-router-dom";
+import Login from "@/pages/Login";
+import Signup from "@/pages/Signup";
+import ForgotPassword from "@/pages/ForgotPassword";
+import UpdatePassword from "@/pages/UpdatePassword";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import Onboarding from "@/pages/Onboarding";
+import TalentOnboarding from "@/pages/TalentOnboarding";
+import ServiceOnboarding from "@/pages/ServiceOnboarding";
+
+import {Fragment} from "react";
+
+import {Route, Routes} from "react-router-dom";
+import Login from "@/pages/Login";
+import Signup from "@/pages/Signup";
+import ForgotPassword from "@/pages/ForgotPassword";
+import UpdatePassword from "@/pages/UpdatePassword";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import Onboarding from "@/pages/Onboarding";
+import TalentOnboarding from "@/pages/TalentOnboarding";
+import ServiceOnboarding from "@/pages/ServiceOnboarding";
+import { Fragment } from "react",
+import { Route, Routes } from "react-router-dom",
+import Login from "@/pages/Login",
+import Signup from "@/pages/Signup",
+import ForgotPassword from "@/pages/ForgotPassword",
+import UpdatePassword from "@/pages/UpdatePassword",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import Onboarding from "@/pages/Onboarding",
+import TalentOnboarding from "@/pages/TalentOnboarding";
+
+import ServiceOnboarding from "@/pages/ServiceOnboarding";
+
+"
+>>>>>>> origin/chore/fix-lint-and-merge
+import { Fragment } from "react","
+import { Route, Routes } from "react-router-dom","
+import Login from "@/pages/Login","
+import Signup from "@/pages/Signup","
+import ForgotPassword from "@/pages/ForgotPassword","
+import UpdatePassword from "@/pages/UpdatePassword","
+import { ProtectedRoute } from "@/components/ProtectedRoute","
+<<<<<<< HEAD
+import Onboarding from "@/pages/Onboarding","
+=======
+import Onboarding from "@/pages/Onboarding",";
+import TalentOnboarding from "@/pages/TalentOnboarding";"
+import ServiceOnboarding from "@/pages/ServiceOnboarding";
+"
+>>>>>>> origin/chore/fix-lint-and-merge
+import TalentOnboarding from "@/pages/TalentOnboarding","
+import ServiceOnboarding from "@/pages/ServiceOnboarding",
+const AuthRoutes = () => {}
   return (
     <Routes>
-</Routes>"
+      {/* Auth Routes */}"
       <Route path="/login" element={<Login />} />"
-</Route>"
       <Route path="/signup" element={<Signup />} />"
-</Route>"
       <Route path="/forgot-password" element={<ForgotPassword />} />"
-</Route>"
-      <Route path="/update-password" element={<UpdatePassword />} />"
-</Route>
-      <Route;"
-        path="/onboarding""
-        element={
+      <Route path="/update-password" element={<UpdatePassword />} />
+      {/* Onboarding Routes */}
+      <Route"
+        path="/onboarding"
+        element={}
           <ProtectedRoute>
-</Route>
             <Onboarding />
-</Onboarding>
           </ProtectedRoute>
-      <Route;"
-        path="/talent-onboarding""
-        element={
+        }
+      />
+      <Route"
+        path="/talent-onboarding"
+        element={}
           <ProtectedRoute>
-</Route>
             <TalentOnboarding />
-</TalentOnboarding>
           </ProtectedRoute>
-      <Route;"
-        path="/service-onboarding""
-        element={
+        }
+      />
+      <Route"
+        path="/service-onboarding"
+        element={}
           <ProtectedRoute>
-</Route>
             <ServiceOnboarding />
-</ServiceOnboarding>
           </ProtectedRoute>
+        }
+      />
     </Routes>
+  )
+};
+export default AuthRoutes;
+
+},
+<<<<<<< HEAD
+export default AuthRoutes,
+import Login from "Login";"
+import Signup from "Signup";"
+import ForgotPassword from "ForgotPassword";"
+import UpdatePassword from "UpdatePassword";"
+import { ProtectedRoute } from "@/components/ProtectedRoute",;"
+import Onboarding from "Onboarding";"
+import TalentOnboarding from "TalentOnboarding";"
+import ServiceOnboarding from "ServiceOnboarding";"
+}
+=======
+
+export default AuthRoutes,";
+import { Fragment } from "react",;"
+import { Route, Routes } from "react-router-dom",;"
+import Login from "@/pages/Login",;"
+import Signup from "@/pages/Signup",;"
+import ForgotPassword from "@/pages/ForgotPassword",;"
+import UpdatePassword from "@/pages/UpdatePassword",;"
+import { ProtectedRoute } from "@/components/ProtectedRoute",;"
+import Onboarding from "@/pages/Onboarding",;"
+import TalentOnboarding from "@/pages/TalentOnboarding",;"
+import ServiceOnboarding from "@/pages/ServiceOnboarding",;
+
+const AuthRoutes = () => {
+
+>>>>>>> origin/chore/fix-lint-and-merge
+const AuthRoutes = () => {;
+
     <Routes>;
-</Routes>"
+      {/* Auth Routes */}"
       <Route path="/login" element={<Login />} />"
-</Route>"
       <Route path="/signup" element={<Signup />} />"
-</Route>"
       <Route path="/forgot-password" element={<ForgotPassword />} />"
-</Route>"
-      <Route path="/update-password" element={<UpdatePassword />} />"
-</Route>
-      <Route;"
-        path="/onboarding""
-        element={
+      <Route path="/update-password" element={<UpdatePassword />} />
+
+      {/* Onboarding Routes */}
+      <Route"
+        path="/onboarding"
+        element={}
           <ProtectedRoute>
-</Route>
             <Onboarding />
-</Onboarding>
           </ProtectedRoute>
-      <Route;"
-        path="/talent-onboarding""
-        element={
+        }
+      />
+      <Route"
+        path="/talent-onboarding"
+        element={}
           <ProtectedRoute>
-</Route>
             <TalentOnboarding />
-</TalentOnboarding>
           </ProtectedRoute>
-      <Route;"
-        path="/service-onboarding""
-        element={
+        }
+      />
+      <Route"
+        path="/service-onboarding"
+
+          <ProtectedRoute>;
+            <ServiceOnboarding />;
+          </ProtectedRoute>;
+        } ;
+      />;
+
+export default AuthRoutes;
+
           <ProtectedRoute>
-</Route>
             <ServiceOnboarding />
-</ServiceOnboarding>
           </ProtectedRoute>
+        }
+      />
     </Routes>
+
+};
+
+};
+};
+
+},
+
+  return (
     <Routes>;
-</Routes>
+      {/* Auth Routes */}
+
+  ),;
+},;
+;
+export default AuthRoutes,; const AuthRoutes = () => {
   return (<Routes> {
-</Routes>"
-}<Route path="/login" element= {"
+  /* Auth Routes */ 
+}<Route path="/login" element= {
   <Login /> 
-</Route>"
-}/> <Route path="/signup" element= {"
+}/> <Route path="/signup" element= {
   <Signup /> 
-</Route>"
-}/> <Route path="/forgot-password" element= {"
+}/> <Route path="/forgot-password" element= {
   <ForgotPassword /> 
-</Route>"
-}/> <Route path="/update-password" element= {"
+}/> <Route path="/update-password" element= {
   <UpdatePassword /> 
-</Route>
+}/> /* Onboarding Routes */ 
 }<Route <Onboarding /> </ProtectedRoute> 
-</Route>
 }/> <Route <TalentOnboarding /> </ProtectedRoute> 
-</Route>
 }/> <Route <ServiceOnboarding /> </ProtectedRoute> 
-</Route>)
-}/> </Routes>) "
+}/> </Routes>) 
+};
+export default AuthRoutes;
+  );
+},;
+export default AuthRoutes;

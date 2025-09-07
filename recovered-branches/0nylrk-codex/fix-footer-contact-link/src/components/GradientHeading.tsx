@@ -1,106 +1,150 @@
-
 interface GradientHeadingProps {;
   children: React && React.ReactNode,;
 
-  className?: string;
-  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";"
-}
-
-"
-export function GradientHeading(): any ({ children, className, level = "h2" }: GradientHeadingProps) {;"
   const Tag = level;
 
   return (
     <Tag;
       className={cn("
-        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"""
-import { cn } from "@/lib/utils";""
-import React from "react";"
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"
+
 interface GradientHeadingProps {
-  // TODO: Implement
-}
-  className?: string;"
-import { cn } from "@/lib/utils",""
-import React from "react",""
-import {cn} from "@/lib/utils";""
-import React from "react";""
-import { cn } from "@/lib/utils",""
-import React from "react","
-interface GradientHeadingProps {
-  // TODO: Implement
-}
   children: React.ReactNode,
   className?: string,
-"
-  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6""
+
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 }
-
-
-
-  return (
-    <Tag;
-      className={cn(
 
 interface GradientHeadingProps {
-  // TODO: Implement
-}
   children: React.ReactNode,
-  className?: string,"
-  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6""
+  className?: string,
+
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 }
-)"
-export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {;"
-  const Tag = level;"
-export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {"
+<<<<<<< HEAD
+export function GradientHeading() {;"
+  }
+export function GradientHeading() {"
+  }
+  const Tag = level,;
+return (;
+    <Tag,
+className={cn(
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";"
+}
+import { cn } from "@/lib/utils";"
+import React from "react";"
+=======
+"
+export function GradientHeading() { return null; }
+export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {};
   const Tag = level;
   const Tag = level,
-  
-
-
 
   return (
     <Tag;
       className={cn("
-        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";""
-import { cn } from "@/lib/utils",;""
-import React from "react",;"
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
+"
+import { cn } from "@/lib/utils",;"
+import React from "react",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface GradientHeadingProps {;
   children: React.ReactNode,;
   className?: string,;"
-  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";"
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
-;)"
-export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {;"
-  const Tag = level;
+<<<<<<< HEAD
+;
+export function GradientHeading() {;"
+  }
   return (;
     <Tag;
-      className={cn(;"
+      className={cn(;
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";"
-        className;"
+        }
+        className;
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent","
-        className;)
+        classNameimport { cn } from '@/lib / utils';'
+import React from './react';'
+interface GradientHeadingProps {
+  }
+  "children": React.ReactNode,
+  class_name?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";"
+=======
+
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
+        className
+
       )}
     >
-</Tag>
-    </Tag>;
+      {children}
+
+import { cn } from '@/lib / utils';
+
+import React from './react';
+interface GradientHeadingProps {}
+  children: React.ReactNode,
+  class_name?: string;"
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+>>>>>>> origin/chore/fix-lint-and-merge
+}
+export /**;
+ * GradientHeading - Function description;
+ */
+<<<<<<< HEAD
+function GradientHeading() {
+  }
+=======
+function GradientHeading() {}
+  const Tag = level;
+>>>>>>> origin/chore/fix-lint-and-merge
+;
+  return (
     <Tag;
       className={cn ("
-        "text - 4xl font - bold tracking - tight bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent";")
+        "text - 4xl font - bold tracking - tight bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent";
         class_name)}
     >;
-</Tag>
+      {children}
     </Tag>);
+
+import { cn } from "@/lib/utils",;
+import React from "react",;
+;
+interface GradientHeadingProps {;
+  children:React.ReactNode,;
+  className?:string,;
+  level?:"h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+;
+export function GradientHeading({ children, className, level = "h2" } GradientHeadingProps) {;
+  const Tag = level,;
+  ;
+  return (;
     <Tag ;
-      className={cn(;"
-        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",;"
-        className;)
+      className={cn(;
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",;
+        className;
       )}
     >;
-</Tag>
+      {children}
     </Tag>;
-return (<Tag className= {)
+  ),;}
+ interface GradientHeadingProps {
+  children: React.ReactNode;
+className?: string;
+return (<Tag className= {
   cn () 
 }> {
-</Tag>
+  children 
 }</Tag>) 
-    </Tag>"
+}
+
+      )}
+    >
+      {children}
+    </Tag>
+  )
+}

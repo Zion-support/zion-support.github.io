@@ -1,96 +1,109 @@
-import React from "react";""
-import { MobileHeader } from "../components/common/MobileHeader";""
-import { BottomNavigation } from "../components/common/BottomNavigation";""
-import { ClientDashboard } from "../components/dashboard/ClientDashboard";""
-import { TalentDashboard } from "../components/dashboard/TalentDashboard";""
-import { useAuth } from "@/hooks/useAuth";"
-export function MobileHome() {
-  const { user } = useAuth();"
-  const isClient = user?.userType === "employer" || user?.userType === "buyer";""
-import React from "react",""
-import { MobileHeader } from "../components/common/MobileHeader",""
-import { BottomNavigation } from "../components/common/BottomNavigation",""
-import { ClientDashboard } from "../components/dashboard/ClientDashboard",""
-import { TalentDashboard } from "../components/dashboard/TalentDashboard";""
-import { useAuth } from "@/hooks/useAuth";"
+import React from "react";
+import { MobileHeader } from "../components/common/MobileHeader";
+import { BottomNavigation } from "../components/common/BottomNavigation";
+import { ClientDashboard } from "../components/dashboard/ClientDashboard";
+
+import { TalentDashboard } from "../components/dashboard/TalentDashboard";
+import { useAuth } from "@/hooks/useAuth";
 export function MobileHome() {
   const { user } = useAuth();
-"
-  const isClient = user?.userType === 'employer' |user?.userType === 'buyer';'
+
+  const isClient = user?.userType === "employer" || user?.userType === "buyer";
+
+import React from "react",
+
+import { MobileHeader } from "../components/common/MobileHeader",
+import { BottomNavigation } from "../components/common/BottomNavigation",
+import { ClientDashboard } from "../components/dashboard/ClientDashboard",
+
+import { TalentDashboard } from "../components/dashboard/TalentDashboard";
+
+import { useAuth } from "@/hooks/useAuth";
+export function MobileHome() {};
+  const { user } = useAuth();
+
+  const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
+
+import { TalentDashboard } from "../components/dashboard/TalentDashboard",
+
+import { useAuth } from "@/hooks/useAuth",
+
   return (
 
-'
-import { TalentDashboard } from "../components/dashboard/TalentDashboard",""
-import { useAuth } from "@/hooks/useAuth",")
-export function MobileHome() {
-  const { user } = useAuth(),"
-  const isClient = user?.userType === 'employer' || user?.userType === 'buyer','
-  return ('
-    <div className="min-h-screen">"
-</div>
-      <MobileHeader;"
-        title={isClient ? "Client Dashboard" : "Talent Dashboard"}"
-        showNotifications;
-        showSettings;
-      />
-</MobileHeader>
-"
-      <main className="py-4">"
-</main>
-        {isClient ? <ClientDashboard /> : <TalentDashboard />}
-</ClientDashboard>
-      </main>
+    <div className="min-h-screen">
+      <MobileHeader
+        title={isClient ? "Client Dashboard" : "Talent Dashboard"}
+        showNotifications
+        showSettings
 
-      <BottomNavigation />
-</BottomNavigation>
-    </div>"
-    <div className="min - h-screen">;"
-</div>
-      <MobileHeader;"
-        title={is_client ? "Client Dashboard" : "Talent Dashboard"}"
+      <main className="py-4">
+import React from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { ClientDashboard } from "../components/dashboard/ClientDashboard",;
+import { TalentDashboard } from "../components/dashboard/TalentDashboard",;
+import { useAuth } from "@/hooks/useAuth",;
+export function MobileHome() {;
+  const { user } = useAuth();
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
+  return (;
+
         show_notifications;
         show_settings;
       />;
-</MobileHeader>"
       <main className="py - 4">;"
-</main>
         {is_client ? <ClientDashboard /> : <TalentDashboard />}
-</ClientDashboard>
+
       </main>;
       <BottomNavigation />;
-</BottomNavigation>)
+    </div>);
+}
+
+import React from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { ClientDashboard } from "../components/dashboard/ClientDashboard",;
+import { TalentDashboard } from "../components/dashboard/TalentDashboard",;
+import { useAuth } from "@/hooks/useAuth",;
+;
+export function MobileHome() {;
+  const { user } = useAuth(),;
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer',;
+  ;
+  return (;
+    <div className="min-h-screen">;
+      <MobileHeader ;
+        title={isClient ? "Client Dashboard" :"Talent Dashboard"} ;
+)
     </div>);"
     <div className="min-h-screen">;"
-</div>
       <MobileHeader ;"
         title={isClient ? "Client Dashboard" :"Talent Dashboard"} ;"
         showNotifications ;
-        showSettings;
-      />;
-</MobileHeader>"
       <main className="py-4">;"
-</main>
         {isClient ? <ClientDashboard /> :<TalentDashboard />}
-</ClientDashboard>
       </main>;
+      ;
       <BottomNavigation />;
-</BottomNavigation>
-    </div>;"
-min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomNavigation /> </div>)"
-</MobileHeader>"
-    <div className="min-h-screen">;"
-</div>
-      <MobileHeader;"
-        title={isClient ? "Client Dashboard" : "Talent Dashboard"} ;"
+    </div>;
+  ),;}
+ export function MobileHome () {
+  const {
+  user 
+}= useAuth ();
+const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
+min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomNavigation /> </div>) 
+}
+    <div className="min-h-screen">;
+      <MobileHeader;
+        title={isClient ? "Client Dashboard" : "Talent Dashboard"} ;
         showNotifications;
         showSettings;
       />;
-</MobileHeader>"
-      <main className="py-4">;"
-</main>
+      <main className="py-4">;
         {isClient ? <ClientDashboard /> : <TalentDashboard />}
-</ClientDashboard>
       </main>
       <BottomNavigation />
-</BottomNavigation>
-    </div>"
+    </div>
+  )
+}

@@ -1,80 +1,45 @@
-import {useState} from "react";""
-import {Star} from "lucide-react";""
-import {useForm} from "react-hook-form";""
-import {Button} from "@/components/ui/button";""
-import {Textarea} from "@/components/ui/textarea";""
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";""
-import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";""
-import {Switch} from "@/components/ui/switch";""
-import {Review} from "@/types/reviews";"
-interface ReviewFormValues {;
-"
-import { useState } from './react';''
-import { Star } from './lucide-react';''
-import { use_form } from './react - hook - form';''
-import { Button } from '@/components / ui / button';''
-import { Textarea } from '@/components / ui / textarea';''
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';''
-import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';''
-import { Switch } from '@/components / ui / switch';''
-import { Review } from '@/types / reviews';'
 interface ReviewFormValues {
-  // TODO: Implement
-}
+
   rating?: number;
   review_text?: string;
   communication_rating?: number;
   quality_rating?: number;
   timeliness_rating?: number;
-  would_work_again?: boolean;
-  is_anonymous?: boolean;
+  would_work_again?: boolean;}
+  is_anonymous?: boolean;}
 }
-'
-import { useState } from "react",""
-import { Star } from "lucide-react",""
-import { useForm } from "react-hook-form",""
-import { Button } from "@/components/ui/button";""
-import { Textarea } from "@/components/ui/textarea";"
-import {
-  // TODO: Implement
-}
+
+import { useState } from "react",
+import { Star } from "lucide-react",
+import { useForm } from "react-hook-form",
+
+import { Textarea } from "@/components/ui/textarea";
+import {};
   Form;
   FormControl;
   FormField;
   FormItem;
   FormLabel;"
-import { Button } from "@/components/ui/button",""
-import { Textarea } from "@/components/ui/textarea","
-import {
-  // TODO: Implement
-}
+import { Button } from "@/components/ui/button","
+import { Textarea } from "@/components/ui/textarea",
+import {}
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,"
-  FormMessage} from "@/components/ui/form","
-import {
-  // TODO: Implement
-}
-  RadioGroup;"
-  RadioGroupItem} from "@/components/ui/radio-group",""
-import { Switch } from "@/components/ui/switch";""
-import { Review } from "@/types/reviews";""
-import { Switch } from "@/components/ui/switch",""
-import { Review } from "@/types/reviews",""
-import { useState } from './react';''
-import { Star } from './lucide-react';''
-import { use_form } from './react - hook - form';''
-import { Button } from '@/components / ui / button';''
-import { Textarea } from '@/components / ui / textarea';''
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';''
-import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';''
-import { Switch } from '@/components / ui / switch';''
-import { Review } from '@/types / reviews';'
+  FormMessage} from "@/components/ui/form",
+
+import { useState } from './react';
+import { Star } from './lucide-react';
+import { use_form } from './react - hook - form';
+import { Button } from '@/components / ui / button';
+import { Textarea } from '@/components / ui / textarea';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
+import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';
+import { Switch } from '@/components / ui / switch';
+import { Review } from '@/types / reviews';
 interface ReviewFormValues {
-  // TODO: Implement
-}
   rating?: number;
   review_text?: string;
   communication_rating?: number;
@@ -83,64 +48,203 @@ interface ReviewFormValues {
   would_work_again?: boolean;
   is_anonymous?: boolean;
 }
-interface ReviewFormValues {
-  // TODO: Implement
-}
+<<<<<<< HEAD
+import { useState } from "react","
+import { Star } from "lucide-react","
+import { useForm } from "react-hook-form","
+import { Button } from "@/components/ui/button";"
+import { Textarea } from "@/components/ui/textarea";"
+import {
+  }
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+import { Button } from "@/components/ui/button","
+import { Textarea } from "@/components/ui/textarea","
+  }
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form","
+  }
+  RadioGroup;
+  RadioGroupItem} from "@/components/ui/radio-group","
+import { Switch } from "@/components/ui/switch";"
+import { Review } from "@/types/reviews";"
+import { Switch } from "@/components/ui/switch","
+import { Review } from "@/types/reviews",import { useState } from "react";"
+import { Star } from "lucide-react";"
+import { useForm } from "react-hook-form",;"
+import { Button } from "@/components/ui/button",;"
+import { Textarea } from "@/components/ui/textarea",;"
+=======
+
   rating?: number,
   review_text?: string,
   communication_rating?: number,
   quality_rating?: number,
   timeliness_rating?: number,
-  would_work_again?: boolean,
-  is_anonymous?: boolean;
+
 interface ReviewFormProps {;
   projectId: string,;
   revieweeId: string,;
   revieweeName: string,;
   onSubmit: (data: any) => Promise<boolean>, ;
-</boolean>
-  onSubmit: (data: any) => Promise<boolean>,;
-</boolean>
-  const [hoveredStar, setHoveredStar] = useState<number>(0),
-</number>
-  const [hoveredStar, setHoveredStar] = useState<number>(0);
-</number>
 
-  const [hoveredStar, setHoveredStar] = useState<number>(0),
-</number>
-  const form = useForm<ReviewFormValues>({
-</ReviewFormValues>)
-  const [hoveredStar, setHoveredStar] = useState<number>(0);
-</number>
-  const form = useForm<ReviewFormValues>({;
-</ReviewFormValues>)
-  const [hoveredStar, setHoveredStar] = useState<number>(0);
-</number>
-    <Form {...form}>;
-</Form>'
-      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;"
-</form>
-        <FormField;
-          control={form && form.control}"
-          name="rating"""
-          rules={{ required: "Rating is required" }}""
-import { useState } from "react",;""
-import { Star } from "lucide-react",;""
-import { useForm } from "react-hook-form",;""
-import { Button } from "@/components/ui/button",;""
-import { Textarea } from "@/components/ui/textarea",;"
+export function ReviewForm(): any ({;
+
+  projectId;
+  revieweeId;
+  revieweeName;
+  onSubmit;
+  defaultValues;
+
+import { useState } from "react",;
+
+import { useState } from "react",;
+
+import { Star } from "lucide-react",;
+import { useForm } from "react-hook-form",;
+
+import { Textarea } from "@/components/ui/textarea",;
+>>>>>>> origin/chore/fix-lint-and-merge
 import {;
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
-  FormLabel,;"
+<<<<<<< HEAD
+  FormLabel,;
   FormMessage} from "@/components/ui/form",;"
+  }
+  RadioGroup,;
+=======
+  FormLabel,;"
+  FormMessage} from "@/components/ui/form",;
 import {;
   RadioGroup,;"
-  RadioGroupItem} from "@/components/ui/radio-group",;""
-import { Switch } from "@/components/ui/switch",;""
-import { Review } from "@/types/reviews",;"
+>>>>>>> origin/chore/fix-lint-and-merge
+  RadioGroupItem} from "@/components/ui/radio-group",;"
+import { Switch } from "@/components/ui/switch",;"
+import { Review } from "@/types/reviews",;
+interface ReviewFormValues {;
+  rating?: number,;
+  review_text?: string,;
+  communication_rating?: number,;
+  quality_rating?: number,;
+  timeliness_rating?: number,;
+  would_work_again?: boolean,;
+  is_anonymous?: boolean;
+}
+;
+interface ReviewFormProps {;
+  projectId: string,;
+  revieweeId: string,;
+  revieweeName: string,;
+  onSubmit: (data: any) => Promise<boolean>,;
+  defaultValues?: Review,;
+  isSubmitting: boolean;
+
+}
+
+  projectId,
+  revieweeId,
+  revieweeName,
+  onSubmit,
+  defaultValues,
+
+  isSubmitting}: ReviewFormProps) {
+
+  const [hoveredStar, setHoveredStar] = useState<number>(0);
+
+  const form = useForm<ReviewFormValues>({
+    defaultValues: defaultValues ? {
+      rating: defaultValues.rating
+      review_text: defaultValues.review_text
+      communication_rating: defaultValues.communication_rating
+      quality_rating: defaultValues.quality_rating
+      timeliness_rating: defaultValues.timeliness_rating
+      would_work_again: defaultValues.would_work_again
+      is_anonymous: defaultValues.is_anonymous} : {
+
+  });
+  const handleSubmit = async (values: ReviewFormValues) => {}
+    const formattedData = {}
+      ...values;
+      project_id: projectId;
+      reviewee_id: revieweeId}
+
+  const handleSubmit = async (values: ReviewFormValues) => {;
+
+  isSubmitting}: ReviewFormProps) {;
+  const [hoveredStar, setHoveredStar] = useState<number>(0);
+
+    const success = await onSubmit(formattedData);
+    if (success) {
+      form.reset()
+    }
+
+  };
+
+  const watchRating = form && form.watch("rating");
+
+  };
+"
+  const watchRating = form && form.watch("rating");
+
+  };
+"
+  const watchRating = form && form.watch("rating");
+
+  return (
+
+    <Form {...form}>;
+
+      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
+
+        {/* Main Rating */}
+        <FormField;
+          control={form && form.control}"
+          name="rating""
+<<<<<<< HEAD
+          rules={{ "required": "Rating is required" }}"
+import { useState } from "react",;"
+import { Star } from "lucide-react",;"
+  }
+=======
+          rules={{ required: "Rating is required" }}
+
+import { useState } from "react",;
+import { Star } from "lucide-react",;
+import { useForm } from "react-hook-form",;
+import { Button } from "@/components/ui/button",;
+
+import { Textarea } from "@/components/ui/textarea",;
+import {;
+>>>>>>> origin/chore/fix-lint-and-merge
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+<<<<<<< HEAD
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;"
+  }
+  RadioGroup,;
+  RadioGroupItem} from "@/components/ui/radio-group",;"
+=======
+  FormLabel,;"
+  FormMessage} from "@/components/ui/form",;
+import {;
+  RadioGroup,;"
+  RadioGroupItem} from "@/components/ui/radio-group",;"
+import { Switch } from "@/components/ui/switch",;"
+import { Review } from "@/types/reviews",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 interface ReviewFormValues {;
   rating?:number,;
@@ -156,213 +260,642 @@ interface ReviewFormProps {;
   revieweeId:string,;
   revieweeName:string,;
   onSubmit:(data:any) => Promise<boolean>, ;
-</FormField>
-  const [hoveredStar, setHoveredStar] = useState<number>(0),;
-</number>
+  defaultValues?:Review,;
+  isSubmitting:boolean;
+}
+;
+<<<<<<< HEAD
+export function ReviewForm() {;
+  }
+  ;
   const form = useForm<ReviewFormValues>({;
-</ReviewFormValues>
-    <Form {...form}>;
-</Form>)"
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;"
-</form>
+    }
+    "defaultValues":defaultValues ? {;
+      }
+      "rating":defaultValues.rating,;
+      "review_text":defaultValues.review_text,;
+      "communication_rating":defaultValues.communication_rating,;
+      "quality_rating":defaultValues.quality_rating,;
+      "timeliness_rating":defaultValues.timeliness_rating,;
+      "would_work_again":defaultValues.would_work_again,;
+      "is_anonymous":defaultValues.is_anonymous} {;
+      }
+      "rating":0,;
+      "review_text":"",;"
+      "communication_rating":undefined,;
+      "quality_rating":undefined,;
+      "timeliness_rating":undefined,;
+      "would_work_again":undefined,;
+      "is_anonymous":false}
+  }),;
+  ;
+  const handleSubmit = async ("values":ReviewFormValues) => {;
+    }
+=======
+export function ReviewForm() { return null; }
+      is_anonymous:defaultValues.is_anonymous} {;
+      rating:0,;"
+      review_text:"",;
+      communication_rating:undefined,;
+      quality_rating:undefined,;
+      timeliness_rating:undefined,;
+      would_work_again:undefined,;
+      is_anonymous:false}
+  }),;
+  ;
+  const handleSubmit = async (values:ReviewFormValues) => {;
+    const formattedData = {;
+>>>>>>> origin/chore/fix-lint-and-merge
+      ...values,;
+      project_id:projectId,;
+      reviewee_id:revieweeId},;
+    ;
+    const success = await onSubmit(formattedData),;
+    if (success) {;
+      form.reset(),;
+    }
+  },;
+  ;"
+  const watchRating = form.watch("rating"),;
+  ;
+  return (;
+    <Form {...form}>;"
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
+        {/* Main Rating */}
         <FormField;
           control={form.control}"
-          name="rating";""
-          rules={{ required:"Rating is required" }}"
-          render={({ field }) => (;
-</FormField>
-            <FormItem>;
-</FormItem>"
-              <FormLabel className="block text-center mb-2">;"
-</FormLabel>
-              </FormLabel>;
-              <FormControl>;
-</FormControl>"
-                <div className="flex justify-center gap-1">;"
-</div>
-                    <button;
-                      key={star}"
-                      type="button"")
-                      onClick={() => field && field.onChange(star)}
-</button>
-                    <button;
-                      key={star}"
-                      type="button";"
-                      onClick={() => field.onChange(star)}
-</button>
-                      <Star;
-                        className={`h-10 w-10 ${
+          name="rating";"
+          rules={{ required:"Rating is required" }}
 
-                          star <= (hoveredStar || field && field.value || 0)
-"
-                            ? "fill-yellow-400 text-yellow-400"""
-                            : "text-gray-300"""
-                            ? "fill-yellow-400 text-yellow-400"""
-                            : "text-gray-300""
+                            : "text-gray-300"
                       <Star;
                         className={`h-10 w-10 ${;
                           star <= (hoveredStar || field.value || 0);"
-                            ? "fill-yellow-400 text-yellow-400";""
-                            :"text-gray-300";"
+                            ? "fill-yellow-400 text-yellow-400";"
+                            :"text-gray-300";
+
                         } transition-colors`}
                       />;
-</Star>
                     </button>;
+                  ))}
                 </div>;
-              </FormControl>;"
-              <div className="text-center mt-1 h-5">;"
-</div>
+
+              <div className="text-center mt-1 h-5">;
                 <FormMessage />;
-</FormMessage>
               </div>;
             </FormItem>;
-        <FormField;
-          control={form && form.control}"
-          name="review_text""
-          rules={{"
-            required: "Please provide feedback"",
-  minLength: {
-              value: 20;,"
-  message: "Review must be at least 20 characters"}}}"
+          )}
+
+      rating: 0,
+
+        />;
+
+        />;
+
+        {/* Review Text */}
+        <FormField
+          control={form && form.control}
+          name="review_text"
+          rules={{
+            required: "Please provide feedback"
+            minLength: {
+              value: 20
+
+              message: "Review must be at least 20 characters"}}}
           render={({ field }) => (;
-</FormField>
             <FormItem>;
-</FormItem>
               <FormLabel>Your Review</FormLabel>;
               <FormControl>;
-</FormControl>
-                <Textarea;"
-                  placeholder="Share your experience and feedback..."""
-                  className="min-h-24 resize-none""
+                <Textarea
+                  placeholder="Share your experience and feedback..."
+                  className="min-h-24 resize-none"
 interface ReviewFormProps {
-  // TODO: Implement
-}
   project_id: string,
   reviewee_id: string,
-  reviewee_name: string,)
+  reviewee_name: string,
   on_submit: (data: any) => Promise < boolean>,
-</Textarea>
+  default_values?: Review;
+  is_submitting: boolean;
+}
+export /**
+ * ReviewForm - Function description
+ */
+function ReviewForm() {
   const [hovered_star, setHoveredStar] = useState < number>(0);
 ;
   const form = use_form < ReviewFormValues>({
-    default_values: default_values ? {,
-  rating: default_values.rating,
+    default_values: default_values ? {
+      rating: default_values.rating,
       review_text: default_values.review_text,
       communication_rating: default_values.communication_rating,
       quality_rating: default_values.quality_rating,
       timeliness_rating: default_values.timeliness_rating,
       would_work_again: default_values.would_work_again,
       is_anonymous: default_values.is_anonymous} : {
-      rating: 0,"
-      review_text: "","
+      rating: 0,
+      review_text: "",
       communication_rating: undefined,
       quality_rating: undefined,
       timeliness_rating: undefined,
       would_work_again: undefined,
-      is_anonymous: false})
+      is_anonymous: false}
   });
 ;
   const handle_submit = async (values: ReviewFormValues) => {
     const formatted_data = {
+
       ...values,
       project_id: project_id,
       reviewee_id: reviewee_id},
     const success = await on_submit (formatted_data);
     // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
       form.reset ();
     }
   }
 ;"
-  const watch_rating = form.watch ("rating");"
+  const watch_rating = form.watch ("rating");
 ;
   return (
-    <Form {...form}>;
-</Form>)"
-      <form on_submit={form.handle_submit (handle_submit)} className="space - y-6">;"
-</form>
+
+        {/* Main Rating */}
         <FormField;
           control={form.control}"
-          name="rating";""
-          rules={{ required: "Rating is required" }}"
+          name="rating";"
+          rules={{ required: "Rating is required" }}
           render={({ field }) => (
-</FormField>
-            <FormItem>;
-</FormItem>"
-              <FormLabel className="block text - center mb - 2">;"
-</FormLabel>
-              </FormLabel>;
-              <FormControl>;
-</FormControl>"
-                <div className="flex justify - center gap - 1">;"
-</div>
+
+                  {[1, 2, 3, 4, 5].map ((star) => (
                     <button;
                       key={star}
         {/* Review Text */}
         <FormField;
           control={form.control}"
-          name="review_text";"
+          name="review_text";
           rules={{"
-            required: "Please provide feedback","
-            min_length: {,
-  value: 20,"
-              message: "Review must be at least 20 characters"}}}")
+            required: "Please provide feedback",
+            min_length: {}
+              value: 20,"
+
+              message: "Review must be at least 20 characters"}}}
           render={({ field }) => (
-</button>
             <FormItem>;
-</FormItem>
               <FormLabel > Your Review</FormLabel>;
               <FormControl>;
-</FormControl>
-                <Textarea;"
-                  placeholder="Share your experience and feedback...";""
-                  className="min - h-24 resize - none";"
-                <Textarea;"
-                  placeholder="Share your experience and feedback...";""
-                  className="min-h-24 resize-none";"
+
+        {/* Additional Rating Categories (only shown if main rating is provided) */}
+        {watchRating > 0 && (
+          <div className="space-y-6 border-t pt-6">
+            <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
+
+        {/* Additional Rating Categories (only shown if main rating is provided) */}
+        {watchRating > 0 && (;"
+          <div className="space-y-6 border-t pt-6">;"
+            <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>;
+
+            {/* Communication */}
+            <FormField
+              control={form && form.control}
+              name="communication_rating"
+
+            {/* Communication */}
+            <FormField;
+              control={form && form.control}"
+              name="communication_rating"
+
+              render={({ field }) => (;"
+                <FormItem className="space-y-2">;
+                  <FormLabel>Communication</FormLabel>;
+                  <FormControl>;
+
+                    <RadioGroup
+                      onValueChange={(value) => field && field.onChange(parseInt(value))}
+
+              render={({ field }) => (;
+                <FormItem className="space-y-2">;
+                  <FormLabel>Communication</FormLabel>;
+                  <FormControl>;
+                    <RadioGroup
+                      onValueChange={(value) => field && field.onChange(parseInt(value))}
+
+                      defaultValue={field && field.value?.toString()}
+                      className="flex flex-wrap gap-4";
+                    >;
+                      {[1, 2, 3, 4, 5].map((value) => (;
+                        <FormItem
+                          key={value}
+                          className="flex items-center space-x-2">;
+                          <FormControl>;
+
+                          <FormLabel className="cursor-pointer font-normal">;
+                            {value}
+                          </FormLabel>;
+
+                        </FormItem>;
+                      ))}
+
+                    </RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
+              )}
+
+                          </FormControl>;
+                          <FormLabel className="cursor-pointer font-normal">;
+                            {value}
+                          </FormLabel>;
+
+                        </FormItem>;
+                      ))}
+                        </FormItem>;
+                      ))}
+
+                    </RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
+              )}
+
+                    </RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
+              )}
+
+                          {field && field.value ? "Yes" : "No"}
+            </FormItem>)}
+        />;
+        {/* Additional Rating Categories (only shown if main rating is provided) */}
+
+                <FormItem className="space - y-2">;
+                  <FormLabel > Communication</FormLabel>;
+                  <FormControl>;
+                    <RadioGroup;
+                      onValueChange={(value) => field.on_change (parse_int (value))}
+
+                      className="flex flex - wrap gap - 4";
+                    >;
+                      {[1, 2, 3, 4, 5].map ((value) => (
+                        <FormItem;
+
+                          className="flex items - center space - x-2";
+                        >;
+                          <FormControl>;
+                            <RadioGroupItem value={value.to_string ()} />;
+
+                          <FormLabel className="cursor - pointer font - normal">;
+                            {value}
+                          </FormLabel>;
+                        </FormItem>))}
+                    </RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>)}
+            />;
+            {/* Quality */}
+            <FormField;
+
+                <FormItem className="space - y-2">;
+                  <FormLabel > Quality of Work</FormLabel>;
+                  <FormControl>;
+                    <RadioGroup;
+                      onValueChange={(value) => field.on_change (parse_int (value))}
+
+                      className="flex flex - wrap gap - 4";
+                    >;
+                      {[1, 2, 3, 4, 5].map ((value) => (
+                        <FormItem;
+
+                          className="flex items - center space - x-2";
+                        >;
+                          <FormControl>;
+                            <RadioGroupItem value={value.to_string ()} />;
+
+                          <FormLabel className="cursor - pointer font - normal">;
+                            {value}
+                          </FormLabel>;
+                        </FormItem>))}
+                    </RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>)}
+            />;
+            {/* Timeliness */}
+            <FormField;
+
+                <FormItem className="space - y-2">;
+                  <FormLabel > Timeliness</FormLabel>;
+                  <FormControl>;
+                    <RadioGroup;
+                      onValueChange={(value) => field.on_change (parse_int (value))}
+
+                      className="flex flex - wrap gap - 4";
+                    >;
+                      {[1, 2, 3, 4, 5].map ((value) => (
+                        <FormItem;
+
+                          className="flex items - center space - x-2";
+                        >;
+                          <FormControl>;
+                            <RadioGroupItem value={value.to_string ()} />;
+
+                          <FormLabel className="cursor - pointer font - normal">;
+                            {value}
+                          </FormLabel>;
+                        </FormItem>))}
+                    </RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>)}
+            />;
+            {/* Would Work Again */}
+            <FormField;
+
+                      <div className="flex items - center space - x-2">;
+                        <Switch;
+                          checked={field.value}
+                          onCheckedChange={field.on_change}
+
+                        </span>;
+                      </div>;
+                    </FormControl>;
+                  </div>;
+                  <FormMessage />;
+
+        {/* Anonymous Review */}
+        <FormField
+          control={form && form.control}
+          name="is_anonymous"
+
+          render={({ field }) => (;
+            <FormItem>;"
+              <div className="flex items-center gap-2">;
+                <FormControl>;
+
+                  />;
+                </FormControl>;"
+                <FormLabel className="cursor-pointer font-normal">;
+                  Submit anonymously;
+                </FormLabel>;
+              </div>;"
+              <p className="text-xs text-muted-foreground mt-1">;'
+                Anonymous reviews won't display your name but will still be linked to your account.;
+              </p>;
+              <FormMessage />;
+            </FormItem>;
+
+        />;
+
+        <Button
+          type="submit"
+          className="w-full"
+          disabled={isSubmitting || !form && form.formState.isValid}>;
+          {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
+
+  }),;
+  const handleSubmit = async (values: ReviewFormValues) => {;
+    const formattedData = {;
+      ...values,;
+      project_id: projectId,;
+      reviewee_id: revieweeId},;
+    const success = await onSubmit(formattedData),;
+    if (success) {;
+      form.reset();
+    }
+  },
+
                   {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        {/* Additional Rating Categories (only shown if main rating is provided) */}
+        {watchRating > 0 && (
+          <div className="space-y-6 border-t pt-6">
+            <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
+
+            {/* Communication */}
+            <FormField
+              control={form.control}
+              name="communication_rating"
+              render={({ field }) => (
+                <FormItem className="space-y-2">
+                  <FormLabel>Communication</FormLabel>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={(value) => field.onChange(parseInt(value))}
+                      defaultValue={field.value?.toString()}
+                      className="flex flex-wrap gap-4"
+                    >
+                      {[1, 2, 3, 4, 5].map((value) => (
+                        <FormItem
+                          key={value}
+                          className="flex items-center space-x-2"
+                        >
+                          <FormControl>
+                            <RadioGroupItem value={value.toString()} />
+                          </FormControl>
+                          <FormLabel className="cursor-pointer font-normal">
+                            {value}
+                          </FormLabel>
+                        </FormItem>
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {/* Quality */}
+            <FormField
+              control={form.control}
+              name="quality_rating"
+              render={({ field }) => (
+                <FormItem className="space-y-2">
+                  <FormLabel>Quality of Work</FormLabel>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={(value) => field.onChange(parseInt(value))}
+                      defaultValue={field.value?.toString()}
+                      className="flex flex-wrap gap-4"
+                    >
+                      {[1, 2, 3, 4, 5].map((value) => (
+                        <FormItem
+                          key={value}
+                          className="flex items-center space-x-2"
+                        >
+                          <FormControl>
+                            <RadioGroupItem value={value.toString()} />
+                          </FormControl>
+                          <FormLabel className="cursor-pointer font-normal">
+                            {value}
+                          </FormLabel>
+                        </FormItem>
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {/* Timeliness */}
+            <FormField
+              control={form.control}
+              name="timeliness_rating"
+              render={({ field }) => (
+                <FormItem className="space-y-2">
+                  <FormLabel>Timeliness</FormLabel>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={(value) => field.onChange(parseInt(value))}
+                      defaultValue={field.value?.toString()}
+                      className="flex flex-wrap gap-4"
+                    >
+                      {[1, 2, 3, 4, 5].map((value) => (
+                        <FormItem
+                          key={value}
+                          className="flex items-center space-x-2"
+                        >
+                          <FormControl>
+                            <RadioGroupItem value={value.toString()} />
+                          </FormControl>
+                          <FormLabel className="cursor-pointer font-normal">
+                            {value}
+                          </FormLabel>
+                        </FormItem>
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {/* Would Work Again */}
+            <FormField
+              control={form.control}
+              name="would_work_again"
+              render={({ field }) => (
+                <FormItem>
+                  <div className="flex items-center gap-2">
+                    <FormLabel>Would you work with {revieweeName} again?</FormLabel>
+                    <FormControl>
+                      <div className="flex items-center space-x-2">
+                        <Switch
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                        <span className="text-sm text-muted-foreground">
+                          {field.value ? "Yes" : "No"}
+                        </span>
+                      </div>
+                    </FormControl>
+                  </div>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+        )}
+        {/* Anonymous Review */}
+        <FormField
+          control={form.control}
+          name="is_anonymous"
+          render={({ field }) => (
+            <FormItem>
+              <div className="flex items-center gap-2">
+                <FormControl>
+                  <Switch
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                  />
+                </FormControl>
+                <FormLabel className="cursor-pointer font-normal">
+                  Submit anonymously
+                </FormLabel>
+              </div>
+              <p className="text-xs text-muted-foreground mt-1">
+                Anonymous reviews won't display your name but will still be linked to your account.
+              </p>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <Button
+          type="submit"
+          className="w-full"
+          disabled={isSubmitting |!form.formState.isValid}
+        >
+          {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
+        </Button>
+      </form>
+    </Form>
+  )
+
+        </Button>;
+      </form>;
+    </Form>;
+  );
+}
+
+                </FormItem>)}
+            />;
+          </div>)}
+        {/* Anonymous Review */}
+        <FormField;
+
+              <div className="flex items - center gap - 2">;
+                <FormControl>;
+                  <Switch;
+                    checked={field.value}
+                    onCheckedChange={field.on_change}
+                  />;
+
+                Anonymous reviews won't display your name but will still be linked to your account.;
+
                 />;
 </Textarea>
               </FormControl>;
               <FormMessage />;
+
 </FormMessage>"
           <div className="space-y-6 border-t pt-6">;"
 </div>)"
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>;"
-            <FormField;
-              control={form && form.control}"
               name="communication_rating""
-              render={({ field }) => (;
-</FormField>"
                 <FormItem className="space-y-2">;"
-</FormItem>
-                  <FormLabel>Communication</FormLabel>;
-                  <FormControl>;
-</FormControl>
+
+                  <FormLabel>Communication;
+
                     <RadioGroup;)
                       onValueChange={(value) => field && field.onChange(parseInt(value))}
-</RadioGroup>
+
                         <FormItem;
                           key={value}"
                           className="flex items-center space-x-2">;"
-</FormItem>
-                          <FormControl>;
-</FormControl>
+
                             <RadioGroupItem value={value && value.toString()} />;
-</RadioGroupItem>
-                          </FormControl>;"
+
                           <FormLabel className="cursor-pointer font-normal">;"
+
+              name="quality_rating""
+
+                  <FormLabel>Quality of Work;
+
 </FormLabel>
                           </FormLabel>;
                         </FormItem>;
                         </FormItem>;
+
                     </RadioGroup>;
                   </FormControl>;
                   <FormMessage />;
 </FormMessage>
                 </FormItem>;
+
             <FormField;
               control={form && form.control}"
               name="quality_rating""
@@ -390,353 +923,138 @@ if ( {) {
                           </FormLabel>;
                         </FormItem>;
                         </FormItem>;
+
                     </RadioGroup>;
                   </FormControl>;
                   <FormMessage />;
 </FormMessage>
                 </FormItem>;
+
             <FormField;
               control={form && form.control}"
               name="timeliness_rating""
-              render={({ field }) => (;
-</FormField>"
-                <FormItem className="space-y-2">;"
-</FormItem>
-                  <FormLabel>Timeliness</FormLabel>;
-                  <FormControl>;
-</FormControl>
-                    <RadioGroup;)
-                      onValueChange={(value) => field && field.onChange(parseInt(value))}
-</RadioGroup>
-                        <FormItem;
-                          key={value}"
-                          className="flex items-center space-x-2">;"
-</FormItem>
-                          <FormControl>;
-</FormControl>
-                            <RadioGroupItem value={value && value.toString()} />;
-</RadioGroupItem>
-                          </FormControl>;"
-                          <FormLabel className="cursor-pointer font-normal">;"
-</FormLabel>
-                          </FormLabel>;
-                        </FormItem>;
-                        </FormItem>;
-                    </RadioGroup>;
-                  </FormControl>;
-                  <FormMessage />;
-</FormMessage>
-                </FormItem>;
-            <FormField;
-              control={form && form.control}"
+
+                  <FormLabel>Timeliness;
+
               name="would_work_again""
-              render={({ field }) => (;
-</FormField>
-                <FormItem>;
-</FormItem>"
+
                   <div className="flex items-center gap-2">;"
-</div>
-                    <FormLabel>Would you work with {revieweeName} again?</FormLabel>;
-                    <FormControl>;
-</FormControl>"
+                    <FormLabel>Would you work with {revieweeName} again?;
                       <div className="flex items-center space-x-2">;"
-</div>
                         <Switch;
                           checked={field && field.value}
                           onCheckedChange={field && field.onChange}
-                        />;
-</Switch>"
                         <span className="text-sm text-muted-foreground">;"
 </span>)
-            </FormItem>)}"
+            )}"
           <div className="space - y-6 border - t pt - 6">;"
 </div>"
             <h3 className="font - medium text - sm">Additional Ratings (Optional)</h3>;"
-            <FormField;
-              control={form.control}"
               name="communication_rating";"
-              render={({ field }) => (
-</FormField>"
                 <FormItem className="space - y-2">;"
-</FormItem>
-                  <FormLabel > Communication</FormLabel>;
-                  <FormControl>;
-</FormControl>
-                    <RadioGroup;)
+
+                  <FormLabel > Communication;
+
                       onValueChange={(value) => field.on_change (parse_int (value))}
-</RadioGroup>
-                        <FormItem;
-                          key={value}"
+
                           className="flex items - center space - x-2";"
                         >;
-</FormItem>
-                          <FormControl>;
-</FormControl>
+
                             <RadioGroupItem value={value.to_string ()} />;
-</RadioGroupItem>
-                          </FormControl>;"
+
                           <FormLabel className="cursor - pointer font - normal">;"
-</FormLabel>
-                          </FormLabel>;
-                        </FormItem>))}
-                    </RadioGroup>;
-                  </FormControl>;
-                  <FormMessage />;
-</FormMessage>
-                </FormItem>)}
-            <FormField;
-              control={form.control}"
+
+                        ))}
+
+                )}
               name="quality_rating";"
-              render={({ field }) => (
-</FormField>"
-                <FormItem className="space - y-2">;"
-</FormItem>
-                  <FormLabel > Quality of Work</FormLabel>;
-                  <FormControl>;
-</FormControl>
-                    <RadioGroup;)
-                      onValueChange={(value) => field.on_change (parse_int (value))}
-</RadioGroup>
-                        <FormItem;
-                          key={value}"
-                          className="flex items - center space - x-2";"
-                        >;
-</FormItem>
-                          <FormControl>;
-</FormControl>
-                            <RadioGroupItem value={value.to_string ()} />;
-</RadioGroupItem>
-                          </FormControl>;"
-                          <FormLabel className="cursor - pointer font - normal">;"
-</FormLabel>
-                          </FormLabel>;
-                        </FormItem>))}
-                    </RadioGroup>;
-                  </FormControl>;
-                  <FormMessage />;
-</FormMessage>
-                </FormItem>)}
-            <FormField;
-              control={form.control}"
+
+                  <FormLabel > Quality of Work;
+
               name="timeliness_rating";"
-              render={({ field }) => (
-</FormField>"
-                <FormItem className="space - y-2">;"
-</FormItem>
-                  <FormLabel > Timeliness</FormLabel>;
-                  <FormControl>;
-</FormControl>
-                    <RadioGroup;)
-                      onValueChange={(value) => field.on_change (parse_int (value))}
-</RadioGroup>
-                        <FormItem;
-                          key={value}"
-                          className="flex items - center space - x-2";"
-                        >;
-</FormItem>
-                          <FormControl>;
-</FormControl>
-                            <RadioGroupItem value={value.to_string ()} />;
-</RadioGroupItem>
-                          </FormControl>;"
-                          <FormLabel className="cursor - pointer font - normal">;"
-</FormLabel>
-                          </FormLabel>;
-                        </FormItem>))}
-                    </RadioGroup>;
-                  </FormControl>;
-                  <FormMessage />;
-</FormMessage>
-                </FormItem>)}
-            <FormField;
-              control={form.control}"
+
+                  <FormLabel > Timeliness;
+
               name="would_work_again";"
-              render={({ field }) => (
-</FormField>
-                <FormItem>;
-</FormItem>"
+
                   <div className="flex items - center gap - 2">;"
-</div>
-                    <FormLabel > Would you work with {reviewee_name} again?</FormLabel>;
-                    <FormControl>;
-</FormControl>"
+                    <FormLabel > Would you work with {reviewee_name} again?;
                       <div className="flex items - center space - x-2">;"
-</div>
-                        <Switch;
                           checked={field.value}
                           onCheckedChange={field.on_change}
-                        />;
-</Switch>"
                         <span className="text - sm text - muted - foreground">;"
 </span>
-                        <Switch;
-                          checked={field.value}
                           onCheckedChange={field.onChange}
-                        />;
-</Switch>"
-                        <span className="text-sm text-muted-foreground">;"
-</span>
                         </span>;
-                      </div>;
-                    </FormControl>;
-                  </div>;
-                  <FormMessage />;
-</FormMessage>
-        <FormField;
-          control={form && form.control}"
+
           name="is_anonymous"")
-          render={({ field }) => (;
-</FormField>
-            <FormItem>;
-</FormItem>"
-              <div className="flex items-center gap-2">;"
-</div>
-                <FormControl>;
-</FormControl>
-                  <Switch;
-                    checked={field && field.value}
-                    onCheckedChange={field && field.onChange}
-                  <Switch;
-                    checked={field && field.value}
-                    onCheckedChange={field && field.onChange}
-                  />;
-</Switch>
-                </FormControl>;"
-                <FormLabel className="cursor-pointer font-normal">;"
-</FormLabel>
-                </FormLabel>;
+
               </div>;"
               <p className="text-xs text-muted-foreground mt-1">;"
 </p>
+
               </p>;
               <FormMessage />;
-</FormMessage>
-            </FormItem>;
-        <Button;"
-          type="submit"""
-          className="w-full""
-          disabled={isSubmitting || !form && form.formState.isValid}>;
-</Button>
-        </Button>;
-      </form>;
-    </Form>;)
-                </FormItem>)}
-          </div>)}
-        <FormField;
-          control={form.control}"
-          name="is_anonymous";"
-          render={({ field }) => (
-</FormField>
-            <FormItem>;
-</FormItem>"
-              <div className="flex items - center gap - 2">;"
-</div>
-                <FormControl>;
-</FormControl>
-                  <Switch;
-                    checked={field.value}
-                    onCheckedChange={field.on_change}
-                  />;
-</Switch>
-                </FormControl>;"
-                <FormLabel className="cursor - pointer font - normal">;"
-</FormLabel>
-                </FormLabel>;
-              </div>;"
-              <p className="text - xs text - muted - foreground mt - 1">;"
-</p>
-              </p>;
-              <FormMessage />;
-</FormMessage>)
-            </FormItem>)}
-        <Button;"
-          type="submit";""
-          className="w - full";"
+
           disabled={is_submitting || !form.form_state.is_valid}
         >;
-</Button>
+
+          {is_submitting ? "Submitting..." : default_values ? "Save Changes" : "Submit Review"}
         </Button>;
       </form>;
     </Form>);
-        <Button;"
-          type="submit";""
-          className="w-full";"
-          disabled={isSubmitting || !form.formState.isValid}
-        >;
-</Button>
+
+          {isSubmitting ? "Submitting..." :defaultValues ? "Save Changes" :"Submit Review"}
         </Button>;
       </form>;
     </Form>;
+
+  Form;
+FormControl;
+FormField;
+FormItem;
+FormLabel;
+
+  rating?: number;
+review text?: string;
+communication rating?: number;
+quality rating?: number;
+timeliness rating?: number;
+would work again?: boolean;
+
+  projectId: string;
+revieweeId: string;
+revieweeName: string;
 onSubmit: (data: any) => Promise<boolean>;
-</boolean>
+defaultValues?: Review;
+
+  projectId;
+revieweeId;
+revieweeName;
+onSubmit;
+defaultValues;
+
+  required: "Rating is required" 
+});
+          className="w-full";"
+          disabled={isSubmitting || !form.formState.isValid}
+
+onSubmit: (data: any) => Promise<boolean>;
   const [hoveredStar, setHoveredStar] = useState<number> (0);
-</number>
   return (<Form {
   // TODO: Implement
-}
   ...form;
 }> <form onSubmit= {
-</Form>
+
 }<FormField control= {
   form.control;"
 }name="rating" rules= {"
   {"
   required: "Rating is required""
-}
 
+}/> </FormControl> <FormLabel className="cursor-pointer font-normal"> Submit anonymously </FormLabel> </div> <p className="text-xs text-muted-foreground mt-1" > Anonymous reviews won't display your name but will still be linked to your account. </p> <FormMessage /> </FormItem>) 
+}/> <Button </Button> </form> </Form>) 
+}
+}
 }
 ;
-
-}render= {
-  ({
-  field;)
-}) => (<FormItem> revieweeName;
-</FormField>"
-}? </FormLabel> <FormControl> className="focus:outline-none transition-transform hover:scale-110" > <Star className= {"
-</FormControl>)
-  star <= (hoveredStar || field.value || 0) /> </button>) ) "
-}</div> </FormControl> <div className="text-center mt-1 h-5" > <FormMessage /> </div> </FormItem>)""
-}<FormField <FormItem> <FormLabel>Your Review</FormLabel> <FormControl> <Textarea placeholder="Share your experience and feedback..." className="min-h-24 resize-none" {"
-</FormField>
-}/> </FormControl> <FormMessage /> </FormItem>) 
-</FormMessage>"
-  watchRating > 0 && (<div className="space-y-6 border-t pt-6"> <h3 className="font-medium text-sm" >Additional Ratings (Optional) </h3> {"
-</div>
-}<FormField <FormLabel>Communication</FormLabel> <FormControl> <RadioGroup onValueChange= {
-</FormField>
-  [1, 2, 3, 4, 5].map ( (value) => (<FormItem key= {
-  value;"
-}className="flex items-center space-x-2" > <FormControl> <RadioGroupItem value= {"
-</FormItem>)
-}/> </FormControl> </FormLabel> </FormItem>) ) 
-}</RadioGroup> </FormControl> <FormMessage /> </FormItem>) 
-</FormMessage>
-}<FormField <FormLabel>Quality of Work</FormLabel> <FormControl> <RadioGroup onValueChange= {
-</FormField>
-  [1, 2, 3, 4, 5].map ( (value) => (<FormItem key= {
-  value;"
-}className="flex items-center space-x-2" > <FormControl> <RadioGroupItem value= {"
-</FormItem>)
-}/> </FormControl> </FormLabel> </FormItem>) ) 
-}</RadioGroup> </FormControl> <FormMessage /> </FormItem>) 
-</FormMessage>
-}<FormField <FormLabel>Timeliness</FormLabel> <FormControl> <RadioGroup onValueChange= {
-</FormField>
-  [1, 2, 3, 4, 5].map ( (value) => (<FormItem key= {
-  value;"
-}className="flex items-center space-x-2" > <FormControl> <RadioGroupItem value= {"
-</FormItem>)
-}/> </FormControl> </FormLabel> </FormItem>) ) 
-}</RadioGroup> </FormControl> <FormMessage /> </FormItem>) 
-</FormMessage>"
-}<FormField <FormItem> <div className="flex items-center gap-2"> <FormLabel>Would you work with {"
-</FormField>"
-}again?</FormLabel> <FormControl> <div className="flex items-center space-x-2"> <Switch checked= {"
-</FormControl>
-}/> </span> </div> </FormControl> </div> <FormMessage /> </FormItem>) 
-</FormMessage>
-}/> </div>) "
-}<FormField <FormItem> <div className="flex items-center gap-2"> <FormControl> <Switch checked= {"
-</FormField>"
-}/> </FormControl> <FormLabel className="cursor-pointer font-normal"> Submit anonymously </FormLabel> </div> <p className="text-xs text-muted-foreground mt-1" > Anonymous reviews won't display your name but will still be linked to your account. </p> <FormMessage /> </FormItem>)'
-}/> <Button </Button> </form> </Form>) '

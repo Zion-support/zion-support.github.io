@@ -1,101 +1,141 @@
-import { Fragment } from "react";""
-import { Route, Routes } from "react-router-dom";""
-import EnterprisePlans from "../pages/EnterprisePlans";""
-import EnterpriseAdmin from "../pages/EnterpriseAdmin";""
-import CompanyWorkspace from "../pages/CompanyWorkspace";""
-import EnterpriseBilling from "../pages/EnterpriseBilling";""
+<<<<<<< HEAD
+import { Fragment } from "react";"
+import { Route, Routes } from "react-router-dom";"
+import EnterprisePlans from "../pages/EnterprisePlans";"
+import EnterpriseAdmin from "../pages/EnterpriseAdmin";"
+import CompanyWorkspace from "../pages/CompanyWorkspace";"
+import EnterpriseBilling from "../pages/EnterpriseBilling";"
 import ZionHireAI from "../pages/ZionHireAI";"
-const EnterpriseRoutes = () => {
-const EnterpriseRoutes = () => {;"
-import {Fragment} from "react";""
-import {Route, Routes} from "react-router-dom";""
-import EnterprisePlans from "../pages/EnterprisePlans";""
-import EnterpriseAdmin from "../pages/EnterpriseAdmin";""
-import CompanyWorkspace from "../pages/CompanyWorkspace";""
-import EnterpriseBilling from "../pages/EnterpriseBilling";""
-import ZionHireAI from "../pages/ZionHireAI";""
-import { Fragment } from "react",""
-import { Route, Routes } from "react-router-dom",""
-import EnterprisePlans from "../pages/EnterprisePlans",""
-import EnterpriseAdmin from "../pages/EnterpriseAdmin",""
-import CompanyWorkspace from "../pages/CompanyWorkspace",""
-import EnterpriseBilling from "../pages/EnterpriseBilling";""
-import ZionHireAI from "../pages/ZionHireAI";""
-import EnterpriseBilling from "../pages/EnterpriseBilling",""
-import ZionHireAI from "../pages/ZionHireAI","
-const EnterpriseRoutes = () => {
+const EnterpriseRoutes = () => {import {Fragment} from "react";"
+import {Route, Routes} from "react-router-dom";"
+=======
+import { Fragment } from "react";
+import { Route, Routes } from "react-router-dom";
+import EnterprisePlans from "../pages/EnterprisePlans";
+import EnterpriseAdmin from "../pages/EnterpriseAdmin";
+import CompanyWorkspace from "../pages/CompanyWorkspace";
+import EnterpriseBilling from "../pages/EnterpriseBilling";
+import ZionHireAI from "../pages/ZionHireAI";
+
+import {Fragment} from "react";
+
+import {Route, Routes} from "react-router-dom";
+import EnterprisePlans from "../pages/EnterprisePlans";
+import EnterpriseAdmin from "../pages/EnterpriseAdmin";
+import CompanyWorkspace from "../pages/CompanyWorkspace";
+import EnterpriseBilling from "../pages/EnterpriseBilling";
+import ZionHireAI from "../pages/ZionHireAI";
+import { Fragment } from "react",
+import { Route, Routes } from "react-router-dom",
+import EnterprisePlans from "../pages/EnterprisePlans",
+import EnterpriseAdmin from "../pages/EnterpriseAdmin",
+import CompanyWorkspace from "../pages/CompanyWorkspace",
+import EnterpriseBilling from "../pages/EnterpriseBilling";
+
+import ZionHireAI from "../pages/ZionHireAI";
+
+"
+>>>>>>> origin/chore/fix-lint-and-merge
+import { Fragment } from "react","
+import { Route, Routes } from "react-router-dom","
+import EnterprisePlans from "../pages/EnterprisePlans","
+import EnterpriseAdmin from "../pages/EnterpriseAdmin","
+<<<<<<< HEAD
+import CompanyWorkspace from "../pages/CompanyWorkspace","
+=======
+import CompanyWorkspace from "../pages/CompanyWorkspace",";
+import EnterpriseBilling from "../pages/EnterpriseBilling";"
+import ZionHireAI from "../pages/ZionHireAI";
+"
+>>>>>>> origin/chore/fix-lint-and-merge
+import EnterpriseBilling from "../pages/EnterpriseBilling","
+import ZionHireAI from "../pages/ZionHireAI",
+const EnterpriseRoutes = () => {}
   return (
     <Routes>
-</Routes>"
+      {/* Enterprise Routes */}"
       <Route path="/enterprise" element={<EnterprisePlans />} />"
-</Route>"
       <Route path="/plans/enterprise" element={<EnterprisePlans />} />"
-</Route>"
       <Route path="/enterprise/admin" element={<EnterpriseAdmin />} />"
-</Route>"
       <Route path="/company/:companySlug" element={<CompanyWorkspace />} />"
-</Route>"
-      <Route path="/enterprise/billing" element={<EnterpriseBilling />} />"
-</Route>"
-      <Route path="/zion-hire-ai" element={<ZionHireAI />} />"
-</Route>"
-      <Route path="/hire-ai" element={<ZionHireAI />} />"
-</Route>
+      <Route path="/enterprise/billing" element={<EnterpriseBilling />} />
+
+      <Route path="/hire-ai" element={<ZionHireAI />} />
     </Routes>
-    <Routes>;
-</Routes>"
-      <Route path="/enterprise" element={<EnterprisePlans />} />"
-</Route>"
-      <Route path="/plans/enterprise" element={<EnterprisePlans />} />"
-</Route>"
-      <Route path="/enterprise/admin" element={<EnterpriseAdmin />} />"
-</Route>"
-      <Route path="/company/:companySlug" element={<CompanyWorkspace />} />"
-</Route>"
-      <Route path="/enterprise/billing" element={<EnterpriseBilling />} />"
-</Route>"
+  );
+};
+export default EnterpriseRoutes;
+<<<<<<< HEAD
+},
+export default EnterpriseRoutes,
+import EnterprisePlans from "EnterprisePlans";"
+import EnterpriseAdmin from "EnterpriseAdmin";"
+import CompanyWorkspace from "CompanyWorkspace";"
+import EnterpriseBilling from "EnterpriseBilling";"
+import ZionHireAI from "ZionHireAI";"
+}
+const EnterpriseRoutes = () => {;
       <Route path="/zion-hire-ai" element={<ZionHireAI />} />"
-</Route>"
       <Route path="/hire-ai" element={<ZionHireAI />} />"
-</Route>
+=======
+
+      <Route path="/hire-ai" element={<ZionHireAI />} />
+>>>>>>> origin/chore/fix-lint-and-merge
     </Routes>
+
+};
+
+};
+import { Fragment } from './react';
+import { Route, Routes } from './react-router-dom';
+import EnterprisePlans from "../pages / EnterprisePlans";
+import EnterpriseAdmin from "../pages / EnterpriseAdmin";
+import CompanyWorkspace from "../pages / CompanyWorkspace";
+import EnterpriseBilling from "../pages / EnterpriseBilling";
+
+import ZionHireAI from "../pages / ZionHireAI";
+const EnterpriseRoutes = () =>: any {}
+  return (
     <Routes>;
-</Routes>"
+      {/* Enterprise Routes */}"
       <Route path="/enterprise" element={<EnterprisePlans />} />;"
-</Route>"
       <Route path="/plans / enterprise" element={<EnterprisePlans />} />;"
-</Route>"
       <Route path="/enterprise / admin" element={<EnterpriseAdmin />} />;"
-</Route>"
       <Route path="/company/:company_slug" element={<CompanyWorkspace />} />;"
-</Route>"
-      <Route path="/enterprise / billing" element={<EnterpriseBilling />} />;"
-</Route>"
+      <Route path="/enterprise / billing" element={<EnterpriseBilling />} />;
+      {/* Zion Hire AI Routes */}"
       <Route path="/zion - hire - ai" element={<ZionHireAI />} />;"
-</Route>"
-      <Route path="/hire - ai" element={<ZionHireAI />} />;"
-</Route>)
+      <Route path="/hire - ai" element={<ZionHireAI />} />;
     </Routes>);
+}
+;
+export default EnterpriseRoutes;
+
+  ),;
+},;
+;export default EnterpriseRoutes,
+ const EnterpriseRoutes = () => {
   return (<Routes> {
-</Routes>"
-}<Route path="/enterprise" element= {"
+  /* Enterprise Routes */ 
+}<Route path="/enterprise" element= {
   <EnterprisePlans /> 
-</Route>"
-}/> <Route path="/plans/enterprise" element= {"
+}/> <Route path="/plans/enterprise" element= {
   <EnterprisePlans /> 
-</Route>"
-}/> <Route path="/enterprise/admin" element= {"
+}/> <Route path="/enterprise/admin" element= {
   <EnterpriseAdmin /> 
-</Route>"
-}/> <Route path="/company/:companySlug" element= {"
+}/> <Route path="/company/:companySlug" element= {
   <CompanyWorkspace /> 
-</Route>"
-}/> <Route path="/enterprise/billing" element= {"
+}/> <Route path="/enterprise/billing" element= {
   <EnterpriseBilling /> 
-</Route>"
-}<Route path="/zion-hire-ai" element= {"
+}/> {
+  /* Zion Hire AI Routes */ 
+}<Route path="/zion-hire-ai" element= {
   <ZionHireAI /> 
-</Route>"
-}/> <Route path="/hire-ai" element= {"
+}/> <Route path="/hire-ai" element= {
   <ZionHireAI /> 
-</Route>)"
+}/> 
+};
+export default EnterpriseRoutes;
+  );
+},;
+export default EnterpriseRoutes;

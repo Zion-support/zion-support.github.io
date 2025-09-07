@@ -1,63 +1,84 @@
-import React from "react";""
-import { Button } from "@/components/ui/button";""
-import { useNavigate } from "react-router-dom";"
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { use_navigate  } from './react-router-dom';
+
 interface NotificationFooterProps {
-  // TODO: Implement
+
+  on_close: () => void;
+
 }
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+
+interface NotificationFooterProps {
+
   onClose: () => void;
 }
 
-export const NotificationFooter: React.FC<NotificationFooterProps> = ({
-</NotificationFooterProps>"
-    <div className="p-3 text-center border-t border-zion-blue-light">;"
-</div>
-export const NotificationFooter: React.FC<NotificationFooterProps> = ({
-</NotificationFooterProps>"
-    <div className="p-3 text-center border-t border-zion-blue-light">"
-</div>
-      <Button;"
-        variant="link"""
-        size="sm"""
-        className="text-zion-slate-light text-xs""
+  const handleViewAll = () => {
+    onClose();
+    navigate("/notifications");
+  }
+  onClose: () => void
+}
+
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
+  const navigate = useNavigate();
+
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
+  const navigate = useNavigate(),
+
+  const handleViewAll = () => {}
+    onClose(),
+    navigate('/notifications')
+  },
+  
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({}
+  onClose,
+}) => {};
+  const navigate = useNavigate();
+
+  return ("
+    <div className="p-3 text-center border-t border-zion-blue-light">
+
+        variant="link"
+        size="sm"
+
+        className="text-zion-slate-light text-xs"
+
         onClick={handleViewAll}>;
-</Button>
+
+  );
+
+  );
+
+};
+
+};
+
 export const NotificationFooter: React.FC < NotificationFooterProps> = ({
-  on_close,)
-}) => {
+
+  on_close,
+}) => {};
   const navigate = use_navigate ();
 ;
-  const handleViewAll = () =>: any {
-  // TODO: Implement
-}
+  const handleViewAll = () =>: any {}
     on_close ();"
-    navigate ("/notifications");"
+    navigate ("/notifications");
   }
 ;
-  return ("
-    <div className="p - 3 text - center border - t border - zion - blue - light">;"
-</div>
-      <Button;"
-        variant="link";""
-        size="sm";""
-        className="text - zion - slate - light text - xs";"
+
         on_click={handleViewAll}
       >;
-</Button>
-      </Button>;)
-    </div>);
-export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }) => {;
-</NotificationFooterProps>"
-    <div className="p-3 text-center border-t border-zion-blue-light">;"
-</div>
-      <Button;"
-        variant="link";""
-        size="sm";""
-        className="text-zion-slate-light text-xs";"
-        onClick={handleViewAll}
-      >;
-</Button>
+        View all notifications;
       </Button>;
-    </div>;"
-},; return (<div className="p-3 text-center border-t border-zion-blue-light" > <Button > View all notifications </Button> </div>)"
-      </Button>
-    </div>"
+    </div>);
+}
+;
+
+  );
+
+};
+
+};

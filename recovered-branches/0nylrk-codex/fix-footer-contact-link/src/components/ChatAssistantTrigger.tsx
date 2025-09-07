@@ -1,68 +1,77 @@
+import {useState} from "react";
+import {MessageSquare} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {ChatAssistant} from "@/components/ChatAssistant";
+export function ChatAssistantTrigger() {;
+<<<<<<< HEAD
+  }
+=======
+  const [isOpen, setIsOpen] = useState(false);
+>>>>>>> origin/chore/fix-lint-and-merge
 
+import { useState } from "react",
+import { MessageSquare } from "lucide-react",
+import { Button } from "@/components/ui/button";
 
-
-
-import { useState } from "react",""
-import { MessageSquare } from "lucide-react",""
-import { Button } from "@/components/ui/button";""
-import { ChatAssistant } from "@/components/ChatAssistant";"
-export function ChatAssistantTrigger() {
+import { ChatAssistant } from "@/components/ChatAssistant";
+export function ChatAssistantTrigger() {};
   const [isOpen, setIsOpen] = useState(false);"
-import { Button } from "@/components/ui/button",""
-import { ChatAssistant } from "@/components/ChatAssistant","
-export function ChatAssistantTrigger() {
+import { Button } from "@/components/ui/button","
+import { ChatAssistant } from "@/components/ChatAssistant",
+export function ChatAssistantTrigger() {}
   const [isOpen, setIsOpen] = useState(false),
 
+  // Handle sending messages to the AI chat assistant
 
-
-  // Handle sending messages to the AI chat assistant;
   const handleSendMessage = async (message: string): Promise<void> => {
-</void>
-    <>
-      <Button;"
-import { useState } from "react",;""
-import { MessageSquare } from "lucide-react",;""
-import { Button } from "@/components/ui/button",;""
-import { ChatAssistant } from "@/components/ChatAssistant",;"
-export function ChatAssistantTrigger() {;
-  const [isOpen, setIsOpen] = useState(false);
+    try {
+      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
+        method: "POST"
+        headers: {
 
-  // Handle sending messages to the AI chat assistant;
-  const handleSendMessage = async (message: string): Promise<void> => {;
-</Button>
+          "Content-Type": "application/json"},
+        body: JSON.stringify({ "
+          messages: [{ role: "user", content: message }] 
+        })}),
+
+      if (!response.ok) {
+        throw new Error("Failed to get response from AI assistant")
+      }
+      return Promise.resolve()
+    } catch (error) {
+      console.error("Error in AI chat:", error);
+      return Promise.resolve()
+
+import {useState} from "react";
+import {MessageSquare} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {ChatAssistant} from "@/components/ChatAssistant";
+
+    }
+  }
+  return (
     <>;
 
-      <Button;
-
-
         onClick={() => setIsOpen(true)}
-</Button>
 
-    <>;
-      <Button;
-        onClick={() => setIsOpen(true)}
-</Button>"
-        <MessageSquare className="h-5 w-5" />;"
-</MessageSquare>
-      </Button>;
-        <ChatAssistant;
-          isOpen={isOpen}
-          onClose={() => setIsOpen(false)}
-</ChatAssistant>
+          }}
+          onSendMessage={handleSendMessage}
+        />;
+      )}
+
     </>;
   );
-}"
-import { useState } from './react';''
-import { MessageSquare } from './lucide-react';''
-import { Button } from '@/components / ui / button';''
-import { ChatAssistant } from '@/components / ChatAssistant';'
-export /**
+}
+
+import { useState } from './react';
+import { MessageSquare } from './lucide-react';
+import { Button } from '@/components / ui / button';
+
+import { ChatAssistant } from '@/components / ChatAssistant';
+export /**;
  * ChatAssistantTrigger - Function description;
  */
-function ChatAssistantTrigger() {
+function ChatAssistantTrigger() {}
   const [is_open, setIsOpen] = useState (false);
+
 ;
-
-
-
-'

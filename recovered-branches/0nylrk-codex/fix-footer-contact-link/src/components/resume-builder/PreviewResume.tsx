@@ -1,30 +1,43 @@
-import { Resume } from "@/types/resume";"
-import {
-  // TODO: Implement
-}
-  PreviewHeader,
-  ResumeBasicInfoSection,
-  WorkExperienceSection,
-  EducationSection,
-  SkillsSection,
-  CertificationsSection,"
-} from "./preview";"
+import {Resume} from '@/types/resume';
+import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
+
+import { Resume } from '@/types/resume',;
+import {;
+  PreviewHeader,;
+  ResumeBasicInfoSection,;
+  WorkExperienceSection,;
+  EducationSection,;
+  SkillsSection,;
+  CertificationsSection;
+} from './preview',;
+interface PreviewResumeProps {;
+<<<<<<< HEAD
+  }
+  "resume": Resume;
+  "onBack": () => void;import { Resume } from "@/types/resume";"
+  }
+=======
+  resume: Resume;
+
+  onBack: () => void;import { Resume } from "@/types/resume";
+
 interface PreviewResumeProps {
-  // TODO: Implement
-}
-  resume: Resume;,
+  resume: Resume;
   onBack: () => void;
 }
-"
-import { Resume } from "@/types/resume";"
+
+import { Resume } from "@/types/resume";
+
 import {
-  // TODO: Implement
-}
+>>>>>>> origin/chore/fix-lint-and-merge
   PreviewHeader,
   ResumeBasicInfoSection,
   WorkExperienceSection,
   EducationSection,
   SkillsSection,
+  CertificationsSection,
+} from "./preview";
+
   CertificationsSection,"
 } from "./preview";"
 interface PreviewResumeProps {
@@ -37,24 +50,16 @@ interface PreviewResumeProps {
 }
 
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
-  return ("
-    <div className="space-y-6">"
-</div>
+  return (
+
+    <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />
-</PreviewHeader>"
-      <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">"
-</div>
+
+      {/* Resume Preview */}"
+      <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />
-</ResumeBasicInfoSection>
         <WorkExperienceSection workExperience={resume.work_experience} />
-</WorkExperienceSection>
         <EducationSection education={resume.education} />
-</EducationSection>
         <SkillsSection skills={resume.skills} />
-</SkillsSection>
         <CertificationsSection certifications={resume.certifications} />
-</CertificationsSection>
       </div>
-    </div>
-    </div>;)
- </div> </div>) "

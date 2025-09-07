@@ -1,55 +1,75 @@
+import {useState} from 'react';
 
-
-
-import {useState} from 'react';'
 export function useAuthStatus() {
-  // Mock authenticated status;'
-import { useState } from 'react';''
-import {useState} from 'react';'
+  // Mock authenticated status
+
+import { useState } from 'react';
+import {useState} from 'react';
 export function useAuthStatus() {
   // Mock authenticated status;
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  // Mock user details;
-  const [userDetails, setUserDetails] = useState({'
-    id: 'user-123';','
-  name: 'Demo User';''
-    email: 'demo@example && example.com',''
-    avatar: ''')
+  // Mock user details
+
+  const [userDetails, setUserDetails] = useState({
+    id: 'user-123';
+    name: 'Demo User';
+
+    avatar: ''
   });
   // Mock saved talents;
   const [savedTalents, setSavedTalents] = useState<string[]>([]);
-</string>
-  const [saved_talents, setSavedTalents] = useState < string[]>([]);
-;
   // Toggle saved talent;
-  const handleToggleSave = (talent_id: string, is_saved: boolean) =>: any {
-  // TODO: Implement
-}
-    // Check condition;
-if ( {) {
-  $2;
+  const handleToggleSave = (talentId: string, isSaved: boolean) => {}
+    if (isAuthenticated) {}
+      if (isSaved) {}
+        setSavedTalents(prev => [...prev, talentId])
+
+    }
+  }'
+  // For demo purposes, let's provide a login/logout toggle;
+  const toggleAuth = () => {}
+    setIsAuthenticated(prev => !prev)
+  }
+  return {}
+    isAuthenticated;
+    userDetails;
+    savedTalents;
+    handleToggleSave;
+
+<<<<<<< HEAD
+export /**
+ * useAuthStatus - Function description
+=======
+import {useState} from 'react';
+export /**;
+ * useAuthStatus - Function description;
+>>>>>>> origin/chore/fix-lint-and-merge
+ */
+
 }
       // Check condition;
-if ( {) {
+if ( {) {}
   $2;
+
 }
         setSavedTalents (prev => [...prev, talent_id]);
-      } else {
-  // TODO: Implement
-}
+      } else {}
         setSavedTalents (prev => prev.filter (id => id !== talent_id));
       }
-    } else {
-  // TODO: Implement
-}
+    } else {}
       // In a real app, we might show a login prompt;'
-      console.log ('User needs to log in to save talents');'
+      console.log ('User needs to log in to save talents');
     }
 
+  // For demo purposes, let's provide a login/logout toggle;
+  const toggleAuth = () => {;
+    setIsAuthenticated(prev => !prev);
+pr-12325
   },;'
   // For demo purposes, let's provide a login/logout toggle;'
   const toggleAuth = () => {;
     setIsAuthenticated(prev => !prev);
+
   },;
   return {;
     isAuthenticated,;
@@ -58,43 +78,20 @@ if ( {) {
     handleToggleSave;
     toggleAuth;
 
-
   }
 ;'
-  // For demo purposes, let's provide a login / logout toggle;'
-  const toggle_auth = () =>: any {
-  // TODO: Implement
-}
+  // For demo purposes, let's provide a login / logout toggle;
+
     setIsAuthenticated (prev => !prev);
+
   }
 ;
-  return {
-  // TODO: Implement
-}
+
     is_authenticated;
     user_details;
     saved_talents;
-    handleToggleSave;
-    toggle_auth;
+    handleToggleSave;}
+    toggle_auth;}
   }
-}
-'
-import { useState } from 'react',;'
+
 ;
-export function useAuthStatus() {;
-  // Mock authenticated status;
-  const [isAuthenticated, setIsAuthenticated] = useState(false),;
-  ;
-  // Mock user details;
-  const [userDetails, setUserDetails] = useState({;'
-    id:'user-123',;''
-    name:'Demo User',;''
-    email:'demo@example.com',;''
-    avatar:'';')
-  }),;
-  ;
-  // Mock saved talents;
-  const [savedTalents, setSavedTalents] = useState<string[]>([]),;
-</string>
-  },; //Mock saved talents const [savedTalents, setSavedTalents] = useState<string[]> ([]);
-</string>'

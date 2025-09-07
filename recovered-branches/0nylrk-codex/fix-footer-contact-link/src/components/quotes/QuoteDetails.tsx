@@ -1,36 +1,51 @@
-import React from "react";"
-import {
-  // TODO: Implement
-}
+import React from "react";
+
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription,"
-} from "@/components/ui/dialog";""
-import { Button } from "@/components/ui/button";""
-import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";""
-import { Card, CardContent } from "@/components/ui/card";""
-import { Separator } from "@/components/ui/separator";""
-import { QuoteStatusBadge } from "./QuoteStatusBadge";""
-import type { QuoteRequest } from "@/types/quotes";""
-import { format } from "date-fns";"
+<<<<<<< HEAD
+  DialogDescription} from "@/components/ui/dialog";"
+import { Button } from "@/components/ui/button";"
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";"
+import { Card, CardContent } from "@/components/ui/card";"
+import { Separator } from "@/components/ui/separator";"
+import { QuoteStatusBadge } from "./QuoteStatusBadge";"
+import type { QuoteRequest } from "@/types/quotes";"
+import React from "react","
+  }
+=======
+
+import React from "react",
+import { 
+>>>>>>> origin/chore/fix-lint-and-merge
+  Dialog,
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogDescription 
+} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
+import { QuoteStatusBadge } from "./QuoteStatusBadge",
+import type { QuoteRequest } from "@/types/quotes",
+
 interface QuoteDetailsProps {
-  // TODO: Implement
-}
-  quote: QuoteRequest | null;,
+
+  quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void;
 }
-"
-import {format} from "date-fns";"
+
+import {format} from "date-fns";
+
   const formatDate = (dateString?: string) => {"
-    if (!dateString) return "Not specified";"
-    try {
-  // TODO: Implement
-}"
-      return format(new Date(dateString), "PPP");"
-    } catch (e) {
+    if (!dateString) return "Not specified";
+    try {"
+      return format(new Date(dateString), "PPP");
+    } catch (e) {}
       return dateString;
     }
   };
@@ -39,44 +54,68 @@ import {format} from "date-fns";"
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
-  const formatDate = (dateString?: string) => {"
+<<<<<<< HEAD
+    }
     if (!dateString) return "Not specified";"
     try {
-  // TODO: Implement
-}"
+      }
       return format(new Date(dateString), "PPP");"
     } catch (e) {
+      }
       return dateString;
     }
   }
-  };"
-import {format} from "date-fns";"
-  const formatDate = (dateString?: string) => {"
+  };
+    }
     if (!dateString) return "Not specified";"
     try {
-  // TODO: Implement
-}"
+      }
       return format(new Date(dateString), "PPP");"
     } catch (e) {
+      }
       return dateString;
     }
   };
-"
-import React from "react",;"
+=======
+  const formatDate = (dateString?: string) => {"
+    if (!dateString) return "Not specified";
+    try {"
+      return format(new Date(dateString), "PPP");
+    } catch (e) {}
+      return dateString;
+    }
+  }
+
+import {format} from "date-fns";
+
+  const formatDate = (dateString?: string) => {"
+    if (!dateString) return "Not specified";
+    try {"
+      return format(new Date(dateString), "PPP");
+    } catch (e) {}
+      return dateString;
+    }
+  };
+
+import React from "react",;
+>>>>>>> origin/chore/fix-lint-and-merge
 import {;
   Dialog,;
   DialogContent,;
   DialogHeader,;
   DialogTitle,;
   DialogDescription;"
-} from "@/components/ui/dialog",;""
-import { Button } from "@/components/ui/button",;""
-import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",;""
-import { Card, CardContent } from "@/components/ui/card",;""
-import { Separator } from "@/components/ui/separator",;""
-import { QuoteStatusBadge } from "./QuoteStatusBadge",;""
-import type { QuoteRequest } from "@/types/quotes",;""
-import { format } from "date-fns",;"
+} from "@/components/ui/dialog",;"
+<<<<<<< HEAD
+=======
+import { Button } from "@/components/ui/button",;"
+>>>>>>> origin/chore/fix-lint-and-merge
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",;"
+import { Card, CardContent } from "@/components/ui/card",;"
+import { Separator } from "@/components/ui/separator",;"
+import { QuoteStatusBadge } from "./QuoteStatusBadge",;"
+import type { QuoteRequest } from "@/types/quotes",;"
+import { format } from "date-fns",;
 interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
@@ -85,118 +124,90 @@ interface QuoteDetailsProps {;
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
-"
+<<<<<<< HEAD
 import React from './react';'
-import {
-  // TODO: Implement
-}
+  }
+=======
+
+import React from './react';
+import {}
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription,'
-} from '@/components / ui / dialog';''
-import { Button  } from '@/components / ui / button';''
-import { Calendar, User, Mail, Clock, DollarSign  } from './lucide-react';''
-import { Card, CardContent  } from '@/components / ui / card';''
-import { Separator  } from '@/components / ui / separator';''
-import { QuoteStatusBadge  } from './QuoteStatusBadge';''
-import type { QuoteRequest } from "@/types / quotes";""
-import { format  } from './date - fns';'
-interface QuoteDetailsProps {
-  // TODO: Implement
-}
-  quote: QuoteRequest | null;,
+  DialogDescription,';
+} from '@/components / ui / dialog';'
+import { Button  } from '@/components / ui / button';'
+import { Calendar, User, Mail, Clock, DollarSign  } from './lucide-react';'
+import { Card, CardContent  } from '@/components / ui / card';'
+import { Separator  } from '@/components / ui / separator';'
+import { QuoteStatusBadge  } from './QuoteStatusBadge';"
+import type { QuoteRequest } from "@/types / quotes";'
+import { format  } from './date - fns';
+interface QuoteDetailsProps {}
+  quote: QuoteRequest | null;
   is_open: boolean;
   on_close: () => void;
 }
-export const QuoteDetails = ({ quote, is_open, on_close }: QuoteDetailsProps) =>: any {
-  // TODO: Implement
-}
+export const QuoteDetails = ({ quote, is_open, on_close }: QuoteDetailsProps) =>: any {};
   // Check condition;
-if (return null) {
+if (return null) {}
   $2;
 }
-  const format_date = (date_string?: string) =>: any {
-  // TODO: Implement
-}
-    // Check condition;'
-if (return "Not specified") {"
+  const format_date = (date_string?: string) =>: any {}
+    // Check condition"
+if (return "Not specified") {}
   $2;
 }
 
-    try {
-  // TODO: Implement
-}"
-      return format (new Date (date_string), "PPP");"
-    } catch (e) {
+    try {"
+      return format (new Date (date_string), "PPP");
 
-
-
-  return ()
-    <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-</Dialog>"
-      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">"
-</DialogContent>
-        <DialogHeader>
-</DialogHeader>"
-          <DialogTitle className="text-2xl flex items-center justify-between">"
-</DialogTitle>
+  return (
+    <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>"
+      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader>"
+          <DialogTitle className="text-2xl flex items-center justify-between">
             <span>{quote.project_name}</span>
             <QuoteStatusBadge status={quote.status} />
-</QuoteStatusBadge>
           </DialogTitle>
           <DialogDescription>
-</DialogDescription>
+            Quote request submitted on {formatDate(quote.created_at)}
           </DialogDescription>
         </DialogHeader>
 "
-        <Separator className="my-4" />"
-</Separator>"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
-</div>
-          <Card>
-</Card>"
+        <Separator className="my-4" />
+"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Card>"
             <CardContent className="pt-6">"
-</CardContent>"
-              <h3 className="text-lg font-medium mb-3">"
-</h3>
+              <h3 className="text-lg font-medium mb-3">
+                Requester Information;
               </h3>"
               <div className="space-y-2">"
-</div>"
                 <div className="flex items-center gap-2">"
-</div>"
-                  <User className="h-4 w-4 text-gray-500" />"
-</User>
+                  <User className="h-4 w-4 text-gray-500" />
                   <span>{quote.requester_name}</span>
                 </div>"
                 <div className="flex items-center gap-2">"
-</div>"
-                  <Mail className="h-4 w-4 text-gray-500" />"
-</Mail>
+                  <Mail className="h-4 w-4 text-gray-500" />
                   <span>{quote.requester_email}</span>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card>
-</Card>"
+          <Card>"
             <CardContent className="pt-6">"
-</CardContent>"
-              <h3 className="text-lg font-medium mb-3">Project Timeline</h3>""
+              <h3 className="text-lg font-medium mb-3">Project Timeline</h3>"
               <div className="space-y-2">"
-</div>"
                 <div className="flex items-center gap-2">"
-</div>"
-                  <Calendar className="h-4 w-4 text-gray-500" />"
-</Calendar>
+                  <Calendar className="h-4 w-4 text-gray-500" />
                   <span>Start date: {formatDate(quote.start_date)}</span>
                 </div>"
                 <div className="flex items-center gap-2">"
-</div>"
-                  <Clock className="h-4 w-4 text-gray-500" />"
-</Clock>
+                  <Clock className="h-4 w-4 text-gray-500" />
                   <span>Timeline: {quote.timeline}</span>
                 </div>
               </div>
@@ -205,120 +216,77 @@ if (return "Not specified") {"
         </div>
 "
         <Card className="mt-6">"
-</Card>"
           <CardContent className="pt-6">"
-</CardContent>"
-            <h3 className="text-lg font-medium mb-3">Project Details</h3>""
-            <p className="mb-4">{quote.project_summary}</p>"
+            <h3 className="text-lg font-medium mb-3">Project Details</h3>"
+            <p className="mb-4">{quote.project_summary}</p>
+
+            {quote.project_description && (
               <>"
-                <h4 className="font-medium mt-4">Additional Details</h4>"
+                <h4 className="font-medium mt-4">Additional Details</h4>
                 <p>{quote.project_description}</p>
               </>
             )}
 "
             <div className="mt-6 flex items-center gap-2">"
-</div>"
               <DollarSign className="h-4 w-4 text-gray-500" />"
-</DollarSign>"
-              <span className="font-medium">Budget: </span>"
+              <span className="font-medium">Budget: </span>
+              {quote.budget_display ||
+                (quote.budget_min && quote.budget_max;
+                  ? `$${quote.budget_min} - $${quote.budget_max}`
+                  : quote.budget_min;`
+                    ? `$${quote.budget_min}`"
+                    : "Not specified")}
             </div>
           </CardContent>
         </Card>
 "
-        <div className="mt-6 flex justify-end">"
-</div>
+        <div className="mt-6 flex justify-end">
           <Button onClick={onClose}>Close</Button>
         </div>
       </DialogContent>
     </Dialog>
-    <Dialog open={is_open} onOpenChange={(open) => !open && on_close ()}>;
-</Dialog>"
-      <DialogContent className="max - w-3xl max - h-[90vh] overflow - y-auto">;"
-</DialogContent>
-        <DialogHeader>;
-</DialogHeader>"
-          <DialogTitle className="text - 2xl flex items - center justify - between">;"
-</DialogTitle>
+  )
+};
+
+      return date_string;
+    }
+  }
+;
+  return (
+
             <span>{quote.project_name}</span>;
             <QuoteStatusBadge status={quote.status} />;
-</QuoteStatusBadge>
           </DialogTitle>;
           <DialogDescription>;
-</DialogDescription>
+            Quote request submitted on {format_date (quote.created_at)}
           </DialogDescription>;
-        </DialogHeader>;"
-        <Separator className="my - 4" />;"
-</Separator>"
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;"
-</div>
-          <Card>;
-</Card>"
-            <CardContent className="pt - 6">;"
-</CardContent>"
-              <h3 className="text - lg font - medium mb - 3">;"
-</h3>
-              </h3>;"
-              <div className="space - y-2">;"
-</div>"
-                <div className="flex items - center gap - 2">;"
-</div>"
-                  <User className="h - 4 w - 4 text - gray - 500" />;"
-</User>
-                  <span>{quote.requester_name}</span>;
-                </div>;"
-                <div className="flex items - center gap - 2">;"
-</div>"
-                  <Mail className="h - 4 w - 4 text - gray - 500" />;"
-</Mail>
+
                   <span>{quote.requester_email}</span>;
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
-          <Card>;
-</Card>"
-            <CardContent className="pt - 6">;"
-</CardContent>"
-              <h3 className="text - lg font - medium mb - 3">Project Timeline</h3>;""
-              <div className="space - y-2">;"
-</div>"
-                <div className="flex items - center gap - 2">;"
-</div>"
-                  <Calendar className="h - 4 w - 4 text - gray - 500" />;"
-</Calendar>
-                  <span > Start date: {format_date (quote.start_date)}</span>;
-                </div>;"
-                <div className="flex items - center gap - 2">;"
-</div>"
-                  <Clock className="h - 4 w - 4 text - gray - 500" />;"
-</Clock>
+
                   <span > Timeline: {quote.timeline}</span>;
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
-        </div>;"
-        <Card className="mt - 6">;"
-</Card>"
-          <CardContent className="pt - 6">;"
-</CardContent>"
-            <h3 className="text - lg font - medium mb - 3">Project Details</h3>;""
-            <p className="mb - 4">{quote.project_summary}</p>;"
-              <>;"
-                <h4 className="font - medium mt - 4">Additional Details</h4>;"
-                <p>{quote.project_description}</p>;
-              </>)}"
-            <div className="mt - 6 flex items - center gap - 2">;"
-</div>"
-              <DollarSign className="h - 4 w - 4 text - gray - 500" />;"
-</DollarSign>"
-              <span className="font - medium">Budget: </span>;"
+
+              {quote.budget_display ||;
+                (quote.budget_min && quote.budget_max;`
+                  ? `$${quote.budget_min} - $${quote.budget_max}`;
+                  : quote.budget_min;`
+                    ? `$${quote.budget_min}`;"
+                    : "Not specified")}
             </div>;
           </CardContent>;
-        </Card>;"
-        <div className="mt - 6 flex justify - end">;"
-</div>
+
           <Button on_click={on_close}>Close</Button>;
         </div>;
       </DialogContent>;
-    </Dialog>);"
+    </Dialog>);
+}
+;
+
+  )

@@ -1,84 +1,142 @@
-
 class ErrorBoundary extends React.Component {
-  // TODO: Implement
-}
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);'
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+
+import React, { useState } from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {Grid3X3, ListFilter} from "lucide-react";
+import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
+import {FilterSidebar} from "@/components/search/FilterSidebar";
+import {ActiveFiltersBar} from "@/components/search/ActiveFiltersBar";
+import {ProductListingCard} from "@/components/ProductListingCard";
+import {MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions} from "@/data/marketplaceData";
+import {toast} from "@/hooks/use-toast";
+import {useNavigate} from "react-router-dom";
+import {SearchSuggestion} from "@/types/search";
+import {AppLayout} from "@/layout/AppLayout";
+
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState("");
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
-</string>
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-</string>
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-</string>
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-</number>
+
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+import { Grid3X3, ListFilter } from "lucide-react",
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { FilterSidebar } from "@/components/search/FilterSidebar",
+import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData",
+import { toast } from "@/hooks/use-toast",
+import { useNavigate } from "react-router-dom",
+import { SearchSuggestion } from "@/types/search";
+import { AppLayout } from "@/layout/AppLayout";
+export default function Marketplace() {
+
+  const [searchQuery, setSearchQuery] = useState("");
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
-</string>
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-</string>
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-</string>
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-</number>
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
-</string>
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
-</string>
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
-</string>
-  const [selectedRating, setSelectedRating] = useState<number | null>(null),
-</number>
+
+  // Filter listings based on selected filters
+
+  const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
+    // Search filter
+    if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
+
+import React, { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { Button } from "@/components/ui/button",;
+import { Link } from "react-router-dom",;
+import { Grid3X3, ListFilter } from "lucide-react",;
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
+import { FilterSidebar } from "@/components/search/FilterSidebar",;
+import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar",;
+import { ProductListingCard } from "@/components/ProductListingCard",;
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData",;
+import { toast } from "@/hooks/use-toast",;
+import { useNavigate } from "react-router-dom",;
+import { SearchSuggestion } from "@/types/search",;
+import { AppLayout } from "@/layout/AppLayout",;
+export default function Marketplace() {;
+  const navigate = useNavigate(),;
+  const [searchQuery, setSearchQuery] = useState(""),;
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),;
-</string>
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]),;
-</string>
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),;
-</string>
   const [selectedRating, setSelectedRating] = useState<number | null>(null),;
-</number>
-    if (selectedRating && (!listing.rating |listing.rating < selectedRating)) {
+  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),;
+  const filterOptions = generateFilterOptions(),;
+  // Filter listings based on selected filters;
+  const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {;
+    // Search filter;
+    if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&;
+        !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&;
+        !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {;
       return false;
+
     }
 
+    // Product type filter
+    if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
+      return false
+    }
+    // Location filter
+    if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
+      return false
+    }
+    // Availability filter
+    if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
+      return false
+    }
+    // Rating filter
+    if (selectedRating && (!listing.rating |listing.rating < selectedRating)) {
+      return false
+    }
 
-    
-    return true;
+    return true
+  });
+  const handleFilterChange = (filterType: string, value: string) => {    
+
+    return true
+
   }),
+<<<<<<< HEAD
+    // // // console.log(`Filter "changed": ${filterType} = ${value}`),`    switch (filterType) {
+      }
+      case 'productType':'
+        setSelectedProductTypes(prev => { return prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+        ); }
+=======
   
-  const handleFilterChange = (filterType: string, value: string) => {
+  const handleFilterChange = (filterType: string, value: string) => {}
     // // // console.log(`Filter changed: ${filterType} = ${value}`),
 
-
-    return true;
-  });
-  const handleFilterChange = (filterType: string, value: string) => {
-    switch (filterType) {'
-      case 'productType':'
-        setSelectedProductTypes(prev =>)
+    switch (filterType) {
+      case 'productType':
+        setSelectedProductTypes(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
         );
-        break;'
-      case 'location':'
-        setSelectedLocations(prev =>)
+>>>>>>> origin/chore/fix-lint-and-merge
+        break;
+      case 'location':
+        setSelectedLocations(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
         );
-        break;'
-      case 'availability':'
-        setSelectedAvailability(prev =>)
+        break;
+      case 'availability':
+        setSelectedAvailability(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
 
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),;
@@ -86,7 +144,7 @@ class ErrorBoundary extends React.Component {
 
   // Filter listings based on selected filters;
   const filteredListings = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {;
-    // Search filter;)
+    // Search filter;
     if (searchQuery && !listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) && ;
         !listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) &&;
         !listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()))) {;
@@ -116,103 +174,96 @@ class ErrorBoundary extends React.Component {
     return true;
   });
 
-  const handleFilterChange = (filterType: string, value: string) => {;
+  const handleFilterChange = (filterType: string, value: string) => {;`
     console && console.log(`Filter changed: ${filterType} = ${value}`),;
     switch (filterType) {;'
-      case 'productType':;'
-        setSelectedProductTypes(prev => ;)
+      case 'productType':;
+        setSelectedProductTypes(prev => ;
           prev && prev.includes(value) ? prev && prev.filter(item => item !== value) : [...prev, value];
         );
         break;'
-      case 'location':;'
-        setSelectedLocations(prev => ;)
+      case 'location':;
+        setSelectedLocations(prev => ;
           prev && prev.includes(value) ? prev && prev.filter(item => item !== value) : [...prev, value];
         );
         break;'
-      case 'availability':;'
-        setSelectedAvailability(prev => ;)
+      case 'availability':;
+        setSelectedAvailability(prev => ;
           prev && prev.includes(value) ? prev && prev.filter(item => item !== value) : [...prev, value];
-        );
-        break;
-    }
 
-  };
-
-  const clearAllFilters = () => {;
-'
-    setSearchQuery("");"
+    setSearchQuery("");
     setSelectedProductTypes([]);
     setSelectedLocations([]);
     setSelectedAvailability([]);
 
+    setSearchQuery("");
+    setSelectedProductTypes([]);
+    setSelectedLocations([]);
+    setSelectedAvailability([]);
 
   },
-  
 
         );
         break;
   },
-  
 
-  const clearAllFilters = () => {"
-    setSearchQuery(""),"
+    setSearchQuery(""),
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
 
   },
-  
 
+  // Handle requesting a quote
 
-  // Handle requesting a quote;
   const handleRequestQuote = (listingId: string) => {
+
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
-    if (listing) {
+    if (listing) {}
       toast({"
-        title: "Quote Requested"",
-  description: `Your quote request for ${listing.title} has been sent.`
+        title: "Quote Requested"`
+        description: `Your quote request for ${listing.title} has been sent.`
 
-)
       }),
-      
 
+      // Navigate to the quote request page with the listing information
+      navigate("/request-quote", {
+        state: {
+          serviceType: listing.category
+          specificItem: {
+            id: listing.id
+            title: listing.title
+            category: listing.category
 
-      // Navigate to the quote request page with the listing information;"
-      navigate("/request-quote", {"
-        state: {,
-  serviceType: listing.category;
-          specificItem: {,
-  id: listing.id;
-            title: listing.title;,
-  category: listing.category;
             image: listing.images?.[0]
 
 ;
-    return true;)
+    return true;
   }),;
-  const handleFilterChange = (filterType: string, value: string) => {;
+  const handleFilterChange = (filterType: string, value: string) => {;`
     // // // console.log(`Filter changed: ${filterType} = ${value}`),;
-    switch (filterType) {;"
-      case 'productType':;'
-        setSelectedProductTypes(prev =>;)
+    switch (filterType) {;'
+
+      case 'productType':;
+        setSelectedProductTypes(prev =>;
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value];
         ),;
-        break,;'
-      case 'location':;'
-        setSelectedLocations(prev =>;)
+
+      case 'location':;
+        setSelectedLocations(prev =>;
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value];
         ),;
-        break,;'
-      case 'availability':;'
-        setSelectedAvailability(prev =>;)
+
+      case 'availability':;
+        setSelectedAvailability(prev =>;
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value];
         ),;
         break;
     }
   },;
-  const clearAllFilters = () => {;'
-    setSearchQuery(""),;"
+
+    setSearchQuery(""),;
     setSelectedProductTypes([]),;
     setSelectedLocations([]),;
     setSelectedAvailability([]),;
@@ -225,38 +276,34 @@ class ErrorBoundary extends React.Component {
     const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === listingId),;
 
     if (listing) {;
-      toast({;"
-        title: "Quote Requested",;"
-        description: `Your quote request for ${listing && listing.title} has been sent.`;)
-      });
 
-      // Navigate to the quote request page with the listing information;"
-      navigate("/request-quote", {;"
-        state: { ;,
-  serviceType: listing && listing.category,;
+      navigate("/request-quote", {;
+        state: { ;
+          serviceType: listing && listing.category,;
           specificItem: {;
-"
-import React, { useState } from './react';''
-import { Header } from '@/components / Header';''
-import { Footer } from '@/components / Footer';''
-import { Button } from '@/components / ui / button';''
-import { Link } from './react-router-dom';''
-import { Grid3X3, ListFilter } from './lucide-react';''
-import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';''
-import { FilterSidebar } from '@/components / search / FilterSidebar';''
-import { ActiveFiltersBar } from '@/components / search / ActiveFiltersBar';''
-import { ProductListingCard } from '@/components / ProductListingCard';''
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from '@/data / marketplace_data';''
-import { toast } from '@/hooks / use - toast';''
-import { use_navigate } from './react-router-dom';''
-import { SearchSuggestion } from '@/types / search';''
-import { AppLayout } from '@/layout / AppLayout';'
-export default /**
+
+import React, { useState } from './react';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { Button } from '@/components / ui / button';
+import { Link } from './react-router-dom';
+import { Grid3X3, ListFilter } from './lucide-react';
+import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
+import { FilterSidebar } from '@/components / search / FilterSidebar';
+import { ActiveFiltersBar } from '@/components / search / ActiveFiltersBar';
+import { ProductListingCard } from '@/components / ProductListingCard';
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from '@/data / marketplace_data';
+import { toast } from '@/hooks / use - toast';
+import { use_navigate } from './react-router-dom';
+import { SearchSuggestion } from '@/types / search';
+
+import { AppLayout } from '@/layout / AppLayout';
+export default /**;
  * Marketplace - Function description;
- */)
-function Marketplace() {
-  const navigate = use_navigate ();'
-  const [search_query, setSearchQuery] = useState ("");"
+ */
+function Marketplace() {}
+  const navigate = use_navigate ();"
+  const [search_query, setSearchQuery] = useState ("");
   const [selectedProductTypes, setSelectedProductTypes] = useState < string[]>([]);
   const [selected_locations, setSelectedLocations] = useState < string[]>([]);
   const [selected_availability, setSelectedAvailability] = useState < string[]>([]);
@@ -266,35 +313,35 @@ function Marketplace() {
   const filter_options = generateFilterOptions ();
 ;
   // Filter listings based on selected filters;
-  const filtered_listings = MARKETPLACE_LISTINGS.filter (listing => {
-    // Search filter;)
-    if (.includes (search_query.toLowerCase ()) &&) {
+  const filtered_listings = MARKETPLACE_LISTINGS.filter (listing => {}
+    // Search filter;
+    if (.includes (search_query.toLowerCase ()) &&) {}
   $2;
 }
         !listing.description.toLowerCase ().includes (search_query.toLowerCase ()) &&;
-        !listing.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ()))) {
+        !listing.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ()))) {}
       return false;
     }
     // Product type filter;
-    if () {) {
+    if () {) {}
   $2;
 }
       return false;
     }
     // Location filter;
-    if () {) {
+    if () {) {}
   $2;
 }
       return false;
     }
     // Availability filter;
-    if () {) {
+    if () {) {}
   $2;
 }
       return false;
     }
     // Rating filter;
-    if () {) {
+    if () {) {}
   $2;
 }
       return false;
@@ -302,30 +349,26 @@ function Marketplace() {
     return true;
   });
 ;
-  const handleFilterChange = (filter_type: string, value: string) =>: any {
-  // TODO: Implement
-}
+  const handleFilterChange = (filter_type: string, value: string) =>: any {}`
     console.log (`Filter changed: ${filter_type} = ${value}`),
-    switch (filter_type) {"
-      case 'product_type':;'
-        setSelectedProductTypes (prev =>;)
+    switch (filter_type) {'
+      case 'product_type':;
+        setSelectedProductTypes (prev =>;
           prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
         break;'
-      case 'location':;'
-        setSelectedLocations (prev =>;)
+      case 'location':;
+        setSelectedLocations (prev =>;
           prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
         break;'
-      case 'availability':;'
-        setSelectedAvailability (prev =>;)
+      case 'availability':;
+        setSelectedAvailability (prev =>;
           prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
         break;
     }
   }
 ;
-  const clearAllFilters = () =>: any {
-  // TODO: Implement
-}'
-    setSearchQuery ("");"
+  const clearAllFilters = () =>: any {"
+    setSearchQuery ("");
     setSelectedProductTypes ([]);
     setSelectedLocations ([]);
     setSelectedAvailability ([]);
@@ -333,138 +376,157 @@ function Marketplace() {
   }
 ;
   // Handle requesting a quote;
-  const handleRequestQuote = (listing_id: string) =>: any {
-  // TODO: Implement
-}
+  const handleRequestQuote = (listing_id: string) =>: any {}
     const listing = MARKETPLACE_LISTINGS.find (item => item.id === listing_id),
     // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
       toast ({"
-        title: "Quote Requested","
-        description: `Your quote request for ${listing.title} has been sent.`;)
+        title: "Quote Requested",`
+        description: `Your quote request for ${listing.title} has been sent.`;
       });
 ;
       // Navigate to the quote request page with the listing information;"
-      navigate ("/request - quote", {"
-        state: {,
-  service_type: listing.category,
-          specific_item: {,
-  id: listing.id,
+      navigate ("/request - quote", {}
+        state: {}
+          service_type: listing.category,
+          specific_item: {}
+            id: listing.id,
             title: listing.title,
             category: listing.category,
-            image: listing.images?.[0];,
-  id: listing.id,;
+            image: listing.images?.[0];
+
+            id: listing.id,;
             title: listing.title,;
             category: listing.category,;
             image: listing.images?.[0];
 
           }
-        })
+        }
       });
     }
 
-
   },
   };
   },
 
-
-
+  };
+  },  },
   };
   },
+
   return (
 
     <AppLayout>;
-</AppLayout>"
-      <main className="flex-grow container mx-auto px-4 py-8">;"
-</main>"
-        <div className="max-w-4xl mx-auto mb-8">;"
-</div>"
-          <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>;""
-          <p className="text-zion-slate-light">;"
-</p>
-    <AppLayout>;
-</AppLayout>"
-      <main className="flex - grow container mx - auto px - 4 py - 8">;"
-</main>"
-        <div className="max - w-4xl mx - auto mb - 8">;"
-</div>"
-          <h1 className="text - 3xl font - bold text - white mb - 4">AI & Tech Marketplace</h1>;""
-          <p className="text - zion - slate - light">;"
-</p>
+      <main className="flex-grow container mx-auto px-4 py-8">;
+        <div className="max-w-4xl mx-auto mb-8">;
+          <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>;
+
+          <p className="text-zion-slate-light">;
+
+;
+  return (
+
+  }
+
+            Discover professional services and products for your AI and tech projects.;
+            Browse our curated collection of solutions from verified providers.;
           </p>;
-        </div>;"
-        <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 mb - 8">;"
-</div>"
-          <div className="flex flex - col md:flex - row gap - 4">;"
-</div>"
-            <div className="relative flex - 1">;"
-</div>
+        </div>;
+        {/* Search and filter bar */}
+
               <EnhancedSearchInput;
                 value={search_query}
-                on_change={setSearchQuery}"
-                placeholder="Search the marketplace...";"
+                on_change={setSearchQuery}
+                placeholder="Search the marketplace...";
                 search_suggestions={search_suggestions}
               />;
-</EnhancedSearchInput>
-            </div>;"
-            <div className="flex gap - 2">;"
-</div>"
-              <Button variant="ghost" size="icon" className="text - zion - slate - light">;"
-</Button>"
-                <Grid3X3 className="h - 4 w - 4" />;"
-</Grid3X3>
-              </Button>;"
-              <Button variant="ghost" size="icon" className="text - zion - slate - light">;"
-</Button>"
-                <ListFilter className="h - 4 w - 4" />;"
-</ListFilter>
+            </div>;
+            <div className="flex gap - 2">;
+              <Button variant="ghost" size="icon" className="text - zion - slate - light">;
+                <Grid3X3 className="h - 4 w - 4" />;
+              </Button>;
+              <Button variant="ghost" size="icon" className="text - zion - slate - light">;
+                <ListFilter className="h - 4 w - 4" />;
+
               </Button>;
             </div>;
           </div>;
-        </div>;"
-        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">;"
-</div>"
-          <div className="lg: col - span - 1">;"
-</div>
+        </div>;
+
+        {/* Main layout with sidebar and results */}
+        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">;
+          {/* Sidebar Filters */}
+          <div className="lg: col - span - 1">;
             <FilterSidebar;
 
               filters={{
 
+                selectedProductTypes
+                selectedLocations
+                selectedAvailability,
+
+              <EnhancedSearchInput
+
+                value={searchQuery}
+                onChange={setSearchQuery}"
+                placeholder="Search the marketplace..."
+                searchSuggestions={searchSuggestions}
+              </Button>;
+            </div>;
+          </div>;
+        </div>;
+        {/* Main layout with sidebar and results */}"
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
+          {/* Sidebar Filters */}"
+          <div className="lg: col-span-1">;
+
+                selectedRating
+
+                selected_locations;
+                selected_availability,
+                selected_rating;
+              }}
+              filter_options={filter_options}
+              onFilterChange={handleFilterChange}
+              onRatingChange={setSelectedRating}
+              onClearFilters={clearAllFilters}
+
+              selectedProductTypes={selectedProductTypes}
+              selected_locations={selected_locations}
+              selected_availability={selected_availability}
+              selected_rating={selected_rating}
+              search_query={search_query}
+              onRemoveFilter={handleFilterChange}
+
+              }}
+              filterOptions={filterOptions}
+              onFilterChange={handleFilterChange}
+              onRatingChange={setSelectedRating}
+              onClearFilters={clearAllFilters}
+            />
+          </div>
+          {/* Main content */}
+          <div className="lg:col-span-3">
+            {/* Active filters display */}
+            <ActiveFiltersBar
+              selectedProductTypes={selectedProductTypes}
                 selectedProductTypes;
                 selectedLocations;
                 selectedAvailability,
 
-              <EnhancedSearchInput;
                 value={searchQuery}
                 onChange={setSearchQuery}"
                 placeholder="Search the marketplace...""
                 searchSuggestions={searchSuggestions}
-              </Button>;
-</FilterSidebar>
-            </div>;
-          </div>;
-        </div>;"
+
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;"
-</div>"
           <div className="lg: col-span-1">;"
-</div>
-            <FilterSidebar;
         {/* Main layout with sidebar and results */}"
-        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">;"
-</FilterSidebar>"
-          <div className="lg: col - span - 1">;"
-</div>
-            <FilterSidebar;
-              filters={{
-                selectedProductTypes;
-                selectedLocations;
                 selectedAvailability;
                 selectedProductTypes,
                 selectedLocations,
-                selectedAvailability,
 
                 selectedRating;
                 selected_locations;
@@ -477,7 +539,7 @@ if ( {) {
               onClearFilters={clearAllFilters}
           {/* Main content */}"
           <div className="lg:col-span-3">;"
-</FilterSidebar>
+
             <ActiveFiltersBar;
               selectedProductTypes={selectedProductTypes}
               selected_locations={selected_locations}
@@ -487,183 +549,165 @@ if ( {) {
               onRemoveFilter={handleFilterChange}
             {/* Results count */}"
             <div className="mb-6">;"
-</ActiveFiltersBar>"
-              <p className="text-zion-slate-light">;"
-</p>
-          </div>"
           <div className="lg:col-span-3">"
+pr-12325
 </div>
             <ActiveFiltersBar;
               selectedProductTypes={selectedProductTypes}
+
               selectedLocations={selectedLocations}
-              selectedAvailability={selectedAvailability}
-              selectedRating={selectedRating}
-              searchQuery={searchQuery}
-              onRemoveFilter={handleFilterChange})
-              onRemoveRating={() => setSelectedRating(null)}
-</ActiveFiltersBar>"
-            <div className="mb-6">"
-</div>"
-              <p className="text-zion-slate-light">"
-</p>
-              </p>
-            </div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
-</div>
-                  <ProductListingCard;
-                    key={listing.id}
-                    listing={listing}
-                    onRequestQuote={handleRequestQuote}
-                  />
-</ProductListingCard>"
-                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">"
-</div>"
-                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>""
-                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">"
-</p>
-                  </p>
-              </p>;
-            </div>;"
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;"
-</div>
-                  <ProductListingCard;
-                    key={listing && listing.id} 
-                    listing={listing}
-                    onRequestQuote={handleRequestQuote}
-                  />;
-</ProductListingCard>"
-                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">;"
-</div>"
-                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>;""
-                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">;"
-</p>
-                  </p>;
-                  <Button;
-                    onClick={clearAllFilters}"
-                    className="bg-zion-purple hover:bg-zion-purple-dark">;"
-</Button>
-                  </Button>;
-                </div>;"
-            <div className="mb - 6">;"
-</div>"
-              <p className="text - zion - slate - light">;"
-</p>
-              </p>;
-            </div>;"
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;"
-</div>
-                  <ProductListingCard;
-                    key={listing.id}
-                    listing={listing}
-                    onRequestQuote={handleRequestQuote}
-                  />))) : (
-</ProductListingCard>"
-                <div className="col - span - 2 text - center py - 16 bg - zion - blue - dark border border - zion - blue - light rounded - lg">;"
-</div>"
-                  <h2 className="text - 2xl font - bold text - white mb - 4">No Results Found</h2>;""
-                  <p className="text - zion - slate - light max - w-md mx - auto mb - 8">;"
-</p>
-                  </p>;
-                  <Button;
-                    on_click={clearAllFilters}"
-                    className="bg - zion - purple hover:bg - zion - purple - dark";"
-                  >;
-</Button>
-                  </Button>;)
-                </div>)}"
-          <div className="lg:col-span-3">;"
-</div>
-            <ActiveFiltersBar ;
-              selectedProductTypes={selectedProductTypes}              selectedLocations={selectedLocations}
               selectedAvailability={selectedAvailability}
               selectedRating={selectedRating}
               searchQuery={searchQuery}
               onRemoveFilter={handleFilterChange}
               onRemoveRating={() => setSelectedRating(null)}
-</ActiveFiltersBar>"
-            <div className="mb-6">;"
-</div>"
-              <p className="text-zion-slate-light">;"
-</p>
+              onClearSearch={() => setSearchQuery("")}
+            />
+            {/* Results count */}
+            <div className="mb-6">
+              <p className="text-zion-slate-light">
+                Showing {filteredListings.length} results
+                {searchQuery && ` for "${searchQuery}"`}
+              </p>
+            </div>
+
+            {/* Display actual marketplace listings */}
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {filteredListings.length > 0 ? (
+                filteredListings.map((listing) => (
+                  <ProductListingCard;
+
+            {/* Display actual marketplace listings */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {filteredListings.length > 0 ? (
+                filteredListings.map((listing) => (
+                  <ProductListingCard
+
+                    key={listing.id}
+                    listing={listing}
+                    onRequestQuote={handleRequestQuote}
+                  />
+                ))
+
               </p>;
-            </div>;"
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;"
-</div>
+            </div>;
+
+            {/* Display actual marketplace listings */}"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+              {filteredListings && filteredListings.length > 0 ? (;
+                filteredListings && filteredListings.map((listing) => (;
+
+                  <ProductListingCard;
+                    key={listing && listing.id} 
+                    listing={listing}
+                    onRequestQuote={handleRequestQuote}
+                  />;
+                ));
+              ) : (;"
+                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">;"
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>;"
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">;'
+                    We couldn't find any listings matching your filters. Try adjusting your search criteria.;
+                  </p>;
+                  <Button;
+                    onClick={clearAllFilters}"
+                    className="bg-zion-purple hover:bg-zion-purple-dark">;
+                    Clear Filters;
+
+              onRemoveRating={() => setSelectedRating (null)}"
+              onClearSearch={() => setSearchQuery ("")}
+            />;
+            {/* Results count */}"
+            <div className="mb - 6">;"
+              <p className="text - zion - slate - light">;
+                Showing {filtered_listings.length} results;"`
+                {search_query && ` for "${search_query}"`}
+              </p>;
+            </div>;
+            {/* Display actual marketplace listings */}"
+
+                  >;
+
+          <div className="lg:col-span-3">;
+            {/* Active filters display */}
+                  ;)
+                </div>)}"
+            <ActiveFiltersBar ;
+              selectedProductTypes={selectedProductTypes}              selectedLocations={selectedLocations}
+
+                {searchQuery && ` for "${searchQuery}"`}
+              </p>;
+            </div>;
+            ;
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+              {filteredListings.length > 0 ? (;
+                filteredListings.map((listing) => (;
                   <ProductListingCard ;
                     key={listing.id} ;
                     listing={listing}
                     onRequestQuote={handleRequestQuote}
                   />;
-</ProductListingCard>"
-                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">;"
-</div>"
-                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>;""
-                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">;"
-</p>
-                  </p>;
-                  <Button ;
-                    onClick={clearAllFilters}"
-                    className="bg-zion-purple hover:bg-zion-purple-dark";"
+                ));
+
+                    className="bg-zion-purple hover:bg-zion-purple-dark";
                   >;
-</Button>
+                    Clear Filters;
                   </Button>;
                 </div>;
-                  <Button;
-                    onClick={clearAllFilters}"
-                    className="bg-zion-purple hover:bg-zion-purple-dark""
-                  >
-</Button>
+              )}
+
                   </Button>
                 </div>
+              )}
             </div>
           </div>
         </div>
+
       </main>
     </AppLayout>
+  )
+}
+
             </div>;
           </div>;
         </div>;
       </main>;
-    </AppLayout>);
-    </AppLayout>;"
-Discover professional services and products for your AI and tech projects. Browse our curated collection of solutions from verified providers. </p> </div> /> </div> <div className="flex gap-2" > <Button variant="ghost" size="icon" className="text-zion-slate-light" > <Grid3X3 className="h-4 w-4" /> </Button> <Button variant="ghost" size="icon" className="text-zion-slate-light" > <ListFilter className="h-4 w-4" /> </Button> </div> </div> </div> <FilterSidebar filters= {"
-  {
-  selectedProductTypes, selectedLocations, selectedAvailability, selectedRating;
+
+    </AppLayout>;
+  ),; const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions ();
+const filterOptions = generateFilterOptions ();
+//Search filter if (searchQuery && !listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) && !listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) && !listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ) {}
+  return true;
+});
+switch (filterType) {'
+  case 'productType': setSelectedProductTypes (prev => prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
+break;'
+case 'location': setSelectedLocations (prev => prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
+break;'
+case 'availability': setSelectedAvailability (prev => prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
+break;
+
 }
-}filterOptions= {
-  filterOptions;
-}onFilterChange= {
-  handleFilterChange;
-}onRatingChange= {
-  setSelectedRating;
-}onClearFilters= {
-  clearAllFilters;
-}/> </div> <ActiveFiltersBar selectedProductTypes= {
-  selectedProductTypes;
-}selectedLocations= {
-  selectedLocations;
-}selectedAvailability= {
-  selectedAvailability;
-}selectedRating= {
-  selectedRating;
-}searchQuery= {
-  searchQuery;
-}onRemoveFilter= {
-  handleFilterChange;
-}onRemoveRating= {
-  () => setSelectedRating (null) 
-</ActiveFiltersBar>"
-}<div className="mb-6"> </p> </div> {""
-}<div className="grid grid-cols-1 md:grid-cols-2 gap-6"> {"
-</div>
-  filteredListings.length > 0 ? (filteredListings.map ( (listing) => (<ProductListingCard key= {
-  listing.id;
-}listing= {
-  listing;
-}onRequestQuote= {
-  handleRequestQuote;)"
-}/>) ) ) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg"> <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2> <p className="text-zion-slate-light max-w-md mx-auto mb-8"> We couldn't find any listings matching your filters. Try adjusting your search criteria. </p> <Button onClick= {'
-</ProductListingCard>)'
-}className="bg-zion-purple hover:bg-zion-purple-dark" > Clear Filters </Button> </div>)"
+;
+
+};
+
+  id: listing.id;
+title: listing.title;
+category: listing.category;
+image: listing.images?.[0] 
+}
+}
+}) 
+}
+
+}className="bg-zion-purple hover:bg-zion-purple-dark" > Clear Filters </Button> </div>) 
+
 }</div> </div> </div> </main> </AppLayout>) 
-    </AppLayout>;"
+}
+    </AppLayout>;
+  );
+}
+;

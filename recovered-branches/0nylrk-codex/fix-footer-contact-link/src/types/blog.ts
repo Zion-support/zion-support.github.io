@@ -1,36 +1,34 @@
-export interface BlogAuthor {
+name: string;
+
   // TODO: Implement
 }
   name: string;,
   title: string;
   avatarUrl: string;
+
 }
 
   title: string,
   avatar_url: string;
 
-}
-export interface BlogPost {
-  // TODO: Implement
-}
 export interface BlogAuthor {
-  // TODO: Implement
-}
+
+  name: string;
+}export interface BlogAuthor {
   name: string;
 }
-export interface BlogPost {
-  // TODO: Implement
-}
-export interface BlogPost {;
-  id: string;,
+
+  id: string;
+
   title: string;
-  slug: string;,
+  slug: string;
   excerpt: string;
-  content: string;,
+  content: string;
   author: BlogAuthor;
-  published_date: string;,
+
+  published_date: string;
   read_time: string;
-  category: string;,
+  category: string;
   tags: string[];
   featuredImage: string;
   isFeatured?: boolean;
@@ -47,91 +45,34 @@ export interface BlogPost {;
 }
 // Type for generated blog content;
 
-export interface GeneratedBlogContent {
-  // TODO: Implement
-}
-  title: string;,
   meta_description: string;
-  body: string;,
+  body: string;
   tags: string[];
   tweetSummary?: string;
   imagePrompt?: string;
+
 }
 
   tweet_summary?: string,
   image_prompt?: string;
-}
-  publishedDate: string;,
+
+  publishedDate: string;
   readTime: string;
-  category: string;,
+  category: string;
   tags: string[];
   featuredImage: string;
   isFeatured?: boolean;
   isPublished?: boolean;
 
-  createdBy?: string;
-  updatedAt?: string;
-}
-// Type for generated blog content;
 export interface GeneratedBlogContent {;
-  title: string;,
+  title: string;
   metaDescription: string;
-  body: string;,
+  body: string;
   tags: string[];
 
-  tweetSummary?: string;
-  imagePrompt?: string;
-}
-// Type for generated newsletter content;
-export interface GeneratedNewsletterContent {;
-  subject: string;,
+  subject: string;
   previewText: string;
 
-  body: string;,
-  cta: string;
-}
-export interface BlogAuthor {;
-  name: string,;
-  title: string,;
-  avatarUrl: string;
-}
-;
-export interface BlogPost {;
-  id: string,;
-  title: string,;
-  slug: string,;
-  excerpt: string,;
-  content: string,;
-  author: BlogAuthor,;
-  publishedDate: string,;
-  readTime: string,;
-  category: string,;
-  tags: string[],;
-  featuredImage: string,;
-  isFeatured?: boolean,;
-  isPublished?: boolean,;
-  createdBy?: string,;
-  updatedAt?: string;
-}
-;
-// Type for generated blog content;
-export interface GeneratedBlogContent {;
-  title: string,;
-  metaDescription: string,;
-  body: string,;
-  tags: string[],;
-  tweetSummary?: string,;
-  imagePrompt?: string;
-}
-;
-// Type for generated newsletter content;
-export interface GeneratedNewsletterContent {
-  // TODO: Implement
-}
-  subject: string;,
-  previewText: string;
-  body: string;,
-  cta: string;
 }
 
 export interface BlogAuthor {;
@@ -140,7 +81,7 @@ export interface BlogAuthor {;
 export interface GeneratedNewsletterContent {;
   subject: string,;
   previewText: string,;
-  body: string;,
+  body: string;
   cta: string;
 }
 ;

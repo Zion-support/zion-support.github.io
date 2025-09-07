@@ -1,72 +1,132 @@
+import { SortDesc, ChevronDown  } from './lucide-react';
+
+import {
+
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { SORT_OPTIONS  } from '@/data / sort_options';
+import { SortDesc, ChevronDown  } from './lucide-react';
+
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {SORT_OPTIONS} from "@/data/sortOptions";
+import {SortDesc, ChevronDown} from "lucide-react";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { SORT_OPTIONS } from "@/data/sortOptions",
+import { SortDesc, ChevronDown } from "lucide-react",
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { SORT_OPTIONS } from "@/data/sortOptions";
+import { SortDesc, ChevronDown } from "lucide-react";
+import {
+
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+
+interface SortDropdownProps {
+  sortOption: string;
+  setSortOption: (option: string) => void;
+}
+
 import React from "react";""
 import { Button } from "@/components/ui/button";""
 import { SORT_OPTIONS } from "@/data/sortOptions";""
 import { SortDesc, ChevronDown } from "lucide-react";"
+
 import {
   // TODO: Implement
 }
   DropdownMenu,
   DropdownMenuContent,
+
   DropdownMenuItem,
   DropdownMenuTrigger,"
 } from "@/components/ui/dropdown-menu";""
-import React from './react';''
-import { Button  } from '@/components / ui / button';''
-import { SORT_OPTIONS  } from '@/data / sort_options';''
-import { SortDesc, ChevronDown  } from './lucide-react';''
-import React from "react";""
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { SORT_OPTIONS  } from '@/data / sort_options';
+import { SortDesc, ChevronDown  } from './lucide-react';
 import {Button} from "@/components/ui/button";""
 import {SORT_OPTIONS} from "@/data/sortOptions";""
 import {SortDesc, ChevronDown} from "lucide-react";""
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";"
-import {
   // TODO: Implement
-}
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,"
-} from '@/components / ui / dropdown - menu';'
+} from '@/components / ui / dropdown - menu';
 ;
 interface SortDropdownProps {
   // TODO: Implement
-}
   sortOption: string;,
   setSortOption: (option: string) => void;
+pr-12325
+
 }
+}
+}
+export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
 
 export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdownProps) {;
   return (
     <DropdownMenu>
-</DropdownMenu>
       <DropdownMenuTrigger asChild>
-</DropdownMenuTrigger>
-        <Button;'
-          variant="outline"""
-          className="w-full justify-between border-zion-blue-light text-white""
+        <Button
+          variant="outline"
+          className="w-full justify-between border-zion-blue-light text-white"
         >
-</Button>"
-          <div className="flex items-center gap-2">"
-</div>"
-            <SortDesc className="h-4 w-4 text-zion-purple" />"
-</SortDesc>
-          </div>"
-          <ChevronDown className="h-4 w-4 ml-2 opacity-50" />"
-</ChevronDown>
+          <div className="flex items-center gap-2">
+            <SortDesc className="h-4 w-4 text-zion-purple" />
+            {SORT_OPTIONS.find((opt) => opt.value === sortOption)?.label ||
+              "Sort by"}
+          </div>
+          <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent;"
-        align="start"""
-        className="w-[200px] bg-zion-blue-dark border-zion-blue-light""
+
+      <DropdownMenuContent
+        align="start"
+
+        className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
       >
-</DropdownMenuContent>
+        {SORT_OPTIONS.map((option) => (;
           <DropdownMenuItem;
-            key={option.value})
-            onClick={() => setSortOption(option.value)}
-</DropdownMenuItem>
+            key={option.value}
+            onClick={() => setSortOption(option.value)});
+}
+;
+
+            key={option.value}
+
+              sortOption === option.value
+                ? "bg-zion-purple/20 text-zion-purple"
+                : ""
+
+            }`}
+
+          >
+            {option.label}
           </DropdownMenuItem>
+        ))}
       </DropdownMenuContent>
+<<<<<<< HEAD
     </DropdownMenu>
-          </DropdownMenuItem>
-      </DropdownMenuContent>
+=======
     </DropdownMenu>"
+import React from "react",;"
+import { Button } from "@/components/ui/button",;"
+>>>>>>> origin/chore/fix-lint-and-merge
+import { SORT_OPTIONS } from "@/data/sortOptions",;"
+import { SortDesc, ChevronDown } from "lucide-react",;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;"
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
+interface SortDropdownProps {;
+  sortOption: string;
+  setSortOption: (option: string) => void;
+  );
+
+}
+;

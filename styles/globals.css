@@ -1,38 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-family: 'Inter', system-ui, sans-serif;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -40,243 +14,44 @@ a {
   text-decoration: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom animations */
-@keyframes gradient-xy {
-  0%, 100% {
-    background-size: 200% 200%;
-    background-position: left center;
-  }
-  50% {
-    background-size: 200% 200%;
-    background-position: right center;
+  body {
+    color: white;
+    background: black;
   }
 }
 
-.animate-gradient-xy {
-  animation: gradient-xy 15s ease infinite;
-}
-
-/* Glass morphism effect */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Custom button styles */
-.btn-primary {
-  @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg;
-}
-
-.btn-secondary {
-  @apply bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105;
-}
-
-/* Custom card styles */
-.card {
-  @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
-}
-
-.card-dark {
-  @apply bg-gray-800 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
-}
-
-/* Custom input styles */
-.input {
-  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200;
-}
-
-/* Custom text styles */
-.text-gradient {
-  @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
-}
-
-/* Custom spacing utilities */
-.section-padding {
-  @apply py-16 md:py-20 lg:py-24;
-}
-
-.container-padding {
-  @apply px-4 sm:px-6 lg:px-8;
-}
-
-/* Custom grid utilities */
-.grid-auto-fit {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.grid-auto-fill {
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
-
-/* Custom aspect ratios */
-.aspect-video {
-  aspect-ratio: 16 / 9;
-}
-
-.aspect-square {
-  aspect-ratio: 1 / 1;
-}
-
-/* Custom focus styles */
-.focus-ring {
-  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
-}
-
-/* Custom hover effects */
-.hover-lift {
-  @apply transition-transform duration-200 hover:-translate-y-1;
-}
-
-.hover-glow {
-  @apply transition-shadow duration-200 hover:shadow-glow;
-}
-
-/* Custom loading states */
-.loading {
-  @apply animate-pulse bg-gray-200 rounded;
-}
-
-/* Custom error states */
-.error {
-  @apply border-red-500 text-red-500;
-}
-
-/* Custom success states */
-.success {
-  @apply border-green-500 text-green-500;
-}
-
-/* Custom disabled states */
-.disabled {
-  @apply opacity-50 cursor-not-allowed;
-}
-
-/* Custom responsive utilities */
-@media (max-width: 640px) {
-  .mobile-hidden {
-    display: none;
-  }
-}
-
-@media (min-width: 641px) {
-  .desktop-hidden {
-    display: none;
-  }
-}
-
-/* Custom print styles */
-@media print {
-  .print-hidden {
-    display: none !important;
+@layer components {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-in-out;
   }
   
-  .print-visible {
-    display: block !important;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
+@tailwind base; @tailwind components; @tailwind utilities;
 
-/* Custom selection styles */
-::selection {
-  background-color: #3b82f6;
-  color: white;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind base; @tailwind components; @tailwind utilities;
 
-::-moz-selection {
-  background-color: #3b82f6;
-  color: white;
-}
-
-/* Custom placeholder styles */
-::placeholder {
-  color: #9ca3af;
-  opacity: 1;
-}
-
-::-webkit-input-placeholder {
-  color: #9ca3af;
-  opacity: 1;
-}
-
-::-moz-placeholder {
-  color: #9ca3af;
-  opacity: 1;
-}
-
-:-ms-input-placeholder {
-  color: #9ca3af;
-  opacity: 1;
-}
-
-/* Custom focus visible styles */
-:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-/* Custom reduced motion styles */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+@layer utilities {
+  .focus-visible:focus {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
   }
-}
-
-/* Custom high contrast styles */
-@media (prefers-contrast: high) {
-  .card {
-    @apply border-2 border-gray-900;
-  }
-  
-  .btn-primary {
-    @apply border-2 border-blue-800;
-  }
-}
-
-/* Custom dark mode styles */
-@media (prefers-color-scheme: dark) {
-  .card {
-    @apply bg-gray-800 border-gray-700;
-  }
-  
-  .input {
-    @apply bg-gray-800 border-gray-600 text-white;
-  }
-  
-  ::placeholder {
-    color: #6b7280;
-  }
-}

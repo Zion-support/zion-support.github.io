@@ -1,76 +1,131 @@
-import React from "react";""
-import { Button } from "@/components/ui/button";""
-import { cn } from "@/lib/utils";"
 interface QuickReplyButtonProps {
-  // TODO: Implement
+  text: string;
+  onClick: () => void
 }
-  text: string;,
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+interface QuickReplyButtonProps {
+  text: string;
   onClick: () => void;
 }
 
 export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProps) {;
   return (
-    <Button;"
-      variant="outline"""
-      size="sm""
+export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {  return (
+    <Button
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+
+import { cn } from "@/lib/utils";
+interface QuickReplyButtonProps {}
+  text: string;
+  onClick: () => void;
+}
+
+  return (
+    <Button;
+"
+      variant="outline""
+      size="sm"
       className={cn(
 
-"
-        "border-zion-purple/30 hover: bg-zion-purple hover:text-white",""
-        "transition-colors duration-200",")
+        "transition-colors duration-200"
+        "border-zion-purple/30 hover:bg-zion-purple hover:text-white",
+        "transition-colors duration-200"
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { cn } from "@/lib/utils",;
+interface QuickReplyButtonProps {;
+  text: string,;
+  onClick: () => void;
+}
+;
+export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
+  return (;
+    <Button;
+      variant="outline";
+      size="sm";
+      className={cn(;
+        "border-zion-purple/30 hover:bg-zion-purple hover:text-white";
+        "transition-colors duration-200";
+
+        "transition-colors duration-200",
       )}
       onClick={onClick}>;
-</Button>
+      {text}
+
     </Button>;
-    <Button;"
-import React from './react';''
-import { Button  } from '@/components / ui / button';''
-import { cn  } from '@/lib / utils';'
-interface QuickReplyButtonProps {
-  // TODO: Implement
+  );
 }
-  text: string;,
+  return (
+
+import { cn  } from '@/lib / utils';
+interface QuickReplyButtonProps {}
+  text: string;
   on_click: () => void;
-</Button>
-    <Button;'
-      variant="outline";""
+}
+
+  text: string;
+  onClick: () => void;
+
+}
+export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {}
+  return (;
+    <Button;
+<<<<<<< HEAD
+      variant="outline";"
       size="sm";"
-      className={cn ("
-        "border - zion - purple / 30 hover: bg - zion - purple hover:text - white",""
-        "transition - colors duration - 200",")
+      className={cn (
+        "border - zion - purple / 30 "hover": bg - zion - purple "hover":text - white","
+        "transition - colors duration - 200","
       )}
       on_click={on_click}
     >;
-</Button>
+      {text}
     </Button>);
-    </Button>
-    <Button;"
-      variant="outline";""
-      size="sm";"
-      className={cn(;"
-        "border-zion-purple/30 hover:bg-zion-purple hover:text-white",;""
-        "transition-colors duration-200";")
-      )}
-      onClick={onClick}
-    >;
-</Button>
-    </Button>;"
-  return (<Button variant="outline" size="sm" className= {")
-  cn () 
-}onClick= {
-  onClick;
-}> {
-</Button>
-}</Button>) 
-    <Button;"
-      variant="outline"""
+}
+interface QuickReplyButtonProps {
+  }
+  "text": string;
+  "onClick": () => void,
+interface QuickReplyButtonProps {
+  }
+  "text": string;
+  "onClick": () => void;
+}
+export function QuickReplyButton() {
+}
+return (;
+    <Button,
+variant="outline";"
       size="sm""
+      className={cn(
+"border-zion-purple/30 "hover": bg-zion-purple "hover":text-white""
+        "transition-colors duration-200""
+        "transition-colors duration-200","
+=======
+"
+      variant="outline""
+      size="sm"
       className={cn("
-"border-zion-purple/30 hover: bg-zion-purple hover:text-white"""
-        "transition-colors duration-200"""
-        "transition-colors duration-200",")
+"border-zion-purple/30 hover: bg-zion-purple hover:text-white""
+
+        "transition-colors duration-200"
+"
+        "transition-colors duration-200",
+
+>>>>>>> origin/chore/fix-lint-and-merge
       )}
       onClick={onClick}
     >
-</Button>
-    </Button>"
+      {text}
+    </Button>
+  );
+}
+  )
+}
+;

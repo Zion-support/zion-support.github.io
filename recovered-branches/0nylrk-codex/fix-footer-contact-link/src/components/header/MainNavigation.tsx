@@ -1,159 +1,210 @@
+<<<<<<< HEAD
 
-import {Link} from 'react-router-dom';''
-import { cn } from '@/lib / utils';''
-import { NavLink } from './react-router-dom';''
-import {Link} from 'react-router-dom';''
-import {cn} from "@/lib/utils";""
-import {NavLink} from "react-router-dom";""
-import { Link  } from 'react-router-dom';''
-import { cn } from "@/lib/utils";""
-import { NavLink } from "react-router-dom";""
-import {Link} from 'react-router-dom';''
-import {cn} from "@/lib/utils";""
-import {NavLink} from "react-router-dom";""
-import {Link} from 'react-router-dom';''
-import { cn } from '@/lib / utils';''
-import { NavLink } from './react-router-dom';''
-import {Link} from 'react-router-dom';''
-import {cn} from "@/lib/utils";""
-import {NavLink} from "react-router-dom";""
-import React from 'react',''
-import { Link } from 'react-router-dom',''
-import { cn } from "@/lib/utils",""
-import { NavLink } from "react-router-dom","
+=======
+import { Link  } from 'react-router-dom';
+
+import { cn } from "@/lib/utils";
+import { NavLink } from "react-router-dom";
+
+import { NavLink } from './react-router-dom';
+
+import React from 'react',
+import { Link } from 'react-router-dom',
+import { cn } from "@/lib/utils",
+import { NavLink } from "react-router-dom",
+
 interface MainNavigationProps {
-  // TODO: Implement
+  className?: string
+
 }
-  className?: string;
-}
-export function MainNavigation({ className }: MainNavigationProps) {
+export function MainNavigation({ className }: MainNavigationProps) {}
   return (
 
-
-interface MainNavigationProps {
-  // TODO: Implement
-}
+interface MainNavigationProps {};
   class_name?: string;
 }
-"
-import {Link} from 'react-router-dom';''
-import {cn} from "@/lib/utils";""
-import {NavLink} from "react-router-dom";"
-interface MainNavigationProps {;
-  className?: string;
-}
-)
-export function MainNavigation(): any ({ className }: MainNavigationProps) {;
-  return ()"
-    <nav className={cn("hidden md:flex items-center space-x-6", className)}>;"
-</nav>
-      <NavLink;"
-        to="/""
+
         className={({ isActive }) =>;
-</NavLink>"
-    <nav className={cn ("hidden md:flex items - center space - x-6", class_name)}>;"
-</nav>
+
+          cn(;
+            "text-sm font-medium transition-colors hover: text-primary",;
+            isActive ? "text-zion-cyan" : "text-muted-foreground";
+>>>>>>> origin/chore/fix-lint-and-merge
+          );
+
+export /**
+ * MainNavigation - Function description
+
+ */
+<<<<<<< HEAD
+function MainNavigation() {
+
+=======
+function MainNavigation() {}
+  return ("
+    <nav className={cn ("hidden md:flex items - center space - x-6", class_name)}>;
       <NavLink;"
-        to="/";"
+        to="/";
         className={({ is_active }) =>;
-</NavLink>"
-    <nav className={cn("hidden md:flex items-center space-x-6", className)}>;"
-</nav>
-      <NavLink;"
-        to="/";"
+          cn ("
+            "text - sm font - medium transition - colors hover: text - primary","
+            is_active ? "text - zion - cyan" : "text - muted - foreground");
+
+      >;
+        Home;
+      </NavLink>;
+
         className={({ isActive }) =>;
-</NavLink>
-      </NavLink>;"
-      <Link to="/talent" className="text - zion - slate - light hover:text - white transition - colors">;"
-</Link>
-      </Link>;"
-      <Link to="/services" className="text - zion - slate - light hover:text - white transition - colors">;"
-</Link>
-      </Link>;"
-      <Link to="/equipment" className="text - zion - slate - light hover:text - white transition - colors">;"
-</Link>
-      </Link>;"
-      <Link to="/blog" className="text - zion - slate - light hover:text - white transition - colors">;"
-</Link>
-      </Link>;"
-      <Link to="/categories" className="text - zion - slate - light hover:text - white transition - colors">;"
-</Link>
+          cn(;
+            "text-sm font-medium transition-colors hover: text-primary",;
+            isActive ? "text-zion-cyan" : "text-muted-foreground";
+          );
+
+      <Link to="/talent" className="text - zion - slate - light hover:text - white transition - colors">;
+        Find Talent;
+      </Link>;
+      <Link to="/services" className="text - zion - slate - light hover:text - white transition - colors">;
+        Services;
+      </Link>;
+      <Link to="/equipment" className="text - zion - slate - light hover:text - white transition - colors">;
+        Equipment;
+      </Link>;
+      <Link to="/blog" className="text - zion - slate - light hover:text - white transition - colors">;
+        Blog;
+      </Link>;
+
+        Categories;
       </Link>;
       <NavLink;"
-        to="/partners";"
-        className={({ is_active }) =>;
-</NavLink>
-      </NavLink>;
-      </NavLink>;
-    </nav>;
-      <NavLink;"
-        to="/signup";"
-        className={({ is_active }) =>;
-</NavLink>
-      </NavLink>;
-    </nav>);"
-    <nav className={cn("hidden md:flex items-center space-x-6", className)}>"
-</nav>
-      <NavLink;"
-        to="/""
-        className={({ isActive }) =>
-</NavLink>
-      </NavLink>"
-      <Link to="/talent" className="text-zion-slate-light hover:text-white transition-colors">"
-</Link>
-      </Link>"
-      <Link to="/services" className="text-zion-slate-light hover:text-white transition-colors">"
-</Link>
-      </Link>"
-      <Link to="/equipment" className="text-zion-slate-light hover:text-white transition-colors">"
-</Link>
-      </Link>"
-      <Link to="/blog" className="text-zion-slate-light hover:text-white transition-colors">"
-</Link>
-      </Link>"
-      <Link to="/categories" className="text-zion-slate-light hover:text-white transition-colors">"
-</Link>
-      </Link>
-      <NavLink;"
-        to="/partners""
-        className={({ isActive }) =>
-</NavLink>
-      </NavLink>
-      <NavLink;"
-        to="/signup""
-        className={({ isActive }) =>
-</NavLink>
-      </NavLink>
-    </nav>"
-    <nav className={cn("hidden md:flex items-center space-x-6", className)}>;"
-</nav>
-      <NavLink;"
-        to="/";"
-        className={({ isActive }) =>;
-</NavLink>"
-    <nav className={cn ("hidden md:flex items - center space - x-6", class_name)}>;"
-</nav>
-      <NavLink;"
-        to="/";"
-        className={({ is_active }) =>;
-</NavLink>
-      </NavLink>;
-      </Link>;
-      <NavLink;"
-        to="/partners";"
+        to="/partners";
+
+          );
         }
       >;
-</NavLink>
+        Register;
       </NavLink>;
+    </nav>;
+
+        to="/signup";
+        className={({ is_active }) =>;
+          cn ("
+            "text - sm font - medium transition - colors hover: text - primary";"
+            is_active ? "text - zion - cyan" : "text - muted - foreground","
+            "bg - zion - purple px - 4 py - 2 rounded - md hover:bg - zion - purple - light");
+        }
+      >;
+        Register;
       </NavLink>;
     </nav>);
-  return (<nav className= {)"
-  cn ("hidden md:flex items-center space-x-6", className)""
-}> <NavLink to="/" className= {"
-</nav>"
-}> Home </NavLink> <Link to=" /talent"className=" text-zion-slate-light hover:text-white transition-colors"> Find Talent </Link> <Link to=" /services"className=" text-zion-slate-light hover:text-white transition-colors"> Services </Link> <Link to=" /equipment"className=" text-zion-slate-light hover:text-white transition-colors"> Equipment </Link> <Link to=" /blog"className=" text-zion-slate-light hover:text-white transition-colors"> Blog </Link> <Link to=" /categories"className=" text-zion-slate-light hover:text-white transition-colors"> Categories </Link> <NavLink cn (" text-sm font-medium transition-colors hover:text-primary";")"
-isActive ? " text-zion-cyan": " text-muted-foreground")""
-}> Partner Program </NavLink> <NavLink cn (" text-sm font-medium transition-colors hover:text-primary";""
-isActive ? " text-zion-cyan": " text-muted-foreground";")"
-" bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light")"
-}> Register </NavLink> </nav>) "
+}
+
+"
+            "text-sm font-medium transition-colors hover:text-primary",
+
+            isActive ? "text-zion-cyan" : "text-muted-foreground",;
+            "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light";
+>>>>>>> origin/chore/fix-lint-and-merge
+          );
+        }
+      >;
+        Register;
+      </NavLink>;
+    </nav>;
+  );
+}
+<<<<<<< HEAD
+      <NavLink;
+
+        }
+      >;
+        Register;
+      </NavLink>;
+    </nav>);
+}
+
+          )
+        }
+      >
+        Home
+      </NavLink>
+
+=======
+
+            isActive ? "text-zion-cyan" : "text-muted-foreground"
+          )
+        }
+      >
+        Home;
+      </NavLink>"
+      <Link to="/talent" className="text-zion-slate-light hover:text-white transition-colors">
+        Find Talent;
+      </Link>"
+      <Link to="/services" className="text-zion-slate-light hover:text-white transition-colors">
+        Services;
+      </Link>"
+      <Link to="/equipment" className="text-zion-slate-light hover:text-white transition-colors">
+        Equipment;
+      </Link>"
+      <Link to="/blog" className="text-zion-slate-light hover:text-white transition-colors">
+        Blog;
+      </Link>"
+      <Link to="/categories" className="text-zion-slate-light hover:text-white transition-colors">
+        Categories;
+      </Link>
+      <NavLink"
+        to="/partners"
+        className={({ isActive }) =>
+          cn(
+
+            isActive ? "text-zion-cyan" : "text-muted-foreground"
+>>>>>>> origin/chore/fix-lint-and-merge
+          )
+        }
+      >
+        Partner Program;
+      </NavLink>
+      <NavLink"
+        to="/signup"
+        className={({ isActive }) =>
+
+          cn(
+            "text-sm font-medium transition-colors hover: text-primary";
+            isActive ? "text-zion-cyan" : "text-muted-foreground"
+
+          cn(;
+
+            "text-sm font-medium transition-colors hover: text-primary";
+            isActive ? "text-zion-cyan" : "text-muted-foreground",
+
+            "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
+          )
+        }
+      >
+        Register;
+
+      </NavLink>
+    </nav>
+  )
+}
+
+<<<<<<< HEAD
+=======
+        }
+      >;
+        Home;
+      </NavLink>;
+        Categories;
+      </Link>;
+      <NavLink;"
+        to="/partners";
+        }
+      >;
+        Partner Program;
+      </NavLink>;
+        }
+      >;
+        Register;
+      </NavLink>;
+    </nav>);
+}
+>>>>>>> origin/chore/fix-lint-and-merge

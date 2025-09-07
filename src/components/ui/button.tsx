@@ -1,68 +1,41 @@
-import React from "react""
-interface ButtonProps {
-  // TODO: Implement
-}
-  className?: string;"
-  size?: "sm" | "md" | "lg";""
-  variant?: "default" | "outline" | "ghost";"
-  children: React.ReactNode;
-  onClick?: () => void;"
-  type?: "button" | "submit" | "reset";"
-  disabled?: boolean;
+
+=======
+import * as React from "react;
+import { cn } from @/lib/utils";
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "default | destructive" | "outline | secondary" | "ghost | link";
+  size?: "default | sm" | "lg | icon";
 }
 
-export function Button({ "
-  className = "",""
-  size = "md",""
-  variant = "default","
-  children, 
-  ...props;)
-}: ButtonProps) {"
-  const baseClasses = "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50""
-  const sizeClasses = {"
-    sm: "h-9 px-3 text-sm",""
-    md: "h-10 px-4 py-2",""
-    lg: "h-11 px-8 text-lg""
-  }
-  
-  const variantClasses = {"
-    default: "bg-blue-600 text-white hover:bg-blue-700",""
-    outline: "border border-gray-300 bg-white hover:bg-gray-50",""
-    ghost: "hover:bg-gray-100""
-  }
-  
-  return (
-    <button;
-      className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
-      {...props}
-    >
-</button>
-    </button>
-      return <div>Something went wrong.</div>;
-const Button: React.FC<ButtonProps> = ({
-</ButtonProps>
-  const content = <>{children}</>;
-)
-  if (href) {;
-
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant = "default, size = default", ...props }, ref) => {
     return (
-      <Link href={href} className={classes} style={style}>;
-</Link>
-      </Link>;
-  const content = <>{children}</>;
-  // Check condition;)
-if ( {) {
-  $2;
-}
-    return (
-      <Link href={href} className={classes} style={style}>;
-</Link>)
-      </Link>);
-    <button;
-      type={type}
-      className={classes}
-      onClick={onClick}
-      disabled={disabled}
+      <button
+        className={cn(
+          "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50,
+          {
+            bg-primary text-primary-foreground hover:bg-primary/90": variant === "default,
+            bg-destructive text-destructive-foreground hover:bg-destructive/90": variant === "destructive,
+            border border-input bg-background hover:bg-accent hover:text-accent-foreground": variant === "outline,
+            bg-secondary text-secondary-foreground hover:bg-secondary/80": variant === "secondary,
+            hover:bg-accent hover:text-accent-foreground": variant === "ghost,
+            text-primary underline-offset-4 hover:underline": variant === "link},
+          {
+            h-10 px-4 py-2": size === "default,
+            h-9 rounded-md px-3": size === "sm,
+            h-11 rounded-md px-8": size === "lg,
+            h-10 w-10": size === "icon},
+          className
+        )}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
+Button.displayName = Button";
 
-    </button>;
-    </button>"
+export { Button }
+>>>>>>> cursor/automate-test-improve-and-merge-code-aa0d

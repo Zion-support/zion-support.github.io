@@ -1,255 +1,360 @@
+import React, { useState } from "react";
 
-
+import React, { useState } from "react";
 
 import {
-  // TODO: Implement
-}
+
   Table;
   TableBody;
   TableCell;
+
   TableHead;
   TableHeader;
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table","
-import {
-  // TODO: Implement
-}
+  }
+=======
+  TableRow} from "@/components/ui/table",
+
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog;
   DialogContent;
   DialogDescription;
+
   DialogFooter;
   DialogHeader;
-  DialogTitle;"
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";""
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";""
-import {Button} from "@/components/ui/button";""
-import {Input} from "@/components/ui/input";""
-import {Label} from "@/components/ui/label";""
-import {Badge} from "@/components/ui/badge";""
-import {PlusCircle, Trash, Mail, UserPlus} from "lucide-react";""
-import {toast} from "@/hooks/use-toast";"
+<<<<<<< HEAD
+  DialogTitle;import React, { useState } from "react","
+  }
+=======
+
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Badge} from "@/components/ui/badge";
+import {PlusCircle, Trash, Mail, UserPlus} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
 export function TeamManagement() {;
-  const [isAddingMember, setIsAddingMember] = useState(false);"
-  const [newMemberEmail, setNewMemberEmail] = useState("");""
-import React, { useState } from "react","
+  const [isAddingMember, setIsAddingMember] = useState(false);
+  const [newMemberEmail, setNewMemberEmail] = useState("");
+
+import React, { useState } from "react",
+
 import {
-  // TODO: Implement
-}
+
+>>>>>>> origin/chore/fix-lint-and-merge
   Table,
   TableBody,
   TableCell,
+
   TableHead,
-  TableHeader,"
+<<<<<<< HEAD
+  TableHeader,
   TableRow} from "@/components/ui/table","
-import {
-  // TODO: Implement
-}
+  }
+=======
+  TableHeader,"
+  TableRow} from "@/components/ui/table",
+
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog,
   DialogContent,
   DialogDescription,
+
   DialogFooter,
   DialogHeader,
-  DialogTitle,
-"
-  DialogTrigger} from "@/components/ui/dialog",""
-import { Button } from "@/components/ui/button",""
-import { Input } from "@/components/ui/input",""
-import { Label } from "@/components/ui/label",""
-import { Badge } from "@/components/ui/badge",""
-import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react",""
-import { toast } from "@/hooks/use-toast","
-export function TeamManagement() {
+
+  DialogTrigger} from "@/components/ui/dialog",
+
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+
+import { Badge } from "@/components/ui/badge",
+
+import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react",
+
+import { toast } from "@/hooks/use-toast",
+export function TeamManagement() {}
   const [isAddingMember, setIsAddingMember] = useState(false),"
-  const [newMemberEmail, setNewMemberEmail] = useState(""),"
-  // Mock team members data;
+
+  const [newMemberEmail, setNewMemberEmail] = useState(""),
+
+  // Mock team members data
+
   const teamMembers = [
     {
-      id: 1;,"
-  name: "Alex Johnson"""
-      email: "alex@example.com"","
-  role: "Admin"""
-      status: "active"","
-  lastActive: "2 hours ago"}"
-    {
-      id: 2;,"
-  name: "Jamie Smith"""
-      email: "jamie@example.com"","
-  role: "Recruiter"""
-      status: "active"","
-  lastActive: "Yesterday"}"
-    {
-      id: 3;,"
-  name: "Sam Williams"""
-      email: "sam@example.com"","
-  role: "Manager"""
-      status: "pending"","
-  lastActive: "Never"}"
-    {
-      id: 4;,"
-  name: "Taylor Brown"""
-      email: "taylor@example.com"","
-  role: "Viewer"""
-      status: "active"",]"
-  lastActive: "3 days ago"}]"
-  const handleAddMember = () => {
+      id: 1
+      name: "Alex Johnson"
+      email: "alex@example.com"
+      role: "Admin"
+      status: "active"
+
+      lastActive: "2 hours ago"}
+    {}
+      id: 2"
+      name: "Jamie Smith""
+      email: "jamie@example.com""
+      role: "Recruiter""
+      status: "active""
+      lastActive: "Yesterday"}
+    {}
+      id: 3"
+      name: "Sam Williams""
+      email: "sam@example.com""
+      role: "Manager""
+      status: "pending""
+      lastActive: "Never"}
+    {}
+      id: 4"
+      name: "Taylor Brown""
+      email: "taylor@example.com""
+      role: "Viewer""
+      status: "active""
+      lastActive: "3 days ago"}]
+  const handleAddMember = () => {}
     // In a real app, this would make an API call to add the member;
-    if (!newMemberEmail) {
+    if (!newMemberEmail) {}
       toast({"
-        title: "Email required"","
-  description: "Please enter an email address for the new team member."")"
-        variant: "destructive"})"
+        title: "Email required""
+        description: "Please enter an email address for the new team member.""
+        variant: "destructive"})
       return;
     }
-    toast({
 
-"
-      title: "Invitation sent",")
+      title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 "
-    setNewMemberEmail(""),"
+    setNewMemberEmail(""),
     setIsAddingMember(false)
   },
 
-
-
-  const handleRemoveMember = (memberId: number) => {
-    // In a real app, this would make an API call to remove the member;
-    toast({"
-      title: "Team member removed"",)"
-  description: "The team member has been removed from your workspace."})"
-  },
-
-
-
   const handleResendInvite = (memberEmail: string) => {
-    // In a real app, this would make an API call to resend the invitation;
-    toast({"
-      title: "Invitation resent"",)
-  description: `A new invitation has been sent to ${memberEmail}`})
-"
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";""
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";""
-import {Button} from "@/components/ui/button";""
-import {Input} from "@/components/ui/input";""
-import {Label} from "@/components/ui/label";""
-import {Badge} from "@/components/ui/badge";""
-import {PlusCircle, Trash, Mail, UserPlus} from "lucide-react";""
-import {toast} from "@/hooks/use-toast";"
+    // In a real app, this would make an API call to resend the invitation
+    toast({
+      title: "Invitation resent"
+
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Badge} from "@/components/ui/badge";
+import {PlusCircle, Trash, Mail, UserPlus} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
 export function TeamManagement() {;
-  const [isAddingMember, setIsAddingMember] = useState(false);"
-  const [newMemberEmail, setNewMemberEmail] = useState("");"
+  const [isAddingMember, setIsAddingMember] = useState(false);
+  const [newMemberEmail, setNewMemberEmail] = useState("");
+
   // Mock team members data;
   const teamMembers = [;
     {;
-      id: 1,;"
-      name: "Alex Johnson",;""
-      email: "alex@example && example.com",;""
-      role: "Admin",;""
-      status: "active",;""
-      lastActive: "2 hours ago"},;"
+      id: 1,;
+      name: "Alex Johnson",;
+      email: "alex@example && example.com",;
+      role: "Admin",;
+      status: "active",;
+      lastActive: "2 hours ago"},;
     {;
-      id: 2,;"
-      name: "Jamie Smith",;""
-      email: "jamie@example && example.com",;""
-      role: "Recruiter",;""
-      status: "active",;""
-      lastActive: "Yesterday"},;"
+      id: 2,;
+      name: "Jamie Smith",;
+      email: "jamie@example && example.com",;
+      role: "Recruiter",;
+      status: "active",;
+      lastActive: "Yesterday"},;
     {;
-      id: 3,;"
-      name: "Sam Williams",;""
-      email: "sam@example && example.com",;""
-      role: "Manager",;""
-      status: "pending",;""
-      lastActive: "Never"},;"
+      id: 3,;
+      name: "Sam Williams",;
+      email: "sam@example && example.com",;
+      role: "Manager",;
+      status: "pending",;
+      lastActive: "Never"},;
     {;
-      id: 4,;"
-      name: "Taylor Brown",;""
-      email: "taylor@example && example.com",;""
-      role: "Viewer",;""
-      status: "active",;"]"
-      lastActive: "3 days ago"}],;"
+      id: 4,;
+      name: "Taylor Brown",;
+      email: "taylor@example && example.com",;
+      role: "Viewer",;
+      status: "active",;
+      lastActive: "3 days ago"}],;
+
   const handleAddMember = () => {;
     // In a real app, this would make an API call to add the member;
     if (!newMemberEmail) {;
-      toast({;"
-        title: "Email required",;""
-        description: "Please enter an email address for the new team member.",;")"
-        variant: "destructive"}),;"
+      toast({;
+        title: "Email required",
+        description: "Please enter an email address for the new team member.",;
+        variant: "destructive"}),;
       return;
     }
 
-    toast({;"
-      title: "Invitation sent",;")
+    toast({;
+      title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),;
-"
-    setNewMemberEmail("");"
+
+    setNewMemberEmail("");
     setIsAddingMember(false);
   };
 
   const handleRemoveMember = (memberId: number) => {;
+
     // In a real app, this would make an API call to remove the member;
-    toast({;"
-      title: "Team member removed",;")"
-      description: "The team member has been removed from your workspace."});"
-  };
+    toast({"
+      title: "Team member removed""
+      description: "The team member has been removed from your workspace."})
 
-  const handleResendInvite = (memberEmail: string) => {;
+  const handleResendInvite = (memberEmail: string) => {}
     // In a real app, this would make an API call to resend the invitation;
-    toast({;"
-      title: "Invitation resent",;")
-      description: `A new invitation has been sent to ${memberEmail}`});
-  };
+    toast({"
+      title: "Invitation resent"`
+      description: `A new invitation has been sent to ${memberEmail}`})
 
+  return (
 
-  return ("
-    <div className="space-y-6">;"
-</div>"
-      <div className="flex items-center justify-between">;"
-</div>"
-        <h3 className="text-xl font-medium">Team Members</h3>;"
+        <h3 className="text-xl font-medium">Team Members</h3>;
         <Dialog open={isAddingMember} onOpenChange={setIsAddingMember}>;
-</Dialog>
-          <DialogTrigger asChild>;
-</DialogTrigger>"
+          <DialogTrigger asChild>;"
             <Button className="gap-2">;"
-</Button>"
-              <UserPlus className="h-4 w-4" />;"
-</UserPlus>"
-    <div className="space - y-6">;"
-</div>"
-      <div className="flex items - center justify - between">;"
-</div>"
-        <h3 className="text - xl font - medium">Team Members</h3>;"
+              <UserPlus className="h-4 w-4" />;
+import React, { useState } from './react';'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';'
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';'
+import { Button } from '@/components / ui / button';'
+import { Input } from '@/components / ui / input';'
+import { Label } from '@/components / ui / label';'
+import { Badge } from '@/components / ui / badge';'
+import { PlusCircle, Trash, Mail, UserPlus } from './lucide-react';'
+import { toast } from '@/hooks / use - toast';
+export /**;
+ * TeamManagement - Function description;
+ */
+function TeamManagement() {}
+  const [isAddingMember, setIsAddingMember] = useState (false);"
+  const [newMemberEmail, setNewMemberEmail] = useState ("");
+;
+  // Mock team members data;
+  const team_members = [;
+    {}
+      id: 1,"
+      name: "Alex Johnson","
+      email: "alex@example.com","
+      role: "Admin","
+      status: "active","
+      last_active: "2 hours ago"},
+    {}
+      id: 2,"
+      name: "Jamie Smith","
+      email: "jamie@example.com","
+      role: "Recruiter","
+      status: "active","
+      last_active: "Yesterday"},
+    {}
+      id: 3,"
+      name: "Sam Williams","
+      email: "sam@example.com","
+      role: "Manager","
+      status: "pending","
+      last_active: "Never"},
+    {}
+      id: 4,"
+      name: "Taylor Brown","
+      email: "taylor@example.com","
+      role: "Viewer","
+      status: "active","
+      last_active: "3 days ago"}],
+  const handleAddMember = () =>: any {}
+    // In a real app, this would make an API call to add the member;
+    // Check condition;
+if ( {) {}
+  $2;
+}
+      toast ({"
+        title: "Email required","
+        description: "Please enter an email address for the new team member.","
+        variant: "destructive"}),
+      return;
+    }
+    toast ({"
+      title: "Invitation sent",`
+      description: `An invitation has been sent to ${newMemberEmail}`}),"
+    setNewMemberEmail ("");
+    setIsAddingMember (false);
+  }
+;
+  const handleRemoveMember = (member_id: number) =>: any {}
+    // In a real app, this would make an API call to remove the member;
+    toast ({"
+      title: "Team member removed","
+      description: "The team member has been removed from your workspace."});
+  }
+;
+  const handleResendInvite = (member_email: string) =>: any {}
+    // In a real app, this would make an API call to resend the invitation;
+    toast ({"
+      title: "Invitation resent",`
+      description: `A new invitation has been sent to ${member_email}`});
+  }
+;
+
+  return (
+    <div className="space-y-6">;
+      <div className="flex items - center justify-between">;
+        <h3 className="text - xl font-medium">Team Members</h3>;
         <Dialog open={isAddingMember} onOpenChange={setIsAddingMember}>;
-</Dialog>
           <DialogTrigger as_child>;
-</DialogTrigger>"
-            <Button className="gap - 2">;"
-</Button>"
-              <UserPlus className="h - 4 w - 4" />;"
-</UserPlus>
+
+              Add Team Member;
             </Button>;
           </DialogTrigger>;
           <DialogContent>;
-</DialogContent>
             <DialogHeader>;
-</DialogHeader>
-              <DialogDescription>;
-</DialogDescription>
-              </DialogDescription>;
-            </DialogHeader>;
-                      </span>
-                    </div>
-                    <div>
-</div>"
-                      <div className="font-medium">{member.name}</div>""
-                      <div className="text-sm text-muted-foreground">"
-</div>
-                      </div>
-                    </div>
-                  </div>
-                </TableCell>
-                <TableCell>{member.role}</TableCell>
-                <TableCell>
+
+import React, { useState } from "react",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+
+  TableRow} from "@/components/ui/table",;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogFooter,;
+  DialogHeader,;
+
+      lastActive: "3 days ago"}],;
+  const handleAddMember = () => {;
+    // In a real app, this would make an API call to add the member;
+    if (!newMemberEmail) {;
+
+        variant: "destructive"}),;
+      return;
+    }
+;
+
+    setNewMemberEmail(""),;
+    setIsAddingMember(false);
+  },;
+  const handleRemoveMember = (memberId: number) => {;
+    // In a real app, this would make an API call to remove the member;
+
+      description: "The team member has been removed from your workspace."});
+  },;
+  const handleResendInvite = (memberEmail: string) => {;
+    // In a real app, this would make an API call to resend the invitation;
+
+              <UserPlus className="h-4 w-4" />;
+              Add Team Member;
+            </Button>;
+          </DialogTrigger>;
+          <DialogContent>;
+            <DialogHeader>;
+              <DialogTitle>Add Team Member</DialogTitle>;
+
+                  <option value="viewer">Viewer</option>;
 </TableCell>
                   <Badge;"
                     variant={member.status === "active" ? "default" : "outline"}"
@@ -390,6 +495,82 @@ export function TeamManagement() {;
               </div>;
             </div>;
             <DialogFooter>;
+
+<Button variant="outline" onClick={() => setIsAddingMember(false)}>;
+                Cancel;
+              </Button>;
+              <Button onClick={handleAddMember}>Send Invitation</Button>;
+            </DialogFooter>;
+          </DialogContent>;
+        </Dialog>;
+      </div>;
+
+                      </div>;
+                    </div>;
+                  </div>;
+                </TableCell>;
+
+                <TableCell>{member.role}</TableCell>;
+
+                <TableCell>;
+                  <Badge;"
+                    variant={member.status === "active" ? "default" : "outline"}
+
+                <TableCell>;
+                  <Badge;"
+                    variant={member.status === "active" ? "default" :"outline"}
+                  >;
+                    {member.status}
+                  </Badge>;
+                </TableCell>;
+                <TableCell>{member.last_active}</TableCell>;
+                <TableCell className="text - right">;
+                  <div className="flex justify - end gap - 2">;
+                    {member.status === "pending" ? (
+                      <Button;
+                        variant="ghost";
+                        size="sm";
+
+                        className="text-destructive hover:text-destructive";
+
+>;
+                    {member.status}
+                  </Badge>
+                </TableCell>
+                <TableCell>{member.lastActive}</TableCell>
+                <TableCell className="text-right">
+                  <div className="flex justify-end gap-2">
+                    {member.status === "pending" ? (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => handleResendInvite(member.email)}
+                      >;
+                        <Mail className="h-4 w-4 mr-1" />;
+                        Resend;
+                      </Button>;
+                    ) : (;
+                      <Button;
+                        variant="ghost";
+                        size="sm";
+                        className="text-destructive hover:text-destructive";
+              <Button on_click={handleAddMember}>Send Invitation</Button>;                <TableCell>{member.role}</TableCell>;
+                <TableCell>;
+                  <Badge;
+                    variant={member.status === "active" ? "default" : "outline"}
+                <TableCell>;
+                  <Badge;
+                    variant={member.status === "active" ? "default" :"outline"}
+
+                        onClick={() => handleRemoveMember(member.id)}
+                      >"
+                        <Trash className="h-4 w-4" />
+                      </Button>
+                    )}
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))}
 </DialogFooter>
 "
               <Button variant="outline" on_click={() => setIsAddingMember (false)}>;"
@@ -470,6 +651,7 @@ export function TeamManagement() {;
 </Button>"
                         <Trash className="h-4 w-4" />"
 </Trash>
+
                       </Button>
                   </div>
                 </TableCell>
@@ -478,52 +660,4 @@ export function TeamManagement() {;
         </Table>
       </div>
     </div>
-                <TableCell>{member.lastActive}</TableCell>;"
-                <TableCell className="text-right">;"
-</TableCell>"
-                  <div className="flex justify-end gap-2">;"
-</div>
-                      <Button;"
-                        variant="ghost";""
-                        size="sm";"
-                        onClick={() => handleResendInvite(member.email)}
-</Button>"
-                        <Mail className="h-4 w-4 mr-1" />;"
-</Mail>
-                      </Button>;
-                      <Button;"
-                        variant="ghost";""
-                        size="sm";""
-                        className="text-destructive hover:text-destructive";"
-                        onClick={() => handleRemoveMember(member.id)}
-</Button>"
-                        <Trash className="h-4 w-4" />;"
-</Trash>
-                      </Button>;                    )}
-                  </div>;
-                </TableCell>;
-              </TableRow>;
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>;"
-}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className=" text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {"
-</div>
-  teamMembers.map ( (member) => (<TableRow key= {
-  member.id;)"
-}> <TableCell> .join ("")"
-</TableRow>
-}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {
-  member.role;
-}</TableCell> <TableCell> <Badge > {
-</TableCell>
-}</Badge> </TableCell> <TableCell> {
-</TableCell>"
-}</TableCell> <TableCell className="text-right"> onClick= {"
-</TableCell>"
-}> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick= {"
-</Mail>"
-}> <Trash className="h-4 w-4" /> </Button>)"
-</Trash>
-}</div> </TableCell> </TableRow>) ) 
-}</TableBody> </Table> </div> </div>) "
+  )

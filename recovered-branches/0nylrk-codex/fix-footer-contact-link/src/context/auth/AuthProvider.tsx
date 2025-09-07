@@ -1,18 +1,14 @@
+import {cleanupAuthState} from "../../utils/authUtils";
+import {useNavigate, useLocation} from 'react-router-dom';"
+import {useAuthState} from "./useAuthState";"
+import {useAuthEventHandlers} from "./useAuthEventHandlers";"
+import {mapProfileToUser} from "./profileMapper";
 
-import React, { useEffect } from "react";""
-import {supabase, getFromProfiles} from "../../integrations/supabase/client";""
-import {useAuthOperations} from "../../hooks/useAuthOperations";""
-import {AuthContext} from "./AuthContext";""
-import {cleanupAuthState} from "../../utils/authUtils";""
-import {useNavigate, useLocation} from 'react-router-dom';''
-import {useAuthState} from "./useAuthState";""
-import {useAuthEventHandlers} from "./useAuthEventHandlers";""
-import {mapProfileToUser} from "./profileMapper";"
-export const AuthProvider = ({ children }: { children: React && React.ReactNode }) => {;
-  const { ;
     user, setUser, ;
     isLoading, setIsLoading, ;
-    onboardingStep, setOnboardingStep ;
+
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+
   } = useAuthState();
 
   const navigate = useNavigate();
@@ -29,47 +25,13 @@ export const AuthProvider = ({ children }: { children: React && React.ReactNode 
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
-    loginWithWeb3;
-  } = useAuthOperations(setUser, setIsLoading);
 
+  // Wrapper for login to match the AuthContextType interface
+  const login = async (email: string, password: string) => {
+    return loginImpl({ email, password })
+  }
+  // Wrapper for signup to match the AuthContextType interface
 
-"
-import React, { useEffect } from "react",""
-import { supabase, getFromProfiles } from "../../integrations/supabase/client",""
-import { useAuthOperations } from "../../hooks/useAuthOperations",""
-import { AuthContext } from "./AuthContext",""
-import { cleanupAuthState } from "../../utils/authUtils",""
-import { useNavigate, useLocation } from 'react-router-dom',''
-import { useAuthState } from "./useAuthState",""
-import { useAuthEventHandlers } from "./useAuthEventHandlers",""
-import { mapProfileToUser } from "./profileMapper","
-export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const {
-  // TODO: Implement
-}
-    user, setUser, 
-    isLoading, setIsLoading, 
-
-    onboardingStep, setOnboardingStep;
-  } = useAuthState(),
-
-    onboardingStep, setOnboardingStep;
-  } = useAuthState(),
-  
-  const navigate = useNavigate(),
-  const location = useLocation(),
-  const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep),
-
-  const {
-  // TODO: Implement
-}
-    login: loginImpl,
-    signup: signupImpl,
-    logout,
-    resetPassword,
-    updateProfile,
-    loginWithGoogle,
-    loginWithFacebook,
     loginWithTwitter,
     loginWithWeb3;
   } = useAuthOperations(setUser, setIsLoading),
@@ -83,59 +45,242 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     return signupImpl({ email, password, display_name: userData })
   }
   useEffect(() => {
+    // Clean up any potential stale auth state before setting up listeners
+
+import React, { useEffect } from "react",
+
+import { supabase, getFromProfiles } from "../../integrations/supabase/client",
+import { useAuthOperations } from "../../hooks/useAuthOperations",
+import { AuthContext } from "./AuthContext",
+import { cleanupAuthState } from "../../utils/authUtils",
+import { useNavigate, useLocation } from 'react-router-dom',
+import { useAuthState } from "./useAuthState",
+import { useAuthEventHandlers } from "./useAuthEventHandlers",
+
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+
+  const { 
+    user, setUser, 
+    isLoading, setIsLoading, 
+    onboardingStep, setOnboardingStep 
+  } = useAuthState(),    onboardingStep, setOnboardingStep 
+  } = useAuthState(),
+<<<<<<< HEAD
+const navigate = useNavigate(),;
+const location = useLocation(),;
+const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep),;
+    }
+    "login": loginImpl,
+    "signup": signupImpl,
+=======
+
+  const navigate = useNavigate(),
+  const location = useLocation(),
+  const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep),
+
+  const {}
+    login: loginImpl,
+    signup: signupImpl,
+>>>>>>> origin/chore/fix-lint-and-merge
+    logout,
+    resetPassword,
+    updateProfile,
+    loginWithGoogle,
+    loginWithFacebook,
+    loginWithTwitter,
+    loginWithWeb3;
+  } = useAuthOperations(setUser, setIsLoading),
+
+  // Wrapper for login to match the AuthContextType interface;
+  const login = async (email: string, password: string) => {}
+    return loginImpl({ email, password })
+  }
+  // Wrapper for signup to match the AuthContextType interface;
+  const signup = async (email: string, password: string, userData?: any) => {}
+    return signupImpl({ email, password, display_name: userData })
+  }
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      async (event, session) => {}
+        if (session?.user) {}
+          try {}
+            const { data: profile, error } = await getFromProfiles()'
+              .select('*')'
+              .eq('id', session.user.id)
+
+              .single(),
+
+            if (profile) {}
+
+              const mappedUser = mapProfileToUser(session.user, profile),
+              setUser(mappedUser),
+
+              // Show welcome toast when user logs in
+
+              if (event === 'SIGNED_IN') {
+                handleSignedIn(mappedUser)
+              }
+            } else if (error) {
+              console.error("Error fetching user profile:", error),
+              setUser(null)
+            }
+          } catch (error) {
+            console.error("Error fetching user profile:", error),
+            setUser(null)
+<<<<<<< HEAD
+import { supabase, getFromProfiles } from "../../integrations/supabase/client";"
+import { useAuthOperations } from "../../hooks/useAuthOperations",;"
+import { AuthContext } from "./AuthContext",;"
+import { cleanupAuthState } from "../../utils/authUtils",;"
+import { useNavigate, useLocation } from 'react-router-dom',;'
+import { useAuthState } from "./useAuthState",;"
+import { useAuthEventHandlers } from "./useAuthEventHandlers",;"
+import { mapProfileToUser } from "./profileMapper",;"
+export const AuthProvider = ({ children }: { "children": React.ReactNode }) => {;
+  }
+=======
+
+        } else {
+          setUser(null);
+          // Show logout toast when user logs out
+          if (event === 'SIGNED_OUT') {
+            handleSignedOut()
+
+import React, { useEffect } from "react",;
+import { supabase, getFromProfiles } from "../../integrations/supabase/client",;
+import { useAuthOperations } from "../../hooks/useAuthOperations",;
+import { AuthContext } from "./AuthContext",;
+import { cleanupAuthState } from "../../utils/authUtils",;
+import { useNavigate, useLocation } from 'react-router-dom',;
+import { useAuthState } from "./useAuthState",;
+import { useAuthEventHandlers } from "./useAuthEventHandlers",;
+
+import { mapProfileToUser } from "./profileMapper",;
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
+  const {;
+    user, setUser,;
+    isLoading, setIsLoading,;
+    onboardingStep, setOnboardingStep;
+  } = useAuthOperations(setUser, setIsLoading),
+
+  // Wrapper for login to match the AuthContextType interface;
+  const login = async (email: string, password: string) => {
+    return loginImpl({ email, password })
+  // Wrapper for signup to match the AuthContextType interface;
+  const signup = async (email: string, password: string, userData?: any) => {
+    return signupImpl({ email, password, display_name: userData })
+  useEffect(() => {
     // Clean up any potential stale auth state before setting up listeners;
     cleanupAuthState(),
-    
-    
     const { data: { subscription } } = supabase.auth.onAuthStateChange()
       async (event, session) => {
         if (session?.user) {
           try {
   // TODO: Implement
-}
             const { data: profile, error } = await getFromProfiles()"
-              .select('*')''
-              .eq('id', session.user.id)'
+              .select('*')
+              .eq('id', session.user.id)
               .single(),
 
             if (profile) {
               const mappedUser = mapProfileToUser(session.user, profile),
               setUser(mappedUser),
-              
 
-              // Show welcome toast when user logs in;'
-              if (event === 'SIGNED_IN') {'
+              // Show welcome toast when user logs in;
+              if (event === 'SIGNED_IN') {
                 handleSignedIn(mappedUser)
-              }
-            } else if (error) {'
+            } else if (error) {
               console.error("Error fetching user profile:", error),"
               setUser(null)
-            }
           } catch (error) {"
-            console.error("Error fetching user profile:", error),"
-            setUser(null)
-"
 import React, { useEffect } from "react",;""
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",;""
 import { useAuthOperations } from "../../hooks/useAuthOperations",;""
 import { AuthContext } from "./AuthContext",;""
 import { cleanupAuthState } from "../../utils/authUtils",;""
-import { useNavigate, useLocation } from 'react-router-dom',;''
+import { useNavigate, useLocation } from 'react-router-dom',;
 import { useAuthState } from "./useAuthState",;""
 import { useAuthEventHandlers } from "./useAuthEventHandlers",;""
 import { mapProfileToUser } from "./profileMapper",;"
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
+    user, setUser,;
+    isLoading, setIsLoading,;
+pr-12325
+
   const {;
     user, setUser,;
     isLoading, setIsLoading,;
-    onboardingStep, setOnboardingStep;
+    onboardingStep, setOnboardingStep;) => {
+  return $3;}
+}
   } = useAuthState(),;
+<<<<<<< HEAD
+    }
+    "login": loginImpl,;
+    "signup": signupImpl,;
+=======
   const navigate = useNavigate(),;
   const location = useLocation(),;
   const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep),;
   const {;
     login: loginImpl,;
     signup: signupImpl,;
+pr-12325
+>>>>>>> origin/chore/fix-lint-and-merge
+    logout,;
+    resetPassword,;
+    updateProfile,;
+    loginWithGoogle,;
+    loginWithFacebook,;
+    loginWithTwitter,;}
+    loginWithWeb3;}
+  } = useAuthOperations(setUser, setIsLoading),;
+      async (event, session) => {;
+        if (session?.user) {;
+          try {;
+            const { data: profile, error } = await getFromProfiles();
+  } = useAuthOperations(setUser, setIsLoading),;
+
+  // Wrapper for login to match the AuthContextType interface;
+  const login = async (email: string, password: string) => {;
+    return loginImpl({ email, password });
+  };
+
+  // Wrapper for signup to match the AuthContextType interface;
+  const signup = async (email: string, password: string, userData?: any) => {;
+    return signupImpl({ email, password, display_name: userData });
+
+  useEffect(() => {;
+    // Clean up any potential stale auth state before setting up listeners;
+    cleanupAuthState();
+
+    const { data: { subscription } } = supabase && supabase.auth.onAuthStateChange(;)
+      async (event, session) => {;
+        if (session?.user) {;
+          try {;
+            const { data: profile, error } = await getFromProfiles();"
+pr-12325
+              .select('*');
+              .eq('id', session && session.user.id);
+              .single();
+              .select('*');''
+              .eq('id', session && session.user.id);'
+
+              .single();
+            if (profile) {;
+              const mappedUser = mapProfileToUser(session && session.user, profile);
+              setUser(mappedUser);
+              // Show welcome toast when user logs in;
+              if (event === 'SIGNED_IN') {;
+                handleSignedIn(mappedUser);
+              }
+            } else if (error) {;    login;
+    signup;
+    logout;
+    resetPassword;
+    updateProfile;    login,;
+    signup,;
     logout,;
     resetPassword,;
     updateProfile,;
@@ -149,57 +294,48 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
   const login = async (email: string, password: string) => {;
     return loginImpl({ email, password });
   };
-
-  // Wrapper for signup to match the AuthContextType interface;
-  const signup = async (email: string, password: string, userData?: any) => {;
-    return signupImpl({ email, password, display_name: userData });
-  };
+    loginWithWeb3,;
+    onboardingStep;
+  return (;
+    <AuthContext.Provider value={authContextValue}>;
+      {children}
+    </AuthContext.Provider>;
+  )
+};
 
   useEffect(() => {;
     // Clean up any potential stale auth state before setting up listeners;
     cleanupAuthState();
 
-    const { data: { subscription } } = supabase && supabase.auth.onAuthStateChange(;)
+    const { data: { subscription } } = supabase && supabase.auth.onAuthStateChange(;
+
       async (event, session) => {;
         if (session?.user) {;
           try {;
-            const { data: profile, error } = await getFromProfiles();"
-              .select('*');''
-              .eq('id', session && session.user.id);'
-              .single();
+            const { data: profile, error } = await getFromProfiles();'
+              .select('*');
 
-            if (profile) {;
-              const mappedUser = mapProfileToUser(session && session.user, profile);
-              setUser(mappedUser);
-
-              // Show welcome toast when user logs in;'
-              if (event === 'SIGNED_IN') {;'
-                handleSignedIn(mappedUser);
               }
-            } else if (error) {;'
-              console && console.error("Error fetching user profile:", error);"
+            } else if (error) {;
+"
+              console && console.error("Error fetching user profile:", error);
               setUser(null);
             }
           } catch (error) {;"
-            console && console.error("Error fetching user profile:", error);"
+            console && console.error("Error fetching user profile:", error);
             setUser(null);
           }
         } else {;
           setUser(null);
 
-
-          // Show logout toast when user logs out;"
-          if (event === 'SIGNED_OUT') {;'
-            handleSignedOut();
-
           // Show logout toast when user logs out;'
-          if (event === 'SIGNED_OUT') {;'
+          if (event === 'SIGNED_OUT') {;
             handleSignedOut();
+
           }
         }
         setIsLoading(false);
       }
-
 
     // Initial session check;
     supabase && supabase.auth.getSession().then(({ data: { session } }) => {;
@@ -216,35 +352,30 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
     }
   }, [navigate]);
 
-
   const authContextValue = {;
     user;
     isLoading;
     isAuthenticated: !!user,;
 
-
     login;
     signup;
     logout;
     resetPassword;
-    updateProfile;'
-import React, { useEffect } from './react';''
-import { supabase, getFromProfiles } from '../../integrations / supabase / client';''
-import { useAuthOperations } from '../../hooks / useAuthOperations';''
-import { AuthContext } from './AuthContext';''
-import { cleanupAuthState } from '../../utils / auth_utils';''
-import {use_navigate, use_location} from 'react-router-dom';''
-import { useAuthState } from './useAuthState';''
-import { useAuthEventHandlers } from './useAuthEventHandlers';''
-import { mapProfileToUser } from './profile_mapper';'
-export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: any {
-  // TODO: Implement
-}
-  const {
-  // TODO: Implement
-}
+    updateProfile;
+'
+import React, { useEffect } from './react';'
+import { supabase, getFromProfiles } from '../../integrations / supabase / client';'
+import { useAuthOperations } from '../../hooks / useAuthOperations';'
+import { AuthContext } from './AuthContext';'
+import { cleanupAuthState } from '../../utils / auth_utils';'
+import {use_navigate, use_location} from 'react-router-dom';'
+import { useAuthState } from './useAuthState';'
+import { useAuthEventHandlers } from './useAuthEventHandlers';'
+import { mapProfileToUser } from './profile_mapper';
+export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: any {}
+  const {}
     user, set_user,
-    is_loading, setIsLoading,
+    is_loading, setIsLoading,;
     onboarding_step, setOnboardingStep;
   } = useAuthState ();
 ;
@@ -252,14 +383,13 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
   const location = use_location ();
   const { handleSignedIn, handleSignedOut } = useAuthEventHandlers (set_user, setOnboardingStep);
 ;
-  const {
-  // TODO: Implement
-}
+  const {}
     login: login_impl,
     signup: signup_impl,
     logout;
     reset_password;
     update_profile;
+
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
@@ -268,58 +398,50 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
     onboardingStep;
   };
 
-
   return (
     <AuthContext && AuthContext.Provider value={authContextValue}>;
-</AuthContext>
-    </AuthContext && AuthContext.Provider>;)
-  );
-};
+      {children}
 
     onboardingStep;
   };
   return (;
     <AuthContext.Provider value={authContextValue}>;
-</AuthContext>
+      {children}
     </AuthContext.Provider>;
   return (
     <AuthContext && AuthContext.Provider value={authContextValue}>;
-</AuthContext>
-    </AuthContext && AuthContext.Provider>;)
-  );
-};
+      {children}
+
   } = useAuthOperations (set_user, setIsLoading);
 ;
   // Wrapper for login to match the AuthContextType interface;
-  const login = async (email: string, password: string) => {
+  const login = async (email: string, password: string) => {}
     return login_impl ({ email, password });
   }
 ;
   // Wrapper for signup to match the AuthContextType interface;
-  const signup = async (email: string, password: string, user_data?: any) => {
+  const signup = async (email: string, password: string, user_data?: any) => {}
     return signup_impl ({ email, password, display_name: user_data });
   }
 ;
-  useEffect (() => {
+  useEffect (() => {}
     // Clean up any potential stale auth state before setting up listeners;
     cleanupAuthState ();
 ;
-    const { data: { subscription } } = supabase.auth.onAuthStateChange ()
-      async (event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange (
+      async (event, session) => {}
         // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
-          try {
-  // TODO: Implement
-}
+          try {}
             const { data: profile, error } = await getFromProfiles ();'
-              .select ('*');''
-              .eq ('id', session.user.id);'
+              .select ('*');'
+              .eq ('id', session.user.id);
               .single ();
 ;
             // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
               const mapped_user = mapProfileToUser (session.user, profile);
@@ -327,55 +449,52 @@ if ( {) {
 ;
               // Show welcome toast when user logs in;
               // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
                 handleSignedIn (mapped_user);
               }
             } else // Check condition;
-if ( {) {
+if ( {) {}
   $2;
-}'
-              console.error ("Error fetching user profile:", error);"
+}"
+              console.error ("Error fetching user profile:", error);
               set_user (null);
             }
           } catch (error) {"
-            console.error ("Error fetching user profile:", error);"
+            console.error ("Error fetching user profile:", error);
             set_user (null);
           }
-        } else {
-  // TODO: Implement
-}
+        } else {}
           set_user (null);
 ;
           // Show logout toast when user logs out;
           // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
             handleSignedOut ();
           }
         }
         setIsLoading (false);
-      }
-    );
+      });
 ;
     // Initial session check;
-    supabase.auth.get_session ().then (({ data: { session } }) => {
+    supabase.auth.get_session ().then (({ data: { session } }) => {}
       // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }
         setIsLoading (false);
       }
     });
 ;
-    return () => {
+    return () => {}
       subscription.unsubscribe ();
     }
   }, [navigate]);
 ;
-  const authContextValue = {
+  const authContextValue = {}
     user;
     is_loading;
     is_authenticated: !!user,
@@ -393,26 +512,11 @@ if ( {) {
 ;
   return (
     <AuthContext.Provider value={authContextValue}>;
-</AuthContext>)
+      {children}
     </AuthContext.Provider>);
 }
 ;
 
-};
-
-
-};
-
-    onboardingStep;
-  }
-  return (
-    <AuthContext.Provider value={authContextValue}>
-</AuthContext>
-    </AuthContext.Provider>)
-  )
-}
-
-};
     ),;
     // Initial session check;
     supabase.auth.getSession().then(({ data: { session } }) => {;
@@ -428,7 +532,9 @@ if ( {) {
     user,;
     isLoading,;
     isAuthenticated: !!user,;
+
     login,;
+
     signup,;
     logout,;
     resetPassword,;
@@ -438,15 +544,192 @@ if ( {) {
     loginWithTwitter,;
     loginWithWeb3,;
     onboardingStep;
-  };
+
   return (;
     <AuthContext.Provider value={authContextValue}>;
-</AuthContext>
-    </AuthContext.Provider>;)
+
+    </AuthContext.Provider>;
+  return (
+    <AuthContext && AuthContext.Provider value={authContextValue}>;
+      {children}
+    </AuthContext && AuthContext.Provider>;
   );
 };
 
+  } = useAuthOperations (set_user, setIsLoading);
+  // Wrapper for login to match the AuthContextType interface;
+    return login_impl ({ email, password });
+  // Wrapper for signup to match the AuthContextType interface;
+  const signup = async (email: string, password: string, user_data?: any) => {
+    return signup_impl ({ email, password, display_name: user_data });
+  useEffect (() => {
+    // Clean up any potential stale auth state before setting up listeners;
+    cleanupAuthState ();
+    const { data: { subscription } } = supabase.auth.onAuthStateChange ()
+        // Check condition;
+if ( {) {
+  $2;
+  // TODO: Implement
+            const { data: profile, error } = await getFromProfiles ();
+              .select ('*');
+              .eq ('id', session.user.id);
+              .single ();
+            // Check condition;
+              const mapped_user = mapProfileToUser (session.user, profile);
+              set_user (mapped_user);
+              // Show welcome toast when user logs in;
+              // Check condition;
+                handleSignedIn (mapped_user);
+            } else // Check condition;
+              console.error ("Error fetching user profile:", error);"
+              set_user (null);
+        } else {
+  // TODO: Implement
+          // Show logout toast when user logs out;
+          // Check condition;
+            handleSignedOut ();
+        setIsLoading (false);
+    // Initial session check;
+    supabase.auth.get_session ().then (({ data: { session } }) => {
+      // Check condition;
+    return () => {
+      subscription.unsubscribe ();
+  const authContextValue = {
+    is_loading;
+    is_authenticated: !!user,
+    onboarding_step;
+)
+    </AuthContext.Provider>);
+}
+;
+};
 
+};
+
+    <AuthContext.Provider value={authContextValue}>
+
+};
+    </AuthContext.Provider>)
+
+    ),;
+    // Initial session check;
+    supabase.auth.getSession().then(({ data: { session } }) => {;
+    }),;
+      subscription.unsubscribe();
+  }, [navigate]),;
+    user,;
+    isLoading,;
+    isAuthenticated: !!user,;
+} = useAuthState(),;
+  ;
+  const navigate = useNavigate(),;
+  const location = useLocation(),;
+  const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep),;
+;
+  const {;
+    login:loginImpl,;
+    signup:signupImpl,;
+    logout,;
+    resetPassword,;
+    updateProfile,;
+    loginWithGoogle,;
+    loginWithFacebook,;
+    loginWithTwitter,;
+    loginWithWeb3;
+  } = useAuthOperations(setUser, setIsLoading),;
+;
+  // Wrapper for login to match the AuthContextType interface;
+  const login = async (email:string, password:string) => {;
+    return loginImpl({ email, password }),;
+  },;
+;
+  // Wrapper for signup to match the AuthContextType interface;
+  const signup = async (email:string, password:string, userData?:any) => {;
+    return signupImpl({ email, password, display_name:userData }),;
+  },;
+;
+  useEffect(() => {;
+    // Clean up any potential stale auth state before setting up listeners;
+    cleanupAuthState(),;
+    ;
+    const { data:{ subscription } } = supabase.auth.onAuthStateChange(;
+      async (event, session) => {;
+        if (session?.user) {;
+          try {;
+            const { data:profile, error } = await getFromProfiles();
+              .select('*');
+              .eq('id', session.user.id);
+              .single(),;
+;
+            if (profile) {;
+              const mappedUser = mapProfileToUser(session.user, profile),;
+              setUser(mappedUser),;
+              ;
+              // Show welcome toast when user logs in;
+              if (event === 'SIGNED_IN') {;
+                handleSignedIn(mappedUser),;
+              }
+            } else if (error) {;
+              console.error("Error fetching user profile:", error),;
+              setUser(null),;
+            }
+          } catch (error) {;
+            console.error("Error fetching user profile:", error),;
+            setUser(null),;
+          }
+        } else {;
+          setUser(null),;
+          ;
+          // Show logout toast when user logs out;
+          if (event === 'SIGNED_OUT') {;
+            handleSignedOut(),;          }
+            if (profile) {const mappedUser = mapProfileToUser(session.user, profile);
+              setUser(mappedUser);
+              // Show welcome toast when user logs in,
+if (event === 'SIGNEDIN') {
+                handleSignedIn(mappedUser)}
+            } else if (error) {setUser(null)}
+          } catch (error) {setUser(null)}
+        } else {setUser(null);
+          // Show logout toast when user logs out,
+if (event === 'SIGNEDOUT') {
+            handleSignedOut()}
+        }
+        setIsLoading(false),;
+      }
+    ),;
+;
+    // Initial session check;
+    supabase.auth.getSession().then(({ data:{ session } }) => {;
+      if (!session) {;
+        setIsLoading(false),;
+      }
+    }),;
+;
+    return () => {;
+      subscription.unsubscribe(),;
+    },;
+  }, [navigate]),;
+;
+  const authContextValue = {;
+    user,;
+    isLoading,;
+    isAuthenticated:!!user,;
+    login,;
+
+    signup,;
+    loginWithWeb3,;
+
+    onboardingStep;
+},;
+;
+  };
+  return (;
+    <AuthContext.Provider value={authContextValue}>;
+      {children}
+    </AuthContext.Provider>;
+
+};
 
   ),;},
  export const AuthProvider = ({
@@ -454,74 +737,46 @@ if ( {) {
 }: {
   children: React.ReactNode;)
 }) => {
-  const {
   // TODO: Implement
-}
   user, setUser;
 isLoading, setIsLoading;
-onboardingStep, setOnboardingStep;
 }= useAuthState ();
 const navigate = useNavigate ();
 const location = useLocation ();
-const {
   // TODO: Implement
-}
   handleSignedIn, handleSignedOut;
 }= useAuthEventHandlers (setUser, setOnboardingStep);
-const {
   // TODO: Implement
-}
   login: loginImpl;,
   signup: signupImpl;
-logout;
-resetPassword;
-updateProfile;
-loginWithGoogle;
-loginWithFacebook;
-loginWithTwitter;
-loginWithWeb3;
 }= useAuthOperations (setUser, setIsLoading);
 //Wrapper for login to match the AuthContextType interface const login = async (email: string, password: string) => {
   return loginImpl ({
   email, password;)
 }) 
-};
 //Wrapper for signup to match the AuthContextType interface const signup = async (email: string, password: string, userData?: any) => {
   return signupImpl ({
   email, password, display name: userData;)
-}) 
-};
 useEffect ( () => {
   //Clean up any potential stale auth state before setting up listeners cleanupAuthState ();
 data: {
   subscription;
-}
 }= supabase.auth.onAuthStateChange (async (event, session) => {
-  if (session?.user) {
-  try {
   // TODO: Implement
-}
-  const {
   // TODO: Implement
-}
   data: profile, error;"
-}= await getFromProfiles () .select ('*') .eq ('id', session.user.id) .single ();'
-}
+}= await getFromProfiles () .select ('*') .eq ('id', session.user.id) .single ();
 }else {
   // TODO: Implement
-}
-  setUser (null);'
-//Show logout toast when user logs out if (event === 'SIGNED OUT') {'
+  setUser (null);
+//Show logout toast when user logs out if (event === 'SIGNED OUT') {
   handleSignedOut () 
-}
 }setIsLoading (false) 
-});
 //Initial session check return (<AuthContext.Provider value= {
   authContextValue;
 }> {
-</AuthContext>)
 }</AuthContext.Provider>) 
+pr-12325
 };
   );
 };
-'

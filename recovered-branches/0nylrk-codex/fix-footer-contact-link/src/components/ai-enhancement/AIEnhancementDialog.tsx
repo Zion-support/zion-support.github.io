@@ -1,48 +1,41 @@
-
-
-
-  title: string,
+title: string,
   isOpen: boolean,
   onClose: () => void,
   onApply: (content: string) => void,
   defaultOptions: AIEnhancementOptions,
   initialContent?: string;
+
 }
 
 export function AIEnhancementDialog({;
-import React from 'react';'
-  title;
-  isOpen;
-  onClose;
-  onApply;
-  defaultOptions;
-'
-import React from 'react',;'
+import React from 'react';
+
+import React from 'react',;
+
 import {;
   Dialog,;
   DialogContent,;
   DialogHeader,;'
-  DialogTitle} from '@/components/ui/dialog',;''
-import { AIEnhancementPanel } from './AIEnhancementPanel',;''
-import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;'
+  DialogTitle} from '@/components/ui/dialog',;'
+import { AIEnhancementPanel } from './AIEnhancementPanel',;'
+import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
 interface AIEnhancementDialogProps {;
   title: string,;
-  isOpen: boolean,;)
+  isOpen: boolean,;
   onClose: () => void,;
   onApply: (content: string) => void,;
   defaultOptions: AIEnhancementOptions,;
   initialContent?: string;
 }
 
-
-  title: string;,
+  title: string;
   isOpen: boolean;
-  onClose: () => void;,
-  onApply: (content: string) => void;,
+  onClose: () => void;
+  onApply: (content: string) => void;
   defaultOptions: AIEnhancementOptions;
   initialContent?: string;
 }
-export function AIEnhancementDialog({
+export function AIEnhancementDialog({};
   title;
   isOpen;
   onClose;
@@ -54,12 +47,7 @@ export function AIEnhancementDialog({
   onClose,
   onApply,
   defaultOptions,
-  initialContent;)
-}: AIEnhancementDialogProps) {
 
-  const handleApply = (content: string) => {
-    onApply(content)
-    onClose()
   initialContent;
 }: AIEnhancementDialogProps) {;
   const handleApply = (content: string) => {;
@@ -67,56 +55,79 @@ export function AIEnhancementDialog({
     onClose();
   };
 
+  title;
+  isOpen;
+  onClose;
+  onApply;
+  defaultOptions;import React from 'react',;
+  defaultOptions;
 
   },
 
-  return ()
+  return (
+
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;
-</Dialog>'
-      <DialogContent className="max-w-3xl">;"
-</DialogContent>
+      <DialogContent className="max-w-3xl">;
         <DialogHeader>;
-</DialogHeader>
           <DialogTitle>{title}</DialogTitle>;
         </DialogHeader>;
-        <AIEnhancementPanel;
+
           title={title}
+
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
 
-        />;
-</AIEnhancementPanel>
-      </DialogContent>;
-    </Dialog>;
-    <Dialog open={is_open} onOpenChange={() => on_close ()}>;
-</Dialog>"
-      <DialogContent className="max - w-3xl">;"
-</DialogContent>
+'
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';'
+import {AIEnhancementPanel} from './AIEnhancementPanel';'
+import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
+interface AIEnhancementDialogProps {}
+
+  title: string,
+  is_open: boolean,
+  on_close: () => void,
+  on_apply: (content: string) => void,
+  default_options: AIEnhancementOptions,
+  initial_content?: string;
+}
+
+    on_apply (content),
+    on_close ();
+  }
+;
+  return (
+
+      <DialogContent className="max - w-3xl">;
         <DialogHeader>;
-</DialogHeader>
           <DialogTitle>{title}</DialogTitle>;
         </DialogHeader>;
         <AIEnhancementPanel;
           title={title}
+
           default_options={default_options}
           on_apply={handle_apply}
           initial_content={initial_content}
         />;
-</AIEnhancementPanel>
       </DialogContent>;
     </Dialog>);
+}
+
+  ),;});
  <DialogHeader> <DialogTitle> {
-</DialogHeader>
-}</DialogTitle> </DialogHeader> <AIEnhancementPanel title= {
-  title;
+
+}  <AIEnhancementPanel title= {
 }defaultOptions= {
-  defaultOptions;
 }onApply= {
   handleApply;
 }initialContent= {
+}/>  ) 
+
+pr-12325
   initialContent;
 }/> </DialogContent> </Dialog>) 
 </AIEnhancementPanel>
       </DialogContent>
-    </Dialog>"
+    </Dialog>
+  )
+}

@@ -1,91 +1,124 @@
-import * as React from "react";""
-import * as LabelPrimitive from "@radix-ui/react-label";""
-import { cva, type, VariantProps } from "class-variance-authority";""
-import * as React from "react";""
-import * as LabelPrimitive from "@radix-ui/react-label";""
-import { cva, type, VariantProps } from "class-variance-authority";""
-import * as React from "react"""
-import * as LabelPrimitive from "@radix-ui/react-label"""
-import {cva, type, VariantProps} from "class-variance-authority"""
-import {cn} from "@/lib/utils"""
-import { cva, type VariantProps } from "class-variance-authority"""
-import { cn } from "@/lib/utils"""
-import { cn } from "@/lib/utils";"
-const labelVariants = cva("
-  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70",")
+import * as React from "react";
+import * as LabelPrimitive from "@radix-ui/react-label";
+
+import { cva, type, VariantProps } from "class-variance-authority";
+
+  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70",
 );
 
-const Label = React.forwardRef<
-  React.ElementRef<typeof LabelPrimitive.Root>
-</typeof>
-
-  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &
-</typeof>
-    VariantProps<typeof labelVariants>
-</typeof>
-  <LabelPrimitive.Root;"
-import * as React from './react';''
-import * as LabelPrimitive from "@radix - ui / react - label";""
-import { cva, type, VariantProps  } from './class - variance - authority';'
-;'
-import { cn  } from '@/lib / utils';'
-const label_variants = cva ('
-  "text - sm font - medium leading - none peer - disabled: cursor - not - allowed peer - disabled:opacity - 70","
-    ref={ref})
+<<<<<<< HEAD
+import { cn } from "@/lib/utils";    ref={ref}"
     className={cn(labelVariants(), className)}
     {...props}
-  />
-</LabelPrimitive>
+=======
+const Label = React.forwardRef<
+  React.ElementRef<typeof LabelPrimitive.Root>
+
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &
+    VariantProps<typeof labelVariants>
+>(({ className, ...props }, ref) => (
+
+  <LabelPrimitive.Root;
+"
+import * as React from "react";"
+import * as LabelPrimitive from "@radix-ui/react-label";"
+>>>>>>> origin/chore/fix-lint-and-merge
+import { cva, type VariantProps } from "class-variance-authority";"
+import { cn } from "@/lib/utils";
+const labelVariants = cva(;"
+  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";
+
+<<<<<<< HEAD
+);
+;
 const Label = React.forward_ref<;
   React.ElementRef < typeof LabelPrimitive.Root>,
   React.ComponentPropsWithoutRef < typeof LabelPrimitive.Root> &;
     VariantProps < typeof label_variants>;
 >(({ class_name, ...props }, ref) => (
   <LabelPrimitive.Root;
-"
-import React from 'react';''
-import * as React from "react";""
-import * as LabelPrimitive from "@radix-ui/react-label";""
-import {cva, type, VariantProps} from "class-variance-authority";""
+
+import React from 'react';'
+import {cva, type, VariantProps} from "class-variance-authority";"
+
 import {cn} from "@/lib/utils";"
-const labelVariants = cva(;"
-  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";")
+
+  "text-sm font-medium leading-none peer-"disabled": cursor-not-allowed peer-"disabled":opacity-70";"
 );
 
 const Label = React && React.forwardRef<;
   React && React.ElementRef<typeof LabelPrimitive && LabelPrimitive.Root>,;
-</LabelPrimitive>
   React && React.ComponentPropsWithoutRef<typeof LabelPrimitive && LabelPrimitive.Root> &;
-</typeof>
     VariantProps<typeof labelVariants>;
-</typeof>
-  <LabelPrimitive&& LabelPrimitive.Root;
-    ref={ref}
+>(({ className, ...props }, ref) => (;
+  <LabelPrimitive&& LabelPrimitive.Root    ref={ref}
     className={cn (label_variants (), class_name)}
-    {...props}"
-import * as React from "react";""
-import * as LabelPrimitive from "@radix-ui/react-label";""
-import { cva, type VariantProps } from "class-variance-authority";""
-import { cn } from "@/lib/utils";"
-const labelVariants = cva(;"
-  "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70";")
+    {...props}
+  "text-sm font-medium leading-none peer-"disabled":cursor-not-allowed peer-"disabled":opacity-70";"
 );
 ;
 const Label = React.forwardRef<;
   React.ElementRef<typeof LabelPrimitive.Root>,;
-</LabelPrimitive>
-const Label = React.forwardRef<;
+);
   React.ElementRef<typeof LabelPrimitive.Root>;
-</typeof>
   React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &;
-</typeof>
     VariantProps<typeof labelVariants>;
-</typeof>
+>(({ className, ...props }, ref) => (;
   <LabelPrimitive.Root;
+    ref={ref}
+    className={cn(labelVariants(), className)}
+    {...props} />
+));
+Label.displayName = LabelPrimitive.Root.displayName;
+export { Label }
+export { Label }
+;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+    ref={ref}
+    className={cn(labelVariants(), className)}
+    {...props}
+  />;
+));
+Label && Label.displayName = LabelPrimitive && LabelPrimitive.Root.displayName;
+
     ref={ref}
     className={cn(labelVariants(), className)}
     {...props}
   />
+));
+Label.displayName = LabelPrimitive.Root.displayName;
+export { Label };
+  />));
+Label.display_name = LabelPrimitive.Root.display_name;
+;
+
+Label.displayName = LabelPrimitive.Root.displayName;
+;
+"
+import React from 'react';
+import {cva, type, VariantProps} from "class-variance-authority";""
+import {cn} from "@/lib/utils";"
+const labelVariants = cva(;"
+  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";")
+
+const Label = React && React.forwardRef<;
+  React && React.ElementRef<typeof LabelPrimitive && LabelPrimitive.Root>,;
+
+  React && React.ComponentPropsWithoutRef<typeof LabelPrimitive && LabelPrimitive.Root> &;
+    VariantProps<typeof labelVariants>;
+  <LabelPrimitive&& LabelPrimitive.Root;
+    ref={ref}
+    className={cn (label_variants (), class_name)}
+    {...props}"
+import { cva, type VariantProps } from "class-variance-authority";""
+  "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70";")
+const Label = React.forwardRef<;
+  React.ElementRef<typeof LabelPrimitive.Root>,;
+
+  React.ElementRef<typeof LabelPrimitive.Root>;
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &;
+
 </LabelPrimitive>
 export { Label } React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants> > ( ({
 </typeof>)
@@ -96,4 +129,8 @@ export { Label } React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & Va
 }{
   ...props;
 }/>) ) Label.displayName = LabelPrimitive.Root.displayName export {
-</LabelPrimitive>"
+  Label 
+}
+Label.displayName = LabelPrimitive.Root.displayName;
+export { Label }
+;

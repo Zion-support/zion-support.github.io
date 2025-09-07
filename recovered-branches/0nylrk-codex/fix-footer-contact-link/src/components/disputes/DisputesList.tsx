@@ -1,322 +1,263 @@
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Dispute, DisputeStatus} from "@/types/disputes";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Skeleton} from "@/components/ui/skeleton";
+import {formatDistanceToNow} from "date-fns";
+import {ShieldAlert} from "lucide-react";
+import {Link} from "react-router-dom";
 
-
-
-
-import React, { useState } from "react";""
-import {Dispute, DisputeStatus} from "@/types/disputes";""
-import {Button} from "@/components/ui/button";""
-import {Badge} from "@/components/ui/badge";""
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";""
-import {Skeleton} from "@/components/ui/skeleton";""
-import {formatDistanceToNow} from "date-fns";""
-import {ShieldAlert} from "lucide-react";""
-import {Link} from "react-router-dom";""
-import React, { useState } from "react",""
-import { Dispute, DisputeStatus } from "@/types/disputes",""
-import { Button } from "@/components/ui/button",""
-import { Badge } from "@/components/ui/badge","
+import { Dispute, DisputeStatus } from "@/types/disputes";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
-  // TODO: Implement
-}
   Table,
   TableBody,
   TableCell,
   TableHead,
-  TableHeader,"
-  TableRow} from "@/components/ui/table",""
-import { Skeleton } from "@/components/ui/skeleton",""
-import { formatDistanceToNow } from "date-fns",""
-import { ShieldAlert } from "lucide-react",""
-import { Link } from "react-router-dom","
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Skeleton } from "@/components/ui/skeleton";
+import { formatDistanceToNow } from "date-fns";
+import { ShieldAlert } from "lucide-react";
+import { Link } from "react-router-dom";
+type DisputesListProps = $2;
+  isLoading: boolean},
+
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),
+
+  const filteredDisputes = statusFilter === "all" 
+    ? disputes 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 type DisputesListProps = {
-  disputes: Dispute[],
-  isLoading: boolean;
+  disputes: Dispute[]
+  isLoading: boolean
+
 }
-export function DisputesList({ disputes, isLoading }: DisputesListProps) {"
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");"
-</DisputeStatus>"
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");"
-</DisputeStatus>"
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),"
-</DisputeStatus>"
+export function DisputesList() { return null; }
+},
+
+type DisputesListProps = {
+  disputes: Dispute[]
+  isLoading: boolean
+
+  const getStatusBadgeVariant = (status: DisputeStatus) => {
+    switch (status) {
+      case "open": return "default";
+
+      case "under_review":
+
+        return "secondary"
+      case "resolved":
+        return "outline", // Changed from "success" to "outline"
+      case "closed":
+
+        return "outline",
+      default:"
+        return "default"
+    }
+
+  },
+
+  if (isLoading) {}
+    return ("
       <div className="space-y-4">"
-</div>"
         <div className="flex gap-2 mb-4">"
-</div>"
-            <Skeleton key={status} className="h-10 w-24" />"
-</Skeleton>
+          {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => ("
+            <Skeleton key={status} className="h-10 w-24" />
+          ))}
         </div>"
-        <div className="border rounded-md">"
-</div>
+
+        <div className="border rounded-md">
+
           <Table>
-</Table>
+
             <TableHeader>
-</TableHeader>
+
               <TableRow>
-</TableRow>
-                <TableHead>Case ID</TableHead>
-                <TableHead>Project</TableHead>
-                <TableHead>Parties</TableHead>
-                <TableHead>Created</TableHead>
-                <TableHead>Status</TableHead>"
-                <TableHead className="text-right">Actions</TableHead>"
+
+                <TableHead className="text-right">Actions</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-</TableBody>
-                <TableRow key={i}>
-</TableRow>"
-                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>""
-                  <TableCell><Skeleton className="h-4 w-40" /></TableCell>""
-                  <TableCell><Skeleton className="h-4 w-32" /></TableCell>""
-                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>""
-                  <TableCell><Skeleton className="h-6 w-20" /></TableCell>""
-                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>"
-                </TableRow>"
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");"
-</DisputeStatus>"
-  const [status_filter, setStatusFilter] = useState < DisputeStatus | "all">("all");"
-;"
-  const filtered_disputes = status_filter === "all";"
+              {[...Array(5)].map((_, i) => (
+
+import React, { useState } from "react",;
+import { Dispute, DisputeStatus } from "@/types/disputes",;
+import { Button } from "@/components/ui/button",;
+
+import { Badge } from "@/components/ui/badge",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;"
+  TableRow} from "@/components/ui/table",;"
+import { Skeleton } from "@/components/ui/skeleton",;"
+import { formatDistanceToNow } from "date-fns",;"
+import { ShieldAlert } from "lucide-react",;"
+import { Link } from "react-router-dom",;
+
+type DisputesListProps = {;
+  disputes: Dispute[],;
+  isLoading: boolean;
+};
+
+export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;"
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+"
+  const filteredDisputes = statusFilter === "all" ;
+    ? disputes ;
+    : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter);
+
+  const getStatusBadgeVariant = (status: DisputeStatus) => {;
+    switch (status) {;"
+      case "open": return "default";
+
+import React, { useState } from "react",;
+import { Dispute, DisputeStatus } from "@/types/disputes",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { formatDistanceToNow } from "date-fns",;
+import { ShieldAlert } from "lucide-react",;
+import { Link } from "react-router-dom",;
+
+      case "under_review":;
+        return "secondary",;
+      case "resolved":;
+        return "outline", // Changed from "success" to "outline";
+      case "closed":;
+import React, { useState } from './react';
+import { Dispute, DisputeStatus } from '@/types / disputes';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
+import { Skeleton } from '@/components / ui / skeleton';
+import { formatDistanceToNow } from './date - fns';
+import { ShieldAlert } from './lucide-react';
+
+import { Link } from './react-router-dom';
+type DisputesListProps = {}
+  disputes: Dispute[],
+  is_loading: boolean;
+}
+;
+export /**;
+ * DisputesList - Function description;
+ */
+
     ? disputes;
     : disputes.filter (dispute => dispute.status === status_filter);
 ;
   const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
-  // TODO: Implement
-}
-    switch (status) {"
-      case "open": return "default";""
-      case "under_review":;""
-        return "secondary",""
-      case "resolved":;""
-        return "outline", // Changed from './success'; to "outline";""
-      case "closed":;""
-        return "outline";"
+    switch (status) {
+      case "open": return "default";
+      case "under_review":;
+        return "secondary",
+      case "resolved":;
+        return "outline", // Changed from './success'; to "outline";
+
+        return "outline";
       default:;"
-        return "default";"
+        return "default";
     }
-
-
 
               ))}
             </TableBody>;
-          </Table>;
-        </div>;
-      </div>;"
-      <div className="text-center py-12 border rounded-md bg-muted/20">;"
-</div>"
-        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;"
-</ShieldAlert>"
-        <h3 className="text-xl font-medium">No disputes found</h3>;""
-        <p className="text-muted-foreground mt-2">;"
-</p>
-        </p>;
-      </div>;"
-    <div className="space-y-4">;"
-</div>"
-      <div className="flex gap-2 mb-4 overflow-x-auto pb-2">;"
-</div>
-        <Button;"
-          variant={statusFilter === "all" ? "default" : "outline"}""
-          onClick={() => setStatusFilter("all")}"
-</Button>
-        </Button>;
-        <Button;"
-          variant={statusFilter === "open" ? "default" : "outline"}""
-          onClick={() => setStatusFilter("open")}"
-</Button>
-        </Button>;
-        <Button;"
-          variant={statusFilter === "under_review" ? "default" : "outline"}""
-          onClick={() => setStatusFilter("under_review")}"
-</Button>
-        </Button>;
-        <Button;"
-          variant={statusFilter === "resolved" ? "default" : "outline"}""
-          onClick={() => setStatusFilter("resolved")}"
-</Button>
-        </Button>;"
-      <div className="space - y-4">;"
-</div>"
-        <div className="flex gap - 2 mb - 4">;"
-</div>"
-            <Skeleton key={status} className="h - 10 w - 24" />))}"
-</Skeleton>
-        </div>;"
-        <div className="border rounded - md">;"
-</div>
+
+        <div className="border rounded - md">;
           <Table>;
-</Table>
             <TableHeader>;
-</TableHeader>
               <TableRow>;
-</TableRow>
                 <TableHead > Case ID</TableHead>;
                 <TableHead > Project</TableHead>;
                 <TableHead > Parties</TableHead>;
                 <TableHead > Created</TableHead>;
-                <TableHead > Status</TableHead>;"
-                <TableHead className="text - right">Actions</TableHead>;"
+
+                <TableHead className="text - right">Actions</TableHead>;
               </TableRow>;
             </TableHeader>;
             <TableBody>;
-</TableBody>
-                <TableRow key={i}>;
-</TableRow>"
-                  <TableCell><Skeleton className="h - 4 w - 24" /></TableCell>;""
-                  <TableCell><Skeleton className="h - 4 w - 40" /></TableCell>;""
-                  <TableCell><Skeleton className="h - 4 w - 32" /></TableCell>;""
-                  <TableCell><Skeleton className="h - 4 w - 24" /></TableCell>;""
-                  <TableCell><Skeleton className="h - 6 w - 20" /></TableCell>;""
-                  <TableCell className="text - right"><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell>;"
+              {[...Array (5)].map ((_, i) => (
+
+                  <TableCell className="text - right"><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell>;
                 </TableRow>))}
             </TableBody>;
           </Table>;
         </div>;
-      </div>);"
-      <div className="text - center py - 12 border rounded - md bg - muted / 20">;"
-</div>"
-        <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb - 4" />;"
-</ShieldAlert>"
-        <h3 className="text - xl font - medium">No disputes found</h3>;""
-        <p className="text - muted - foreground mt - 2">;"
-</p>
+      </div>);
+  }
+
+        <p className="text - muted - foreground mt - 2">;
+          No active disputes match the selected filter;
         </p>;
-      </div>);"
-    <div className="space - y-4">;"
-</div>"
-      <div className="flex gap - 2 mb - 4 overflow - x-auto pb - 2">;"
-</div>
-        <Button;"
-          variant={status_filter === "all" ? "default" : "outline"}""
-          on_click={() => setStatusFilter ("all")}"
-</Button>
+      </div>);
+  }
+
+          size="sm";
+        >;
+          All;
         </Button>;
-        <Button;"
-          variant={status_filter === "open" ? "default" : "outline"}""
-          on_click={() => setStatusFilter ("open")}"
-</Button>
+
+          size="sm";
+        >;
+          Open;
         </Button>;
-        <Button;"
-          variant={status_filter === "under_review" ? "default" : "outline"}""
-          on_click={() => setStatusFilter ("under_review")}"
-</Button>
+
+          size="sm";
+        >;
+          Under Review;
         </Button>;
-        <Button;"
-          variant={status_filter === "resolved" ? "default" : "outline"}""
-          on_click={() => setStatusFilter ("resolved")}"
-</Button>
+
+          size="sm";
+        >;
+          Resolved;
         </Button>;
-        <Button;"
-          variant={status_filter === "closed" ? "default" : "outline"}""
-          on_click={() => setStatusFilter ("closed")}"
-</Button>
+
+          size="sm";
+        >;
+          Closed;
         </Button>;
-      </div>;"
-      <div className="border rounded - md overflow - hidden">;"
-</div>
-        <Table>;
-</Table>
-          <TableHeader>;
-</TableHeader>
-            <TableRow>;
-</TableRow>
-              <TableHead > Case ID</TableHead>;
-              <TableHead > Project</TableHead>;
-              <TableHead > Parties</TableHead>;
-              <TableHead > Created</TableHead>;
-              <TableHead > Status</TableHead>;"
-              <TableHead className="text - right">Actions</TableHead>;"
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-</TableBody>
-              <TableRow key={dispute.id}>;
-</TableRow>"
-                <TableCell className="font - mono text - xs">;"
-</TableCell>
-                </TableCell>;
-                <TableCell>;
-</TableCell>
-                </TableCell>;
-                <TableCell>;
-</TableCell>"
-                  <div className="flex flex - col text - sm">;"
-</div>
+      </div>;
+
+<div className="flex flex-col text-sm">;
                     <span>;
-</span>
+                      Client:{dispute.client_profile?.display_name || "Unknown Client"}
                     </span>;
                     <span>;
-</span>
+                      Talent:{dispute.talent_profile?.display_name || "Unknown Talent"}
                     </span>;
                   </div>;
                 </TableCell>;
                 <TableCell>;
-</TableCell>
 
-
-
+</TableBody>
+        </Table>
+      </div>
+    </div>
+  )
+}
           </TableBody>;
         </Table>;
       </div>;
     </div>;
+  );
+}
+
+;
+                  {formatDistanceToNow(new Date(dispute.created_at), { addSuffix:true })}
                 </TableCell>;
                 <TableCell>;
-</TableCell>
-                  <Badge variant={getStatusBadgeVariant (dispute.status)}>;
-</Badge>
-                  </Badge>;
-                </TableCell>;"
-                <TableCell className="text - right">;"
-</TableCell>"
-                  <Button as_child size="sm">;"
-</Button>
-                    <Link to={`/dashboard / disputes/${dispute.id}`}>View Details</Link>;
-                  </Button>;
-                </TableCell>;
-              </TableRow>))}
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>);
-                </TableCell>;
-                <TableCell>;
-</TableCell>
-                </TableCell>;
-                <TableCell>;
-</TableCell>
-                  <Badge variant={getStatusBadgeVariant(dispute.status)}>;
-</Badge>
-                  </Badge>;
-                </TableCell>;"
-                <TableCell className="text-right">;"
-</TableCell>"
-                  <Button asChild size="sm">;"
-</Button>
-                    <Link to={`/dashboard/disputes/${dispute.id}`}>View Details</Link>;
-                  </Button>;
-                </TableCell>;
-              </TableRow>;
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>;"
-  return (<div className="space-y-4" > <div className="flex gap-2 mb-4" > {"
-</div>)"
-  ["All", "Open", "Under Review", "Resolved", "Closed" ].map ( (status) => (<Skeleton key= {"
-  status;"
-}className="h-10 w-24" />"
-</Skeleton>"
-}</div> <div className="border rounded-md" > <Table> <TableHeader> <TableRow> <TableHead>Case ID</TableHead> <TableHead>Project</TableHead> <TableHead>Parties</TableHead> <TableHead>Created</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {"
-</div>)
-  [...Array (5) ].map ( (, i) => (<TableRow key= {
-  i;)"
-}> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-4 w-40" /></TableCell> <TableCell><Skeleton className="h-4 w-32" /></TableCell> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-6 w-20" /></TableCell> <TableCell className="text-right" ><Skeleton className="h-9 w-20 ml-auto" /></TableCell> </TableRow>) )"
-}</TableBody> </Table> </div> </div>) "
-}> All </Button> <Button > Open </Button> <Button > Under Review </Button> <Button > Resolved </Button> <Button > Closed </Button> </div> <div className="border rounded-md overflow-hidden" > <Table> <TableHeader> <TableRow> <TableHead>Case ID</TableHead> <TableHead>Project</TableHead> <TableHead>Parties</TableHead> <TableHead>Created</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {"
-  filteredDisputes.map ( (dispute) => (<TableRow key= {
-  dispute.id;"
-}> </TableCell> <TableCell> <div className="flex flex-col text-sm" > <span> </span> </div> </TableCell> <TableCell> {"
-</TableRow>)
-}</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) 
-}</TableBody> </Table> </div> </div>) "

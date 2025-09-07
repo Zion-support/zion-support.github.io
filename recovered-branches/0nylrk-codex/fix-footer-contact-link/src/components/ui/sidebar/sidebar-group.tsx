@@ -1,14 +1,20 @@
-import React, { forwardRef } from "react";""
-import { ChevronDown } from "lucide-react";""
-import { cn } from "@/lib/utils";""
-import { SafeRef } from "@/types/ref-types";"
-interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-</HTMLDivElement>
-const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
-</HTMLDivElement>
-const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
-</HTMLDivElement>
-interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement> {
+import React, { forwardRef } from "react";
+import { ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { SafeRef } from "@/types/ref-types";
+
+  icon?: React && React.ReactNode;
+
+  defaultExpanded?: boolean;
+  showChevron?: boolean;
+}
+
+import React, { forward_ref } from './react';'
+import { ChevronDown  } from './lucide-react';'
+import { cn  } from '@/lib / utils';'
+import { SafeRef  } from '@/types / ref - types';
+interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement> {}
+
   title?: string;
   icon?: React.ReactNode;
   default_expanded?: boolean;
@@ -16,7 +22,7 @@ interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement> {
 }
 const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
   (
-    {
+
       title,
       icon,
       default_expanded = true,
@@ -25,105 +31,144 @@ const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
       children,
       ...props;
     },
-    ref,)
-  ) => {
+    ref,
+
     const [expanded, set_expanded] = React.useState (default_expanded);
 ;
     return (
       <div;
-        ref={ref as SafeRef < HTMLDivElement>}
-</div>
+
+        className={cn ("px - 3 py - 2", class_name)}
+
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
-</HTMLDivElement>
+  ({ title, icon, defaultExpanded = true, showChevron = true, className, children, ...props }, ref) => {;
+    const [expanded, setExpanded] = React && React.useState(defaultExpanded);
+
+import React, { forwardRef } from "react",
+import { ChevronDown } from "lucide-react",
+import { cn } from "@/lib/utils";
+import { SafeRef } from "@/types/ref-types";
+import { cn } from "@/lib/utils",
+import { SafeRef } from "@/types/ref-types",
+
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-</HTMLDivElement>
+  title?: string,
+  icon?: React.ReactNode,
+  defaultExpanded?: boolean,
+  showChevron?: boolean
+
+}
+
+<<<<<<< HEAD
+const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
+  (
+    {
+      }
+      title,
+icon
+      defaultExpanded = true,
+showChevron = true,
+className
+      children
+      ...props
+    }
+    ref
+  ) => {
+    }
+    const [expanded, setExpanded] = React.useState(defaultExpanded);
+return (;
+      <div
+}
+import { ChevronDown } from "lucide-react";"
+import { cn } from "@/lib/utils",;"
+import { SafeRef } from "@/types/ref-types",;"
+=======
+import React, { forwardRef } from "react",;
+import { ChevronDown } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+
+import { SafeRef } from "@/types/ref-types",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
-</HTMLDivElement>
+  title?: string,;
+  icon?: React.ReactNode,;
+  defaultExpanded?: boolean,;
+  showChevron?: boolean;
+}
+;
 const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
-</HTMLDivElement>
+  ({ title, icon, defaultExpanded = true, showChevron = true, className, children, ...props }, ref) => {;
+    const [expanded, setExpanded] = React.useState(defaultExpanded),;
+    return (;
       <div;
 
         ref={ref as SafeRef<HTMLDivElement>}
-</div>
-          <button;"
-            type="button"""
-            className="flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground hover:bg-secondary/30"")
+        className={cn("px-3 py-2", className)}
+        {...props}
+      >
+        {title && (
+          <button
+            type="button"
+            className="flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground hover:bg-secondary/30"
             onClick={() => setExpanded(!expanded)}
-</button>"
-            <div className="flex items-center gap-2">"
-</div>
+          >
+            <div className="flex items-center gap-2">
+              {icon}
               <span>{title}</span>
             </div>
-              <ChevronDown;
-                className={cn("
-                  "h-4 w-4 transition-transform",""
-                  expanded ? "rotate-0" : "-rotate-90",")
+            {showChevron && (
+              <ChevronDown
+                className={cn(
+                  "h-4 w-4 transition-transform",
+                  expanded ? "rotate-0" : "-rotate-90",
                 )}
               />
-</ChevronDown>
-          </button>;"
-        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>"
-      </div>
-interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
-</HTMLDivElement>
-const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
-</HTMLDivElement>
-      <div;
-        ref={ref as SafeRef<HTMLDivElement>}
-</div>
-          </button>;)"
-        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;"
+            )}
+          </button>;
+        )}
+
+        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
       </div>;
-        ref={ref as SafeRef<HTMLDivElement>}
-</HTMLDivElement>
-          <button;"
-            type="button"""
-            className="flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground hover:bg-secondary/30""
-            onClick={() => setExpanded(!expanded)}
-</button>"
-            <div className="flex items-center gap-2">"
-</div>
-              <span>{title}</span>
-            </div>
-              <ChevronDown;
-                className={cn("
-                  "h-4 w-4 transition-transform"""
-                  expanded ? "rotate-0" : "-rotate-90"")
-                )}
-              />
-</ChevronDown>
-          </button>"
-        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>"
-      </div>
-          <button;"
-            type="button";""
-            className="flex w - full items - center justify - between rounded - md px - 2 py - 1 text - sm font - medium text - muted - foreground hover:bg - secondary / 30";"
-            on_click={() => set_expanded (!expanded)}
-</button>"
-            <div className="flex items - center gap - 2">;"
-</div>
-              <span>{title}</span>;
-            </div>;
-              <ChevronDown;
-                className={cn ("
-                  "h - 4 w - 4 transition - transform",""
-                  expanded ? "rotate - 0" : "-rotate - 90",")
-                )}
-              />)}
-</ChevronDown>
-          </button>)}"
-        <div className={cn ("mt - 1", !expanded && "hidden")}>{children}</div>;"
-      </div>);
-export { SidebarGroup },; interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-</HTMLDivElement>
-}const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps> ( ({
-</HTMLDivElement>
+    );
+  });
+
+        className={cn("px-3 py-2", className)}
+        {...props}
+      >;
+            )}
+          </button>;
+        )}
+
+    ),;
+  }
+),;
+;"
+SidebarGroup.displayName = "SidebarGroup",;
+export { SidebarGroup },; interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {}
+  title?: string;
+icon?: React.ReactNode;
+defaultExpanded?: boolean;
+showChevron?: boolean;
+}const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps> ( ({}
+  title, icon, defaultExpanded = true, showChevron = true, className, children, ...props;
+}, ref) => {}
+  const [expanded, setExpanded] = React.useState (defaultExpanded);
 ref as SafeRef<HTMLDivElement> 
-</HTMLDivElement>
-}</div> {)
+}</div> {}
   showChevron && (<ChevronDown />) 
-</ChevronDown>
 }</button>) 
-}</div>) "
-        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;"
-      </div>;"
+}</div>) 
+});
+
+SidebarGroup.displayName = "SidebarGroup",
+export { SidebarGroup },";
+        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
+      </div>;
+    );
+  });
+"
+SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
+
+    )
+  }
+),

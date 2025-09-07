@@ -1,130 +1,109 @@
-
 // Common constants used across fraud detection modules;
 // Phrases that might indicate fraud;
 export const suspicious_phrases = [;
 
-  "whatsapp me";""
-  "contact me outside";""
-  "cashapp only";""
-  "western union";""
-  "pay directly";""
-  "bypass";""
-  "telegram";""
-  "signal me";""
-  "avoid fees";""
-  "payment link";""
-  "urgent payment";""
-  "deal outside";"]
+  "whatsapp me";
+  "contact me outside";
+  "cashapp only";
+  "western union";
+  "pay directly";
+  "bypass";
+  "telegram";
+  "signal me";
+  "avoid fees";
+  "payment link";
+  "urgent payment";
+
+  "deal outside";
 ];
 
 ;
 // Email domains often used for throwaway accounts;
 export const suspiciousEmailDomains = [;
 
-export const suspiciousPhrases = ["
-  "whatsapp me",""
-  "contact me outside",""
-  "cashapp only",""
-  "western union",""
-  "pay directly",""
-  "bypass",""
-  "telegram",""
-  "signal me",""
-  "avoid fees",""
-  "payment link",""
-  "urgent payment",""
-  "deal outside"""
-  "deal outside";"]
+export const suspiciousPhrases = [
+  "whatsapp me",
+  "contact me outside",
+  "cashapp only",
+  "western union",
+  "pay directly",
+  "bypass",
+  "telegram",
+  "signal me",
+  "avoid fees",
+  "payment link",
+  "urgent payment",
+
 ];
+
 ],
 
-// Email domains often used for throwaway accounts;
-export const suspiciousEmailDomains = [;"
-  "tempmail";""
-  "throwaway";""
-  "fakeemail";""
-  "mailinator";""
-  "guerrillamail";"
-export const suspiciousEmailDomains = ["
-  "tempmail",""
-  "throwaway",""
-  "fakeemail",""
-  "mailinator",""
-  "guerrillamail",""
-  "10minutemail""]
+// Email domains often used for throwaway accounts
+export const suspiciousEmailDomains = [;
+
+  "tempmail";
+
+  "throwaway";
+  "fakeemail";
+  "mailinator";
+  "guerrillamail";
+"10minutemail"
+export const suspiciousEmailDomains = [
+  "tempmail",
+  "throwaway",
+  "fakeemail",
+  "mailinator",
+  "guerrillamail",
+  "10minutemail"
+
 ],
+
 // Common constants used across fraud detection modules;
 // Phrases that might indicate fraud;
 export const suspiciousPhrases = [;"
-  "whatsapp me",;""
-  "contact me outside",;""
-  "cashapp only",;""
-  "western union",;""
-  "pay directly",;""
-  "bypass",;""
-  "telegram",;""
-  "signal me",;""
-  "avoid fees",;""
-  "payment link",;""
-  "urgent payment",;""
-  "deal outside";"]
+  "whatsapp me",;"
+  "contact me outside",;"
+  "cashapp only",;"
+  "western union",;"
+  "pay directly",;"
+  "bypass",;"
+  "telegram",;"
+  "signal me",;"
+  "avoid fees",;"
+  "payment link",;"
+  "urgent payment",;"
+  "deal outside";
 ],;
 // Email domains often used for throwaway accounts;
 export const suspiciousEmailDomains = [;"
-  "tempmail",;""
-  "throwaway",;""
-  "fakeemail",;""
-  "mailinator",;""
-  "guerrillamail",;""
-  "10minutemail";"
+  "tempmail",;"
+  "throwaway",;"
+  "fakeemail",;"
+  "mailinator",;"
+  "guerrillamail",;"
+  "10minutemail";
+
 // Common constants used across fraud detection modules;
 // Phrases that might indicate fraud;
 export const suspicious_phrases = [;
-"
-  "whatsapp me";""
-  "contact me outside";""
-  "cashapp only";""
-  "western union";""
-  "pay directly";""
-  "bypass";""
-  "telegram";""
-  "signal me";""
-  "avoid fees";""
-  "payment link";""
-  "urgent payment";""
-  "deal outside";"]
-];
 
-;
-// Email domains often used for throwaway accounts;
-export const suspiciousEmailDomains = [;
-"
-  "tempmail";""
-  "throwaway";""
-  "fakeemail";""
-  "mailinator";""
-  "guerrillamail";""
-  "10minutemail";"]
+  "10minutemail";
 ];
 
 ;
 
-"
-  "deal outside""
+  "deal outside"
+
 ],
 
+// Email domains often used for throwaway accounts
 
-// Email domains often used for throwaway accounts;
-export const suspiciousEmailDomains = ["
-  "tempmail",""
-  "throwaway",""
-  "fakeemail",""
-  "mailinator",""
-  "guerrillamail",""
-  "10minutemail""]
+export const suspiciousEmailDomains = [
+  "tempmail",
+  "throwaway",
+  "fakeemail",
+  "mailinator",
+  "guerrillamail",
+  "10minutemail"
+
 ];
-];
-];"
-  "10minutemail";"
-];
-"

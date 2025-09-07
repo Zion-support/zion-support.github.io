@@ -1,137 +1,344 @@
-const abs = path && path.resolve(__dirname, '..', '..', relPath);''
-  const res = spawnSync('node', [abs, ...args], {''
-    stdio: 'pipe'','
-  encoding: 'utf8'')
+function runNode(relPath, args = []) {
+
+
+<<<<<<< HEAD
+=======
+  const res = spawnSync('node', [abs, ...args], {
+    stdio: 'pipe'
+    encoding: 'utf8'
   });
   return {
-  // TODO: Implement
-}
+
+ursor/expand-services-advertise-and-build-project-4b36
+
+    status: res && res.status || 0,
+
+    stdout: res && res.stdout || '',
+
+  const res = spawnSync('node', [abs, ...args], {'
+    stdio: 'pipe''
+    encoding: 'utf8'
+  });
+  return {}
     status: res && res.status || 0,'
-    stdout: res && res.stdout || '',''
-    stderr: res && res.stderr || '','
+    stdout: res && res.stdout || '','
+
+    stderr: res && res.stderr || '',
   };'
-exports && exports.config = { schedule: '0 */6 * * *' };'
-exports && exports.handler = async () => {
+exports && exports.config = { schedule: '0 */6 * * *' };
+
+>>>>>>> origin/chore/fix-lint-and-merge
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   const logs = [];
-  const step = (name, fn) => {
+  const step = (name, fn) => {}
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+
+ursor/expand-services-advertise-and-build-project-4b36
+
+<<<<<<< HEAD
+const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8',;'
+});
+  return { "status": res && res.status || 0, "stdout": res && res.stdout || '', "stderr": res && res.stderr || '' }'
+}exports && exports.config = { "schedule": '0 */6 * * *','
+},exports && exports.handler = async () => {const logs = [],const step = (name, fn) => {logs && logs.push(`\n=== ${name} ===`);`  const { status, stdout, stderr } = fn(),if (stdout) logs && logs.push(stdout),if (stderr) logs && logs.push(stderr),logs && logs.push(`exit = ${status}`);`  return status;
+  },step('og-"images":generate', () => runNode('automation/og-image-generator && generator.cjs')),step('"git":sync', () => runNode('automation/advanced-git-sync && sync.cjs')),return { "statusCode": 200, "headers": { 'content-type': 'text/plain','
+}, "body": logs && logs.join('\n') },'
+},ursor/expand-services-advertise-and-build-project-4b36;
+
+const path = require ('path';'
+  const { spawn_sync }  = require ('child_process')/**;'
+ * run_node - Function description;
+ */;
+function run_node() {const abs = path.resolve (__dirname, '..', '..', rel_path;'
+  }
+  const res = spawn_sync ('node', [abs, ...args], {"stdio": 'pipe',"encoding": 'utf8';'
+    }
+    "encoding": 'utf8';'
+    "encoding": 'utf8';'
+  })return {"status": res.status || 0,"stdout": res.stdout || '',"stderr": res.stderr || '';'
+    }
+    "stderr": res.stderr || '';'
+    "stderr": res.stderr || '';'
+  }exports.config = { "schedule": '0 */6 * * *','
+}exports.handler = async () => ;
+
+const step = (name, fn) =>: any {logs.push (`\number=== ${name} ===`;`  const { status, stdout, stderr } = fn ()if (logs.push (stdout)) {$2;
+}
+    if (logs.push (stderr)) {$2;
+
+}
+
+const abs = path && path.resolve(__dirname, '..', '..', relPath);'
+
+const res = spawnSync('node', [abs, ...args], {'
+    }
+    "stdio": 'pipe''
+    }
+    "stdio": "stdio","
+    "encoding": 'utf8''
+ 
+});
+  return {
+    }
+    "status": res && res.status || 0,
+    "stdout": res && res.stdout || '','
+    "stderr": res && res.stderr || '''
+ 
+};
+exports && exports.config = { "schedule": '0 */6 * * *','
+};
+exports && exports.handler = async () => {
+ ;
+  }
+
+const step = (name, fn) => {
+    }
+    logs && logs.push(`\n=== ${name} ===`);`
+const { status, stdout, stderr } = fn();
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     if (stdout) logs && logs.push(stdout);
+
     if (stderr) logs && logs.push(stderr);
+
     logs && logs.push(`exit=${status}`);
-    return status;
-  };
+
     return status;
   }'
-  step('og-images:generate', () =>''
-    runNode('automation/og-image-generator && generator.cjs')'
-  );'
-  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));'
+  step('og-images:generate', () =>'
+    runNode('automation/og-image-generator && generator.cjs')
+  );
+
+ursor/expand-services-advertise-and-build-project-4b36
+
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
+
   return {
-  // TODO: Implement
+<<<<<<< HEAD
+    }
+    "statusCode": 200,
+    "headers": { 'content-type': 'text/plain','
+},
+    "body": logs && logs.join('\n')'
+  }
+};
+function runNode() {
 }
-    statusCode: 200,'
-    headers: { 'content-type': 'text/plain' },''
-    body: logs && logs.join('\n'),'
-  };
-};function runNode(relPath, args = []) {'
-  const abs = path && path.resolve(__dirname, '....', relPath),''
-  const abs = path.resolve(__dirname, '....', relPath),''
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),''
-  return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }'
+const abs = path && path.resolve(__dirname, '....', relPath),;'
+const abs = path.resolve(__dirname, '....', relPath),;'
+}),
+  return { "status": res && res.status || 0, "stdout": res && res.stdout || '', "stderr": res && res.stderr || '' }'
+}
+
+exports && exports.config = { "schedule": '0 */6 * * *','
+},
+
+exports && exports.config = { "schedule": '0 */6 * * *' },'
+exports && exports.handler = async () => {
+}
+const logs = [],;
+    }
+    logs && logs.push(`\n=== ${name} ===`),`const { status, stdout, stderr } = fn(),;
+    if (stdout) logs && logs.push(stdout),
+    if (stderr) logs && logs.push(stderr),
+    logs && logs.push(`exit=${status}`),`return status;
+  },
+  step('og-"images":generate', () => runNode('automation/og-image-generator && generator.cjs')),'
+  step('"git":sync', () => runNode('automation/advanced-git-sync && sync.cjs')),'
+
+ ;
+return { "statusCode": 200, "headers": { 'content-type': 'text/plain',;'
+}, "body": logs && logs.join('\n') },'
+},;
+  const path = require ('path');'
+
+  return { "statusCode": 200, "headers": { 'content-type': 'text/plain' }, "body": logs && logs.join('\n') }'
+},
+const { spawn_sync } = require ('child_process');'
+;
+/**
+ * run_node - Function description
+ */
+function run_node() {
+  }
+  const abs = path.resolve (__dirname, '..', '..', rel_path);'
+
+const res = spawn_sync ('node', [abs, ...args], {'
+    }
+    "stdio": 'pipe','
+    "encoding": 'utf8''
+ 
+});
+  return {
+    }
+    "status": res.status || 0,
+    "stdout": res.stdout || '','
+    "stderr": res.stderr || '''
+ 
+}
+;
+exports.config = { "schedule": '0 */6 * * *','
+}
+;
+exports.handler = async () => {
+ ;
+  }
+
+const step = (name, fn) =>: any {
+    }
+    logs.push (`\number=== ${name} ===`);`
+const { status, stdout, stderr } = fn ();
+    if (logs.push (stdout)) {
+  $2
+}
+    logs.push (`exit = ${status}`;`  return status;
+  }step ('og - "images":generate', () =>;'
+    run_node ('automation / og - image - generator.cjs'))step ('"git":sync', () => run_node ('automation / advanced - git - sync.cjs'))return {"status_code": 200,"headers": { 'content - type': 'text / plain','
+},"body": logs.join ('\n')"body": logs.join ('\n')"body": logs.join ('\n')},'
+}/**;
+ * run_node - Function description;
+ */;
+function run_node() {const abs = path.resolve (__dirname, '....', rel_path),const res = spawn_sync ('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8','
+});
+  return { "status": res.status || 0, "stdout": res.stdout || '', "stderr": res.stderr || '' }'
+}
+exports.config = { "schedule": '0 */6 * * *','
+},exports.handler = async () => {const logs = [],const step = (name, fn) =>: any {logs.push (`\number=== ${name} ===`);`  const { status, stdout, stderr } = fn (),if (logs.push (stdout), ) {$2;
+}
+    if (logs.push (stderr), ) {$2;
+}
+    logs.push (`exit = ${status}`);`  return status;
+  },step ('og - "images":generate', () => run_node ('automation / og - image - generator.cjs')),step ('"git":sync', () => run_node ('automation / advanced - git - sync.cjs')),return { "status_code": 200, "headers": { 'content - type': 'text / plain','
+}, "body": logs.join ('\n') }'
+    if (stdout) logs.push(stdout)if (stderr) logs.push(stderr)logs.push(`exit = ${statu,`}`)"statusCode": 200,"headers": { 'content-type': 'text/plain','
+},"body": logs.join('\n'),'
+}
+    if (logs.push (stderr), ) {
+  $2
+}
+    logs.push (`exit=${status}`),`
+   ;
+  return status;
+  },
+  step ('og - "images":generate', () => run_node ('automation / og - image - generator.cjs')),'
+  step ('"git":sync', () => run_node ('automation / advanced - git - sync.cjs')),'
+return { "status_code": 200, "headers": { 'content - type': 'text / plain',;'
+}, "body": logs.join ('\n'),'
+}
+  return { "status_code": 200, "headers": { 'content - type': 'text / plain' }, "body": logs.join ('\n') }'
+
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+    statusCode: 200,
+    headers: { 'content-type': 'text/plain' },
+    body: logs && logs.join('\n'),
+  }
+};function runNode(relPath, args = []) {
+  const abs = path && path.resolve(__dirname, '....', relPath),
+
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+
+  return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
 '
-exports && exports.config = { schedule: '0 */6 * * *' },'
-exports && exports.handler = async () => {
+exports && exports.config = { schedule: '0 */6 * * *' },
+
+exports && exports.handler = async () => {}
   const logs = [],
-  const step = (name, fn) => {
+  const step = (name, fn) => {}`
     logs && logs.push(`\n=== ${name} ===`),
     const { status, stdout, stderr } = fn(),
     if (stdout) logs && logs.push(stdout),
-    if (stderr) logs && logs.push(stderr),
+    if (stderr) logs && logs.push(stderr),`
     logs && logs.push(`exit=${status}`),
     return status;
   },
 '
-  step('og-images:generate', () => runNode('automation/og-image-generator && generator.cjs')),''
-  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),''
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }'
-},'
-const path = require ('path');''
-const { spawn_sync } = require ('child_process');'
+  step('og-images:generate', () => runNode('automation/og-image-generator && generator.cjs')),'
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+'
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
+},
+
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+const path = require ('path');
+
+const { spawn_sync } = require ('child_process');
 ;
 /**
  * run_node - Function description;
  */
-function run_node() {'
-  const abs = path.resolve (__dirname, '..', '..', rel_path);''
-  const res = spawn_sync ('node', [abs, ...args], {''
-    stdio: 'pipe',''
-    encoding: 'utf8',')
+function run_node() { return null; }
   });
-  return {
-  // TODO: Implement
-}
+  return {}
     status: res.status || 0,'
-    stdout: res.stdout || '',''
-    stderr: res.stderr || '','
+    stdout: res.stdout || '','
+    stderr: res.stderr || '',
   }
 ;'
-exports.config = { schedule: '0 */6 * * *' }'
+exports.config = { schedule: '0 */6 * * *' }
 ;
-exports.handler = async () => {
+exports.handler = async () => {}
   const logs = [];
-  const step = (name, fn) =>: any {
-  // TODO: Implement
-}
+  const step = (name, fn) =>: any {}`
     logs.push (`\number=== ${name} ===`);
     const { status, stdout, stderr } = fn ();
-    if (logs.push (stdout)) {
+    if (logs.push (stdout)) {}
   $2;
 }
-    if (logs.push (stderr)) {
+    if (logs.push (stderr)) {}
   $2;
-}
+}`
     logs.push (`exit=${status}`);
     return status;
   }
 ;'
-  step ('og - images:generate', () =>;''
-    run_node ('automation / og - image - generator.cjs'));''
-  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs'));'
+  step ('og - images:generate', () =>;'
+    run_node ('automation / og - image - generator.cjs'));'
+  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs'));
 ;
-  return {
-  // TODO: Implement
-}
+  return {}
     status_code: 200,'
-    headers: { 'content - type': 'text / plain' },''
-    body: logs.join ('\n'),'
+    headers: { 'content - type': 'text / plain' },'
+    body: logs.join ('\n'),
   }
 }/**
  * run_node - Function description;
  */
-function run_node() {'
-  const abs = path.resolve (__dirname, '....', rel_path),''
-  const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),''
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }'
+function run_node() { return null; }
+  const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),'
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }'
-exports.config = { schedule: '0 */6 * * *' },'
-exports.handler = async () => {
+exports.config = { schedule: '0 */6 * * *' },
+exports.handler = async () => {}
   const logs = [],
-  const step = (name, fn) =>: any {
-  // TODO: Implement
-}
+  const step = (name, fn) =>: any {}`
     logs.push (`\number=== ${name} ===`),
     const { status, stdout, stderr } = fn (),
-    if (logs.push (stdout), ) {
+    if (logs.push (stdout), ) {}
   $2;
 }
-    if (logs.push (stderr), ) {
+    if (logs.push (stderr), ) {}
   $2;
-}
+}`
     logs.push (`exit=${status}`),
     return status;
   },'
-  step ('og - images:generate', () => run_node ('automation / og - image - generator.cjs')),''
-  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),''
-  return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }''
+  step ('og - images:generate', () => run_node ('automation / og - image - generator.cjs')),'
+  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),'
+  return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
+
+const abs = path && path.resolve(__dirname, '..', '..', relPath);
+
+function runNode(relPath, args = []) {

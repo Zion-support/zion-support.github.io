@@ -1,0 +1,11 @@
+const LazyComponent = React && React.lazy(() => import('./LazyComponent'));
+// Example: Route-based code splitting
+const HomePage = React && React.lazy(() => import('../pages/Home'));
+const AboutPage = React && React.lazy(() => import('../pages/About'));
+// Example: Component-based code splitting
+const HeavyComponent = React && React.lazy(() => import('./HeavyComponent')),
+
+// Example: Dynamic imports for better code splitting;
+
+// Example: Component - based code splitting;
+"
