@@ -1,61 +1,69 @@
 {
-  "timestamp": "2025-09-06T04:56:46.894Z",
-  "totalDuration": 50098,
-  "successfulTasks": 5,
+  "timestamp": "2025-09-07T10:16:03.267Z",
+  "totalDuration": 26651,
+  "successfulTasks": 2,
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
-      "success": true,
-      "duration": 7952,
-      "errors": [],
+      "success": false,
+      "duration": 884,
+      "errors": [
+        "Command failed: npm install\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error path /workspace/package.json\nnpm error Merge conflict detected in your package.json.\nnpm error\nnpm error Please resolve the package.json conflict and retry.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T10_15_36_676Z-debug-0.log\n",
+        "Command failed: npm install @eslint/js --save-dev\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error path /workspace/package.json\nnpm error Merge conflict detected in your package.json.\nnpm error\nnpm error Please resolve the package.json conflict and retry.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T10_15_37_003Z-debug-0.log\n"
+      ],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
-      "duration": 6380,
+      "duration": 3029,
       "errors": [
         "Command failed: npx tsc --noEmit --skipLibCheck\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
-        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nWarning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .\n"
+        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:2885) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nError: Invalid package config /workspace/package.json.\n    at getPackageScopeConfig (node:internal/modules/package_json_reader:149:33)\n    at Object.getFileProtocolModuleFormat [as file:] (node:internal/modules/esm/get_format:116:72)\n    at defaultGetFormatWithoutErrors (node:internal/modules/esm/get_format:232:36)\n    at defaultResolve (node:internal/modules/esm/resolve:1008:13)\n    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)\n    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)\n    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)\n    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)\n    at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:643:36)\n    at TracingChannel.tracePromise (node:diagnostics_channel:344:14)\n"
       ],
       "warnings": []
     },
     "securityAudit": {
       "success": false,
-      "duration": 2366,
+      "duration": 399,
       "errors": [
-        "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+        "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOLOCK\nnpm error audit This command requires an existing lockfile.\nnpm error audit Try creating one first with: npm i --package-lock-only\nnpm error audit Original error: loadVirtual requires existing shrinkwrap file\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T10_15_40_566Z-debug-0.log\n"
       ],
       "warnings": []
     },
     "buildOptimization": {
-      "success": true,
-      "duration": 9820,
-      "errors": [],
+      "success": false,
+      "duration": 153,
+      "errors": [
+        "Command failed: npm run clean\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 456 (line 12 column 1) while parsing near \"...art\\\": \\\"next start\\\",\\n<<<<<<< HEAD\\n    \\\"bu...\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T10_15_40_965Z-debug-0.log\n",
+        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 456 (line 12 column 1) while parsing near \"...art\\\": \\\"next start\\\",\\n<<<<<<< HEAD\\n    \\\"bu...\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T10_15_41_040Z-debug-0.log\n"
+      ],
       "warnings": []
     },
     "seoOptimization": {
       "success": true,
-      "duration": 57,
+      "duration": 390,
       "errors": [],
       "warnings": []
     },
     "accessibilityImprovements": {
       "success": false,
-      "duration": 3078,
+      "duration": 833,
       "errors": [
-        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nWarning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .\n"
+        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3006) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nError: Invalid package config /workspace/package.json.\n    at getPackageScopeConfig (node:internal/modules/package_json_reader:149:33)\n    at Object.getFileProtocolModuleFormat [as file:] (node:internal/modules/esm/get_format:116:72)\n    at defaultGetFormatWithoutErrors (node:internal/modules/esm/get_format:232:36)\n    at defaultResolve (node:internal/modules/esm/resolve:1008:13)\n    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)\n    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)\n    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)\n    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)\n    at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:643:36)\n    at TracingChannel.tracePromise (node:diagnostics_channel:344:14)\n"
       ],
       "warnings": []
     },
     "performanceOptimization": {
-      "success": true,
-      "duration": 18997,
-      "errors": [],
+      "success": false,
+      "duration": 148,
+      "errors": [
+        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 456 (line 12 column 1) while parsing near \"...art\\\": \\\"next start\\\",\\n<<<<<<< HEAD\\n    \\\"bu...\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T10_15_42_341Z-debug-0.log\n"
+      ],
       "warnings": []
     },
     "deployment": {
       "success": true,
-      "duration": 1444,
+      "duration": 20813,
       "errors": [],
       "warnings": []
     }
@@ -63,6 +71,7 @@
   "recommendations": [
     "Review and fix code quality issues",
     "Address security vulnerabilities",
+    "Optimize application performance",
     "Enhance accessibility features"
   ]
 }

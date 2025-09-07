@@ -9,7 +9,6 @@
     "dev": "next dev",
     "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
     "start": "next start",
-<<<<<<< HEAD
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
@@ -219,7 +218,7 @@
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "npm run clean && npm run build",
     "automation:master": "node automation/master-orchestrator.cjs",
-    "automation:performance": "node automation/performance-optimizer.cjs",
+    "automation:performance": "node automation/performance-monitor-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
     "automation:health": "node automation/health-check.cjs",
     "automation:security": "node automation/security-scanner.cjs",
@@ -247,7 +246,7 @@
     "error:prevention:logs": "pm2 logs --lines 100",
     "build:production": "NODE_ENV=production npm run build",
     "error:detect": "node automation/intelligent-error-detector.cjs",
-    "automation:enhanced": "node automation/enhanced-master-automation-orchestrator.cjs",
+    "automation:enhanced": "node automation/enhanced-master-orchestrator.cjs",
     "optimize:images": "node scripts/optimize-images.js",
     "analyze:bundle": "npm run build && npx @next/bundle-analyzer",
     "test:accessibility": "npx jest --testPathPatterns=accessibility",
@@ -261,9 +260,7 @@
     "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
     "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs",
-    "automation:enhanced": "node automation/enhanced-master-orchestrator.cjs",
     "automation:test": "node automation/intelligent-test-automation.cjs",
-    "automation:performance": "node automation/performance-monitor-optimizer.cjs",
     "automation:ultimate": "node automation/ultimate-automation-runner.cjs"
   },
   "pm2": {
@@ -302,13 +299,7 @@
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
     "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.57.0",
-=======
-    "lint": "next lint"
-  },
-  "dependencies": {
     "@supabase/supabase-js": "^2.57.2",
->>>>>>> origin/main
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
@@ -346,7 +337,6 @@
     "import-fresh": "^3.3.1",
     "jszip": "^3.10.1",
     "lucide-react": "^0.536.0",
-<<<<<<< HEAD
     "mongodb": "^6.19.0",
     "next": "^15.5.2",
     "node-cron": "^4.2.1",
@@ -441,21 +431,4 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
-=======
-    "next": "^14.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "^14.0.0",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
-    "typescript": "^5.0.0"
-  }
->>>>>>> origin/main
 }
