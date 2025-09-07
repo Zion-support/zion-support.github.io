@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import bundleAnalyzer from '@next/bundle-analyzer';
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -47,6 +48,15 @@ const nextConfig = {
   },
   
   // Security headers
+=======
+
+const nextConfig = {
+  // Security configurations
+  poweredByHeader: false,
+  compress: true,
+  
+  // Headers for security
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-94b9
   async headers() {
     return [
       {
@@ -54,6 +64,7 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
+<<<<<<< HEAD
             value: 'DENY',
           },
           {
@@ -99,3 +110,40 @@ const nextConfig = {
 };
 
 export default withBundleAnalyzer(nextConfig);
+=======
+            value: 'DENY'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin'
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()'
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains; preload'
+          }
+        ]
+      }
+    ];
+  },
+  
+  // Environment variables
+  env: {
+    NODE_ENV: 'production',
+    NEXT_TELEMETRY_DISABLED: '1'
+  }
+};
+
+module.exports = nextConfig;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-94b9
