@@ -1,80 +1,26 @@
 {
-  "timestamp": "2025-09-05T15:52:31.442Z",
-  "totalDuration": 19528,
-  "successfulPhases": 3,
-  "totalPhases": 7,
-  "results": {
-    "syntaxFixes": {
-      "success": true,
-      "duration": 1,
-  "timestamp": "2025-09-06T17:32:48.376Z",
-  "duration": "64s",
-  "results": {
-    "tests": {
-      "passed": 0,
-      "failed": 2,
-      "errors": [
-        "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n",
-        "spawnSync /bin/sh ENOBUFS"
-      ]
-    },
-    "builds": {
-      "success": true,
-  "timestamp": "2025-09-05T15:52:31.442Z",
-  "totalDuration": 19528,
-  "successfulPhases": 3,
-  "totalPhases": 7,
-  "results": {
-    "syntaxFixes": {
-      "success": true,
-      "duration": 1,
-      "errors": []
-    },
-    "linting": {
+  "timestamp": "2025-09-07T11:33:01.214Z",
+  "results": [
+    {
       "success": false,
-      "duration": 1802,
-      "errors": [
-        "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:6058) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.34.0\n\nA configuration object specifies rule \"@typescript-eslint/no-unused-vars\", but could not find plugin \"@typescript-eslint\".\n\nCommon causes of this problem include:\n\n1. The \"@typescript-eslint\" plugin is not defined in your configuration file.\n2. The \"@typescript-eslint\" plugin is not defined within the same configuration object in which the \"@typescript-eslint/no-unused-vars\" rule is applied.\n\n"
-      ]
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:4853) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
     },
     {
-      "action": "Type checking",
-      "error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n/workspace/node_modules/typescript/lib/_tsc.js:44171\n  function bindWorker(node) {\n                     ^\n\nRangeError: Maximum call stack size exceeded\n    at bindWorker (/workspace/node_modules/typescript/lib/_tsc.js:44171:22)\n    at bind (/workspace/node_modules/typescript/lib/_tsc.js:44117:5)\n    at visitNode2 (/workspace/node_modules/typescript/lib/_tsc.js:28191:18)\n    at forEachChildInBinaryExpression (/workspace/node_modules/typescript/lib/_tsc.js:28389:12)\n    at forEachChild (/workspace/node_modules/typescript/lib/_tsc.js:28712:35)\n    at bindEachChild (/workspace/node_modules/typescript/lib/_tsc.js:42717:5)\n    at bindChildren (/workspace/node_modules/typescript/lib/_tsc.js:42726:7)\n    at bind (/workspace/node_modules/typescript/lib/_tsc.js:44123:9)\n    at visitNode2 (/workspace/node_modules/typescript/lib/_tsc.js:28191:18)\n    at forEachChildInBinaryExpression (/workspace/node_modules/typescript/lib/_tsc.js:28389:12)\n\nNode.js v22.16.0\n"
+      "success": false,
+      "error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n<--- Last few GCs --->\n\n[4877:0xbbf0000]    33007 ms: Mark-Compact 4042.3 (4128.8) -> 4038.1 (4140.3) MB, pooled: 0 MB, 950.34 / 0.01 ms  (average mu = 0.468, current mu = 0.270) allocation failure; scavenge might not succeed\n[4877:0xbbf0000]    35286 ms: Mark-Compact 4054.5 (4141.3) -> 4048.2 (4151.0) MB, pooled: 0 MB, 2258.62 / 0.01 ms  (average mu = 0.209, current mu = 0.009) allocation failure; scavenge might not succeed\n\n\n<--- JS stacktrace --->\n\nFATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory\n----- Native stack trace -----\n\n 1: 0xe13fde node::OOMErrorHandler(char const*, v8::OOMDetails const&) [node]\n 2: 0x11d5070 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [node]\n 3: 0x11d5347 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [node]\n 4: 0x1402c05  [node]\n 5: 0x141c499 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]\n 6: 0x13f0b48 v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]\n 7: 0x13f1a75 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]\n 8: 0x13ca74e v8::internal::Factory::NewFillerObject(int, v8::internal::AllocationAlignment, v8::internal::AllocationType, v8::internal::AllocationOrigin) [node]\n 9: 0x182bd6c v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [node]\n10: 0x7f1eabeac476 \nAborted (core dumped)\n"
     },
     {
-      "action": "Running smoke tests",
+      "success": false,
+      "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token ','\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
     },
     {
-      "action": "Building Next.js project",
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/node_modules/.bin/next'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n"
-    },
-    "securityAudit": {
       "success": false,
-      "duration": 889,
-      "errors": [
-        "Command failed: node scripts/security-audit-enhanced.cjs\n/workspace/scripts/security-audit-enhanced.cjs:34\nconst fs = require(\"fs\");\"const path = require(\"path\");class SecurityAuditor { constructor() { this.vulnerabilities = []; this.recommendations = []} async auditDependencies() {\" console.log(\" Auditing dependencies.\"); / Check for known vulnerabilities const vulnerabilities = [/ Add actual vulnerability checks here ]; this.vulnerabilities = vulnerabilities; console.log(`Found ${vulnerabilities.length} potential vulnerabilities`)} async auditCode() {\" console.log(\" Auditing code security.\"); const securityIssues = [/ Add code security checks here ]; this.recommendations = securityIssues;` console.log(`Found ${securityIssues.length} security recommendations`)} async generateReport() { const report = { timestamp: new Date().toISOString(),\" vulnerabilities: this.vulnerabilities,\" recommendations: this.recommendations,\"\" status: this.vulnerabilities.length === 0 ? \"secure\" : \"needs_attention\" };` const reportPath = `security-audit-${Date.now()}.json`; fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));\"` console.log(` Security audit report generated: ${reportPath}`); return report}}const auditor = new SecurityAuditor();auditor.auditDependencies() .then(() => auditor.auditCode()) .then(() => auditor.generateReport()) .catch(console.error);'\"`'\"`\n      ^\n\nSyntaxError: Identifier 'fs' has already been declared\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-      ]
-    },
-    "performanceOptimization": {
-      "success": false,
-      "duration": 55,
-      "errors": [
-        "Command failed: node scripts/performance-optimizer.cjs\n/workspace/scripts/performance-optimizer.cjs:131\n}\n^\n\nSyntaxError: Unexpected token '}'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n",
-        "Command failed: node scripts/ux-optimizer.cjs\n/workspace/scripts/ux-optimizer.cjs:31\nconst fs = require(\"fs\");\"const path = require(\"path\");class UXOptimizer { constructor() { this.improvements = []} async optimizeLoading() {\" console.log(\" Optimizing loading performance.\");\" this.improvements.push(\"Loading optimization completed\")} async optimizeAccessibility() {\" console.log(\" Optimizing accessibility.\");\" this.improvements.push(\"Accessibility improvements completed\")} async optimizeMobile() {\" console.log(\" Optimizing mobile experience.\");\" this.improvements.push(\"Mobile optimization completed\")} async generateReport() { const report = { timestamp: new Date().toISOString(),\" improvements: this.improvements,\" ux_score: 95,\"\" recommendations: [\"Implement lazy loading\",\" \"Add keyboard navigation\",\" \"Optimize touch targets\" ] };\" fs.writeFileSync(\"ux-report.json\", JSON.stringify(report, null, 2));\" console.log(\" UX report generated\")}}const uxOptimizer = new UXOptimizer();uxOptimizer.optimizeLoading() .then(() => uxOptimizer.optimizeAccessibility()) .then(() => uxOptimizer.optimizeMobile()) .then(() => uxOptimizer.generateReport()) .catch(console.error);'\"'\"\n      ^\n\nSyntaxError: Identifier 'fs' has already been declared\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n",
-        "Command failed: node scripts/seo-optimizer.cjs\n/workspace/scripts/seo-optimizer.cjs:2\n#!/usr/bin/env node\n^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-      ]
-    },
-    "build": {
-      "success": false,
-      "duration": 10130,
-      "errors": [
-        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Compiled with warnings in 7.6s\n\n./pages/_app.tsx\nAttempted import error: '../components/PerformanceMonitor' does not contain a default export (imported as 'PerformanceMonitor').\n\n./pages/_app.tsx\nAttempted import error: '../components/PerformanceMonitor' does not contain a default export (imported as 'PerformanceMonitor').\n\n[Error: Minified React error #130; visit https://reactjs.org/docs/error-decoder.html?invariant=130&args[]=undefined&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.]\nError occurred prerendering page \"/services\". Read more: https://nextjs.org/docs/messages/prerender-error\n[Error: Minified React error #130; visit https://reactjs.org/docs/error-decoder.html?invariant=130&args[]=undefined&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.]\nExport encountered an error on /services, exiting the build.\n[Error: Minified React error #130; visit https://reactjs.org/docs/error-decoder.html?invariant=130&args[]=undefined&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.]\nError occurred prerendering page \"/AIServices\". Read more: https://nextjs.org/docs/messages/prerender-error\n[Error: Minified React error #130; visit https://reactjs.org/docs/error-decoder.html?invariant=130&args[]=undefined&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.]\nExport encountered an error on /AIServices, exiting the build.\n ⨯ Next.js build worker exited with code: 1 and signal: null\n"
-      ]
-    },
-    "deployment": {
-      "success": true,
-      "duration": 5292,
-      "errors": []
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n ⚠ Mismatching @next/swc version, detected: 14.2.32 while Next.js is on 15.5.2. Please ensure these match\n\n> Build error occurred\n[SyntaxError: Unexpected token ',']\n"
     }
+  ],
+  "summary": {
+    "total": 4,
+    "successful": 0,
+    "failed": 4
   }
 }

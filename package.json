@@ -2,13 +2,12 @@
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "ci:preflight": "node -e \"try{require('fs').accessSync('dist');console.log('dist exists')}catch(e){process.exit(0)}\" && echo prebuilt || echo building",
     "ci:build-test": "npm run build && npm run test:smoke",
     "dev": "next dev",
     "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
-    "clean": "rm -rf .next && rm -rf out",
+    "clean": "rm -rf .next out dist node_modules/.cache",
     "export": "next build && next export",
     "start": "next start",
     "build:netlify": "node scripts/build-with-error-handling.js",
@@ -24,7 +23,6 @@
     "test:coverage": "jest --coverage --config jest.config.ts",
     "verify": "npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
     "check": "npm run lint && npm run type-check && npm run test:smoke",
-    "clean": "rm -rf .next out dist node_modules/.cache",
     "precommit": "npm run check",
     "prepare": "echo 'Husky prepare script disabled'",
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
@@ -232,7 +230,7 @@
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
     "@next/bundle-analyzer": "^15.5.2",
-    "@next/swc-linux-x64-gnu": "^14.2.32",
+    "@next/swc-linux-x64-gnu": "^15.5.2",
     "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-alert-dialog": "^1.1.2",
     "@radix-ui/react-avatar": "^1.1.1",
@@ -341,3 +339,4 @@
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
   }
+}
