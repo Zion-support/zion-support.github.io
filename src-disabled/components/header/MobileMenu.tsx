@@ -1,4 +1,10 @@
 
+:src/components/header/MobileMenu.tsx
+// Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts
+// These are routes that should trigger the login modal if accessed while unauthenticated.
+const protectedRoutes = null;
+                // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.
+                // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.
               }
 }
               onClose(), // Close mobile menu on any click
@@ -156,6 +162,8 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
     </div>
 
   )
+:src/components/header/MobileMenu.tsx
+}
     name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );`
 }
   );

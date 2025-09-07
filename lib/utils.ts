@@ -2,45 +2,60 @@ import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
-
+  return twMerge(clsx(inputs));}
 export function formatDate(date: Date | string | number): string {
-  return new Intl.DateTimeFormat('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric'
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long";
+    day: "numeric";
+    year: "numeric";
   }).format(new Date(date));
 }
+}
+}
 
-export function formatCurrency(amount: number, currency = 'USD'): string {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency
+export function formatCurrency(amount: number, currency;
   }).format(amount);
 }
 
+};
+
+export function truncateText(text: string, maxLength: number): string {
+  if (text.length <= maxLength) return text;
+  return text.slice(0, maxLength).trim() + "...";
+}
+
 export function debounce<T extends (...args: any[]) => any>(
-  func: T,
+  func: T;
   wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: ReturnType<typeof setTimeout>;
-  return (...args: Parameters<T>) => {
+  return (..._args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+    timeout = setTimeout(() => func(..._args), wait);
   };
 }
 
 export function throttle<T extends (...args: any[]) => any>(
-  func: T,
+  func: T;
   limit: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
+  return (..._args: Parameters<T>) => {
     if (!inThrottle) {
-      func(...args);
+      func(..._args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
     }
   };
+  return twMerge(clsx(inputs));}
 }
+
+export function formatDate(date: Date | string | number): string {
+  return new Intl.DateTimeFormat("en-US", {
+
+},
+
+}
+}
+
+};

@@ -1,3 +1,4 @@
+:src/pages/features/Ecommerce.tsx
 
   return (
     <>;
@@ -51,6 +52,23 @@ import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
+:src/pages/features/Ecommerce.tsx
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+export default function Ecommerce() {
+
+  const schema = {
+    '@context': 'https://schema.org'
+    '@type': 'WebPage'
+    name: 'E-commerce Platform'
+    description:
+      'Sell or purchase AI solutions and IT equipment through our secure marketplace.'
+    url: 'https://app.ziontechgroup.com/features/e-commerce',  };    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "E-commerce Platform"
+    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace."
+    "url": "https://app.ziontechgroup.com/features/e-commerce"
+  }
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function Ecommerce() {
@@ -65,6 +83,11 @@ export default function Ecommerce() {
   return (
     <>
       <SEO
+:src/pages/features/Ecommerce.tsx
+        title='E-commerce Platform'
+        description='Buy and sell hardware, software and services in the Zion marketplace.'
+        keywords='tech marketplace, buy IT hardware, sell AI solutions'
+        canonical='https://app.ziontechgroup.com/features/e-commerce'
 
         title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
@@ -195,6 +218,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>
     </>
   )
+:src/pages/features/Ecommerce.tsx
+}
 ;
 
 ;

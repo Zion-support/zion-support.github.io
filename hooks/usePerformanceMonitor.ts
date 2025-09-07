@@ -1,6 +1,12 @@
+},
+,
+export default usePerformanceMonitor;
+interface PerformanceMetrics {
+  loadTime: number, firstContentfulPaint: number
+  largestContentfulPaint: number, firstInputDelay: number
+  cumulativeLayoutShift: number
 }
 export function usePerformanceMonitor() {
-
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {

@@ -31,6 +31,7 @@ import { Notification, NotificationType } from '@/context/notifications'
 }) => {
       className={cn(
                   onMarkAsRead(notification.id); import React from 'react'
+:src/components/notifications/NotificationItem.tsx
 
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -64,6 +65,42 @@ export const getTypeIcon = (type: NotificationType,) => {
       return <span className="text-orange-500">📦</span>
     default:
       return <span className="text-gray-500">📣</span>
+:src/components/notifications/NotificationItem.tsx
+import React from 'react',;
+// Use the centralized icon wrapper to avoid missing icons;
+import { Check, Trash2, ChevronRight } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Badge } from '@/components/ui/badge',;
+import { formatDistanceToNow } from 'date-fns',;
+import { cn } from '@/lib/utils',;
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger} from '@/components/ui/tooltip',;
+import { useRouter } from 'next/router',;
+import { Notification, NotificationType } from '@/context/notifications',;
+export const getTypeIcon = (type: NotificationType) => {;
+  switch (type) {;
+    case 'message':;
+      return <span className="text-blue-500">💬</span>,;
+    case 'quote_request':;
+      return <span className="text-purple-500">📝</span>,;
+    case 'booking_confirmation':;
+      return <span className="text-green-500">✅</span>,;
+    case 'hire_request':;
+      return <span className="text-zion-purple">🤝</span>,;
+    case 'onboarding':;
+      return <span className="text-zion-cyan">🚀</span>,;
+    case 'system':;
+      return <span className="text-yellow-500">⚠️</span>,;
+    case 'project_update':;
+      return <span className="text-indigo-400">📌</span>,;
+    case 'milestone_complete':;
+      return <span className="text-green-500">🏁</span>,;
+    case 'order_status':;
+      return <span className="text-orange-500">📦</span>,;
+    default:;
 
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
@@ -124,11 +161,14 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     if (notification.action_url) {;
       router.push(notification.action_url), // Changed to router.push;
     }
+:src/components/notifications/NotificationItem.tsx
+  }
 
   return (<div
       className = {cn(
         'p-3 border-b border-zion-blue-light relative group'
         !notification.read ? 'bg-zion-blue-dark/30' : ''),}
+:src/components/notifications/NotificationItem.tsx
 
   },;
   return (;
@@ -143,6 +183,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
         <div className="flex-1">
           <div className="flex justify-between items-center mb-1">
             <h4 className="font-medium text-white">
+:src/components/notifications/NotificationItem.tsx
+              {notification.title |'Notification'}
 
             </h4>
             {!notification.read && (
@@ -150,6 +192,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
             )}
           </div>
           <p className="text-sm text-zion-slate-light">
+:src/components/notifications/NotificationItem.tsx
+            {notification.message |'You have a new notification'}
 
           </p>
           <div className="flex justify-between items-center mt-1">
@@ -165,6 +209,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
                 variant="link"
                 size="sm"
                 className="text-zion-cyan p-0 h-auto"
+:src/components/notifications/NotificationItem.tsx
+                onClick = {handleClick,}
+              >
 
                 {notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />
@@ -180,6 +227,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
+:src/components/notifications/NotificationItem.tsx
+                onClick={(e,) => {
+                  e.stopPropagation()
 
                   e.stopPropagation(),
                   onMarkAsRead(notification.id)
@@ -277,6 +327,15 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
             <TooltipTrigger asChild>
               <Button
                 variant="ghost"
+:src/components/notifications/NotificationItem.tsx
+                size="icon"
+                className="h-6 w-6"
+                onClick={(e,) => {
+                  e.stopPropagation()
+                  e.stopPropagation(),
+                  onDismiss(notification.id)
+                }}
+                aria-label="Dismiss notification"
                 size="sm"
                 onClick={handleDismiss}
                 className="h-8 w-8 p-0 text-gray-400 hover:text-red-500"
@@ -288,6 +347,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
               <p>Dismiss</p>
             </TooltipContent>
           </Tooltip>
+:src/components/notifications/NotificationItem.tsx
+        </TooltipProvider>
+      </div>;
+    </div>;
+  );
+};
 
     </div>);
 },

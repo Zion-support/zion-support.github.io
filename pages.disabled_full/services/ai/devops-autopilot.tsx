@@ -36,5 +36,3 @@ export default function Devopsautopilot({ }: DevopsautopilotProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-}

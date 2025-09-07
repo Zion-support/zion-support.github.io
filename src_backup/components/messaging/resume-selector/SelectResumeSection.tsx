@@ -1,3 +1,4 @@
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/resume-selector/SelectResumeSection.tsx
 export function SelectResumeSection({
 
 import React from 'react';
@@ -16,12 +17,27 @@ interface SelectResumeSectionProps {
   selectedResume: ResumeOption | null;
   handleResumeSelect: (resumeId: string) => void;
   handleDownloadResume: () => void;
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/resume-selector/SelectResumeSection.tsx
   isLoading: boolean
 export function SelectResumeSection({
   resumeOptions;
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/resume-selector/SelectResumeSection.tsx
+
+  resumeOptions: ResumeOption[]
+  selectedResume: ResumeOption | null
+  handleResumeSelect: (resumeId: string) => void
+  handleDownloadResume: () => void
+
+  isLoading: boolean
+}
+export function SelectResumeSection({
+  resumeOptions,
+  selectedResume,
+  handleResumeSelect,
+  handleDownloadResume,
 origin/cursor/automate-test-improve-and-merge-code-2533
   isLoading
 }: SelectResumeSectionProps) {

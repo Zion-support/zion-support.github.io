@@ -1,10 +1,7 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/error-recovery.cjs
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/error-recovery.cjs
 
       "autoFixEnabled"
       console.error(' Failed to start Error "Recovery")
@@ -34,7 +31,3 @@ const path = require('path')
     execSync('rm -rf .next', { "stdio"})
     execSync('npm run build', { "stdio"})
     execSync('pm2 restart all', { "stdio"})
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/error-recovery.cjs
-<<<<<<< HEAD:scripts/intelligent/error-recovery.cjs
-      console.error('Error saving recovery "history")
-      console.error('Error saving recovery "history")

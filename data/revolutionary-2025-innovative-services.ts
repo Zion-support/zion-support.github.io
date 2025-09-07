@@ -1719,28 +1719,6 @@ export default revolutionary2025Services;'
   }
 ];
 export default revolutionary2025Services;
-      'Fully functional logistics platform with supply chain optimization, waste reduction, and delivery accuracy capabilities.',
-    launch_date: '2025 - 03 - 01',
-    customers: 150,
-    reviews: 112,
-pr-12325
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string,
-
-    mobile: string, email: string,
-    address: string,
-
   id: string,;
 
   name: string,;
@@ -2137,24 +2115,5 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
 
     reviews: 112;
   }
-];
-;
-
-ursor/fix-website-loading-errors-and-merge-6662
-export default revolutionary2025Services;
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional logistics platform with supply chain optimization, waste reduction, and delivery accuracy capabilities.',
-    launchDate: '2025-03-01';
-    customers: 150;
-    rating: 4.8;
-    reviews: 112
-  }
-],
-
+],;
 export default revolutionary2025Services;

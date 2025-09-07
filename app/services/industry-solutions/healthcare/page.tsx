@@ -1,6 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Service | Zion Tech Group',
   description: 'Professional services for your business needs.',
@@ -13,8 +12,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
-};
-
+}
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gray-50">

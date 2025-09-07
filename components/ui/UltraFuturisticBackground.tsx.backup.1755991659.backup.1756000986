@@ -25,7 +25,6 @@ export default function UltraFuturisticBackground({
     
 
   useEffect(() => {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -39,7 +38,6 @@ export default function UltraFuturisticBackground({
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     };
 
     resizeCanvas();
@@ -47,7 +45,6 @@ export default function UltraFuturisticBackground({
 
     // Enhanced Particle class
     class Particle {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7563
       x: number;
       y: number;
       vx: number;
@@ -435,13 +432,87 @@ export default function UltraFuturisticBackground({
 
     window.addEventListener('resize', handleResize);
 
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    initParticles();
+        
+        // Draw particle
+        ctx.save();
+        ctx.globalAlpha = particle.opacity;
+        
+        if (particle.type === 'quantum') {
+          // Quantum particles with wave function
+          const wave = Math.sin(Date.now() * 0.01 + index) * 2;
+          ctx.fillStyle = particle.color;
+          ctx.beginPath();
+          ctx.arc(particle.x + wave, particle.y + wave, particle.size, 0, Math.PI * 2);
+          ctx.fill();
+        } else if (particle.type === 'neural') {
+          // Neural network nodes
+          ctx.fillStyle = particle.color;
+          ctx.beginPath();
+          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+          ctx.fill();
+          
+          // Neural connections
+          ctx.strokeStyle = particle.color;
+          ctx.lineWidth = 1;
+          ctx.globalAlpha = particle.opacity * 0.5;
+          ctx.beginPath();
+          ctx.moveTo(particle.x, particle.y);
+          ctx.lineTo(particle.x + particle.vx * 10, particle.y + particle.vy * 10);
+          ctx.stroke();
+        } else {
+          // Cyber particles
+          ctx.fillStyle = particle.color;
+          ctx.fillRect(particle.x - particle.size/2, particle.y - particle.size/2, particle.size, particle.size);
+        }
+        
+        ctx.restore();
+      });
+      
+      // Draw connections
+      connections.forEach(connection => {
+        const from = particles[connection.from];
+        const to = particles[connection.to];
+        if (from && to) {
+          const distance = Math.sqrt((from.x - to.x) ** 2 + (from.y - to.y) ** 2);
+          if (distance < 150) {
+            ctx.save();
+            ctx.strokeStyle = `rgba(0, 255, 255, ${connection.opacity * (1 - distance / 150)})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(from.x, from.y);
+            ctx.lineTo(to.x, to.y);
+            ctx.stroke();
+            ctx.restore();
+          }
+        }
+      });
+      
+      // Data streams
+      const drawDataStreams = () => {
+        ctx.save();
+        ctx.strokeStyle = 'rgba(0, 255, 0, 0.3)';
+        ctx.lineWidth = 2;
+        
+        for (let i = 0; i < 5; i++) {
+          const y = (canvas.height / 6) * (i + 1);
+          ctx.beginPath();
+          for (let x = 0; x < canvas.width; x += 5) {
+            const offset = Math.sin((x + Date.now() * 0.01 + i * 100) * 0.01) * 20;
+            if (x === 0) {
+              ctx.moveTo(x, y + offset);
+            } else {
+              ctx.lineTo(x, y + offset);
+            }
+          }
+          ctx.stroke();
+        }
+        ctx.restore();
+      };
+      
+      drawDataStreams();
+      
     animate();
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
@@ -460,7 +531,6 @@ export default function UltraFuturisticBackground({
   };
 
   return (
-<<<<<<< HEAD
     <div className={`relative min-h-screen ${backgroundVariants[variant as keyof typeof backgroundVariants]}`}>
       {/* Animated canvas background */}
       {isClient && (
@@ -565,12 +635,10 @@ export default function UltraFuturisticBackground({
         )}
       </div>
       
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
       {/* Content */}
       <div className="relative z-20">
         {children}
       </div>
-<<<<<<< HEAD
 
       {/* Quantum particles overlay */}
       <div className="absolute inset-0 pointer-events-none">
@@ -599,6 +667,35 @@ export default function UltraFuturisticBackground({
     </div>
   );
 }
+      
+      {/* CSS animations */}
+      <style jsx>{`
+        @keyframes lightRay {
+          0% { transform: translateY(-100%); opacity: 0; }
+          50% { opacity: 0.1; }
+          100% { transform: translateY(100%); opacity: 0; }
+        }
+      `}</style>
+      {/* Floating geometric shapes */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rotate-45 animate-pulse"></div>
+        <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-32 left-1/4 w-16 h-16 border-t-2 border-r-2 border-blue-400/30 transform rotate-45 animate-spin"></div>
+        <div className="absolute bottom-20 right-20 w-20 h-20 bg-gradient-to-br from-green-400/10 to-blue-400/10 transform rotate-12 animate-pulse"></div>
+      </div>
+      
+      {/* Content overlay */}
+      <div className="relative z-10">
+        {children}
+      </div>
+      
+      {/* Ambient lighting effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-cyan-500/5 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-purple-500/5 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-blue-500/5 to-transparent"></div>
+        <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-pink-500/5 to-transparent"></div>
+      </div>
     </div>
   );
 };
@@ -638,4 +735,3 @@ const getOverlayGradient = (variant: string) => {
 };
 
 export default UltraFuturisticBackground;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6

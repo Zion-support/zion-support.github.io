@@ -1,5 +1,5 @@
-<<<<<<< HEAD:components/services/index.tsx.backup.1755991404.backup.1756001157
-=======
+:components/services/index.tsx.backup.1755991404.backup.1756001157
+:components/services/index.tsx.backup.1755991404.backup.1756001157
 import React from 'react';
 import EnhancedMarketplaceCard, { ServiceItem } from '../../components/ui/EnhancedMarketplaceCard';
 import QuoteRequestModal, { QuoteFormValues } from '../../components/ui/QuoteRequestModal';
@@ -144,8 +144,6 @@ const ServicesPage: NextPage = () => {
 };
 
 export default ServicesPage;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services/index.tsx.backup.1755991590
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, ArrowRight, Star, CheckCircle } from 'lucide-react';
@@ -739,7 +737,6 @@ export default function ServicesIndexPage() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD:components/services/index.tsx.backup.1755991404.backup.1756001157
-=======
+:components/services/index.tsx.backup.1755991404.backup.1756001157
+:components/services/index.tsx.backup.1755991404.backup.1756001157
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services/index.tsx.backup.1755991590

@@ -1,3 +1,23 @@
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
+import { useState } from "react",
+import { MatchResultItem } from "@/lib/ai-matchmaking",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
+import { Skeleton } from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
+interface AIMatchingResultsProps {
+
+  matches: MatchResultItem[]
+  onSelectMatch?: (match: MatchResultItem) => void
+
+  isLoading?: boolean;
+  projectDescription?: string;
+  serviceType?: string
+}
+export function AIMatchingResults({
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
@@ -5,12 +25,40 @@ interface AIMatchingResultsProps {
   projectDescription?: string,
   serviceType?: string
 }
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
+  matches;
+  onSelectMatch;
+  isLoading = false;
+  projectDescription = "";
+export function AIMatchingResults({
+  matches;
+  onSelectMatch;
+
+  isLoading = false;
+  projectDescription = "";
+  serviceType: _serviceType = ""
+}: AIMatchingResultsProps) {
+  const [activeTab, setActiveTab] = useState("all");
+  serviceType: _serviceType = ""
+}: AIMatchingResultsProps) {
+  const [activeTab, setActiveTab] = useState("all"),
+  
+  // Group matches by category
 
   const categories = {
     all: matches,
     talent: matches.filter(match => match.category.toLowerCase().includes("talent")),
     services: matches.filter(match => match.category.toLowerCase().includes("service")),
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
+  }
+  // Get the icon for a category
+  const getCategoryIcon = (category: string) => {
+    const lowerCategory = category.toLowerCase();
+    if (lowerCategory.includes("talent")) return User;
+    if (lowerCategory.includes("equipment")) return Monitor
+    return BriefcaseIcon
+  }
   },
   
   // Get the icon for a category
@@ -33,6 +81,21 @@ interface AIMatchingResultsProps {
       </div>
     )
   }
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
+  if (matches.length === 0) {
+    return (
+      <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">
+        <CardContent className="pt-6">
+          <BarChart3 className="h-12 w-12 mx-auto text-zion-slate-light mb-3" />
+          <p className="text-white font-medium mb-2">No matches found</p>
+          <p className="text-zion-slate-light text-sm mb-4">
+            Try adjusting your search criteria or description for better results.
+          </p>
+          {projectDescription && (
+            <div className="bg-zion-blue-light/20 p-3 rounded-md text-left">
+              <p className="text-xs text-zion-slate-light">Your search:</p>
+              <p className="text-sm text-white">{projectDescription}</p>
+            </div>
 
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
 import Skeleton from "@/components/ui/skeleton",;
@@ -99,6 +162,7 @@ export function AIMatchingResults({;
       </Card>;
     );
   }
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
   return (
     <div className="space-y-4">

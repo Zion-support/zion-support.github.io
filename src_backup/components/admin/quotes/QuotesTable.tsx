@@ -1,3 +1,83 @@
+:src/components/admin/quotes/QuotesTable.tsx
+import React from "react";
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
+import { 
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow 
+} from "@/components/ui/table",
+import { Button } from "@/components/ui/button";
+import { 
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import { formatDate } from "@/utils/dateUtils";
+interface QuotesTableProps {
+  quotes: QuoteRequest[];
+  isArchived?: boolean;
+  isLoading: boolean;
+  updateStatus: (id: string, status: QuoteStatus) => void;
+  toggleArchive: (id: string, isArchived: boolean) => void;
+  deleteQuote: (id: string) => void;
+  onViewDetails: (quote: QuoteRequest) => void
+  quotes
+  isArchived = false
+import React from "react"
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from "@/components/ui/table"; import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu"; import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge"
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes"
+import {formatDate} from "@/utils/dateUtils"
+interface QuotesTableProps {
+  quotes: QuoteRequest[]
+  isArchived?: boolean
+  isLoading: boolean
+  updateStatus: (id: string, status: QuoteStatus,) => void
+  toggleArchive: (id: string, isArchived: boolean,) => void
+  deleteQuote: (id: string,) => void
+  onViewDetails: (quote: QuoteRequest,) => void
+import React from "react",
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
+import { 
+  Table,
+  TableBody, 
+  TableCell, 
+  TableHead, 
+  TableHeader, 
+  TableRow 
+} from "@/components/ui/table",
+import { Button } from "@/components/ui/button",
+import { 
+  DropdownMenu,
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
+import { formatDate } from "@/utils/dateUtils",
+interface QuotesTableProps {
+  quotes: QuoteRequest[],
+  isArchived?: boolean,
+  isLoading: boolean,
 isLoading: boolean,
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
@@ -13,6 +93,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
   isLoading
   updateStatus
   toggleArchive
+:src/components/admin/quotes/QuotesTable.tsx
+  deleteQuote
 
   quotes,
   isArchived = false,
@@ -52,6 +134,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
             </TableRow>
           ) : (
             quotes.map(quote => (
+:src/components/admin/quotes/QuotesTable.tsx
+              <TableRow
+                key = {quote.id,}
 
                 className="border-zion-blue-light hover:bg-zion-blue"
 
@@ -115,6 +200,33 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({};
                   {quote.requester_name}
 
                     {quote.project_summary}
+:src/components/admin/quotes/QuotesTable.tsx
+                  </div>
+                </TableCell>
+                <TableCell className="text-white">
+                  {quote.budget_display |
+                  (quote.budget_min && quote.budget_max
+                   ? `$${quote.budget_min} - $${quote.budget_max}`
+                   : quote.budget_min
+                     ? `$${quote.budget_min}`
+                     : 'Not specified')}
+                </TableCell>
+                <TableCell className="text-white">
+                  {formatDate(quote.created_at)}
+                </TableCell>
+                <TableCell>
+                  <QuoteStatusBadge status={quote.status} />
+                </TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick = {() => onViewDetails(quote),}
+                    >
+                      <Eye className="h-4 w-4" />
+                      <span className="sr-only">View Details</span>
+                    </Button>
 
                     <Button 
                       variant="ghost" 
@@ -188,6 +300,12 @@ import { ;
                             <Archive className="h-4 w-4 mr-2" />
                             Archive;
                           </DropdownMenuItem>
+:src/components/admin/quotes/QuotesTable.tsx
+                          <DropdownMenuItem
+                            onClick = {() => {
+                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
+                                deleteQuote(quote.id)
+                              } }}
 
                           <DropdownMenuItem 
 
@@ -202,6 +320,19 @@ import { ;
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
+:src/components/admin/quotes/QuotesTable.tsx
+                    )}
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))
+          )}
+        </TableBody>
+      </Table>
+    </div>
+  )
+}
+'"
 
 import React from "react",;
 

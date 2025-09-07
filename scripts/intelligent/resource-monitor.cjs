@@ -1,6 +1,4 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/resource-monitor.cjs
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync } = require('child_process')
 const fs = require('fs')
 const os = require('os')
@@ -25,7 +23,3 @@ const os = require('os')
       "severity"
       "severity"
       console.error('Error saving "analysis")
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/resource-monitor.cjs
-<<<<<<< HEAD:scripts/intelligent/resource-monitor.cjs
-      console.error('Error saving "alert")
-      console.error('Error saving "alert")

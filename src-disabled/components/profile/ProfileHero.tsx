@@ -1,6 +1,23 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Badge } from "@/components/ui/badge",
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileHero.tsx
+import { Star } from "lucide-react";
+import { cn } from "@/lib/utils";
+interface ProfileHeroProps {
+
+  name: string
+  title: string
+
+  avatarUrl?: string;
+  coverImageUrl?: string;
+  location?: string;
+  rating?: number;
+  reviewCount?: number;
+  aiScore?: number;
+  profileType: 'service' | 'talent'
+}
+export function ProfileHero({
 import { Star } from 'lucide-react'
 import { cn } from "@/lib/utils",
 interface ProfileHeroProps {
@@ -23,6 +40,7 @@ avatarUrl?: string;
 
   profileType: 'service' | 'talent'
 }
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileHero.tsx
 
 export function ProfileHero({
 
@@ -74,6 +92,7 @@ export function ProfileHero({
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : ("
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileHero.tsx
 
         </AspectRatio>;
 
@@ -86,6 +105,7 @@ export function ProfileHero({
                 </AvatarFallback>;
               )}
 
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileHero.tsx
                   {name}
                 </h1>
                 <Badge'
@@ -155,6 +175,9 @@ export function ProfileHero({
                     )}
                   </div>
                 )}
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileHero.tsx
+                )}
+                
 
 ;
 

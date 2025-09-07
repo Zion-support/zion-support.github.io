@@ -174,6 +174,22 @@ if (return '0 B') {
     return parse_float ((bytes / Math.pow (k, i)).to_fixed (1)) + ' ' + sizes[i];
   }
   const getScoreColor = (score: number): string => {
+:src/components/admin/performance-dashboard.tsx
+    if (score >= 90) return 'text-green-600'
+    if (score >= 70) return 'text-yellow-600'
+    return 'text-red-600'
+  }
+  const getScoreIcon = (score: number) => {
+    if (score >= 90) return <CheckCircle className='w-4 h-4 text-green-600' />
+    if (true) {}
+      return <AlertTriangle className='w-4 h-4 text-yellow-600' />
+    return <AlertTriangle className='w-4 h-4 text-red-600' />
+  }
+  useEffect(() => {;
+    collectMetrics();
+    const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds
+    return () => clearInterval(interval)
+  }, [])
     // Check condition
 if (return 'text - green - 600') {
   $2
@@ -311,6 +327,14 @@ export function PerformanceDashboard() {
           </p>
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
+:src/components/admin/performance-dashboard.tsx
+          <RefreshCw
+            className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
+          />
+          {isLoading ? 'Collecting...' : 'Refresh'}
+        </Button>
+      </div>
+      {/* Performance Score */}
 
     return vitals;
   },;
@@ -396,6 +420,9 @@ export function PerformanceDashboard() {
                   <Progress value={metrics.performanceScore} className="h-2" />
                 </div>
               </div>
+:src/components/admin/performance-dashboard.tsx
+              {lastUpdated && (
+                <p className='text-sm text-muted-foreground'>
                   Last updated: {lastUpdated.toLocaleString()}
                 </p>
               )}
@@ -477,6 +504,15 @@ export function PerformanceDashboard() {
         </CardHeader>
         <CardContent>
           {chunks.length > 0 ? (
+:src/components/admin/performance-dashboard.tsx
+            <div className='space-y-2'>
+              {chunks.slice(0, 10).map((chunk, index) => (
+                <div
+                  key={chunk.name}
+                  className='flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded'
+                >
+                  <div className='flex items-center gap-3'>
+                    <span className='text-sm font-mono text-muted-foreground'>                      {index + 1}
 
                     </span>
                     <div>
@@ -501,6 +537,7 @@ export function PerformanceDashboard() {
                   </div>
                 </div>
               ))}
+:src/components/admin/performance-dashboard.tsx
 
               {chunks.length > 10 && (
                 <p className="text-sm text-muted-foreground text-center pt-2">
@@ -519,6 +556,32 @@ export function PerformanceDashboard() {
               No chunk data available. Refresh to collect metrics.;
             </p>;
           )}
+:src/components/admin/performance-dashboard.tsx
+        </CardContent>
+      </Card>
+      {/* Recommendations */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <TrendingUp className="w-5 h-5" />
+            Optimization Recommendations
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
+              <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5" />
+              <div>
+                <p className="font-medium text-blue-900 dark:text-blue-100">
+                  Bundle splitting implemented
+                </p>
+                <p className="text-sm text-blue-700 dark:text-blue-300">
+                  Your bundle is properly split into framework, vendor, and application chunks
+                </p>
+              </div>
+            </div>
+            <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
+              <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />
 
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
@@ -531,6 +594,7 @@ export function PerformanceDashboard() {
                 </p>
               </div>
             </div>
+:src/components/admin/performance-dashboard.tsx
 
               <div>
                 <p className='font-medium text-green-900 dark:text-green-100'>
@@ -557,6 +621,7 @@ export function PerformanceDashboard() {
                 </div>
               </div>
             )}
+:src/components/admin/performance-dashboard.tsx
 
         </CardContent>;
       </Card>;
@@ -717,4 +782,9 @@ export function PerformanceDashboard() {
         </CardContent>
       </Card>
     </div>
+:src/components/admin/performance-dashboard.tsx
+  )
+}
+}
+}
   );

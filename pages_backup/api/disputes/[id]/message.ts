@@ -1,9 +1,22 @@
+:pages/api/disputes/[id]/message.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getDisputeById, upsertDispute } from '[^']*';
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '[^']*';
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
+:pages/api/disputes/[id]/message.ts
+import {
+  parseUserFromRequest
+  ensureInvolvedOrAdmin
+} from "../../../../utils/auth";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
 import {}
   parseUserFromRequest,;
   ensureInvolvedOrAdmin,;"
@@ -90,8 +103,17 @@ export default async function handler(
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 
+:pages/api/disputes/[id]/message.ts
+  res.setHeader("Allow", "POST");
+  return res.status(405).end("Method Not Allowed");
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler() { return null; }
 import type { NextApiRequest, NextApiResponse } from 'next';'

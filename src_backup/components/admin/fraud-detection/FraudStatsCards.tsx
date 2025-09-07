@@ -1,3 +1,4 @@
+:src/components/admin/fraud-detection/FraudStatsCards.tsx
 import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
@@ -17,6 +18,13 @@ import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
 import { FraudStats } from "@/types/fraud";
+:src/components/admin/fraud-detection/FraudStatsCards.tsx
+interface FraudStatsCardsProps {
+  stats: FraudStats
+}
+export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
+  return (
+    <div className;
 
 interface FraudStatsCardsProps {
   stats: FraudStats
@@ -32,6 +40,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
+:src/components/admin/fraud-detection/FraudStatsCards.tsx
 
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
@@ -42,6 +51,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
+:src/components/admin/fraud-detection/FraudStatsCards.tsx
 
       <Card>
 
@@ -53,6 +63,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
+:src/components/admin/fraud-detection/FraudStatsCards.tsx
 
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
@@ -63,6 +74,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
+:src/components/admin/fraud-detection/FraudStatsCards.tsx
 
       <Card>
 
@@ -71,6 +83,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
+:src/components/admin/fraud-detection/FraudStatsCards.tsx
 
       <Card>
         <CardHeader className="pb-2">
@@ -79,6 +92,10 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>
       </Card>
     </div>
+:src/components/admin/fraud-detection/FraudStatsCards.tsx
+  );
+};
+";
 
 },
 import React from "react",;
@@ -158,4 +175,9 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
         <CardHeader className="pb-2">;
 
         </CardHeader>;
+:src/components/admin/fraud-detection/FraudStatsCards.tsx
+      </Card>;
+    </div>;
+  );
+};
       </Card>;

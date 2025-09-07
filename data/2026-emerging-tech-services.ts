@@ -38,9 +38,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-};
-
-origin/cursor/automate-test-improve-and-merge-code-382a
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number
+}
 
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
@@ -590,11 +594,10 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
     service => service.category === category;
   );
-
-};
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
+}
+export const getPopularEmergingTechServices2026 = () => {
+  return emergingTechServices2026.filter(service => service.popular);
+}
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -608,27 +611,89 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   });
 };    return price >= minPrice && price <= maxPrice;
   })
-
-    description: 'Cloud-based quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum machine learning capabilities. Features include quantum circuit optimization, quantum error correction, and hybrid quantum-classical computing.',
-    features: ['
-      'Access to multiple quantum processors (IBM, Google, Rigetti)AI-optimized quantum algorithm libraryQuantum error correction and noise mitigationHybrid quantum-classical computing workflowsQuantum machine learning algorithmsReal-time quantum circuit visualizationIntegration with classical computing frameworksCustom quantum algorithm development';'
-      'Quantum performance analytics and benchmarkingAPI for quantum application development'
-    ];'
-    popular: true, icon: '🔮','
-    color: 'from-purple-600 to-indigo-600', textColor: 'text-purple-400','
-    link: 'https://ziontechgroup.com/quantum-computing-as-a-service','
-    marketPosition: 'Competes with IBM Quantum ($0.60/credit), Amazon Braket ($0.30/hour), Google Quantum AI (Free). Our advantage: AI optimization improves quantum algorithm performance by 40% and reduces quantum resource requirements.','
-    targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions, AI research labs, Universities','
-    trialDays: 30, setupTime: '1-2 weeks','
-    category: 'Quantum Computing & AI', realService: true,'
-    technology: ['QiskitCirqPennyLanePythonReactPostgreSQL'], integrations: ['IBM QuantumGoogle Quantum AIAmazon BraketRigettiD-WaveJupyter'],'
-    useCases: ['Drug discoveryFinancial modelingOptimization problemsMachine learningCryptography research'], roi: 'Research institutions report 500% ROI through accelerated discovery and breakthrough innovations.','
-    competitors: ['IBM QuantumAmazon BraketGoogle Quantum AIRigetti'], marketSize: '$8.5B quantum computing market','
-    growthRate: '45% annual growth', contactInfo: contact,
-    realImplementation: true,'
-    implementationDetails: 'Cloud-native quantum computing platform with AI-optimized algorithms, multi-provider access, and comprehensive quantum development tools.','
-    launchDate: '2024-12-15', customers: 23,
-    rating: 4.9,
+}
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+;
+const contact = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com';
+},;
+export const emergingTechServices2026: EmergingTechService2026[] = [;
+  // Quantum Computing Services;
+  {;
+    id: 'quantum-computing-as-a-service',;
+    name: 'Quantum Computing as a Service (QCaaS)',;
+    tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms',;
+    price: '$999',;
+    period: '/month',;
+    description: 'Cloud-based quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum machine learning capabilities. Features include quantum circuit optimization, quantum error correction, and hybrid quantum-classical computing.',;
+    features: [;
+      'Access to multiple quantum processors (IBM, Google, Rigetti)AI-optimized quantum algorithm libraryQuantum error correction and noise mitigationHybrid quantum-classical computing workflowsQuantum machine learning algorithmsReal-time quantum circuit visualizationIntegration with classical computing frameworksCustom quantum algorithm development',;
+      'Quantum performance analytics and benchmarkingAPI for quantum application development';
+    ],;
+    popular: true,;
+    icon: '🔮',;
+    color: 'from-purple-600 to-indigo-600',;
+    textColor: 'text-purple-400',;
+    link: 'https://ziontechgroup.com/quantum-computing-as-a-service',;
+    marketPosition: 'Competes with IBM Quantum ($0.60/credit), Amazon Braket ($0.30/hour), Google Quantum AI (Free). Our advantage: AI optimization improves quantum algorithm performance by 40% and reduces quantum resource requirements.',;
+    targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions, AI research labs, Universities',;
+    trialDays: 30,;
+    setupTime: '1-2 weeks',;
+    category: 'Quantum Computing & AI',;
+    realService: true,;
+    technology: ['QiskitCirqPennyLanePythonReactPostgreSQL'],;
+    integrations: ['IBM QuantumGoogle Quantum AIAmazon BraketRigettiD-WaveJupyter'],;
+    useCases: ['Drug discoveryFinancial modelingOptimization problemsMachine learningCryptography research'],;
+    roi: 'Research institutions report 500% ROI through accelerated discovery and breakthrough innovations.',;
+    competitors: ['IBM QuantumAmazon BraketGoogle Quantum AIRigetti'],;
+    marketSize: '$8.5B quantum computing market',;
+    growthRate: '45% annual growth',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Cloud-native quantum computing platform with AI-optimized algorithms, multi-provider access, and comprehensive quantum development tools.',;
+    launchDate: '2024-12-15',;
+    customers: 23,;
+    rating: 4.9,;
     reviews: 18;
   };
   // Blockchain & Web3 Solutions;
@@ -793,34 +858,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.4,
     reviews: 29;
   }
-];
-
-export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
-  return emergingTechServices2026.filter(service => {
-    const price = parseInt(service.price.replace('$', ''));
-    return price >= minPrice && price <= maxPrice
-
-  })
+],;
+export const getEmergingTechServices2026ByCategory = (category: string) => {;
+  return emergingTechServices2026.filter(service => service.category === category);
+},;
+export const getPopularEmergingTechServices2026 = () => {;
+  return emergingTechServices2026.filter(service => service.popular);
+},;
+export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {;
+  return emergingTechServices2026.filter(service => {;
+    const price = parseInt(service.price.replace('$', '')),;
+    return price >= minPrice && price <= maxPrice;
+  });
 };
-;
-export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
-  return emergingTechServices2026.filter (
-    service => service.category === category);
-}
-
-;
-export const getPopularEmergingTechServices2026 = () =>: any {
-  return emergingTechServices2026.filter (service => service.popular);
-}
-;
-export const getEmergingTechServices2026ByPriceRange = (
-  min_price: number,
-  max_price: number) =>: any {
-  return emergingTechServices2026.filter (service => {
-    const price = parse_int (service.price.replace ('$', ''));
-    return price >= min_price && price <= max_price;
-  });
-}    return price >= min_price && price <= max_price;
-  });
-}
-;

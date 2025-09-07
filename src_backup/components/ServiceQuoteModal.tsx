@@ -1,3 +1,5 @@
+:src/components/ServiceQuoteModal.tsx
+import { useState  } from 'react';
 ...formData;            startDate: startDate?.toISOString(),
 
             endDate: endDate?.toISOString()}
@@ -6,6 +8,7 @@
 
 }
 }
+:src/components/ServiceQuoteModal.tsx
 
 ...form_data;            start_date: start_date?.toISOString (),
             end_date: end_date?.toISOString ()}
@@ -476,12 +479,15 @@ const TIMELINE_OPTIONS = [;"
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               )}
+:src/components/ServiceQuoteModal.tsx
 
             </div>
           </DialogFooter>
         </form>
       </DialogContent>
     </Dialog>
+:src/components/ServiceQuoteModal.tsx
+  )
   );
 
 });

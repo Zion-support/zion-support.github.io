@@ -1,21 +1,24 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-      destination: '/academy / founder - course',
-      permanent: false,
-    },
-  }      permanent: false}}
-}
-;
-export default /**;
- * LaunchRedirect - Function description;
- */
-function LaunchRedirect() {}
-}
-;
-
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import { GetServerSideProps } from 'next';
 export const getServerSideProps: GetServerSideProps;
-
-export default function LaunchRedirect() {}
-  return null;}
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/academy/founder-course'
+      permanent: false
+    }
+  };      permanent: false}}
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+export default function LaunchRedirect() {;
+  return null;
+}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

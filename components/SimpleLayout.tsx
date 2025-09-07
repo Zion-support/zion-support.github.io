@@ -1,22 +1,11 @@
-
-
-interface SimpleLayoutProps {
-  children: ReactNode;
-  title?: string;
+<<<<<<< HEAD
+{description && <meta name="description" content={description} />}
+      </Head>
+      {children}
+    </>)
 }
-
-const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {title && (
-          <h1 className="text-3xl font-bold text-gray-900 mb-8">{title}</h1>
-        )}
-        {children}
-      </div>
-    </div>
-  );
-};
-
-export default SimpleLayout;
-
+=======
+import React from 'react;';
+import * as React from 'react';
+import Head from next/head';
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

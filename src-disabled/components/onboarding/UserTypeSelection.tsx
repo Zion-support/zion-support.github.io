@@ -1,3 +1,5 @@
+:src/components/onboarding/UserTypeSelection.tsx
+import { useState } from "react";
 import { useState } from 'react';
 import { Briefcase, Star, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -11,6 +13,9 @@ export function UserTypeSelection({
   onSelect
   selectedType
 }: UserTypeSelectionProps) {
+:src/components/onboarding/UserTypeSelection.tsx
+  const userTypes: UserTypeOption[] = [
+    {
 id: 'serviceProvider'
       name: 'Service Provider'
 
@@ -38,6 +43,8 @@ interface UserTypeSelectionProps {
       icon: Star;
 
     },
+:src/components/onboarding/UserTypeSelection.tsx
+    {
 
       id: "client",
       name: "Client",
@@ -47,6 +54,23 @@ interface UserTypeSelectionProps {
   ],
 
   return (
+:src/components/onboarding/UserTypeSelection.tsx
+    <div className="space-y-6">
+      <div className="text-center mb-6">
+        <h3 className="text-2xl font-bold text-white">Choose your role</h3>
+        <p className="text-zion-slate-light mt-2">
+          This helps us personalize your experience
+        </p>
+      </div>
+      <div className='grid gap-4 md:grid-cols-3'>
+        {userTypes.map(type => {
+          const Icon = type.icon
+          const isSelected = selectedType === type.id
+              onClick={() => onSelect(type.id)}
+              variant='outline'              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
+                isSelected
+                  ? 'border-zion-purple bg-zion-purple/10 text-zion-purple'
+                  : 'border-zion-blue-light hover:border-zion-cyan/50 text-white'
 
     <div className='space-y-6'>;
       <div className='text-center mb-6'>;
@@ -149,6 +173,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>"`
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />
               </div>
+:src/components/onboarding/UserTypeSelection.tsx
+              <div className='text-center'>
+                <h4 className='font-medium'>{type.name}</h4>
+                <p className='text-sm text-zion-slate-light mt-1'>
+                  {type.description}
+                </p>
+              </div>
+            </Button>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
 
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
@@ -226,4 +264,8 @@ interface UserTypeSelectionProps {;"
       </div>
     </div>
   );
+:src/components/onboarding/UserTypeSelection.tsx
+};
+}
+}
 origin/cursor/automate-test-improve-and-merge-code-2533

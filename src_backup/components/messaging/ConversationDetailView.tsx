@@ -9,6 +9,7 @@ import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 export function ConversationDetailView() {
+:src/components/messaging/ConversationDetailView.tsx
   const { user } = useAuth();
   const { 
     activeConversation;
@@ -212,6 +213,10 @@ export function ConversationDetailView() {
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
+:src/components/messaging/ConversationDetailView.tsx
+            <AvatarImage
+              src = {activeConversation.other_user.avatar_url,}
+              alt = {activeConversation.other_user.name,}
 
             />
             <AvatarFallback className="bg-zion-blue-dark text-white">
@@ -222,6 +227,15 @@ export function ConversationDetailView() {
             <div className="font-medium text-white">
               {activeConversation.other_user.name}
             </div>
+:src/components/messaging/ConversationDetailView.tsx
+            <div className="text-xs text-zion-slate">
+              {activeConversation.other_user.user_type === 'talent' ? 'Talent' :
+               activeConversation.other_user.user_type === 'employer' ? 'Employer' :
+               activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Context information (if available) */}
       {hasContextData && (
@@ -231,6 +245,9 @@ export function ConversationDetailView() {
               <div className="w-16 h-16 flex-shrink-0">
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
                   <img
+:src/components/messaging/ConversationDetailView.tsx
+                    src = {activeConversation.context_data.image_url,}
+                    alt = {activeConversation.context_data.title |"Context",}
 
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
@@ -264,11 +281,33 @@ export function ConversationDetailView() {
             <div key={group.date}>
               <DateDivider date={new Date(group.date)} />
               <div className="space-y-3">
+:src/components/messaging/ConversationDetailView.tsx
+                {group.messages.map((message,) => (
+                  <MessageBubble
+                    key = {message.id,}
+                    message = {message,}
+                    isUserMessage = {message.sender_id === user?.id,}
+                  />                ))}
+              </div>
+            </div>
+          ))
+        )}
+        <div ref={messagesEndRef} />
+      </div>
 
       {/* Input */}
       <div className="p-3 border-t border-zion-purple/20">
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
           <textarea
+:src/components/messaging/ConversationDetailView.tsx
+            value = {messageText,}
+            onChange = {(e,) => setMessageText(e.target.value),}
+            onKeyDown = {handleKeyDown,}
+            placeholder="Type a message..."
+            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+            ref = {inputRef,}
+          />
+          <Button
 
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
@@ -285,6 +324,11 @@ export function ConversationDetailView() {
             Send
           </Button>
         </form>
+:src/components/messaging/ConversationDetailView.tsx
+      </div>;
+    </div>;
+  );
+};
 
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
@@ -305,6 +349,11 @@ export function ConversationDetailView() {
           </Button>;
         </form>;
       </div>;
+:src/components/messaging/ConversationDetailView.tsx
+    </div>;
+  );
+}
+;
 
 });
 <AvatarImage src= {;

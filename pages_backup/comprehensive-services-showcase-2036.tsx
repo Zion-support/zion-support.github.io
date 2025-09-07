@@ -1,3 +1,23 @@
+:pages/comprehensive-services-showcase-2036.tsx
+import React from 'react',
+import SEO from '../components/SEO',
+import { real2036InnovativeServices  } from '../data/real-2036-innovative-services';
+import { real2036ITServices  } from '../data/real-2036-it-services';
+import { real2036AIServices  } from '../data/real-2036-ai-services';
+import { motion } from 'framer-motion';
+const ComprehensiveServicesShowcase2036: React.FC;
+import Layout from '../components/layout/Layout';
+
+import {real2036InnovativeServices} from '../data/real-2036-innovative-services';
+import {real2036ITServices} from '../data/real-2036-it-services';
+import {real2036AIServices} from '../data/real-2036-ai-services';
+import {motion} from 'framer-motion';
+const ComprehensiveServicesShowcase2036: React.FC = () => {
+  const allServices = [
+    ...real2036InnovativeServices
+    ...real2036ITServices
+    ...real2036AIServices,  ];
+  const categories = [...new Set(allServices.map(service => service.category))]
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -38,6 +58,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   const allServices = [
     ...real2036InnovativeServices,
     ...real2036ITServices,
+:pages/comprehensive-services-showcase-2036.tsx
+    ...real2036AIServices,
+  ];
+
+  const categories = [...new Set(allServices.map(service => service.category))];
+
     ...real2036AIServices
 
   const categories = [...new Set(allServices && allServices.map(service => service && service.category))],;
@@ -77,6 +103,7 @@ const ComprehensiveServicesShowcase2036: React.FC;
         <section className='relative py-20 px-4 overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 animate-pulse'></div>
           <div className='relative z-10 max-w-7xl mx-auto text-center'>
+:pages/comprehensive-services-showcase-2036.tsx
 
             <motion.h1
               initial={{ opacity: 0, y: 50 }  } catch (error) {
@@ -114,6 +141,8 @@ const ComprehensiveServicesShowcase2036: React.FC;
               <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg'>
                 Get Started Today
               </button>
+:pages/comprehensive-services-showcase-2036.tsx
+              <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                View Pricing
               <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
                 View Pricing
 
@@ -121,6 +150,10 @@ const ComprehensiveServicesShowcase2036: React.FC;
             </motion.div>
           </div>
         </section>
+:pages/comprehensive-services-showcase-2036.tsx
+        {/* Services Overview */}
+        <section className='py-16 px-4'>
+          <div className='max-w-7xl mx-auto'>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }  } catch (error) {
@@ -190,6 +223,8 @@ const ComprehensiveServicesShowcase2036: React.FC;
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Our comprehensive portfolio spans the most advanced and
                 innovative technology domains, designed to transform businesses
+:pages/comprehensive-services-showcase-2036.tsx
+                and drive the future forward.              </p>
                 and drive the future forward.
               </p>
             </motion.div>
@@ -201,6 +236,8 @@ const ComprehensiveServicesShowcase2036: React.FC;
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
+:pages/comprehensive-services-showcase-2036.tsx
+                  className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105'
 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105'
                 >
                   <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
@@ -252,12 +289,17 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm bo
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
+:pages/comprehensive-services-showcase-2036.tsx
 
             >
 
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                 Featured Revolutionary Services;
               </h2>
+:pages/comprehensive-services-showcase-2036.tsx
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Discover our most innovative and game-changing services that are
+                reshaping industries and defining the future of technology.              </p>
 
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Discover our most innovative and game-changing services that are
@@ -373,6 +415,7 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm bo
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
+:pages/comprehensive-services-showcase-2036.tsx
 
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-400">Starting from</span>
@@ -416,6 +459,12 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm bo
             >
 
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+:pages/comprehensive-services-showcase-2036.tsx
+                Complete Service Portfolio
+              </h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Explore our entire collection of {allServices.length} innovative
+                services across all technology domains.              </p>
                 Featured Revolutionary Services;
               </h2>"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -461,11 +510,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion&& motion.div
 
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
+:pages/comprehensive-services-showcase-2036.tsx
+                className='mb-16'
 className='mb-16'
               >
                 <h3 className='text-3xl font-bold mb-8 text-center text-cyan-400'>
                   {category}
                 </h3>
+:pages/comprehensive-services-showcase-2036.tsx
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                  {allServices
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 
                   {allServices
@@ -504,11 +557,14 @@ transition={{
                           delay: serviceIndex * 0.1,
                         }}
                         className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105'
+:pages/comprehensive-services-showcase-2036.tsx
 
                       >
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-2xl">{service.icon}</span>
                           {service.popular && (
+:pages/comprehensive-services-showcase-2036.tsx
+                            <span className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-2 py-1 rounded-full'>                              Popular
 
                             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-2 py-1 rounded-full">
                               Popular;
@@ -553,6 +609,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </div>
                           ))}
                         </div>
+:pages/comprehensive-services-showcase-2036.tsx
+                        <button className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm'>                          View Details
 <button className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm'>
 
                           View Details
@@ -568,6 +626,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20'
+:pages/comprehensive-services-showcase-2036.tsx
 
                         </div>
 
@@ -592,6 +651,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
                   Contact Us Today
                 </button>
+:pages/comprehensive-services-showcase-2036.tsx
+                <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                  Schedule Demo
                 <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
                   Schedule Demo
 
@@ -602,6 +663,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </div>
     </Layout>
+:pages/comprehensive-services-showcase-2036.tsx
+  )
+}
+export default ComprehensiveServicesShowcase2036;
 
   )
 }

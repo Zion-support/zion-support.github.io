@@ -1,10 +1,7 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/security-automation.cjs
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/security-automation.cjs
 
       "autoPatch"
       "vulnerabilityThreshold"
@@ -93,7 +90,3 @@ const path = require('path')
       console.error('Error in quick vulnerability "check")
       console.error('Error saving scan "results")
       console.error('Error saving security "data")
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/security-automation.cjs
-<<<<<<< HEAD:scripts/intelligent/security-automation.cjs
-      console.error('Error loading security "data")
-      console.error('Error loading security "data")

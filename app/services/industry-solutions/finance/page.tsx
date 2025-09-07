@@ -1,31 +1,30 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'Service | Zion Tech Group',
-  description: 'Professional services for your business needs.',
-  keywords: 'services, business, technology',
+  title: 'Industry Solutions/finance | Zion Tech Group',
+  description: 'Professional industry solutions/finance services to help your business grow and succeed.',
+  keywords: 'industry, solutions/finance, business solutions, professional services',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'Service | Zion Tech Group',
-    description: 'Professional services for your business needs.',
+    title: 'Industry Solutions/finance | Zion Tech Group',
+    description: 'Professional industry solutions/finance services to help your business grow and succeed.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
 };
 
-export default function ServicePage() {
+export default function IndustrySolutionsFinancePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Service
+              Industry Solutions/finance
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Professional services for your business needs
+              Professional industry solutions/finance services to help your business grow and succeed.
             </p>
           </div>
         </div>
@@ -37,10 +36,10 @@ export default function ServicePage() {
             Coming Soon
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            This service page is under development. Please contact us for more information.
+            This service is currently under development. Please contact us for more information.
           </p>
           <a
-            href="/contact"
+            href="mailto:kleber@ziontechgroup.com?subject=Industry Solutions/finance Inquiry"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
           >
             Contact Us

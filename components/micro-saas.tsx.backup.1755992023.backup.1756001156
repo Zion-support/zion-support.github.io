@@ -571,8 +571,6 @@ export default function MicroSaasPage() {
     }
   ];
 
-<<<<<<< HEAD
-=======
   const categories = [...new Set(microSaasServices.map(service => service.category))];
 
   const competitiveAdvantages = [
@@ -608,7 +606,6 @@ export default function MicroSaasPage() {
     }
   ];
 
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-website-improvements-33cc
   return (
     <>
       <Head>

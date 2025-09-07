@@ -1,12 +1,6 @@
 import { ApiDocsSpec } from './types';
 
-  ]
-}
-export default v1;
-  ];
-
-const baseUrl = 'https://api && api.zion.os';
-
+const baseUrl = 'https://api.zion.os';
 const v1: ApiDocsSpec = {
   product: 'Zion OS'
   versions: ['v1']
@@ -433,25 +427,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
           auth: ['jwt']
           responseBodySchema: { type: 'object';, properties: { members: { type: 'number' ;}, proposals: { type: 'number' ;} } }
           samples: [
-            {
-              language: 'curl';,
-              code: `curl '${baseUrl;}/v1/nation/stats' -H 'Authorization: Bearer <token>'`;,
-            },
-            {
-              language: 'javascript';,
-              code: `await fetch('${baseUrl;}/v1/nation/stats', { headers: { Authorization: 'Bearer <token>' ;} }).then(r => r.json());`,
-            },
-            {
-              language: 'python';,
-              code: `import requests\nrequests.get('${baseUrl;}/v1/nation/stats', headers={'Authorization':'Bearer <token>'}).json()`;
-            },
-          ],
-          versions: ['v1'];,
-        },
-      ],
-    },
-  ],
+            { language: 'curl', code: `curl '${baseUrl}/v1/nation/stats' -H 'Authorization: Bearer <token>'` }
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/nation/stats', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json()),` }
+            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/nation/stats', headers={'Authorization':'Bearer <token>'}).json()` }]
+          versions: ['v1']
+        }
+      }
+    }
+  ]
+}
+export default v1;
 };
 
 export default v1;
-origin/cursor/automate-test-improve-and-merge-code-2533

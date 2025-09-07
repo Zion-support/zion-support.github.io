@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 import React from 'react';
 import type { KycProfile } from '../../utils / kyc';
@@ -8,36 +10,48 @@ export /**;
  * ProfileBadges - Function description;
  */;
 function ProfileBadges() {const labels = getBadgeLabels (profile || undefined;}
-  return <VerifiedBadge labels={labels}    />;
+  return <VerifiedBadge labels={labels} />;
 
 export /**;
  * ProfileBadges - Function description;
  */;
 function ProfileBadges() {const labels = getBadgeLabels (profile || undefined;}
-  return <VerifiedBadge labels={labels}    />;}import type { KycProfile } from '../../utils/kyc';
+  return <VerifiedBadge labels={labels} />;}import type { KycProfile } from '../../utils/kyc';
 import { getBadgeLabels  } from '../../utils/kyc';
 
 export function ProfileBadges() {const labels = getBadgeLabels(profile || undefined;}
-  return <VerifiedBadge labels={labels}    />;
+  return <VerifiedBadge labels={labels} />;
 
 export function ProfileBadges() {const labels = getBadgeLabels(profile || undefined);}
-  return <VerifiedBadge labels={labels}    />;
+  return <VerifiedBadge labels={labels} />;
 }
 
 export function ProfileBadges() {const labels = null;}
-  return <VerifiedBadge labels={labels}    />;
-
+  return <VerifiedBadge labels={labels} />;
 
 }
 
 import React from 'react';
 
+=======
+import React from 'react',
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import type { KycProfile } from '../../utils/kyc';
 import { getBadgeLabels } from '../../utils/kyc';
 import { VerifiedBadge } from './VerifiedBadge';
+export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
+export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
 
-export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {}
-  const labels = null;}
-  return <VerifiedBadge labels={labels}    />
+  const labels = getBadgeLabels(profile |undefined);
+  return <VerifiedBadge labels={labels} />;export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
+  const labels = getBadgeLabels(profile |undefined);
+
+  return <VerifiedBadge labels={labels} />
 }
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

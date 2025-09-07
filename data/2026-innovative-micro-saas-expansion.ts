@@ -1,8 +1,4 @@
-origin/cursor/expand-services-advertise-and-build-project-c28b
-import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasService2026 {
-origin/cursor/automate-test-improve-and-merge-code-2533
-
   id: string;
   name: string;
   tagline: string;
@@ -653,8 +649,9 @@ export const getInnovativeMicroSaasServices2026ByCategory = (
 ) => {
   return innovativeMicroSaasServices2026.filter(
     service => service.category === category;
-
+  );
 }
+export const getPopularInnovativeMicroSaasServices2026 = () => {
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
   ];
@@ -689,136 +686,8 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
 
   })
 }
-origin/cursor/expand-services-advertise-and-build-project-c28b
-export interface InnovativeMicroSaasService2026 {
-
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string,
-  contactInfo: {}
-    mobile: string, email: string,
-    address: string,;
-    website: string;
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number;
-}
-const contact = {}
-  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com','
-  address: '364 E Main St STE 1008 Middletown DE 19709','
-  website: 'https://ziontechgroup.com'
+  return innovativeMicroSaasServices2026.filter(service => {;
+    const price = parseInt(service.price.replace('$', ''));
+    return price >= minPrice && price <= maxPrice;
+  });
 };
-export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] = [;
-  // AI-Powered Business Intelligence & Analytics;
-  {'
-    id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite','
-    tagline: 'Transform raw data into actionable insights with AI-powered analytics', price: '$299','
-    period: '/month','
-    description: 'Advanced business intelligence platform that uses AI to analyze data, generate insights, and provide predictive analytics. Features include automated reporting, real-time dashboards, and natural language querying.',
-    features: ['
-      'AI-powered data analysis and visualizationPredictive analytics and forecastingReal-time dashboard and reportingNatural language query interfaceAutomated insight generationMulti-source data integrationCustom KPI trackingMobile-responsive design';'
-      'API for third-party integrations24/7 AI monitoring and alerts'
-    ];'
-    popular: true, icon: '📊','
-    color: 'from-blue-600 to-cyan-600', textColor: 'text-blue-400','
-    link: 'https://ziontechgroup.com/ai-business-intelligence-suite','
-    marketPosition: 'Competes with Tableau ($70/month), Power BI ($9.99/month). Our advantage: AI automation reduces manual analysis by 80% and provides predictive insights.','
-    targetAudience: 'Small to medium businesses, Data analysts, Business consultants, Marketing agencies, E-commerce companies','
-    trialDays: 14, setupTime: '1-2 hours','
-    category: 'Business Intelligence & Analytics', realService: true,'
-    technology: ['ReactPythonTensorFlowPostgreSQLRedisDocker'], integrations: ['SalesforceHubSpotGoogle AnalyticsShopifyQuickBooksExcel'],'
-    useCases: ['Sales performance analysisCustomer behavior insightsFinancial forecastingMarketing ROI trackingOperational efficiency monitoring'], roi: 'Businesses report 300% ROI through improved decision-making and operational efficiency.','
-    competitors: ['TableauPower BILookerQlikView'], marketSize: '$29.5B BI market','
-    growthRate: '15% annual growth', contactInfo: contact,
-    realImplementation: true,'
-    implementationDetails: 'Cloud-native SaaS platform with AI algorithms for data analysis, real-time processing, and automated insight generation.','
-    launchDate: '2024-11-01', customers: 45,
-
-    rating: 4.8,
-    reviews: 23;
-  };
-  // AI Content Creation & Marketing;
-  {'
-
-    rating: 4.7,
-    reviews: 34;
-  };
-  // AI Customer Service & Support;
-  {'
-
-    rating: 4.6,
-    reviews: 28;
-  };
-  // AI-Powered E-commerce Optimization;
-  {'
-
-    rating: 4.5,
-    reviews: 19;
-  };
-  // AI-Powered HR & Recruitment;
-  {'
-
-    rating: 4.4,
-    reviews: 22;
-  };
-  // AI-Powered Financial Management;
-  {'
-
-    rating: 4.6,
-    reviews: 31;
-  };
-  // AI-Powered Project Management;
-  {'
-
-    rating: 4.5,
-    reviews: 26;
-  };
-  // AI-Powered Learning & Training;
-  {'
-
-    rating: 4.4,
-    reviews: 21;
-  };
-  // AI-Powered Healthcare Solutions;
-  {'
-
-;
-export const getInnovativeMicroSaasServices2026ByCategory = (
-  category: string) =>: any {}
-  return innovativeMicroSaasServices2026.filter (;
-    service => service.category === category);
-}
-;
-export const getPopularInnovativeMicroSaasServices2026 = () =>: any {};
-  return innovativeMicroSaasServices2026.filter (service => service.popular);
-
-}
-;
-export const getInnovativeMicroSaasServices2026ByPriceRange = (
-  min_price: number,
-
-};
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-    website: string
-  },
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-};
-origin/cursor/automate-test-improve-and-merge-code-2533

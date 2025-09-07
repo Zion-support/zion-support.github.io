@@ -1,5 +1,4 @@
 export interface ContentGenerationRequest {
-export interface ContentGenerationRequest {;
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
@@ -27,33 +26,6 @@ export interface ContentGenerationResponse {
   }
 }
 export interface ContentTemplate {
-export interface ContentTemplate {;
-
-    description: string,
-    tags: string[];
-
-  }
-}
-export interface ContentTemplate {
-
-    description: string,
-    tags: string[];
-
-  }
-}
-
-  suggestions: string[];
-
-  metadata: {
-    title: string,
-  description: string
-
-    description: string,
-    tags: string[];
-
-  }
-}
-
   id: string;
   name: string;
   description: string;
@@ -80,156 +52,6 @@ export class AIContentGeneratorService {
         body: JSON.stringify(request)});
       if (!response.ok) {
         throw new Error(`Content generation failed: ${response.statusText}`)
-
-export interface ContentGenerationRequest {;
-
-  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
-  topic: string,;'
-  tone: 'professional' | 'casual' | 'friendly' | 'formal',;'
-  length: 'short' | 'medium' | 'long',;
-  keywords?: string[],;
-  targetAudience?: string;
-}
-;
-export interface ContentGenerationResponse {;
-  content: string,;
-  wordCount: number,;
-  seoScore: number,;
-  readabilityScore: number,;
-  suggestions: string[],;
-  metadata: {;
-    title: string,;
-    description: string,;
-    tags: string[];
-  }
-}
-;
-export interface ContentTemplate {;
-  id: string,;
-  name: string,;
-  description: string,;
-  type: string,;
-  preview: string,;
-  price: number;
-}
-;
-export class AIContentGeneratorService {;
-  private apiKey: string,;
-  private baseUrl: string,;'
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {;
-    this.apiKey = apiKey,;
-    this.baseUrl = baseUrl;
-  }
-;
-  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {;
-    try {;
-      // In a real implementation, this would call OpenAI, Claude, or similar API;
-      const response = await fetch(`${this.baseUrl}/content/generate`, {;'
-        method: 'POST',;
-        headers: {;'`
-          'Authorization': `Bearer ${this.apiKey}`,;'
-          'Content-Type': 'application/json'},;
-        body: JSON.stringify(request)}),;
-      if (!response.ok) {;`
-        throw new Error(`Content generation failed: ${response.statusText}`);
-
-export interface ContentGenerationRequest {;
-
-      }
-      return await response.json()
-
-`
-      const response = await fetch(`${this && this.baseUrl}/content/generate`, {'
-        method: 'POST',
-        headers: {'`
-          'Authorization': `Bearer ${this && this.apiKey}`;'
-          'Content-Type': 'application/json'};
-        body: JSON && JSON.stringify(request)});
-
-      if (!response && response.ok) {}`
-        throw new Error(`Content generation failed: ${response && response.statusText}`)
-      }
-
-      return await response && response.json()
-
-    } catch (error) {}
-      // Fallback to mock data for demo purposes;
-      return this && this.generateMockContent(request)
-    }
-  }
-
-  preview: string,
-  price: number;
-}
-export class AIContentGeneratorService {};
-  private api_key: string;
-  private base_url: string,'
-  constructor (api_key: string, base_url: string = 'https://api.ziontech.ai') {}
-    this.api_key = api_key,
-    this.base_url = base_url;
-  }
-  async generate_content (request: ContentGenerationRequest): Promise < ContentGenerationResponse> {}
-    try {}
-      // In a real implementation, this would call OpenAI, Claude, or similar API;`
-      const response = await fetch (`${this.base_url}/content / generate`, {'
-        method: 'POST',
-        headers: {'`
-          'Authorization': `Bearer ${this.api_key}`;'
-          'Content - Type': 'application / json'}
-        body: JSON.stringify (request)});
-;
-      // Check condition;
-if ( {) {}
-  $2;
-}`
-        throw new Error (`Content generation failed: ${response.status_text}`);
-      }
-      return await response.json ();
-    } catch (error) {}
-      // Fallback to mock data for demo purposes;
-      return this.generateMockContent (request);
-    }
-  }
-  async get_templates (): Promise < ContentTemplate[]> {}
-    return [;
-
-      {
-        id: 'blog - post - starter';
-        name: 'Blog Post Starter';
-
-        description: 'Professional blog post template with SEO optimization';
-
-'
-        type: 'blog - post';'
-        preview: 'Create engaging blog posts that rank well in search engines...',
-        price: 29;
-
-      }
-
-  id: string;
-  name: string,
-  description: string;
-
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
-    this && this.apiKey = apiKey,
-    this && this.baseUrl = baseUrl
-
-export class AIContentGeneratorService {
-
-  private apiKey: string;
-
-  private baseUrl: string
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey
-    this.baseUrl = baseUrl
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
-    this && this.apiKey = apiKey,
-    this && this.baseUrl = baseUrl
-  }
-  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
-    try {
-      // In a real implementation, this would call OpenAI, Claude, or similar API
-export interface ContentGenerationRequest {;
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
   topic: string,;
   tone: 'professional' | 'casual' | 'friendly' | 'formal',;
@@ -301,7 +123,6 @@ export interface ContentGenerationRequest {;
       return this && this.generateMockContent(request)
     }
   }
-
   async getTemplates(): Promise<ContentTemplate[]> {
     return [
   preview: string,
@@ -370,8 +191,12 @@ if ( {) {
 
       }
       {
-        id: 'landing - page - copy';
-
+        id: 'landing-page-copy';
+        name: 'Landing Page Copy';
+        description: 'High-converting landing page content';
+        type: 'landing-page';
+        preview: 'Turn visitors into customers with compelling copy...'
+        price: 59
       }
     ];
   }
@@ -433,115 +258,25 @@ ${request && request.topic} represents a significant opportunity for organizatio
     seoScore: number;
     readabilityScore: number;
     suggestions: string[]
-
-This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.;
-## Key Points;
-- Point 1: ${request.topic} is essential for modern businesses;
-- Point 2: Implementing ${request.topic} can improve efficiency;
-- Point 3: Best practices for ${request.topic} implementation;
-## Conclusion;
-
-      word_count: mock_content.split (' ').length;
-      seo_score: 85;
-      readability_score: 78;
-      suggestions: [;'
-        'Add more specific examples_include relevant statistics_optimize for target keywords';
-      ],
-      metadata: {}`
-        title: `${request.topic} - Complete Guide`;`
-        description: `Learn everything about ${request.topic} and how to implement it effectively.`;
-
-${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
-;
-    return {
-      content: mock_content;
-      word_count: mock_content.split (' ').length;
-      seo_score: 85;
-      readability_score: 78;
-      suggestions: [;
-        'Add more specific examples_include relevant statistics_optimize for target keywords';
-      ],
-      metadata: {
-        title: `${request.topic} - Complete Guide`;
-        description: `Learn everything about ${request.topic} and how to implement it effectively.`;
-
-        tags: [request.topic, request.type, 'guidetutorial'];
-      }
-    }
-  }
-
-  async analyze_content (content: string): Promise<{
-
-    seo_score: number;
-    readability_score: number;
-    suggestions: string[],
-    keyword_density: Record < string, number>;
-
+    keywordDensity: Record<string, number>
   }> {
-    // Mock content analysis;
-
-        'content': 2 && 2.1;
-        'seo': 1 && 1.8,
-        'marketing': 1 && 1.5
-
+    // Mock content analysis
     return {
-        'content': 2 && 2.1;
-        'seo': 1 && 1.8,
-        'marketing': 1 && 1.5
-
-    // Mock content analysis;
-'
-        'content': 2 && 2.1;'
-        'seo': 1 && 1.8,'
-        'marketing': 1 && 1.5;
-  }> {}
-    // Mock content analysis;
-    return {}
-      seo_score: Math.floor (Math.random () * 30) + 70;
-
-  }> {
-    // Mock content analysis;
-    return {
-      seo_score: Math.floor (Math.random () * 30) + 70;
-
-      readability_score: Math.floor (Math.random () * 30) + 70;
-      suggestions: [;'
-        'Add more headings for better structure_include internal links to related content_optimize meta description';
+      seoScore: Math.floor(Math.random() * 30) + 70;
+      readabilityScore: Math.floor(Math.random() * 30) + 70;
+      suggestions: [
+        'Add more headings for better structureInclude internal links to related contentOptimize meta description'
       ];
-
-      keyword_density: {
+      keywordDensity: {
         'content': 2.1;
-        'seo': 1.8,
-        'marketing': 1.5;
-
-;
-  async analyzeContent(content: string): Promise<{;
-    seoScore: number,;
-    readabilityScore: number,;
-    suggestions: string[],;
-    keywordDensity: Record<string number>;
-  }> {;
-    // Mock content analysis;
-
-    return {;
-
-      seoScore: Math.floor(Math.random() * 30) + 70,;
-      readabilityScore: Math.floor(Math.random() * 30) + 70,;
-      suggestions: [;'
-        'Add more headings for better structureInclude internal links to related contentOptimize meta description';
-      ],;
-
+        'seo': 1.8
+        'marketing': 1.5
       }
     }
   }
 }
-
-// Pricing tiers for the AI Content Generator;
-// Pricing tiers for the AI Content Generator;
-
-// Pricing tiers for the AI Content Generator;
-
-// Pricing tiers for the AI Content Generator;
+// Pricing tiers for the AI Content Generator
+}
 
 export const AI_CONTENT_PRICING = {
   starter: {
@@ -576,49 +311,7 @@ export const AI_CONTENT_PRICING = {
     features: [
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]
-
-    period: '/month',
-
-    period: '/month',
-
-;
-// Pricing tiers for the AI Content Generator;
-export const AI_CONTENT_PRICING = {;
-  starter: {;'
-    name: 'Starter',;
-    price: 29,;'
-    period: '/month',;
-
-    features: [;
-      'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee';
-    ];
-
-  },;
-
-  professional: {;'
-    name: 'Professional',;
-    price: 99,;'
-    period: '/month',;
-    features: [;'
-      '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access';
-    ];
-  },;
-  enterprise: {;'
-    name: 'Enterprise',;
-    price: 299,;'
-    period: '/month',;
-    features: [;'
-      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';
-    ];
-
   }
-
+}
+  }
 };
-
-  }
-}
-;
-
-  }
-}
-;

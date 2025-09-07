@@ -1,0 +1,18 @@
+import { GetServerSideProps } from 'next';
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/developers/docs',
+:backup-problematic-files/components/api-docs.tsx.backup.1755991238
+      permanent: true,
+    },
+  };
+
+};
+
+export default function ApiDocsRedirect() {
+  return null;
+:backup-problematic-files/components/api-docs.tsx.backup.1755991238
+}
+}

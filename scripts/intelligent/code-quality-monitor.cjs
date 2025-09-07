@@ -1,10 +1,7 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/code-quality-monitor.cjs
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/code-quality-monitor.cjs
 
       "autoFixEnabled"
       console.error(' Failed to start Code Quality "Monitor")
@@ -26,7 +23,3 @@ const path = require('path')
       console.error('Error fixing ESLint "issues")
       execSync('npx prettier --write .', { "stdio"})
       console.error('Error fixing Prettier "issues")
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/code-quality-monitor.cjs
-<<<<<<< HEAD:scripts/intelligent/code-quality-monitor.cjs
-      console.error('Error fixing TypeScript "issues")
-      console.error('Error fixing TypeScript "issues")

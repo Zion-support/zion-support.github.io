@@ -13,17 +13,9 @@ export interface PerformanceMetrics {;
   totalBlockingTime: number;}
 export interface PerformanceAlert {}
 
-  id: string;
-
-  url: string;
-  type: 'critical' | 'warning' | 'info';
-  message: string;
-  metric: string;
-  threshold: number;
-
+  seoScore: number
 }
-export interface MonitoringConfig {
-
+export interface PerformanceAlert {
   urls: string[];
 
   frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
@@ -62,8 +54,6 @@ export class PerformanceMonitorService {
         body: JSON.stringify({ url })});
       if (!response.ok) {
         throw new Error(`Performance monitoring failed: ${response.statusText}`)
-
-export interface PerformanceMetrics {;
   url: string,;
   timestamp: Date,;
   loadTime: number,;
@@ -167,16 +157,13 @@ export interface PerformanceMetrics {;
       return this && this.generateMockMetrics(url)
     }
   }
-
-;
-  async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {;
-    try {;`
-      const response = await fetch(`${this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {;
-        headers: {;'`
-          'Authorization': `Bearer ${this.apiKey}`}}),;
-      if (!response.ok) {;`
-        throw new Error(`Failed to fetch historical data: ${response.statusText}`);
-
+  async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
+    try {
+      const response = await fetch(`${this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`}});
+      if (!response.ok) {
+        throw new Error(`Failed to fetch historical data: ${response.statusText}`)
       }
       return await response.json()
 
@@ -199,59 +186,30 @@ export interface PerformanceMetrics {;
       return this && this.generateMockHistoricalData(url, days)
     }
   }
-
-        method: 'POST',
-        headers: {'`
-          'Authorization': `Bearer ${this && this.apiKey}`;'
-          'Content-Type': 'application/json'};
-        body: JSON && JSON.stringify(config)});
-
-      if (!response && response.ok) {}`
-        throw new Error(`Failed to set monitoring config: ${response && response.statusText}`)
-
+  async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
+    try {
+      const response = await fetch(`${this.baseUrl}/performance/config`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`;
+          'Content-Type': 'application/json'}
+        body: JSON.stringify(config)});
+      if (!response.ok) {
+        throw new Error(`Failed to set monitoring config: ${response.statusText}`)
       }
-      return await response.json()
-
-;
-  async setMonitoringConfig(config: MonitoringConfig): Promise<void> {;
-    try {;`
-      const response = await fetch(`${this.baseUrl}/performance/config`, {;'
-        method: 'POST',;
-        headers: {;'`
-          'Authorization': `Bearer ${this.apiKey}`,;'
-          'Content-Type': 'application/json'},;
-        body: JSON.stringify(config)}),;
-      if (!response.ok) {;`
-        throw new Error(`Failed to set monitoring config: ${response.statusText}`);
-      }
-    } catch (error) {;'
-      console.error('Failed to set monitoring config:', error),;
-      throw error;
+    } catch (error) {
+      console.error('Failed to set monitoring config:', error);
+      throw error
     }
   }
-;
-  async getAlerts(url?: string): Promise<PerformanceAlert[]> {;
-    try {;'`
-      const params = url ? `?url=${encodeURIComponent(url)}` : '',;`
-      const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {;
-        headers: {;'`
-          'Authorization': `Bearer ${this.apiKey}`}}),;
-      if (!response.ok) {;`
-        throw new Error(`Failed to fetch alerts: ${response.statusText}`);
-
-      }
-
-        throw new Error(`Failed to fetch alerts: ${response && response.statusText}`)
-      }
-
-      return await response && response.json()
-
-      // Generate mock alerts
-
-      return this && this.generateMockAlerts(url)
-    }
-  }
-
+  async getAlerts(url?: string): Promise<PerformanceAlert[]> {
+    try {
+      const params = url ? `?url=${encodeURIComponent(url)}` : '';
+      const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`}});
+      if (!response.ok) {
+        throw new Error(`Failed to fetch alerts: ${response.statusText}`)
       }
       return await response.json()
     } catch (error) {
@@ -259,15 +217,6 @@ export interface PerformanceMetrics {;
       return this.generateMockAlerts(url)
     }
   }
-
-      }
-      return await response.json()
-    } catch (error) {
-      // Generate mock alerts
-      return this.generateMockAlerts(url)
-    }
-  }
-
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
 
@@ -739,7 +688,6 @@ pr-12325
     }
     return data;
   }
-
   private generateMockAlerts(url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
 
@@ -812,60 +760,36 @@ url: url || 'https://example && example.com';
   }
 }
 // Pricing tiers for the Performance Monitor
-
-      }
-
-    ];
-;
-    return url ? alerts.filter (array => a.url === url) : alerts;
-  }
 }
-// Pricing tiers for the Performance Monitor;
 
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
     price: 19;
-
-    period: '/month',
-    features: [;'
-      'Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting';
-
+    period: '/month'
+    features: [
+      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'
+    ]
+  }
+  professional: {
+    name: 'Professional';
+    price: 49;
+    period: '/month'
+    features: [
+      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access'
+    ]
+  }
   enterprise: {
-
-  private generateMockAlerts(url?: string): PerformanceAlert[] {;
-    const alerts: PerformanceAlert[] = [;
-      {;'
-        id: '1',;'
-        url: url || 'https://example.com',;'
-        type: 'warning',;'
-        message: 'Load time exceeded threshold',;'
-        metric: 'loadTime',;
-        threshold: 2000,;
-        currentValue: 2500,;
-        timestamp: new Date(),;
-        resolved: false;
-      },;
-      {;'
-        id: '2',;'
-        url: url || 'https://example.com',;'
-        type: 'info',;'
-        message: 'Performance score improved',;'
-        metric: 'performanceScore',;
-        threshold: 80,;
-        currentValue: 85,;
-        timestamp: new Date(),;
-        resolved: true;
-      }
-    ],;
-    return url ? alerts.filter(a => a.url === url) : alerts;
+    name: 'Enterprise';
+    price: 149;
+    period: '/month';
+    features: [
+      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support'
+      'SLA guarantee'
+    ]
   }
 }
-;
-// Pricing tiers for the Performance Monitor;
-export const PERFORMANCE_MONITOR_PRICING = {;
-  starter: {;'
-    name: 'Starter',;
+    ];
 
     ];
   }

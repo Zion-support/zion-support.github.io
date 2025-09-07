@@ -77,6 +77,8 @@ const [isOpen, setIsOpen] = useState(false)
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
                 )}
               >
+:src/components/support/SupportWidget.tsx
+                Zion Support
 "
 import React, { useState } from "react","
 import { useRouter } from "next/router","
@@ -137,6 +139,36 @@ export function SupportWidget() { return null; }
             <div className="flex items-center gap-2">
 
               <Button
+:src/components/support/SupportWidget.tsx
+                variant='ghost'
+                size='icon'
+                className='h-8 w-8 rounded-full'
+                onClick={() => router.push('/help')}
+                aria-label='Help center'              >
+                <Info className='h-5 w-5' />
+              </Button>
+              <Button
+                variant='ghost'
+                size='icon'
+                className='h-8 w-8 rounded-full'
+                onClick={() => setIsOpen(false)}
+                aria-label='Close support'              >
+                <X className='h-5 w-5' />
+              </Button>
+            </div>
+          </div>
+          <ChatBotPanel />
+        </div>
+      )}
+    </>
+  )
+}
+          <ChatBotPanel />
+        </div>
+      )}
+    </>;
+  );
+};
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"

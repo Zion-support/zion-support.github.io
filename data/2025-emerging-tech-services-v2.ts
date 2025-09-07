@@ -43,7 +43,81 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   customers: number;
   rating: number;
   reviews: number;
+  marketSize: string;
+  growthRate: string
+}
 
+export const emergingTechServicesV2: EmergingTechService[] = [
+  {
+    id: 'space-mining-platform';
+    name: 'Space Mining Platform';
+    tagline: 'Revolutionary asteroid mining and space resource extraction';
+    description: 'Advanced platform that enables automated asteroid mining, resource extraction, and space resource management using cutting-edge robotics and AI technology.',
+    category: 'Space & Emerging Tech';
+    price: {
+      monthly: 999;
+      yearly: 9990;
+      currency: 'USD';
+      trialDays: 7;
+      setupTime: '24 hours';
+      enterprise: 4999
+    },
+    features: [
+      'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis';
+      'Risk assessmentRegulatory compliance tools'
+  growthRate: string;
+export const emergingTechServicesV2: EmergingTechService[] = [
+  {
+    id: 'space-mining-platform'
+    name: 'Space Mining Platform'
+    tagline: 'Revolutionary asteroid mining and space resource extraction'
+    description:
+      'Advanced platform that enables automated asteroid mining, resource extraction, and space resource management using cutting-edge robotics and AI technology.'
+    category: 'Space & Emerging Tech'
+    price: {
+      monthly: 999
+      yearly: 9990
+      currency: 'USD'
+      trialDays: 7
+      setupTime: '24 hours'
+      enterprise: 4999
+    }
+    features: [
+      'Asteroid identification and mapping'
+      'Automated mining operations'
+      'Resource extraction systems'
+      'Space logistics management'
+      'Real-time monitoring'
+      'Resource processing'
+      'Transportation coordination'
+      'Market analysis'
+      'Risk assessment'
+      'Regulatory compliance tools'
+    ]
+    benefits: [
+      'Access to rare earth elements'
+      'Reduce Earth resource dependency'
+      'Enable space colonization'
+      'Create new economic opportunities'
+      'Advance space technology'
+    ]
+    targetAudience: [
+      'Space agencies'
+      'Mining companies'
+      'Investment firms'
+      'Research institutions'
+      'Government agencies'
+      'Technology companies'
+    ]
+    marketPosition:
+      'Competitive with Planetary Resources ($1000+), Deep Space Industries ($800+), and AstroForge ($600+). Our advantage: Advanced automation, AI optimization, and comprehensive platform.'
+    competitors: [
+      'Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+'
+    ]
+    techStack: [
+      'Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems'
+    ]
+    realImplementation: true
     implementationDetails:
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.'
@@ -518,22 +592,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ]
     support:'
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
-
-      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
-    ],'
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform','
-    icon: '🚗','
-    color: 'from-red-500 to-pink-600',
-    popular: true,'
-
-    launchDate: '2024-01-25',
-    customers: 180,
-    rating: 4.9,
-    reviews: 65,'
-    marketSize: '$35B autonomous vehicle market','
-    growthRate: '75% annually',
-  },;
-
+    compliance: [
+      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'
+    ]
+    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
+    icon: '🚗'
+    color: 'from-red-500 to-pink-600'
+    popular: true
+    launchDate: '2024-01-25'
+    customers: 180
+    rating: 4.9
+    reviews: 65
+    marketSize: '$35B autonomous vehicle market'
+    growthRate: '75% annually'
+  }
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 
   marketSize: string;
@@ -669,55 +741,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9;
     reviews: 65;
 
-  id: string,;
-  name: string,;
-  tagline: string,;
-  description: string,;
-  category: string,;
-  price: {;
-    monthly: number,;
-    yearly: number,;
-    currency: string,;
-    trialDays: number,;
-    setupTime: string,;
-    enterprise: number;
-  },;
-  features: string[],;
-  benefits: string[],;
-  targetAudience: string[],;
-  marketPosition: string,;
-  competitors: string[],;
-  techStack: string[],;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  roi: string,;
-  useCases: string[],;
-  integrations: string[],;
-  support: string,;
-  compliance: string[],;
-  link: string,;
-  icon: string,;
-  color: string,;
-  popular: boolean,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number,;
-  marketSize: string,;
-  growthRate: string;
-}
-;
+    marketSize: '$35B autonomous vehicle market'
 
-export interface EmergingTechService {;
-
+    growthRate: '75% annually'
   }
 ];
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    marketSize: '$35B autonomous vehicle market';
-    growthRate: '75% annually';
-  }
-];
-origin/cursor/automate-test-improve-and-merge-code-2533

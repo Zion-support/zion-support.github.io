@@ -1,22 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
-import { Award, Users, Target, Globe, CheckCircle, Star } from 'lucide-react';
+import { Award, Users, Lightbulb, Target, CheckCircle, Star, Globe } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'About | Zion Tech Group',
-  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
-  keywords: 'about, company, mission, AI solutions, micro SaaS, IT services, enterprise software',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'About | Zion Tech Group',
-    description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Zion Tech Group',
-  },
+export const metadata = {
+  title: "About | Zion Tech Group",
+  description:
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
 };
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -24,8 +13,8 @@ export default function AboutPage() {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6">About Zion Tech Group</h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            We are a forward-thinking technology company dedicated to delivering 
-            cutting-edge AI solutions, innovative micro SaaS platforms, and 
+            We are a forward-thinking technology company dedicated to delivering
+            cutting-edge AI solutions, innovative micro SaaS platforms, and
             comprehensive IT services that drive real business transformation.
           </p>
         </div>
@@ -105,18 +94,18 @@ export default function AboutPage() {
         <div className="text-center bg-slate-800 rounded-lg p-12">
           <h2 className="text-3xl font-bold mb-8">Ready to Work With Us?</h2>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how our innovative solutions can help transform your business 
+            Let&apos;s discuss how our innovative solutions can help transform your business
             and drive your digital transformation goals.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
             >
               Get Started
             </a>
-            <a 
-              href="/services" 
+            <a
+              href="/services"
               className="px-8 py-4 border border-slate-400 hover:border-white rounded-lg font-semibold transition-all duration-300"
             >
               View Services

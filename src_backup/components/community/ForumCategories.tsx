@@ -1,3 +1,11 @@
+:src/components/community/ForumCategories.tsx
+import Link from "next/link",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { useAuth } from "@/hooks/useAuth";
+import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
+import { ForumCategoryInfo } from "@/types/community";
+const categories: ForumCategoryInfo[] = [
+  {
 {
 
     id: "getting-hired"
@@ -6,7 +14,6 @@
     adminOnly: false
     icon: "Briefcase"
   }
-import { ForumCategoryInfo } from "@/types/community",
   {
     id: "project-help"
     name: "Project Help"
@@ -20,6 +27,9 @@ import { ForumCategoryInfo } from "@/types/community",
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
+:src/components/community/ForumCategories.tsx
+    icon: "Code"
+  }
     icon: "FileText"
 
   {
@@ -51,6 +61,8 @@ const categories: ForumCategoryInfo[] = [;
     description: "Share your feedback and suggest new features.",
     adminOnly: false,
     icon: "FileText"
+:src/components/community/ForumCategories.tsx
+  }
   },
   {
     id: "announcements",
@@ -59,6 +71,25 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: true,
     icon: "Megaphone"
   }
+:src/components/community/ForumCategories.tsx
+]
+const iconMap = {
+  Briefcase
+  MessageSquare
+  Code
+  FileText
+  Megaphone
+}
+export const ForumCategories = () => {
+  const { user } = useAuth()
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+  const visibleCategories = categories.filter(
+    category => !category.adminOnly |isAdmin
+  )
+  return (
+    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">;
+      {visibleCategories.map((category) => {;
+        const Icon = iconMap[category.icon as keyof typeof iconMap]; return (
 
 ],
 
@@ -98,6 +129,15 @@ export const ForumCategories = () => {
             </Card>
           </Link>
         )
+:src/components/community/ForumCategories.tsx
+      })}
+    </div>
+  )
+}
+export default ForumCategories
+"
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+export default ForumCategories
 
 import Link from "next/link",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;

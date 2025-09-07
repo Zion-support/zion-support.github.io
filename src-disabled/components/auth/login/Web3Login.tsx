@@ -1,3 +1,16 @@
+:src/components/auth/login/Web3Login.tsx
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { useAuth } from "@/hooks/useAuth"
+import { useWallet as useAppWallet  } from "../../../context/WalletContext.tsx"; // Renamed to avoid conflict if useWallet hook is defined locally
+import { Wallet } from 'lucide-react'
+import { toast } from "sonner";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function Web3Login() {
+
+  const { loginWithWeb3 } = useAuth()
+  const { isWalletSystemAvailable } = useAppWallet()
+  const [isLoading, setIsLoading] = useState(false)
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
@@ -33,6 +46,10 @@ export function Web3Login() {
     }
 
     try {
+:src/components/auth/login/Web3Login.tsx
+      setIsLoading(true)
+      // Check if Ethereum provider (e.g., MetaMask) is available
+      const ethereum = (window as any).ethereum
       setIsLoading(true),
       // Check if Ethereum provider (e.g., MetaMask) is available
       const ethereum = (window as any).ethereum,
@@ -49,6 +66,18 @@ export function Web3Login() {
     } finally {
       setIsLoading(false)
     }
+:src/components/auth/login/Web3Login.tsx
+  }
+  const buttonDisabled = isLoading |!isWalletSystemAvailable
+  const buttonTitle = !isWalletSystemAvailable
+    ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
+    : ""
+}
+
+  )
+}
+  )
+}
   },
 
   const buttonDisabled = isLoading || !isWalletSystemAvailable,

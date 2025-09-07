@@ -9,31 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active')
-origin/cursor/automate-test-improve-and-merge-code-2533
-
         })
-    }),
-    
-    // Stats counter animation'
-    const statNumbers = document.querySelectorAll('.stat-number'),
-    const statsObserver = new IntersectionObserver((entries) => {}
-        entries.forEach(entry => {}
-            if (entry.isIntersecting) {}
-
-                animateCounter(entry.target),
-                statsObserver.unobserve(entry.target)
-            }
-        })
-    }, { threshold: 0.5 }),
-
-            backToTopBtn.classList.add('visible')
-        } else {'
-            backToTopBtn.classList.remove('visible')
-        }
-    }),
-
-    initializeModals()
-}),
 
 // Search function
 function performSearch(query) {
@@ -49,19 +25,6 @@ function performSearch(query) {
 
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
 
-            { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },
-            { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },
-            { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },
-// Zion Tech Group Website JavaScript;
-document.addEventListener('DOMContentLoaded', function() {;
-    // Mobile Navigation Toggle;
-    const navToggle = document.getElementById('nav-toggle'),;
-    const navMenu = document.getElementById('nav-menu'),;
-    if (navToggle && navMenu) {;
-        navToggle.addEventListener('click', function() {;
-            navMenu.classList.toggle('active'),;
-            navToggle.classList.toggle('active');
-        });
     }
 pr-12325
 ;
@@ -576,323 +539,102 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             searchResults.innerHTML = results.map(result =>
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
 
-        ].filter(item =>;
-            item.title.toLowerCase().includes(query);
-        ),;
-        if (results.length > 0) {;
-            searchResults.innerHTML = results.map(result =>;
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`;
-            ).join(''),;
-            searchResults.style.display = 'block';
-        } else {;
-            searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',;
-            searchResults.style.display = 'block';
-        }
-    }
-}
-;
-// Counter animation;
-function animateCounter(element) {;
-    const target = parseInt(element.textContent.replace(/\D/g, '')),;
-    const duration = 2000,;
-    const step = target / (duration / 16),;
-    let current = 0,;
-    const timer = setInterval(() => {;
-        current += step,;
-        if (current >= target) {;
-            current = target,;
-            clearInterval(timer);
-        }
-;
-        const suffix = element.textContent.replace(/\d/g, ''),;
-        element.textContent = Math.floor(current) + suffix;
+            ).join('')
 
+            searchResults.style.display = 'block'
         } else {
-            searchResults && searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
-
-            searchResults && searchResults.style.display = 'block'
-
+            searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>'
+            searchResults.style.display = 'block'
         }
     }
 }
-// Counter animation;
-function animateCounter(element) {}
-    const timer = setInterval(() => {}
-        current += step;
-        if (current >= target) {}
-            current = target;
+// Counter animation
+function animateCounter(element) {
+    const target = parseInt(element.textContent.replace(/\D/g, ''))
+    const duration = 2000
+    const step = target / (duration / 16)
+    let current = 0
+    const timer = setInterval(() => {
+
+        current += step
+        if (current >= target) {
+            current = target
             clearInterval(timer)
         }
+        const suffix = element.textContent.replace(/\d/g, '')
 
+        element.textContent = Math.floor(current) + suffix
     }, 16)
-
 }
+// Tooltip initialization
+function initializeTooltips() {
 
+    const tooltipElements = document.querySelectorAll('[data-tooltip]')
+    tooltipElements.forEach(element => {
+        element.addEventListener('mouseenter', function(e) {
+            const tooltip = document.createElement('div')
+            tooltip.className = 'tooltip'
+            tooltip.textContent = this.dataset.tooltip
+            document.body.appendChild(tooltip)
+            const rect = this.getBoundingClientRect()
+            tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px'
+            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px'
+
+            this.tooltip = tooltip
+        })
+        element.addEventListener('mouseleave', function() {
+            if (this.tooltip) {
+
+                this.tooltip.remove()
+
+                this.tooltip = null
             }
         })
     })
-    // Close modal on overlay click;
+}
+// Modal initialization
+function initializeModals() {
+
+    const modalTriggers = document.querySelectorAll('[data-modal]')
+    const modals = document.querySelectorAll('.modal')
+    modalTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.preventDefault()
+            const modalId = this.dataset.modal
+            const modal = document.getElementById(modalId)
+            if (modal) {
+                modal.classList.add('active')
+
+                document.body.style.overflow = 'hidden'
             }
         })
-        // Close modal on close button click;
+    })
+    // Close modal on overlay click
+    modals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+
+                this.classList.remove('active')
+
+                document.body.style.overflow = ''
+            }
+        })
+        // Close modal on close button click
+
+        const closeBtn = modal.querySelector('.modal-close')
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                modal.classList.remove('active')
+
+                document.body.style.overflow = ''
             })
         }
     })
-
-        ].filter(item => 
-            item.title.toLowerCase().includes(query)
-        ),
-        
-        if (results.length > 0) {
-            searchResults.innerHTML = results.map(result =>
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`
-        ].filter(item =>;
-            item.title.toLowerCase().includes(query);
-        ),;
-        if (results.length > 0) {;
-            searchResults.innerHTML = results.map(result =>;
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`;
-            ).join(''),;
-            searchResults.style.display = 'block';
-        } else {;
-            searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',;
-            searchResults.style.display = 'block';
-
-        }
-    }
-}
-;
-// Counter animation;
-function animateCounter(element) {;
-    const target = parseInt(element.textContent.replace(/\D/g, '')),;
-    const duration = 2000,;
-    const step = target / (duration / 16),;
-    let current = 0,;
-    const timer = setInterval(() => {;
-        current += step,;
-        if (current >= target) {;
-            current = target,;
-            clearInterval(timer);
-        }
-
-        ].filter(item =>;
-            item.title.toLowerCase().includes(query);
-        ),;
-        if (results.length > 0) {;
-            searchResults.innerHTML = results.map(result =>;
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`;
-            ).join(''),;
-            searchResults.style.display = 'block';
-        } else {;
-            searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',;
-            searchResults.style.display = 'block';
-        }
-    }
-}
-;
-// Counter animation;
-function animateCounter(element) {;
-    const target = parseInt(element.textContent.replace(/\D/g, '')),;
-    const duration = 2000,;
-    const step = target / (duration / 16),;
-    let current = 0,;
-    const timer = setInterval(() => {;
-        current += step,;
-        if (current >= target) {;
-            current = target,;
-            clearInterval(timer);
-        }
-;
-        const suffix = element.textContent.replace(/\d/g, ''),;
-        element.textContent = Math.floor(current) + suffix;
-;
-        const suffix = element.textContent.replace(/\d/g, ''),;
-        element.textContent = Math.floor(current) + suffix;
-    }, 16);
-}
-;
-// Tooltip initialization;
-function initializeTooltips() {;
-    const tooltipElements = document.querySelectorAll('[data-tooltip]'),;
-    tooltipElements.forEach(element => {;
-        element.addEventListener('mouseenter', function(e) {;
-            const tooltip = document.createElement('div'),;
-            tooltip.className = 'tooltip',;
-            tooltip.textContent = this.dataset.tooltip,;
-            document.body.appendChild(tooltip),;
-            const rect = this.getBoundingClientRect(),;
-            tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px',;
-            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px',;
-            this.tooltip = tooltip;
-        }),;
-        element.addEventListener('mouseleave', function() {;
-            if (this.tooltip) {;
-                this.tooltip.remove(),;
-
-//Zion Tech Group Website JavaScript;
-});
-// Search function;
-/**
- * perform_search - Function description
- */
-function perform_search() {
-    // This would typically make an API call to search your content;
-    // For now, we'll simulate search results;
-    const search_results = document.query_selector ('.search - results'),
-    // Check condition
-if ( {) {
-  $2
-
-            { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
-        ].filter(item => 
-            item.title.toLowerCase().includes(query)
-        ),
-        if (results.length > 0) {
-            searchResults.innerHTML = results.map(result =>
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`
-        ].filter(item =>;
-            item.title.toLowerCase().includes(query);
-        ),;
-        if (results.length > 0) {;
-            searchResults.innerHTML = results.map(result =>;
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`;
-            ).join(''),;
-            searchResults.style.display = 'block';
-        } else {;
-            searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',;
-            searchResults.style.display = 'block';
-        }
-    }
-}
-;
-// Counter animation;
-function animateCounter(element) {;
-    const target = parseInt(element.textContent.replace(/\D/g, '')),;
-    const duration = 2000,;
-    const step = target / (duration / 16),;
-    let current = 0,;
-    const timer = setInterval(() => {;
-        current += step,;
-        if (current >= target) {;
-            current = target,;
-            clearInterval(timer);
-        }
-        ].filter(item =>;
-            item.title.toLowerCase().includes(query);
-        ),;
-        if (results.length > 0) {;
-            searchResults.innerHTML = results.map(result =>;
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`;
-            ).join(''),;
-            searchResults.style.display = 'block';
-        } else {;
-            searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',;
-            searchResults.style.display = 'block';
-        }
-    }
-}
-;
-// Counter animation;
-function animateCounter(element) {;
-    const target = parseInt(element.textContent.replace(/\D/g, '')),;
-    const duration = 2000,;
-    const step = target / (duration / 16),;
-    let current = 0,;
-    const timer = setInterval(() => {;
-        current += step,;
-        if (current >= target) {;
-            current = target,;
-            clearInterval(timer);
-        }
-;
-        const suffix = element.textContent.replace(/\d/g, ''),;
-        element.textContent = Math.floor(current) + suffix;
-;
-        const suffix = element.textContent.replace(/\d/g, ''),;
-        element.textContent = Math.floor(current) + suffix;
-    }, 16);
-}
-;
-// Tooltip initialization;
-function initializeTooltips() {;
-    const tooltipElements = document.querySelectorAll('[data-tooltip]'),;
-    tooltipElements.forEach(element => {;
-        element.addEventListener('mouseenter', function(e) {;
-            const tooltip = document.createElement('div'),;
-            tooltip.className = 'tooltip',;
-            tooltip.textContent = this.dataset.tooltip,;
-            document.body.appendChild(tooltip),;
-            const rect = this.getBoundingClientRect(),;
-            tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px',;
-            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px',;
-            this.tooltip = tooltip;
-        }),;
-        element.addEventListener('mouseleave', function() {;
-            if (this.tooltip) {;
-                this.tooltip.remove(),;
-
-}
-
-        const results = [;
-            { title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager' },
-            { title: 'Quantum Neural Network Platform', url: '/solutions / quantum - neural - network - platform' },
-            { title: 'AI & Autonomous Systems', url: '/services / ai - autonomous - systems' },
-
-            { title: 'Quantum Computing Services', url: '/services / quantum - computing' }
-        ].filter (item =>;
-            item.title.toLowerCase ().includes (query)),
-        // Check condition;
-if ( {) {}
-  $2;
-}
-            search_results.innerHTML = results.map (result =>;'"
-                `<a href="${result.url}" class="search - result - item">${result.title}</a>`).join (''),'
-            search_results.style.display = 'block';
-        } else {'"
-            search_results.innerHTML = '<div class="search - result - item no - results">No results found</div>','
-            search_results.style.display = 'block';
-        }
-    }
-}
-// Counter animation;
-/**
- * animate_counter - Function description;
- */
-function animate_counter() { return null; }
-    const timer = set_interval (() => {}
-        current += step,
-        // Check condition;
-if ( {) {}
-  $2;
-}
-            current = target,
-            clear_interval (timer);
-        }'
-        const suffix = element.text_content.replace (/\d / g, ''),
-        element.text_content = Math.floor (current) + suffix;
-
-    }, 16);
-}
-// Tooltip initialization;
-/**
- * initialize_tooltips - Function description;
- */
-function initialize_tooltips() { return null; }
-        }),'
-        element.addEventListener ('mouseleave', function () {}
-            // Check condition;
-if ( {) {}
-  $2;
-}
-                this.tooltip.remove (),
-
-                this.tooltip = null;
-
-            }
-        });
-    });
-}
-
+    // Close modal on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            modals.forEach(modal => {
+                if (modal.classList.contains('active')) {
 ;
 // Modal initialization;
 function initializeModals() {;
@@ -1024,18 +766,11 @@ if ( {) {
 // Performance monitoring
 function logPerformance() {
 
-        const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
-        // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
-        // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
-
     if ('performance' in window) {
+        const perfData = performance.getEntriesByType('navigation')[0]
+        console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms')
 
-    if ({
-        const perfData = performance.getEntriesByType('navigation')[0]);
-        console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
         console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
-origin/cursor/automate-test-improve-and-merge-code-2533
-
     }
 }
 // Error tracking
@@ -1222,18 +957,7 @@ document && document.addEventListener('click', function(e) {
 })
 // Log performance when page is fully loaded
 
-  title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager';
-}
-{'
-  title: 'Quantum Neural Network Platform', url: '/solutions / quantum - neural - network - platform';
-}
-{'
-  title: 'AI & Autonomous Systems', url: '/services / ai - autonomous - systems';
-}
-
-{
-  title: 'Quantum Computing Services', url: '/services / quantum - computing';
-}].filter (item => item.title.toLowerCase () .includes (query) );
+window.addEventListener('load', logPerformance)
 ;
 }//Counter animation //Close modal on overlay click modals.for_each (modal => {
   modal.addEventListener ('click', function (e) {
@@ -1294,6 +1018,4 @@ document.addEventListener ('click', function (e) {
     }
 }),
 // Log performance when page is fully loaded;
-
-'
-    // // // console.log('Event tracked:', eventName, eventData),
+window.addEventListener('load', logPerformance),;

@@ -1,3 +1,4 @@
+:src/components/mobile-app/AppStoreBanner.tsx
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage";
 import { X } from 'lucide-react'
@@ -11,12 +12,35 @@ export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
   const isMobile = useIsMobile()
   useEffect((,) => {
+:src/components/mobile-app/AppStoreBanner.tsx
+import React, { useState, useEffect } from "react",
+import { safeStorage } from "@/utils/safeStorage",
+import { X } from 'lucide-react'
+import { useIsMobile } from "@/hooks/use-mobile",
+export const AppStoreBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false),
+  const isMobile = useIsMobile(),
+  
+  useEffect(() => {
 
     // Only show banner on mobile devices and if it hasn't been dismissed before
     if (isMobile && !safeStorage.getItem("appBannerDismissed")) {
       // Delay showing the banner by 2 seconds
       const timer = setTimeout(() => {
         setIsVisible(true)
+:src/components/mobile-app/AppStoreBanner.tsx
+      }, 2000)
+      return () => clearTimeout(timer)
+    }
+    return undefined
+  }, [isMobile])
+  const dismissBanner = () => {
+    setIsVisible(false)
+    safeStorage.setItem("appBannerDismissed", "true")
+  }
+  // Only render on mobile devices
+  if (!isMobile |!isVisible) return null
+  return (
       }, 2000),
       
       return () => clearTimeout(timer)
@@ -57,6 +81,11 @@ export const AppStoreBanner: React.FC = () => {
         </div>
       </div>
     </div>
+:src/components/mobile-app/AppStoreBanner.tsx
+  )
+}
+'"}
+}
 
 },
 import React, { useState, useEffect } from "react",;
@@ -118,6 +147,9 @@ export const AppStoreBanner: React.FC = () => {;
         </div>;
       </div>;
     </div>;
+:src/components/mobile-app/AppStoreBanner.tsx
+  );
+};
   )
 };
 '"},

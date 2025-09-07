@@ -133,8 +133,6 @@ const EnhancedFooter: React.FC = () => {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-=======
 
       {/* Bottom Bar */}
       <motion.div 
@@ -175,7 +173,6 @@ const EnhancedFooter: React.FC = () => {
           <span>Get Started</span>
         </Link>
       </motion.div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     </footer>
   );
 };

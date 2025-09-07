@@ -1,30 +1,21 @@
-
-
-import type { NextPage } from "next";"
-import Head from "next/head";"
-import Link from "next/link";
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
+<<<<<<< HEAD
+<div> <Head> <title>ApiDevelopmentChat - Zion Tech Solutions</title> <meta name="description" content="ApiDevelopmentChat service" /> </Head> <main> <h1>ApiDevelopmentChat</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default ApiDevelopmentChat
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
-
-const ApiDevelopmentChat: NextPage = () => {}
+const ApiDevelopmentChat: NextPage;
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+const ApiDevelopmentChat: NextPage = () => {
   return (
     <div>
       <Head>
-
-import type { NextPage } from "next";
-import Head from "next/head";
-
-import Link from "next/link";
-const ApiDevelopmentChat: NextPage = () => {;
-  return (
-    <div>;
-      <Head>;
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>;"
         <meta name="description" content="ApiDevelopmentChat service" />{" "}
 
-      </Head>;
-
+      </Head>
         <meta name="description" content="ApiDevelopmentChat service" />
       </Head>
 pr-12243
@@ -35,39 +26,7 @@ pr-12243
         <a href="/services">Back to Services</a>
       </main>
     </div>
-      </Head>;
-
-      <main>;
-        <h1>ApiDevelopmentChat</h1>;
-        <p>Service details coming soon...</p>;"
-        <a href="/services">Back to Services</a>;
-      </main>;
-    </div>;
   );
 }
 export default ApiDevelopmentChat;
-
-        <title>ApiDevelopmentChat - Zion Tech Solutions</title>
-
-import type { NextPage } from './next';
-import Head from './next / head';
-
-import Link from './next / link';
-const ApiDevelopmentChat: NextPage = () => {}
-  return (
-    <div>;
-      <Head>;
-        <title > ApiDevelopmentChat - Zion Tech Solutions</title>;"
-        <meta name="description" content="ApiDevelopmentChat service" />{" "}
-      </Head>;
-      <main>;
-        <h1 > ApiDevelopmentChat</h1>;
-        <p > Service details coming soon...</p>;"
-        <a href="/services">Back to Services</a>;
-      </main>;
-    </div>);
-}
-;
-export default ApiDevelopmentChat;
-;
-
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

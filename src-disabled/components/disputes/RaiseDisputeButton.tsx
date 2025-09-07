@@ -1,3 +1,4 @@
+:src/components/disputes/RaiseDisputeButton.tsx
 projectId: string,
 
 import React, { useState } from "react";
@@ -36,8 +37,47 @@ interface RaiseDisputeButtonProps {
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string
+}
 
 export function RaiseDisputeButton({
+:src/components/disputes/RaiseDisputeButton.tsx
+  projectId
+  milestoneId
+  variant = 'outline'
+  size
+  className
+}: RaiseDisputeButtonProps) {
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const router = useRouter()
+  const handleDisputeCreated = (disputeId: string) => {
+    setIsDialogOpen(false)
+    router.push(`/dashboard/disputes/${disputeId}`)
+  }
+
+  return (
+    <>
+      <Button
+        variant={variant}
+        size={size}
+        className={className}
+        onClick={() => setIsDialogOpen(true)}      >
+        <ShieldAlert className='h-4 w-4 mr-2' />
+        Raise Dispute
+      </Button>
+  projectId,
+  milestoneId, 
+  variant = "outline", 
+  size,
+  className 
+}: RaiseDisputeButtonProps) {
+  const [isDialogOpen, setIsDialogOpen] = useState(false),
+  const router = useRouter(),
+  
+  const handleDisputeCreated = (disputeId: string) => {
+    setIsDialogOpen(false),
+    router.push(`/dashboard/disputes/${disputeId}`)
+  },
+  
 Dialog,
   DialogContent,
   DialogHeader,
@@ -85,6 +125,20 @@ export function RaiseDisputeButton({
         <ShieldAlert className="h-4 w-4 mr-2" />
         Raise Dispute
       </Button>
+:src/components/disputes/RaiseDisputeButton.tsx
+      
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-[550px]">
+          <DialogHeader>
+            <DialogTitle>Raise a Dispute</DialogTitle>
+            <DialogDescription>
+              Please provide details about the issue you're experiencing with this project.
+            </DialogDescription>
+          </DialogHeader>
+          <DisputeForm
+            projectId={projectId}
+            milestoneId={milestoneId}
+            onDisputeCreated={handleDisputeCreated}
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>',
@@ -135,6 +189,9 @@ export function RaiseDisputeButton({
         </DialogContent>
       </Dialog>
     </>
+:src/components/disputes/RaiseDisputeButton.tsx
+  )
+}
 
             on_cancel={() => setIsDialogOpen (false)}          />;
         </DialogContent>;
@@ -225,6 +282,8 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
+:src/components/disputes/RaiseDisputeButton.tsx
+};
 
 }
 ;

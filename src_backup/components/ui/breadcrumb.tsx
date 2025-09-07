@@ -1,3 +1,9 @@
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/breadcrumb.tsx
+import * as React from "react"
+import {Slot} from "@radix-ui/react-slot"
+import {ChevronRight} from "lucide-react"
+
+import {cn} from "@/lib/utils"
 }
 >(({ className, separator, ...props }, ref,) => (;
  
@@ -116,6 +122,17 @@ BreadcrumbLink.displayName = "BreadcrumbLink"
   >
     &#8230
   </span>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/breadcrumb.tsx
+)
+BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
+export {
+  Breadcrumb;
+  BreadcrumbList;
+  BreadcrumbItem;
+  BreadcrumbLink;
+  BreadcrumbSeparator;
+  BreadcrumbEllipsis}
+
 );
 BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
 

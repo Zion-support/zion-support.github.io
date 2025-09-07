@@ -1,8 +1,28 @@
+:src/components/mobile-app/admin/ChangelogManager.tsx
+import React, { useState } from "react",
+import { Card, CardHeader, CardTitle, CardContent  } from "@/components/ui/card";
+import { Button  } from "@/components/ui/button";
+import { Input  } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Plus, Trash2 } from 'lucide-react'
+import { AppPlatform } from "./MetadataManager";
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
 
 type ChangelogEntry = {
+:src/components/mobile-app/admin/ChangelogManager.tsx
+  id: string
+  version: string
+  date: string
+  changes: string
+}
+    })
+  }
+  const handleRemoveEntry = (id: string) => {
+    setEntries(entries.filter(entry => entry.id !== id))
+  }
+  )
 
   id: string;
   version: string;
@@ -62,6 +82,22 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     const { name, value } = e.target,
 
     setNewEntry(prev => ({ ...prev, [name]: value }))
+:src/components/mobile-app/admin/ChangelogManager.tsx
+  }
+  return (
+    <Card className="bg-zion-blue border-zion-purple/30">
+      <CardHeader>
+        <CardTitle>Version History</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          <div className="flex flex-col md:flex-row gap-3">
+            <div className="flex-1 grid grid-cols-2 gap-3">
+              <Input
+                placeholder="Version (e.g. 1.0.1)"
+                name="version"
+                value = {newEntry.version,}
+                onChange = {handleInputChange,}
 
                 value={newEntry.version}
                 onChange={handleInputChange}
@@ -72,6 +108,14 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 type="date"
 
                 name="date"
+:src/components/mobile-app/admin/ChangelogManager.tsx
+                value = {newEntry.date,}
+                onChange = {handleInputChange,}
+              />
+            </div>
+            <Button
+              onClick = {handleAddEntry,}
+              disabled = {!newEntry.version |!newEntry.changes,}
 
               disabled = {!newEntry.version || !newEntry.changes,}
 
@@ -161,6 +205,26 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             placeholder="What's new in this version?"
 
             name="changes"
+:src/components/mobile-app/admin/ChangelogManager.tsx
+            value = {newEntry.changes,}
+            onChange = {handleInputChange,}
+            rows = {3,}
+          />
+          <div className="border-t border-zion-purple/20 pt-4 space-y-4">
+            {entries.map((entry,) => (
+              <div
+                key = {entry.id,}
+                className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"
+              >
+                <div className="flex justify-between mb-2">
+                  <div className="flex items-center gap-3">
+                    <span className="text-zion-cyan font-semibold">v{entry.version}</span>
+                    <span className="text-sm text-gray-400">{entry.date}</span>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick = {(,) => handleRemoveEntry(entry.id),}
 
             value={newEntry.changes}
             onChange={handleInputChange}
@@ -184,6 +248,13 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             ))}
 
             )}
+:src/components/mobile-app/admin/ChangelogManager.tsx
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
 
 };
 

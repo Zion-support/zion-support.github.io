@@ -21,10 +21,10 @@ permissions:
 jobs:
   run-automations:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 25
     steps:
     timeout-minutes: 25    steps:
-
+    timeout-minutes: 25    steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -35,13 +35,11 @@ jobs:
         with:
           node-version: '22'
           cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Install dependencies
-        run: npm ci
-
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
       - name: Run cloud autonomous automations
         run: node automation/cloud-autonomous-runner.cjs
 

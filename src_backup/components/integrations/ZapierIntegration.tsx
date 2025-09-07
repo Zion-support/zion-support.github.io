@@ -1,3 +1,33 @@
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
+import React, { useState } from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+
+import { toast } from "sonner";
+import { Check, Copy, ExternalLink } from "lucide-react";
+export function ZapierIntegration() {
+  const [copied, setCopied] = useState(false);
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
+
+  const handleCopyApiKey = () => {
+    navigator.clipboard.writeText(apiKey);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+    toast.success("API key copied to clipboard");
+  }
+
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
+import { Check, Copy, ExternalLink } from "lucide-react";
+
 import React, { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -23,6 +53,18 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
               Connect Zion with 3,000+ apps via Zapier. Use your API key below
               to set up integrations.
             </p>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Your Zion API Key</label>
+                <div className="flex gap-2">
+                  <Input 
+                    value={apiKey} 
+                    readOnly 
+                    className="font-mono text-sm" 
+                  />
+                  <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
+                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
             <div className='space-y-4'>
               <div className='space-y-2'>
                 <label className='text-sm font-medium'>Your Zion API Key</label>
@@ -59,6 +101,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           </CardFooter>
         </Card>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
 
         <Card>
 
@@ -101,6 +144,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardFooter>
         </Card>
       </div>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
 
       <Card>
 
@@ -123,6 +167,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-sm text-muted-foreground mb-4">
             Use these webhook triggers to start Zaps when events happen in your Zion account.
           </p>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
 
           <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
@@ -132,7 +177,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
-            
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
@@ -141,6 +185,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
 
             </div>
           </div>
@@ -162,6 +207,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </CardContent>
       </Card>
     </div>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
+  );
+}
+  );
+}
 
             <p className='text - sm text - muted - foreground mb - 4'>;
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;

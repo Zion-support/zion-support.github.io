@@ -44,6 +44,5 @@ jobs:
           FAILS=$(cat data/reports/broken-links.json | jq '.links | map(select(.state!="OK")) | length')
           if [ "$FAILS" -gt 0 ]; then
             gh issue create -t "Link check: $FAILS failures" -b "Automated link check found $FAILS failing links. See data/reports/broken-links.json." || true
-
           fi
           fi

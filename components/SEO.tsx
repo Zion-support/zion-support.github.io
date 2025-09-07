@@ -1,39 +1,22 @@
-
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 interface SEOProps {
   title?: string;
   description?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;}
+  keywords?: string;
 }
-}
-
-export default function SEO({
-  title = "Zion Tech Group",
-  description = "Leading technology solutions provider",
-  canonical,
-  ogImage = "/og-image.jpg",
-  ogType = "website",
-  twitterCard = "summary_large_image"
-}: SEOProps) {
+const SEO: React.FC<SEOProps> = ({
+  title = "Zion Tech Group - Technology Solutions"
+  description = "Leading provider of AI services, IT solutions, and micro SaaS development."
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting"
+}) => {
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
-      {canonical && <link rel="canonical" href={canonical} />}
-      <meta property="og: title" content={title;} />
-      <meta property="og: description" content={description;} />
-      <meta property="og: type" content={ogType;} />
-      <meta property="og: image" content={ogImage;} />
-      <meta name="twitter: card" content={twitterCard;} />
-      <meta name="twitter: title" content={title;} />
-      <meta name="twitter: description" content={description;} />
-      <meta name="twitter: image" content={ogImage;} />
+      <meta name="keywords" content={keywords} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
   );
 }
-
-pr-12243
-

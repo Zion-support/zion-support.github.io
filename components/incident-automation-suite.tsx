@@ -1,67 +1,75 @@
+<<<<<<< HEAD
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+  service.name 
+}- Zion Tech Group</title>) ) 
+}</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
+}
+=======
+import React from 'react',
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+  service.name
+}- Zion Tech Group</title>) )
+  service.name 
+}- Zion Tech Group</title>) ) 
+}</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
-
+import Head from 'next/head';
+import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
-
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
 export default function IncidentAutomationSuitePage() {
-  const service = null;
+
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
+  if (!service) return null;
+
   return (
-    <UltraAdvancedFuturisticBackground>;
-      <Head>;
+    <UltraAdvancedFuturisticBackground>
+      <Head>
         <title>{service && service.name} - Zion Tech Group</title>;"
         <meta name="description" content={service && service.description} />;"
-        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/incident-automation-suite" />;
-
-            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service && service.tagline}</p>;
+        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/incident-automation-suite" />
+            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service && service.tagline}</p>
           </div>;"
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">;"
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-emerald-500/30 p-6">;"
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>;"
               <p className="text-slate-300 mb-6">{service && service.description}</p>;"
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">;
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service && service.features.slice(0, 12).map((feat, i) => (;"
-                  <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0 && 0.5" /><span>{feat}</span></li>;
+                  <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0 && 0.5" /><span>{feat}</span></li>
                 ))}
-              </ul>;
+              </ul>
             </div>;"
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">;"
-              <div className="flex items-end justify-between mb-3">;
-
-                </div>;
+              <div className="flex items-end justify-between mb-3">
+                </div>
               </div>;"
               <Link href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>;"
               <div className="mt-6 space-y-3 text-sm text-slate-300">;"
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;"
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;"
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-  service.name;
-
-import {enhancedRealMicroSaasServices} from '../data / enhanced - real - micro - saas - services';
-export default /**;
- * IncidentAutomationSuitePage - Function description;
+                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>
+  service.name
+import {enhancedRealMicroSaasServices} from '../data / enhanced - real - micro - saas - services'
+export default /**
+ * IncidentAutomationSuitePage - Function description
  */
 function IncidentAutomationSuitePage() { return null; }
-if (return null) {}
-  $2;
-}
+  if($2) {}
+  $2
   return (
-    <UltraAdvancedFuturisticBackground>;
-      <Head>;
+    <UltraAdvancedFuturisticBackground>
+      <Head>
         <title>{service.name} - Zion Tech Group</title>;"
         <meta name="description" content={service.description} />;"
-        <link rel="canonical" href="https://ziontechgroup.com / incident - automation - suite" />;
-
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-    </UltraAdvancedFuturisticBackground>);
-}
-;
-
+        <link rel="canonical" href="https://ziontechgroup.com / incident - automation - suite" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>)
               </ul>
             </div>
             <div className=\"bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit\"    />
@@ -85,5 +93,4 @@ if (return null) {}
     </UltraAdvancedFuturisticBackground>
   );
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
-
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

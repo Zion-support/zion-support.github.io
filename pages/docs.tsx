@@ -1,40 +1,23 @@
 import React from 'react';
-import { Metadata } from 'next';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 
-export const metadata: Metadata = {
-  title: 'Docs - Zion Tech Group',
-  description: 'Professional docs services to help your business grow and succeed.',
-  keywords: 'docs, business solutions, professional services'
-};
-
-export default function DocsPage() {
+export default function docs() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Docs
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Professional docs services to help your business grow and succeed.
-        </p>
+    <Layout>
+      <Head>
+        <title>Docs - Zion Tech Group</title>
+        <meta name="description" content="Docs solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Docs</h1>
+          <p className="text-lg text-gray-600">
+            Professional docs solutions tailored to your business needs.
+          </p>
+        </div>
       </div>
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-          Coming Soon
-        </h2>
-        <p className="text-lg text-gray-600 text-center">
-          This page is currently under development. Please contact us for more information.
-        </p>
-      </div>
-      <div className="text-center">
-        <a
-          href="mailto:kleber@ziontechgroup.com?subject=Docs Inquiry"
-          className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-        </a>
-      </div>
-
-    </div>
+    </Layout>
   );
 }

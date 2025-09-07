@@ -1,6 +1,10 @@
-import React from 'react';
+<<<<<<< HEAD
+</div> <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > {
+=======
+import React from 'react',
+import SEO from '../components/SEO',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
-
 export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -36,6 +40,32 @@ export default function ResourcesPage() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </UltraFuturisticBackground>
+  );  )
 }
+export default ResourcesPage;
+
+ </div> <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > {
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+  [ {
+  name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' 
+}, {
+  name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' 
+}, {
+  name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' 
+}, {
+  name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' 
+}, {
+  name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' 
+}, {
+  name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' 
+}].map ( (it) => () ) 
+}</div> </div> </UltraFuturisticBackground>) 
+<<<<<<< HEAD
+}
+export default ResourcesPage
+=======
+};
+
+export default Resources;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

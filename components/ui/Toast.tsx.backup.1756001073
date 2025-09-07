@@ -256,11 +256,8 @@ export const withToast = <P extends object>(
       )}
     </ToastContext.Consumer>
   );
-<<<<<<< HEAD
   
   WrappedComponent.displayName = `withToast(${Component.displayName || Component.name || 'Component'})`;
   
   return WrappedComponent;
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 };

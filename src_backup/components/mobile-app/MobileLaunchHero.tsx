@@ -1,3 +1,6 @@
+:src/components/mobile-app/MobileLaunchHero.tsx
+import React from 'react'
+import Link from 'next/link'
 import { ArrowRight, Smartphone } from 'lucide-react'
 
 import { Button } from "@/components/ui/button",
@@ -19,6 +22,10 @@ export const MobileLaunchHero: React.FC = () => {
               The Power of <span className="text-zion-cyan">Zion</span><br />
 
               In Your Pocket
+:src/components/mobile-app/MobileLaunchHero.tsx
+            </h1>
+            <p className='text-lg md:text-xl opacity-90 mb-8'>
+              Find top AI talent or global IT jobs on the go. Track projects
 
               message candidates, and get AI-powered matches instantly with our
 
@@ -27,6 +34,31 @@ export const MobileLaunchHero: React.FC = () => {
             <div className='mb-8'>
               <AppStoreButtons
                 appStoreUrl={appStoreUrl}
+:src/components/mobile-app/MobileLaunchHero.tsx
+                googlePlayUrl={googlePlayUrl}              />
+            </div>
+            <div className='flex flex-wrap gap-4'>
+              <Link href='/open-app'>
+                <Button
+                  variant='outline'
+                  size='lg'
+                  className='flex gap-2 border-white text-white hover:bg-white/10'
+                >                  Open App
+                  <ArrowRight size={20} />
+                </Button>
+              </Link>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/open-app">
+                <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
+                  <ArrowRight size={20} />
+                </Button>
+              </Link>
+              <Link href='#features'>
+                <Button
+                  variant='ghost'
+                  size='lg'
+                  className='text-white hover:bg-white/10'
+                >                  See Features
                 googlePlayUrl={googlePlayUrl}
               />
             </div>
@@ -55,6 +87,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card className='relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3'>
                 <CardContent className='p-0'>
                   <div className='w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center'>
+:src/components/mobile-app/MobileLaunchHero.tsx
+                    <Smartphone className='w-40 h-40 text-white opacity-40' />                    {/* In production, replace with actual app screenshot */}              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
+              <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
+                <CardContent className="p-0">
+                  <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
+                    <Smartphone className="w-40 h-40 text-white opacity-40" />
                     <Smartphone className='w-40 h-40 text-white opacity-40' />
                     {/* In production, replace with actual app screenshot */}
 
@@ -66,6 +104,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </section>
+:src/components/mobile-app/MobileLaunchHero.tsx
+  )
+}
+"  )
+}
 
 import React from 'react';
 import Link from 'next/link';

@@ -6,6 +6,16 @@ on:
   schedule:
     - cron: '*/15 * * * *' # every 15 minutes
   workflow_dispatch: {}
+name: Cloud Automations
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *' # every 30 minutes
+
+permissions:
+  contents: write
+
 
 jobs:
   run-automations:
@@ -48,6 +58,5 @@ jobs:
             git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
           else
             echo "No changes to commit"
-
           fi
           fi

@@ -3,22 +3,130 @@ import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
 
 import { motion } from 'framer-motion';
-import {}
+import Layout from '../../components/Layout';
+import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
+import React from 'react';
+import Layout from "../../components/Layout";";
+import { motion } from 'framer-motion';
+import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+}
+
+export default function SMBSolutionsPage() {
+  const smbServices = [;
+    {}
+      title: "Cost-Effective IT","
+      description: "Affordable technology solutions for small and medium businesses","
+      icon: DollarSign,
+      features: ["Budget-Friendly", "Scalable Solutions", "ROI Focused"]"
+    },
+    {}
+      title: "Quick Setup","
+      description: "Rapid deployment of essential business systems","
+      icon: Zap,
+      features: ["Fast Implementation", "Minimal Downtime", "Easy Migration"]"
+    },
+    {}
+      title: "Team Collaboration","
+      description: "Tools and systems to enhance team productivity","
+      icon: Users,
+      features: ["Communication Tools", "Project Management", "File Sharing"]"
+    },
+    {}
+      title: "Business Growth","
+      description: "Technology solutions that grow with your business","
+      icon: Building2,
+      features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]"
+    }
+;  ];
+  return (;
+    <Layout );
+      title="SMB Solutions - Zion Tech Group"";
+      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."";
+    >;
+      <div className="min-h-screen bg-gray-50">";
+  ];
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
+import React from 'react';
+import Layout from "../../components/Layout";";
+import { motion } from 'framer-motion';
+import { 
   Building2, 
   Users, 
   DollarSign, 
   Zap, 
   CheckCircle, 
 
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+const smbServices = [
+  {
+    icon: DollarSign,
+    title: 'Cost-Effective IT',
+    description: 'Affordable technology solutions for small and medium businesses'
+  },
+  {
+    icon: Zap,
+    title: 'Quick Setup',
+    description: 'Fast implementation to get you up and running quickly'
+  },
+  {
+    icon: Users,
+    title: 'Dedicated Support',
+    description: 'Personal support team for your business needs'
+  },
+  {
+    icon: Building2,
+    title: 'Scalable Solutions',
+    description: 'Grow with your business as it expands'
+  }
+];
+}
+
+export default function SMBSolutionsPage() {
+  
+import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+export default function SMBSolutionsPage() {
+  const smbServices = [;
+    {}
+      title: "Cost-Effective IT","
+      description: "Affordable technology solutions for small and medium businesses","
+      icon: DollarSign,
+      features: ["Budget-Friendly", "Scalable Solutions", "ROI Focused"]"
+    },
+    {}
+      title: "Quick Setup","
+      description: "Rapid deployment of essential business systems","
+      icon: Zap,
+      features: ["Fast Implementation", "Minimal Downtime", "Easy Migration"]"
+    },
+    {}
+      title: "Team Collaboration","
+      description: "Tools and systems to enhance team productivity","
+      icon: Users,
+      features: ["Communication Tools", "Project Management", "File Sharing"]"
+    },
+    {}
+      title: "Business Growth","
+      description: "Technology solutions that grow with your business","
+      icon: Building2,
+      features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]"
+    }
+;  ];
+  return (;
+    <Layout );
+      title="SMB Solutions - Zion Tech Group"";
+      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."";
+    >;
+      <div className="min-h-screen bg-gray-50">";
+  ];
+  return (
+    <Layout
+      title="SMB Solutions - Zion Tech Group"
+      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
 
 } from 'lucide-react';
 
@@ -231,7 +339,8 @@ export default function SMBSolutionsPage() {;
             </div>
           </div>
         </section>
-
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
 
             <h2 className="text-3xl md: text-4xl font-bold mb-6">", Grow Your Business Today,;
@@ -252,39 +361,5 @@ export default function SMBSolutionsPage() {;
           </div>;
         </section>;
       </div>;
-
-            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Grow Your Business Today,;
-
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >"
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Grow Your Business?
-              </h2>"
-              <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">'
-                Let's discuss how our SMB solutions can help your business succeed.
-              </p>"
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link"
-                  href="/contact""
-                  className="inline-flex items-center px-8 py-3 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Contact Sales"
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link"
-                  href="/solutions""
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold"
-                >
-                  View Solutions;
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
+    </Layout>;
   );

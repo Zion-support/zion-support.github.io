@@ -1,40 +1,26 @@
-import React from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Guides - Zion Tech Group',
-  description: 'Professional guides services to help your business grow and succeed.',
-  keywords: 'guides, business solutions, professional services'
-};
-
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/Layout'
 export default function GuidesPage() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Guides
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Professional guides services to help your business grow and succeed.
-        </p>
+    <Layout 
+      title="Guides - Zion Tech Group"
+      description="Comprehensive guides and tutorials for our services"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Guides
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Comprehensive guides and tutorials for our services
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-          Coming Soon
-        </h2>
-        <p className="text-lg text-gray-600 text-center">
-          This page is currently under development. Please contact us for more information.
-        </p>
-      </div>
-      <div className="text-center">
-        <a
-          href="mailto:kleber@ziontechgroup.com?subject=Guides Inquiry"
-          className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-        </a>
-      </div>
-    </div>
-  );
+    </Layout>
+  )
 }
-

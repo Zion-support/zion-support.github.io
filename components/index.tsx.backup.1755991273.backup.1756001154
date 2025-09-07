@@ -12,8 +12,6 @@ export default function HomePage() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
@@ -38,4 +36,3 @@ function AutomationItem({ title, desc, link }: { title: string; desc: string; li
     </Link>
   );
 }
->>>>>>> origin/cursor/build-zion-ipo-readiness-portal-e565

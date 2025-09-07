@@ -158,7 +158,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         }
       }
 
-=======
       // Draw neural network connections for neural variant
       if (variant === 'neural') {
         ctx.strokeStyle = 'rgba(16, 185, 129, 0.3)';
@@ -178,7 +177,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         }
       }
 
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a489
       animationRef.current = requestAnimationFrame(animate);
     };
 
@@ -321,7 +319,18 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
             ease: "easeInOut"
           }}
         />
-<<<<<<< HEAD
+        <motion.div
+          className="absolute inset-0 border border-purple-400/10 rounded-full"
+          animate={{
+            scale: [1, 1.8, 2.5, 1],
+            opacity: [0.1, 0.2, 0, 0.1]
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
       </div>
 
       {/* Content Layer */}

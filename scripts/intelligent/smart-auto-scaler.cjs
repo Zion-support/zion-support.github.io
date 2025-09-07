@@ -1,14 +1,9 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/smart-auto-scaler.cjs
-
-#!/usr/bin/env node;
+///usr/bin/env node
 /**
- * Smart Auto-Scaler;
- * Intelligent scaling based on load, performance metrics, and predictive analytics;
+ * Smart Auto-Scaler
+ * Intelligent scaling based on load, performance metrics, and predictive analytics
  */
 
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/smart-auto-scaler.cjs
-
-const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
 const os = require('os')
@@ -37,7 +32,3 @@ const os = require('os')
       "Memory"
       Response "Time"
       Error "Rate"
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/smart-auto-scaler.cjs
-<<<<<<< HEAD:scripts/intelligent/smart-auto-scaler.cjs
-    console.error(' Smart Auto-Scaler "failed")
-    console.error(' Smart Auto-Scaler "failed")

@@ -30,6 +30,7 @@ pr-12325
   }
 }
 import React from 'react';
+
 interface PricingGuidePageProps {
   // Add props here as needed
 
@@ -41,31 +42,5 @@ export default function PricingGuidePage({ }: PricingGuidePageProps) {
     <div>
       <h1>PricingGuidePage</h1>
       <p>This component is currently under development.</p>
-    </div>;
+    </div>
   );
-
-}
-
-:src.pages.disabled/PricingGuidePage.jsx
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-:src.pages.disabled/PricingGuidePage.jsx
-
-}
-}
-}
-}
-}
-
->
-
-:src.pages.disabled/PricingGuidePage.jsx
-}
-}
-}
-}
-}

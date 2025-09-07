@@ -13,10 +13,10 @@
             "enabled": true,
             "runs": 200
           },
-
+          "evmVersion": "paris",
           "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
-
+          "evmVersion": "paris",          "outputSelection": {
             "*": {
               "*": [
                 "abi",
@@ -59,10 +59,10 @@
             "enabled": true,
             "runs": 200
           },
-
+          "evmVersion": "paris",
           "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
-
+          "evmVersion": "paris",          "outputSelection": {
             "*": {
               "*": [
                 "abi",
@@ -304,10 +304,10 @@
             "enabled": true,
             "runs": 200
           },
-
+          "evmVersion": "paris",
           "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
-
+          "evmVersion": "paris",          "outputSelection": {
             "*": {
               "*": [
                 "abi",
@@ -975,10 +975,10 @@
             "enabled": true,
             "runs": 200
           },
-
+          "evmVersion": "paris",
           "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
-
+          "evmVersion": "paris",          "outputSelection": {
             "*": {
               "*": [
                 "abi",
@@ -1053,10 +1053,10 @@
             "enabled": true,
             "runs": 200
           },
-
+          "evmVersion": "paris",
           "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
-
+          "evmVersion": "paris",          "outputSelection": {
             "*": {
               "*": [
                 "abi",
@@ -1211,10 +1211,10 @@
             "enabled": true,
             "runs": 200
           },
-
+          "evmVersion": "paris",
           "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
-
+          "evmVersion": "paris",          "outputSelection": {
             "*": {
               "*": [
                 "abi",
@@ -1660,10 +1660,10 @@
         "^0.8.20"
       ],
       "artifacts": [
-
+        "ZionToken"
       ]
         "ZionToken"      ]
-
+        "ZionToken"      ]
     }
   }
 }

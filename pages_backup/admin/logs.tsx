@@ -1,5 +1,8 @@
 import path from 'path';
 
+:pages/admin/logs.tsx
+import fs from 'fs';
+import path from 'path';
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 
@@ -22,6 +25,11 @@ import {
   Search
   Download
   RefreshCw;
+:pages/admin/logs.tsx
+} from 'lucide-react';
+
+import { logErrorToProduction } from '@/utils/productionLogger';
+interface LogEntry {
 
   SelectTrigger,;
   SelectValue,;'
@@ -122,6 +130,15 @@ interface LogEntry {;
     message: string;
     stack?: string;
 
+:pages/admin/logs.tsx
+  }
+
+  performance?: {
+    memory?: number;
+
+  }
+
+interface LogsPageProps {
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -160,6 +177,8 @@ interface LogEntry {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+:pages/admin/logs.tsx
+interface LogsPageProps {
 }
 ;
 interface LogsPageProps {;
@@ -182,7 +201,11 @@ interface LogsPageProps {
   errorCount: number;
   warningCount: number;
   totalCount: number;
+  lastUpdated: string
+}
 
+:pages/admin/logs.tsx
+  lastUpdated: string;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -217,6 +240,8 @@ return <Info className='h-4 w-4 text-blue-500' />;
   warningCount
   totalCount
   lastUpdated
+:pages/admin/logs.tsx
+}: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
 
   logs: initialLogs,
   errorCount,
@@ -333,6 +358,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
+:pages/admin/logs.tsx
+  const categories = Array.from(new Set(logs.map(log => log.category))).filter(
 
     Boolean
 
@@ -392,6 +419,9 @@ const dataUri =
 
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
+:pages/admin/logs.tsx
+    const dataStr = JSON.stringify(filteredLogs, null, 2);
+    const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
 
   };
 
@@ -481,6 +511,10 @@ const dataUri =
 
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click();
+:pages/admin/logs.tsx
+  }
+  const formatTimestamp = (timestamp: string) => {
+    return new Date(timestamp).toLocaleString();  }
   },;
   const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
@@ -556,6 +590,12 @@ const dataUri =
     if (performance.fps) {
       parts.push(`FPS: ${performance.fps}`)
     }
+:pages/admin/logs.tsx
+    return parts.length > 0 ? parts.join(', ') : null;
+  }
+  const errorCount = logs.filter(log => log.level === 'error' |log.level === 'critical').length;
+  const warningCount = logs.filter(log => log.level === 'warn').length;
+  const totalCount = logs.length;
 
   },;
   const formatTimestamp = (timestamp: string) => {;
@@ -593,6 +633,9 @@ const dataUri =
             Export;
           </Button>
         </div>
+:pages/admin/logs.tsx
+      {/* Summary Cards */}
+      <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -600,6 +643,9 @@ const dataUri =
             <Info className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
+:pages/admin/logs.tsx
+            <div className='text-2xl font-bold'>{totalCount}</div>
+            <p className='text-xs text-muted-foreground'>All log entries</p>          </CardContent>
 
             <div className="text-2xl font-bold">{totalCount}</div>
 
@@ -612,6 +658,12 @@ const dataUri =
             <CardTitle className="text-sm font-medium">Errors</CardTitle>"
             <XCircle className="h-4 w-4 text-red-500" />
           </CardHeader>
+:pages/admin/logs.tsx
+          <CardContent>
+            <div className='text-2xl font-bold text-red-600'>{errorCount}</div>
+            <p className='text-xs text-muted-foreground'>
+              Critical & error logs
+            </p>          </CardContent>
           <CardContent>"
             <div className="text-2xl font-bold text-red-600">{errorCount}</div>"
             <p className="text-xs text-muted-foreground">Critical & error logs</p>
@@ -624,6 +676,12 @@ const dataUri =
             <CardTitle className="text-sm font-medium">Warnings</CardTitle>"
             <AlertTriangle className="h-4 w-4 text-yellow-500" />
           </CardHeader>
+:pages/admin/logs.tsx
+          <CardContent>
+            <div className='text-2xl font-bold text-yellow-600'>
+              {warningCount}
+            </div>
+            <p className='text-xs text-muted-foreground'>Warning logs</p>          </CardContent>
           <CardContent>"
             <div className="text-2xl font-bold text-yellow-600">{warningCount}</div>"
             <p className="text-xs text-muted-foreground">Warning logs</p>
@@ -651,6 +709,11 @@ const dataUri =
             <XCircle className='h-4 w-4 text-red-500' />
           </CardHeader>
           <CardContent>
+:pages/admin/logs.tsx
+            <div className='text-sm font-medium'>
+              {formatTimestamp(lastUpdated)}
+            </div>
+            <p className='text-xs text-muted-foreground'>Data freshness</p>          </CardContent>
             <div className='text-2xl font-bold text-red-600'>{errorCount}</div>
             <p className='text-xs text-muted-foreground'>
               Critical & error logs
@@ -684,6 +747,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>
       </div>
       {/* Filters */}
+:pages/admin/logs.tsx
 
       {/* Filters */  } catch (error) {
     console.error("Error:", error);
@@ -737,6 +801,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <SelectContent>
                 <SelectItem value='all'>All Categories</SelectItem>
                 {categories.map(category => (
+:pages/admin/logs.tsx
+                  <SelectItem key={category} value={category}>
+                    {category}
+                  </SelectItem>                ))}
+              </SelectContent>
+            </Select>
+            <Select value={sourceFilter} onValueChange={setSourceFilter}>
+              <SelectTrigger>
+                <SelectValue placeholder="All categories" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Categories</SelectItem>
+                {categories.map(category => (
+                  <SelectItem key={category} value={category}>{category}</SelectItem>
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                 ))}
               </SelectContent>
@@ -753,6 +836,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <SelectContent>"
                 <SelectItem value="all">All Sources</SelectItem>
                 {sources.map(source => (
+:pages/admin/logs.tsx
+                  <SelectItem key={source} value={source}>
+                    {source}
+                  </SelectItem>                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+      {/* Logs Table */}
 
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -834,6 +926,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Badge variant="secondary">{log.source}</Badge>
                       {log.component && ("
                         <Badge variant="outline">{log.component}</Badge>
+:pages/admin/logs.tsx
+                      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </div>
+                    <span className="text-sm text-muted-foreground">
+                      {formatTimestamp(log.timestamp)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </span>
+                  </div>
+                  <div className='text-sm font-medium'>{log.message}</div>
 
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
@@ -841,6 +949,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
                         View Context;
                       </summary>
+:pages/admin/logs.tsx
+                      <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-x-auto'>                        {JSON.stringify(log.context, null, 2)}
+                      </pre>
+                    </details>
+                  )}
 
                       <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-x-auto">
                         {JSON.stringify(log.context, null, 2)  } catch (error) {"
@@ -974,6 +1087,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               ))
             ) : (
+:pages/admin/logs.tsx
+              <div className='text-center text-muted-foreground py-8'>                No logs found matching the current filters.
 <div className='text-center text-muted-foreground py-8'>
                 No logs found matching the current filters.
               </div>
@@ -1033,11 +1148,29 @@ errorCount,
     logErrorToProduction('Error reading logs:', error);
     return {
       props: {
+:pages/admin/logs.tsx
+        logs: []
+        errorCount: 0
+        warningCount: 0
+        totalCount: 0
+        lastUpdated: new Date().toISOString()
+      }
+    }
+  }
+}
 
         logs: [],
         errorCount: 0,
         warningCount: 0,
         totalCount: 0,
+:pages/admin/logs.tsx
+        lastUpdated: new Date().toISOString(),
+      },
+    };
+  }
+};
+  }
+}
 
             )  } catch (error) {
     console.error("Error:", error);

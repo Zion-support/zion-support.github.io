@@ -1,14 +1,9 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/intelligent-monitor.cjs
-
-#!/usr/bin/env node;
+///usr/bin/env node
 /**
- * Intelligent Monitoring System;
- * Advanced monitoring with predictive analytics and smart alerting;
+ * Intelligent Monitoring System
+ * Advanced monitoring with predictive analytics and smart alerting
  */
 
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/intelligent-monitor.cjs
-
-const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
 const os = require('os')
@@ -36,7 +31,3 @@ const os = require('os')
         "priority"
         "action"
         "details"
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/intelligent-monitor.cjs
-<<<<<<< HEAD:scripts/intelligent/intelligent-monitor.cjs
-    console.error(' Intelligent Monitor "failed")
-    console.error(' Intelligent Monitor "failed")

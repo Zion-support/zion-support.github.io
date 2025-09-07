@@ -1,141 +1,146 @@
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
+import { 
+  LightBulbIcon,
+  CpuChipIcon, 
+  GlobeAltIcon, 
+  ShieldCheckIcon,
+  ChartBarIcon,
+  UserGroupIcon,
+  ArrowRightIcon,
+  CheckCircleIcon,
+  ClockIcon,
+  CurrencyDollarIcon
+} from '@heroicons/react/24/outline';
+
 export const metadata = {
-  title: "Services | Zion Tech Group",
-  description:
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",
+  title: 'Services | Zion Tech Group',
+  description: 'Explore our comprehensive range of AI, micro SaaS, and IT services designed to transform your business.',
 };
-export default function ServicesOverviewPage() {
+
+export default function ServicesPage() {
   return (
-    <div className="animate-fade-in">
-      {" "}
-      <div className="text-center mb-16">
-        {" "}
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>{" "}
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          {" "}
-          Product engineering and AI-first consulting to deliver measurable
-          outcomes for your business.{" "}
-        </p>{" "}
-      </div>{" "}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        <ServiceCard
-          href="/services/micro-saas"
-          title="Micro SaaS"
-          description="End-to-end product development with billing, auth, and analytics"
-          bullets={[
-            "Foundational architecture",
-            "Billing + subscriptions",
-            "Growth analytics",
-          ]}
-          icon="🚀"
-        />
-        <ServiceCard
-          href="/services/ai-services"
-          title="AI Services"
-          description="LLM applications, RAG systems, and MLOps pipelines"
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
-          icon="🤖"
-        />
-        <ServiceCard
-          href="/services/it-services"
-          title="IT Services"
-          description="Cloud migration, DevOps, and security solutions"
-          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-          icon="⚙️"
-        />
-        <ServiceCard
-          href="/services/blockchain"
-          title="Blockchain Solutions"
-          description="Smart contracts, DeFi protocols, and Web3 applications"
-          bullets={["Smart contracts", "DeFi development", "NFT platforms"]}
-          icon="⛓️"
-        />
-        <ServiceCard
-          href="/services/automation"
-          title="Automation Services"
-          description="RPA, workflow automation, and business process optimization"
-          bullets={["Process automation", "RPA implementation", "AI-powered automation"]}
-          icon="⚡"
-        />
-        <ServiceCard
-          href="/services/consulting"
-          title="Technology Consulting"
-          description="Digital transformation, strategy, and architecture consulting"
-          bullets={["Digital transformation", "Technology strategy", "Architecture design"]}
-          icon="📋"
-        />
-      </div>{" "}
-      <CTA />{" "}
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Our Services
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Comprehensive AI, micro SaaS, and IT solutions to transform your business
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Our Core Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We deliver cutting-edge technology solutions across multiple domains
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ServiceCard
+              href="/services/ai-services"
+              title="AI Services"
+              description="Custom AI solutions, machine learning models, and intelligent automation"
+              icon={<CpuChipIcon className="h-8 w-8 text-blue-600" />}
+            />
+            
+            <ServiceCard
+              href="/services/micro-saas"
+              title="Micro SaaS Development"
+              description="End-to-end SaaS product development from concept to deployment"
+              icon={<GlobeAltIcon className="h-8 w-8 text-green-600" />}
+            />
+            
+            <ServiceCard
+              href="/services/cloud-services"
+              title="Cloud Services"
+              description="Scalable cloud infrastructure and DevOps solutions"
+              icon={<ChartBarIcon className="h-8 w-8 text-purple-600" />}
+            />
+            
+            <ServiceCard
+              href="/services/cybersecurity"
+              title="Cybersecurity"
+              description="Comprehensive security solutions and compliance consulting"
+              icon={<ShieldCheckIcon className="h-8 w-8 text-red-600" />}
+            />
+            
+            <ServiceCard
+              href="/services/automation"
+              title="Automation Services"
+              description="RPA, workflow automation, and business process optimization"
+              icon={<LightBulbIcon className="h-8 w-8 text-yellow-600" />}
+            />
+            
+            <ServiceCard
+              href="/services/consulting"
+              title="Technology Consulting"
+              description="Digital transformation, strategy, and architecture consulting"
+              icon={<UserGroupIcon className="h-8 w-8 text-indigo-600" />}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our technology solutions can drive your success.
+          </p>
+          <Link
+            href="/contact"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-block"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
-function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon,
-}: {
-  href: string;
-  title: string;
-  description: string;
-  bullets: string[];
-  icon: string;
-}) {
+
+function ServiceCard({ href, title, description, icon }) {
   return (
     <Link
       href={href}
-      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
+      className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow group"
     >
-      {" "}
-      <div className="text-4xl mb-4">{icon}</div>{" "}
-      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-        {title}
-      </h3>{" "}
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>{" "}
-      <ul className="text-gray-600 space-y-2">
-        {" "}
-        {bullets.map((bullet) => (
-          <li key={bullet} className="flex items-center">
-            {" "}
-            <span className="text-blue-500 mr-2">•</span> {bullet}{" "}
-          </li>
-        ))}{" "}
-      </ul>{" "}
+      <div className="flex items-center mb-4">
+        {icon}
+        <h3 className="text-xl font-semibold ml-3 text-gray-900 group-hover:text-blue-600 transition-colors">
+          {title}
+        </h3>
+      </div>
+      <p className="text-gray-600 mb-4">
+        {description}
+      </p>
+      <div className="flex items-center text-blue-600 font-medium group-hover:text-blue-700">
+        Learn more
+        <ArrowRightIcon className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+      </div>
     </Link>
-  );
-}
-function CTA() {
-  return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-      {" "}
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Get Started?
-      </h3>{" "}
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        {" "}
-        Talk to our experts about your project. We'll help you choose the right
-        service and create a custom solution for your business needs.{" "}
-      </p>{" "}
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        {" "}
-        <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          {" "}
-          Call +1 302 464 0950{" "}
-        </a>{" "}
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-        >
-          {" "}
-          Email Us{" "}
-        </a>{" "}
-      </div>{" "}
-    </div>
   );
 }

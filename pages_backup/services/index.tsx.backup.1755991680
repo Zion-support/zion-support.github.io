@@ -35,15 +35,9 @@ import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
 import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
 import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
 import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
-<<<<<<< HEAD
 import { newRealServices2025Q4 } from '../../data/new-real-services-2025-q4';
-=======
-<<<<<<< HEAD
+:pages/services/index.tsx.backup.1755991680
 import { newRealServices2025Q4 } from '../../data/new-real-services-2025-q4';
-=======
-import { cursorAddedServices } from '../../data/cursor-added-services';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-13a5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 // Define a common service interface
 interface Service {
@@ -163,15 +157,9 @@ export default function ServicesIndexPage() {
       real2026Q4NewServices as unknown[],
       real2027Q1Additions as unknown[],
       real2027Q2Additions as unknown[],
-<<<<<<< HEAD
       newRealServices2025Q4 as unknown[]
-=======
-<<<<<<< HEAD
+:pages/services/index.tsx.backup.1755991680
       newRealServices2025Q4 as unknown[]
-=======
-      cursorAddedServices as unknown[]
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-13a5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     );
     return acc;
   }, {} as Record<string, Service[]>);

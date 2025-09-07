@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react",
-import { safeStorage } from "@/utils/safeStorage",
+import { safeStorage  } from "@/utils/safeStorage";
 import { X, ArrowRight } from 'lucide-react'
 
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -9,11 +9,27 @@ interface SmartAppBannerProps {}
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
+:src/components/mobile-app/SmartAppBanner.tsx
+  delay?: number, // Delay in milliseconds before showing the banner
 
 }
 
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
+:src/components/mobile-app/SmartAppBanner.tsx
+  appName = "Zion Marketplace"
+  appIconSrc
+  appStoreUrl = "/download"
+  googlePlayUrl = "/download"
+  delay = 1500
+}) => {
+  const [isVisible, setIsVisible] = useState(false)
+  const isMobile = useIsMobile()
+  useEffect((,) => {
+  const [isVisible, setIsVisible] = useState(false),
+  const isMobile = useIsMobile(),
+  
+  useEffect(() => {
   appName = "Zion Marketplace",
   appIconSrc,
   appStoreUrl = "/download",
@@ -25,6 +41,20 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true)
+:src/components/mobile-app/SmartAppBanner.tsx
+      }, delay)
+      return () => clearTimeout(timer)
+    }
+    return undefined
+  }, [isMobile, delay])
+  const dismissBanner = () => {
+    setIsVisible(false)
+    safeStorage.setItem("smartBannerDismissed", "true")
+  }
+  const resetBanner = () => {
+    safeStorage.removeItem("smartBannerDismissed")
+    setIsVisible(true)
+  }
 
       }, delay),
       
@@ -51,6 +81,10 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     ) : null
   }
+:src/components/mobile-app/SmartAppBanner.tsx
+  // Detect iOS or Android
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
   
   // Detect iOS or Android
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
@@ -66,11 +100,13 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
             <div className="text-zion-cyan font-bold text-lg">Z</div>
           )}
         </div>
+:src/components/mobile-app/SmartAppBanner.tsx
 
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
+:src/components/mobile-app/SmartAppBanner.tsx
 
         <div className="flex items-center gap-3">
           <Link 
@@ -80,6 +116,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
             View
             <ArrowRight className="w-3 h-3 ml-1" />
           </Link>
+:src/components/mobile-app/SmartAppBanner.tsx
 
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
             <X className="h-5 w-5" />
@@ -88,6 +125,9 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     </div>
   )
+:src/components/mobile-app/SmartAppBanner.tsx
+}
+'"
 
 },
 import React, { useState, useEffect } from "react",;

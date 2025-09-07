@@ -1,3 +1,4 @@
+:src/components/jobs/MyApplications.tsx
 return <Badge variant="outline">{status}</Badge>
 
     }
@@ -19,6 +20,16 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
+:src/components/jobs/MyApplications.tsx
+import Link from "next/link";
+import { ApplicationStatus } from "@/types/jobs";
+export function MyApplications() {
+
+  const { applications, isLoading, error } = useJobApplications()
+  const getStatusBadge = (status: ApplicationStatus,) => {
+    switch (status) {
+      case "new": return <Badge variant="secondary">New</Badge>
+        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>
 import Link from "next/link",
 import { ApplicationStatus } from "@/types/jobs",
 export function MyApplications() {
@@ -78,6 +89,8 @@ export function MyApplications() {
   }
 
     <div className="grid gap-4 md:grid-cols-2">
+:src/components/jobs/MyApplications.tsx
+      {applications.map((application,) => (
 
       {applications.map((application) => (
 
@@ -85,6 +98,8 @@ export function MyApplications() {
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
               <CardTitle className="text-lg">
+:src/components/jobs/MyApplications.tsx
+                {application.job?.title |"Unknown Job"}
 
                 {application.job?.title || "Unknown Job"}
               </CardTitle>
@@ -98,6 +113,7 @@ export function MyApplications() {
             <div className="space-y-3">
               {application.cover_letter && ("
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
+:src/components/jobs/MyApplications.tsx
 
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -167,6 +183,10 @@ export function MyApplications() {;
               )}
 
               <div className="flex justify-between items-center">
+:src/components/jobs/MyApplications.tsx
+                <Button
+                  variant="outline"
+                  size="sm"
                 <Button "
                   variant="outline" "
                   size="sm" 
@@ -174,6 +194,13 @@ export function MyApplications() {;
                   className="text-xs"
                   asChild;
                 >
+:src/components/jobs/MyApplications.tsx
+                  <Link href={`/jobs/${application.job_id}`}>
+                    <ExternalLink className="h-3 w-3 mr-1" /> View Job
+                  </Link>
+                </Button>
+                <Button
+                  variant="default"
 
               </CardTitle>;
               {getStatusBadge(application && application.status)}
@@ -259,6 +286,9 @@ if ( {) {}
 }
 
     </div>
+:src/components/jobs/MyApplications.tsx
+  )
+}
   );
 
 };

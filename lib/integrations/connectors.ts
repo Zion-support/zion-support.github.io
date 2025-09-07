@@ -1,9 +1,6 @@
-import { ProviderConnection, SyncLogEntry } from './types';
+import { ProviderConnection, SyncLogEntry  } from './types';
 import { v4 as uuidv4 } from 'uuid';
-import { ProviderConnection, SyncLogEntry } from "./types";
-import { v4 as uuidv4 } from "uuid";
-import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
+export async function simulateAction<T;
 
 pr-12243
 
@@ -52,13 +49,15 @@ async function mockProviderCall<T>(
 }
 
 // CRM actions
+}
+
 export const crm = {
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   async syncContact(
     connection: ProviderConnection;
     contact: Record<string, any>
-  ) {"
+  ) {
     return mockProviderCall(connection, "sync_contact", { contact });
   }
   async addEmailTouchpoint(
@@ -83,6 +82,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
 // ATS actions
+}
+
 export const ats = {
 
     id: uuidv4(),
@@ -120,62 +121,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12243
 
     status: Record<string, any>
-
-}
-;
-// ATS actions;
-export const ats = {}
-  async update_status (
-    connection: ProviderConnection,
-    status: Record < string, any>,
-  ) {";
-    return mockProviderCall (connection, "update_status", { status });
-  },
-}
-
-;
-
-}
-;
-// ATS actions;
-export const ats = {}
-  async update_status (
-    connection: ProviderConnection,
-    status: Record < string, any>,
-  ) {";
-    return mockProviderCall (connection, "update_status", { status });
-  },
-}
-
-;
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-pr-12243
-
-export class WebhookConnector extends BaseConnector {
-  async connect(): Promise<IntegrationResponse> {
-    return { success: true ;};
-  }
-
-  async disconnect(): Promise<IntegrationResponse> {
-    return { success: true ;};
-  }
-
-  async test(): Promise<IntegrationResponse> {
-    return { success: true ;};
+  ) {
+    return mockProviderCall(connection, "update_status", { status });
   }
 }
-ursor/fix-website-loading-errors-and-merge-6662
-// Email actions
-export const email = {
-
-  async createCandidate(
-    connection: ProviderConnection,
-    candidate: Record<string, any>
-  ) {'
-    return executeProviderAction(connection, 'createCandidate', { candidate });
-  },
-};
+    return mockProviderCall(connection, "update_status", { status });
+  }
+}
 
 // Email actions
 export const email = {
@@ -184,12 +136,4 @@ export const email = {
 
     return executeProviderAction(connection, 'sendNotification', { notification });
   },
-
 };
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-    return simulateAction(connection, 'ats.updateStatus', { change });
-  },
-};
-origin/cursor/automate-test-improve-and-merge-code-2533

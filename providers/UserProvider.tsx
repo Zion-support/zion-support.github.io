@@ -3,35 +3,8 @@ export type User = {;
 export type UserRole = 'client' | 'talent';
 
 export type User = {
-
+export type User = {;
   id: string;
-
-import React, {;
-  createContext,;
-  useContext,;
-  useEffect,;
-  useMemo,;
-  useState,;} from 'react';} from 'react';
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-
-export type UserRole = 'client' | 'talent';
-origin/cursor/expand-services-advertise-and-build-project-c28b
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,
-useState,;
-} from 'react';
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-
-export type UserRole = 'client' | 'talent';
-export type User = {
-
   name: string;
 
   role: UserRole;
@@ -40,21 +13,34 @@ export type User = {
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
+  completeOnboarding: () => void;};}
+export type UserContextValue = {;
+  user: User | null;
+  setUser: (user: User | null) => void;
+  logout: () => void;
+  completeOnboarding: () => void;};};
 
-  updateUser: (userData: Partial<User>) => Promise<void>;
+const UserContext = createContext<UserContextValue | undefined>(undefined);
+const DEFAULT_USER: User = {
+  id: 'u_001'
+  name: 'Jordan Lee'
+  role: 'client'
+  onboardingCompleted: false
 }
-
-interface UserProviderProps {}
-  children: React.ReactNode;
-}
-
-export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {};
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
-
+export function UserProvider({ children }: { children: React.ReactNode }) {  const [user, setUser] = useState<User | null>(null);  const [user, setUser] = useState<User | null>(null);
+  useEffect(() => {
+    try {
   completeOnboarding: () => void;
-};
-
+}
+;
+const UserContext = createContext<UserContextValue | undefined>(undefined);
+const DEFAULT_USER: User = {;
+  id: 'u_001',;
+  name: 'Jordan Lee',;
+  role: 'client',;
+  onboardingCompleted: false}
+;
+export function UserProvider({ children }: { children: React.ReactNode }) {;
   const [user, setUser] = useState<User | null>(null);
 
     const storedUser = localStorage.getItem('user');
@@ -68,49 +54,10 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {};
     } catch {
       // Ignore localStorage errors
     }
-  }, [user]);
-
-        name: 'John Doe',
-        email,'
-        role: 'client',
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      };
-      
-      setUser(mockUser);'
-      localStorage.setItem('user', JSON.stringify(mockUser));
-    } catch (error) {'
-      console.error('Login error:', error);
-      throw error;
-    } finally {}
-      setLoading(false);
-    }
-  };
-
-    localStorage.removeItem('user');
-  };
-
-  const updateUser = async (userData: Partial<User>): Promise<void> => {}
-    if (!user) return;
-    
-    const updatedUser = {}
-      ...user,
-      ...userData,
-      updatedAt: new Date().toISOString(),
-    };
-    
-    setUser(updatedUser);'
-    localStorage.setItem('user', JSON.stringify(updatedUser));
-  };
-
-  const contextValue = useMemo(
-
-  );
-
-export default UserProvider;
-export default UserProvider;
-
-if (user) localStorage.setItem('zion.user', JSON.stringify(user));
+  }, []);
+  useEffect(() => {
+    try {
+      if (user) localStorage.setItem('zion.user', JSON.stringify(user));
       else localStorage.removeItem('zion.user');
     } catch {}
   }, [user]);
@@ -132,37 +79,10 @@ export function useUser() {
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 
-      // Mock login logic - replace with actual authentication
-      const mockUser: User = {
-        id: '1',
-        name: 'John Doe',
-        email,
-        role: 'client',
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      };
-      
-      setUser(mockUser);
-      localStorage.setItem('user', JSON.stringify(mockUser));
-    } catch (error) {
-      console.error('Login error:', error);
-      throw error;
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const logout = (): void => {
-    setUser(null);
-    localStorage.removeItem('user');
-  };
-
-pr-12325
-  const updateUser = async (userData: Partial<User>): Promise<void> => {
-
-  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
-};
-
-export default UserProvider;
-export default UserProvider;
+export function useUser() {;
+  const ctx = useContext(UserContext);
+  if (!ctx) throw new Error('useUser must be used within UserProvider');
+  return ctx;
+}

@@ -32,6 +32,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
+:src/components/admin/fraud-detection/EmptyFraudState.tsx
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -60,6 +61,11 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({,
     </div>
   )
 }
+:src/components/admin/fraud-detection/EmptyFraudState.tsx
+      )}
+    </div>;
+  );
+};
 '""
 import React from "react""
 import {Button} from "@/components/ui/button""

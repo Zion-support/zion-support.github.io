@@ -34,7 +34,7 @@ const { upsert_file } = require ('./_lib / github');
     const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
     const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
-
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));
     const summary = {
       updatedAt: Date.now();
     const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json')
@@ -116,33 +116,33 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
-    const content = JSON.stringify(summary, null, 2)
-    if (owner && repo && token) {'
+    const content = JSON.stringify(summary, null, 2);
+    if (owner && repo && token) {
+      await upsertFile({
+        owner
+        repo
+        path: 'data/learn/insights-weekly.json'
+        content
+        message: 'chore(automation): weekly learning insights'
+        token
+      });
+    }
+
+    if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
 
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-  } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  }
-
-}
-},
-origin/cursor/automate-test-improve-and-merge-code-20a4
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
-  } catch (e) {}
+  } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 
-},
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
+};      }
+      topBadges: Object.values(users).reduce((map, u) => {
+        (u.badges |[]).forEach((b) => { map[b] = (map[b] |0) + 1 })
+        return map
+      }, {})
+    }
+    const owner = process.env.GITHUB_OWNER
+    const repo = process.env.GITHUB_REPO
+    const token = process.env.GITHUB_TOKEN

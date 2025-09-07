@@ -1,3 +1,11 @@
+:src/components/enterprise/EnterpriseStickyNav.tsx
+import { useState } from "react";
+import { Menu } from 'lucide-react'
+import { useState } from "react";
+import { Menu } from 'lucide-react'
+
+import Link from 'next/link'
+  const [ open, setOpen ] = useState(false)
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
@@ -142,6 +150,10 @@ export function EnterpriseStickyNav() {
           </ul>
         </div>
       </div>
+:src/components/enterprise/EnterpriseStickyNav.tsx
+    </nav>;
+  );
+};
 
 import { useState } from "react",;
 import { Menu } from 'lucide-react';
@@ -182,5 +194,7 @@ export function EnterpriseStickyNav() {;
 
   );
 }
+:src/components/enterprise/EnterpriseStickyNav.tsx
+;
     </nav>);
 }

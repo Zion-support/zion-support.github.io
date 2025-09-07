@@ -24,7 +24,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
   enableTracking = true
 }) => {
   const router = useRouter();
-=======
   const trackingId = Math.random().toString(36).substr(2, 9);
   const enableTracking = true;
 
@@ -50,7 +49,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     const target = event.target as HTMLElement;
     trackMetric('UserInteraction', 1);
   }, [trackMetric]);
->>>>>>> origin/cursor/website-audit-and-enhancement-8a0c
 
   // Track page view
   const trackPageView = useCallback(() => {
@@ -347,7 +345,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
   useEffect(() => {
     if (!enableTracking) return;
 
-<<<<<<< HEAD
     trackPageView();
 
     // Track route changes

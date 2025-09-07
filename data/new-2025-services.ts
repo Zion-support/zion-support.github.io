@@ -1,8 +1,17 @@
-};
-
-origin/cursor/automate-test-improve-and-merge-code-382a
-
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+const contact = null;
+const contact = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',};const contact = {
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
 // Additional 2025 real micro-SaaS, AI and IT services
+}
 
 export const new2025Services: EnhancedRealMicroSaasService[] = [
   {
@@ -2079,76 +2088,38 @@ reviews: 6,
     price: '$129', period: '/month',
     description: 'Central registry of AI assets with ownership, risk, policy mappings and audit trails for compliance.',
     features: [
-      'Model and dataset registryRisk and policy mappingsPII/PHI tagging and checksChange approvals and trailsReports and exports'
-    ];
-
-    popular: true, icon: '📚',
-    color: 'from-slate-700 to-gray-700', textColor: 'text-slate-300',
-    link: 'https://ziontechgroup.com/services/ai-governance-registry', marketPosition: 'Practical governance for teams shipping AI quickly.',
-    targetAudience: 'Product, security and compliance',
-    trialDays: 14, setupTime: '2 days',
-    category: 'AI & Data', realService: true,
-    technology: ['TypeScriptPostgreSQL'], integrations: ['GitHubJiraSlack'],
-    useCases: ['Audit readinessAsset ownershipPolicy enforcement'], roi: 'Reduce compliance cycle time by 50%',
-    competitors: ['Model governance suites'], marketSize: '$3B AI governance',
-    growthRate: '30% CAGR', variant: 'ai-futuristic',
-    contactInfo: contact, realImplementation: true,
-    implementationDetails: 'Registry, policies and approval workflows.',
-    launchDate: '2025-03-07', customers: 10,
-    rating: 4.6,
-    reviews: 6
-
-    id: 'llm-safety-observability-suite',
-    name: 'LLM Safety & Observability Suite',
-    tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards',
-    price: '$129',
-    period: '/month',
-    description: 'Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.',
-    features: [
-      'Prompt/output policy engineJailbreak and injection detection',
-      'PII redaction and audit trailHallucination and grounding score',
-      'Dashboards and CI quality gates'
-    ],
-    popular: true,
-    icon: '🛡️',
-    color: 'from-rose-600 to-red-700',
-    textColor: 'text-rose-300',
-    link: 'https://ziontechgroup.com/services/llm-safety-observability-suite',
-    marketPosition: 'Comparable to Lakera/Guardrails AI at a lower entry price with built-in observability.',
-    targetAudience: 'Teams shipping AI copilots and assistants',
-    trialDays: 14,
-    setupTime: '30 minutes',
-    category: 'AI & Data',
-    realService: true,
-    technology: ['TypeScriptOpenAI', 'AnthropicOpenTelemetry'],
-    integrations: ['SlackPagerDuty', 'DatadogGitHub Actions'],
-    useCases: ['Prevent unsafe outputsCompliance readiness', 'Model regression detection'],
-    roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks',
-    competitors: ['LakeraGuardrails AI', 'Azure AI Content Safety'],
-    marketSize: '$3.5B+ AI safety & governance',
-    growthRate: '200% annual growth',
-    variant: 'holographic-matrix',
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-  }
-];
-
-;
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      'Prevent unsafe outputs',
-      'Compliance readiness',
-      'Model regression detection',
-    ],
-    roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks',
-    competitors: ['Lakera', 'Guardrails AI', 'Azure AI Content Safety'],
-    marketSize: '$3.5B+ AI safety & governance',
-    growthRate: '200% annual growth',
-    variant: 'holographic-matrix',
-    contactInfo: contact,
+      'Model and dataset registry'
+      'Risk and policy mappings'
+      'PII/PHI tagging and checks'
+      'Change approvals and trails'
+      'Reports and exports'
+    ]
+    popular: true
+    icon: '📚'
+    color: 'from-slate-700 to-gray-700'
+    textColor: 'text-slate-300'
+    link: 'https://ziontechgroup.com/services/ai-governance-registry'
+    marketPosition: 'Practical governance for teams shipping AI quickly.'
+    targetAudience: 'Product, security and compliance'
+    trialDays: 14
+    setupTime: '2 days'
+    category: 'AI & Data'
+    realService: true
+    technology: ['TypeScript', 'PostgreSQL']
+    integrations: ['GitHub', 'Jira', 'Slack']
+    useCases: ['Audit readiness', 'Asset ownership', 'Policy enforcement']
+    roi: 'Reduce compliance cycle time by 50%'
+    competitors: ['Model governance suites']
+    marketSize: '$3B AI governance'
+    growthRate: '30% CAGR'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Registry, policies and approval workflows.'
+    launchDate: '2025-03-07'
+    customers: 10
+    rating: 4.6
+reviews: 6
     realImplementation: true,
     implementationDetails:
       'Inline middleware, policy DSL, exporters and dashboards.',
@@ -2885,7 +2856,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2025-03-07',
     customers: 10,
     rating: 4.6,
-    reviews: 6,
-  },
+    reviews: 6
+  }
 ];
-origin/cursor/automate-test-improve-and-merge-code-2533

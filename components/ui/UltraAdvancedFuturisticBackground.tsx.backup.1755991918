@@ -490,7 +490,6 @@ export default function UltraAdvancedFuturisticBackground({
       });
     };
 
-=======
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -548,12 +547,10 @@ export default function UltraAdvancedFuturisticBackground({
     };
 
     initEffects();
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-afd8
     animate();
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
-<<<<<<< HEAD
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }

@@ -1,3 +1,31 @@
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
+import React from "react",
+import { Button } from "@/components/ui/button";
+import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
+interface ActionButtonsProps {
+  flagId: string;
+  status: string;
+
+  onAction: (
+    flagId: string
+    action: "warning" | "suspension" | "ban" | "ignore"
+  ) => void;
+}
+export const ActionButtons: React.FC<ActionButtonsProps> = ({
+  flagId
+  status
+  onAction
+}) => {
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
+
+interface ActionButtonsProps {
+  flagId: string,
+  status: string,
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
+}
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
 interface ActionButtonsProps {
 
@@ -25,6 +53,9 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         variant="ghost"
         size="icon"
         title="Send Warning"
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
+        onClick={() => onAction(flagId, "warning")}
+        disabled={status === "actioned" |status === "ignored"}
         aria-label="Send warning"
         onClick={() => onAction(flagId, 'warning')}
 
@@ -36,6 +67,9 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         variant="ghost"
         size="icon"
         title="Suspend User"
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
+        onClick={() => onAction(flagId, "suspension")}
+        disabled={status === "actioned" |status === "ignored"}
         aria-label="Suspend user"
         onClick={() => onAction(flagId, 'suspension')}
         disabled={status === 'actioned' || status === 'ignored'}
@@ -46,6 +80,9 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         variant="ghost"
         size="icon"
         title="Ban User"
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
+        onClick={() => onAction(flagId, "ban")}
+        disabled={status === "actioned" |status === "ignored"}
         aria-label="Ban user"
         onClick={() => onAction(flagId, 'ban')}
         disabled={status === 'actioned' || status === 'ignored'}
@@ -72,6 +109,14 @@ interface ActionButtonsProps {
           Ignore
         </Button>
       )}
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
+    </div>
+  );
+}
+
+};
+    </div>
+  );
 
 import React from 'react';
 import { Button } from '@/components / ui / button';

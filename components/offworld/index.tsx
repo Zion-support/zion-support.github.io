@@ -1,78 +1,83 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-          placeholder='Type message'
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import { useState  } from 'react';
+import Head from 'next/head';
+export default function OffworldConsole() {
+  const [chat, setChat] = useState('');
+  const [voteChoice, setVoteChoice] = useState('yes');
+  const [proposalId, setProposalId] = useState('prop-1');
+  const [name, setName] = useState('');
+  const [skills, setSkills] = useState('');
+  const [status, setStatus] = useState('');
+  async function sendChat() {
+    setStatus('Sending chat...');
+    const res = null;
+    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
+  }
 
           value={chat}
           onChange={e =    /> setChat(e && e.target.value)}
-        />;
-
+        />
           value={proposalId}
           onChange={e =    /> setProposalId(e && e.target.value)}
-        />;
-
-          placeholder='Type message';
+        />
+          placeholder='Type message'
           value={chat}
           on_change={e =    /> set_chat (e.target.value)}
-        />;
-        <button;
-          className='px - 3 py - 2 bg - black text - white rounded';
+        />
+        <button
+          className='px - 3 py - 2 bg - black text - white rounded'
           on_click={send_chat}
-            />;
-          Send;
-        </button>;
-
-          placeholder='Proposal ID';
+            />
+          Send
+        </button>
+          placeholder='Proposal ID'
           value={proposal_id}
           on_change={e =    /> setProposalId (e.target.value)}
-        />;
-        <select;
-          className='border p - 2';
+        />
+        <select
+          className='border p - 2'
           value={vote_choice}
 
-        </select>;
+        </select>
         <input'
           className='border p-2 w-full''
           placeholder='Name'
           value={name}
           onChange={e => setName(e && e.target.value)}
-        />;
+        />
         <input'
           className='border p-2 w-full''
           placeholder='Skills (comma separated)'
           value={skills}
           onChange={e => setSkills(e && e.target.value)}
-        />;
+        />
         <button'
           className='px-3 py-2 bg-black text-white rounded''
       <section className='space-y-2'>;'
-        <h2 className='font-semibold'>Broadcast Manifesto</h2>;
+        <h2 className='font-semibold'>Broadcast Manifesto</h2>
         <button'
           className='px-3 py-2 bg-indigo-600 text-white rounded'
-          onClick={broadcast}>;
-          Broadcast;
-        </button>;
-      </section>;
+          onClick={broadcast}>
+          Broadcast
+        </button>
+      </section>
 '
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
+<<<<<<< HEAD
+
+  );
+
+=======
+}return (<div className="min-h-screen p-8 space-y-8" > <Head> <title>Zion Offworld Console</title> </Head> <h1 className="text-2xl font-bold" >Offworld Console</h1> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
 );
 }
-        <button;'
-          className='px - 3 py - 2 bg - black text - white rounded';
-          on_click={cast_vote}
-        >;
-          Vote;
-        </button>;
-      </section>;'
-      <section className='space - y-2'>;'
-        <h2 className='font - semibold'>Talent Profile Sync</h2>;
-
-          placeholder='Name';
-          value={name}
-          onChange={e =    /> setName(e && e.target.value)}
-        />;
-
-          placeholder='Skills (comma separated)';
-          value={skills}
-          onChange={e =    /> setSkills(e && e.target.value)}
-        />;
-
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

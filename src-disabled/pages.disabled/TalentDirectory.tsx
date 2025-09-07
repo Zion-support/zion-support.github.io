@@ -24,6 +24,7 @@ export default function TalentDirectory() {
                             setCurrentPage(
                               Math.min(totalPages, currentPage + 1)
                             )
+:src/pages/TalentDirectory.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
                           }}
                         />
@@ -438,4 +439,9 @@ export default function TalentDirectory() {;
         </div>
       </div>
     </div>
+:src/pages/TalentDirectory.tsx
+  )
+}
+  )
+}
 

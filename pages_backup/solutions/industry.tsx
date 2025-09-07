@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';
-
+import React from 'react';
 import Link from 'next/link';';
 
 import { motion } from 'framer-motion';
@@ -10,23 +10,51 @@ import { motion } from 'framer-motion';
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
-const capabilities = [;
-  { title: 'Regulatory Compliance, description: 'Ensure compliance with industry-specific regulations' },',
-  { title: 'Custom Workflows, description: 'Tailored business processes for your industry' },',
-  { title: 'Integration Expertise, description: 'Seamless integration with existing industry systems' },',
-  { title: 'Security Standards, description: 'Industry-specific security and data protection' },',
-  { title: 'Performance Optimization, description: 'Optimized for industry-specific performance requirements' },',
-
-  { title: 'Ongoing Support, description: 'Dedicated support team familiar with your industry' }',
+const industries = [;
+  {}
+    name: 'Healthcare,',
+    icon: Heart,
+    description: 'HIPAA-compliant solutions for healthcare providers and medical institutions,',
+    features: ['HIPAA Compliance, 'Patient Data Security', 'Telemedicine Platforms', 'Medical Records Management'],',
+    color: 'from-red-500 to-pink-500'';
+  },
+  {}
+    name: 'Finance,',
+    icon: CreditCard,
+    description: 'Secure financial technology and payment solutions for banks and fintech companies,',
+    features: ['PCI DSS Compliance, 'Fraud Detection', 'Payment Processing', 'Risk Management'],',
+    color: 'from-green-500 to-emerald-500'';
+  },
+  {}
+    name: 'E-commerce,',
+    icon: Globe,
+    description: 'Scalable online retail and marketplace platforms for digital commerce,',
+    features: ['Scalable Architecture, 'Payment Integration', 'Inventory Management', 'Customer Analytics'],',
+    color: 'from-blue-500 to-cyan-500'';
+  },
+  {}
+    name: 'Education,',
+    icon: GraduationCap,
+    description: 'Learning management and educational technology solutions,',
+    features: ['LMS Development, 'Student Analytics', 'Online Assessment', 'Content Management'],',
+    color: 'from-purple-500 to-indigo-500'';
+  },
+  {}
+    name: 'Manufacturing,',
+    icon: Factory,
+    description: 'IoT and automation solutions for manufacturing and industrial operations,',
+    features: ['IoT Integration, 'Process Automation', 'Quality Control', 'Supply Chain Management'],',
+    color: 'from-orange-500 to-red-500'';
+  },
+  {}
+    name: 'Real Estate,',
+    icon: Home,
+    description: 'Property management and real estate technology platforms,',
+    features: ['Property Management, 'Virtual Tours', 'Market Analytics', 'Transaction Management'],',
+    color: 'from-yellow-500 to-orange-500'';
+  }
 ;];
 
-const stats = [;
-  { number: '15+, label: 'Industries Served' },',
-  { number: '10+, label: 'Years Experience' },',
-  { number: '100%, label: 'Compliance Rate' },',
-
-  { number: '500+, label: 'Industry Projects' }',
-;];
 
 export default function IndustrySolutionsPage() {
 
@@ -79,6 +107,9 @@ export default function IndustrySolutionsPage() {
           </div>;
         </section>;
 
+        {/* Stats Section */}
+        <section className="py-16 bg-white">"
+          <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {stats.map((stat, index) => (,
                 <motion.div}),

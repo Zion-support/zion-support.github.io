@@ -5,10 +5,8 @@ interface UltraAdvancedQuantumBackgroundProps {
   intensity?: number;
   variant?: 'quantum' | 'holographic' | 'neural' | 'cyberpunk' | 'space' | 'matrix';
   children: React.ReactNode;
-=======
   intensity?: 'low' | 'medium' | 'high';
   variant?: 'quantum' | 'holographic' | 'neural' | 'cyberpunk' | 'space';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 }
 
 const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({
@@ -17,7 +15,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
   children
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-<<<<<<< HEAD
   const animationRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
@@ -291,7 +288,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       <div className="relative z-20">
         {children}
       </div>
-<<<<<<< HEAD
 
       {/* Floating geometric elements */}
       <div className="absolute inset-0 pointer-events-none z-5">
@@ -337,8 +333,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           }}
         />
       </div>
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     </div>
   );
 };

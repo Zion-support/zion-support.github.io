@@ -1,33 +1,9 @@
-
-interface LazyComponentProps {
-  fallback?: React.ReactNode;
-  children: React.ReactNode;
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react'
 }
-
-const LazyComponent: React.FC<LazyComponentProps> = ({ 
-  fallback = <div className="flex items-center justify-center p-4">Loading...</div>, 
-  children 
-}) => {
-  return (
-    <Suspense fallback={fallback}>
-      {children}
-    </Suspense>
-  );
+=======
+import React from 'react';
 };
+import React, { Suspense, lazy } from 'react';
 
-export default LazyComponent;
-
-interface LazyComponentProps {
-  children: ReactNode;
-  fallback?: ReactNode;
-
-  return (
-
-    <Suspense fallback={fallback}>
-      {children}
-    </Suspense>
-  );
-};
-
-export default LazyComponent;
-
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

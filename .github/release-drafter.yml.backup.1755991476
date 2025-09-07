@@ -15,7 +15,7 @@ categories:
   - title: '⚡ Performance'
     labels:
       - 'perf'
-
+      - 'performance'
   - title: '🧰 Maintenance'
     labels:
       - 'chore'
@@ -49,6 +49,5 @@ template: |
   $CHANGES
 
   ## Contributors
-
   $CONTRIBUTORS
   $CONTRIBUTORS

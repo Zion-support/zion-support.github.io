@@ -1,3 +1,11 @@
+:src/components/disputes/DisputeForm.tsx
+import React, { useState } from "react",
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { Button } from "@/components/ui/button";
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import {
 import React, { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -20,11 +28,66 @@ import {
   FormField,
   FormItem,
   FormLabel,
+:src/components/disputes/DisputeForm.tsx
+  FormMessage} from "@/components/ui/form",
+import { Textarea } from "@/components/ui/textarea",
+import {
 
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
+:src/components/disputes/DisputeForm.tsx
+  SelectValue} from "@/components/ui/select",
+import { Input } from "@/components/ui/input",
+import { disputeReasonLabels } from "@/types/disputes",
+import { useDisputes } from "@/hooks/useDisputes",
+import { toast } from "sonner",
+import { FileText } from 'lucide-react'
+
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+} from '@/components/ui/form'
+import { Textarea } from '@/components/ui/textarea'; import {
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from '@/components/ui/select'
+import { Input } from '@/components/ui/input'
+import { disputeReasonLabels } from '@/types/disputes'
+import { useDisputes } from '@/hooks/useDisputes'
+import { toast } from 'sonner'
+import { FileText } from 'lucide-react'
+const formSchema = z.object({
+  reason_code: z
+    .string()
+    .min(1, { message: 'Please select a reason for the dispute' })
+  description: z
+    .string()
+    .min(20, { message: 'Description must be at least 20 characters' })
+  attachments: z.array(z.any()).optional()
+})
+type DisputeFormProps = {
+  projectId: string
+  milestoneId?: string
+  onDisputeCreated?: (disputeId: string) => void
+  onCancel?: () => void
+}
+export function DisputeForm({
+  projectId
+  milestoneId
+  onDisputeCreated
+  onCancel
+}: DisputeFormProps) {
+  const { createDispute } = useDisputes()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [files, setFiles] = useState<File[]>([])
 
 const formSchema = z.object({
   reason_code: z.string()
@@ -51,11 +114,44 @@ export function DisputeForm({
   const [files, setFiles] = useState<File[]>([]),
 
   const form = useForm<z.infer<typeof formSchema>>({
+:src/components/disputes/DisputeForm.tsx
+    resolver: zodResolver(formSchema)
+    defaultValues: {
+      reason_code: ''
+      description: ''
+      attachments: []
+    }
+  })
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>,) => {
+    if (e.target.files) {
+      const newFiles = Array.from(e.target.files)
+      setFiles(prev => [...prev, ...newFiles])
+      form.setValue('attachments', [...files, ...newFiles])
+    }
+  }
+  const removeFile = (index: number) => {
+    const newFiles = [...files]
+    newFiles.splice(index, 1)
+    setFiles(newFiles)
+    form.setValue('attachments', newFiles)
+  }
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      setIsSubmitting(true)
+      const dispute = await createDispute({
+        project_id: projectId
+        milestone_id: milestoneId
+        reason_code: values.reason_code
+        description: values.description
+      })
 
       const dispute = await createDispute({
         project_id: projectId,
         milestone_id: milestoneId,
         reason_code: values.reason_code,
+:src/components/disputes/DisputeForm.tsx
+        description: values.description}),
+      
 
       if (dispute && dispute.id) {
         // Future enhancement: Upload attachments
@@ -63,6 +159,9 @@ export function DisputeForm({
         if (files.length > 0) {
           // logInfo(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
+:src/components/disputes/DisputeForm.tsx
+        toast.success('Your dispute has been submitted')
+        if (onDisputeCreated) {
 
           onDisputeCreated(dispute.id)
 
@@ -70,6 +169,7 @@ export function DisputeForm({
       }
     } catch (error) {
 
+:src/components/disputes/DisputeForm.tsx
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
 
@@ -88,6 +188,56 @@ export function DisputeForm({
         <FileText className="h-5 w-5 text-primary" />
         <h2 className="text-xl font-semibold">Report an Issue</h2>
       </div>
+:src/components/disputes/DisputeForm.tsx
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <FormField
+            control={form.control}
+            name='reason_code'
+            render={({
+              field
+            }: {
+              field: ControllerRenderProps<
+                z.infer<typeof formSchema>
+                'reason_code'
+              >
+            }) => (              <FormItem>
+                <FormLabel>Reason for dispute</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select a reason" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {Object.entries(disputeReasonLabels).map(
+                      ([value, label]) => (
+                        <SelectItem key={value} value={value}>
+                          {label}
+                        </SelectItem>
+                      )
+                    )}                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name='description'
+            render={({
+              field
+            }: {
+              field: ControllerRenderProps<
+                z.infer<typeof formSchema>
+                'description'
+              >
+            }) => (              <FormItem>
+                <FormLabel>Describe the issue in detail</FormLabel>
+                <FormControl>
+                  <Textarea
+                    placeholder='Please provide specific details about the issue...'
+                    className='min-h-[150px]'
 
             name="reason_code"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
@@ -410,6 +560,12 @@ if ( {) {
                     </ul>
                   </div>
                 )}
+:src/components/disputes/DisputeForm.tsx
+              </div>
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+          <div className='flex justify-end space-x-2'>
             {onCancel && (
               <Button type='button' variant='outline' onClick={onCancel}>
                 Cancel
@@ -473,6 +629,41 @@ const removeFile = (index: number) => {;
         </form>
       </Form>
     </div>
+:src/components/disputes/DisputeForm.tsx
+  )
+}
+const removeFile = (index: number) => {
+  async function onSubmit (values: z.infer<typeof formSchema>) {
+  try {
+  setIsSubmitting (true)
+const dispute = await createDispute ({
+  project id: projectId
+milestone id: milestoneId
+reason code: values.reason code
+description: values.description
+})
+//Future enhancement: Upload attachments //For now we just log the files that would be uploaded if (files.length > 0) {
+}finally {
+  setIsSubmitting (false)
+}"
+}return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {
+  field.onChange
+}defaultValue= {
+  field.value "
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {
+  Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItem key= {
+  value
+}value= {
+  value
+}> {
+  label
+}</SelectItem>) )
+}</SelectContent> </Select> <FormMessage /> </FormItem>)
+}/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) "
+}/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) )
+}</ul> </div>)
+}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>)
+}'"}
   );
 
 };

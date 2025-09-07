@@ -11,6 +11,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from "sonner",
 import { supabase } from "@/integrations/supabase/client",
+:src/pages/admin/TenantOnboarding.tsx
+import { Switch } from "@/components/ui/switch";
+import { logErrorToProduction } from '@/utils/productionLogger';
+export default function TenantOnboarding() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("company");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 import { Switch } from "@/components/ui/switch",
 import { logErrorToProduction } from '@/utils/productionLogger',
 export default function TenantOnboarding() {
@@ -20,6 +27,10 @@ export default function TenantOnboarding() {
   const [formData, setFormData] = useState({
 
     is_co_branded: true
+:src/pages/admin/TenantOnboarding.tsx
+  });
+  // Check if user has admin role
+  const isAdmin = null;
 
   }),
   // Check if user has admin role
@@ -64,7 +75,7 @@ export default function TenantOnboarding() {
           is_active: true,
           account_manager_id: user.id,
           dns_verified: false,
-          email_template_override: null
+          email_template_override: null,
         })
         .select('id, brand_name, subdomain')'
         .single(),
@@ -88,6 +99,27 @@ export default function TenantOnboarding() {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error creating tenant' }),'
       toast.error("Failed to create tenant", {"
         .select('id, brand_name, subdomain')
+:src/pages/admin/TenantOnboarding.tsx
+        .single();
+
+      if (error) throw error;
+
+      toast.success('Tenant created successfully!', {
+        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`,
+      });
+
+      // Reset form
+      setFormData({
+        brand_name: '',
+        subdomain: '',
+        logo_url: '',
+        primary_color: '#9b87f5',
+        theme_preset: 'light',
+        company_size: '',
+        industry: '',
+        custom_domain: '',
+        is_co_branded: true,
+      });
         .single(),
       if (error) throw error,
       toast.success("Tenant created successfully!", {
@@ -106,13 +138,19 @@ export default function TenantOnboarding() {
         is_co_branded: true
       })
     } catch (error: any) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error creating tenant' }),
-      toast.error("Failed to create tenant", {
-        description: error.message
-      })
+      logErrorToProduction(
+        error instanceof Error ? error.message : String(error),
+        error instanceof Error ? error : undefined,
+        { message: 'Error creating tenant' }
+      );
+      toast.error('Failed to create tenant', {
+        description: error.message,
+      });
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
+:src/pages/admin/TenantOnboarding.tsx
+  };
   },
   return (
     <>
@@ -390,6 +428,9 @@ export default function TenantOnboarding() {
         </div>
       </main>
     </>
+:src/pages/admin/TenantOnboarding.tsx
+  )
+}
 
   );
 

@@ -1,3 +1,5 @@
+:src/components/RatingStars.tsx
+import React from 'react';
 import { Star, StarHalf } from 'lucide-react'
 
 export function RatingStars({ value = 0, count }: { value?: number, count?: number }) {
@@ -16,6 +18,10 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
             />
           )
         }
+:src/components/RatingStars.tsx
+        if (i === filled && half) {
+          return (
+            <StarHalf
 
         if (i === filled && half) {;
           return (;
@@ -30,6 +36,7 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
       })}
       {typeof count === 'number' && (
         <span className="text-xs ml-1">({count})</span>
+:src/components/RatingStars.tsx
 
 }
 
@@ -38,6 +45,8 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
     </div>
   )
 
+}
+:src/components/RatingStars.tsx
 }
 }
 }

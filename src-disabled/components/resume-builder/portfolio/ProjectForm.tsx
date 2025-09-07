@@ -1,3 +1,4 @@
+:src/components/resume-builder/portfolio/ProjectForm.tsx
 }
       let success = false;
       // Check condition;
@@ -24,6 +25,27 @@ import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio  } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';
+:src/components/resume-builder/portfolio/ProjectForm.tsx
+// Define schema for form validation
+const projectSchema = null;
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { logErrorToProduction } from '@/utils/productionLogger'; import {
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+} from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
+import { PortfolioProject } from '@/types/resume'
+import { usePortfolio } from '@/hooks/usePortfolio'
+import { useAuth } from '@/hooks/useAuth'
 // Define schema for form validation
 const projectSchema = null;
 
@@ -47,6 +69,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
     }
   }
 
+:src/components/resume-builder/portfolio/ProjectForm.tsx
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -134,6 +157,8 @@ export function ProjectForm() { return null; }
         />;
         <FormField
           control={form.control}
+:src/components/resume-builder/portfolio/ProjectForm.tsx
+          name='title'
           name='description''
 
         <FormField
@@ -198,12 +223,28 @@ export function ProjectForm() { return null; }
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
+:src/components/resume-builder/portfolio/ProjectForm.tsx
+                <Input
+                  placeholder='E.g., AI Chatbot, E-commerce Website'
+                  {...field}                />
 
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
+:src/components/resume-builder/portfolio/ProjectForm.tsx
+        />
+        <FormField
+          control={form.control}
+          name='description'
+          render={({ field }: { field: any }) => (            <FormItem>
+              <FormLabel>Project Description</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder='Describe what the project does and your role in it...'
+                  className='min-h-[100px]'
+                  {...field}
 
         />;
         <FormField;
@@ -222,6 +263,11 @@ export function ProjectForm() { return null; }
               <FormMessage />
             </FormItem>
           )}
+:src/components/resume-builder/portfolio/ProjectForm.tsx
+        />
+        <FormField
+          control={form.control}
+          name='technologies'
 
         />;
         <FormField;
@@ -306,6 +352,14 @@ export function ProjectForm() { return null; }
             </FormItem>
           )}
         />
+:src/components/resume-builder/portfolio/ProjectForm.tsx
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <FormField
+            control={form.control}
+            name='github_url'
+            render={({ field }: { field: any }) => (              <FormItem>
+                <FormLabel className='flex items-center gap-2'>
+                  <Github className='h-4 w-4' />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
@@ -324,6 +378,15 @@ export function ProjectForm() { return null; }
                 <FormMessage />
               </FormItem>
             )}
+:src/components/resume-builder/portfolio/ProjectForm.tsx
+          />
+          <FormField
+            control={form.control}
+            name='demo_url'
+            render={({ field }: { field: any }) => (              <FormItem>
+                <FormLabel className='flex items-center gap-2'>
+                  <Link className='h-4 w-4' />
+                  Demo URL
 
           />;
           <FormField;
@@ -344,6 +407,11 @@ export function ProjectForm() { return null; }
             )}
 
           name='image_url'
+:src/components/resume-builder/portfolio/ProjectForm.tsx
+          render={({ field }: { field: any }) => (            <FormItem>
+              <FormLabel className='flex items-center gap-2'>
+                <FileImage className='h-4 w-4' />
+                Screenshot URL
 
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel className='flex items-center gap-2'>;
@@ -371,6 +439,11 @@ export function ProjectForm() { return null; }
               <FormMessage />
             </FormItem>
           )}
+:src/components/resume-builder/portfolio/ProjectForm.tsx
+        />
+        {/* Future file upload field would go here */}
+        <div className='flex justify-end space-x-2 pt-4'>
+          <Button type='button' variant='outline' onClick={onCancel}>
 
         />;
         {/* Future file upload field would go here */}
@@ -400,6 +473,8 @@ export function ProjectForm() { return null; }
       </form>;
     </Form>;
   )
+};
+:src/components/resume-builder/portfolio/ProjectForm.tsx
 };
 };
     </Form>

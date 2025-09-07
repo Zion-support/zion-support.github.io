@@ -10,10 +10,8 @@ export default function Header() {
   const router = useRouter();
 
   useEffect(() => {
-=======
     if (typeof window === 'undefined') return;
     
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -21,7 +19,6 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-<<<<<<< HEAD
 
   const navigation = [
     { name: 'Product', href: '#', hasDropdown: true },
@@ -186,7 +183,6 @@ export default function Header() {
             ))}
           </nav>
 
-<<<<<<< HEAD
           {/* Contact Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -197,8 +193,6 @@ export default function Header() {
             </Link>
           </div>
 
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-3">
             <Link

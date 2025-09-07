@@ -1,9 +1,5 @@
+export type InnovativeMicroSaas = any;
 export type InnovativeMicroSaas = {
-      'Multi-speaker diarization',
-  launch_date?: string;
-
-export type InnovativeMicroSaas = {
-export type InnovativeMicroSaas = {;
   id: string;
 
 export type InnovativeMicroSaas = any;
@@ -114,27 +110,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'candidate-screening-copilot'
     name: 'Candidate Screening Copilot'
     description:
-      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-    category: 'Human Resources',
-    pricing: { starter: '$69/mo' },
-    features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
-    integrations: ['Greenhouse', 'Lever'],
-
-    category: 'Human Resources',
-    pricing: { starter: '$69 / mo' },
-    features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
-    integrations: ['Greenhouse', 'Lever'],
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    use_cases: ['Faster hiring', 'Bias reduction'],
-
-    link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
-    real_service: true,
-
-  },
-
+      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
+    category: 'Human Resources'
+    pricing: { starter: '$69/mo' }
+    features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync']
+    integrations: ['Greenhouse', 'Lever']
+    useCases: ['Faster hiring', 'Bias reduction']
+    link: 'https://ziontechgroup.com/services/candidate-screening-copilot'
+    realService: true
+  }
 ];	id: string;
 
 	id: string, name: string,
@@ -573,11 +557,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		integrations: ['GreenhouseLever'],;
 		useCases: ['Faster hiringBias reduction'],;
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot',;
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-    useCases: ['Faster hiring', 'Bias reduction'],
-    link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
-    realService: true,
-  },
+		realService: true;
+	}
 ];
-origin/cursor/automate-test-improve-and-merge-code-2533

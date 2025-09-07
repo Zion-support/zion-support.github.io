@@ -67,8 +67,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         });
       }
 
-<<<<<<< HEAD
-=======
       // Send to custom analytics endpoint
       if (process.env.NODE_ENV === 'production') {
         fetch('/api/analytics/events', {
@@ -266,7 +264,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         });
       }
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e21f
       // Google Tag Manager
       if ((window as any).dataLayer) {
         (window as any).dataLayer.push({

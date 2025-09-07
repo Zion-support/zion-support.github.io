@@ -1,3 +1,8 @@
+:src/components/enterprise/admin/TeamActivity.tsx
+import React from "react";
+import {
+
+import React from "react";
 import {
 
   Table
@@ -16,6 +21,63 @@ import { CalendarIcon, Search } from 'lucide-react'
   TableRow} from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+:src/components/enterprise/admin/TeamActivity.tsx
+import { Badge } from "@/components/ui/badge",
+import { CalendarIcon, Search } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+export function TeamActivity() {
+  // Mock activity data
+  const activities = [
+    {
+      id: 1
+      user: "Alex Johnson"
+      action: "Posted a job"
+      target: "Senior AI Engineer"
+      timestamp: new Date(Date.now() - 1000 * 60 * 30)
+      category: "jobs"}
+    {
+      id: 2
+      user: "Jamie Smith"
+      action: "Contacted candidate"
+      target: "Michael Chen"
+      timestamp: new Date(Date.now() - 1000 * 60 * 120)
+      category: "candidates"}
+    {
+      id: 3
+      user: "Sam Williams"
+      action: "Updated job"
+      target: "Frontend Developer"
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5)
+      category: "jobs"}
+    {
+      id: 4
+      user: "Alex Johnson"
+      action: "Added team member"
+      target: "Chris Rodriguez"
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24)
+      category: "team"}
+    {
+      id: 5
+      user: "Taylor Brown"
+      action: "Viewed candidate profile"
+      target: "Sarah Kim"
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2)
+      category: "candidates"}
+    {
+      id: 6
+      user: "Jamie Smith"
+      action: "Updated budget"
+      target: "Monthly spending cap"
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3)
+      category: "billing"}]
+  // Function to format the date in a readable way
+  const formatDate = (date: Date) => {
+    const now = new Date()
+    const diffMs = now.getTime() - date.getTime()
+    const diffMins = Math.floor(diffMs / (1000 * 60))
+    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60))
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24))
 
 import React from "react",
 
@@ -43,6 +105,18 @@ import {
     } else {
       return date.toLocaleDateString()
     }
+:src/components/enterprise/admin/TeamActivity.tsx
+  }
+  const getCategoryBadge = (category: string,) => {
+    const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {
+      jobs: { variant: "default" }
+      candidates: { variant: "outline" }
+      team: { variant: "secondary" }
+      billing: { variant: "destructive" }}
+    const style = categoryStyles[category] |{ variant: "default" as const }
+    return <Badge variant={style.variant}>{category}</Badge>
+  }
+      jobs: { variant: "default" },
   },
 
   const getCategoryBadge = (category: string) => {
@@ -75,6 +149,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
+:src/components/enterprise/admin/TeamActivity.tsx
+  },
 
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
@@ -103,6 +179,31 @@ export function TeamActivity() {
           </Button>
         </div>
       </div>
+:src/components/enterprise/admin/TeamActivity.tsx
+      <div className="rounded-md border">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>User</TableHead>
+              <TableHead>Activity</TableHead>
+              <TableHead>Target</TableHead>
+              <TableHead>Category</TableHead>
+              <TableHead>Time</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {activities.map((activity) => (
+              <TableRow key={activity.id}>
+                <TableCell className="font-medium">{activity.user}</TableCell>
+                <TableCell>{activity.action}</TableCell>
+                <TableCell>
+                  <span className="font-medium">{activity.target}</span>
+                </TableCell>
+                <TableCell>{getCategoryBadge(activity.category)}</TableCell>
+                <TableCell className="text-muted-foreground">
+                  {formatDate(activity.timestamp)}
+                </TableCell>
+              </TableRow>
 
 import React from "react",;
 import {;
@@ -232,6 +333,7 @@ export function TeamActivity() {;
           </TableBody>
         </Table>
       </div>
+:src/components/enterprise/admin/TeamActivity.tsx
 
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
@@ -245,6 +347,16 @@ export function TeamActivity() {;
         </Button>
 
     </div>
+:src/components/enterprise/admin/TeamActivity.tsx
+  )
+}
+const getCategoryBadge = (category: string) => {
+};"
+  activities.map ( (activity) => (<TableRow key= {
+  activity.id
+}> </TableCell> </TableRow>) ) "
+}</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>)
+}"}
   );
 
 };

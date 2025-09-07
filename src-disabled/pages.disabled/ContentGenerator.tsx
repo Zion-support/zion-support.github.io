@@ -1,3 +1,21 @@
+:src/pages/ContentGenerator.tsx
+import React, { useState, useEffect } from 'react',
+import { Header } from "@/components/Header",
+import { Button } from "@/components/ui/button",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Textarea } from "@/components/ui/textarea",
+import { Input } from "@/components/ui/input",
+import { Switch } from "@/components/ui/switch",
+import { Label } from "@/components/ui/label",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { toast } from "sonner",
+import { Loader2 } from 'lucide-react'
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { useRouter  } from 'next/router';
+import {logErrorToProduction} from '@/utils/productionLogger';
 export default function ContentGenerator() {
 
   const { user, isLoading } = useAuth();
@@ -95,105 +113,6 @@ export default function ContentGenerator() {
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
-      }),;
-      if (error) throw error,;
-      toast.success(`Test newsletter sent to ${testEmail}!`);
-    } catch (error) {;
-      logErrorToProduction('Error sending test newsletter:', { data: error });
-      toast.error("Failed to send test newsletter. Please try again.");
-    }
-  };
-  // Check if user is still loading;
-  if (isLoading) {;
-    return (;
-      <>;
-        <Header />;
-        <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
-          <div className="animate-pulse text-white">Loading...</div>;
-        </div>;
-      </>;
-    );
-  }
-;
-  return (;
-    <>;
-      <Header />;
-      <div className="min-h-screen bg-zion-blue py-12">;
-        <div className="container mx-auto px-4">;
-          <h1 className="text-3xl font-bold text-white mb-8">Content Generator</h1>;
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-            <div className="lg:col-span-1">;
-              <Card className="bg-zion-blue-dark border border-zion-blue-light">;
-                <CardHeader>;
-                  <CardTitle className="text-white">Content Settings</CardTitle>;
-                  <CardDescription className="text-zion-slate-light">;
-                    Configure what type of content you want to generate.;
-                  </CardDescription>;
-                </CardHeader>;
-                <CardContent className="space-y-6">;
-                  <div className="space-y-2">;
-                    <Label htmlFor="contentType" className="text-white">Content Type</Label>;
-                    <Select value={contentType} onValueChange={(value) => setContentType(value as 'blog' | 'newsletter' | 'serviceDescription' | 'faq')}>;
-                      <SelectTrigger id="contentType" className="bg-zion-blue border border-zion-blue-light text-white">;
-                        <SelectValue placeholder="Select content type" />;
-                      </SelectTrigger>;
-                      <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
-                        <SelectItem value="blog" className="text-white">Blog Post</SelectItem>;
-                        <SelectItem value="newsletter" className="text-white">Email Newsletter</SelectItem>;
-                        <SelectItem value="serviceDescription" className="text-white">Service Description</SelectItem>;
-                        <SelectItem value="faq" className="text-white">FAQ</SelectItem>;
-                      </SelectContent>;
-                    </Select>;
-                  </div>;
-                  <div className="space-y-2">;
-                    <Label htmlFor="topic" className="text-white">Main Topic / User Prompt</Label>;
-                    <Input;
-                      id="topic";
-                      placeholder={;
-                        contentType === 'blog' ? "e.g., Benefits of AI in Marketing" :;
-                        contentType === 'serviceDescription' ? "e.g., AI-Powered Chatbot Solutions" :;
-                        contentType === 'faq' ? "e.g., How does AI improve customer service?" :;
-                        "e.g., May Platform Updates" // Newsletter or default;
-                      }
-                      className="bg-zion-blue border border-zion-blue-light text-white";
-                      value={topic}
-                      onChange={(e) => setTopic(e.target.value)}
-                    />;
-                  </div>;
-                  <div className="space-y-2">;
-                    <Label htmlFor="keywords" className="text-white">Keywords (Optional, comma-separated)</Label>;
-                    <Input;
-                      id="keywords";
-                      placeholder="e.g., AI, machine learning, SEO";
-                      className="bg-zion-blue border border-zion-blue-light text-white";
-                      value={keywords}
-                      onChange={(e) => setKeywords(e.target.value)}
-                    />;
-                  </div>;
-                  <div className="space-y-2">;
-                    <Label htmlFor="customPrompt" className="text-white">Detailed Instructions / Custom Prompt (Optional)</Label>;
-                    <Textarea;
-                      id="customPrompt";
-                      placeholder="Optionally provide more detailed instructions or a full custom prompt for the AI...";
-                      className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]";
-                      value={customPrompt}
-                      onChange={(e) => setCustomPrompt(e.target.value)}
-                    />;
-                  </div>;
-                  {contentType === 'blog' && (;
-                    <>;
-                      <div className="flex items-center justify-between">;
-                        <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>;
-                        <Switch;
-                          id="autoPublish";
-                          checked={autoPublish}
-                          onCheckedChange={setAutoPublish}
-                        />;
-                      </div>;
-                      <div className="flex items-center justify-between">;
-                        <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
-                        <Switch;
-                          id="includeImage";
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
                         />;
@@ -321,4 +240,9 @@ export default function ContentGenerator() {
           </div>
         </div>
       </div>
+:src/pages/ContentGenerator.tsx
+    </>
+  )
+}
+}
     </>

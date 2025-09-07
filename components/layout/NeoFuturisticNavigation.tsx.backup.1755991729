@@ -48,8 +48,6 @@ export default function NeoFuturisticNavigation() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
-<<<<<<< HEAD
-=======
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -238,7 +236,6 @@ export default function NeoFuturisticNavigation() {
     }
   ];
 
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4aaf
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Top contact bar */}

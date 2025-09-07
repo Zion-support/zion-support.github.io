@@ -26,6 +26,7 @@ pr-12325
   }
 }
 import React from 'react';
+
 interface CustomerExperienceProps {
   // Add props here as needed
 
@@ -38,28 +39,3 @@ export default function CustomerExperience({ }: CustomerExperienceProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-}
-
-:src.pages.disabled/CustomerExperience.jsx
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-:src.pages.disabled/CustomerExperience.jsx
-}
-}
-}
-}
-}
-
-}
-
-:src.pages.disabled/CustomerExperience.jsx
-}
-}
-}
-}
-}

@@ -1,4 +1,4 @@
-export interface MarketTrend {;
+export interface MarketTrend {
   id: string;
   keyword: string;
   searchVolume: number;
@@ -11,7 +11,9 @@ export interface MarketTrend {;
   market_opportunity: 'high' | 'medium' | 'low',
   timestamp: Date;
 
-export interface MarketTrend {};
+  timestamp: Date
+}
+export interface CompetitorAnalysis {
   id: string;
   keyword: string;
 
@@ -77,7 +79,7 @@ export interface MarketSegment {
   solutions: string[];
 
 }
-
+export interface MarketReport {
   id: string;
   title: string;
   industry: string;
@@ -104,16 +106,22 @@ export interface MarketResearchRequest {
   custom_metrics?: string[];
 
 }
-
+export interface MarketResearchResponse {
   success: boolean;
   data: {}
     trends?: MarketTrend[];
     competitors?: CompetitorAnalysis[];
-'
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {}
-    this && this.apiKey = apiKey,
 
-export class AIMarketResearchService {;
+    segments?: MarketSegment[]
+    report?: MarketReport
+  }
+  insights: string[];
+  recommendations: string[];
+  nextSteps: string[]
+
+  estimatedROI: number
+}
+export class AIMarketResearchService {
   private apiKey: string;
 
   private baseUrl: string
@@ -213,21 +221,42 @@ export interface MarketResearchResponse {
   }
   async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
-
-      const response = await fetch(`${this && this.baseUrl}/api/market-research/export/${reportId}`, {
-
-        method: 'POST',
-        headers: {'`
-          'Authorization': `Bearer ${this && this.apiKey}`;'
-          'Content-Type': 'application/json'};
-        body: JSON && JSON.stringify({ format })});
-
-      if (!response && response.ok) {}`
-        throw new Error(`HTTP error! status: ${response && response.status}`)
+      const response = await fetch(`${this.baseUrl}/api/market-research/export/${reportId}`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`;
+          'Content-Type': 'application/json'}
+        body: JSON.stringify({ format })});
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
-
-      const data = await response && response.json();
-
+      const data = await response.json();
+      return data.downloadUrl
+    } catch (error) {
+      console.error('Error exporting report:', error);
+      throw error
+    }
+  }
+  async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {
+    try {
+      const response = await fetch(`${this.baseUrl}/api/market-research/schedule`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`;
+          'Content-Type': 'application/json'}
+        body: JSON.stringify({ ...request, schedule })});
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      const data = await response.json();
+      return data.scheduleId
+    } catch (error) {
+      console.error('Error scheduling report:', error);
+      throw error
+    }
+  }
+}
+export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
   id: string,;
   keyword: string,;
   searchVolume: number,;'

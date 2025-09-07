@@ -1,4 +1,4 @@
-export interface ShortUrl {;
+export interface ShortUrl {
   id: string;
   originalUrl: string;
   shortCode: string;
@@ -23,7 +23,9 @@ export interface ShortUrl {
 export interface ShortUrl {
   id: string;
 }
-
+export interface UrlAnalytics {
+  totalClicks: number;
+  uniqueVisitors: number;
   referrers: string[];
   countries: string[];
   devices: string[];
@@ -100,11 +102,12 @@ export interface ClickEvent {
   os: string;
 }
 export interface CreateShortUrlRequest {
+  originalUrl: string;
+  customCode?: string;
 
-  original_url: string;
-  custom_code?: string;
-  expires_at?: Date,
-  user_id?: string;
+  expiresAt?: Date
+
+  userId?: string
 }
 
   private urls: Map < string, ShortUrl> = new Map ();
@@ -299,41 +302,6 @@ export interface ShortUrl {;
     }
     return url
   }
-
-export interface ShortUrl {;
-
-    }
-
-    return url
-  }
-
-  async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
-
-      }
-      if (!analytics && analytics.countries.includes(clickData && clickData.country)) {}
-        analytics && analytics.countries.push(clickData && clickData.country)
-      }
-      if (!analytics && analytics.devices.includes(clickData && clickData.device)) {}
-        analytics && analytics.devices.push(clickData && clickData.device)
-      }
-      if (!analytics && analytics.browsers.includes(clickData && clickData.browser)) {}
-        analytics && analytics.browsers.push(clickData && clickData.browser)
-
-      }
-    }
-  }
-  async getAnalytics(shortCode: string): Promise<UrlAnalytics | null> {}
-    return this && this.analytics.get(shortCode) || null;
-  }
-
-    const url = this && this.urls.get(shortCode);
-    if (!url) return;
-    const clickEvent: ClickEvent = {
-
-    }
-    return url
-  }
-
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
     const url = this.urls.get(shortCode);
     if (!url) return;
@@ -401,7 +369,8 @@ export interface ShortUrl {;
 
   }
   async getUserUrls(userId: string): Promise<ShortUrl[]> {
-
+    return Array.from(this.urls.values()).filter(url => url.userId === userId)
+  }
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
     return true
   }
@@ -418,7 +387,7 @@ export interface ShortUrl {;
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     for (let i = 0, i < 6, i++) {
-
+      result += chars.charAt(Math.floor(Math.random() * chars.length))
     }
 
     return result
@@ -531,110 +500,6 @@ export const urlShortenerService = new UrlShortenerService();
 
   }
 }
-export const urlShortenerService = new UrlShortenerService();
-
-      urls: Array && Array.from(this && this.urls.entries());
-      analytics: Array && Array.from(this && this.analytics.entries()),
-      clicks: Array && Array.from(this && this.clicks.entries())
-    }
-  }
-  async importData(data: any): Promise<void> {
-    this && this.urls = new Map(data && data.urls);
-    this && this.analytics = new Map(data && data.analytics),
-    this && this.clicks = new Map(data && data.clicks)
-
-  private generate_id (): string {}
-    return Math.random ().to_string (36).substr (2, 9);
-  }
-
-  }
-}
-export const urlShortenerService = new UrlShortenerService();
-
-  private generate_id (): string {
-    return Math.random ().to_string (36).substr (2, 9);
-  }
-
-      urls: Array.from (this.urls.entries ());
-      analytics: Array.from (this.analytics.entries ()),
-      clicks: Array.from (this.clicks.entries ());
-    }
-  }
-
-    this.urls = new Map (data.urls);
-    this.analytics = new Map (data.analytics),
-    this.clicks = new Map (data.clicks);
-  }
-}
-export const urlShortenerService = new UrlShortenerService ();
-;
-
-export const urlShortenerService = new UrlShortenerService();
-export const urlShortenerService = new UrlShortenerService();
-;
-  async getAnalytics(shortCode:string):Promise<UrlAnalytics | null> {;
-    return this.analytics.get(shortCode) || null;
-  }
-;
-  async getUserUrls(userId:string):Promise<ShortUrl[]> {;
-    return Array.from(this.urls.values()).filter(url => url.userId === userId);
-  }
-;
-  async deactivateUrl(shortCode:string, userId?:string):Promise<boolean> {;
-    const url = this.urls.get(shortCode),;
-    if (!url || (userId && url.userId !== userId)) return false,;
-;
-    url.isActive = false,;
-    return true,;
-  }
-;
-  async updateUrl(shortCode:string, updates:Partial<ShortUrl>, userId?:string):Promise<boolean> {;
-    const url = this.urls.get(shortCode),;
-    if (!url || (userId && url.userId !== userId)) return false,;
-;
-    Object.assign(url, updates),;
-    return true,;
-  }
-;
-  private generateShortCode():string {;
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',;
-    let result = '',;
-    for (let i = 0, i < 6, i++) {;
-      result += chars.charAt(Math.floor(Math.random() * chars.length)),;
-    }
-    return result,;
-  }
-;
-  private generateId():string {;
-    return Math.random().toString(36).substr(2, 9),;
-  }
-;
-  // Utility methods for data persistence (in a real app, this would use a database);
-  async exportData():Promise<any> {;
-    return {;
-      urls:Array.from(this.urls.entries()),;
-      analytics:Array.from(this.analytics.entries()),;
-      clicks:Array.from(this.clicks.entries());
-    },;  }
-;
-  async importData(data:any):Promise<void> {;
-;
-  // Utility methods for data persistence (in a real app, this would use a database);
-  async exportData(): Promise<any> {;
-    return {;
-      urls: Array.from(this.urls.entries()),;
-      analytics: Array.from(this.analytics.entries()),;
-      clicks: Array.from(this.clicks.entries());
-    }
-  }
-;
-  async importData(data: any): Promise<void> {;
-    this.urls = new Map(data.urls),;
-    this.analytics = new Map(data.analytics),;
-    this.clicks = new Map(data.clicks);
-  }
-}
-;
 export const urlShortenerService = new UrlShortenerService();
 
 export const urlShortenerService = new UrlShortenerService();

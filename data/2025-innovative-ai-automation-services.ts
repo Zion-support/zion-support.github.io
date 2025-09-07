@@ -30,17 +30,15 @@ export interface InnovativeAIAutomationService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
+    website: string
   },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+  reviews: number
 }
-
-const contact = null;
 
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
