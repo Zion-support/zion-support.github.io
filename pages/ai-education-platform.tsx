@@ -1,14 +1,23 @@
 import React from 'react';
-import SEO from '../components/SEO';
-export default function AIEducationPlatformPage() {
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function aieducationplatform() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto py-8">
-        <h1 className="text-2xl font-bold mb-6">Page</h1>
-        <div className="bg-white rounded-lg shadow p-6">
-          <p className="text-gray-600">Content coming soon.</p>
+    <Layout>
+      <Head>
+        <title>Ai Education Platform - Zion Tech Group</title>
+        <meta name="description" content="Ai Education Platform solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Education Platform</h1>
+          <p className="text-lg text-gray-600">
+            Professional ai education platform solutions tailored to your business needs.
+          </p>
         </div>
       </div>
-    </div>
-  )
+    </Layout>
+  );
 }

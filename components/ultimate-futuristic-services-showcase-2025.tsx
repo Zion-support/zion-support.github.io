@@ -1,99 +1,28 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Star, TrendingUp, Users, Award, Clock, Heart;
-  Brain, Atom, Shield, Rocket, Zap, Globe;
-import {
-  Star
-  TrendingUp
-  Users
-  Award
-  Clock
-  Heart
-  Brain
-  Atom
-  Shield
-  Rocket
-  Zap
-  Globe
-  CheckCircle
-  ArrowRight
-  Search
-  Filter
-  ChevronDown
-  ChevronUp
-  Eye
-  Play
-  Sparkles
-  Target
-  Microscope
-  Lock
-  Cloud
-  BarChart3
-  Settings
-  Cpu
-  Database
-  Network
-  Server
-  ShieldCheck
-  GlobeIcon
-  StarIcon
-  TrendingUpIcon
-  UsersIcon
-  CheckCircleIcon
-  ArrowRightIcon
-  CpuIcon
-  DollarSign
-  Phone
-  Mail
-  MapPin
-  Dna
-  Target as TargetIcon
-  Shield as ShieldIcon
-  BookOpen
-  Sparkles as SparklesIcon
-  Zap as ZapIcon
-  Brain as BrainIcon
-  Play as PlayIcon;
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
-  Star, TrendingUp, Users, Award, Clock, Heart
-  Brain, Atom, Shield, Rocket, Zap, Globe
-
-  CheckCircle, ArrowRight, Search, Filter;
-  ChevronDown, ChevronUp, Eye, Play, Sparkles;
-  Target, Microscope, Lock, Cloud, BarChart3;
-  Settings, Cpu, Database, Network, Server;
-  ShieldCheck, GlobeIcon, StarIcon, TrendingUpIcon;
-  UsersIcon, CheckCircleIcon, ArrowRightIcon;
-  CpuIcon, DollarSign, Phone, Mail, MapPin;
-  Dna, Target as TargetIcon, Shield as ShieldIcon;
-  BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
-  Brain as BrainIcon, Play as PlayIcon
- } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
-
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+const filteredServices = ultimateFuturisticServices2025.filter (service => {
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const sortedServices = [...filteredServices].sort ( (a, b) => {
+  switch (sortBy) {
+  case 'price-low': case 'rating': return b.rating - a.rating
+case 'customers': const containerVariants = {
+  hidden: {
+  opacity: 0 
 }
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1
 }
+}
+}
 const itemVariants = {
   hidden: {
-  y: 20, opacity: 0
+  y: 20, opacity: 0 
 }
 visible: {
   y: 0, opacity: 1, transition: {
-  duration: 0.5
-];
-const stats = [
+  duration: 0.5 
+}
+}
+}
+return (<Layout> <Head> <title>Ultimate Futuristic Services Showcase 2025 | Zion Tech Group</title> <motion.div initial= {
   {
     number: '15+'
     label: 'Revolutionary Services'

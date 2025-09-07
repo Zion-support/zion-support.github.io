@@ -1,210 +1,142 @@
-import React from 'react',
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe, ArrowRight;
-  Brain, Rocket, Target, Shield, Cpu;
-import {
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Brain
-  Rocket
-  Target
-  Shield
-  Cpu
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  MessageCircle
-  Star
-  Zap
-  Sparkles
-  Home
-  Users
-  Briefcase
-  BookOpen
-  TrendingUp
-  MessageSquare
-  Calendar
-  GraduationCap
-  ShieldCheck
-  Eye
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Globe2
-  Bot
-  Crown
-  Infinity;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, ArrowRight
-  Brain, Rocket, Target, Shield, Cpu
-
-  Facebook, Twitter, Linkedin, Instagram, Youtube;
-  Github, MessageCircle, Star, Zap, Sparkles;
-  Home, Users, Briefcase, BookOpen, TrendingUp;
-  MessageSquare, Calendar;
-  GraduationCap, ShieldCheck, Eye, Code, Wrench;
-  Smartphone, BarChart3, Palette, Camera, Video;
-  Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind;
-  Droplets, Mountain, Globe2, Bot, Crown, Infinity
-
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+const serviceCategories = [ {
+  title: 'AI & Consciousness', icon: Brain, color: 'from-violet-600 via-purple-600 to-indigo-600', services: [ {
+  name: 'AI Consciousness Evolution', href: '/services/ai-consciousness-evolution-platform' 
 }
 {
-  name: 'AI Emotional Intelligence', href: '/services/ai-emotional-intelligence-platform'
+  name: 'AI Emotional Intelligence', href: '/services/ai-emotional-intelligence-platform' 
 }
 {
-  name: 'AI Creativity Orchestrator', href: '/services/ai-creativity-orchestrator'
+  name: 'AI Creativity Orchestrator', href: '/services/ai-creativity-orchestrator' 
 }
 {
-  name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager'
-}]
+  name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager' 
+}] 
 }
 {
   title: 'Quantum Technology', icon: Globe, color: 'from-indigo-600 via-blue-600 to-cyan-600', services: [ {
-  name: 'Quantum Internet Security', href: '/services/quantum-internet-security-gateway'
+  name: 'Quantum Internet Security', href: '/services/quantum-internet-security-gateway' 
 }
 {
-  name: 'Biotech DNA Computing', href: '/services/biotech-dna-computing-platform'
+  name: 'Biotech DNA Computing', href: '/services/biotech-dna-computing-platform' 
 }
 {
-  name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading-platform'
+  name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading-platform' 
 }
 {
-  name: 'Quantum Creativity Studio', href: '/services/quantum-creativity-studio'
-}]
+  name: 'Quantum Creativity Studio', href: '/services/quantum-creativity-studio' 
+}] 
 }
 {
   title: 'Space & Metaverse', icon: Rocket, color: 'from-teal-600 via-emerald-600 to-green-600', services: [ {
-  name: 'Space Mining Automation', href: '/services/space-mining-automation-platform'
+  name: 'Space Mining Automation', href: '/services/space-mining-automation-platform' 
 }
 {
-  name: 'Metaverse Digital Reality', href: '/services/metaverse-digital-reality-platform'
+  name: 'Metaverse Digital Reality', href: '/services/metaverse-digital-reality-platform' 
 }
 {
-  name: 'AI Predictive Health', href: '/services/ai-predictive-health-analytics'
+  name: 'AI Predictive Health', href: '/services/ai-predictive-health-analytics' 
 }
 {
-  name: 'Virtual Event Holograms', href: '/services/virtual-event-hologram-platform'
-}]
+  name: 'Virtual Event Holograms', href: '/services/virtual-event-hologram-platform' 
+}] 
 }
 {
   title: 'Enterprise IT', icon: Cpu, color: 'from-blue-600 via-cyan-600 to-teal-600', services: [ {
-  name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-suite'
+  name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-suite' 
 }
 {
-  name: 'Smart Supply Chain', href: '/services/smart-supply-chain-optimization'
+  name: 'Smart Supply Chain', href: '/services/smart-supply-chain-optimization' 
 }
 {
-  name: 'Intelligent HR Management', href: '/services/intelligent-hr-management-system'
+  name: 'Intelligent HR Management', href: '/services/intelligent-hr-management-system' 
 }
 {
-  name: 'Smart Financial Management', href: '/services/smart-financial-management-platform'
+  name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' 
+}] 
 }]
-}];
 const footerSections = [ {
   title: 'Services', links: [ {
-  name: 'AI & Machine Learning', href: '/services/ai-ml'
+  name: 'AI & Machine Learning', href: '/services/ai-ml' 
 }
 {
-  name: 'Quantum Computing', href: '/services/quantum-computing'
+  name: 'Quantum Computing', href: '/services/quantum-computing' 
 }
 {
-  name: 'Space Technology', href: '/services/space-technology'
+  name: 'Space Technology', href: '/services/space-technology' 
 }
 {
-  name: 'Enterprise IT', href: '/services/enterprise-it'
+  name: 'Enterprise IT', href: '/services/enterprise-it' 
 }
 {
-  name: 'Micro SAAS', href: '/services/micro-saas'
+  name: 'Micro SAAS', href: '/services/micro-saas' 
 }
 {
-  name: 'Cybersecurity', href: '/services/cybersecurity'
-}]
+  name: 'Cybersecurity', href: '/services/cybersecurity' 
+}] 
 }
 {
   title: 'Solutions', links: [ {
-  name: 'AI Consciousness', href: '/solutions/ai-consciousness'
+  name: 'AI Consciousness', href: '/solutions/ai-consciousness' 
 }
 {
-  name: 'Quantum Security', href: '/solutions/quantum-security'
+  name: 'Quantum Security', href: '/solutions/quantum-security' 
 }
 {
-  name: 'Space Mining', href: '/solutions/space-mining'
+  name: 'Space Mining', href: '/solutions/space-mining' 
 }
 {
-  name: 'Metaverse Platform', href: '/solutions/metaverse'
+  name: 'Metaverse Platform', href: '/solutions/metaverse' 
 }
 {
-  name: 'Business Intelligence', href: '/solutions/business-intelligence'
+  name: 'Business Intelligence', href: '/solutions/business-intelligence' 
 }
 {
-  name: 'Supply Chain AI', href: '/solutions/supply-chain-ai'
-}]
+  name: 'Supply Chain AI', href: '/solutions/supply-chain-ai' 
+}] 
 }
 {
   title: 'Industries', links: [ {
-  name: 'Healthcare', href: '/industries/healthcare'
+  name: 'Healthcare', href: '/industries/healthcare' 
 }
 {
-  name: 'Finance', href: '/industries/finance'
+  name: 'Finance', href: '/industries/finance' 
 }
 {
-  name: 'Manufacturing', href: '/industries/manufacturing'
+  name: 'Manufacturing', href: '/industries/manufacturing' 
 }
 {
-  name: 'Retail', href: '/industries/retail'
+  name: 'Retail', href: '/industries/retail' 
 }
 {
-  name: 'Education', href: '/industries/education'
+  name: 'Education', href: '/industries/education' 
 }
 {
-  name: 'Government', href: '/industries/government'
-}]
+  name: 'Government', href: '/industries/government' 
+}] 
 }
 {
   title: 'Resources', links: [ {
-  name: 'Documentation', href: '/docs'
+  name: 'Documentation', href: '/docs' 
 }
 {
-  name: 'API Reference', href: '/api'
+  name: 'API Reference', href: '/api' 
 }
 {
-  name: 'Case Studies', href: '/case-studies'
+  name: 'Case Studies', href: '/case-studies' 
 }
 {
-  name: 'White Papers', href: '/white-papers'
+  name: 'White Papers', href: '/white-papers' 
 }
 {
-  name: 'Blog', href: '/blog'
+  name: 'Blog', href: '/blog' 
 }
 {
-  name: 'Research', href: '/research'
+  name: 'Research', href: '/research' 
+}] 
 }]
-}];
-<motion.div initial= {  {  website: 'https://ziontechgroup.com'
+<motion.div initial= {
+  {
+  opacity: 0, y: 20 
 }
 const serviceCategories = [
     title: 'AI & Consciousness'

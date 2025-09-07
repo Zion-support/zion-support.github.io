@@ -1,7 +1,6 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
-const AutomationStatus: NextPage = () => {
+import React from 'react'
+import Head from 'next/head'
+const AutomationStatus: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto py-8">
@@ -13,4 +12,4 @@ const AutomationStatus: NextPage = () => {
     </div>
   )
 }
-export default AutomationStatus;
+export default AutomationStatus

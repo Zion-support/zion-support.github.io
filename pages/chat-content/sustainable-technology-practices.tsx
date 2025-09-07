@@ -1,22 +1,23 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-const SustainableTechnologyPractices: NextPage;
-const SustainableTechnologyPractices: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>SustainableTechnologyPractices - Zion Tech Solutions</title>
-        <meta
-          name='description'
-          content='SustainableTechnologyPractices page'
-        />
-      </Head>
+import Layout from '../../components/layout/Layout';
 
-      <main>
-        <h1>SustainableTechnologyPractices</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-  )
+export default function sustainabletechnologypractices() {
+  return (
+    <Layout>
+      <Head>
+        <title>Sustainable Technology Practices - Zion Tech Group</title>
+        <meta name="description" content="Sustainable Technology Practices solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Sustainable Technology Practices</h1>
+          <p className="text-lg text-gray-600">
+            Professional sustainable technology practices solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }
-export default SustainableTechnologyPractices;

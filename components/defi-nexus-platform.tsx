@@ -1,37 +1,14 @@
-import React from 'react',
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { TrendingUp, Brain, Shield, Zap, Target;
-import {
-  TrendingUp
-  Brain
-  Shield
-  Zap
-  Target
-  BarChart3
-  Cpu
-  Globe
-  Users
-  Award
-  CheckCircle
-  ArrowRight
-  Star
-  Phone
-  Mail
-  MapPin;
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';import {
-  TrendingUp, Brain, Shield, Zap, Target
-
-  BarChart3, Cpu, Globe, Users, Award;
-  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
- } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+export default function DeFiNexusPlatform () {
+  return (<Layout> <Head> <title>DeFi Nexus Platform | Zion Tech Group</title> </Head> {
+  /* Hero Section */ 
+}<section className="relative min-h-screen flex items-center justify-center overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black" ></div> </div> <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6" > <TrendingUp className="w-4 h-4 mr-2" /> DeFi & Blockchain </div> <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent" > DeFi Nexus </span> <br /> <span className="text-white" >Platform</span> </h1> </p> </motion.div> {
+  /* CTA Buttons */ 
+}<motion.div > <a href="#pricing" className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105" > <Target className="w-5 h-5 mr-2" /> Get Started </a> <a href="#contact" className="inline-flex items-center px-8 py-4 rounded-full border-2 border-green-500/30 text-green-400 font-semibold text-lg hover:bg-green-500/10 transition-all duration-300" > <Phone className="w-5 h-5 mr-2" /> Contact Sales </a> </motion.div> </div> </section> > <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" > Revolutionary DeFi Technology </h2> > <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4" > <CheckCircle className="w-6 h-6 text-white" /> </div> </motion.div>) ) 
+}</div> </div> </section> > <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" > Choose Your Plan </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Flexible pricing options designed for DeFi users of all levels, from beginners to institutional investors. </p> </motion.div> <motion.div key= {
+  index 
+}initial= {
+  {
+  opacity: 0, y: 30 
 }
 const features = [
   'Multi-chain DeFi aggregation'

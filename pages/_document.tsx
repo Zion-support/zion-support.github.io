@@ -1,5 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-export default function Document() {
+import Document, { Html, Head, Main, NextScript } from 'next/document'
+export default function MyDocument() {
   return (
     <Html lang="en">
       <Head>
@@ -17,10 +17,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  );
   )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }

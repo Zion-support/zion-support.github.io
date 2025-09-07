@@ -1,14 +1,24 @@
+import React, { useState } from 'react'
+import LoadingSpinner from './LoadingSpinner'
 interface FormData {
   name: string
   email: string
   company: string
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+  phone: string
+  service: string
+  message: string
+}
 
   service: string
   message: string
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    service: ''
+    message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
@@ -37,7 +47,25 @@ const ContactForm: React.FC = () => {
       })
     } catch {
       setSubmitStatus('error')
-    message: '',
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+  return (
+    <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
+      <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Get In Touch</h2>
+      
+      {submitStatus === 'success' && (
+        <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
+          Thank you for your message! We'll get back to you soon.
+        </div>
+      )}
+      
+      {submitStatus === 'error' && (
+        <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+          Sorry, there was an error sending your message. Please try again.
+        </div>
+      )}
 
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -238,4 +266,4 @@ type=\"text\"
     </div>
   )
 }
-export default ContactForm;
+export default ContactForm

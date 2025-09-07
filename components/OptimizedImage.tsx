@@ -1,37 +1,14 @@
-import React from "react"
-import Image from "next/image"
-interface OptimizedImageProps {
-
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  quality?: number
-'use client'
-import React, { useState, useRef, useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
 interface OptimizedImageProps {
-'use client, ';''''
-  'import Image from 'next/image
-  ';interface OptimizedImageProps {'
   src: string
   alt: string
-  width?: number
-  height?: number
+  width: number
+  height: number
   className?: string
   priority?: boolean
   quality?: number
-  placeholder?: 'blur' | 'empty'
-  blurDataURL?: string
-  sizes?: string
-  fill?: boolean
-  style?: React.CSSProperties
-  onClick?: () => void
-  onLoad?: () => void
-  onError?: () => void
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+}
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
@@ -51,4 +28,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     />
   )
 }
-export default OptimizedImage;
+export default OptimizedImage

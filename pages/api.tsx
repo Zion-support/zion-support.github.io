@@ -1,20 +1,6 @@
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
-import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import {
-  Code
-  Check
-  Globe
-  Shield
-  Zap
-  Database
-  Cpu
-  Cloud
-  XCircle
-} from "lucide-react";
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/Layout'
 export default function APIPage() {
   const apiEndpoints = [
     {
@@ -303,6 +289,6 @@ export default function APIPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
-  );
+    </Layout>
+  )
 }

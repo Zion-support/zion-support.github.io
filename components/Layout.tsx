@@ -1,28 +1,13 @@
-import React from "react";
-import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
-
+import React, { ReactNode } from "react"
 interface LayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
+  children: ReactNode
 }
 
-export default function Layout({ children, title, description }: LayoutProps) {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <>
-      <Head>
-        <title>{title || 'Zion Tech Group'}</title>
-        <meta name="description" content={description || 'Enterprise AI & IT Solutions'} />
-      </Head>
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
-      </div>
-    </>
-  );
+    <main className="min-h-screen">
+      {children}
+    </main>
+  )
 }
+export default Layout

@@ -1,8 +1,41 @@
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface UltraAdvancedQuantumBackgroundProps {
-  children: React.ReactNode;
-  className?: string
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+let animationFrameId: number
+let particles: Particle[] = []
+let quantumFields: QuantumField[] = []
+let neuralNetworks: NeuralNetwork[] = []
+class Particle {
+  x: number
+y: number
+vx: number
+vy: number
+size: number
+color: string
+life: number
+maxLife: number
+constructor () {
+  this.x = Math.random () * canvas.width
+this.y = Math.random () * canvas.height
+this.vx = (Math.random () - 0.5) * 2
+this.vy = (Math.random () - 0.5) * 2
+this.size = Math.random () * 3 + 1
+this.color = `hsl ($ {
+  Math.random () * 360 
+}, 70%, 60%) `
+this.life = Math.random () * 100
+this.maxLife = 100 
+}if (this.x < 0 || this.x > canvas.width) this.vx *= -1
+if (this.y < 0 || this.y > canvas.height) this.vy *= -1
+if (this.life <= 0) {
+  constructor () {
+  this.x = Math.random () * canvas.width
+this.y = Math.random () * canvas.height
+this.radius = Math.random () * 100 + 50
+this.intensity = Math.random () * 0.5 + 0.5
+this.phase = Math.random () * Math.PI * 2
+this.color = `hsl ($ {
+  200 + Math.random () * 60 
+}, 80%, 60%) ` 
 }
 
 const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps    /> = ({children
@@ -269,128 +302,17 @@ canvas.height = window.innerHeight) => {
       window.removeEventListener('resize', handleResize);}
 cancelAnimationFrame(animationFrameId)}
 }
-  }, [])
-  return (
-    <div className={`relative min-h-screen overflow-hidden ${className}`}    />
-
-      {/* Quantum Matrix Overlay */}
-      {/* Animated Quantum Grid */}'
-      <div className='absolute inset-0 opacity-20'>;'
-        <div className='absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0 && 0.3)_100%)] bg-[length:50px_50px]' />;'
-        <div className='absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0 && 0.3)_100%)] bg-[length:50px_50px]' />      </div>
-      {/* Floating Quantum Elements */}
-      <motion&& motion.div'
-        className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl'      {/* Animated Quantum Grid */}
-        }}
-        transition={{}
-          duration: 4
-          repeat: Infinity'
-          ease: 'easeInOut',        animate={{}
-        transition={{}
-          duration: 4
-          repeat: Infinity
-          ease: "easeInOut"
-        }}"
-        className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl"
-        animate={{}
-          scale: [1, 1 && 1.3, 1]
-          opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]}}
-        transition={{}
-          duration: 5
-          repeat: Infinity"
-          ease: "easeInOut"
-          delay: 1
-        }}
-      />
-      <motion.div
-        className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl'
-        animate={{
-          scale: [1, 1.3, 1]
-          opacity: [0.2, 0.5, 0.2],        animate={{
-          scale: [1, 1.4, 1];
-          opacity: [0.2, 0.6, 0.2]}}
-        transition={{
-          duration: 6
-          repeat: Infinity
-          ease: 'easeInOut'
-          delay: 2,          ease: "easeInOut"
-          delay: 2
-          duration: 6,
-          repeat: Infinity,
-          ease: 'easeInOut',
-          delay: 2,
-        }}
-        transition={{
-          duration: 5
-          repeat: Infinity
-          ease: 'easeInOut'
-          delay: 1,        }}
-      />
-      <motion.div
-        className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-20 blur-xl'
-        animate={{
-          scale: [1, 1.4, 1]
-          opacity: [0.2, 0.6, 0.2]
-        }}
-        transition={{
-          duration: 6
-          repeat: Infinity
-          ease: 'easeInOut'
-          delay: 2,        }}
-      />
-      {/* Quantum Canvas */}
-
-      {/* Content Layer */}'"
-      <div className='relative z-10'>{children}</div>        className="absolute inset-0 w-full h-full opacity-60"
-        style={{ zIndex: 1 }}
-
-      <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>
-        <motion&& motion.div'
-          className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent'
-          animate={{}
-            x: [0, -100, 0]
-      />
-      {/* Quantum Canvas */}
-      <canvas
-        ref={canvas_ref}
-        className='absolute inset - 0 w - full h - full opacity - 60'        style={{ z_index: 1 ,}
-
-         />
-      {/* Content Layer */}
-          }}
-          transition={{duration: 8;}
-            repeat: Infinity;}
-            ease: 'linear',          }}
-        />
-        <motion&& motion.div
-          className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-500/20 to-transparent'
-          animate={{x: [0, 100, 0];}
-          }}
-          transition={{}
-            duration: 10
-            repeat: Infinity'
-            ease: 'linear'
-            delay: 2,          }}
-        />
-      </div>
-    </div>
-  )
-          }}
-           />
-      </div>
-    </div>
-)
+}// Initialize neuralNetworks.push (new NeuralNetwork () )
 }
-export default UltraAdvancedQuantumBackground;            ease: "linear"
-
-export default UltraAdvancedQuantumBackground;            ease: "linear",
-            delay: 2
-          }}
-        />
-      </div>
-    </div>
-  );
+}ctx.restore ()
+animationFrameId = requestAnimationFrame (animate) 
 }
-export default UltraAdvancedQuantumBackground;  )
+animate ()
+window.addEventListener ('resize', handleResize)
+</div> {
+  /* Floating Quantum Elements */ 
+}<motion.div /> {
+  /* Quantum Canvas */ 
+}<canvas /> </div> </div>) 
 }
-export default UltraAdvancedQuantumBackground;
+export default UltraAdvancedQuantumBackground

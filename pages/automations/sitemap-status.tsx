@@ -1,38 +1,23 @@
-import type { NextPage, GetServerSideProps } from 'next';
-import fs from 'fs';
-import path from 'path';
-type Props = any;
-type Props = { urlCount: number }
-const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function sitemapstatus() {
   return (
-    <main className="space-y-4">
-      <h1 className="text-2xl font-semibold">Sitemap Status</h1>
-      <p className="text-sm text-gray-600">Nightly generated. <a className="text-blue-500 underline" href="/sitemap.xml">View sitemap</a></p>
-      <div className="enhanced-card">
-        <div className="text-lg">Indexed URLs: {urlCount}</div>
+    <Layout>
+      <Head>
+        <title>Sitemap Status - Zion Tech Group</title>
+        <meta name="description" content="Sitemap Status solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Sitemap Status</h1>
+          <p className="text-lg text-gray-600">
+            Professional sitemap status solutions tailored to your business needs.
+          </p>
+        </div>
       </div>
-    </div>
-  )
+    </Layout>
+  );
 }
-export const getServerSideProps: GetServerSideProps = async () => {
-  const p = path.join(process.cwd(), 'publicsitemap.xml')
-  let urlCount = 0
-  try {
-    const raw = fs.readFileSync(p, 'utf8')
-    urlCount = (raw.match(/<url>/g) |[]).length
-  } catch {}
-  return { props: { urlCount } }
-}
-export default SitemapStatus;
-  } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return { props: { urlCount }   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-};
-export default SitemapStatus;

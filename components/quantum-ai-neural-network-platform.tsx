@@ -1,47 +1,11 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
-import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
-import SEO from '../components/SEO';
-const QuantumAINeuralNetworkPlatform: React.FC;
-import { motion } from 'framer-motion';
-import {
-  Atom
-  Brain
-  Zap
-  Shield
-  Users
-  Target
-  ArrowRight
-  Check
-  Star
-  Globe
-  Cpu
-  Network;
-} from 'lucide-react';
-const QuantumAINeuralNetworkPlatform: React.FC = () => {
-  const features = [
-    'Quantum-enhanced neural network architecture'
-    'Superposition-based learning algorithms'
-    'Quantum entanglement optimization'
-    'Quantum-classical hybrid training'
-    'Quantum error correction protocols'
-    'Multi-dimensional quantum states'
-    'Quantum memory management'
-    'Quantum coherence preservation'
-    'Quantum measurement optimization'
-    'Cross-platform quantum synchronization'
-]
-const benefits = [
-  'Exponential computational power'
-    'Quantum advantage in AI training'
-    'Enhanced pattern recognition'
-    'Faster convergence rates'
-    'Quantum-secure AI operations'
-]
-const pricing = {
-  starter: '$999/month',
-    professional: '$1,999/month',;}
-    enterprise: 'Custom pricing',}
+min-h-screen bg-black text-white"> <SEO <div className=" relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <motion.div > <div className=" flex justify-center mb-6"> <div className=" w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center"> <Atom className=" w-10 h-10 text-white"/> </div> </div> <h1 className=" text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent"> Quantum AI Neural Network Platform 2045 </h1> <p className=" text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"> Experience the future of AI with quantum-powered neural networks that deliver exponential computational power
+quantum advantage, and unprecedented learning capabilities. </p> <div className=" flex flex-col sm:flex-row gap-4 justify-center"> <motion.button > Start Free Trial </motion.button> <motion.button > Schedule Demo </motion.button> </div> </motion.div> </div> </section> > <h2 className=" text-4xl md:text-5xl font-bold mb-6"> Quantum-Powered Features </h2> <p className=" text-xl text-gray-400 max-w-3xl mx-auto"> Harness the power of quantum mechanics to revolutionize AI neural network performance and capabilities. </p> </motion.div> > <div className=" w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4"> <Check className=" w-6 h-6 text-white"/> </div> </motion.div>) ) 
+}</div> </div> </section> > <h2 className=" text-4xl md:text-5xl font-bold mb-6"> Quantum Advantage Benefits </h2> </motion.div> > <div className=" w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4"> <Star className=" w-8 h-8 text-white"/> </div> </motion.div>) ) 
+}</div> </div> </section> > <h2 className=" text-4xl md:text-5xl font-bold mb-6"> Pricing Plans </h2> <p className=" text-xl text-gray-400 max-w-3xl mx-auto"> Choose the perfect plan for your quantum AI neural network journey. </p> </motion.div> <motion.div key= {
+  plan 
+}initial= {
+  {
+  opacity: 0, y: 20 
 }
   return (
       <SEO
@@ -343,4 +307,31 @@ className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-
 }
 export default QuantumAINeuralNetworkPlatform;  )
 }
-export default QuantumAINeuralNetworkPlatform;
+}transition= {
+  {
+  duration: 0.5, delay: index * 0.1 
+}
+}className= {
+  `bg-gray-800/50 border rounded-xl p-8 $ {
+  plan === 'professional' ? 'border-blue-500/50 bg-blue-900/20' : 'border-gray-600/50' 
+}` 
+}> > Get Started </motion.button> </motion.div>) ) 
+}</div> </div> </section> <motion.div initial= {
+  {
+  opacity: 0, y: 20 
+}
+}whileInView= {
+  {
+  opacity: 1, y: 0 
+}
+}viewport= {
+  {
+  once: true 
+}
+}transition= {
+  {
+  duration: 0.8 
+}
+}> <h2 className=" text-4xl md:text-5xl font-bold mb-6"> Ready for Quantum AI Revolution? </h2> <p className=" text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the quantum computing revolution and experience exponential AI performance improvements. </p> <motion.button 
+}
+export default QuantumAINeuralNetworkPlatform

@@ -1,53 +1,23 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function RetailTechnologySolutions() {
-	return (
-		<ServiceLanding
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 
-			title="Retail Technology Solutions"
-			slug="retail-technology-solutions"
-			description="Optimize merchandising, pricing, demand forecasting, and omni-channel experiences with AI. Personalize at scale while reducing waste and stockouts."
-			subtitle="Higher margins and better experiences powered by AI."
-			pricePerMonthUSD={1999}
-			implementationWeeks="Implementation: 4–8 weeks"
-			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
-			features={[
-				"Demand forecasting and dynamic pricing"
-				"Assortment optimization and store clustering"
-				"Customer 360 and propensity modeling"
-				"Store ops: labor planning and task automation"
-				"Omni-channel journey orchestration"
-
-				"Integrations: POS, eCom, WMS, ESP, CDP"
-			]}
-			industries={["Retail", "CPG", "E‑commerce"]}
-			implementationWeeks="Implementation: 4–8 weeks"
-			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
-			features={[
-				"Demand forecasting and dynamic pricing",
-				"Assortment optimization and store clustering",
-				"Customer 360 and propensity modeling",
-				"Store ops: labor planning and task automation",
-				"Omni-channel journey orchestration",
-				"Integrations: POS, eCom, WMS, ESP, CDP"
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["Retail", "CPG", "E‑commerce"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			canonical="https: //ziontechgroup.com/retail-technology-solutions"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/retail-technology-solutions";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+export default function retailtechnologysolutions() {
+  return (
+    <Layout>
+      <Head>
+        <title>Retail Technology Solutions - Zion Tech Group</title>
+        <meta name="description" content="Retail Technology Solutions solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Retail Technology Solutions</h1>
+          <p className="text-lg text-gray-600">
+            Professional retail technology solutions solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

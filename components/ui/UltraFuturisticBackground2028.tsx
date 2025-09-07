@@ -1,15 +1,14 @@
-import React, { useEffect, useRef } from 'react';
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
 // Particle system const particles: Array< {
-  // Wrap around edges if (particle && particle.x < 0) particle && particle.x = canvas && canvas.width
-if (particle && particle.x > canvas && canvas.width) particle && particle.x = 0
-if (particle && particle.y < 0) particle && particle.y = canvas && canvas.height
-if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0
-// Draw particle requestAnimationFrame (animate)
+  // Wrap around edges if (particle.x < 0) particle.x = canvas.width
+if (particle.x > canvas.width) particle.x = 0
+if (particle.y < 0) particle.y = canvas.height
+if (particle.y > canvas.height) particle.y = 0
+// Draw particle requestAnimationFrame (animate) 
 }
-animate ();'
-// Handle resize window && window.addEventListener ('resize', handleResize)
+animate ()
+// Handle resize window.addEventListener ('resize', handleResize)
 /> {
   /* Floating Circles */
 }<motion.div

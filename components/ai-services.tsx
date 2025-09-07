@@ -1,10 +1,6 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
-import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight  } from 'lucide-react';
-import SEO from '../components/SEO';
-const aiServices = null;
-export default function AIServices() {
-  
+export default function AIServices () {
+  return (<QuantumHolographicMatrixBackground intensity= {
+  1.5 
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) ) 
 }</div>) ) 
 }</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) ) 

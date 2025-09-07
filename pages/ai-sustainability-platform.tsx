@@ -1,13 +1,23 @@
 import React from 'react';
-import SEO from '../components/SEO';
-export default function AISustainabilityPlatformPage() {
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function aisustainabilityplatform() {
   return (
-    <div className="min-h-[60vh] px-6 py-24">
-      <SEO title="AI Sustainability Platform | Zion Tech Group" description="Sustainability analytics and optimization" />
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold text-white mb-4">AI Sustainability Platform</h1>
-        <p className="text-gray-300">Measure and optimize sustainability metrics with AI. Details coming soon.</p>
+    <Layout>
+      <Head>
+        <title>Ai Sustainability Platform - Zion Tech Group</title>
+        <meta name="description" content="Ai Sustainability Platform solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Sustainability Platform</h1>
+          <p className="text-lg text-gray-600">
+            Professional ai sustainability platform solutions tailored to your business needs.
+          </p>
+        </div>
       </div>
-    </div>
-  )
+    </Layout>
+  );
 }

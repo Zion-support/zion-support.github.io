@@ -1,52 +1,23 @@
-import React from 'react'
-export default function Page() {
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function error() {
   return (
-    <>
-      <Head>;
-        <title>Authentication Error - Zion Tech Marketplace</title>;
-        <meta name=&quot;description&quot; content=&quot;Authentication error page&quot; />
+    <Layout>
+      <Head>
+        <title>Error - Zion Tech Group</title>
+        <meta name="description" content="Error solutions and services." />
       </Head>
-      <div className=&quot;min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4&quot;>
-        <Card className=&quot;w-full max-w-md&quot;>
-          <CardHeader className=&quot;space-y-1 text-center&quot;>
-            <div className=&quot;mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20&quot;>
-              <AlertTriangle className=&quot;h-6 w-6 text-red-600 dark:text-red-400&quot; />
-            </div>
-            <CardTitle className="text-2xl font-bold">Authentication Error</CardTitle>
-            <p className="text-sm text-muted-foreground">
-              There was an issue with your authentication request
-            </p>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="text-center space-y-4">
-              <p className="text-sm text-muted-foreground">
-                This could be due to:
-              </p>
-              <ul className="text-sm text-muted-foreground space-y-1 text-left">
-                <li>• Invalid email or password</li>
-                <li>• Account not verified</li>
-                <li>• Network connectivity issues</li>
-                <li>• Temporary service unavailability</li>
-              </ul>
-              <div className=&quot;pt-4 space-y-2&quot;>
-                <Button asChild className=&quot;w-full&quot;>
-                  <Link href=&quot;/auth/login&quot;>
-                    Try Again
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" className="w-full">
-                  <Link href="/">
-                    Go to Homepage
-                  </Link>
-                </Button>
-              </div>
-              <div className=&quot;text-center text-sm text-muted-foreground pt-4&quot;>
-                Need help? <Link href=&quot;/contact&quot; className=&quot;hover:text-primary&quot;>Contact Support</Link>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Error</h1>
+          <p className="text-lg text-gray-600">
+            Professional error solutions tailored to your business needs.
+          </p>
+        </div>
       </div>
-    </div>
-  )
+    </Layout>
+  );
 }

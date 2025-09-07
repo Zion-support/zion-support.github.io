@@ -1,254 +1,20 @@
-import React, { useState, useEffect } from 'react',
-import Layout from './layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
-import {
-  ArrowRight
-  Play
-  Star
-  Users
-  Award
-  TrendingUp
-  Brain
-  Shield
-  Rocket
-  Loader2
-  ChevronDown
-  Zap
-  Globe
-  Lock
-  Cpu
-  Database
-  Cloud
-  Palette
-  Heart
-  Phone
-  Mail
-  MapPin
-  Search
-  Grid
-  List
-  Atom
-  Target
-  Sparkles;
-} from 'lucide-react';
-import Link from 'next/link';import {
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket
+> <div className="relative" > <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" /> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse" ></div> </div> <p className="text-xl text-gray-300 mb-2" >Loading Zion Tech Group 2045...</p> <p className="text-sm text-gray-500" >Preparing your futuristic digital transformation journey</p> </motion.div> </div>)
+useEffect ( () => {
+  //Simulate content loading with better timing return () => clearTimeout (timer) 
+}, [])
+//Intersection Observer for better performance useEffect ( () => {
+  if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+  const observer = new (window as any) .IntersectionObserver ( (entries: unknown[]) => {
+  entries.forEach ( (entry) => {
+  if (entry.isIntersecting) {
+  return () => observer.disconnect () 
+}
+}, [])
+}
 
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
-  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
- } from 'lucide-react';
-import Link from 'next/link';
-// Import our new innovative services
-import { innovative2040FuturisticServices  } from '../data/innovative-2040-futuristic-services';
-import { innovative2040ITServices  } from '../data/innovative-2040-it-services';
-import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
-import { innovative2040ITServices } from '../data/innovative-2040-it-services';
-import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
-import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
-// Loading fallback component
-          <p className='text-cyan-400 text-xl'>Loading Zion Tech Group...</p>        </div>      'from-cyan-400 to-blue-500from-purple-400 to-pink-500from-emerald-400 to-teal-500from-orange-400 to-red-500from-indigo-400 to-purple-500from-yellow-400 to-orange-500'
-    ]
-    return ('
-      <div className='min-h-screen bg-black flex items-center justify-center'>;'
-        <div className='text-center'>;'
-          <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4'></div>;'
-          <p className='text-cyan-400 text-xl'>Loading Zion Tech Group...</p>      <div className="min-h-screen bg-black flex items-center justify-center">;"
-        <div className="text-center">;"
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>;"
-          <p className="text-cyan-400 text-xl">Loading Zion Tech Group...</p>
-      </div>
-    )
-  return (
-    <Layout>;'
-      <div className='min-h-screen bg-black text-white relative overflow-x-hidden'>
-        {/* Hero Section */}
-        <section'
-          id='hero''
-          className='relative min-h-screen flex items-center justify-center overflow-hidden'>
-          {/* Animated Background Elements */}'
-          <div className='absolute inset-0 pointer-events-none'>
-            <motion&& motion.div'
-              className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg'
-              animate={{}
-              }}
-              transition={{}
-                duration: 8
-                repeat: Infinity'
-                ease: 'easeInOut',              }}'
-              className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full'
-              animate={{}
-              }}
-              transition={{}
-                duration: 6
-                repeat: Infinity'
-                ease: 'easeInOut'
-              }}
-import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;}
-  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles}
- } from 'lucide-react'
-import Link from 'next/link'
-// Import our new innovative services'
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';'
-import { innovative2040ITServices } from '../data/innovative-2040-it-services';'
-import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services'
-import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services'
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services'
-import { innovative2040ITServices } from '../data/innovative-2040-it-services'
-import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services'
-import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services'
-// Loading fallback component
-const LoadingFallback = () => ('
-  <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}'
-      className='text - center'// Loading fallback component
-    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}'
-      className='text - center'
-    >;'
-      <div className='relative'>;'
-        <Loader2 className='w - 16 h - 16 text - cyan - 400 animate - spin mx - auto mb - 4' />;'
-        <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - xl opacity - 20 animate - pulse'></div>
-      </div>;'
-      <p className='text - xl text - gray - 300 mb - 2'>
-        Loading Zion Tech Group 2045...
-      </p>;'
-      <p className='text - sm text - gray - 500'>
-        Preparing your futuristic digital transformation journey
-    </motion.div>
-  </div>)
-const Homepage2045: React.FC = () => {}
-  const [is_loading, setIsLoading] = useState (true)
-  const [is_visible, setIsVisible] = useState (false);'
-  const [active_section, setActiveSection] = useState ('hero')
-  useEffect (() => {}
-    // Simulate content loading with better timing
-    const timer = set_timeout (() => {}
-      setIsLoading (false)
-      setIsVisible (true)
-    }, 800)
-    return () => clear_timeout (timer);  }, []);      setIsVisible (true)
-    }, 800)
-    return () => clear_timeout (timer)
-  // Intersection Observer for better performance
-  useEffect (() => {}
-    // Check condition
-  if($2) {}
-  $2
-      const observer = new (window as any).IntersectionObserver (
-        (entries: any[]) => {}
-          entries.for_each (entry => {}
-            // Check condition
-  if($2) {}
-  $2
-              setActiveSection (entry.target.id)
-          });'
-        },        { threshold: 0.3, root_margin: '-100px' }
-      );'
-      const sections = document.querySelectorAll ('section[id]')
-      sections.for_each (section => observer.observe (section))
-      return () => observer.disconnect ();    }            // Check condition
-  if($2) {}
-  $2
-              setActiveSection (entry.target.id)
-          })
-        }
-        { threshold: 0.3, rootMargin: '-100px' }
-      );
-      const sections = document.querySelectorAll('section[id]');
-      sections.forEach(section => observer.observe(section));
-      return () => observer.disconnect();      sections.forEach((section) => observer.observe(section));
-      return () => observer.disconnect()
-    }
-  }, []);
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 }
-    animate: { opacity: 1, y: 0 }
-    transition: { duration: 0.6, ease: 'easeOut' },  };    transition: { duration: 0.6, ease: "easeOut" }
-  }
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1
-        delayChildren: 0.2
-      }
-    },  };        delayChildren: 0.2
-      }
-    }
-  }
-  const backgroundVariants = {
-    initial: { opacity: 0, scale: 0.8 }
-    animate: { opacity: 1, scale: 1 }
-    transition: { duration: 1.2, ease: 'easeOut' },  }
-  const getColorClasses = (index: number) => {
-    const colors = [    transition: { duration: 1.2, ease: "easeOut" }
-  }
-  const getColorClasses = (index: number) => {
-    const colors = [
-      'from-cyan-400 to-blue-500'
-      'from-purple-400 to-pink-500'
-      'from-emerald-400 to-teal-500'
-      'from-orange-400 to-red-500'
-      'from-indigo-400 to-purple-500'
-      'from-yellow-400 to-orange-500'
-    ];
-    return colors[index % colors.length];  }
-  if (isLoading) {
-    return (
-      <div className='min-h-screen bg-black flex items-center justify-center'>
-        <div className='text-center'>
-          <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4'></div>
-          <p className='text-cyan-400 text-xl'>Loading Zion Tech Group...</p>        </div>      'from-cyan-400 to-blue-500from-purple-400 to-pink-500from-emerald-400 to-teal-500from-orange-400 to-red-500from-indigo-400 to-purple-500from-yellow-400 to-orange-500'
-    ];
-    return colors[index % colors.length]
-  }
-  if (isLoading) {
-    return (
-      <div className='min-h-screen bg-black flex items-center justify-center'>
-        <div className='text-center'>
-          <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4'></div>
-          <p className='text-cyan-400 text-xl'>Loading Zion Tech Group...</p>      <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-          <p className="text-cyan-400 text-xl">Loading Zion Tech Group...</p>
-      </div>
-    );
-  }
-  return (
-
-      <div className='min-h-screen bg-black text-white relative overflow-x-hidden'>
-        {/* Hero Section */}
-        <section
-          id='hero'
-          className='relative min-h-screen flex items-center justify-center overflow-hidden'    />
-
-          {/* Animated Background Elements */}
-          <div className='absolute inset-0 pointer-events-none'    />
-            <motion.div
-              className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg'
-              animate={{rotate: [0, 360]
-                scale: [1, 1.1, 1];}
-                opacity: [0.3, 0.6, 0.3];}
-              }}
-              transition={{duration: 8
-                repeat: Infinity
-              animate={{rotate: [0, 360];}
-                scale: [1, 1.1, 1];}
-                opacity: [0.3, 0.6, 0.3]}}
-              transition={{duration: 8,repeat: Infinity,ease: 'easeInOut'              }}
-               />
-            <motion.div
-              className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full'
-              animate = {{rotate: [360, 0],scale: [1, 1.2, 1],opacity: [0.3, 0.7, 0.3],staggerChildren: 0.1,delayChildren: 0.2}}  }
-
-  const backgroundVariants = {initial: { opacity: 0, scale: 0.8}
-},animate: { opacity: 1, scale: 1}
+  animate: {
+  transition: {
+  staggerChildren: 0.1, delayChildren: 0.2 
 }
   return (}}
               }}duration: 6,animate={{rotate: [45, 405];}
@@ -698,8 +464,9 @@ href='tel:+1 302 464 0950'
       </div>
     </Layout>
 }
-  /* CTA Buttons */
-};
+}
+}
+
   /* CTA Buttons */ 
 }<motion.div > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {
   /* Stats */
@@ -716,7 +483,8 @@ href='tel:+1 302 464 0950'
   duration: 0.8;}
 }viewport= {
   {
-
+  once: true 
+}
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+}
 export default Homepage2045
-}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)
-};export default Homepage2045;export default Homepage2045;

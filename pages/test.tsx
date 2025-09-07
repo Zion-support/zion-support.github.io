@@ -1,33 +1,23 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/Layout';
+import Layout from '../components/layout/Layout';
 
-import Layout from '../components/Layout';
-export default function TestPage() {
+export default function test() {
   return (
-    <Layout title="Test Page">
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
+    <Layout>
+      <Head>
+        <title>Test - Zion Tech Group</title>
+        <meta name="description" content="Test solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Test</h1>
+          <p className="text-lg text-gray-600">
+            Professional test solutions tailored to your business needs.
+          </p>
+        </div>
       </div>
     </Layout>
   );
-}
-export default function TestPage() {
-  return (
-    <>
-      <Head>
-        <title>Test Page | Zion Tech Group</title>
-      </Head>
-      <div className='min-h-screen bg-black text-white flex items-center justify-center'>
-        <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
-      </div>
-    </>
-  );
-);
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
-      </div>
-    </>
-  )
-}
 }

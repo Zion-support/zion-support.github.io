@@ -1,40 +1,24 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
-interface SearchResult {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  type: string;
-  slug: string;
-  relevance: number;
-  features?: string[];
-  pricing?: {
-    starter?: string;
-    enterprise?: string
-  }
-}
-
 //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
   
-}];
-setIsSearching (true);
+}]
+setIsSearching (true)
 //Simulate API call delay setTimeout ( () => {
   const filteredResults = mockSearchResults.filter (result => {
-  const matchesQuery = result.name.toLowerCase () .includes (searchQuery.toLowerCase () ) |result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) |result.category.toLowerCase () .includes (searchQuery.toLowerCase () );
-const matchesFilters = selectedFilters.length === 0 |selectedFilters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) |result.type.toLowerCase () .includes (filter.toLowerCase () ) );
-setResults (sortedResults);
-setShowResults (true);
-setIsSearching (false)
+  const matchesQuery = result.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || result.category.toLowerCase () .includes (searchQuery.toLowerCase () )
+const matchesFilters = selectedFilters.length === 0 || selectedFilters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) || result.type.toLowerCase () .includes (filter.toLowerCase () ) )
+setResults (sortedResults)
+setShowResults (true)
+setIsSearching (false) 
+}, 300) 
 }, 300)
-}, 300);
-[selectedFilters]);
-[selectedFilters]);
+[selectedFilters])
+[selectedFilters])
 //Close search on outside click useEffect ( () => {
   const handleClickOutside = (event: MouseEvent) => {
   if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
-}, []);
+  
+}
+}, [])
 //Handle filter toggle const toggleFilter = (filterId: string) => {
   setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId)
 }> {
@@ -165,65 +149,17 @@ function debounce<T extends (...args: any[]) => any>(
 }{
   /* Popular Searches */ ;"
 }<div> <div className="flex items-center gap-2 mb-3"> <TrendingUp className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Popular Searches</span> </div> <div className="flex flex-wrap gap-2"> {
-  popularSearches && popularSearches.map ( (term, index) => (<buttonkey= {}
-  index
-}onClick= {}
-  () => setQuery (term) ;"
-}className="px-3 py-1 && 1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30" > {
-  term
-}</button>) )
-}</div> </div> </div>)
-}</div> </motion && motion.div>)
-}</AnimatePresence> </div>)
+  popularSearches.map ( (term, index) => (<button key= {
+  index 
+}onClick= {
+  () => setQuery (term) 
+}className="px-3 py-1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30" > {
+  term 
+}</button>) ) 
+}</div> </div> </div>) 
+}</div> </motion.div>) 
+}</AnimatePresence> </div>) 
 }
 // Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T
-wait: number
+wait: number 
 }export default EnhancedSearch
-// Debounce utility function
-function debounce<T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS && NodeJS.Timeout,
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout),
-    timeout = setTimeout(() => func(...args), wait)
-}
-export default EnhancedSearch
-  category.id
-}on_click= {}
-  () => toggle_filter (category.id)
-  is_searching ? 'Searching...' : 'Search'
-}</button> </div> </div> {}
-  /* Search Suggestions */
-}<AnimatePresence> {}
-  show_suggestions && suggestions.length > 0 && (<motion.div initial= {}
-  {}
-  opacity: 0, coordinate_y: -10
-}animate= {}
-  {}
-  opacity: 1, coordinate_y: 0
-  action.icon
-}<span> {}
-  action.name
-}</span> </button>) )
-  term
-}</button>) )
-}</div> </div> </div>)
-}</div> </motion.div>)
-}</AnimatePresence> </div>)
-// Debounce utility function function debounce < T extends (...args: unknown[]) => any> (func: T
-wait: number
-}export default EnhancedSearch
-// Debounce utility function
-function debounce<T extends (...args: any[]) => any>(
-  func: T
-  wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout)
-    timeout = setTimeout(() => func(...args), wait)
-  }
-}
-export default EnhancedSearch;

@@ -1,9 +1,6 @@
-import Button from '../components/ui/Button';
-export default function AIEvaluationOrchestratorPage() {
-import React from 'react',
-import Head from 'next/head';
-
-import Layout from '../components/layout/Layout';
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
 const AIEvaluationOrchestrator: React.FC = () => {
 
   return (
@@ -52,4 +49,6 @@ const AIEvaluationOrchestrator: React.FC = () => {
         </div>
       </main>
     </Layout>
-  );
+  )
+}
+export default AIEvaluationOrchestrator

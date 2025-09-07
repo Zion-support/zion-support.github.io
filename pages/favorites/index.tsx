@@ -1,35 +1,23 @@
-import { useEffect, useState } from 'react'
-import EmptyState from '../../components/ui/EmptyState'
-export default function FavoritesPage() {
-  const [favorites, setFavorites] = useState<string[]>([])
-  useEffect(() => {
-    const raw = localStorage.getItem('zion.favorites')
-    setFavorites(raw ? JSON.parse(raw) : [])
-  }, [])
-;
-  if (!favorites.length) {;
-    return <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Save profiles to revisit them easily.&quot; ctaLabel=&quot;Browse Talent&quot; ctaHref=&quot;/talent&quot; />
-  }
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function FavoritesIndex() {
   return (
-    <div>
-      <h2 className=&quot;text-xl font-semibold mb-4&quot;>Favorites</h2>
-      <ul className=&quot;list-disc pl-6&quot;>
-        {favorites.map(f => <li key={f}>{f}</li>)}
-      </ul>;
-    </div>;
+    <Layout>
+      <Head>
+        <title>Favorites - Zion Tech Group</title>
+        <meta name="description" content="Favorites solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Favorites</h1>
+          <p className="text-lg text-gray-600">
+            Professional favorites solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
   );
-      <h2 className="text-xl font-semibold mb-4">Favorites</h2>
-      <ul className="list-disc pl-6">
-        {favorites.map(f => <li key={f}>{f}</li>)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      </ul>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }

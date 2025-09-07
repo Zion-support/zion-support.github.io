@@ -1,221 +1,41 @@
-import React, { useState, useMemo } from 'react',
-import Head from 'next/head',
-import Link from 'next/link';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail  } from 'lucide-react';
-import { innovative2026MicroSaasServicesV4  } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV4  } from '../data/emerging-tech-2026-services-v4';
-import { enterpriseIT2026ServicesV4  } from '../data/enterprise-it-2026-services-v4';
-import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-export default function Innovative2026ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<string>('name'),
-
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search
-  Star
-  Users
-  TrendingUp
-  DollarSign
-  Clock
-  CheckCircle
-  ArrowRight
-  Rocket
-  Zap
-  Brain
-  Globe
-  Shield
-  Phone
-  Mail;
-} from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import {
-  Search,
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Zap,
-  Brain,
-  Globe,
-  Shield,
-  Phone,
-  Mail,;
-} from 'lucide-react';
-import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
-import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
-import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
-    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount }
-    { id: 'quantum', name: 'Quantum Tech', icon: '⚛️', count: quantumCount }
-    {
-      id: 'enterprise'
-      name: 'Enterprise IT'
-      icon: '🏢'
-      count: enterpriseCount
-    }
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount }
-    {
-      id: 'emerging'
-      name: 'Emerging Tech'
-      icon: '🔬'
-      count: emergingTechCount
-    },  ];
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' }
-    { id: 'low', name: 'Under $500', range: 'Under $500' }
-    { id: 'medium', name: '$500 - $1,000', range: '$500 - $1,000' }
-    { id: 'high', name: 'Over $1,000', range: 'Over $1,000' },  ];
-  const sortOptions = [
-    { id: 'name', name: 'Name' }
-    { id: 'price', name: 'Price' }
-    { id: 'rating', name: 'Rating' }
-    { id: 'popularity', name: 'Popularity' },  ];
-  // Filter and sort services
-  const filteredServices = useMemo(() => {
-    let filtered = allServices;
-    // Category filter
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => {
-        switch (selectedCategory) {
-          case 'ai':
-            return service.category?.includes('AI');
-          case 'quantum':
-            return service.category?.includes('Quantum');
-          case 'enterprise':
-            return service.category?.includes('Enterprise');
-          case 'micro-saas':
-            return service.category?.includes('Micro SaaS');
-          case 'emerging':
-            return (
-              service.category?.includes('Emerging') |
-              service.category?.includes('Neuromorphic') |
-              service.category?.includes('Synthetic')
-            );
-          default: return true
-        }
-      });    }
-    // Price range filter
-    if (selectedPriceRange !== 'all') {
-      filtered = filtered.filter(service => {
-        const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-        switch (selectedPriceRange) {
-          case 'low':
-            return price < 500;
-          case 'medium':
-            return price >= 500 && price <= 1000;
-          case 'high':
-            return price > 1000;
-          default: return true
-        }
-      });    }
-    // Search filter
-    if (searchTerm) {
-      filtered = filtered.filter(
-        service =>
-          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-          service.description
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase()) |
-          service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );    }
-    // Sort
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'price':
-          const priceA = parseInt(a.price.replace(/[^0-9]/g, ''));
-          const priceB = parseInt(b.price.replace(/[^0-9]/g, ''));
-          return priceA - priceB;
-        case 'rating':
-          return b.rating - a.rating;
-        case 'popularity':
-          return b.customers - a.customers;
-        default: return a.name.localeCompare(b.name)
-      }
-    });
-    return filtered;  }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
-  const containerVariants = {
-    hidden: { opacity: 0 }
-    visible: {
-      opacity: 1
-      transition: {
-        staggerChildren: 0.1
-      }
-    },  }
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 }
-    visible: {
-      y: 0
-      opacity: 1
-      transition: {
-        duration: 0.5
-      }
-    },  }
-  return (
-    <>
-      <Head>
-        <title>2026 Innovative Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="Discover cutting-edge 2026 innovative services including AI, Quantum Computing, Emerging Technologies, and Enterprise IT solutions. Transform your business with next-generation technology." />
-        <meta name="keywords" content="2026 services, innovative technology, AI services, quantum computing, emerging tech, enterprise IT, micro SaaS, Zion Tech Group" />
-        <meta property="og:title" content="2026 Innovative Services Showcase - Zion Tech Group" />
-        <meta property="og:description" content="Discover cutting-edge 2026 innovative services including AI, Quantum Computing, Emerging Technologies, and Enterprise IT solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/2026-innovative-services-showcase" />
-        <link rel="canonical" href="https://ziontechgroup.com/2026-innovative-services-showcase" />
-      </Head>
-      <UltraAdvancedFuturisticBackground2026
-        intensity='extreme'
-        colorScheme='neural-network'        particleCount={800}
-        animationSpeed={3.0}
-        enableHolographic={true}
-        enableQuantumEffects={true}
-        enableNeuralNetworks={true}
-        enableMultidimensional={true}
-      />
-      <UltraAdvancedNavigation2026 />
-      <div className='min-h-screen relative z-10'>
-        {/* Hero Section */}
-        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='mb-8'
-            >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-                2026 Innovative Services
-              </h1>
-              <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
-                Discover the future of technology with our cutting-edge 2026
-                services. From AI-powered solutions to quantum computing and
-                emerging technologies, transform your business with
-                next-generation innovation.              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+//Category filter if (selectedCategory !== 'all') {
+  filtered = filtered.filter (service => {
+  switch (selectedCategory) {
+  case 'ai': return service.category?.includes ('AI')
+case 'quantum': return service.category?.includes ('Quantum')
+case 'enterprise': return service.category?.includes ('Enterprise')
+case 'micro-saas': return service.category?.includes ('Micro SaaS')
+case 'emerging': switch (selectedPriceRange) {
+  case 'low': return price < 500
+case 'medium': return price >= 500 && price <= 1000
+case 'high': 
+}//Search filter if (searchTerm) {
+  filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) //Sort filtered.sort ( (a, b) => {
+  switch (sortBy) {
+  case 'price': case 'rating': return b.rating - a.rating
+case 'popularity': return filtered
+}, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy])
+const containerVariants = {
+  hidden: {
+  opacity: 0 
+}
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1 
 }
               animate={{ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+}
+const itemVariants = {
+  hidden: {
+  y: 20, opacity: 0 
+}
+visible: {
+  y: 0, opacity: 1, transition: {
+  duration: 0.5 
 }
               className="flex flex-wrap justify-center gap-4 mb-12"
             >
@@ -253,10 +73,39 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+}
+return (<> <Head> <title>2026 Innovative Services Showcase - Zion Tech Group</title> /> <UltraAdvancedNavigation2026 /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6" > 2026 Innovative Services </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover the future of technology with our cutting-edge 2026 services. From AI-powered solutions to quantum computing and emerging technologies, transform your business with next-generation innovation. </p> </motion.div> <motion.div </div> <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-3" > <span className="text-purple-400 font-semibold" >AI-Powered</span> </div> <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30 rounded-full px-6 py-3" > <span className="text-green-400 font-semibold" >Quantum Ready</span> </div> <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm border border-orange-500/30 rounded-full px-6 py-3" > <span className="text-orange-400 font-semibold" >Future-Proof</span> </div> </motion.div> {
+  /* Search and Filters */ 
+}<motion.div > <div className="relative mb-8" > <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> <input key= {
+  category.id 
+}onClick= {
+  () => setSelectedCategory (category.id) 
+}className= {
+  `px-6 py-3 rounded-full backdrop-blur-sm border transition-all duration-300 $ {
+  selectedCategory === category.id ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300' : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50' 
+}` 
+}> </button>) ) 
+}</div> key= {
+  range.id 
+}onClick= {
+  () => setSelectedPriceRange (range.id) 
+}className= {
+  `px-4 py-2 rounded-lg backdrop-blur-sm border transition-all duration-300 $ {
+  selectedPriceRange === range.id ? 'bg-gradient-to-r from-green-600/30 to-emerald-600/30 border-green-500/50 text-green-300' : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50' 
+}` 
+}> {
+  range.name 
+}</button>) ) 
+}</div> </motion.div> </div> </section> > {
+  filteredServices.map ( (service) => (<motion.div key= {
+  service.id 
+}POPULAR </span>) 
+}</div>) 
+}</div> </div> <span>Learn More</span> <ArrowRight className="w-4 h-4" /> </span> </button> </Link> </div> </div> </motion.div>) ) 
+}</motion.div> > <div className="text-gray-400 text-xl mb-4" >No services found matching your criteria</div> <button > Clear Filters </button> </motion.div>) 
+}</div> </section> <motion.div initial= {
+  {
+  opacity: 0, y: 30 
 }
                   className="w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent"
                 />

@@ -1,74 +1,112 @@
-import React, { useEffect, useState } from "react",
-import EnhancedLayout from "../../components/layout/EnhancedLayout";
-export default function AdminTokens() {
-  const [transactions, setTransactions] = useState<any[]>([]);
-  const [userId, setUserId] = useState("");
-  const [amount, setAmount] = useState(100);
-  const [reason, setReason] = useState("admin_action");
-  const [config, setConfig] = useState<any>(null),
-
-import React, { useEffect, useState } from "react";
-import EnhancedLayout from "../../components/layout/EnhancedLayout";
-export default function AdminTokens() {
-  const [transactions, setTransactions] = useState<any[]>([])
-  const [userId, setUserId] = useState("")
-  const [amount, setAmount] = useState(100)
-  const [reason, setReason] = useState("admin_action")
-  const [config, setConfig] = useState<any>(null)
-export default function AdminTokens() {
-  const [transactions, setTransactions] = useState<any[]>([]),
-  const [userId, setUserId] = useState(""),
-  const [amount, setAmount] = useState(100),
-  const [reason, setReason] = useState("admin_action"),
-  const [config, setConfig] = useState<any>(null),
-  async function load() {
-    const [txRes, cfgRes] = await Promise.all([
-      fetch("/api/admin/tokens").then((r) => r.json())
-      fetch("/api/admin/tokens/config").then((r) => r.json())])
-    setTransactions(txRes.transactions |[])
-
-    setConfig(cfgRes)
-  }
-  useEffect(() => {
-    load()
-  }, [])
-  async function issue() {
-
-  }
+import React, { useState, useEffect } from 'react'
+import Head from 'next/head'
+interface TokenConfig {
+  conversionRate: number
+  minPurchase: number
+  maxPurchase: number
+  enabled: boolean
 }
-  useEffect(() => {
-    load()
-  }, []),
-  async function issue() {
-    const res = await fetch("/api/admin/tokens/issue", {
-      method: "POST"
-      headers: { "Content-Type": "application/json" }
-      body: JSON.stringify({ userId, amount, reason })})
-    const data = await res.json()
-    if (data.error) alert(data.error)
-    await load()
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-  async function revoke() {
-    const res = await fetch("/api/admin/tokens/revoke", {
-      method: "POST"
-      headers: { "Content-Type": "application/json" }
-      body: JSON.stringify({ userId, amount, reason })})
-    const data = await res.json()
-    if (data.error) alert(data.error)
-    await load()
-  }
-  async function saveConfig() {
-    const res = await fetch("/api/admin/tokens/config", {
-      method: "POST"
-      headers: { "Content-Type": "application/json" }
-      body: JSON.stringify(config)})
-    const data = await res.json()
 
-    setConfig(data)
+interface Transaction {
+  id: string
+  userId: string
+  amount: number
+  tokens: number
+  status: 'pending' | 'completed' | 'failed'
+  createdAt: string
+  type: 'purchase' | 'refund' | 'bonus'
+}
+
+const mockTransactions: Transaction[] = [
+  {
+    id: '1',
+    userId: 'user123',
+    amount: 100,
+    tokens: 1000,
+    status: 'completed',
+    createdAt: '2025-01-15T10:00:00Z',
+    type: 'purchase'
+  },
+  {
+    id: '2',
+    userId: 'user456',
+    amount: 50,
+    tokens: 500,
+    status: 'pending',
+    createdAt: '2025-01-15T09:30:00Z',
+    type: 'purchase'
+  },
+  {
+    id: '3',
+    userId: 'user789',
+    amount: 0,
+    tokens: 100,
+    status: 'completed',
+    createdAt: '2025-01-14T15:00:00Z',
+    type: 'bonus'
   }
+]
+const AdminTokensPage: React.FC = () => {
+  const [config, setConfig] = useState<TokenConfig>({
+    conversionRate: 0.05,
+    minPurchase: 10,
+    maxPurchase: 1000,
+    enabled: true
+  })
+  const [transactions, setTransactions] = useState<Transaction[]>([])
+  const [loading, setLoading] = useState(true)
+  const [saving, setSaving] = useState(false)
+  useEffect(() => {
+    // Simulate loading data
+    setTimeout(() => {
+      setTransactions(mockTransactions)
+      setLoading(false)
+    }, 1000)
+  }, [])
+  const handleConfigUpdate = async (updates: Partial<TokenConfig>) => {
+    setSaving(true)
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      setConfig(prev => ({ ...prev, ...updates }))
+    } catch (error) {
+      console.error('Error updating config:', error)
+    } finally {
+      setSaving(false)
+    }
+  }
+  const handleIssueTokens = async () => {
+    if (config.conversionRate <= 0) {
+      alert('Conversion rate must be greater than 0')
+      return
+    }
+    await handleConfigUpdate(config)
+  }
+  const handleRevokeTokens = async () => {
+    await handleConfigUpdate({ enabled: false })
+  }
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'completed': return 'bg-green-100 text-green-800'
+      case 'pending': return 'bg-yellow-100 text-yellow-800'
+      case 'failed': return 'bg-red-100 text-red-800'
+      default: return 'bg-gray-100 text-gray-800'
+    }
+  }
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'purchase': return 'bg-blue-100 text-blue-800'
+      case 'refund': return 'bg-red-100 text-red-800'
+      case 'bonus': return 'bg-green-100 text-green-800'
+      default: return 'bg-gray-100 text-gray-800'
+    }
+  }
+  const totalTokensIssued = transactions
+    .filter(t => t.status === 'completed')
+    .reduce((sum, t) => sum + t.tokens, 0)
+  const totalRevenue = transactions
+    .filter(t => t.status === 'completed' && t.type === 'purchase')
+    .reduce((sum, t) => sum + t.amount, 0)
   return (
     <EnhancedLayout title="Admin: ZION$">
       <div className="max-w-4xl mx-auto space-y-6">
@@ -84,110 +122,8 @@ export default function AdminTokens() {
             </div>
           </div>
         </div>
-        <div className="p-4 border rounded bg-white dark:bg-zinc-900">
-          <h2 className="font-medium mb-3">Conversion & Rules</h2>
-          {config && (
-            <div className="space-y-3 text-sm">
-              <div className="flex items-center gap-2">
-                <label className="w-40">USD per Token</label>
-                <input type="number" step="0.01" className="border rounded px-2 py-1" value={config.usdPerToken} onChange={(e) => setConfig({ ...config, usdPerToken: parseFloat(e.target.value |"0") })} />
-                <button className="px-3 py-1 rounded border" onClick={saveConfig}>Save</button>
-              </div>
-              <div className="text-xs text-gray-500">Example: 0.05 means 100 ZION$ = $5 credit.</div>
-            </div>
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+      </main>
+    </>
+  )
 }
-        </div>
-        <div className="p-4 border rounded bg-white dark:bg-zinc-900">
-          <h2 className="font-medium mb-3">Transactions</h2>
-          <div className="space-y-2 text-sm max-h-96 overflow-auto">
-            {transactions.map((t) => (
-              <div key={t.id} className="flex justify-between border rounded p-2">
-                <div className="flex gap-2 items-center">
-                  <span className={`px-2 py-0.5 rounded text-xs ${["earn","issue"].includes(t.type) ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>{t.type}</span>
-                  <span className="text-gray-600">{t.userId}</span>
-                  <span className="text-gray-500">{t.reason.replaceAll("_"," ")}</span>
-                </div>
-                <div className="font-medium">{t.type === "earn" |t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
-              </div>
-;
-  async function saveConfig() {;
-    const res = await fetch("/api/admin/tokens/config", {;
-      method: "POST",;
-      headers: { "Content-Type": "application/json" },;
-      body: JSON.stringify(config)});
-    const data = await res.json();
-    setConfig(data);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  return (;
-    <EnhancedLayout title="Admin: ZION$">;
-      <div className="max-w-4xl mx-auto space-y-6">;
-        <div className="p-4 border rounded bg-white dark:bg-zinc-900">;
-          <h2 className="font-medium mb-3">Issue / Revoke</h2>;
-          <div className="grid sm:grid-cols-4 gap-2 text-sm">;
-            <input placeholder="userId" className="border rounded px-2 py-1" value={userId} onChange={(e) => setUserId(e.target.value)} />;
-            <input type="number" placeholder="amount" className="border rounded px-2 py-1" value={amount} onChange={(e) => setAmount(parseInt(e.target.value || "0"))} />;
-            <input placeholder="reason" className="border rounded px-2 py-1" value={reason} onChange={(e) => setReason(e.target.value)} />;
-            <div className="flex gap-2">;
-              <button className="px-3 py-1 rounded border" onClick={issue}>Issue</button>;
-              <button className="px-3 py-1 rounded border" onClick={revoke}>Revoke</button>;
-            </div>;
-          </div>;
-        </div>;
-        <div className="p-4 border rounded bg-white dark:bg-zinc-900">;
-          <h2 className="font-medium mb-3">Conversion & Rules</h2>;
-          {config && (;
-            <div className="space-y-3 text-sm">;
-              <div className="flex items-center gap-2">;
-                <label className="w-40">USD per Token</label>;
-                <input type="number" step="0.01" className="border rounded px-2 py-1" value={config.usdPerToken} onChange={(e) => setConfig({ ...config, usdPerToken: parseFloat(e.target.value || "0") })} />;
-                <button className="px-3 py-1 rounded border" onClick={saveConfig}>Save</button>;
-              </div>;
-              <div className="text-xs text-gray-500">Example: 0.05 means 100 ZION$ = $5 credit.</div>;
-            </div>;
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </div>;
-        <div className="p-4 border rounded bg-white dark:bg-zinc-900">;
-          <h2 className="font-medium mb-3">Transactions</h2>;
-          <div className="space-y-2 text-sm max-h-96 overflow-auto">;
-            {transactions.map((t) => (;
-              <div key={t.id} className="flex justify-between border rounded p-2">;
-                <div className="flex gap-2 items-center">;
-                  <span className={`px-2 py-0.5 rounded text-xs ${["earn","issue"].includes(t.type) ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>{t.type}</span>;
-                  <span className="text-gray-600">{t.userId}</span>;
-                  <span className="text-gray-500">{t.reason.replaceAll("_"," ")}</span>;
-                </div>;
-                <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>;
-              </div>;
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            {transactions.length === 0 && <div className="text-gray-500">No transactions.</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </div>;
-    </EnhancedLayout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+export default AdminTokensPage

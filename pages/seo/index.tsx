@@ -1,21 +1,23 @@
 import React from 'react';
-export default function SEOIndex() {
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 
-  const [slugs, setSlugs] = React.useState<string[]>([])
-  React.useEffect(() => {
-    // In a real app, list from API or build-time, here we rely on directory hint not available at runtime.
-    setSlugs([])
-  }, [])
-
+export default function index() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto py-8">
-        <h1 className="text-2xl font-bold mb-6">Page</h1>
-        <div className="bg-white rounded-lg shadow p-6">
-          <p className="text-gray-600">Content coming soon.</p>
+    <Layout>
+      <Head>
+        <title>Index - Zion Tech Group</title>
+        <meta name="description" content="Index solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Index</h1>
+          <p className="text-lg text-gray-600">
+            Professional index solutions tailored to your business needs.
+          </p>
         </div>
       </div>
-    </div>
-  )
-}
+    </Layout>
+  );
 }

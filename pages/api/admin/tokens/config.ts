@@ -1,19 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getConfig } from "../../../../utils/token/service";
-import { tokenStore } from "../../../../utils/token/storage";
+import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    const config = getConfig();
-    return res.status(200).json(config);
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
   }
-
-  if (req.method === "POST") {
-const body = req.body |{}
-    const current = tokenStore.getConfig()
-    const updated = { ...current, ...body }
-    tokenStore.setConfig(updated)
-    return res.status(200).json(updated)
-  }
-  return res.status(405).json({ error: "Method not allowed" })
+  
+  res.status(200).json({ config: {} });
 }

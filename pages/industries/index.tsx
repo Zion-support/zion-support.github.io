@@ -1,8 +1,7 @@
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
-
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import Layout from '../../components/Layout'
+import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react'
 const industries = [
   {
     title: 'Healthcare',
@@ -46,8 +45,7 @@ const industries = [
     features: ['E-commerce', 'Inventory Management', 'Customer Analytics', 'Personalization'],
     href: '/industries/retail'
   }
-];
-
+]
 const benefits = [
   {
     title: 'Industry Expertise',
@@ -69,9 +67,7 @@ const benefits = [
     description: 'Solutions that grow with your business and adapt to changing needs',
     icon: Cloud
   }
-];
-}
-
+]
 export default function IndustriesPage() {
   return (
     <Layout>
@@ -230,4 +226,5 @@ export default function IndustriesPage() {
         </section>
       </div>
     </Layout>
-  );
+  )
+}

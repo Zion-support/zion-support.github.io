@@ -1,8 +1,7 @@
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react';
-
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import Layout from '../../components/Layout'
+import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react'
 const solutions = [
   {
     title: 'AI-Powered Fraud Detection',
@@ -28,8 +27,7 @@ const solutions = [
     icon: FileText,
     features: ['Regulatory Reporting', 'Compliance Monitoring', 'Audit Trails', 'Risk Assessment']
   }
-];
-
+]
 const benefits = [
   {
     icon: DollarSign,
@@ -57,9 +55,7 @@ const benefits = [
     description: 'Automated compliance monitoring ensures adherence to regulations',
     icon: CheckCircle
   }
-];
-}
-
+]
 export default function FinancePage() {
   return (
     <Layout>
@@ -211,4 +207,5 @@ export default function FinancePage() {
         </section>
       </div>
     </Layout>
-  );
+  )
+}

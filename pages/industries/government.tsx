@@ -1,8 +1,7 @@
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';
-
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import Layout from '../../components/Layout'
+import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react'
 const solutions = [
   {
     title: 'Digital Government Platform',
@@ -28,8 +27,7 @@ const solutions = [
     icon: Users,
     features: ['Service Requests', 'Document Submission', 'Status Tracking', 'Mobile Access']
   }
-];
-
+]
 const benefits = [
   {
     title: 'Enhanced Security',
@@ -51,9 +49,7 @@ const benefits = [
     description: 'Analytics help make informed policy and resource decisions',
     icon: Database
   }
-];
-}
-
+]
 export default function GovernmentPage() {
   return (
     <Layout>
@@ -205,4 +201,5 @@ export default function GovernmentPage() {
         </section>
       </div>
     </Layout>
-  );
+  )
+}

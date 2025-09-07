@@ -1,16 +1,23 @@
-import dynamic from 'next/dynamic';
-const ApiDocsPage = null;
-const ApiDocsPage = dynamic(() => import('../../components/docs/ApiDocsPage'), { ssr: false })
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
 
-export default function DocsRoute() {
-  return <ApiDocsPage />
-}
-const ApiDocsPage = dynamic(() => import('../../components/docs/ApiDocsPage'), { ssr: false });
-export default function DocsRoute(req, res) {
-  try {
-  return <ApiDocsPage />;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+export default function DevelopersDocs() {
+  return (
+    <Layout>
+      <Head>
+        <title>Developers Docs - Zion Tech Group</title>
+        <meta name="description" content="Developers Docs solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Developers Docs</h1>
+          <p className="text-lg text-gray-600">
+            Professional developers docs solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

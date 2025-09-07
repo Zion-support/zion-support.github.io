@@ -1,5 +1,4 @@
-import Layout from '../components/Layout';
-
+import Layout from '../components/Layout'
 const About = () => {
   
     >
@@ -157,8 +156,6 @@ const About = () => {
         </main>
       </div>
     </Layout>
-  );
-};
+  )
 }
-
-export default About;
+export default About

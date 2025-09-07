@@ -1,8 +1,7 @@
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Heart, Brain, Shield, Users, BarChart3, CheckCircle, ArrowRight, Phone, Mail, Calendar, Stethoscope, Activity, Database, Camera, FileText } from 'lucide-react';
-
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import Layout from '../../components/Layout'
+import { Heart, Brain, Shield, Users, BarChart3, CheckCircle, ArrowRight, Phone, Mail, Calendar, Stethoscope, Activity, Database, Camera, FileText } from 'lucide-react'
 const solutions = [
   {
     title: 'AI-Powered Medical Imaging',
@@ -28,8 +27,7 @@ const solutions = [
     icon: BarChart3,
     features: ['Patient Analytics', 'Treatment Outcomes', 'Resource Optimization', 'Predictive Modeling']
   }
-];
-
+]
 const benefits = [
   {
     title: 'Improved Patient Care',
@@ -51,9 +49,7 @@ const benefits = [
     description: 'Automated processes reduce administrative burden and costs',
     icon: CheckCircle
   }
-];
-}
-
+]
 export default function HealthcarePage() {
   return (
     <Layout>
@@ -205,4 +201,5 @@ export default function HealthcarePage() {
         </section>
       </div>
     </Layout>
-  );
+  )
+}

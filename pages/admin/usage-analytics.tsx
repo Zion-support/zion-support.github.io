@@ -1,41 +1,105 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react',
-import Head from 'next/head',
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { GetServerSideProps  } from 'next';
-import { requireAdminRole  } from '../../utils/auth';
-import DatePicker from 'react-datepicker';
-export const getServerSideProps: GetServerSideProps;
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import Head from 'next/head';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { GetServerSideProps } from 'next';
-import { requireAdminRole } from '../../utils/auth';
-import DatePicker from 'react-datepicker';
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const result = await requireAdminRole(ctx)
-  // @ts-ignore
-  if ('redirect' in result) return result
-  return result
+import React, { useState, useEffect } from 'react'
+import Head from 'next/head'
+interface AnalyticsData {
+  totalUsers: number
+  activeUsers: number
+  totalProjects: number
+  completedProjects: number
+  totalRevenue: number
+  monthlyRevenue: number
+  averageProjectValue: number
+  userGrowth: Array<{ month: string; users: number }>
+  revenueGrowth: Array<{ month: string; revenue: number }>
+  topFeatures: Array<{ name: string; usage: number }>
+  userSatisfaction: number
 }
-type Datum = { label: string, value: number }
-function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
-  const total = Math.max(1, data.reduce((s, d) => s + d.value, 0))
-  let acc = 0
-  const radius = size / 2
-  const center = radius
-  const colors = ['#3b82f6#10b981#f59e0b#8b5cf6#ef4444#06b6d4']
-  const slices = data.map((d, i) => {
-    const start = (acc / total) * 2 * Math.PI
-    acc += d.value
-    const end = (acc / total) * 2 * Math.PI
-    const x1 = center + radius * Math.cos(start)
-    const y1 = center + radius * Math.sin(start)
-    const x2 = center + radius * Math.cos(end)
-    const y2 = center + radius * Math.sin(end)
-    const largeArc = end - start > Math.PI ? 1 : 0
-    const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z`
-    return <path key={d.label} d={path} fill={colors[i % colors.length]} />
-  })
+
+const mockAnalyticsData: AnalyticsData = {
+  totalUsers: 1250,
+  activeUsers: 890,
+  totalProjects: 340,
+  completedProjects: 298,
+  totalRevenue: 1250000,
+  monthlyRevenue: 125000,
+  averageProjectValue: 3676,
+  userGrowth: [
+    { month: 'Jan', users: 800 },
+    { month: 'Feb', users: 850 },
+    { month: 'Mar', users: 920 },
+    { month: 'Apr', users: 980 },
+    { month: 'May', users: 1050 },
+    { month: 'Jun', users: 1120 },
+    { month: 'Jul', users: 1200 },
+    { month: 'Aug', users: 1250 }
+  ],
+  revenueGrowth: [
+    { month: 'Jan', revenue: 95000 },
+    { month: 'Feb', revenue: 105000 },
+    { month: 'Mar', revenue: 115000 },
+    { month: 'Apr', revenue: 120000 },
+    { month: 'May', revenue: 125000 },
+    { month: 'Jun', revenue: 130000 },
+    { month: 'Jul', revenue: 135000 },
+    { month: 'Aug', revenue: 125000 }
+  ],
+  topFeatures: [
+    { name: 'AI Development', usage: 85 },
+    { name: 'Web Development', usage: 78 },
+    { name: 'Mobile Apps', usage: 65 },
+    { name: 'Cloud Architecture', usage: 58 },
+    { name: 'Data Analytics', usage: 42 }
+  ],
+  userSatisfaction: 4.7
+}
+const AdminUsageAnalyticsPage: React.FC = () => {
+  const [analytics, setAnalytics] = useState<AnalyticsData | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [timeRange, setTimeRange] = useState<'7d' | '30d' | '90d' | '1y'>('30d')
+  const [selectedMetric, setSelectedMetric] = useState<'users' | 'revenue' | 'projects'>('users')
+  useEffect(() => {
+    // Simulate loading analytics data
+    setTimeout(() => {
+      setAnalytics(mockAnalyticsData)
+      setLoading(false)
+    }, 1000)
+  }, [])
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(amount)
+  }
+  const formatNumber = (num: number) => {
+    return new Intl.NumberFormat('en-US').format(num)
+  }
+  if (loading) {
+    return (
+      <>
+        <Head>
+          <title>Usage Analytics - Admin</title>
+        </Head>
+        <main className="max-w-7xl mx-auto px-4 py-8">
+          <div className="text-center py-8">Loading analytics...</div>
+        </main>
+      </>
+    )
+  }
+
+  if (!analytics) {
+    return (
+      <>
+        <Head>
+          <title>Usage Analytics - Admin</title>
+        </Head>
+        <main className="max-w-7xl mx-auto px-4 py-8">
+          <div className="text-center py-8 text-red-600">Failed to load analytics data</div>
+        </main>
+      </>
+    )
+  }
+
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
   )
@@ -200,10 +264,8 @@ export default function UsageAnalytics(req, res) {
           <div className="font-medium mb-2">Funnel</div>
           <Funnel data={funnel} />
         </div>
-        <div className="text-xs text-gray-500 dark:text-gray-400">
-          Optional providers supported (setup via env): Plausible, PostHog. Currently using local event log for aggregation.
-        </div>
-      </div>
-    </EnhancedLayout>
+      </main>
+    </>
   )
 }
+export default AdminUsageAnalyticsPage

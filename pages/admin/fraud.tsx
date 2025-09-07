@@ -1,70 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react';
-interface FraudItem {
-  id: string;
-  userId: string | null;
-  source: string;
-  createdAt: string;
-  heuristic: { reasons: string[], severity: string },
-  gpt?: { label: string, reason: string, confidence: number },
-interface FraudItem {
-
-  id: string
-  userId: string | null
-  source: string
-  createdAt: string
-  heuristic: { reasons: string[], severity: string }
-  gpt?: { label: string, reason: string, confidence: number }
-
-  status: string
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-export default function FraudAdminPage() {
-  const [items, setItems] = useState<FraudItem[]>([])
-  const [adminToken, setAdminToken] = useState<string>('')
-  const [loading, setLoading] = useState<boolean>(false)
-  const [error, setError] = useState<string | null>(null)
-  useEffect(() => {
-    const saved = null;
-    const saved = localStorage.getItem('admin-token') |''
-    setAdminToken(saved)
-  }, [])
-  const fetchItems = async () => {
-    setLoading(true)
-    setError(null)
-    try {
-      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} })
-      const json = await res.json()
-      if (!res.ok) throw new Error(json.error |'Failed to load')
-      setItems(json.items |[])
-    } catch (e: any) {
-      setError(e.message |'Failed to load')
-    } finally {
-      setLoading(false)
-    }
-  }
-  useEffect(() => {
-    fetchItems()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [adminToken])
-  const onSaveToken = () => {
-    localStorage.setItem('admin-token', adminToken)
-    fetchItems()
-  }
-  const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
-    const res = await fetch('/api/fraud/admin/action', {
-      method: 'POST'
-      headers: {
-        'Content-Type': 'application/json'
-        ...(adminToken ? { 'x-admin-token': adminToken } : {})}
-      body: JSON.stringify({ fraudId: id, action })})
-    const json = await res.json()
-    if (res.ok) fetchItems()
-    else alert(json.error |'Action failed')
-  }
-
+import React from 'react'
+import Head from 'next/head'
+const FraudPage: React.FC = () => {
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -132,3 +68,4 @@ export default function FraudAdminPage() {
     </div>
   )
 }
+export default FraudPage

@@ -1,31 +1,23 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
-export default function GitHubRedirect() {
-export default function GitHubRedirect() {
+import Layout from '../../components/layout/Layout';
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.location.replace('https: //github.com/Zion-Holdings')
-    }
-  }, []);
+export default function github() {
   return (
-    <>
+    <Layout>
       <Head>
-        <title>GitHub | Zion Tech Group</title>
-        <link rel='canonical' href='https: //github.com/Zion-Holdings' />
-        <meta
-          httpEquiv='refresh'
-          content='0,url=https://github.com/Zion-Holdings'
-        />
-        <meta name='robots' content='noindex, nofollow' />
+        <title>Github - Zion Tech Group</title>
+        <meta name="description" content="Github solutions and services." />
       </Head>
-      <div className='min-h-screen bg-black text-white flex items-center justify-center p-8'>
-        <a
-          href='https: //github.com/Zion-Holdings'
-          className='text-cyan-400 underline'
-        >
-          Continue to GitHub
-        </a>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Github</h1>
+          <p className="text-lg text-gray-600">
+            Professional github solutions tailored to your business needs.
+          </p>
+        </div>
       </div>
-    </>
+    </Layout>
   );
+}

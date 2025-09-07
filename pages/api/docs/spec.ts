@@ -1,16 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import v1 from '../../../data/api-docs/v1';
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+import { NextApiRequest, NextApiResponse } from 'next';
 
-  res.setHeader("Content-Type", "application/json");
-  res.status(200).json(v1);
-}
-export default function handler(req, res) {
-  try {
-    res.status(200).json({ message: 'API endpoint working' })
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
   }
+  
+  res.status(200).json({ message: 'Endpoint working' });
 }

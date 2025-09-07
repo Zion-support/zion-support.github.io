@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { 
   BookOpen, 
   Clock, 
@@ -11,9 +11,8 @@ import {
   Code, 
   Database, 
   Cloud, 
-  Shield ;
-} from 'lucide-react';
-
+  Shield 
+} from 'lucide-react'
 const tutorialCategories = [
   {
     icon: Code,
@@ -39,9 +38,7 @@ const tutorialCategories = [
     description: 'Protect your applications and data',
     tutorials: 10
   }
-];
-}
-
+]
 export default function TutorialsPage() {
   return (
     <>
@@ -194,4 +191,5 @@ export default function TutorialsPage() {
         </section>
       </div>
     </>
-  );
+  )
+}

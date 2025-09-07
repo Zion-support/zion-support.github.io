@@ -1,8 +1,7 @@
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChart3, FileText, Video, Globe, Database } from 'lucide-react';
-
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import Layout from '../../components/Layout'
+import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChart3, FileText, Video, Globe, Database } from 'lucide-react'
 const solutions = [
   {
     title: 'AI-Powered Learning Management System',
@@ -28,8 +27,7 @@ const solutions = [
     icon: FileText,
     features: ['Auto-generated Content', 'Multimedia Support', 'Version Control', 'Collaboration Tools']
   }
-];
-
+]
 const benefits = [
   {
     title: 'Improved Learning Outcomes',
@@ -51,9 +49,7 @@ const benefits = [
     description: 'Comprehensive analytics help improve teaching methods',
     icon: Database
   }
-];
-}
-
+]
 export default function EducationPage() {
   return (
     <Layout>
@@ -205,4 +201,5 @@ export default function EducationPage() {
         </section>
       </div>
     </Layout>
-  );
+  )
+}
