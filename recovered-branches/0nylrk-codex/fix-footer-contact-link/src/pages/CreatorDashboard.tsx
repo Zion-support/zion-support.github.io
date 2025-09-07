@@ -1,0 +1,102 @@
+
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";""
+import { AppSidebar } from "@/components/creator/CreatorSidebar";""
+import { Header } from "@/components/Header";""
+import { Footer } from "@/components/Footer";"
+export default function CreatorDashboard() {
+  return (
+    <SidebarProvider>
+</SidebarProvider>"
+      <div className="min-h-screen flex w-full bg-zion-blue">"
+</div>
+        <AppSidebar />
+</AppSidebar>"
+        <div className="flex flex-col w-full">"
+</div>
+          <Header />
+</Header>"
+          <main className="flex-1 p-6 md:p-10 bg-zion-blue">"
+</main>"
+            <h1 className="text-2xl font-bold text-white mb-8">"
+</h1>
+            </h1>"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">"
+</div>"
+              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg">"
+</div>"
+                <div className="flex items-center gap-3 mb-2">"
+</div>"
+                  <span className="bg-zion-purple/20 rounded-full p-2">"
+</span>"
+                    <span className="text-zion-purple">"
+</span>"
+                      <svg width="28" height="28">"
+</svg>"
+                        <use href="#lucide-bar-chart" />"
+</use>
+
+                      </svg>
+                    </span>
+                  </span>"
+                  <span className="text-zion-slate-light font-medium">"
+</span>
+                  </span>
+
+                </div>"
+                <div className="text-3xl text-white font-bold">"
+</div>"
+                  <span className="text-zion-cyan text-lg font-normal">"
+</span>
+                  </span>
+                </div>
+              </div>"
+              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg">"
+</div>"
+                <div className="flex items-center gap-3 mb-2">"
+</div>"
+                  <span className="bg-zion-purple/20 rounded-full p-2">"
+</span>"
+                    <span className="text-zion-purple">"
+</span>"
+                      <svg width="28" height="28">"
+</svg>"
+                        <use href="#lucide-file-text" />"
+</use>
+
+                      </svg>
+                    </span>
+                  </span>"
+                  <span className="text-zion-slate-light font-medium">"
+</span>
+                  </span>
+
+                </div>"
+                <div className="text-3xl text-white font-bold">12</div>"
+              </div>
+            </div>"
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">"
+</div>"
+              <h2 className="text-xl font-bold text-white mb-4">"
+</h2>
+              </h2>"
+              <p className="text-zion-slate text-lg mb-2 max-w-prose">"
+</p>
+              </p>
+            </div>
+          </main>
+          <Footer />
+</Footer>
+        </div>
+      </div>
+      <SidebarTrigger />
+</SidebarTrigger>
+    </SidebarProvider>)
+    </SidebarProvider>);
+    </SidebarProvider>);
+    </SidebarProvider>;"
+  return (min-h-screen flex w-full bg-zion-blue"> <AppSidebar /> <div className=" flex flex-col w-full"> <Header /> <main className=" flex-1 p-6 md:p-10 bg-zion-blue"> <h1 className=" text-2xl font-bold text-white mb-8">Creator Dashboard</h1> <div className=" grid grid-cols-1 md:grid-cols-2 gap-6 mb-8"> {"
+</AppSidebar>"
+}</span> </span> <span className=" text-zion-slate-light font-medium">Analytics</span> </div> <div className=" text-3xl text-white font-bold">23, 400 <span className=" text-zion-cyan text-lg font-normal">Views</span></div> </div> <div className=" bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg"> <div className=" flex items-center gap-3 mb-2"> <span className=" bg-zion-purple/20 rounded-full p-2"> <span className=" text-zion-purple"> <svg width=" 28"height=" 28"><use href=" #lucide-file-text"/></svg> </span> </span> <span className=" text-zion-slate-light font-medium">Your Posts</span> </div> <div className=" text-3xl text-white font-bold">12</div> </div> </div> <div className=" bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6"> <h2 className=" text-xl font-bold text-white mb-4">Welcome back, Creator!</h2> <p className=" text-zion-slate text-lg mb-2 max-w-prose" > Create new content, monitor your analytics, or manage your account using the sidebar menu. </p> {")
+}</div> </main> <Footer /> </div> </div> <SidebarTrigger /> </SidebarProvider>) 
+</Footer>"
+
