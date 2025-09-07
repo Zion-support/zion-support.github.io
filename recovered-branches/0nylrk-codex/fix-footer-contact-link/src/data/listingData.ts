@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import { ProductListing } from "@/types/listings";
@@ -57,8 +58,20 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
+<<<<<<< HEAD
 
 
+=======
+  ];
+  return suggestions.map(text => ({
+    text
+    type: 'product', // Use a valid type from the SearchSuggestion interface
+  }));};  ];
+import { ProductListing } from "@/types/listings",
+import { SearchSuggestion } from "@/types/search",
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -179,7 +192,14 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     reviewCount: 36,
     featured: true,
     location: "Global",
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
     location: "Global",
 
     availability: "Immediate",
@@ -221,6 +241,19 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   }))
 
     ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),
+<<<<<<< HEAD
+=======
+
+  }));
+};
+
+// Generate filter options for sidebar
+export const generateFilterOptions = () => {
+<<<<<<< HEAD
+  // Extract unique categories, locations, and availability options from listings
+const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
   ].sort();
   const locations = [
     ...new Set(
@@ -286,6 +319,10 @@ export const generateFilterOptions = () => {
   // Extract unique categories, locations, and availability options from listings
 
       avatar_url: "https://images.unsplash.com / photo - 1600180758890 - 6b94519a8ba6?auto = format & fit = crop & w=100 & h=100"}
+=======
+  // Extract unique categories, locations, and availability options from listings;
+    avatar_url: "https://images.unsplash.com / photo - 1600180758890 - 6b94519a8ba6?auto = format & fit = crop & w=100 & h=100"}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     images: ["https://images.unsplash.com / photo - 1624355834900 - 99cd2071585b?auto = format & fit = crop & w=800 & h=500"];
     created_at: "2023 - 12 - 10T16:45:00.000Z";
     rating: 4.8;
@@ -412,19 +449,25 @@ locations: locations.map (location => ({
 availability_options: availability.map (item => ({
   label: item, value: item;
 }) );
+<<<<<<< HEAD
 rating_options: [1, 2, 3, 4, 5];
 }export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
+=======
+<<<<<<< HEAD
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 ratingOptions: [1, 2, 3, 4, 5] 
 
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
     ratingOptions: [1, 2, 3, 4, 5]
-import { ProductListing } from "@/types/listings",;
-import { SearchSuggestion } from "@/types/search",;
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion } from "@/types/search";
 // Shared data source for marketplace listings;
 export const MARKETPLACE_LISTINGS: ProductListing[] = [;
   {;
@@ -591,6 +634,5 @@ export const generateFilterOptions = () => {;
   }
 },;
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));

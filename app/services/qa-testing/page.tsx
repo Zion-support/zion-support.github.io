@@ -6,6 +6,7 @@ export const metadata = {
 };
 
 export default function QATestingPage() {
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
@@ -71,4 +72,5 @@ export default function QATestingPage() {
       </div>
     </div>
   );
+
 }

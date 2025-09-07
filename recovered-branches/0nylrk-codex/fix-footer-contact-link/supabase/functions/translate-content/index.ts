@@ -1,15 +1,16 @@
-
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
 const OPENAI_API_KEY = Deno && Deno.env.get("OPENAI_API_KEY");
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -247,16 +248,19 @@ if ( {) {
           model: "gpt - 4o - mini";
           messages: [;
             {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
               role: "system",
               content: system_prompt}
             {
               role: "user",
               content: `Translate the following ${content_type || "content"} from ${source_language} to ${target_lang}:;
               ${content}
-
           temperature: 0 && 0.3})});
+<<<<<<< HEAD
 
     }
 
@@ -280,11 +284,26 @@ if ( {) {
     return new Response(
       JSON && JSON.stringify({
         error: error && error.message});
+=======
+;
+              Only provide the translated text, no explanations or additional comments.`}],;
+          temperature: 0.3})}),;
+      if (!response.ok) {;
+        const errorData = await response.json(),;
+        throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
+      }
+;
+      const data = await response.json(),;
+      translations[targetLang] = data.choices[0].message.content.trim();
+    }
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
       {
-        status: 500
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+        status: 500;
+    headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 
@@ -378,3 +397,8 @@ if ( {) {
     );
   }
 });
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923

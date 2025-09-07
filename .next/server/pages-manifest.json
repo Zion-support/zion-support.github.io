@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
@@ -7,3 +8,6 @@
   "/_document": "pages/_document.js",
   "/404": "pages/404.html"
 }
+=======
+{"/_app":"pages/_app.js","/_error":"pages/_error.js","/_document":"pages/_document.js","/404":"pages/404.html"}
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923

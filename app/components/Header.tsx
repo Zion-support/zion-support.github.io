@@ -4,11 +4,15 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function Header() {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = ()  => {
+
     setIsMenuOpen(!isMenuOpen);
-  };
+  
+
+};
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">

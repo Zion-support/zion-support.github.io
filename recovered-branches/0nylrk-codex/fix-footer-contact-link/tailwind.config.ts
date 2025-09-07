@@ -2,13 +2,15 @@ import { Config } from "tailwindcss",
 import { fontFamily } from "tailwindcss/defaultTheme",
 import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
-
 import plugin from "tailwindcss/plugin",
 import animatePlugin from "tailwindcss-animate",
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 const config: Config = {
   darkMode: ["class"]
   content: [
@@ -36,15 +38,18 @@ const config: Config = {
   theme: {
     container: {
       center: true;
-      padding: "2rem"
-      screens: {
+      padding: "padding",
+    screens: {
         "2xl": "1400px"}}
       center: true,
       padding: "2rem",
       screens: {
         "2xl": "1400px"}},
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
     extend: {
       colors: {
         border: "hsl (var (--border))";
@@ -127,6 +132,7 @@ const config: Config = {
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
+<<<<<<< HEAD
 
           DEFAULT: "hsl (var (--primary))",
           foreground: "hsl (var (--primary - foreground))"}
@@ -358,6 +364,8 @@ const config: Config = {;
 
 
 
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 export default config;
 ;
 export default config;

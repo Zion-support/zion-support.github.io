@@ -1,4 +1,3 @@
-
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -12,6 +11,7 @@ import {Textarea} from "@/components/ui/textarea";
 import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
+<<<<<<< HEAD
 
 
 
@@ -32,6 +32,8 @@ import { supabase } from "@/integrations/supabase/client",
 
 
 const partnerFormSchema = z.object({
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
   twitter: z.string().optional(),
@@ -42,10 +44,12 @@ const partnerFormSchema = z.object({
   audience_size: z.string(),
   payout_method: z.string(),
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),
-
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),
@@ -93,20 +97,28 @@ const partnerFormSchema = z && z.object({;
   async function onSubmit(data: PartnerFormValues) {
     if (!user) {
       toast({
-        title: "Authentication required"
-        description: "You must be logged in to register as a partner."
+        title: "title",
+    description: "You must be logged in to register as a partner."
         variant: "destructive"})
       return
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
           }
         ])
         .select();
       if (error) throw error;
+<<<<<<< HEAD
 
 
 import { useState } from "react",;
 import { z } from "zod",;
+=======
+import { useState } from "react";
+import { z } from "zod";
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -296,8 +308,8 @@ if (return) {
         .insert ([;
 
           {
-            user_id: user.id
-            name: data.name
+            user_id: user.id;
+    name: data.name
             website: data.website |null
             social_media: {
 
@@ -320,7 +332,6 @@ if (return) {
             payout_method: data && data.payout_method,;
             bio: data && data.bio,;
             status: 'pending', // Partners need approval;
-
           }
         ]);
         .select();
@@ -339,7 +350,6 @@ if (return) {
       toast({
         title: "Submission failed"
         description: error.message |"There was a problem submitting your application."
-
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)
@@ -372,6 +382,7 @@ if (return) {
         ]);
         .select(),;
       if (error) throw error,;
+<<<<<<< HEAD
 
       toast({;
         title: "Application submitted!",;
@@ -399,6 +410,8 @@ if (return) {
       setIsSubmitting(false);
     }
 
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
               twitter: data.twitter || null,
               instagram: data.instagram || null,
               youtube: data.youtube || null,
@@ -527,10 +540,12 @@ if ( {) {
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
                 />;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
                 <FormField
                   control={form && form.control}
                   name="instagram"
@@ -540,7 +555,6 @@ if ( {) {
 
                 />;
                 <FormField;
-
                   control={form.control}
                   name="instagram";
                   render={({ field }) => (
@@ -550,9 +564,9 @@ if ( {) {
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
                 />;
               </div>;
+<<<<<<< HEAD
 
               <div className="grid sm:grid-cols-2 gap-4">;
 
@@ -620,14 +634,19 @@ if ( {) {
                     <FormItem>;
                       <FormLabel>LinkedIn (Optional)</FormLabel>;
                       <FormControl>;
+=======
+              <div className="grid sm:grid-cols-2 gap-4">;                      <FormControl>;
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
                         <Input placeholder="Profile URL or username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
                 />;
               </div>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
               <FormField
                 control={form && form.control}
                 name="niche"
@@ -673,7 +692,6 @@ if ( {) {
                           </SelectTrigger>;
                         </FormControl>;
                         <SelectContent>;
-
                 />;
 
 
@@ -738,6 +756,7 @@ if ( {) {
                       Limit: 500 characters;
                     </FormDescription>;
                     <FormMessage />;
+<<<<<<< HEAD
 
 
             <Button 
@@ -748,6 +767,10 @@ if ( {) {
               disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : "Submit Application"}
 
+=======
+            <Button 
+              type="submit" 
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : "Submit Application"}
@@ -857,6 +880,9 @@ data: existingCode
 }
 };
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 }

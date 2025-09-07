@@ -1,4 +1,6 @@
 [build]
+<<<<<<< HEAD
+
 command = "npm ci && npm run build"
 <<<<<<< HEAD
 publish = "dist"
@@ -7,6 +9,13 @@ publish = "dist"
 publish = ".next"
 
 [build.environment]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 <<<<<<< HEAD
 
   NODE_VERSION = "20"
@@ -17,26 +26,41 @@ NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> main
   command = "npm install --legacy-peer-deps && npm run build"
   publish = ".next"
+=======
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
 command = "npm ci && npm run build"
+<<<<<<< HEAD
 publish = ".next"
 =======
 publish = "dist"
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
 >>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
+=======
+>>>>>>> 79d75ebd63c0929536b7d47cf5dc16d1ef769356
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 
 [build.environment]
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 =======
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
 >>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
+=======
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -60,8 +84,13 @@ status = 200
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
 >>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
+=======
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 from = "/api/*"
 to = "/.netlify/functions/:splat"
 status = 200
@@ -96,9 +125,21 @@ X-Permitted-Cross-Domain-Policies = "none"
 Origin-Agent-Cluster = "?1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 # SPA fallback for client-side routing
 [[redirects]]
 from = "/*"
@@ -107,6 +148,12 @@ status = 200
 
 # Static redirects for specific routes
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
+<<<<<<< HEAD
 
 # Static redirects for exported site
 ursor/automate-test-improve-and-merge-code-646c
@@ -114,6 +161,7 @@ ursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
 =======
+<<<<<<< HEAD
 >>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
   for = "/*.css"
   [headers.values]
@@ -134,6 +182,10 @@ ursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
 >>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
+=======
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 [[redirects]]
 from = "/ai-customer-success-platform"
 to = "/services/ai-customer-success-platform/"
@@ -204,5 +256,10 @@ status = 301
 from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
 >>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
+=======
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923

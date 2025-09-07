@@ -1,16 +1,12 @@
-
-
 import {;
   Card,;
   CardHeader,;
   CardTitle,;
   CardDescription,;
   CardContent,;
-
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
-
 import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -28,19 +24,20 @@ import {
   CardTitle,
   CardDescription,
   CardContent,;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 import {;
   Card,;
   CardHeader,;
   CardTitle,;
   CardDescription,;
   CardContent,;
-
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
-
 import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
 import React from "react",
@@ -48,6 +45,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",
 import { useJobMatches } from "@/hooks/useJobMatches",
+<<<<<<< HEAD
 import { Skeleton } from "@/components/ui/skeleton",
 
 interface JobMatchesProps {
@@ -70,6 +68,10 @@ export function JobMatches({ jobId }: JobMatchesProps) {
 
   const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
   
+=======
+import { Skeleton } from "@/components/ui/skeleton",    useJobMatches(jobId);
+  const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
   if (isLoading) {
     return (
       <Card>
@@ -89,12 +91,17 @@ export function JobMatches({ jobId }: JobMatchesProps) {
                 <Skeleton className="h-4 w-48" />
                 <Skeleton className="h-4 w-32" />
               </div>
+<<<<<<< HEAD
             </div>
 
 
 
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
+=======
+            </div>import React from "react";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
 import { useJobMatches } from "@/hooks/useJobMatches",;
@@ -102,15 +109,17 @@ import { Skeleton } from "@/components/ui/skeleton",;
 interface JobMatchesProps {;
   jobId: string;
 }
+<<<<<<< HEAD
 
 
 export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
   const { matches, isLoading, isProcessing, triggerAIMatching } =;
 
+=======
+>>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
   const { matches, isLoading, isProcessing, triggerAIMatching } =;
     useJobMatches(jobId);
-
   if (isLoading) {;
     return (
 interface JobMatchesProps {;
@@ -158,12 +167,10 @@ interface JobMatchesProps {;
   if (matches.length === 0) {;
     return <EmptyMatchesCard onRefresh={triggerAIMatching} isProcessing={isProcessing} />;
   }
-
   return (
     <div className="space-y-4">;
       {matches && matches.map((match) => (;
         <JobMatchCard
-
           key={match && match.id}
           matchId={match && match.id}
           talentId={match && match.talent_profile?.id || ""}
@@ -285,9 +292,7 @@ if ( {) {
 }
     </div>
     </div>;
-
   );
-
         />))}
     </div>);
 }
