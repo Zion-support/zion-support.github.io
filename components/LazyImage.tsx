@@ -11,31 +11,7 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
-<<<<<<< HEAD
 
-=======
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-export default function LazyImage({
-  src
-  alt
-  width
-  height
-  className = ""
-  priority = false
-  placeholder = "empty"
-  blurDataURL
-  sizes
-  quality = 75
-  fill = false
-  style
-  onLoad
-  onError
-}: LazyImageProps) {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   src,
   alt,
   width,
@@ -51,15 +27,7 @@ export default function LazyImage({
   onLoad,
   onError,
 }: LazyImageProps) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
@@ -146,29 +114,13 @@ if ( {) {}
         ref={img_ref}`
         className={`flex items - center justify - center bg - gray - 200 text - gray - 500 ${class_name}`}
         style={style}
-<<<<<<< HEAD
-      >;
-        <div className="text-center">;
-          <div className="text-4xl mb-2">📷</div>;
-          <div className="text-sm">Image failed to load</div>;
-=======
-      >;"
-        <div className="text - center">;"
-          <div className="text - 4xl mb - 2">📷</div>;"
-          <div className="text - sm">Image failed to load</div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         </div>;
       </div>);
   }
   return (`
     <div ref={img_ref} className={`relative ${class_name}`} style={style}>;
-<<<<<<< HEAD
-      {!isInView && !priority && (
-        <div className="absolute inset - 0 flex items - center justify - center bg-gray-100">;
-=======
-      {!isInView && !priority && ("
-        <div className="absolute inset - 0 flex items - center justify - center bg - gray - 100">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           <LoadingSpinner size="sm" color="gray" />;
         </div>)}
       {isInView && (

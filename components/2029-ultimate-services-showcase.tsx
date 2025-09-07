@@ -1,108 +1,9 @@
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer-motion';
-import {}
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-import {};
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Target;
-  Crown;
-  Star;
-  TrendingUp;
-  ArrowRight;
-  CheckCircle;
-  DollarSign;
-  Users;
-  Clock;
-  Award;
-  Zap as ZapIcon;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Heart;
-  Leaf;
-  Car;
-  GraduationCap;
-  Scale;
-  Building;
-  Factory;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Eye;
-  Globe2;
-  Satellite;
-  Dna;
-  Battery;
-  Gamepad'
-  Cpu as CpuIcon;} from 'lucide-react';import {};
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-import {}
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Target,
-  Crown,
-  Star,
-  TrendingUp,
-  ArrowRight,
-  CheckCircle,
-  DollarSign,
-  Users,
-  Clock,
-  Award,
-  Zap as ZapIcon,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Heart,
-  Leaf,
-  Car,
-  GraduationCap,
-  Scale,
-  Building,
-  Factory,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Eye,
-  Globe2,
-  Satellite,
-  Dna,
-  Battery,
-;
-  Gamepad,;'
-  Cpu as CpuIcon,;} from 'lucide-react';import {};
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 
-
-import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2, Eye;
-<<<<<<< HEAD
-      transition: {}
-=======
-      transition: {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   const allServices = [;
     ...cuttingEdge2028MicroSaas,;
     ...practicalBusinessSolutions2028,;
@@ -110,159 +11,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ...quantumSpaceInnovations2028,;
   ];
   const categories = [;
-<<<<<<< HEAD
-    {;'
-      id: 'all',;'
-      name: '🚀 All Services',;
-      icon: Rocket,;
-      count: allServices && allServices.length,;'
-      color: 'from-violet-600 to-purple-600',;
-    },;
-    {;'
-      id: 'cutting-edge',;'
-      name: '⚡ Cutting-Edge',;
-      icon: Zap,;
-      count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length,;'
-      color: 'from-cyan-600 to-blue-600',;
-    },;
-    {;'
-      id: 'business',;'
-      name: '🎯 Business Solutions',;
-      icon: Target,;
-      count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length,;'
-      color: 'from-green-600 to-emerald-600',;
-    },;
-    {;'
-      id: 'ai-autonomous',;'
-      name: '🤖 AI & Autonomous',;
-      icon: Brain,;
-      count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length,;'
-      color: 'from-emerald-600 to-teal-600',;
-    },;
-    {;'
-      id: 'quantum-space',;'
-      name: '⚛️ Quantum & Space',;
-      icon: Atom,;
-      count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length,;'
-      color: 'from-indigo-600 to-blue-600',;
-    },;
-    {;'
-      id: 'ai',;'
-      name: '🧠 AI & ML',;
-      icon: Brain,;
-      count: allServices && allServices.filter(s =>;'
-        s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'));
-      ).length,;'
-      color: 'from-pink-600 to-rose-600',;
-    },;
-    {;'
-      id: 'quantum',;'
-      name: '🔮 Quantum Tech',;
-      icon: Atom,;
-      count: allServices && allServices.filter(s =>;'
-        s && s.category.some(c => c && c.includes('Quantum'));
-      ).length,;'
-      color: 'from-purple-600 to-violet-600',;
-    },;
-    {;'
-      id: 'enterprise',;'
-      name: '🏢 Enterprise',;
-      icon: Shield,;
-      count: allServices && allServices.filter(s =>;'
-        s && s.category.some(c => c && c.includes('Enterprise'));
-      ).length,;'
-      color: 'from-blue-600 to-cyan-600',;'
-    },    { id: 'all', name: '🚀 All Services', icon: Rocket, count: allServices && allServices.length, color: 'from-violet-600 to-purple-600' },;'
-    { id: 'cutting-edge', name: '⚡ Cutting-Edge', icon: Zap, count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length, color: 'from-cyan-600 to-blue-600' },;'
-    { id: 'business', name: '🎯 Business Solutions', icon: Target, count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length, color: 'from-green-600 to-emerald-600' },;'
-    { id: 'ai-autonomous', name: '🤖 AI & Autonomous', icon: Brain, count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length, color: 'from-emerald-600 to-teal-600' },;'
-    { id: 'quantum-space', name: '⚛️ Quantum & Space', icon: Atom, count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length, color: 'from-indigo-600 to-blue-600' },;'
-    { id: 'ai', name: '🧠 AI & ML', icon: Brain, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))).length, color: 'from-pink-600 to-rose-600' },;'
-    { id: 'quantum', name: '🔮 Quantum Tech', icon: Atom, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Quantum'))).length, color: 'from-purple-600 to-violet-600' },;'
-    { id: 'enterprise', name: '🏢 Enterprise', icon: Shield, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Enterprise'))).length, color: 'from-blue-600 to-cyan-600' }
-  const priceRanges = [;'
-    { id: 'all', name: 'All Prices', range: 'All' },;'
-    { id: 'low', name: 'Under $5K', range: 'Under $5,000' },;'
-    { id: 'medium', name: '$5K - $15K', range: '$5,000 - $15,000' },;'
-    { id: 'high', name: '$15K - $30K', range: '$15,000 - $30,000' },;'
-    { id: 'premium', name: 'Over $30K', range: 'Over $30,000' },;
-=======
-    {;
-      id: 'all';,;
-      name: '🚀 All Services';,;
-      icon: Rocket;,;
-      count: allServices && allServices.length;,;
-      color: 'from-violet-600 to-purple-600';,;
-    },;
-    {;
-      id: 'cutting-edge';,;
-      name: '⚡ Cutting-Edge';,;
-      icon: Zap;,;
-      count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length;,;
-      color: 'from-cyan-600 to-blue-600';,;
-    },;
-    {;
-      id: 'business';,;
-      name: '🎯 Business Solutions';,;
-      icon: Target;,;
-      count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length;,;
-      color: 'from-green-600 to-emerald-600';,;
-    },;
-    {;
-      id: 'ai-autonomous';,;
-      name: '🤖 AI & Autonomous';,;
-      icon: Brain;,;
-      count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length;,;
-      color: 'from-emerald-600 to-teal-600';,;
-    },;
-    {;
-      id: 'quantum-space';,;
-      name: '⚛️ Quantum & Space';,;
-      icon: Atom;,;
-      count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length;,;
-      color: 'from-indigo-600 to-blue-600';,;
-    },;
-    {;
-      id: 'ai';,;
-      name: '🧠 AI & ML';,;
-      icon: Brain;,;
-      count: allServices && allServices.filter(s =>;
-        s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'));
-      ).length,;
-      color: 'from-pink-600 to-rose-600';,;
-    },;
-    {;
-      id: 'quantum';,;
-      name: '🔮 Quantum Tech';,;
-      icon: Atom;,;
-      count: allServices && allServices.filter(s =>;
-        s && s.category.some(c => c && c.includes('Quantum'));
-      ).length,;
-      color: 'from-purple-600 to-violet-600';,;
-    },;
-    {;
-      id: 'enterprise';,;
-      name: '🏢 Enterprise';,;
-      icon: Shield;,;
-      count: allServices && allServices.filter(s =>;
-        s && s.category.some(c => c && c.includes('Enterprise'));
-      ).length,;
-      color: 'from-blue-600 to-cyan-600';,;
-    },    { id: 'all';, name: '🚀 All Services';, icon: Rocket;, count: allServices && allServices.length;, color: 'from-violet-600 to-purple-600' ;},;
-    { id: 'cutting-edge';, name: '⚡ Cutting-Edge';, icon: Zap;, count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length;, color: 'from-cyan-600 to-blue-600' ;},;
-    { id: 'business';, name: '🎯 Business Solutions';, icon: Target;, count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length;, color: 'from-green-600 to-emerald-600' ;},;
-    { id: 'ai-autonomous';, name: '🤖 AI & Autonomous';, icon: Brain;, count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length;, color: 'from-emerald-600 to-teal-600' ;},;
-    { id: 'quantum-space';, name: '⚛️ Quantum & Space';, icon: Atom;, count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length;, color: 'from-indigo-600 to-blue-600' ;},;
-    { id: 'ai';, name: '🧠 AI & ML';, icon: Brain;, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))).length;, color: 'from-pink-600 to-rose-600' ;},;
-    { id: 'quantum';, name: '🔮 Quantum Tech';, icon: Atom;, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Quantum'))).length;, color: 'from-purple-600 to-violet-600' ;},;
-    { id: 'enterprise';, name: '🏢 Enterprise';, icon: Shield;, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Enterprise'))).length;, color: 'from-blue-600 to-cyan-600' ;}
-  const priceRanges = [;
-    { id: 'all';, name: 'All Prices';, range: 'All' ;},;
-    { id: 'low';, name: 'Under $5K';, range: 'Under $5;,000' },;
-    { id: 'medium';, name: '$5K - $15K';, range: '$5;,000 - $15,000' },;
-    { id: 'high';, name: '$15K - $30K';, range: '$15;,000 - $30,000' },;
-    { id: 'premium';, name: 'Over $30K';, range: 'Over $30;,000' },;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   Globe2, Satellite, Dna, Battery, Gamepad, Cpu as CpuIcon
 
  } from 'lucide-react';
@@ -271,299 +20,7 @@ import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFoote
 import { cuttingEdge2028MicroSaas  } from '../data/2028-cutting-edge-micro-saas';
 import { practicalBusinessSolutions2028  } from '../data/2028-practical-business-solutions';
 import { advancedAIAutonomousServices2028  } from '../data/2028-advanced-ai-autonomous-services';
-<<<<<<< HEAD
-import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations';
-  const allServices = null;
-                  setSelectedPriceRange('all')
-origin/cursor/automate-test-improve-and-merge-code-2533
-  ];
-  const filteredServices = allServices && allServices.filter(service => {;
-    const matchesCategory =;'
-      selectedCategory === 'all' ||;'
-      (selectedCategory === 'cutting-edge' &&;
-        cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.includes(service)) ||;'
-      (selectedCategory === 'business' &&;
-        practicalBusinessSolutions2028 && practicalBusinessSolutions2028.includes(service)) ||;'
-      (selectedCategory === 'ai-autonomous' &&;
-        advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.includes(service)) ||;'
-      (selectedCategory === 'quantum-space' &&;
-        quantumSpaceInnovations2028 && quantumSpaceInnovations2028.includes(service)) ||;'
-      (selectedCategory === 'ai' &&;
-        service && service.category.some(;'
-          c => c && c.includes('AI') || c && c.includes('Machine Learning');
-        )) ||;'
-      (selectedCategory === 'quantum' &&;'
-        service && service.category.some(c => c && c.includes('Quantum'))) ||;'
-      (selectedCategory === 'enterprise' &&;'
-        service && service.category.some(c => c && c.includes('Enterprise')));
-    const matchesSearch =;
-      service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      service && service.category.some(c =>;
-        c && c.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-      );
-    const matchesPrice =;'
-      selectedPriceRange === 'all' ||;'
-      (selectedPriceRange === 'low' &&;'
-        parseFloat(service && service.price.replace(/[$]/g, '')) < 5000) ||;'
-      (selectedPriceRange === 'medium' &&;'
-        parseFloat(service && service.price.replace(/[$]/g, '')) >= 5000 &&;'
-        parseFloat(service && service.price.replace(/[$]/g, '')) < 15000) ||;'
-      (selectedPriceRange === 'high' &&;'
-        parseFloat(service && service.price.replace(/[$]/g, '')) >= 15000 &&;'
-        parseFloat(service && service.price.replace(/[$]/g, '')) < 30000) ||;'
-      (selectedPriceRange === 'premium' &&;'
-        parseFloat(service && service.price.replace(/[$]/g, '')) >= 30000);'
-    return matchesCategory && matchesSearch && matchesPrice;  });    const matchesCategory = selectedCategory === 'all' || ;'
-      (selectedCategory === 'cutting-edge' && cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.includes(service)) ||;'
-      (selectedCategory === 'business' && practicalBusinessSolutions2028 && practicalBusinessSolutions2028.includes(service)) ||;'
-      (selectedCategory === 'ai-autonomous' && advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.includes(service)) ||;'
-      (selectedCategory === 'quantum-space' && quantumSpaceInnovations2028 && quantumSpaceInnovations2028.includes(service)) ||;'
-      (selectedCategory === 'ai' && service && service.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))) ||;'
-      (selectedCategory === 'quantum' && service && service.category.some(c => c && c.includes('Quantum'))) ||;'
-      (selectedCategory === 'enterprise' && service && service.category.some(c => c && c.includes('Enterprise')));'
-    const matchesPrice = selectedPriceRange === 'all' ||;'
-      (selectedPriceRange === 'low' && parseFloat(service && service.price.replace(/[$]/g, '')) < 5000) ||;'
-      (selectedPriceRange === 'medium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 15000) ||;'
-      (selectedPriceRange === 'high' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 15000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 30000) ||;'
-      (selectedPriceRange === 'premium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 30000);
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-      },;
-    },  };        staggerChildren: 0 && 0.1;
-      }
-    }
-        stagger_children: 0.1,
-      },
-    },  }        stagger_children: 0.1;
-      }
-    }
-  }
-;
-  const item_variants = {}
-    hidden: { opacity: 0, coordinate_y: 20 },
-    visible: {}
-      opacity: 1,
-      coordinate_y: 0,
-      transition: {}
-      }
-    }
-  }
-;
-  const contact_info = {'
-    mobile: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    <>;
-      <Head>;
-        <title>;
-          2029 Ultimate Services Showcase - Zion Tech Group | Revolutionary;
-          Technology Solutions;
-        </title>;
-    const matchesPrice =
-      selectedPriceRange === 'all' |
-      (selectedPriceRange === 'low' &&
-        parseFloat(service.price.replace(/[$]/g, '')) < 5000) |
-      (selectedPriceRange === 'medium' &&
-        parseFloat(service.price.replace(/[$]/g, '')) >= 5000 &&
-        parseFloat(service.price.replace(/[$]/g, '')) < 15000) |
-      (selectedPriceRange === 'high' &&
-        parseFloat(service.price.replace(/[$]/g, '')) >= 15000 &&
-        parseFloat(service.price.replace(/[$]/g, '')) < 30000) |
-      (selectedPriceRange === 'premium' &&
-        parseFloat(service.price.replace(/[$]/g, '')) >= 30000);
 
-    return matchesCategory && matchesSearch && matchesPrice;
-  });
-
-  const containerVariants = {
-    hidden: { opacity: 0 }
-    visible: {
-      opacity: 1
-      transition: {
-staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-duration: 0.5,
-      },
-    },
-  };
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-  };
-
-  return (
-    <>
-      <Head>
-<title>
-          2029 Ultimate Services Showcase - Zion Tech Group | Revolutionary
-          Technology Solutions
-        </title>
-        <meta
-          name='description'
-          content='Explore our revolutionary 2029 services including AI Consciousness Evolution, Quantum Time Manipulation, Space Quantum Communication, and autonomous AI systems. Transform your business with future technology.'
-        />
-        <meta
-          name='keywords'
-          content='2029 technology, AI consciousness, quantum computing, space technology, autonomous AI, business automation, micro SAAS, Zion Tech Group'
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/2029-ultimate-services-showcase'
-        />
-origin/cursor/automate-test-improve-and-merge-code-2533
-        {/* Open Graph */}
-        <meta'
-          property='og:title''
-          content='2029 Ultimate Services Showcase - Zion Tech Group'
-        />;
-        <meta'
-          property='og:description''
-          content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.'
-        />;
-        <meta'
-          property='og:url'
-        {/* Twitter */}'
-        <meta name='twitter:card' content='summary_large_image' />;
-        <meta'
-          name='twitter:title''
-          content='2029 Ultimate Services Showcase - Zion Tech Group'
-        />;
-        <meta'
-          name='twitter:description''
-          content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.'
-        />      </Head>        {/* Open Graph */}
-        {/* Twitter */}
-        <meta;'
-          name='description';'
-          content='Explore our revolutionary 2029 services including AI Consciousness Evolution, Quantum Time Manipulation, Space Quantum Communication, and autonomous AI systems. Transform your business with future technology.';
-        />;
-        <meta;'
-          name='keywords';'
-          content='2029 technology, AI consciousness, quantum computing, space technology, autonomous AI, business automation, micro SAAS, Zion Tech Group';
-        />;'
-        <meta name='viewport' content='width = device - width, initial - scale = 1' />;
-        <link;'
-          rel='canonical';'
-          href='https://ziontechgroup.com / 2029 - ultimate - services - showcase';
-        />;
-        {/* Open Graph */}
-        <meta;'
-          property='og:title';'
-          content='2029 Ultimate Services Showcase - Zion Tech Group';
-        />;
-        <meta;'
-          property='og:description';'
-          content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.';
-        />;
-        <meta;'
-          property='og:url';'
-          content='https://ziontechgroup.com / 2029 - ultimate - services - showcase';
-        />;'
-        <meta property='og:type' content='website' />;
-        {/* Twitter */}'
-        <meta name='twitter:card' content='summary_large_image' />;
-        <meta;'
-          name='twitter:title';'
-          content='2029 Ultimate Services Showcase - Zion Tech Group';
-        />;
-        <meta;'
-          name='twitter:description';'
-          content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.';
-        />      </Head>        {/* Open Graph */}
-        <meta property="og:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />;"
-        <meta property="og:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />;"
-        <meta property="og:url" content="https://ziontechgroup.com / 2029 - ultimate - services - showcase" />;"
-        <meta property="og:type" content="website" />;
-        {/* Twitter */}"
-        <meta name="twitter:card" content="summary_large_image" />;"
-        <meta name="twitter:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />;"
-        <meta name="twitter:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />;
-      </Head>;
-
-        />
-      </Head>
-      <UltraFuturisticNavigation2029 />
-      {/* Hero Section */}
-<section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black'>
-        {/* Animated Background */}
-        <div className='absolute inset-0'>
-          <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 animate-pulse' />
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0.15),transparent_50%)] animate-spin-slow' />
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)] animate-pulse' />
-        </div>
-
-        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8'>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-className='max-w-4xl mx-auto'
-          >
-            <div className='flex items-center justify-center space-x-2 mb-6'>
-              <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl'>
-                <Rocket className='w-9 h-9 text-white' />
-              </div>
-              <div className='w-16 h-16 bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center shadow-2xl'>
-                <Brain className='w-9 h-9 text-white' />
-              </div>
-              <div className='w-16 h-16 bg-gradient-to-br from-indigo-400 via-purple-500 to-violet-600 rounded-2xl flex items-center justify-center shadow-2xl'>
-                <Atom className='w-9 h-9 text-white' />
-              </div>
-            </div>
-            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
-              <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
-                2029 Ultimate
-              </span>
-              <br />
-              <span className='bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-600 bg-clip-text text-transparent'>
-                Services Showcase
-              </span>
-            </h1>
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
-              Experience the future of technology with our revolutionary AI
-              consciousness, quantum computing, space technology, and autonomous
-              systems. Transform your business with innovations that define
-              tomorrow.
-            </p>
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
-              <Link
-                href='/contact'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              >
-                Get Started Today;
-              </Link>"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg">;
-                Get Started Today;
-              </Link>;
-<<<<<<< HEAD
-              <Link
-href='/pricing'
-                className='px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg'
-=======
-              <Link'
-                href='/pricing''"
-                className='px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg'                href="/pricing""
-                className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >
                 View Pricing;
               </Link>
@@ -660,35 +117,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 type="text""
                 placeholder="Search services..."
                 value={searchTerm}
-<<<<<<< HEAD
-      {/* Filters Section */}
-<section className='py-16 bg-gray-900/50 border-b border-cyan-500/20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex flex-col lg:flex-row items-center justify-between space-y-6 lg:space-y-0'>
-            {/* Search */}
-            <div className='relative w-full lg:w-96'>
-              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400' />
-              <input
-                type='text'
-                placeholder='Search services...'
-                value={searchTerm}
-                onChange={e => setSearchTerm(e.target.value)}
-                className='w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200'
-              />
-            </div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            {/* Category Filter */}
-<div className='flex flex-wrap items-center space-x-2'>
-              {categories.map(category => (
-                <button
 
-=======
-            {/* Category Filter */}'
-            <div className='flex flex-wrap items-center space-x-2'>"
-              {categories.map(category => (            <div className="flex flex-wrap items-center space-x-2">
-              {categories.map((category) => (
-                <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${}
@@ -696,7 +125,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`'
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'`
                   }`}
-
 
                 >
 <div className='flex items-center space-x-2'>
@@ -712,18 +140,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
               ))}
-<<<<<<< HEAD
-            {/* Price Filter */}
-<div className='flex items-center space-x-2'>
-              {priceRanges.map(range => (
-                <button
-=======
-            {/* Price Filter */}'
-            <div className='flex items-center space-x-2'>"
-              {priceRanges.map(range => (                <button            <div className="flex items-center space-x-2">
-              {priceRanges.map((range) => (
-                <button;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                   }`}
                 >;
                   {range && range.name}
@@ -731,19 +148,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
 
                   key={range.id}
-<<<<<<< HEAD
-                  onClick={() => setSelectedPriceRange(range.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-                    selectedPriceRange === range.id
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg'
-: 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
-=======
-                  onClick={() => setSelectedPriceRange(range.id)}`
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${}
-                    selectedPriceRange === range.id'
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg''`
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'                  }`}                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                   }`}
                 >
                   {range.name}
@@ -759,7 +164,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
       {/* Services Grid */}
-
 
             variants={containerVariants}"
             initial="hidden""
@@ -818,20 +222,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {cat}
                         </span>
                       ))}
-<<<<<<< HEAD
-                      {service.category.length > 3 && (
-<span className='px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg'>
-=======
-                      {service.category.length > 3 && ('"
-                        <span className='px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg'>                          +{service.category.length - 3}                        <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                           +{service.category.length - 3}
                         </span>
                       )}
                     </div>
                   </div>'
                           className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'                        >
-
 
                         >
 {cat}
@@ -843,13 +240,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           +{service.category.length - 3}
                         </span>
 
-<<<<<<< HEAD
-                  {/* Features Preview */}
-<div className='mb-6'>
-=======
-                  {/* Features Preview */}'
-                  <div className='mb-6'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <h4 className='text-sm font-semibold text-white mb-2'>
                       Key Features:
                     </h4>'
@@ -858,41 +248,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <li;
                           key={idx}'
                           className='flex items-center space-x-2 text-sm text-gray-300'
-<<<<<<< HEAD
-                        >
-                          <CheckCircle className='h-3 w-3 text-cyan-400 flex-shrink-0' />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                      {service.features.length > 3 && (
-<li className='text-xs text-gray-500'>
-                          +{service.features.length - 3} more features
-=======
-                        >'
-                          <CheckCircle className='h-3 w-3 text-cyan-400 flex-shrink-0' />                          <span>{feature}</span>
-                        </li>
-                      ))}
-                      {service.features.length > 3 && ('"
-                        <li className='text-xs text-gray-500'>                          +{service.features.length - 3} more features                  <div className="mb-6">"
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>"
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, idx) => ("
-                        <li key={idx} className="flex items-center space-x-2 text-sm text-gray-300">"
-                          <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />
-                        </li>
-                      ))}
-                      {service.features.length > 3 && ('"
-                        <li className='text-xs text-gray-500'>                        <li className="text-xs text-gray-500">
-                          +{service.features.length - 3} more features;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                         </li>
                       )}
 
                     </div>;
                   </div>;
-
-
-
 
                           {cat}
                         </span>;
@@ -1001,9 +362,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion && motion.div>;'"
                   <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-
-
-
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;'
             <div className='text-center py-20'>;'
@@ -1015,48 +373,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h3>;'
               <p className='text-gray-400 mb-8'>;
                 Try adjusting your search criteria or browse all services;
-<<<<<<< HEAD
-              </p>              <button
-                onClick={() => {;
-          {filteredServices.length === 0 && (
-<div className='text-center py-20'>
-              <div className='w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6'>
-                <Search className='w-12 h-12 text-gray-400' />
-              </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                No services found
-              </h3>
-              <p className='text-gray-400 mb-8'>
-                Try adjusting your search criteria or browse all services
-              </p>
-              <button
-                onClick={() => {
-origin/cursor/automate-test-improve-and-merge-code-2533
-                  setSelectedCategory('all');
-                  setSearchTerm('');
-setSelectedPriceRange('all');
-=======
-              </p>              <button;
-                onClick={() => {;'
-                  setSelectedCategory('all');'
-                  setSearchTerm('');'
-                  setSelectedPriceRange('all');
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                 }}
                 onClick={() => {'
                   setSelectedCategory('all');'
                   setSearchTerm('');'
                   setSelectedPriceRange('all')
-<<<<<<< HEAD
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 }}
-=======
-                }}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
                 Reset Filters;
@@ -1064,31 +389,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           )}
           )}
-<<<<<<< HEAD
-      {/* Contact CTA */}'
-      <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>;'"
-        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">;"
-=======
-      {/* Contact CTA */}
-      <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>;
-        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div;
       {/* Contact CTA */}"
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">"
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            </h2>"
-=======
-          <motion.div
-            initial={{ opacity: 0;, y: 30 ;}}
-            whileInView={{ opacity: 1;, y: 0 ;}}
-            </h2>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join the future of technology with our revolutionary services.
               Contact us today to discuss how we can help you achieve your goals.
@@ -1192,14 +499,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <UltraFuturisticFooter2029 />;
     </>));
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
       <UltraFuturisticFooter2029 />
     </>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

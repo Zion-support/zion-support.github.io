@@ -1,25 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-export type RedemptionType =
-  | "boost_profile"
-  | "promote_listing"
-  | "premium_support";
-export default function UseTokensModal({
-origin/cursor/automate-test-improve-and-merge-code-2533
-  isOpen
-  onClose
-  serviceId
-  defaultType
-}: {
-
-=======
-  isOpen;
-  onClose;
-  serviceId;
-  defaultType;
-}: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   isOpen,
   onClose,
   serviceId,
@@ -53,16 +32,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   async function redeem() {}
     setIsSubmitting(true);
-<<<<<<< HEAD
-    try {
-      const res = await fetch('/api/tokens/redeem', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ account, amount: tokens, type, serviceId }),
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       });
       const data = await res && res.json();
       if (data?.ok) {;
@@ -74,8 +44,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   if (!isOpen) return null;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   return (
             >;
               <option value="boost_profile">Boost profile</option>;"
@@ -109,37 +78,7 @@ onClick={onClos}
               <option value='premium_support' />Get premium support</option>;
             </select>;
           </div>;
-<<<<<<< HEAD
-              <button;
-                onClick={connect}"
-                className="enhanced-button enhanced-button-primary">;
-                Connect MetaMask;
-              </button>;
-<<<<<<< HEAD
-=======
-          <div className='text-sm' />;
-            <div className='mb-1' />Amount (ZION)</div>;
-            <input;
-              type='number';
-              min={1}
-              value={tokens}
-              onChange={e = /> setTokens(parseInt(e.target.value || '0', 10))}
-              className='w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2';
-            />;
-            <div className='opacity-70 mt-1' />Approx. ${usdValue} USD</div>;
-          </div>;
-          <div className='text-sm' />;
-            <div className='mb-1' />Wallet</div>;
-            {account ? (<div className='rounded border border-green-600 text-green-700 dark:text-green-400 px-2 py-2' />;}
-                Connected: {account.slice(0, 6)}…{account.slice(-4)}
-              </div>;
-            ) : (<button;
-                onClick={connect}
-                className='enhanced-button enhanced-button-primary' />
 
-                Connect MetaMask;
-              </button>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <div className='fixed inset-0 z-[60] flex items-end sm:items-center justify-center'>
       <div className='absolute inset-0 bg-black/40' onClick={onClose} />
       <div className='relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4'>
@@ -241,85 +180,20 @@ disabled={!account |isSubmitting |tokens <= 0}
             <div className=\"mb-1\" />Wallet</div>;"
             {account ? (<div className=\"rounded border border - green - 600 text - green - 700 dark:text - green - 400 px-2 py-2\" />;}
                 Connected: {account.slice (0, 6)}…{account.slice (-4)}
-<<<<<<< HEAD
-              </div>) : (
-              <button;
-                on_click={connect}
-                className="enhanced - button enhanced-button-primary";
-=======
-          <button;
-            disabled={!account |isSubmitting |tokens <= 0}
-            onClick={redeem}"
-            className="enhanced-button enhanced-button-primary disabled: opacity-50">;"
-          <div className="text - sm">;"
-            <div className="mb - 1">Amount (ZION)</div>;
-            <input;"
-              type="number";
-              min={1}
-              value={tokens}"
-              on_change={(e) => set_tokens (parse_int (e.target.value || "0", 10))}"
-              className="w - full rounded border border - gray - 300 dark:border - gray - 700 bg - transparent px - 2 py - 2";
-            />;"
-            <div className="opacity - 70 mt - 1">Approx. ${usd_value} USD</div>;
-          </div>;"
-          <div className="text - sm">;"
-            <div className="mb - 1">Wallet</div>;
-            {account ? ("
-              <div className="rounded border border - green - 600 text - green - 700 dark:text - green - 400 px - 2 py - 2">;
-                Connected: {account.slice (0, 6)}…{account.slice (-4)}
-              </div>) : (
-              <button;
-                on_click={connect}"
-                className="enhanced - button enhanced - button - primary";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               >;
                 Connect MetaMask;
               </button>)}
           </div>;
-<<<<<<< HEAD
-        </div>;
-        <div className="mt - 4 flex items-center justify-between">;
-          <div className="text-xs opacity-70">;
-=======
-        </div>;"
-        <div className="mt - 4 flex items - center justify - between">;"
-          <div className="text - xs opacity - 70">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              </div>) : (<button;
-                on_click={connect}"
-                className=\"enhanced - button enhanced - button - primary\";"
-                className=\"enhanced - button enhanced-button-primary\" />
 
-                Connect MetaMask;
-              </button>)}
-          </div>;
-        </div>;"
-        <div className=\"mt - 4 flex items - center justify - between\" />;"
-          <div className=\"text - xs opacity - 70\" />;"
-        <div className=\"mt - 4 flex items-center justify-between\" />;"
-          <div className=\"text-xs opacity-70\" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             You can spend tokens to boost visibility, promote listings, or;
             access premium support.;
           </div>;
           <button;
             disabled={!account || is_submitting || tokens <= 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            on_click={redeem}
-            className="enhanced - button enhanced - button-primary disabled: opacity-50";
-=======
-            on_click={redeem}"
-            className="enhanced - button enhanced - button - primary disabled: opacity - 50";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-          >;
-=======
-            on_click={redeem}"
-            className=\"enhanced - button enhanced - button - primary disabled: opacity - 50\";"
-            className=\"enhanced - button enhanced - button-primary disabled: opacity-50\" />
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+          >;
+
             Redeem;
           </button>;
         </div>;"
@@ -328,19 +202,7 @@ disabled={!account |isSubmitting |tokens <= 0}
           <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className=\"enhanced-button enhanced-button-primary disabled: opacity-50\" />Redeem</button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-"
-        <div className="mt-4 flex items-center justify-between">"
-          <div className="text-xs opacity-70">You can spend tokens to boost visibility, promote listings, or access premium support.</div>"
-=======
-    </div>;
-  )}
-    </div>)}
-}
 
-        <div className="mt-4 flex items-center justify-between">
-          <div className="text-xs opacity-70">You can spend tokens to boost visibility, promote listings, or access premium support.</div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className="enhanced-button enhanced-button-primary disabled: opacity-50">Redeem</button>
         </div>
       </div>
@@ -349,13 +211,4 @@ disabled={!account |isSubmitting |tokens <= 0}
 }
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

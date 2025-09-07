@@ -1,128 +1,16 @@
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react';'
-import {AlertTriangle, RefreshCw} from 'lucide-react';
-interface Props {}
-  children: ReactNode,  fallback?: ReactNode;
-}
-interface State {}
-      }
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">;"
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">;"
-            <div className="flex justify-center mb-4">;"
-              <AlertTriangle className="w-12 h-12 text-red-500" />;
-            </div>;"
-            <h2 className="text-xl font-semibold text-gray-900 mb-2">;
-              Something went wrong;
-            </h2>;"
-            <p className="text-gray-600 mb-6">;
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw } from 'lucide-react';
 
-interface Props  {children: ReactNode,  fallback?: ReactNode;}
-}
-
-interface State  {}
-      return (<div className=\"min-h-screen flex items-center justify-center bg-gray-50\" />;"
-          <div className=\"max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center\" />;"
-            <div className=\"flex justify-center mb-4\" />;"
-              <AlertTriangle className=\"w-12 h-12 text-red-500\" />;
-            </div>;"
-            <h2 className=\"text-xl font-semibold text-gray-900 mb-2\" />;
-              Something went wrong;
-            </h2>;"
-            <p className=\"text-gray-600 mb-6\" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               We&apos, re sorry, but something unexpected happened. Please try refreshing the page.;
             </p>;
             <button;
               onClick={this && this.handleRetry}"
-<<<<<<< HEAD
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors">;"
-              <RefreshCw className="w-4 h-4 mr-2" />;
-              Try Again;
-            </button>;'
-            {process && process.env.NODE_ENV === 'development' && this && this.state.error && (;"
-              <details className="mt-4 text-left">;"
-                <summary className="cursor-pointer text-sm text-gray-500">;
-                  Error Details;
-                </summary>;"
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">;
-=======
-              className=\"inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors\" />;"
-              <RefreshCw className=\"w-4 h-4 mr-2\" />;
-              Try Again;
-            </button>;"
-            {process && process.env.NODE_ENV === 'development' && this && this.state.error && (<details className=\"mt-4 text-left\" />;"
-                <summary className=\"cursor-pointer text-sm text-gray-500\" />;
-                  Error Details;
-                </summary>;}"
-                <pre className=\"mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto\" />;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                   {this && this.state.error && error.stack}
                 </pre>;
               </details>;
             )}
   has_error: boolean,error?: Error;
 }
-<<<<<<< HEAD
-class ErrorBoundary extends Component < Props, State> {}
-  public state: State = {}
-    has_error: false;
-  },
-  public static getDerivedStateFromError (error: Error): State {}
-    return { has_error: true, error }
-  }
-  public componentDidCatch (error: Error, error_info: ErrorInfo) {}
-    // eslint - disable - next - line no - console;'
-    console.error ('ErrorBoundary caught an error:', error, error_info);
-  }
-  private handle_retry = () => {}
-    this.set_state ({ has_error: false, error: undefined }),
-  }
-;
-  public render () {}
-    // Check condition;
-if ( {) {}
-  $2;
-}
-      // Check condition;
-if ( {) {}
-  $2;
-}
-        return this.props.fallback;
-      }
-<<<<<<< HEAD
-      return (
-        <div className="min - h-screen flex items - center justify - center bg-gray-50">;
-          <div className="max - w-md w - full bg - white shadow - lg rounded - lg p-6 text-center">;
-            <div className="flex justify-center mb-4">;
-              <AlertTriangle className="w - 12 h - 12 text-red-500" />;
-            </div>;
-            <h2 className="text - xl font - semibold text - gray-900 mb-2">;
-=======
-class ErrorBoundary extends Component < Props, State> {public state: State = {has_error: false;}
-  },public static getDerivedStateFromError (error: Error): State {return { has_error: true, error }
-  }
-  public componentDidCatch (error: Error, error_info: ErrorInfo) {// eslint - disable - next - line no - console;}
-    console.error ('ErrorBoundary caught an error:', error, error_info)}
-  private handle_retry = () => {this.set_state ({ has_error: false, error: undefined}
-})}public render () {// Check condition;}
-if ( {) {$2;}
-}
-      // Check condition;
-if ( {) {$2;}
-}
-        return this.props.fallback;
-      }"
-      return (<div className=\"min - h-screen flex items - center justify - center bg-gray-50\" />;"
-          <div className=\"max - w-md w - full bg - white shadow - lg rounded - lg p-6 text-center\" />;"
-            <div className=\"flex justify-center mb-4\" />;"
-              <AlertTriangle className=\"w - 12 h - 12 text-red-500\" />;
-            </div>;"
-            <h2 className=\"text - xl font - semibold text - gray-900 mb-2\" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
               Something went wrong;
             </h2>;"
             <p className=\"text - gray-600 mb-6\" />;
@@ -138,40 +26,7 @@ if ( {) {$2;}
             {process.env.NODE_ENV === 'development' && this.state.error && (<details className=\"mt-4 text-left\" />;"
                 <summary className=\"cursor - pointer text - sm text-gray-500\" />;
                   Error Details;
-<<<<<<< HEAD
-                </summary>;
-                <pre className="mt - 2 text - xs text - red - 600 bg - red - 50 p-2 rounded overflow-auto">;
-=======
-      return ("
-        <div className="min - h-screen flex items - center justify - center bg - gray - 50">;"
-          <div className="max - w-md w - full bg - white shadow - lg rounded - lg p - 6 text - center">;"
-            <div className="flex justify - center mb - 4">;"
-              <AlertTriangle className="w - 12 h - 12 text - red - 500" />;
-            </div>;"
-            <h2 className="text - xl font - semibold text - gray - 900 mb - 2">;
-              Something went wrong;
-            </h2>;"
-            <p className="text - gray - 600 mb - 6">;
-              We & apos, re sorry, but something unexpected happened. Please try refreshing the page.;
-            </p>;
-            <button;
-              on_click={this.handle_retry}"
-              className="inline - flex items - center px - 4 py - 2 bg - blue - 600 text - white rounded - lg hover: bg - blue - 700 transition - colors";
-            >;"
-              <RefreshCw className="w - 4 h - 4 mr - 2" />;
-              Try Again;
-            </button>;'
-            {process.env.NODE_ENV === 'development' && this.state.error && ("
-              <details className="mt - 4 text - left">;"
-                <summary className="cursor - pointer text - sm text - gray - 500">;
-                  Error Details;
-                </summary>;"
-                <pre className="mt - 2 text - xs text - red - 600 bg - red - 50 p - 2 rounded overflow - auto">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                </summary>;}"
-                <pre className=\"mt - 2 text - xs text - red - 600 bg - red - 50 p-2 rounded overflow-auto\" />;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                   {this.state.error.stack}
                 </pre>;
               </details>)}
@@ -180,9 +35,4 @@ if ( {) {$2;}
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-export default ErrorBoundary;'"
-=======
 
-export default ErrorBoundary;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

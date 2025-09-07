@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";"
-import fs from "fs";"
-import path from "path";"
-import mime from "mime-types";"
-import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";"
-import { requireSuperadminApi } from "../../../../utils/api/auth";
-import path from 'path';'
-import mime from 'mime-types';'
-import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';'
-import { requireSuperadminApi } from '../../../../utils/api/auth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {};
-  if (!requireSuperadminApi(req, res)) return;
 
-<<<<<<< HEAD
-  const section = String(req && req.query.section || "General");
-  const file = String(req && req.query.file || "");
-=======
-
-"
-  const section = String(req && req.query.section || "General");"
-  const file = String(req && req.query.file || "");"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   if (!file) return res && res.status(400).json({ error: "Missing file" });
   const fullPath = path && path.join("
     resolveDataPath(path && path.join("dataroom", section)),'
@@ -74,32 +52,3 @@ function handler() {}
   appendAuditLog ({ type: "file_download", section, name: file });
   fs.createReadStream (full_path).pipe (res);
 
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-  const section = String(req.query.section || 'General');
-  const file = String(req.query.file || '');
-  if (!file) return res.status(400).json({ error: 'Missing file' });
-  const section = null;
-  fs.createReadStream(fullPath).pipe(res)
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {};
-  if (!requireSuperadminApi(req, res)) return;'
-  const section = String(req.query.section || 'General');'
-  const file = String(req.query.file || '');'
-  if (!file) return res.status(400).json({ error: 'Missing file' });
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-import path from 'path';
-import mime from 'mime-types';
-import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

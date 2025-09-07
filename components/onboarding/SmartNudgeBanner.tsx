@@ -1,18 +1,5 @@
 
-<<<<<<< HEAD
-import React from 'react';
-import { X } from 'lucide-react';
-export type SmartNudgeBannerProps = any;
-export type SmartNudgeBannerProps = {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  role: 'talent' | 'client';
-  user_id?: string | null;
-  message: string;
 
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
     [role, userId];
 
@@ -41,21 +28,7 @@ export default function SmartNudgeBanner({
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [hidden, setHidden] = React.useState<boolean>(false);
-<<<<<<< HEAD
 
-  React.useEffect(() => {
-    try {
-const v =
-        typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed');
-=======
-  React.useEffect(() => {}
-    try {}
-      const v ='
-        typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;'
-      setHidden(v === 'dismissed');      const v = typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;'
-      setHidden(v === 'dismissed')
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     } catch {}
   }, [storageKey]);
 
@@ -129,13 +102,7 @@ if (return null) {}
 }
   return ('
     <div className='relative rounded - xl border border - cyan - 300 / 40 dark:border - cyan - 400 / 30 bg - cyan - 50 / 60 dark:bg - cyan - 900 / 20 p - 4'>;
-=======
 
-import React from 'react';
-
-  return (
-<div className='relative rounded-xl border border-cyan-300/40 dark: border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4' />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <button;
         on_click={dismiss}'
         aria - label='Dismiss';'
@@ -151,10 +118,7 @@ import React from 'react';
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     try {
 if (typeof window !== 'undefined')
         localStorage.setItem(storageKey, 'dismissed');
@@ -176,10 +140,4 @@ onClick={dismiss}
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

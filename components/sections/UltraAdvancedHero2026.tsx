@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 
 import Link from 'next/link';
@@ -33,33 +28,7 @@ import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-d
 
 export default function UltraAdvancedHero2026() {
   const totalServices = null;
-<<<<<<< HEAD
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Rocket
-  Globe
-  Sparkles
-  CheckCircle
-  Phone
-  Mail
-=======
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Rocket;
-  Globe;
-  Sparkles;
-  CheckCircle;
-  Phone;
-  Mail;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   MapPin;
   ArrowRight,
   Star,
@@ -88,28 +57,6 @@ export default function UltraAdvancedHero2026() {};
 
   };
 
-
-<<<<<<< HEAD
-export default function UltraAdvancedHero2026() {
-  const totalServices =
-    aiAutonomousServices2026.length +
-    quantumSpaceTechServices2026.length +
-    metaverseDigitalRealityServices2026.length;
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const containerVariants = {
-    hidden: { opacity: 0 }
-import {motion} from 'framer-motion';
-=======
-  const containerVariants = {}
-    hidden: { opacity: 0 }'
-import {motion} from 'framer-motion';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Link from 'next / link';
 import {}
   ArrowRight,
@@ -155,60 +102,7 @@ function UltraAdvancedHero2026() {}
 ;
   const container_variants = {}
     hidden: { opacity: 0 },
-<<<<<<< HEAD
-    visible: {
-      opacity: 1
-      transition: {
-staggerChildren: 0.1,
-      },
-    },
-  };
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 }
-    visible: {
-      opacity: 1
-      y: 0
-      transition: {
-duration: 0.8,
-      },
-    },
-  };
-
-  return (
-    <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
-      {/* Enhanced Background Effects */}
-      <div className='absolute inset-0'>
-        <div className='absolute inset-0 bg-gradient-to-br from-purple-900/40 via-black to-cyan-900/40'></div>
-        <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/30 via-transparent to-blue-900/30'></div>
-        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.15),transparent_50%)]'></div>
-        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(120,119,198,0.15),transparent_50%)]'></div>
-        {/* Animated Background Elements */}
-        <div className='absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>
-        <div className='absolute bottom-20 right-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-500'></div>
-      </div>
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-        <motion.div
-origin/cursor/automate-test-improve-and-merge-code-2533
-          variants={containerVariants}
-          initial='hidden'
-          animate='visible'
-=======
-    visible: {}
-      opacity: 1;
-      transition: {}
-  const itemVariants = {}
-    hidden: { opacity: 0, y: 30 }
-    visible: {}
-      opacity: 1;
-      y: 0;
-      transition: {}
-          variants={containerVariants}'
-          initial='hidden''
-          animate='visible''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className='space-y-8'>;
           {/* Badge */}
           <motion&& motion.div;
@@ -232,10 +126,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <br />;'
             <span className='text-white'>is Now</span>;
           </motion && motion.h1>;
-
-
-
-
 
           {/* Subheading */}
           <motion&& motion.p;
@@ -351,59 +241,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate="visible""
           className="space-y-8">;
           {/* Badge */}
-<<<<<<< HEAD
-            className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
-          >
-            <div className='text-center p-4 bg-gradient-to-br from-purple-800/20 to-purple-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl'>
-              <div className='text-3xl font-bold text-purple-400'>
-                {aiAutonomousServices2026.length}
-              </div>
-              <div className='text-gray-300 text-sm'>
-                AI Autonomous Services
-              </div>
-            </div>
-            <div className='text-center p-4 bg-gradient-to-br from-cyan-800/20 to-cyan-900/20 backdrop-blur-xl border border-cyan-500/20 rounded-2xl'>
-              <div className='text-3xl font-bold text-cyan-400'>
-                {quantumSpaceTechServices2026.length}
-              </div>
-              <div className='text-gray-300 text-sm'>Quantum Space Tech</div>
-            </div>
-            <div className='text-center p-4 bg-gradient-to-br from-pink-800/20 to-pink-900/20 backdrop-blur-xl border border-pink-500/20 rounded-2xl'>
-              <div className='text-3xl font-bold text-pink-400'>
-                {metaverseDigitalRealityServices2026.length}
-              </div>
-              <div className='text-gray-300 text-sm'>Metaverse Services</div>
-            </div>
-            <div className='text-center p-4 bg-gradient-to-br from-green-800/20 to-green-900/20 backdrop-blur-xl border border-green-500/20 rounded-2xl'>
-              <div className='text-3xl font-bold text-green-400'>∞</div>
-              <div className='text-gray-300 text-sm'>Possibilities</div>
-            </div>
-          </motion.div>
-          {/* Key Benefits */}
-<motion.div
-            variants={itemVariants}
-            className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'
-          >
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl'>
-              <CheckCircle className='w-6 h-6 text-blue-400 flex-shrink-0' />
-              <span className='text-gray-200 font-medium'>
-                First-to-Market Technology
-              </span>
-            </div>
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl border border-purple-500/20 rounded-xl'>
-              <CheckCircle className='w-6 h-6 text-purple-400 flex-shrink-0' />
-              <span className='text-gray-200 font-medium'>
-                1000% ROI Guaranteed
-              </span>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            </div>
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
-              <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
-=======
-            </div>'
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>'
-              <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               <span className='text-gray-200 font-medium'>
                 24/7 Autonomous Operation;
               </span>            </div>
@@ -438,33 +276,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >"
               <Zap className="w-6 h-6 mr-3" />
-<<<<<<< HEAD
-              </span>
-            </div>
-          </motion.div>
-          {/* Call to Action Buttons */}
-<motion.div
-            variants={itemVariants}
-            className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'
-          >
-            <Link
-              href='/services'
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold text-lg rounded-2xl hover:from-purple-700 hover:via-pink-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl'
-            >
-              <Rocket className='w-6 h-6 mr-3' />
-              Explore All Services
-              <ArrowRight className='w-6 h-6 ml-3' />
-            </Link>
-            <Link
-              href='/contact'
-              className='inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
-            >
-              <Zap className='w-6 h-6 mr-3' />
-origin/cursor/automate-test-improve-and-merge-code-2533
-              Get Started Today
-=======
-              Get Started Today;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             </Link>
           </motion.div>
 "
@@ -658,15 +470,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           🚀;
         </motion.div>;
         <motion.div;
-<<<<<<< HEAD
-      {/* Floating Elements */}
-<div className='absolute inset-0 pointer-events-none'>
-        <motion.div
-origin/cursor/automate-test-improve-and-merge-code-2533
-          animate={{
-=======
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             coordinate_y: [0, 20, 0],
             rotate: [0, -5, 0],
           }}
@@ -824,28 +628,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
   );
-<<<<<<< HEAD
-            ease: 'easeInOut'
-          }}
-          className='absolute bottom-1/3 right-10 text-5xl opacity-20'
-            ease: "easeInOut"
-          }}
-          className="absolute bottom-1/3 right-10 text-5xl opacity-20"
-        >
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           🌐
         </motion.div>
       </div>
     </section>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

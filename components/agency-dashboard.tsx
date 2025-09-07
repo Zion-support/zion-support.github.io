@@ -1,29 +1,5 @@
 import type { GetServerSideProps } from 'next';
-<<<<<<< HEAD
 
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
-type Props = { vendor: Vendor | null };
-
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
-export default function AgencyDashboardPage() { return null; }
-type Props = { vendor: Vendor | null };
-
-
-<<<<<<< HEAD
-import { FormEvent, useEffect, useState } from 'react';
-import type { Vendor } from '../utils/vendor-types';
-type Props = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default function AgencyDashboardPage({ vendor }: Props) {
-  const [activeVendor, setActiveVendor] = useState(vendor);
-  const [pkgTitle, setPkgTitle] = useState('');
-  const [pkgDesc, setPkgDesc] = useState('');
-=======
-export default function AgencyDashboardPage({ vendor }: Props) {};
-  const [activeVendor, setActiveVendor] = useState(vendor);'
-  const [pkgTitle, setPkgTitle] = useState('');'
-  const [pkgDesc, setPkgDesc] = useState('');'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only;
@@ -36,47 +12,12 @@ export default function AgencyDashboardPage({ vendor }: Props) {};
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
     const packages = []
       ...(activeVendor.packages |[])
-<<<<<<< HEAD
 
-if (!activeVendor)
-    return (
-      <div className='text-gray-500'>No vendor found. Please apply first.</div>
-    );
-
-  async function saveProfile(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const updated = {
-...activeVendor,
-      name: String(formData.get('name') || activeVendor.name),
-      about: String(formData.get('about') || activeVendor.about || ''),
-      servicesOffered: String(
-        formData.get('servicesOffered') |
-          activeVendor.servicesOffered?.join(',') |
-          ''
-      )
-        .split(',')
-        .map(s => s.trim())
-        .filter(Boolean)
-    } as Vendor;
-    // For MVP, update via direct API not implemented; keep local preview only
-    setActiveVendor(updated);
-  }
-  function addPackage() {
-    if (!pkgTitle || !pkgPrice || !activeVendor) return;
-const packages = [
-      ...(activeVendor.packages || []),
-origin/cursor/automate-test-improve-and-merge-code-2533
-      {
-=======
-      {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         id: `pkg_${Date.now()}`
         title: pkgTitle;
         description: pkgDesc;
         priceUsd: Number(pkgPrice)
       }
-
 
   function addPackage() { return null; }`
         id: `pkg_${Date && Date.now()}`,;
@@ -128,35 +69,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;'
           <div className='md:col-span-2'>;'
             <label className='block text-sm mb-1'>Services Offered</label>;
-<<<<<<< HEAD
-            <input
-              name='servicesOffered'
-    setPkgTitle('');
-    setPkgDesc('');
-      <section className='space-y-3'>
-              defaultValue={activeVendor.servicesOffered?.join(', ') |''}
-              className='w-full border rounded px-3 py-2 bg-transparent'
-            />
-          </div>
-          <div className='md:col-span-2'>
-            <button className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>
-              Save
-            </button>
-          </div>
-        </form>
-      </section>
 
-<section className='space-y-3'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-        <h2 className='text-lg font-medium'>Publish Packages</h2>
-=======
-            <input'
-              name='servicesOffered''
-    setPkgTitle('');'
-    setPkgDesc('');'
-      <section className='space-y-3'>'
-        <h2 className='text-lg font-medium'>Publish Packages</h2>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
 
     <div className="space-y-8">;"
@@ -217,7 +130,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               placeholder='Price (USD)''
               type='number'
               value={pkgPrice}
-
 
               onChange={e => setPkgPrice(Number(e.target.value))}
               className='border rounded px-3 py-2 bg-transparent w-full'
@@ -335,33 +247,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             defaultValue={item.status}
             onChange={e => changeStatus(item.id, e.target.value)}'
             className='border rounded px-2 py-1 bg-transparent text-sm'
-<<<<<<< HEAD
-          >
-            <option value='lead'>Lead</option>
-            <option value='qualified'>Qualified</option>
-            <option value='proposal'>Proposal</option>
-            <option value='in_progress'>In Progress</option>
-            <option value='complete'>Complete</option>
-            <option value='lost'>Lost</option>
-          </select>
-=======
-          >'
-            <option value='lead'>Lead</option>'
-            <option value='qualified'>Qualified</option>'
-            <option value='proposal'>Proposal</option>'
-            <option value='in_progress'>In Progress</option>'
-            <option value='complete'>Complete</option>'
-            <option value='lost'>Lost</option>          </select>
-        </div>
-      ))}"
-    </div>          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">"
-            <option value="lead">Lead</option>"
-            <option value="qualified">Qualified</option>"
-            <option value="proposal">Proposal</option>"
-            <option value="in_progress">In Progress</option>"
-            <option value="complete">Complete</option>"
-            <option value="lost">Lost</option>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         </div>
       ))}'
   const { listVendors } = await import('../utils/vendor-store');
@@ -395,20 +281,4 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {';
   return { props: { vendor } }
 }
 ;
-<<<<<<< HEAD
-    </div>
-);
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] || null; // tie to auth later
-  return { props: { vendor } };
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

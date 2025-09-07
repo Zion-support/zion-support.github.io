@@ -1,61 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { getConfig } from "../../../../utils/token/service",;
-import { tokenStore } from "../../../../utils/token/storage",;
-=======
+import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === "GET") {
-    return res.status(200).json(getConfig())
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
   }
-<<<<<<< HEAD
-  if (req.method === "POST") {
-    const body = req.body || {}
-    const current = tokenStore.getConfig()
-    const updated = { ...current, ...body }
-    tokenStore.setConfig(updated)
-    return res.status(200).json(updated)
+
+  try {
+    res.status(200).json({ message: 'API endpoint working' });
+  } catch (error) {
+    res.status(500).json({ error: 'Internal server error' });
   }
-  return res.status(405).json({ error: "Method not allowed" })
-<<<<<<< HEAD
 }
-
-
-
-
-=======
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  
-  if (req.method === 'POST') {
-    const { updated } = req.body || {};
-    if (updated) {
-      tokenStore.setConfig(updated);
-      return res.status(200).json({ success: true });
-    }
-  }
-  
-  return res.status(405).json({ error: "Method not allowed" });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-import type { NextApiRequest, NextApiResponse } from "next",;"
-import { getConfig } from "../../../../utils/token/service",;"
-import { tokenStore } from "../../../../utils/token/storage",;
-export default function handler() { return null; }
-  if (req.method === "GET") {}
-    return res.status(200).json(getConfig())
-  }"
-  if (req.method === "POST") {}
-    const body = req.body || {},
-    const current = tokenStore.getConfig(),
-    const updated = { ...current, ...body },
-    tokenStore.setConfig(updated),
-    return res.status(200).json(updated)
-  }"
-  return res.status(405).json({ error: "Method not allowed" });
-};"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

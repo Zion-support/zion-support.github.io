@@ -1,30 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 
 export type StartMode = any;
-<<<<<<< HEAD
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  Room
-  RoomEvent
-  RemoteParticipant
-  LocalParticipant
-  createLocalTracks
-=======
-  Room;
-  RoomEvent;
-  RemoteParticipant;
-  LocalParticipant;
-  createLocalTracks;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   VideoPresets;
   Room,
   RoomEvent,
@@ -93,25 +74,8 @@ export default function CallRoom(): any ({;
 import Controls from './Controls';'
 export type StartMode = 'video' | 'audio';
 
-
 };
 
-<<<<<<< HEAD
-export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
-
-
-  const [room, setRoom] = useState<Room | null>(null);
-  const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
-  const [participants, setParticipants] = useState<
-    Array<RemoteParticipant | LocalParticipant>
-  >([]);
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const [connectedAt, setConnectedAt] = useState<number | null>(null);
-  const connect = useCallback(async () => {
-=======
-export default function CallRoom() { return null; }
-  const connect = useCallback(async () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const r = new Room();
     r.on(RoomEvent.ParticipantConnected, () => rebuild());
     r.on(RoomEvent.ParticipantDisconnected, () => rebuild());
@@ -163,45 +127,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
     }
   }, [connect]);
-<<<<<<< HEAD
-  const handleLeave = () => {
-    if (room) {
-    await r.connect(serverUrl, token, {
-      autoSubscribe: true
-    });
-    // publish local tracks
 
-    setRoom(r);
-    setConnectedAt(Date.now());
-    rebuild(r);
-// eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [serverUrl, token, startMode]);
-  const rebuild = (current?: Room | null) => {
-    const r = current |room;
-    if (!r) return;
-const list: Array<RemoteParticipant | LocalParticipant> = [
-      r.localParticipant,
-      ...Array.from(r.participants.values()),
-    ];
-    setParticipants(list);
-  };
-
-  useEffect(() => {
-    connect();
-    return () => {
-      if (room) {
-room.disconnect();
-      }
-    };
-  }, [connect]);
-  const handleLeave = () => {
-    if (room) {
-room.disconnect();
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  const handleLeave = () => {}
-    if (room) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }, [connect]);
 
@@ -394,14 +320,7 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {}
       <div className='p - 4 flex items - center justify - between border - b border - gray - 800'>;
         <div>;'
           <h2 className='text - lg font - semibold'>Project Room: {project_id}</h2>;'
-=======
 
-  return (
-    <div className='min - h-screen bg - gray - 950 text - gray - 100 flex flex - col'>;
-      <div className='p - 4 flex items - center justify - between border - b border - gray - 800'>;
-        <div>;
-          <h2 className='text - lg font - semibold'>Project Room: {project_id;}</h2>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <p className='text - xs text - gray - 400'>Room {room_name}</p>;
         </div>;'
         <Controls room={room} on_leave={handle_leave} accent='cyan' />      </div>;
@@ -412,13 +331,7 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {}
         {participants.map ((p, idx) => (
           <ParticipantTile;
             key={String ((p as any).sid || (p as any).identity) + idx}
-<<<<<<< HEAD
-=======
 
-    if (count = == 2);
-  return 'grid-cols-2';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
     if (count <= 6) return 'grid-cols-2 md:grid-cols-3';}
     return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4';}
@@ -444,15 +357,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 key={String((p as any).sid || (p as any).identity) + idx}
             participant={p}
             is_local={p instanceof LocalParticipant}
-<<<<<<< HEAD
-            display_name={}
-              (p as any).name ||;'
-              (p instanceof LocalParticipant ? 'You' : undefined);
-=======
-            display_name={
-              (p as any).name ||;}
-              (p instanceof LocalParticipant ? 'You' : undefined);}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             }
           />        ))}
       </div>;
@@ -460,10 +365,7 @@ key={String((p as any).sid || (p as any).identity) + idx}
 }          <ParticipantTile key={String ((p as any).sid || (p as any).identity) + idx} participant={p} is_local={p instanceof LocalParticipant} display_name={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />))}
       </div>;
     </div>);
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           />
         ))}
       </div>
@@ -471,8 +373,4 @@ key={String((p as any).sid || (p as any).identity) + idx}
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-<<<<<<< HEAD
-'"`
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

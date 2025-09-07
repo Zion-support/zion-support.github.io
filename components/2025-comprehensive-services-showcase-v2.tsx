@@ -1,131 +1,4 @@
-<<<<<<< HEAD
-import React from "react";"
-import SEO from "./seo/Seo";"
-import { motion } from "framer-motion";
-import {}
-  Brain,
-  Zap,
-  Shield,
-  Circle,
-  ArrowRight,
-  Check,
-  Star,
-  TrendingUp,
-  Users,
-  Globe,
-  Lock,
-  Cloud,
-  Smartphone,
-  Building,
-  Phone,
-  Mail,
-  MapPin,";
-} from "lucide-react";
 
-// Import our new 2025 V2 innovative services"
-import { advancedMicroSaasExpansion2025V2 } from "../data/2025-advanced-micro-saas-expansion-v2";"
-import { advancedITServices2025 } from "../data/2025-advanced-it-services";"
-import { advancedAIServices2025 } from "../data/2025-advanced-ai-services";
-
-const fadeInUp = {}
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-};
-
-const staggerContainer = {}
-  animate: {}
-    transition: {}
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-export default function ComprehensiveServicesShowcase2025V2() {}
-  const allNewServices = []
-    ...advancedMicroSaasExpansion2025V2,
-    ...advancedITServices2025,
-    ...advancedAIServices2025,;
-  ];
-
-  const serviceCategories = []
-    {"
-      id: "micro-saas","
-      name: "Innovative Micro SAAS","
-      icon: <Smartphone className="w-8 h-8" />,"
-      color: "from-blue-500 to-cyan-500",
-      services: advancedMicroSaasExpansion2025V2,"
-      description: "Cutting-edge micro SAAS solutions for modern businesses",
-    },
-    {"
-      id: "it-infrastructure","
-      name: "IT Infrastructure Services","
-      icon: <Cloud className="w-8 h-8" />,"
-      color: "from-purple-500 to-pink-500",
-      services: advancedITServices2025,"
-      description: "Advanced IT infrastructure and security solutions",
-    },
-    {"
-      id: "ai-services","
-      name: "AI & Machine Learning","
-      icon: <Brain className="w-8 h-8" />,"
-      color: "from-green-500 to-emerald-500",
-      services: advancedAIServices2025,"
-      description: "Intelligent AI solutions for business transformation",
-    },
-    {"
-      id: "industry-solutions","
-      name: "Industry Solutions","
-      icon: <Building className="w-8 h-8" />,"
-      color: "from-orange-500 to-red-500",
-      services: advancedITServices2025,"
-      description: "Specialized solutions for specific industries",
-    },
-    {"
-      id: "emerging-tech","
-      name: "Emerging Technology","
-      icon: <Zap className="w-8 h-8" />,"
-      color: "from-indigo-500 to-purple-500",
-      services: advancedAIServices2025,"
-      description: "Breakthrough technologies of the future",
-    },
-  ];
-
-  const contactInfo = {"
-    mobile: "+1 302 464 0950","
-    email: "kleber@ziontechgroup.com","
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-  };
-
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO"
-        title="2025 Comprehensive Services Showcase V2 | Zion Tech Group""
-        description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions."
-        keywords={["
-          "micro SAAS","
-          "IT infrastructure","
-          "AI services","
-          "industry solutions","
-          "emerging technology","
-          "Zion Tech Group",
-        ]}
-      />
-
-      {/* Hero Section */}"
-      <section className="relative py-20 px-4 overflow-hidden">"
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1"
-=======
-import React from 'react';
-import SEO from './seo/Seo';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { 
   Brain, Zap, Shield, Circle, ArrowRight,
   Check, Star, TrendingUp, Users,
@@ -219,41 +92,19 @@ export default function ComprehensiveServicesShowcase2025V2() {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
-            2025 V2 Comprehensive;
-            <br />
-            Services Showcase;
-          </motion.h1>
-          <motion.p"
-=======
-            2025 V2 Comprehensive
-            <br />
-            Services Showcase
-          </motion.h1>
-          <motion.p 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
-            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS, 
-<<<<<<< HEAD
-=======
-            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS, 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 import { Brain, Atom, Shield, Target, Rocket;
   ArrowRight, Check, Star, TrendingUp, Users;
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
@@ -272,11 +123,7 @@ import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-brea
 const fadeInUp = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
             IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
-=======
-            Experience the future of technology with our revolutionary portfolio;
-            of innovative micro SAAS, IT infrastructure, AI services, industry;
-            solutions, and emerging technology breakthroughs.
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           </motion.p>
           <motion.div"
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -312,11 +159,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
             Ready to Transform Your Business?
           </motion.h2>
-<<<<<<< HEAD
-          <motion.div"
-=======
-          <motion.div 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             className="grid md:grid-cols-3 gap-8"
 <motion.div
             className='grid md:grid-cols-3 gap-8'
@@ -325,17 +168,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
-          >"
-            <div className="text-center">"
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
-              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"
-=======
-          >
-            <div className="text-center">
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
               <p className="text-cyan-400 text-lg">{contactInfo.mobile}</p>
             </div>"
             <div className="text-center">"
@@ -375,13 +208,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Services by Category */}"
-      <section id="services" className="py-20 px-4">"
-=======
-      {/* Services by Category */}
-      <section id="services" className="py-20 px-4">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="max-w-7xl mx-auto">
           <motion.h2"
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
@@ -397,25 +223,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
             Our Comprehensive Service Portfolio;
           </motion.h2>
-<<<<<<< HEAD
 
-          <motion.div"
-            className="space-y-20"
-<<<<<<< HEAD
-=======
-          
-          <motion.div 
-            className="space-y-20"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <motion.div
             className='space-y-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
             variants={staggerContainer}
             initial="initial"
-=======
-            variants={staggerContainer}"
-            initial="initial""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             whileInView="animate"
             viewport={{ once: true }}
           >
@@ -519,13 +333,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Market Statistics */}"
-      <section className="py-20 px-4 bg-black/20">"
-=======
-      {/* Market Statistics */}
-      <section className="py-20 px-4 bg-black/20">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="max-w-7xl mx-auto">
           <motion.h2"
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
@@ -541,13 +348,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
             Market Impact & Growth;
           </motion.h2>
-<<<<<<< HEAD
 
-          <motion.div"
-=======
-          
-          <motion.div 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
 <motion.div
             className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'
@@ -556,17 +357,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
-          >"
-            <div className="text-center">"
-              <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
-                25+
-              </div>"
-=======
-          >
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">25+</div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
               <div className="text-white text-lg">New Services Added</div>
             </div>"
             <div className="text-center">"
@@ -615,13 +406,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Call to Action */}"
-      <section className="py-20 px-4">"
-=======
-      {/* Call to Action */}
-      <section className="py-20 px-4">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2"
             className="text-4xl md:text-5xl font-bold text-white mb-6"
@@ -637,11 +421,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
             Ready to Lead the Future?
           </motion.h2>
-<<<<<<< HEAD
-          <motion.p"
-=======
-          <motion.p 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             className="text-xl text-gray-300 mb-8"
 <motion.p
             className='text-xl text-gray-300 mb-8'
@@ -651,12 +431,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-<<<<<<< HEAD
-            Join thousands of businesses already transforming their operations;
-            with our cutting-edge solutions.
-=======
-            Join thousands of businesses already transforming their operations with our cutting-edge solutions.
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
           </motion.p>
           <motion.div"
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -671,13 +446,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-<<<<<<< HEAD
-            <a;`
-              href={`mailto:${contactInfo.email}`}"
-=======
-            <a 
-              href={`mailto:${contactInfo.email}`}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"
             >
               Contact Our Team;
@@ -702,17 +471,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   )
 }
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  );
-}
-"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

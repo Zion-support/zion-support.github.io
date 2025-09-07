@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from 'next/link';
 
-<<<<<<< HEAD
-=======
-export type Course = {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   title: string;
   duration_minutes: number;
@@ -22,10 +14,7 @@ export default /**;
  * CourseCard - Function description;
  */
 function CourseCard() {}
-=======
-export type Course = any;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className='border rounded - lg p - 4 hover:shadow - md transition'>;'
       <div className='flex items - center justify - between'>;'
@@ -38,19 +27,7 @@ export type Course = any;
         {Math.round (course.duration_minutes / 60)}h          {course.is_free ? 'Free' : 'Paid'}
         </span>;
       </div>;
-<<<<<<< HEAD
-      <div className="text - xs text - gray-500 mt-1">{course.category} • {course.level} • {Math.round (course.duration_minutes / 60)}h</div>;
-      <div className="text - sm mt - 2 line-clamp-2">{course.description}</div>;
-      <div className="mt - 3 flex items-center justify-between">;
-        <span className="text - xs bg - indigo - 50 text - indigo - 700 px-2 py-0.5 rounded">Badge: {course.certification_badge}</span>;
-        <Link href={`/learn/${course.id}`}>;
-=======
-      <div className="text - xs text - gray - 500 mt - 1">{course.category} • {course.level} • {Math.round (course.duration_minutes / 60)}h</div>;"
-      <div className="text - sm mt - 2 line - clamp - 2">{course.description}</div>;"
-      <div className="mt - 3 flex items - center justify - between">;"
-        <span className="text - xs bg - indigo - 50 text - indigo - 700 px - 2 py - 0.5 rounded">Badge: {course.certification_badge}</span>;
-        <Link href={`/learn/${course.id}`}>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           <a className='text - blue - 600 hover:underline text - sm'>View course</a>;
       </div>;'
       <div className='text - sm mt - 2 line - clamp - 2'>{course.description}</div>;'
@@ -61,26 +38,12 @@ export type Course = any;
         <Link href={`/learn/${course.id}`}>;'
           <a className='text - blue - 600 hover:underline text - sm'>View course</a>        </Link>;
       </div>;
-<<<<<<< HEAD
-    </div>);
-}          <a className="text - blue-600 hover: underline text-sm">View course</a>;
-=======
-    </div>);"
-}          <a className="text - blue - 600 hover: underline text - sm">View course</a>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         </Link>;
       </div>;
     </div>);
 
   );
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  certificationBadge: string;
-  description?: string;
-};
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   certificationBadge: string;
 }
@@ -115,10 +78,4 @@ export default function CourseCard() {return (<div className='border rounded-lg 
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,55 +1,15 @@
-<<<<<<< HEAD
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Shield,;
-  Star,;
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumInternetSecurityPage() {
   const service = null;
-<<<<<<< HEAD
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Shield
-  Star;
-origin/cursor/automate-test-improve-and-merge-code-2533
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-=======
-} from 'lucide-react';'
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';'
-import Button from '../components/ui/Button';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
 export default function QuantumInternetSecurityPage() {}
 export default function QuantumInternetSecurityPage() { return null; }
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-export default function QuantumInternetSecurityPage() {;
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/quantum-internet-security-platform')
-  );
-  if (!service) return null;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -115,11 +75,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
-=======
-export default function QuantumInternetSecurityPage() { return null; }
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>"
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
                 className='w-full'
               >
@@ -194,15 +150,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className='text - slate - 400 text - base'>;
                       {service.period}
                     </span>;
-<<<<<<< HEAD
-                  </div>;'
-                  <div className='text - slate - 400'>;'
-                    {service.trial_days}-day free trial • Setup:{' '}
-=======
-                  </div>;
-                  <div className='text - slate - 400'>;
-                    {service.trial_days}-day free trial • Setup: {' ';}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                     {service.setup_time}
                   </div>;
                 </div>;'
@@ -246,13 +194,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

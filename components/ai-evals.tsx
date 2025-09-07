@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-  Check,
-  ShieldCheck,
-  TrendingUp,
-  Clock,
-  Phone,
-  Mail,
-<<<<<<< HEAD
-import React from 'react',
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Head from 'next/head';
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
@@ -24,42 +13,6 @@ export default function AIEvalsPage() {
 				<meta name="description" content="Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />
 			</Head>
-
-<<<<<<< HEAD
-import {
-  Check
-  ShieldCheck
-  TrendingUp
-  Clock
-  Phone
-  Mail
-  MapPin
-  ExternalLink;
-origin/cursor/automate-test-improve-and-merge-code-2533
-} from 'lucide-react';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-
-export default function AIEvalsPage() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-};
-=======
-} from 'lucide-react';'
-import Card from '../components/ui/Card';'
-import Button from '../components/ui/Button';
-
-export default function AIEvalsPage() {}
-  const contactInfo = {'
-    mobile: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
-    address: '364 E Main St STE 1008 Middletown DE 19709',';
-    website: 'https://ziontechgroup.com',;
-  };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const features = ['
     'Golden datasets and synthetic evals''
@@ -123,40 +76,14 @@ export default function AIEvalsPage() {}
 	);
 }
 	);
-<<<<<<< HEAD
-    </QuantumHolographicMatrixBackground>);					<div className="bg - black / 20 border border - cyan - 500 / 30 rounded-2xl p-6">;
-      <h3 className="text - xl font - semibold text - white mb-4 text-center">Contact</h3>;
-      <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6 text-sm">;
-      <div className="flex items - center justify - center gap - 2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`}>{contact_info.mobile}</a></div>;
-      <div className="flex items - center justify - center gap - 2 text-purple-400"><Mail className="w-4 h-4" /> <a href={`mailto:${contact_info.email}`}>{contact_info.email}</a></div>;
-      <div className="flex items - center justify - center gap - 2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs">{contact_info.address}</a></div>;
-      </div>;
-      <div className="text-center mt-6">;
-      <Button href="/services" variant="outline" className="border - cyan - 500 text-cyan-400">Explore Services <ExternalLink className="w - 4 h-4 ml-2" /></Button>;
-=======
-    </QuantumHolographicMatrixBackground>);					<div className="bg - black / 20 border border - cyan - 500 / 30 rounded - 2xl p - 6">;"
-      <h3 className="text - xl font - semibold text - white mb - 4 text - center">Contact</h3>;"
-      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - sm">;'"
-      <div className="flex items - center justify - center gap - 2 text - cyan - 400"><Phone className="w - 4 h - 4" /> <a href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`}>{contact_info.mobile}</a></div>;"`
-      <div className="flex items - center justify - center gap - 2 text - purple - 400"><Mail className="w - 4 h - 4" /> <a href={`mailto:${contact_info.email}`}>{contact_info.email}</a></div>;"`
-      <div className="flex items - center justify - center gap - 2 text - emerald - 400"><MapPin className="w - 4 h - 4" /> <a href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`} target="_blank" rel="noopener noreferrer" className="text - xs">{contact_info.address}</a></div>;
-      </div>;"
-      <div className="text - center mt - 6">;"
-      <Button href="/services" variant="outline" className="border - cyan - 500 text - cyan - 400">Explore Services <ExternalLink className="w - 4 h - 4 ml - 2" /></Button>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       </div>;
     </div>;
     </div>;
   </section>;
   </QuantumHolographicMatrixBackground>);
 }
-<<<<<<< HEAD
-          content='Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.'
-        />
-        <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />
-      </Head>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
       <section className='min-h-screen pt-28 pb-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-12'>
@@ -277,6 +204,4 @@ export default function AIEvalsPage() {}
     </QuantumHolographicMatrixBackground>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

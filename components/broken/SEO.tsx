@@ -1,11 +1,5 @@
 
-<<<<<<< HEAD
-{}
-  /* Robots Meta */
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 
@@ -27,12 +21,7 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
   title;
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-}{
-=======
-}{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   noindex && <meta name="robots" content="noindex" />
 }{"
   nofollow && <meta name="robots" content="nofollow" />
@@ -246,31 +235,7 @@ const SEO: React.FC<SEOProps> = ({'
   author = 'Zion Tech Group';
   section;
   tags = [];
-<<<<<<< HEAD
-  structuredData;
-    : `https://ziontechgroup.com${image}`;
 
-  return (
-    <Head>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-<meta name='description' content={description} />
-      <meta
-        name='keywords'
-        content={Array.isArray(keywords) ? keywords.join(', ') : keywords}
-      />
-      <meta name='author' content={author} />
-      <meta name='robots' content={noindex ? 'noindex' : 'index'} />
-origin/cursor/automate-test-improve-and-merge-code-2533
-      {nofollow && <meta name='robots' content='nofollow' />}
-      {noindex && <meta name='robots' content='noindex' />}
-      {nofollow && <meta name='robots' content='nofollow' />}
-=======
-  structuredData;'
-      {nofollow && <meta name='robots' content='nofollow' />}'
-      {noindex && <meta name='robots' content='noindex' />}'
-      {nofollow && <meta name='robots' content='nofollow' />}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       {!noindex && !nofollow && <meta name='robots' content='index, follow' />}
       {/* Open Graph Meta Tags */}
       {/* Article Specific Meta Tags */}'
@@ -388,13 +353,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           })
         }}
 
-<<<<<<< HEAD
-      {/* Favicon and App Icons */}
-=======
-
-
-      {/* Favicon and App Icons */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <link rel='icon' href='/favicon.ico' />
       <link'
         rel='apple-touch-icon''
@@ -559,16 +517,4 @@ export default SEO);
 ;
 export default SEO;
 ;
-<<<<<<< HEAD
-    </Head>
-);
-};
 
-export default SEO;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

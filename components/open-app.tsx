@@ -1,27 +1,5 @@
 import { useEffect } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL |'zion://open';export default function OpenApp() {
-const IOS_APP_URL = null;
-const IOS_APP_URL =
-  process.env.NEXT_PUBLIC_IOS_APP_URL |
-  'https://apps.apple.com/app/id0000000000';
-const ANDROID_APP_URL =
-  process.env.NEXT_PUBLIC_ANDROID_APP_URL |
-  'https://play.google.com/store/apps/details?id=com.zion.app';
-const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';
-
-export default function OpenApp() {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  useEffect(() => {
-const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';export default function OpenApp() {
-=======
-'
-const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL |'zion://open';export default function OpenApp() {}
-  useEffect(() => {';
-const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';export default function OpenApp() {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   useEffect(() => {;
 
   useEffect(() => {}
@@ -30,13 +8,7 @@ const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';exp
     const now = Date.now();
     const timeout = setTimeout(() => {}
       const elapsed = Date.now() - now;
-<<<<<<< HEAD
-      if (elapsed < 2000) {
-window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-      if (elapsed < 2000) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       }
     }, 1200);
     // Try to open the deep link'
@@ -78,19 +50,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   );  }, []);
 
-<<<<<<< HEAD
-    <div className='min-h-[50vh] flex items-center justify-center'>
-      <div className='text-center'>
-        <div className='text-lg font-semibold'>Opening the Zion app…</div>
-        <div className='mt-2 text-sm opacity-70'>
-          If nothing happens, you’ll be redirected to the store.
-        </div>
-      </div>
-    </div>
-  );
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className="min-h-[50vh] flex items-center justify-center">
       <div className="text-center">
@@ -101,6 +60,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

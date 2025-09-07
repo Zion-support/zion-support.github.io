@@ -1,463 +1,13 @@
-<<<<<<< HEAD
-import Layout from './layout/Layout';'
-=======
 
-import Layout from './layout/Layout';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion, AnimatePresence } from 'framer-motion';
 
-<<<<<<< HEAD
-import {
-
-
-import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-import {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
-<<<<<<< HEAD
-  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette'
- } from 'lucide-react';'
-import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
 
-class ErrorBoundary extends React.Component {}
-  constructor(props) {};
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {'
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-=======
-  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
-  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;}
-  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette}
- } from 'lucide-react';
-import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';;
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);}
-    this.state = { hasError: false;}
-};
-  }
-  static getDerivedStateFromError(error) {}
-    return { hasError: true;}
-};
-  }
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary: ';, error, errorInfo);}
-  }
-  render() {
-    if (this.state.hasError) {}
-      return <div />Something went wrong.</div>;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
     return this.props.children;
 
   }
-<<<<<<< HEAD
-}'
-import React, { useState, useEffect } from 'react';'
-import Layout from './layout / Layout';'
-import { motion, AnimatePresence } from 'framer-motion';
 
-'
-import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';'
-import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';'
-import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';'
-import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';'
-import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
-// Loading fallback component;
-const LoadingFallback = () => (;'
-  <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion&& motion.div;
-      initial={{ opacity: 0, scale: 0 && 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0 && 0.5 }}'
-      className='text-center'// Loading fallback component;
-      transition: { duration: 1.5, ease: "easeOut" as const }
-    }
-  }
-  const categories = ['"
-    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" /> }'"
-    { id: 'ai', name: 'AI & ML', icon: <Brain className="w-5 h-5" /> }'"
-    { id: 'it', name: 'IT Enterprise', icon: <Cpu className="w-5 h-5" /> }'"
-    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className="w-5 h-5" /> }'"
-    { id: 'space', name: 'Space Tech', icon: <Satellite className="w-5 h-5" /> }'"
-    { id: 'cyber', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" /> }'"
-    { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> }'"
-    { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
-  ];
-  const allServices = ['
-              service && service.category.includes('Financial') ||;'
-              service && service.category.includes('Trading');
-            );
-          return true;
-        });
-  if (isLoading) {;
-    return <LoadingFallback />;  }      opacity: 1,;
-      scale: 1,;"
-      transition: { duration: 1 && 1.5, ease: "easeOut" as const }
-    }
-  };
-  const categories = [;'"
-    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" /> },;'"
-    { id: 'ai', name: 'AI & ML', icon: <Brain className="w-5 h-5" /> },;'"
-    { id: 'it', name: 'IT Enterprise', icon: <Cpu className="w-5 h-5" /> },;'"
-    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className="w-5 h-5" /> },;'"
-    { id: 'space', name: 'Space Tech', icon: <Satellite className="w-5 h-5" /> },;'"
-    { id: 'cyber', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" /> },;'"
-    { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },;'"
-    { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
-  ];
-import {}
-  ArrowRight,
-  Play,
-  Star,
-  Users,
-  Award,
-  TrendingUp,
-  Brain,
-  Shield,
-  Rocket,
-  Loader2,
-  ChevronDown,
-  Zap,
-  Globe,
-  Target,
-  Lightbulb,
-  Code,
-  Database,
-  Cloud,
-  Lock,
-  ChartBar,
-  Cpu,
-  Atom,
-  Satellite,
-  Gamepad2,';
-  Palette,} from 'lucide-react';import {}
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket,;
-  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
-  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette;'
-import UltraFuturisticBackground2035 from './ui / UltraFuturisticBackground2035';'
-import UltraFuturisticServiceCard2035 from './ui / UltraFuturisticServiceCard2035';'
-import { innovative2025MicroSaasBatch } from '../data / innovative - 2025 - micro - saas - batch';'
-import { innovative2025ITEnterpriseBatch } from '../data / innovative - 2025 - it - enterprise - batch';'
-import { innovative2025AIServicesBatch } from '../data / innovative - 2025 - ai - services - batch';
-// Loading fallback component;
-const LoadingFallback = () =>: any ('
-  <div className='min - h-screen flex items - center justify - center bg - gray - 900'>    <motion.div;
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}'
-      className='text - center'// Loading fallback component;
-const LoadingFallback = () =>: any ("
-  <div className="min - h-screen flex items - center justify - center bg - gray - 900">;
-    <motion.div;
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}'
-      className='text - center';
-    >;'
-      <div className='relative'>;'
-        <Loader2 className='w - 16 h - 16 text - cyan - 400 animate - spin mx - auto mb - 4' />;'
-        <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - xl opacity - 20 animate - pulse'></div>;
-      </div>;'
-      <p className='text - xl text - gray - 300 mb - 2'>Loading Zion Tech Group...</p>;'
-      <p className='text - sm text - gray - 500'>;
-        Preparing your digital transformation journey;
-      </p>    </motion.div>    >;"
-      <div className="relative">;"
-        <Loader2 className="w - 16 h - 16 text - cyan - 400 animate - spin mx - auto mb - 4" />;"
-        <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - xl opacity - 20 animate - pulse"></div>;
-      </div>;"
-      <p className="text - xl text - gray - 300 mb - 2">Loading Zion Tech Group...</p>;"
-      <p className="text - sm text - gray - 500">Preparing your digital transformation journey</p>;
-    </motion.div>;
-  </div>);
-;
-const Homepage2035: React.FC = () => {}
-  const [is_loading, setIsLoading] = useState (true);
-  const [is_visible, setIsVisible] = useState (false);'
-  const [active_category, setActiveCategory] = useState ('all');
-;
-  useEffect (() => {}
-    const timer = set_timeout (() => {}
-      setIsLoading (false);
-      setIsVisible (true);
-    }, 800);
-;
-    return () => clear_timeout (timer);  }, []);      setIsVisible (true);
-    }, 800);
-;
-    return () => clear_timeout (timer);
-  const fadeInUp = {}
-    initial: { opacity: 0, coordinate_y: 60 },
-    animate: { opacity: 1, coordinate_y: 0 },'"
-    transition: { duration: 0.6, ease: 'ease_out' },  }    transition: { duration: 0.6, ease: "ease_out" }
-// Loading fallback component
-const LoadingFallback = null;
-    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-className='text-center'
-    >
-      <div className='relative'>
-        <Loader2 className='w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4' />
-        <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse'></div>
-      </div>
-      <p className='text-xl text-gray-300 mb-2'>Loading Zion Tech Group...</p>
-      <p className='text-sm text-gray-500'>
-        Preparing your digital transformation journey
-      </p>
-    </motion.div>
-  </div>
-);
-const Homepage2035: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeCategory, setActiveCategory] = useState('all');
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-setIsVisible(true);
-    }, 800);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-transition: { duration: 0.6, ease: 'easeOut' },
-  };
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-delayChildren: 0.2,
-      },
-    },
-  };
-
-  const backgroundVariants = {
-    initial: { opacity: 0, scale: 0.8 },
-animate: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 1.5, ease: 'easeOut' as const },
-    },
-  };
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: <Globe className='w-5 h-5' /> }
-    { id: 'ai', name: 'AI & ML', icon: <Brain className='w-5 h-5' /> }
-    { id: 'it', name: 'IT Enterprise', icon: <Cpu className='w-5 h-5' /> }
-    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className='w-5 h-5' /> }
-    {
-      id: 'space'
-      name: 'Space Tech'
-      icon: <Satellite className='w-5 h-5' />
-    }
-    {
-      id: 'cyber'
-      name: 'Cybersecurity'
-      icon: <Shield className='w-5 h-5' />
-    }
-    {
-      id: 'cloud'
-      name: 'Cloud & DevOps'
-      icon: <Cloud className='w-5 h-5' />
-    }
-    { id: 'fintech', name: 'FinTech', icon: <ChartBar className='w-5 h-5' /> }
-  ];
-  const allServices = [
-    ...innovative2025MicroSaasBatch
-    ...innovative2025ITEnterpriseBatch
-    ...innovative2025AIServicesBatch
-  ];
-  const filteredServices =
-    activeCategory === 'all'
-      ? allServices
-      : allServices.filter(service => {
-          if (activeCategory === 'ai')
-            return (
-              service.category.includes('AI') |
-              service.category.includes('Machine Learning')
-            );
-          if (activeCategory === 'it')
-            return (
-              service.category.includes('IT') |
-              service.category.includes('Enterprise')
-            );
-          if (activeCategory === 'quantum')
-            return service.name.includes('Quantum');
-          if (activeCategory === 'space')
-            return service.category.includes('Space');
-          if (activeCategory === 'cyber')
-            return (
-              service.category.includes('Security') |
-              service.category.includes('Cybersecurity')
-            );
-          if (activeCategory === 'cloud')
-            return (
-              service.category.includes('Cloud') |
-              service.category.includes('DevOps')
-            );
-          if (activeCategory === 'fintech')
-            return (
-              service.category.includes('Financial') |
-              service.category.includes('Trading')
-            );
-          return true;
-        });
-  if (isLoading) {
-    return <LoadingFallback />;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  }
-;
-  const stagger_container = {}
-    animate: {}
-      transition: {}
-        stagger_children: 0.1,
-        delay_children: 0.2,
-      },
-    },  }
-;
-  const background_variants = {}
-    initial: { opacity: 0, scale: 0.8 },
-    animate: {        delay_children: 0.2;
-      }
-    }
-  }
-;
-  const background_variants = {}
-    initial: { opacity: 0, scale: 0.8 },
-    animate: {}
-      opacity: 1,
-      scale: 1,'
-      transition: { duration: 1.5, ease: 'ease_out' as const },
-    },
-  }
-;
-  const categories = [;'
-    { id: 'all', name: 'All Services', icon: <Globe className='w - 5 h - 5' /> },'
-    { id: 'ai', name: 'AI & ML', icon: <Brain className='w - 5 h - 5' /> },'
-    { id: 'it', name: 'IT Enterprise', icon: <Cpu className='w - 5 h - 5' /> },'
-    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className='w - 5 h - 5' /> },
-    {'
-      id: 'space','
-      name: 'Space Tech','
-      icon: <Satellite className='w - 5 h - 5' />,
-    },
-    {'
-      id: 'cyber','
-      name: 'Cybersecurity','
-      icon: <Shield className='w - 5 h - 5' />,
-    },
-    {'
-      id: 'cloud','
-      name: 'Cloud & DevOps','
-      icon: <Cloud className='w - 5 h - 5' />,
-    },'
-    { id: 'fintech', name: 'FinTech', icon: <ChartBar className='w - 5 h - 5' /> },
-  ];
-;
-  const all_services = [;
-    ...innovative2025MicroSaasBatch,
-    ...innovative2025ITEnterpriseBatch,
-    ...innovative2025AIServicesBatch,
-  ];
-;
-  const filtered_services =;'
-    active_category === 'all';
-      ? all_services;
-      : all_services.filter (service => {}
-          // Check condition;
-if (
-            return () {}
-  $2;
-}'
-              service.category.includes ('AI') ||;'
-              service.category.includes ('Machine Learning'));
-          // Check condition;
-if (
-            return () {}
-  $2;
-}'
-              service.category.includes ('IT') ||;'
-              service.category.includes ('Enterprise'));
-          if ('
-            return service.name.includes ('Quantum')) {}
-  $2;
-}
-          if ('
-            return service.category.includes ('Space')) {}
-  $2;
-}
-          // Check condition;
-if (
-            return () {}
-  $2;
-}'
-              service.category.includes ('Security') ||;'
-              service.category.includes ('Cybersecurity'));
-          // Check condition;
-if (
-            return () {}
-  $2;
-}'
-              service.category.includes ('Cloud') ||;'
-              service.category.includes ('DevOps'));
-          // Check condition;
-if (
-            return () {}
-  $2;
-}'
-              service.category.includes ('Financial') ||;'
-              service.category.includes ('Trading'));
-          return true;
-        });
-;
-  // Check condition;
-if ( {) {}
-  $2;
-}
-  }
-  }
-
-  return (
-    <Layout>;
-      <UltraFuturisticBackground2035>;
-        {/* Hero Section */}
-
-  }
-
-  return (
-    <Layout>
-      <UltraFuturisticBackground2035>
-        {/* Hero Section */}
-<<<<<<< HEAD
-<section className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <motion.div
-=======
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -573,15 +123,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
 
-
-
             </motion && motion.div>;
           </div>;
         </section>;
-
-
-
-
 
 className='text-center'
                 >
@@ -599,27 +143,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;'"
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">;
-<<<<<<< HEAD
-            <motion&& motion.div
-<section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-            <motion.div
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-            <motion&& motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 
-<<<<<<< HEAD
-className='text-center mb-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
-            >
-=======
-            >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology Solutions;
               </h2>'
@@ -632,13 +161,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Revolutionary Technology Solutions;
               </h2>"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                Discover our comprehensive portfolio of cutting-edge services designed to transform your business
-                designed to transform your business
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                Discover our comprehensive portfolio of cutting-edge services designed to transform your business;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               </p>
             </motion.div>'
               className='text-center mb-16'>;'
@@ -655,9 +178,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Discover our comprehensive portfolio of cutting-edge services designed to transform your business;
               </p>;
             </motion && motion.div>;
-
-
-
 
             {/* Category Filter */}
             <motion&& motion.div;
@@ -686,17 +206,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion && motion.button>;
               ))}
 
-
             {/* Services Grid */}
-<<<<<<< HEAD
-            <motion&& motion.div
-              variants={staggerContainer}
-initial='initial'
-=======
-            <motion&& motion.div;
-              variants={staggerContainer}'
-              initial='initial''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               whileInView='animate'
               viewport={{ once: true }}'"
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              initial="initial";"
@@ -784,13 +295,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 
-<<<<<<< HEAD
-className='text-center mb-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
-            >
-=======
-            >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Why Choose Zion Tech Group?
               </h2>'
@@ -860,15 +364,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   viewport={{ once: true }}'
                   className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
 
-
-
-<<<<<<< HEAD
-className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
-origin/cursor/automate-test-improve-and-merge-code-2533
-                >
-=======
-                >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>
                     {feature.icon}
                   </div>'
@@ -881,30 +376,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.div>
 
-
             </div>;
           </div>;
         </section>;
-
 
         {/* CTA Section */}'
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;'"
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-4xl mx-auto text-center">;
-<<<<<<< HEAD
-            <motion&& motion.div
-        {/* CTA Section */}
-<section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-4xl mx-auto text-center'>
-            <motion.div
-=======
-            <motion&& motion.div;
-        {/* CTA Section */}'
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>'"
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">"
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -958,52 +438,6 @@ animate: {}
   animate: {}
 };
 
-
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-<h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
-                Ready to Transform Your Business?
-              </h2>
-              <p className='text-xl text-gray-300 mb-8'>
-                Join thousands of companies already leveraging our cutting-edge
-                technology solutions
-              </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className='bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'
-                >
-                  <span>Get Started Today</span>
-                  <ArrowRight className='w-5 h-5' />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300'
-                >
-                  Schedule a Demo
-                </motion.button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </UltraFuturisticBackground2035>
-    </Layout>
-);
-};
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-  animate: {
-  transition: {
-  staggerChildren: 0.1, delayChildren: 0.2
-=======
-  animate: {}
-  transition: {}
-  staggerChildren: 0.1, delayChildren: 0.2;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 }
 ];
@@ -1410,20 +844,3 @@ export default Homepage2035);
 ;
 export default Homepage2035;
 
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
-import React, { useState, useEffect } from 'react';
-import Layout from './layout / Layout';
-import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
-import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
-
-import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
-import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';
-import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

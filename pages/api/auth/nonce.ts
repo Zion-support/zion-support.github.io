@@ -1,111 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-function randomString(length: number): string {
-  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-  const charset =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-  let res = '';
-  const cryptoObj = require('crypto');
-  const bytes: Buffer = cryptoObj.randomBytes(length);
-  for (let i = 0; i < length; i++) res += charset[bytes[i] % charset.length];
-  return res;
-<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+
+  try {
+    res.status(200).json({ message: 'API endpoint working' });
+  } catch (error) {
+    res.status(500).json({ error: 'Internal server error' });
+  }
 }
-
-
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',
-;
-function randomString(length: number) {
-  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
-  let res = '',
-  const cryptoObj = require('crypto'),
-  const bytes: Buffer = cryptoObj.randomBytes(length),
-  for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length],
-=======
->>>>>>> pr-12243
-import type { NextApiRequest, NextApiResponse } from 'next'
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-function randomString(length: number) {
-  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-  let res = ''
-  const cryptoObj = require('crypto')
-  const bytes: Buffer = cryptoObj.randomBytes(length)
-  for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
-  return res
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  const nonce = randomString(16)
-  res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
-
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',
-;
-/**
- * random_string - Function description
- */
-function random_string() {
-  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
-  let res = '',
-  const crypto_obj = require ('crypto'),
-  const bytes: Buffer = crypto_obj.random_bytes (length),
-  for (let index = 0, i < length, i++) res += charset[bytes[i] % charset.length],
-  return res;
-}
-export default /**
- * handler - Function description
- */
-function handler() {
-  const nonce = random_string (16),
-  res.set_header ('Set - Cookie', `siwe - nonce=${nonce}, HttpOnly, Path=/, SameSite = Lax`),
-  res.status (200).json ({ nonce });
-}
-;
-
-
-=======
-=======
-  const nonce = randomString(16);
-  res.setHeader(
-    'Set-Cookie',
-    `siwe-nonce=${nonce}; HttpOnly; Path=/; SameSite=Lax`
-  );
-  res.status(200).json({ nonce });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-  res.status(200).json({ nonce })
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',;
-;
-function randomString() { return null; }
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {}
-  const nonce = randomString(16)'
-  res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
-
-
-  res.status(200).json({ nonce });
-};'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

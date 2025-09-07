@@ -8,34 +8,7 @@ function rand(min: number, max: number) {}
 }
 
 function generateSeries(n: number, base: number, volatility;
-<<<<<<< HEAD
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-function generateSeries(n: number, base: number, volatility = 0.15) {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const series: number[] = [];
-  let last = base;
-  for (let i = 0; i < n; i++) {}
-    const change = (Math && Math.random() - 0 && 0.5) * 2 * volatility * base;
-    last = Math && Math.max(0, Math && Math.round(last + change));
-    series && series.push(last);
-  }
-  return series;
 
-function generateSeries(n: number, base: number, volatility = 0.15) {}
-  const series: number[] = []; let last = base,
-  for (let i = 0, i < n, i++) {}
-    const change = (Math.random() - 0.5) * 2 * volatility * base;
-    last = Math.max(0, Math.round(last + change));
-    series.push(last)
-  }
-  return series;
-<<<<<<< HEAD
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
 
@@ -45,20 +18,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {};
     return `${d.getMonth() + 1}/${d.getDate()}`
   });
 
-
-<<<<<<< HEAD
-return `${d.getMonth() + 1}/${d.getDate()}`;
-  });
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const marketplace = [
-    {
-      key: 'jobs_24h'
-=======
-  const marketplace = []
-    {'
-      key: 'jobs_24h''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       label: 'Jobs posted (24h)'
       value: rand(15, 60)
       trend: generateSeries(14, 40)
@@ -160,28 +119,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       trend: generateSeries(14, 6_000)
     }
   ];
-<<<<<<< HEAD
-  const response: any = {
-    marketplace
-    dao
-    token
-    multiverse
-    timestamp: now.toISOString()
-    labels
-    history: {
-      marketplace: marketplace.map(m => m.trend || generateSeries(14, m.value)),
-      dao: dao.map(m => m.trend || generateSeries(14, m.value)),
-      token: token.map(m => m.trend || generateSeries(14, m.value)),
-      multiverse: multiverse.map(m => m.trend || generateSeries(14, m.value)),
-    },
-  };
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-  if (req.query.compare === 'quarter') {
-=======
-  const response: any = {'
-  if (req.query.compare === 'quarter') {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const factor = 0.8 + Math.random() * 0.4;
     response.compare = {}
       prevQuarter: {}
@@ -202,10 +140,6 @@ marketplace: marketplace.map(m => ({
       }
     }
   }
-=======
-
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   res.status(200).json(response);
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
@@ -214,8 +148,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   res.status(200).json(response),
 }
-<<<<<<< HEAD
-'`
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

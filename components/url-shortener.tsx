@@ -1,27 +1,4 @@
-<<<<<<< HEAD
-  Link;
-  Copy;
-  BarChart3;
-  ArrowRight;
-  RefreshCw;
-  CheckCircle;
-  ExternalLink;
-  QrCode;
-  Settings;
-  Trash2;
-} from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button';
-import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default function URLShortenerPage() {
-=======
-export default function URLShortenerPage() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Link,
   Copy,
   BarChart3,
@@ -62,44 +39,9 @@ import React, { useState } from 'react';
 import {';
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
-
 export default function URLShortenerPage() { return null; }
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function URLShortenerPage() {;
-  const [longUrl, setLongUrl] = useState('');
-  const [customAlias, setCustomAlias] = useState('');
-  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
-  const [isShortening, setIsShortening] = useState(false);
-
-setIsShortening(true);
-
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    const alias = customAlias.trim() |generateRandomAlias();
-    const shortUrl = `https://zion.tech/${alias}`;
-    const newShortUrl = {
-      id: Date.now()
-      longUrl: longUrl.trim()
-      shortUrl
-      alias
-      clicks: 0
-      createdAt: new Date().toISOString()
-      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
-    }
-origin/cursor/automate-test-improve-and-merge-code-2533
-    setShortenedUrls(prev => [newShortUrl, ...prev]);
-    setLongUrl('');
-    setCustomAlias('');
-    setIsShortening(false);
-      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    for (let i = 0; i < 6; i++) {
-=======
-export default function URLShortenerPage() { return null; }
-    for (let i = 0; i < 6; i++) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       result += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     return result;
@@ -190,8 +132,6 @@ import {}
             Track clicks, generate QR codes, and manage your links efficiently with advanced analytics.
     return shortenedUrls.length;
   };
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <>
@@ -228,11 +168,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
       {/* URL Shortening Tool */}
-<<<<<<< HEAD
-            </h2>"
-=======
-            </h2>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our advanced shortening engine creates professional, trackable links in seconds.
             </p>
@@ -340,22 +276,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </>
                   ) : (
                     <>
-<<<<<<< HEAD
-<Link className='w-5 h-5 mr-2' />
-origin/cursor/automate-test-improve-and-merge-code-2533
-                      Create Short URL
-=======
-                      Create Short URL;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                     </>
                   )}
                 </Button>
 
-<<<<<<< HEAD
-                <Button;
-=======
-                <Button
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   onClick={generateShortUrl}
                   disabled={!longUrl && longUrl.trim() || isShortening}'
                   className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'>;
@@ -423,11 +348,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='text-center p-4 bg-gray-700 rounded-lg'>'
                     <div className='text-3xl font-bold text-red-400 mb-2'>
                       {getTotalClicks()}
-<<<<<<< HEAD
-                    </div>;"
-=======
-                    </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                     <div className="text-sm text-gray-400">Total Clicks</div>;
                   </div>;
                 </div>;
@@ -509,10 +430,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Your Shortened URLs;
               </h2>"
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 <section className='py-20 bg-gray-800'>
           <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-16'>
@@ -531,12 +449,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   key={url && url.id}
                   className='p-6 bg-gray-700 border border-gray-600'>;
                   <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>;
-=======
-                <Card;
-                  key={url && url.id}'
-                  className='p-6 bg-gray-700 border border-gray-600'>;'
-                  <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             <div className="space-y-4">
               {shortenedUrls.map((url) => ("
                 <Card key={url.id} className="p-6 bg-gray-700 border border-gray-600">"
@@ -557,13 +470,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             {url && url.longUrl}
                           </p>;'
                           <div className='flex items-center space-x-4 mt-3 text-sm text-gray-400'>;
-<<<<<<< HEAD
-                            <span>;'
-                              Created:{' '}
-=======
-                            <span>;
-                              Created: {' ';}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                           {url.clicks}
                         </div>"
                         <div className="text-xs text-gray-400">Total Clicks</div>
@@ -600,10 +507,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           Visit;
                         </Button>
                       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                               {new Date(url.createdAt).toLocaleDateString()}
                             </span>
                             <span>Alias: {url.alias;}</span>
@@ -646,20 +550,10 @@ variant='outline'
 <div className='flex space-x-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                         <Button
-=======
-                        <Button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                           onClick={() =>;
                             setShowQR(showQR === url && url.id ? null : url && url.id);
-<<<<<<< HEAD
-                          }'
-                          variant='outline';'
-                          size='sm';'
-=======
-                          }
-                          variant='outline';
-                          size='sm';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                           className='flex-1 border-gray-600 text-gray-300 hover:bg-gray-600';
                         >;'
                           <QrCode className='w-4 h-4 mr-2' />                          QR Code;
@@ -728,19 +622,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Features */}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             </h2>
-=======
-            </h2>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to create, manage, and track your shortened;
               URLs effectively.
@@ -803,26 +691,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Easy Management;
               </h3>'
               <p className='text-gray-400'>
-<<<<<<< HEAD
-                Simple dashboard to manage, edit, and delete your shortened URLs
-                as needed.
-              </p>
-=======
-                Simple dashboard to manage, edit, and delete your shortened URLs"
-                as needed.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">"
-              <div className="text-4xl mb-4">🔧</div>"
-              <h3 className="text-xl font-bold text-white mb-4">Easy Management</h3>"
-              <p className="text-gray-400">
-                Simple dashboard to manage, edit, and delete your shortened URLs as needed.
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             </Card>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>"
-=======
-      </section>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From marketing campaigns to social media, our URL shortener serves all your link management needs.
             </p>
@@ -863,13 +736,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li>• Measure click-through rates</li>
                 <li>• Optimize marketing strategies</li>
               </ul>
-<<<<<<< HEAD
-            </Card>"
-              <h3 className="text-2xl font-bold text-white mb-4">Social Media</h3>"
-=======
-            </Card>
-              <h3 className="text-2xl font-bold text-white mb-4">Social Media</h3>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
               <p className="text-gray-400 mb-6">
                 Share concise, professional links on social platforms with built-in analytics to understand audience engagement.
               </p>"
@@ -935,17 +802,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Card>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>'
-      <section className='py-20 bg-gray-900'>;'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;'
-          <div className='text-center mb-16'>;'
-=======
-      </section>
-      <section className='py-20 bg-gray-900'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='text-center mb-16'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
             </h2>;'
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;

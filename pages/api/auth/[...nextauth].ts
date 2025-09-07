@@ -1,109 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET' && req.method !== 'POST') {
-    res.status(405).end()
-
-    return
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET' && req.method !== 'POST') {
-    res.status(405).end()
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET' && req.method !== 'POST') {
-    res.status(405).end();
-    return;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
   }
 
-  // TODO: Implement authentication logic here
-  res.status(200).json({ message: 'Auth endpoint placeholder' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-    return
-  }
-  // TODO: Implement authentication logic here
-  res.status(200).json({ message: 'Auth endpoint placeholder' })
-}
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET' && req.method !== 'POST') {
-    res.status(405).end();
-    return
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-  // TODO: Implement authentication logic here
-  res.status(200).json({ message: 'Auth endpoint placeholder' })
-
-
-
-  }
-}
-  // TODO: Implement authentication logic here
-  res.status(200).json({ message: 'Auth endpoint placeholder' })
-} ;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req, res) {
   try {
-  if (req.method !== 'GET' && req.method !== 'POST') {;
-    res.status(405).end();
-    return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    res.status(200).json({ message: 'API endpoint working' });
+  } catch (error) {
+    res.status(500).json({ error: 'Internal server error' });
   }
 }
-;
-  // TODO: Implement authentication logic here;
-  res.status(200).json({ message: 'Auth endpoint placeholder' });
-} ;
-
-
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',
-;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET' && req.method !== 'POST') {
-    res.status(405).end(),
-=======
->>>>>>> pr-12243
-import type { NextApiRequest, NextApiResponse } from 'next'
-;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET' && req.method !== 'POST') {
-    res.status(405).end()
-    return
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',;
-;
-export default function handler() { return null; }
-  if (req.method !== 'GET' && req.method !== 'POST') {}
-    res.status(405).end(),;
-    return;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  }
-  // TODO: Implement authentication logic here'
-  res.status(200).json({ message: 'Auth endpoint placeholder' })
-<<<<<<< HEAD
-} 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-} '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

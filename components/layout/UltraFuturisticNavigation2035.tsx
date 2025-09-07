@@ -1,261 +1,12 @@
-<<<<<<< HEAD
-import {}
-  Menu,
-  ChevronDown,
-  X,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Brain,
-  Rocket,
-  Shield,
-  Zap,
-  Target,
-  Atom,
-  BookOpen,
-  Truck,
-  DollarSign,
-  BarChart3,
-  Globe,
-  Users,
-  Star,
-  Sparkles,
-  Cpu,
-  Lock,
-  Cloud,
-  Settings,
-  Eye,
-  Award,
-  Clock,
-  Heart,
-  Lightbulb,
-  Search,
-  Grid,
-  List,
-  TrendingUp,
-  Shield as ShieldIcon,
-  Globe as GlobeIcon,
-  User,
-  ShoppingCart,
-  Bell,
-  HelpCircle,
-  FileText,
-  Video,
-  Headphones,
-  Code,
-  Database,
-  Network,
-  Server,
-  Monitor,
-  Smartphone,
-  Camera,
-  Gamepad2,
-  Palette,
-  Music,
-  Film,
-  BookOpenCheck,;
-  Building,;
-  MessageCircle,;
-} from 'lucide-react';
 
-import {};
-  Menu;
-  ChevronDown;
-  X;
-  Phone;
-  Mail;
-  MapPin;
-  ArrowRight;
-  Brain;
-  Rocket;
-  Shield;
-  Zap;
-  Target;
-  Atom;
-  BookOpen;
-  Truck;
-  DollarSign;
-  BarChart3;
-  Globe;
-  Users;
-  Star;
-  Sparkles;
-  Cpu;
-  Lock;
-  Cloud;
-  Settings;
-  Eye;
-  Award;
-  Clock;
-  Heart;
-  Lightbulb;
-  Search;
-  Grid;
-  List;
-  TrendingUp;
-  Shield as ShieldIcon;
-  Globe as GlobeIcon;
-  User;
-  ShoppingCart;
-  Bell;
-  HelpCircle;
-  FileText;
-  Video;
-  Headphones;
-  Code;
-  Database;
-  Network;
-  Server;
-  Monitor;
-  Smartphone;
-  Camera;
-  Gamepad2;
-  Palette;
-  Music;
-  Film;
-  BookOpenCheck;
-  Building;
-  MessageCircle;'
-} from 'lucide-react';
-interface NavigationItem {}
-  name: string;
-
-
-  href: string;  icon?: React.ReactNode;import { ;
-
-
-  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
-  Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
-  Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles;
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
-  Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon;
-  User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones;
-  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
-  Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
-  Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles, ;
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
-  Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon;
-  User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, ;
-import {}
-  Menu,
-  ChevronDown,
-  X,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Brain,
-  Rocket,
-  Shield,
-  Zap,
-  Target,
-  Atom,
-  BookOpen,
-  Truck,
-  DollarSign,
-  BarChart3,
-  Globe,
-  Users,
-  Star,
-  Sparkles,
-  Cpu,
-  Lock,
-  Cloud,
-  Settings,
-  Eye,
-  Award,
-  Clock,
-  Heart,
-  Lightbulb,
-  Search,
-  Grid,
-  List,
-  TrendingUp,
-  Shield as ShieldIcon,
-  Globe as GlobeIcon,
-  User,
-  ShoppingCart,
-  Bell,
-  HelpCircle,
-  FileText,
-  Video,
-  Headphones,
-  Code,
-  Database,
-  Network,
-  Server,
-  Monitor,
-  Smartphone,
-  Camera,
-  Gamepad2,
-  Palette,
-  Music,
-  Film,
-  BookOpenCheck,
-  Building,
-  MessageCircle,';
-} from 'lucide-react';
-;
-interface NavigationItem {}
-  name: string;
-  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
-  Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
-  Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles,
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
-  Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon;
-  User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones,
-  Code, Database, Network, Server, Monitor, Smartphone;
-  Camera, Gamepad2, Palette, Music, Film, BookOpenCheck;
-  Building, MessageCircle;'
-} from 'lucide-react';
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
-  Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
-  Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles;
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
-  Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon;
-  User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones;
-  Code, Database, Network, Server, Monitor, Smartphone;
-  Camera, Gamepad2, Palette, Music, Film, BookOpenCheck;
-  Building, MessageCircle
- } from 'lucide-react';
-interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description?: string;
   children?: NavigationItem[];
   badge?: string;
   title?: string;
-<<<<<<< HEAD
-  featured?: boolean;
-=======
 
-  featured?: boolean
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
   featured?: boolean;
-<<<<<<< HEAD
-  featured?: boolean;  featured?: boolean
 
-const contactInfo = null;
-<<<<<<< HEAD
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  featured?: boolean;  featured?: boolean;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
   featured?: boolean;
 
@@ -456,148 +207,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     badge: 'New',
     featured: true,
     children: [;
-<<<<<<< HEAD
-      {
-        name: 'AI Customer Success Platform',
-        href: '/ai - customer - success - platform',
-    name: 'Contact',
-    href: '/contact',
-    icon: <Phone className='w-5 h-5' />,
-    description: 'Talk to our team',
-    featured: true,
-    children: [
-      { name: 'Contact Sales', href: '/contact', description: 'Get a quote' },
-{ name: 'Support', href: '/support', description: 'Help center' },
-    ],
-  },
-  {
-    name: 'Services',
-    href: '/services',
-    icon: <Grid className='w-5 h-5' />,
-    description: 'Browse by category',
-    badge: 'New',
-    children: [
-      {
-        name: 'AI & Data',
-        href: '/services?filter=ai-consciousness',
-        description: 'AI, data, ML services',
-      },
-      {
-        name: 'Enterprise IT',
-        href: '/services?filter=enterprise-it',
-        description: 'Infra, security, platforms',
-      },
-      {
-        name: 'Quantum & Emerging',
-        href: '/services?filter=quantum-emerging',
-        description: 'Quantum, space, frontier',
-      },
-      {
-        name: 'Micro SAAS',
-        href: '/services?filter=micro-saas',
-        description: 'Business accelerators',
-      },
-      {
-        name: 'Creative & Media',
-        href: '/services?filter=creative-media',
-        description: 'Content, media, design',
-      },
-    ],
-  },
-  {
-    name: 'All Services',
-    href: '/comprehensive-services-showcase-2025',
-    icon: <Globe className='w-5 h-5' />,
-    description: 'Complete portfolio of all technology services',
-    badge: 'Showcase',
-    featured: true,
-    children: [
-{
-        name: 'View All Services',
-        href: '/comprehensive-services-showcase-2025',
-        description: 'Complete services portfolio',
-      },
-      {
-        name: 'Ultimate 2035 Futuristic'
-        href: '/ultimate-2035-futuristic-services-showcase'
-        description: 'Revolutionary future technology'
-        featured: true
-      }
-      {
-        name: 'Ultimate 2025 Micro SAAS'
-        href: '/ultimate-2025-micro-saas-showcase'
-        description: 'Latest innovative services'
-        featured: true
-      }
-      {
-        name: 'Service Categories'
-        href: '/comprehensive-services-showcase-2025#categories'
-        description: 'Browse by category'
-      }
-      {
-        name: 'Pricing Comparison'
-        href: '/comprehensive-services-showcase-2025#pricing'
-        description: 'Compare service costs'
-      }
-      {
-        name: 'Service Search'
-        href: '/comprehensive-services-showcase-2025#search'
-        description: 'Find specific services'
-      }
-      {
-        name: 'Market Pricing'
-        href: '/market-pricing'
-        description: 'Average market prices & references'
-      }
-      {
-        name: 'Latest Innovations'
-        href: '/revolutionary-2025-services-showcase'
-        description: 'Cutting-edge solutions'
-      }
-      {
-        name: '2026 Services'
-        href: '/revolutionary-2026-services'
-        description: 'Next generation solutions'
-      }
-      {
-        name: '2027 Services'
-        href: '/revolutionary-2027-services-showcase'
-        description: 'Future-ready services'
-      }
-      {
-        name: 'Ultimate 2026'
-        href: '/ultimate-2026-services-showcase'
-        description: 'Premium service collection'
-      }
-      {
-        name: 'Enterprise Solutions'
-        href: '/enterprise-solutions-showcase'
-        description: 'Enterprise-grade solutions'
-      }
-      {
-        name: 'Innovative Business Solutions'
-        href: '/innovative-business-solutions'
-        description: 'Business transformation services'
-      }
-    ]
-  }
-  {
-    name: 'AI & Consciousness',
-    href: '/ai-services',
-    icon: <Brain className='w-5 h-5' />,
-    description: 'Revolutionary AI consciousness and emotional intelligence',
-    badge: 'New',
-    featured: true,
-    children: [
-{
-        name: 'AI Customer Success Platform',
-        href: '/ai-customer-success-platform',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-      {'
-        name: 'AI Customer Success Platform','
-        href: '/ai - customer - success - platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         description: 'Predict and prevent churn with AI',
         featured: true,
       },
@@ -985,378 +595,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
     ]
   }
-<<<<<<< HEAD
-        name: 'AI Sales Intelligence'
-        href: '/ai-sales-intelligence-platform'
-        description: 'Supercharge sales with AI automation'
-      }
-      {
-        name: 'AI Financial Planning'
-        href: '/ai-financial-planning-platform'
-        description: 'Intelligent financial forecasting'
-      }
-      {
-        name: 'AI Decision Engine'
-        href: '/ai-powered-decision-engine'
-        description: 'AI-powered business decisions'
-      }
-      {
-        name: 'AI Content Automation'
-        href: '/intelligent-content-automation-platform'
-        description: 'Automate content creation'
-      }
-      {
-        name: 'AI HR Analytics'
-        href: '/ai-hr-analytics-platform'
-        description: 'Transform HR with AI insights'
-      }
-      {
-        name: 'AI Consciousness Evolution'
-        href: '/ai-consciousness-evolution-2029'
-        description: 'Emotional intelligence and self-awareness'
-      }
-      {
-        name: 'AI Quantum Neural Network'
-        href: '/ai-quantum-neural-network'
-        description: 'Hybrid AI-Quantum computing platform'
-      }
-      {
-        name: 'AI Autonomous Business Operations'
-        href: '/ai-autonomous-business-operations'
-        description: 'Fully autonomous business management'
-      }
-      {
-        name: 'AI Autonomous Research'
-        href: '/ai-autonomous-research-assistant'
-        description: 'Self-directed AI research'
-      }
-      {
-        name: 'AI Emotional Intelligence'
-        href: '/ai-emotional-intelligence-training'
-        description: 'EQ training platform'
-      }
-      {
-        name: 'AI Predictive Maintenance'
-        href: '/ai-predictive-maintenance-platform'
-        description: 'Equipment failure prediction'
-      }
-      {
-        name: 'AI Content Personalization'
-        href: '/ai-content-personalization-engine'
-        description: 'Personalized content delivery'
-      }
-      {
-        name: 'AI Autonomous Ecosystem'
-        href: '/ai-autonomous-ecosystem-manager'
-        description: 'Self-managing AI systems'
-      }
-      {
-        name: 'AI Ethics & Governance'
-        href: '/ai-ethics-governance-framework'
-        description: 'Ethical AI frameworks'
-      }
-      {
-        name: 'Advanced AI Automation'
-        href: '/advanced-ai-automation-services'
-        description:
-          'AI automation for development, testing, DevOps, security, and data'
-      }
-    ]
-  }
-  {
-    name: 'Micro SAAS Solutions',
-    href: '/micro-saas',
-    icon: <Rocket className='w-5 h-5' />,
-    description: 'Innovative business solutions for modern enterprises',
-    badge: 'Hot',
-    featured: true,
-    children: [
-{
-        name: 'Customer Success Platform',
-        href: '/ai-customer-success-platform',
-        description: 'AI-powered customer retention',
-        featured: true,
-      },
-      {
-        name: 'Supply Chain Optimization'
-        href: '/intelligent-supply-chain-optimization'
-        description: 'AI-powered supply chain management'
-      }
-      {
-        name: 'Financial Planning Platform'
-        href: '/ai-financial-planning-platform'
-        description: 'Intelligent financial planning'
-      }
-      {
-        name: 'HR Analytics Platform'
-        href: '/ai-hr-analytics-platform'
-        description: 'AI-powered HR insights'
-      }
-      {
-        name: 'Sales Intelligence Platform'
-        href: '/ai-sales-intelligence-platform'
-        description: 'AI-powered sales automation'
-      }
-      {
-        name: 'CRM Intelligence Suite'
-        href: '/smart-crm-intelligence-suite'
-        description: 'Transform your CRM with AI'
-      }
-      {
-        name: 'Content Automation Platform'
-        href: '/intelligent-content-automation-platform'
-        description: 'AI-powered content management'
-      }
-      {
-        name: 'Decision Engine'
-        href: '/ai-powered-decision-engine'
-        description: 'AI-powered business decisions'
-      }
-      {
-        name: 'Helpdesk & Support'
-        href: '/helpdesk-automation'
-        description: 'AI helpdesk, ticketing, KB, and chat'
-      }
-      {
-        name: 'Learning Management (LMS)'
-        href: '/lms-platform'
-        description: 'Adaptive training and certifications'
-      }
-      {
-        name: 'E‑commerce Returns'
-        href: '/ecommerce-returns-management'
-        description: 'Automated returns, labels, and RMAs'
-      }
-      {
-        name: 'SEO Content Optimizer'
-        href: '/seo-content-optimizer'
-        description: 'On-page AI scoring and fixes'
-      }
-      {
-        name: 'Keyword Research Engine'
-        href: '/keyword-research-engine'
-        description: 'Low-competition keywords discovery'
-      }
-      {
-        name: 'Privacy Analytics Suite'
-        href: '/analytics-suite'
-        description: 'Cookie-less, privacy-friendly analytics'
-      }
-      {
-        name: 'Invoice Studio'
-        href: '/invoice-studio'
-        description: 'Instant branded invoices and payments'
-      }
-    ]
-  }
-  {
-    name: 'Quantum & Emerging Tech',
-    href: '/quantum-services',
-    icon: <Atom className='w-5 h-5' />,
-    description: 'Quantum computing and breakthrough technologies',
-    badge: 'Hot',
-    featured: true,
-    children: [
-{
-        name: 'Quantum-Secure Cloud Infrastructure',
-        href: '/quantum-secure-cloud-infrastructure',
-        description: 'Unbreakable quantum encryption',
-      },
-      {
-        name: 'Quantum Financial Trading Platform'
-        href: '/quantum-financial-trading'
-        description: 'Ultra-fast quantum trading'
-      }
-      {
-        name: 'Quantum Internet Security Platform'
-        href: '/quantum-internet-security-platform'
-        description: 'Future-proof internet security'
-      }
-      {
-        name: 'Space Resource Mining'
-        href: '/space-resource-mining-platform'
-        description: 'Asteroid mining and space resources'
-      }
-      {
-        name: 'Quantum Internet Security'
-        href: '/quantum-internet-security-platform'
-        description: 'Unbreakable encryption'
-      }
-      {
-        name: 'Brain-Computer Interface'
-        href: '/brain-computer-interface-platform'
-        description: 'Neural interface technology'
-      }
-      {
-        name: 'Quantum Materials Discovery'
-        href: '/quantum-materials-discovery-platform'
-        description: 'Materials science acceleration'
-      }
-      {
-        name: 'Autonomous Vehicle AI'
-        href: '/autonomous-vehicle-ai-platform'
-        description: 'Self-driving AI systems'
-      }
-      {
-        name: 'Quantum Bio-Computing'
-        href: '/quantum-bio-computing-platform'
-        description: 'Quantum-biological hybrid processing'
-      }
-      {
-        name: 'Quantum Energy Platform'
-        href: '/quantum-energy-platform'
-        description: 'Fusion power simulation'
-      }
-      {
-        name: 'Quantum Robotics'
-        href: '/quantum-robotics'
-        description: 'Quantum-enhanced robotics'
-      }
-      {
-        name: 'Quantum Cybersecurity'
-        href: '/quantum-cybersecurity-platform'
-        description: 'Next-gen security'
-      }
-      {
-        name: 'Quantum Logistics'
-        href: '/quantum-logistics-optimization'
-        description: 'Route optimization'
-      }
-      {
-        name: 'Quantum Metaverse'
-        href: '/quantum-metaverse'
-        description: 'Quantum-enhanced virtual worlds'
-      }
-      {
-        name: 'Quantum IoT Platform'
-        href: '/quantum-iot'
-        description: 'Quantum-secured IoT'
-      }
-      {
-        name: 'AI-Powered Space Technology'
-        href: '/ai-powered-space-technology'
-        description: 'Revolutionary space AI'
-      }
-    ]
-  }
-  {
-    name: 'Enterprise IT',
-    href: '/enterprise-it',
-    icon: <Shield className='w-5 h-5' />,
-    description: 'Advanced enterprise infrastructure and security',
-    badge: 'Enterprise',
-    featured: true,
-    children: [
-{
-        name: 'Zero Trust Security',
-        href: '/zero-trust-security-platform',
-        description: 'Next-generation security architecture',
-      },
-      {
-        name: 'Quantum Cloud Infrastructure',
-        href: '/quantum-cloud-infrastructure',
-        description: 'Quantum-enhanced cloud computing',
-      },
-      {
-        name: 'Autonomous IT Operations',
-        href: '/autonomous-it-operations-center',
-        description: 'Self-managing IT infrastructure',
-      },
-      {
-        name: 'Edge Computing Orchestration',
-        href: '/edge-computing-orchestration',
-        description: 'Distributed edge computing',
-      },
-      {
-        name: 'Blockchain Infrastructure',
-        href: '/blockchain-infrastructure-platform',
-        description: 'Enterprise blockchain solutions',
-      },
-      {
-        name: 'AI-Powered DevOps',
-        href: '/ai-powered-devops-platform',
-        description: 'Intelligent development operations',
-      },
-      {
-        name: 'Quantum Cybersecurity',
-        href: '/quantum-cybersecurity-services',
-        description: 'Next-gen quantum security',
-      },
-      {
-        name: 'AI-Powered Cybersecurity',
-        href: '/ai-powered-cybersecurity',
-        description: 'Intelligent threat detection',
-      },
-    ],
-  },
-  {
-    name: 'Industry Solutions',
-    href: '/industry-solutions',
-    icon: <Building className='w-5 h-5' />,
-    description: 'Industry-specific technology solutions',
-    badge: 'Industry',
-    children: [
-      {
-        name: 'Zero Trust Security'
-        href: '/zero-trust-security-platform'
-        description: 'Next-generation security architecture'
-      }
-      {
-        name: 'Quantum Cloud Infrastructure'
-        href: '/quantum-cloud-infrastructure'
-        description: 'Quantum-enhanced cloud computing'
-      }
-      {
-        name: 'Autonomous IT Operations'
-        href: '/autonomous-it-operations-center'
-        description: 'Self-managing IT infrastructure'
-      }
-      {
-        name: 'Edge Computing Orchestration'
-        href: '/edge-computing-orchestration'
-        description: 'Distributed edge computing'
-      }
-      {
-        name: 'Blockchain Infrastructure'
-        href: '/blockchain-infrastructure-platform'
-        description: 'Enterprise blockchain solutions'
-      }
-      {
-        name: 'AI-Powered DevOps'
-        href: '/ai-powered-devops-platform'
-        description: 'Intelligent development operations'
-      }
-      {
-        name: 'Quantum Cybersecurity'
-        href: '/quantum-cybersecurity-services'
-        description: 'Next-gen quantum security'
-      }
-      {
-        name: 'Biotech AI Research',
-        href: '/biotech-ai',
-        description: 'AI-driven biotech',
-      },
-    ],
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
-  {
-    name: 'Resources',
-    href: '/resources',
-    icon: <BookOpen className='w-5 h-5' />,
-    description: 'Documentation, support, and learning resources',
-    children: [
-    href: '/enterprise - it',
-    icon: <Shield className="w - 5 h - 5" />,
-=======
-  {'
-    name: 'Resources''
-    href: '/resources''
-    icon: <BookOpen className='w-5 h-5' />'
-    description: 'Documentation, support, and learning resources'
-    children: ['
-    href: '/enterprise - it',"
-    icon: <Shield className="w - 5 h - 5" />,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     badge: 'Enterprise',
     featured: true,
     children: [;
@@ -1456,109 +695,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: <BookOpen className='w - 5 h - 5' />,'
     description: 'Documentation, support, and learning resources',
     children: [;
-<<<<<<< HEAD
-      {
-        name: 'Documentation',
-        href: '/docs',
-        description: 'Technical documentation',
-      },
-      {
-        name: 'API Reference',
-        href: '/api-documentation',
-        description: 'API documentation',
-      },
-      {
-        name: 'Case Studies',
-        href: '/case-studies',
-        description: 'Success stories',
-      },
-      { name: 'Blog & News', href: '/blog', description: 'Latest insights' },
-origin/cursor/automate-test-improve-and-merge-code-2533
-      {
-        name: 'Support Center',
-        href: '/support',
-        description: 'Help and support',
-      },
-      {
-        name: 'Training',
-        href: '/training',
-        description: 'Learning resources',
-      },
-      { name: 'Community', href: '/community', description: 'User community' },
-    ],
-  },
-];
 
-const quickActions = [
-  {
-    name: 'Get Started',
-    href: '/contact',
-    icon: <ArrowRight className='w-4 h-4' />,
-    primary: true,
-  },
-  {
-    name: 'Get a Quote',
-    href: '/quote',
-    icon: <DollarSign className='w-4 h-4' />,
-  },
-  { name: 'Book Demo', href: '/demo', icon: <Video className='w-4 h-4' /> },
-  {
-    name: 'Live Chat',
-    href: '/chat',
-    icon: <MessageCircle className='w-4 h-4' />,
-  },
-  {
-    name: 'View Pricing',
-    href: '/pricing',
-    icon: <DollarSign className='w-4 h-4' />,
-  },
-  {
-    name: 'Market Pricing',
-    href: '/market-pricing',
-    icon: <BarChart3 className='w-4 h-4' />,
-  },
-  {
-    name: 'Services Advertising',
-    href: '/services-advertising',
-    icon: <Sparkles className='w-4 h-4' />,
-  },
-  {
-    name: 'Documentation',
-    href: '/docs',
-    icon: <BookOpen className='w-4 h-4' />,
-  },
-  {
-    name: 'Support',
-    href: '/support',
-    icon: <HelpCircle className='w-4 h-4' />,
-  },
-];
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-const UltraFuturisticNavigation2035: React.FC = () => {
-=======
-      {'
-        name: 'Documentation''
-        href: '/docs''
-        description: 'Technical documentation'
-      }
-      {}
-      {'
-        name: 'Support Center''
-        href: '/support''
-        description: 'Help and support'
-      }
-      {'
-        name: 'Training''
-        href: '/training''
-        description: 'Learning resources'
-      }'
-      { name: 'Community', href: '/community', description: 'User community' }
-    ]
-  }
-];
-const UltraFuturisticNavigation2035: React.FC = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -1592,10 +729,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     closeDropdowns()
   };
 
-
-
             {/* Desktop Navigation */}  };
-
 
   return ("
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${}
@@ -1661,7 +795,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 closeDropdowns();
   };
 
-  
     >
       {/* Background Effects */}
       <div className='absolute inset-0'>
@@ -1752,7 +885,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         transition={{ duration: 0.2 }}'
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 
-
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
                     {activeDropdown === item && item.name && (;
@@ -1776,31 +908,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>"
                           <div className="space-y-2">
                             {item.children?.map((child) => (
-<<<<<<< HEAD
-className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-                        onMouseLeave={closeDropdowns}
-                      >
-                        <div className='p-6'>
-                          <div className='flex items-center gap-3 mb-4'>
-                            {item.icon}
-                            <div>
-                              <h3 className='font-semibold text-white'>
-                                {item.title |item.name}
-                              </h3>
-                              {item.description && (
-                                <p className='text-sm text-gray-400'>
-                                  {item.description}
-                                </p>
-                              )}
-                            </div>
-                          </div>
-                          <div className='space-y-2'>
-                            {item.children?.map(child => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-                              <Link
-=======
-                              <Link;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                                 key={child && child.name}
                                 href={child && child.href}`
                                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${'
@@ -1947,20 +1055,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${}
                               <Link;
                                 key={child.name}
-<<<<<<< HEAD
-                                href={child.href}
-                                className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
-child.featured
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'
-                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-=======
-                                href={child.href}`
-                                className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${}
-                                  child.featured'
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'                                  child.featured'
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20''
-                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                                 }`}
                                 onClick={closeDropdowns}
                               >
@@ -1990,25 +1085,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Right Side Actions */}'
             <div className='hidden lg:flex items-center gap-4'>
               {/* Quick Actions */}
-<<<<<<< HEAD
-            {/* Right Side Actions */}
-<div className='hidden lg:flex items-center gap-4'>
-              {/* Quick Actions */}
-              <div className='flex items-center gap-2'>
 
-                  <Link
-
-                {quickActions.map(action => (
-                  <Link
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-            {/* Right Side Actions */}'
-            <div className='hidden lg:flex items-center gap-4'>
-              {/* Quick Actions */}'
-              <div className='flex items-center gap-2'>
-
-                  <Link;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     key={action.name}
                     href={action.href}`
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${}
@@ -2021,17 +1098,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>{action.name}</span>
                   </Link>
                 ))}
-<<<<<<< HEAD
-              {/* Contact Info */}
-<div className='flex items-center gap-4 text-sm text-gray-400'>
-                <a
-                  href={`tel:${contactInfo.mobile}`}
-=======
-              {/* Contact Info */}'
-              <div className='flex items-center gap-4 text-sm text-gray-400'>
-                <a;`
-                  href={`tel:${contactInfo.mobile}`}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                   className='flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200'
                 >'
                   <Phone className='w-4 h-4' />'
@@ -2040,52 +1107,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <a;`
                   href={`mailto:${contactInfo.email}`}'
                   className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200'
-<<<<<<< HEAD
-                >
-                  <Mail className='w-4 h-4' />
-                  <span className='hidden xl:inline'>{contactInfo.email}</span>
-                </a>
-              </div>
-            </div>
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200'
-=======
-                >'
-                  <Mail className='w-4 h-4' />'"
-                  <span className='hidden xl:inline'>{contactInfo.email}</span>                </a>              <div className="flex items-center gap-4 text-sm text-gray-400">"`
-                <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200">"
-                  <Phone className="w-4 h-4" />"
-                  <span className="hidden xl:inline">{contactInfo.mobile}</span>
-                </a>"`
-                <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 hover:text-purple-400 transition-colors duration-200">"
-                  <Mail className="w-4 h-4" />"
-                  <span className="hidden xl:inline">{contactInfo.email}</span>
-              </div>
-            </div>
-            {/* Mobile Menu Button */}
-            <button;
-              onClick={() => setIsOpen(!isOpen)}'
-              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               aria-label='Toggle mobile menu'
             >
               {isOpen ? ('
                 <X className='w-6 h-6' />
-<<<<<<< HEAD
-              ) : (
-                <Menu className='w-6 h-6' />
-              )}
-            </button>
-=======
-              ) : ('
-                <Menu className='w-6 h-6' />"
-              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200""
-              aria-label="Toggle mobile menu"
-            >"
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           </div>
         </div>
         {/* Mobile Menu */}
@@ -2128,21 +1155,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </span>
                           )}
                         </div>
-<<<<<<< HEAD
-<ChevronDown
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item.name ? 'rotate-180' : ''
-                          }`}
-                        />
-=======
-                        <ChevronDown;`
-                          className={`w-4 h-4 transition-transform duration-200 ${'
-                            activeDropdown === item.name ? 'rotate-180' : ''`
-                          }`}`
-                        />                      </button>                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${'
-                          activeDropdown === item.name ? 'rotate-180' : ''`
-                        }`} />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                       </button>
 `
                         />                      </button>                        <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${'
@@ -2150,30 +1163,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         }`} />;
                       </button>;
 
-
-
-
                       {/* Mobile Dropdown */}
                       <AnimatePresence>;
                         {activeDropdown === item && item.name && (;
-<<<<<<< HEAD
-                          <motion&& motion.div
-                      <AnimatePresence>
-                        {activeDropdown === item.name && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.2 }}
-className='ml-6 mt-2 space-y-2'
-                          >
-                            {item.children?.map(child => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-                              <Link
-=======
-                          <motion&& motion.div;
-                              <Link;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                                 key={child && child.name}
                                 href={child && child.href}`
                                 className={`block p-3 rounded-lg transition-colors duration-200 ${'
@@ -2201,9 +1194,6 @@ child.featured
 origin/cursor/automate-test-improve-and-merge-code-2533
                                 )}
 
-
-
-
                               </Link>
                               </Link>;
                             ))}
@@ -2212,8 +1202,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </AnimatePresence>;
                     </div>;
                   ))}
-
-
 
                   {/* Mobile Quick Actions */}
 <div className='pt-4 border-t border-gray-800/50'>
@@ -2239,14 +1227,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {/* Mobile Contact Info */}'
                   <div className='pt-4 border-t border-gray-800/50'>;'
                     <div className='space-y-3 text-sm text-gray-400'>;
-<<<<<<< HEAD
-<div className='pt-4 border-t border-gray-800/50'>
-                    <div className='space-y-3 text-sm text-gray-400'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                      <a
-=======
-                      <a;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                         <span>{contactInfo.mobile}</span>
                       </a>
                       <a;`
@@ -2299,7 +1280,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </nav>
 );
 };
-
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 }, []);
@@ -2397,7 +1377,4 @@ export default UltraFuturisticNavigation2035;  )
 export default UltraFuturisticNavigation2035;
 export default UltraFuturisticNavigation2035;
 '"`
-=======
 
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

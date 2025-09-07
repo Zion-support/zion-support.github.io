@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-  Check,
-  Shield,
-  ShieldAlert,
-  Lock,
-  Phone,
-  Mail,
-<<<<<<< HEAD
-import React from 'react',
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Head from 'next/head';
 import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -24,42 +13,6 @@ export default function AIGuardrailsPage() {
 				<meta name="description" content="Production-grade safety and governance for AI apps: policy enforcement;, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-guardrails" />
 			</Head>
-
-<<<<<<< HEAD
-import {
-  Check
-  Shield
-  ShieldAlert
-  Lock
-  Phone
-  Mail
-  MapPin
-  ExternalLink;
-origin/cursor/automate-test-improve-and-merge-code-2533
-} from 'lucide-react';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-
-export default function AIGuardrailsPage() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-};
-=======
-} from 'lucide-react';'
-import Card from '../components/ui/Card';'
-import Button from '../components/ui/Button';
-
-export default function AIGuardrailsPage() {}
-  const contactInfo = {'
-    mobile: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
-    address: '364 E Main St STE 1008 Middletown DE 19709',';
-    website: 'https://ziontechgroup.com',;
-  };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const features = ['
     'Prompt/output policy engine with allow/deny lists''
@@ -147,39 +100,14 @@ import Head from 'next/head';
 	);
 }
 	);
-<<<<<<< HEAD
-    </UltraAdvancedFuturisticBackground>);					<div className="bg - black / 20 border border - rose - 500 / 30 rounded-2xl p-6">;
-      <h3 className="text - xl font - semibold text - white mb-4 text-center">Contact</h3>;
-      <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6 text-sm">;
-      <div className="flex items - center justify - center gap - 2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`}>{contact_info.mobile}</a></div>;
-      <div className="flex items - center justify - center gap - 2 text-purple-400"><Mail className="w-4 h-4" /> <a href={`mailto:${contact_info.email}`}>{contact_info.email}</a></div>;
-      <div className="flex items - center justify - center gap - 2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs">{contact_info.address}</a></div>;
-      </div>;
-      <div className="text-center mt-6">;
-      <Button href="/services" variant="outline" className="border - rose - 500 text-rose-400">Explore Services <ExternalLink className="w - 4 h-4 ml-2" /></Button>;
-=======
-    </UltraAdvancedFuturisticBackground>);					<div className="bg - black / 20 border border - rose - 500 / 30 rounded - 2xl p - 6">;"
-      <h3 className="text - xl font - semibold text - white mb - 4 text - center">Contact</h3>;"
-      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - sm">;'"
-      <div className="flex items - center justify - center gap - 2 text - cyan - 400"><Phone className="w - 4 h - 4" /> <a href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`}>{contact_info.mobile}</a></div>;"`
-      <div className="flex items - center justify - center gap - 2 text - purple - 400"><Mail className="w - 4 h - 4" /> <a href={`mailto:${contact_info.email}`}>{contact_info.email}</a></div>;"`
-      <div className="flex items - center justify - center gap - 2 text - emerald - 400"><MapPin className="w - 4 h - 4" /> <a href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`} target="_blank" rel="noopener noreferrer" className="text - xs">{contact_info.address}</a></div>;
-      </div>;"
-      <div className="text - center mt - 6">;"
-      <Button href="/services" variant="outline" className="border - rose - 500 text - rose - 400">Explore Services <ExternalLink className="w - 4 h - 4 ml - 2" /></Button>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       </div>;
     </div>;
     </div>;
   </section>;
   </UltraAdvancedFuturisticBackground>);
 }
-<<<<<<< HEAD
-        />
-        <link rel='canonical' href='https://ziontechgroup.com/ai-guardrails' />
-      </Head>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
       <section className='min-h-screen pt-28 pb-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-12'>
@@ -295,6 +223,4 @@ import Head from 'next/head';
     </UltraAdvancedFuturisticBackground>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

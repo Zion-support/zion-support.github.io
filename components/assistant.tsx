@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-interface Message {;
-  role: 'user' | 'assistant';
-  content: string;
 
-export default function Assistant() { return null; }
-  const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
-export default function Assistant() { return null; }
-      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`,;
-    },;'
-  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();'
-  const tenantId = params.get('tenantId') |'';'
-  const brand = params.get('brand') |'Zion AI';
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useEffect, useMemo, useState } from 'react';
 interface Message { role: 'user' | 'assistant', content: string }
 
@@ -22,22 +6,6 @@ export default function Assistant() {
   const params = null;
       return
 
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const [messages, setMessages] = useState<Message[]>([
-{
-      role: 'assistant',
-      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`,
-    },
-  ]);
-=======
-  const [messages, setMessages] = useState<Message[]>([]
-    {'
-      role: 'assistant'`
-      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`
-    }
-  ]);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [input, setInput] = useState('');
 
   const faqs: Record<string, string> = useMemo(;
@@ -67,7 +35,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ]);
       return;
 
-
   async function handleAsk(question: string) {
     const lower = question.toLowerCase();
     const faq = Object.keys(faqs).find(key => lower.includes(key))
@@ -79,8 +46,7 @@ setMessages(prev => [
       ]);
       return;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     }
     ]);
   }
@@ -106,10 +72,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }>            {m && m.content}    }
     // Basic fallback;'
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             }
           >
             {m.content}
@@ -129,10 +92,7 @@ className='p-3 border-t flex gap-2'
 origin/cursor/automate-test-improve-and-merge-code-2533
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
-=======
-        <input;
-          className="flex-1 border rounded px-3 py-2 text-sm""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           placeholder="Ask about the role..."
           value={input}
 
@@ -156,13 +116,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useEffect, useMemo, useState} from 'react';
 ;
 interface Message {'
@@ -254,27 +207,7 @@ if ( {) {}
     // Basic fallback;'
     set_messages (prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
   }
-<<<<<<< HEAD
-  return (
-    <div className="min - h-full h - full w - full flex flex-col bg-white">;
-      <div className="px - 4 py - 2 border - b text - sm text - gray - 600 flex items-center gap-2">;
-        <span className="font-semibold">{brand}</span>;
-        <span className="text-gray-400">Applicant Assistant</span>;
-        {tenant_id && <span className="ml - auto text - xs text-gray-400">Tenant: {tenant_id.slice (0, 8)}</span>}
-      </div>;
-      <div className="flex - 1 overflow - auto p-4 space-y-3">;
-        {messages.map ((m, idx) => (
-=======
-  return ("
-    <div className="min - h-full h - full w - full flex flex - col bg - white">;"
-      <div className="px - 4 py - 2 border - b text - sm text - gray - 600 flex items - center gap - 2">;"
-        <span className="font - semibold">{brand}</span>;"
-        <span className="text - gray - 400">Applicant Assistant</span>;"
-        {tenant_id && <span className="ml - auto text - xs text - gray - 400">Tenant: {tenant_id.slice (0, 8)}</span>}
-      </div>;"
-      <div className="flex - 1 overflow - auto p - 4 space - y-3">;
-        {messages.map ((m, idx) => ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           <div key={idx} className={m.role === 'assistant' ? 'text - gray - 800' : 'text - gray - 900 font - medium'}>;
             {m.content}
           </div>))}
@@ -305,23 +238,7 @@ if ( {) {}
         </button>;
       </form>;
     </div>);      >;
-<<<<<<< HEAD
-        <input;
-          className="flex - 1 border rounded px - 3 py-2 text-sm";
-          placeholder="Ask about the role...";
-          value={input}
-          on_change={(e) => set_input (e.target.value)}
-        />;
-        <button type="submit" className="bg - gray - 900 text - white text - sm rounded px-3 py-2">Send</button>;
-=======
-        <input;"
-          className="flex - 1 border rounded px - 3 py - 2 text - sm";"
-          placeholder="Ask about the role...";
-          value={input}
-          on_change={(e) => set_input (e.target.value)}
-        />;"
-        <button type="submit" className="bg - gray - 900 text - white text - sm rounded px - 3 py - 2">Send</button>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       </form>;
     </div>);
         />
@@ -331,12 +248,4 @@ if ( {) {}
   )
 
 }
-<<<<<<< HEAD
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

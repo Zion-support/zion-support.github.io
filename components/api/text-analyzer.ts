@@ -1,10 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-interface TextAnalysisResult {}
-=======
 
-interface TextAnalysisResult {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
 export default async function handler(
@@ -19,12 +14,7 @@ export default async function handler(
     // Basic statistics;
     const characters = text.length;'
     const charactersNoSpaces = text.replace(/\s/g, '').length;
-<<<<<<< HEAD
-    const words = text
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 text: string;
   statistics: {characters: number;
     charactersNoSpaces: number;
@@ -57,12 +47,7 @@ return res.status(405).json({ error: 'Method not allowed'}
     }
 
     // Basic statistics
-<<<<<<< HEAD
-const words = text
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    const words = text;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       .trim()
       .split(/\s+/)
       .filter(word => word && word.length > 0).length;
@@ -153,19 +138,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const negativeCount = textWords && textWords.filter(word =>
       negativeWords && negativeWords.includes(word)
     ).length;
-<<<<<<< HEAD
-    const sentimentScore = positiveCount - negativeCount;
-    let sentimentLabel: TextAnalysisResult['sentiment']['label'];
-    if (sentimentScore <= -3) sentimentLabel = 'very-negative';
-    else if (sentimentScore <= -1) sentimentLabel = 'negative';
-    else if (sentimentScore <= 1) sentimentLabel = 'neutral';
-    else if (sentimentScore <= 3) sentimentLabel = 'positive';
-=======
-    const sentimentScore = positiveCount - negativeCount;'
-    let sentimentLabel: TextAnalysisResult['sentiment']['label'];'
-    if (sentimentScore <= -3) sentimentLabel = 'very-negative';    else if (sentimentScore <= -1) sentimentLabel = 'negative';    else if (sentimentScore <= 1) sentimentLabel = 'neutral';'
-    else if (sentimentScore <= 3) sentimentLabel = 'positive';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     else sentimentLabel = 'very-positive';
     // Keyword analysis;
     const wordCounts = new Map<string, number>();
@@ -238,41 +211,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         readingTime;
         speakingTime;
       }
-<<<<<<< HEAD
-const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);
-    const detectedLanguage = isEnglish ? 'en' : 'unknown';
-    const confidence = isEnglish ? 0.95 : 0.5;
-    const result: TextAnalysisResult = {
-text,
-      statistics: {
-        characters,
-        charactersNoSpaces,
-        words,
-        sentences,
-        paragraphs,
-        syllables,
-        readingTime,
-        speakingTime,
-      },
-origin/cursor/automate-test-improve-and-merge-code-2533
-      readability: {
-        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100
-        fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100
-        gunningFog: Math.round(gunningFog * 100) / 100
-        smog: Math.round(smog * 100) / 100
-        colemanLiau: Math.round(colemanLiau * 100) / 100
-        automatedReadability: Math.round(automatedReadability * 100) / 100
-        averageGrade
-=======
-      readability: {}
-        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100;
-        fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100;
-        gunningFog: Math.round(gunningFog * 100) / 100;
-        smog: Math.round(smog * 100) / 100;
-        colemanLiau: Math.round(colemanLiau * 100) / 100;
-        automatedReadability: Math.round(automatedReadability * 100) / 100;
-        averageGrade;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       }
       sentiment: {}
         score: sentimentScore;
@@ -319,26 +258,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-
-
-
-
-<<<<<<< HEAD
-    console.error('Text analysis error:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     res.status(500).json({ error: 'Internal server error' })
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

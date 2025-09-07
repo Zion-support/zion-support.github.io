@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-};
-<<<<<<< HEAD
-import React from 'react';
-  const featuredNews = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-{
- featured: true 
-=======
-{}
- featured: true ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 };
 {;
   title: 'Cybersecurity Partnership with Global Tech Leaders';'
@@ -47,29 +36,7 @@ const years = [ {'
   id: '2023', name: '2023';
 }];
 TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
-<<<<<<< HEAD
-Clock, BookOpen, Video, Podcast, FileText, Search;
-}from 'lucide-react';
-return (<UltraFuturisticBackground> <div className="min-h-screen" > <Head> <title > News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title> <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." /> </Head> id: 1;
-title: "Zion Tech Group Launches Revolutionary Quantum AI Platform";
-excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.";
-category: "Product Launch";
-author: "Zion Tech Group Team";
-date: "2025-01-15";
-readTime: "5 min read";
-image: "/images/news/quantum-ai-launch.jpg";
-=======
-Clock, BookOpen, Video, Podcast, FileText, Search;'
-}from 'lucide-react';'
-return (<UltraFuturisticBackground> <div className="min - h-screen" > <Head> <title > News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title> <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." /> </Head> id: 1;"
-title: "Zion Tech Group Launches Revolutionary Quantum AI Platform";"
-excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.";"
-category: "Product Launch";"
-author: "Zion Tech Group Team";"
-date: "2025-01-15";"
-readTime: "5 min read";"
-image: "/images/news/quantum-ai-launch.jpg";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 tags: ["Quantum Computing", "AI", "Product Launch" ]
 }
 export default function News () {}
@@ -123,75 +90,21 @@ function News() {}
   export default /**;
  * NewsPage - Function description;
  */
-<<<<<<< HEAD
-function NewsPage() {
-  const news_articles = [ {
-  </div> </section> {
-  /* Featured Article */;
-}> <h2 className="text - 3xl lg:text - 4xl font - bold text-white mb-6" > Featured Story </h2> </motion.div> <motion.div <span key= {
-  tag;
-}className="bg - gray - 800 / 50 text - gray - 300 text - sm px - 3 py - 1 rounded - full border border-gray-700 / 50" > {
-  tag;
-}</span>) );
-}</div> <Link > Read Full Article <ArrowRight className="w - 5 h-5 ml-2" /> </a> </div> <div className="relative h-64 lg:h-auto" > <div className="absolute inset - 0 bg - gradient - to - br from - purple - 900 / 50 to - blue - 900 / 50 flex items-center justify-center" > <Newspaper className="w - 24 h - 24 text-purple-400" /> </div> </div> </div> </motion.div> </div> </section>);
-}<button key= {
-=======
-function NewsPage() {}
-  const news_articles = [ {}
-  </div> </section> {}
-  /* Featured Article */;"
-}> <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6" > Featured Story </h2> </motion.div> <motion.div <span key= {}
-  tag;"
-}className="bg - gray - 800 / 50 text - gray - 300 text - sm px - 3 py - 1 rounded - full border border - gray - 700 / 50" > {}
-  tag;
-}</span>) );"
-}</div> <Link > Read Full Article <ArrowRight className="w - 5 h - 5 ml - 2" /> </a> </div> <div className="relative h - 64 lg:h - auto" > <div className="absolute inset - 0 bg - gradient - to - br from - purple - 900 / 50 to - blue - 900 / 50 flex items - center justify - center" > <Newspaper className="w - 24 h - 24 text - purple - 400" /> </div> </div> </div> </motion.div> </div> </section>);
-}<button key= {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   category.name;
 }className= {}`
   `px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 $ {'
   category.active ? 'bg - gradient - to - r from - purple - 500 to - blue - 600 text - white' : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50 border border - gray - 700 / 50';`
 }`;
 }> </button>) );
-<<<<<<< HEAD
-}</div> </section>);
-}> <h2 className="text - 3xl lg:text - 4xl font - bold text-white mb-6" > Latest News </h2> <p className="text - xl text - gray - 400 max-w-3xl mx-auto" > Stay updated with our latest developments and breakthroughs </p> </motion.div> > <div className="relative h - 48 bg - gradient - to - br from - purple - 900 / 30 to - blue - 900 / 30 flex items-center justify-center" > <Newspaper className="w - 16 h - 16 text-purple-400" /> </div> <span key= {
-  tag;
-}className="bg - gray - 800 / 30 text - gray - 400 text - xs px - 2 py - 1 rounded - full border border-gray-700 / 30" > {
-  tag;
-}</span>) );
-}</div> <Link > Read More <ArrowRight className="w - 4 h-4 ml-1" /> </a> </div> <section className="py - 20 px - 4 sm:px-6 lg:px-8" > <div className="max-w-7xl mx-auto" > <motion.div > <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - blue - 500 / 20 to - cyan - 500 / 20 border border - blue - 500 / 30 text - blue - 300 text - sm font-medium mb-6" > <Newspaper className="w - 4 h-4 mr-2" /> <section className="relative py-20 px-4" > <div className="container mx-auto max-w-6xl" > <motion.div > <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - blue - 400 via - indigo - 500 to - purple - 600 bg - clip - text text-transparent mb-6" > Latest News & Updates </div> <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - blue - 400 via - cyan - 400 to - indigo - 400 bg - clip - text text-transparent mb-6" > News & Press </h1> <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx-auto leading-relaxed" > Stay updated with the latest developments, breakthroughs, and innovations from Zion Tech Group and the technology industry. </p> </motion.div> > {
-  categories.map ( (category, index) => (<button key= {
-=======
-}</div> </section>);"
-}> <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6" > Latest News </h2> <p className="text - xl text - gray - 400 max - w-3xl mx - auto" > Stay updated with our latest developments and breakthroughs </p> </motion.div> > <div className="relative h - 48 bg - gradient - to - br from - purple - 900 / 30 to - blue - 900 / 30 flex items - center justify - center" > <Newspaper className="w - 16 h - 16 text - purple - 400" /> </div> <span key= {}
-  tag;"
-}className="bg - gray - 800 / 30 text - gray - 400 text - xs px - 2 py - 1 rounded - full border border - gray - 700 / 30" > {}
-  tag;
-}</span>) );"
-}</div> <Link > Read More <ArrowRight className="w - 4 h - 4 ml - 1" /> </a> </div> <section className="py - 20 px - 4 sm:px - 6 lg:px - 8" > <div className="max - w-7xl mx - auto" > <motion.div > <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - blue - 500 / 20 to - cyan - 500 / 20 border border - blue - 500 / 30 text - blue - 300 text - sm font - medium mb - 6" > <Newspaper className="w - 4 h - 4 mr - 2" /> <section className="relative py - 20 px - 4" > <div className="container mx - auto max - w-6xl" > <motion.div > <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - blue - 400 via - indigo - 500 to - purple - 600 bg - clip - text text - transparent mb - 6" > Latest News & Updates </div> <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - blue - 400 via - cyan - 400 to - indigo - 400 bg - clip - text text - transparent mb - 6" > News & Press </h1> <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed" > Stay updated with the latest developments, breakthroughs, and innovations from Zion Tech Group and the technology industry. </p> </motion.div> > {}
-  categories.map ( (category, index) => (<button key= {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   category;
 }import {}
   {}
   {};
   Search, Calendar, Clock, User, Tag;
 ArrowRight, ExternalLink, TrendingUp;
-<<<<<<< HEAD
-BookOpen, Globe, Video;
-}from 'lucide-react';
-import Link from 'next/link';
-export default /**
- * News - Function description
-=======
-BookOpen, Globe, Video;'
-}from 'lucide-react';'
-import Link from 'next / link';
-export default /**;
- * News - Function description;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
  */
 function News() { return null; }
 const categories = [ {}
@@ -232,25 +145,7 @@ excerpt: 'Examining the ethical implications of AI consciousness and how busines
 category: 'industry';'
 author: 'Dr. Robert Chang';
 }];
-<<<<<<< HEAD
-const upcoming_events = [ {
-  id: 1;
-title: 'AI Consciousness Summit 2024';
-type: 'Conference';
-date: '2024 - 02 - 15';
-time: '9:00 AM - 6:00 PM';
-location: 'San Francisco, CA',
-  description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.';
-=======
-const upcoming_events = [ {}
-  id: 1;'
-title: 'AI Consciousness Summit 2024';'
-type: 'Conference';'
-date: '2024 - 02 - 15';'
-time: '9:00 AM - 6:00 PM';'
-location: 'San Francisco, CA';'
-description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 }
 {}
   id: 2;'
@@ -318,15 +213,7 @@ type: 'Workshop';
 description: 'Hands - on workshop covering quantum computing fundamentals and practical applications.';'
 registration: 'https://ziontechgroup.com / events / quantum - workshop';
 }];
-<<<<<<< HEAD
-const matches_search = article.title.toLowerCase () .includes (search_term.toLowerCase () ) || article.excerpt.toLowerCase () .includes (search_term.toLowerCase () ) || > Latest News & Insights </motion.h1> <motion.p > Stay updated with the latest developments in AI consciousness, quantum computing, and emerging technologies from Zion Tech Group. </motion.p> {
-  /* Search and Filter */;
-}<motion.div > <div className="relative mb-8" > <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w-5 h-5" /> <input key= {
-=======
-const matches_search = article.title.toLowerCase () .includes (search_term.toLowerCase () ) || article.excerpt.toLowerCase () .includes (search_term.toLowerCase () ) || > Latest News & Insights </motion.h1> <motion.p > Stay updated with the latest developments in AI consciousness, quantum computing, and emerging technologies from Zion Tech Group. </motion.p> {}
-  /* Search and Filter */;"
-}<motion.div > <div className="relative mb - 8" > <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" /> <input key= {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   category.id;
 }on_click= {}
   () => setSelectedCategory (category.id);
@@ -338,17 +225,7 @@ const matches_search = article.title.toLowerCase () .includes (search_term.toLow
   category.name;
 }({}
   category.count;
-<<<<<<< HEAD
-}) </button>) );
-}</div> </motion.div> </div> </section> <motion.h2 'All NewsCompany NewsPartnershipsAI & EthicsQuantum TechnologySpace TechnologyMicro SAASIT Services';
-'MetaverseIndustry Insights'];
-> Latest News & Insights </motion.h1> <motion.p > Stay updated with the latest developments in AI, quantum computing, space technology, and more from Zion Tech Group. </motion.p> <motion.div > <a href="#featured" className="bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition - all duration - 300 flex items-center space-x-2" > <span > Read Featured News</span> <ArrowRight className="w-5 h-5" /> </a> <a href="#insights" className="border border - purple - 500 text - purple - 400 hover:bg - purple - 500 hover:text - white px - 8 py - 3 rounded - lg font - semibold transition-all duration-300" > Industry Insights </a> </motion.div> </div> </section> <button key= {
-=======
-}) </button>) );'
-}</div> </motion.div> </div> </section> <motion.h2 'All NewsCompany NewsPartnershipsAI & EthicsQuantum TechnologySpace TechnologyMicro SAASIT Services';'
-'MetaverseIndustry Insights'];"
-> Latest News & Insights </motion.h1> <motion.p > Stay updated with the latest developments in AI, quantum computing, space technology, and more from Zion Tech Group. </motion.p> <motion.div > <a href="#featured" className="bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition - all duration - 300 flex items - center space - x-2" > <span > Read Featured News</span> <ArrowRight className="w - 5 h - 5" /> </a> <a href="#insights" className="border border - purple - 500 text - purple - 400 hover:bg - purple - 500 hover:text - white px - 8 py - 3 rounded - lg font - semibold transition - all duration - 300" > Industry Insights </a> </motion.div> </div> </section> <button key= {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   index;
 }className= {}`
   `px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 300 $ {'
@@ -356,23 +233,7 @@ const matches_search = article.title.toLowerCase () .includes (search_term.toLow
 }`;
 }> {}
   category;
-<<<<<<< HEAD
-}</button>) );
-}</div> </div> </section> > <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip-text text-transparent" > Featured News </h2> <p className="text - xl text - gray - 300 max-w-3xl mx-auto" > Our most important announcements and breakthrough developments. </p> </motion.div> > <div className="h - 48 bg - gradient - to - br from - purple - 900 / 50 to - pink - 900 / 50 flex items-center justify-center" > <Newspaper className="w - 16 h - 16 text-purple-400" /> </div> <span > Read More</span> <ArrowRight className="w-4 h-4" /> </a> </div> </motion.article>) );
-}</div> </div> </section> > <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip-text text-transparent" > Recent News </h2> <p className="text - xl text - gray - 300 max-w-3xl mx-auto" > Stay current with our latest developments and industry updates. </p> </motion.div> <span > Read More</span> <ArrowRight className="w-4 h-4" /> </a> </motion.article>) );
-}</div> </div> </section> > <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip-text text-transparent" > Industry Insights </h2> <p className="text - xl text - gray - 300 max-w-3xl mx-auto" > Deep analysis and thought leadership on emerging technologies and industry trends. </p> </motion.div> </span>) );
-}</div> <a href="#" className="inline - flex items - center gap - 2 text - purple - 400 hover:text - purple - 300 transition-colors duration-300" > <span > Read Insight</span> <ArrowRight className="w-4 h-4" /> </a> </motion.div>) );
-}</div> </div> </section> <motion.div initial= {
-  {
-=======
-}</button>) );"
-}</div> </div> </section> > <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip - text text - transparent" > Featured News </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Our most important announcements and breakthrough developments. </p> </motion.div> > <div className="h - 48 bg - gradient - to - br from - purple - 900 / 50 to - pink - 900 / 50 flex items - center justify - center" > <Newspaper className="w - 16 h - 16 text - purple - 400" /> </div> <span > Read More</span> <ArrowRight className="w - 4 h - 4" /> </a> </div> </motion.article>) );"
-}</div> </div> </section> > <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip - text text - transparent" > Recent News </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Stay current with our latest developments and industry updates. </p> </motion.div> <span > Read More</span> <ArrowRight className="w - 4 h - 4" /> </a> </motion.article>) );"
-}</div> </div> </section> > <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip - text text - transparent" > Industry Insights </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Deep analysis and thought leadership on emerging technologies and industry trends. </p> </motion.div> </span>) );"
-}</div> <a href="#" className="inline - flex items - center gap - 2 text - purple - 400 hover:text - purple - 300 transition - colors duration - 300" > <span > Read Insight</span> <ArrowRight className="w - 4 h - 4" /> </a> </motion.div>) );
-}</div> </div> </section> <motion.div initial= {}
-  {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   opacity: 0, coordinate_y: 20;
 }whileInView= {}
   {}
@@ -380,52 +241,12 @@ const matches_search = article.title.toLowerCase () .includes (search_term.toLow
 }transition= {}
   {}
   duration: 0.8;
-<<<<<<< HEAD
-}viewport= {
-  {
-  once: true;
-}> <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip-text text-transparent" > Stay Updated </h2> <p className="text - xl text - gray - 300 mb - 8 max-w-2xl mx-auto" > Subscribe to our newsletter for the latest news, insights, and updates from Zion Tech Group. </p> <div className="flex flex - col sm:flex - row gap - 4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email" className="flex - 1 px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border-purple-500" /> <button className="px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - semibold rounded - lg transition-all duration-300" > Subscribe </button> </div> </motion.div> </div> </section>;
-}</span> </div> <ArrowRight className="w - 5 h - 5 text - cyan - 400 group - hover:translate - x-1 transition-transform duration-300" /> </div> </div> </div> </motion.article>) );
-}</div> </div> </section> > Latest News </motion.h2> > <div className="h - full bg - white / 5 border border - white / 10 rounded - 2xl overflow - hidden hover:border - cyan - 500 / 50 transition-all duration-300" > <div className="aspect - video bg - gradient - to - br from - cyan - 500 / 20 to - purple - 600 / 20 flex items-center justify-center" > <BookOpen className="w - 12 h - 12 text-cyan-400" /> </div> </span> </div> </div> </div> </motion.article>) );
-}</div> </div> </section> > Upcoming Events </motion.h2> </div> </div> <a > Register Now <ExternalLink className="w-4 h-4" /> </a> </div> </div> </motion.div>) );
-}</div> </div> </section> > <h2 className="text - 4xl md:text - 5xl font-bold mb-6" > Stay Updated </h2> <p className="text - xl text - gray-300 mb-8" > Get the latest news, insights, and updates delivered directly to your inbox. </p> <div className="flex flex - col sm:flex - row gap - 4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email address" className="flex - 1 px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - full text - white placeholder - gray - 400 focus:outline - none focus:border - cyan - 500 focus:bg - white / 20 transition-all duration-300" /> <button className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - blue - 700 transition - all duration-300 transform hover:scale-105" > Subscribe </button> </div> <p className="text - sm text - gray-400 mt-4" > No spam, unsubscribe at any time. We respect your privacy. </p> </motion.div> </div> </section> <div className="max-w-7xl mx-auto" > <motion.div > <h2 className="text - 4xl font-bold mb-4" >Latest News</h2> <p className="text - xl text - gray - 400 max-w-3xl mx-auto" > Stay updated with our most recent developments and announcements </p> </motion.div> </div> </div> <button className="w - full px - 4 py - 2 border border - cyan - 500 / 30 text - cyan - 400 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 flex items - center justify-center gap-2" > Read More <ArrowRight className="w-4 h-4" /> </button> </motion.article>) );
-}</div> </div> </section> Stay Updated </h2> <p className="text - xl text - gray - 400 max - w-2xl mx-auto mb-8" > Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing. <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg-gray-800 / 30" > <div className="max - w-4xl mx-auto text-center" > <motion.div initial= {
-  {
-=======
-}viewport= {}
-  {}
-  once: true;"
-}> <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip - text text - transparent" > Stay Updated </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto" > Subscribe to our newsletter for the latest news, insights, and updates from Zion Tech Group. </p> <div className="flex flex - col sm:flex - row gap - 4 max - w-md mx - auto" > <input type="email" placeholder="Enter your email" className="flex - 1 px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - purple - 500" /> <button className="px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - semibold rounded - lg transition - all duration - 300" > Subscribe </button> </div> </motion.div> </div> </section>;"
-}</span> </div> <ArrowRight className="w - 5 h - 5 text - cyan - 400 group - hover:translate - x-1 transition - transform duration - 300" /> </div> </div> </div> </motion.article>) );"
-}</div> </div> </section> > Latest News </motion.h2> > <div className="h - full bg - white / 5 border border - white / 10 rounded - 2xl overflow - hidden hover:border - cyan - 500 / 50 transition - all duration - 300" > <div className="aspect - video bg - gradient - to - br from - cyan - 500 / 20 to - purple - 600 / 20 flex items - center justify - center" > <BookOpen className="w - 12 h - 12 text - cyan - 400" /> </div> </span> </div> </div> </div> </motion.article>) );"
-}</div> </div> </section> > Upcoming Events </motion.h2> </div> </div> <a > Register Now <ExternalLink className="w - 4 h - 4" /> </a> </div> </div> </motion.div>) );"
-}</div> </div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold mb - 6" > Stay Updated </h2> <p className="text - xl text - gray - 300 mb - 8" > Get the latest news, insights, and updates delivered directly to your inbox. </p> <div className="flex flex - col sm:flex - row gap - 4 max - w-md mx - auto" > <input type="email" placeholder="Enter your email address" className="flex - 1 px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - full text - white placeholder - gray - 400 focus:outline - none focus:border - cyan - 500 focus:bg - white / 20 transition - all duration - 300" /> <button className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105" > Subscribe </button> </div> <p className="text - sm text - gray - 400 mt - 4" > No spam, unsubscribe at any time. We respect your privacy. </p> </motion.div> </div> </section> <div className="max - w-7xl mx - auto" > <motion.div > <h2 className="text - 4xl font - bold mb - 4" >Latest News</h2> <p className="text - xl text - gray - 400 max - w-3xl mx - auto" > Stay updated with our most recent developments and announcements </p> </motion.div> </div> </div> <button className="w - full px - 4 py - 2 border border - cyan - 500 / 30 text - cyan - 400 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 flex items - center justify - center gap - 2" > Read More <ArrowRight className="w - 4 h - 4" /> </button> </motion.article>) );"
-}</div> </div> </section> Stay Updated </h2> <p className="text - xl text - gray - 400 max - w-2xl mx - auto mb - 8" > Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing. <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gray - 800 / 30" > <div className="max - w-4xl mx - auto text - center" > <motion.div initial= {}
-  {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   opacity: 0, coordinate_y: 20;
 }animate= {}
   {}
   opacity: 1, coordinate_y: 0;
-<<<<<<< HEAD
-}transition= {
-  {
-  duration: 0.6, delay: 0.8;
-}> <h2 className="text - 4xl font-bold mb-6" >Stay Updated</h2> <p className="text - xl text - gray-400 mb-8" > Subscribe to our newsletter for the latest news, insights, and technology updates </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center max-w-md mx-auto" > <input type="email" placeholder="Enter your email" className="flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border-cyan-500 / 50" /> <button className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition-all duration-300" > Subscribe </button> </div> </motion.div> </div> </motion.article>) );
-}</div> </div> </section> > <h2 className="text - 4xl font - bold text-white mb-4" > News Categories </h2> <p className="text - xl text - gray - 300 max-w-3xl mx-auto" > Explore news by category to find updates in your areas of interest. </p> </motion.div> </motion.div>) );
-}</div> </div> </section> > <h2 className="text - 4xl font - bold text-white mb-4" > Recent News </h2> <p className="text - xl text - gray - 300 max-w-3xl mx-auto" > Stay updated with our latest announcements and developments. </p> </motion.div> </div> </div> </motion.article>) );
-}</div> </div> </section> <motion.div initial= {
-  {
-=======
-}transition= {}
-  {}
-  duration: 0.6, delay: 0.8;"
-}> <h2 className="text - 4xl font - bold mb - 6" >Stay Updated</h2> <p className="text - xl text - gray - 400 mb - 8" > Subscribe to our newsletter for the latest news, insights, and technology updates </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center max - w-md mx - auto" > <input type="email" placeholder="Enter your email" className="flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - cyan - 500 / 50" /> <button className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300" > Subscribe </button> </div> </motion.div> </div> </motion.article>) );"
-}</div> </div> </section> > <h2 className="text - 4xl font - bold text - white mb - 4" > News Categories </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Explore news by category to find updates in your areas of interest. </p> </motion.div> </motion.div>) );"
-}</div> </div> </section> > <h2 className="text - 4xl font - bold text - white mb - 4" > Recent News </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Stay updated with our latest announcements and developments. </p> </motion.div> </div> </div> </motion.article>) );
-}</div> </div> </section> <motion.div initial= {}
-  {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   opacity: 0, coordinate_y: 30;
 }whileInView= {}
   {}
@@ -433,21 +254,7 @@ const matches_search = article.title.toLowerCase () .includes (search_term.toLow
 }transition= {}
   {}
   duration: 0.8;
-<<<<<<< HEAD
-}viewport= {
-  {
-  once: true;
-}> <h2 className="text - 4xl font - bold text-white mb-4" > Media Inquiries </h2> <p className="text - xl text - gray-300 mb-8" > For press inquiries, media interviews, or additional information;
-please contact our communications team. </p> <div className="flex flex - col sm:flex - row gap-4 justify-center" > <a href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - semibold rounded - lg hover:from - purple - 700 hover:to - cyan - 700 transition - all duration-300 transform hover:scale-105" > Contact Media Team <Mic className="ml - 2 w-5 h-5" /> </a> <a href="/press" className="inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 text - purple - 400 font - semibold rounded - lg hover:bg - purple - 500 hover:text - white transition-all duration-300" > Press Kit </a> </div> </motion.div> </div> </section> </div> </Layout> <motion.div initial= {
-  {
-=======
-}viewport= {}
-  {}
-  once: true;"
-}> <h2 className="text - 4xl font - bold text - white mb - 4" > Media Inquiries </h2> <p className="text - xl text - gray - 300 mb - 8" > For press inquiries, media interviews, or additional information;"
-please contact our communications team. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <a href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - semibold rounded - lg hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 300 transform hover:scale - 105" > Contact Media Team <Mic className="ml - 2 w - 5 h - 5" /> </a> <a href="/press" className="inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 text - purple - 400 font - semibold rounded - lg hover:bg - purple - 500 hover:text - white transition - all duration - 300" > Press Kit </a> </div> </motion.div> </div> </section> </div> </Layout> <motion.div initial= {}
-  {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   opacity: 0, coordinate_y: 20;
 }whileInView= {}
   {}
@@ -455,21 +262,7 @@ please contact our communications team. </p> <div className="flex flex - col sm:
 }transition= {}
   {}
   duration: 0.8;
-<<<<<<< HEAD
-}viewport= {
-  {
-  once: true;
-}> <h2 className="text - 4xl md:text - 5xl font-bold mb-6" > Ready to Stay Informed? </h2> <p className="text - xl text - gray-300 mb-8" > Explore our latest research, industry insights, and technology breakthroughs that are shaping the future of AI and quantum computing. </p> <Link href="/blog" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - blue - 700 transition - all duration-300 transform hover:scale-105" > Explore Our Blog <ArrowRight className="w - 5 h-5 ml-2" /> </a> <Link href="/contact" className="px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 hover:text - black transition-all duration-300" > Contact Our Team </a> </div> </motion.div> </div> </section> </div>);
-}<motion.div initial= {
-  {
-=======
-}viewport= {}
-  {}
-  once: true;"
-}> <h2 className="text - 4xl md:text - 5xl font - bold mb - 6" > Ready to Stay Informed? </h2> <p className="text - xl text - gray - 300 mb - 8" > Explore our latest research, industry insights, and technology breakthroughs that are shaping the future of AI and quantum computing. </p> <Link href="/blog" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105" > Explore Our Blog <ArrowRight className="w - 5 h - 5 ml - 2" /> </a> <Link href="/contact" className="px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 hover:text - black transition - all duration - 300" > Contact Our Team </a> </div> </motion.div> </div> </section> </div>);
-}<motion.div initial= {}
-  {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   opacity: 0, coordinate_y: 20;
 }whileInView= {}
   {}
@@ -477,37 +270,7 @@ please contact our communications team. </p> <div className="flex flex - col sm:
 }transition= {}
   {}
   duration: 0.8;
-<<<<<<< HEAD
-}viewport= {
-  {
-  once: true;
-}> <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip-text text-transparent" > Get in Touch </h2> <p className="text - xl text - gray - 300 mb - 8 max-w-3xl mx-auto" > Have questions about our news or want to learn more about our latest developments? Contact our team. </p> <span > Contact Us</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/about" className="border border - purple - 500 text - purple - 400 hover:bg - purple - 500 hover:text - white px - 8 py - 3 rounded - lg font - semibold transition-all duration-300" > About Zion Tech Group </a> </div> </motion.div> </div> </section> </div>);
-}title: "Partnership with TechCorp Announced for Cloud Infrastructure";
-excerpt: "Strategic collaboration to deliver next - generation cloud automation solutions for enterprise clients worldwide.";
-date: "2025 - 01 - 18";
-category: "Partnerships";
-author: "Sarah Chen";
-}
-}
-{
-image: "🤝" 
-}
-=======
-}viewport= {}
-  {}
-  once: true;"
-}> <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip - text text - transparent" > Get in Touch </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Have questions about our news or want to learn more about our latest developments? Contact our team. </p> <span > Contact Us</span> <ArrowRight className="w - 5 h - 5" /> </a> <a href="/about" className="border border - purple - 500 text - purple - 400 hover:bg - purple - 500 hover:text - white px - 8 py - 3 rounded - lg font - semibold transition - all duration - 300" > About Zion Tech Group </a> </div> </motion.div> </div> </section> </div>);"
-}title: "Partnership with TechCorp Announced for Cloud Infrastructure";"
-excerpt: "Strategic collaboration to deliver next - generation cloud automation solutions for enterprise clients worldwide.";"
-date: "2025 - 01 - 18";"
-category: "Partnerships";"
-author: "Sarah Chen";
-}
-}
-{"
-image: "🤝" ;
-};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 };
 {;
   id: 6;"
@@ -517,13 +280,7 @@ date: "2025 - 01 - 14";"
 category: "Sustainability";"
 author: "Lisa Park";
 }
-<<<<<<< HEAD
-{
-image: "🌱" 
-=======
-{"
-image: "🌱" ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 };
 {;
   id: 7;"
@@ -533,13 +290,7 @@ date: "2025 - 01 - 13";"
 category: "Case Studies";"
 author: "Alex Thompson";
 }
-<<<<<<< HEAD
-{
-image: "📊" 
-=======
-{"
-image: "📊" ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 };
 {;
   id: 8;"
@@ -554,16 +305,7 @@ author: "Prof. Maria Garcia";
           <motion.h2"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">;
-<<<<<<< HEAD
-          <motion&& motion.h2 
 
-      {/* Upcoming Events Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
-          <motion&& motion.h2;
-      {/* Upcoming Events Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-7xl mx-auto">
           <motion.h2;
             initial={{ opacity: 0, y: 20 }}
@@ -620,16 +362,6 @@ author: "Prof. Maria Garcia";
         </div>;
       </section>;
 
-<<<<<<< HEAD
-      {/* Upcoming Events Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
-=======
-
-
-
-      {/* Upcoming Events Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.h2;
             initial={{ opacity: 0, y: 20 }}
@@ -891,31 +623,7 @@ author: "Prof. Maria Garcia";
 ;"
   const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
 ;
-<<<<<<< HEAD
-readTime: "7 min read";
-image: "📚"
-}];
-min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className=" container mx-auto px-6 py-12"> <section className=" text-center mb-16"> <h1 className=" text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> Latest News </h1> > {
-  category
-}</button>) )
-}</div> <span>•</span> <span> {
-  article.date
-}</span> <span>•</span> <span> {
-  article.readTime 
-}</span> </div> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read Full Article </button> </div> </div> </div>) ) 
-}</div> <button className=" w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read More </button> </article>) ) 
-}</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>)
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-        <meta name="description" content="Stay informed with the latest news, company updates, and industry insights from Zion Tech Group." />;
-        <meta property="og:title" content="News - Zion Tech Group" />;
-        <meta property="og:description" content="Latest company news, partnerships, and technology insights." />;
-=======
-  return ("
-        <meta name="description" content="Stay informed with the latest news, company updates, and industry insights from Zion Tech Group." />;"
-        <meta property="og:title" content="News - Zion Tech Group" />;"
-        <meta property="og:description" content="Latest company news, partnerships, and technology insights." />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
 
@@ -945,39 +653,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span>{article && article.date}</span>;
                       <span>•</span>;
                       <span>{article && article.readTime}</span>;
-<<<<<<< HEAD
-                    </div>;
-                    <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">;
-      <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate-950 text-white">;
-        <main className="container mx - auto px-6 py-12">;
-          <section className="text-center mb-16">;
-            <h1 className="text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip-text text-transparent">;
-              Latest News;
-            </h1>;
-            <p className="text - xl text - white / 80 max-w-3xl mx-auto">;
-              Stay updated with company news, partnerships, innovations, and industry insights;
-            </p>;
-          </section>;
-          <section className="mx-auto max-w-6xl">;
-            {/* Category Filter */}
-            <div className="flex flex - wrap justify - center gap-3 mb-12">;
-=======
-                    </div>;"
-                    <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">;"
-      <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;"
-        <main className="container mx - auto px - 6 py - 12">;"
-          <section className="text - center mb - 16">;"
-            <h1 className="text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent">;
-              Latest News;
-            </h1>;"
-            <p className="text - xl text - white / 80 max - w-3xl mx - auto">;
-              Stay updated with company news, partnerships, innovations, and industry insights;
-            </p>;
-          </section>;"
-          <section className="mx - auto max - w-6xl">;
-            {/* Category Filter */}"
-            <div className="flex flex - wrap justify - center gap - 3 mb - 12">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               {categories.map ((category) => (
                 <button;
                   key={category}`
@@ -991,61 +667,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>))}
             </div>;
             {/* Featured Article */}
-<<<<<<< HEAD
-            {news_articles.filter (article => article.featured).map ((article) => (
-              <div key={article.id} className="bg - gradient - to - r from - cyan - 400 / 20 to - fuchsia - 400 / 20 backdrop - blur - xl rounded - 2xl p - 8 mb - 12 border border-cyan-400 / 30">;
-                <div className="flex items-start gap-6">;
-                  <div className="text-6xl">{article.image}</div>;
-                  <div className="flex-1">;
-                    <div className="flex items - center gap-2 mb-3">;
-                      <span className="px - 3 py - 1 bg - cyan - 400 / 30 text - cyan - 300 text - sm rounded - full border border-cyan-400 / 50">;
-                        Featured;
-                      </span>;
-                      <span className="px - 3 py - 1 bg - white / 20 text - white / 80 text - sm rounded-full border border-white / 30">;
-                        {article.category}
-                      </span>;
-                    </div>;
-                    <h2 className="text - 3xl font - bold mb - 4 text - white hover:text - cyan-400 transition-colors">;
-                      {article.title}
-                    </h2>;
-                    <p className="text - white / 80 mb - 4 text-lg leading-relaxed">;
-                      {article.excerpt}
-                    </p>;
-                    <div className="flex items - center gap - 4 text - sm text-white / 60 mb-4">;
-=======
-            {news_articles.filter (article => article.featured).map ((article) => ("
-              <div key={article.id} className="bg - gradient - to - r from - cyan - 400 / 20 to - fuchsia - 400 / 20 backdrop - blur - xl rounded - 2xl p - 8 mb - 12 border border - cyan - 400 / 30">;"
-                <div className="flex items - start gap - 6">;"
-                  <div className="text - 6xl">{article.image}</div>;"
-                  <div className="flex - 1">;"
-                    <div className="flex items - center gap - 2 mb - 3">;"
-                      <span className="px - 3 py - 1 bg - cyan - 400 / 30 text - cyan - 300 text - sm rounded - full border border - cyan - 400 / 50">;
-                        Featured;
-                      </span>;"
-                      <span className="px - 3 py - 1 bg - white / 20 text - white / 80 text - sm rounded - full border border - white / 30">;
-                        {article.category}
-                      </span>;
-                    </div>;"
-                    <h2 className="text - 3xl font - bold mb - 4 text - white hover:text - cyan - 400 transition - colors">;
-                      {article.title}
-                    </h2>;"
-                    <p className="text - white / 80 mb - 4 text - lg leading - relaxed">;
-                      {article.excerpt}
-                    </p>;"
-                    <div className="flex items - center gap - 4 text - sm text - white / 60 mb - 4">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                       <span > By {article.author}</span>;
                       <span>•</span>;
                       <span>{article.date}</span>;
                       <span>•</span>;
                       <span>{article.read_time}</span>;
-<<<<<<< HEAD
-                    </div>;
-                    <button className="px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white font - semibold rounded - lg hover:from - cyan - 500 hover:to - fuchsia - 500 transition-all duration-200">;
-=======
-                    </div>;"
-                    <button className="px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white font - semibold rounded - lg hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 200">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                       Read Full Article;
                     </button>;
                   </div>;
@@ -1070,24 +698,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </section>;
         </main>;
       </div>;
-<<<<<<< HEAD
-                  />
-                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">
-                    Subscribe
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-    </>
-  )
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

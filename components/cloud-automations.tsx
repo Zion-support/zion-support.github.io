@@ -12,11 +12,6 @@ export default function CloudAutomationsPage() {};
       .catch(() => setData({ ok: false }))
   }, []);
 
-
-<<<<<<< HEAD
-  const items = null;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className='space-y-6'>
       <h1 className='text-3xl font-bold'>Cloud Automations</h1>
@@ -55,32 +50,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <pre className='mt - 2 text - xs whitespace - pre - wrap'>;
                 {JSON.stringify (value.metrics, null, 2)}
               </pre>            ) : null}        {items.map (([key, value]: any) => (
-<<<<<<< HEAD
-          <div key={key} className="border rounded p - 4 bg - gray - 50 dark:bg-gray-900">;
-            <h2 className="text-xl font-semibold">{value.name || key}</h2>;
-            <p className="text - sm text-gray-500">Started: {value.started_at || '—'}</p>;
-            <p className="text - sm text-gray-500">Finished: {value.finished_at || '—'}</p>;
-            <p className={`text - sm ${value.success ? 'text - green - 600' : 'text - red - 600'}`}>{value.success ? 'Success' : 'Failed'}</p>;
-            {value.metrics ? (
-              <pre className="mt - 2 text - xs whitespace-pre-wrap">{JSON.stringify (value.metrics, null, 2)}</pre>) : null}
-          </div>))}
-      </div>;
-    </div>);
-      </div>
-    </div>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          <div key={key} className="border rounded p - 4 bg - gray - 50 dark:bg - gray - 900">;"
-            <h2 className="text - xl font - semibold">{value.name || key}</h2>;'"
-            <p className="text - sm text - gray - 500">Started: {value.started_at || '—'}</p>;'"
-            <p className="text - sm text - gray - 500">Finished: {value.finished_at || '—'}</p>;'
-            <p className={`text - sm ${value.success ? 'text - green - 600' : 'text - red - 600'}`}>{value.success ? 'Success' : 'Failed'}</p>;
-            {value.metrics ? ("
-              <pre className="mt - 2 text - xs whitespace - pre - wrap">{JSON.stringify (value.metrics, null, 2)}</pre>) : null}
-          </div>))}
-      </div>;
-    </div>);
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

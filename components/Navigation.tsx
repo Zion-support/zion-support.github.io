@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -46,20 +30,7 @@ const Navigation = () => {
     { name: 'Portfolio';, href: '#portfolio' ;},
     { name: 'Contact';, href: '#contact' ;},
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
-
-
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,10 +42,6 @@ const Navigation = () => {
             </div>
             <span className="text-white text-xl font-bold">Zion Tech Group</span>
           </Link>
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -215,15 +182,7 @@ const Navigation = () => {
 };
 
 export default Navigation;
-<<<<<<< HEAD
-<<<<<<< HEAD
-pr-12243
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -254,18 +213,7 @@ origin/automation-improvements-final
 import SearchModal from "./SearchModal";
 
 export default function Navigation() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 export default function Navigation() {;
 export default function Navigation() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -989,7 +937,6 @@ export default function Navigation() {;
     </>);
 }
 
-
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -1003,17 +950,6 @@ const Navigation = () => {
 
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1160,12 +1096,6 @@ const Navigation = () => {
           )}
         </AnimatePresence>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Link from 'next/link';
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -1271,85 +1201,10 @@ const Navigation: React.FC = () => {
         </div>
       )}
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     </nav>
   );
 };
 
 export default Navigation;
-<<<<<<< HEAD
-<<<<<<< HEAD
-main
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-pr-12243
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
-=======
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-main
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-pr-12243
-
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              className="md:hidden overflow-hidden"
-              variants={mobileMenuVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
-            >
-              <div className="py-4 space-y-2">
-                {navItems.map((item) => (
-                  <motion.a
-                    key={item.name}
-                    href={item.href}
-                    className={`block py-3 px-4 rounded-lg font-medium transition-colors duration-200 hover:bg-gray-100 ${
-                      scrolled ? 'text-gray-700' : 'text-white hover: bg-white/10';
-                    }`}
-                    variants={mobileItemVariants}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </motion.a>
-                ))}
-                <motion.button
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 group mt-4"
-                  variants={mobileItemVariants}
-                  whileTap={{ scale: 0.95 ;}}
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </motion.nav>
-  );
-};
-
-export default Navigation;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,338 +1,16 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';'
-import Head from 'next/head';'
-import Card from '../components/ui/Card';
-'
-import Button from '../components/ui/Button';
 
-import {}
-  Search,
-  TrendingUp,
-  CheckCircle,
-  AlertTriangle,
-  ArrowRight,
-  Target,
-  BarChart3,
-  Globe,;
-  Smartphone,;
-  Zap,;
-export default function SEOAnalyzerToolPage() { return null; }
-} from 'lucide-react';
-
-
-export default function SEOAnalyzerToolPage() { return null; }
-    {}
-    }
-    {'
-      category: 'Content SEO'
-      factors: ['
-        'Keyword density''
-        'Content relevance''
-        'Readability scores''
-        'Content freshness''
-        'Multimedia optimization''
-        'Schema markup'
-      ]'
-      icon: '''
-      color: 'text-purple-400'
-    }
-    {'
-      category: 'Local SEO'
-      factors: ['
-        'Google My Business''
-        'Local citations''
-        'Review management''
-        'Local keyword targeting''
-        'Location-based content''
-        'Local link building'
-      ]
-import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function SEOAnalyzerToolPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
-<<<<<<< HEAD
-icon: <Search className='w-8 h-8 text-white' />,
-      title: 'Comprehensive SEO Analysis',
-      description:
-        'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'
-    }
-    {
-      icon: <Target className='w-8 h-8 text-white' />
-      title: 'Keyword Research'
-      description:
-        'Discover high-value keywords and analyze search intent to optimize your content strategy.'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-      gradient: 'from-blue-400 to-cyan-500'
-    }
-    {
-      icon: <BarChart3 className='w-8 h-8 text-white' />
-      title: 'Competitive Analysis'
-      description:
-        "Analyze your competitors' SEO strategies and identify opportunities to outperform them."
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-      gradient: 'from-purple-400 to-indigo-500'
-    }
-    {
-      icon: <Zap className='w-8 h-8 text-white' />
-      title: 'AI-Powered Insights'
-      description:
-        'Get intelligent recommendations and actionable insights to improve your search rankings.',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500',
-    },
-  ];
-  const seoFactors = [
-    {
-      category: 'On-Page SEO'
-      factors: [
-'Title tags optimization',
-        'Meta descriptions',
-        'Header structure (H1, H2, H3)',
-        'Content quality and length',
-        'Internal linking structure',
-        'Image optimization (alt tags)',
-      ],
-      icon: '📝',
-      color: 'text-green-400',
-    },
-    {
-      category: 'Technical SEO',
-      factors: [
-        'Page load speed',
-        'Mobile responsiveness',
-        'XML sitemap',
-        'Robots.txt configuration',
-        'SSL certificate',
-        'Core Web Vitals',
-      ],
-      icon: '⚙️',
-      color: 'text-blue-400',
-    },
-    {
-      category: 'Content SEO',
-      factors: [
-        'Keyword density',
-        'Content relevance',
-        'Readability scores',
-        'Content freshness',
-        'Multimedia optimization',
-        'Schema markup',
-      ],
-      icon: '📊',
-      color: 'text-purple-400',
-    },
-    {
-      category: 'Local SEO',
-      factors: [
-        'Google My Business',
-        'Local citations',
-        'Review management',
-        'Local keyword targeting',
-        'Location-based content',
-        'Local link building',
-      ],
-      icon: '📍',
-      color: 'text-orange-400',
-    },
-origin/cursor/automate-test-improve-and-merge-code-2533
-  ];
-  const features = [;
-    {;'
-      icon: <Search className='w-8 h-8 text-white' />,;
-      description:;'
-        'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.',;'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',;'
-      gradient: 'from-green-400 to-emerald-500',;
-    },;
-    {;'
-      icon: <Target className='w-8 h-8 text-white' />,;'
-      title: 'Keyword Research',;
-      description:;'
-        'Discover high-value keywords and analyze search intent to optimize your content strategy.',;'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',;'
-      gradient: 'from-blue-400 to-cyan-500',;
-    },;
-    {;'
-      icon: <BarChart3 className='w-8 h-8 text-white' />,;'
-      title: 'Competitive Analysis',;
-      description:;'
-        "Analyze your competitors' SEO strategies and identify opportunities to outperform them.",;'
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',;'
-      gradient: 'from-purple-400 to-indigo-500',;
-    },;
-    {;'
-      icon: <Zap className='w-8 h-8 text-white' />,;'
-      title: 'AI-Powered Insights',;
-      description:;'
-        'Get intelligent recommendations and actionable insights to improve your search rankings.',;'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',;'
-      gradient: 'from-orange-400 to-red-500',;
-    },;'
-  ];      gradient: 'from-orange-400 to-red-500'}],;
-  const seoFactors = [;
-    {;'
-      category: 'On-Page SEO',;
-      factors: [;'
-        'Title tags optimization',;'
-        'Meta descriptions',;'
-        'Header structure (H1, H2, H3)',;'
-        'Content quality and length',;'
-        'Internal linking structure',;'
-        'Image optimization (alt tags)',;
-      ],;'
-      icon: '📝',;'
-      color: 'text-green-400',      icon: '📝',;'
-      color: 'text-green-400';
-    };
-    {;'
-      category: 'Technical SEO',;
-      factors: [;'
-        'Page load speedMobile responsivenessXML sitemapRobots && sitemapRobots.txt configurationSSL certificateCore Web Vitals';
-      ];'
-      icon: '⚙️',;'
-      color: 'text-blue-400';
-    };
-    {;'
-      category: 'Content SEO',;
-      factors: [;'
-        'Keyword densityContent relevanceReadability scoresContent freshnessMultimedia optimizationSchema markup';
-      ],;'
-      icon: '📊',;'
-      color: 'text-purple-400';
-    };
-    {;'
-      category: 'Local SEO',;
-      factors: [;'
-        'Google My BusinessLocal citationsReview managementLocal keyword targetingLocation-based contentLocal link building';
-      ],;'
-      icon: '📍',;'
-      color: 'text-orange-400',;
-    },;
-    {;'
-      category: 'Technical SEO',;
-      factors: [;'
-        'Page load speed',;'
-        'Mobile responsiveness',;'
-        'XML sitemap',;'
-        'Robots && Robots.txt configuration',;'
-        'SSL certificate',;'
-        'Core Web Vitals',;
-      ],;'
-      icon: '⚙️',;'
-      color: 'text-blue-400',;
-    },;
-    {;'
-      category: 'Content SEO',;
-      factors: [;'
-        'Keyword density',;'
-        'Content relevance',;'
-        'Readability scores',;'
-        'Content freshness',;'
-        'Multimedia optimization',;'
-        'Schema markup',;
-      ],;'
-      icon: '📊',;'
-      color: 'text-purple-400',;
-    },;
-    {;'
-      category: 'Local SEO',;
-      factors: [;'
-        'Google My Business',;'
-        'Local citations',;'
-        'Review management',;'
-        'Local keyword targeting',;'
-        'Location-based content',;'
-        'Local link building',;
-      ],;'
-      icon: '📍',;'
-      color: 'text-orange-400',;'
-    },  ];      color: 'text-orange-400';
-    }'
-        '10 website analyses/monthBasic SEO metricsKeyword research (100 keywords)On-page SEO analysisEmail supportBasic reporting'
-      ];
-      popular: false;
-    };
-    {}
-;
-  const pricing = [;
-    {'
-      name: 'Starter','
-      price: '$39','
-      period: '/month','
-      description: 'Perfect for small businesses and bloggers',
-<<<<<<< HEAD
-      features: [;
-        '10 website analyses / month',
-        'Basic SEO metrics',
-        'Keyword research (100 keywords)',
-        'On - page SEO analysis',
-      name: 'Starter'
-      price: '$39'
-      period: '/month'
-      description: 'Perfect for small businesses and bloggers'
-      features: [
-'10 website analyses/month',
-        'Basic SEO metrics',
-        'Keyword research (100 keywords)',
-        'On-page SEO analysis',
-origin/cursor/automate-test-improve-and-merge-code-2533
-        'Email support',
-=======
-      features: [;'
-        '10 website analyses / month','
-        'Basic SEO metrics','
-        'Keyword research (100 keywords)','
-        'On - page SEO analysis','
-        'Email support','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         'Basic reporting',
       ],
       popular: false,'
     },    {        '10 website analyses / month_basic SEO metrics_keyword research (100 keywords)On - page SEO analysis_email support_basic reporting';
       ];
       popular: false;
-<<<<<<< HEAD
-    }
-    },
-    {
-origin/cursor/automate-test-improve-and-merge-code-2533
-      name: 'Professional',
-      price: '$89',
-      period: '/month',
-      description: 'Ideal for growing businesses and agencies',
-      features: [
-'50 website analyses/month',
-        'Advanced SEO metrics',
-        'Keyword research (500 keywords)',
-        'Competitive analysis',
-        'Priority support',
-        'Advanced reporting',
-        'API access',
-        'Team collaboration',
-      ],
-      popular: true,
-    },
-    {
-origin/cursor/automate-test-improve-and-merge-code-2533
-      name: 'Enterprise',
-      price: '$249',
-      period: '/month',
-=======
-    }'
-      name: 'Professional','
-      price: '$89','
-      period: '/month','
-      description: 'Ideal for growing businesses and agencies','
-      name: 'Enterprise','
-      price: '$249','
-      period: '/month','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       description: 'For large organizations and SEO agencies',
       features: [
 'Unlimited analyses',
@@ -353,45 +31,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/automate-test-improve-and-merge-code-2533
     setIsAnalyzing(true);
-<<<<<<< HEAD
-    // Simulate SEO analysis
-    setTimeout(() => {
-      setAnalysisResults({
-        url: url
-        overallScore: 78
-        onPageScore: 82
-        technicalScore: 75
-        contentScore: 80
-        mobileScore: 85
-        issues: [
-{
-            type: 'error',
-            message: 'Missing meta description',
-            priority: 'high',
-          },
-          {
-            type: 'warning'
-            message: 'Title tag too long (65 characters)'
-=======
-    // Simulate SEO analysis;
-    setTimeout(() => {}
-      setAnalysisResults({}
-        url: url;
-        overallScore: 78;
-        onPageScore: 82;
-        technicalScore: 75;
-        contentScore: 80;
-        mobileScore: 85;
-        issues: []
-          {'
-            type: 'error''
-            message: 'Missing meta description''
-            priority: 'high'
-          }
-          {'
-            type: 'warning''
-            message: 'Title tag too long (65 characters)''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             priority: 'medium'
           }
           {}
@@ -495,48 +135,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ) : (;
                   <>;'
                     <Search className='w-5 h-5 mr-2' />                    Analyze SEO      </Head>;
-<<<<<<< HEAD
-    }, 4000);
-  };
 
-  return (
-    <>
-      <Head>
-<title>
-          SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis &
-          Optimization
-        </title>
-        <meta
-          name='description'
-          content="Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve search rankings."
-        />
-        <meta
-          property='og:title'
-          content='SEO Analyzer Tool - Zion Tech Group'
-        />
-        <meta
-          property='og:description'
-          content='Professional SEO analysis tool with comprehensive insights and optimization recommendations.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-      </Head>
-origin/cursor/automate-test-improve-and-merge-code-2533
-      {/* Hero Section */}
-      <section className="relative section-padding bg-gradient-cursor overflow-hidden">;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0 && 0.08),transparent_50%)]" />;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0 && 0.06),transparent_50%)]" />;
-        <div className="absolute inset-0 bg-grid opacity-10" />;
-        <div className="relative z-10 container-cursor text-center">;
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">;
-=======
-      {/* Hero Section */}"
-      <section className="relative section-padding bg-gradient-cursor overflow-hidden">;"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0 && 0.08),transparent_50%)]" />;"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0 && 0.06),transparent_50%)]" />;"
-        <div className="absolute inset-0 bg-grid opacity-10" />;"
-        <div className="relative z-10 container-cursor text-center">;"
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Search className="w-4 h-4 mr-2" />;
             Professional SEO Analysis;
           </div>;"
@@ -549,28 +148,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* URL Input */}"
           <div className="max-w-2xl mx-auto mb-8">;"
             <div className="flex flex-col sm:flex-row gap-4">;
-<<<<<<< HEAD
-          <div className='max-w-2xl mx-auto mb-8'>
-            <div className='flex flex-col sm:flex-row gap-4'>
-              <input
-                type='url'
-                placeholder='Enter your website URL (e.g., https://example.com)'
-                value={url}
-                onChange={e => setUrl(e.target.value)}
-                className='flex-1 px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'
-              />
-              <Button
-                onClick={handleAnalyzeSEO}
-                size='lg'
-                className='bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap'
-                disabled={isAnalyzing || !url.trim()}
-              >
-                {isAnalyzing ? (
-                  <>
-<div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </p>
           {/* URL Input */}
           <div className="max-w-2xl mx-auto mb-8">
@@ -578,10 +156,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               <input
                 type="url"
-=======
-              <input"
-                type="url""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                 placeholder="Enter your website URL (e && e.g., https://example && example.com)"
                 value={url}
                 onChange={(e) => setUrl(e && e.target.value)}"
@@ -591,61 +166,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 onClick={handleAnalyzeSEO}"
                 size="lg""
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap"
-<<<<<<< HEAD
-                disabled={isAnalyzing |!url.trim()}
-              >
-                {isAnalyzing ? (
-                  <>
-                    <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
-                    Analyzing...
-                  </>
-                ) : (
-                  <>
-<Search className='w-5 h-5 mr-2' />
-                    Analyze SEO
-                  </>
-                )}
-              </Button>
-            </div>
-          </div>
 
-<div className='flex flex-col sm:flex-row gap-6 justify-center'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <Button
-              href='#pricing'
-              variant='outline'
-              size='lg'
-              className='border-green-500 text-green-400 hover:bg-green-500 hover:text-white shadow-2xl'>;
-              View Pricing;
-            </Button>;
-              className='border-green-500 text-green-400 hover:bg-green-500 hover:text-white shadow-2xl'
-            >
-              View Pricing
-            </Button>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <Button
-href='/contact'
-              variant='outline'
-              size='lg'
-              className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'>              href="#pricing";
-              variant="outline";
-              size="lg";
-=======
-            <Button'
-              href='#pricing''
-              variant='outline''
-              size='lg''
-              className='border-green-500 text-green-400 hover:bg-green-500 hover:text-white shadow-2xl'>;
-              View Pricing;
-            </Button>;
-            <Button'
-              href='/contact''
-              variant='outline''
-              size='lg''"
-              className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'>              href="#pricing";"
-              variant="outline";"
-              size="lg";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white shadow-2xl";
               View Pricing;
             </Button>;
@@ -728,25 +249,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>
             ))}
 
-
-
-
-<<<<<<< HEAD
-      {/* SEO Factors Section */}
-<section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-=======
-      {/* SEO Factors Section */}'
-      <section className='section-padding bg-gradient-cursor'>'
-        <div className='container-cursor'>'
-          <div className='text-center mb-20'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-
-
-
 
               Comprehensive SEO Analysis;
             </h2>'
@@ -1008,10 +511,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className="text-gray-300">{issue.message}</span>"
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
                       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 <section className='section-padding bg-gradient-cursor-accent'>
           <div className='container-cursor'>
             <div className='text-center mb-12'>
@@ -1089,13 +589,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <h3 className='text-2xl font-bold mb-6 text-white'>
                   Issues Found
                 </h3>
-=======
-              {/* Issues */}'
-              <Card className='border-gradient-green'>'
-                <h3 className='text-2xl font-bold mb-6 text-white'>
-                  Issues Found;
-                </h3>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                 <div className='space-y-3'>
                   {analysisResults.issues.map((issue, index) => ('
                     <div key={index} className='flex items-start space-x-3'>'
@@ -1110,28 +604,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className='text-gray-300'>{issue.message}</span>'
                         <div className='text-xs text-gray-500 mt-1'>
                           Priority: {issue.priority}
-<<<<<<< HEAD
-                        </div>
-=======
-                        </div>                      </div>                  {analysisResults.issues.map((issue, index) => ("
-                    <div key={index} className="flex items-start space-x-3">'
-                      {issue.type === 'error' ? ("
-                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />'
-                      ) : issue.type === 'warning' ? ("
-                        <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
-                      ) : ("
-                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
-                      )}
-                      <div>"
-                        <span className="text-gray-300">{issue.message}</span>"
-                        <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                       </div>
                         </div>                      </div>
 
                       </div>
-
-
 
                     </div>
                   ))}
@@ -1158,10 +635,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div key={index} className="flex items-start space-x-3">;"
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;"
                       <span className="text-gray-300">{rec}</span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             {/* Recommendations and Keywords */}
 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               <Card className='border-gradient-green'>
@@ -1188,12 +662,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       key={index}
                       className='border-b border-gray-700 pb-3 last:border-b-0'>;
                       <div className='flex justify-between items-center mb-2'>;
-=======
-                    <div;
-                      key={index}'
-                      className='border-b border-gray-700 pb-3 last:border-b-0'>;'
-                      <div className='flex justify-between items-center mb-2'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                         <span className='font-semibold text-white'>;
                           {keyword && keyword.keyword}
                         </span>;'
@@ -1205,35 +674,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className='text-sm text-gray-400'>;
                           Difficulty: {keyword && keyword.difficulty}
                         </span>;
-<<<<<<< HEAD
-                        <span;`
-                          className={`px-2 py-1 rounded text-xs ${'
-                            keyword && keyword.difficulty === 'low''
-                              ? 'bg-green-500/20 text-green-400''
-                              : keyword && keyword.difficulty === 'medium''
-                                ? 'bg-yellow-500/20 text-yellow-400''
-                                : 'bg-red-500/20 text-red-400'"`
-                          }`}>                          {keyword && keyword.difficulty}                      <div className="flex justify-between items-center">;"
-                        <span className="text-sm text-gray-400">Difficulty: {keyword && keyword.difficulty}</span>;`
-                        <spanclassName={`px-2 py-1 rounded text-xs ${'
-                          keyword && keyword.difficulty === 'low' ? 'bg-green-500/20 text-green-400' :'
-                          keyword && keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :'
-                          'bg-red-500/20 text-red-400'`
-=======
-                        <span
-                          className={`px-2 py-1 rounded text-xs ${
-                            keyword && keyword.difficulty === 'low'
-                              ? 'bg-green-500/20 text-green-400'
-                              : keyword && keyword.difficulty === 'medium'
-                                ? 'bg-yellow-500/20 text-yellow-400'
-                                : 'bg-red-500/20 text-red-400'
-                          }`}>                          {keyword && keyword.difficulty}                      <div className="flex justify-between items-center">;
-                        <span className="text-sm text-gray-400">Difficulty: {keyword && keyword.difficulty}</span>;
-                        <spanclassName={`px-2 py-1 rounded text-xs ${
-                          keyword && keyword.difficulty === 'low' ? 'bg-green-500/20 text-green-400' :
-                          keyword && keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
-                          'bg-red-500/20 text-red-400'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                         }`}>;
                         </span>;
                       </div>;
@@ -1263,11 +704,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </span>
                       </div>
                     </div>
-<<<<<<< HEAD
-                  ))}'
-=======
-                  ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
               {/* Overall Score */}'
               <Card className='border - gradient - green text - center'>;'
@@ -1549,13 +986,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {feature}
                     </li>
                   ))}
-<<<<<<< HEAD
-                <Button
-href='/contact'
-=======
-                <Button'
-                  href='/contact''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                   size='lg'
                       {feature}
 
@@ -1580,7 +1011,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
-
               </Card>'`
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
                   Get Started;'"
@@ -1593,17 +1023,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>;
             ))}
       {/* CTA Section */}
-<<<<<<< HEAD
-      {/* CTA Section */}
-<section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
-        <div className='container-cursor text-center relative z-10'>
-=======
-      {/* CTA Section */}'
-      <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>'
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />'
-        <div className='container-cursor text-center relative z-10'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
           </h2>'
           <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1638,10 +1058,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'
             >
               Schedule Demo
@@ -1653,6 +1070,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

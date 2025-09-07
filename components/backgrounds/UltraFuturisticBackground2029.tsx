@@ -1,31 +1,7 @@
-<<<<<<< HEAD
-initParticles ();
-// Animation loop // Update and draw particles particlesRef && particlesRef.current.forEach ( (particle, index) => {;
-  // Update position particle && particle.x += particle && particle.vx;
-particle && particle.y += particle && particle.vy;
-// Wrap around edges if (particle && particle.x < 0) particle && particle.x = canvas && canvas.width;
-if (particle && particle.x > canvas && canvas.width) particle && particle.x = 0;
-if (particle && particle.y < 0) particle && particle.y = canvas && canvas.height;
-if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0;
-// Draw particle ctx && ctx.save ();
-ctx && ctx.globalAlpha = particle && particle.opacity;
-// Different effects for different particle types switch (particle && particle.type) {;
-  case 'quantum': // Quantum particles with glow effect import React, { useEffect, useRef } from 'react';'
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 }
-<<<<<<< HEAD
-export default function UltraFuturisticBackground2029() {;
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const particlesRef = useRef<Particle[]>([]);
-  const animationRef = useRef<number | undefined>(undefined);
-<<<<<<< HEAD
-=======
 
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef } from 'react';
 
 interface Particle {
@@ -41,30 +17,6 @@ interface Particle {
 }
 }
 
-<<<<<<< HEAD
-export default function UltraFuturisticBackground2029() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const particlesRef = useRef<Particle[]>([]);
-  const animationRef = useRef<number | undefined>(undefined);
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-    };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-    // Initialize particles
-    const initParticles = () => {
-=======
-export default function UltraFuturisticBackground2029() { return null; }
-    const initParticles = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const particles: Particle[] = [];
       const particleCount = Math.floor((canvas.width * canvas.height) / 20000);
 
@@ -176,14 +128,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         // Draw particle;
         ctx.save();
         ctx.globalAlpha = particle.opacity;
-<<<<<<< HEAD
 
-        // Different effects for different particle types
-        switch (particle.type) {
-=======
-        // Different effects for different particle types;
-        switch (particle.type) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           case 'quantum':
             // Quantum particles with glow effect;
             ctx.shadowColor = particle.color;
@@ -254,34 +199,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               connections.forEach(connection => {}
                 const distance = Math.sqrt(
                   Math.pow(particle.x - connection.x, 2) + Math.pow(particle.y - connection.y, 2)
-<<<<<<< HEAD
-          case 'neural':
-            // Neural particles with network connections
-            ctx.fillStyle = particle.color;
-            ctx.shadowColor = particle.color;
-            ctx.shadowBlur = 10;
-            ctx.beginPath();
-            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-            ctx.fill();
-// Neural network connections
-            if (index % 15 === 0) {
-              const connections = particlesRef.current.filter(
-                p =>
-                  p.type === 'neural' &&
-                  Math.sqrt(
-                    Math.pow(particle.x - p.x, 2) +
-                      Math.pow(particle.y - p.y, 2)
-                  ) < 80
-              );
-              connections.forEach(connection => {
-                const distance = Math.sqrt(
-                  Math.pow(particle.x - connection.x, 2) +
-                    Math.pow(particle.y - connection.y, 2)
-origin/cursor/automate-test-improve-and-merge-code-2533
-                );
-=======
-                );`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                 ctx.strokeStyle = `rgba(16, 185, 129, ${0.4 * (1 - distance / 80)})`;
                 ctx.lineWidth = 0.5;
                 ctx.beginPath();
@@ -445,17 +363,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (139, 92, 246, 0.3) 50%, rgba (6, 182, 212, 0.2) 100%)','
             'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)',
           ],        }}      {/* Animated gradient overlay */}
-<<<<<<< HEAD
-      <motion.div;
-        className="absolute inset - 0 bg - gradient - to - br from - black via - cyan - 900 / 20 to-purple-900 / 30";
-        animate={{
-          background: [;
-=======
-      <motion.div;"
-        className="absolute inset - 0 bg - gradient - to - br from - black via - cyan - 900 / 20 to - purple - 900 / 30";
-        animate={{}
-          background: [;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (139, 92, 246, 0.3) 50%, rgba (6, 182, 212, 0.2) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)';
           ];
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)',
@@ -491,40 +399,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         style={{ filter: 'blur(0 && 0.5px)' }}
       />;
 
-<<<<<<< HEAD
-      {/* Additional visual layers */}
-=======
-
-      {/* Additional visual layers */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="absolute inset-0">;
         {/* Quantum field ripples */}
         <motion&& motion.div"
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
       <canvas;
-<<<<<<< HEAD
-        ref={canvas_ref}
-        className="absolute inset - 0 w-full h-full";
-        style={{ filter: 'blur (0.5px)' }}
-      />;
-      {/* Additional visual layers */}
-      <div className="absolute inset-0">;
-        {/* Quantum field ripples */}
-        <motion.div;
-          className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border-cyan-500 / 20";
-          animate={{
-=======
-        ref={canvas_ref}"
-        className="absolute inset - 0 w - full h - full";'
-        style={{ filter: 'blur (0.5px)' }}
-      />;
-      {/* Additional visual layers */}"
-      <div className="absolute inset - 0">;
-        {/* Quantum field ripples */}
-        <motion.div;"
-          className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20";
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             scale: [1, 1 && 1.2, 1]
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
           }}
@@ -571,15 +451,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
         />;
         {/* Neural network nodes */}
-<<<<<<< HEAD
-        <motion.div;
-          className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border-green-500 / 20";
-          animate={{
-=======
-        <motion.div;"
-          className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20";
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             scale: [1, 1 && 1.1, 1]
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2]
           }}
@@ -622,17 +494,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ease: 'easeInOut'
         }}
       />
-<<<<<<< HEAD
-{/* Canvas for particle effects */}
-      <canvas
-        ref={canvasRef}
-        className='absolute inset-0 w-full h-full'
-=======
-      {/* Canvas for particle effects */}
-      <canvas;
-        ref={canvasRef}'
-        className='absolute inset-0 w-full h-full''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         style={{ filter: 'blur(0.5px)' }}
       />
       {/* Additional visual layers */}'
@@ -722,20 +584,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             duration: 4,
             repeat: Infinity,
 
-<<<<<<< HEAD
-            transition={{
-              delay: i * 0.3
-              duration: 3 + i * 0.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-delay: i * 0.3,
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-            transition={{}
-              delay: i * 0.3;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             }}
             animate={{y: [0;, -20, 0],opacity: [0.3;, 0.8, 0.3],scale: [1;, 1.2, 1]}}duration: 4;,repeat: Infinity;,transition={{delay: i * 0.3;}
               duration: 3 + i * 0.5;,repeat: Infinity;,ease: 'easeInOut';,
@@ -753,25 +601,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
       </div>
     </div>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-        ))}
-
-      </div>
-    </div>
-);
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

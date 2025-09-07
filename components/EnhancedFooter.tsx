@@ -1,39 +1,4 @@
-<<<<<<< HEAD
-  Brain,
-  Mail,
-  Phone,
-  MapPin,
-  Globe,
-} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';'
-import React from 'react';
 
-
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {'
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}'
-import React from 'react';'
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from 'next/link';
 import {;
   Brain,;
@@ -43,14 +8,7 @@ import {;
   Globe,;
   Github,;
   Linkedin,;
-<<<<<<< HEAD
-  Twitter,;'
-} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';'
-import React from 'react';
-=======
-  Twitter,;
-} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 import {
   Facebook,
   Twitter,
@@ -67,46 +25,17 @@ import {
 } from 'lucide-react';
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
     this.state = { hasError: false ;};
   }
-<<<<<<< HEAD
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {'
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-=======
-  static getDerivedStateFromError(error) {
-    return { hasError: true ;};
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: ';, error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
       return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
-<<<<<<< HEAD
-}'
-import React from 'react';'
-import Link from 'next/link';
-import {;
-=======
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   Brain,;
   Mail,;
   Phone,;
@@ -121,88 +50,12 @@ const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear(),;
 
   const footerSections = [;
-<<<<<<< HEAD
-    {;'
-      title: 'Services',;
-      links: [;'
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },;'
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },;'
-        { name: 'Edge Computing', href: '/edge-computing-orchestration' },;'
-        { name: 'Space Technology', href: '/space-technology' },;
-        {;'
-          name: 'View All Services',;'
-          href: '/comprehensive-2025-services-showcase',;
-=======
-    {;
-      title: 'Services';,;
-      links: [;
-        { name: 'AI Business Intelligence';, href: '/ai-business-intelligence' ;},;
-        { name: 'Quantum Cybersecurity';, href: '/quantum-cybersecurity' ;},;
-        { name: 'Edge Computing';, href: '/edge-computing-orchestration' ;},;
-        { name: 'Space Technology';, href: '/space-technology' ;},;
-        {;
-          name: 'View All Services';,;
-          href: '/comprehensive-2025-services-showcase';,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
         },;
-<<<<<<< HEAD
-      ],;
-<<<<<<< HEAD
-    },    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
-import React from 'react',
-import Link from 'next/link';
-=======
-    },    {        { name: 'View All Services';, href: '/comprehensive-2025-services-showcase' ;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 const EnhancedFooter: React.FC;
 
-<<<<<<< HEAD
-  const socialLinks = [
-    {
-      name: 'Facebook',
-      icon: Facebook,
-      href: 'https://facebook.com/ziontechgroup',
-    },
-    {
-      name: 'Twitter',
-      icon: Twitter,
-      href: 'https://twitter.com/ziontechgroup',
-    },
-    {
-      name: 'LinkedIn',
-      icon: Linkedin,
-      href: 'https://linkedin.com/company/ziontechgroup',
-    },
-    {
-      name: 'Instagram',
-      icon: Instagram,
-      href: 'https://instagram.com/ziontechgroup',
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-    },
-  ];
-
-  const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-{
-      name: 'LinkedIn',
-      href: 'https://linkedin.com/company/ziontechgroup',
-      icon: Linkedin,
-    },
-    {
-      name: 'Twitter',
-      href: 'https://twitter.com/ziontechgroup',
-      icon: Twitter,
-    },
-  ];
-  const socialLinks = [
-origin/cursor/automate-test-improve-and-merge-code-2533
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
-=======
-      ],;'
-    },    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }'
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
     {'
       name: 'LinkedIn''
@@ -222,7 +75,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       href: 'https://twitter && twitter.com/ziontechgroup',;
       icon: Twitter,;
     },;
-
 
 '
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
@@ -317,148 +169,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </ul>;
             </div>;
           ))}
-<<<<<<< HEAD
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Mail className="w-4 h-4" />
-                <a
-                  href="mailto: kleber@ziontechgroup.com"
-                  className="hover:text-white transition-colors"
-                >
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <MapPin className="w-4 h-4" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-            </div>
-          </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-blue-400" />
-              Services
-            </h3>
-            <ul className="space-y-2">
-              {footerLinks.services.map(link => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Shield className="w-5 h-5 mr-2 text-green-400" />
-              Solutions
-            </h3>
-            <ul className="space-y-2">
-              {footerLinks.solutions.map(link => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <FileText className="w-5 h-5 mr-2 text-purple-400" />
-              Company
-            </h3>
-            <ul className="space-y-2">
-              {footerLinks.company.map(link => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources & Legal */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <HelpCircle className="w-5 h-5 mr-2 text-yellow-400" />
-              Resources
-            </h3>
-            <ul className="space-y-2 mb-6">
-              {footerLinks.resources.map(link => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <h4 className="text-md font-semibold mb-3 text-gray-300">Legal</h4>
-            <ul className="space-y-2">
-              {footerLinks.legal.map(link => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Newsletter Signup */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="max-w-2xl mx-auto text-center mb-8">
-            <h3 className="text-xl font-semibold mb-2">Stay Updated</h3>
-            <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter for the latest technology insights and
-              company updates.
-            </p>
-            <form className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
-
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-        {/* Bottom Section */}
-        <div className='pt-8 border-t border-white/10'>;
-=======
-        {/* Bottom Section */}'
-        <div className='pt-8 border-t border-white/10'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
             {/* Copyright */}
             {/* Social Links */}'
@@ -469,7 +180,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 "
             <div className="text-white/60 text-sm">;
             </div>;
-
 
             {/* Social Links */}
 
@@ -568,14 +278,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }export default EnhancedFooter);
 }
 ;
-<<<<<<< HEAD
-);
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default EnhancedFooter;
-=======
-export default EnhancedFooter;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 import React from './react';
   FileText,'
   HelpCircle} from './lucide-react';
@@ -819,26 +522,3 @@ company updates.;"
 
 };
 
-
-<<<<<<< HEAD
-      </button>
-    </footer>
-  )}"'
-origin/cursor/automate-test-improve-and-merge-code-2533
-      {/* Scroll to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50"
-        aria-label="Scroll to top"
-      >
-        <ArrowUp className="w-5 h-5" />
-      </button>
-    </footer>
-  );
-}
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

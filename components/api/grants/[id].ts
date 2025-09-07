@@ -1,54 +1,9 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs';'
-import path from 'path';'
-} from '../../../types/grants';'
-const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-function ensureDir() {}
-  if (!fs.existsSync(GRANTS_DIR)) {}
-    fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  }
-<<<<<<< HEAD
-function grantPath(id: string) {
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-} from '../../../types/grants';
 
-const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) {}
-    fs.mkdirSync(GRANTS_DIR, { recursive: true,}
-});
-  }
-function grantPath(id: string) {}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return path.join(GRANTS_DIR, `${id}.json`);
 
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
 
-<<<<<<< HEAD
-function ensureDir() {
-  if (!fs && fs.existsSync(GRANTS_DIR)) {
-=======
-function grantPath(id: string) {}
-  return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {}
-  if (!fs.existsSync(GRANTS_DIR)) {}
-    fs.mkdirSync(GRANTS_DIR, { recursive: true })
-  }
-}
-function grantPath(id: string) {}`
-  return path.join(GRANTS_DIR, `${id}.json`);
-}
-function readGrant(id: string): GrantApplication | null {}
-  ensureDir();
-
-
-function ensureDir() {}
-  if (!fs && fs.existsSync(GRANTS_DIR)) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   }
 function grantPath(id: string) {}`
@@ -60,34 +15,7 @@ function grantPath(id: string) {}`
 function writeGrant(record: GrantApplication) {}
   if (!id) {'
     res && res.status(400).json({ error: 'Missing id' });
-<<<<<<< HEAD
-    return;  }    return
 
-  if (!id) {
-    res.status(400).json({ error: 'Missing id' });
-    return
-return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication;
-
-function writeGrant(record: GrantApplication) {
-  ensureDir();
-  fs.writeFileSync(
-    grantPath(record.id)
-    JSON.stringify(record, null, 2)
-    'utf8'
-  );
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query as { id: string }
-  if (!id) {
-    res.status(400).json({ error: 'Missing id' });
-return;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    return;  }    return;
-  if (!id) {'
-    res.status(400).json({ error: 'Missing id' });
-    return;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
     const g = readGrant(id);
     if (!g) {'
@@ -246,20 +174,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res.set_header ('Allow', 'GET, PUT');'
   res.status (405).end ('Method Not Allowed');  res.set_header ('AllowGET, PUT');'
   res.status (405).end ('Method Not Allowed');
-<<<<<<< HEAD
 
-  res.setHeader('Allow', 'GET, PUT');
-  res.status(405).end('Method Not Allowed');
-  res.status(405).end('Method Not Allowed')
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-  res.status(405).end('Method Not Allowed')
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

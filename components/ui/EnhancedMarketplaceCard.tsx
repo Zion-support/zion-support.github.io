@@ -1,34 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-pr-12243
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
-      </div>;
-      <p className="text-sm text-gray-600 mb-4">{description}</p>;
-      <div className="mt-auto flex items-center justify-between">;
-        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
-=======
-import React from 'react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import React from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 import Link from 'next/link';
 
 interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
   price?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  href: string, image?: string
-import React from 'react';
-import { Star, Heart, ShoppingCart } from 'lucide-react';
-pr-12243
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   image?: string;
   href: string;
   category?: string;
@@ -155,26 +133,6 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
 };
 
 export default EnhancedMarketplaceCard;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-pr-12243
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
-      </div>;
-      <p className="text-sm text-gray-600 mb-4">{description}</p>;
-      <div className="mt-auto flex items-center justify-between">;
-        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
-import Link from 'next/link';
-import Image from 'next/image';
-interface EnhancedMarketplaceCardProps {
-  title: string, description: string
-  price?: string;
-  href: string, image?: string
-import React from 'react';
-import { Star, Heart, ShoppingCart } from 'lucide-react';
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface MarketplaceCardProps {
 interface EnhancedMarketplaceCardProps {
@@ -184,14 +142,6 @@ interface EnhancedMarketplaceCardProps {
   image?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-export default EnhancedMarketplaceCard;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title,
   description,
@@ -235,32 +185,4 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
 };
 
 export default EnhancedMarketplaceCard;
-<<<<<<< HEAD
-<<<<<<< HEAD
-pr-12243
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
-pr-12243
-export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {
-
-  return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden">
-      {image && (
-        <img src={image} alt={title} className="w-full h-48 object-cover" />
-      )}
-      <div className="p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
-        {price && (
-          <div className="text-xl font-bold text-blue-600">{price}</div>
-        )}
-      </div>
-    </div>
-  );
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
