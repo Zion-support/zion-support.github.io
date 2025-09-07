@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 export const metadata = {
@@ -146,7 +145,6 @@ export default function AIDataAnalyticsPage() {
             <p className="text-gray-600">
               Optimize operations and reduce costs with data-driven process
               improvements
-=======
 export const metadata = {
   title: 'Ai Data Analytics | Zion Tech Group',
   description: 'Professional ai data analytics services for your business needs.',
@@ -185,12 +183,10 @@ export default function ServicePage() {
             <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
             <p className="text-gray-300">
               Round-the-clock support to ensure your ai data analytics solutions run smoothly.
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
             </p>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -286,8 +282,6 @@ function PricingCard({
     </div>
   );
 }
-=======
     </div>
   );
 }
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

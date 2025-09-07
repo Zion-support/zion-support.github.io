@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 
@@ -7,25 +5,19 @@ export const metadata = {
   title: 'AI Services | Zion Tech Group',
   description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.',
   keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'
-=======
 import Link from "next/link";
 
 export const metadata = {
   title: "AI Services | Zion Tech Group",
   description: "Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.",
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
 export const metadata = {
   title: 'Ai Services | Zion Tech Group',
   description: 'Professional ai services services for your business needs.',
   keywords: 'ai-services, services, business, technology'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 };
 
 export default function ServicePage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
@@ -165,7 +157,6 @@ export default function ServicePage() {
         <div className="mt-8 text-sm">
           <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           <p>📧 kleber@ziontechgroup.com</p>
-=======
     <div className="animate-fade-in">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -261,7 +252,6 @@ export default function ServicePage() {
             title="Deployment & Optimization"
             description="Deploy AI solutions and continuously monitor and optimize performance."
           />
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
         </div>
       </div>
 
@@ -367,7 +357,6 @@ function AIServiceCard({ icon, title, description, features, price }: {
       >
         Get Quote
       </a>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -402,7 +391,6 @@ function AIServiceCard({ icon, title, description, features, price }: {
           </div>
         </div>
       </div>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     </div>
   );
 }

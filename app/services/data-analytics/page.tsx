@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 
@@ -7,27 +5,21 @@ export const metadata = {
   title: 'Advanced Data Analytics & BI | Zion Tech Group',
   description: 'Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.',
   keywords: 'data analytics, business intelligence, data visualization, predictive analytics, data engineering'
-=======
 import Link from "next/link";
 
 export const metadata = {
   title: "Data Analytics & BI | Zion Tech Group",
   description: "Advanced data analytics, business intelligence, and machine learning solutions to transform raw data into actionable insights.",
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
 import { Metadata } from 'next';
 import React from 'react';
 
 export const metadata: Metadata = { 
   title: 'Data Analytics Solutions | Zion Tech Group',
   description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 };
 
 export default function DataAnalyticsPage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -52,7 +44,6 @@ export default function DataAnalyticsPage() {
           </a>
         </div>
       </section>
-=======
     <div className="animate-fade-in">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -97,7 +88,6 @@ export default function DataAnalyticsPage() {
               description="Integrate data from disparate sources and ensure high data quality through cleansing, validation, and transformation processes."
               benefits={["Unified data view", "Automated data pipelines", "Error reduction", "Improved data reliability"]}
             />
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -129,11 +119,9 @@ export default function DataAnalyticsPage() {
             <p className="text-gray-300">
               Build robust data pipelines and infrastructure for scalable analytics.
             </p>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
           </div>
         </div>
       </div>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
     </div>
   );
 }

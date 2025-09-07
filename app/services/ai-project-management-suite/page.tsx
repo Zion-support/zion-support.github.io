@@ -3,7 +3,6 @@ import React from 'react';
 
 
 export const metadata = {
-<<<<<<< HEAD
   title: 'AI Project Management Suite | Zion Tech Group',
   description: 'Intelligent project management with AI-powered task automation, resource optimization, risk prediction, and smart scheduling for enhanced team productivity.',
   keywords: 'AI project management, task automation, resource optimization, risk prediction, team productivity, project planning AI',
@@ -383,7 +382,6 @@ export default function AIProjectManagementSuitePage() {
           <p>Email: kleber@ziontechgroup.com</p>
         </div>
       </section>
-=======
   title: 'Ai Project Management Suite | Zion Tech Group',
   description: 'Professional ai project management suite services for your business needs.',
   keywords: 'ai-project-management-suite, services, business, technology'
@@ -425,7 +423,6 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     </div>
   );
 }

@@ -1,18 +1,14 @@
 export const metadata = {
-<<<<<<< HEAD
   title: 'Service Name | Zion Tech Group',
   description: 'Service description for the Zion Tech Group service page.',
   keywords: 'service keywords, relevant terms',
-=======
   title: 'Devops Automation | Zion Tech Group',
   description: 'Professional devops automation services for your business needs.',
   keywords: 'devops-automation, services, business, technology'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 };
 
 export default function ServicePage() {
   return (
-<<<<<<< HEAD
     <div className="animate-fade-in">
       <section className="py-12">
         <div className="text-center mb-16">
@@ -73,7 +69,6 @@ export default function ServicePage() {
     </div>
   );
 }
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -111,4 +106,3 @@ export default function ServicePage() {
     </div>
   );
 }
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

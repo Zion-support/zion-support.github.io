@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import './global-styles.css';
@@ -22,14 +19,10 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
     description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-=======
-=======
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
   title: {
     default: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
     template: '%s | Zion Tech Group'
@@ -70,7 +63,6 @@ export const metadata: Metadata = {
     description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
     images: ['/og-image.jpg'],
     creator: '@ziontechgroup',
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
   },
   robots: {
     index: true,
@@ -91,13 +83,10 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   colorScheme: 'light',
   themeColor: '#000000',
-=======
   title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
   description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 };
 
-<<<<<<< HEAD
 function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
@@ -174,10 +163,6 @@ function Footer() {
   );
 }
 
-=======
->>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
-=======
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 export default function RootLayout({
   children
 }: {
@@ -185,9 +170,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       <body className="min-h-screen bg-gray-50">
         <Header />
         <main>
@@ -197,24 +179,15 @@ export default function RootLayout({
       </body>
     </html>
   );
-=======
       <body>{children}</body>
     </html>
   )
->>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
-=======
       <body className={inter.className}>
-=======
       <body>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
         <div className="min-h-screen bg-white">
           {children}
         </div>
       </body>
     </html>
   );
-<<<<<<< HEAD
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 }

@@ -45,7 +45,6 @@ const PricingTier = ({ name, price, description, features, isPopular }: {
 );
 
 export const metadata = {
-<<<<<<< HEAD
   title: 'AI-Powered CRM Platform | Zion Tech Group',
   description: 'Revolutionary CRM with AI-powered lead scoring, automated follow-ups, predictive analytics, and intelligent sales insights. Boost conversion rates by 40% with our smart CRM solution.',
   keywords: 'AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales intelligence'
@@ -467,7 +466,6 @@ function CaseStudy({ company, industry, result, description, metrics }: {
               {metric}
             </div>
           ))}
-=======
   title: 'Ai Powered Crm | Zion Tech Group',
   description: 'Professional ai powered crm services for your business needs.',
   keywords: 'ai-powered-crm, services, business, technology'
@@ -507,7 +505,6 @@ export default function ServicePage() {
               Round-the-clock support to ensure your ai powered crm solutions run smoothly.
             </p>
           </div>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
         </div>
       </div>
     </div>

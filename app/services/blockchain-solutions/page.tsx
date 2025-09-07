@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from "next/link";
 
 export const metadata = {
@@ -179,7 +178,6 @@ function CTA() {
       </div>
     </div>
   );
-=======
 export const metadata = {
   title: 'Blockchain Solutions | Zion Tech Group',
   description: 'Professional blockchain solutions services for your business needs.',
@@ -224,5 +222,4 @@ export default function ServicePage() {
       </div>
     </div>
   );
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 }

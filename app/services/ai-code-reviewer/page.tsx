@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export const metadata = {
   title: "AI Code Reviewer | Zion Tech Group",
@@ -143,7 +142,6 @@ export default function AICodeReviewerPage() {
         <div className="mt-4 text-sm text-gray-500">
           <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-=======
 export const metadata = {
   title: 'Ai Code Reviewer | Zion Tech Group',
   description: 'Professional ai code reviewer services for your business needs.',
@@ -184,12 +182,10 @@ export default function ServicePage() {
               Round-the-clock support to ensure your ai code reviewer solutions run smoothly.
             </p>
           </div>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 
 function FeatureItem({
@@ -268,6 +264,4 @@ function StepCard({
     </div>
   );
 }
-=======
 }
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

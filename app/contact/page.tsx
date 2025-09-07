@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import React, { useState } from 'react';
@@ -227,7 +226,6 @@ export default function ContactPage() {
             <Link
               href="/services"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center"
-=======
 import React from 'react';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
@@ -327,7 +325,6 @@ export default function ContactPage() {
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Project Inquiry"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
             >
               Send us an Email
               <ArrowRightIcon className="h-5 w-5 ml-2" />

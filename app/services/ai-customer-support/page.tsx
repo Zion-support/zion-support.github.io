@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = { title: 'AI Customer Support | Zion Tech Group' };
 
 export default function AICustomerSupportPage() {
@@ -264,7 +263,6 @@ function ContactSection() {
     </div>
   );
 }
-=======
 export const metadata = {
   title: 'Ai Customer Support | Zion Tech Group',
   description: 'Professional ai customer support services for your business needs.',
@@ -310,4 +308,3 @@ export default function ServicePage() {
     </div>
   );
 }
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const metadata = { title: 'AI Marketing Automation | Zion Tech Group' };
 
 export default function AIMarketingAutomationPage() {
@@ -102,12 +100,9 @@ export default function AIMarketingAutomationPage() {
       <PricingSection />
 
       <ContactSection />
-=======
 import React from 'react';
 import Link from 'next/link';
 
-=======
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 export const metadata = {
   title: 'Ai Marketing Automation | Zion Tech Group',
   description: 'Professional ai marketing automation services for your business needs.',
@@ -128,7 +123,6 @@ export default function ServicePage() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
           <FeatureCard
             icon="🎯"
             title="AI-Powered Personalization"
@@ -347,12 +341,10 @@ export default function ServicePage() {
           <p>Email: kleber@ziontechgroup.com</p>
         </div>
       </section>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
     </div>
   );
 }
 
-<<<<<<< HEAD
 function FeatureCard({
   title,
   features,
@@ -371,7 +363,6 @@ function FeatureCard({
           <li key={index} className="flex items-start">
             <span className="text-yellow-500 mr-2 mt-1">•</span>
             <span className="text-gray-600">{feature}</span>
-=======
 function FeatureCard({ icon, title, description, benefits }: {
   icon: string;
   title: string;
@@ -388,7 +379,6 @@ function FeatureCard({ icon, title, description, benefits }: {
           <li key={index} className="text-sm text-gray-600 flex items-center">
             <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
             {benefit}
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
           </li>
         ))}
       </ul>
@@ -396,7 +386,6 @@ function FeatureCard({ icon, title, description, benefits }: {
   );
 }
 
-<<<<<<< HEAD
 function PricingSection() {
   return (
     <div className="mb-16">
@@ -463,35 +452,29 @@ function PricingCard({
   name: string;
   price: string;
   duration: string;
-=======
 function PricingCard({ name, price, period, description, features, popular }: {
   name: string;
   price: string;
   period: string;
   description: string;
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
   features: string[];
   popular: boolean;
 }) {
   return (
-<<<<<<< HEAD
     <div
       className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-yellow-500 shadow-lg' : 'border-gray-200'}`}
     >
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-yellow-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-=======
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
             Most Popular
           </span>
         </div>
       )}
-<<<<<<< HEAD
       <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
       <div className="text-3xl font-bold text-yellow-600 mb-1">{price}</div>
       <div className="text-gray-500 mb-6">{duration}</div>
@@ -500,7 +483,6 @@ function PricingCard({ name, price, period, description, features, popular }: {
           <li key={index} className="flex items-start">
             <span className="text-green-500 mr-2 mt-1">✓</span>
             <span className="text-gray-600">{feature}</span>
-=======
       <div className="text-center mb-6">
         <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
         <div className="text-4xl font-bold text-blue-600 mb-2">
@@ -516,24 +498,20 @@ function PricingCard({ name, price, period, description, features, popular }: {
               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
             </svg>
             <span className="text-gray-700">{feature}</span>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
           </li>
         ))}
       </ul>
       <a
-<<<<<<< HEAD
         href="tel:+13024640950"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
             ? 'bg-yellow-600 text-white hover:bg-yellow-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-=======
         href="mailto:kleber@ziontechgroup.com?subject=AI Marketing Automation - {name} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
             ? 'bg-blue-600 text-white hover:bg-blue-700'
             : 'bg-gray-900 text-white hover:bg-gray-800'
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
         }`}
       >
         Get Started
@@ -542,7 +520,6 @@ function PricingCard({ name, price, period, description, features, popular }: {
   );
 }
 
-<<<<<<< HEAD
 function ContactSection() {
   return (
     <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-xl p-8 text-center">
@@ -574,7 +551,6 @@ function ContactSection() {
     </div>
   );
 }
-=======
 function CaseStudy({ company, industry, result, description, metrics }: {
   company: string;
   industry: string;
@@ -601,7 +577,6 @@ function CaseStudy({ company, industry, result, description, metrics }: {
               {metric}
             </div>
           ))}
-=======
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
             <p className="text-gray-300">
@@ -622,10 +597,8 @@ function CaseStudy({ company, industry, result, description, metrics }: {
               Round-the-clock support to ensure your ai marketing automation solutions run smoothly.
             </p>
           </div>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
         </div>
       </div>
     </div>
   );
 }
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739

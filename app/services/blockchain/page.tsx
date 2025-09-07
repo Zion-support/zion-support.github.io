@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 import React from 'react';
 
 
 export const metadata = { 
-=======
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
 export const metadata: Metadata = { 
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
   title: 'Blockchain Services | Zion Tech Group',
   description: 'Comprehensive blockchain development services including smart contracts, DeFi protocols, NFT platforms, and enterprise blockchain solutions.',
   keywords: 'blockchain development, smart contracts, DeFi, NFT, Web3, cryptocurrency, enterprise blockchain, dApp development'
@@ -17,7 +14,6 @@ export const metadata: Metadata = {
 
 export default function BlockchainPage() {
   return (
-<<<<<<< HEAD
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -42,7 +38,6 @@ export default function BlockchainPage() {
           </a>
         </div>
       </section>
-=======
     <div className="animate-fade-in">
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -428,7 +423,6 @@ function CTASection() {
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
       </div>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     </div>
   );
 }

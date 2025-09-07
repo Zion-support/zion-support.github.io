@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import Link from "next/link";
-=======
 import React from 'react';
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 
 export const metadata = {
   title: "Solutions | Zion Tech Group",
@@ -22,7 +19,6 @@ export default function SolutionsPage() {
           </p>
         </div>
 
-<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <SolutionCard
             title="AI-Powered Solutions"
@@ -81,7 +77,6 @@ export default function SolutionsPage() {
           >
             Get Started Today
           </Link>
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="bg-gray-800 rounded-lg p-6 text-center">
             <div className="text-4xl font-bold text-blue-400 mb-2">01</div>
@@ -135,7 +130,6 @@ export default function SolutionsPage() {
               View Services
             </a>
           </div>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
         </div>
       </div>
     </div>

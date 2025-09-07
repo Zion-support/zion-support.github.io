@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 
@@ -7,18 +5,15 @@ export const metadata = {
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions for modern businesses.',
   keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure, enterprise IT, cloud consulting, SRE'
-=======
 import Link from "next/link";
 
 export const metadata = {
   title: "IT Services | Zion Tech Group",
   description: "Comprehensive IT services including cloud migration, DevOps, cybersecurity, and infrastructure management for enterprise-scale solutions.",
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 };
 
 export default function ITServicesPage() {
   return (
-<<<<<<< HEAD
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -41,7 +36,6 @@ export default function ITServicesPage() {
           >
             Call +1 302 464 0950
           </a>
-=======
     <div className="animate-fade-in">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -112,7 +106,6 @@ export default function ITServicesPage() {
               title="Enterprise Security"
               description="Bank-grade security measures and compliance with industry standards and regulations."
             />
-=======
 export const metadata = {
   title: 'It Services | Zion Tech Group',
   description: 'Professional it services services for your business needs.',
@@ -152,12 +145,9 @@ export default function ServicePage() {
             <p className="text-gray-300">
               Round-the-clock support to ensure your it services solutions run smoothly.
             </p>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
           </div>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
         </div>
       </div>
-<<<<<<< HEAD
 
       <div className="text-center mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Our IT Service Process</h2>
@@ -186,8 +176,6 @@ export default function ServicePage() {
       <CTA />
     </div>
   );
-<<<<<<< HEAD
-=======
 }
 
 function FeatureItem({ icon, title, description, benefits }: { icon: string; title: string; description: string; benefits: string[] }) {
@@ -258,9 +246,6 @@ function CTA() {
       </div>
     </div>
   );
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
     </div>
   );
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 }

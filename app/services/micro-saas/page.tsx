@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 
@@ -16,17 +14,14 @@ export const metadata = {
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
   keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
-=======
 export const metadata = {
   title: 'Micro Saas | Zion Tech Group',
   description: 'Professional micro saas services for your business needs.',
   keywords: 'micro-saas, services, business, technology'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 };
 
 export default function MicroSaaSPage() {
   return (
-<<<<<<< HEAD
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -49,7 +44,6 @@ export default function MicroSaaSPage() {
           >
             Call +1 302 464 0950
           </a>
-=======
 import Link from "next/link";
 
 export const metadata = {
@@ -131,8 +125,6 @@ export default function MicroSAASPage() {
               description="Complete maintenance, updates, and feature additions to keep your micro SaaS product competitive and profitable."
             />
           </div>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -165,7 +157,6 @@ export default function MicroSAASPage() {
               Round-the-clock support to ensure your micro saas solutions run smoothly.
             </p>
           </div>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
         </div>
       </div>
 
@@ -196,8 +187,6 @@ export default function MicroSAASPage() {
       <CTA />
     </div>
   );
-<<<<<<< HEAD
-=======
 }
 
 function FeatureItem({ icon, title, description, benefits }: { icon: string; title: string; description: string; benefits: string[] }) {
@@ -216,7 +205,6 @@ function FeatureItem({ icon, title, description, benefits }: { icon: string; tit
       </ul>
     </div>
   );
-<<<<<<< HEAD
 }
 
 function BenefitCard({ icon, title, description }: { icon: string; title: string; description: string }) {
@@ -269,7 +257,4 @@ function CTA() {
       </div>
     </div>
   );
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 }
