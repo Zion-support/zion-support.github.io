@@ -1,16 +1,12 @@
-import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeToggle, expect } from 'lucide-react'; expect.extend(toHaveNoViolations); test(','ModeToggle has no accessibility violations',async () => {  const { container } = render(<ModeToggle />) const results = await axe(container) expect(results).toHaveNoViolations()}'
-});'
+import React from 'react';
+import { render } from '@testing-library/react';
+import { axe, toHaveNoViolations } from 'jest-axe';
+import { ModeToggle } from '../components/ThemeToggle';
 
-</ModeToggle>'
+expect.extend(toHaveNoViolations);
 
-</ModeToggle>'
-</ModeToggle>'
-</ModeToggle>'
-
-</ModeToggle>'
-
-</ModeToggle>'
-
-</ModeToggle>'
-
-</ModeToggle>'
+test('ModeToggle has no accessibility violations', async () => {
+  const { container } = render(<ModeToggle />);
+  const results = await axe(container);
+  expect(results).toHaveNoViolations();
+});

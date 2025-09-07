@@ -431,8 +431,7 @@ if (!category || category ===,
   return $3;}
 }
   return comprehensivePricingAnalysis2025.filter(s => s.category === category)};
-export const getMarketInsights = (
-  const insights = {
+export const getMarketInsights = (insights = {
   \"totalMarketSize\": '$1.2T+,
     averageGrowthRate:,
   250% annual',
@@ -511,7 +510,7 @@ export interface PricingAnalysis { serviceId: string; serviceName: string; categ
   return $3;}
 }; export const getPricingAnalysisByCategory = (; if (!category || category ===,All') return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s => s.category === category)) => {
   return $3;}
-}; export const getMarketInsights = ( const insights = { totalMarketSize: '$1.2T+,averageGrowthRate:,250% annual',
+}; export const getMarketInsights = (insights = { totalMarketSize: '$1.2T+,averageGrowthRate:,250% annual',
   priceRange: $799 - $6,999/month,,mostExpensiveCategory: 'Quantum Computing & AI,mostAffordableCategory:,IoT & Edge Computing',
   highestROI: '1000% (Quantum Neural Network Platform),fastestPayback: '2-4 months (DeFi Trading Platform)') => {
   return $3;}
@@ -553,7 +552,7 @@ export interface PricingAnalysis { serviceId: string; serviceName: string; categ
   return $3;}
 }; export const getPricingAnalysisByCategory = (; if (!category || category ===,All') return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s => s.category === category)) => {
   return $3;}
-}; export const getMarketInsights = ( const insights = { totalMarketSize: '$1.2T+,averageGrowthRate:,250% annual',
+}; export const getMarketInsights = (insights = { totalMarketSize: '$1.2T+,averageGrowthRate:,250% annual',
   priceRange: $799 - $6,999/month,,mostExpensiveCategory: 'Quantum Computing & AI,mostAffordableCategory:,IoT & Edge Computing',
   highestROI: '1000% (Quantum Neural Network Platform),fastestPayback: '2-4 months (DeFi Trading Platform)') => {
   return $3;}
@@ -595,7 +594,7 @@ export interface PricingAnalysis { serviceId: string; serviceName: string; categ
   return $3;}
 }; export const getPricingAnalysisByCategory = (; if (!category || category ===,All') return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s => s.category === category)) => {
   return $3;}
-}; export const getMarketInsights = ( const insights = { totalMarketSize: '$1.2T+,averageGrowthRate:,250% annual',
+}; export const getMarketInsights = (insights = { totalMarketSize: '$1.2T+,averageGrowthRate:,250% annual',
   priceRange: $799 - $6,999/month,,mostExpensiveCategory: 'Quantum Computing & AI,mostAffordableCategory:,IoT & Edge Computing',
   highestROI: '1000% (Quantum Neural Network Platform),fastestPayback: '2-4 months (DeFi Trading Platform)') => {
   return $3;}

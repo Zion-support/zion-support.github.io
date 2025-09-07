@@ -33,7 +33,7 @@ interface EmailValidationResult {}
 
 export default async function handler(
   req: NextApiRequest;
-  res: NextApiResponse<EmailValidationResult | { error: string } />
+  res: NextApiResponse<EmailValidationResult | { error: string }    />
 ) {
   if (req.method !== 'POST') {}
 return res.status(405).json({ error: 'Method not allowed',}

@@ -1,39 +1,212 @@
+<<<<<<< HEAD
+return (
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          AI-Powered CRM Solution
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Intelligent customer relationship management platform with AI-driven
+          insights, automated workflows, and predictive analytics to boost sales
+          and customer satisfaction.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <FeatureCard
+          title="Lead Management"
+          features={[
+            'AI-powered lead scoring & qualification',
+            'Automated lead capture & assignment',
+            'Lead nurturing campaigns',
+            'Pipeline management & forecasting',
+            'Lead source tracking & attribution',
+            'Conversion optimization insights',
+          ]}
+          icon="🎯"
+        />
+        <FeatureCard
+          title="Customer Insights"
+          features={[
+            '360-degree customer view',
+            'Behavioral analytics & patterns',
+            'Customer lifetime value prediction',
+            'Churn risk identification',
+            'Personalization recommendations',
+            'Sentiment analysis & feedback',
+          ]}
+          icon="👤"
+        />
+        <FeatureCard
+          title="Sales Automation"
+          features={[
+            'Automated follow-up sequences',
+            'Email & SMS campaign management',
+            'Meeting scheduling & reminders',
+            'Quote & proposal generation',
+            'Contract management & e-signatures',
+            'Sales performance analytics',
+          ]}
+          icon="🤖"
+        />
+      </div>
+      <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-8 mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          CRM Benefits & ROI
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              37% Sales Increase
+            </h3>
+            <p className="text-gray-600">
+              AI-driven insights boost conversion rates
+        </p>
+      </div>
+          <div className="text-center">
+            <div className="text-4xl mb-4">⏰</div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              50% Time Savings
+            </h3>
+            <p className="text-gray-600">
+              Automated workflows reduce manual tasks
+        </p>
+      </div>      </div>
+      </div>
+      </div>
+      <PricingSection />
+
+      <ContactSection />
+      </div>
+  );
+
+            <span className="text-gray-600">{feature}</span>
+          </li>
+        ))}
+      </ul>
+      </div>
+  );
+
+            "Email support",
+
+          ]}
+          popular={false}
+        />
+
+            "Priority support",
+
+          ]}
+          popular={true}
+        />
+
+            "24/7 phone support",
+
+          ]}
+          popular={false}
+        />
+      </div>
+      </div>
+  );
+
+  name,
+  price,
+  duration,
+
+  popular,
+
+  name: string;
+  price: string;
+  duration: string;
+
+  popular: boolean;
+
+            <span className="text-gray-600">{feature}</span>
+          </li>
+        ))}
+      </ul>
+
+      </a>
+      </div>
+  );
+
+      <div className="mt-6 text-sm text-gray-500">
+        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+      </div>
+      </div>
+  );
+=======
 import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Crm Solution - Zion Tech Group',
-  description: 'Professional crm solution services to help your business grow and succeed.',
-  keywords: 'crm solution, business solutions, professional services'
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page solutions for your business needs.',
+  keywords: 'page',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+  },
 };
 
-export default function CrmSolutionPage() {
+export default function ServicePage() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Crm Solution
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Professional crm solution services to help your business grow and succeed.
-        </p>
-      </div>
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-          Coming Soon
-        </h2>
-        <p className="text-lg text-gray-600 text-center">
-          This service is currently under development. Please contact us for more information.
-        </p>
-      </div>
-      <div className="text-center">
-        <a
-          href="mailto:kleber@ziontechgroup.com?subject=Crm Solution Inquiry"
-          className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-        </a>
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional page solutions for your business needs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
+            <p className="text-gray-600 mb-4">
+              Advanced features and capabilities for your business needs.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Professional solutions</li>
+              <li>• 24/7 support</li>
+              <li>• Scalable architecture</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
+            <p className="text-gray-600 mb-4">
+              Transform your business with our cutting-edge solutions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Increased efficiency</li>
+              <li>• Cost savings</li>
+              <li>• Better results</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
+            <p className="text-gray-600 mb-4">
+              Comprehensive support and maintenance services.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Expert consultation</li>
+              <li>• Training and documentation</li>
+              <li>• Ongoing maintenance</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834

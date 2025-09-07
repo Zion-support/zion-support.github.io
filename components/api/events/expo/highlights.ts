@@ -26,10 +26,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 });
   }
     return res.status(200).json({ summary: content, provider: 'openai' })
-  } catch (e: any) {}
+  } catch (e) {
     return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })
- ,
-};
+ }
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
