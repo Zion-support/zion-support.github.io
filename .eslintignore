@@ -6,7 +6,6 @@ public/
 *.config.js
 *.config.cjs
 *.config.mjs
-<<<<<<< HEAD
 fix-*.js
 fix-*.cjs
 *-fix*.cjs
@@ -42,6 +41,11 @@ security-reports/
 pages.__backup/
 pages-disabled/
 pages.disabled_auto/
+pages.broken/
+pages.corrupted.*/
+pages.disabled*/
+pages.old/
+pages_backup*/
 zion_academy/
 pm2-automation/
 scripts/
@@ -74,13 +78,6 @@ vite.config.ts
 types/empty.ts
 types/index.ts
 pages_backup_conflicts/
-=======
-pages.broken/
-pages.corrupted.*/
-pages.disabled*/
-pages.old/
-pages_backup*/
->>>>>>> cursor/automate-test-improve-and-merge-code-3e92
 pages_disabled/
 pages_minimal/
 temp-disabled/
@@ -94,7 +91,6 @@ components.disabled*/
 lib_backup/
 lib.broken/
 lib.disabled/
-<<<<<<< HEAD
 lib/
 lint-stub.js
 lint-target/
@@ -132,15 +128,14 @@ src
 src.disabled
 src.pages.disabled
 src.pages.disabled.auto
-components.disabled
-**/*.js.jsx
-**/*.d.tsx
-=======
 src.pages.disabled*/
 src.broken/
 src.corrupted/
 src_backup*/
 src.disabled/
+components.disabled
+**/*.js.jsx
+**/*.d.tsx
 pm2-automation/
 services/
 automation/
@@ -161,4 +156,3 @@ analyze_links.cjs
 app-enhancement-suite.cjs
 App.simple.tsx
 App.smoke.test.tsx
->>>>>>> cursor/automate-test-improve-and-merge-code-3e92
