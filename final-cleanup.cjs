@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-    .replace(/<<<<<<< [^\n]+[\s\S]*?
+    .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?[^\n]+/g, '')
     .replace(/^<<<<<<< [^\n]+$/gm, '')
-    .replace(/^
+    .replace(/^=======$/gm, '')
+    .replace(/^[^\n]+$/gm, '');
 }
 
 // Function to clean common syntax errors
@@ -38,13 +39,37 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     let cleaned = cleanMergeConflicts(content);
     cleaned = cleanSyntaxErrors(cleaned);
+    
+    if (cleaned !== content) {
+      fs.writeFileSync(filePath, cleaned);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.log(`Error processing ${filePath}: ${error.message}`);
+    return false;
+  }
+}
 
+// Function to recursively process directory
+function processDirectory(dirPath) {
+  let processedCount = 0;
+// Function to recursively find all files with merge conflicts
+function findConflictedFiles(dir, conflictedFiles = []) {
+  const files = fs.readdirSync(dir);
+
+  
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-
-  content = content.replace(/
-  content = content.replace(/
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findConflictedFiles(filePath, conflictedFiles);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      const content = fs.readFileSync(filePath, 'utf8');
+  content = content.replace(/[a-f0-9]+\n?/g, '');
+  content = content.replace(/origin\/[^\n]+\n?/g, '');
+  content = content.replace(/ursor\/[^\n]+\n?/g, '');
   
   // Clean up any remaining artifacts
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');

@@ -3,6 +3,8 @@
 const { execSync } = require('child_process');
 
 console.log('🔧 Automated Merge Conflict Resolver');
+console.log('==');
+ursor/fix-lint-push-and-merge-to-main-28da
 
 // Strategy for resolving conflicts
 const conflictResolutionStrategy = {

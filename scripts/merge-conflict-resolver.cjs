@@ -1,5 +1,7 @@
 
 
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -12,4 +14,13 @@ console.log('=====')
       console.error('Error resolving "conflicts")
   console.log('Run "git add ." and "git commit")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+
+
+
+
+
+
+
+main
 

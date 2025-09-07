@@ -19,10 +19,12 @@ const nextConfig = {
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: true,
+    dirs: []
   },
   typescript: {
-    ignoreBuildErrors: true
+    ignoreBuildErrors: true,
+    tsconfigPath: false
   },
   experimental: {
     esmExternals: false

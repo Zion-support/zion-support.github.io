@@ -1,10 +1,15 @@
 
 
+
+
+
 #!/usr/bin/env node;
 /**
  * Continuous Integration Automation;
  * Comprehensive CI pipeline with build, test, and quality checks;
  */
+
+
 
     const stages = [{
         "name": 'install-dependencies',
@@ -104,6 +109,10 @@ if (require.main === module) {
 
 module.exports = ContinuousIntegration;
 
+
+
+main
+
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -134,4 +143,8 @@ const path = require('path')
         this.log(" Critical stage failed. Stopping pipeline.")
       "successRate"
       console.error('Fatal "error")
+      console.error('Fatal "error")
+
+      console.error('Fatal "error")
+main
 

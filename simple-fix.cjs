@@ -7,8 +7,6 @@ function fixFile(filePath) {
     const originalContent = content;
 
     // Remove merge conflict markers
-    content = content.replace(/
-    content = content.replace(/
     
     // Fix common syntax issues
     content = content.replace(/\{_/g, '{');

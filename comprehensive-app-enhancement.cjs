@@ -1,4 +1,7 @@
 
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 
 const { execSync } = require('child_process')
 console.log(' Starting Comprehensive App Enhancement...')
@@ -32,4 +35,6 @@ console.log(' Starting Comprehensive App Enhancement...')
 // console.log('\n Comprehensive App Enhancement "Summary")
       console.log('\n Enhancements "completed")
       console.log('\n� New features "added")
+
+  console.error(' App enhancement "failed")
 

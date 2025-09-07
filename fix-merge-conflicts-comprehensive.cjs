@@ -13,23 +13,7 @@ function fixMergeConflicts(filePath) {
     let modified = false;
 
     // Remove merge conflict markers and keep the HEAD version (first part)
-    const conflictRegex = /
-    
-    content = content.replace(conflictRegex, (match, headContent, originContent) => {
-      modified = true;
-      // Clean up the head content
-      let cleaned = headContent
-        .replace(/&apos;/g, "'")
-        .replace(/&quot;/g, '"')
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&amp;/g, '&');
-      
-      return cleaned;
-    });
-
-    // Remove any remaining conflict markers
-    content = content.replace(/
+    content = content.replace(/[^\n]+\n?/g, '');
 
     // Clean up HTML entities
     content = content.replace(/&apos;/g, "'");
@@ -129,15 +113,6 @@ try {
   console.log('Build error:', error.message);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 console.log('\n✨ Merge conflict resolution script completed!');
-=======
-<<<<<<< HEAD
-console.log('\n✨ Merge conflict resolution script completed!');
-=======
-console.log('\n✨ Merge conflict resolution script completed!');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+origin/cursor/expand-services-advertise-and-build-project-c28b
+

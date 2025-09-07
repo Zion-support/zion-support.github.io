@@ -1,5 +1,6 @@
 
 
+
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -250,4 +251,7 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+
+  console.error(" Failed to start enhanced error "fixer": ")
+
 

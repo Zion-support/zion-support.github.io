@@ -1,10 +1,15 @@
 
 
+
+
+
 #!/usr/bin/env node;
 /**
  * Master Automation Suite;
  * Orchestrates all automation scripts in a comprehensive workflow;
  */
+
+
 
     const phases = [{
         "name": 'enhanced-orchestrator',
@@ -110,6 +115,10 @@ if (require.main === module) {
       process.exit(1)})}
 
 module.exports = MasterAutomationSuite;
+
+
+
+main
 
 const { execSync } = require('child_process')
 const fs = require('fs')

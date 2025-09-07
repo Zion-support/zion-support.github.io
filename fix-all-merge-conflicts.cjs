@@ -3,13 +3,20 @@ const path = require('path');
 
 function fixMergeConflicts(filePath) {
   try {
-
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+ursor/automate-test-improve-and-merge-code-85f4
     // Check if file has merge conflict markers
     if (
-
+      content.includes('
+      content.includes('') ||
+      content.includes('>>>>>>>')
+ursor/fix-lint-push-and-merge-to-main-28da
     ) {
       console.log(`Fixing merge conflicts: in: ${filePath}`);
 
+      // Remove merge conflict markers and keep the content after 
+ursor/fix-lint-push-and-merge-to-main-28da
       const lines = content.split('\n');
       const fixedLines = [];
       let inConflict = false;
@@ -18,11 +25,20 @@ function fixMergeConflicts(filePath) {
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
 
+        if (line.includes('
+ursor/fix-lint-push-and-merge-to-main-28da
           inConflict = true;
           keepContent = false;
           continue;
         }
 
+        if (line.includes('')) {
+          keepContent = true;
+          continue;
+        }
+
+        if (line.includes('>>>>>>>')) {
+ursor/fix-lint-push-and-merge-to-main-28da
           inConflict = false;
           keepContent = false;
           continue;

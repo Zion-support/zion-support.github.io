@@ -1,135 +1,111 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+  description: 'Leading provider of AI-powered solutions, micro SaaS platforms, and comprehensive IT services. Transform your business with cutting-edge technology.',
+  keywords: 'AI services, micro SaaS, IT services, automation, technology solutions, business transformation',
+  openGraph: {
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+    description: 'Leading provider of AI-powered solutions, micro SaaS platforms, and comprehensive IT services.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+    description: 'Leading provider of AI-powered solutions, micro SaaS platforms, and comprehensive IT services.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://ziontechgroup.com',
+  },
+};
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI, Micro SaaS, and IT Services
-          </h1>
-          <p className="text-xl text-blue-100 mb-8">
-            Enterprise-grade solutions that drive real business results
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Get Started
+    <div className="space-y-16">
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg" role="banner">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          Zion Tech Group
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Leading provider of AI-powered solutions, micro SaaS platforms, and comprehensive IT services. 
+          Transform your business with cutting-edge technology.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link 
+            href="/services" 
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Explore Services
+          </Link>
+          <Link 
+            href="/contact" 
+            className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+          >
+            Get Started
+          </Link>
+        </div>
+      </section>
+
+      {/* Services Overview */}
+      <section className="py-16" role="region" aria-labelledby="services-heading">
+        <h2 id="services-heading" className="text-3xl font-bold text-center mb-12">
+          Our Services
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>
+            <p className="text-gray-600 mb-4">
+              Harness the power of artificial intelligence to automate processes, 
+              gain insights, and drive innovation.
+            </p>
+            <Link href="/services/ai" className="text-blue-600 hover:underline">
+              Learn More →
             </Link>
-            <Link
-              href="/services"
-              className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              View Services
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Micro SaaS</h3>
+            <p className="text-gray-600 mb-4">
+              Scalable software-as-a-service solutions tailored to your specific 
+              business needs and requirements.
+            </p>
+            <Link href="/services/micro-saas" className="text-blue-600 hover:underline">
+              Learn More →
+            </Link>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">IT Services</h3>
+            <p className="text-gray-600 mb-4">
+              Comprehensive IT support, infrastructure management, and technology 
+              consulting services.
+            </p>
+            <Link href="/services/it" className="text-blue-600 hover:underline">
+              Learn More →
             </Link>
           </div>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white rounded-lg p-6 shadow-lg">
-            <div className="flex items-center mb-4">
-              <span className="text-2xl mr-3">🤖</span>
-              <h3 className="text-xl font-semibold text-gray-900">AI Services</h3>
-            </div>
-            <p className="text-gray-600 mb-4">
-              Custom AI solutions including chatbots, analytics, and automation
-            </p>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span className="text-gray-600">AI-powered chatbots</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span className="text-gray-600">Predictive analytics</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span className="text-gray-600">Machine learning models</span>
-              </li>
-            </ul>
-          </div>
-          
-          <div className="bg-white rounded-lg p-6 shadow-lg">
-            <div className="flex items-center mb-4">
-              <span className="text-2xl mr-3">💼</span>
-              <h3 className="text-xl font-semibold text-gray-900">Micro SaaS</h3>
-            </div>
-            <p className="text-gray-600 mb-4">
-              Scalable software solutions for modern businesses
-            </p>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span className="text-gray-600">Custom web applications</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span className="text-gray-600">API development</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span className="text-gray-600">Cloud deployment</span>
-              </li>
-            </ul>
-          </div>
-          
-          <div className="bg-white rounded-lg p-6 shadow-lg">
-            <div className="flex items-center mb-4">
-              <span className="text-2xl mr-3">⚙️</span>
-              <h3 className="text-xl font-semibold text-gray-900">IT Services</h3>
-            </div>
-            <p className="text-gray-600 mb-4">
-              Comprehensive IT infrastructure and support solutions
-            </p>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span className="text-gray-600">Cloud migration</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span className="text-gray-600">Cybersecurity</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span className="text-gray-600">DevOps & SRE</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Join 500+ businesses already using our AI and IT solutions. 
-            Get a free consultation and see how we can help you achieve your technology goals.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Email kleber@ziontechgroup.com
-            </a>
-          </div>
-          <div className="mt-8 text-blue-200">
-            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p className="mt-2">🕒 Available 24/7 for Enterprise Support</p>
-          </div>
-        </div>
-      </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gray-900 text-white py-16 rounded-lg text-center">
+        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+        <p className="text-xl mb-8 max-w-2xl mx-auto">
+          Let's discuss how our AI, micro SaaS, and IT services can help you achieve your goals.
+        </p>
+        <Link 
+          href="/contact" 
+          className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-block"
+        >
+          Contact Us Today
+        </Link>
+      </section>
     </div>
   );
 }

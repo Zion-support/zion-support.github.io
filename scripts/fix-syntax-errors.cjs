@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-/**
- * Syntax Error Fixer;
- * Automatically fixes common syntax errors in the codebase;
- */
 
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+
+
+main
 
   }
 
@@ -33,7 +27,6 @@ const path = require('path')
       return false;
     } catch (error) {
       this.errors.push(`${filePath}: ${error.message}`);
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -85,34 +78,16 @@ class SyntaxErrorFixer {
         }
       }
       
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
       return false;
     }
   }
 
-<<<<<<< HEAD
-  fixCommonErrors(content) {
-    // Fix unterminated strings
-    content = content.replace(/'([^']*?)(?=\n|$)/g, (match, str) => {
-      if (!str.endsWith("'")) {
-        return match + "'";
-      }
-      return match;
-    });
-    
-    content = content.replace(/"([^"]*?)(?=\n|$)/g, (match, str) => {
-      if (!str.endsWith('"')) {
-        return match + '"';
-      }
-      return match;
-    });
-    
-    // Fix missing semicolons
-    content = content.replace(/([^;}])\n/g, '$1;\n');
-    
-    // Fix merge conflict markers
-    content = content.replace(/
 
+
+
+
+    
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     
@@ -204,7 +179,6 @@ module.exports = SyntaxErrorFixer;
       execSync('npm run format', { "stdio"})
       this.log(` Syntax fixing "failed"`)
       this.log(`� Syntax error fixing "failed"`)
-=======
   async fixESLintErrors() {
     this.log('🔍 Running ESLint with auto-fix...');
     
@@ -360,4 +334,4 @@ if (require.main === module) {
 }
 
 module.exports = SyntaxErrorFixer;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
