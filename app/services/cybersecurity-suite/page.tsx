@@ -15,7 +15,7 @@ export default function CybersecuritySuitePage() {
           <h1 className="text-5xl font-bold text-gray-900 mb-6">Cybersecurity Suite</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Protect your business with our comprehensive cybersecurity solutions. 
-            From security assessments to managed security services, we've got you covered.
+            From security assessments to managed security services, we&apos;ve got you covered.
           </p>
         </div>
         

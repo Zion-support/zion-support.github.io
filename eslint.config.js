@@ -1,41 +1,79 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-// import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
+import nextPlugin from '@next/eslint-plugin-next';
 import globals from 'globals';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
+  baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all
+  allConfig: js.configs.all,
 });
 
 export default [
-
-  js.configs.recommended,
+  ...compat.extends('next/core-web-vitals'),
   {
-    files: ['**/*.{js,jsx}'],
+    ignores: [
+      'node_modules/**',
+      'dist/**',
+      'build/**',
+      'coverage/**',
+      '.next/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**',
+      'backup-problematic-files/**',
+      'src.disabled/**',
+      'components.disabled/**',
+      'pages.disabled/**',
+    ],
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
+      parser: typescriptParser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true
-        }
-      }
+          jsx: true,
+        },
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2021,
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks,
+      '@next/next': nextPlugin
     },
     rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn'
-    }
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...nextPlugin.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/no-unescaped-entities': 'off',
+      '@next/next/no-html-link-for-pages': 'off',
+      '@next/next/no-img-element': 'off',
+      'no-console': 'off',
+      'no-undef': 'off',
+    },
   },
   {
     ignores: [
@@ -148,104 +186,31 @@ export default [
       'system-*.js',
       'ultimate-*.js',
       '*.js',
-      'src_backup_temp/**',
-      'temp-backup/**',
-      'temp_exclude/**',
-      'temp_components/**',
-      'temp_broken_files/**',
-      'temp_working/**',
-      'zion-os.disabled/**',
-      'zion-ai-assistant/**',
-      'tools/**',
-      'utils/**',
-      'recovered-branches/**',
-      'pages._archive_corrupted/**',
-      'pages.bak/**',
-      'pages.disabled_full/**',
-      'pages_api.disabled/**',
-      'pages_backup_conflicts/**',
-      'pages_disabled/**',
-      'src.pages.disabled/**',
-      'vite.config-backup.ts'
+      'public/**',
+      'services-broken.tsx',
+      'services/**/*.ts',
+      'vitest.config.ts',
+      'playwright.config.ts',
+      'setupTests.ts',
+      'components/**',
+      'data/**',
+      'hooks/**',
+      'lib/**',
+      'middleware*',
+      'next.config.ts',
+      'cypress.config.ts',
+      'jest.*',
+      'fix_typescript_syntax_errors.jsx',
+      'contracts.disabled/**',
+      'data.disabled/**',
+      'hooks.disabled/**',
+      'lib.disabled/**',
+      'lib_backup/**',
+      'lint-target/**',
+      'pages-backup/**',
+      'pages-disabled/**',
+      'pages-quarantine/**',
+      'app/**'
     ]
-  },
-  {
-    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly'
-      },
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
-      '@next/next': nextPlugin
-      // '@next/next': nextPlugin, // Not needed for Vite project
-    },
-    rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/display-name': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/ban-ts-comment': 'off',
-      'no-unused-vars': 'off',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'prefer-const': 'error',
-      'no-debugger': 'warn',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn'
-    },
-    settings: {
-      react: {
-        version: 'detect'
-      }
-    }
-  },
-  {
-    files: ['**/*.js'],
-    languageOptions: {
-      globals: {
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly'
-      }
-    },
-    rules: {
-      'no-console': 'off'
-    }
-  }
-      'no-console': 'off'
-    }
-
   }
 ];

@@ -4,7 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
+>>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
 
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
@@ -19,7 +19,7 @@ origin/automation-improvements-final
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
 =======
->>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
+>>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
@@ -31,7 +31,7 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
+>>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
 
     "jest": true
     "es6": true,
@@ -42,7 +42,7 @@ origin/automation-improvements-final
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
 =======
->>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
+>>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
     "es2021": true
   },
   "globals": {
@@ -55,7 +55,7 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
+>>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
 
 
     "es6": true,
@@ -70,7 +70,7 @@ origin/automation-improvements-final
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
 =======
->>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
+>>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
@@ -81,7 +81,7 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
+>>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
     "no-console": "warn"
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
@@ -111,7 +111,7 @@ origin/automation-improvements-final
     "no-undef": "error"
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
 =======
->>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
+>>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
   },
   "ignorePatterns": [
     "node_modules/",
@@ -189,7 +189,7 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
+>>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
 
     "pages.disabled_auto/",
     "zion_academy/",
@@ -452,6 +452,6 @@ origin/automation-improvements-final
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
 =======
->>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
+>>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
   ]
 }

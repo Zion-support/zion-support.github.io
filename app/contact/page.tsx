@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import React from 'react';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export default function ContactPage() {
@@ -10,11 +10,11 @@ export default function ContactPage() {
             Get In Touch
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your business with our AI solutions and enterprise services? 
+            Ready to transform your business with our AI solutions and enterprise services?
             Let's discuss your project and create something amazing together.
           </p>
         </div>
-        
+
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
@@ -38,7 +38,7 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Why Choose Us?</h3>
                 <ul className="space-y-2 text-gray-600">
@@ -50,12 +50,12 @@ export default function ContactPage() {
                 </ul>
               </div>
             </div>
-            
+
             {/* CTA Section */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Ready to Get Started?</h2>
               <p className="text-gray-600 mb-8">
-                Contact us today for a free consultation and discover how our AI solutions 
+                Contact us today for a free consultation and discover how our AI solutions
                 can transform your business.
               </p>
               <div className="space-y-4">

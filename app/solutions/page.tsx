@@ -1,9 +1,10 @@
+import React from 'react';
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export const metadata = {
-  title: 'Solutions - Zion Tech Group',
-  description: 'Comprehensive technology solutions for businesses of all sizes.',
+  title: "Solutions | Zion Tech Group",
+  description: "Comprehensive AI and technology solutions designed to transform your business operations.",
 };
 
 export default function SolutionsPage() {
@@ -54,7 +55,7 @@ export default function SolutionsPage() {
             Our Solutions
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to address your business challenges 
+            Comprehensive technology solutions designed to address your business challenges
             and drive growth across all industries.
           </p>
         </div>
@@ -149,7 +150,7 @@ export default function SolutionsPage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let's discuss your specific needs and create a custom solution 
+              Let's discuss your specific needs and create a custom solution
               that drives real business value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
