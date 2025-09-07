@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Lead Generation Tool | Zion Tech Group',
   description: 'Professional lead generation tool services for your business needs.',
@@ -38,8 +39,11 @@ export default function ServicePage() {
               Round-the-clock support to ensure your lead generation tool solutions run smoothly.
             </p>
           </div>
+
         </div>
       </div>
     </div>
   );
+
 }
+

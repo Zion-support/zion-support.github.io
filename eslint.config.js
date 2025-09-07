@@ -6,6 +6,16 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+<<<<<<< HEAD
+import nextPlugin from '@next/eslint-plugin-next';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+=======
 // import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
 import globals from 'globals';
 
@@ -13,6 +23,7 @@ const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
   recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 });
 
 export default [
@@ -32,6 +43,36 @@ export default [
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn'
+<<<<<<< HEAD
+    }
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks,
+      '@next/next': nextPlugin
+    },
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off'
+=======
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     }
   },
   {
@@ -145,6 +186,33 @@ export default [
       'system-*.js',
       'ultimate-*.js',
       '*.js',
+<<<<<<< HEAD
+      'public/**',
+      'services-broken.tsx',
+      'services/**/*.ts',
+      'vitest.config.ts',
+      'playwright.config.ts',
+      'setupTests.ts',
+      'components/**',
+      'data/**',
+      'hooks/**',
+      'lib/**',
+      'middleware*',
+      'next.config.ts',
+      'cypress.config.ts',
+      'jest.*',
+      'fix_typescript_syntax_errors.jsx',
+      'contracts.disabled/**',
+      'data.disabled/**',
+      'hooks.disabled/**',
+      'lib.disabled/**',
+      'lib_backup/**',
+      'lint-target/**',
+      'pages-backup/**',
+      'pages-disabled/**',
+      'pages-quarantine/**',
+      'app/**'
+=======
       'src_backup_temp/**',
       'temp-backup/**',
       'temp_exclude/**',
@@ -164,6 +232,7 @@ export default [
       'pages_disabled/**',
       'src.pages.disabled/**',
       'vite.config-backup.ts'
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     ]
   },
   {
@@ -195,7 +264,8 @@ export default [
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
-      'react-hooks': reactHooks
+      'react-hooks': reactHooks,
+      '@next/next': nextPlugin
       // '@next/next': nextPlugin, // Not needed for Vite project
     },
     rules: {
@@ -240,4 +310,7 @@ export default [
       'no-console': 'off'
     }
   }
-];
+      'no-console': 'off'
+    }
+  }
+};

@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Social Media Scheduler | Zion Tech Group',
   description: 'Professional social media scheduler services for your business needs.',
@@ -38,8 +39,11 @@ export default function ServicePage() {
               Round-the-clock support to ensure your social media scheduler solutions run smoothly.
             </p>
           </div>
+
         </div>
       </div>
     </div>
   );
+
 }
+

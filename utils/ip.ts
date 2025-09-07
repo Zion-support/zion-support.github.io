@@ -99,70 +99,10 @@ export function getClientIp(req: any): string {
       }
     };
 
-    const data = mockData[ip as keyof typeof mockData] || {
-      reputation: 'neutral' as const,
-      score: 50,
-      sources: ['unknown'],
-      details: {
-        isProxy: Math.random() > 0.8,
-        isVpn: Math.random() > 0.9,
-        isTor: Math.random() > 0.95,
-        isBot: Math.random() > 0.7,
-        isSpam: Math.random() > 0.85,
-        isMalicious: Math.random() > 0.95,
-        isBlacklisted: Math.random() > 0.9
-      }
-    };
 
-    return {
-      ip,
-      reputation: data.reputation,
-      score: data.score,
-      sources: data.sources,
-      lastUpdated: new Date().toISOString(),
-      details: data.details
-    };
-  }
 
-  // Validate IP address
-  isValidIp(ip: string): boolean {
-    if (!ip || ip === 'unknown') return false;
-    
-    // IPv4 validation
-    const ipv4Regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-    if (ipv4Regex.test(ip)) return true;
-    
-    // IPv6 validation (simplified)
-    const ipv6Regex = /^(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/;
-    if (ipv6Regex.test(ip)) return true;
-    
-    return false;
-  }
 
-  // Check if IP is private
-  isPrivateIp(ip: string): boolean {
-    if (!this.isValidIp(ip)) return false;
-    
-    // Private IP ranges
-    const privateRanges = [
-      /^10\./,                    // 10.0.0.0/8
-      /^172\.(1[6-9]|2[0-9]|3[0-1])\./, // 172.16.0.0/12
-      /^192\.168\./,              // 192.168.0.0/16
-      /^127\./,                   // 127.0.0.0/8 (loopback)
-      /^169\.254\./,              // 169.254.0.0/16 (link-local)
-      /^::1$/,                    // IPv6 loopback
-      /^fc00:/,                   // IPv6 unique local
-      /^fe80:/                    // IPv6 link-local
-    ];
-    
-    return privateRanges.some(range => range.test(ip));
-  }
 
-  // Check if IP is likely a proxy/VPN
-  async isProxyOrVpn(ip: string): Promise<boolean> {
-    const reputation = await this.getIpReputation(ip);
-    return reputation?.details.isProxy || reputation?.details.isVpn || false;
-  }
 
   // Get IP geolocation
   async getGeolocation(ip: string): Promise<GeolocationResult | null> {

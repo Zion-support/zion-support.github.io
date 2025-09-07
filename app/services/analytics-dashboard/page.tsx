@@ -1,4 +1,5 @@
 export const metadata = {
+
   title: 'Analytics Dashboard | Zion Tech Group',
   description: 'Professional analytics dashboard services for your business needs.',
   keywords: 'analytics-dashboard, services, business, technology'
@@ -43,3 +44,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

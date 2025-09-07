@@ -1,4 +1,5 @@
 export const metadata = {
+
   title: 'Mobile Development | Zion Tech Group',
   description: 'Professional mobile development services for your business needs.',
   keywords: 'mobile-development, services, business, technology'
@@ -43,3 +44,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

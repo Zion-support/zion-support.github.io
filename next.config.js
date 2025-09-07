@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
+
+// Memory optimization settings
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
@@ -74,4 +75,4 @@ const nextConfig = {
   }
 };
 
-export default nextConfig;
+module.exports = nextConfig;

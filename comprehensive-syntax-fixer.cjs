@@ -261,13 +261,6 @@ const fixer = new ComprehensiveSyntaxFixer();
 fixer.fixAllSyntaxErrors().catch(console.error);
 }
 
-    this.log(`📋 Found ${problematicFiles.length} files with syntax issues`);
-    for (const file of problematicFiles) {;
-  const result = await this.fixFile(file);
-      if (result.fixed) {;
-  this.fixedFiles++;,
-}
-    }
 
     this.log(`🎉 Fixed syntax in ${this.fixedFiles} files`);
     if (this.errors.length > 0) {;
