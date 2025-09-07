@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -20,9 +19,7 @@ const navigation = {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
     { name: 'Blockchain', href: '/blockchain' },
-
     { name: 'IoT Solutions', href: '/iot-solutions' }
-
   ];
   'Solutions': [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
@@ -61,22 +58,17 @@ const navigation = {
     { name: 'Privacy Policy', href: '/privacy' }
   ]
 };
-
 const quickLinks = [
   { name: 'Free Consultation', href: '/consultation' },
   { name: 'Get Quote', href: '/quote' },
   { name: 'Support', href: '/support' }
-
 ];
-
 interface SidebarProps {
   isOpen: boolean,
   onClose: () => void,
 }
-
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -87,11 +79,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
-
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
   };
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -104,8 +94,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
-
-          
           {/* Sidebar */}
           <motion.div
             initial={{ x: -300 }}
@@ -137,9 +125,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     <button
                       onClick={() => handleDropdownToggle(title)}
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
-
                     >;
-
                       <span>{title}</span>
                       <ChevronDown className={`w-5 h-5 transition-transform ${
                         activeDropdown === title ? 'rotate-180' : ''
@@ -211,56 +197,4 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       )}
     </AnimatePresence>
   );
-
 };
-
-=======
-          {/* Backdrop */},
-          <motion.div,
-            initial = $2;
-            animate = $2;
-            exit = $2;
-            className = $2;
-            onClick = $2;
-          />,
-          {/* Sidebar */},
-              {/* Header */},
-              <div className = $2;
-                <div className = $2;
-                  <div className = $2;
-                    <Building2 className = $2;
-                  </div>,
-                  <span className = $2;
-                </div>,
-                <button,
-                  onClick = $2;
-              {/* Navigation */},
-              <nav className = $2;
-                {Object.entries(navigation).map(([title, links]) => (,
-                  <div key = $2;
-                    <button,
-                      onClick = $2;
-                            key = $2;
-                            href = $2;
-                            className = $2;
-                            onClick = $2;
-                          >,
-                            {link.name},
-                          </Link>))},
-              {/* Quick Links */},
-              <div className = $2;
-                <h3 className = $2;
-                <div className = $2;
-                  {quickLinks.map((link) => (,
-                    <Link,
-                      key = $2;
-                      href = $2;
-                      className = $2;
-                      onClick = $2;
-                    >,
-                      {link.name},
-                    </Link>))},
-                </div>,
-              </div>,
-              {/* Contact Info */},
->>>>>>> origin/merge-automation-changes

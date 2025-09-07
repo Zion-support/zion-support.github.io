@@ -7,21 +7,18 @@ console.log('📄 Package.json exists:', fs.existsSync('package.json')),
 console.log('📄 Next.config.js exists:', fs.existsSync('next.config.js')),
 console.log('📁 Pages directory exists:', fs.existsSync('pages')),
 console.log('📁 Components directory exists:', fs.existsSync('components')),
-
 // Check package.json
 if (fs.existsSync('package.json')) {
   const packageJson = $2;
   console.log($2);
   console.log('📦 React version:', packageJson.dependencies?.react || 'Not found')
 }
-
 // Check pages directory structure
 if (fs.existsSync('pages')) {
   const pages = fs.readdirSync($2);
   console.log($2);
   console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')))
 }
-
 // Check for any problematic files
 console.log($2);
 const problematicFiles = $2;
@@ -36,12 +33,10 @@ for (const file of allFiles) {
     // Skip files that can't be read;
   }
 }
-
 console.log($2);
 if (problematicFiles.length > 0) {
   console.log('Files:', problematicFiles.slice(0, 10))
 }
-
 // Function to get all files recursively
 function getAllFiles(dir, extensions) {
   let files = $2;
@@ -61,5 +56,4 @@ function getAllFiles(dir, extensions) {
   }
   return files
 }
-
 console.log($2);

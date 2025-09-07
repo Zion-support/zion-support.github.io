@@ -20,7 +20,6 @@ function fixMergeConflicts(filePath) {
     return false
   }
 }
-
 // Function to get all files recursively
 function getAllFiles(dir, extensions) {
   let files = $2;
@@ -39,7 +38,6 @@ function getAllFiles(dir, extensions) {
   }
   return files
 }
-
 // Main execution
 async function main() {
   console.log($2);
@@ -57,9 +55,7 @@ async function main() {
       // Skip files that can't be read;
     }
   }
-  
   console.log($2);
   console.log('🎉 Merge conflict resolution completed!')
 }
-
 main().catch($2);

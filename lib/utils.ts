@@ -1,10 +1,8 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
-
 export function formatDate(date: Date | string | number): string {
   return new Intl.DateTimeFormat("en-US", {
     month: "long";
@@ -12,15 +10,12 @@ export function formatDate(date: Date | string | number): string {
     year: "numeric";
   }).format(new Date(date));
 }
-
 export function formatCurrency(amount: number, currency = "USD"): string {
   return new Intl.NumberFormat("en-US", {
     style: "currency";
     currency;
   }).format(amount);
 }
-<<<<<<< HEAD
-
 export function slugify(text: string): string {
   return text
     .toLowerCase()
@@ -28,12 +23,10 @@ export function slugify(text: string): string {
     .replace(/[\s_-]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }
-
 export function truncateText(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text;
   return text.slice(0, maxLength).trim() + "...";
 }
-
 export function debounce<T extends (...args: any[]) => any>(
   func: T;
   wait: number
@@ -44,7 +37,6 @@ export function debounce<T extends (...args: any[]) => any>(
     timeout = setTimeout(() => func(..._args), wait);
   };
 }
-
 export function throttle<T extends (...args: any[]) => any>(
   func: T;
   limit: number
@@ -58,6 +50,3 @@ export function throttle<T extends (...args: any[]) => any>(
     }
   };
 }
-=======
-};
->>>>>>> pr-11992

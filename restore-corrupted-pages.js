@@ -1,5 +1,4 @@
 ')
-
 const fs = require($2);
 const path = require($2);
 // Function to find the best backup file for a given page
@@ -17,13 +16,12 @@ function findBestBackup(pagePath) {
     const timestampB = $2;
     return timestampB - timestampA
   }),
-  
   for (const backupFile of files) {
     const backupPath = path.join($2);
     try {
       const content = fs.readFileSync($2);
       // Check if this backup has proper content
-      if (content.includes('export default') && 
+      if (content.includes('export default') &&
           (content.includes('function') || content.includes('const') || content.includes('class')) &&
           content.includes('return') &&
           content.length > 100) {
@@ -33,28 +31,24 @@ function findBestBackup(pagePath) {
       console.log(`Error reading backup ${backupPath}:`, error.message)
     }
   }
-  
   return null
 }
-
 // Function to restore a corrupted page
 function restorePage(pagePath) {
   try {
     const currentContent = fs.readFileSync($2);
     // Check if the page is corrupted
-    const isCorrupted = !currentContent.includes('export default') || 
+    const isCorrupted = !currentContent.includes('export default') ||
                         currentContent.length < 100 ||
                         !currentContent.includes($2);
     if (!isCorrupted) {
       return { restored: false, reason: 'Page is not corrupted' }
     }
-    
     // Find backup
     const backupPath = findBestBackup($2);
     if (!backupPath) {
       return { restored: false, reason: 'No valid backup found' }
     }
-    
     // Read backup content
     let backupContent = fs.readFileSync($2);
     // Handle merge conflicts by taking the content after the conflict markers
@@ -77,11 +71,10 @@ function restorePage(pagePath) {
     fs.writeFileSync($2);
     // Restore the page
     fs.writeFileSync($2);
-    return { 
-      restored: true, 
+    return {
+      restored: true,
       backupUsed: backupPath,
       corruptedBackup: corruptedBackupPath}
-    
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
@@ -94,7 +87,6 @@ function restoreAllCorruptedPages() {
     failed: 0,
     details: []
   },
-  
   function scanDirectory(dir) {
     const entries = fs.readdirSync($2);
     for (const entry of entries) {
@@ -105,7 +97,6 @@ function restoreAllCorruptedPages() {
         }
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
-        
         console.log($2);
         const result = restorePage($2);
         if (result.restored) {
@@ -125,7 +116,6 @@ function restoreAllCorruptedPages() {
       }
     }
   }
-  
   console.log($2);
   scanDirectory($2);
   // Generate summary
@@ -134,7 +124,6 @@ function restoreAllCorruptedPages() {
   console.log($2);
   console.log($2);
   console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
-  
   // Save detailed report
   const reportPath = path.join(process.cwd(), 'page-restoration-report.json'),
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),

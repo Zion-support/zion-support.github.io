@@ -1,17 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-
 interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
-
   url?: string;
   image?: string;
   type?: string;
 }
-
 const SEO: React.FC<SEOProps> = ({
   title,
   description,
@@ -23,7 +19,6 @@ const SEO: React.FC<SEOProps> = ({
   const siteName = 'Zion Tech Group';
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullUrl = url ? `https://ziontechgroup.com${url}` : 'https://ziontechgroup.com';
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -31,7 +26,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullUrl} />
-
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
@@ -39,26 +33,22 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content={siteName} />
-
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={fullUrl} />
       <meta property="twitter:title" content={fullTitle} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
-
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -90,45 +80,4 @@ const SEO: React.FC<SEOProps> = ({
     </Helmet>
   );
 };
-
 export default SEO;
-=======
-import Head from 'next/head';
-
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-}
-
-export function SEO({ 
-  title = 'Zion Tech Group', 
-  description = 'Enterprise-grade AI solutions, micro SaaS development, and comprehensive IT services.',
-  keywords = 'AI, micro SaaS, IT services, automation, consulting',
-  canonical,
-  ogImage = '/og-image.jpg'
-}: SEOProps) {
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content="website" />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-    </Head>
-  );
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-aa0d

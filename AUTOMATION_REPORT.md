@@ -1,19 +1,15 @@
 # Automation Report
-
 **Timestamp:** 2025-09-07T05:23:29.906Z
 **Duration:** NaNms
-
 ## Summary
 - ✅ Successful: 4
 - ❌ Errors: 4
 - ⚠️ Warnings: 0
-
 ## Successful Operations
 - Operation
 - scripts/advanced-build-optimizer.js
 - scripts/performance-monitor-enhanced.js
 - scripts/auto-fixer.js
-
 ## Errors
 - scripts/comprehensive-error-fixer.cjs: Command failed: node scripts/comprehensive-error-fixer.cjs
 Error fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/media/docu-script/requirements.txt'
@@ -32,7 +28,6 @@ Error fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/
   syscall: 'stat',
   path: '/workspace/media/docu-script/requirements.txt'
 }
-
 - ESLint: Command failed: npm run lint
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
@@ -43,44 +38,29 @@ npm warn config       Default value does install optional deps unless otherwise 
 (node:3185) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///workspace/eslint.config.js?mtime=1757222491864 is not specified and it doesn't parse as CommonJS.
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /workspace/package.json.
-
 - TypeScript: Command failed: npm run type-check
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
-
 - Build: Command failed: npm run build
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
- ⚠ Invalid next.config.js options detected: 
+ ⚠ Invalid next.config.js options detected:
  ⚠     Unrecognized key(s) in object: 'swcMinify'
  ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
 Failed to compile.
-
 ./app/layout.tsx
 Error:   [31mx[0m Merge conflict marker encountered.
     ,-[[36;1;4m/workspace/app/layout.tsx[0m:12:1]
  [2m 9[0m | export const metadata: Metadata = {
  [2m10[0m |   title: 'Zion Tech Group - Leading AI and Technology Solutions',
  [2m11[0m |   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
- [2m12[0m | <<<<<<< HEAD
-    : [35;1m^^^^^^^[0m
+ [2m12[0m | : [35;1m^^^^^^^[0m
  [2m13[0m |   keywords: 'AI, artificial intelligence, technology solutions, cloud computing, cybersecurity, data analytics, digital transformation',
- [2m14[0m | =======
- [2m15[0m |   keywords: ['AI', 'artificial intelligence', 'blockchain', 'technology', 'innovation', 'automation'],
-    `----
-  [31mx[0m Merge conflict marker encountered.
-    ,-[[36;1;4m/workspace/app/layout.tsx[0m:14:1]
- [2m11[0m |   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
- [2m12[0m | <<<<<<< HEAD
- [2m13[0m |   keywords: 'AI, artificial intelligence, technology solutions, cloud computing, cybersecurity, data analytics, digital transformation',
- [2m14[0m | =======
-    : [35;1m^^^^^^^[0m
- [2m15[0m |   keywords: ['AI', 'artificial intelligence', 'blockchain', 'technology', 'innovation', 'automation'],
- [2m16[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+ [2m14[0m |
  [2m17[0m |   authors: [{ name: 'Zion Tech Group' }],
     `----
   [31mx[0m Merge conflict marker encountered.
@@ -99,21 +79,9 @@ Error:   [31mx[0m Merge conflict marker encountered.
  [2m19[0m |   robots: 'index, follow',
  [2m20[0m |   openGraph: {
  [2m21[0m |     title: 'Zion Tech Group - Leading AI and Technology Solutions',
- [2m22[0m | <<<<<<< HEAD
-    : [35;1m^^^^^^^[0m
+ [2m22[0m | : [35;1m^^^^^^^[0m
  [2m23[0m |     description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
- [2m24[0m | =======
- [2m25[0m |     description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
-    `----
-  [31mx[0m Merge conflict marker encountered.
-    ,-[[36;1;4m/workspace/app/layout.tsx[0m:24:1]
- [2m21[0m |     title: 'Zion Tech Group - Leading AI and Technology Solutions',
- [2m22[0m | <<<<<<< HEAD
- [2m23[0m |     description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
- [2m24[0m | =======
-    : [35;1m^^^^^^^[0m
- [2m25[0m |     description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
- [2m26[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+ [2m24[0m |
  [2m27[0m |     type: 'website',
     `----
   [31mx[0m Merge conflict marker encountered.
@@ -132,21 +100,9 @@ Error:   [31mx[0m Merge conflict marker encountered.
  [2m30[0m |   twitter: {
  [2m31[0m |     card: 'summary_large_image',
  [2m32[0m |     title: 'Zion Tech Group - Leading AI and Technology Solutions',
- [2m33[0m | <<<<<<< HEAD
-    : [35;1m^^^^^^^[0m
+ [2m33[0m | : [35;1m^^^^^^^[0m
  [2m34[0m |     description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
- [2m35[0m | =======
- [2m36[0m |     description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
-    `----
-  [31mx[0m Merge conflict marker encountered.
-    ,-[[36;1;4m/workspace/app/layout.tsx[0m:35:1]
- [2m32[0m |     title: 'Zion Tech Group - Leading AI and Technology Solutions',
- [2m33[0m | <<<<<<< HEAD
- [2m34[0m |     description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
- [2m35[0m | =======
-    : [35;1m^^^^^^^[0m
- [2m36[0m |     description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
- [2m37[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+ [2m35[0m |
  [2m38[0m |   },
     `----
   [31mx[0m Merge conflict marker encountered.
@@ -164,8 +120,7 @@ Error:   [31mx[0m Merge conflict marker encountered.
  [2m44[0m |   children: React.ReactNode;
  [2m45[0m | }) {
  [2m46[0m |   return (
- [2m47[0m | <<<<<<< HEAD
-    : [35;1m^^^^^^^[0m
+ [2m47[0m | : [35;1m^^^^^^^[0m
  [2m48[0m |     <html lang="en" className={inter.className}>
  [2m49[0m |       <body className="antialiased">
  [2m50[0m |         <div className="min-h-screen flex flex-col">
@@ -175,7 +130,7 @@ Error:   [31mx[0m Merge conflict marker encountered.
  [2m67[0m |       <body className="font-sans antialiased">
  [2m68[0m |         {children}
  [2m69[0m |         <PerformanceMonitor />
- [2m70[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+ [2m70[0m |
     : [35;1m^[0m
  [2m71[0m |       </body>
  [2m72[0m |     </html>
@@ -262,21 +217,14 @@ Error:   [31mx[0m Merge conflict marker encountered.
  [2m73[0m |   );
  [2m74[0m | }
     `----
-
 Caused by:
     Syntax Error
-
 Import trace for requested module:
 ./app/layout.tsx
-
-
 > Build failed because of webpack errors
-
-
 ## Warnings
 - ESLint had issues
 - TypeScript had issues
-
 ## Recommendations
 - Address all errors before deployment
 - Review and address warnings for better code quality
@@ -284,7 +232,6 @@ Import trace for requested module:
 - Set up automated deployment pipeline
 - Monitor performance metrics in production
 - Regular security audits and dependency updates
-
 ## Next Steps
 - Review the comprehensive automation report
 - Address any critical errors identified
@@ -292,5 +239,4 @@ Import trace for requested module:
 - Set up monitoring for production environment
 - Schedule regular automation runs
 - Document any custom automation workflows
-
 *Generated on 2025-09-07T09:42:29.025Z*

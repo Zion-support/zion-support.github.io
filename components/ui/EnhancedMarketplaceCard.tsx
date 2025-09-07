@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Image from 'next/image';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
-
 interface MarketplaceCardProps {
   title: string,
   description: string,
@@ -13,7 +10,6 @@ interface MarketplaceCardProps {
   onAddToCart?: () => void;
   onFavorite?: () => void;
 }
-
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title;
   description;
@@ -34,11 +30,9 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           <Heart className="w-4 h-4 text-gray-600" />
         </button>
       </div>
-      
       <div className="p-4">
         <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
         <p className="text-gray-600 text-sm mb-3">{description}</p>
-        
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -46,7 +40,6 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           </div>
           <span className="text-lg font-bold text-blue-600">$ + {price}</span>
         </div>
-        
         <button
           onClick={onAddToCart}
           className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 flex items-center justify-center"
@@ -58,40 +51,7 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
     </div>
   );
 };
-
 export default EnhancedMarketplaceCard;
-=======
-
-          <div className="h-12 w-12 rounded bg-gray-200" />)};
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
-      </div>;
-      <p className="text-sm text-gray-600 mb-4">{description}</p>;
-      <div className="mt-auto flex items-center justify-between">;
-        {price && <span className="text-sm font-medium text-blue-600">{price}</span>};
-import React from 'react';
-import EnhancedCard from './EnhancedCard';
-export type MarketplaceCardProps = {
-  title: string,
-  subtitle?: string;
-  description?: string;
-  footer?: React.ReactNode
-};
-
-export default function EnhancedMarketplaceCard({ title, subtitle, description, footer }: MarketplaceCardProps) {
-  return (
-    <EnhancedCard className="p-5">
-      <div className="space-y-2">
-        <div>
-          <h3 className="text-base font-semibold leading-tight">{title}</h3>
-          {subtitle && <p className="text-sm text-gray-500 dark:text-gray-400">{subtitle}</p>}
-        </div>
-        {description && <p className="text-sm text-gray-700 dark:text-gray-300">{description}</p>}
-        {footer && <div className="pt-2">{footer}</div>}
-      </div>
-    </EnhancedCard>
-  )
-}
->>>>>>> pr-11992
 =======
           <div className="h-12 w-12 roundedbg-gray-200" />)};
         <h3 className=" text-lgfont-semiboldtext-gray-900">{title}</h3>;
@@ -100,4 +60,3 @@ export default function EnhancedMarketplaceCard({ title, subtitle, description, 
       <div className="mt- auto flexitems-centerjustify-between">;
         {price && <span className=" text-smfont-mediumtext-blue-600">{price}</span>};
 <div className = "h-12 w-12 rounded bg-gray-200" />)}; <h3 className = "text-lg font-semibold text-gray-900">{title}</h3>; </div>; <p className = "text-sm text-gray-600 mb-4">{description}</p>; <div className = "mt-auto flex items-center justify-between">; {price && <span className = "text-sm font-medium text-blue-600">{price}</span>};
->>>>>>> origin/merge-automation-changes
