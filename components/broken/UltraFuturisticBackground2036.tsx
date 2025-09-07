@@ -4,7 +4,7 @@
       <canvas;
         ref={canvas_ref}
         className=&quot;w - full h - full & quot;
-        style={{ display: 'block' ,}
+        style={{display: 'block' }
 }
       />;
       {/* Additional overlay effects */}

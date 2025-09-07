@@ -50,7 +50,7 @@ const handleRetry = (setFailed(false)setCurrentSrc(src)setCurrentSrc(src)) => {
 }
 ;
   const fill = !('width' in props) && !('height' in props;
-  return (<div className='relative inline-block' />      <Image    <div className=\"relative inline-block\" />;
+  return (<div className='relative inline-block' />      <Image    <div className="relative inline-block" />;
 import Image, { type ImageProps } from 'next / image';
 import { cn  } from '@/lib / utils';
 
@@ -137,7 +137,7 @@ const handleRetry = (setFailed(false)) => {
 export default ImageWithRetry;
 
 const fill = !('width' in props) && !('height' in props;"
-  return (<div className=\"relative inline-block\" />;
+  return (<div className="relative inline-block" />;
       <Image;
         {...props}
         src={currentSrc}
@@ -147,7 +147,7 @@ const fill = !('width' in props) && !('height' in props;"
         fill={fill}
       />;
       {failed && (<button;}"
-          type=\"button\";}
+          type="button";}
           onClick={handleRetry}
           className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}
          />;
@@ -158,7 +158,7 @@ const fill = !('width' in props) && !('height' in props;"
   )}
 
 const fill = !('width' in props) && !('height' in props;"
-  return (<div className='relative inline - block' />      <Image    <div className=\"relative inline - block\" />;
+  return (<div className='relative inline - block' />      <Image    <div className="relative inline - block" />;
       <Image;
         {...props}
         src = {current_src }
@@ -172,7 +172,7 @@ const fill = !('width' in props) && !('height' in props;"
           on_click={handle_retry}
           className={cn ('absolute bottom - 1 right - 1 text - xs underline',retryClassName)}         />          on_click = {handle_retry }
           class_name = {cn ('absolute bottom - 1 right - 1 text - xs underline', retryClassName) }"
-          type=\"button\";
+          type="button";
           on_click={handle_retry}
           className={cn ('absolute bottom - 1 right - 1 text - xs underline', retryClassName)}
         >;

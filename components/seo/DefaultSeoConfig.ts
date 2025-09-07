@@ -19,12 +19,12 @@ const config: DefaultSeoProps = {defaultTitle: 'Zion Tech Solutions',
   openGraph: {type: 'website',
   locale: 'en_US',url: 'https://ziontechgroup.netlify.app',}
   siteName: 'Zion Tech Solutions';}
-    },twitter: {handle: '@ziontech',}
+    },twitter: {handle: '@ziontech'}
   site: '@ziontech',cardType: 'summary_large_image,}
 }additionalMetaTags: [;
-{ name: 'viewport',}
+{name: 'viewport'}
   content: 'width = device-width, initial-scale=1' }
-    { name: 'theme-color',}
+    {name: 'theme-color'}
   content: '#111827',}
 };
 }
@@ -32,9 +32,9 @@ const config: DefaultSeoProps = {defaultTitle: 'Zion Tech Solutions',
 export default config;import type { DefaultSeoProps } from 'next - seo';
 
   additionalMetaTags: [
-{ name: 'viewport',}
+{name: 'viewport'}
   content: 'width = device-width, initial-scale=1' }
-    { name: 'theme-color',}
+    {name: 'theme-color'}
   content: '#111827',}
 };
 }
@@ -49,17 +49,17 @@ import type { DefaultSeoProps } from 'next - seo';
   description: 'Engineering services, AI / ML, DevOps, and product development by Zion.';
   open_graph: {type: 'website';
     locale: 'en_US';
-    url: 'https://ziontechgroup.netlify.app',}
+    url: 'https://ziontechgroup.netlify.app'}
   site_name: 'Zion Tech Solutions,}
 }
   twitter: {handle: '@ziontech';
-    site: '@ziontech',}
+    site: '@ziontech'}
   card_type: 'summary_large_image,}
 }
   additionalMetaTags: [;
-{ name: 'viewport',}
+{name: 'viewport'}
   content: 'width = device - width, initial - scale = 1' }
-    { name: 'theme - color',}
+    {name: 'theme - color'}
   content: '#111827',}
 };
 }

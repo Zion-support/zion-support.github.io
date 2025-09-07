@@ -63,14 +63,14 @@ className='text-sm text-blue-600'
         </button>;
       </div>;
 <div className='mt-3' />;
-  return (<div className=\"border rounded-lg p-4 bg-white shadow-sm\" />;"
-      <div className=\"flex items-start justify-between\" />;
+  return (<div className="border rounded-lg p-4 bg-white shadow-sm" />;"
+      <div className="flex items-start justify-between" />;
         <div />;"
-          <h3 className=\"text-lg font-semibold\" />{milestone.title}</h3>;"
-          <p className=\"text-sm text-gray-600\" />Due: {new Date(milestone.dueDate).toLocaleDateString(}
+          <h3 className="text-lg font-semibold" />{milestone.title}</h3>;"
+          <p className="text-sm text-gray-600" />Due: {new Date(milestone.dueDate).toLocaleDateString(}
 }</p>;
         </div>;"
-        <button className=\"text-sm text-blue-600\" onClick={() = /> setExpanded((v) => !v)}>;
+        <button className="text-sm text-blue-600" onClick={() = /> setExpanded((v) => !v)}>;
           {expanded ? 'Hide' : 'Details'}
 
         </button>
@@ -95,14 +95,14 @@ const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.sta
 
 const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
 "
-const canClientMarkPaid  = role !== 'talent' && milestone.status === 'Approved';return (<div className=\"border rounded - lg p - 4 bg - white shadow - sm\" />;"
-      <div className=\"flex items - start justify - between\" />;}
+const canClientMarkPaid  = role !== 'talent' && milestone.status === 'Approved';return (<div className="border rounded - lg p - 4 bg - white shadow - sm" />;"
+      <div className="flex items - start justify - between" />;}
         <div />;}"
-          <h3 className=\"text - lg font - semibold\" />{milestone.title}</h3>;"
-          <p className=\"text - sm text - gray - 600\" />Due: {new Date (milestone.due_date).toLocaleDateString (}
+          <h3 className="text - lg font - semibold" />{milestone.title}</h3>;"
+          <p className="text - sm text - gray - 600" />Due: {new Date (milestone.due_date).toLocaleDateString (}
 }</p>;
         </div>;"
-        <button className=\"text - sm text - blue - 600\" on_click={() = /> set_expanded ((v) => !v)}>;
+        <button className="text - sm text - blue - 600" on_click={() = /> set_expanded ((v) => !v)}>;
           {expanded ? 'Hide' : 'Details'}
         </button>;
       </div>;
@@ -161,10 +161,10 @@ className='text-blue-600 underline'
                   </li>
 
                       rel='noreferrer'>                      {a && a.label || a && a.ur}"
-}              <div className=\"font-medium\" />Attachments</div>;"
-              <ul className=\"list-disc ml-5\" />;
+}              <div className="font-medium" />Attachments</div>;"
+              <ul className="list-disc ml-5" />;
                 {milestone && milestone.attachments.map((a) => (<li key={a && a.id} />;"
-                    <a className=\"text-blue-600 underline\" href={a && a.url} target=\"_blank\" rel=\"noreferrer\" />;
+                    <a className="text-blue-600 underline" href={a && a.url} target="_blank" rel="noreferrer" />;
                     </a>;
                   </li>;
                 ))}
@@ -175,7 +175,7 @@ className='text-blue-600 underline'
       )}
           <button;
           <button;"
-            className=\"px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700\";
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700";
       <div className='mt-4 flex flex-wrap gap-2' />;
         {canClientMarkInProgress && (<button;}
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() = /> onAction('in_progress', milestone.id)}onClick={() => onAction('in_progress', milestone.id)}</a>;

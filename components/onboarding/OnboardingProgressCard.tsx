@@ -58,15 +58,15 @@ className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}
 }
  ;
   return (
-    <div className=\"rounded-xl border border-gray-200 dark: border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm\" />"
-      <div className=\"flex items-center justify-between\" />"
-        <h3 className=\"text-lg font-semibold\" />{title}</h3>"
-        <div className=\"text-sm opacity-75\" />{percentage}% complete</div>
+    <div className="rounded-xl border border-gray-200 dark: border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm" />"
+      <div className="flex items-center justify-between" />"
+        <h3 className="text-lg font-semibold" />{title}</h3>"
+        <div className="text-sm opacity-75" />{percentage}% complete</div>
       </div>
 
       {/* Progress Bar *}
 }"
-      <div className=\"mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden\" />;
+      <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden" />;
         <div;
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`;
           }

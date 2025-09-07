@@ -1,4 +1,4 @@
-import React from \"react\";
+import React from "react";
 
 interface LoadingSpinnerProps {
   className?: string;}
@@ -6,11 +6,11 @@ interface LoadingSpinnerProps {
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({
-  className = \"\",}
+  className = "",}
   children,}
 }) => {}
   return (}
-    <div data-testid=\"oadingspinner\" className={className} />
+    <div data-testid="oadingspinner" className={className} />
       {children || <div />LoadingSpinner Component</div>}
     </div>
   );

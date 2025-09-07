@@ -307,9 +307,9 @@ className='flex items-center space-x-2 text-gray-300 hover: text-white transitio
 }
                         animate={{ opacity: 1, y: 0, scale: 1 }
 } />;
-                        <div className=\"p-4\" />;"
-                          <div className=\"text-sm text-gray-400 mb-3\" />{item.description}</div>;"
-                          <div className=\"space-y-2\" />;
+                        <div className="p-4" />;"
+                          <div className="text-sm text-gray-400 mb-3" />{item.description}</div>;"
+                          <div className="space-y-2" />;
                             {item.dropdown.map((dropdownItem) => (<Link;}
                   </Link />;}
                 )}{/* Dropdown Menu */}
@@ -373,11 +373,11 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
           </div />
 
           {/* Contact Info & CTA */}"
-          <div className=\"hidden lg:flex items-center space-x-6\" />"
-            <div className=\"flex items-center space-x-4 text-sm text-gray-300\" />"
-              <a href={`tel:${contactInfo.mobile}`} className=\"flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200\" />"
-                <Phone className=\"w-4 h-4\" />"
-                <span className=\"hidden xl:inline\" />{contactInfo.mobile}</span>
+          <div className="hidden lg:flex items-center space-x-6" />"
+            <div className="flex items-center space-x-4 text-sm text-gray-300" />"
+              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200" />"
+                <Phone className="w-4 h-4" />"
+                <span className="hidden xl:inline" />{contactInfo.mobile}</span>
               </a>
 
             </div>

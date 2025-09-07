@@ -38,8 +38,7 @@ const [publishing, setPublishing] = useState(false);
 const handleGenerate = async () => {
     setGenerating(true);
     try {
-      const res = await fetch('/api/podcast/generate', {
-        method: 'POST',}
+      const res = await fetch('/api/podcast/generate', {method: 'POST'}
   headers: { 'Content-Type': 'application/json',}
 },
 body: JSON.stringify({
@@ -67,8 +66,7 @@ const handleSynthesize = async () => {
   return;
     setSynthesizing(true);
     try {
-      const res = await fetch('/api/podcast/synthesize', {
-        method: 'POST',}
+      const res = await fetch('/api/podcast/synthesize', {method: 'POST'}
   headers: { 'Content-Type': 'application/json',}
 },
 body: JSON.stringify({ episodeId: episode.id, persona }),
@@ -89,7 +87,7 @@ const handlePublishRss = async () => {
   return;
     setPublishing(true);
     try {}
-const res = await fetch('/api/podcast/rss', { method: 'POST',}
+const res = await fetch('/api/podcast/rss', {method: 'POST'}
 });
       await res.json();
       alert('RSS feed updated. Platforms will pull on next refresh.');

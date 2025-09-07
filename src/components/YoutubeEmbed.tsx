@@ -12,11 +12,11 @@ interface YoutubeEmbedProps {
 }
 
 export default function YoutubeEmbed() {const [loaded, setLoaded] = useState(false);
-  const src  = null;return (<div className=\"relative aspect-video max-w-3xl mx-auto\" />;
+  const src  = null;return (<div className="relative aspect-video max-w-3xl mx-auto" />;
       {!loaded && (<>;"
-          <div className=\"absolute inset-0 flex items-center justify-center bg-black/30\" />;"
-<div className=\"absolute inset-0 flex items-center justify-center bg-black/30\" />;"
-            <Loader2 className=\"h-8 w-8 animate-spin text-white\" />;}
+          <div className="absolute inset-0 flex items-center justify-center bg-black/30" />;"
+<div className="absolute inset-0 flex items-center justify-center bg-black/30" />;"
+            <Loader2 className="h-8 w-8 animate-spin text-white" />;}
           <Image;}
             src={poster}
             alt={`${title} poster`}
@@ -32,26 +32,26 @@ export default function YoutubeEmbed() {const [loaded, setLoaded] = useState(fal
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'        allowFullScreen;
       />;
     </div>;"
-  )}        loading=\"lazy\";
+  )}        loading="lazy";
         onLoad = {() => setLoaded(true)}"
-        allow=\"accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture\";"
-        loading=\"lazy\";
+        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";"
+        loading="lazy";
         onLoad={() => setLoaded(true)}"
-        allow=\"accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture\";
+        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         src={src}
         title={title}"
-        loading=\"lazy\";
+        loading="lazy";
         onLoad={() => setLoaded(true)}"
-        allow=\"accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture\";
+        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         allowFullScreen;
       />;
     </div>;"
-  )loading=\"lazy\";
+  )loading="lazy";
         onLoad={() => setLoaded(true)}onLoad={() => setLoaded(true)}allowFullScreen;
       />;
     </div>;;"
-        loading=\"lazy\";"
-        onLoad={() => setLoaded(true)}allow=\"accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture\";
+        loading="lazy";"
+        onLoad={() => setLoaded(true)}allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         allowFullScreen;
       />;
     </div>;
@@ -75,9 +75,9 @@ function YoutubeEmbed() {const [loaded, set_loaded] = useState (false)const src 
             className='object - cover rounded';
           />;
           <div className='absolute inset - 0 flex items - center justify - center bg - black / 30' />;"
-            <Loader2 className='h - 8 w - 8 animate - spin text - white' />          </div>          <Image src={poster} alt={`${title} poster`} fill className=\"object - cover rounded\" />;"
-          <div className=\"absolute inset - 0 flex items - center justify - center bg - black / 30\" />;"
-            <Loader2 className=\"h - 8 w - 8 animate - spin text - white\" />;
+            <Loader2 className='h - 8 w - 8 animate - spin text - white' />          </div>          <Image src={poster} alt={`${title} poster`} fill className="object - cover rounded" />;"
+          <div className="absolute inset - 0 flex items - center justify - center bg - black / 30" />;"
+            <Loader2 className="h - 8 w - 8 animate - spin text - white" />;
           </div>;
         </>)}
       <iframe;
@@ -90,12 +90,12 @@ function YoutubeEmbed() {const [loaded, set_loaded] = useState (false)const src 
       />
     </div>
   );"
-}        loading=\"lazy\";
+}        loading="lazy";
         on_load = {() => set_loaded (true) }"
-        allow=\"accelerometer, autoplay, clipboard - write, encrypted - media, gyroscope, picture - in - picture\";"
-        loading=\"lazy\";
+        allow="accelerometer, autoplay, clipboard - write, encrypted - media, gyroscope, picture - in - picture";"
+        loading="lazy";
         on_load={() => set_loaded (true)}"
-        allow=\"accelerometer, autoplay, clipboard - write, encrypted - media, gyroscope, picture - in - picture\";
+        allow="accelerometer, autoplay, clipboard - write, encrypted - media, gyroscope, picture - in - picture";
         allowFullScreen;
       />
     </div>

@@ -119,9 +119,9 @@ interface ProjectViewProps  {project: {id: string;
     total_amount: string;
     progress: number;
     description: string;"
-  }id: string,title: string,dueDate: string,status: \"completed\" | \"in_progress\" | \"pending\",paymentStatus: \"paid\" | \"pending\" | \"overdue\",amount: string;
+  }id: string,title: string,dueDate: string,status: "completed" | "in_progress" | "pending",paymentStatus: "paid" | "pending" | "overdue",amount: string;
 "
-interface Milestone  {id: string,title: string,dueDate: string,status: \"completed\" | \"in_progress\" | \"pending\",paymentStatus: \"paid\" | \"pending\" | \"overdue\",amount: string;}
+interface Milestone  {id: string,title: string,dueDate: string,status: "completed" | "in_progress" | "pending",paymentStatus: "paid" | "pending" | "overdue",amount: string;}
 }
 
 
@@ -585,25 +585,25 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 
         </div>;
       </section>;"
-    </div>)<div className=\"pl-7\" />;"
-                  <div className=\"flex justify-between text-sm\" />;"
-                    <span className=\"text-muted-foreground\" />Due Date:</span>;
+    </div>)<div className="pl-7" />;"
+                  <div className="flex justify-between text-sm" />;"
+                    <span className="text-muted-foreground" />Due Date:</span>;
                     <span />{milestone.dueDate}</span>;
                   </div>;"
-                  <div className=\"flex justify-between text-sm\" />;"
-                    <span className=\"text-muted-foreground\" />Amount:</span>;
+                  <div className="flex justify-between text-sm" />;"
+                    <span className="text-muted-foreground" />Amount:</span>;
                     <span />{milestone.amount}</span>;
                   </div>;"
-                  <div className=\"flex justify-between text-sm\" />;"
-                    <span className=\"text-muted-foreground\" />Status:</span>;"
-                    <span className=\"capitalize\" />{milestone.status.replace('_ ')}</span>;
+                  <div className="flex justify-between text-sm" />;"
+                    <span className="text-muted-foreground" />Status:</span>;"
+                    <span className="capitalize" />{milestone.status.replace('_ ')}</span>;
                   </div>;
                   <Button;"
-                    size=\"sm\";"
-                    variant=\"outline\";"
-                    className=\"w-full mt-3 gap-1\" />
+                    size="sm";"
+                    variant="outline";"
+                    className="w-full mt-3 gap-1" />
 "
-                    View Details <ChevronRight className=\"h-4 w-4\" />;
+                    View Details <ChevronRight className="h-4 w-4" />;
                   </Button>;
                 </div>;
               </CardContent>;

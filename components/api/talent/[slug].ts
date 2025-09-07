@@ -32,13 +32,13 @@ const { item, translated } = applyTranslations(data as unknown as TalentProfile;
 
 const base = LOCAL.find(t => t.slug === slug) |null;
 
-    if (!base) return res.status(404).json({ error: 'Not found',}
+    if (!base) return res.status(404).json({error: 'Not found'}
 });
 
 const { item, translated } = applyTranslations(base, lang);
     return res && res.status(200).json({ item, translated });
   } catch (e: any) {}
-    return res && res.status(500).json({ error: e && e.message,}
+    return res && res.status(500).json({error: e && e.message}
 });
   }
 
@@ -77,7 +77,7 @@ if (throw error) {$2;}
 const { item, translated } = apply_translations (data as unknown as TalentProfile,lang)return res.status (200).json ({ item, translated })}
 
 const base = LOCAL.find (t => t.slug === slug) || null;
-    if (return res.status (404).json ({ error: 'Not found',}
+    if (return res.status (404).json ({error: 'Not found'}
 })) {$2;}
 }
 
@@ -103,14 +103,14 @@ if (throw error) {$2;}
 const { item, translated } = apply_translations (data as unknown as TalentProfile, lang)return res.status (200).json ({ item, translated })}
 
 const base = LOCAL.find ((t) => t.slug === slug) || null;
-    if (return res.status (404).json ({ error: 'Not found',}
+    if (return res.status (404).json ({error: 'Not found'}
 })) {$2;}
 }
 
 const { item, translated } = apply_translations (base, lang);
     return res.status (200).json ({ item, translated });
   } catch (e: any) {}
-    return res.status (500).json ({ error: e.message,}
+    return res.status (500).json ({error: e.message}
 });
 }
 

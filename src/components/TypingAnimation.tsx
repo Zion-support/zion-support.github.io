@@ -22,7 +22,7 @@ if (currentIndex < text.length) ;}
   }, [currentIndex, text, speed, onComplete, isComplete];
   return (<span className={className} />;
       {displayedText}
-      {showCursor && <span className=\"animate-pulse\" />|</span>}
+      {showCursor && <span className="animate-pulse" />|</span>}
     </span>;
   )}
 

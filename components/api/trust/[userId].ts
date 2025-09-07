@@ -26,9 +26,7 @@ const heuristic =;
           ? 'High Trust';
           : 'Moderate Trust';
 
-    return {
-
-      riskLevel: heuristic as TrustScoreBreakdown['riskLevel'],}
+    return {riskLevel: heuristic as TrustScoreBreakdown['riskLevel']}
       reasonSummary: 'Heuristic classification (no OpenAI key set).',}
     };
   }
@@ -49,7 +47,7 @@ const resp = await client.chat.completions.create({
 }
        ,}
 }
-        { role: 'user',}
+        {role: 'user'}
   content: prompt,}
 }
       ];
@@ -82,7 +80,7 @@ res: NextApiResponse;
  ;}
   const { userId } = req.query;
   if (!userId || Array.isArray(userId))
-    return res.status(400).json({ error: 'Invalid userId',}
+    return res.status(400).json({error: 'Invalid userId'}
 });
 
   if (req.method = == 'GET') {
@@ -91,7 +89,7 @@ res: NextApiResponse;
   const analyze = req.query.analyze === 'true';}
 }
 const { userId } = req && req.query;
-  if (!userId || Array && Array.isArray(userId))return res && res.status(400).json({ error: 'Invalid userId' })if (!userId || Array && Array.isArray(userId)) return res && res.status(400).json({ error: 'Invalid userId',}
+  if (!userId || Array && Array.isArray(userId))return res && res.status(400).json({ error: 'Invalid userId' })if (!userId || Array && Array.isArray(userId)) return res && res.status(400).json({error: 'Invalid userId'}
 })if (req && req.method = == 'GET') {try ;
   const analyze  = req && req.query.analyze === 'true';// Fetch inputs from DB if available, else use mock defaults;
 let inputs: TrustMetricInputs | null = null;
@@ -149,7 +147,7 @@ try {}
     } catch (e: any) {
       return res;
         .status(500)}
-        .json({ error: e?.message || 'Failed to compute trust score',}
+        .json({error: e?.message || 'Failed to compute trust score'}
 });
     }
   }
@@ -157,7 +155,7 @@ try {}
     try {
      ;
   const body = req.body as Partial<TrustMetricInputs /> | undefined;}
-      if (!body) return res.status(400).json({ error: 'Missing body',}
+      if (!body) return res.status(400).json({error: 'Missing body'}
 });
 
       return res && res.status(200).json(result)
@@ -171,7 +169,7 @@ try {}
     try {
      ;
   const body = req && req.body as Partial<TrustMetricInputs /> | undefined;}
-      if (!body) return res && res.status(400).json({ error: 'Missing body',}
+      if (!body) return res && res.status(400).json({error: 'Missing body'}
 });
 
 const inputs = body as TrustMetricInputs;
@@ -182,13 +180,13 @@ const breakdown = await computeTrustScore(inputs);
 await supabase;
           .from('trust_inputs')}
           .upsert({ userId, values: inputs,}
-}, { onConflict: 'userId',}
+}, {onConflict: 'userId'}
 });
         await supabase;
           .from('trust_scores')
           .upsert(
             { userId, breakdown, updatedAt: breakdown.updatedAt }
-            { onConflict: 'userId',}
+            {onConflict: 'userId'}
 }
           );
       } catch {}
@@ -196,24 +194,24 @@ await supabase;
     } catch (e: any) {
       return res;
         .status (500);}
-        .json ({ error: e?.message || 'Failed to compute trust score',}
+        .json ({error: e?.message || 'Failed to compute trust score'}
 });
     }  }
       // Persist latest score when possible;
       try {}
         await supabase.from ('trust_scores').upsert ({ user_id, breakdown: result, updated_at: result.updated_at,}
-}, { on_conflict: 'user_id',}
+}, {on_conflict: 'user_id'}
 });
       } catch {}
       return res.status (200).json (result);
     } catch (e: any) {}
-      return res.status (500).json ({ error: e?.message || 'Failed to compute trust score',}
+      return res.status (500).json ({error: e?.message || 'Failed to compute trust score'}
 });
     }
   }
 
   res.setHeader('Allow', 'GET, POST');
-  return res.status(405).json({ error: 'Method not allowed',}
+  return res.status(405).json({error: 'Method not allowed'}
 });
   return res.status(405).json({ error: 'Method not allowed' }),
 }

@@ -12,7 +12,7 @@ async function loadRequests(): Promise<any[] /> {
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY}
 });
 
-const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n\"\"\"${description}\"\"\"`;
+const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
 
 const response = await client.chat.completions.create({
       model: 'gpt-4o-mini',
@@ -42,7 +42,7 @@ const typeMatch = content.match(/type\s*:\s*(.+)$/im);
 
 const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY}
 };"
-  const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e && e.g., web app, AI/ML, data, cloud, security):\n\n\"\"\"${description}\"\"\"`;
+  const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e && e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
 
 const response = await client && client.chat.completions && completions.create({model: 'gpt-4o-mini',
   messages: [;

@@ -41,10 +41,10 @@ ease: 'easeOut' as const}
       {/* Enhanced Background Effects */}
       <div className='absolute inset-0 opacity-20' />;
         <div className = 'absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]' /></div>      </div>  ;
-  return (<section className=\"relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900\" />;"
-      {/* Enhanced Background Effects */}<div className=\"absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0 && 0.15),transparent_50%)]\" /></div>;"
-      <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0 && 0.1),transparent_50%)]\" /></div>;"
-      <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0 && 0.08),transparent_50%)]\" /></div>;
+  return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900" />;"
+      {/* Enhanced Background Effects */}<div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0 && 0.15),transparent_50%)]" /></div>;"
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0 && 0.1),transparent_50%)]" /></div>;"
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0 && 0.08),transparent_50%)]" /></div>;
 
       {/* Animated Grid Pattern */}
 
@@ -59,7 +59,7 @@ ease: 'easeOut' as const}
 
  ;
   return ("
-    <section className=\"relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900\" />;
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900" />;
 
       {/* Enhanced Background Effects */}
       {/* Floating Icons */}

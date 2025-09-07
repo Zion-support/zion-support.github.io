@@ -1,7 +1,7 @@
 
 
-import type { NextApiRequest, NextApiResponse } from \"next\";"
-import { findPartnerByApiKey, signJwt } from \"../../../utils/api/partnerAuth\";
+import type { NextApiRequest, NextApiResponse } from "next";"
+import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
 
@@ -28,9 +28,9 @@ const match = await findPartnerByApiKey(apiKey);
 });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {"
-  if (req.method !== \"POST\") {}"
-    res.setHeader(\"Allow\", \"POST\");}"
-    return res.status(405).json({ error: \"Method Not Allowed\" })
+  if (req.method !== "POST") {}"
+    res.setHeader("Allow", "POST");}"
+    return res.status(405).json({ error: "Method Not Allowed" })
  
 }
 

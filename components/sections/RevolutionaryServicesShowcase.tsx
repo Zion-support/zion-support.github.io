@@ -155,10 +155,10 @@ className='group relative cursor-pointer'
           variants={container_variants}
           initial='hidden';
           whileInView='visible'          viewport={{ once: true }
-}          className=\"grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12\";
+}          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12";
           variants={container_variants}"
-          initial=\"hidden\";"
-          whileInView=\"visible\" />
+          initial="hidden";"
+          whileInView="visible" />
 
           {filtered_services.slice (0, visible_services).map ((service, index) => (<motion.div;}
               key={service.id}
@@ -178,17 +178,17 @@ className='group relative cursor-pointer'
                     <Star className='w - 3 h - 3 inline mr - 1' />                    POPULAR              style={{ perspective: '1000px' }
 }
             >;"
-              <div className=\"absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75\" /></div>;"
-              <div className=\"relative bg - black / 80 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6 overflow - hidden h - full\" />;
+              <div className="absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75" /></div>;"
+              <div className="relative bg - black / 80 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6 overflow - hidden h - full" />;
                 {/* Background Effects */}"
-                <div className=\"absolute inset - 0 rounded - 2xl overflow - hidden\" />;"
-                  <div className=\"absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500\" /></div>;"
-                  <div className=\"absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700\" /></div>;
+                <div className="absolute inset - 0 rounded - 2xl overflow - hidden" />;"
+                  <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500" /></div>;"
+                  <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700" /></div>;
                 </div>;
                 {/* Popular Badge */}
                 {service.popular && (<div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300' />;"
-                    <Star className='w - 3 h - 3 inline mr - 1' />                  <div className=\"absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300\" />;"
-                    <Star className=\"w - 3 h - 3 inline mr - 1\" />;
+                    <Star className='w - 3 h - 3 inline mr - 1' />                  <div className="absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300" />;"
+                    <Star className="w - 3 h - 3 inline mr - 1" />;
                     POPULAR;
     </div>}
   );}
@@ -208,8 +208,8 @@ className='group relative cursor-pointer'
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300' />;
                 {/* Popular Badge */}
                 {service && service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300' />;"
-                    <Star className='w-3 h-3 inline mr-1' />                  <div className=\"absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300\" />;"
-                    <Star className=\"w-3 h-3 inline mr-1\" />;
+                    <Star className='w-3 h-3 inline mr-1' />                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300" />;"
+                    <Star className="w-3 h-3 inline mr-1" />;
                     POPULAR;}
                   </div>;}
                 )}

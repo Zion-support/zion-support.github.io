@@ -62,7 +62,7 @@ const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(({title,ic
               <span />{title}</span>;
             </div>;
             {showChevron && (<ChevronDown;}
-                className={cn(\"h-4 w-4 transition-transform\", expanded ? \"rotate-0\" : \"-rotate-90\")}
+                className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
               />;
             )}
           </button>;
@@ -74,13 +74,13 @@ export { SidebarGroup }}
             )}
           </button>;
         )}"
-        <div className={cn(\"mt-1\", !expanded && \"hidden\")} />{children}</div>;
+        <div className={cn("mt-1", !expanded && "hidden")} />{children}</div>;
       </div>;
     )}"
-),SidebarGroup.displayName = \"SidebarGroup\",export { SidebarGroup },<div className={cn(\"mt-1\", !expanded && \"hidden\")} />{children}</div>;
+),SidebarGroup.displayName = "SidebarGroup",export { SidebarGroup },<div className={cn("mt-1", !expanded && "hidden")} />{children}</div>;
       </div>;
     )}"
-),SidebarGroup.displayName = \"SidebarGroup\",export { SidebarGroup }className={cn(\"h-4 w-4 transition-transform\", expanded ? \"rotate-0\" : \"-rotate-90\")}
+),SidebarGroup.displayName = "SidebarGroup",export { SidebarGroup }className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
               />;
             )}
           </button>;

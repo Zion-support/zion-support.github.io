@@ -436,13 +436,13 @@ href={service.href}
                           className='text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group' />;
                           <ArrowRight className='w-3 h-3 opacity-0 group-hover: opacity-100 transition-opacity duration-200' />                          <span />{service && service.nam}
 }</span>              {serviceCategories && serviceCategories.map((category, index) => (<div key={index} />;
-                  <h5 className=\"text-sm font-medium text-gray-300 mb-3\" />{category && category.title}</h5>;"
-                  <ul className=\"space-y-2\" />;
+                  <h5 className="text-sm font-medium text-gray-300 mb-3" />{category && category.title}</h5>;"
+                  <ul className="space-y-2" />;
                     {category && category.services.map((service) => (<li key={service && service.name} />;
                         <Link;
                           href={service && service.href}"
-                          className=\"text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group\" />;"
-                          <ArrowRight className=\"w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200\" />;
+                          className="text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group" />;"
+                          <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />;
                           <span />{service && service.name}</span>;
                         </Link>;
                       </li>;
@@ -485,12 +485,12 @@ href={service.href}
                           href={link && link.href}
                           className='text-sm text-gray-400 hover: text-white transition-colors duration-200' />                <div key={section && section.titl}
 } />;"
-                  <h5 className=\"text-sm font-medium text-gray-300 mb-3\" />{section && section.title}</h5>;"
-                  <ul className=\"space-y-2\" />;
+                  <h5 className="text-sm font-medium text-gray-300 mb-3" />{section && section.title}</h5>;"
+                  <ul className="space-y-2" />;
                     {section && section.links.map((link) => (<li key={link && link.name} />;
                         <Link;
                           href={link && link.href}"
-                          className=\"text-sm text-gray-400 hover:text-white transition-colors duration-200\" />;
+                          className="text-sm text-gray-400 hover:text-white transition-colors duration-200" />;
                           {link && link.name}
                         </Link>;
                       </li>;{/* Footer Sections */}

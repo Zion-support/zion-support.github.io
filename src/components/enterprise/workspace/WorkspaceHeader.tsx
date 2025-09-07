@@ -35,8 +35,8 @@ export function WorkspaceHeader() {return (<div className='space-y-6' />;
             </p>;
           </div>;
         </div>;"
-            <h1 className=\"text-3xl font-bold tracking-tight\" />{company.name} Workspace</h1>;"
-            <p className=\"text-muted-foreground\" />;
+            <h1 className="text-3xl font-bold tracking-tight" />{company.name} Workspace</h1>;"
+            <p className="text-muted-foreground" />;
 import { Button  } from '@/components / ui / button';
 
 interface WorkspaceHeaderProps  {company: Company;

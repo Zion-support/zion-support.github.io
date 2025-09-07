@@ -72,7 +72,7 @@ alt=''
           initial={{ opacity: 0, scale: 1.1 ,}
 }
           animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
-          transition={{ duration: 0.5 ,}
+          transition={{duration: 0.5 }
 }
 className='w-full h-full object-cover'
           loading='lazy'

@@ -196,7 +196,7 @@ canvas.height = window.innerHeight;) => {
       <canvas;
         ref={canvasRef}
         className='absolute inset-0 w-full h-full';
-        style={{ zIndex: -1 ,}
+        style={{zIndex: -1 }
 }
       />;
       {/* Overlay Gradients */}

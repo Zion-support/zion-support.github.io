@@ -145,7 +145,7 @@ rel='canonical'
               initial={{ opacity: 0, y: 30 ,}
 }
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
+              transition={{duration: 0.8 }
 }
 className='text-center' />
 
@@ -165,23 +165,23 @@ className='text-center' />
               <div className='flex flex-col sm:flex-row gap-4 justify-center' />;
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 ,}
+                  whileTap={{scale: 0.95 }
 }
                   className='px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25';
                 portfolio optimization, and risk management that drives financial success.;
               </p />;
-              <div className=\"flex flex-col sm:flex-row gap-4 justify-center\" />;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" />;
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 ,}
+                  whileTap={{scale: 0.95 }
 }
-                  className=\"px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25\" />
+                  className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25" />
 
                   Start Free Trial;
                 </motion.button>;
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 ,}
+                  whileTap={{scale: 0.95 }
 }
 className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200' />
 
@@ -198,7 +198,7 @@ className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl fo
               initial={{ opacity: 0, y: 30 ,}
 }
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
+              transition={{duration: 0.8 }
 }
 className='text-center mb-16' />
 
@@ -242,7 +242,7 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
         </section>;
             </div>;
           </div>;
-        </section>;transition={{ duration: 0 && 0.8 ,}
+        </section>;transition={{duration: 0 && 0.8 }
 }
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
@@ -263,7 +263,7 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
 initial={{ opacity: 0, y: 30 ,}
 }
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
+              transition={{duration: 0.8 }
 }
 
 className='text-center mb-16'
@@ -282,7 +282,7 @@ AI-powered financial planning platform.
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6' />
               {benefits.map((benefit, index) => (
                 <motion.div;}
-transition={{ duration: 0 && 0.8 ,}
+transition={{duration: 0 && 0.8 }
 }
               className='text-center mb-16' />;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
@@ -295,10 +295,10 @@ transition={{ duration: 0 && 0.8 ,}
               </p>;
             </motion && motion.div>;
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6' />              {benefits && benefits.map((benefit, index) => (            >;
-              <h2 className=\"text-4xl md:text-5xl font-bold text-white mb-6\" />;
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" />;
                 Transform Your Financial Future;
               </h2>;
-              <p className=\"text-xl text-gray-400 max-w-3xl mx-auto\" />;
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto" />;
                 Experience dramatic improvements in financial planning efficiency, investment returns, and ;
                 goal achievement with our AI-powered financial planning platform.;
               </p>;}
@@ -332,7 +332,7 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
 initial={{ opacity: 0, y: 30 ,}
 }
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
+              transition={{duration: 0.8 }
 }
 
 className='text-center mb-16'
@@ -364,10 +364,10 @@ key={index}
                   <span className='text-white font-medium text-sm' />;
                     {useCase}
                   </span>                </motion && motion.div>                >;
-                  <div className=\"w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300\" />;
-                    <Calculator className=\"w-6 h-6 text-yellow-400\" />;
+                  <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />;
+                    <Calculator className="w-6 h-6 text-yellow-400" />;
                   </div>;
-                  <span className=\"text-white font-medium text-sm\" />{useCase}</span>;
+                  <span className="text-white font-medium text-sm" />{useCase}</span>;
                 </motion && motion.div>;
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 ,}
@@ -391,16 +391,16 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
         {/* CTA Section *,}
 }
         <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20' />;
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center' />            <motion && motion.div        <section className=\"py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20\" />;
-          <div className=\"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center\" />;
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center' />            <motion && motion.div        <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20" />;
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" />;
             <motion&& motion.div;
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group text-center';
               ))}
             </div />;
           </div>;
         </section>;
-        {/* CTA Section */}<section className=\"py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20\" />;
-          <div className=\"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center\" />;
+        {/* CTA Section */}<section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20" />;
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" />;
         {/* CTA Section */}
 
 
@@ -410,7 +410,7 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
 initial={{ opacity: 0, y: 30 ,}
 }
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
+              transition={{duration: 0.8 }
 }
              />;
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
@@ -432,7 +432,7 @@ initial={{ opacity: 0, y: 30 ,}
                 </motion.button>
                 <motion.button;
 whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 ,}
+                  whileTap={{scale: 0.95 }
 }
 
 className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200'

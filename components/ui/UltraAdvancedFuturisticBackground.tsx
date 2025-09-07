@@ -472,7 +472,7 @@ ref={canvasRef}
         {enableHolographic && (<>;
             <div;
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin';}
-              style={{ animationDuration: '20s' ,}
+              style={{animationDuration: '20s' }
 } /></div>;
             <div;
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin';

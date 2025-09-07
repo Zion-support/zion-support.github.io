@@ -166,22 +166,22 @@ const integrations = [
   icon: '🔍',}
       description: 'Search performance data',}
     },
-    { name: 'WordPress',}
+    {name: 'WordPress'}
   icon: '🔌', description: 'Plugin integration',}
 },
-    { name: 'Shopify',}
+    {name: 'Shopify'}
   icon: '🛒', description: 'E-commerce optimization',}
 },
-    { name: 'HubSpot',}
+    {name: 'HubSpot'}
   icon: '📈', description: 'Marketing automation sync',}
 },
-    { name: 'Slack',}
+    {name: 'Slack'}
   icon: '💬', description: 'Team notifications',}
 },
-    { name: 'Zapier',}
+    {name: 'Zapier'}
   icon: '⚡', description: '500+ app integrations',}
 },
-{ name: 'API Access',}
+{name: 'API Access'}
   icon: '🔑', description: 'Custom integrations',}
 },
   ];
@@ -286,16 +286,16 @@ const useCases = [
     {metric: 'ROI';
       value: '400%';}
       description: 'Average return on investment';}
-    },  ];    { metric: 'Organic Traffic',}
+    },  ];    {metric: 'Organic Traffic'}
   value: '+150%', description: 'Average increase in organic traffic',}
 }
-    { metric: 'Search Rankings',}
+    {metric: 'Search Rankings'}
   value: '+45%', description: 'Improvement in search rankings',}
 }
-    { metric: 'Conversion Rate',}
+    {metric: 'Conversion Rate'}
   value: '+80%', description: 'Increase in conversion rates',}
 }
-    { metric: 'ROI',}
+    {metric: 'ROI'}
   value: '400%', description: 'Average return on investment',}
 }
   return (<>;
@@ -551,13 +551,13 @@ key={benefitIndex}
                 </div>;
               </Card>;
             ))}
-      {/* Pricing Section */}<section id=\"pricing\" className=\"py-24 bg-gray-900 relative overflow-hidden\" />;
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10\" />;
-          <div className=\"text-center mb-20\" />;
-            <h2 className=\"text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight\" />;
+      {/* Pricing Section */}<section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden" />;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" />;
+          <div className="text-center mb-20" />;
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight" />;
               Simple, Transparent Pricing;
             </h2>;
-            <p className=\"text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed\" />;
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" />;
       {/* Pricing Section */}
 
 
@@ -619,10 +619,10 @@ key={featureIndex}
                   size='lg' />;
                   Get Started;
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan && plan.buttonColor} text-white`}
-                  size=\"lg\">
+                  size="lg">
 
                   Get Started;
-                  <ArrowRight className=\"w-5 h-5 ml-2\" />;
+                  <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;</li>;
                   ))}

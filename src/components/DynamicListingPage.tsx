@@ -20,15 +20,15 @@ interface DynamicListingPageProps  {title: string,description: string,categorySl
   detailBasePath?: string;
 }
 "
-export function DynamicListingPage() {const router = useRouter(),const [searchQuery, setSearchQuery] = useState(\"\"),const [selectedCategories, setSelectedCategories] =;
+export function DynamicListingPage() {const router = useRouter(),const [searchQuery, setSearchQuery] = useState(""),const [selectedCategories, setSelectedCategories] =;
   useState<string[] />([]);
   const toggleCategory = (setSelectedCategories(prev =>;
       prev.includes(category)? prev.filter(c => c !== category): [...prev, category];) => {
   return $3;}
 }
     )},const clearCategories = () => setSelectedCategories([]),const [view, setView] =;"
-  useState<ListingView />(\"grid\");"
-  const isGrid = view === \"grid\",// Swap icons to match action;
+  useState<ListingView />("grid");"
+  const isGrid = view === "grid",// Swap icons to match action;
 
 
   },
@@ -547,7 +547,7 @@ const handleRequestQuote = (setIsLoading(true)const listing  = allListings && al
    
 }, 500)}
 ;"
-  const listing = allListings.find((item) => item.id === listingId),setTimeout(() => {setIsLoading(false),if (listing) {toast({title: \"Quote Requested\",description: `Your quote request for ${listing.title} has been sent.
+  const listing = allListings.find((item) => item.id === listingId),setTimeout(() => {setIsLoading(false),if (listing) {toast({title: "Quote Requested",description: `Your quote request for ${listing.title} has been sent.
 }),// Store quote data in sessionStorage for the request-quote page;
 
 

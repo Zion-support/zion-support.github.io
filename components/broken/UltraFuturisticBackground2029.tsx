@@ -133,14 +133,14 @@ ease: 'easeInOut'}
           transition={{}
           }}
             ease: 'easeInOut',
-  ease: \"easeInOut\"
+  ease: "easeInOut"
 
           
 }
           transition={{duration: 20;}
             repeat: Infinity;}
             duration: 20,repeat: Infinity,ease: 'easeInOut',"
-  ease: \"easeInOut\";'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)','radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)','radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)','radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)']}}
+  ease: "easeInOut";'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)','radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)','radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)','radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)']}}
           transition={{duration: 20,repeat: Infinity,ease: 'easeInOut'}}
         />;
       </div>;

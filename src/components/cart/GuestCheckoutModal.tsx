@@ -46,17 +46,17 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
     }setIsSubmitting(true)try {onSubmit({ email, address })} finally {setIsSubmitting(false)}
   }}
   },const handleSubmit  = null;return (<Dialog open={open} onOpenChange={onOpenChange} />;
-      <DialogContent className=\"bg-zion-blue border-zion-cyan/20 max-w-md\" />;
+      <DialogContent className="bg-zion-blue border-zion-cyan/20 max-w-md" />;
         <DialogHeader />;"
-          <DialogTitle className=\"text-white flex items-center gap-2\" />;"
-            <User className=\"h-5 w-5 text-zion-cyan\" />;
+          <DialogTitle className="text-white flex items-center gap-2" />;"
+            <User className="h-5 w-5 text-zion-cyan" />;
             Guest Checkout;
           </DialogTitle>;"
-          <DialogDescription className=\"text-zion-slate-light\" />;
+          <DialogDescription className="text-zion-slate-light" />;
             Enter your details to complete your purchase as a guest.;
           </DialogDescription>;
         </DialogHeader>;"
-        {!isProdDomain() && (<div className=\"rounded-md bg-amber-500/20 p-2 text-center text-amber-400\" />;
+        {!isProdDomain() && (<div className="rounded-md bg-amber-500/20 p-2 text-center text-amber-400" />;
             Pay with test data – use card 4242 4242 4242 4242 and any future date.;}
           </div>;}
         )}<Dialog open={open} onOpenChange={onOpenChange} />;
@@ -85,36 +85,36 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               type='email';
               value={email || ''}
               onChange={(e) = /> setEmail(e.target.value || '')}"
-              placeholder=\"your.email@example.com\";
+              placeholder="your.email@example.com";
               required;"
-              className=\"bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light\";
+              className="bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light";
             />;
           </div>;"
-          <div className=\"space-y-2\" />;"
-            <Label htmlFor=\"guest-address\" className=\"text-white flex items-center gap-2\" />;"
-              <MapPin className=\"h-4 w-4 text-zion-cyan\" />;
+          <div className="space-y-2" />;"
+            <Label htmlFor="guest-address" className="text-white flex items-center gap-2" />;"
+              <MapPin className="h-4 w-4 text-zion-cyan" />;
               Shipping Address;
             </Label>;
             />;
           </div>;"
-          <div className=\"bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3\" />;"
-            <p className=\"text-yellow-400 text-sm\" />;
+          <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3" />;"
+            <p className="text-yellow-400 text-sm" />;
               💡 Creating an account allows you to track your order and checkout faster next time.;
             </p>;
           </div>;"
-          <DialogFooter className=\"space-x-2\" />;
+          <DialogFooter className="space-x-2" />;
             <Button;"
-              type=\"button\";"
-              variant=\"outline\";
+              type="button";"
+              variant="outline";
               onClick={() = /> onOpenChange(false)}"
-              className=\"border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10\">
+              className="border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10">
 
               Cancel;
             </Button>;
             <Button;"
-              type=\"submit\";
+              type="submit";
               disabled={isSubmitting || !email || !address}"
-              className=\"bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue\" />
+              className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue" />
 
               value={email || ''}
               onChange={e => setEmail(e && e.target.value || ''}
@@ -192,10 +192,10 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             <p className='text - yellow - 400 text - sm' />;💡 Creating an account allows you to track your order and checkout;
               faster next time.;
             </p>;"
-          </div>;<form onSubmit={handleSubmit} className=\"space-y-4\" />;"
-          <div className=\"space-y-2\" />;"
-            <Label htmlFor=\"guest-email\" className=\"text-white flex items-center gap-2\" />;"
-              <Mail className=\"h-4 w-4 text-zion-cyan\" />;
+          </div>;<form onSubmit={handleSubmit} className="space-y-4" />;"
+          <div className="space-y-2" />;"
+            <Label htmlFor="guest-email" className="text-white flex items-center gap-2" />;"
+              <Mail className="h-4 w-4 text-zion-cyan" />;
               Email Address;
             </Label>;
             <Input;

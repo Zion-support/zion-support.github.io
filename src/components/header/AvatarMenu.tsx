@@ -80,4 +80,4 @@ const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase(;
   )}
 
 export default AvatarMenu;
-\";"
+";"

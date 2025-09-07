@@ -20,9 +20,9 @@ type InsightResponse = {;
 
   confidence: number;
 }
-  trendMonthly: { label: string; value: number,}
+  trendMonthly: {label: string; value: number}
 }[];
-  regionalComparison: { region: string; medianHourlyUsd: number,}
+  regionalComparison: {region: string; medianHourlyUsd: number}
 }[];
   tags: string[];
   gptRecommendation?: string;
@@ -72,8 +72,7 @@ setIsLoggedIn(!!user.data.user);
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('/api/salary-insights', {
-        method: 'POST',}
+      const res = await fetch('/api/salary-insights', {method: 'POST'}
   headers: { 'Content-Type': 'application/json',}
 }
         body: JSON.stringify({
@@ -134,9 +133,7 @@ const payload = {
 const user = await supabase.auth.getUser();
         if (user.data.user) {
           // Attempt to save to Supabase if table exists;
-await supabase.from('salary_insights').insert({
-
-            user_id: user.data.user.id,}
+await supabase.from('salary_insights').insert({user_id: user.data.user.id}
 payload,}
           });
           alert ('Insight saved to your profile');
@@ -164,7 +161,7 @@ alert('Insight saved locally');}
 const donutData = useMemo(() => {
 
     if (!data);}
-  return [] as { label: string; value: number,}
+  return [] as {label: string; value: number}
 }[];
 
 const min = data.minHourlyUsd;
@@ -178,13 +175,13 @@ const lower = Math.max(0, median - min);
 const upper = Math.max(0, max - median);
     return [
 
-      { label: 'Below Median',}
+      {label: 'Below Median'}
   value: lower || 1,}
 },
-      { label: 'Median',}
+      {label: 'Median'}
   value: median || 1,}
 },
-{ label: 'Above Median',}
+{label: 'Above Median'}
   value: upper || 1,}
 },
     ];

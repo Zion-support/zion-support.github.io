@@ -401,19 +401,19 @@ className='block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
                   <span className='text - xs text - gray - 400 font - mono' />;
                     2030 Future Technology;
                   </span>                </div>            {/* Logo */}
-            <div className=\"flex items - center space - x-4\" />;"
-              <Link href=\"/\" className=\"flex items - center space - x-3 group\" />;"
-                <div className=\"relative\" />;"
-                  <div className=\"w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - xl flex items - center justify - center transform group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300\" />;"
-                    <Zap className=\"w - 6 h - 6 text - white\" />;
+            <div className="flex items - center space - x-4" />;"
+              <Link href="/" className="flex items - center space - x-3 group" />;"
+                <div className="relative" />;"
+                  <div className="w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - xl flex items - center justify - center transform group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300" />;"
+                    <Zap className="w - 6 h - 6 text - white" />;
                   </div>;"
-                  <div className=\"absolute inset - 0 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - xl blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300\" /></div>;
+                  <div className="absolute inset - 0 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - xl blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300" /></div>;
                 </div>;"
-                <div className=\"flex flex - col\" />;"
-                  <span className=\"text - 2xl font - bold bg - gradient - to - r from - purple - 400 to - cyan - 400 bg - clip - text text - transparent\" />;
+                <div className="flex flex - col" />;"
+                  <span className="text - 2xl font - bold bg - gradient - to - r from - purple - 400 to - cyan - 400 bg - clip - text text - transparent" />;
                     Zion Tech Group;
                   </span>;"
-                  <span className=\"text - xs text - gray - 400 font - mono\" />2030 Future Technology</span>;
+                  <span className="text - xs text - gray - 400 font - mono" />2030 Future Technology</span>;
                 </div>;
               </Link>;
             </div>;
@@ -431,7 +431,7 @@ className='block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
               <div className='relative group' />;
                 <button className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200' />;
                   <Briefcase className='w - 4 h - 4' />;
-                  <span  /> Services</span>;
+                  <span /> Services</span>;
                   <ChevronDown className='w - 4 h - 4 group - hover:rotate - 180 transition - transform duration - 200' />;
                 </button>;
                 {/* Mega Menu */}
@@ -460,34 +460,34 @@ className='block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
                                 className='block p - 3 rounded - lg hover:bg - purple - 500 / 10 transition - colors duration - 200 group'                <Link;
                   key={item.name}
                   href={item.href}"
-                  className=\"flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 group\" />
+                  className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 group" />
 "
-                  <item.icon className=\"w - 4 h - 4 group - hover:text - purple - 400 transition - colors\" />;
+                  <item.icon className="w - 4 h - 4 group - hover:text - purple - 400 transition - colors" />;
                   <span />{item.name}</span>;
                 </Link>))}
               {/* Services Dropdown */}"
-              <div className=\"relative group\" />;"
-                <button className=\"flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200\" />;"
-                  <Briefcase className=\"w - 4 h - 4\" />;
-                  <span  /> Services</span>;"
-                  <ChevronDown className=\"w - 4 h - 4 group - hover:rotate - 180 transition - transform duration - 200\" />;
+              <div className="relative group" />;"
+                <button className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200" />;"
+                  <Briefcase className="w - 4 h - 4" />;
+                  <span /> Services</span>;"
+                  <ChevronDown className="w - 4 h - 4 group - hover:rotate - 180 transition - transform duration - 200" />;
                 </button>;
                 {/* Mega Menu */}"
-                <div className=\"absolute top - full left - 0 w - screen max - w-6xl bg - black / 95 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl shadow - 2xl opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform group - hover:translate - y-0 translate - y-4\" />;"
-                  <div className=\"p - 8\" />;"
-                    <div className=\"grid grid - cols - 2 gap - 8\" />;"
-                      {service_categories.map ((category, index) => (<div key={index} className=\"space - y-4\" />;"
-                          <div className=\"flex items - center space - x-3\" />;
+                <div className="absolute top - full left - 0 w - screen max - w-6xl bg - black / 95 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl shadow - 2xl opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform group - hover:translate - y-0 translate - y-4" />;"
+                  <div className="p - 8" />;"
+                    <div className="grid grid - cols - 2 gap - 8" />;"
+                      {service_categories.map ((category, index) => (<div key={index} className="space - y-4" />;"
+                          <div className="flex items - center space - x-3" />;
                             <div className={`p - 2 rounded - lg bg - gradient - to - r ${category.color}`} />
 "
-                              <category.icon className=\"w - 5 h - 5 text - white\" />;
+                              <category.icon className="w - 5 h - 5 text - white" />;
                             </div>;
                             <div />;"
-                              <h3 className=\"text - lg font - semibold text - white\" />{category.title}</h3>;"
-                              <p className=\"text - sm text - gray - 400\" />{category.description}</p>;
+                              <h3 className="text - lg font - semibold text - white" />{category.title}</h3>;"
+                              <p className="text - sm text - gray - 400" />{category.description}</p>;
                             </div>;
                           </div>;"
-                          <div className=\"space - y-2\" />;
+                          <div className="space - y-2" />;
                             {category.services.map ((service, service_index) => (<Link;}
                                 key={service_index}
                                 href={service.href}
@@ -505,14 +505,14 @@ className='block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
                                   <span className='text - xs font - mono text - purple - 400' />;
                                     {service.price}
                                   </span>                                </div>                              >;"
-                                <div className=\"flex items - center justify - between\" />;
+                                <div className="flex items - center justify - between" />;
                                   <div />;"
-                                    <h4 className=\"text - sm font - medium text - white group - hover:text - purple - 400 transition - colors\" />;
+                                    <h4 className="text - sm font - medium text - white group - hover:text - purple - 400 transition - colors" />;
                                       {service.name}
                                     </h4>;"
-                                    <p className=\"text - xs text - gray - 400\" />{service.description}</p>;
+                                    <p className="text - xs text - gray - 400" />{service.description}</p>;
                                   </div>;"
-                                  <span className=\"text - xs font - mono text - purple - 400\" />{service.price}</span>;
+                                  <span className="text - xs font - mono text - purple - 400" />{service.price}</span>;
                                 </div>;
                               </Link>))}
                           </div>;

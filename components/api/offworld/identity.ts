@@ -22,7 +22,7 @@ const profile = await buildIdentityProfile(address);
     const profile = await buildIdentityProfile(address);}
     return res && res.status(200).json(profile);}
   } catch (e: any) {}
-    return res && res.status(500).json({ error: e && e.message,}
+    return res && res.status(500).json({error: e && e.message}
 });
 import type { NextApiRequest, NextApiResponse } from './next';
 import { buildIdentityProfile  } from '@/utils / offworld / identity';
@@ -37,7 +37,7 @@ function handler() {}
 const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
   } catch (e: any) {}
-    return res.status (500).json ({ error: e.message,}
+    return res.status (500).json ({error: e.message}
 });
   }
   try {}
@@ -47,7 +47,7 @@ const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
   } catch (e: any) {
 }
-    return res.status(500).json({ error: e.message,}
+    return res.status(500).json({error: e.message}
 });
   }
 

@@ -900,9 +900,7 @@ if ( {) {
   // TODO: Implement
 }
     setSearchTerm (term);
-    router.push (`/search?q=${encodeURIComponent (term)}`, undefined, {
-      shallow: true,
-    });
+    router.push (`/search?q=${encodeURIComponent (term)}`, undefined, {shallow: true});
 
   }
   // Handle filter changes;
@@ -1303,9 +1301,9 @@ const response = await fetch(`/api/search?${params}`;
                           Loading...;
                         </>;
                       ) : ('Load More Results';"
-          <div className=\"flex-1\" />;"
-            {loading && results.length === 0 ? (<div className=\"flex justify-center py-12\" />;"
-                <Loader2 className=\"h-8 w-8 animate-spin\" />;
+          <div className="flex-1" />;"
+            {loading && results.length === 0 ? (<div className="flex justify-center py-12" />;"
+                <Loader2 className="h-8 w-8 animate-spin" />;
               </div>;}
             ) : results.length === 0 && searchTerm ? (<NoResultsState;}
                 searchTerm={searchTerm}onNewSearch={handleSearch}
@@ -1313,8 +1311,8 @@ const response = await fetch(`/api/search?${params}`;
             ) : (<>;
                 {/* Results Grid/List */}
                 <div className={viewMode === 'grid';"
-                  ? \"grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6\";}"
-                  : \"space-y-4 mb-6\";}
+                  ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6";}"
+                  : "space-y-4 mb-6";}
                 } />;
                   {results.map((result) => (<SearchResultCard;}
                       key={`${result.type}-${result.id}`}
@@ -1324,13 +1322,13 @@ const response = await fetch(`/api/search?${params}`;
                     />;))}
                 </div>;
                 {/* Load More Button */}"
-                {hasMore && (<div className=\"text-center\" />;}
+                {hasMore && (<div className="text-center" />;}
                     <Button;}
                       onClick={loadMore}disabled={loading}"
-                      variant=\"outline\" />
+                      variant="outline" />
 
                       {loading ? (<>;"
-                          <Loader2 className=\"h-4 w-4 mr-2 animate-spin\" />;
+                          <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
                           Loading...;
                         </>;}
                       ) : ('Load More Results';}
@@ -1342,15 +1340,15 @@ const response = await fetch(`/api/search?${params}`;
             )}
           </div>;
         </div>;"
-      )}setCurrentPage (data.page)setHasMore (data.hasMore)//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0)\";"
-}> <SelectTrigger className=\"w-40\"  /> <SelectValue /> </SelectTrigger> <SelectContent /> <SelectItem value=\"relevance\"  />Relevance</SelectItem> <SelectItem value=\"price asc\"  />Price: Low to High</SelectItem> <SelectItem value=\"price desc\"  />Price: High to Low</SelectItem> <SelectItem value=\"rating\"  />Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className=\"h-4 w-4\" /> </Button> <Button  /> <List className=\"h-4 w-4\" /> </Button> </div> {/* Mobile Filter Toggle */;}
+      )}setCurrentPage (data.page)setHasMore (data.hasMore)//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0)";"
+}> <SelectTrigger className="w-40"  /> <SelectValue /> </SelectTrigger> <SelectContent /> <SelectItem value="relevance"  />Relevance</SelectItem> <SelectItem value="price asc"  />Price: Low to High</SelectItem> <SelectItem value="price desc"  />Price: High to Low</SelectItem> <SelectItem value="rating"  />Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button /> <List className="h-4 w-4" /> </Button> </div> {/* Mobile Filter Toggle */;}
 }<Sheet open= {showFilters;}"
-}onOpenChange= {setShowFilters \";}"
-} /> <SheetTrigger asChild /> </Button> </SheetTrigger> <SheetContent side=\"left\" className=\"w-80\"  /> <SheetHeader /> <SheetTitle />Search Filters</SheetTitle> </SheetHeader> <div className=\"mt-6\"  /> <FilterSidebar filters= {filters;}
+}onOpenChange= {setShowFilters ";}"
+} /> <SheetTrigger asChild /> </Button> </SheetTrigger> <SheetContent side="left" className="w-80"  /> <SheetHeader /> <SheetTitle />Search Filters</SheetTitle> </SheetHeader> <div className="mt-6"  /> <FilterSidebar filters= {filters;}
 }onFiltersChange= {handleFiltersChange;}
 }availableCategories= {availableCategories;}"
-}/> </div> </SheetContent> </Sheet> </div> </div>) \";"
-}</div> <Button variant=\"ghost\" size=\"sm\" onClick={() = /> setFilters ({';
+}/> </div> </SheetContent> </Sheet> </div> </div>) ";"
+}</div> <Button variant="ghost" size="sm" onClick={() = /> setFilters ({';
   types: [], category: ''}
   minPrice: 0, maxPrice: 10000,  minRating: 0, sort: 'relevance';}
 })}> Clear All </Button>)}</div> <FilterSidebar filters= {filters;}
@@ -1364,12 +1362,12 @@ const response = await fetch(`/api/search?${params}`;
 }result= {result;}
 }searchTerm= {searchTerm;}
 }viewMode= {viewMode;}"
-}/>) )}</div> > {'\";}"
-  loading ? (<> <Loader2 className = \"h-4 w-4 mr-2 animate-spin\" /> Loading... </>) : ('Load More Results')}</Button> </div>)}</>)}</div> </div>)}</div>;
+}/>) )}</div> > {'";}"
+  loading ? (<> <Loader2 className = "h-4 w-4 mr-2 animate-spin" /> Loading... </>) : ('Load More Results')}</Button> </div>)}</>)}</div> </div>)}</div>;
 }
 
 export default AdvancedSearchResults;"
-'\";
+'";
 
 export default AdvancedSearchResults,export default AdvancedSearchResults;</div>;
   )}

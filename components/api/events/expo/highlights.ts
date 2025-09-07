@@ -27,7 +27,7 @@ const prompt = `Summarize today’s top 3 Zion Expo highlights, including multiv
 
 const chat = await client.chat.completions.create({
       model: 'gpt-4o-mini',
-  messages: [{ role: 'user',}
+  messages: [{role: 'user'}
   content: prompt,}
 }],
       temperature: 0.3,
@@ -40,7 +40,7 @@ const content = chat && chat.choices?.[0]?.message?.content || baseSummary;
     return res;
       .status(500)
 }
-      .json({ error: e.message || 'Failed to generate highlights',}
+      .json({error: e.message || 'Failed to generate highlights'}
 });
   }
     return res.status(200).json({ summary: content, provider: 'openai' })

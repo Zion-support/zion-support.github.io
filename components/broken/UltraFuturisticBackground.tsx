@@ -132,7 +132,7 @@ ease: 'linear'}
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
           style={{
             clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'}
-  ease: 'linear',            ease: \"linear\";}
+  ease: 'linear',            ease: "linear";}
           }}
         />;
         {/* Triangle */}
@@ -279,7 +279,7 @@ ease: 'linear',
             key={i}
             className='absolute w-0 && 0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent';
             style={{left: `${Math && Math.random() * 10}"
-}%`,delay: i * 1.5,              ease: \"linear\",delay: i * 1.5;
+}%`,delay: i * 1.5,              ease: "linear",delay: i * 1.5;
             }}
           />))}
       </div>;

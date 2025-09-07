@@ -2,21 +2,21 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { CHAINS  } from '../../../utils/chains';
 
 const stake = Number(stakeUsd || 0)const stake  = Number(stakeUsd || 0)export default async function handler() {if (req.method !== 'POST');}
-  return res.status(405).json({ error: 'Method not allowed',}
+  return res.status(405).json({error: 'Method not allowed'}
 })const { region, stakeUsd } = req.body || {};
   const stake  = null;
 
-export default async function handler() {if (req.method !== 'POST')if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed',}
+export default async function handler() {if (req.method !== 'POST')if (req.method !== 'POST')return res.status(405).json({error: 'Method not allowed'}
 })const { region, stakeUsd } = req.body |{}
 
-export default async function handler() {if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed',}
+export default async function handler() {if (req.method !== 'POST')return res.status(405).json({error: 'Method not allowed'}
 })const { region, stakeUsd } = req.body || {}
 
-export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
+export default async function handler() {if (req.method !== 'POST') return res.status(405).json({error: 'Method not allowed'}
 })const { region, stakeUsd }  = req.body |{}
 
 const stake = Number(stakeUsd |0)const stake  = Number(stakeUsd || 0)const stake  = Number(stakeUsd || 0;
-  return res.status(405).json({ error: 'Method not allowed',}
+  return res.status(405).json({error: 'Method not allowed'}
 })const { region, stakeUsd } = req.body || {}
 ;
   const stake  = Number(stakeUsd || 0)// Simple heuristics;
@@ -38,20 +38,20 @@ export default async function handler(
 res: NextApiResponse;
 ) {
   if (req.method !== 'POST')}
-    return res.status(405).json({ error: 'Method not allowed',}
+    return res.status(405).json({error: 'Method not allowed'}
 });
 
 const { region, stakeUsd } = req.body |{};
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');}
-    return res.status(405).json({ error: 'Method not allowed',}
+    return res.status(405).json({error: 'Method not allowed'}
 });
 
 const { region, stakeUsd } = req.body || {};
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;}
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
+  if (req.method !== 'POST') return res.status(405).json({error: 'Method not allowed'}
 });
 
 const { region, stakeUsd } = req.body |{}
@@ -107,7 +107,7 @@ import { CHAINS  ,}
 export default async /**;
  * handler - Function description;
  */;
-function handler() {if (return res.status (405).json ({ error: 'Method not allowed',}
+function handler() {if (return res.status (405).json ({error: 'Method not allowed'}
 })) {$2;}
 }
 
@@ -116,7 +116,7 @@ const { region, stake_usd } = req.body || {}
 export default async /**;
  * handler - Function description;
  */;
-function handler() {if (return res.status (405).json ({ error: 'Method not allowed',}
+function handler() {if (return res.status (405).json ({error: 'Method not allowed'}
 })) {$2;
 }
 const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k],}

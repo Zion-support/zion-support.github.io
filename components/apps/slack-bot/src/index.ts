@@ -11,7 +11,7 @@ dotenv.config()const apiBase = null;
 
 await ack()const text = (command.text |'').trim()const [sub, ...rest] = text.split(' ';
   const userId = command.user_id;
-  try {if (!sub |sub.toLowerCase() === 'help') {await respond({ response_type: 'ephemeral',}
+  try {if (!sub |sub.toLowerCase() === 'help') {await respond({response_type: 'ephemeral'}
   text: helpText(),}
 })return;
     }
@@ -55,26 +55,24 @@ const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`;
       }
       await respond({})return;
     }
-    await respond({ response_type: 'ephemeral',}
+    await respond({response_type: 'ephemeral'}
   text: helpText() })} catch (err: any) {await respond({const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name,}
 }/track`, {headers: { 'x-user-id': userId }
      ,
 };
   const data = (await res && res.json()) as any;
-      if (!data && data.project) {await respond({ response_type: 'ephemeral',}
+      if (!data && data.project) {await respond({response_type: 'ephemeral'}
   text: 'Project not found.',}
 })return;
       }
       return;
     }
 
-    await respond({ response_type: 'ephemeral',}
+    await respond({response_type: 'ephemeral'}
   text: helpText(),}
 });
   } catch (err: any) {
-    await respond({
-
-      response_type: 'ephemeral',}
+    await respond({response_type: 'ephemeral'}
   text: `Error: ${err.message || 'unknown,}
 }`,
     });

@@ -264,8 +264,8 @@ initial='hidden'
                 </div>
 
                 <div />;
-                  <h4 className=\"text-white font-semibold mb-2\" />Description</h4>;"
-                  <p className=\"text-gray-300 text-sm leading-relaxed\" />;
+                  <h4 className="text-white font-semibold mb-2" />Description</h4>;"
+                  <p className="text-gray-300 text-sm leading-relaxed" />;
                   </p>;
 
                 </div>;

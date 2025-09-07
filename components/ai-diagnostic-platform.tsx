@@ -55,7 +55,7 @@ property='og:url'
 initial={{ opacity: 0, y: 30 ,}
 }
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 ,}
+            transition={{duration: 0.8 }
 }
 className='mb-8'
            />
@@ -129,7 +129,7 @@ initial={{ opacity: 0, y: 30 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true ,}
+            viewport={{once: true }
 }
 
 className='text-center mb-16'
@@ -157,10 +157,10 @@ className='text-center mb-16' />;
             </p>;
           </motion && motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8' />            {features && features.map((feature, index) => (          >;
-            <h2 className=\"text-3xl md:text-5xl font-bold text-white mb-6\" />;
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" />;
               Revolutionary Medical Technology;
             </h2>;
-            <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\" />;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" />;
               Experience the future of medical diagnostics with AI-powered analysis and comprehensive healthcare solutions.;
             </p>;}
           </motion && motion.div>;}
@@ -200,7 +200,7 @@ initial={{ opacity: 0, y: 30 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true ,}
+            viewport={{once: true }
 }
 
 className='text-center mb-16'
@@ -228,10 +228,10 @@ className='text-center mb-16' />;
             </p>;
           </motion && motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />            {pricingPlans && pricingPlans.map((plan, index) => (          >;
-            <h2 className=\"text-3xl md:text-5xl font-bold text-white mb-6\" />;
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" />;
               Choose Your Plan;
             </h2>;
-            <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\" />;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" />;
               Flexible pricing options designed for healthcare providers of all sizes, from clinics to large hospital systems.;
             </p>;}
           </motion && motion.div>;}
@@ -303,7 +303,7 @@ key={featureIndex}
       </section>
 
                 </ul>;
-                <button className=\"w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300\" />;
+                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300" />;
 <button className='w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300' />;
                   Get Started;
                 </button>;
@@ -312,7 +312,7 @@ key={featureIndex}
           </div>;
         </div>;
       </section>;
-                </ul>;<button className='w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300' />                  Get Started                <button className=\"w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300\" />;
+                </ul>;<button className='w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300' />                  Get Started                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300" />;
                   Get Started;
                 </button>;
               </motion && motion.div>;
@@ -330,15 +330,15 @@ key={featureIndex}
       <section;
         id='contact';
         className='py-20 bg-gradient-to-b from-slate-900 to-black' />;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />          <motion && motion.div      <section id=\"contact\" className=\"py-20 bg-gradient-to-b from-slate-900 to-black\" />;
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />          <motion && motion.div      <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black" />;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />;
           <motion&& motion.div;
             initial={{ opacity: 0, y: 30 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
 
-            viewport={{ once: true ,}
+            viewport={{once: true }
 }
 
 className='text-center mb-16'
@@ -365,10 +365,10 @@ className='text-center mb-16' />;
             </p>;
           </motion && motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />            <motion && motion.div           />;
-            <h2 className=\"text-3xl md:text-5xl font-bold text-white mb-6\" />;
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" />;
               Ready to Transform Healthcare?;
             </h2>;
-            <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\" />;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" />;
               Contact our team to learn more about how AI Diagnostic Pro Platform can revolutionize your medical practice.;
             </p>;
           </motion && motion.div>;initial={{ opacity: 0, y: 30 ,}
@@ -396,11 +396,11 @@ className='text-center' />;
               </div>;
               <h3 className='text-xl font-semibold text-white mb-2' />Phone</h3>;
               <p className='text-gray-300' />{contactInfo && contactInfo.mobile}</p>            </motion && motion.div>            >;
-              <div className=\"w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4\" />;
-                <Phone className=\"w-8 h-8 text-white\" />;
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4" />;
+                <Phone className="w-8 h-8 text-white" />;
               </div>;
-              <h3 className=\"text-xl font-semibold text-white mb-2\" />Phone</h3>;
-              <p className=\"text-gray-300\" />{contactInfo && contactInfo.mobile}</p>;
+              <h3 className="text-xl font-semibold text-white mb-2" />Phone</h3>;
+              <p className="text-gray-300" />{contactInfo && contactInfo.mobile}</p>;
             </motion && motion.div>;
               initial={{ opacity: 0, y: 30 ,}
 }
@@ -427,11 +427,11 @@ className='text-center' />;
               </div>;
               <h3 className='text-xl font-semibold text-white mb-2' />Email</h3>;
               <p className='text-gray-300' />{contactInfo && contactInfo.email}</p>            </motion && motion.div>            >;
-              <div className=\"w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4\" />;
-                <Mail className=\"w-8 h-8 text-white\" />;
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4" />;
+                <Mail className="w-8 h-8 text-white" />;
               </div>;
-              <h3 className=\"text-xl font-semibold text-white mb-2\" />Email</h3>;
-              <p className=\"text-gray-300\" />{contactInfo && contactInfo.email}</p>;
+              <h3 className="text-xl font-semibold text-white mb-2" />Email</h3>;
+              <p className="text-gray-300" />{contactInfo && contactInfo.email}</p>;
             </motion && motion.div>;
               initial={{ opacity: 0, y: 30 ,}
 }

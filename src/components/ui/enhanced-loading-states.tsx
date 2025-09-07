@@ -115,7 +115,7 @@ const [activeStep, setActiveStep] =;
 }className= {cn ('flex items-center gap-3 p-2 rounded-md', index === activeStep ? 'bg-primary/10' : 'opacity-50')}initial= {{opacity: 0, x: -20;}
   return (<div className={cn('flex items-center gap-2', className)} />;
       <Loader2 className={cn('animate-spin', sizeClasses[size], variantClasses[variant])} />;
-      {showText && <span className=\"text-sm text-muted-foreground\" />{text}</span>}
+      {showText && <span className="text-sm text-muted-foreground" />{text}</span>}
     </div>;
   )},// Progressive loading component;
 
@@ -132,8 +132,8 @@ if (currentStep !== undefined) {setActiveStep(currentStep)}
   useEffect(() => {}
 if (activeStep = == steps.length - 1 && onComplete) {setTimeout(onComplete, 500)}
   }, [activeStep, steps.length, onComplete]);"
-  return (<div className=\"space-y-4\" />;"
-      {showProgress && (<div className=\"w-full bg-muted rounded-full h-2\" />;}
+  return (<div className="space-y-4" />;"
+      {showProgress && (<div className="w-full bg-muted rounded-full h-2" />;}
           <motion.div;}
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
@@ -147,7 +147,7 @@ if (activeStep = == steps.length - 1 && onComplete) {setTimeout(onComplete, 500)
             key = {step.id}
             className = {cn('flex items-center gap-3 p-2 rounded-md';}
               index === activeStep ? 'bg-primary/10' : 'opacity-50';}"
-            )}<div className=\"space-y-2\" />;
+            )}<div className="space-y-2" />;
         {steps.map((step, index) => (<motion.div;}
             key={step.id}
             className={cn('flex items-center gap-3 p-2 rounded-md',index === activeStep ? 'bg-primary/10' : 'opacity-50';}
@@ -170,13 +170,13 @@ if (activeStep = == steps.length - 1 && onComplete) {setTimeout(onComplete, 500)
             transition={{ delay: index * 0.1 }
 }
           >;"
-            {index < activeStep ? (<div className=\"h-4 w-4 rounded-full bg-green-500 flex items-center justify-center\" />;"
-                <div className=\"h-2 w-2 rounded-full bg-white\" />;
+            {index < activeStep ? (<div className="h-4 w-4 rounded-full bg-green-500 flex items-center justify-center" />;"
+                <div className="h-2 w-2 rounded-full bg-white" />;
               </div>;"
-            ) : index === activeStep ? (<LoadingSpinner size=\"sm\" variant=\"primary\" />;}"
-            ) : (<div className=\"h-4 w-4 rounded-full border-2 border-muted\" />;}
+            ) : index === activeStep ? (<LoadingSpinner size="sm" variant="primary" />;}"
+            ) : (<div className="h-4 w-4 rounded-full border-2 border-muted" />;}
             )}"
-            <span className=\"text-sm font-medium\" />{step.label}</span>;
+            <span className="text-sm font-medium" />{step.label}</span>;
           </motion.div>;
         ))}}, [active_step, steps.length, on_complete])return (<div className='space - y-4' />;
       {show_progress && (<div className='w - full bg - muted rounded - full h - 2' />;
@@ -241,7 +241,7 @@ interface SkeletonProps  {</div>;
 const config = getErrorConfig(),const Icon = config.icon;
   const canRetry = showRetry && onRetry && retryCount < maxRetries;
   return (<Card className={cn('border-destructive/20', className)} />;"
-      <CardContent className=\"p-8 text-center\" />;
+      <CardContent className="p-8 text-center" />;
         <motion.div;
           initial={{ scale: 0.8, opacity: 0 }
 }
@@ -250,8 +250,8 @@ const config = getErrorConfig(),const Icon = config.icon;
 }
          />;
           <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />;"
-          <h3 className=\"text-lg font-semibold mb-2\" />{config.title}</h3>;"
-          <p className=\"text-muted-foreground mb-6 max-w-md mx-auto\" />;
+          <h3 className="text-lg font-semibold mb-2" />{config.title}</h3>;"
+          <p className="text-muted-foreground mb-6 max-w-md mx-auto" />;
             {config.description}
           </p>;
           {error && process.env.NODE_ENV === 'development' && (class_name?: string;
@@ -313,7 +313,7 @@ if ( {) {$2;}
 }
       case 'permission':;
         return {icon: AlertTriangle,title: title || 'Access Denied',description:;}"
-            description || \"You don't have permission to access this resource.\",color: 'text - red - 500}
+            description || "You don't have permission to access this resource.",color: 'text - red - 500}
 }
       default:;
         return {</div>;}
@@ -348,7 +348,7 @@ const handleOnline = () => setIsOnline(true);}
         },case 'timeout':;
         return {icon: Clock,title: title || 'Request Timeout',description: description || 'The request took too long to complete. Please try again.',color: 'text-yellow-500';}
         },case 'permission':;
-        return {icon: AlertTriangle,title: title || 'Access Denied',description: description || 'You don\'t have permission to access this resource.',color: 'text-red-500';}
+        return {icon: AlertTriangle,title: title || 'Access Denied',description: description || 'You don't have permission to access this resource.',color: 'text-red-500';}
         },default:;
         return {icon: AlertTriangle,title: title || 'Something went wrong',description:;}
             description || 'An unexpected error occurred. Please try again.',color: 'text-red-500'}}
@@ -393,13 +393,13 @@ const baseClasses = 'bg-muted rounded';
           initial={{ scale: 0.8, opacity: 0 }
 }
           animate={{ scale: 1, opacity: 1 }"
-}</p />;{error && process.env.NODE_ENV === 'development' && (<details className=\"mb-4 text-left\" />;"
-              <summary className=\"text-sm text-muted-foreground cursor-pointer\" />;}
+}</p />;{error && process.env.NODE_ENV === 'development' && (<details className="mb-4 text-left" />;"
+              <summary className="text-sm text-muted-foreground cursor-pointer" />;}
                 Error Details (Development)</summary>;}
                 {typeof error === 'string' ? error : error.message}
               </pre>;
             </details>;"
-          )}<pre className=\"mt-2 p-2 bg-muted rounded text-xs overflow-auto\" />;
+          )}<pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto" />;
                 {typeof error === 'string' ? error : error.message}transition={{ duration: 0 && 0.3 }
 }>;
           <Icon className={cn('mx-auto mb-4 h-12 w-12', config && config.color)} />;
@@ -415,14 +415,14 @@ const baseClasses = 'bg-muted rounded';
             </details>;
           )}<div className='flex flex-col sm:flex-row gap-2 justify-center' />;
             {canRetry && (<Button onClick={onRetry} variant='default' />;"
-                <RefreshCw className='h-4 w-4 mr-2' />;<div className=\"flex flex-col sm:flex-row gap-2 justify-center\" />;
+                <RefreshCw className='h-4 w-4 mr-2' />;<div className="flex flex-col sm:flex-row gap-2 justify-center" />;
             {canRetry && (Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
               </Button>;
             )}{action && (<Button;}
                 onClick={action.onClick}
                 variant={canRetry ? 'outline' : 'default'}
                />;"
-            {action && (<Button onClick={action.onClick} variant={canRetry ? \"outline\" : \"default\"} />;
+            {action && (<Button onClick={action.onClick} variant={canRetry ? "outline" : "default"} />;
                 {action.label}
               </Button>;
             )}Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
@@ -431,19 +431,19 @@ const baseClasses = 'bg-muted rounded';
                 onClick={action.onClick}
                 variant={canRetry ? 'outline' : 'default'}
                />;"
-            {action && (<Button onClick={action.onClick} variant={canRetry ? \"outline\" : \"default\"} />;
+            {action && (<Button onClick={action.onClick} variant={canRetry ? "outline" : "default"} />;
                 {action.label}
               </Button>;
             )}{action.label}
               </Button>;
             )}{secondaryAction && (<Button onClick={secondaryAction.onClick} variant='ghost' />;"
-            {secondaryAction && (<Button onClick={secondaryAction.onClick} variant=\"ghost\" />;
+            {secondaryAction && (<Button onClick={secondaryAction.onClick} variant="ghost" />;
                 {secondaryAction.label}
               </Button>;
             )}
           </div>;"
-          {!isOnline && (<div className=\"mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground\" />;"
-              <WifiOff className=\"h-4 w-4\" />;
+          {!isOnline && (<div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground" />;"
+              <WifiOff className="h-4 w-4" />;
               <span />Offline</span>;}
             </div>;}
           )}{secondaryAction && (<Button onClick={secondaryAction && secondaryAction.onClick} variant='ghost' />;
@@ -493,7 +493,7 @@ const baseClasses = 'bg-muted rounded';
           </div>;
           {!is_online && (<div className='mt - 4 flex items - center justify - center gap - 2 text - sm text - muted - foreground' />;
               <WifiOff className='h - 4 w - 4' />;
-              <span  /> Offline</span>
+              <span /> Offline</span>
     </div>}
   );}
 }
@@ -526,31 +526,31 @@ const gridClasses = {card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:gr
   list: 'p-4 space-y-3',table: 'p-3 space-y-2';}
   },return (<div className={cn(gridClasses[variant], className)} />;
       {Array.from({ length: count}"
-}).map((_, i) => (<Card key={i} className=\"animate-pulse\" />;
+}).map((_, i) => (<Card key={i} className="animate-pulse" />;
           <CardContent className={itemClasses[variant]} />;
             {variant === 'card' && (<>;"
-                <Skeleton variant=\"rectangular\" className=\"h-32\" />;"
-                <div className=\"space-y-2\" />;}"
-                  <Skeleton variant=\"text\" className=\"h-6 w-3/4\" />;}"
-                  <Skeleton variant=\"text\" lines={2} />;"
-                  <div className=\"flex gap-2\" />;"
-                    <Skeleton variant=\"text\" className=\"h-4 w-16\" />;"
-                    <Skeleton variant=\"text\" className=\"h-4 w-20\" />;
+                <Skeleton variant="rectangular" className="h-32" />;"
+                <div className="space-y-2" />;}"
+                  <Skeleton variant="text" className="h-6 w-3/4" />;}"
+                  <Skeleton variant="text" lines={2} />;"
+                  <div className="flex gap-2" />;"
+                    <Skeleton variant="text" className="h-4 w-16" />;"
+                    <Skeleton variant="text" className="h-4 w-20" />;
                   </div>;
                 </div>;
               </>;"
-            )}{variant === 'list' && (<div className=\"flex gap-4\" />;"
-                <Skeleton variant=\"circular\" />;"
-                <div className=\"flex-1 space-y-2\" />;}"
-                  <Skeleton variant=\"text\" className=\"h-5 w-1/2\" />;}"
-                  <Skeleton variant=\"text\" lines={2} />;
+            )}{variant === 'list' && (<div className="flex gap-4" />;"
+                <Skeleton variant="circular" />;"
+                <div className="flex-1 space-y-2" />;}"
+                  <Skeleton variant="text" className="h-5 w-1/2" />;}"
+                  <Skeleton variant="text" lines={2} />;
                 </div>;
               </div>;"
-            )}{variant === 'table' && (<div className=\"flex items-center gap-4\" />;"
-                <Skeleton variant=\"text\" className=\"h-4 w-1/4\" />;"
-                <Skeleton variant=\"text\" className=\"h-4 w-1/3\" />;"
-                <Skeleton variant=\"text\" className=\"h-4 w-1/6\" />;"
-                <Skeleton variant=\"text\" className=\"h-4 w-1/4\" />;}
+            )}{variant === 'table' && (<div className="flex items-center gap-4" />;"
+                <Skeleton variant="text" className="h-4 w-1/4" />;"
+                <Skeleton variant="text" className="h-4 w-1/3" />;"
+                <Skeleton variant="text" className="h-4 w-1/6" />;"
+                <Skeleton variant="text" className="h-4 w-1/4" />;}
               </div>;}
             )}</CardContent>;
         </Card>;
@@ -576,13 +576,13 @@ const getPerformanceColor = (if (time < 100) return 'text-green-500',if (time < 
   return 'text-red-500';) => {
   return $3;}
 }"
-  },if (isLoading) {return (<Badge variant=\"outline\" className={cn('text-xs', className)} />;"
-        <LoadingSpinner size=\"sm\" />;"
-        <span className=\"ml-1\" />Loading...</span>;
+  },if (isLoading) {return (<Badge variant="outline" className={cn('text-xs', className)} />;"
+        <LoadingSpinner size="sm" />;"
+        <span className="ml-1" />Loading...</span>;
       </Badge>;
     )}return (<div className={cn('flex items-center gap-2 text-xs text-muted-foreground', className)} />;"
-      {loadTime && (<Badge variant=\"outline\" className={getPerformanceColor(loadTime)} />;"
-          <Zap className=\"h-3 w-3 mr-1\" />;
+      {loadTime && (<Badge variant="outline" className={getPerformanceColor(loadTime)} />;"
+          <Zap className="h-3 w-3 mr-1" />;
           {loadTime}ms;
         </Badge>;
       )}}

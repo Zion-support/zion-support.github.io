@@ -21,4 +21,4 @@
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string uniqueValue?: strin
 }
 
-export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = ['';\"\";"
+export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = ['';"";"

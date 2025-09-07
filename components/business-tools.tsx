@@ -384,7 +384,7 @@ const productivityTips = [
     {
       title: 'Measure ROI',
   description:
-        \"Track how each tool improves your team's productivity and business outcomes.\"
+        "Track how each tool improves your team's productivity and business outcomes."
       icon: <ChartBar className='w-6 h-6 text-purple-400' />}
    ,}
 }
@@ -504,7 +504,7 @@ organization. Each tool has been evaluated for features, pricing,
                 {category.tools.map((tool, toolIndex) => (<Card;}
                     key={toolIndex}
                     className={`card-hover border-gradient-blue group ${tool.popular ? 'ring-2 ring-cursor-blue/50' : ''}`}
-style={{animationDelay: `${categoryIndex * 0.2 + toolIndex * 0.,}
+style={{animationDelay: `${categoryIndex * 0.2 + toolIndex * 0.}
 }s`,}}
                    />;
                     {tool.popular && (<div className='absolute -top-3 left-1/2 transform -translate-x-1/2' />;
@@ -569,13 +569,13 @@ variant='primary';
                       className='w-full group-hover:scale-105 transition-transform duration-300';
                       external />;
                       Visit Website;
-                      <ExternalLink className='w-4 h-4 ml-2' />                    </Button>                      variant=\"primary\";
-                      size=\"sm\";
-                      className=\"w-full group-hover:scale-105 transition-transform duration-300\";
+                      <ExternalLink className='w-4 h-4 ml-2' />                    </Button>                      variant="primary";
+                      size="sm";
+                      className="w-full group-hover:scale-105 transition-transform duration-300";
                       external>
 
                       Visit Website;
-                      <ExternalLink className=\"w-4 h-4 ml-2\" />;
+                      <ExternalLink className="w-4 h-4 ml-2" />;
                   </Card>;
                 ))}
               </div>;
@@ -611,16 +611,16 @@ variant='primary';
 
                             <Check className='w - 4 h - 4 text - cursor - blue mr - 3 flex - shrink - 0' />                            {feature}                        {tool.icon}
                       </div>;
-                      <h4 className=\"text - xl font - bold text - white mb - 2\" />{tool.name}</h4>;
-                      <p className=\"text - gray - 400 text - sm leading - relaxed\" />{tool.description}</p>;
+                      <h4 className="text - xl font - bold text - white mb - 2" />{tool.name}</h4>;
+                      <p className="text - gray - 400 text - sm leading - relaxed" />{tool.description}</p>;
                     </div>;
-                    <div className=\"mb - 6\" />;
-                      <div className=\"text - center mb - 4\" />;
-                        <span className=\"text - 2xl font - bold text - cursor - blue\" />{tool.pricing}</span>;
+                    <div className="mb - 6" />;
+                      <div className="text - center mb - 4" />;
+                        <span className="text - 2xl font - bold text - cursor - blue" />{tool.pricing}</span>;
                       </div>;
-                      <ul className=\"space - y-2\" />;
-                        {tool.features.map ((feature, feature_index) => (<li key={feature_index} className=\"flex items - center text - gray - 300 text - sm\" />;
-                            <Check className=\"w - 4 h - 4 text - cursor - blue mr - 3 flex - shrink - 0\" />;
+                      <ul className="space - y-2" />;
+                        {tool.features.map ((feature, feature_index) => (<li key={feature_index} className="flex items - center text - gray - 300 text - sm" />;
+                            <Check className="w - 4 h - 4 text - cursor - blue mr - 3 flex - shrink - 0" />;
                             {feature}
                           </li>))}
                       </ul>;
@@ -633,13 +633,13 @@ variant='primary';
                       external />
 
                       Visit Website;
-                      <ExternalLink className='w - 4 h - 4 ml - 2' />                    </Button>                      variant=\"primary\";
-                      size=\"sm\";
-                      className=\"w - full group - hover:scale - 105 transition - transform duration - 300\";
+                      <ExternalLink className='w - 4 h - 4 ml - 2' />                    </Button>                      variant="primary";
+                      size="sm";
+                      className="w - full group - hover:scale - 105 transition - transform duration - 300";
                       external>
 
                       Visit Website;
-                      <ExternalLink className=\"w - 4 h - 4 ml - 2\" />;
+                      <ExternalLink className="w - 4 h - 4 ml - 2" />;
                   </Card>))}
               </div>;
             </div>))}
@@ -717,11 +717,11 @@ key={index}
                 </h3>;
                 <p className='text - gray - 400 text - sm leading - relaxed' />;
                   {tip.description}
-                </p>              </Card>                <div className=\"flex justify - center mb - 4\" />;
+                </p>              </Card>                <div className="flex justify - center mb - 4" />;
                   {tip.icon}
                 </div>;
-                <h3 className=\"text - xl font - bold text - white mb - 3\" />{tip.title}</h3>;
-                <p className=\"text - gray - 400 text - sm leading - relaxed\" />{tip.description}</p>))}
+                <h3 className="text - xl font - bold text - white mb - 3" />{tip.title}</h3>;
+                <p className="text - gray - 400 text - sm leading - relaxed" />{tip.description}</p>))}
           </div>;
         </div>;
       </section>;

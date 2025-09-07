@@ -14,12 +14,11 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
 const contactInfo = null;
 
 const containerVariants = {}
-    hidden: { opacity: 0,}
+    hidden: {opacity: 0}
 }
-    visible: {
-      opacity: 1;
+    visible: {opacity: 1;
 transition: {
-        staggerChildren: 0.1,}
+        staggerChildren: 0.1}
 delayChildren: 0.2,}
       },
     },
@@ -31,9 +30,7 @@ const itemVariants = {}
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-
-        duration: 0.6,}
+      transition: {duration: 0.6}
 ease: 'easeOut',}
       },
     },
@@ -211,7 +208,7 @@ className='text-center mb-16'
 }
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true ,}
+              viewport={{once: true }
 }
              />;
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
@@ -236,7 +233,7 @@ key={index}
                   whileInView={{ opacity: 1, x: 0 ,}
 }
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
-                  viewport={{ once: true ,}
+                  viewport={{once: true }
 } />;
                   <div className='mb-6' />;
                     <h3 className='text-2xl font-bold text-white mb-4' />;
@@ -308,10 +305,10 @@ key={index}
                 <div className='text - center' />;
                   <MapPin className='w - 8 h - 8 text - pink - 400 mx - auto mb - 3' />;
                   <div className='text - white font - semibold' />Address</div>;
-                  <div className='text - gray - 400' />{contact_info.address}</div>                </div>                <div className=\"text - center\" />;
-                  <MapPin className=\"w - 8 h - 8 text - pink - 400 mx - auto mb - 3\" />;
-                  <div className=\"text - white font - semibold\" />Address</div>;
-                  <div className=\"text - gray - 400\" />{contact_info.address}</div>;
+                  <div className='text - gray - 400' />{contact_info.address}</div>                </div>                <div className="text - center" />;
+                  <MapPin className="w - 8 h - 8 text - pink - 400 mx - auto mb - 3" />;
+                  <div className="text - white font - semibold" />Address</div>;
+                  <div className="text - gray - 400" />{contact_info.address}</div>;
               </div>;
             </motion.div>;
           </div>;
@@ -321,13 +318,13 @@ key={index}
           <div className='max - w-7xl mx - auto' />;
             <motion.div;
               className='text - center mb - 16'              initial={{ opacity: 0, coordinate_y: 30 ,}
-}        <section className=\"py - 20 px - 4 sm:px - 6 lg:px - 8\" />;
-          <div className=\"max - w-7xl mx - auto\" />;
+}        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8" />;
+          <div className="max - w-7xl mx - auto" />;
             <motion.div;
-              className=\"text - center mb - 16\";
+              className="text - center mb - 16";
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true ,}
+              viewport={{once: true }
 }
              />;
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6' />;
@@ -344,11 +341,11 @@ key={index}
             <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8' />              {featured_services.map ((service, index) => (                  Featured;
                 </span> Innovative Services;
               </h2>;
-              <p className=\"text - xl text - gray - 300 max - w-3xl mx - auto\" />;
+              <p className="text - xl text - gray - 300 max - w-3xl mx - auto" />;
                 Our most revolutionary services that are pushing the boundaries of what's possible;
               </p>;
             </motion.div>;
-            <div className=\"grid grid - cols - 1 lg:grid - cols - 2 gap - 8\" />;}
+            <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8" />;}
               {featured_services.map ((service, index) => (<motion.div;}
                   key={index}
                   initial={{ opacity: 0, coordinate_x: index % 2 === 0 ? -50 : 50 ,}
@@ -459,7 +456,7 @@ className='text-center mb-16'
                     whileInView={{ opacity: 1, y: 0 ,}
 }
                     transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true ,}
+                    viewport={{once: true }
 }
                    />;
                     <UltraFuturisticCard;
@@ -501,7 +498,7 @@ className='text-center mt-16'
 }
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true ,}
+              viewport={{once: true }
 }
              />;
               <motion.a;
@@ -574,9 +571,9 @@ variant='quantum-holographic'
                     <div className='text-2xl font-bold text-cyan-400 mb-2' />
 
                       {service.price}
-                      <span className=\"text - sm text - gray - 400\" />{service.period}</span>;
+                      <span className="text - sm text - gray - 400" />{service.period}</span>;
                     </div>;
-                    <div className=\"text - sm text - gray - 400 mb - 4\" />{service.market_size} • {service.growth_rate}</div>;
+                    <div className="text - sm text - gray - 400 mb - 4" />{service.market_size} • {service.growth_rate}</div>;
                     <a;
 
                       href={service.link}
@@ -598,7 +595,7 @@ className='text-center mt-16';
 }
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true ,}
+              viewport={{once: true }
 }
              />;
               <motion.a;
@@ -616,29 +613,29 @@ href='/services';
         </section>
 
                 className='bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2'                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 ,}
+                whileTap={{scale: 0 && 0.95 }
 }>;
                 <span />Discover All AI Services</span>;
-                <ArrowRight className='w-6 h-6' />              </motion && motion.a>                href=\"/services\";
-                className=\"bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2\";
+                <ArrowRight className='w-6 h-6' />              </motion && motion.a>                href="/services";
+                className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2";
                 whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 ,}
+                whileTap={{scale: 0 && 0.95 }
 }
               >;
                 <span />Discover All AI Services</span>;
-                <ArrowRight className='w-6 h-6' />                <ArrowRight className=\"w-6 h-6\" />;
+                <ArrowRight className='w-6 h-6' />                <ArrowRight className="w-6 h-6" />;
               </motion && motion.a>;
             </motion && motion.div>;
           </div>;
         </section>;
         {/* Call to Action */}
         <section className='py-20 px-4 sm:px-6 lg:px-8' />;
-          <div className='max-w-4xl mx-auto text-center' />            <motion && motion.div        <section className=\"py-20 px-4 sm:px-6 lg:px-8\" />;
-          <div className=\"max-w-4xl mx-auto text-center\" />;
+          <div className='max-w-4xl mx-auto text-center' />            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8" />;
+          <div className="max-w-4xl mx-auto text-center" />;
             <motion&& motion.div;
         {/* Call to Action */}
-        <section className=\"py-20 px-4 sm:px-6 lg:px-8\" />;
-          <div className=\"max-w-4xl mx-auto text-center\" />;
+        <section className="py-20 px-4 sm:px-6 lg:px-8" />;
+          <div className="max-w-4xl mx-auto text-center" />;
             <motion.div;
         {/* Call to Action */}
 <section className='py-20 px-4 sm:px-6 lg:px-8' />;

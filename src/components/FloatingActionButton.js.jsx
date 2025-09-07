@@ -47,7 +47,7 @@ const [isOpen, setIsOpen] = useState(false);
 }
                 exit={{ opacity: 0, x: 20 ,}
 }'''';
-                transition={{ delay: index * 0.1 ,}
+                transition={{delay: index * 0.1 }
 }'''';
                 className='flex items-center space-x-3 ' />;
                 <motion.button`;
@@ -77,7 +77,7 @@ const [isOpen, setIsOpen] = useState(false);
         onClick={toggleMenu}'''';
         className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110''';
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 ,}
+        whileTap={{scale: 0.95 }
 }'';
         aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}'''';
        />'''';
@@ -90,7 +90,7 @@ const [isOpen, setIsOpen] = useState(false);
               animate={{ rotate: 0, opacity: 1 ,}
 }
               exit={{ rotate: 90, opacity: 0 }}
-              transition={{ duration: 0.2 ,}
+              transition={{duration: 0.2 }
 }'''';
              />'''';
               <XMarkIcon className='w-6 h-6' />;
@@ -103,7 +103,7 @@ const [isOpen, setIsOpen] = useState(false);
               animate={{ rotate: 0, opacity: 1 ,}
 }
               exit={{ rotate: -90, opacity: 0 }}
-              transition={{ duration: 0.2 ,}
+              transition={{duration: 0.2 }
 }'''';
              />'''';
               <PlusIcon className='w-6 h-6' />;

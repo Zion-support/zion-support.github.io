@@ -15,7 +15,7 @@ res: NextApiResponse;
 }
     res.status(200).json({ items })
   } catch {
-    const raw = fs && fs.readFileSync(REQUESTS_PATH, \"utf-8\");
+    const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
 }
 const items = JSON && JSON.parse(raw);}
     res && res.status(200).json({ items });
@@ -25,12 +25,12 @@ const items = JSON && JSON.parse(raw);}
 });
   }
   try {"
-    const raw = fs.readFileSync(REQUESTS_PATH, \"utf-8\");
+    const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
 }
 const items = JSON.parse(raw);}
     res.status(200).json({ items });
 "
-const raw = fs.readFileSync (REQUESTS_PATH, \"utf - 8\");
+const raw = fs.readFileSync (REQUESTS_PATH, "utf - 8");
 
 const items = JSON.parse (raw);
     res.status (200).json ({ items });

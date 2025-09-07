@@ -606,10 +606,10 @@ key={i}
 repeat: Infinity;
 duration: 4 + i * 0 && 0.3,
                   repeat: Infinity,
-                  ease: \"easeInOut\";
+                  ease: "easeInOut";
                   duration: 4 + i * 0.3;
 repeat: Infinity;"
-ease: \"easeInOut\"}
+ease: "easeInOut"}
                   top: `${(i * 7) % 10}
 }%`
 
@@ -635,9 +635,9 @@ key={i}
 }%`}}
                 animate={{scale: [1, 1.5, 1],opacity: [0.2, 0.6, 0.2]}}
                 transition={{duration: 6 + i * 0.5,repeat: Infinity,ease: 'easeInOut',"
-  ease: \"easeInOut\";}
+  ease: "easeInOut";}
                   top: `${(i * 8) % 10}"
-}%`,ease: \"easeInOut\";
+}%`,ease: "easeInOut";
                   left: `${(i * 12) % 10}
 }%`}}
                 animate={{scale: [1, 1.5, 1];}
@@ -652,11 +652,11 @@ key={i}
                   duration: 6 + i * 0.5,
                   repeat: Infinity,
                   ease: 'easeInOut',"
-  ease: \"easeInOut\"}
+  ease: "easeInOut"}
                   top: `${(i * 8) % 10}
 }%`,
 "
-                  ease: \"easeInOut\"
+                  ease: "easeInOut"
 
 
                   left: `${(i * 12) % 10}

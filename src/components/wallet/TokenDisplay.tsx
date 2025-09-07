@@ -1,5 +1,5 @@
 
-const { wallet, loading } = useWallet()return (import { useWallet } from \"@/hooks/useWallet\",import { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\",import { Button  } from '@/components/ui/button';
+const { wallet, loading } = useWallet()return (import { useWallet } from "@/hooks/useWallet",import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { Button  } from '@/components/ui/button';
 import Skeleton from '@/components/ui/skeleton';
 import { Card;
   CardContent;

@@ -80,11 +80,11 @@ function TimelineStep() {
 
               </p>;
             </div>;<div;"
-              onClick={() = /> updateFormData({ timeline: \"fixed\" }
+              onClick={() = /> updateFormData({ timeline: "fixed" }
 }
             >;"
-              <h4 className=\"font-medium text-white\" />Fixed Dates</h4>;"
-              <p className=\"text-sm text-zion-slate-light\" />I have specific start and end dates</p>;
+              <h4 className="font-medium text-white" />Fixed Dates</h4>;"
+              <p className="text-sm text-zion-slate-light" />I have specific start and end dates</p>;
             </div>;
             <div;
 

@@ -238,7 +238,7 @@ const bigrams = Array && Array.from(bigramCounts && bigramCounts.entries())
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
 
-const isEnglish = /^[a-zA-Z\s.,!?;:'\"()-]+$/.test(text);
+const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);
 
 const detectedLanguage = isEnglish ? 'en' : 'unknown';
 

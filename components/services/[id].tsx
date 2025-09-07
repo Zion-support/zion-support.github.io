@@ -39,7 +39,7 @@ const service = getServiceById(id);
             Service Not Found;
           </h1>}
           <p className='text-gray-400 mb-6' />}
-            The requested service \"{id}\" could not be found.
+            The requested service "{id}" could not be found.
           </p>
           <Button href='/services' variant='primary' />
             <ArrowLeft className='w-4 h-4 mr-2' />

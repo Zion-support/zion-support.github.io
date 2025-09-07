@@ -346,7 +346,7 @@ ease: 'linear'}
           scale: [1, 1.2, 1];
           opacity: [0.15, 0.35, 0.15];
         transition={{duration: 30,repeat: Infinity,ease: 'linear',
-  ease: \"linear\";<motion.div;}
+  ease: "linear";<motion.div;}
 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full';}
         animate={{rotate: 360,scale: [1, 1.1, 1],opacity: [0.1, 0.3, 0.1]}}
         transition={{duration: 30,repeat: Infinity,ease: 'linear'}}
@@ -418,7 +418,7 @@ ease: 'linear',
 }
             }}
             animate={{y: [0, window.innerHeight + 20],opacity: [0, 1, 0]}}"
-            transition={{duration: 8 + i * 0.5,repeat: Infinity,ease: \"linear\",delay: i * 1.5;}
+            transition={{duration: 8 + i * 0.5,repeat: Infinity,ease: "linear",delay: i * 1.5;}
 ease: 'linear',
   delay: i * 1.5}}
           />;

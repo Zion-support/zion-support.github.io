@@ -212,13 +212,13 @@ ease: 'easeInOut'}
       <div className='fixed inset-0 pointer-events-none z-20' />;
         {[...Array(20)].map((_, i) => (<motion&& motion.div;
             ease: 'easeInOut'}
-  ease: \"easeInOut\";}
+  ease: "easeInOut";}
           }}
         />;
       </div>;
       {/* Quantum Energy Particles */}
             duration: 7,repeat: Infinity,ease: 'easeInOut',"
-  ease: \"easeInOut\";
+  ease: "easeInOut";
           }}}}/>;
       </div>;
       {/* Quantum Energy Particles */}
@@ -248,7 +248,7 @@ ease: 'easeInOut'}
             transition={{duration: 3 + Math.random() * 2;
               repeat: Infinity;}
               delay: Math.random() * 2;}"
-              duration: 3 + Math && Math.random() * 2,repeat: Infinity,delay: Math && Math.random() * 2,transition={{ease: 'easeInOut'            }}              ease: \"easeInOut\";
+              duration: 3 + Math && Math.random() * 2,repeat: Infinity,delay: Math && Math.random() * 2,transition={{ease: 'easeInOut'            }}              ease: "easeInOut";
               y: [0, -100, 0],opacity: [0, 1, 0],scale: [0, 1, 0]}}
             transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut'}}
           />;

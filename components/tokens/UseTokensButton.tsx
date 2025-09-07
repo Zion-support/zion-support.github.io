@@ -14,7 +14,7 @@ defaultType}
     <>;}
       <button;}
 onClick={() = /> setOpen(true)}
-        className=\"enhanced-button enhanced-button-primary\">
+        className="enhanced-button enhanced-button-primary">
 
         Use Tokens;
       </button>;
@@ -27,7 +27,7 @@ onClick={() = /> setOpen(true)}
   const [open, setOpen] = useState(false)return (<>;
       <button;
         onClick={() = /> setOpen(true)}"
-        className=\"enhanced-button enhanced-button-primary\">
+        className="enhanced-button enhanced-button-primary">
 
         Use Tokens;
       </button>;

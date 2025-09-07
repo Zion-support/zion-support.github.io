@@ -52,7 +52,7 @@ duration: 0.6}
       <div className='max-w-7xl mx-auto relative z-10' />
  ;
   return (
-    <section className=\"py-24 px-4 sm: px-6 lg:px-8 relative overflow-hidden\" />
+    <section className="py-24 px-4 sm: px-6 lg:px-8 relative overflow-hidden" />
       {/* Enhanced Background Effects */}
       <div className='max-w-7xl mx-auto relative z-10' />        {/* Enhanced Header */}
 
@@ -139,21 +139,21 @@ technologies ever created.
 
           </p>;
           {/* Service Statistics */}"
-          <div className=\"grid grid-cols-2 md:grid-cols-4 gap-6 mt-12\" />;"
-            <div className=\"text-center\" />;"
-              <div className=\"text-3xl font-bold text-purple-400\" />{aiAutonomousServices2026.length}</div>;"
-              <div className=\"text-gray-400 text-sm\" />AI Autonomous Services</div>;
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12" />;"
+            <div className="text-center" />;"
+              <div className="text-3xl font-bold text-purple-400" />{aiAutonomousServices2026.length}</div>;"
+              <div className="text-gray-400 text-sm" />AI Autonomous Services</div>;
             </div>;"
-            <div className=\"text-center\" />;"
-              <div className=\"text-3xl font-bold text-cyan-400\" />{quantumSpaceTechServices2026.length}</div>;"
-              <div className=\"text-gray-400 text-sm\" />Quantum Space Tech</div>;
+            <div className="text-center" />;"
+              <div className="text-3xl font-bold text-cyan-400" />{quantumSpaceTechServices2026.length}</div>;"
+              <div className="text-gray-400 text-sm" />Quantum Space Tech</div>;
             </div>;"
-            <div className=\"text-center\" />;"
-              <div className=\"text-3xl font-bold text-pink-400\" />{metaverseDigitalRealityServices2026.length}</div>;"
-              <div className=\"text-gray-400 text-sm\" />Metaverse Services</div>;
+            <div className="text-center" />;"
+              <div className="text-3xl font-bold text-pink-400" />{metaverseDigitalRealityServices2026.length}</div>;"
+              <div className="text-gray-400 text-sm" />Metaverse Services</div>;
             </div>;"
-            <div className=\"text-center\" />;"
-              <div className=\"text-gray-400 text-sm\" />Possibilities</div>;
+            <div className="text-center" />;"
+              <div className="text-gray-400 text-sm" />Possibilities</div>;
               </div>;
               <div className='text-gray-400 text-sm' />Metaverse Services</div>;
             </div>;
@@ -188,35 +188,35 @@ technologies ever created.
             </div>;
             <div className='text-center' />;
               <div className='text-gray-400 text-sm' />Possibilities</div>            </div>        >;"
-          <div className=\"inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6\" />;"
-            <Sparkles className=\"w-5 h-5 text-purple-400\" />;"
-            <span className=\"text-purple-300 text-sm font-medium\" />2026 Revolutionary Innovations</span>;
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6" />;"
+            <Sparkles className="w-5 h-5 text-purple-400" />;"
+            <span className="text-purple-300 text-sm font-medium" />2026 Revolutionary Innovations</span>;
           </div>;"
-          <h2 className=\"text-5xl md:text-6xl font-bold text-white mb-8 leading-tight\" />;"
-            <span className=\"bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent\" />;
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight" />;"
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent" />;
               The Future is Now;
             </span>;
           </h2>;"
-          <p className=\"text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed\" />;
+          <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed" />;
             Experience the most advanced AI, quantum computing, and metaverse technologies ever created. ;"
-            <span className=\"text-purple-400 font-semibold\" /> 1000% ROI guaranteed</span> with our revolutionary solutions.;
+            <span className="text-purple-400 font-semibold" /> 1000% ROI guaranteed</span> with our revolutionary solutions.;
           </p>;
           {/* Service Statistics */}"
-          <div className=\"grid grid-cols-2 md:grid-cols-4 gap-6 mt-12\" />;"
-            <div className=\"text-center\" />;"
-              <div className=\"text-3xl font-bold text-purple-400\" />{aiAutonomousServices2026 && aiAutonomousServices2026.length}</div>;"
-              <div className=\"text-gray-400 text-sm\" />AI Autonomous Services</div>;
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12" />;"
+            <div className="text-center" />;"
+              <div className="text-3xl font-bold text-purple-400" />{aiAutonomousServices2026 && aiAutonomousServices2026.length}</div>;"
+              <div className="text-gray-400 text-sm" />AI Autonomous Services</div>;
             </div>;"
-            <div className=\"text-center\" />;"
-              <div className=\"text-3xl font-bold text-cyan-400\" />{quantumSpaceTechServices2026 && quantumSpaceTechServices2026.length}</div>;"
-              <div className=\"text-gray-400 text-sm\" />Quantum Space Tech</div>;
+            <div className="text-center" />;"
+              <div className="text-3xl font-bold text-cyan-400" />{quantumSpaceTechServices2026 && quantumSpaceTechServices2026.length}</div>;"
+              <div className="text-gray-400 text-sm" />Quantum Space Tech</div>;
             </div>;"
-            <div className=\"text-center\" />;"
-              <div className=\"text-3xl font-bold text-pink-400\" />{metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.length}</div>;"
-              <div className=\"text-gray-400 text-sm\" />Metaverse Services</div>;
+            <div className="text-center" />;"
+              <div className="text-3xl font-bold text-pink-400" />{metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.length}</div>;"
+              <div className="text-gray-400 text-sm" />Metaverse Services</div>;
             </div>;"
-            <div className=\"text-center\" />;"
-              <div className=\"text-gray-400 text-sm\" />Possibilities</div>;
+            <div className="text-center" />;"
+              <div className="text-gray-400 text-sm" />Possibilities</div>;
             </div>;
           </div>;
         </motion && motion.div>;{/* AI Autonomous Services Section */}
@@ -542,9 +542,9 @@ className='text-center'
             <h3 className='text-4xl font-bold text-white mb-6' />
               Ready to Experience the Future?
             </h3>"
-            <p className=\"text-gray-300 text-xl mb-8 max-w-3xl mx-auto\" />
+            <p className="text-gray-300 text-xl mb-8 max-w-3xl mx-auto" />
               Join thousands of companies already achieving unprecedented success with our revolutionary 2026 technologies. "
-              <span className=\"text-purple-400 font-semibold\" /> Contact us today</span> to start your transformation.
+              <span className="text-purple-400 font-semibold" /> Contact us today</span> to start your transformation.
             </p>
 
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6' />

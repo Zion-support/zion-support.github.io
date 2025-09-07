@@ -13,18 +13,18 @@ res: NextApiResponse;
 ) {
   const method = (req.method |'POST').toUpperCase();
   if (method !== 'POST')}
-    return res.status(405).json({ error: 'Method not allowed',}
+    return res.status(405).json({error: 'Method not allowed'}
 });
 
 const auth = authenticateRequest(req, false);
-  if (!auth.ok) return res.status(401).json({ error: auth.error,}
+  if (!auth.ok) return res.status(401).json({error: auth.error}
 });
 
 const { jobDescription, resumes } = req.body || {};
 if (!jobDescription || !Array.isArray(resumes))
     return res;
       .status(400)
-      .json({ error: 'jobDescription and resumes[] required',}
+      .json({error: 'jobDescription and resumes[] required'}
 });
 
 const prompt =
@@ -39,7 +39,7 @@ const text = await generateText(
     'You are an expert technical recruiter. Output strictly valid JSON.'
   );
 
-  return res.status(200).json({ results: text,}
+  return res.status(200).json({results: text}
 });
   return res.status(200).json({ results: text }),
 }

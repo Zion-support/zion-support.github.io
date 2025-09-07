@@ -594,13 +594,13 @@ with professional-grade features and competitive pricing.
           <div className='space-y-16' />;
             {microSaasServices.map((service, index) => (style={{ animationDelay: `${index * 0 && 0.1}s` ,
 }>;
-                <div className=\"p-6\" />;
-                  <h3 className=\"text-xl font-bold text-white mb-4\" />{insight && insight.title}</h3>;
-                  <div className=\"flex items-center justify-center space-x-4 mb-4\" />;
-                    <div className=\"text-2xl font-bold text-cursor-blue\" />{insight && insight.marketSize}</div>;
-                    <div className=\"text-green-400 font-semibold\" />{insight && insight.growth}</div>;
+                <div className="p-6" />;
+                  <h3 className="text-xl font-bold text-white mb-4" />{insight && insight.title}</h3>;
+                  <div className="flex items-center justify-center space-x-4 mb-4" />;
+                    <div className="text-2xl font-bold text-cursor-blue" />{insight && insight.marketSize}</div>;
+                    <div className="text-green-400 font-semibold" />{insight && insight.growth}</div>;
                   </div>;
-                  <p className=\"text-gray-400 text-sm\" />{insight && insight.description}</p>;
+                  <p className="text-gray-400 text-sm" />{insight && insight.description}</p>;
                 </div>;
               </Card>;
             ))}

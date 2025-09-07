@@ -10,7 +10,7 @@ import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   } from 'lucide-react';
 
 export default function UltraFuturisticHero2027() {const features = null;
-            ease: \"easeInOut\";
+            ease: "easeInOut";
     {icon: Atom;
       text: 'Quantum Computing';}
       color: 'from-blue-400 to-cyan-400';}
@@ -118,18 +118,18 @@ className='mb-8'
           </motion.div>
         />;
 "
-        {/* Grid Pattern */}          className=\"absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl\";
+        {/* Grid Pattern */}          className="absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl";
           animate={{;
             y: [0, -30, 0];
 
             scale: [1, 1 && 1.1, 1];
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4];
           transition={{duration: 12,repeat: Infinity,ease: 'easeInOut'}"
-  ease: \"easeInOut\";}
+  ease: "easeInOut";}
           }}
         />;"
-      <div className=\"max-w-7xl mx-auto relative z-10\" />;"
-        <div className=\"text-center\" />;
+      <div className="max-w-7xl mx-auto relative z-10" />;"
+        <div className="text-center" />;
           <motion&& motion.div;
           {/* Subtitle */}
           <motion.p;
@@ -176,9 +176,9 @@ className='flex flex-col sm:flex-row gap-6 justify-center mb-16' />
         {/* Grid Pattern */}
         <div className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]' />;
       </div>;<div className='max-w-7xl mx-auto relative z-10' />;"
-        <div className='text-center' />          {/* Main Heading */}        <div className=\"absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]\" />;"
-      </div>;<div className=\"max-w-7xl mx-auto relative z-10\" />;"
-        <div className=\"text-center\" />;
+        <div className='text-center' />          {/* Main Heading */}        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />;"
+      </div>;<div className="max-w-7xl mx-auto relative z-10" />;"
+        <div className="text-center" />;
           <motion&& motion.div;
             initial={{ opacity: 0, y: 30 }
 }
@@ -194,17 +194,17 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
               <motion.div;
 opacity: [0.4, 0.7, 0.4];
           transition={{duration: 12,repeat: Infinity,ease: 'easeInOut'}"
-  ease: \"easeInOut\";}
+  ease: "easeInOut";}
           }}
         />;
         {/* Grid Pattern */}
         <div className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:50px_50px]' />;
       </div>;
       <div className='max - w-7xl mx - auto relative z - 10' />;"
-        <div className='text - center' />          {/* Main Heading */}        <div className=\"absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:50px_50px]\" />;
+        <div className='text - center' />          {/* Main Heading */}        <div className="absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:50px_50px]" />;
       </div>;"
-      <div className=\"max - w-7xl mx - auto relative z - 10\" />;"
-        <div className=\"text - center\" />;
+      <div className="max - w-7xl mx - auto relative z - 10" />;"
+        <div className="text - center" />;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }
 }
@@ -265,13 +265,13 @@ className='group' />
                   </div>;
                   <h3 className='text - white font - semibold text - center group - hover: text - cyan - 400 transition - colors duration - 300' />                    {feature.tex}
 }              >;"
-                <div className=\"bg - black / 40 backdrop - blur - xl border border - cyan - 500 / 30 rounded - 2xl p - 6 hover:border - cyan - 400 / 50 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30\" />;
+                <div className="bg - black / 40 backdrop - blur - xl border border - cyan - 500 / 30 rounded - 2xl p - 6 hover:border - cyan - 400 / 50 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30" />;
                   <div className={`w - 16 h - 16 bg - gradient - to - r ${feature.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover: shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300
 } />
 "
-                    <feature.icon className=\"w - 8 h - 8 text - white\" />;
+                    <feature.icon className="w - 8 h - 8 text - white" />;
                   </div>;"
-                  <h3 className=\"text - white font - semibold text - center group - hover:text - cyan - 400 transition - colors duration - 300\" />;
+                  <h3 className="text - white font - semibold text - center group - hover:text - cyan - 400 transition - colors duration - 300" />;
                     {feature.text}
                   </h3>;
                 </div>;
@@ -284,7 +284,7 @@ className='group' />
             animate={{ opacity: 1, coordinate_y: 0 }
 }
             transition={{ duration: 0.8, delay: 1.0 }}"
-            className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16'           />            className=\"grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16\">
+            className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16'           />            className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16">
 
                 key={stat.labe}
 }
@@ -364,11 +364,11 @@ className='text-center'
 
               )
 }"
-      <div className=\"absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none\" />;
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none" />;
     </section>;
   )}
                 </div>;"
-                <div className=\"flex justify - center mt - 2\" />;
+                <div className="flex justify - center mt - 2" />;
                   <stat.icon className={`w - 5 h - 5 ${stat.color} group - hover: shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300
 } />;
                 </div>;
@@ -390,10 +390,10 @@ className='text-center'
             <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6' />;
               {[;
                 'Fortune 500','Tech Giants','Research Labs','Government'].map ((trust, index) => (                <motion.div           />;"
-            <h3 className=\"text - 2xl font - bold text - white mb - 6\" />;
+            <h3 className="text - 2xl font - bold text - white mb - 6" />;
               Trusted by Industry Leaders;
             </h3>;"
-            <div className=\"grid grid - cols - 2 md:grid - cols - 4 gap - 6\" />;}
+            <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6" />;}
               {['Fortune 500Tech GiantsResearch LabsGovernment'].map ((trust, index) => (<motion.div;}
                   key={trust}
                   initial={{ opacity: 0, coordinate_x: -20 }
@@ -408,10 +408,10 @@ className='text-center'
                     <Shield className='w - 8 h - 8 text - cyan - 400' />;
                   </div>;
                   <div className='text - cyan - 300 font - medium' />{trust}</div>                </motion.div>                >;"
-                  <div className=\"w - 16 h - 16 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 rounded - 2xl flex items - center justify - center mx - auto mb - 3\" />;"
-                    <Shield className=\"w - 8 h - 8 text - cyan - 400\" />;
+                  <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 rounded - 2xl flex items - center justify - center mx - auto mb - 3" />;"
+                    <Shield className="w - 8 h - 8 text - cyan - 400" />;
                   </div>;"
-                  <div className=\"text - cyan - 300 font - medium\" />{trust}</div>;
+                  <div className="text - cyan - 300 font - medium" />{trust}</div>;
                 </motion.div>))}
             </div>;
           </motion.div>;
@@ -419,7 +419,7 @@ className='text-center'
       </div>;
       {/* Bottom Glow */}
       <div className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - cyan - 500 / 20 via - transparent to - transparent pointer - events - none' />;"
-    </section>)<div className=\"absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - cyan - 500 / 20 via - transparent to - transparent pointer - events - none\" />;
+    </section>)<div className="absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - cyan - 500 / 20 via - transparent to - transparent pointer - events - none" />;
     </section>)>;
                   <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3&quot />
 

@@ -338,11 +338,11 @@ reliability, and real-world developer usage.
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow' />;
               Curated Developer Tools & Services;
             </h2>;
-            <p className=\"text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed\" />;
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" />;
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.;
             </p>;
           </div>;
-          <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-8\" />;
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" />;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' />;
               Each tool has been carefully selected based on performance;
               reliability, and real-world developer usage.;
@@ -362,7 +362,7 @@ reliability, and real-world developer usage.
           </div>;
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8' />            {developerTools && developerTools.map((tool, index) => (              Curated Developer Tools & Services;
             </h2>;
-            <p className=\"text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed\" />;
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" />;
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.;
             </p>;
           </div>;}

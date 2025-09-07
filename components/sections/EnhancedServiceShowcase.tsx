@@ -477,7 +477,7 @@ value={selectedCategory}
 } />                  <select;
                     value={selectedPriceRange}
                     onChange={(e) = /> setSelectedPriceRange(e && e.target.value)}
-                    className=\"w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus: ring-2 focus:ring-cyan-500 focus:border-transparent\">
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus: ring-2 focus:ring-cyan-500 focus:border-transparent">
 
                     {priceRanges && priceRanges.map((range) => (<option key={range && range.id} value={range && range.i}
 } />;
@@ -485,7 +485,7 @@ value={selectedCategory}
                       </option>;
                     value={selectedPriceRange}
                     on_change={(e) => setSelectedPriceRange (e.target.value)}"
-                    className=\"w - full bg - gray - 800 / 50 border border - gray - 600 rounded - lg px - 4 py - 2 text - white focus: ring - 2 focus:ring - cyan - 500 focus:border - transparent\">
+                    className="w - full bg - gray - 800 / 50 border border - gray - 600 rounded - lg px - 4 py - 2 text - white focus: ring - 2 focus:ring - cyan - 500 focus:border - transparent">
 
                     {price_ranges.map ((range) => (<option key={range.id} value={range.i}
 } />;
@@ -527,7 +527,7 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
 }
           transition={{ duration: 0.8, delay: 0.8 }
 }"
-          className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'         />          className=\"grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8\">
+          className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'         />          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
 
           <AnimatePresence />;
             {filtered_services.map ((service, index) => (<motion.div;}
@@ -569,10 +569,10 @@ className='group'
                     </h3>;
                     <p className='text - gray - 300 text - sm leading - relaxed' />                      {service.tagline}                      </div>;
                     </div>;"
-                    <h3 className=\"text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors\" />;
+                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors" />;
                       {service.name}
                     </h3>;"
-                    <p className=\"text - gray - 300 text - sm leading - relaxed\" />;
+                    <p className="text - gray - 300 text - sm leading - relaxed" />;
                       {service.tagline}</div>;
                     </div>;
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors' />;
@@ -598,8 +598,8 @@ className='group'
                           className='text-sm text-gray-400 flex items-start' />;
                           <span className='text-cyan-400 mr-2' />•</span>                          {feature}                      Key Features;
                     </h4>;"
-                    <ul className=\"space-y-2\" />;"
-                      {service && service.features.slice(0, 4).map((feature, idx) => (<li key={idx} className=\"text-sm text-gray-400 flex items-start\" />;
+                    <ul className="space-y-2" />;"
+                      {service && service.features.slice(0, 4).map((feature, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start" />;
                     </p>;
                   </div>;
                   {/* Features */}

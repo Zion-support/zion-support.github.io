@@ -91,8 +91,7 @@ const connect = useCallback(async () => {
 let localTracks: any[] = [];
     if (startMode === 'video') {
 
-localTracks = await createLocalTracks({
-        audio: true,}
+localTracks = await createLocalTracks({audio: true}
         video: VideoPresets.h720,}
       });
     } else {;}

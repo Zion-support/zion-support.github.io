@@ -172,28 +172,28 @@ const pricingPlans = [
   ];
 
 const integrations = [
-    { name: 'AWS',}
+    {name: 'AWS'}
   icon: '☁️', description: 'CloudWatch integration',}
 },
-    { name: 'Azure',}
+    {name: 'Azure'}
   icon: '🔷', description: 'Monitor integration',}
 },
-    { name: 'GCP',}
+    {name: 'GCP'}
   icon: '☁️', description: 'Stackdriver integration',}
 },
-    { name: 'Docker',}
+    {name: 'Docker'}
   icon: '🐳', description: 'Container monitoring',}
 },
-    { name: 'Kubernetes',}
+    {name: 'Kubernetes'}
   icon: '☸️', description: 'K8s native support',}
 },
-    { name: 'Slack',}
+    {name: 'Slack'}
   icon: '💬', description: 'Team notifications',}
 },
-    { name: 'PagerDuty',}
+    {name: 'PagerDuty'}
   icon: '🚨', description: 'Incident management',}
 },
-{ name: 'Jira',}
+{name: 'Jira'}
   icon: '📋', description: 'Issue tracking',}
 },
   ];
@@ -548,10 +548,10 @@ key={featureIndex}
                   size='lg' />;
                   Get Started;
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan && plan.buttonColor} text-white`}
-                  size=\"lg\">
+                  size="lg">
 
                   Get Started;
-                  <ArrowRight className=\"w-5 h-5 ml-2\" />;
+                  <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;</li>;
                   ))}

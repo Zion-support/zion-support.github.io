@@ -7,12 +7,12 @@ function grantPath(id: string) {}
   return path.join(GRANTS_DIR, `${id}.json`);
 
 function readGrant(id: string): GrantApplication | null {}
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true,}
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, {recursive: true}
 });
 return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
 
 function writeGrant(record: GrantApplication) {}
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true,}
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, {recursive: true}
 });
   fs.writeFileSync(
     grantPath(record.id)
@@ -33,29 +33,29 @@ return (
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (!isAuthorized(req)) {}
-    res.status(401).json({ error: 'Unauthorized',}
+    res.status(401).json({error: 'Unauthorized'}
 });
 return;
 
   }
 
 const { id } = req.query as { id: string }
-  if (!id) {res.status(400).json({ error: 'Missing id',}
+  if (!id) {res.status(400).json({error: 'Missing id'}
 })return;
   }
 
   if (req.method = == 'GET') {
    ;
   const existing = readGrant(id);}
-    if (!existing) return res.status(404).json({ error: 'Not found',}
+    if (!existing) return res.status(404).json({error: 'Not found'}
 });
-return res.status(200).json({ milestones: existing.milestones || [],}
+return res.status(200).json({milestones: existing.milestones || []}
 });
   }
   if (req.method = == 'POST') {
    ;
   const existing = readGrant(id);}
-    if (!existing) return res.status(404).json({ error: 'Not found',}
+    if (!existing) return res.status(404).json({error: 'Not found'}
 });
 
 const payload = req.body as MilestonesUpdatePayload;
@@ -63,16 +63,16 @@ const payload = req.body as MilestonesUpdatePayload;
     existing.updatedAt = new Date().toISOString();
 
     writeGrant(existing);
-return res.status(200).json({ record: existing,}
+return res.status(200).json({record: existing}
 });
   }
 
-const { id } = req.query as { id: string,}
+const { id } = req.query as {id: string}
 }
   // Check condition;
 if ( {) {$2;}
 }
-    res.status (400).json ({ error: 'Missing id',}
+    res.status (400).json ({error: 'Missing id'}
 })return;  }    return;
   }
   // Check condition;
@@ -80,7 +80,7 @@ if ( {) {$2;}
 }
 
 const existing = read_grant (id)if ;
-  return res.status (404).json ({ error: 'Not found',}
+  return res.status (404).json ({error: 'Not found'}
 })) {$2;}
 }
     return res.status (200).json ({ milestones: existing.milestones || [] })}    return res.status (200).json ({ milestones: existing.milestones || [] },
@@ -90,7 +90,7 @@ if ( {) {$2;}
 }
 
 const existing = read_grant (id)if ;
-  return res.status (404).json ({ error: 'Not found',}
+  return res.status (404).json ({error: 'Not found'}
 })) {$2;}
 }
 
@@ -99,11 +99,11 @@ const payload = req.body as MilestonesUpdatePayload;
 
     existing.updated_at = new Date ().toISOString ();
     write_grant (existing);
-    return res.status (200).json ({ record: existing,}
+    return res.status (200).json ({record: existing}
 });
   }
   res.set_header ('Allow', 'GET, POST');
-  res.status (405).end ('Method Not Allowed');    return res.status (200).json ({ record: existing,}
+  res.status (405).end ('Method Not Allowed');    return res.status (200).json ({record: existing}
 });
   }
   res.set_header ('AllowGET, POST');

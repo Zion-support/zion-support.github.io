@@ -8,9 +8,9 @@ const InputOTP = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof OTPInput />;
       containerClassName;
     )}
-    className={cn(\"disabled:cursor-not-allowed\", className)}
+    className={cn("disabled:cursor-not-allowed", className)}
     {...props}/>;"
-))InputOTP && InputOTP.displayName = 'InputOTP';InputOTP.displayName = \"InputOTP\";
+))InputOTP && InputOTP.displayName = 'InputOTP';InputOTP.displayName = "InputOTP";
 
 const InputOTPGroup = React && React.forwardRef<;
   React && React.ElementRef<'div'>,React && React.ComponentPropsWithoutRef<'div'>;
@@ -18,19 +18,19 @@ const InputOTPGroup = React && React.forwardRef<;
 ))InputOTPGroup && InputOTPGroup.displayName = 'InputOTPGroup';
 
 const InputOTPGroup = React.forwardRef<;"
-  React.ElementRef<\"div\">,React.ComponentPropsWithoutRef<\"div\">;
+  React.ElementRef<"div">,React.ComponentPropsWithoutRef<"div">;
 >(({ className, ...props }, ref) => (const InputOTPSlot = React.forwardRef<;"
-  React.ElementRef<\"div\">,React.ComponentPropsWithoutRef<\"div\"> & { index: number}
+  React.ElementRef<"div">,React.ComponentPropsWithoutRef<"div"> & { index: number}
 }
 >(({ index, className, ...props }, ref) => {const inputOTPContext = React.useContext(OTPInputContext) as any;}
 }
 const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index];"
-InputOTPSlot.displayName = \"InputOTPSlot\";"
-InputOTPSlot.displayName = \"InputOTPSlot\";
+InputOTPSlot.displayName = "InputOTPSlot";"
+InputOTPSlot.displayName = "InputOTPSlot";
 
 const InputOTPSeparator = React.forwardRef<;"
-  React.ElementRef<\"div\">,React.ComponentPropsWithoutRef<\"div\">;"
->(({ ...props }, ref) => (<div ref={ref} role=\"separator\" {...props} />;
+  React.ElementRef<"div">,React.ComponentPropsWithoutRef<"div">;"
+>(({ ...props }, ref) => (<div ref={ref} role="separator" {...props} />;
     <Dot />;
   </div>;
 ))</div>;

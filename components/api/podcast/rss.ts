@@ -61,7 +61,7 @@ const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
       return `
     <item />
       <pubDate />${pubDate}</pubDate>
-      <enclosure url=\"${audioUrl}\" length=\"0\" type=\"audio/mpeg\" />
+      <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />
 
     </item>`;
     }).join('\n')<channel />;

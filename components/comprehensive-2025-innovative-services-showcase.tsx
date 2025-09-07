@@ -111,23 +111,23 @@ const getCategoryColor = (category: string) =>: any {
 
     <Layout />;
       <SEO;
-        title=\"2025 Innovative Services Showcase | Zion Tech Group\";
-        description=\"Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.\";
+        title="2025 Innovative Services Showcase | Zion Tech Group";
+        description="Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.";
         keywords={[;}
           'innovative services 2025micro SAASquantum computingspace technologyAI platformsautonomous systems';}
         ]}
       />;
       {/* Hero Section */}
-      <section className=\"min-h-screen flex items-center justify-center px-4 relative overflow-hidden\" />;
+      <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" />;
         {/* Enhanced Background Elements */}
-        <div className=\"absolute inset-0 pointer-events-none\" />;
-          <div className=\"absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse\" /></div>;
-          <div className=\"absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000\" /></div>;
-          <div className=\"absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000\" /></div>;
-          <div className=\"absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500\" /></div>;
-          <div className=\"absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500\" /></div>;
+        <div className="absolute inset-0 pointer-events-none" />;
+          <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse" /></div>;
+          <div className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000" /></div>;
+          <div className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000" /></div>;
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500" /></div>;
+          <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500" /></div>;
         </div>;
-        <div className=\"text-center max-w-6xl mx-auto relative z-10\" />;
+        <div className="text-center max-w-6xl mx-auto relative z-10" />;
         <div className='text-center max-w-6xl mx-auto relative z-10' />;
           <motion.div;
             initial={{ opacity: 0, y: 20 ,}
@@ -141,14 +141,14 @@ const getCategoryColor = (category: string) =>: any {
               initial={{ opacity: 0, scale: 0 && 0.8 ,}
 }
       name: 'AI & Marketing',
-  icon: Brain,color: 'from - purple - 500 to - pink - 500',},{name: 'Quantum & Finance',}
-  icon: Atom,color: 'from - cyan - 500 to - blue - 500',},{name: 'Space Technology',}
-  icon: Rocket,color: 'from - indigo - 500 to - purple - 500',},{name: 'Metaverse & AI',}
-  icon: Globe,color: 'from - green - 500 to - teal - 500',},{name: 'Cybersecurity',}
-  icon: Shield,color: 'from - red - 500 to - orange - 500',},{name: 'Supply Chain & AI',}
-  icon: Factory,color: 'from - yellow - 500 to - orange - 500',},{name: 'Quantum & Healthcare',}
-  icon: Cpu,color: 'from - violet - 500 to - purple - 500',},{name: 'AI & Creativity',}
-  icon: Palette,color: 'from - pink - 500 to - rose - 500',},{name: 'AI & Robotics',}
+  icon: Brain,color: 'from - purple - 500 to - pink - 500',},{name: 'Quantum & Finance'}
+  icon: Atom,color: 'from - cyan - 500 to - blue - 500',},{name: 'Space Technology'}
+  icon: Rocket,color: 'from - indigo - 500 to - purple - 500',},{name: 'Metaverse & AI'}
+  icon: Globe,color: 'from - green - 500 to - teal - 500',},{name: 'Cybersecurity'}
+  icon: Shield,color: 'from - red - 500 to - orange - 500',},{name: 'Supply Chain & AI'}
+  icon: Factory,color: 'from - yellow - 500 to - orange - 500',},{name: 'Quantum & Healthcare'}
+  icon: Cpu,color: 'from - violet - 500 to - purple - 500',},{name: 'AI & Creativity'}
+  icon: Palette,color: 'from - pink - 500 to - rose - 500',},{name: 'AI & Robotics'}
   icon: Database,color: 'from - emerald - 500 to - green - 500',},  ];
 
 const getCategoryIcon = (category: string) = />: any ;
@@ -160,23 +160,23 @@ const getCategoryColor = (category: string) =>: any ;
   return cat ? cat.color : 'from - gray - 500 to - gray - 600';  }return (<Layout />;
       <SEO;
         title='2025 Innovative Services Showcase | Zion Tech Group';
-        description = 'Discover our cutting - edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.'    { name: 'AI & Marketing',}
+        description = 'Discover our cutting - edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.'    {name: 'AI & Marketing'}
   icon: Brain, color: 'from - purple - 500 to - pink - 500',}
-},{ name: 'Quantum & Finance',}
+},{name: 'Quantum & Finance'}
   icon: Atom, color: 'from - cyan - 500 to - blue - 500',}
-},{ name: 'Space Technology',}
+},{name: 'Space Technology'}
   icon: Rocket, color: 'from - indigo - 500 to - purple - 500',}
-},{ name: 'Metaverse & AI',}
+},{name: 'Metaverse & AI'}
   icon: Globe, color: 'from - green - 500 to - teal - 500',}
-},{ name: 'Cybersecurity',}
+},{name: 'Cybersecurity'}
   icon: Shield, color: 'from - red - 500 to - orange - 500',}
-},{ name: 'Supply Chain & AI',}
+},{name: 'Supply Chain & AI'}
   icon: Factory, color: 'from - yellow - 500 to - orange - 500',}
-},{ name: 'Quantum & Healthcare',}
+},{name: 'Quantum & Healthcare'}
   icon: Cpu, color: 'from - violet - 500 to - purple - 500',}
-},{ name: 'AI & Creativity',}
+},{name: 'AI & Creativity'}
   icon: Palette, color: 'from - pink - 500 to - rose - 500',}
-},{ name: 'AI & Robotics',}
+},{name: 'AI & Robotics'}
   icon: Database, color: 'from - emerald - 500 to - green - 500';}
 }
 
@@ -209,16 +209,16 @@ const getCategoryColor = (category: string) =>: any ;
             initial={{ opacity: 0, coordinate_y: 20 ,}
 }
             animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 ,}
+            transition={{duration: 0.8 }
 }
             className='space - y-6'           />;
-        <div className=\"text - center max - w-6xl mx-auto relative z-10\" />;
+        <div className="text - center max - w-6xl mx-auto relative z-10" />;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 ,}
 }
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
-            className='space - y-6'            className=\"space-y-6\" />
+            className='space - y-6'            className="space-y-6" />
 
             {/* Enhanced Company Badge *,}
 }
@@ -254,15 +254,15 @@ quantum computing solutions, and autonomous AI platforms;
               Pioneering the future with cutting-edge micro SAAS services,quantum computing solutions, and autonomous AI platforms;
             </p>;transition={{ duration: 0.6, delay: 0.2 ,}
 }
-              className=\"inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm\">
+              className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm">
 
-              <Star className=\"w-5 h-5\" />;
+              <Star className="w-5 h-5" />;
               <span />Innovation Leader 2025</span>;
             </motion.div>;
-            <h1 className=\"text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent\" />;
+            <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" />;
               2025 Innovative Services;
             </h1>;
-            <p className=\"text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed\" />;
+            <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed" />;
               Pioneering the future with cutting-edge micro SAAS services, quantum computing solutions, and autonomous AI platforms;
             </p>;
             {/* Enhanced Stats */}
@@ -319,7 +319,7 @@ initial={{ opacity: 0, y: 20 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true ,}
+            viewport={{once: true }
 }
 
 className='text-center mb-16'
@@ -393,7 +393,7 @@ cutting-edge technology domains;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 
-            viewport={{ once: true ,}
+            viewport={{once: true }
 }
 
 className='text-center mb-16'
@@ -437,7 +437,7 @@ industries;
 }
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true ,}
+            viewport={{once: true }
 }
             className='text-center mb-16';
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent' />;
@@ -491,7 +491,7 @@ initial={{ opacity: 0, y: 20 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true ,}
+            viewport={{once: true }
 }
 
 className='space-y-8'

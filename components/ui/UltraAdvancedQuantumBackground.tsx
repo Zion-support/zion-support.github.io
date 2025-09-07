@@ -129,9 +129,9 @@ this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`;
         ctx.lineWidth = 2;}
         ctx.beginPath()ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)ctx.stroke()ctx.restore()}
     }
-    class NeuralNetwork {nodes: { x: number; y: number; connections: number[],}
+    class NeuralNetwork {nodes: { x: number; y: number; connections: number[]}
 }[];
-      connections: { from: number; to: number; weight: number,}
+      connections: {from: number; to: number; weight: number}
 }[];
 
       constructor() {
@@ -370,7 +370,7 @@ className='absolute inset-0 w-full h-full opacity-60'
       {/* Quantum Canvas */}
       <canvas;
         ref={canvas_ref}
-        className='absolute inset - 0 w - full h - full opacity - 60'        style={{ z_index: 1 ,}
+        className='absolute inset - 0 w - full h - full opacity - 60'        style={{z_index: 1 }
 }
       />;
       {/* Content Layer */}

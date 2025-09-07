@@ -89,7 +89,7 @@ interface EnhancedSearchInputProps {
 }
 
 export function EnhancedSearchInput() {searchSuggestions;}"
-}: EnhancedSearchInputProps) {import React, { useState, useEffect, useRef, useCallback, useMemo } from \"react\"; // Added useMemo;
+}: EnhancedSearchInputProps) {import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo;
 import { Search, X   } from 'lucide-react';
 import { Input  } from '@/components/ui/input';
 import { AutocompleteSuggestions  } from '@/components/search/AutocompleteSuggestions';

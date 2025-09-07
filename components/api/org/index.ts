@@ -6,7 +6,7 @@ import type { OrgFilters, RoleType } from '../../../types/org';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {}
-    return res.status(405).json({ error: 'Method not allowed',}
+    return res.status(405).json({error: 'Method not allowed'}
 });
   }
 return Array.isArray(v)

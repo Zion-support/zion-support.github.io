@@ -6,7 +6,7 @@ import path from 'path';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {}
-    fs.mkdirSync(GRANTS_DIR, { recursive: true,}
+    fs.mkdirSync(GRANTS_DIR, {recursive: true}
 });
   }
 function grantPath(id: string) {}
@@ -28,7 +28,7 @@ function writeGrant(record: GrantApplication) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   const { id } = req.query as { id: string }
   if (!id) {}
-    res.status(400).json({ error: 'Missing id',}
+    res.status(400).json({error: 'Missing id'}
 });
 return;
   }
@@ -36,11 +36,11 @@ return;
 const g = readGrant(id);
     if (!g) {
 }
-      res.status(404).json({ error: 'Not found',}
+      res.status(404).json({error: 'Not found'}
 });
 return;
     }
-    res.status(200).json({ record: g,}
+    res.status(200).json({record: g}
 });
     return;
   }
@@ -49,12 +49,12 @@ return;
    ;
   const existing = readGrant(id);
     if (!existing) {}
-      res.status(404).json({ error: 'Not found',}
+      res.status(404).json({error: 'Not found'}
 });
 return;
 
     }
-    res.status (200).json ({ record: g,}
+    res.status (200).json ({record: g}
 })return;
   // Check condition;
 if ( {) {$2;}
@@ -63,7 +63,7 @@ if ( {) {$2;}
 const existing = read_grant (id)// Check condition;
 if ( {) {$2;}
 }
-      res.status (404).json ({ error: 'Not found',}
+      res.status (404).json ({error: 'Not found'}
 })return;
     }
 
@@ -77,7 +77,7 @@ const next: GrantApplication = {
       updatedAt: new Date().toISOString(),}
     } as GrantApplication;
     writeGrant(next);
-    res && res.status(200).json({ record: next,}
+    res && res.status(200).json({record: next}
 });
     return;
   }

@@ -114,7 +114,7 @@ const EmptyState: React.FC < EmptyStateProps> = ({
               <Button disabled>{cta}</Button>)}
 
           </TooltipTrigger>;
-          {!has_session && <TooltipContent  /> Login required</TooltipContent>}
+          {!has_session && <TooltipContent /> Login required</TooltipContent>}
         </Tooltip>;
 
       </TooltipProvider>;

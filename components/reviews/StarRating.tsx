@@ -1,7 +1,7 @@
 
 ;
 }
- > <polygon points = \"12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2\" /> </svg> </button>)})}</div>)}
+ > <polygon points = "12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>)})}</div>)}
 
 export;
   const StarRating: React.FC<Props /> = ({ value, onChange, size = 24, readOnly    }) => {
@@ -13,7 +13,7 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     }return this.props.children;
   }
 }"
- > <polygon points = \"12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2\" /> </svg> </button>)})}</div>;
+ > <polygon points = "12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>)})}</div>;
 }
 
 export const StarRating: React.FC<Props /> = ({ value, onChange, size = 24, readOnly    }) => {
@@ -33,7 +33,7 @@ export const StarRating: React.FC<Props />  = ({ value, onChange, size = 24, rea
                     onMouseEnter = {() => !readOnly && setHovered(star)}       ;
   return (<button;
             key={star}"
-            type=\"button\";
+            type="button";
             className = {`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}
 }import React, {;}
   useState } from 'react';
@@ -56,7 +56,7 @@ xmlns='http://www.w3.org/2000/svg';
               fill = {active ? 'gold' : 'none;}
 }
 "
-export default StarRating;xmlns=\"http://www.w3.org/2000/svg\";
+export default StarRating;xmlns="http://www.w3.org/2000/svg";
 
 
 class ErrorBoundary extends React.Component {
@@ -83,7 +83,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }"
- > <polygon points=\"12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2\" /> </svg> </button>) ;
+ > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) ;
 }) ;
 }</div>) 
 };
@@ -108,7 +108,7 @@ const stars = [1, 2, 3, 4, 5];
 }
           <button;}
 key={star}"
-            type=\"button\"
+            type="button"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
 
 
@@ -126,7 +126,7 @@ width={size}
 
 export default StarRating;
 "
-              xmlns=\"http: //www.w3.org/2000/svg\"
+              xmlns="http: //www.w3.org/2000/svg"
               width={size}
               stroke={active ? 'gold' : 'current_color}
 }
@@ -149,15 +149,15 @@ export default StarRating;              width={size}
 
 export default StarRating;              width={size}
               height={size}"
-              view_box=\"0 0 24 24\";
+              view_box="0 0 24 24";
               fill={active ? 'gold' : 'none'}
               stroke={active ? 'gold' : 'current_color'}"
-              stroke_width=\"2\";"
-              stroke_linecap=\"round\";"
-              stroke_linejoin=\"round\";
+              stroke_width="2";"
+              stroke_linecap="round";"
+              stroke_linejoin="round";
               className={`drop - shadow ${active ? 'animate - pulse - slow' : ''}`}>
 "
-              <polygon points=\"12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2\" />;
+              <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" />;
             </svg>;
           </button>)})}
     </div>)}

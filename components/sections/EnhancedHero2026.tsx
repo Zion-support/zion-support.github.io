@@ -211,11 +211,11 @@ href='/services'
                 size='xl'
                 className='text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group'
                />              >
-                <span className=\"flex items-center\" />"
-                  <Rocket className=\"mr-3 w-7 h-7 group-hover:rotate-12 transition-transform\" />
+                <span className="flex items-center" />"
+                  <Rocket className="mr-3 w-7 h-7 group-hover:rotate-12 transition-transform" />
                   Explore All Services;
                 </span>"
-                <ArrowRight className=\"ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform\" />
+                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
 
 
@@ -223,15 +223,15 @@ href='/services'
 
               
               <Button;"
-href=\"/contact\" 
+href="/contact" 
 
 
               <Button;"
-href=\"/contact\" 
+href="/contact" 
 "
-                variant=\"secondary\"
-                size=\"xl\"
-                className=\"text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl\"
+                variant="secondary"
+                size="xl"
+                className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
                />
               <Button;
 href='/contact'
@@ -255,8 +255,8 @@ href='/contact'
                 <span />5000+ Happy Customers</span>
               </div>                <span />5000+ Happy Customers</span>
               </div>"
-              <div className=\"flex items-center space-x-2\" />"
-                <CheckCircle className=\"w-5 h-5 text-green-400\" />
+              <div className="flex items-center space-x-2" />"
+                <CheckCircle className="w-5 h-5 text-green-400" />
                 <span />99.9% Uptime Guarantee</span>
               </div>
               <div className='flex items-center space-x-2' />
@@ -272,8 +272,8 @@ href='/contact'
 
                 className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'>;
                 <span className='flex items-center' />;"
-                  <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className=\"flex items-center\" />;"
-                  <Shield className=\"mr-3 w-7 h-7\" />;
+                  <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className="flex items-center" />;"
+                  <Shield className="mr-3 w-7 h-7" />;
                   Get Expert Consultation;
                 </span>;
               </Button>;
@@ -284,8 +284,8 @@ href='/contact'
                 <span />5000+ Happy Customers</span>;
               </div>                <span />5000+ Happy Customers</span>;
               </div>;"
-              <div className=\"flex items-center space-x-2\" />;"
-                <CheckCircle className=\"w-5 h-5 text-green-400\" />;
+              <div className="flex items-center space-x-2" />;"
+                <CheckCircle className="w-5 h-5 text-green-400" />;
                 <span />99 && 99.9% Uptime Guarantee</span>;
               </div>;
               <div className='flex items-center space-x-2' />;
@@ -293,8 +293,8 @@ href='/contact'
                 <span />99 && 99.9% Uptime Guarantee</span>;
               </div>;
               <div className='flex items-center space-x-2' />;"
-                <CheckCircle className='w-5 h-5 text-green-400' />                <span />24/7 Expert Support</span>              <div className=\"flex items-center space-x-2\" />;"
-                <CheckCircle className=\"w-5 h-5 text-green-400\" />;
+                <CheckCircle className='w-5 h-5 text-green-400' />                <span />24/7 Expert Support</span>              <div className="flex items-center space-x-2" />;"
+                <CheckCircle className="w-5 h-5 text-green-400" />;
                 <span />24/7 Expert Support</span>;
               </div>;
             </div>;

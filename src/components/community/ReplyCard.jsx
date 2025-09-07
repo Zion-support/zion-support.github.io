@@ -9,7 +9,7 @@ export default function ReplyCard({}
   className = '', onMarkAnswer,canMarkAnswer}) {}
  ;
   return ()`;
-    <div className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}\"  />\";
+    <div className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}"  />";
       <div className='flex items-start space-x-3' />;
         <img;
           src={reply.author.avatar}''';';
@@ -95,4 +95,4 @@ export { ReplyCard }
 export { ReplyCard }
 
 export { ReplyCard }
-\"`\";
+"`";

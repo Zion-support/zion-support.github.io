@@ -43,11 +43,11 @@ import { useTalentProfileEnhancer  } from '@/hooks/useTalentProfileEnhancer';
 import { supabase  } from '@/integrations/supabase/client';
 import { logErrorToProduction } from '@/utils/productionLogger';
   Form, FormControl, FormField, FormItem, FormLabel, FormMessage;
-} from \"@/components/ui/form\";
+} from "@/components/ui/form";
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue;"
-} from \"@/components/ui/select\";
+} from "@/components/ui/select";
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2  } from 'lucide-react';"
-import { useAuth } from \"@/hooks/useAuth\",// Define the form schema with validation;
+import { useAuth } from "@/hooks/useAuth",// Define the form schema with validation;
 
 const talentSchema = null;
   // Rest of the file remains unchanged...;

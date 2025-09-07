@@ -1,4 +1,4 @@
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return {hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
@@ -74,8 +74,7 @@ value: ProposalForm[K]
     setIsGenerating(true);
     setStatusMessage('Generating draft...');
     try {
-      const res = await fetch('/api/proposals/generate', {
-        method: 'POST',}
+      const res = await fetch('/api/proposals/generate', {method: 'POST'}
   headers: { 'Content-Type': 'application/json',}
 },
 body: JSON.stringify(form),
@@ -102,8 +101,7 @@ const data = await res.json();
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
-      const res = await fetch('/api/proposals/export', {
-        method: 'POST',}
+      const res = await fetch('/api/proposals/export', {method: 'POST'}
   headers: { 'Content-Type': 'application/json',}
 }
         body: JSON.stringify({
@@ -132,7 +130,7 @@ mdUrl: data.mdUrl}
 
 
   }
-  async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {method: 'POST',}
+  async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {method: 'POST'}
   headers: { 'Content-Type': 'application/json',}
 },body: JSON && JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,}),};
   const data = await res && res.json()setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A,}
@@ -143,9 +141,7 @@ mdUrl: data.mdUrl}
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
-      const res = await fetch('/api/proposals/submit', {
-
-        method: 'POST',}
+      const res = await fetch('/api/proposals/submit', {method: 'POST'}
   headers: { 'Content-Type': 'application/json',}
 },
 body: JSON.stringify({

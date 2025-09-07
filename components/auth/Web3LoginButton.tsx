@@ -1,5 +1,5 @@
 
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return {hasError: true }
 }
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) ;}
@@ -73,7 +73,7 @@ const onLoggedIn = (
 const disconnect = async () => {
     window.localStorage.removeItem('zion-web3-user');
 try {}
-      await fetch('/api/auth/logout', { method: 'POST',}
+      await fetch('/api/auth/logout', {method: 'POST'}
 });
     } catch {}
     setUser(null);

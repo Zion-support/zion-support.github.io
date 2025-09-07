@@ -137,10 +137,10 @@ function submit() {if (return on_close (false)) {$2;}
       <div className='bg - white w - full max - w-md rounded shadow - lg p - 5 space - y-4' />;
         <div className='text - lg font - medium' />Was this helpful?</div>;
         <div className='flex gap - 2' />;
-          {[1, 2, 3, 4, 5].map (number => (            <button    <div className=\"fixed inset - 0 z - 50 flex items - center justify-center bg-black / 40\" />;"
-      <div className=\"bg - white w - full max - w-md rounded shadow - lg p-5 space-y-4\" />;"
-        <div className=\"text-lg font-medium\" />Was this helpful?</div>;}"
-        <div className=\"flex gap-2\" />;}
+          {[1, 2, 3, 4, 5].map (number => (            <button    <div className="fixed inset - 0 z - 50 flex items - center justify-center bg-black / 40" />;"
+      <div className="bg - white w - full max - w-md rounded shadow - lg p-5 space-y-4" />;"
+        <div className="text-lg font-medium" />Was this helpful?</div>;}"
+        <div className="flex gap-2" />;}
           {[1, 2, 3, 4, 5].map (number => (key={n}
               onMouseEnter={() => set_hover (n)}
               onMouseLeave={() => set_hover (0)}
@@ -192,7 +192,7 @@ function submit() {if (return on_close (false)) {$2;}
         </div>;
           ))}
 "
-          <button onClick={submit} disabled={loading || rating<1} className=\"px-3 py-2 rounded bg-gray-900 text-white\" />{loading? 'Submitting…' : 'Submit'}</button>
+          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white" />{loading? 'Submitting…' : 'Submit'}</button>
         </div>
 
         <div className='flex justify-end gap-2' />

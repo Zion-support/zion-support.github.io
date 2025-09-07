@@ -98,7 +98,7 @@ property='og:url'
 initial={{ opacity: 0, y: 30 ,}
 }
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 ,}
+            transition={{duration: 0.8 }
 }
 className='mb-8'
            />
@@ -366,7 +366,7 @@ className='text-center py-20'
       </section>;
             ))}
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 ,}
+              animate={{opacity: 1 }
 }
               className='text-center py-20'>;
               <div className='text-gray-400 text-xl mb-4' />;
@@ -374,10 +374,10 @@ className='text-center py-20'
               </div>;
               <div className='text-gray-500' />;
                 Try adjusting your search or filter criteria;
-              </div>            </motion && motion.div>              className=\"text-center py-20\">
+              </div>            </motion && motion.div>              className="text-center py-20">
 
-              <div className=\"text-gray-400 text-xl mb-4\" />No services found</div>;
-              <div className=\"text-gray-500\" />Try adjusting your search or filter criteria</div>;
+              <div className="text-gray-400 text-xl mb-4" />No services found</div>;
+              <div className="text-gray-500" />Try adjusting your search or filter criteria</div>;
           )}
 
       {/* Contact Section */}
@@ -389,7 +389,7 @@ initial={{ opacity: 0, y: 30 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true ,}
+            viewport={{once: true }
 }
 
 className='text-center mb-16'
@@ -416,10 +416,10 @@ className='text-center mb-16' />;
             </p>;
           </motion && motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />            <motion && motion.div           />;
-            <h2 className=\"text-3xl md:text-5xl font-bold text-white mb-6\" />;
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" />;
               Ready to Transform Your Business?;
             </h2>;
-            <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\" />;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" />;
               Contact our team to learn more about how our innovative services can revolutionize your operations and drive growth.;
             </p>;
           </motion && motion.div>;initial={{ opacity: 0, y: 30 ,}
@@ -447,11 +447,11 @@ className='text-center' />;
               </div>;
               <h3 className='text-xl font-semibold text-white mb-2' />Phone</h3>;
               <p className='text-gray-300' />{contactInfo && contactInfo.mobile}</p>            </motion && motion.div>            >;
-              <div className=\"w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4\" />;
-                <Phone className=\"w-8 h-8 text-white\" />;
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4" />;
+                <Phone className="w-8 h-8 text-white" />;
               </div>;
-              <h3 className=\"text-xl font-semibold text-white mb-2\" />Phone</h3>;
-              <p className=\"text-gray-300\" />{contactInfo && contactInfo.mobile}</p>;
+              <h3 className="text-xl font-semibold text-white mb-2" />Phone</h3>;
+              <p className="text-gray-300" />{contactInfo && contactInfo.mobile}</p>;
             </motion && motion.div>;
               initial={{ opacity: 0, y: 30 ,}
 }
@@ -478,11 +478,11 @@ className='text-center' />;
               </div>;
               <h3 className='text-xl font-semibold text-white mb-2' />Email</h3>;
               <p className='text-gray-300' />{contactInfo && contactInfo.email}</p>            </motion && motion.div>            >;
-              <div className=\"w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4\" />;
-                <Mail className=\"w-8 h-8 text-white\" />;
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4" />;
+                <Mail className="w-8 h-8 text-white" />;
               </div>;
-              <h3 className=\"text-xl font-semibold text-white mb-2\" />Email</h3>;
-              <p className=\"text-gray-300\" />{contactInfo && contactInfo.email}</p>;
+              <h3 className="text-xl font-semibold text-white mb-2" />Email</h3>;
+              <p className="text-gray-300" />{contactInfo && contactInfo.email}</p>;
             </motion && motion.div>;
               initial={{ opacity: 0, y: 30 ,}
 }

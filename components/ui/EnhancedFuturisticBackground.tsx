@@ -405,7 +405,7 @@ ref={canvasRef}
 
 className='fixed inset-0 w-full h-full pointer-events-none z-0'
 
-        style={{ background: 'transparent' ,}
+        style={{background: 'transparent' }
 }
       />;
       {/* Overlay gradient */}

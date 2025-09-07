@@ -174,7 +174,7 @@ type='text'
                   </select>;
                     }`}
                   >;
-                    <Grid className=\"w-5 h-5\" />;
+                    <Grid className="w-5 h-5" />;
                   </button>;
                   <button;
                     onClick={() = /> setViewMode('list')}
@@ -183,14 +183,14 @@ type='text'
                         : 'text-gray-400 hover:text-white';}
                     }`}>
 "
-                    <option value=\"name\" />Sort by Name</option>;"
-                    <option value=\"price\" />Sort by Price</option>;"
-                    <option value=\"roi\" />Sort by ROI</option>;
+                    <option value="name" />Sort by Name</option>;"
+                    <option value="price" />Sort by Price</option>;"
+                    <option value="roi" />Sort by ROI</option>;
                   </select>;"
-                  <ChevronDown className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none\" />;
+                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />;
                 </div>;
                 {/* View Mode */}"
-                <div className=\"flex bg-gray-700/50 rounded-xl p-1\" />;
+                <div className="flex bg-gray-700/50 rounded-xl p-1" />;
                   <button;
                     onClick={() = /> setViewMode('grid')}
                     className={`p-2 rounded-lg transition-all duration-200 ${viewMode === 'grid';
@@ -321,7 +321,7 @@ className='group'
                     {/* Tags */}
 <div className='flex flex-wrap gap-2 mb-6' />;
                       {service.tags.slice(0, 3).map((tag, idx) => (<span;}"
-                          key={idx}className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                         />                    <div className=\"flex flex-wrap gap-2 mb-6\" />;
+                          key={idx}className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                         />                    <div className="flex flex-wrap gap-2 mb-6" />;
                       {service.tags.slice(0, 3).map((tag, idx) => (<span;}
                           key={idx}
 
@@ -399,7 +399,7 @@ className='group'
                         <p className='text-gray-300 mb-3 leading-relaxed' />
                           {service.description}
                         </p>;"
-                        <div className=\"flex flex - wrap gap - 2 mb - 3\" />;
+                        <div className="flex flex - wrap gap - 2 mb - 3" />;
                           {service.tags.slice (0, 4).map ((tag, idx) => (}
                             <span;}
                               key={idx}
@@ -488,7 +488,7 @@ className='mt-20 text-center'
               Ready to Transform Your Business?;
             </h3>;
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto' />;"
-                              className=\"px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50\">
+                              className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50">
 
                               {tag}
                             </span>))}
@@ -506,14 +506,14 @@ className='mt-20 text-center'
                           href={service.link}
                           className='inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow - cyan - 500 / 25' />
 
-                          <span  /> Learn More</span>;
+                          <span /> Learn More</span>;
                           <ArrowRight className='w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform' />                        </Link>                        </div>;
                         <Link;
                           href={service.link}"
-                          className=\"inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow - cyan - 500 / 25\" />
+                          className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow - cyan - 500 / 25" />
 
-                          <span  /> Learn More</span>;"
-                          <ArrowRight className=\"w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform\" />;
+                          <span /> Learn More</span>;"
+                          <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" />;
                         </Link>;
                       </div>;
                     </div>;
@@ -528,7 +528,7 @@ className='mt-20 text-center'
             transition={{ duration: 0.6 }
 }
            />          <motion.div;"
-            className=\"text - center py - 20\";
+            className="text - center py - 20";
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }
@@ -543,15 +543,15 @@ className='mt-20 text-center'
               you're looking for.            </p>;
             <button;
               on_click={() = /> {setSearchTerm ('')setSelectedCategory ('all')}}"
-              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'            >            <div className=\"text - 6xl mb - 4\" />🔍</div>;"
-            <h3 className=\"text - 2xl font - bold text - white mb - 4\" />No services found</h3>;"
-            <p className=\"text - gray - 400 mb - 8\" />;
+              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'            >            <div className="text - 6xl mb - 4" />🔍</div>;"
+            <h3 className="text - 2xl font - bold text - white mb - 4" />No services found</h3>;"
+            <p className="text - gray - 400 mb - 8" />;
               Try adjusting your search terms or category filter to find what you're looking for.;
             <button;
               on_click={() = /> {setSearchTerm ('')setSelectedCategory ('all')}}
               className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                setSelectedCategory ('all')
 }"
-              className=\"px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300\">
+              className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300">
 
               Clear Filters;
             </button>;
@@ -608,19 +608,19 @@ href='/pricing'
 } /> {}
   category === 'all' ? 'All Categories' : category}
 }</option>) )"
-}</select> <ChevronDown className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none\" /> </div> > <option value=\"name\"  />Sort by Name</option> <option value=\"price\"  />Sort by Price</option> <option value=\"roi\"  />Sort by ROI</option> </select> <ChevronDown className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none\" /> </div> <button onClick= {}
+}</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> > <option value="name"  />Sort by Name</option> <option value="price"  />Sort by Price</option> <option value="roi"  />Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <button onClick= {}
   () = /> setViewMode ('grid')}
 }className= {
   `p-2 rounded-lg transition-all duration-200 $ {}
   viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white'}
 }`"
-}> <Grid className=\"w-5 h-5\" /> </button> <button onClick= {}
+}> <Grid className="w-5 h-5" /> </button> <button onClick= {}
   () = /> setViewMode ('list')}
 }className= {
   `p-2 rounded-lg transition-all duration-200 $ {}
   viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'}
 }`"
-}> <List className=\"w-5 h-5\" /> </button> </div> </div> </div> </div> </motion.div> {}
+}> <List className="w-5 h-5" /> </button> </div> </div> </div> </div> </motion.div> {}
   /* Results Count */}
 }<motion.div  /> {
   filteredServices.map ( (service, index) => (<motion.div key= {}
@@ -628,28 +628,28 @@ href='/pricing'
 }</li />) )
 }</ul> </div> <span key= {}
   idx}"
-}className=\"px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50\"  /> {}
+}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"  /> {}
   tag}
 }</span>) )
 }</div> {}
   /* CTA */}"
-}<Link  /> <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </motion.div>) )
+}<Link /> <span />Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" /> </a> </div> </motion.div>) )
 }</motion.div> > {
   filteredServices.map ( (service, index) => (<motion.div key= {}
   service.id}
 }<span key= {}
   idx}"
-}className=\"px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50\"  /> {}
+}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"  /> {}
   tag}
 }</span>) )"
-}</div> </div> > <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </div> </div> </motion.div>) )
+}</div> </div> > <span />Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) )
 }</motion.div>)"
-}</AnimatePresence> > <div className=\"text-6xl mb-4\"  />🔍</div> <h3 className=\"text-2xl font-bold text-white mb-4\"  />No services found</h3> <p className=\"text-gray-400 mb-8\"  /> Try adjusting your search terms or category filter to find what you're looking for. </p> <button  /> Clear Filters </button> </motion.div>)
+}</AnimatePresence> > <div className="text-6xl mb-4"  />🔍</div> <h3 className="text-2xl font-bold text-white mb-4"  />No services found</h3> <p className="text-gray-400 mb-8"  /> Try adjusting your search terms or category filter to find what you're looking for. </p> <button /> Clear Filters </button> </motion.div>)
 }{"
-                className=\"inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50\">;
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50">;
 
                 <span />View Pricing</span>;"
-                <TrendingUp className=\"w-5 h-5\" />;
+                <TrendingUp className="w-5 h-5" />;
               </Link>;
             </div>;
           </div>;
@@ -664,34 +664,34 @@ export default Enhanced2027ServicesShowcase;
                 href='/contact';
                 className='inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25' />
 
-                <span  /> Get Started Today</span>;
+                <span /> Get Started Today</span>;
                 <ArrowRight className='w - 5 h - 5' />;
               </Link>;
               <Link;
                 href='/pricing';
                 className='inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50' />
 
-                <span  /> View Pricing</span>;
+                <span /> View Pricing</span>;
                 <TrendingUp className='w - 5 h - 5' />              </Link>              Ready to Transform Your Business?;
             </h3>;"
-            <p className=\"text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto\" />;
+            <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" />;
               Our team of experts is ready to help you implement these revolutionary services;
               and achieve unprecedented growth. Let's build the future together.;
             </p>;"
-            <div className=\"flex flex - col sm:flex - row gap - 4 justify - center items - center\" />;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center" />;
               <Link;"
-                href=\"/contact\";"
-                className=\"inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25\" />
+                href="/contact";"
+                className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25" />
 
-                <span  /> Get Started Today</span>;"
-                <ArrowRight className=\"w - 5 h - 5\" />;
+                <span /> Get Started Today</span>;"
+                <ArrowRight className="w - 5 h - 5" />;
               </Link>;
               <Link;"
-                href=\"/pricing\";"
-                className=\"inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50\" />
+                href="/pricing";"
+                className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50" />
 
-                <span  /> View Pricing</span>;"
-                <TrendingUp className=\"w - 5 h - 5\" />;
+                <span /> View Pricing</span>;"
+                <TrendingUp className="w - 5 h - 5" />;
               </Link>;
             </div>;
           </div>;
@@ -710,19 +710,19 @@ export default Enhanced2027ServicesShowcase;
 } /> {}
   category === 'all' ? 'All Categories' : category}
 }</option>) )"
-}</select> <ChevronDown className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none\" /> </div> > <option value=\"name\"  />Sort by Name</option> <option value=\"price\"  />Sort by Price</option> <option value=\"roi\"  />Sort by ROI</option> </select> <ChevronDown className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none\" /> </div> <button onClick= {}
+}</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> > <option value="name"  />Sort by Name</option> <option value="price"  />Sort by Price</option> <option value="roi"  />Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <button onClick= {}
   () = /> setViewMode ('grid')}
 }className= {
   `p-2 rounded-lg transition-all duration-200 $ {}
   viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white'}
 }`"
-}> <Grid className=\"w-5 h-5\" /> </button> <button onClick= {}
+}> <Grid className="w-5 h-5" /> </button> <button onClick= {}
   () = /> setViewMode ('list')}
 }className= {
   `p-2 rounded-lg transition-all duration-200 $ {}
   viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'}
 }`"
-}> <List className=\"w-5 h-5\" /> </button> </div> </div> </div> </div> </motion.div> {}
+}> <List className="w-5 h-5" /> </button> </div> </div> </div> </div> </motion.div> {}
   /* Results Count */}
 }<motion.div  /> {
   filteredServices.map ( (service, index) => (<motion.div key= {}
@@ -730,23 +730,23 @@ export default Enhanced2027ServicesShowcase;
 }</li />) )
 }</ul> </div> <span key= {}
   idx}"
-}className=\"px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50\"  /> {}
+}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"  /> {}
   tag}
 }</span>) )
 }</div> {}
   /* CTA */}"
-}<Link  /> <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </motion.div>) )
+}<Link /> <span />Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" /> </a> </div> </motion.div>) )
 }</motion.div> > {
   filteredServices.map ( (service, index) => (<motion.div key= {}
   service.id}
 }<span key= {}
   idx}"
-}className=\"px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50\"  /> {}
+}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"  /> {}
   tag}
 }</span>) )"
-}</div> </div> > <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </div> </div> </motion.div>) )
+}</div> </div> > <span />Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) )
 }</motion.div>)"
-}</AnimatePresence> > <div className=\"text-6xl mb-4\"  />🔍</div> <h3 className=\"text-2xl font-bold text-white mb-4\"  />No services found</h3> <p className=\"text-gray-400 mb-8\"  /> Try adjusting your search terms or category filter to find what you're looking for. </p> <button  /> Clear Filters </button> </motion.div>)
+}</AnimatePresence> > <div className="text-6xl mb-4"  />🔍</div> <h3 className="text-2xl font-bold text-white mb-4"  />No services found</h3> <p className="text-gray-400 mb-8"  /> Try adjusting your search terms or category filter to find what you're looking for. </p> <button /> Clear Filters </button> </motion.div>)
 }{;}
 }
 

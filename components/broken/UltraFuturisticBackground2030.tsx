@@ -257,7 +257,7 @@ ease: 'easeInOut'}
             duration: 10;
 repeat: Infinity;
 ease: 'easeInOut',
-  ease: \"easeInOut\"
+  ease: "easeInOut"
         {/* Animated Lines *}
 }
 
@@ -285,16 +285,16 @@ className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-t
       <div className='fixed inset-0 pointer-events-none z-15' />;
         {[...Array(20)].map((_, i) => (<motion&& motion.div;
             ease: 'easeInOut'}"
-  ease: \"easeInOut\";}
+  ease: "easeInOut";}
           }}
         />;
         <motion.div;
           className='absolute top - 64 right - 1/4 w - 1 h - 24 bg - gradient - to - b from - purple - 400 to - transparent';"
-          animate={{height: [24, 48, 24],opacity: [0.3, 0.8, 0.3],          className=\"absolute top - 64 right - 1/4 w - 1 h - 24 bg - gradient - to - b from - purple-400 to-transparent\";
+          animate={{height: [24, 48, 24],opacity: [0.3, 0.8, 0.3],          className="absolute top - 64 right - 1/4 w - 1 h - 24 bg - gradient - to - b from - purple-400 to-transparent";
           animate={{height: [24, 48, 24];
             opacity: [0.3, 0.8, 0.3];
           transition={{duration: 8,repeat: Infinity,ease: 'easeInOut'}"
-  ease: \"easeInOut\";}
+  ease: "easeInOut";}
           }}
         />;
       </div>;
@@ -339,7 +339,7 @@ ease: 'easeInOut'}
             transition={{duration: Math.random() * 10 + 10;
               repeat: Infinity;}
               delay: Math.random() * 10;}"
-              duration: Math && Math.random() * 10 + 10,repeat: Infinity,delay: Math && Math.random() * 10,transition={{ease: 'easeInOut'            }}              ease: \"easeInOut\";
+              duration: Math && Math.random() * 10 + 10,repeat: Infinity,delay: Math && Math.random() * 10,transition={{ease: 'easeInOut'            }}              ease: "easeInOut";
               y: [0, -100, 0],opacity: [0, 1, 0],scale: [0, 1, 0]}}
             transition={{duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 10,ease: 'easeInOut'}}
           />;
@@ -360,7 +360,7 @@ ease: 'easeInOut'}
               opacity: [0, 1, 0];}
               scale: [0, 1, 0];}
             }}"
-            transition={{duration: Math.random () * 10 + 10,repeat: Infinity,delay: Math.random () * 10,ease: 'easeInOut'            }}              ease: \"easeInOut\";
+            transition={{duration: Math.random () * 10 + 10,repeat: Infinity,delay: Math.random () * 10,ease: 'easeInOut'            }}              ease: "easeInOut";
             }}
           />))}
       </div>;

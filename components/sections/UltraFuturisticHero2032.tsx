@@ -95,11 +95,11 @@ className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-ti
           </span>;
           <br />;
           <span className='text-white' />Technology is Here</span>        </motion && motion.h1>        >;
-          <span className=\"bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\" />;
+          <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" />;
             The Future of;
           </span>;
           <br />;"
-          <span className=\"text-white\" />Technology is Here</span>;
+          <span className="text-white" />Technology is Here</span>;
         </motion && motion.h1>;{/* Subheading */}
         <motion&& motion.p;
           initial={{ opacity: 0, y: 30 }
@@ -111,7 +111,7 @@ className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-ti
           className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed' />;
           Experience the revolution with our cutting-edge AI consciousness,quantum computing, space technology, and emerging tech solutions.;
           Transform your business with technologies that were once science;"
-          fiction.        </motion && motion.p>          className=\"text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed\">
+          fiction.        </motion && motion.p>          className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
 
           Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with ;
           technologies that were once science fiction.;
@@ -194,12 +194,12 @@ left: `${Math.random () * 10}
       </div>;
       {/* Main Content */}
       <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center' />        {/* Hero Badge *}"
-}        <div className=\"absolute top - 20 left - 10 w - 72 h - 72 bg - purple - 500 / 10 rounded - full blur - 3xl animate - pulse\" />;"
-        <div className=\"absolute bottom - 20 right - 10 w - 96 h - 96 bg - cyan - 500 / 10 rounded - full blur - 3xl animate - pulse\" />;"
-        <div className=\"absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w-[800px] h-[800px] bg - gradient - to - r from - purple - 500 / 5 via - cyan - 500 / 5 to - pink - 500 / 5 rounded - full blur - 3xl animate - spin - slow\" />;
+}        <div className="absolute top - 20 left - 10 w - 72 h - 72 bg - purple - 500 / 10 rounded - full blur - 3xl animate - pulse" />;"
+        <div className="absolute bottom - 20 right - 10 w - 96 h - 96 bg - cyan - 500 / 10 rounded - full blur - 3xl animate - pulse" />;"
+        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w-[800px] h-[800px] bg - gradient - to - r from - purple - 500 / 5 via - cyan - 500 / 5 to - pink - 500 / 5 rounded - full blur - 3xl animate - spin - slow" />;
       </div>;
       {/* Main Content */}"
-      <div className=\"relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center\" />;
+      <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center" />;
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 20 }
 }
@@ -209,7 +209,7 @@ left: `${Math.random () * 10}
           className='inline - flex items - center space - x-2 bg - gradient - to - r from - purple - 500 / 20 to - cyan - 500 / 20 border border - purple - 500 / 30 rounded - full px - 6 py - 3 mb - 8 backdrop - blur - sm';
           transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }
 }"
-          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16' />          className=\"grid grid-cols-2 md:grid-cols-4 gap-6 mb-16\">
+          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16' />          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
 
           {heroStats && heroStats.map((stat, index) => (<motion&& motion.div;}
               key={stat && stat.label}
@@ -233,12 +233,12 @@ left: `${Math.random () * 10}
               <div className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat && stat.color} rounded-2xl transform transition-all duration-300 group-hover: shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg
 } />
 "
-                <stat && stat.icon className=\"w-8 h-8 text-white\" />;
+                <stat && stat.icon className="w-8 h-8 text-white" />;
               </div>;"
-              <div className=\"text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2\" />;
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2" />;
                 {stat && stat.number}
               </div>;"
-              <div className=\"text-gray-400 text-sm\" />{stat && stat.label}</div>;
+              <div className="text-gray-400 text-sm" />{stat && stat.label}</div>;
             </motion && motion.div>;
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }
@@ -301,10 +301,10 @@ className='group'
             Featured Revolutionary Services;
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6' />            {featuredServices && featuredServices.map((service, index) => (        >;"
-          <h2 className=\"text-2xl md:text-3xl font-bold text-white mb-8\" />;
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8" />;
             Featured Revolutionary Services;
           </h2>;"
-          <div className=\"grid grid-cols-1 md:grid-cols-3 gap-6\" />;}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6" />;}
             {featuredServices && featuredServices.map((service, index) => (<motion&& motion.div;}
                 key={service && service.name}
                 initial={{ opacity: 0, y: 20 }
@@ -364,7 +364,7 @@ className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-c
                       <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
                     </div>;
                   </div>;<div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </Link>                  ;"
-                  <div className=\"absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none\" />;
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />;
                 </Link>;
               </motion && motion.div>;
             ))}
@@ -447,33 +447,33 @@ href='/contact'
               className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25' />;
               <span />Get Started Today</span>;
               <ArrowRight className='w-5 h-5' />            </Link>        >;"
-          <h3 className=\"text-2xl font-bold text-white mb-6 text-center\" />;
+          <h3 className="text-2xl font-bold text-white mb-6 text-center" />;
             Ready to Transform Your Business?;"
-          </h3>;<div className=\"grid grid-cols-1 md:grid-cols-3 gap-6 mb-6\" />;"
-            <div className=\"flex items-center space-x-3 text-gray-300\" />;"
-              <Phone className=\"w-5 h-5 text-cyan-400\" />;
+          </h3>;<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6" />;"
+            <div className="flex items-center space-x-3 text-gray-300" />;"
+              <Phone className="w-5 h-5 text-cyan-400" />;
               <a href={`tel: ${contactInfo && contactInfo.mobile},"
-} className=\"hover:text-cyan-400 transition-colors\" />;
+} className="hover:text-cyan-400 transition-colors" />;
                 {contactInfo && contactInfo.mobile}
               </a>;
             </div>;"
-            <div className=\"flex items-center space-x-3 text-gray-300\" />;"
-              <Mail className=\"w-5 h-5 text-purple-400\" />;
+            <div className="flex items-center space-x-3 text-gray-300" />;"
+              <Mail className="w-5 h-5 text-purple-400" />;
               <a href={`mailto: ${contactInfo && contactInfo.email},"
-} className=\"hover:text-purple-400 transition-colors\" />;
+} className="hover:text-purple-400 transition-colors" />;
                 {contactInfo && contactInfo.email}
               </a>;
             </div>;"
-            <div className=\"flex items-center space-x-3 text-gray-300\" />;"
-              <MapPin className=\"w-5 h-5 text-green-400\" />;
+            <div className="flex items-center space-x-3 text-gray-300" />;"
+              <MapPin className="w-5 h-5 text-green-400" />;
               <span />{contactInfo && contactInfo.address}</span>;
             </div>;"
-          </div>;<div className=\"text-center\" />;
+          </div>;<div className="text-center" />;
             <Link;"
-              href=\"/contact\";"
-              className=\"inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25\" />;
+              href="/contact";"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25" />;
               <span />Get Started Today</span>;"
-              <ArrowRight className=\"w-5 h-5\" />;
+              <ArrowRight className="w-5 h-5" />;
             </Link>;
           </div>;
         </motion && motion.div>;
@@ -506,7 +506,7 @@ href='/contact'
                     </div>;
                   </div>;
                   <div className='absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - cyan - 500 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none' />                </Link>;"
-                  <div className=\"absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - cyan - 500 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none\" />;
+                  <div className="absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - cyan - 500 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />;
                 </Link>;
               </motion.div>))}
           </div>;
@@ -555,38 +555,38 @@ href='/contact'
               href='/contact';
               className='inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - purple - 500 / 25' />
 
-              <span  /> Get Started Today</span>;
+              <span /> Get Started Today</span>;
               <ArrowRight className='w - 5 h - 5' />            </Link>        >;"
-          <h3 className=\"text - 2xl font - bold text - white mb - 6 text - center\" />;
+          <h3 className="text - 2xl font - bold text - white mb - 6 text - center" />;
             Ready to Transform Your Business?;
           </h3>;"
-          <div className=\"grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 6\" />;"
-            <div className=\"flex items - center space - x-3 text - gray - 300\" />;"
-              <Phone className=\"w - 5 h - 5 text - cyan - 400\" />;
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 6" />;"
+            <div className="flex items - center space - x-3 text - gray - 300" />;"
+              <Phone className="w - 5 h - 5 text - cyan - 400" />;
               <a href={`tel: ${contact_info.mobile},"
-} className=\"hover:text - cyan - 400 transition - colors\" />;
+} className="hover:text - cyan - 400 transition - colors" />;
                 {contact_info.mobile}
               </a>;
             </div>;"
-            <div className=\"flex items - center space - x-3 text - gray - 300\" />;"
-              <Mail className=\"w - 5 h - 5 text - purple - 400\" />;
+            <div className="flex items - center space - x-3 text - gray - 300" />;"
+              <Mail className="w - 5 h - 5 text - purple - 400" />;
               <a href={`mailto: ${contact_info.email},"
-} className=\"hover:text - purple - 400 transition - colors\" />;
+} className="hover:text - purple - 400 transition - colors" />;
                 {contact_info.email}
               </a>;
             </div>;"
-            <div className=\"flex items - center space - x-3 text - gray - 300\" />;"
-              <MapPin className=\"w - 5 h - 5 text - green - 400\" />;
+            <div className="flex items - center space - x-3 text - gray - 300" />;"
+              <MapPin className="w - 5 h - 5 text - green - 400" />;
               <span />{contact_info.address}</span>;
             </div>;
           </div>;"
-          <div className=\"text - center\" />;
+          <div className="text - center" />;
             <Link;"
-              href=\"/contact\";"
-              className=\"inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - purple - 500 / 25\" />
+              href="/contact";"
+              className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - purple - 500 / 25" />
 
-              <span  /> Get Started Today</span>;"
-              <ArrowRight className=\"w - 5 h - 5\" />;
+              <span /> Get Started Today</span>;"
+              <ArrowRight className="w - 5 h - 5" />;
             </Link>;
           </div>;
         </motion.div>;

@@ -9,8 +9,8 @@ const Textarea: React.FC<TextareaProps /> = ({ label,error,helperText,className 
    }) => {
 
 
-return (<div className=\"w-full\" />;}"
-      {label && (<label className=\"block text-sm font-medium text-gray-700 mb-2\" />;}
+return (<div className="w-full" />;}"
+      {label && (<label className="block text-sm font-medium text-gray-700 mb-2" />;}
           {label}
         </label>;
       )}
@@ -26,9 +26,9 @@ return (<div className=\"w-full\" />;}"
         {...prop}
 }
       />;"
-      {error && (<p className=\"mt-1 text-sm text-red-600\" />{error}</p>;
+      {error && (<p className="mt-1 text-sm text-red-600" />{error}</p>;
       )}"
-      {helperText && !error && (<p className=\"mt-1 text-sm text-gray-500\" />{helperText}</p>;
+      {helperText && !error && (<p className="mt-1 text-sm text-gray-500" />{helperText}</p>;
       )}
     </div>;
   )}

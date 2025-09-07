@@ -132,15 +132,14 @@ const geoCounts: Record<string, number /> = {}usersData.forEach(u => {geoCounts[
         .slice(0, 5)
         .map(([label, value]) => ({ label, value })),
       referralConversions,
-      geo: Object.entries(geoCounts).map(([country, value]) => ({
-        label: country,}
+      geo: Object.entries(geoCounts).map(([country, value]) => ({label: country}
         value,}
       })),
-      geo: [{ label: 'US',}
+      geo: [{label: 'US'}
   value: 2,}
-}, { label: 'IN',}
+}, {label: 'IN'}
   value: 1,}
-}, { label: 'GB',}
+}, {label: 'GB'}
   value: 1 }]})
   }
    ,
@@ -159,22 +158,22 @@ const geoCounts: Record<string, number /> = {}usersData.forEach(u => {geoCounts[
         activeProjects: 2,}
       },
       topCategories: [
-        { label: 'AI/ML',}
+        {label: 'AI/ML'}
   value: 2,}
 },
-        { label: 'Design',}
+        {label: 'Design'}
   value: 1,}
 },
       ],
       referralConversions: 2,
       geo: [
-        { label: 'US',}
+        {label: 'US'}
   value: 2,}
 },
-        { label: 'IN',}
+        {label: 'IN'}
   value: 1,}
 },
-        { label: 'GB',}
+        {label: 'GB'}
   value: 1,}
 },
       ],

@@ -108,7 +108,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
           name='title';
           render={({ field }: { field: any}
 }) = /> (<FormItem />;
-              <FormLabel  /> Project Title</FormLabel>;
+              <FormLabel /> Project Title</FormLabel>;
               <FormControl />;
                 <Input;
                   placeholder='E.g., AI Chatbot, E - commerce Website';
@@ -122,7 +122,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
           name='description';
           render={({ field }: { field: any}
 }) = /> (            <FormItem />;
-              <FormLabel  /> Project Description</FormLabel>;
+              <FormLabel /> Project Description</FormLabel>;
               <FormControl />;
                 <Textarea;
                   placeholder='Describe what the project does and your role in it...';
@@ -143,26 +143,26 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
         <FormField;
           control={form.control}
           name='technologies';
-          control={form.control}name=\"title\";
+          control={form.control}name="title";
           render={({ field }: { field: any}
 }) = /> (<FormItem />;
               <FormLabel />Project Title</FormLabel>;
               <FormControl />;"
-                <Input placeholder=\"E.g., AI Chatbot, E-commerce Website\" {...field} />;
+                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />;
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}/>;
         <FormField;
           control={form.control}"
-          name=\"description\";
+          name="description";
           render={({ field }: { field: any}
 }) = /> (<FormItem />;
               <FormLabel />Project Description</FormLabel>;
               <FormControl />;
                 <Textarea;"
-                  placeholder=\"Describe what the project does and your role in it...\";"
-                  className=\"min-h-[100px]\";
+                  placeholder="Describe what the project does and your role in it...";"
+                  className="min-h-[100px]";
                   {...field}/>;
               </FormControl>;
               <FormMessage />;
@@ -170,10 +170,10 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
           )}/>;
         <FormField;
           control={form.control}"
-          name=\"technologies\";
+          name="technologies";
           render={({ field }: { field: any}
 }) = /> (<FormItem />;
-              <FormLabel  /> Technologies Used</FormLabel>;
+              <FormLabel /> Technologies Used</FormLabel>;
               <FormControl />;
                 <Input;
                   placeholder='React, Node.js, MongoDB, etc. (comma separated)';
@@ -248,7 +248,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
             )}GitHub URL;
                 </FormLabel>;
                 <FormControl />;"
-                  <Input placeholder=\"https: //github.com/yourusername/project\" {...fiel}
+                  <Input placeholder="https: //github.com/yourusername/project" {...fiel}
 } />;
                 </FormControl>;
                 <FormMessage />;
@@ -256,15 +256,15 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
             )}/>;
           <FormField;
             control={form.control}"
-            name=\"demo_url\";
+            name="demo_url";
             render={({ field }: { field: any}
 }) = /> (<FormItem />;"
-                <FormLabel className=\"flex items-center gap-2\" />;"
-                  <Link className=\"h-4 w-4\" />;
+                <FormLabel className="flex items-center gap-2" />;"
+                  <Link className="h-4 w-4" />;
                   Demo URL;
                 </FormLabel>;
                 <FormControl />;"
-                  <Input placeholder=\"https: //your-project-demo.com\" {...fiel}
+                  <Input placeholder="https: //your-project-demo.com" {...fiel}
 } />;
                 </FormControl>;
                 <FormMessage />;
@@ -285,22 +285,22 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
           />;
         </div>;
         <FormField;"
-          control={form.control}name=\"image_url\";
+          control={form.control}name="image_url";
           render={({ field }: { field: any}
 }) = /> (<FormItem />;"
-              <FormLabel className=\"flex items-center gap-2\" />;"
-                <FileImage className=\"h-4 w-4\" />;
+              <FormLabel className="flex items-center gap-2" />;"
+                <FileImage className="h-4 w-4" />;
                 Screenshot URL;
               </FormLabel>;
               <FormControl />;"
-                <Input placeholder=\"https: //example.com/screenshot.jpg\" {...fiel}
+                <Input placeholder="https: //example.com/screenshot.jpg" {...fiel}
 } />;
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}/>;"
-        {/* Future file upload field would go here */}<div className=\"flex justify-end space-x-2 pt-4\" />;"
-          <Button type=\"button\" variant=\"outline\" onClick={onCancel} />;
+        {/* Future file upload field would go here */}<div className="flex justify-end space-x-2 pt-4" />;"
+          <Button type="button" variant="outline" onClick={onCancel} />;
             Cancel;
           </Button>;
           <Button type='submit' disabled={isLoading} />;

@@ -85,7 +85,7 @@ function fixSyntaxPatterns(content) {
 // Function to fix a single file
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     const result = fixSyntaxPatterns(content);
     
     if (result.fixed) {

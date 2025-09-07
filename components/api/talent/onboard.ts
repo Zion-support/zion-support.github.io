@@ -25,7 +25,7 @@ async function summarizeAndTag(input: {
   try {}
     const { OpenAI } = await import('openai');
 
-const client = new OpenAI({ apiKey: openaiApiKey,}
+const client = new OpenAI({apiKey: openaiApiKey}
 });
 
 const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT: \n${combinedTex,}
@@ -34,10 +34,10 @@ const prompt = `Create a concise professional summary (max 70 words) and extract
 const response = await client.chat.completions.create({
       model: 'gpt-4o-mini',
   messages: [
-{ role: 'system',}
+{role: 'system'}
   content: 'You are an expert technical recruiter.',}
 },
-        { role: 'user',}
+        {role: 'user'}
   content: prompt,}
 },
       ],
@@ -73,7 +73,7 @@ res: NextApiResponse;
 
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');}
-    return res.status(405).json({ error: 'Method not allowed',}
+    return res.status(405).json({error: 'Method not allowed'}
 });
   }
   try {
@@ -106,7 +106,7 @@ fullName,
       !availability |
       !timezone;
     ) {}
-      return res.status(400).json({ error: 'Missing required fields',}
+      return res.status(400).json({error: 'Missing required fields'}
 });
     }
 
@@ -161,8 +161,7 @@ const record = {
       timezone,
       hourlyRate: hourlyRate ? Number(hourlyRate) : null,
       portfolioLinks,
-      assets: {
-        profileImage: savedProfileImagePath,}
+      assets: {profileImage: savedProfileImagePath}
         cv: savedCvPath,}
       },
       ai: {
@@ -172,7 +171,7 @@ const record = {
     };
 
 const perRecordPath = path.join(dataDir, `${id}.json`);
-    await fse.writeJSON(perRecordPath, record, { spaces: 2,}
+    await fse.writeJSON(perRecordPath, record, {spaces: 2}
 });
 
 const aggregatePath = path.join(
@@ -195,13 +194,13 @@ if (Array.isArray(content)) aggregate = content;}
     }
 
     aggregate.push(record);
-    await fse.writeJSON(aggregatePath, aggregate, { spaces: 2,}
+    await fse.writeJSON(aggregatePath, aggregate, {spaces: 2}
 });
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data;
 return res.status(200).json({ ok: true, id, summary, tags });
   } catch (error) {}
-    return res.status(500).json({ error: 'Internal server error',}
+    return res.status(500).json({error: 'Internal server error'}
 });
   }
 

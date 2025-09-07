@@ -13,16 +13,16 @@ interface LayoutProps  {children: React && React.ReactNode;
   description?: string;
   keywords?: string;
 
-export default function Layout() {return (<div className=\"min-h-screen bg-white\" />;
+export default function Layout() {return (<div className="min-h-screen bg-white" />;
 
 export default /**;
  * Layout - Function description;
  */;"
-function Layout() {return (<div className=\"min - h-screen bg - white\" />;}
+function Layout() {return (<div className="min - h-screen bg - white" />;}
       <Header />;}"
-      <main />;\"./Footer\"import Footer  from \"react./Footer,export default function Layout() {return (<div className=\"min-h-screen flex flex-col />      <Header />\"      <main className=\"flex-1 pt-16 />        {children}\"      </main><Footer />;
+      <main />;"./Footer"import Footer  from "react./Footer,export default function Layout() {return (<div className="min-h-screen flex flex-col />      <Header />"      <main className="flex-1 pt-16 />        {children}"      </main><Footer />;
     </div>;"
-  )\"; type: LayoutProps = { children: React.ReactNode;}
+  )"; type: LayoutProps = { children: React.ReactNode;}
 }
 
 export default function Layout({ children }: LayoutProps) { return <div />{children}</div>;
@@ -30,8 +30,8 @@ export default function Layout({ children }: LayoutProps) { return <div />{child
 type LayoutProps = { children: React.ReactNode;}
 }
 "
-export default function Layout({ children }: LayoutProps) { return <div />{children}</div> } \" ;"
-  )\"; type: LayoutProps = { children: React.ReactNode;}
+export default function Layout({ children }: LayoutProps) { return <div />{children}</div> } " ;"
+  )"; type: LayoutProps = { children: React.ReactNode;}
 }
 
 export default function Layout({ children }: LayoutProps) { return <div />{children}</div>;
@@ -39,14 +39,14 @@ export default function Layout({ children }: LayoutProps) { return <div />{child
 type LayoutProps = { children: React.ReactNode;}
 }
 "
-export default function Layout({ children }: LayoutProps) { return <div />{children}</div> } \" ;
+export default function Layout({ children }: LayoutProps) { return <div />{children}</div> } " ;
 }}"
-    <div className=\"min-h-screen bg-white\" />;
+    <div className="min-h-screen bg-white" />;
 
 export default /**;
  * Layout - Function description;
  */;"
-function Layout() {return (<div className=\"min - h-screen bg - white\" />;}
+function Layout() {return (<div className="min - h-screen bg - white" />;}
       <Header />;}
       <main />{children}
       </main>;
@@ -62,12 +62,12 @@ export: default /**;
 function Layout() {return: <div />{childre}
 }</div>;
 React from';"
-  \"react\"\"import Footer from './react';"
-  \"./Footer\"import Footer  from \"react./Footer,export default /**;
+  "react""import Footer from './react';"
+  "./Footer"import Footer  from "react./Footer,export default /**;
  * Layout - Function description;
  */;"
-function Layout() {return (<div className=\"min - h-screen flex flex - col />      <Header />\"      <main className=\"flex - 1 pt - 16 />        {children}\"      </main><Footer />;"
-    </div>)\"; type: LayoutProps = { children: React.ReactNode;}
+function Layout() {return (<div className="min - h-screen flex flex - col />      <Header />"      <main className="flex - 1 pt - 16 />        {children}"      </main><Footer />;"
+    </div>)"; type: LayoutProps = { children: React.ReactNode;}
 }
 
 export default /**;
@@ -79,7 +79,7 @@ type LayoutProps = { children: React.ReactNode;}
 }
 
 export default /**;"
-    </div>)\"; type: LayoutProps = { children: React.ReactNode;}
+    </div>)"; type: LayoutProps = { children: React.ReactNode;}
 }
 
 export default /**;
@@ -93,7 +93,7 @@ type LayoutProps = { children: React.ReactNode;}
 export default /**;
  * Layout - Function description;
  */;"
-function Layout() { return <div />{children}</div> } \" ;
+function Layout() { return <div />{children}</div> } " ;
 }}ursor/automate-test-improve-and-merge-code-646c;
 
 interface LayoutProps {
@@ -105,11 +105,11 @@ interface LayoutProps {
 export default function Layout() {return (<>;}
       <Head />;}
         <title />{title}</title>;"
-        <meta name=\"description\" content={description} />;"
-        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />;"
-        <link rel=\"icon\" href=\"/favicon.ico\" />;
+        <meta name="description" content={description} />;"
+        <meta name="viewport" content="width=device-width, initial-scale=1" />;"
+        <link rel="icon" href="/favicon.ico" />;
       </Head>;"
-      <div className=\"min-h-screen bg-gray-50\" />;
+      <div className="min-h-screen bg-gray-50" />;
         {children}
       </div>;
     </>;
@@ -117,7 +117,7 @@ export default function Layout() {return (<>;}
   keywords?: string;
 }
 "
-export default function Layout() {return (<div className=\"min-h-screen bg-gray-50\" />;}
+export default function Layout() {return (<div className="min-h-screen bg-gray-50" />;}
       {children}
     </div>;
   )}
@@ -131,9 +131,9 @@ const Layout: React.FC<LayoutProps /> = ({ children   }
 }) => {
 
 "
-return (<div className=\"min-h-screen flex flex-col\" />;
+return (<div className="min-h-screen flex flex-col" />;
       <Header />;}"
-      <main className=\"flex-1\" />;}
+      <main className="flex-1" />;}
         {children}
       </main>;
       <Footer />;
@@ -150,17 +150,17 @@ interface LayoutProps {
 }
 }
 "
-export default function Layout({ children, title = \"Zion Tech Group\", description = \"Leading technology solutions provider\" }: LayoutProps) {
+export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
  ;
   return (
     <>}
       <Head />}
         <title />{title}</title>"
-        <meta name=\"description\" content={description} />"
-        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />"
-        <link rel=\"icon\" href=\"/favicon.ico\" />
+        <meta name="description" content={description} />"
+        <meta name="viewport" content="width=device-width, initial-scale=1" />"
+        <link rel="icon" href="/favicon.ico" />
       </Head>"
-      <div className=\"min-h-screen bg-gray-50\" />
+      <div className="min-h-screen bg-gray-50" />
         {children}
       </div>
 

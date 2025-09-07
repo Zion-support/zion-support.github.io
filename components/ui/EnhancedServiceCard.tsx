@@ -149,15 +149,15 @@ className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs fon
             variants={iconVariants}
             initial='hidden';
             animate='visible';
-      <div className=\"relative p-6\" />;
+      <div className="relative p-6" />;
         {/* Header */}"
-        <div className=\"flex items-start justify-between mb-4\" />;
+        <div className="flex items-start justify-between mb-4" />;
           <motion.div;
             className={`text-4xl ${service.textColor}`}
             variants={iconVariants}"
-            initial=\"hidden\";"
-            animate=\"visible\";"
-            whileHover=\"hover\" />
+            initial="hidden";"
+            animate="visible";"
+            whileHover="hover" />
 
             {service.icon}
 
@@ -265,12 +265,12 @@ key={index}
           </div>;
         </div>;
         {/* Trial & Setup Info */}"
-          <div className=\"flex items-center gap-2 text-gray-400\" />;"
-            <Clock className=\"w-4 h-4\" />;
+          <div className="flex items-center gap-2 text-gray-400" />;"
+            <Clock className="w-4 h-4" />;
             {service.trialDays} day trial;
           </div>;"
-          <div className=\"flex items-center gap-2 text-gray-400\" />;"
-            <Shield className=\"w-4 h-4\" />;
+          <div className="flex items-center gap-2 text-gray-400" />;"
+            <Shield className="w-4 h-4" />;
             <span className='text-xs text-yellow-400' />{service.roi}</span>;
           </div>;
         </div>;
@@ -303,13 +303,13 @@ key={index}
             <span className='text-xs font-semibold text-white' />ROI</span>;
             <span className='text-xs text-yellow-400' />{service && service.roi}</span>          </div>;
         </div>;{/* Trial & Setup Info */}          </div>;"
-          <div className=\"flex items-center justify-between mb-2\" />;"
-            <span className=\"text-xs font-semibold text-white\" />Growth Rate</span>;"
-            <span className=\"text-xs text-green-400\" />{service && service.growthRate}</span>;
+          <div className="flex items-center justify-between mb-2" />;"
+            <span className="text-xs font-semibold text-white" />Growth Rate</span>;"
+            <span className="text-xs text-green-400" />{service && service.growthRate}</span>;
           </div>;"
-          <div className=\"flex items-center justify-between\" />;"
-            <span className=\"text-xs font-semibold text-white\" />ROI</span>;"
-            <span className=\"text-xs text-yellow-400\" />{service && service.roi}</span>;
+          <div className="flex items-center justify-between" />;"
+            <span className="text-xs font-semibold text-white" />ROI</span>;"
+            <span className="text-xs text-yellow-400" />{service && service.roi}</span>;
           </div>;
         </div>;{/* Trial & Setup Info */}
         <div className='flex items-center justify-between mb-6 text-sm' />;
@@ -318,13 +318,13 @@ key={index}
             {service && service.trialDays} day trial;
           </div>;
           <div className='flex items-center gap-2 text-gray-400' />;"
-            <Shield className='w-4 h-4' />            {service && service.setupTime}        <div className=\"flex items-center justify-between mb-6 text-sm\" />;"
-          <div className=\"flex items-center gap-2 text-gray-400\" />;"
-            <Clock className=\"w-4 h-4\" />;
+            <Shield className='w-4 h-4' />            {service && service.setupTime}        <div className="flex items-center justify-between mb-6 text-sm" />;"
+          <div className="flex items-center gap-2 text-gray-400" />;"
+            <Clock className="w-4 h-4" />;
             {service && service.trialDays} day trial;
           </div>;"
-          <div className=\"flex items-center gap-2 text-gray-400\" />;"
-            <Shield className=\"w-4 h-4\" />;
+          <div className="flex items-center gap-2 text-gray-400" />;"
+            <Shield className="w-4 h-4" />;
           </div>;
         </div>;{/* Action Buttons */}{service.setupTime}</div>;
         </div>;
@@ -372,21 +372,21 @@ href={service.link}
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }
 }>;"
-            <ExternalLink className=\"w-4 h-4\" />;
+            <ExternalLink className="w-4 h-4" />;
             Learn More;
           </motion && motion.a>;<motion&& motion.a;
             href={`mailto: ${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}
 }"
-            className=\"bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center\";
+            className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center";
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }
 } />;"
-            <ArrowRight className=\"w-4 h-4\" />;
+            <ArrowRight className="w-4 h-4" />;
           </motion && motion.a>;
         </div>;{/* Contact Info */}
         <div className='mt-4 pt-4 border-t border-white/10' />;"
-          <div className='text-xs text-gray-500 text-center' />        <div className=\"mt-4 pt-4 border-t border-white/10\" />;"
-          <div className=\"text-xs text-gray-500 text-center\" />;
+          <div className='text-xs text-gray-500 text-center' />        <div className="mt-4 pt-4 border-t border-white/10" />;"
+          <div className="text-xs text-gray-500 text-center" />;
             Contact: {service && service.contactInfo.emai}
 }
           </div>;

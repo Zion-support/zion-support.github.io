@@ -25,10 +25,10 @@ const [isPrinting, setIsPrinting] = useState(false);
   return (<div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`} />
 
       <Button;
-        variant=\"outline\";"
-        onClick={onBack}className=\"gap-2 no-print\" />
+        variant="outline";"
+        onClick={onBack}className="gap-2 no-print" />
 "
-        <ArrowLeft className=\"h-4 w-4\" />;
+        <ArrowLeft className="h-4 w-4" />;
         Back;
       </Button>;
       <div;
@@ -38,8 +38,8 @@ const [isPrinting, setIsPrinting] = useState(false);
         <Button;
           variant='outline';
           onClick={handleBrowserPrint}"
-          disabled={isPrinting}<Button variant=\"outline\" className=\"gap-2\" />;"
-          <Link className=\"h-4 w-4\" />;
+          disabled={isPrinting}<Button variant="outline" className="gap-2" />;"
+          <Link className="h-4 w-4" />;
           className='gap-2'>
 
           <FileText className='h-4 w-4' />;
@@ -55,8 +55,8 @@ const [isPrinting, setIsPrinting] = useState(false);
           Print;
         </Button>;<Button variant='outline' className='gap-2' />;
           <Link className='h-4 w-4' />          Add to Profile        ;"
-        <Button variant=\"outline\" className=\"gap-2\" />;"
-          <Link className=\"h-4 w-4\" />;
+        <Button variant="outline" className="gap-2" />;"
+          <Link className="h-4 w-4" />;
           Add to Profile;
         </Button>;
       </div>;
@@ -89,8 +89,8 @@ const [isPrinting, setIsPrinting] = useState(false);
         </Button>;
         <Button variant='outline' className='gap - 2' />;
           <Link className='h - 4 w - 4' />          Add to Profile;"
-        <Button variant=\"outline\" className=\"gap - 2\" />;"
-          <Link className=\"h - 4 w - 4\" />;
+        <Button variant="outline" className="gap - 2" />;"
+          <Link className="h - 4 w - 4" />;
           Add to Profile;
         </Button>;
       </div>

@@ -459,9 +459,9 @@ ease: 'easeInOut'}
 
 <div className='absolute inset-0' />
         <motion.div;
-className=\"absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]\"
+className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
 "
-              ease: 'easeInOut'            }}              ease: \"easeInOut\";
+              ease: 'easeInOut'            }}              ease: "easeInOut";
             }}
           />))}
       </div>;
@@ -488,7 +488,7 @@ ease: 'easeInOut'}
 }
 export default UltraFuturisticBackground2034;}}
           transition={{duration: 4,repeat: -1,ease: 'easeInOut'}"
-  ease: \"easeInOut\";}
+  ease: "easeInOut";}
             opacity: [0.3, 0.6, 0.3]}}
           transition={{duration: 4,repeat: -1,ease: 'easeInOut'}}
         />;

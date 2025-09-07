@@ -176,34 +176,34 @@ body: JSON.stringify({
 
         
 }
-        <div className=\"space-y-3\" />;"
-          <button onClick={handleEvmConnect} disabled={loading} className=\"w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black\" />;
+        <div className="space-y-3" />;"
+          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black" />;
             {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
           </button>;"
-          <button onClick={handlePhantomConnect} disabled={loading} className=\"w-full rounded-lg bg-purple-600 text-white py-2.5\" />;
+          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5" />;
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
           </button>;
         </div>;"
-        <div className=\"mt-4 flex justify-end\" />;
+        <div className="mt-4 flex justify-end" />;
         </div>;
       </div>;
     </div>;
   )}
 
 export default function Web3LoginModal() {if (!isClient) return null;return <ModalInner {...props} />;        </div>;"
-        {error && (<div className=\"mb-3 rounded-md bg-red-50 dark: bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300\" />{erro}
+        {error && (<div className="mb-3 rounded-md bg-red-50 dark: bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300" />{erro}
 }</div>;
         )}"
-        <div className=\"space-y-3\" />;"
-          <button onClick={handleEvmConnect} disabled={loading} className=\"w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black\" />;
+        <div className="space-y-3" />;"
+          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black" />;
             {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
           </button>;"
-          <button onClick={handlePhantomConnect} disabled={loading} className=\"w-full rounded-lg bg-purple-600 text-white py-2.5\" />;
+          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5" />;
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
 
           </button>
         </div>"
-        <div className = \"mt-4 flex justify-end\" />
+        <div className = "mt-4 flex justify-end" />
         </div>
       </div>
     </div>

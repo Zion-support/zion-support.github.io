@@ -86,30 +86,30 @@ const socialLinks = [
 }</span>
  ;
   return (
-    <footer className=\"relative bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden\" />;
+    <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden" />;
 
       {/* Animated background elements */}
         {/* Main footer content */}"
-        <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12\" />;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12" />;
           {/* Company Info */}"
-          <div className=\"lg:col-span-1\" />;"
-            <div className=\"flex items-center space-x-2 mb-6\" />;"
-              <div className=\"w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center\" />;"
-                <Zap className=\"w-6 h-6 text-white\" />;
+          <div className="lg:col-span-1" />;"
+            <div className="flex items-center space-x-2 mb-6" />;"
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center" />;"
+                <Zap className="w-6 h-6 text-white" />;
               </div>;"
-              <span className=\"text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent\" />;
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent" />;
                 Zion Tech Group;
               </span>;
             </div>;"
-            <p className=\"text-gray-400 mb-6 leading-relaxed\" />;
+            <p className="text-gray-400 mb-6 leading-relaxed" />;
               Leading provider of AI-powered micro SaaS solutions, helping businesses automate, optimize, and scale their operations with cutting-edge technology.;
             </p>;"
-            <div className=\"flex space-x-4\" />;
+            <div className="flex space-x-4" />;
               {socialLinks && socialLinks.map((social) => (<a;}
                   key={social && social.name}
                   href={social && social.href}"
-                  target=\"_blank\";"
-                  rel=\"noopener noreferrer\";
+                  target="_blank";"
+                  rel="noopener noreferrer";
               ))}{/* Quick Links */}
           <div />;
 <h3 className='text-lg font-semibold text-white mb-6 flex items-center' />;
@@ -160,16 +160,16 @@ const socialLinks = [
                     href={link && link.href}
                     className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block' />              Quick Links;
             </h3>;"
-            <ul className=\"space-y-3\" />;
+            <ul className="space-y-3" />;
               {quickLinks && quickLinks.map((link) => (<li key={link && link.name} />;
                   <Link;
                     href={link && link.href}"
-                    className=\"text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block\" />;
+                    className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block" />;
                     {link && link.name}
                   </Link>;
                 </li>;
                     href={link.href}"
-                    className=\"text - gray - 400 hover: text - white transition - colors duration - 200 hover:translate-x-1 inline-block\">
+                    className="text - gray - 400 hover: text - white transition - colors duration - 200 hover:translate-x-1 inline-block">
 
                     {link.name}
               ))}
@@ -186,16 +186,16 @@ const socialLinks = [
                     href={service && service.href}
                     className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block' />              Services;
             </h3>;"
-            <ul className=\"space-y-3\" />;
+            <ul className="space-y-3" />;
               {serviceCategories && serviceCategories.map((service) => (<li key={service && service.name} />;
                   <Link;
                     href={service && service.href}"
-                    className=\"text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block\" />;
+                    className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block" />;
                     {service && service.name}
                   </Link>;
                 </li>;
                     href={service.href}"
-                    className=\"text - gray - 400 hover: text - white transition - colors duration - 200 hover:translate-x-1 inline-block\">
+                    className="text - gray - 400 hover: text - white transition - colors duration - 200 hover:translate-x-1 inline-block">
 
                     {service.name}
               ))}

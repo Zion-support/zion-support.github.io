@@ -87,7 +87,7 @@ const timeToHireDays = filled.length;
 const shortlisted = 5; // Placeholder;
 const funnel = [
       },
-      { label: 'Hire',}
+      {label: 'Hire'}
   value: filled && filled.length,}
 },
     ];
@@ -96,22 +96,21 @@ const funnel = [
       shortlisted,
       funnel,
     });
-  } catch (e) {
-      funnel: [
-        { label: 'Post',}
+  } catch (e) {funnel: [
+        { label: 'Post'}
   value: 3,}
 }
-        { label: 'Invite',}
+        {label: 'Invite'}
   value: 2,}
 }
 
-        { label: 'Hire',}
+        {label: 'Hire'}
   value: 2 }
       ]
    ,
 });
   }
-        { label: 'Hire',}
+        {label: 'Hire'}
   value: 2 }]})
   },
 }

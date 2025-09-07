@@ -11,15 +11,15 @@ const res = await fetch('/api/offworld/orbit?action=chat', {method: 'POST';}
       headers: { 'content-type': 'application/json',}
 }
 
-      body: JSON.stringify({ from: 'anon',}
+      body: JSON.stringify({from: 'anon'}
   text: chat })
    ,
 });
     setStatus(res.ok ? 'Chat sent' : 'Chat failed');
 
-const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST',}
+const res = await fetch('/api/offworld/orbit?action=chat', {method: 'POST'}
   headers: { 'content-type': 'application/json',}
-}, body: JSON.stringify({ from: 'anon',}
+}, body: JSON.stringify({from: 'anon'}
   text: chat }) })
     setStatus(res.ok ? 'Chat sent' : 'Chat failed')
  ,
@@ -27,8 +27,7 @@ const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST',}
   async function castVote() {
     setStatus('Recording vote...');
 
-const res = await fetch('/api/offworld/orbit?action=vote', {
-      method: 'POST',}
+const res = await fetch('/api/offworld/orbit?action=vote', {method: 'POST'}
   headers: { 'content-type': 'application/json',}
 },
       body: JSON.stringify({ proposalId, voter: 'anon',}
@@ -40,8 +39,7 @@ const res = await fetch('/api/offworld/orbit?action=vote', {
   async function syncProfile() {
     setStatus('Pinning profile...');
 
-const res = await fetch('/api/offworld/ipfs?action=json', {
-      method: 'POST',}
+const res = await fetch('/api/offworld/ipfs?action=json', {method: 'POST'}
   headers: { 'content-type': 'application/json',}
 },
       body: JSON.stringify({}
@@ -56,11 +54,10 @@ const data = await res.json();
   async function broadcast() {
     setStatus('Broadcasting manifesto...');
 
-const res = await fetch('/api/offworld/ipfs?action=broadcast', {
-      method: 'POST',}
+const res = await fetch('/api/offworld/ipfs?action=broadcast', {method: 'POST'}
   headers: { 'content-type': 'application/json',}
 },
-      body: JSON.stringify({ message: 'We build beyond platforms.',}
+      body: JSON.stringify({message: 'We build beyond platforms.'}
 }),
     });
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
@@ -94,20 +91,20 @@ export default /**;
 function OffworldConsole() {const [chat, set_chat] = useState ('')const [vote_choice, setVoteChoice] = useState ('yes')const [proposal_id, setProposalId] = useState ('prop - 1')const [name, set_name] = useState ('')const [skills, set_skills] = useState ('')const [status, set_status]  = useState ('')async /**;
  * send_chat - Function description;
  */;
-function send_chat() {set_status ('Sending chat...')const res = await fetch ('/api / offworld / orbit?action = chat', {method: 'POST',}
+function send_chat() {set_status ('Sending chat...')const res = await fetch ('/api / offworld / orbit?action = chat', {method: 'POST'}
   headers: { 'content - type': 'application / json',}
-},body: JSON.stringify ({ from: 'anon',}
+},body: JSON.stringify ({from: 'anon'}
   text: chat,}
 }),})set_status (res.ok ? 'Chat sent' : 'Chat failed';
-  const res = await fetch ('/api / offworld / orbit?action = chat', { method: 'POST',}
+  const res = await fetch ('/api / offworld / orbit?action = chat', {method: 'POST'}
   headers: { 'content - type': 'application / json',}
-}, body: JSON.stringify ({ from: 'anon',}
+}, body: JSON.stringify ({from: 'anon'}
   text: chat }),
 }),set_status (res.ok ? 'Chat sent' : 'Chat failed')}
   async /**;
  * cast_vote - Function description;
  */;
-function cast_vote() {set_status ('Recording vote...')const res = await fetch ('/api / offworld / orbit?action = vote', {method: 'POST',}
+function cast_vote() {set_status ('Recording vote...')const res = await fetch ('/api / offworld / orbit?action = vote', {method: 'POST'}
   headers: { 'content - type': 'application / json',}
 },body: JSON.stringify ({ proposal_id, voter: 'anon',}
   choice: vote_choice,}
@@ -115,7 +112,7 @@ function cast_vote() {set_status ('Recording vote...')const res = await fetch ('
   async /**;
  * sync_profile - Function description;
  */;
-function sync_profile() {set_status ('Pinning profile...')const res = await fetch ('/api / offworld / orbit?action = vote', { method: 'POST',}
+function sync_profile() {set_status ('Pinning profile...')const res = await fetch ('/api / offworld / orbit?action = vote', {method: 'POST'}
   headers: { 'content - type': 'application / json',}
 }, body: JSON.stringify ({ proposal_id, voter: 'anon',}
   choice: vote_choice }),
@@ -123,7 +120,7 @@ function sync_profile() {set_status ('Pinning profile...')const res = await fetc
   async /**;
  * sync_profile - Function description;
  */;
-function sync_profile() {set_status ('Pinning profile...')const res = await fetch ('/api / offworld / ipfs?action = json', {method: 'POST',}
+function sync_profile() {set_status ('Pinning profile...')const res = await fetch ('/api / offworld / ipfs?action = json', {method: 'POST'}
   headers: { 'content - type': 'application / json',}
 },body: JSON.stringify ({profile: { name, skills: skills.split (', ').map (string => s.trim ()) },}),};
   const data = await res.json ()set_status (res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed',
@@ -131,7 +128,7 @@ function sync_profile() {set_status ('Pinning profile...')const res = await fetc
   async /**;
  * broadcast - Function description;
  */;
-function broadcast() {set_status ('Broadcasting manifesto...')const res = await fetch ('/api / offworld / ipfs?action = json', { method: 'POST',}
+function broadcast() {set_status ('Broadcasting manifesto...')const res = await fetch ('/api / offworld / ipfs?action = json', {method: 'POST'}
   headers: { 'content - type': 'application / json',}
 }, body: JSON.stringify ({ profile: { name, skills: skills.split ().map (string => s.trim ()) } }),
 });
@@ -140,13 +137,13 @@ function broadcast() {set_status ('Broadcasting manifesto...')const res = await 
   async /**;
  * broadcast - Function description;
  */;
-function broadcast() {set_status ('Broadcasting manifesto...')const res = await fetch ('/api / offworld / ipfs?action = broadcast', {method: 'POST',}
+function broadcast() {set_status ('Broadcasting manifesto...')const res = await fetch ('/api / offworld / ipfs?action = broadcast', {method: 'POST'}
   headers: { 'content - type': 'application / json',}
-},body: JSON.stringify ({ message: 'We build beyond platforms.',}
+},body: JSON.stringify ({message: 'We build beyond platforms.'}
 }),})set_status (res.ok ? 'Broadcast sent' : 'Broadcast failed';
   return (<div className='min - h-screen p - 8 space - y-8' />;
       <Head />;
-        <title  /> Zion Offworld Console</title>;
+        <title /> Zion Offworld Console</title>;
       </Head>;
       <h1 className='text - 2xl font - bold' />Offworld Console</h1>;
       <section className='space - y-2' />;

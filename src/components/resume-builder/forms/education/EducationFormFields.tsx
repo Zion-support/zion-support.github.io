@@ -139,12 +139,12 @@ import { EducationFormFieldsProps   } from './types';
                   />;
 </Input>
                 </FormControl>;
-                <FormMessage />;control={form.control}name=\"institution\";
+                <FormMessage />;control={form.control}name="institution";
             render={({ field }: { field: any}
 }) => (<FormItem />;
                 <FormLabel />Institution</FormLabel>;
                 <FormControl />;"
-                  <Input placeholder=\"University of California, MIT, etc.\" {...field} />;
+                  <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
 

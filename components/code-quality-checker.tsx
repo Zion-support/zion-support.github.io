@@ -246,25 +246,25 @@ safer, and more maintainable code.
 }
           {/* Code Input Form *,}
 }
-          <div className=\"max-w-4xl mx-auto mb-8\" />;
+          <div className="max-w-4xl mx-auto mb-8" />;
             <textarea;
-              placeholder=\"Paste your code here for analysis... (Supports JavaScript, TypeScript, Python, Java, C++, Go, PHP, and more)\";
+              placeholder="Paste your code here for analysis... (Supports JavaScript, TypeScript, Python, Java, C++, Go, PHP, and more)";
               value={codeInput}
               onChange={(e) = /> setCodeInput(e && e.target.value)}
-              className=\"w-full h-32 px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent font-mono text-sm\";
+              className="w-full h-32 px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent font-mono text-sm";
             />;
             <Button;
               onClick={handleAnalyzeCode}
 
-              size=\"lg\"
-              className=\"w-full mt-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover: from-teal-600 hover:to-cyan-700 text-white shadow-2xl hover-glow\"
+              size="lg"
+              className="w-full mt-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover: from-teal-600 hover:to-cyan-700 text-white shadow-2xl hover-glow"
 
 
               disabled={isAnalyzing |!codeInput.trim(,}
 }
              />;
               {isAnalyzing ? (<>;
-                  <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                  <div className=\"animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2\" />;
+                  <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />;
                   Analyzing Code...;
                 </>;
               ) : (<>;
@@ -437,11 +437,11 @@ language-specific analysis rules and best practices.
                     <div className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover: opacity - 20 transition - opacity duration - 300 blur - sm,
 } />;
                   </div>;
-                  <div className=\"flex - 1\" />;
-                    <h3 className=\"text - 2xl font - bold mb - 4 text - white\" />;
+                  <div className="flex - 1" />;
+                    <h3 className="text - 2xl font - bold mb - 4 text - white" />;
                       {feature.title}
                     </h3>;
-                    <p className=\"text - gray - 400 leading - relaxed\" />;
+                    <p className="text - gray - 400 leading - relaxed" />;
                       {feature.description}
             ))}
               <Card;
@@ -693,13 +693,13 @@ href='/contact'
 }>
 
                   Get Started;
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href=\"/contact\";
-                  size=\"lg\";
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
+                  size="lg";
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover: from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white,
 }>
 
                   Get Started;
-                  <ArrowRight className=\"w-5 h-5 ml-2\" />;
+                  <ArrowRight className="w-5 h-5 ml-2" />;
               </Card>;
             ))}
       {/* CTA Section */}

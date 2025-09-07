@@ -144,7 +144,7 @@ quantum space mining, we're building tomorrow's solutions today.
             Experience the future of technology with Zion Tech Group's;
             revolutionary 2029 services. From AI consciousness evolution to;
             quantum space mining, we're building tomorrow's solutions today.          </p>          ;
-          <p className=\"text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed\" />;
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed" />;
             Experience the future of technology with Zion Tech Group's revolutionary 2029 services. ;
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.;
         </motion && motion.div>;{/* CTA Buttons */}
@@ -161,7 +161,7 @@ quantum space mining, we're building tomorrow's solutions today.
             <span />Get Started</span>;
             <Zap className='w-5 h-5' />          </Link>        >;
           <Link;"
-            href=\"/services\";
+            href="/services";
         {/* Features Grid */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }
@@ -172,7 +172,7 @@ quantum space mining, we're building tomorrow's solutions today.
                 coordinate_x: [0, Math.random () * 1000];}
                 coordinate_y: [0, Math.random () * 1000];}
                 opacity: [0.2, 0.8, 0.2]}}"
-              transition={{duration: Math.random () * 10 + 10,repeat: Infinity,ease: \"linear\";}
+              transition={{duration: Math.random () * 10 + 10,repeat: Infinity,ease: "linear";}
               }}
               style={{left: Math.random () * 100 + '%',top: Math.random () * 100 + '%'}}
             />)
@@ -193,11 +193,11 @@ quantum space mining, we're building tomorrow's solutions today.
       <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center' />        {/* Main Heading *}
 }        </div>;
         {/* Gradient Orbs */}"
-        <div className=\"absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 rounded - full blur - 3xl animate - pulse\" />;"
-        <div className=\"absolute bottom - 1/4 right - 1/4 w - 96 h - 96 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000\" />;
+        <div className="absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 rounded - full blur - 3xl animate - pulse" />;"
+        <div className="absolute bottom - 1/4 right - 1/4 w - 96 h - 96 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000" />;
       </div>;
       {/* Content */}"
-      <div className=\"relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center\" />;
+      <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center" />;
         {/* Main Heading */}
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 30 }
@@ -221,7 +221,7 @@ quantum space mining, we're building tomorrow's solutions today.
             Experience the future of technology with Zion Tech Group's;
             revolutionary 2029 services. From AI consciousness evolution to;
             quantum space mining, we're building tomorrow's solutions today.          </p>;"
-          <p className=\"text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed\" />;
+          <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed" />;
             Experience the future of technology with Zion Tech Group's revolutionary 2029 services.;
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.;
         </motion.div>;
@@ -328,9 +328,9 @@ className='group p - 4 rounded - xl bg - gray - 800 / 30 backdrop - blur - sm bo
               <div className={`w - 12 h - 12 mx - auto mb - 3 rounded - lg bg - gradient - to - r ${feature.color} flex items - center justify - center group - hover: shadow - lg hover:shadow - cyan - 400 / 40 transition - transform
 } />
 "
-                <feature.icon className=\"w - 6 h - 6 text - white\" />;
+                <feature.icon className="w - 6 h - 6 text - white" />;
               </div>;"
-              <p className=\"text - xs text - gray - 300 group - hover:text - white transition - colors text - center leading - tight\" />;
+              <p className="text - xs text - gray - 300 group - hover:text - white transition - colors text - center leading - tight" />;
                 {feature.text}
               </p>;
             </motion.div>))}
@@ -342,7 +342,7 @@ className='group p - 4 rounded - xl bg - gray - 800 / 30 backdrop - blur - sm bo
           animate={{ opacity: 1, coordinate_y: 0 }
 }
           transition={{ duration: 0.8, delay: 0.6 }}"
-          className='grid grid - cols - 2 md:grid - cols - 4 gap - 8'         />          className=\"grid grid - cols - 2 md:grid - cols - 4 gap - 8\">
+          className='grid grid - cols - 2 md:grid - cols - 4 gap - 8'         />          className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">
 
               key={stat.labe}
 }
@@ -425,19 +425,19 @@ className='w-1 h-3 bg-cyan-400 rounded-full mt-2'
               animate={{ coordinate_y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity }
 }"
-              className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2'            />          className=\"absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2\">
+              className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2'            />          className="absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2">
 
           <motion.div;
             animate={{ coordinate_y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }
 }"
-            className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'            className=\"w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center\" />
+            className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'            className="w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center" />
 
             <motion.div;
               animate={{ coordinate_y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity }
 }"
-              className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2'              className=\"w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2\";
+              className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2'              className="w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2";
             />;
           </motion.div>;
         </motion.div>;

@@ -173,10 +173,10 @@ if ( {) {$2;}
       </div>
     </div>
   );
-}, [participant])return (<div className=\"bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative\" />;"
-      <video ref={video_ref} auto_play plays_inline muted={Boolean (is_local)} className=\"w - full h - 48 object - cover bg - black\" />;"
-      <audio ref={audio_ref} auto_play className=\"hidden\" />;"
-      <div className=\"absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white\" />;
+}, [participant])return (<div className="bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative" />;"
+      <video ref={video_ref} auto_play plays_inline muted={Boolean (is_local)} className="w - full h - 48 object - cover bg - black" />;"
+      <audio ref={audio_ref} auto_play className="hidden" />;"
+      <div className="absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white" />;
         {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
       </div>;
 

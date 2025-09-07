@@ -58,7 +58,7 @@ type={type}
       {...props}
      />
       {loading ? (
-        <LoadingSpinner size=\"sm\" />
+        <LoadingSpinner size="sm" />
       ) : (}
         children}
       )}

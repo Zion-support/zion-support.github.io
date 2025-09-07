@@ -195,7 +195,7 @@ function collectAllServices(): any (): Svc[] {;
   )function normalizeSlug(value: string): string {return value;
     .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')function extractRootSlugFromLink(link?: string): string | null {if (!link) return null;
   try {const url = new URL(link;
-  const path = url.pathname.replace(/^\/+|\/+$/g, '')// Accept root-level slugs like \"/ai-energy-management\", ignore nested like \"services/...\";
+  const path = url.pathname.replace(/^\/+|\/+$/g, '')// Accept root-level slugs like "/ai-energy-management", ignore nested like "services/...";
     if (path && !path.includes('/')) return path;}
     return null;}
   } catch {return null;}
@@ -207,7 +207,7 @@ const services = collectAllServices();
 const staticSlugs = new Set<string />();
 
   try {}
-const entries = fs.readdirSync(pagesDir, { withFileTypes: true,}
+const entries = fs.readdirSync(pagesDir, {withFileTypes: true}
 });
       }
     }

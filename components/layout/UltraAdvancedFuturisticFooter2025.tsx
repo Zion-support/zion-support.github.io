@@ -533,11 +533,11 @@ href='https: //ziontechgroup.com'
                         className='text-gray-300 hover: text-white transition-colors duration-200 hover:translate-x-1 inline-block' />                  <span />{section && section.titl}
 }</span>;
                 </h4>;
-                <ul className=\"space-y-3\" />;
+                <ul className="space-y-3" />;
                   {section && section.items.map((item) => (<li key={item && item.label} />;
                       <Link;
                         href={item && item.href}"
-                        className=\"text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block\" />;
+                        className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block" />;
                         {item && item.label}
                       </Link>;
                     </li>;
@@ -650,21 +650,21 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
 }
                    />;
                     <social.icon className='w - 5 h - 5' />                  </motion.a>          >;"
-            <div className=\"flex flex - col lg:flex - row items - center justify-between gap-8\" />;
+            <div className="flex flex - col lg:flex - row items - center justify-between gap-8" />;
               {/* Social Links */}"
-              <div className=\"flex items-center space-x-6\" />;"
-                <span className=\"text - gray-400 font-medium\" />Follow Us:</span>;
+              <div className="flex items-center space-x-6" />;"
+                <span className="text - gray-400 font-medium" />Follow Us:</span>;
                 {social_links.map ((social) => (<motion.a;}
                     key={social.label}
                     href={social.href}"
-                    target=\"_blank\";"
-                    rel=\"noopener noreferrer\";"
-                    className=\"w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gradient - to - r hover:from - cyan - 500 hover:to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 hover:text - white transition - all duration-200 hover:scale-110\";
+                    target="_blank";"
+                    rel="noopener noreferrer";"
+                    className="w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gradient - to - r hover:from - cyan - 500 hover:to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 hover:text - white transition - all duration-200 hover:scale-110";
                     while_hover={{ coordinate_y: -2 }}
                     while_tap={{ scale: 0.95 }
 }
                    />;"
-                    <social.icon className=\"w-5 h-5\" />;
+                    <social.icon className="w-5 h-5" />;
                   </motion.a>))}
               </div>;
               {/* Newsletter Signup */}
@@ -685,14 +685,14 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
                   <motion.button;
                     className='px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover: from - purple - 600 hover:to - pink - 600 transition - all duration - 200'                    while_hover={{ scale: 1.05 }
 }                </p />;"
-                <div className=\"flex space-x-2\" />;
+                <div className="flex space-x-2" />;
                   <input;"
-                    type=\"email\";"
-                    placeholder=\"Enter your email\";"
-                    className=\"flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple-500 focus:border-transparent\";
+                    type="email";"
+                    placeholder="Enter your email";"
+                    className="flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple-500 focus:border-transparent";
                   />;
                   <motion.button;"
-                    className=\"px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition-all duration-200\";
+                    className="px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition-all duration-200";
                     while_hover={{ scale: 1.05 }}
                     while_tap={{ scale: 0.95 }
 }

@@ -32,7 +32,7 @@ interface UltraFuturisticBackground2028Props {
 export default function UltraFuturisticBackground2028({ children}
 }: UltraFuturisticBackground2028Props) {
   const canvasRef = null;
-              ease: \"easeInOut\"
+              ease: "easeInOut"
   useEffect(() => {
 
     const canvas = canvasRef.current;
@@ -166,13 +166,13 @@ ref={canvasRef}
 }
       />;
       {/* Gradient Overlays */}"
-      <div className=\"absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20\" style={{ zIndex: 1 }
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20" style={{ zIndex: 1 }
 } />;"
-      <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(147,51,234,0.15),transparent_50%)]\" style={{ zIndex: 1 }
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(147,51,234,0.15),transparent_50%)]" style={{ zIndex: 1 }
 } />;"
-      <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.15),transparent_50%)]\" style={{ zIndex: 1 }
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.15),transparent_50%)]" style={{ zIndex: 1 }
 } />;"
-      <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]\" style={{ zIndex: 1 }
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" style={{ zIndex: 1 }
 } />;
       {/* Floating Geometric Shapes */}
 
@@ -276,7 +276,7 @@ className='absolute top-2/3 right-1/4 w-20 h-20 border border-blue-400/40 rounde
           animate={{y: [0, 25, 0],opacity: [0.2, 0.5, 0.2]}}transition={{duration: 7,repeat: Infinity,ease: 'easeInOut'}}animate={{y: [0, -15, 0];}
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25];}
           transition={{duration: 5,repeat: Infinity}}duration: 5,repeat: Infinity,ease: 'easeInOut',"
-  ease: \"easeInOut\";
+  ease: "easeInOut";
         />;
         <motion.div;
 className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rounded-full';
@@ -338,7 +338,7 @@ ease: 'linear'}
             duration: 8,
             repeat: Infinity,
             ease: 'linear',"
-  delay: 4,            ease: \"linear\",
+  delay: 4,            ease: "linear",
         />
       </div>
 

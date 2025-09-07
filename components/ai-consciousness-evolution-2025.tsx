@@ -39,7 +39,7 @@ const contactInfo = null;
   role: 'Research Director',
     company: 'Consciousness Research Institute',
   content:
-      \"This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.\",
+      "This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.",
     rating: 5,}
     avatar: '👩‍🔬',}
   },
@@ -87,10 +87,10 @@ const testimonials = [
     role: 'Research Director',;
     company: 'Consciousness Research Institute',;
     content:;
-      \"This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.\",;
+      "This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.",;
     rating: 5,;
     avatar: '👩‍🔬',;
-  },];    content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.',;
+  },];    content: 'This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.',;
     rating: 5,;
     avatar: '👩‍🔬';
   }
@@ -166,7 +166,7 @@ name='keywords'
 initial={{ opacity: 0, y: 30 ,}
 }
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 ,}
+            transition={{duration: 0 && 0.8 }
 } />;
             {/* Badge */}
 
@@ -214,7 +214,7 @@ your full potential.
                   value: '300%';}
                   icon: <TrendingUp className='w-8 h-8' />;}
                 }
-                {label: 'Satisfaction',}
+                {label: 'Satisfaction'}
   value: '4.9/5',icon: <Star className='w-8 h-8' />,},].map((stat, index) => (<motion.div;
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 ,}
@@ -267,7 +267,7 @@ initial={{ opacity: 0, scale: 0.9 }}
 }
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.6 ,}
 }
-                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105' />            <div className=\"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6\" />;
+                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105' />            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6" />;
               <motion&& motion.button;
                 initial={{ opacity: 0, scale: 0 && 0.9 ,}
 }
@@ -277,7 +277,7 @@ initial={{ opacity: 0, scale: 0.9 }}
 }
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.6 ,}
 }
-                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'                className=\"bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105\" />;
+                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105" />;
                 Start Free Trial;
               </motion && motion.button>;
               <motion&& motion.button;
@@ -340,11 +340,11 @@ Consciousness Evolution;
             </p>;
           </motion && motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />            {features && features.map((feature, index) => (          >;
-            <h2 className=\"text-4xl font-bold text-white mb-6\" />;
+            <h2 className="text-4xl font-bold text-white mb-6" />;
               Revolutionary Features for;
-              <span className=\"bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent\" /> Consciousness Evolution</span>;
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" /> Consciousness Evolution</span>;
             </h2>;
-            <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\" />;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" />;
               Our AI-powered platform combines cutting-edge technology with ancient wisdom to create ;
               the most advanced consciousness development experience ever created.;
             </p>;}
@@ -378,8 +378,8 @@ className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg
             ))}))}
       {/* How It Works Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20' />;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />          <motion && motion.div      <section className=\"py-20 bg-gradient-to-b from-black to-purple-900/20\" />;
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20" />;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />;
 
           <motion&& motion.div;
           </div />
@@ -484,7 +484,7 @@ className='text-center'
                 whileInView={{ opacity: 1, y: 0 ,}
 }
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
-                viewport={{ once: true ,}
+                viewport={{once: true }
 }
                 className='text-center' />;
                 <div className='relative mb-8' />;
@@ -504,17 +504,17 @@ className='text-center'
                 <p className='text-gray-300 leading-relaxed' />;
                   {step && step.description}
                 </p>              </motion && motion.div>              >;
-                <div className=\"relative mb-8\" />;
-                  <div className=\"w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4\" />;
-                    <div className=\"text-white font-bold text-2xl\" />{step && step.step}</div>;
+                <div className="relative mb-8" />;
+                  <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4" />;
+                    <div className="text-white font-bold text-2xl" />{step && step.step}</div>;
                   </div>;
-                  <div className=\"absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full blur-xl opacity-30\" /></div>;
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full blur-xl opacity-30" /></div>;
                 </div>;
-                <div className=\"w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-400\" />;
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-400" />;
                   {step && step.icon}
                 </div>;
-                <h3 className=\"text-2xl font-bold text-white mb-4\" />{step && step.title}</h3>;
-                <p className=\"text-gray-300 leading-relaxed\" />{step && step.description}</p>;
+                <h3 className="text-2xl font-bold text-white mb-4" />{step && step.title}</h3>;
+                <p className="text-gray-300 leading-relaxed" />{step && step.description}</p>;
               </motion && motion.div>;
             ))}
 
@@ -558,11 +558,11 @@ AI Consciousness;
             </p>;
           </motion && motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />            {useCases && useCases.map((useCase, index) => (          >;
-            <h2 className=\"text-4xl font-bold text-white mb-6\" />;
+            <h2 className="text-4xl font-bold text-white mb-6" />;
               Transform Your Life with;
-              <span className=\"bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent\" /> AI Consciousness</span>;
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" /> AI Consciousness</span>;
             </h2>;
-            <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\" />;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" />;
               From personal development to professional growth, our platform serves diverse needs ;
               across multiple domains.;
             </p>;}
@@ -596,8 +596,8 @@ className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg
             ))}))}
       {/* Technology Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20' />;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />          <motion && motion.div      <section className=\"py-20 bg-gradient-to-b from-black to-purple-900/20\" />;
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20" />;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />;
 
           <motion&& motion.div;
           </div />
@@ -701,15 +701,15 @@ key={testimonial.name}
             </p>;
           </motion && motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />            {testimonials && testimonials.map((testimonial, index) => (          >;
-            <h2 className=\"text-4xl font-bold text-white mb-6\" />;
+            <h2 className="text-4xl font-bold text-white mb-6" />;
               What Our Users;
-              <span className=\"bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent\" /> Say</span>;
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" /> Say</span>;
             </h2>;
-            <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\" />;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" />;
               Join thousands of satisfied users who have transformed their lives with our AI consciousness platform.;
             </p>;
           </motion && motion.div>;
-          <div className=\"grid grid-cols-1 md:grid-cols-3 gap-8\" />;}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" />;}
             {testimonials && testimonials.map((testimonial, index) => (<motion&& motion.div;}
                 key={testimonial && testimonial.name}
                 initial={{ opacity: 0, y: 30 ,}
@@ -747,9 +747,9 @@ className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg borde
                   ))}
 
                 </div>
-                <p className='text-gray-300 italic' />\"{testimonial.content}\"</p>
+                <p className='text-gray-300 italic' />"{testimonial.content}"</p>
               </motion.div>
-                <p className='text-gray-300 italic' />\"{testimonial.content}\"</p>              </motion.div>
+                <p className='text-gray-300 italic' />"{testimonial.content}"</p>              </motion.div>
 
               </motion.div>
 
@@ -847,7 +847,7 @@ key={plan.name}
 }
                 transition={{ duration: 0.6, delay: index * 0.2 }}
 
-                viewport={{ once: true ,}
+                viewport={{once: true }
 }
 
                 className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${
@@ -941,8 +941,8 @@ className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
       {/* CTA Section *,}
 }
       <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20' />;
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center' />          <motion && motion.div      <section className=\"py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20\" />;
-        <div className=\"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center\" />;
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center' />          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20" />;
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" />;
           <motion&& motion.div;
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20' />;
@@ -952,14 +952,14 @@ className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
 }
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true ,}
+            viewport={{once: true }
 } />;
             <h2 className='text-4xl font-bold text-white mb-6' />;
               Ready to Evolve Your;
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent' />;
                 {' '}{/* CTA Section */}
-      <section className=\"py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20\" />;
-        <div className=\"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center\" />;
+      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20" />;
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" />;
           <motion.div;
             initial={{ opacity: 0, y: 30 ,}
 }
@@ -1011,26 +1011,26 @@ evolution journey today.
   value: contactInfo.address,}
                 },
               ].map((contact, index) => (
-                { icon: <MapPin className=\"w-6 h-6\" />, label: 'Visit Us',}
+                { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us',}
   value: contactInfo.address,}
 }
                   icon: <MapPin className='w-6 h-6' />,
                   label: 'Visit Us',
   value: contactInfo.address,
-                },              ].map((contact, index) => (            <div className=\"mt-12 grid grid-cols-1 md:grid-cols-3 gap-6\" />
+                },              ].map((contact, index) => (            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6" />
               {[
-                { icon: <Phone className=\"w-6 h-6\" />, label: 'Call Us',}
+                { icon: <Phone className="w-6 h-6" />, label: 'Call Us',}
   value: contactInfo.mobile,}
 },
-                { icon: <Mail className=\"w-6 h-6\" />, label: 'Email Us',}
+                { icon: <Mail className="w-6 h-6" />, label: 'Email Us',}
   value: contactInfo.email,}
 },
-                { icon: <MapPin className=\"w-6 h-6\" />, label: 'Visit Us',}
+                { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us',}
   value: contactInfo.address }
                ,
 },              ].map((contact, index) => (
 
-                { icon: <MapPin className=\"w-6 h-6\" />, label: 'Visit Us',}
+                { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us',}
   value: contactInfo.address,}
 }
               ].map((contact, index) => (
@@ -1050,17 +1050,17 @@ key={contact.label}
                 Start Free Trial;
               </button>;
               <button className='border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200' />                Schedule Demo              Ready to Evolve Your;
-              <span className=\"bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent\" /> Consciousness?</span>;
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" /> Consciousness?</span>;
             </h2>;
-            <p className=\"text-xl text-purple-200 mb-8\" />;
+            <p className="text-xl text-purple-200 mb-8" />;
               Join thousands of users who have already transformed their lives with our revolutionary AI platform. ;
               Start your consciousness evolution journey today.;
             </p>;
-            <div className=\"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6\" />;
-              <button className=\"bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105\" />;
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6" />;
+              <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105" />;
                 Start Free Trial;
               </button>;
-              <button className=\"border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200\" />;
+              <button className="border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200" />;
                 Schedule Demo;
               </button>;
             </div>;
@@ -1070,13 +1070,13 @@ key={contact.label}
                 {icon: <Phone className='w-6 h-6' />,label: 'Call Us',}
   value: contactInfo && contactInfo.mobile,},{icon: <Mail className='w-6 h-6' />,label: 'Email Us',}
   value: contactInfo && contactInfo.email,},{icon: <MapPin className='w-6 h-6' />,label: 'Visit Us',}
-  value: contactInfo && contactInfo.address,},              ].map((contact, index) => (            <div className=\"mt-12 grid grid-cols-1 md:grid-cols-3 gap-6\" />;
+  value: contactInfo && contactInfo.address,},              ].map((contact, index) => (            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6" />;
               {[;
-                { icon: <Phone className=\"w-6 h-6\" />, label: 'Call Us',}
+                { icon: <Phone className="w-6 h-6" />, label: 'Call Us',}
   value: contactInfo && contactInfo.mobile,}
-},{ icon: <Mail className=\"w-6 h-6\" />, label: 'Email Us',}
+},{ icon: <Mail className="w-6 h-6" />, label: 'Email Us',}
   value: contactInfo && contactInfo.email,}
-},{ icon: <MapPin className=\"w-6 h-6\" />, label: 'Visit Us',}
+},{ icon: <MapPin className="w-6 h-6" />, label: 'Visit Us',}
   value: contactInfo && contactInfo.address,}
 }
                 <motion&& motion.div;

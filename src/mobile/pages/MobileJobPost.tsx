@@ -329,20 +329,20 @@ export function MobileJobPost() {;"
 
           </Button>;
         </div>;"
-        {renderStepContent()}<div className=\"flex gap-2 mt-6\" />;"
-          {currentStep !== \"details\" && (<Button;"
-              variant=\"outline\";}"
-              className=\"flex-1 gap-1\";}
+        {renderStepContent()}<div className="flex gap-2 mt-6" />;"
+          {currentStep !== "details" && (<Button;"
+              variant="outline";}"
+              className="flex-1 gap-1";}
               onClick={goToPrevStep}
              />;"
-              <ChevronLeft className=\"h-4 w-4\" /> Back;
+              <ChevronLeft className="h-4 w-4" /> Back;
             </Button>;
           )}<Button;"
-            className=\"flex-1 gap-1\";
+            className="flex-1 gap-1";
             onClick={goToNextStep}
            />;"
-            {currentStep === \"preview\" ? \"Publish Job\" : \"Continue\"}"
-            {currentStep !== \"preview\" && <ChevronRight className=\"h-4 w-4\" />}</Button>;
+            {currentStep === "preview" ? "Publish Job" : "Continue"}"
+            {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}</Button>;
         </div>;
       </main>;
 

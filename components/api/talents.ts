@@ -1,12 +1,12 @@
 
 
-import type { NextApiRequest, NextApiResponse } from \"next\";"
-import fs from \"fs-extra\";"
-import path from \"path\";"
-import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../utils/api/partnerAuth\";"
-import { v4 as uuidv4 } from \"uuid\";
+import type { NextApiRequest, NextApiResponse } from "next";"
+import fs from "fs-extra";"
+import path from "path";"
+import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";"
+import { v4 as uuidv4 } from "uuid";
 "
-const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\");
+const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
   const started = null;}
@@ -27,7 +27,7 @@ import path from 'path';
 import { authenticateRequest, enforceRateLimit, recordRequest  } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4  } from 'uuid';
 "
-const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\")export default async function handler() ;
+const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")export default async function handler() ;
   const started = null;
   return res.status(201).json({ id: record.id }
 }import fs from 'fs - extra';
@@ -98,38 +98,38 @@ const records = (await fs.path_exists (TALENTS_FILE));
   return res && res.status(201).json({ id: record && record.id}
 });  return res && res.status(201).json({ id: record && record.id })
 }"
-import type { NextApiRequest, NextApiResponse } from \"next\";"
-import fs from \"fs-extra\";"
-import path from \"path\";"
-import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../utils/api/partnerAuth\";"
-import { v4 as uuidv4 } from \"uuid\";
+import type { NextApiRequest, NextApiResponse } from "next";"
+import fs from "fs-extra";"
+import path from "path";"
+import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";"
+import { v4 as uuidv4 } from "uuid";
 "
-const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\");
+const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now();
 
 const auth = await authenticateRequest(req);
   if (!auth) {}"
-    return res.status(401).json({ error: \"Unauthorized\"}
+    return res.status(401).json({ error: "Unauthorized"}
 });
   }
   if (!(await enforceRateLimit(auth.apiKey))) {}
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);}"
-    return res.status(429).json({ error: \"Rate limit exceeded\" })
+    return res.status(429).json({ error: "Rate limit exceeded" })
  
 }"
-  if (req.method !== \"POST\") {"
-    res.setHeader(\"Allow\", \"POST\");}
+  if (req.method !== "POST") {"
+    res.setHeader("Allow", "POST");}
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);}"
-    return res.status(405).json({ error: \"Method Not Allowed\" })
+    return res.status(405).json({ error: "Method Not Allowed" })
  
 }
 
 const { name, email, skills, programTrack, certificationStatus } = req.body || {};
   if (!name || !email) {}
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);}"
-    return res.status(400).json({ error: \"Missing required fields\" })
+    return res.status(400).json({ error: "Missing required fields" })
  
 }
   await fs.ensureDir(path.dirname(TALENTS_FILE));
@@ -142,7 +142,7 @@ const record = {
     id: uuidv4(), name,
     email;
     skills: skills || [], programTrack: programTrack || null,"
-    certificationStatus: certificationStatus || \"pending\", partnerId: auth.partner.id}
+    certificationStatus: certificationStatus || "pending", partnerId: auth.partner.id}
     createdAt: no}
 };
   records.push(record);

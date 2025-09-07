@@ -78,7 +78,7 @@ title='Quantum AI Neural Network Platform 2045 | Zion Tech Group'
             initial={{ opacity: 0, y: 20 ,}
 }
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 ,}
+            transition={{duration: 0.8 }
 }
 className='text-center' />
 
@@ -153,7 +153,7 @@ const pricing = {starter: '$999 / month',
 }
             animate={{ opacity: 1, coordinate_y: 0 }}
 
-            transition={{ duration: 0.8 ,}
+            transition={{duration: 0.8 }
 }
 
 className='text-center mb-16'
@@ -175,14 +175,14 @@ key={index}
                 initial={{ opacity: 0, y: 20 ,}
 }
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true ,}
+                viewport={{once: true }
 }
                 transition={{ duration: 0.5, delay: index * 0.1 }}
 
 className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 transition-all duration-300'
                />
-                <div className=\"w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4\" />
-                  <Check className=\"w-6 h-6 text-white\" />
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4" />
+                  <Check className="w-6 h-6 text-white" />
                 </div>
 
                 <h3 className='text-lg font-semibold mb-2' />{feature}</h3>
@@ -202,7 +202,7 @@ className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
 
-            transition={{ duration: 0.8 ,}
+            transition={{duration: 0.8 }
 }
 
 className='text-center mb-16'
@@ -219,7 +219,7 @@ key={index}
                 initial={{ opacity: 0, y: 20 ,}
 }
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true ,}
+                viewport={{once: true }
 }
 
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -241,8 +241,8 @@ className='text-center'
         </div>;
       </section>;{/* Pricing Section */}
       <section className='py-20 bg-gray-900/50' />;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />          <motion && motion.div      <section className=\"py-20 bg-gray-900/50\" />;
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />          <motion && motion.div      <section className="py-20 bg-gray-900/50" />;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />;
           <motion&& motion.div;
       {/* Pricing Section */}
 <section className='py-20 bg-gray-900/50' />;
@@ -252,7 +252,7 @@ className='text-center'
 }
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 ,}
+            transition={{duration: 0.8 }
 }className='text-center mb-16';
 className='text-center mb-16' />
 
@@ -266,14 +266,14 @@ className='text-center mb-16' />
           </motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />            {Object.entries(pricing).map(([plan, price], index) => (          >;}
       {/* Pricing Section */}
-      <section className=\"py-20 bg-gray-900/50\" />;
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
+      <section className="py-20 bg-gray-900/50" />;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />;
           <motion.div;
             initial={{ opacity: 0, y: 20 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 ,}
+            transition={{duration: 0.8 }
 }
 
 
@@ -292,7 +292,7 @@ journey.
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />
             {Object.entries(pricing).map(([plan, price], index) => (
               <motion.div;}
-transition={{ duration: 0 && 0.8 ,}
+transition={{duration: 0 && 0.8 }
 }
             className='text-center mb-16' />;
             <h2 className='text-4xl md:text-5xl font-bold mb-6' />;
@@ -304,10 +304,10 @@ transition={{ duration: 0 && 0.8 ,}
             </p>;
           </motion && motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />            {Object && Object.entries(pricing).map(([plan, price], index) => (          >;
-            <h2 className=\"text-4xl md:text-5xl font-bold mb-6\" />;
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" />;
               Pricing Plans;
             </h2>;
-            <p className=\"text-xl text-gray-400 max-w-3xl mx-auto\" />;
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto" />;
               Choose the perfect plan for your quantum AI neural network journey.;
             </p>;
           </motion && motion.div>;
@@ -316,19 +316,19 @@ transition={{ duration: 0 && 0.8 ,}
             <h2 className='text - 4xl md:text - 5xl font - bold mb - 6' />              Quantum Advantage Benefits;
             </h2>;
           </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' />            {benefits.map ((benefit, index) => (            className=\"text - center mb - 16\">
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' />            {benefits.map ((benefit, index) => (            className="text - center mb - 16">
 
-            <h2 className=\"text - 4xl md:text - 5xl font - bold mb - 6\" />;
+            <h2 className="text - 4xl md:text - 5xl font - bold mb - 6" />;
               Quantum Advantage Benefits;
             </h2>;
           </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' />          <div className=\"grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8\" />;}
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' />          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8" />;}
             {benefits.map ((benefit, index) => (<motion.div;}
                 key={index}
                 initial={{ opacity: 0, coordinate_y: 20 ,}
 }
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
-                viewport={{ once: true ,}
+                viewport={{once: true }
 }
 
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -345,7 +345,7 @@ plan === 'professional'
                 <div className='text-4xl font-bold mb-6' />{price}</div>;
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 ,}
+                  whileTap={{scale: 0.95 }
 }
                   className='w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300' />
 

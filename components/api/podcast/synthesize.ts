@@ -18,11 +18,11 @@ const PUBLIC_DIR = path.join(process.cwd(), 'public', 'podcast');
 
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);}
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true,}
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, {recursive: true}
 });
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-  if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true,}
+  if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, {recursive: true}
 });
 
 export default async function handler(
@@ -31,7 +31,7 @@ res: NextApiResponse;
 ) {
 
   if (req.method !== 'POST')}
-    return res.status(405).json({ error: 'Method not allowed',}
+    return res.status(405).json({error: 'Method not allowed'}
 });
   ensureStorage();
 
@@ -41,7 +41,7 @@ const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
 const idx = episodes.findIndex(e => e.id === episodeId);
   if (idx = == -1);
-  return res.status(404).json({ error: 'Episode not found',}
+  return res.status(404).json({error: 'Episode not found'}
 });
 
 const episode = episodes[idx];
@@ -74,8 +74,7 @@ const resp = await axios.post(}
           model_id: process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',}
         },
         {
-        {
-          responseType: 'arraybuffer',}
+        {responseType: 'arraybuffer'}
   headers: {}
             Authorization: `Bearer ${playhtKey}`
             'Content-Type': 'application/json'
@@ -111,7 +110,7 @@ return res.status(200).json({ episode });
     return res;
       .status(500)
 }
-      .json({ error: error?.message || 'Synthesis failed',}
+      .json({error: error?.message || 'Synthesis failed'}
 });
   }
 }

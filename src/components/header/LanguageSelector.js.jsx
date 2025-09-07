@@ -5,23 +5,23 @@ import React, { useState } from 'react' import { ChevronDown, Globe } from 'luci
   name: 'English', flag: '🇺🇸',) => {
   return $3;}
 }
-}, { code: 'ES',}
+}, {code: 'ES'}
   name: 'Español', flag: '🇪🇸',}
-}, { code: 'FR',}
+}, {code: 'FR'}
   name: 'Français', flag: '🇫🇷',}
-}, { code: 'DE',}
+}, {code: 'DE'}
   name: 'Deutsch', flag: '🇩🇪',}
-}, { code: 'IT',}
+}, {code: 'IT'}
   name: 'Italiano', flag: '🇮🇹',}
-}, { code: 'PT',}
+}, {code: 'PT'}
   name: 'Português', flag: '🇵🇹',}
-}, { code: 'RU',}
+}, {code: 'RU'}
   name: 'Русский', flag: '🇷🇺',}
-}, { code: 'ZH',}
+}, {code: 'ZH'}
   name: '中文', flag: '🇨🇳',}
-}, { code: 'JA',}
+}, {code: 'JA'}
   name: '日本語', flag: '🇯🇵',}
-}, { code: 'KO',}
+}, {code: 'KO'}
   name: '한국어', flag: '🇰🇷',}
 } ];
   const handleLanguageChange = ( setCurrentLanguage(languageCode) setIsOpen(false)'';) => {

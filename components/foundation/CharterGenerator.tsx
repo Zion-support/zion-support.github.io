@@ -19,7 +19,7 @@ const symbol  = tokenSymbol.trim() || 'ZION$';}
 }
 const header = `${name} Foundation Charter`;
 
-const preamble  = `This Charter establishes a legally-neutral foundation (the \"Foundation\") to steward the ${name} Protocol, an open, decentralized AI protocol dedicated to sovereignty, open knowledge, and verifiable trust.`;
+const preamble  = `This Charter establishes a legally-neutral foundation (the "Foundation") to steward the ${name} Protocol, an open, decentralized AI protocol dedicated to sovereignty, open knowledge, and verifiable trust.`;
 
 const registry  = `1. Legal Neutrality and Registry\n- Structure: ${legalStructur}
 }.\n- Purpose: Maintain global neutrality, operate outside the control of any single jurisdiction, and coordinate public-good infrastructure for the ${name} Protocol.\n- Scope: Non-custodial oversight, standard-setting, and community enablement.`;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function VerifiedBadge({ labels }: { labels: string[],}
+export function VerifiedBadge({ labels }: {labels: string[]}
 }) {
 
   if (!labels || labels.length;

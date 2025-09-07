@@ -19,12 +19,12 @@ export default function URLShortenerPage() {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);}
-    this.state = { hasError: false,}
+    this.state = {hasError: false}
 };
   }
   
   static getDerivedStateFromError(error) {}
-    return { hasError: true,}
+    return {hasError: true}
 };
   }
   
@@ -324,9 +324,9 @@ key={url && url.i,}
 }
                   className='p-6 bg-gray-700 border border-gray-600' />;
                   <div className='grid grid-cols-1 lg:grid-cols-3 gap-6' />;
-            <div className=\"space-y-4\" />;
-              {shortenedUrls.map((url) => (<Card key={url.id} className=\"p-6 bg-gray-700 border border-gray-600\" />;
-                  <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-6\" />;
+            <div className="space-y-4" />;
+              {shortenedUrls.map((url) => (<Card key={url.id} className="p-6 bg-gray-700 border border-gray-600" />;
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" />;
                     {/* URL Info */}
                     <div className='lg:col-span-2' />;
                       <div className='flex items-start justify-between mb-4' />;

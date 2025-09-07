@@ -117,7 +117,7 @@ const serviceCategories: ServiceCategory[] = [;
     icon: <FaRobot className='w-8 h-8' />;}
     color: 'from-yellow-500 to-orange-500';}
   },];    description: 'Cutting-edge artificial intelligence and machine learning solutions';
-    icon: <FaBrain className=\"w-8 h-8\" />;
+    icon: <FaBrain className="w-8 h-8" />;
     color: 'from-purple-500 to-pink-500';
   }
     id: 'cloud';
@@ -125,7 +125,7 @@ const serviceCategories: ServiceCategory[] = [;
     description: 'Scalable cloud infrastructure and development operations';
     icon: <FaCloud className='w-8 h-8' />;
     color: 'from-blue-500 to-cyan-500';
-  },    icon: <FaCloud className=\"w-8 h-8\" />;
+  },    icon: <FaCloud className="w-8 h-8" />;
     color: 'from-blue-500 to-cyan-500';
   }
   {id: 'security';
@@ -133,7 +133,7 @@ const serviceCategories: ServiceCategory[] = [;
     description: 'Advanced security solutions for modern threats';
     icon: <FaShieldAlt className='w-8 h-8' />;}
     color: 'from-red-500 to-orange-500';}
-  },    icon: <FaShieldAlt className=\"w-8 h-8\" />;
+  },    icon: <FaShieldAlt className="w-8 h-8" />;
     color: 'from-red-500 to-orange-500';
   }
   {id: 'data';
@@ -141,7 +141,7 @@ const serviceCategories: ServiceCategory[] = [;
     description: 'Comprehensive data management and analytics platforms';
     icon: <FaDatabase className='w-8 h-8' />;}
     color: 'from-green-500 to-emerald-500';}
-  },    icon: <FaDatabase className=\"w-8 h-8\" />;
+  },    icon: <FaDatabase className="w-8 h-8" />;
     color: 'from-green-500 to-emerald-500';
   }
   {id: 'iot';
@@ -149,7 +149,7 @@ const serviceCategories: ServiceCategory[] = [;
     description: 'Internet of Things and edge computing solutions';
     icon: <FaNetworkWired className='w-8 h-8' />;}
     color: 'from-indigo-500 to-purple-500';}
-  },    icon: <FaNetworkWired className=\"w-8 h-8\" />;
+  },    icon: <FaNetworkWired className="w-8 h-8" />;
     color: 'from-indigo-500 to-purple-500';
   }
   {id: 'automation';
@@ -157,7 +157,7 @@ const serviceCategories: ServiceCategory[] = [;
     description: 'Intelligent automation for business processes';
     icon: <FaRobot className='w-8 h-8' />;}
     color: 'from-yellow-500 to-orange-500';}
-  },    icon: <FaRobot className=\"w-8 h-8\" />;
+  },    icon: <FaRobot className="w-8 h-8" />;
     id: 'ai-ml';
     name: 'AI & Machine Learning';
     description: 'Cutting-edge artificial intelligence and machine learning solutions';
@@ -218,16 +218,16 @@ const services: Service[] = [;
   title: 'Cloud - Native Development Platform',description: 'Modern cloud - native development and deployment platform',
   icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs';}
     ];benefits: [;}
-      'Unified data view','Real-time insights','Improved data quality','Reduced integration costs',],},{id: 'cloud-native-platform',}
+      'Unified data view','Real-time insights','Improved data quality','Reduced integration costs',],},{id: 'cloud-native-platform'}
   title: 'Cloud-Native Development Platform',description: 'Modern cloud-native development and deployment platform',}
-  {{id: 'cloud-native-platform',}
+  {{id: 'cloud-native-platform'}
   title: 'Cloud-Native Development Platform',description: 'Modern cloud-native development and deployment platform',];}
       'Apache Kafka','Apache Spark','Snowflake','Databricks','Airflow',],'Improved data quality','Reduced integration costs',],},  {id: 'cloud - native - platform',
   title: 'Cloud - Native Development Platform',description: 'Modern cloud - native development and deployment platform',
   icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs'
 ];}
 benefits: [;}
-      'Unified data view','Real-time insights','Improved data quality','Reduced integration costs',],},{id: 'cloud-native-platform',}
+      'Unified data view','Real-time insights','Improved data quality','Reduced integration costs',],},{id: 'cloud-native-platform'}
   title: 'Cloud-Native Development Platform',description: 'Modern cloud-native development and deployment platform',}
   {{id: 'cloud-native-platform',
   title: 'Cloud-Native Development Platform',description: 'Modern cloud-native development and deployment platform',];
@@ -331,7 +331,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           className='text-center mb-16'      }
-    })return (<div className=\"min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white\" />;
+    })return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white" />;
     })}, [selectedCategory, searchTerm, sortBy])const handleServiceSelect = (setSelectedService(service,) => {
   return $3;}
 }
@@ -350,9 +350,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
           className='text-center mb-16'      }
    ,
 };
-  return (<div className=\"min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white\" />;
+  return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white" />;
       {/* Header */}
-      <div className=\"container mx-auto px-4 py-16\" />;
+      <div className="container mx-auto px-4 py-16" />;
         <motion&& motion.div;
       <div className='container mx-auto px-4 py-16' />;
         <motion.div;
@@ -363,15 +363,15 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
           animate={{ opacity: 1, y: 0 ,}
 }
  ;
-  return (<div className=\"min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900 text - white\" />;
+  return (<div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900 text - white" />;
       {/* Header */}
-      <div className=\"container mx - auto px - 4 py - 16\" />;
+      <div className="container mx - auto px - 4 py - 16" />;
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 20 ,}
 }
           animate={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.8 }}transition={{ duration: 0 && 0.8 }}
-          transition={{ duration: 0.8 }}transition={{ duration: 0 && 0.8 ,}
+          transition={{ duration: 0.8 }}transition={{duration: 0 && 0.8 }
 }
           className='text-center mb-16' />;
           <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent' />;
@@ -381,10 +381,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
             Discover our cutting-edge technology solutions designed for the;
             future. From AI-powered automation to quantum computing, we're;
             building tomorrow's innovations today.          </p>        >;
-          <h1 className=\"text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\" />;
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" />;
             2025 Services Showcase;
           </h1>;
-          <p className=\"text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed\" />;
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed" />;
             Discover our cutting-edge technology solutions designed for the future. ;
             From AI-powered automation to quantum computing, we're building tomorrow's innovations today.;
           </p>;
@@ -434,10 +434,10 @@ className='mb-12'>
             Discover our cutting - edge technology solutions designed for the;
             future. From AI - powered automation to quantum computing, we're;
             building tomorrow's innovations today.          </p>        >;
-          <h1 className=\"text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent\" />;
+          <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent" />;
             2025 Services Showcase;
           </h1>;
-          <p className=\"text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed\" />;
+          <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed" />;
             Discover our cutting - edge technology solutions designed for the future.;
             From AI - powered automation to quantum computing, we're building tomorrow's innovations today.;
           </p>;
@@ -475,32 +475,32 @@ className='mb-12'>
               <option value='price' />Sort by Price</option>;
               <option value='category' />Sort by Category</option>            </select>        >;
               <input;
-                type=\"text\";
-                placeholder=\"Search services, technologies, or features...\";
+                type="text";
+                placeholder="Search services, technologies, or features...";
                 value={searchTerm}
             <select;
               value={sortBy}
               onChange={(e) = /> setSortBy(e && e.target.value as 'name' | 'price' | 'category')}
-              className=\"px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500\";
-          <div className=\"flex flex - col md:flex - row gap - 4 items - center justify - center\" />;
-            <div className=\"relative flex - 1 max - w-md\" />;
+              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500";
+          <div className="flex flex - col md:flex - row gap - 4 items - center justify - center" />;
+            <div className="relative flex - 1 max - w-md" />;
               <input;
-                type=\"text\";
-                placeholder=\"Search services, technologies, or features...\";
+                type="text";
+                placeholder="Search services, technologies, or features...";
                 value={search_term}
                 on_change={(e) = /> setSearchTerm (e.target.value)}
-                className=\"w - full px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent\";
+                className="w - full px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
               />;
-              <FaSearch className=\"absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400\" />;
+              <FaSearch className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400" />;
             </div>;
             <select;
               value={sort_by}
               on_change={(e) = /> setSortBy (e.target.value as 'name' | 'price' | 'category')}
-              className=\"px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - blue - 500\">
+              className="px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - blue - 500">
 
-              <option value=\"name\" />Sort by Name</option>;
-              <option value=\"price\" />Sort by Price</option>;
-              <option value=\"category\" />Sort by Category</option>;
+              <option value="name" />Sort by Name</option>;
+              <option value="price" />Sort by Price</option>;
+              <option value="category" />Sort by Category</option>;
             </select>;
           </div>;className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500';
             >;
@@ -630,9 +630,9 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
                   </span>;
                 )}
               </div>;
-                  <span className=\"text-sm text-gray-400 font-normal\" />/month</span>;
+                  <span className="text-sm text-gray-400 font-normal" />/month</span>;
                 </div>;
-                <button className=\"px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300\" />;
+                <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300" />;
 <div className='flex items-center justify-between' />;
                 <div className='text-2xl font-bold text-blue-400' />;
                   ${service.pricing.starter}
@@ -648,7 +648,7 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
           ))}
         </motion.div>;
               <div className='flex items-center justify-between' />;
-                <div className='text-2xl font-bold text-blue-400' />                  <span className=\"px-2 py-1 bg-white/10 rounded text-xs text-gray-300\" />;
+                <div className='text-2xl font-bold text-blue-400' />                  <span className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300" />;
                     +{service && service.technologies.length - 3} more;
                   </span>;
                 )}
@@ -662,9 +662,9 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
                 </div>;
                 <button className='px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover: from-blue-600 hover:to-purple-600 transition-all duration-300' />                  Learn More                  ${service && service.pricing.starte,}
 }
-                  <span className=\"text-sm text-gray-400 font-normal\" />/month</span>;
+                  <span className="text-sm text-gray-400 font-normal" />/month</span>;
                 </div>;
-                <button className=\"px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300\" />;
+                <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300" />;
                   Learn More;
                 </button>;
               </div>;
@@ -675,7 +675,7 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}className='text-center py-16';
            />;
-            animate={{ opacity: 1 ,}
+            animate={{opacity: 1 }
 }className='text-center py-16'>
 
             <div className='text-6xl mb-4' />🔍</div>;
@@ -693,7 +693,7 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            exit={{ opacity: 0 ,}
+            exit={{opacity: 0 }
 }
 className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4';
             onClick={closeModal}
@@ -746,7 +746,7 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                     {selectedService && selectedService.features.map((feature, index) => (<li;}
                         key={index}className='flex items-center gap-2 text-gray-300' />;
                         <div className='w-2 h-2 bg-blue-500 rounded-full' /></div>                        {feature}                >;
-                  <span className=\"text-2xl\" />×</span>;
+                  <span className="text-2xl" />×</span>;
                 </button>;
               </div>;
                 {/* Features */}className='flex items-center gap-2 text-gray-300';
@@ -773,10 +773,10 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                     {selectedService && selectedService.benefits.map((benefit, index) => (<li;}
                         key={index}
                         className='flex items-center gap-2 text-gray-300' />;
-                        <div className='w-2 h-2 bg-green-500 rounded-full' /></div>                        {benefit}                  <h3 className=\"text-xl font-bold text-white mb-4\" />Key Benefits</h3>;
-                  <ul className=\"space-y-2\" />;
-                    {selectedService && selectedService.benefits.map((benefit, index) => (<li key={index} className=\"flex items-center gap-2 text-gray-300\" />;
-                        <div className=\"w-2 h-2 bg-green-500 rounded-full\" /></div>;
+                        <div className='w-2 h-2 bg-green-500 rounded-full' /></div>                        {benefit}                  <h3 className="text-xl font-bold text-white mb-4" />Key Benefits</h3>;
+                  <ul className="space-y-2" />;
+                    {selectedService && selectedService.benefits.map((benefit, index) => (<li key={index} className="flex items-center gap-2 text-gray-300" />;
+                        <div className="w-2 h-2 bg-green-500 rounded-full" /></div>;
                       </li>;<div />;
 <h3 className='text-xl font-bold text-white mb-4' />;
                     Key Benefits;
@@ -799,12 +799,12 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                 </h3>;
                 <div className='flex flex-wrap gap-3' />;
                   {selectedService.technologies.map(tech => (<span;}
-                      key={tech}className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                     />              <div className=\"mt-8\" />;
-                <h3 className=\"text-xl font-bold text-white mb-4\" />Technologies</h3>;
-                <div className=\"flex flex-wrap gap-3\" />;
+                      key={tech}className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                     />              <div className="mt-8" />;
+                <h3 className="text-xl font-bold text-white mb-4" />Technologies</h3>;
+                <div className="flex flex-wrap gap-3" />;
                   {selectedService.technologies.map((tech) => (<span;}
                       key={tech}
-                      className=\"px-3 py-2 bg-white/10 rounded-lg text-gray-300\";
+                      className="px-3 py-2 bg-white/10 rounded-lg text-gray-300";
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                     />;
                     >;
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300';
@@ -853,12 +853,12 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                 <div className='flex flex-wrap gap-3' />;
                   {selectedService && selectedService.technologies.map(tech => (<span;}
                       key={tech}
-                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300' />              <div className=\"mt-8\" />;
-                <h3 className=\"text-xl font-bold text-white mb-4\" />Technologies</h3>;
-                <div className=\"flex flex-wrap gap-3\" />;
+                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300' />              <div className="mt-8" />;
+                <h3 className="text-xl font-bold text-white mb-4" />Technologies</h3>;
+                <div className="flex flex-wrap gap-3" />;
                   {selectedService && selectedService.technologies.map((tech) => (<span;}
                       key={tech}
-                      className=\"px-3 py-2 bg-white/10 rounded-lg text-gray-300\";
+                      className="px-3 py-2 bg-white/10 rounded-lg text-gray-300";
                       {tech}
                     </span />;
                   ))}
@@ -884,7 +884,7 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                           Get Started;
                         </button>;
                       </div>;
-                    ))}                </div>                      <button className=\"w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover: from-blue-600 hover:to-purple-600 transition-all duration-300\" />;
+                    ))}                </div>                      <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover: from-blue-600 hover:to-purple-600 transition-all duration-300" />;
                         Get Started;
                       </button>;
                     </div>;
@@ -927,20 +927,20 @@ export default EnhancedServicesShowcase2025;
                     key={tech}
                     className='px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300'                   />              on_click={() => handleServiceSelect (service)}
             >;
-              <div className=\"flex items - center gap - 3 mb - 4\" />;
-                <div className=\"p - 3 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg\" />;
+              <div className="flex items - center gap - 3 mb - 4" />;
+                <div className="p - 3 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg" />;
                   {service.icon}
                 </div>;
                 <div />;
-                  <h3 className=\"text - xl font - bold text - white\" />{service.title}</h3>;
-                  <p className=\"text - sm text - gray - 400\" />{service_categories.find (c => c.id === service.category)?.name}</p>;
+                  <h3 className="text - xl font - bold text - white" />{service.title}</h3>;
+                  <p className="text - sm text - gray - 400" />{service_categories.find (c => c.id === service.category)?.name}</p>;
                 </div>;
               </div>;
-              <p className=\"text - gray - 300 mb - 4 line - clamp - 3\" />{service.description}</p>;
-              <div className=\"flex flex - wrap gap - 2 mb - 4\" />;
+              <p className="text - gray - 300 mb - 4 line - clamp - 3" />{service.description}</p>;
+              <div className="flex flex - wrap gap - 2 mb - 4" />;
                 {service.technologies.slice (0, 3).map ((tech) => (<span;}
                     key={tech}
-                    className=\"px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300\" />
+                    className="px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300" />
 
                     {tech}
                   </span>))}
@@ -948,7 +948,7 @@ export default EnhancedServicesShowcase2025;
                   </span>)}
               </div>;
               <div className='flex items - center justify - between' />;
-                <div className='text - 2xl font - bold text - blue - 400' />                  <span className=\"px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300\" />;
+                <div className='text - 2xl font - bold text - blue - 400' />                  <span className="px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300" />;
                     +{service.technologies.length - 3} more;
                   </span>)}
               </div>;
@@ -961,9 +961,9 @@ export default EnhancedServicesShowcase2025;
                 </div>;
                 <button className='px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover: from - blue - 600 hover:to - purple - 600 transition - all duration - 300' />                  Learn More                  ${service.pricing.starte,}
 }
-                  <span className=\"text - sm text - gray - 400 font - normal\" />/month</span>;
+                  <span className="text - sm text - gray - 400 font - normal" />/month</span>;
                 </div>;
-                <button className=\"px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300\" />;
+                <button className="px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300" />;
                   Learn More;
                 </button>;
               </div>;
@@ -972,7 +972,7 @@ export default EnhancedServicesShowcase2025;
         {/* No Results */}
         {filtered_services.length === 0 && (<motion.div;}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 ,}
+            animate={{opacity: 1 }
 }
             className='text - center py - 16' />
 
@@ -982,11 +982,11 @@ export default EnhancedServicesShowcase2025;
             </h3>;
             <p className='text - gray - 400' />;
               Try adjusting your search terms or category filters;
-            </p>          </motion.div>            className=\"text - center py - 16\">
+            </p>          </motion.div>            className="text - center py - 16">
 
-            <div className=\"text - 6xl mb - 4\" />🔍</div>;
-            <h3 className=\"text - 2xl font - bold text - gray - 300 mb - 2\" />No services found</h3>;
-            <p className=\"text - gray - 400\" />Try adjusting your search terms or category filters</p>)}
+            <div className="text - 6xl mb - 4" />🔍</div>;
+            <h3 className="text - 2xl font - bold text - gray - 300 mb - 2" />No services found</h3>;
+            <p className="text - gray - 400" />Try adjusting your search terms or category filters</p>)}
       </div>;
       {/* Service Detail Modal */}
       <AnimatePresence />;
@@ -995,7 +995,7 @@ export default EnhancedServicesShowcase2025;
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className='fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4'            on_click={close_moda,}
-}            className=\"fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4\";
+}            className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4";
             on_click={close_modal}
            />;
             <motion.div;
@@ -1025,14 +1025,14 @@ export default EnhancedServicesShowcase2025;
                 <button;
                   on_click={close_modal}
                   className='p - 2 hover:bg - white / 10 rounded - lg transition - colors'             />;
-              <div className=\"flex items - start justify - between mb - 6\" />;
-                <div className=\"flex items - center gap - 4\" />;
-                  <div className=\"p - 4 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - xl\" />;
+              <div className="flex items - start justify - between mb - 6" />;
+                <div className="flex items - center gap - 4" />;
+                  <div className="p - 4 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - xl" />;
                     {selected_service.icon}
                   </div>;
                   <div />;
-                    <h2 className=\"text - 3xl font - bold text - white mb - 2\" />{selected_service.title}</h2>;
-                    <p className=\"text - gray - 400\" />{service_categories.find (c => c.id === selected_service.category)?.name}</p>;
+                    <h2 className="text - 3xl font - bold text - white mb - 2" />{selected_service.title}</h2>;
+                    <p className="text - gray - 400" />{service_categories.find (c => c.id === selected_service.category)?.name}</p>;
                   </div>;
                 </div>;
                 <button;
@@ -1057,17 +1057,17 @@ export default EnhancedServicesShowcase2025;
                         className='flex items - center gap - 2 text - gray - 300' />
 
                         <div className='w - 2 h - 2 bg - blue - 500 rounded - full' /></div>                        {feature}                >;
-                  <span className=\"text - 2xl\" />×</span>;
+                  <span className="text - 2xl" />×</span>;
                 </button>;
               </div>;
-              <p className=\"text - gray - 300 text - lg mb - 8\" />{selected_service.description}</p>;
-              <div className=\"grid grid - cols - 1 lg:grid - cols - 2 gap - 8\" />;
+              <p className="text - gray - 300 text - lg mb - 8" />{selected_service.description}</p>;
+              <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8" />;
                 {/* Features */}
                 <div />;
-                  <h3 className=\"text - xl font - bold text - white mb - 4\" />Key Features</h3>;
-                  <ul className=\"space - y-2\" />;
-                    {selected_service.features.map ((feature, index) => (<li key={index} className=\"flex items - center gap - 2 text - gray - 300\" />;
-                        <div className=\"w - 2 h - 2 bg - blue - 500 rounded - full\" /></div>;
+                  <h3 className="text - xl font - bold text - white mb - 4" />Key Features</h3>;
+                  <ul className="space - y-2" />;
+                    {selected_service.features.map ((feature, index) => (<li key={index} className="flex items - center gap - 2 text - gray - 300" />;
+                        <div className="w - 2 h - 2 bg - blue - 500 rounded - full" /></div>;
                         {feature}
                       </li>))}
                   </ul>;
@@ -1082,10 +1082,10 @@ export default EnhancedServicesShowcase2025;
                         key={index}
                         className='flex items - center gap - 2 text - gray - 300' />
 
-                        <div className='w - 2 h - 2 bg - green - 500 rounded - full' /></div>                        {benefit}                  <h3 className=\"text - xl font - bold text - white mb - 4\" />Key Benefits</h3>;
-                  <ul className=\"space - y-2\" />;
-                    {selected_service.benefits.map ((benefit, index) => (<li key={index} className=\"flex items - center gap - 2 text - gray - 300\" />;
-                        <div className=\"w - 2 h - 2 bg - green - 500 rounded - full\" /></div>;
+                        <div className='w - 2 h - 2 bg - green - 500 rounded - full' /></div>                        {benefit}                  <h3 className="text - xl font - bold text - white mb - 4" />Key Benefits</h3>;
+                  <ul className="space - y-2" />;
+                    {selected_service.benefits.map ((benefit, index) => (<li key={index} className="flex items - center gap - 2 text - gray - 300" />;
+                        <div className="w - 2 h - 2 bg - green - 500 rounded - full" /></div>;
                       </li>))}
                   </ul>;
                 </div>;
@@ -1098,12 +1098,12 @@ export default EnhancedServicesShowcase2025;
                 <div className='flex flex - wrap gap - 3' />;
                   {selected_service.technologies.map (tech => (<span;}
                       key={tech}
-                      className='px - 3 py - 2 bg - white / 10 rounded - lg text - gray - 300'                     />              <div className=\"mt - 8\" />;
-                <h3 className=\"text - xl font - bold text - white mb - 4\" />Technologies</h3>;
-                <div className=\"flex flex - wrap gap - 3\" />;
+                      className='px - 3 py - 2 bg - white / 10 rounded - lg text - gray - 300'                     />              <div className="mt - 8" />;
+                <h3 className="text - xl font - bold text - white mb - 4" />Technologies</h3>;
+                <div className="flex flex - wrap gap - 3" />;
                   {selected_service.technologies.map ((tech) => (<span;}
                       key={tech}
-                      className=\"px - 3 py - 2 bg - white / 10 rounded - lg text - gray - 300\";
+                      className="px - 3 py - 2 bg - white / 10 rounded - lg text - gray - 300";
                       {tech}
                     </span />))}
                 </div>;
@@ -1130,7 +1130,7 @@ export default EnhancedServicesShowcase2025;
                         <button className='w - full px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300' />;
                           Get Started;
                         </button>;
-                      </div>))}                </div>                      <button className=\"w - full px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover: from - blue - 600 hover:to - purple - 600 transition - all duration - 300\" />;
+                      </div>))}                </div>                      <button className="w - full px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover: from - blue - 600 hover:to - purple - 600 transition - all duration - 300" />;
                         Get Started;
                       </button>;
                     </div>))}

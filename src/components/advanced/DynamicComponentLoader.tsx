@@ -39,15 +39,15 @@ const EnhancedLoading: React.FC<{progress?: number;
   show_progress?: boolean;
 } /> = ({progress = 0,message = 'Loading component...',showProgress = true;}
 }) => (<motion.div;
-              className=\"absolute inset-0 rounded-full border-2 border-primary\";
+              className="absolute inset-0 rounded-full border-2 border-primary";
               style={{background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;"
-  message = 'Loading component...',show_progress = true}) = /> (<Card className=\"w-full max-w-md mx-auto\" />;"
-    <CardContent className=\"p-6\" />;"
-      <div className=\"flex flex-col items-center space-y-4\" />;"
-        <div className=\"relative\" />;"
-          <Loader2 className=\"h-8 w-8 animate-spin text-primary\" />;
+  message = 'Loading component...',show_progress = true}) = /> (<Card className="w-full max-w-md mx-auto" />;"
+    <CardContent className="p-6" />;"
+      <div className="flex flex-col items-center space-y-4" />;"
+        <div className="relative" />;"
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />;
           {showProgress && (<motion.div;}"
-              className=\"absolute inset-0 rounded-full border-2 border-primary\";}
+              className="absolute inset-0 rounded-full border-2 border-primary";}
               style={{background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;
               }}
               initial={{ rotate: 0 }}
@@ -61,18 +61,18 @@ const EnhancedError: React.FC<{error: Error;
   isOnline: boolean;
   retryCount: number;}
   maxRetries: number;}"
-}> = ({ error, retry, isOnline, retryCount, maxRetries }) => () : (<WifiOff className=\"h-6 w-6 text-red-600\" />;
+}> = ({ error, retry, isOnline, retryCount, maxRetries }) => () : (<WifiOff className="h-6 w-6 text-red-600" />;
           )}
         </div>;"
-        <div className=\"text-center\" />;"
-          <h3 className=\"font-semibold text-red-900 dark:text-red-100\" />;
+        <div className="text-center" />;"
+          <h3 className="font-semibold text-red-900 dark:text-red-100" />;
             {isOnline ? 'Loading Failed' : 'Offline'}
           </h3>;"
-  <Card className=\"w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10\" />;"
-    <CardContent className=\"p-6\" />;"
-      <div className=\"flex flex-col items-center space-y-4\" />;"
-        <div className=\"p-3 rounded-full bg-red-100 dark:bg-red-900/20\" />;"
-          {isOnline ? (<AlertTriangle className=\"h-6 w-6 text-red-600\" />;
+  <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10" />;"
+    <CardContent className="p-6" />;"
+      <div className="flex flex-col items-center space-y-4" />;"
+        <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20" />;"
+          {isOnline ? (<AlertTriangle className="h-6 w-6 text-red-600" />;
           ) : (<WifiOff className='h-6 w-6 text-red-600' />;
         </div>;
       </div>;
@@ -101,7 +101,7 @@ const EnhancedError: React.FC<{error: Error;
           </p>;
           {retryCount > 0 && (<p className='text-xs text-red-600 dark:text-red-300 mt-2' />;
           </h3>;"
-          <p className=\"text-sm text-red-700 dark:text-red-200 mt-1\" />;
+          <p className="text-sm text-red-700 dark:text-red-200 mt-1" />;
             {isOnline;
               ? error.message || 'Failed to load component';}
               : 'Please check your internet connection';}
@@ -111,11 +111,11 @@ const EnhancedError: React.FC<{error: Error;
             </p>;
           )}</div>;
         {retryCount < maxRetries && (<Button;}"
-            onClick={retry}variant=\"outline\";"
-            size=\"sm\";"
-            className=\"border-red-300 text-red-700 hover:bg-red-100\" />
+            onClick={retry}variant="outline";"
+            size="sm";"
+            className="border-red-300 text-red-700 hover:bg-red-100" />
 "
-            <RefreshCw className=\"h-4 w-4 mr-2\" />;
+            <RefreshCw className="h-4 w-4 mr-2" />;
             Try Again;
           </Button>;
         )}
@@ -326,8 +326,8 @@ export const createDynamicComponent = <T extends ComponentType<any />>(importFn:
   )}// Predefined dynamic loaders for common heavy components;
 // Note: These are examples - uncomment and install types as needed;
 // export const DynamicChartComponent = createDynamicComponent(//   () => import('recharts').then(module => ({ default: module.LineChart}"
-})),//   {//     loadingComponent: () => (//       <div className=\"w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center\" />;"
-//         <span className=\"text-muted-foreground\" />Loading chart...</span>;
+})),//   {//     loadingComponent: () => (//       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center" />;"
+//         <span className="text-muted-foreground" />Loading chart...</span>;
 //       </div>;}
 //     )//     prefetch: true;}
 //   }
@@ -361,8 +361,8 @@ interface DynamicLoaderProps  {importFn: () => Promise<{ default: ComponentType<
 const EnhancedLoading: React.FC<{progress?: number;
   message?: string;}
   showProgress?: boolean;}"
-}> = ({progress;//   {//     loadingComponent: () => (//       <div className=\"w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center\" />;"
-//         <span className=\"text-muted-foreground\" />Loading 3D renderer...</span>;}
+}> = ({progress;//   {//     loadingComponent: () => (//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center" />;"
+//         <span className="text-muted-foreground" />Loading 3D renderer...</span>;}
 //       </div>;}
 //     )//   }
 // )export default DynamicComponentLoader;
@@ -474,26 +474,26 @@ export const createDynamicComponent = <T extends ComponentType < any />>(import_
 // Note: These are examples - uncomment and install types as needed;
 // export const DynamicChartComponent = createDynamicComponent (//   (, ) => import ('recharts').then (module => ({ default: module.LineChart}
 })),//   () => import('three').then(module => ({ default: module.WebGLRenderer}"
-})),//   {//     loading_component: () => (//       <div className=\"w - full h - 64 bg - muted animate - pulse rounded - lg flex items - center justify - center\" />;"
-//         <span className=\"text - muted - foreground\" />Loading chart...</span>;
+})),//   {//     loading_component: () => (//       <div className="w - full h - 64 bg - muted animate - pulse rounded - lg flex items - center justify - center" />;"
+//         <span className="text - muted - foreground" />Loading chart...</span>;
 //       </div>;}
 //     ),//     prefetch: true;}
 //   }
 // )// export const DynamicThreeComponent = createDynamicComponent (//   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer}"
-})),//   {//     loading_component: () => (//       <div className=\"w - full h - 96 bg - muted animate - pulse rounded - lg flex items - center justify - center\" />;"
-//         <span className=\"text - muted - foreground\" />Loading 3D renderer...</span>;}
+})),//   {//     loading_component: () => (//       <div className="w - full h - 96 bg - muted animate - pulse rounded - lg flex items - center justify - center" />;"
+//         <span className="text - muted - foreground" />Loading 3D renderer...</span>;}
 //       </div>;}
 //     )//   }/>;
   )}// Predefined dynamic loaders for common heavy components;
 // Note: These are examples - uncomment and install types as needed;// export const DynamicChartComponent = createDynamicComponent(//   (,) => import('recharts').then(module => ({ default: module && module.LineChart}"
-})),//   {//     loadingComponent: () => (//       <div className=\"w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center\" />;"
-//         <span className=\"text-muted-foreground\" />Loading chart...</span>;
+})),//   {//     loadingComponent: () => (//       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center" />;"
+//         <span className="text-muted-foreground" />Loading chart...</span>;
 //       </div>;}
 //     ),//     prefetch: true;}
 //   }
 // )// export const DynamicThreeComponent = createDynamicComponent(//   (,) => import('three').then(module => ({ default: module && module.WebGLRenderer}"
-})),//   {//     loadingComponent: () => (//       <div className=\"w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center\" />;"
-//         <span className=\"text-muted-foreground\" />Loading 3D renderer...</span>;}
+})),//   {//     loadingComponent: () => (//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center" />;"
+//         <span className="text-muted-foreground" />Loading 3D renderer...</span>;}
 //       </div>;}
 //     )//   }
 // )export default DynamicComponentLoader;

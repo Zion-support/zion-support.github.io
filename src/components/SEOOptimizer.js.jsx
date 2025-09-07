@@ -254,7 +254,7 @@ const csvContent = ['';
             ])'`'`'`'`;
         ].map(row => row.map(cell => `'${cell}'`).join(',)).join('\n')';'';
 
-const blob = new Blob([csvContent], { type: 'text/csv',}
+const blob = new Blob([csvContent], {type: 'text/csv'}
 })'';
 
 const url = window.URL.createObjectURL(blob)';';

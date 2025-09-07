@@ -272,7 +272,7 @@ ease: 'linear'}
         <motion&& motion.div;
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent';
             ease: 'linear',
-  ease: \"linear\";
+  ease: "linear";
           }}
         />;
       </div>;

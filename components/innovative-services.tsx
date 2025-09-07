@@ -39,35 +39,35 @@ const [sortBy, setSortBy] = useState('innovation');
 
 const [showFilters, setShowFilters] = useState(false);
 
-    { value: 'All',}
+    {value: 'All'}
   label: 'All Prices',}
 },
-{ value: '0-1000',}
+{value: '0-1000'}
   label: '$0 - $1,000' },
-    { value: '1001-2000',}
+    {value: '1001-2000'}
   label: '$1,001 - $2,000' },
-    { value: '2001-3000',}
+    {value: '2001-3000'}
   label: '$2,001 - $3,000' },
-    { value: '3001-5000',}
+    {value: '3001-5000'}
   label: '$3,001 - $5,000' },
-    { value: '5001+',}
+    {value: '5001+'}
   label: '$5,001+' },
   ];
 
 const sortOptions = [
-    { value: 'innovation',}
+    {value: 'innovation'}
   label: 'Innovation Level',}
 },
-    { value: 'price',}
+    {value: 'price'}
   label: 'Price Low-High',}
 },
-    { value: 'popularity',}
+    {value: 'popularity'}
   label: 'Most Popular',}
 },
-    { value: 'category',}
+    {value: 'category'}
   label: 'Category',}
 },
-{ value: 'roi',}
+{value: 'roi'}
   label: 'Highest ROI',}
 },
   ];
@@ -357,8 +357,8 @@ value={sortBy}
                   </div>;
                   {/* View Mode Toggle */}<div className='flex-shrink-0' />;
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20' />;{/* View Mode Toggle */}
-                  <div className=\"flex-shrink-0\" />;
-                    <div className=\"flex bg-white/10 rounded-xl p-1 border border-white/20\" />;
+                  <div className="flex-shrink-0" />;
+                    <div className="flex bg-white/10 rounded-xl p-1 border border-white/20" />;
                   {/* View Mode Toggle */}
 
 

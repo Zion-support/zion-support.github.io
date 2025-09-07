@@ -163,7 +163,7 @@ default:}
   });
 
 const containerVariants = {}
-    hidden: { opacity: 0,}
+    hidden: {opacity: 0}
 }
     visible: {
       opacity: 1;
@@ -226,7 +226,7 @@ rel='canonical'
 initial={{ opacity: 0, y: 30 ,}
 }
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 ,}
+            transition={{duration: 0.8 }
 }
            />
 <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6' />
@@ -606,7 +606,7 @@ onClick={() = /> {}
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover: from-purple-600 hover:to-pink-600 transition-all duration-300'
                   setSelectedCategory('all')
                 }}
-                className=\"bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300\"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
               >
                 Clear Filters;
               </button>
@@ -622,7 +622,7 @@ onClick={() = /> {}
 }
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true ,}
+            viewport={{once: true }
 }
 
            />

@@ -31,16 +31,16 @@ if ( {) {$2;}
                     : 'Something went wrong'}
                 </AlertTitle>;
               </div>;</AlertDescription>;
-            </Alert>;<div className=\"flex min-h-screen items-center justify-center p-4\" />;"
-          <div className=\"w-full max-w-md space-y-4\" />;"
-            <Alert variant=\"destructive\" />;"
-              <div className=\"flex items-center gap-2\" />;"
-                {isNetworkError ? (<WifiOff className=\"h-4 w-4\" />;}"
-                ) : (<RefreshCw className=\"h-4 w-4\" />;}
+            </Alert>;<div className="flex min-h-screen items-center justify-center p-4" />;"
+          <div className="w-full max-w-md space-y-4" />;"
+            <Alert variant="destructive" />;"
+              <div className="flex items-center gap-2" />;"
+                {isNetworkError ? (<WifiOff className="h-4 w-4" />;}"
+                ) : (<RefreshCw className="h-4 w-4" />;}
                 )}
                 <AlertTitle />{isNetworkError ? 'Connection Problem' : 'Something went wrong'}</AlertTitle>;
               </div>;"
-              <AlertDescription className=\"mt-2\" />;
+              <AlertDescription className="mt-2" />;
                 {isNetworkError ? (!this.state.isOnline ? ('You appear to be offline. Please check your internet connection.';
                   ) : ('Unable to connect to our servers. This might be a temporary network issue.';}
                   )) : ('An unexpected error occurred while loading the page.';}
@@ -51,19 +51,19 @@ if ( {) {$2;}
               <Button;
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}"
-                className=\"w-full\" />
+                className="w-full" />
 
                 {this.state.isRetrying ? (<>;"
-                    <RefreshCw className=\"mr-2 h-4 w-4 animate-spin\" />;
+                    <RefreshCw className="mr-2 h-4 w-4 animate-spin" />;
                     Retrying...;
                   </>;
                 ) : (<>;"
-                    <RefreshCw className=\"mr-2 h-4 w-4\" />;
+                    <RefreshCw className="mr-2 h-4 w-4" />;
                     Try Again;}
                   </>;}"
-                )}variant=\"outline\";
+                )}variant="outline";
                 onClick={() => window.location.reload()}"
-                className=\"w-full\">
+                className="w-full">
 
                 Reload Page;
               </Button>;
@@ -102,7 +102,7 @@ if ( {) {$2;}
             </div>;
             {!this.state.is_online && (<div className='flex items - center justify - center gap - 2 text - sm text - muted - foreground' />;
                 <WifiOff className='h - 4 w - 4' />;
-                <span  /> Offline</span>
+                <span /> Offline</span>
     </div>}
   );}
 }
@@ -134,10 +134,10 @@ export const useApiErrorHandler = () =>: any ;
                   {this && this.state.errorInfo?.componentStack}
                 </pre>;
               </details>;"
-            )}<details className=\"mt-4 rounded border p-2 text-xs\" />;"
-                <summary className=\"cursor-pointer font-medium\" />;
+            )}<details className="mt-4 rounded border p-2 text-xs" />;"
+                <summary className="cursor-pointer font-medium" />;
                   Debug Info (Development Only)</summary>;"
-                <pre className=\"mt-2 whitespace-pre-wrap break-all\" />;
+                <pre className="mt-2 whitespace-pre-wrap break-all" />;
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>;

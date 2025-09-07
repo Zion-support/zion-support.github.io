@@ -3,7 +3,7 @@
 
 const options: RequestInit = {method;}
       headers: {Authorization: `Bearer ${apiKe}
-}`,\"Content-Type\": \"application/json\"},// Add timeout to prevent hanging;
+}`,"Content-Type": "application/json"},// Add timeout to prevent hanging;
       try {options.body = JSON.stringify (JSON.parse (body))} catch {set_loading (true)set_response (null)try {const res = await fetch (url, options;
   const content_type = res.headers.get ('content - type')let response_text: string;}
       if () {) {$2;}
@@ -48,8 +48,8 @@ export function ApiPlayground() {const [apiKey, setApiKey] = useState('demo_key_
 const searchParams = new URLSearchParams()if (method === 'GET' |method === 'DELETE') {params.forEach(p => ;}
   const val = paramValues[p.name];}
         if (val) searchParams.append(p.name, val)})const query = searchParams.toString()if (query) url += `?${query}` }"
-import { Button } from \"@/components/ui/button\",import CodeBlock from \"./CodeBlock\",interface Param  {name: string,type: string,required?: boolean;}"
-import { useState } from \"react\",import { Input } from \"@/components/ui/input\",import { Textarea } from \"@/components/ui/textarea\",interface Param  {name: string,type: string,required?: boolean;}
+import { Button } from "@/components/ui/button",import CodeBlock from "./CodeBlock",interface Param  {name: string,type: string,required?: boolean;}"
+import { useState } from "react",import { Input } from "@/components/ui/input",import { Textarea } from "@/components/ui/textarea",interface Param  {name: string,type: string,required?: boolean;}
 }
 
 interface ApiPlaygroundProps {
@@ -57,12 +57,12 @@ interface ApiPlaygroundProps {
 }
 }
 "
-export function ApiPlayground() {const [apiKey, setApiKey] = useState(\"demo_key_123\"),const [paramValues, setParamValues] = useState<Record<string string />>({}),const [body, setBody] = useState(\"{}\"),const [response, setResponse] = useState<string | null />(null),const [loading, setLoading] = useState(false),const handleParamChange = (setParamValues((prev) => ({ ...prev, [name]: value ) => {
+export function ApiPlayground() {const [apiKey, setApiKey] = useState("demo_key_123"),const [paramValues, setParamValues] = useState<Record<string string />>({}),const [body, setBody] = useState("{}"),const [response, setResponse] = useState<string | null />(null),const [loading, setLoading] = useState(false),const handleParamChange = (setParamValues((prev) => ({ ...prev, [name]: value ) => {
   return $3;}
 }))};
   const sendRequest = async () => {// For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set;}
 }"
-const baseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin : ''),let url = `${baseUrl}${path}`,const searchParams = new URLSearchParams(),if (method === \"GET\" || method === \"DELETE\") {params.forEach((p) => {const val = paramValues[p.name],if (val) searchParams.append(p.name, val)});
+const baseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin : ''),let url = `${baseUrl}${path}`,const searchParams = new URLSearchParams(),if (method === "GET" || method === "DELETE") {params.forEach((p) => {const val = paramValues[p.name],if (val) searchParams.append(p.name, val)});
   const query = searchParams.toString(),if (query) url += `?${query}`;
     }
 
@@ -85,7 +85,7 @@ export function ApiPlayground(): any ({method,path,params = []}: ApiPlaygroundPr
   const [response, setResponse] = useState<string | null />(null;
   const [loading, setLoading]  = useState(false)options.body = body;
 "
-export function ApiPlayground() {const [apiKey, setApiKey] = useState(\"demo_key_123\"),const [paramValues, setParamValues] = useState<Record<string string />>({}),const [body, setBody] = useState(\"{}\"),const [response, setResponse] = useState<string | null />(null),const [loading, setLoading] = useState(false),const handleParamChange = (setParamValues(prev => ({ ...prev, [name]: value ) => {
+export function ApiPlayground() {const [apiKey, setApiKey] = useState("demo_key_123"),const [paramValues, setParamValues] = useState<Record<string string />>({}),const [body, setBody] = useState("{}"),const [response, setResponse] = useState<string | null />(null),const [loading, setLoading] = useState(false),const handleParamChange = (setParamValues(prev => ({ ...prev, [name]: value ) => {
   return $3;}
 }))}
 ;
@@ -119,7 +119,7 @@ const statusInfo = `HTTP ${res && res.status} ${res && res.statusText}\n\n`;
       )} finally {setLoading(false)}},return (<div className='space-y-4' />;
       <Input;
         value={apiKey}onChange={(e) = /> setApiKey(e.target.value)}"
-        placeholder=\"API Key\";
+        placeholder="API Key";
       />;
       {params.map(p => (<Input;}
           value={paramValues[p.name] || ''}onChange={e = /> handleParamChange(p.name, e.target.value)}        />;
@@ -171,7 +171,7 @@ if (url += `?$ {) {$2;}
 
 const options: RequestInit = {method, headers: {Authorization: `Bearer $ {api_key;}
 }`;"
-\"Content - Type\" : \"application / json\";
+"Content - Type" : "application / json";
 }
 //Add timeout to prevent hanging signal: AbortSignal.timeout (15000)}
 }set_loading (true)set_response (null)let response_text: string;
@@ -187,7 +187,7 @@ if (val) searchParams && searchParams.append (p && p.name, val)})const query = s
 
 const options: RequestInit = {method, headers: {Authorization: `Bearer $ {apiKey ;}
 }`;"
-\"Content-Type\" : \"application/json\" ;
+"Content-Type" : "application/json" ;
 }//Add timeout to prevent hanging signal: AbortSignal && AbortSignal.timeout (15000)
 }setLoading (true)setResponse (null)let responseText: string;
 if (contentType?.includes ('application/json') ) {try {/> {params && params.map ( (p) => (<Inputkey= {p && p.name;}
@@ -197,26 +197,26 @@ export default ApiPlayground;p.name;
 }</div>)}
 
 export default ApiPlayground;"
-'\";
+'";
   p.name;
 }</div>)}
 
 export default ApiPlayground;"
-'\";"
-}value={paramValues[p.name] || \"\"}
+'";"
+}value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;
       ))}"
-      {method !== \"GET\" && method !== \"DELETE\" && (<Textarea;}
+      {method !== "GET" && method !== "DELETE" && (<Textarea;}
           value={body}
           onChange={(e) = /> setBody(e.target.value)}"
-          className=\"font-mono\";
+          className="font-mono";
         />;
       )}
       <Button onClick={sendRequest} disabled={loading} />;"
-        {loading ? \"Sending...\" : \"Send Request\"}
+        {loading ? "Sending..." : "Send Request"}
       </Button>;"
-      {response && <CodeBlock code={response} language=\"json\" />}
+      {response && <CodeBlock code={response} language="json" />}
     </div>;
   )}
 

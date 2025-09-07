@@ -516,36 +516,36 @@ initial={{ opacity: 0, y: 20 }
                 <div className='flex items-center space-x-3 text-gray-300' />;
                   <Globe className='w-4 h-4 text-cyan-400' />;
                   <span className='text-sm' />{contactInfo && contactInfo.website}</span>                </div>                  </div>;
-                  <div className=\"absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300\" />;
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />;
                 </div>;
                 <div />;"
-                  <h3 className=\"text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\" />;
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" />;
                     Zion Tech Group;
                   </h3>;"
-                  <p className=\"text-sm text-gray-400\" />Future Technology Solutions</p>;
+                  <p className="text-sm text-gray-400" />Future Technology Solutions</p>;
                 </div>;
               </Link>;"
-              <p className=\"text-gray-300 mb-6 leading-relaxed\" />;
+              <p className="text-gray-300 mb-6 leading-relaxed" />;
                 Leading the future with cutting-edge AI, quantum computing, space technology, and innovative micro SAAS solutions. ;
                 Transforming businesses through next-generation technology.;
               </p>;
               {/* Contact Info */}"
-              <div className=\"space-y-3\" />;"
-                <div className=\"flex items-center space-x-3 text-gray-300\" />;"
-                  <Phone className=\"w-4 h-4 text-cyan-400\" />;"
-                  <span className=\"text-sm\" />{contactInfo && contactInfo.mobile}</span>;
+              <div className="space-y-3" />;"
+                <div className="flex items-center space-x-3 text-gray-300" />;"
+                  <Phone className="w-4 h-4 text-cyan-400" />;"
+                  <span className="text-sm" />{contactInfo && contactInfo.mobile}</span>;
                 </div>;"
-                <div className=\"flex items-center space-x-3 text-gray-300\" />;"
-                  <Mail className=\"w-4 h-4 text-cyan-400\" />;"
-                  <span className=\"text-sm\" />{contactInfo && contactInfo.email}</span>;
+                <div className="flex items-center space-x-3 text-gray-300" />;"
+                  <Mail className="w-4 h-4 text-cyan-400" />;"
+                  <span className="text-sm" />{contactInfo && contactInfo.email}</span>;
                 </div>;"
-                <div className=\"flex items-center space-x-3 text-gray-300\" />;"
-                  <MapPin className=\"w-4 h-4 text-cyan-400\" />;"
-                  <span className=\"text-sm\" />{contactInfo && contactInfo.address}</span>;
+                <div className="flex items-center space-x-3 text-gray-300" />;"
+                  <MapPin className="w-4 h-4 text-cyan-400" />;"
+                  <span className="text-sm" />{contactInfo && contactInfo.address}</span>;
                 </div>;"
-                <div className=\"flex items-center space-x-3 text-gray-300\" />;"
-                  <Globe className=\"w-4 h-4 text-cyan-400\" />;"
-                  <span className=\"text-sm\" />{contactInfo && contactInfo.website}</span>;
+                <div className="flex items-center space-x-3 text-gray-300" />;"
+                  <Globe className="w-4 h-4 text-cyan-400" />;"
+                  <span className="text-sm" />{contactInfo && contactInfo.website}</span>;
                 </div>;
               </div>;
             </motion && motion.div>;

@@ -4,7 +4,7 @@ import { createServerClient  } from '../../../utils/supabase/server';
       supabase;
 
 export default async function handler() {try {const supabase = null;}
-        { label: 'ai',}
+        {label: 'ai'}
   value: 1 },
 })try {const supabase = createServerClient(;
   const talentId = (req.query.talentId as string) |null;
@@ -16,13 +16,13 @@ supabase;
         .from('applications').select('id, talent_id, status').eq('talent_id', talentId)supabase;}
         .from('search_matches').select('talent_id, tag').eq('talent_id', talentId)])const views =;}
         .sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }))})} catch (e) {topTags: [;
-        { label: 'react',}
+        { label: 'react'}
   value: 2,}
 }
-        { label: 'node',}
+        {label: 'node'}
   value: 1,}
 }
-        { label: 'ai',}
+        {label: 'ai'}
   value: 1,}
 }
       ];
@@ -64,15 +64,14 @@ const views =
         .slice(0, 5)}
         .map(([label, value]) => ({ label, value }))
     });
-  } catch (e) {
-      topTags: [
-        { label: 'react',}
+  } catch (e) {topTags: [
+        { label: 'react'}
   value: 2,}
 }
-        { label: 'node',}
+        {label: 'node'}
   value: 1,}
 }
-        { label: 'ai',}
+        {label: 'ai'}
   value: 1 }
       ]
 
@@ -142,25 +141,25 @@ const success_rate =;
 const tag_counts: Record < string, number> = {}
     (tags.length;
       ? tags;
-      : [{ tag: 'react',}
-}, { tag: 'node',}
-}, { tag: 'ai',}
-}, { tag: 'react',}
+      : [{tag: 'react'}
+}, {tag: 'node'}
+}, {tag: 'ai'}
+}, {tag: 'react'}
 }]).for_each (t => {tag_counts[t.tag] = (tag_counts[t.tag] || 0) + 1;}
     })res.status (200).json ({profile_views,quote_invites,job_applications,success_rate,top_tags: Object.entries (tag_counts).sort ((a, b) => b[1] - a[1]).slice (0, 5).map (([label, value]) => ({ label, value })).map (([label, value]) => ({ label, value })).map (([label, value]) => ({ label, value }))})} catch (e) {res.status (200).json ({profile_views: 27,quote_invites: 6,job_applications: 9,success_rate: 33.3,top_tags: [;
-        { label: 'react',}
+        {label: 'react'}
   value: 2,}
-},{ label: 'node',}
+},{label: 'node'}
   value: 1,}
-},{ label: 'ai',}
-  value: 1,}
-}
-      ];
-        { label: 'ai',}
+},{label: 'ai'}
   value: 1,}
 }
       ];
-        { label: 'ai',}
+        {label: 'ai'}
+  value: 1,}
+}
+      ];
+        {label: 'ai'}
   value: 1,}
 }
       ];

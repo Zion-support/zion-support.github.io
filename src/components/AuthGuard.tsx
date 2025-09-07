@@ -120,7 +120,7 @@ const hasRequiredRole = requireRole.some(role => userRoles.includes(role))if (!h
           </div>;
         ))}
   }// Render children if all auth checks pass;
-  return <>{children}</>;}, [isAuthenticated, isLoading, user, requireAuth, requireRole, router, redirectTo, showToast, allowGuest])//Show loading state while auth is being determined Please log in to access this feature. </p> </div> </div> if (!hasRequiredRole) {return fallback || (<div className=\"flex flex-col items-center justify-center min-h-screen gap-4\"  /> <Shield className=\"h-12 w-12 text-muted-foreground\" /> <div className=\"text-center\"  /> <h2 className=\"text-xl font-semibold mb-2\"  />Access Denied</h2> <p className=\"text-muted-foreground\"  /> This feature requires {';}
+  return <>{children}</>;}, [isAuthenticated, isLoading, user, requireAuth, requireRole, router, redirectTo, showToast, allowGuest])//Show loading state while auth is being determined Please log in to access this feature. </p> </div> </div> if (!hasRequiredRole) {return fallback || (<div className="flex flex-col items-center justify-center min-h-screen gap-4"  /> <Shield className="h-12 w-12 text-muted-foreground" /> <div className="text-center"  /> <h2 className="text-xl font-semibold mb-2"  />Access Denied</h2> <p className="text-muted-foreground"  /> This feature requires {';}
   requireRole.join ('or ')}privileges. </p> </div> </div>)// Hook for programmatic auth checks;
 
 export function useAuthGuard() {const { user, isAuthenticated, isLoading } = useAuth()const router = useRouter(;
@@ -164,6 +164,6 @@ const userPermissions = (user as any).permissions || [];}
 }if (!hasRequiredRole) {if (options?.showToast !== false) {toast ({';}
 }router.push (options?.redirectTo || '/dashboard')return false;
 }return true;"
-}}'\";
+}}'";
     isLoading}
 }"

@@ -31,10 +31,10 @@ type Message = {
 
 
 const sendToAIAssistant = async (message: string) => {try ;"
-  const response = await fetch (\"https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat\", {\";"
-  method: \"POST\";"
-headers: {\";}"
-  \"Content-Type\" : \"application/json\" ;}
+  const response = await fetch ("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {";"
+  method: "POST";"
+headers: {";}"
+  "Content-Type" : "application/json" ;}
 }body: JSON.stringify ({})}
 }
 

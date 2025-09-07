@@ -35,14 +35,13 @@ app.post('/ai/ask', async (req, reply) => {}
   const body = (req.body as any) |{}
 ;
   const prompt = body.prompt as string;
-  if (!prompt) return reply.code(400).send({ error: 'prompt required',}
+  if (!prompt) return reply.code(400).send({error: 'prompt required'}
 });
 
-const completion = await openai.responses.create({
-    model: 'gpt-4o-mini',}
+const completion = await openai.responses.create({model: 'gpt-4o-mini'}
   input: prompt,}
   });
-  return { text: completion.output_text,}
+  return {text: completion.output_text}
 };
 });
 app.post('/jobs/generate', async (req, reply) => {}
@@ -66,7 +65,7 @@ await withUser(userId, async client => {
 
 const userId = getUserId(req);
 
-  if (!userId) return reply.code(401).send({ error: 'unauthorized',}
+  if (!userId) return reply.code(401).send({error: 'unauthorized'}
 });
 
 const rows = await withUser(userId, async client => {
@@ -83,13 +82,13 @@ LIMIT 25`,
     );}
     return res.rows;}
   });
-  return { results: rows,}
+  return {results: rows}
 };
 });
 
 const userId = getUserId(req);
 
-  if (!userId) return reply.code(401).send({ error: 'unauthorized',}
+  if (!userId) return reply.code(401).send({error: 'unauthorized'}
 });
 
 const project = await withUser(userId, async client => {
@@ -100,14 +99,14 @@ const project = await withUser(userId, async client => {
     );}
     return res.rows[0];}
   });
-  if (!project) return reply.code(404).send({ error: 'not found',}
+  if (!project) return reply.code(404).send({error: 'not found'}
 });
   return { project };
 });
 
 app.get('/notifications', async (req, reply) => {
   const userId = getUserId(req);}
-  if (!userId) return reply.code(401).send({ error: 'unauthorized',}
+  if (!userId) return reply.code(401).send({error: 'unauthorized'}
 });
 
 const items = await withUser(userId, async client => {

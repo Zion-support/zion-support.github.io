@@ -13,20 +13,20 @@ export default function Card() {return (<div className={`bg-white rounded-lg sha
   )}
 import { cn  } from '../../lib/utils';
 
-interface HTMLDivElement extends HTMLElement  {tagName: \"DIV\";}
+interface HTMLDivElement extends HTMLElement  {tagName: "DIV";}
 }
 "
-interface HTMLParagraphElement extends HTMLElement  {tagName: \"P\";}
+interface HTMLParagraphElement extends HTMLElement  {tagName: "P";}
 }
 "
-interface HTMLHeadingElement extends HTMLElement  {tagName: \"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\";}
+interface HTMLHeadingElement extends HTMLElement  {tagName: "H1" | "H2" | "H3" | "H4" | "H5" | "H6";}
 }
 
 const Card = React.forwardRef<;
   HTMLDivElement,React.HTMLAttributes<HTMLDivElement />;
 >(({ className, ...props }, ref) => (<div;
     ref = {ref}"
-    className={cn(\"rounded-lg border bg-card text-card-foreground shadow-sm\",className,)}
+    className={cn("rounded-lg border bg-card text-card-foreground shadow-sm",className,)}
     {...props}
 ;
   const CardContent = React && React.forwardRef<;
@@ -35,7 +35,7 @@ const Card = React.forwardRef<;
   HTMLParagraphElement,React.HTMLAttributes<HTMLHeadingElement />;
 >(({ className, ...props }, ref) => (<h3;
     ref={ref}"
-    className={cn(\"text-2xl font-semibold leading-none tracking-tight\",className,// Define HTML element types;
+    className={cn("text-2xl font-semibold leading-none tracking-tight",className,// Define HTML element types;
 
 interface HTMLElement  {className: string;
   id: string;
@@ -58,54 +58,54 @@ const Card = null;
     )}
     {...props}
   />;"
-))Card.displayName = \"Card\";
+))Card.displayName = "Card";
 
 const CardHeader = null;
   React.HTMLAttributes<HTMLDivElement />;
 >(({ className, ...props }, ref) => (<div;
     ref={ref}"
-    className={cn(\"flex flex-col space-y-1.5 p-6\", className)}
+    className={cn("flex flex-col space-y-1.5 p-6", className)}
     {...props}
   />;"
-))CardHeader.displayName = \"CardHeader\";
+))CardHeader.displayName = "CardHeader";
 
 const CardTitle = null;
       className;
     )}
     {...props}
   />;"
-))CardTitle.displayName = \"CardTitle\";
+))CardTitle.displayName = "CardTitle";
 
 const CardDescription = React.forwardRef<;
   HTMLParagraphElement,const CardDescription = React.forwardRef<;
   HTMLParagraphElement,const CardDescription  = null;React.HTMLAttributes<HTMLParagraphElement />;
 >(({ className, ...props }, ref) => (<p;
     ref={ref}"
-    className={cn(\"text-sm text-muted-foreground\", className)}
+    className={cn("text-sm text-muted-foreground", className)}
     {...props}
   />;"
-))CardDescription.displayName = \"CardDescription\";
+))CardDescription.displayName = "CardDescription";
 
 const CardContent = React.forwardRef<;
   HTMLDivElement,const CardContent = React.forwardRef<;
   HTMLDivElement,const CardContent  = null;React.HTMLAttributes<HTMLDivElement />;"
->(({ className, ...props }, ref) => (<div ref={ref} className={cn(\"p-6 pt-0\", className)} {...props} />;"
-))CardContent && CardContent.displayName = \"CardContent\";
+>(({ className, ...props }, ref) => (<div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;"
+))CardContent && CardContent.displayName = "CardContent";
 
 const CardFooter = React && React.forwardRef<;
   HTMLDivElement,React && React.HTMLAttributes<HTMLDivElement />;
 >(({ className, ...props }, ref) => (<div;"
-  />))CardDescription.display_name = \"CardDescription\";
+  />))CardDescription.display_name = "CardDescription";
 
 const CardContent = React.forward_ref<;
   HTMLDivElement,React.HTMLAttributes < HTMLDivElement>;"
->(({ class_name, ...props }, ref) => (<div ref={ref} className={cn (\"p - 6 pt - 0\", class_name)} {...props} />))CardContent.display_name = \"CardContent\";
+>(({ class_name, ...props }, ref) => (<div ref={ref} className={cn ("p - 6 pt - 0", class_name)} {...props} />))CardContent.display_name = "CardContent";
 
 const CardFooter = React.forward_ref<;
   HTMLDivElement,React.HTMLAttributes < HTMLDivElement>;
 >(({ class_name, ...props }, ref) => (<div;
     ref={ref}"
-    className={cn (\"flex items - center p - 6 pt - 0\", class_name)}
+    className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
 import React from 'react';,interface CardProps {
   children: React.ReactNode;
@@ -133,7 +133,7 @@ const hoverClasses = hover ? 'hover: border-blue-500/30 hover:shadow-2xl hover:s
 const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : '';
 
 const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`;"
-  />))CardFooter.display_name = \"CardFooter\";
+  />))CardFooter.display_name = "CardFooter";
 
 interface CardProps  {children: React.ReactNode,class_name?: string,style?: React.CSSProperties,on_click?: () => void,hover?: boolean;}
 }
@@ -142,23 +142,23 @@ interface CardProps  {children: React.ReactNode,class_name?: string,style?: Reac
       on_click={on_click}
     >;
       {/* Subtle background pattern */}"
-        <div className = \"absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover: opacity - 100 transition - opacity duration - 300 pointer - events - none\" />)}
+        <div className = "absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover: opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
     </div>
 },export default Card,export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent;}
 }
 "
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }<div className=\"absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover: opacity - 100 transition - opacity duration - 300 pointer - events - none\" />
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }<div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover: opacity - 100 transition - opacity duration - 300 pointer - events - none" />
 }"
-    </div>)CardContent.displayName = \"CardContent\";
+    </div>)CardContent.displayName = "CardContent";
 
 const CardFooter = null;
   React.HTMLAttributes<HTMLDivElement />;
 >(({ className, ...props }, ref) => (<div;
     ref={ref}"
-    className={cn(\"flex items-center p-6 pt-0\", className)}
+    className={cn("flex items-center p-6 pt-0", className)}
     {...props}
   />;"
-))CardFooter.displayName = \"CardFooter\";
+))CardFooter.displayName = "CardFooter";
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }hover?: boolean;
 }

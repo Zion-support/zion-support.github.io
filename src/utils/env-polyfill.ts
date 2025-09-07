@@ -34,7 +34,7 @@ export const processEnv =;
 * Environment Polyfill for Browser;
 *;
 * This polyfill ensures that process.env is always available in the browser environment.;
-* It prevents the \"Cannot read properties of undefined (reading 'env')\" error.;
+* It prevents the "Cannot read properties of undefined (reading 'env')" error.;
 */;
 // Define safe defaults for environment variables;
 
@@ -142,7 +142,7 @@ export default safe_env;/**;
  * Environment Polyfill for Browser;
  *;
  * This polyfill ensures that process.env is always available in the browser environment.;"
- * It prevents the \"Cannot read properties of undefined (reading 'env')\" error.;
+ * It prevents the "Cannot read properties of undefined (reading 'env')" error.;
  */;
 // Define safe defaults for environment variables;
         NODE_ENV: 'production',

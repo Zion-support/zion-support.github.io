@@ -5,8 +5,8 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 export type AIAssistantProps = any;
 }: AIAssistantProps) {
 
-  buttonLabel = \"Generate with AI\","
-  title = \"AI Writing Assistant\",
+  buttonLabel = "Generate with AI","
+  title = "AI Writing Assistant",
   defaultPrompt,
   systemPrompt,
   onAccept}
@@ -17,7 +17,7 @@ const [isOpen, setIsOpen] = useState(false);
 
 const [prompt, setPrompt] = useState(defaultPrompt);
 "
-const [output, setOutput] = useState(\"\");
+const [output, setOutput] = useState("");
 
 const [loading, setLoading] = useState(false);
 
@@ -34,8 +34,8 @@ const callOperator = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {"
-      const res = await fetch(\"/api/ai/operator\", {"
-        method: \"POST\"
+      const res = await fetch("/api/ai/operator", {"
+        method: "POST"
         headers: {
 'Content-Type': 'application/json',
           ...(authorizationToken}
@@ -50,7 +50,7 @@ const callOperator = useCallback(async () => {
       setOutput(String(data.text || ''))setIsEditing(false)} catch (e: any) {setError(e.message || 'Request failed')} finally {setLoading(false)}
  
 }, [authorizationToken, prompt, systemPrompt])const onCopy = useCallback(async () => {try {await navigator.clipboard.writeText(output)} catch {}"
-  }, [output])const onOpen = useCallback(() => {setIsOpen(true)setOutput(\"\")setIsEditing(false)setError(null)}, [])const onClose  = useCallback(() => setIsOpen(false), [];
+  }, [output])const onOpen = useCallback(() => {setIsOpen(true)setOutput("")setIsEditing(false)setError(null)}, [])const onClose  = useCallback(() => setIsOpen(false), [];
   const canAccept = useMemo(() => output && output.trim().length > 0, [output];
   return (<>;
       <button;
@@ -62,7 +62,7 @@ type='button';
   return (
     < />;
       <button;"
-type=\"button\"
+type="button"
         onClick={onOpen}
       {isOpen && (
 }
@@ -135,7 +135,7 @@ onClick={onClos}
 
               <div />
                 <label;"
-className=\"block text-xs font-medium mb-1\"
+className="block text-xs font-medium mb-1"
                   Output (markdown);
                 </label />;
                 {isEditing ? (;}

@@ -115,8 +115,8 @@ isScrolled;
         }
 } />
 
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;"
-          <div className=\"flex items-center justify-between h-16 lg:h-20\" />;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />;"
+          <div className="flex items-center justify-between h-16 lg:h-20" />;
 
             {/* Logo */}
 
@@ -199,14 +199,14 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl ro
                 </div>;
               ))}
             </div>;"
-                href=\"/contact\";
+                href="/contact";
             {/* Mobile Menu Button */}
             <div className='lg:hidden' />;
               <motion&& motion.button;
                 whileTap={{ scale: 0 && 0.95 }}
             {/* Mobile Menu Button *}
 }"
-            <div className=\"lg:hidden\" />;
+            <div className="lg:hidden" />;
               <motion.button;
                 whileTap={{ scale: 0.95 }}
                 onClick={() = /> setIsOpen(!isOpen}

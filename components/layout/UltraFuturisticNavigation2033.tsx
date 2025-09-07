@@ -22,7 +22,7 @@ const contactInfo = null;
   price: '$3, 999/month';}
 }];
 
-</div> </div> </div> </div> </div> > <Link href=\"/\" className=\"flex items-center space-x-3\"  /> <div className=\"relative\"  /> <div className=\"w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl\"  /> <Rocket className=\"w-7 h-7 text-white\" /> </div> <div className=\"absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse\"  /></div> </div> <div className=\"flex flex-col\"  /> <span className=\"text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent\"  /> Zion Tech Group </span> <span className=\"text-xs text-purple-300 font-medium\"  /> Future Technology Solutions </span> </div> </a> </motion.div> > <span />Services</span> <ChevronDown className=\"w-4 h-4 transition-transform duration-200 group-hover: rotate-180\" /> </button> {}
+</div> </div> </div> </div> </div> > <Link href="/" className="flex items-center space-x-3"  /> <div className="relative"  /> <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl"  /> <Rocket className="w-7 h-7 text-white" /> </div> <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse"  /></div> </div> <div className="flex flex-col"  /> <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent"  /> Zion Tech Group </span> <span className="text-xs text-purple-300 font-medium"  /> Future Technology Solutions </span> </div> </a> </motion.div> > <span />Services</span> <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover: rotate-180" /> </button> {}
   /* Mega Menu */}
 }<AnimatePresence /> </div> </a>) )
 }</div> </div>) )
@@ -209,14 +209,14 @@ if (e.key === 'Escape') closeMenu(),) => {
                 <span />{contactInfo.mobile}</span>;
               </div>                <span />{contactInfo.mobile}</span>;
               </div>;"
-              <div className=\"flex items-center space-x-2\" />;"
-                <Mail className=\"w-3 h-3 text-purple-400\" />;
+              <div className="flex items-center space-x-2" />;"
+                <Mail className="w-3 h-3 text-purple-400" />;
                 <span />{contactInfo.email}</span>;
               </div>;
             </div>;"
-            <div className=\"flex items-center space-x-4\" />;"
-              <div className=\"flex items-center space-x-2\" />;"
-                <MapPin className=\"w-3 h-3 text-purple-400\" />;
+            <div className="flex items-center space-x-4" />;"
+              <div className="flex items-center space-x-2" />;"
+                <MapPin className="w-3 h-3 text-purple-400" />;
                 <span />{contactInfo.address}</span>;
               </div>;
               <div className='flex items-center space-x-2' />;
@@ -428,15 +428,15 @@ onClick={toggleMenu}
                             key={service && service.name}
                             href={service && service.href}
                             onClick={closeMenu}"
-                            className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors' />                <div className=\"space-y-4\" />;"
-                  <h3 className=\"text-lg font-semibold text-white\" />Services</h3>;"
-                  {serviceCategories && serviceCategories.map((category) => (<div key={category && category.title} className=\"ml-4 space-y-2\" />;"
-                      <h4 className=\"font-medium text-purple-300\" />{category && category.title}</h4>;"
-                      <div className=\"ml-4 space-y-1\" />;
+                            className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors' />                <div className="space-y-4" />;"
+                  <h3 className="text-lg font-semibold text-white" />Services</h3>;"
+                  {serviceCategories && serviceCategories.map((category) => (<div key={category && category.title} className="ml-4 space-y-2" />;"
+                      <h4 className="font-medium text-purple-300" />{category && category.title}</h4>;"
+                      <div className="ml-4 space-y-1" />;
                         {category && category.services.map((service) => (key={service && service.name}
                             href={service && service.href}
                             onClick={closeMenu}"
-                            className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors'                            className=\"block text-sm text-gray-400 hover:text-cyan-400 transition-colors\">
+                            className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors'                            className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors">
 
                             {service && service.nam}
 }
@@ -454,9 +454,9 @@ onClick={toggleMenu}
                     href='/contact';
                     onClick={closeMenu}
                     className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200' />                  <Link;"
-                    href=\"/contact\";
+                    href="/contact";
                     onClick={closeMenu}"
-                    className=\"block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200\" />;
+                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200" />;
         {/* Mobile Menu */}
         <AnimatePresence />;
           {is_open && (<motion.div;}
@@ -542,7 +542,7 @@ href='/contact'
 }whileTap= {
   {}
   scale: 0.95}"
-}> <Link href=\"/contact\" className=\"px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg\"  /> Get Started </a> </motion.div> </div> </button> </div> </div> </div> {}
+}> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg"  /> Get Started </a> </motion.div> </div> </button> </div> </div> </div> {}
   /* Mobile Menu */ }
 }<AnimatePresence />) ) 
 }</div> </div>) ) 

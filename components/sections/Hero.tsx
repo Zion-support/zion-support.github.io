@@ -94,8 +94,8 @@ className='grid grid-cols-2 md: grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto ani
 <div;
 className='mt-16 md:mt-20 animate-fade-in'
             </div />
-            <div className=\"flex items-center gap-2\" />"
-              <Users className=\"w-4 h-4\" />
+            <div className="flex items-center gap-2" />"
+              <Users className="w-4 h-4" />
               <span />10,000+ Developers</span>
             </div>
 
@@ -137,9 +137,9 @@ className='mt-16 md:mt-20 animate-fade-in'
 }
 
 "
-      <div className=\"absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse\" />"
-      <div className=\"absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse\" style={{ animationDelay: '1s' }} />"
-      <div className=\"absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse\" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />"
+      <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />"
+      <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
     </section>
   )
 };

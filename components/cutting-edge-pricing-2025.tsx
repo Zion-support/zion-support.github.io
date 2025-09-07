@@ -88,7 +88,7 @@ const filteredServices =
       : allServices.filter(service => service.category === selectedCategory);
 
 const containerVariants = {}
-    hidden: { opacity: 0,}
+    hidden: {opacity: 0}
 }
     visible: {
       opacity: 1;
@@ -143,7 +143,7 @@ name='keywords'
               initial={{ opacity: 0, y: 30 ,}
 }
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
+              transition={{duration: 0.8 }
 }
 className='text-center' />
 
@@ -378,7 +378,7 @@ key={category.name}
 
 initial='hidden'
               whileInView='visible'
-              viewport={{ once: true ,}
+              viewport={{once: true }
 }
 
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
@@ -439,9 +439,9 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                       ))}
                         </p>;
                       </div>;
-                      <div className=\"ml - 4\" />;
-                        <div className=\"w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center\" />;
-                          <Star className=\"w - 6 h - 6 text - cyan - 400\" />;
+                      <div className="ml - 4" />;
+                        <div className="w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center" />;
+                          <Star className="w - 6 h - 6 text - cyan - 400" />;
                         </div>;
                       </div>;
                     </div>;
@@ -449,16 +449,16 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                     <div className='flex flex - wrap gap - 2 mb - 4' />;
                       {service.tags.slice (0, 3).map ((tag, tag_index) => (<span;}
                           key={tag_index}
-                          className='px - 2 py - 1 text - xs font - medium bg - cyan - 500 / 10 text - cyan - 400 rounded - full border border - cyan - 500 / 20'                         />                    <div className=\"flex flex - wrap gap - 2 mb - 4\" />;
+                          className='px - 2 py - 1 text - xs font - medium bg - cyan - 500 / 10 text - cyan - 400 rounded - full border border - cyan - 500 / 20'                         />                    <div className="flex flex - wrap gap - 2 mb - 4" />;
                       {service.tags.slice (0, 3).map ((tag, tag_index) => (<span;}
                           key={tag_index}
-                          className=\"px - 2 py - 1 text - xs font - medium bg - cyan - 500 / 10 text - cyan - 400 rounded - full border border - cyan - 500 / 20\";
+                          className="px - 2 py - 1 text - xs font - medium bg - cyan - 500 / 10 text - cyan - 400 rounded - full border border - cyan - 500 / 20";
                           {tag}
                         </span />))}
                     </div>;
                     {/* Market Info */}
                     <div className='flex items - center justify - between text - sm text - white / 60 mb - 4' />;
-                      <span  /> Market: {service.market_siz,}
+                      <span /> Market: {service.market_siz,}
 }</span>;
                       <span className='text - cyan - 400' />{service.category}</span>;
                     </div>;
@@ -517,7 +517,7 @@ initial={{ opacity: 0, y: 30 ,}
               whileInView={{ opacity: 1, y: 0 }}
 
               transition={{ duration: 0.8 }}
-              viewport={{ once: true ,}
+              viewport={{once: true }
 }
              />
 <h2 className='text-3xl md:text-4xl font-bold text-white mb-6' />

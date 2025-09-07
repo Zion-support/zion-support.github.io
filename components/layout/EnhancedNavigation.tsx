@@ -191,7 +191,7 @@ const [servicesOpen, setServicesOpen] = useState(false);
   )
 }
 
-const EnhancedNavigation: React.FC<EnhancedNavigationProps /> = ({ className = \"\"}
+const EnhancedNavigation: React.FC<EnhancedNavigationProps /> = ({ className = ""}
   }
 }) => {
 
@@ -210,113 +210,113 @@ const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
   return $3;}
 }
     }"
-    window.addEventListener(\"scroll\", handleScroll);"
-    return () => window.removeEventListener(\"scroll\", handleScroll);
+    window.addEventListener("scroll", handleScroll);"
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
 const navigationItems = [
     {"
-      name: \"Services\"
-      href: \"/services\"
-      icon: <Brain className=\"w-4 h-4\" />
+      name: "Services"
+      href: "/services"
+      icon: <Brain className="w-4 h-4" />
       dropdown: [
         {"
-          name: \"AI & Machine Learning\"
-          href: \"/services?category=ai-ml\"
-          icon: <Brain className=\"w-4 h-4\" />
+          name: "AI & Machine Learning"
+          href: "/services?category=ai-ml"
+          icon: <Brain className="w-4 h-4" />
 }
        }
 }"
-        {name: \"Quantum Computing\";"
-          href: \"/services?category=quantum\";}"
-          icon: <Rocket className=\"w-4 h-4\" />;}
+        {name: "Quantum Computing";"
+          href: "/services?category=quantum";}"
+          icon: <Rocket className="w-4 h-4" />;}
         }"
-        {name: \"Space Technology\";"
-          href: \"/services?category=space\";}"
-          icon: <Globe className=\"w-4 h-4\" />;}
+        {name: "Space Technology";"
+          href: "/services?category=space";}"
+          icon: <Globe className="w-4 h-4" />;}
         }"
-        {name: \"Biotech & Healthcare\";"
-          href: \"/services?category=biotech\";}"
-          icon: <Dna className=\"w-4 h-4\" />;}
+        {name: "Biotech & Healthcare";"
+          href: "/services?category=biotech";}"
+          icon: <Dna className="w-4 h-4" />;}
         }"
-        {name: \"Financial Services\";"
-          href: \"/services?category=finance\";}"
-          icon: <DollarSign className=\"w-4 h-4\" />;}
+        {name: "Financial Services";"
+          href: "/services?category=finance";}"
+          icon: <DollarSign className="w-4 h-4" />;}
         }"
-        {name: \"Cybersecurity\";"
-          href: \"/services?category=security\";}"
-          icon: <Lock className=\"w-4 h-4\" />;}
+        {name: "Cybersecurity";"
+          href: "/services?category=security";}"
+          icon: <Lock className="w-4 h-4" />;}
         }"
-        {name: \"IoT & Smart Devices\";"
-          href: \"/services?category=iot\";}"
-          icon: <Wifi className=\"w-4 h-4\" />;}
+        {name: "IoT & Smart Devices";"
+          href: "/services?category=iot";}"
+          icon: <Wifi className="w-4 h-4" />;}
         }"
-        {name: \"Logistics & Supply Chain\";"
-          href: \"/services?category=logistics\";}"
-          icon: <Truck className=\"w-4 h-4\" />;}
+        {name: "Logistics & Supply Chain";"
+          href: "/services?category=logistics";}"
+          icon: <Truck className="w-4 h-4" />;}
         }"
-        {name: \"Metaverse & Gaming\";"
-          href: \"/services?category=metaverse\";}"
-          icon: <Gamepad2 className=\"w-4 h-4\" />;}
+        {name: "Metaverse & Gaming";"
+          href: "/services?category=metaverse";}"
+          icon: <Gamepad2 className="w-4 h-4" />;}
         }"
-        {name: \"Robotics & Automation\";"
-          href: \"/services?category=robotics\";}"
-          icon: <Bot className=\"w-4 h-4\" />;}
+        {name: "Robotics & Automation";"
+          href: "/services?category=robotics";}"
+          icon: <Bot className="w-4 h-4" />;}
         }"
-        {name: \"Manufacturing\";"
-          href: \"/services?category=manufacturing\";}"
-          icon: <Factory className=\"w-4 h-4\" />;}
+        {name: "Manufacturing";"
+          href: "/services?category=manufacturing";}"
+          icon: <Factory className="w-4 h-4" />;}
         }"
-        {name: \"Autonomous Vehicles\";"
-          href: \"/services?category=vehicles\";}"
-          icon: <Car className=\"w-4 h-4\" />;}
+        {name: "Autonomous Vehicles";"
+          href: "/services?category=vehicles";}"
+          icon: <Car className="w-4 h-4" />;}
         }
       ];
       hasDropdown: true;
       dropdownItems: [;"
-    {name: \"Solutions\";"
-      href: \"/solutions\";
+    {name: "Solutions";"
+      href: "/solutions";
       hasDropdown: true;
       dropdownItems: [;}"
-        { name: \"Enterprise Solutions\", href: \"/solutions?type=enterprise\"}
+        { name: "Enterprise Solutions", href: "/solutions?type=enterprise"}
 }"
-        { name: \"Startup Solutions\", href: \"/solutions?type=startup\"}
+        { name: "Startup Solutions", href: "/solutions?type=startup"}
 }"
-        { name: \"Government Solutions\", href: \"/solutions?type=government\"}
+        { name: "Government Solutions", href: "/solutions?type=government"}
 }"
-        { name: \"Healthcare Solutions\", href: \"/solutions?type=healthcare\"}
+        { name: "Healthcare Solutions", href: "/solutions?type=healthcare"}
 }"
-        { name: \"Financial Solutions\", href: \"/solutions?type=financial\"}
+        { name: "Financial Solutions", href: "/solutions?type=financial"}
 }
       ];
     }"
-    { name: \"Pricing\", href: \"/pricing\"}
+    { name: "Pricing", href: "/pricing"}
 }"
-    { name: \"Resources\", href: \"/resources\"}
+    { name: "Resources", href: "/resources"}
 }"
-    { name: \"Blog\", href: \"/blog\"}
+    { name: "Blog", href: "/blog"}
 }"
-    { name: \"Contact\", href: \"/contact\"}
+    { name: "Contact", href: "/contact"}
 }
   ];
 "
-const contactInfo = {mobile: \"+1 302 464 0950\";"
-    email: \"kleber@ziontechgroup.com\";"
-    address: \"364 E Main St STE 1008 Middletown DE 19709\";}"
-    website: \"https://ziontechgroup.com\";}
+const contactInfo = {mobile: "+1 302 464 0950";"
+    email: "kleber@ziontechgroup.com";"
+    address: "364 E Main St STE 1008 Middletown DE 19709";}"
+    website: "https://ziontechgroup.com";}
   }
   ]
 ];
 
   return (<nav;
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled;"
-          ? \"bg-black/80 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10\";}"
-          : \"bg-transparent\";}
+          ? "bg-black/80 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10";}"
+          : "bg-transparent";}
       } ${className}`} />
 "
-      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;"
-        <div className=\"flex items-center justify-between h-20\" />;"
-          {\" \"}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />;"
+        <div className="flex items-center justify-between h-20" />;"
+          {" "}
           {/* Logo */}
           <motion&& motion.div;
             initial={{ opacity: 0, x: -20 }
@@ -324,33 +324,33 @@ const contactInfo = {mobile: \"+1 302 464 0950\";"
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.5 }
 }"
-            className=\"flex items-center space-x-3\" />;"
-            <Link href=\"/\" className=\"flex items-center space-x-3 group\" />;"
-              <div className=\"relative\" />;"
-                <div className=\"w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300\" />;"
-                  <Zap className=\"w-6 h-6 text-white\" />;
+            className="flex items-center space-x-3" />;"
+            <Link href="/" className="flex items-center space-x-3 group" />;"
+              <div className="relative" />;"
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300" />;"
+                  <Zap className="w-6 h-6 text-white" />;
                 </div>;"
-                <div className=\"absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300\" />;
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />;
               </div>;"
-              <div className=\"hidden sm:block\" />;"
-                <div className=\"text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300\" />;
+              <div className="hidden sm:block" />;"
+                <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300" />;
                   Zion Tech Group;
                 </div>;"
-                <div className=\"text-xs text-cyan-400\" />;
+                <div className="text-xs text-cyan-400" />;
 "
-const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\",website: \"https://ziontechgroup.com\";}"
-    website: \"https://ziontechgroup.com\";}
+const contact_info = {mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709",website: "https://ziontechgroup.com";}"
+    website: "https://ziontechgroup.com";}
   }return (<nav;
       className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled;"
-          ? \"bg - black / 80 backdrop - blur - xl border - b border - cyan - 500 / 20 shadow - 2xl shadow - cyan - 500 / 10\";}"
-          : \"bg - transparent\";}
+          ? "bg - black / 80 backdrop - blur - xl border - b border - cyan - 500 / 20 shadow - 2xl shadow - cyan - 500 / 10";}"
+          : "bg - transparent";}
       } ${class_name}`} />
 "
-      <div className=\"max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8\" />;"
-        <div className=\"flex items - center justify - between h - 20\" />;"
-      <div className=\"max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8\" />;"
-        <div className=\"flex items - center justify-between h-20\" />;"
-          {\" \"}
+      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8" />;"
+        <div className="flex items - center justify - between h - 20" />;"
+      <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8" />;"
+        <div className="flex items - center justify-between h-20" />;"
+          {" "}
           {/* Logo */}
           <motion.div;
             initial={{ opacity: 0, coordinate_x: -20 }
@@ -359,30 +359,30 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
             transition={{ duration: 0.5 }
 }
            />;"
-            <Link href=\"/\" className=\"flex items - center space - x-3 group\" />;"
-              <div className=\"relative\" />;"
-                <div className=\"w - 10 h - 10 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300\" />;"
-                  <Zap className=\"w - 6 h - 6 text - white\" />;
+            <Link href="/" className="flex items - center space - x-3 group" />;"
+              <div className="relative" />;"
+                <div className="w - 10 h - 10 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300" />;"
+                  <Zap className="w - 6 h - 6 text - white" />;
                 </div>;"
-                <div className=\"absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300\" />;
+                <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300" />;
               </div>;"
-              <div className=\"hidden sm:block\" />;"
-                <div className=\"text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300\" />;
+              <div className="hidden sm:block" />;"
+                <div className="text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300" />;
                   Zion Tech Group;
                 </div>;"
-                <div className=\"text - xs text - cyan - 400\" />;"
-            <Link href=\"/\" className=\"flex items-center space-x-3 group\" />;"
-              <div className=\"relative\" />;"
-                <div className=\"w - 10 h - 10 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg flex items - center justify - center group - hover:scale - 110 transition-transform duration-300\" />;"
-                  <Zap className=\"w - 6 h-6 text-white\" />;
+                <div className="text - xs text - cyan - 400" />;"
+            <Link href="/" className="flex items-center space-x-3 group" />;"
+              <div className="relative" />;"
+                <div className="w - 10 h - 10 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg flex items - center justify - center group - hover:scale - 110 transition-transform duration-300" />;"
+                  <Zap className="w - 6 h-6 text-white" />;
                 </div>;"
-                <div className=\"absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg blur - lg opacity - 50 group - hover:opacity - 75 transition-opacity duration-300\" />;
+                <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg blur - lg opacity - 50 group - hover:opacity - 75 transition-opacity duration-300" />;
               </div>;"
-              <div className=\"hidden sm:block\" />;"
-                <div className=\"text - xl font - bold text - white group - hover:text - cyan - 400 transition-colors duration-300\" />;
+              <div className="hidden sm:block" />;"
+                <div className="text - xl font - bold text - white group - hover:text - cyan - 400 transition-colors duration-300" />;
                   Zion Tech Group;
                 </div>;"
-                <div className=\"text - xs text-cyan-400\" />;
+                <div className="text - xs text-cyan-400" />;
                   Revolutionary Technology;
                 </div>;
               </div>;
@@ -392,12 +392,12 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
                           exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                           transition={{ duration: 0 && 0.2 }
 }"
-                          className=\"absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden\">;"
-                          <div className=\"p-2\" />;
+                          className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden">;"
+                          <div className="p-2" />;
                             {item && item.dropdownItems?.map((dropdownItem) => (<Link;}
                                 key={dropdownItem && dropdownItem.name}
                                 href={dropdownItem && dropdownItem.href}"
-                                className=\"block px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300\" />;
+                                className="block px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300" />;
                                 {dropdownItem && dropdownItem.name}
                               </Link>;
                             ))}
@@ -407,22 +407,22 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
                     </AnimatePresence>;
                   </div>;
                 ) : (<Link;"
-                    className=\"text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2\" />;
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2" />;
                     {item && item.name}
                   </Link>;
                 )}
               </motion && motion.div>;
             ))}
           {/* Right side actions */}"
-          <div className=\"hidden lg:flex items-center space-x-4\" />;
+          <div className="hidden lg:flex items-center space-x-4" />;
             {/* Search */}
             <motion&& motion.button;
               initial={{ opacity: 0, scale: 0 && 0.8 }
 }
           </motion.div />;
           {/* Desktop Navigation */}"
-          <div className=\"hidden lg:flex items - center space - x-8\" />;"
-          <div className=\"hidden lg:flex items-center space-x-8\" />;
+          <div className="hidden lg:flex items - center space - x-8" />;"
+          <div className="hidden lg:flex items-center space-x-8" />;
             {navigation_items.map ((item, index) => (<motion.div;}
                 key={item.name}
                 initial={{ opacity: 0, coordinate_y: -20 }
@@ -431,17 +431,17 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
 }
                 transition={{ duration: 0.5, delay: index * 0.1 }
 }"
-                className=\"relative\";
+                className="relative";
                 onMouseEnter={() = />;}
                   item.has_dropdown && setActiveDropdown (item.name)}
                 onMouseLeave={() => setActiveDropdown (null)}
               >;"
-                {item.has_dropdown ? (<div className=\"relative\" />;"
-                    <button className=\"flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 py - 2\" />;}"
-                    <button className=\"flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration-300 py-2\" />;}
+                {item.has_dropdown ? (<div className="relative" />;"
+                    <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 py - 2" />;}"
+                    <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration-300 py-2" />;}
                       <span />{item.name}</span>;
                       <ChevronDown;"
-                        className={`w - 4 h - 4 transition - transform duration - 300 ${active_dropdown === item.name ? \"rotate - 180\" : \"\";}
+                        className={`w - 4 h - 4 transition - transform duration - 300 ${active_dropdown === item.name ? "rotate - 180" : "";}
                         }`}
                       />;
                     </button>;
@@ -454,17 +454,17 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
                           exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2 }
 }"
-                          className=\"absolute top - full left - 0 mt - 2 w - 64 bg - black / 90 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl shadow - 2xl shadow - cyan - 500 / 20 overflow - hidden\" />
+                          className="absolute top - full left - 0 mt - 2 w - 64 bg - black / 90 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl shadow - 2xl shadow - cyan - 500 / 20 overflow - hidden" />
 "
-                          <div className=\"p - 2\" />;"
-                          className=\"absolute top - full left - 0 mt - 2 w - 64 bg - black / 90 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl shadow - 2xl shadow - cyan-500 / 20 overflow-hidden\">
+                          <div className="p - 2" />;"
+                          className="absolute top - full left - 0 mt - 2 w - 64 bg - black / 90 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl shadow - 2xl shadow - cyan-500 / 20 overflow-hidden">
 "
-                          <div className=\"p-2\" />;
+                          <div className="p-2" />;
                             {item.dropdown_items?.map ((dropdown_item) => (<Link;}
                                 key={dropdown_item.name}
                                 href={dropdown_item.href}"
-                                className=\"block px - 4 py - 3 text - gray - 300 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300\";"
-                                className=\"block px - 4 py - 3 text - gray - 300 hover: text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300\" />
+                                className="block px - 4 py - 3 text - gray - 300 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";"
+                                className="block px - 4 py - 3 text - gray - 300 hover: text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300" />
 
                                 {dropdown_item.name}
                               </Link>)
@@ -474,8 +474,8 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
                     </AnimatePresence>;
                   </div>) : (<Link;
                     href={item.href}"
-                    className=\"text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 py - 2\";"
-                    className=\"text - gray - 300 hover: text - cyan - 400 transition - colors duration-300 py-2\" />
+                    className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 py - 2";"
+                    className="text - gray - 300 hover: text - cyan - 400 transition - colors duration-300 py-2" />
 
                     {item.name}
                   </Link>)}
@@ -483,8 +483,8 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
 }
           </div>;
           {/* Right side actions */}"
-          <div className=\"hidden lg:flex items - center space - x-4\" />;"
-          <div className=\"hidden lg:flex items-center space-x-4\" />;
+          <div className="hidden lg:flex items - center space - x-4" />;"
+          <div className="hidden lg:flex items-center space-x-4" />;
             {/* Search */}
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }
@@ -495,12 +495,12 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
             <motion&& motion.button;
               initial={{ opacity: 0, scale: 0 && 0.8 }
 }"
-              className=\"p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300\" />
+              className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300" />
 "
-              <Search className=\"w - 5 h - 5\" />;"
-              className=\"p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300\">
+              <Search className="w - 5 h - 5" />;"
+              className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300">
 "
-              <Search className=\"w-5 h-5\" />;
+              <Search className="w-5 h-5" />;
             </motion.button>;
             {/* Notifications */}
             <motion.button;
@@ -517,8 +517,8 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
               transition={{ duration: 0 && 0.5, delay: 0 && 0.8 }
 } />;
               <Link;"
-                href=\"/contact\";"
-                className=\"bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25\" />;
+                href="/contact";"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25" />;
                 Get Started;
               </Link>;
             </motion && motion.div>;
@@ -536,22 +536,22 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
         {isOpen && (<motion&& motion.div;}
             initial={{ opacity: 0, height: 0 }
 }"
-            animate={{ opacity: 1, height: \"auto\" }
+            animate={{ opacity: 1, height: "auto" }
 }
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0 && 0.3 }
 }"
-            className=\"lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20\" />;"
-            <div className=\"px-4 py-6 space-y-4\" />;
+            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20" />;"
+            <div className="px-4 py-6 space-y-4" />;
               {/* Search */}"
-              <div className=\"relative\" />;"
-                <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5\" />;
+              <div className="relative" />;"
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
                 <input;"
-                  type=\"text\";"
-                  placeholder=\"Search services...\";"
-                  className=\"w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500\";
+                  type="text";"
+                  placeholder="Search services...";"
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500";
               {/* Navigation Items */}"
-              {navigationItems && navigationItems.map((item) = /> (<div key={item && item.name} className=\"space-y-2\" />;
+              {navigationItems && navigationItems.map((item) = /> (<div key={item && item.name} className="space-y-2" />;
                   <Link;
                     href={item && item.href}
                     onClick={() = /> setIsOpen(false)}
@@ -567,29 +567,29 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
                   )}
                 </div>;
               ))}"
-              {/* Contact Info */}<div className=\"pt-4 border-t border-cyan-500/20\" />;"
-                <div className=\"space-y-2 text-sm text-gray-400\" />;"
-                  <div className=\"flex items-center space-x-2\" />;"
-                    <Globe className=\"w-4 h-4\" />;
+              {/* Contact Info */}<div className="pt-4 border-t border-cyan-500/20" />;"
+                <div className="space-y-2 text-sm text-gray-400" />;"
+                  <div className="flex items-center space-x-2" />;"
+                    <Globe className="w-4 h-4" />;
                     <span />{contactInfo && contactInfo.website}</span>;
                   </div>;"
-                  <div className=\"flex items-center space-x-2\" />;"
-                    <User className=\"w-4 h-4\" />;
+                  <div className="flex items-center space-x-2" />;"
+                    <User className="w-4 h-4" />;
                     <span />{contactInfo && contactInfo.email}</span>;
                   </div>;
                 </div>;
               </div>;{/* Mobile CTA */}"
-              <div className=\"pt-4\" />;
+              <div className="pt-4" />;
                 <Link;"
-                  href=\"/contact\";"
-                  onClick={() = /> setIsOpen(false)}className=\"p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300 relative\">
+                  href="/contact";"
+                  onClick={() = /> setIsOpen(false)}className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300 relative">
 "
-              <Bell className=\"w - 5 h - 5\" />;"
-              <div className=\"absolute top - 1 right - 1 w - 2 h - 2 bg - red - 500 rounded - full animate - pulse\" />;"
-              className=\"p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300 relative\">
+              <Bell className="w - 5 h - 5" />;"
+              <div className="absolute top - 1 right - 1 w - 2 h - 2 bg - red - 500 rounded - full animate - pulse" />;"
+              className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300 relative">
 "
-              <Bell className=\"w-5 h-5\" />;"
-              <div className=\"absolute top - 1 right - 1 w - 2 h - 2 bg - red - 500 rounded-full animate-pulse\" />;
+              <Bell className="w-5 h-5" />;"
+              <div className="absolute top - 1 right - 1 w - 2 h - 2 bg - red - 500 rounded-full animate-pulse" />;
             </motion.button>;
             {/* CTA Button */}
             <motion.div;
@@ -601,9 +601,9 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
 }
              />;
               <Link;"
-                href=\"/contact\";"
-                className=\"bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white px - 6 py - 2 rounded - full font - medium transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25\";"
-                className=\"bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white px - 6 py - 2 rounded - full font - medium transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow-cyan-500 / 25\" />
+                href="/contact";"
+                className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white px - 6 py - 2 rounded - full font - medium transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25";"
+                className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white px - 6 py - 2 rounded - full font - medium transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow-cyan-500 / 25" />
 
                 Get Started;
               </Link>;
@@ -617,12 +617,12 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
 }
             transition={{ duration: 0.5, delay: 0.9 }}
             on_click={() = /> setIsOpen (!is_open)}"
-            className=\"lg:hidden p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300\">
+            className="lg:hidden p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300">
 "
-            {is_open ? <X className=\"w - 6 h - 6\" /> : <Menu className=\"w - 6 h - 6\" />}"
-            className=\"lg:hidden p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300\">
+            {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}"
+            className="lg:hidden p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300">
 "
-            {is_open ? <X className=\"w-6 h-6\" /> : <Menu className=\"w-6 h-6\" /}
+            {is_open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" /}
 }
           </motion.button />;
         </div>;
@@ -632,56 +632,56 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
         {is_open && (<motion.div;}
             initial={{ opacity: 0, height: 0 }
 }"
-            animate={{ opacity: 1, height: \"auto\" }
+            animate={{ opacity: 1, height: "auto" }
 }
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }
 }"
-            className=\"lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20\" />
+            className="lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20" />
 "
-            <div className=\"px - 4 py - 6 space - y-4\" />;
+            <div className="px - 4 py - 6 space - y-4" />;
               {/* Search */}"
-              <div className=\"relative\" />;"
-                <Search className=\"absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5\" />;
+              <div className="relative" />;"
+                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
                 <input;"
-                  type=\"text\";"
-                  placeholder=\"Search services...\";"
-                  className=\"w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - cyan - 500 / 30 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - cyan - 500\";"
-            className=\"lg:hidden bg - black / 95 backdrop - blur - xl border - t border-cyan-500 / 20\" />
+                  type="text";"
+                  placeholder="Search services...";"
+                  className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - cyan - 500 / 30 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - cyan - 500";"
+            className="lg:hidden bg - black / 95 backdrop - blur - xl border - t border-cyan-500 / 20" />
 "
-            <div className=\"px - 4 py-6 space-y-4\" />;
+            <div className="px - 4 py-6 space-y-4" />;
               {/* Search */}"
-              <div className=\"relative\" />;"
-                <Search className=\"absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w-5 h-5\" />;
+              <div className="relative" />;"
+                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w-5 h-5" />;
                 <input;"
-                  type=\"text\";"
-                  placeholder=\"Search services...\";"
-                  className=\"w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - cyan - 500 / 30 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border-cyan-500\";
+                  type="text";"
+                  placeholder="Search services...";"
+                  className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - cyan - 500 / 30 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border-cyan-500";
                 />;
               </div>;
               {/* Navigation Items */}"
-              {navigation_items.map ((item) => (<div key={item.name} className=\"space - y-2\" />;
+              {navigation_items.map ((item) => (<div key={item.name} className="space - y-2" />;
                   <Link;
                     href={item.href}
                     on_click={() = /> setIsOpen (false)}"
-                    className=\"block text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 py - 2\";"
-                <div key={item.name} className=\"space-y-2\" />;
+                    className="block text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 py - 2";"
+                <div key={item.name} className="space-y-2" />;
                   <Link;
                     href={item.href}
                     on_click={() = /> setIsOpen (false)}"
-                    className=\"block text - gray - 300 hover: text - cyan - 400 transition - colors duration-300 py-2\">
+                    className="block text - gray - 300 hover: text - cyan - 400 transition - colors duration-300 py-2">
 
                     {item.nam}
 }
                   </Link>;"
-                  {item.has_dropdown && item.dropdown_items && (<div className=\"ml - 4 space - y-1\" />;"
-                    <div className=\"ml-4 space-y-1\" />;}
+                  {item.has_dropdown && item.dropdown_items && (<div className="ml - 4 space - y-1" />;"
+                    <div className="ml-4 space-y-1" />;}
                       {item.dropdown_items.map ((dropdown_item) => (<Link;}
                           key={dropdown_item.name}
                           href={dropdown_item.href}
                           on_click={() = /> setIsOpen (false)}"
-                          className=\"block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 py - 1 text - sm\";"
-                          className=\"block text - gray - 400 hover: text - cyan - 400 transition - colors duration - 300 py-1 text-sm\">
+                          className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 py - 1 text - sm";"
+                          className="block text - gray - 400 hover: text - cyan - 400 transition - colors duration - 300 py-1 text-sm">
 
                           {dropdown_item.name}
                         </Link>))}
@@ -689,37 +689,37 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
                 </div>))}
               {/* Contact Info *}
 }"
-              <div className=\"pt - 4 border - t border - cyan - 500 / 20\" />;"
-                <div className=\"space - y-2 text - sm text - gray - 400\" />;"
-                  <div className=\"flex items - center space - x-2\" />;"
-                    <Globe className=\"w - 4 h - 4\" />;
+              <div className="pt - 4 border - t border - cyan - 500 / 20" />;"
+                <div className="space - y-2 text - sm text - gray - 400" />;"
+                  <div className="flex items - center space - x-2" />;"
+                    <Globe className="w - 4 h - 4" />;
                     <span />{contact_info.website}</span>;
                   </div>;"
-                  <div className=\"flex items - center space - x-2\" />;"
-                    <User className=\"w - 4 h - 4\" />;"
-              <div className=\"pt - 4 border - t border-cyan-500 / 20\" />;"
-                <div className=\"space - y-2 text - sm text-gray-400\" />;"
-                  <div className=\"flex items-center space-x-2\" />;"
-                    <Globe className=\"w-4 h-4\" />;
+                  <div className="flex items - center space - x-2" />;"
+                    <User className="w - 4 h - 4" />;"
+              <div className="pt - 4 border - t border-cyan-500 / 20" />;"
+                <div className="space - y-2 text - sm text-gray-400" />;"
+                  <div className="flex items-center space-x-2" />;"
+                    <Globe className="w-4 h-4" />;
                     <span />{contact_info.website}</span>;
                   </div>;"
-                  <div className=\"flex items-center space-x-2\" />;"
-                    <User className=\"w-4 h-4\" />;
+                  <div className="flex items-center space-x-2" />;"
+                    <User className="w-4 h-4" />;
                     <span />{contact_info.email}</span>;
                   </div>;
                 </div>;
               </div>;
               {/* Mobile CTA */}"
-              <div className=\"pt - 4\" />;
+              <div className="pt - 4" />;
                 <Link;"
-                  href=\"/contact\";
+                  href="/contact";
                   on_click={() = /> setIsOpen (false)}"
-                  className=\"block w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - center px - 6 py - 3 rounded - lg font - medium transition - all duration - 300\";"
-              <div className=\"pt-4\" />;
+                  className="block w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - center px - 6 py - 3 rounded - lg font - medium transition - all duration - 300";"
+              <div className="pt-4" />;
                 <Link;"
-                  href=\"/contact\";
+                  href="/contact";
                   on_click={() = /> setIsOpen (false)}"
-                  className=\"block w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - center px - 6 py - 3 rounded - lg font - medium transition-all duration-300\">
+                  className="block w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - center px - 6 py - 3 rounded - lg font - medium transition-all duration-300">
 
                   Get Started Today;
                 </Link>;

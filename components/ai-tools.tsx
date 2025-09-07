@@ -311,11 +311,11 @@ reliability, and real-world value.
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow' />;
               Curated AI Tools & Services;
             </h2>;
-            <p className=\"text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed\" />;
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" />;
               Each tool has been carefully selected based on performance, reliability, and real-world value.;
             </p>;
           </div>;
-          <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-8\" />;
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" />;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' />;
               Each tool has been carefully selected based on performance;
               reliability, and real-world value.;
@@ -335,7 +335,7 @@ reliability, and real-world value.
           </div>;
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8' />            {aiTools && aiTools.map((tool, index) => (              Curated AI Tools & Services;
             </h2>;
-            <p className=\"text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed\" />;
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" />;
               Each tool has been carefully selected based on performance, reliability, and real-world value.;
             </p>;
           </div>;}
@@ -494,7 +494,7 @@ key={index}
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow' />;
               Getting Started with AI Tools;
             </h2>;
-            <p className=\"text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed\" />;
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" />;
               Practical advice for implementing AI tools in your workflow and maximizing their value.;
             </p>;
           </div>;

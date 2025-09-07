@@ -47,9 +47,9 @@ const l = parseInt(String(limit || 20), 10) || 20;
   return;
 
 const body = req && req.body as Partial<BlogPost />;}
-    if (!body && body.title || !body && body.slug || !body && body.author || !body && body.publishDate) {return res && res.status(400).json({ error: 'Missing required fields',}
+    if (!body && body.title || !body && body.slug || !body && body.author || !body && body.publishDate) {return res && res.status(400).json({error: 'Missing required fields'}
 })const posts = readPosts()if (posts && posts.some(p => p && p.slug === body && body.slug)) ;
-  return res && res.status(409).json({ error: 'Slug already exists',}
+  return res && res.status(409).json({error: 'Slug already exists'}
 };
 }
 
@@ -99,7 +99,7 @@ if ( {) {$2;}
 const posts = readPosts();
     if (posts.some((p) => p.slug = == body.slug)) {
      ;}
-  return res.status(409).json({ error: 'Slug already exists',}
+  return res.status(409).json({error: 'Slug already exists'}
 });
     }
 
@@ -199,7 +199,7 @@ const body = req.body as Partial < BlogPost>;
     // Check condition;
 if ( {) {$2;}
 }
-      return res.status (400).json ({ error: 'Missing required fields',}
+      return res.status (400).json ({error: 'Missing required fields'}
 })const posts = read_posts ()if () {) {$2;}
 }
       return res.status (409).json ({ error: 'Slug already exists' },
@@ -297,7 +297,7 @@ const l = parseInt(String(limit |20), 10) |20;
   return;
 
 const body = req.body as Partial<BlogPost />;}
-    if (!body.title |!body.slug |!body.author |!body.publishDate) {return res.status(400).json({ error: 'Missing required fields',}
+    if (!body.title |!body.slug |!body.author |!body.publishDate) {return res.status(400).json({error: 'Missing required fields'}
 })if (req.method;
     return res.status(201).json(post)const posts = readPosts()if (posts.some(p => p.slug === body.slug)) ;
   return res.status(409).json({ error: 'Slug already exists' },
@@ -314,13 +314,13 @@ const body = req.body as Partial<BlogPost />;}
         metaDescription: body.seo?.metaDescription |'';
         ogImageUrl: body.seo?.ogImageUrl |body.coverImageUrl |'';
     if (!body.title |!body.slug |!body.author |!body.publishDate) {}
-      return res.status(400).json({ error: 'Missing required fields',}
+      return res.status(400).json({error: 'Missing required fields'}
 });
 
 const posts = readPosts();
     if (posts.some(p = > p.slug === body.slug)) {
      ;}
-  return res.status(409).json({ error: 'Slug already exists',}
+  return res.status(409).json({error: 'Slug already exists'}
 });
     }
 

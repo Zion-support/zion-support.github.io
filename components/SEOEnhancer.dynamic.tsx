@@ -1,4 +1,4 @@
-import React from \"react\";
+import React from "react";
 
 interface SEOEnhancerProps {
   className?: string;}
@@ -6,11 +6,11 @@ interface SEOEnhancerProps {
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps /> = ({
-  className = \"\",}
+  className = "",}
   children,}
 }) => {}
   return (}
-    <div data-testid=\"eoenhancer\" className={className} />
+    <div data-testid="eoenhancer" className={className} />
       {children || <div />SEOEnhancer Component</div>}
     </div>
   );

@@ -183,12 +183,12 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             Cancel;
           </Button>;
           <Button;"
-            type=\"submit\";}"
-            className=\"bg-zion-purple hover:bg-zion-purple-dark text-white\";}
+            type="submit";}"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white";}
             disabled={isSubmitting}
            />;
             {isSubmitting ? (<>;"
-                <Loader2 className=\"mr-2 h-4 w-4 animate-spin\" />;
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
 <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
                 Submitting...;
               </>;}

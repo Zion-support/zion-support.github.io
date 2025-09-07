@@ -144,7 +144,7 @@ const card_variants = {hidden: { opacity: 0, coordinate_y: 20}
 },visible: { opacity: 1, y: 0}
 },;
   return (<section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden' />;
-      {/* Background Elements */}return (<section className=\"py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden\" />;
+      {/* Background Elements */}return (<section className="py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden" />;
       {/* Background Elements */}
     hidden: { opacity: 0, y: 20}
 },visible: { opacity: 1, y: 0}
@@ -178,7 +178,7 @@ const card_variants = {hidden: { opacity: 0, coordinate_y: 20}
 },visible: { opacity: 1, y: 0}
 },;
   return (<section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden' />;"
-      {/* Background Elements */}return (<section className=\"py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden\" />;
+      {/* Background Elements */}return (<section className="py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden" />;
       {/* Background Elements */}
         <motion.div;
           initial={{ opacity: 0, y: 30 }
@@ -229,7 +229,7 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
           </h2>;
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed' />;
             We deliver cutting-edge technology solutions that drive innovation,efficiency, and growth for businesses across all industries.          </p>          ;"
-          <p className=\"text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed\" />;
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed" />;
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth ;
             for businesses across all industries.;
         </motion && motion.div>;{/* Services Grid */}
@@ -291,7 +291,7 @@ className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 
           )
 }
         </motion.div>;"
-                <div className=\"absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300\" />;
+                <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />;
               </div>;
             </motion && motion.div>;
           ))}

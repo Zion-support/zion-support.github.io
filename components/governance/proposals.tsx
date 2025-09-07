@@ -1,7 +1,7 @@
   data;
-}: {data: { updatedAt: string | null; proposals: any[],}
+}: {data: { updatedAt: string | null; proposals: any[]}
 }
-  data,}: {data: { updatedAt: string | null; proposals: any[] ,}
+  data,}: {data: { updatedAt: string | null; proposals: any[] }
 }) {return (<div className='max-w-3xl mx-auto p-6 space-y-4' />;
       <h1 className='text-2xl font-semibold' />DAO Proposals</h1>;}
       <div className='text-sm opacity-70' />Updated: {data.updatedAt |'—,}

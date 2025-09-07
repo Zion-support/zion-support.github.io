@@ -4,7 +4,7 @@ import { ApplicationStatus  } from '@/types/jobs';
 import { Progress  } from '@/components/ui/progress';
 import { CheckCircle2, Circle, CircleDot  } from 'lucide-react';
 import { cn  } from '@/lib/utils';
-import { ApplicationStatus } from \"@/types/jobs\",interface ApplicationProgressProps {
+import { ApplicationStatus } from "@/types/jobs",interface ApplicationProgressProps {
   status: ApplicationStatus;className?: string;}
 }
 }

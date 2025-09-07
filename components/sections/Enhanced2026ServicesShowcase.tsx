@@ -140,12 +140,12 @@ emerging technology services designed to transform your business;
           <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed' />;
             Experience the future with our cutting-edge AI, quantum, and;
             emerging technology services designed to transform your business          </p>        >;
-          <h2 className=\"text-4xl md:text-5xl font-bold text-white mb-6\" />;"
-            <span className=\"bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\" />;
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" />;"
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" />;
               2026 Revolutionary Services;
             </span>;
           </h2>;"
-          <p className=\"text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed\" />;
+          <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed" />;
             Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business;
           </p>;
         </motion && motion.div>;{/* Category Overview */}
@@ -258,20 +258,20 @@ className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-c
                 {/* Features */}            >;
               <div className={`absolute inset-0 bg-gradient-to-r ${service && service.color} opacity-10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500
 } /></div>;"
-              <div className=\"relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300\" />;
+              <div className="relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300" />;
                 {/* Service Header */}"
-                <div className=\"flex items-center space-x-3 mb-4\" />;
+                <div className="flex items-center space-x-3 mb-4" />;
                   <div className={`w-12 h-12 bg-gradient-to-br ${service && service.color} rounded-xl flex items-center justify-center`} />
 "
-                    <service && service.icon className=\"w-6 h-6 text-white\" />;
+                    <service && service.icon className="w-6 h-6 text-white" />;
                   </div>;
                   <div />;"
-                    <h3 className=\"text-lg font-bold text-white\" />{service && service.name}</h3>;"
-                    <p className=\"text-gray-400 text-sm\" />{service && service.category}</p>;
+                    <h3 className="text-lg font-bold text-white" />{service && service.name}</h3>;"
+                    <p className="text-gray-400 text-sm" />{service && service.category}</p>;
                   </div>;
                 </div>;
                 {/* Description */}"
-                <p className='text-gray-300 text-sm mb-4 leading-relaxed' />                <p className=\"text-gray-300 text-sm mb-4 leading-relaxed\" />;
+                <p className='text-gray-300 text-sm mb-4 leading-relaxed' />                <p className="text-gray-300 text-sm mb-4 leading-relaxed" />;
                   {service && service.description}
                 </p>;
 
@@ -328,13 +328,13 @@ href={`/${service.id}`}
                     href={`/${service && service.id}`}
                     className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200'>;
                     Learn More <ArrowRight className='w-4 h-4 ml-1' />                  </Link>                  <div />;"
-                    <span className=\"text-2xl font-bold text-cyan-400\" />{service && service.price}</span>;"
-                    <span className=\"text-gray-400 text-sm\" />{service && service.period}</span>;
+                    <span className="text-2xl font-bold text-cyan-400" />{service && service.price}</span>;"
+                    <span className="text-gray-400 text-sm" />{service && service.period}</span>;
                   </div>;
                   <Link;
                     href={`/${service && service.id}`}"
-                    className=\"inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200\" />;"
-                    Learn More <ArrowRight className=\"w-4 h-4 ml-1\" />;
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200" />;"
+                    Learn More <ArrowRight className="w-4 h-4 ml-1" />;
                   </Link>;
                 </div>;
               </div>;

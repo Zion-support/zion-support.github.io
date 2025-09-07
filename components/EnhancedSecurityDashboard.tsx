@@ -87,19 +87,19 @@ const newThreat: SecurityThreat = {id: Date.now().toString(),type:;
     }, 10000;
   return () => clearInterval(interval)}, [autoRefresh];
   const getThreatTypeIcon = (switch (type) {case 'malware':;
-        return <Bug className=\"w-5 h-5\" />;
+        return <Bug className="w-5 h-5" />;
       case 'phishing':;
-        return <Mail className=\"w-5 h-5\" />;
+        return <Mail className="w-5 h-5" />;
       case 'ddos':;
-        return <Activity className=\"w-5 h-5\" />;
+        return <Activity className="w-5 h-5" />;
       case 'brute-force':;
-        return <Key className=\"w-5 h-5\" />;
+        return <Key className="w-5 h-5" />;
       case 'sql-injection':;
-        return <Database className=\"w-5 h-5\" />;
+        return <Database className="w-5 h-5" />;
       case 'xss':;
-        return <Code className=\"w-5 h-5\" />;
+        return <Code className="w-5 h-5" />;
       default:;
-        return <AlertTriangle className=\"w-5 h-5\" />;) => {
+        return <AlertTriangle className="w-5 h-5" />;) => {
   return $3;}
 }
     }
@@ -148,33 +148,33 @@ const getMetricStatusColor = (switch (status) {case 'secure':;
     }
   }
 
-const containerVariants = {hidden: { opacity: 0,}
+const containerVariants = {hidden: { opacity: 0}
 },visible: {opacity: 1,transition: {staggerChildren: 0.1,delayChildren: 0.2,},},}
 ;
   const itemVariants = {hidden: { y: 20, opacity: 0,}
 },visible: {y: 0,opacity: 1,transition: {duration: 0.5,ease: 'easeOut',},},;
-  return (<section className=\"py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white\" />;
-      <div className=\"container mx-auto px-4\" />;
+  return (<section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white" />;
+      <div className="container mx-auto px-4" />;
         <motion.div;
           initial={{ opacity: 0, y: 30 ,}
 }
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className=\"text-center mb-16\" />
+          className="text-center mb-16" />
 
-          <h2 className=\"text-4xl md:text-5xl font-bold mb-6\" />{titl,}
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" />{titl,}
 }</h2>;
-          <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\" />{subtitle}</p>;
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto" />{subtitle}</p>;
         </motion.div>;
         {/* Security Metrics Overview */}
         <motion.div;
           variants={containerVariants}
-          initial=\"hidden\";
-          whileInView=\"visible\";
-          viewport={{ once: true ,}
+          initial="hidden";
+          whileInView="visible";
+          viewport={{once: true }
 }
-          className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16\" />
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16" />
 
           {metrics.map(metric = > ;}
   const IconComponent  = metric.icon;return (<motion.div;}
@@ -182,11 +182,11 @@ const containerVariants = {hidden: { opacity: 0,}
                 variants={itemVariants}
                 whileHover={{ scale: 1.02, y: -5 ,}
 }
-                className=\"bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 hover:bg-gray-800/70 transition-all duration-300\" />
+                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 hover:bg-gray-800/70 transition-all duration-300" />
 
-                <div className=\"flex items-center justify-between mb-4\" />;
-                  <div className=\"w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center\" />;
-                    <IconComponent className=\"w-6 h-6 text-blue-400\" />;
+                <div className="flex items-center justify-between mb-4" />;
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center" />;
+                    <IconComponent className="w-6 h-6 text-blue-400" />;
                   </div>;
                   <div;
                     className={`px-3 py-1 rounded-full text-xs font-medium border ${getMetricStatusColor(metric.status)}`} />
@@ -194,20 +194,20 @@ const containerVariants = {hidden: { opacity: 0,}
                     {metric.status}
                   </div>;
                 </div>;
-                <h3 className=\"text-lg font-semibold text-gray-200 mb-2\" />;
+                <h3 className="text-lg font-semibold text-gray-200 mb-2" />;
                   {metric.name}
                 </h3>;
-                <div className=\"flex items-end gap-2 mb-3\" />;
-                  <span className=\"text-3xl font-bold text-white\" />;
+                <div className="flex items-end gap-2 mb-3" />;
+                  <span className="text-3xl font-bold text-white" />;
                     {metric.value}
                   </span>;
-                  <span className=\"text-lg text-gray-400 mb-1\" />;
+                  <span className="text-lg text-gray-400 mb-1" />;
                     {metric.unit}
                   </span>;
                 </div>;
-                <div className=\"flex items-center gap-2\" />;
-                  {metric.changeType === 'increase' ? (<TrendingUp className=\"w-4 h-4 text-green-400\" />;}
-                  ) : (<TrendingDown className=\"w-4 h-4 text-red-400\" />;}
+                <div className="flex items-center gap-2" />;
+                  {metric.changeType === 'increase' ? (<TrendingUp className="w-4 h-4 text-green-400" />;}
+                  ) : (<TrendingDown className="w-4 h-4 text-red-400" />;}
                   )}
                   <span;
                     className={`text-sm font-medium ${metric.changeType === 'increase';
@@ -217,7 +217,7 @@ const containerVariants = {hidden: { opacity: 0,}
 
                     {Math.abs(metric.change).toFixed(1)}%;
                   </span>;
-                  <span className=\"text-sm text-gray-500\" />vs last period</span>;
+                  <span className="text-sm text-gray-500" />vs last period</span>;
                 </div>;
               </motion.div>;
             )})}
@@ -229,11 +229,11 @@ const containerVariants = {hidden: { opacity: 0,}
           whileInView={{ opacity: 1, y: 0 ,}
 }
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true ,}
+          viewport={{once: true }
 }
-          className=\"flex justify-center mb-12\" />
+          className="flex justify-center mb-12" />
 
-          <div className=\"bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700/50\" />;
+          <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700/50" />;
             {(['1h', '6h', '24h', '7d'] as const).map(range => (<button;}
                 key={range}
                 onClick={() = /> setTimeRange(range)}
@@ -254,42 +254,42 @@ const containerVariants = {hidden: { opacity: 0,}
             whileInView={{ opacity: 1, y: 0 ,}
 }
             transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true ,}
+            viewport={{once: true }
 }
-            className=\"mb-16\" />
+            className="mb-16" />
 
-            <div className=\"flex items-center justify-between mb-8\" />;
-              <h3 className=\"text-2xl font-bold\" />Active Security Threats</h3>;
-              <div className=\"flex items-center gap-4\" />;
-                <div className=\"flex items-center gap-2\" />;
-                  <div className=\"w-3 h-3 bg-red-500 rounded-full animate-pulse\" /></div>;
-                  <span className=\"text-sm text-gray-400\" />Live Monitoring</span>;
+            <div className="flex items-center justify-between mb-8" />;
+              <h3 className="text-2xl font-bold" />Active Security Threats</h3>;
+              <div className="flex items-center gap-4" />;
+                <div className="flex items-center gap-2" />;
+                  <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" /></div>;
+                  <span className="text-sm text-gray-400" />Live Monitoring</span>;
                 </div>;
               </div>;
             </div>;
-            <div className=\"space-y-4\" />;
+            <div className="space-y-4" />;
               {threats.map(threat => (<motion.div;}
                   key={threat.id}
                   initial={{ opacity: 0, x: -20 ,}
 }
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 ,}
+                  transition={{duration: 0.5 }
 }
-                  className=\"bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 hover:bg-gray-800/70 transition-all duration-300 cursor-pointer\";
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 hover:bg-gray-800/70 transition-all duration-300 cursor-pointer";
                   onClick={() = />;}
                     setSelectedThreat(selectedThreat === threat.id ? null : threat.id;}
                     )}
                 >;
-                  <div className=\"flex items-start justify-between\" />;
-                    <div className=\"flex items-start gap-4\" />;
+                  <div className="flex items-start justify-between" />;
+                    <div className="flex items-start gap-4" />;
                       <div;
                         className={`w-12 h-12 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center border ${getSeverityColor(threat.severity)}`} />
 
                         {getThreatTypeIcon(threat.type)}
                       </div>;
-                      <div className=\"flex-1\" />;
-                        <div className=\"flex items-center gap-3 mb-2\" />;
-                          <h4 className=\"text-lg font-semibold text-white capitalize\" />;
+                      <div className="flex-1" />;
+                        <div className="flex items-center gap-3 mb-2" />;
+                          <h4 className="text-lg font-semibold text-white capitalize" />;
                             {threat.type.replace('-', ' ')} Attack;
                           </h4>;
                           <div;
@@ -303,31 +303,31 @@ const containerVariants = {hidden: { opacity: 0,}
                             {threat.status}
                           </div>;
                         </div>;
-                        <p className=\"text-gray-300 mb-3\" />;
+                        <p className="text-gray-300 mb-3" />;
                           {threat.description}
                         </p>;
-                        <div className=\"grid grid-cols-2 md: grid-cols-4 gap-4 text-sm\" />;
+                        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 text-sm" />;
                           <div />;
-                            <span className=\"text-gray-400\" />Source:</span>;
-                            <span className=\"text-white ml-2 font-mono\" />;
+                            <span className="text-gray-400" />Source:</span>;
+                            <span className="text-white ml-2 font-mono" />;
                               {threat.source}
                             </span>;
                           </div>;
                           <div />;
-                            <span className=\"text-gray-400\" />Target:</span>;
-                            <span className=\"text-white ml-2\" />;
+                            <span className="text-gray-400" />Target:</span>;
+                            <span className="text-white ml-2" />;
                               {threat.target}
                             </span>;
                           </div>;
                           <div />;
-                            <span className=\"text-gray-400\" />Time:</span>;
-                            <span className=\"text-white ml-2\" />;
+                            <span className="text-gray-400" />Time:</span>;
+                            <span className="text-white ml-2" />;
                               {threat.timestamp}
                             </span>;
                           </div>;
                           <div />;
-                            <span className=\"text-gray-400\" />Impact:</span>;
-                            <span className=\"text-white ml-2\" />;
+                            <span className="text-gray-400" />Impact:</span>;
+                            <span className="text-white ml-2" />;
                               {threat.impact}
                             </span>;
                           </div>;
@@ -343,52 +343,52 @@ const containerVariants = {hidden: { opacity: 0,}
                         animate={{ opacity: 1, height: 'auto' ,}
 }
                         exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 ,}
+                        transition={{duration: 0.3 }
 }
-                        className=\"mt-6 pt-6 border-t border-gray-700/50\" />
+                        className="mt-6 pt-6 border-t border-gray-700/50" />
 
-                        <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\" />;
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6" />;
                           <div />;
-                            <h5 className=\"font-semibold text-gray-200 mb-3\" />;
+                            <h5 className="font-semibold text-gray-200 mb-3" />;
                               Recommended Actions;
                             </h5>;
-                            <ul className=\"space-y-2 text-sm text-gray-300\" />;
-                              <li className=\"flex items-center gap-2\" />;
-                                <CheckCircle className=\"w-4 h-4 text-green-400\" />;
+                            <ul className="space-y-2 text-sm text-gray-300" />;
+                              <li className="flex items-center gap-2" />;
+                                <CheckCircle className="w-4 h-4 text-green-400" />;
                                 Block source IP address;
                               </li>;
-                              <li className=\"flex items-center gap-2\" />;
-                                <CheckCircle className=\"w-4 h-4 text-green-400\" />;
+                              <li className="flex items-center gap-2" />;
+                                <CheckCircle className="w-4 h-4 text-green-400" />;
                                 Update firewall rules;
                               </li>;
-                              <li className=\"flex items-center gap-2\" />;
-                                <CheckCircle className=\"w-4 h-4 text-green-400\" />;
+                              <li className="flex items-center gap-2" />;
+                                <CheckCircle className="w-4 h-4 text-green-400" />;
                                 Monitor for similar patterns;
                               </li>;
                             </ul>;
                           </div>;
                           <div />;
-                            <h5 className=\"font-semibold text-gray-200 mb-3\" />;
+                            <h5 className="font-semibold text-gray-200 mb-3" />;
                               Security Metrics;
                             </h5>;
-                            <div className=\"space-y-2 text-sm\" />;
-                              <div className=\"flex justify-between\" />;
-                                <span className=\"text-gray-400\" />;
+                            <div className="space-y-2 text-sm" />;
+                              <div className="flex justify-between" />;
+                                <span className="text-gray-400" />;
                                   Risk Score:;
                                 </span>;
-                                <span className=\"text-white\" />8.5/10</span>;
+                                <span className="text-white" />8.5/10</span>;
                               </div>;
-                              <div className=\"flex justify-between\" />;
-                                <span className=\"text-gray-400\" />;
+                              <div className="flex justify-between" />;
+                                <span className="text-gray-400" />;
                                   Confidence:;
                                 </span>;
-                                <span className=\"text-white\" />95%</span>;
+                                <span className="text-white" />95%</span>;
                               </div>;
-                              <div className=\"flex justify-between\" />;
-                                <span className=\"text-gray-400\" />;
+                              <div className="flex justify-between" />;
+                                <span className="text-gray-400" />;
                                   Response Time:;
                                 </span>;
-                                <span className=\"text-white\" />2.3s</span>;
+                                <span className="text-white" />2.3s</span>;
                               </div>;
                             </div>;
                           </div>;
@@ -407,29 +407,29 @@ const containerVariants = {hidden: { opacity: 0,}
           whileInView={{ opacity: 1, y: 0 ,}
 }
           transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true ,}
+          viewport={{once: true }
 }
-          className=\"bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl border border-blue-500/30 p-8 text-center\" />
+          className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl border border-blue-500/30 p-8 text-center" />
 
-          <h3 className=\"text-2xl font-bold mb-6\" />Security Status Overview</h3>;
-          <div className=\"grid grid-cols-1 md:grid-cols-3 gap-6\" />;
+          <h3 className="text-2xl font-bold mb-6" />Security Status Overview</h3>;
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6" />;
             <div />;
-              <div className=\"text-3xl font-bold mb-2 text-green-400\" />;
+              <div className="text-3xl font-bold mb-2 text-green-400" />;
                 {threats.filter(t => t.status === 'blocked').length}
               </div>;
-              <div className=\"text-blue-200\" />Threats Blocked</div>;
+              <div className="text-blue-200" />Threats Blocked</div>;
             </div>;
             <div />;
-              <div className=\"text-3xl font-bold mb-2 text-yellow-400\" />;
+              <div className="text-3xl font-bold mb-2 text-yellow-400" />;
                 {threats.filter(t => t.status === 'investigating').length}
               </div>;
-              <div className=\"text-blue-200\" />Under Investigation</div>;
+              <div className="text-blue-200" />Under Investigation</div>;
             </div>;
             <div />;
-              <div className=\"text-3xl font-bold mb-2 text-blue-400\" />;
+              <div className="text-3xl font-bold mb-2 text-blue-400" />;
                 {metrics.find(m => m.id === 'security-score')?.value}%;
               </div>;
-              <div className=\"text-blue-200\" />Security Score</div>;
+              <div className="text-blue-200" />Security Score</div>;
             </div>;
           </div>;
         </motion.div>;

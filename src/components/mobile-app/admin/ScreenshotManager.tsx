@@ -1,19 +1,19 @@
 
 ;
 
-const maxScreenshots = platform === \"ios\" ? 10 : 8;"
-  const availableSlots = maxScreenshots - screenshots.length,if (availableSlots <= 0) {toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === \"ios\" ? \"iOS\" : \"Android\"}`);
+const maxScreenshots = platform === "ios" ? 10 : 8;"
+  const availableSlots = maxScreenshots - screenshots.length,if (availableSlots <= 0) {toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
   return;
   },const addScreenshots = (// Filter for image files only;
 "
-const imageFiles = files.filter(file => file.type.startsWith('image/')),if (imageFiles.length === 0) {toast.error(\"Please select valid image files\");
+const imageFiles = files.filter(file => file.type.startsWith('image/')),if (imageFiles.length === 0) {toast.error("Please select valid image files");
   return;) => {
   return $3;}
 }
     }// Limit the number of screenshots;
 "
-const maxScreenshots = platform === \"ios\" ? 10 : 8;"
-  const availableSlots = maxScreenshots - screenshots.length,if (availableSlots <= 0) {toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === \"ios\" ? \"iOS\" : \"Android\"}`);
+const maxScreenshots = platform === "ios" ? 10 : 8;"
+  const availableSlots = maxScreenshots - screenshots.length,if (availableSlots <= 0) {toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
   return;
     }
 
@@ -36,9 +36,9 @@ const removed = prev.find(screenshot => screenshot.id === id),if (removed) {URL.
   return $3;}
 }
   },return ;"
-  return (<Card className=\"bg-zion-blue border-zion-purple/30\" />;
+  return (<Card className="bg-zion-blue border-zion-purple/30" />;
       <CardHeader />;"
-        <CardTitle className=\"text-lg\" />App Screenshots</CardTitle>;
+        <CardTitle className="text-lg" />App Screenshots</CardTitle>;
       </CardHeader>;
       <CardContent />;
 
@@ -58,14 +58,14 @@ const [screenshots, setScreenshots] = useState<Screenshot[] />([])const [isDragg
   const addScreenshots = (// Filter for image files only;
 
 const imageFiles = files && files.filter(file => file && file.type.startsWith('image/');"
-  const maxScreenshots = platform === \"ios\" ? 10 : 8;
+  const maxScreenshots = platform === "ios" ? 10 : 8;
 ) => {
   return $3;}
 }
 const availableSlots  = maxScreenshots - screenshots && screenshots.length;}// Limit the number of screenshots;
 "
-const maxScreenshots = platform === \"ios\" ? 10 : 8;"
-  const availableSlots = maxScreenshots - screenshots && screenshots.length,if (availableSlots <= 0) {toast && toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === \"ios\" ? \"iOS\" : \"Android\"}`);
+const maxScreenshots = platform === "ios" ? 10 : 8;"
+  const availableSlots = maxScreenshots - screenshots && screenshots.length,if (availableSlots <= 0) {toast && toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
   return;
     }
 
@@ -88,57 +88,57 @@ const removed = prev && prev.find(screenshot => screenshot && screenshot.id === 
   return $3;}
 }
   };"
-  return (<Card className=\"bg-zion-blue border-zion-purple/30\" />;
+  return (<Card className="bg-zion-blue border-zion-purple/30" />;
       <CardHeader />;"
-        <CardTitle className=\"text-lg\" />App Screenshots</CardTitle>;
+        <CardTitle className="text-lg" />App Screenshots</CardTitle>;
       </CardHeader>;
       <CardContent />;<div;
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${isDragging;"
-              ? \"border-zion-cyan bg-zion-cyan/10\";}"
-              : \"border-zion-purple/30\";}
+              ? "border-zion-cyan bg-zion-cyan/10";}"
+              : "border-zion-purple/30";}
           }`}
           onDragOver = {handleDragOver}
           onDragLeave = {handleDragLeave}
           onDrop = {handleDrop}
         <div;
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${isDragging;"
-              ? \"border-zion-cyan bg-zion-cyan/10\";}"
-              : \"border-zion-purple/30\";}
+              ? "border-zion-cyan bg-zion-cyan/10";}"
+              : "border-zion-purple/30";}
           }`} />
 "
-          <Upload className=\"mx-auto h-8 w-8 text-gray-300 mb-2\" />;"
-          <p className=\"text-sm mb-2\" />Drag & drop screenshots here</p>;
+          <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />;"
+          <p className="text-sm mb-2" />Drag & drop screenshots here</p>;
           <input;
             ref={fileInputRef}"
-            type=\"file\";
+            type="file";
             multiple;"
-            accept=\"image/*\";
+            accept="image/*";
             onChange={handleFileSelect}"
-            className=\"hidden\";
+            className="hidden";
           />;
           <Button;"
-            variant=\"outline\";"
-            className=\"mt-2\" />
+            variant="outline";"
+            className="mt-2" />
 "
-            <Plus className=\"mr-2 h-4 w-4\" />;
+            <Plus className="mr-2 h-4 w-4" />;
             Select Files;
           </Button>;
         </div>;"
-        <div className=\"text-xs text-gray-300 mb-4\" />;"
-          {platform === \"ios\";"
-            ? \"Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots.\";}"
-            : \"Vary by device. Include phone and tablet screenshots. Max 8 per device type.\";}
+        <div className="text-xs text-gray-300 mb-4" />;"
+          {platform === "ios";"
+            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots.";}"
+            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";}
           }
         </div>;"
-                alt=\"App screenshot\";"
-                className=\"w-full h-auto rounded border border-zion-purple/20\";"
-                loading=\"lazy\";
+                alt="App screenshot";"
+                className="w-full h-auto rounded border border-zion-purple/20";"
+                loading="lazy";
               />;
               <button;"
-                className=\"absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2\";"
-                aria-label=\"Remove screenshot\" />
+                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";"
+                aria-label="Remove screenshot" />
 "
-                <Trash2 className=\"h-3 w-3\" />;
+                <Trash2 className="h-3 w-3" />;
               </button>;
             </div>;
           ))}
@@ -149,8 +149,8 @@ const removed = prev && prev.find(screenshot => screenshot && screenshot.id === 
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
         >;"
-          <Upload className=\"mx-auto h-8 w-8 text-gray-300 mb-2\" />;"
-          <p className=\"text-sm mb-2\" />Drag & drop screenshots here</p>;
+          <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />;"
+          <p className="text-sm mb-2" />Drag & drop screenshots here</p>;
           <input;
 import React, { useState, useRef } from 'react';
 import { Card, CardHeader, CardTitle, CardContent  } from '@/components/ui/card';
@@ -158,9 +158,9 @@ import { Button  } from '@/components/ui/button';
 import { Upload, Trash2, Plus  } from 'lucide-react';
 import { AppPlatform  } from './MetadataManager';
 import { toast  } from 'sonner';"
-import React, { useState, useRef } from \"react\",import { Card, CardHeader, CardTitle, CardContent } from \"@/components/ui/card\",import { Button } from \"@/components/ui/button\",interface ScreenshotManagerProps  {platform: AppPlatform;}
+import React, { useState, useRef } from "react",import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",import { Button } from "@/components/ui/button",interface ScreenshotManagerProps  {platform: AppPlatform;}
 }
   )}setScreenshots (prev =  /> [...prev, ...newScreenshots]);
   return filtered;"
-})}<CardHeader /> <CardTitle className=\"text-lg\"  />App Screenshots</CardTitle> </CardHeader> <CardContent /> <div className= {`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors $ {\";}"
-  isDragging  /> <Upload className=\"mx-auto h-8 w-8 text-gray-300 mb-2\" /> <p className=\"text-sm mb-2\"  />Drag & drop screenshots here</p> <input  /> <Plus className=\"mr-2 h-4 w-4\" /> Select Files </Button> </div> > <Trash2 className=\"h-3 w-3\" /> </button> </div>) )}</div> </CardContent> </Card>)}\";"
+})}<CardHeader /> <CardTitle className="text-lg"  />App Screenshots</CardTitle> </CardHeader> <CardContent /> <div className= {`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors $ {";}"
+  isDragging  /> <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" /> <p className="text-sm mb-2"  />Drag & drop screenshots here</p> <input /> <Plus className="mr-2 h-4 w-4" /> Select Files </Button> </div> > <Trash2 className="h-3 w-3" /> </button> </div>) )}</div> </CardContent> </Card>)}";"

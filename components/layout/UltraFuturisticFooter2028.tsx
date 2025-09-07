@@ -263,8 +263,8 @@ key={social.name}
                   href={contactInfo && contactInfo.website}
                   className='text-sm hover: text-white transition-colors' />                  {contactInfo && contactInfo.website}      {/* Main Footer Content *}
 }
-      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\" />;"
-        <div className=\"grid grid-cols-1 lg:grid-cols-4 gap-12\" />;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" />;"
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12" />;
           {/* Company Info */}
             {/* Social Links */}
               ))}
@@ -342,14 +342,14 @@ href={service.href}
                 {companyLinks && companyLinks.map(link => (<li key={link && link.name} />;
                     <Link;
             {/* Company Links */}"
-            <div className=\"mb-6\" />;"
-              <h4 className=\"font-medium text-purple-300 mb-3\" />Company</h4>;"
-              <ul className=\"space-y-2\" />;
+            <div className="mb-6" />;"
+              <h4 className="font-medium text-purple-300 mb-3" />Company</h4>;"
+              <ul className="space-y-2" />;
                 {companyLinks && companyLinks.map((link) => (<li key={link && link.name} />;
                     <Link;
                       href={link && link.href}"
-                      className=\"text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2\" />;"
-                      <link && link.icon className=\"w-4 h-4\" />;
+                      className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2" />;"
+                      <link && link.icon className="w-4 h-4" />;
                       <span />{link && link.name}</span>;
                     </Link>;
                   </li>;
@@ -409,8 +409,8 @@ href={service.href}
                       <link && link.icon className='w-4 h-4' />                      <span />{link && link.name}</span>                  <li key={link && link.name} />;
                     <Link;
                       href={link && link.href}"
-                      className=\"text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2\" />;"
-                      <link && link.icon className=\"w-4 h-4\" />;
+                      className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2" />;"
+                      <link && link.icon className="w-4 h-4" />;
                       <span />{link && link.name}</span>;
                     </Link>;
                   </li>;

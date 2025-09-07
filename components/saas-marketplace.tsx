@@ -268,7 +268,7 @@ href='#services'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-blue-500/25 hover: shadow-blue-500/40'
 
-                style={{ animationDelay: '0 && 0.2s' ,}
+                style={{animationDelay: '0 && 0.2s' }
 } />;
                 Explore Services;
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -506,9 +506,9 @@ key={category}
                         <div className='text - sm text - gray - 300 max - w-xs' />;
                           {service.use_case}
                         </div>                      </div>;
-                      <div className=\"text-right\" />;
-                        <div className=\"text - xs text - gray-500 mb-1\" />Use Case:</div>;
-                        <div className=\"text - sm text - gray-300 max-w-xs\" />{service.use_case}</div>;
+                      <div className="text-right" />;
+                        <div className="text - xs text - gray-500 mb-1" />Use Case:</div>;
+                        <div className="text - sm text - gray-300 max-w-xs" />{service.use_case}</div>;
                     </div>;
                   </div>;
                 </div>;

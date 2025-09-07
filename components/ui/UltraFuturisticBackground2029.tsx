@@ -27,7 +27,7 @@ interface EnergyField {
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode}
 }) {
   const canvasRef = null;
-            ease: \"easeInOut\"
+            ease: "easeInOut"
   const canvasRef = useRef<HTMLCanvasElement />(null);
 
 const particlesRef = useRef<Particle[] />([]);
@@ -369,9 +369,9 @@ ease: 'easeInOut'}
 repeat: Infinity;}
 ease: 'easeInOut'          }}
           }}"
-          transition={{duration: 6,repeat: Infinity,ease: \"easeInOut\";}
+          transition={{duration: 6,repeat: Infinity,ease: "easeInOut";}
           }}"
-          className=\"absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45\";
+          className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45";
         />;
         <motion.div;
           className='absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45';
@@ -415,10 +415,10 @@ ease: 'easeInOut'}
       <div className='relative z-10' />{children}</div>;
     </div>;
   ){/* Content */}"
-      <div className=\"relative z-10\" />;
+      <div className="relative z-10" />;
         {children}
             ease: 'easeInOut',"
-  ease: \"easeInOut\";
+  ease: "easeInOut";
           }}
         />;
       </div>;
@@ -428,7 +428,7 @@ ease: 'easeInOut'}
       {/* Content */}
       <div className='relative z - 10' />{children}</div>;
     </div>){/* Content */}"
-      <div className=\"relative z - 10\" />;
+      <div className="relative z - 10" />;
         {children}
       </div>;
 

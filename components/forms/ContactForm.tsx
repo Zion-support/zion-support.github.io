@@ -79,7 +79,7 @@ const contactInfo = [
 
       </div>;
 
-      <div className='relative container mx-auto px-4' />        {/* Section Header */}      <div className=\"relative container mx-auto px-4\" />
+      <div className='relative container mx-auto px-4' />        {/* Section Header */}      <div className="relative container mx-auto px-4" />
 ];
 
 ;
@@ -208,12 +208,12 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                     </h4>;
                     <p className='text-gray-300 group-hover: text-blue-400 transition-colors duration-300' />                      {info && info.conten}
 }                >;"
-                  <div className=\"w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300\" />;"
-                    <info && info.icon className=\"w-6 h-6 text-white\" />;
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />;"
+                    <info && info.icon className="w-6 h-6 text-white" />;
                   </div>;
                   <div />;"
-                    <h4 className=\"text-lg font-semibold text-white mb-1\" />{info && info.title}</h4>;"
-                    <p className=\"text-gray-300 group-hover:text-blue-400 transition-colors duration-300\" />;
+                    <h4 className="text-lg font-semibold text-white mb-1" />{info && info.title}</h4>;"
+                    <p className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300" />;
                       {info && info.content}
                     </p>;
                   </div>;

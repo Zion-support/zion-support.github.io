@@ -76,7 +76,7 @@ const contactInfo = null;
 }];
 }];
 {/* Background Effects */;}
-}<div className=\"absolute inset-0 overflow-hidden\"  /> <div className=\"absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]\"  /></div> <div className=\"absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]\"  /></div> </div> <motion.div initial= {{title: 'AI & Automation';
+}<div className="absolute inset-0 overflow-hidden"  /> <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]"  /></div> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]"  /></div> </div> <motion.div initial= {{title: 'AI & Automation';
     services: [;
       {name: 'AI Autonomous Business Processor';}
         href: '/ai-autonomous-business-processor';}
@@ -260,7 +260,7 @@ export default function UltraFuturisticFooter2026() {
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16' />
         {/* Main Footer Content *}
 }"
-        <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12\" />;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12" />;
           {/* Company Info */}
 
           <div className='lg:col-span-2' />
@@ -307,7 +307,7 @@ solutions. Transforming businesses with cutting-edge technology.
           </div>;
               </p>;
               {/* Contact Info */}"
-                  <Globe className=\"w-4 h-4 mr-3 text-cyan-400\" />;
+                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />;
                   <span />{contactInfo.website}</span>;
                 </div>;
               </div>;
@@ -326,8 +326,8 @@ solutions. Transforming businesses with cutting-edge technology.
                   <span />{contactInfo && contactInfo.address}</span>;
                 </div>;
                 <div className='flex items-center text-gray-300' />;"
-                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span />{contactInfo && contactInfo.website}</span>                <div className=\"flex items-center text-gray-300\" />;"
-                  <Globe className=\"w-4 h-4 mr-3 text-cyan-400\" />;
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span />{contactInfo && contactInfo.website}</span>                <div className="flex items-center text-gray-300" />;"
+                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />;
                   <span />{contactInfo && contactInfo.website}</span>;
                 </div>;
               </div>;
@@ -578,24 +578,24 @@ href='/terms'
               </div>;
               <div className='w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse' /></div>;
               <div className='text - cyan - 400 text - sm font - semibold' />                99.9% Uptime        >;"
-          <div className=\"flex flex - col md: flex - row justify - between items - center\" />;"
-            <div className=\"text - gray - 400 text - sm mb - 4 md:mb - 0\" />;
+          <div className="flex flex - col md: flex - row justify - between items - center" />;"
+            <div className="text - gray - 400 text - sm mb - 4 md:mb - 0" />;
               © 2026 Zion Tech Group. All rights reserved. |;"
-              <Link href=\"/privacy\" className=\"hover:text - cyan - 400 transition - colors duration - 300 ml - 2\" />;
+              <Link href="/privacy" className="hover:text - cyan - 400 transition - colors duration - 300 ml - 2" />;
                 Privacy Policy;
               </Link>;"
-              <span className=\"mx - 2\" />|</span>;"
-              <Link href=\"/terms\" className=\"hover:text - cyan - 400 transition - colors duration - 300\" />;
+              <span className="mx - 2" />|</span>;"
+              <Link href="/terms" className="hover:text - cyan - 400 transition - colors duration - 300" />;
                 Terms of Service;
               </Link>;
             </div>;"
-            <div className=\"flex items - center space - x-2\" />;"
-              <div className=\"flex items - center text - gray - 400 text - sm\" />;"
-                <Star className=\"w - 4 h - 4 text - yellow - 400 mr - 1\" />;
+            <div className="flex items - center space - x-2" />;"
+              <div className="flex items - center text - gray - 400 text - sm" />;"
+                <Star className="w - 4 h - 4 text - yellow - 400 mr - 1" />;
                 Trusted by 2500+ Companies;
               </div>;"
-              <div className=\"w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse\" /></div>;"
-              <div className=\"text - cyan - 400 text - sm font - semibold\" />;
+              <div className="w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse" /></div>;"
+              <div className="text - cyan - 400 text - sm font - semibold" />;
                 99.9% Uptime;
               </div>;
             </div>;

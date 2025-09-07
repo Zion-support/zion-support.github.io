@@ -53,7 +53,7 @@ const filters: Record<string, any /> = {};
     format: (format as any) || undefined}
 }
 function toCsv(rows: any[]): string {if (!rows.length) return '';}
-return '\"' + s.replace(/\"/g, '\"\"') + '\"'}
+return '"' + s.replace(/"/g, '""') + '"'}
 };
 
 
@@ -105,7 +105,7 @@ const { data, error, count } = await query.range(from, to);
 res.setHeader('Content-Type', 'text/csv');
         res.setHeader(}
           'Content-Disposition'}"
-          `attachment; filename=\"${type}.csv\"`
+          `attachment; filename="${type}.csv"`
         );
         return res.status(200).send(toCsv(data || []));
       }
@@ -158,7 +158,7 @@ const pageItems = filtered.slice(start, end);
 res.setHeader('Content-Type', 'text/csv');
         res.setHeader(}
           'Content-Disposition'}"
-          `attachment; filename=\"${type}.csv\"`
+          `attachment; filename="${type}.csv"`
         );
         return res.status(200).send(toCsv(pageItems));
       return res.status(200).json({ items: pageItems, total });

@@ -82,9 +82,9 @@ const dao = [
     {key: 'voter_participation';}
       label: 'Voter participation %';}
       value: rand(10, 65)trend: generateSeries(14, 38)}
-    { key: 'delegate_heat',}
+    {key: 'delegate_heat'}
   label: 'Delegate activity', value: rand(100, 600) }
-    { key: 'region_quorum',}
+    {key: 'region_quorum'}
   label: 'Regions above quorum', value: rand(2, 7) }
   ];
 
@@ -101,7 +101,7 @@ const token = [
     {key: 'treasury_health';}
       label: 'Treasury health (USD)';}
       value: rand(1_000_000, 7_000_000)trend: generateSeries(14, 3_500_000)}
-    { key: 'top_earners',}
+    {key: 'top_earners'}
   label: 'Top earners (count)', value: rand(5, 25) }
   ];
 
@@ -139,11 +139,10 @@ history: {
   if (req.query.compare = == 'quarter') {
    ;
   const factor = 0.8 + Math.random() * 0.4;
-    response.compare = {
-      prevQuarter: {
+    response.compare = {prevQuarter: {
 
 marketplace: marketplace.map(m => ({
-          ...m,}
+          ...m}
           value: Math.round(m.value * factor),}
         })),
         dao: dao.map(m => ({ ...m, value: Math.round(m.value * factor),}

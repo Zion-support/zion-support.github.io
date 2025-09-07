@@ -231,11 +231,11 @@ property='og:description'
               size='lg'
               className='bg-gradient-to-r from-blue-500 to-cyan-600 hover: from-blue-600 hover:to-cyan-700 text-white shadow-2xl hover-glow'
           </p />
-          <div className=\"flex flex-col sm:flex-row gap-6 justify-center\" />
+          <div className="flex flex-col sm:flex-row gap-6 justify-center" />
             <Button;
 onClick={handleAnalyzeWebsite}
-              size=\"lg\"
-              className=\"bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white shadow-2xl hover-glow\"
+              size="lg"
+              className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white shadow-2xl hover-glow"
 
 
               disabled={isAnalyzin,}
@@ -330,11 +330,11 @@ href='#pricing';
                     <div className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover: opacity - 20 transition - opacity duration - 300 blur - sm,
 } />;
                   </div>;
-                  <div className=\"flex - 1\" />;
-                    <h3 className=\"text - 2xl font - bold mb - 4 text - white\" />;
+                  <div className="flex - 1" />;
+                    <h3 className="text - 2xl font - bold mb - 4 text - white" />;
                       {feature.title}
                     </h3>;
-                    <p className=\"text - gray - 400 leading - relaxed\" />;
+                    <p className="text - gray - 400 leading - relaxed" />;
                       {feature.description}
             ))}
                 key={index}
@@ -479,11 +479,11 @@ needs.
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' />;
                 </p>              </Card>              Comprehensive Performance Metrics;
             </h2>;
-            <p className=\"text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed\" />;
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed" />;
               Track all the metrics that matter for your website's performance and user experience.;
             </p>;
           </div>;
-          <div className=\"grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6\" />;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6" />;
 
             {metrics.map ((metric, index) => (}
               <Card;}
@@ -554,13 +554,13 @@ href='/contact'
 }>
 
                   Get Started;
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href=\"/contact\";
-                  size=\"lg\";
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
+                  size="lg";
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover: from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white,
 }>
 
                   Get Started;
-                  <ArrowRight className=\"w-5 h-5 ml-2\" />;
+                  <ArrowRight className="w-5 h-5 ml-2" />;
               </Card>;
             ))}
       {/* CTA Section */}

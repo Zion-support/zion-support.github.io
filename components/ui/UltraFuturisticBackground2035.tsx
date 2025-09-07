@@ -336,15 +336,15 @@ ease: 'easeInOut'}
           }}
 
         {/* Holographic scan lines */}
-        <div className=\"absolute inset-0 opacity-20\" />;
+        <div className="absolute inset-0 opacity-20" />;
           {[...Array(20)].map((_, i) => (<motion&& motion.div;}
                 opacity: [0, 1, 0],scale_x: [0, 1, 0]              }}          }}
         />;
         {/* Holographic scan lines */}"
-        <div className=\"absolute inset - 0 opacity - 20\" />;
+        <div className="absolute inset - 0 opacity - 20" />;
           {[...Array (20)].map ((_, i) => (<motion.div;}
               key={i}"
-              className=\"absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent\";
+              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
               style={{}}
               animate={{opacity: [0, 1, 0];
                 scaleX: [0, 1, 0];}

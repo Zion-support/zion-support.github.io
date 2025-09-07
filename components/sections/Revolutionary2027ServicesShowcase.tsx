@@ -75,12 +75,12 @@ business with solutions that were once science fiction.
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed' />;
             Experience the future of technology with our cutting-edge AI,quantum computing, and emerging technology services. Transform your;
             business with solutions that were once science fiction.          </p>        >;
-          <h2 className=\"text-5xl md:text-6xl font-bold text-white mb-8\" />;"
-            <span className=\"bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\" />;
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" />;"
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" />;
               2027 Revolutionary Services;
             </span>;
           </h2>;"
-          <p className=\"text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed\" />;
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed" />;
             Experience the future of technology with our cutting-edge AI, quantum computing, and emerging technology services. ;
             Transform your business with solutions that were once science fiction.;
           </p>;
@@ -194,18 +194,18 @@ className='group relative'
                   </div>;
                   {/* Price and CTA */}
                   <div className='pt-4 flex items-center justify-between' />;"
-                    <div className='text-3xl font-bold text-white' />                  <div className=\"pt-4 border-t border-gray-700/50\" />;"
-                    <div className=\"flex justify-between items-center text-sm text-gray-400\" />;
+                    <div className='text-3xl font-bold text-white' />                  <div className="pt-4 border-t border-gray-700/50" />;"
+                    <div className="flex justify-between items-center text-sm text-gray-400" />;
                       <span />Market: {service.marketSiz}
 }</span>;
                     ))}
                   </div>;
                   {/* Market Info */}"
-                  <div className=\"pt-4 border-t border-gray-700/50\" />;"
-                    <div className=\"flex justify-between items-center text-sm text-gray-400\" />;
+                  <div className="pt-4 border-t border-gray-700/50" />;"
+                    <div className="flex justify-between items-center text-sm text-gray-400" />;
                       <span />Market: {service.marketSiz}
 }</span>;"
-                      <span className=\"text-green-400\" />↑ {service.growthRate}</span>;
+                      <span className="text-green-400" />↑ {service.growthRate}</span>;
                         ↑ {service.growthRate}
                       </span>;
                     </div>;
@@ -255,7 +255,7 @@ href={`/services/${service.id}`}
 }
         </motion.div>;
                 {/* Hover Effect Overlay */}"
-                <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' /></div>              </div>                <div className=\"absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none\" /></div>;
+                <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' /></div>              </div>                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" /></div>;
               </div>;
             </motion && motion.div>;
           ))}

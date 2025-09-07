@@ -52,23 +52,23 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
           </TooltipTrigger>;
           <TooltipContent />;}
   },return (<TooltipProvider />;
-      <div className=\"flex items-center gap-1\" />;
+      <div className="flex items-center gap-1" />;
         <Tooltip />;
           <TooltipTrigger asChild />;
             <Link;"
-              href={isAuthenticated ? \"/points\" : \"#\"}
+              href={isAuthenticated ? "/points" : "#"}
               onClick={handleClick}"
-              title={isAuthenticated ? \"View points\" : \"Earn points by participating\"}"
-              className=\"flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95\" />
+              title={isAuthenticated ? "View points" : "Earn points by participating"}"
+              className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95" />
 "
-              <Gift className=\"h-4 w-4\" aria-hidden=\"true\" />;
+              <Gift className="h-4 w-4" aria-hidden="true" />;
               <span />{`${points} pts`}</span>;
             </Link>;
           </TooltipTrigger>;
           <TooltipContent />;
             {isAuthenticated ? (<>;"
-                <p className=\"text-sm font-medium\" />Point Breakdown</p>;"
-                {points === 0 && (<p className=\"text-xs text-muted-foreground\" />;
+                <p className="text-sm font-medium" />Point Breakdown</p>;"
+                {points === 0 && (<p className="text-xs text-muted-foreground" />;
                     You haven't earned any points yet.;}
                   </p>;}
                 )}
@@ -92,11 +92,11 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
                     You haven't earned any points yet.;}
                   </p>)}
                 <ul className='text - xs mt - 1 space - y-0.5' />;
-                  <li  /> Purchases: {breakdown.purchas}
+                  <li /> Purchases: {breakdown.purchas}
 }</li>;
-                  <li  /> Posts: {breakdown.pos}
+                  <li /> Posts: {breakdown.pos}
 }</li>;
-                  <li  /> Referrals: {breakdown.referra}
+                  <li /> Referrals: {breakdown.referra}
 }</li>;
                 </ul>;
                 <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1' />;
@@ -110,7 +110,7 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
                   <br />;
                   • Community posts: 25 pts each;
                   <br />• Refer friends: 200 pts each;"
-                </p>;<ul className=\"text-xs mt-1 space-y-0.5\" />;
+                </p>;<ul className="text-xs mt-1 space-y-0.5" />;
                   <li />Purchases: {breakdown.purchas}
 }</li>;
                   <li />Posts: {breakdown.pos}
@@ -118,19 +118,19 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
                   <li />Referrals: {breakdown.referra}
 }</li>;
                 </ul>;"
-                <p className=\"text-xs mt-2 text-muted-foreground border-t pt-1\" />;
+                <p className="text-xs mt-2 text-muted-foreground border-t pt-1" />;
                   Click to view full rewards program;
                 </p>;
               </>;
             ) : (<>;"
-                <p className=\"text-sm font-medium\" />Zion Rewards Program</p>;"
-                <p className=\"text-xs mt-1 text-muted-foreground\" />;
-                  • Sign up: 50 pts<br/>;
-                  • First purchase: 100 pts<br/>;
-                  • Community posts: 25 pts each<br/>;
+                <p className="text-sm font-medium" />Zion Rewards Program</p>;"
+                <p className="text-xs mt-1 text-muted-foreground" />;
+                  • Sign up: 50 pts<br />;
+                  • First purchase: 100 pts<br />;
+                  • Community posts: 25 pts each<br />;
                   • Refer friends: 200 pts each;
                 </p>;"
-                <p className=\"text-xs mt-2 text-muted-foreground border-t pt-1\" />;
+                <p className="text-xs mt-2 text-muted-foreground border-t pt-1" />;
                   Click to learn more and join!;
                 </p>;
               </>;
@@ -163,21 +163,21 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
                   aria - hidden='true';/>;
               </Button>;
             </TooltipTrigger>;"
-            <TooltipContent />;variant=\"ghost\";"
-                size=\"sm\";
+            <TooltipContent />;variant="ghost";"
+                size="sm";
                 onClick={handleRefresh}
                 disabled={isRefreshing || loading}"
-                className=\"p-1 h-6 w-6 text-muted-foreground hover:text-foreground\";"
-                aria-label=\"Refresh points\">
+                className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground";"
+                aria-label="Refresh points">
 
                 <RefreshCw;
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}"
-                  aria-hidden=\"true\";
+                  aria-hidden="true";
                 />;
               </Button>;
             </TooltipTrigger>;
             <TooltipContent />;"
-              <p className=\"text-sm\" />Refresh points balance</p>;
+              <p className="text-sm" />Refresh points balance</p>;
             </TooltipContent>;
           </Tooltip>;
         )}</div>;

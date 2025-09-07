@@ -7,4 +7,4 @@
 }
 })  const [accessibilityScore, setAccessibilityScore] =;
   useState (85) ;
-  const [activeTab, setActiveTab] = useState ('general')  useEffect ( () => {''\"\";}
+  const [activeTab, setActiveTab] = useState ('general')  useEffect ( () => {''"";}

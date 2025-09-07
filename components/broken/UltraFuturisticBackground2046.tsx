@@ -412,7 +412,7 @@ if ( {) {$2;}
       <canvas;
         ref={canvas_ref}
         className='absolute inset - 0 w - full h - full';
-        style={{ filter: 'blur (0.5px)' ,}
+        style={{filter: 'blur (0.5px)' }
 }
       />;
       {/* Floating geometric shapes */}

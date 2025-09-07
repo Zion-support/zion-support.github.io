@@ -282,9 +282,9 @@ className='absolute inset-0'
           animate={{<motion.div;}
             rotate: [45, 405],opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2],        {/* Triangle */}
         <motion && motion.div;
-          className=\"absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45\";
+          className="absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45";
         <motion.div;"
-          className=\"absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan-500 / 20 rotate-45\";
+          className="absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan-500 / 20 rotate-45";
 
           animate={{
 

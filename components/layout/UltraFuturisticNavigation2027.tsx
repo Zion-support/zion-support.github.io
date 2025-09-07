@@ -667,10 +667,10 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
             {navigation.map (item => (<div key={item.name} className='relative group' />;
                 <motion.button;
                   className='flex items - center space - x-2 px - 4 py - 3 text - gray - 300 hover: text - white transition - all duration - 300 rounded - xl hover:bg - gray - 800 / 50 hover:shadow - lg hover:shadow - cyan - 500 / 20'                  onMouseEnter={() = /> setActiveDropdown (item.name}
-}          <nav className=\"hidden xl:flex items - center space - x-1\" />;"
-            {navigation.map ((item) => (<div key={item.name} className=\"relative group\" />;
+}          <nav className="hidden xl:flex items - center space - x-1" />;"
+            {navigation.map ((item) => (<div key={item.name} className="relative group" />;
                 <motion.button;"
-                  className=\"flex items - center space - x-2 px - 4 py - 3 text - gray - 300 hover:text - white transition - all duration - 300 rounded - xl hover:bg - gray - 800 / 50 hover:shadow - lg hover:shadow - cyan - 500 / 20\";
+                  className="flex items - center space - x-2 px - 4 py - 3 text - gray - 300 hover:text - white transition - all duration - 300 rounded - xl hover:bg - gray - 800 / 50 hover:shadow - lg hover:shadow - cyan - 500 / 20";
                   onMouseLeave={() = /> setActiveDropdown (null)}
                   while_hover={{ coordinate_y: -2 }}
                   while_tap={{ scale: 0.95 }
@@ -687,8 +687,8 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
                     {item.ico}
 }
                   </div>;"
-                  <span className=\"font - medium\" />{item.name}</span>;"
-                  <ChevronDown className=\"w - 4 h - 4 group - hover:rotate - 180 transition - transform duration - 300\" />;
+                  <span className="font - medium" />{item.name}</span>;"
+                  <ChevronDown className="w - 4 h - 4 group - hover:rotate - 180 transition - transform duration - 300" />;
                 {/* Dropdown Menu */}
                 <AnimatePresence />;
                   {active_dropdown === item.name && (<motion.div;}
@@ -773,8 +773,8 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
               <a;
                 href={`tel: ${contactInfo && contactInfo.mobile}
 }"
-                className=\"flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors\" />;"
-                <Phone className=\"w-4 h-4\" />;
+                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors" />;"
+                <Phone className="w-4 h-4" />;
                 <span />{contactInfo && contactInfo.mobile}</span>;
               </a>;
               <a;
@@ -851,12 +851,12 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                 {/* Services *}
 }
                 <div />;"
-                  <h3 className=\"text-lg font-semibold text-white mb-4\" />Services</h3>;"
-                  <div className=\"space-y-3\" />;
+                  <h3 className="text-lg font-semibold text-white mb-4" />Services</h3>;"
+                  <div className="space-y-3" />;
                     {navigation && navigation.map((item) => (<div key={item && item.name} />;
                         <Link;
                           href={item.href}"
-                          className=\"flex items - center space - x-3 p - 3 rounded - xl hover: bg - gray - 800 / 50 transition - all duration - 200\" />
+                          className="flex items - center space - x-3 p - 3 rounded - xl hover: bg - gray - 800 / 50 transition - all duration - 200" />
 
                           <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color}`} />
 
@@ -903,18 +903,18 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                           className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200' />;
                           {link && link.icon}
                           <span className='text-white' />{link && link.name}</span>                        </Link>                  <div />;"
-                    <h3 className=\"text-lg font-semibold text-white mb-4\" />Quick Links</h3>;"
-                    <div className=\"space-y-2\" />;
+                    <h3 className="text-lg font-semibold text-white mb-4" />Quick Links</h3>;"
+                    <div className="space-y-2" />;
                       {quickLinks && quickLinks.map((link) => (<Link;}
                           key={link && link.name}
                           href={link && link.href}"
-                          className=\"flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200\" />;
+                          className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200" />;
                           {link && link.icon}"
-                          <span className=\"text-white\" />{link && link.name}</span>;
+                          <span className="text-white" />{link && link.name}</span>;
                         </Link>;
                           key={link.name}
                           href={link.href}"
-                          className=\"flex items - center space - x-3 p - 3 rounded - xl hover: bg - gray - 800 / 50 transition - all duration - 200\">
+                          className="flex items - center space - x-3 p - 3 rounded - xl hover: bg - gray - 800 / 50 transition - all duration - 200">
 
 
                           {link.icon}
@@ -975,7 +975,7 @@ href='/contact'
 );
 
   `fixed top-0 left-0 right-0 z-50 transition-all duration-500 $ {"
-  isScrolled ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' > <Zap className=\"w-7 h-7 text-white\" /> </motion.div> <div className=\"hidden sm: block\"  /> <div className=\"text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300\"  /> Zion Tech Group </div> <div className=\"text-xs text-gray-400 group-hover:text-cyan-300 transition-colors\"  /> Revolutionary Technology Solutions </div> </div> </a> > <div className= {
+  isScrolled ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' > <Zap className="w-7 h-7 text-white" /> </motion.div> <div className="hidden sm: block"  /> <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300"  /> Zion Tech Group </div> <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors"  /> Revolutionary Technology Solutions </div> </div> </a> > <div className= {
   `p-2 rounded-lg bg-gradient-to-br $ {}
   item.color}
 }shadow-lg`
@@ -994,7 +994,7 @@ href='/contact'
 }while_tap= {
   {}
   scale: 0.95;}"
-} /> <Link href=\"/contact\" className=\"hidden lg:inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - cyan - 500 / 40 transition - all duration - 300\"  /> <Rocket className=\"w - 4 h - 4\" /> <span  /> Get Started</span> </a> </motion.div> {}
+} /> <Link href="/contact" className="hidden lg:inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - cyan - 500 / 40 transition - all duration - 300"  /> <Rocket className="w - 4 h - 4" /> <span /> Get Started</span> </a> </motion.div> {}
   /* Mobile Menu Button */;}
 }<button </button /> </div> </div> </div> {}
   /* Mobile Menu */;}
@@ -1007,7 +1007,7 @@ href='/contact'
   item.icon }
 }</div> <div /> </div> </a> </div>) ) 
 }</div> </div>) ) "
-}</div> </div> <div /> <h3 className=\"text-lg font-semibold text-white mb-4\"  />Contact Info</h3> <div className=\"space-y-3\"  /> <a </div /> </div> </div> </div> </div> <Link href=\"/contact\" className=\"inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300\"  /> <Rocket className=\"w-4 h-4 mr-2\" /> Get Started Today </a> </div> </div> </motion.div>) 
+}</div> </div> <div /> <h3 className="text-lg font-semibold text-white mb-4"  />Contact Info</h3> <div className="space-y-3"  /> <a </div /> </div> </div> </div> </div> <Link href="/contact" className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300"  /> <Rocket className="w-4 h-4 mr-2" /> Get Started Today </a> </div> </div> </motion.div>) 
 }</AnimatePresence> </header>) 
 };
 

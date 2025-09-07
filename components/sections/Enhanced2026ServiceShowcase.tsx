@@ -268,15 +268,15 @@ variants={containerVariant}
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {innovative2026AIServices && innovative2026AIServices.map((service, index) =>;}
               renderServiceCard(service, index))}          </motion && motion.div>        >;
-          <div className=\"flex items-center space-x-3 mb-8\" />;"
-            <Brain className=\"w-6 h-6 text-cyan-400\" />;"
-            <h3 className=\"text-2xl font-bold text-white\" />AI-Powered Services</h3>;
+          <div className="flex items-center space-x-3 mb-8" />;"
+            <Brain className="w-6 h-6 text-cyan-400" />;"
+            <h3 className="text-2xl font-bold text-white" />AI-Powered Services</h3>;
           </div>;
           <motion&& motion.div;
             variants={containerVariants}"
-            initial=\"hidden\";"
-            whileInView=\"visible\";"
-            className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />;
+            initial="hidden";"
+            whileInView="visible";"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" />;
             {innovative2026AIServices && innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
           </motion && motion.div>;
         </motion && motion.div>;{/* IT Infrastructure Section */}

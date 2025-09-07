@@ -159,9 +159,7 @@ if ( {) {
     }
 
     const controller = new AbortController ();
-    fetch (`/api / search / suggest?q=${encodeURIComponent (debounced)}`, {
-      signal: controller.signal,
-    });
+    fetch (`/api / search / suggest?q=${encodeURIComponent (debounced)}`, {signal: controller.signal});
       .then (res => {)'
         if (throw new Error ('Failed to fetch suggestions')) {'
   $2;
@@ -269,14 +267,14 @@ if ( {) {
     </div>
   );
 }/> on_click={';}"
-  () => on_change ('') \";}"
-}aria - label=\"Clear search\" > <X className=\"h - 4 w - 4\" /> </button>)}</div> <AutocompleteSuggestions suggestions= {suggestions;}
+  () => on_change ('') ";}"
+}aria - label="Clear search" > <X className="h - 4 w - 4" /> </button>)}</div> <AutocompleteSuggestions suggestions= {suggestions;}
 }search_term= {value;}
 }onSelectSuggestion= {handle_select;}
 }visible= {focused;}
 }highlighted_index= {highlighted_index;}
 }list_id= {list_id;}"
-}/> </div>)}'\"  )}</div>;
+}/> </div>)}'"  )}</div>;
       <AutocompleteSuggestions;
         suggestions = {suggestions}
         searchTerm = {value}

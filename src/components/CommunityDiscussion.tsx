@@ -26,7 +26,7 @@ const initial_posts: DiscussionPost[] = [
     avatar: 'JD',
     time: '2 hours ago',
     title: 'Best practices for React performance optimization',
-    body: 'I\'ve been working on optimizing a large React application and wanted to share some techniques that have worked well for me...'
+    body: 'I've been working on optimizing a large React application and wanted to share some techniques that have worked well for me...'
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const initial_posts: DiscussionPost[] = [
     avatar: 'JS',
     time: '4 hours ago',
     title: 'TypeScript vs JavaScript for large projects',
-    body: 'What are your thoughts on using TypeScript for large-scale applications? I\'m considering migrating our codebase...'
+    body: 'What are your thoughts on using TypeScript for large-scale applications? I'm considering migrating our codebase...'
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const initial_posts: DiscussionPost[] = [
     avatar: 'MJ',
     time: '1 day ago',
     title: 'Database design patterns for microservices',
-    body: 'I\'m architecting a microservices system and would love to hear about database design patterns that work well...'
+    body: 'I'm architecting a microservices system and would love to hear about database design patterns that work well...'
   }
 ];
 

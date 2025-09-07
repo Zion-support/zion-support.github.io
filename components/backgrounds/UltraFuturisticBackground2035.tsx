@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const canvasRef = null;
-                ease: \"easeInOut\"
+                ease: "easeInOut"
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
@@ -252,7 +252,7 @@ className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent
             delay: 2}
 ease: 'easeInOut'}
           }}"
-            ease: 'easeInOut'          }}            ease: \"easeInOut\"
+            ease: 'easeInOut'          }}            ease: "easeInOut"
           
 }
         />
@@ -263,7 +263,7 @@ ease: 'easeInOut'}
         <motion.div;
 className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent';
           animate={{scaleX: [0, 1, 0],opacity: [0, 1, 0]}}transition={{duration: 4,repeat: Infinity,delay: 2,ease: 'easeInOut'}}"
-            ease: 'easeInOut'          }}            ease: \"easeInOut\";
+            ease: 'easeInOut'          }}            ease: "easeInOut";
           }}
         />;
             ease: 'easeInOut'          }}/>;{/* Quantum Dots */}
@@ -343,7 +343,7 @@ ease: 'easeInOut'}
           <motion.div;
 className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full'
                 delay: i * 0.5,"
-                ease: 'easeInOut'              }}                ease: \"easeInOut\";
+                ease: 'easeInOut'              }}                ease: "easeInOut";
 
               }}
             />))}

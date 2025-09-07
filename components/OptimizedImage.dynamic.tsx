@@ -1,4 +1,4 @@
-import React from \"react\";
+import React from "react";
 
 interface OptimizedImageProps {
   className?: string;}
@@ -6,11 +6,11 @@ interface OptimizedImageProps {
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps /> = ({
-  className = \"\",}
+  className = "",}
   children,}
 }) => {}
   return (}
-    <div data-testid=\"ptimizedimage\" className={className} />
+    <div data-testid="ptimizedimage" className={className} />
       {children || <div />OptimizedImage Component</div>}
     </div>
   );

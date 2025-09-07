@@ -1,4 +1,4 @@
-import React from \"react\";
+import React from "react";
 
 interface PWARegistrationProps {
   className?: string;}
@@ -6,11 +6,11 @@ interface PWARegistrationProps {
 }
 
 const PWARegistration: React.FC<PWARegistrationProps /> = ({
-  className = \"\",}
+  className = "",}
   children,}
 }) => {}
   return (}
-    <div data-testid=\"waregistration\" className={className} />
+    <div data-testid="waregistration" className={className} />
       {children || <div />PWARegistration Component</div>}
     </div>
   );

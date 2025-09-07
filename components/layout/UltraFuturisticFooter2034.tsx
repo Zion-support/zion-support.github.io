@@ -268,7 +268,7 @@ className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
 
             {/* Services *}
 }
-            <div className=\"lg:col-span-2\" />;
+            <div className="lg:col-span-2" />;
               <motion.div;
             {/* Services */}
 <div className='lg:col-span-2' />;
@@ -339,30 +339,30 @@ className='space-y-4'
                             </span>;
                             <span className='text-xs text-gray-500 group-hover: text-cyan-400 transition-colors' />                              {service && service.pric}
 }                    >;"
-                      <div className=\"flex items-center space-x-2\" />;"
-                        <category && category.icon className=\"w-5 h-5 text-cyan-400\" />;"
-                        <h4 className=\"font-semibold text-white\" />{category && category.title}</h4>;
+                      <div className="flex items-center space-x-2" />;"
+                        <category && category.icon className="w-5 h-5 text-cyan-400" />;"
+                        <h4 className="font-semibold text-white" />{category && category.title}</h4>;
                       </div>;"
-                      <div className=\"space-y-2\" />;
+                      <div className="space-y-2" />;
                         {category && category.services.map((service) => (<Link;}
                             key={service && service.name}
                             href={service && service.href}"
-                            className=\"flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200\" />;"
-                            <span className=\"text-gray-300 group-hover:text-cyan-400 transition-colors text-sm\" />;
+                            className="flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200" />;"
+                            <span className="text-gray-300 group-hover:text-cyan-400 transition-colors text-sm" />;
                               {service && service.name}
                             </span>;"
-                            <span className=\"text-xs text-gray-500 group-hover:text-cyan-400 transition-colors\" />;
+                            <span className="text-xs text-gray-500 group-hover:text-cyan-400 transition-colors" />;
                               {service && service.price}
                             </span>;
                           </Link>;
                             key={service.name}
                             href={service.href}"
-                            className=\"flex items - center justify - between group hover:bg - white / 5 rounded - lg p - 2 transition - all duration - 200\">
+                            className="flex items - center justify - between group hover:bg - white / 5 rounded - lg p - 2 transition - all duration - 200">
 "
-                            <span className=\"text - gray - 300 group - hover:text - cyan - 400 transition - colors text - sm\" />;
+                            <span className="text - gray - 300 group - hover:text - cyan - 400 transition - colors text - sm" />;
                               {service.name}
                             </span>;"
-                            <span className=\"text - xs text - gray - 500 group - hover:text - cyan - 400 transition - colors\" />;
+                            <span className="text - xs text - gray - 500 group - hover:text - cyan - 400 transition - colors" />;
                               {service.price}
                         ))}
                       </div>;
@@ -378,7 +378,7 @@ className='space-y-4'
               <motion.div;
             {/* Quick Links & Social *}
 }"
-            <div className='lg:col-span-1' />              <motion && motion.div            <div className=\"lg:col-span-1\" />;
+            <div className='lg:col-span-1' />              <motion && motion.div            <div className="lg:col-span-1" />;
               <motion&& motion.div;
                 initial={{ opacity: 0, y: 20 }
 }
@@ -394,8 +394,8 @@ className='space-y-8'
                 {/* Quick Links *}
 }
                 <div />;"
-                  <h4 className=\"text-lg font-semibold text-white mb-4\" />Quick Links</h4>;"
-                  <div className=\"space-y-2\" />;
+                  <h4 className="text-lg font-semibold text-white mb-4" />Quick Links</h4>;"
+                  <div className="space-y-2" />;
 
                     {quickLinks && quickLinks.map((link) => (;}
                       <Link;}
@@ -474,9 +474,9 @@ key={social.name}
                         <span className='text-sm' />{link && link.name}</span>                      </Link>                      <Link;
                         key={link && link.name}
                         href={link && link.href}"
-                        className=\"flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group\" />;"
-                        <link && link.icon className=\"w-4 h-4 group-hover:scale-110 transition-transform\" />;"
-                        <span className=\"text-sm\" />{link && link.name}</span>;
+                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group" />;"
+                        <link && link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />;"
+                        <span className="text-sm" />{link && link.name}</span>;
                       </Link>;
                     ))}
                 {/* Social Links */}
@@ -494,10 +494,10 @@ key={social.name}
                         <social && social.icon className='w-5 h-5' />                      </Link>                      <Link;
                         key={social && social.name}
                         href={social && social.href}"
-                        target=\"_blank\";"
-                        rel=\"noopener noreferrer\";"
-                        className=\"w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110\" />;"
-                        <social && social.icon className=\"w-5 h-5\" />;
+                        target="_blank";"
+                        rel="noopener noreferrer";"
+                        className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110" />;"
+                        <social && social.icon className="w-5 h-5" />;
                       </Link>;
                     ))}
           {/* Certifications */}

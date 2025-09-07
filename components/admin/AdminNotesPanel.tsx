@@ -192,7 +192,7 @@ if ( {) {$2;}
               checked={is_admin}
               on_change={e = /> setIsAdmin (e.target.checked)}
             />;
-            <span  /> Admin</span>;
+            <span /> Admin</span>;
           </label>;
           <input;
             className='border rounded px - 2 py - 1';
@@ -227,9 +227,9 @@ if ( {) {$2;}
             {notes.map (number => (<li key={n.id} className='rounded border p - 2 text - sm' />;
                 <div className='opacity - 60 text - xs mb - 1' />;
                   {new Date (n.created_at).toLocaleString ()} • {n.author_id}
-                </div>                <div />{n.text}</div>          <ul className=\"space - y-2\" />;"
-            {notes.map ((n) => (<li key={n.id} className=\"rounded border p - 2 text - sm\" />;"
-                <div className=\"opacity - 60 text - xs mb - 1\" />{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
+                </div>                <div />{n.text}</div>          <ul className="space - y-2" />;"
+            {notes.map ((n) => (<li key={n.id} className="rounded border p - 2 text - sm" />;"
+                <div className="opacity - 60 text - xs mb - 1" />{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
               </li>))}
           </ul>)}
       </div>;

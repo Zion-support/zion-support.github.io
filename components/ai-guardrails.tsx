@@ -13,8 +13,8 @@ export default function AIGuardrailsPage() {
 		<UltraAdvancedFuturisticBackground />
 			<Head />
 				<title />AI Guardrails Suite | Zion Tech Group</title>
-				<meta name=\"description\" content=\"Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies.\" />
-				<link rel=\"canonical\" href=\"https://ziontechgroup.com/ai-guardrails\" />
+				<meta name="description" content="Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies." />
+				<link rel="canonical" href="https://ziontechgroup.com/ai-guardrails" />
 			</Head>
 
 import {
@@ -49,12 +49,12 @@ const features = [
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);}
-    this.state = { hasError: false,}
+    this.state = {hasError: false}
 };
   }
   
   static getDerivedStateFromError(error) {}
-    return { hasError: true,}
+    return {hasError: true}
 };
   }
   

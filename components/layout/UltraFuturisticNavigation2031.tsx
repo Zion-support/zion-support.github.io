@@ -293,14 +293,14 @@ setScrolled(window.scrollY > 50)) => {
             <MapPin className='w-4 h-4 text-pink-400' />;
             <span className='text-xs' />{contactInfo && contactInfo.address}</span>          </div>              <span />{contactInfo && contactInfo.mobile}</span>;
             </div>;
-            <div className=\"flex items-center space-x-2\" />;"
-              <Mail className=\"w-4 h-4 text-purple-400\" />;
+            <div className="flex items-center space-x-2" />;"
+              <Mail className="w-4 h-4 text-purple-400" />;
               <span />{contactInfo && contactInfo.email}</span>;
             </div>;
           </div>;"
-          <div className=\"flex items-center space-x-2\" />;"
-            <MapPin className=\"w-4 h-4 text-pink-400\" />;"
-            <span className=\"text-xs\" />{contactInfo && contactInfo.address}</span>;
+          <div className="flex items-center space-x-2" />;"
+            <MapPin className="w-4 h-4 text-pink-400" />;"
+            <span className="text-xs" />{contactInfo && contactInfo.address}</span>;
           </div>;
         </div>;
 
@@ -364,7 +364,7 @@ className='relative group'
                   <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full' /></div>                </motion.div>;
                 </motion.div>;
                   {/* Hover effect */}"
-                  <div className=\"absolute -bottom-1 left-0 w-0 h-0 && 0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full\" /></div>;
+                  <div className="absolute -bottom-1 left-0 w-0 h-0 && 0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full" /></div>;
                 </motion && motion.div>;
 
               ))}
@@ -487,14 +487,14 @@ function UltraFuturisticNavigation2031() {const [is_open, setIsOpen] = useState 
             <MapPin className='w - 4 h - 4 text - pink - 400' />;
             <span className='text - xs' />{contact_info.address}</span>          </div>              <span />{contact_info.mobile}</span>;
             </div>;"
-            <div className=\"flex items - center space - x-2\" />;"
-              <Mail className=\"w - 4 h - 4 text - purple - 400\" />;
+            <div className="flex items - center space - x-2" />;"
+              <Mail className="w - 4 h - 4 text - purple - 400" />;
               <span />{contact_info.email}</span>;
             </div>;
           </div>;"
-          <div className=\"flex items - center space - x-2\" />;"
-            <MapPin className=\"w - 4 h - 4 text - pink - 400\" />;"
-            <span className=\"text - xs\" />{contact_info.address}</span>;
+          <div className="flex items - center space - x-2" />;"
+            <MapPin className="w - 4 h - 4 text - pink - 400" />;"
+            <span className="text - xs" />{contact_info.address}</span>;
           </div>;
         </div>;
       </div>;
@@ -511,8 +511,8 @@ function UltraFuturisticNavigation2031() {const [is_open, setIsOpen] = useState 
           : 'bg - transparent';}
       }`} />
 "
-        <div className=\"max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8\" />;"
-          <div className=\"flex justify - between items - center h - 20\" />;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8" />;"
+          <div className="flex justify - between items - center h - 20" />;
             <motion.div;
               initial={{ opacity: 0, coordinate_x: -20 }
 }
@@ -532,18 +532,18 @@ function UltraFuturisticNavigation2031() {const [is_open, setIsOpen] = useState 
             </motion.div>;
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items - center space - x-8' />              {main_navigation.map ((item, index) => (            >;"
-              <div className=\"w - 12 h - 12 bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 rounded - 2xl flex items - center justify - center\" />;"
-                <Rocket className=\"w - 6 h - 6 text - white\" />;
+              <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 rounded - 2xl flex items - center justify - center" />;"
+                <Rocket className="w - 6 h - 6 text - white" />;
               </div>;"
-              <div className=\"hidden sm:block\" />;"
-                <h1 className=\"text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent\" />;
+              <div className="hidden sm:block" />;"
+                <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent" />;
                   Zion Tech Group;
                 </h1>;"
-                <p className=\"text - xs text - gray - 400\" />2031 Future Technology</p>;
+                <p className="text - xs text - gray - 400" />2031 Future Technology</p>;
               </div>;}
             </motion.div>;}
             {/* Desktop Navigation */}"
-            <div className='hidden lg:flex items - center space - x-8' />            <div className=\"hidden lg:flex items - center space - x-8\" />;
+            <div className='hidden lg:flex items - center space - x-8' />            <div className="hidden lg:flex items - center space - x-8" />;
               {main_navigation.map ((item, index) => (<motion.div;}
                   key={item.name}
                   initial={{ opacity: 0, coordinate_y: -20 }
@@ -565,13 +565,13 @@ function UltraFuturisticNavigation2031() {const [is_open, setIsOpen] = useState 
                   <div className='absolute -bottom - 1 left - 0 w - 0 h - 0.5 bg - gradient - to - r from - cyan - 500 to - purple - 500 transition - all duration - 300 group - hover:w - full' /></div>                </motion.div>                >;
                   <Link;
                     href={item.href}"
-                    className=\"flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 group - hover:text - cyan - 400\" />
+                    className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 group - hover:text - cyan - 400" />
 "
-                    <item.icon className=\"w - 4 h - 4\" />;
+                    <item.icon className="w - 4 h - 4" />;
                     <span />{item.name}</span>;
                   </Link>;
                   {/* Hover effect */}"
-                  <div className=\"absolute -bottom - 1 left - 0 w - 0 h - 0.5 bg - gradient - to - r from - cyan - 500 to - purple - 500 transition - all duration - 300 group - hover:w - full\" /></div>;
+                  <div className="absolute -bottom - 1 left - 0 w - 0 h - 0.5 bg - gradient - to - r from - cyan - 500 to - purple - 500 transition - all duration - 300 group - hover:w - full" /></div>;
                 </motion.div>))}
             </div>;
             {/* CTA Buttons */}

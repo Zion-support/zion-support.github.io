@@ -205,7 +205,7 @@ ease: 'easeOut' as const}
   };
 
   return (
-    <section className=\"py-20 relative overflow-hidden\" />;
+    <section className="py-20 relative overflow-hidden" />;
       {/* Background Elements */}
 
       <div className='absolute inset-0 pointer-events-none' />

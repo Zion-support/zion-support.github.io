@@ -321,14 +321,14 @@ const TestimonialCarousel = () => {
 
             </div>;
             {/* Author Details */}"
-            <div className=\"text-center md:text-left\" />;"
-              <h4 className=\"text-lg font-semibold text-gray-900\" />;
+            <div className="text-center md:text-left" />;"
+              <h4 className="text-lg font-semibold text-gray-900" />;
                 {currentTestimonial.name}
               </h4>;"
-              <p className=\"text-blue-600 font-medium\" />;
+              <p className="text-blue-600 font-medium" />;
                 {currentTestimonial.role}
               </p>;"
-              <p className=\"text-gray-500 text-sm\" />;
+              <p className="text-gray-500 text-sm" />;
                 {currentTestimonial.company}
               </p>;
             </div>;

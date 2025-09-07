@@ -397,9 +397,9 @@ className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group'
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4' />;
               <Link href='/contact' />;
-                <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl' />                  Get Started            <div className=\"hidden lg:flex items-center space-x-4\" />;"
-              <Link href=\"/contact\" />;"
-                <button className=\"px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl\" />;
+                <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl' />                  Get Started            <div className="hidden lg:flex items-center space-x-4" />;"
+              <Link href="/contact" />;"
+                <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl" />;
       {/* Main Navigation */}
       <nav;
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled;
@@ -425,15 +425,15 @@ className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group'
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items - center space - x-8' />;
               {main_navigation.map (item => (            {/* Logo */}"
-            <Link href=\"/\" className=\"flex items - center space - x-3 group\" />;"
-              <div className=\"w - 12 h - 12 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300\" />;"
-                <Rocket className=\"w - 7 h - 7 text - white\" />;
+            <Link href="/" className="flex items - center space - x-3 group" />;"
+              <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300" />;"
+                <Rocket className="w - 7 h - 7 text - white" />;
               </div>;
               <div />;"
-                <div className=\"text - 2xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent\" />;
+                <div className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent" />;
                   Zion Tech Group;
                 </div>;"
-                <div className=\"text - xs text - gray - 400\" />2030 Future Technology</div>;
+                <div className="text - xs text - gray - 400" />2030 Future Technology</div>;
               </div>;
             </Link>;
             {/* Desktop Navigation */}
@@ -450,7 +450,7 @@ className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group'
               <div className='relative group' />;
                 <button className='text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 flex items - center space - x-2 group' />;
                   <Briefcase className='w - 4 h - 4 group - hover:scale - 110 transition - transform' />;
-                  <span  /> Services</span>;
+                  <span /> Services</span>;
                   <ChevronDown className='w - 4 h - 4 group - hover:rotate - 180 transition - transform' />;
                 </button>;
                 {/* Mega Menu */}
@@ -479,34 +479,34 @@ className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group'
                                 className='block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - colors group'                <Link;
                   key={item.name}
                   href={item.href}"
-                  className=\"text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 flex items - center space - x-2 group\" />
+                  className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 flex items - center space - x-2 group" />
 "
-                  <item.icon className=\"w - 4 h - 4 group - hover:scale - 110 transition - transform\" />;
+                  <item.icon className="w - 4 h - 4 group - hover:scale - 110 transition - transform" />;
                   <span />{item.name}</span>;
                 </Link>))}
               {/* Services Dropdown */}"
-              <div className=\"relative group\" />;"
-                <button className=\"text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 flex items - center space - x-2 group\" />;"
-                  <Briefcase className=\"w - 4 h - 4 group - hover:scale - 110 transition - transform\" />;
-                  <span  /> Services</span>;"
-                  <ChevronDown className=\"w - 4 h - 4 group - hover:rotate - 180 transition - transform\" />;
+              <div className="relative group" />;"
+                <button className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 flex items - center space - x-2 group" />;"
+                  <Briefcase className="w - 4 h - 4 group - hover:scale - 110 transition - transform" />;
+                  <span /> Services</span>;"
+                  <ChevronDown className="w - 4 h - 4 group - hover:rotate - 180 transition - transform" />;
                 </button>;
                 {/* Mega Menu */}"
-                <div className=\"absolute top - full left - 0 w - screen max - w-7xl transform -translate - x-1 / 2 left - 1/2 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 pt - 4\" />;"
-                  <div className=\"bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl p - 8 shadow - 2xl shadow - cyan - 500 / 20\" />;"
-                    <div className=\"grid grid - cols - 2 gap - 8\" />;"
-                      {service_categories.map ((category, index) => (<div key={index} className=\"space - y-4\" />;"
-                          <div className=\"flex items - center space - x-3\" />;
+                <div className="absolute top - full left - 0 w - screen max - w-7xl transform -translate - x-1 / 2 left - 1/2 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 pt - 4" />;"
+                  <div className="bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl p - 8 shadow - 2xl shadow - cyan - 500 / 20" />;"
+                    <div className="grid grid - cols - 2 gap - 8" />;"
+                      {service_categories.map ((category, index) => (<div key={index} className="space - y-4" />;"
+                          <div className="flex items - center space - x-3" />;
                             <div className={`w - 10 h - 10 bg - gradient - to - r ${category.color} rounded - xl flex items - center justify - center`} />
 "
-                              <category.icon className=\"w - 5 h - 5 text - white\" />;
+                              <category.icon className="w - 5 h - 5 text - white" />;
                             </div>;
                             <div />;"
-                              <h3 className=\"text - lg font - semibold text - white\" />{category.title}</h3>;"
-                              <p className=\"text - sm text - gray - 400\" />{category.description}</p>;
+                              <h3 className="text - lg font - semibold text - white" />{category.title}</h3>;"
+                              <p className="text - sm text - gray - 400" />{category.description}</p>;
                             </div>;
                           </div>;"
-                          <div className=\"space - y-2\" />;
+                          <div className="space - y-2" />;
                             {category.services.map ((service, service_index) => (<Link;}
                                 key={service_index}
                                 href={service.href}
@@ -522,7 +522,7 @@ className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group'
                                   </div>;
                                   <div className='text - cyan - 400 font - semibold text - sm' />;
                                     {service.price}"
-                                  </div>                                </div>                                  <div className=\"text - cyan - 400 font - semibold text - sm\" />{service.price}</div>;
+                                  </div>                                </div>                                  <div className="text - cyan - 400 font - semibold text - sm" />{service.price}</div>;
                                 </div>;
                               </Link>))}
                           </div>;
@@ -535,9 +535,9 @@ className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group'
             {/* CTA Buttons */}
             <div className='hidden lg:flex items - center space - x-4' />;
               <Link href='/contact' />;"
-                <button className='px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - lg hover:shadow - xl' />                  Get Started            <div className=\"hidden lg:flex items - center space - x-4\" />;"
-              <Link href=\"/contact\" />;"
-                <button className=\"px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - lg hover:shadow - xl\" />;
+                <button className='px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - lg hover:shadow - xl' />                  Get Started            <div className="hidden lg:flex items - center space - x-4" />;"
+              <Link href="/contact" />;"
+                <button className="px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - lg hover:shadow - xl" />;
                   Get Started;
                 </button>;
               </Link>;

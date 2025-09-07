@@ -63,28 +63,28 @@ export default function NeoFuturisticNavigation() {const [isOpen, setIsOpen] = u
 		}`} />
 
 			{/* Scroll Progress Bar */}
-			<div className=\"absolute top-0 left-0 h-1 w-full bg-transparent\" />;
+			<div className="absolute top-0 left-0 h-1 w-full bg-transparent" />;
 				<div;"
-					className=\"h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600\";
+					className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600";
 					style={{ width: `${(typeof window !== 'undefined' && document.body.scrollHeight  /> 0) ? (Math.min(100, (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)) : 0}%` }}
 				/>;
 			</div>;"
-			<div className=\"max-w-7xl mx-auto px-4\" />;"
-				<div className=\"flex items-center justify-between h-20\" />;
+			<div className="max-w-7xl mx-auto px-4" />;"
+				<div className="flex items-center justify-between h-20" />;
 					{/* Logo */}
 "
-					<Link href=\"/\" className=\"flex items-center space-x-3 group\" />"
-						<div className=\"relative\" />"
-							<div className=\"w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300\" />"
-								<Sparkles className=\"w-6 h-6 text-white\" />
+					<Link href="/" className="flex items-center space-x-3 group" />"
+						<div className="relative" />"
+							<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300" />"
+								<Sparkles className="w-6 h-6 text-white" />
 							</div>"
-							<div className=\"absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300\" /></div>
+							<div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" /></div>
 						</div>"
-						<div className=\"hidden sm:block\" />"
-							<div className=\"text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300\" />
+						<div className="hidden sm:block" />"
+							<div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300" />
 								Zion Tech Group;
 							</div>"
-							<div className=\"text-xs text-gray-400\" />Revolutionary Technology</div>
+							<div className="text-xs text-gray-400" />Revolutionary Technology</div>
 						</div>
 					</Link>
 
@@ -946,7 +946,7 @@ href='/contact'
 }`
 }/> </button> </div>) )
 }</div> </div>) )"
-}</div> <div className=\"mt-6 pt-6 border-t border-gray-700/50\"  /> <div className=\"flex items-center justify-between\"  /> <div className=\"text-gray-400 text-sm\"  /> <span className=\"text-cyan-400 font-semibold\"  />500+</span> Revolutionary Services Available </div> <Button href=\"/services\" variant=\"quantum\" size=\"sm\"  /> View All Services <ArrowRight className=\"w-4 h-4 ml-2\" /> </Button> </div> </div> </div>)
+}</div> <div className="mt-6 pt-6 border-t border-gray-700/50"  /> <div className="flex items-center justify-between"  /> <div className="text-gray-400 text-sm"  /> <span className="text-cyan-400 font-semibold"  />500+</span> Revolutionary Services Available </div> <Button href="/services" variant="quantum" size="sm"  /> View All Services <ArrowRight className="w-4 h-4 ml-2" /> </Button> </div> </div> </div>)
 }</div> > <span />Popular</span> <ChevronDown className= {
   `w-4 h-4 transition-transform duration-300 $ {}
   activeDropdown === 'popular'? 'rotate-180': ''}
@@ -961,7 +961,7 @@ href='/contact'
 }`
 }/> </button>) )
 }</div> </div>) )"
-}<div className=\"pt-3\"  /> <Button href=\"/services\" variant=\"quantum\" size=\"sm\" className=\"w-full\"  /> View All Services <ArrowRight className=\"w-4 h-4 ml-2\" /> </Button> </div> </div>)
+}<div className="pt-3"  /> <Button href="/services" variant="quantum" size="sm" className="w-full"  /> View All Services <ArrowRight className="w-4 h-4 ml-2" /> </Button> </div> </div>)
 }</div> {}
   /* Company Section */}
 }<div /> <span />Company</span> <ChevronRight className= {
@@ -978,7 +978,7 @@ href='/contact'
 }` 
 }/> </button>) ) 
 }</div>) "
-}</div> </div> </div> <div className=\"mt-6 space-y-3\"  /> <Button href=\"/services\" variant=\"quantum\" size=\"lg\" className=\"w-full\"  /> Explore Services <ArrowRight className=\"w-5 h-5 ml-2\" /> </Button> <Button href=\"/contact\" variant=\"secondary\" size=\"lg\" className=\"w-full\"  /> Contact Us </Button> </div> </div> </div> </div> </div>) 
+}</div> </div> </div> <div className="mt-6 space-y-3"  /> <Button href="/services" variant="quantum" size="lg" className="w-full"  /> Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full"  /> Contact Us </Button> </div> </div> </div> </div> </div>) 
 }</nav>)
 
 "

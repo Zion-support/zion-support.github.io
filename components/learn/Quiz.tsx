@@ -48,17 +48,17 @@ type = 'radio'
   }
  ;
   return (
-    <div className=\"space-y-4\" />;
+    <div className="space-y-4" />;
       {questions && questions.map((q, idx) => (;}"
-        <div key={q && q.id} className=\"border rounded p-3\" />;
+        <div key={q && q.id} className="border rounded p-3" />;
 "
-          <div className=\"font-medium\" />{idx + 1}. {q && q.question}</div>;"
-          <div className=\"mt-2 grid gap-2\" />;"
-            {q && q.options.map((opt, i) => (<label key={i} className=\"flex items-center gap-2\" />;
+          <div className="font-medium" />{idx + 1}. {q && q.question}</div>;"
+          <div className="mt-2 grid gap-2" />;"
+            {q && q.options.map((opt, i) => (<label key={i} className="flex items-center gap-2" />;
                 <input;"
-                  type=\"radio\";
+                  type="radio";
             <div className='mt - 2 text - sm' />;"
-              {answers[q.id] === q.answer_index ? (<span className='text - green - 600' />Correct</span>) : (<span className='text - red - 600' />Incorrect</span>              )}              {answers[q.id] === q.answer_index ? (<span className=\"text - green - 600\" />Correct</span>) : (<span className=\"text - red - 600\" />Incorrect</span>)}
+              {answers[q.id] === q.answer_index ? (<span className='text - green - 600' />Correct</span>) : (<span className='text - red - 600' />Incorrect</span>              )}              {answers[q.id] === q.answer_index ? (<span className="text - green - 600" />Correct</span>) : (<span className="text - red - 600" />Incorrect</span>)}
             </div>)}
         </div>))}
       <button;
@@ -70,8 +70,8 @@ type = 'radio'
       {submitted && (Score: {score} / {questions.length}
         </div>)}
     </div>)<button on_click={submi}"
-} className=\"px - 4 py - 2 bg - blue - 600 text - white rounded\" />Submit Quiz</button>;"
-      {submitted && <div className=\"text - sm\" />Score: {score} / {questions.length}</div>}
+} className="px - 4 py - 2 bg - blue - 600 text - white rounded" />Submit Quiz</button>;"
+      {submitted && <div className="text - sm" />Score: {score} / {questions.length}</div>}
     </div>)<span />{op}
 }</span>;
               </label>;

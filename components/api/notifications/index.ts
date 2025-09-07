@@ -14,28 +14,28 @@ if (countOnly = == 'true') {}
      ;}
   const { data, error } = await supabase;
         .from('notifications')
-        .select('id', { count: 'exact',}
+        .select('id', {count: 'exact'}
   head: true,}
 })
         .eq('user_id', userId)
         .eq('read_status', false);
       if (error) {
         // Fallback to 0 on error (e.g., table missing)}
-        return res.status(200).json({ count: 0,}
+        return res.status(200).json({count: 0}
 });
       }
 
 const count = (data as any)?.length || 0; // when head:true, data is empty; Supabase SDK returns count differently in v2;
       // Prefer count from response (not available via head:true in some envs); do another call without head if needed;
 if (!count) {}
-        const { count: exactCount,}
+        const {count: exactCount}
 } = await supabase;
           .from('notifications')
-          .select('id', { count: 'exact',}
+          .select('id', {count: 'exact'}
 })
           .eq('user_id', userId)
           .eq('read_status', false);
-return res.status(200).json({ count: exactCount || 0,}
+return res.status(200).json({count: exactCount || 0}
 });
       }
       return res.status(200).json({ count });
@@ -45,7 +45,7 @@ let query = supabase;
       .from('notifications')
       .select('*')
       .eq('user_id', userId)
-      .order('created_at', { ascending: false,}
+      .order('created_at', {ascending: false}
 });
     if (filter === 'unread') {}
       query = query && query.eq('read_status', false);}
@@ -83,22 +83,22 @@ id: 'seed-1',
           related_action: '/status',}
         },
       ];
-      return res.status(200).json({ notifications: fallback,}
+      return res.status(200).json({notifications: fallback}
 });
     }
   };
 }
-      return res.status (200).json ({ notifications: fallback,}
+      return res.status (200).json ({notifications: fallback}
 });
     }
-    return res.status (200).json ({ notifications: data as NotificationItem[],}
+    return res.status (200).json ({notifications: data as NotificationItem[]}
 });
   } catch (e) {}
-return res.status (500).json ({ error: 'Unexpected error',}
+return res.status (500).json ({error: 'Unexpected error'}
 });
-  }    return res.status (500).json ({ error: 'Unexpected error',}
+  }    return res.status (500).json ({error: 'Unexpected error'}
 });
-return res.status(500).json({ error: 'Unexpected error',}
+return res.status(500).json({error: 'Unexpected error'}
 });
   }    return res.status(500).json({ error: 'Unexpected error' })
  ,

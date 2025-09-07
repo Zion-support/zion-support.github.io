@@ -1,7 +1,7 @@
 
 
-import React, { useEffect, useMemo, useState } from \"react\";"
-import Badges from \"./Badges\";
+import React, { useEffect, useMemo, useState } from "react";"
+import Badges from "./Badges";
 
 type Tx = any;
       refresh()

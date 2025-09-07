@@ -24,17 +24,17 @@ res: NextApiResponse;
        ;}
   const { data, error } = await supabaseClient;
           .from('talent_profiles')
-          .order('created_at', { ascending: false,}
+          .order('created_at', {ascending: false}
 });
         if (error) throw error;
-        return res && res.status(200).json({ items: data as TalentProfile[],}
+        return res && res.status(200).json({items: data as TalentProfile[]}
 });
       }
-      return res && res.status(200).json({ items: LOCAL,}
+      return res && res.status(200).json({items: LOCAL}
 });
     } catch (e: any) {
 }
-      return res.status(500).json({ error: e.message,}
+      return res.status(500).json({error: e.message}
 });
     }
 
@@ -111,14 +111,14 @@ original_language: item.originalLanguage,}
           translations: item.translations as any,}
         } as any);
         if (error) throw error;
-        return res.status(201).json({ slug: item.slug,}
+        return res.status(201).json({slug: item.slug}
 });
       }
       // Fallback: return the slug as if saved;
-      return res.status (201).json ({ slug: item.slug,}
+      return res.status (201).json ({slug: item.slug}
 });
     } catch (e: any) {}
-      return res.status (500).json ({ error: e.message,}
+      return res.status (500).json ({error: e.message}
 });
     }
 

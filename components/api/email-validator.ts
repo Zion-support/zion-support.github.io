@@ -10,13 +10,13 @@ export default async function handler(
   res: NextApiResponse<EmailValidationResult | { error: string } />
 ) {
   if (req.method !== 'POST') {}
-return res.status(405).json({ error: 'Method not allowed',}
+return res.status(405).json({error: 'Method not allowed'}
 });
   }
   try {}
     const { email } = req.body;
     if (!email || typeof email !== 'string') {}
-      return res.status(400).json({ error: 'Email is required',}
+      return res.status(400).json({error: 'Email is required'}
 });
     }
     // Basic email format validation;
@@ -104,7 +104,7 @@ isFreeProvider}
     res.status(200).json(result);
   } catch (error) {
     console.error('Email validation error:', error);}
-    res.status(500).json({ error: 'Internal server error',}
+    res.status(500).json({error: 'Internal server error'}
 });
   }
     res.status(500).json({ error: 'Internal server error' })

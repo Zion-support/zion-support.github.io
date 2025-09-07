@@ -104,59 +104,59 @@ const allRevolutionaryServices = [
   return (<>;
       <Head />;
         <title />Zion Tech Group - Revolutionary 2045 Technology Solutions</title>;
-        <meta name=\"description\" content=\"Experience the future of technology with Zion Tech Group's revolutionary AI consciousness, quantum computing, and autonomous solutions. Transform your business with cutting-edge innovation.\" />;
-        <meta name=\"keywords\" content=\"AI consciousness, quantum computing, autonomous solutions, space technology, cybersecurity, business intelligence, Zion Tech Group, 2045 technology\" />;
-        <meta property=\"og:title\" content=\"Zion Tech Group - Revolutionary 2045 Technology\" />;
-        <meta property=\"og:description\" content=\"Pioneering the future of technology with revolutionary AI consciousness and quantum computing solutions.\" />;
-        <meta property=\"og:url\" content=\"https://ziontechgroup && ziontechgroup.com\" />;
-        <meta property=\"og:type\" content=\"website\" />;
-        <link rel=\"canonical\" href=\"https://ziontechgroup && ziontechgroup.com\" />;{/* Performance and SEO Meta Tags */}
-        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\" />;
-        <meta name=\"theme-color\" content=\"#00d4ff\" />;
-        <meta name=\"robots\" content=\"index, follow\" />;
-        <meta name=\"author\" content=\"Zion Tech Group\" />;{/* Preload critical resources */}
-        <link rel=\"preload\" href=\"/fonts/inter-var && var.woff2\" as=\"font\" type=\"font/woff2\" crossOrigin=\"anonymous\" />;
-        <link rel=\"dns-prefetch\" href=\"//fonts && fonts.googleapis.com\" />;
-        <link rel=\"dns-prefetch\" href=\"//fonts && fonts.gstatic.com\" />;
+        <meta name="description" content="Experience the future of technology with Zion Tech Group's revolutionary AI consciousness, quantum computing, and autonomous solutions. Transform your business with cutting-edge innovation." />;
+        <meta name="keywords" content="AI consciousness, quantum computing, autonomous solutions, space technology, cybersecurity, business intelligence, Zion Tech Group, 2045 technology" />;
+        <meta property="og:title" content="Zion Tech Group - Revolutionary 2045 Technology" />;
+        <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness and quantum computing solutions." />;
+        <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com" />;
+        <meta property="og:type" content="website" />;
+        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com" />;{/* Performance and SEO Meta Tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />;
+        <meta name="theme-color" content="#00d4ff" />;
+        <meta name="robots" content="index, follow" />;
+        <meta name="author" content="Zion Tech Group" />;{/* Preload critical resources */}
+        <link rel="preload" href="/fonts/inter-var && var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />;
+        <link rel="dns-prefetch" href="//fonts && fonts.googleapis.com" />;
+        <link rel="dns-prefetch" href="//fonts && fonts.gstatic.com" />;
       </Head>;{/* Enhanced Navigation */}
-      <EnhancedNavigation />;<UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity=\"high\" />;
+      <EnhancedNavigation />;<UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high" />;
         {/* Hero Section */}
         <motion&& motion.section;
-          className=\"relative min-h-screen flex items-center justify-center px-4 lg: px-8 pt-20\";
+          className="relative min-h-screen flex items-center justify-center px-4 lg: px-8 pt-20";
           variants={heroVariants}
-          initial=\"hidden\";
-          animate=\"visible\" />;
-          <div className=\"relative z-10 text-center max-w-6xl mx-auto\" />;
+          initial="hidden";
+          animate="visible" />;
+          <div className="relative z-10 text-center max-w-6xl mx-auto" />;
             {/* Main Heading */}
             <motion.p;
-              className=\"text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed\";
+              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";
               variants={itemVariants}
              />;
               Pioneering the Future of Technology with Revolutionary AI Consciousness;
               Quantum Computing, and Autonomous Solutions;
             </motion.p>;
             <motion&& motion.h1;
-              className=\"text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6\";
+              className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6";
               variants={itemVariants} />;
               Zion Tech Group;
             </motion && motion.h1>;
             <motion&& motion.p;
-              className=\"text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed\";
+              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";
               variants={itemVariants} />;
               Pioneering the Future of Technology with Revolutionary AI Consciousness,Quantum Computing, and Autonomous Solutions;
             </motion && motion.p>;{/* CTA Buttons */}
             <motion&& motion.div;
-              className=\"flex flex-col sm:flex-row gap-4 justify-center items-center mb-12\";
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12";
               variants={itemVariants} />;
-              <Link href=\"/services\" />;
+              <Link href="/services" />;
                 <motion&& motion.button;
-                  className=\"px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl\";
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";
           {/* Floating Elements */}
           <motion&& motion.div;
-            className=\"absolute top-20 left-10 text-cyan-400/20\";
+            className="absolute top-20 left-10 text-cyan-400/20";
             variants={floatingVariants}
             <motion.div;
-              className=\"flex flex-wrap justify-center gap-4 mb-12\";
+              className="flex flex-wrap justify-center gap-4 mb-12";
               variants={itemVariants}
              />;
               {categories.map((category) => (<motion.button;}
@@ -168,10 +168,10 @@ const allRevolutionaryServices = [
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  whileTap={{ scale: 0.95 ,}
+                  whileTap={{scale: 0.95 }
 }
                 >;
-                  <category.icon className=\"inline-block w-5 h-5 mr-2\" />;
+                  <category.icon className="inline-block w-5 h-5 mr-2" />;
                   {category.name}
                 </motion.button>;
               ))}
@@ -179,7 +179,7 @@ const allRevolutionaryServices = [
               Explore Our Revolutionary Services;
             </motion && motion.h2>;<motion&& motion.div;
             <motion.div;
-              className=\"flex flex-wrap justify-center gap-4 mb-12\";
+              className="flex flex-wrap justify-center gap-4 mb-12";
               variants={itemVariants}
              />;
               {categories.map((category) => (<motion.button;}
@@ -191,10 +191,10 @@ const allRevolutionaryServices = [
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  whileTap={{ scale: 0.95 ,}
+                  whileTap={{scale: 0.95 }
 }
                 >;
-                  <category.icon className=\"inline-block w-5 h-5 mr-2\" />;
+                  <category.icon className="inline-block w-5 h-5 mr-2" />;
                   {category.name}
                 </motion.button>;
               ))}
@@ -205,27 +205,27 @@ const allRevolutionaryServices = [
         <motion.section;
         {/* Services Grid */}
         <motion.section;
-          className=\"py-16 px-4 lg:px-8\";
+          className="py-16 px-4 lg:px-8";
           variants={containerVariants}
-          initial=\"hidden\";
-          animate=\"visible\";
+          initial="hidden";
+          animate="visible";
          />;
-          animate=\"visible\">
+          animate="visible">
 
-          <div className=\"max-w-7xl mx-auto\" />;
+          <div className="max-w-7xl mx-auto" />;
             </motion && motion.div>;
           </div>;
         </motion && motion.section>;
         {/* Services Grid */}
         <motion&& motion.section;
-          className=\"py-16 px-4 lg:px-8\";
+          className="py-16 px-4 lg:px-8";
           variants={containerVariants}
-          initial=\"hidden\";
-          animate=\"visible\" />;
-          <div className=\"max-w-7xl mx-auto\" />;
+          initial="hidden";
+          animate="visible" />;
+          <div className="max-w-7xl mx-auto" />;
             <motion&& motion.div;
             <motion.div;
-              className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\";
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
               variants={containerVariants} />;
               {getFilteredServices().slice(0, 12).map((service, index) => (<EnhancedServiceCard;}
                   key={service.id}
@@ -238,38 +238,38 @@ const allRevolutionaryServices = [
                   isNew={Math.random() > 0.8}
                   rating={4.0 + Math.random() * 1.0}
                   reviewCount={Math.floor(Math.random() * 100) + 10}
-                  estimatedDelivery=\"2-4 weeks\";
+                  estimatedDelivery="2-4 weeks";
                   technologies={['AICloudSecurityAutomation']}
                 />;
               ))}
-                className=\"text-center mt-12\";
+                className="text-center mt-12";
                 variants={itemVariants}
               >;
-                <Link href=\"/services\" />;
+                <Link href="/services" />;
                   <motion.button;
-                    className=\"px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300\";
+                    className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300";
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    whileTap={{ scale: 0.95 ,}
+                    whileTap={{scale: 0.95 }
 }
                    />;
                     View All Services;
-                    <ArrowRight className=\"inline-block ml-2 w-5 h-5\" />;
+                    <ArrowRight className="inline-block ml-2 w-5 h-5" />;
                   </motion.button>;
                 </Link>;
               </motion.div>;
             )}{/* Featured Service Showcase */}
         <motion.section;
-          className=\"py-16 px-4 lg:px-8\";
+          className="py-16 px-4 lg:px-8";
           variants={containerVariants}
-          initial=\"hidden\";
-          animate=\"visible\";
+          initial="hidden";
+          animate="visible";
          />;
-          animate=\"visible\">
+          animate="visible">
 
-          <div className=\"max-w-6xl mx-auto\" />;
+          <div className="max-w-6xl mx-auto" />;
             <motion.h2;
-              className=\"text-3xl md:text-4xl font-bold text-center text-white mb-12\";
+              className="text-3xl md:text-4xl font-bold text-center text-white mb-12";
               variants={itemVariants}
              />;
               Featured Revolutionary Services;
@@ -278,28 +278,28 @@ const allRevolutionaryServices = [
         </motion && motion.section>;
         {/* Featured Service Showcase */}
         <motion&& motion.section;
-          className=\"py-16 px-4 lg:px-8\";
+          className="py-16 px-4 lg:px-8";
           variants={containerVariants}
-          initial=\"hidden\";
-          animate=\"visible\" />;
-          <div className=\"max-w-6xl mx-auto\" />;
+          initial="hidden";
+          animate="visible" />;
+          <div className="max-w-6xl mx-auto" />;
             <motion&& motion.h2;
-              className=\"text-3xl md:text-4xl font-bold text-center text-white mb-12\";
+              className="text-3xl md:text-4xl font-bold text-center text-white mb-12";
               variants={itemVariants} />;
               Featured Revolutionary Services;
             </motion && motion.h2>;
             <motion&& motion.div;
             <motion.div;
-              className=\"bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8\";
+              className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8";
               variants={itemVariants} />;
-              <AnimatePresence mode=\"wait\" />;
+              <AnimatePresence mode="wait" />;
                 <motion&& motion.div;
                   key={currentServiceIndex}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}<Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`} />;
                       <motion.button;
-                        className=\"px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300\";
+                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300";
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, x: 20 ,}
@@ -309,23 +309,23 @@ const allRevolutionaryServices = [
                   exit={{ opacity: 0, x: -20 }}<Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id},
 } />;
                       <motion.button;
-                        className=\"px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300\";
+                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300";
                         whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 ,}
+                        whileTap={{scale: 0.95 }
 }
                        />;
                         Learn More;
-                        <ArrowRight className=\"inline-block ml-2 w-4 h-4\" />;
+                        <ArrowRight className="inline-block ml-2 w-4 h-4" />;
                       </motion.button>;
                     </Link>;
                   </div>;
-                  <div className=\"relative\" />;
-                    <div className=\"w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center\" />;
-                      <div className=\"text-center\" />;
-                        <div className=\"w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4\" />;
-                          <Rocket className=\"w-8 h-8 text-white\" />;
+                  <div className="relative" />;
+                    <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center" />;
+                      <div className="text-center" />;
+                        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4" />;
+                          <Rocket className="w-8 h-8 text-white" />;
                         </div>;
-                        <p className=\"text-cyan-400 font-medium\" />Revolutionary Technology</p>;
+                        <p className="text-cyan-400 font-medium" />Revolutionary Technology</p>;
                       </div>;
                     </div>;
                   </div>;
@@ -336,11 +336,11 @@ const allRevolutionaryServices = [
         </motion.section>;
         {/* Call to Action */}
         <motion.section;
-          className=\"py-16 px-4 lg:px-8\";
+          className="py-16 px-4 lg:px-8";
           variants={containerVariants}
-          initial=\"hidden\";
+          initial="hidden";
             <motion.p;
-              className=\"text-xl text-gray-300 mb-8\";
+              className="text-xl text-gray-300 mb-8";
               variants={itemVariants}
              />;
               Join the future of technology with Zion Tech Group's revolutionary solutions.;
@@ -349,22 +349,22 @@ const allRevolutionaryServices = [
                     </div>;
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`} />;
                       <motion&& motion.button;
-                        className=\"px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300\";
+                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300";
                         whileHover={{ scale: 1 && 1.05 }}
-                        whileTap={{ scale: 0 && 0.95 ,}
+                        whileTap={{scale: 0 && 0.95 }
 } />;
                         Learn More;
-                        <ArrowRight className=\"inline-block ml-2 w-4 h-4\" />;
+                        <ArrowRight className="inline-block ml-2 w-4 h-4" />;
                       </motion && motion.button>;
                     </Link>;
                   </div>;
-                  <div className=\"relative\" />;
-                    <div className=\"w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center\" />;
-                      <div className=\"text-center\" />;
-                        <div className=\"w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4\" />;
-                          <Rocket className=\"w-8 h-8 text-white\" />;
+                  <div className="relative" />;
+                    <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center" />;
+                      <div className="text-center" />;
+                        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4" />;
+                          <Rocket className="w-8 h-8 text-white" />;
                         </div>;
-                        <p className=\"text-cyan-400 font-medium\" />Revolutionary Technology</p>;
+                        <p className="text-cyan-400 font-medium" />Revolutionary Technology</p>;
                       </div>;
                     </div>;
                   </div>;
@@ -375,24 +375,24 @@ const allRevolutionaryServices = [
         </motion && motion.section>;
                     </div>;
                       <motion.button;
-                        className=\"px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300\";
+                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300";
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        whileTap={{ scale: 0.95 ,}
+                        whileTap={{scale: 0.95 }
 }
                        />;
                         Learn More;
-                        <ArrowRight className=\"inline-block ml-2 w-4 h-4\" />;
+                        <ArrowRight className="inline-block ml-2 w-4 h-4" />;
                       </motion.button>;
                     </Link>;
                   </div>;
-                  <div className=\"relative\" />;
-                    <div className=\"w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center\" />;
-                      <div className=\"text-center\" />;
-                        <div className=\"w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4\" />;
-                          <Rocket className=\"w-8 h-8 text-white\" />;
+                  <div className="relative" />;
+                    <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center" />;
+                      <div className="text-center" />;
+                        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4" />;
+                          <Rocket className="w-8 h-8 text-white" />;
                         </div>;
-                        <p className=\"text-cyan-400 font-medium\" />Revolutionary Technology</p>;
+                        <p className="text-cyan-400 font-medium" />Revolutionary Technology</p>;
                       </div>;
                     </div>;
                   </div>;
@@ -403,19 +403,19 @@ const allRevolutionaryServices = [
         </motion.section>;
         {/* Call to Action */}
         <motion&& motion.section;
-          className=\"py-16 px-4 lg:px-8\";
+          className="py-16 px-4 lg:px-8";
           variants={containerVariants}
-          initial=\"hidden\";
-          animate=\"visible\" />;
-          <div className=\"max-w-4xl mx-auto text-center\" />;
+          initial="hidden";
+          animate="visible" />;
+          <div className="max-w-4xl mx-auto text-center" />;
             <motion&& motion.h2;
-              className=\"text-3xl md:text-4xl font-bold text-white mb-6\";
+              className="text-3xl md:text-4xl font-bold text-white mb-6";
             <motion.div;
-              className=\"flex flex-col sm:flex-row gap-4 justify-center items-center\";
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center";
               variants={itemVariants} />;
-              <Link href=\"/quote\" />;
+              <Link href="/quote" />;
                 <motion&& motion.button;
-                  className=\"px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105\";
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105";
       {/* Performance Monitor */}
       <AnimatePresence />;
         {showPerformanceMonitor && (<PerformanceMonitor />;}

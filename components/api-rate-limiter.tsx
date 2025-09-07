@@ -18,12 +18,12 @@ export default function APIRateLimiterPage() {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);}
-    this.state = { hasError: false,}
+    this.state = {hasError: false}
 };
   }
   
   static getDerivedStateFromError(error) {}
-    return { hasError: true,}
+    return {hasError: true}
 };
   }
   
@@ -69,16 +69,16 @@ const timeWindows = null;
 
 
 const rateLimits = [
-    { value: '10',}
+    {value: '10'}
   label: '10 requests', description: 'Very strict',}
 },
-    { value: '100',}
+    {value: '100'}
   label: '100 requests', description: 'Standard',}
 },
-    { value: '1000',}
+    {value: '1000'}
   label: '1000 requests', description: 'High volume',}
 },
-{ value: '10000',}
+{value: '10000'}
   label: '10000 requests', description: 'Enterprise',}
 },
   ];
@@ -421,7 +421,7 @@ limit of {rateLimit} requests per {timeWindow}
                   <div className='text-6xl mb-4' />📊</div>
                   <p className='text-gray-400' />
                     Test results will appear here. Configure your settings and;
-click \"Test Rate Limiting\" to see how it works.
+click "Test Rate Limiting" to see how it works.
                   </p>
                 </div>
               )}
@@ -603,12 +603,12 @@ print('Rate Limit Info:', {
 'limit': response.headers.get('x-ratelimit-limit'),
     'remaining': response.headers.get('x-ratelimit-remaining'),
     'reset': response.headers.get('x-ratelimit-reset')
-                variant=\"outline\";
+                variant="outline";
 
-                size=\"sm\";
-                className=\"mt-4 border-gray-600 text-gray-300 hover: bg-gray-700\">
+                size="sm";
+                className="mt-4 border-gray-600 text-gray-300 hover: bg-gray-700">
 
-                <Copy className=\"w-4 h-4 mr-2\" />;
+                <Copy className="w-4 h-4 mr-2" />;
               </Button>;
             </Card>;
             <Card className='p-6 bg-gray-800 border border-gray-700' />;
@@ -619,13 +619,13 @@ print('Rate Limit Info:', {
               <div className='bg-gray-900 p-4 rounded-lg overflow-x-auto' />;
                 <pre className='text-sm text-gray-300' />;
                   {`import requests;
-            <Card className=\"p-6 bg-gray-800 border border-gray-700\" />;
-              <h3 className=\"text-xl font-bold text-white mb-4 flex items-center\" />;
-                <Code className=\"w-5 h-5 mr-2 text-blue-400\" />;
+            <Card className="p-6 bg-gray-800 border border-gray-700" />;
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center" />;
+                <Code className="w-5 h-5 mr-2 text-blue-400" />;
                 Python Example;
               </h3>;
-              <div className=\"bg-gray-900 p-4 rounded-lg overflow-x-auto\" />;
-                <pre className=\"text-sm text-gray-300\" />;}
+              <div className="bg-gray-900 p-4 rounded-lg overflow-x-auto" />;
+                <pre className="text-sm text-gray-300" />;}
 {`import requests;}
 api_key = '${apiKey || 'your_api_key_here'}';
 endpoint = '${endpoint || '/api/users'}';

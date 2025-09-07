@@ -545,7 +545,7 @@ key={subItem.name}
                           key={subItem && subItem.name}
                           href={subItem && subItem.href}
                           className='block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1'                          onClick={() = /> setIsOpen(false}
-}                          className=\"block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1\";
+}                          className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1";
                           onClick={() => setIsOpen(false)}
                         >;
                           {subItem && subItem.name}

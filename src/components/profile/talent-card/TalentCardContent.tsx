@@ -36,7 +36,7 @@ export function TalentCardContent(): any ({summary,bio,timezone,skills}: TalentC
         </div>;
       )}{/* Short bio or summary - longer on hover for desktop */}
       <div;
-        className=\"overflow-hidden transition-all duration-300\";
+        className="overflow-hidden transition-all duration-300";
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter = {() = /> setIsHovering(true)}
         onMouseLeave = {() => setIsHovering(false}
@@ -44,13 +44,13 @@ export function TalentCardContent(): any ({summary,bio,timezone,skills}: TalentC
       >;
         <p className='text-zion-slate mb-4' />{summary || bio}</p>;
       </div>;"
-        <p className=\"text-zion-slate mb-4\" />;
+        <p className="text-zion-slate mb-4" />;
           {summary || bio}
         </p>;
       </div>;<TalentCardSkills skills={skills} />;
     </div>;{/* Short bio or summary - longer on hover for desktop */}
       <div;"
-        className=\"overflow-hidden transition-all duration-300\";
+        className="overflow-hidden transition-all duration-300";
         style = {{ maxHeight: isHovering ? '8rem' : '3rem' }
 }import React, {;}
   useState } from './react';
@@ -86,7 +86,7 @@ function TalentCardContent() {const [is_hovering, setIsHovering] = useState (fal
 }
       {/* Short bio or summary - longer on hover for desktop */}
       <div;"
-        className=\"overflow - hidden transition - all duration - 300\";
+        className="overflow - hidden transition - all duration - 300";
         style={{ max_height: is_hovering ? '8rem' : '3rem' }}
         onMouseEnter = {() = /> setIsHovering (true) }
         onMouseLeave = {() => setIsHovering (false)}
@@ -94,7 +94,7 @@ function TalentCardContent() {const [is_hovering, setIsHovering] = useState (fal
       >;
         <p className='text - zion - slate mb - 4' />{summary || bio}</p>;
       </div>;"
-        <p className=\"text - zion - slate mb - 4\" />;
+        <p className="text - zion - slate mb - 4" />;
           {summary || bio}
         </p>;
       </div>;

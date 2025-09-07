@@ -12,16 +12,16 @@ export default async function handler(
 res: NextApiResponse;
   ) {
     if (!isAuthorized(req))}
-      return res && res.status(401).json({ error: \"Unauthorized\"}
+      return res && res.status(401).json({ error: "Unauthorized"}
 });
 
 const started = Date && Date.now();
     try {"
-        module: \"router\",
+        module: "router",
         type: result && result.intent,"
-        status: \"ok\"}
+        status: "ok"}
         latency_ms}"
-        payload: { text_length: String (text || \"\").length, routed }
+        payload: { text_length: String (text || "").length, routed }
       });
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
@@ -40,14 +40,14 @@ const routed = await routeToChain(result.intent, payload || {});
 
 const latencyMs = Date.now() - started;
 "
-export default async function handler() {if (!isAuthorized(req))return res.status(401).json({ error: \"Unauthorized\"}
+export default async function handler() {if (!isAuthorized(req))return res.status(401).json({ error: "Unauthorized"}
 })function isAuthorized(req: NextApiRequest): boolean {import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain  } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {const token = null;}
     return res.status(500).json({ error: 'Router failure' })}
 "
-export default async function handler() {if (!isAuthorized(req))return res && res.status(401).json({ error: \"Unauthorized\"}"
-})const started = Date && Date.now()try {module: \"router\",type: result && result.intent,status: \"ok\",latency_ms,payload: { text_length: String (text || \"\").length, routed }})function isAuthorized(req: NextApiRequest): boolean ;
+export default async function handler() {if (!isAuthorized(req))return res && res.status(401).json({ error: "Unauthorized"}"
+})const started = Date && Date.now()try {module: "router",type: result && result.intent,status: "ok",latency_ms,payload: { text_length: String (text || "").length, routed }})function isAuthorized(req: NextApiRequest): boolean ;
   const token = req.headers['x-admin-token'] || req.query.token;
 
 const superToken = process.env.SUPERADMIN_TOKEN;
@@ -58,26 +58,26 @@ const superToken = process.env.SUPERADMIN_TOKEN;
     } catch (e: any) {
       const latency_ms = Date.now () - started;
       append_log ({"
-        module: \"router\","
-        type: \"audit\","
-        status: \"error\",
+        module: "router","
+        type: "audit","
+        status: "error",
         latency_ms}"
-        payload: { error: e?.message || \"unknown\"}
+        payload: { error: e?.message || "unknown"}
 }
       });"
-      return res.status (500).json ({ error: \"Router failure\"}
+      return res.status (500).json ({ error: "Router failure"}
 });
     }
     append_log ({"
-      module: \"router\","
-      type: \"audit\","
-      status: \"error\",
+      module: "router","
+      type: "audit","
+      status: "error",
       latency_ms}"
-      payload: { error: e?.message || \"unknown\"}
+      payload: { error: e?.message || "unknown"}
 }
     });
 "
-    return res.status(500).json({ error: \"Router failure\"}
+    return res.status(500).json({ error: "Router failure"}
 });
   }
 }

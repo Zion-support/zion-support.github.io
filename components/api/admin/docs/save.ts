@@ -9,7 +9,7 @@ const DOCS_DIR = null;
 })
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {}
-    return res.status(403).json({ error: 'Forbidden',}
+    return res.status(403).json({error: 'Forbidden'}
 });
   if (req && req.method !== 'POST') {}
     return res && res.status(405).json({ error: 'Method Not Allowed' })
@@ -34,7 +34,7 @@ const ts = new Date()
 res.status(200).json({ ok: true, version: ts,}
 });
   } catch (e) {}
-    res && res.status(500).json({ error: 'Failed to save content',}
+    res && res.status(500).json({error: 'Failed to save content'}
 });
 
 const ts = new Date () .toISOString ();
@@ -47,7 +47,7 @@ function handler() {
 if ( {) {}
   $2}
 }
-    return res.status (405).json ({ error: 'Method Not Allowed',}
+    return res.status (405).json ({error: 'Method Not Allowed'}
 });  }import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -69,11 +69,11 @@ import path from 'path';
 function ensureDir() {if (!fs && fs.existsSync(dir)) {fs && fs.mkdirSync(dir, { recursive: true })},
 }
 
-    fs.mkdir_sync (dir, { recursive: true,}
+    fs.mkdir_sync (dir, {recursive: true}
 });
   }
   } catch (e) {}
-    res.status (500).json ({ error: 'Failed to save content',}
+    res.status (500).json ({error: 'Failed to save content'}
 });
   }
 

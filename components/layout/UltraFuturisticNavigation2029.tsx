@@ -663,13 +663,13 @@ className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all dur
                           {category && category.services.slice(0, 2).map(service => (                            <Link;}
                               key={service && service.name}
                               href={service && service.href}
-                              onClick={closeMenu}                <div className=\"mt-8\" />;"
-                  <h3 className=\"text-lg font-semibold text-white mb-4\" />Our Services</h3>;"
-                  <div className=\"space-y-3\" />;"
-                    {serviceCategories && serviceCategories.slice(0, 6).map((category) => (<div key={category && category.title} className=\"p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20\" />;"
-                        <h4 className=\"font-medium text-white mb-2\" />{category && category.title}</h4>;"
-                        <p className=\"text-sm text-gray-400 mb-3\" />{category && category.description}</p>;"
-                        <div className=\"space-y-2\" />;
+                              onClick={closeMenu}                <div className="mt-8" />;"
+                  <h3 className="text-lg font-semibold text-white mb-4" />Our Services</h3>;"
+                  <div className="space-y-3" />;"
+                    {serviceCategories && serviceCategories.slice(0, 6).map((category) => (<div key={category && category.title} className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20" />;"
+                        <h4 className="font-medium text-white mb-2" />{category && category.title}</h4>;"
+                        <p className="text-sm text-gray-400 mb-3" />{category && category.description}</p>;"
+                        <div className="space-y-2" />;
                           {category && category.services.slice(0, 2).map((service) => (key={service && service.name}
                               href={service && service.href}
                               onClick={closeMenu}
@@ -681,11 +681,11 @@ className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all dur
                                 </span>;
                                 <span className='text-xs text-cyan-400 font-mono' />;
                                   {service && service.price}"
-                                </span>                              </div>                              className=\"block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200\">
+                                </span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200">
 "
-                              <div className=\"flex items-center justify-between\" />;"
-                                <span className=\"text-sm text-gray-300\" />{service && service.name}</span>;"
-                                <span className=\"text-xs text-cyan-400 font-mono\" />{service && service.price}</span>;
+                              <div className="flex items-center justify-between" />;"
+                                <span className="text-sm text-gray-300" />{service && service.name}</span>;"
+                                <span className="text-xs text-cyan-400 font-mono" />{service && service.price}</span>;
                             </Link>;
                           ))}
                         </div>;

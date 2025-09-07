@@ -194,8 +194,8 @@ const EnhancedFooter2025: React.FC = () => {
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5' /></div>
       <div className='relative z-10' />
         {/* Main Footer Content */}
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\" />;"
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12\" />;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" />;"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12" />;
             {/* Company Info */}
 
             <div className='lg:col-span-1' />
@@ -325,7 +325,7 @@ key={link.name}
               </div>;
             </div>;
                     {link.name}</div>;"
-            </div>;className=\"block text - gray - 400 hover: text - white transition - colors duration - 200 text - sm\">
+            </div>;className="block text - gray - 400 hover: text - white transition - colors duration - 200 text - sm">
 
                 ))}
 
@@ -397,7 +397,7 @@ className='text-gray-400 mb-6 max-w-2xl mx-auto'
                 Get the latest insights on AI, quantum computing, and emerging;
 technologies delivered to your inbox.
               </motion.p>"
-                className=\"text-gray-400 mb-6 max-w-2xl mx-auto\"
+                className="text-gray-400 mb-6 max-w-2xl mx-auto"
               >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>

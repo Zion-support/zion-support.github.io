@@ -1,4 +1,4 @@
-import React from \"react\";
+import React from "react";
 
 interface MainSidebarProps {
   className?: string;}
@@ -6,11 +6,11 @@ interface MainSidebarProps {
 }
 
 const MainSidebar: React.FC<MainSidebarProps /> = ({
-  className = \"\",}
+  className = "",}
   children,}
 }) => {}
   return (}
-    <div data-testid=\"ainsidebar\" className={className} />
+    <div data-testid="ainsidebar" className={className} />
       {children || <div />MainSidebar Component</div>}
     </div>
   );

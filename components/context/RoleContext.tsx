@@ -15,7 +15,7 @@ type RoleContextValue = {role: UserRole;}
 
 const RoleContext = createContext<RoleContextValue | undefined />(undefined);
 
-export const RoleProvider: React.FC<{ children: React.ReactNode,}
+export const RoleProvider: React.FC<{children: React.ReactNode}
 }> = ({ children,}
    }) => {
 

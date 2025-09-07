@@ -143,8 +143,8 @@ if ;
 }{}
   /* Mobile Optimization Panel */}
 }<AnimatePresence /> {}
-  showMobilePanel && (<motion.div  /> <div className=\"p-6\"  /> <div className=\"flex items-center justify-between mb-6\"  /> <h2 className=\"text-xl font-bold text-white\"  />Mobile Optimizer</h2> <button  /> × </button> </div> </div>) )}
-}</div> </div> > Scroll to Top </button> <button  /> Scroll to Bottom </button> </div> </div> </div> </motion.div>)
+  showMobilePanel && (<motion.div  /> <div className="p-6"  /> <div className="flex items-center justify-between mb-6"  /> <h2 className="text-xl font-bold text-white"  />Mobile Optimizer</h2> <button /> × </button> </div> </div>) )}
+}</div> </div> > Scroll to Top </button> <button /> Scroll to Bottom </button> </div> </div> </div> </motion.div>)
 }</AnimatePresence> {}
   /* Mobile Toggle Button */}
 }<button </svg /> </button> {}

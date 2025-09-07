@@ -124,19 +124,19 @@ const handleClearHistory = useCallback(() => {}
       <div className='border-b border-gray-200 dark:border-gray-700' />'''';
         <nav className='flex space-x-8 px-6' />'';
           {['';
-            { id: 'generate',}
+            {id: 'generate'}
   label: 'Generate', icon: Sparkles,}
 }, '';
-            { id: 'analyze',}
+            {id: 'analyze'}
   label: 'Analyze', icon: Eye,}
 },'';
-            { id: 'optimize',}
+            {id: 'optimize'}
   label: 'Optimize', icon: Zap,}
 }, '';
-            { id: 'tests',}
+            {id: 'tests'}
   label: 'Tests', icon: TestTube,}
 },'';
-            { id: 'docs',}
+            {id: 'docs'}
   label: 'Docs', icon: FileText,}
 }'';
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() = /> setActiveTab(id,}
@@ -260,19 +260,19 @@ const handleClearHistory = useCallback(() => {}
 '''';}
 }} className='grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg' />'';
                     {['';
-                    { key: 'includeTests',}
+                    {key: 'includeTests'}
   label: 'Tests', icon: TestTube,}
 },'';
-                    { key: 'includeDocs',}
+                    {key: 'includeDocs'}
   label: 'Docs', icon: FileText,}
 }, '';
-                    { key: 'includeErrorHandling',}
+                    {key: 'includeErrorHandling'}
   label: 'Error Handling', icon: AlertCircle,}
 },'';
-                    { key: 'includeLogging',}
+                    {key: 'includeLogging'}
   label: 'Logging', icon: Info,}
 }, '''';
-                    { key: 'includeMetrics',}
+                    {key: 'includeMetrics'}
   label: 'Metrics', icon: Gauge,}
 }'''';
                 ].map(({ key, label, icon: Icon }) => (<label key={ke,}
@@ -362,19 +362,19 @@ const handleClearHistory = useCallback(() => {}
                   {/* Metrics Overview */}'''';
                   <div className='grid grid-cols-2 md:grid-cols-5 gap-4' />'';
                     {['';
-                    { key: 'complexity',}
+                    {key: 'complexity'}
   label: 'Complexity', icon: Code, color: 'red',}
 },'';
-                    { key: 'maintainability',}
+                    {key: 'maintainability'}
   label: 'Maintainability', icon: Wrench, color: 'blue',}
 },'';
-                    { key: 'security',}
+                    {key: 'security'}
   label: 'Security', icon: Shield, color: 'green',}
 },'';
-                    { key: 'performance',}
+                    {key: 'performance'}
   label: 'Performance', icon: Gauge, color: 'yellow',}
 },'';
-                    { key: 'accessibility',}
+                    {key: 'accessibility'}
   label: 'Accessibility', icon: Eye, color: 'purple',}
 }
                 ].map(({ key, label, icon: Icon, color    }) => {
@@ -458,16 +458,16 @@ const value = codeAnalysis[key]'';
 '''';
               <div className='grid grid-cols-2 md:grid-cols-4 gap-4' />'';
                 {['';
-                { key: 'performance',}
+                {key: 'performance'}
   label: 'Performance', icon: Gauge, color: 'blue',}
 }, '';
-                { key: 'security',}
+                {key: 'security'}
   label: 'Security', icon: Shield, color: 'green',}
 }, '';
-                { key: 'maintainability',}
+                {key: 'maintainability'}
   label: 'Maintainability', icon: Wrench, color: 'purple',}
 }, '`';
-                { key: 'accessibility',}
+                {key: 'accessibility'}
   label: 'Accessibility', icon: Eye, color: 'indigo',}
 }`'`';
             ].map(({ key, label, icon: Icon, color }) => (<button key={key} onClick={() = /> handleOptimizeCode(key)} disabled={!generatedCode && !customCode} className={`p-6 text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode''`;}

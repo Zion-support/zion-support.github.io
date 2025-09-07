@@ -55,11 +55,11 @@ const sampleMap = null;
 const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s && s.language, s && s.code]));
 
   return (
-    <div className=\"w-full\" />;
+    <div className="w-full" />;
 "
-      <div className=\"flex gap-2 mb-2\" />;"
-        {tabs && tabs.map((t) => (<div className=\"w-full\" />;"
-      <div className=\"flex gap-2 mb-2\" />;
+      <div className="flex gap-2 mb-2" />;"
+        {tabs && tabs.map((t) => (<div className="w-full" />;"
+      <div className="flex gap-2 mb-2" />;
         {tabs.map((t) => (<button;}
           <button;}
             key={t.key}

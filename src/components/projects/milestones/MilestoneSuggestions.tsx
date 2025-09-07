@@ -75,14 +75,14 @@ export function MilestoneSuggestions() {const handleGenerateMilestones = async (
 }`,startDate: startDate.toISOString(),endDate: endDate ? endDate.toISOString() : null,return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) ;
   return dateString;
     }
-  }return (<div className=\"space-y-4\" />;
+  }return (<div className="space-y-4" />;
       {!showSuggestions && (<Button;}"
-          variant=\"outline\";}
+          variant="outline";}
           onClick={handleGenerateMilestones}"
-          disabled={isGenerating || !scopeSummary || !startDate}className=\"w-full\" />
+          disabled={isGenerating || !scopeSummary || !startDate}className="w-full" />
 
           {isGenerating ? (<>;"
-              <Loader2 className=\"mr-2 h-4 w-4 animate-spin\" />;}
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;}
           variant='outline';}
           onClick={handleGenerateMilestones}
           disabled={isGenerating |!scopeSummary |!startDate}
@@ -92,7 +92,7 @@ export function MilestoneSuggestions() {const handleGenerateMilestones = async (
               Generating milestones...;
             </>;
           ) : (<>;"
-              <Sparkles className=\"mr-2 h-4 w-4\" />;
+              <Sparkles className="mr-2 h-4 w-4" />;
 <Sparkles className='mr-2 h-4 w-4' />;
               Suggest Project Milestones with AI;}
             </>;}
@@ -103,24 +103,24 @@ export function MilestoneSuggestions() {const handleGenerateMilestones = async (
             </>;
           ) : (<>;
               <Sparkles className='mr-2 h-4 w-4' />              Suggest Project Milestones with AI;"
-              <Loader2 className=\"mr-2 h-4 w-4 animate-spin\" />;}"
-          variant=\"outline\";}
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;}"
+          variant="outline";}
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scopeSummary || !startDate}"
-          className=\"w-full\">
+          className="w-full">
 
           {isGenerating ? (<>;"
-              <Loader2 className=\"mr-2 h-4 w-4 animate-spin\" />;
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Generating milestones...;
             </>;
           ) : (<>;"
-              <Sparkles className='mr-2 h-4 w-4' />              <Sparkles className=\"mr-2 h-4 w-4\" />;}
+              <Sparkles className='mr-2 h-4 w-4' />              <Sparkles className="mr-2 h-4 w-4" />;}
               Suggest Project Milestones with AI;}
             </>;)}
         </Button>;"
-      )}<CardHeader className=\"pb-3\" />;"
-            <CardTitle className=\"text-lg flex items-center\" />;"
-              <Sparkles className=\"h-5 w-5 mr-2 text-primary\" />;
+      )}<CardHeader className="pb-3" />;"
+            <CardTitle className="text-lg flex items-center" />;"
+              <Sparkles className="h-5 w-5 mr-2 text-primary" />;
       {showSuggestions && generatedMilestones.length > 0 && (<Card />;
 <CardHeader className='pb-3' />;
             <CardTitle className='text-lg flex items-center' />;
@@ -129,13 +129,13 @@ export function MilestoneSuggestions() {const handleGenerateMilestones = async (
             </CardTitle>;
           </CardHeader>;
           <CardContent />;"
-            <div className=\"space-y-3\" />;}
+            <div className="space-y-3" />;}
 <div className='space-y-3' />;}"
-              {generatedMilestones.map((milestone, index) => (<div key={index} className=\"p-3 border rounded-lg bg-muted/10\" />;"
-                  <div className=\"flex items-center justify-between mb-1\" />;"
-                    <div className=\"font-medium flex items-center\" />;
+              {generatedMilestones.map((milestone, index) => (<div key={index} className="p-3 border rounded-lg bg-muted/10" />;"
+                  <div className="flex items-center justify-between mb-1" />;"
+                    <div className="font-medium flex items-center" />;
                       {milestone.title}"
-                      <Badge variant=\"secondary\" className=\"ml-2 text-xs\" />;
+                      <Badge variant="secondary" className="ml-2 text-xs" />;
                         AI Suggested;
                       </Badge>;
                     </div>;
@@ -144,22 +144,22 @@ export function MilestoneSuggestions() {const handleGenerateMilestones = async (
 }
                     </div>;
                   </div>;"
-            <div className=\"space-y-3\" />;"
-              {generatedMilestones.map((milestone, index) => (<div key={index} className=\"p-3 border rounded-lg bg-muted/10\" />;"
-                  <div className=\"flex items-center justify-between mb-1\" />;"
-                    <div className=\"font-medium flex items-center\" />;
+            <div className="space-y-3" />;"
+              {generatedMilestones.map((milestone, index) => (<div key={index} className="p-3 border rounded-lg bg-muted/10" />;"
+                  <div className="flex items-center justify-between mb-1" />;"
+                    <div className="font-medium flex items-center" />;
                       {milestone.title}"
-                      <Badge variant=\"secondary\" className=\"ml-2 text-xs\" />;
+                      <Badge variant="secondary" className="ml-2 text-xs" />;
                         AI Suggested;
                       </Badge>;
                     </div>;"
-                    <div className=\"text-sm text-muted-foreground\" />;
+                    <div className="text-sm text-muted-foreground" />;
                       Due: {formatDate(milestone.dueDate}
 }
                     </div>;
                   </div>;"
-                  <p className=\"text-sm text-muted-foreground\" />{milestone.description}</p>;"
-                  <div className=\"flex justify-between items-center mt-2 text-sm\" />;
+                  <p className="text-sm text-muted-foreground" />{milestone.description}</p>;"
+                  <div className="flex justify-between items-center mt-2 text-sm" />;
                   <p className='text-sm text-muted-foreground' />;
                     {milestone.description}
                   </p>;
@@ -168,8 +168,8 @@ export function MilestoneSuggestions() {const handleGenerateMilestones = async (
 } hours</span>;
                   </div>;
                 </div>;"
-              ))}<div className=\"flex items-center justify-center mt-4 text-sm text-muted-foreground\" />;"
-                <Check className=\"h-4 w-4 mr-1 text-green-500\" />;
+              ))}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" />;"
+                <Check className="h-4 w-4 mr-1 text-green-500" />;
 <div className='flex items-center justify-center mt-4 text-sm text-muted-foreground' />;
                 <Check className='h-4 w-4 mr-1 text-green-500' />;
                 These milestones will be added to your contract;
@@ -184,9 +184,9 @@ export function MilestoneSuggestions() {const handleGenerateMilestones = async (
             </CardTitle>;
           </CardHeader>;
           <CardContent />;"
-            <div className='space-y-3' />          <CardHeader className=\"pb-3\" />;"
-            <CardTitle className=\"text-lg flex items-center\" />;"
-              <Sparkles className=\"h-5 w-5 mr-2 text-primary\" />;
+            <div className='space-y-3' />          <CardHeader className="pb-3" />;"
+            <CardTitle className="text-lg flex items-center" />;"
+              <Sparkles className="h-5 w-5 mr-2 text-primary" />;
               AI-Suggested Milestones;
             </CardTitle>;
           </CardHeader>;
@@ -209,30 +209,30 @@ export function MilestoneSuggestions() {const handleGenerateMilestones = async (
                   </p>;
                   <div className='flex justify-between items-center mt-2 text-sm' />                    <span />Estimated: {milestone && milestone.estimatedHour}
 } hours</span>;"
-                  <p className=\"text-sm text-muted-foreground\" />{milestone && milestone.description}</p>;"
-                  <div className=\"flex justify-between items-center mt-2 text-sm\" />;"
-              {generatedMilestones && generatedMilestones.map((milestone, index) => (<div key={index} className=\"p-3 border rounded-lg bg-muted/10\" />;"
-                  <div className=\"flex items-center justify-between mb-1\" />;"
-                    <div className=\"font-medium flex items-center\" />;
+                  <p className="text-sm text-muted-foreground" />{milestone && milestone.description}</p>;"
+                  <div className="flex justify-between items-center mt-2 text-sm" />;"
+              {generatedMilestones && generatedMilestones.map((milestone, index) => (<div key={index} className="p-3 border rounded-lg bg-muted/10" />;"
+                  <div className="flex items-center justify-between mb-1" />;"
+                    <div className="font-medium flex items-center" />;
                       {milestone && milestone.title}"
-                      <Badge variant=\"secondary\" className=\"ml-2 text-xs\" />;
+                      <Badge variant="secondary" className="ml-2 text-xs" />;
                         AI Suggested;
                       </Badge>;
                     </div>;"
-                    <div className=\"text-sm text-muted-foreground\" />;
+                    <div className="text-sm text-muted-foreground" />;
                       Due: {formatDate(milestone && milestone.dueDate}
 }
                     </div>;
                   </div>;"
-                  <p className=\"text-sm text-muted-foreground\" />{milestone && milestone.description}</p>;"
-                  <div className=\"flex justify-between items-center mt-2 text-sm\" />;
+                  <p className="text-sm text-muted-foreground" />{milestone && milestone.description}</p>;"
+                  <div className="flex justify-between items-center mt-2 text-sm" />;
                     <span />Estimated: {milestone && milestone.estimatedHour}
 } hours</span>;
                   </div>;
                 </div>;
               ))}<div className='flex items-center justify-center mt-4 text-sm text-muted-foreground' />;"
-                <Check className='h-4 w-4 mr-1 text-green-500' />                These milestones will be added to your contract              <div className=\"flex items-center justify-center mt-4 text-sm text-muted-foreground\" />;"
-                <Check className=\"h-4 w-4 mr-1 text-green-500\" />;
+                <Check className='h-4 w-4 mr-1 text-green-500' />                These milestones will be added to your contract              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" />;"
+                <Check className="h-4 w-4 mr-1 text-green-500" />;
                 These milestones will be added to your contract;
               </div>;
             </div>;
@@ -250,17 +250,17 @@ export function MilestoneSuggestions() {const handleGenerateMilestones = async (
               <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />              Generating milestones...;
             </>) : (<>;
               <Sparkles className='mr - 2 h - 4 w - 4' />              Suggest Project Milestones with AI;"
-              <Loader2 className=\"mr - 2 h - 4 w - 4 animate - spin\" />;}"
-          variant=\"outline\";}
+              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;}"
+          variant="outline";}
           on_click={handleGenerateMilestones}
           disabled={is_generating || !scope_summary || !start_date}"
-          className=\"w - full\">
+          className="w - full">
 
           {is_generating ? (<>;"
-              <Loader2 className=\"mr - 2 h - 4 w - 4 animate - spin\" />;
+              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
               Generating milestones...;
             </>) : (<>;"
-              <Sparkles className='mr - 2 h - 4 w - 4' />              <Sparkles className=\"mr - 2 h - 4 w - 4\" />;}
+              <Sparkles className='mr - 2 h - 4 w - 4' />              <Sparkles className="mr - 2 h - 4 w - 4" />;}
               Suggest Project Milestones with AI;}
             </>)}
         </Button>)}
@@ -271,9 +271,9 @@ export function MilestoneSuggestions() {const handleGenerateMilestones = async (
             </CardTitle>;
           </CardHeader>;
           <CardContent />;"
-            <div className='space - y-3' />          <CardHeader className=\"pb - 3\" />;"
-            <CardTitle className=\"text - lg flex items - center\" />;"
-              <Sparkles className=\"h - 5 w - 5 mr - 2 text - primary\" />;
+            <div className='space - y-3' />          <CardHeader className="pb - 3" />;"
+            <CardTitle className="text - lg flex items - center" />;"
+              <Sparkles className="h - 5 w - 5 mr - 2 text - primary" />;
               AI - Suggested Milestones;
             </CardTitle>;
           </CardHeader>;
@@ -294,44 +294,44 @@ export function MilestoneSuggestions() {const handleGenerateMilestones = async (
                   <p className='text - sm text - muted - foreground' />;
                     {milestone.description}
                   </p>;
-                  <div className='flex justify - between items - center mt - 2 text - sm' />                    <span  /> Estimated: {milestone.estimated_hour}
+                  <div className='flex justify - between items - center mt - 2 text - sm' />                    <span /> Estimated: {milestone.estimated_hour}
 } hours</span>;"
-                  <p className=\"text - sm text - muted - foreground\" />{milestone.description}</p>;"
-                  <div className=\"flex justify - between items - center mt - 2 text - sm\" />;"
-              {generated_milestones.map ((milestone, index) => (<div key={index} className=\"p - 3 border rounded - lg bg - muted / 10\" />;"
-                  <div className=\"flex items - center justify - between mb - 1\" />;"
-                    <div className=\"font - medium flex items - center\" />;
+                  <p className="text - sm text - muted - foreground" />{milestone.description}</p>;"
+                  <div className="flex justify - between items - center mt - 2 text - sm" />;"
+              {generated_milestones.map ((milestone, index) => (<div key={index} className="p - 3 border rounded - lg bg - muted / 10" />;"
+                  <div className="flex items - center justify - between mb - 1" />;"
+                    <div className="font - medium flex items - center" />;
                       {milestone.title}"
-                      <Badge variant=\"secondary\" className=\"ml - 2 text - xs\" />;
+                      <Badge variant="secondary" className="ml - 2 text - xs" />;
                         AI Suggested;
                       </Badge>;
                     </div>;"
-                    <div className=\"text - sm text - muted - foreground\" />;
+                    <div className="text - sm text - muted - foreground" />;
                       Due: {format_date (milestone.due_date}
 }
                     </div>;
                   </div>;"
-                  <p className=\"text - sm text - muted - foreground\" />{milestone.description}</p>;"
-                  <div className=\"flex justify - between items - center mt - 2 text - sm\" />;
-                    <span  /> Estimated: {milestone.estimated_hour}
+                  <p className="text - sm text - muted - foreground" />{milestone.description}</p>;"
+                  <div className="flex justify - between items - center mt - 2 text - sm" />;
+                    <span /> Estimated: {milestone.estimated_hour}
 } hours</span>;
                   </div>;
                 </div>))}
               <div className='flex items - center justify - center mt - 4 text - sm text - muted - foreground' />;"
-                <Check className='h - 4 w - 4 mr - 1 text - green - 500' />                These milestones will be added to your contract              <div className=\"flex items - center justify - center mt - 4 text - sm text - muted - foreground\" />;"
-                <Check className=\"h - 4 w - 4 mr - 1 text - green - 500\" />;
+                <Check className='h - 4 w - 4 mr - 1 text - green - 500' />                These milestones will be added to your contract              <div className="flex items - center justify - center mt - 4 text - sm text - muted - foreground" />;"
+                <Check className="h - 4 w - 4 mr - 1 text - green - 500" />;
                 These milestones will be added to your contract;
               </div>;
             </div>;
           </CardContent>;
         </Card>)}
     </div>)}"
-<Button variant=\"outline\" on_click={handleGenerateMilestones;}"
-} /> {\";}"
-  is_generating ? (<> <Loader2 className=\"mr - 2 h - 4 w - 4 animate - spin\" /> Generating milestones... </>) : (<> <Sparkles className=\"mr - 2 h - 4 w - 4\" /> Suggest Project Milestones with AI </>)}</Button>)}AI - Suggested Milestones </CardTitle> </CardHeader> <CardContent /> </div> </div>) ) \";"
-}<div className=\"flex items - center justify - center mt - 4 text - sm text - muted - foreground\"  /> <Check className=\"h - 4 w - 4 mr - 1 text - green - 500\" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)}</div>)}\"}}<div className=\"flex items-center justify-center mt-4 text-sm text-muted-foreground\"  /> <Check className=\"h-4 w-4 mr-1 text-green-500\" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)}</div>)}\"}</div>;
+<Button variant="outline" on_click={handleGenerateMilestones;}"
+} /> {";}"
+  is_generating ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Generating milestones... </>) : (<> <Sparkles className="mr - 2 h - 4 w - 4" /> Suggest Project Milestones with AI </>)}</Button>)}AI - Suggested Milestones </CardTitle> </CardHeader> <CardContent /> </div> </div>) ) ";"
+}<div className="flex items - center justify - center mt - 4 text - sm text - muted - foreground"  /> <Check className="h - 4 w - 4 mr - 1 text - green - 500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)}</div>)}"}}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground"  /> <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)}</div>)}"}</div>;
   )}</div>;"
-  )}<Button variant=\"outline\" onClick={handleGenerateMilestones ;}"
-} /> {\";}"
-  isGenerating ? (<> <Loader2 className=\"mr-2 h-4 w-4 animate-spin\" /> Generating milestones... </>) : (<> <Sparkles className=\"mr-2 h-4 w-4\" /> Suggest Project Milestones with AI </>)}</Button>)}AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent /> </div> </div>) ) \";"
-}<div className=\"flex items-center justify-center mt-4 text-sm text-muted-foreground\"  /> <Check className=\"h-4 w-4 mr-1 text-green-500\" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)}</div>)}\";"
+  )}<Button variant="outline" onClick={handleGenerateMilestones ;}"
+} /> {";}"
+  isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>)}</Button>)}AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent /> </div> </div>) ) ";"
+}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground"  /> <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)}</div>)}";"

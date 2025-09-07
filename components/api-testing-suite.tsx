@@ -662,13 +662,13 @@ href='/contact'
 }>
 
                   Get Started;
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href=\"/contact\";
-                  size=\"lg\";
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
+                  size="lg";
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white,
 }>
 
                   Get Started;
-                  <ArrowRight className=\"w-5 h-5 ml-2\" />;
+                  <ArrowRight className="w-5 h-5 ml-2" />;
               </Card>;
             ))}
       {/* CTA Section */}

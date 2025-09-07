@@ -716,17 +716,17 @@ export function AppHeader() {
   )}';
 }> {';';}
   t ('auth.login')';}
-}</Link> <Link  /> {';';}"
-  t ('auth.signup')}</Link> </div>)\";"
-}<UserMenu /> </div>) \";\";"
-}</div> </header> <div className=\"absolute inset-0 bg-black/50 backdrop-blur-sm\" onClick={\";}"
-  () = /> setMobileMenuOpen (false) \";\";}"
-}aria-hidden=\"true\" /> <div className=\"relative bg-background border-t border-border h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto\"  /> <MobileMenu unreadCount= {unreadCount ;}
+}</Link> <Link /> {';';}"
+  t ('auth.signup')}</Link> </div>)";"
+}<UserMenu /> </div>) ";";"
+}</div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={";}"
+  () = /> setMobileMenuOpen (false) ";";}"
+}aria-hidden="true" /> <div className="relative bg-background border-t border-border h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto"  /> <MobileMenu unreadCount= {unreadCount ;}
 }onClose= {() = /> setMobileMenuOpen (false)}openLoginModal= {openLoginModal ;}
 }/> </div> </div>)}{/* Mobile Bottom Navigation */ ;}
 }{isMobile && <MobileBottomNav unreadCount= {unreadCount ;}
 }/> ;
 }<LoginModal isOpen= {loginOpen ;}
 }onOpenChange= {setLoginOpen ;}"
-}/> </>)'\";"
-}'\"'\";"
+}/> </>)'";"
+}'"'";"

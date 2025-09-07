@@ -12,42 +12,47 @@ class ComprehensiveAutomationOrchestrator {
   }
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
-    const prefix = {INFO: ℹ️,SUCCESS: ✅,ERROR: ❌,WARNING: ⚠️,PROGRESS: 🔄}[type] ||ℹ️';
+    const prefix = {'INFO': 'ℹ️', 'SUCCESS': '✅', 'ERROR': '❌', 'WARNING': '⚠️', 'PROGRESS': '🔄'}[type] || 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message});
   }
 
   async runCommand(command, description, options = {}) {
-    this.log(`Running: ${description},PROGRESS');
+    this.log(`Running: ${description}`, 'PROGRESS');
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
-        stdio: pipe,
-        encoding: utf8,
+        stdio: 'pipe',
+        encoding: 'utf8',
         timeout: 300000, // 5 minutes timeout
         maxBuffer: 1024 * 1024 * 10, // 10MB buffer
         ...options
       });
-      this.log(`${description} completed successfully`,SUCCESS');
+      this.log(`${description} completed successfully`, 'SUCCESS');
       return { success: true, output: result };
     } catch (error) {
-      this.log(`${description} failed: ${error.message},ERROR');
+      this.log(`${description} failed: ${error.message}`, 'ERROR');
       this.errors.push({ command, description, error: error.message });
       return { success: false, error: error.message };
     }
   }
 
   async fixMemoryIssues() {
-    this.log('🔧 Fixing memory issues...);
+    this.log('🔧 Fixing memory issues...');
     // Increase Node.js memory limit for TypeScript compilation
-    const packageJsonPath = path.join(this.projectRoot,package.json');
+    const packageJsonPath = path.join(this.projectRoot, 'package.json');
     if (fs.existsSync(packageJsonPath)) {
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,utf8));
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       // Update scripts to use increased memory
       packageJson.scripts = {
-        ...packageJson.scripts,type-check: node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck,build: node --max-old-space-size=8192 ./node_modules/.bin/next build,lint: node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000,lint:fix: node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000};
+        ...packageJson.scripts,
+        'type-check': 'node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck',
+        'build': 'node --max-old-space-size=8192 ./node_modules/.bin/next build',
+        'lint': 'node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000',
+        'lint:fix': 'node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000'
+      };
       
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-      this.log('✅ Updated package.json with memory optimizations,SUCCESS');
+      this.log('✅ Updated package.json with memory optimizations', 'SUCCESS');
     }
   }
 

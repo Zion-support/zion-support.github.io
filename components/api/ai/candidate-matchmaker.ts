@@ -13,18 +13,18 @@ res: NextApiResponse;
 ) {
   const method = (req.method |'POST').toUpperCase();
   if (method !== 'POST')}
-    return res.status(405).json({ error: 'Method not allowed',}
+    return res.status(405).json({error: 'Method not allowed'}
 });
 
 const auth = authenticateRequest(req, false);
-  if (!auth.ok) return res.status(401).json({ error: auth.error,}
+  if (!auth.ok) return res.status(401).json({error: auth.error}
 });
 
 const { jobDescription, candidateProfiles } = req.body || {};
 if (!jobDescription || !Array.isArray(candidateProfiles))
     return res;
       .status(400)
-      .json({ error: 'jobDescription and candidateProfiles[] required',}
+      .json({error: 'jobDescription and candidateProfiles[] required'}
 });
 
 const prompt =
@@ -39,7 +39,7 @@ const text = await generateText(
     'You are a matching engine. Output strictly valid JSON.'
   );
 
-  return res.status(200).json({ matches: text,}
+  return res.status(200).json({matches: text}
 });
   return res.status(200).json({ matches: text }),
 }

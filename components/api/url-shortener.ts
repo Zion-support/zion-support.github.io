@@ -52,14 +52,12 @@ try {}
      ;}
   const { originalUrl, customCode }: UrlShortenerRequest = req.body;
       if (!originalUrl) {
-        return res.status(400).json({
-          success: false,}
+        return res.status(400).json({success: false}
 error: 'Original URL is required',}
         });
       }
       if (!isValidUrl(originalUrl)) {
-        return res.status(400).json({
-          success: false,}
+        return res.status(400).json({success: false}
 error: 'Invalid URL format',}
         });
       }
@@ -68,8 +66,7 @@ const existingUrl = Array.from(urlStorage.values()).find(
         url => url.originalUrl === originalUrl;
       );
       if (existingUrl) {
-        return res.status(200).json({
-          success: true,}
+        return res.status(200).json({success: true}
 data: existingUrl,}
         });
       }
@@ -92,14 +89,12 @@ const shortUrl: ShortUrl = {
       };
 
       urlStorage.set(shortCode, shortUrl);
-      res.status(201).json({
-        success: true,}
+      res.status(201).json({success: true}
 data: shortUrl,}
       });
     } catch (error) {
       console.error('URL shortening error:', error);
-      res.status(500).json({
-        success: false,}
+      res.status(500).json({success: false}
 error: 'Internal server error',}
       });
     }
@@ -107,8 +102,7 @@ error: 'Internal server error',}
     // Get all URLs (for demo purposes)
    ;
   const urls = Array.from(urlStorage.values());
-    res.status(200).json({
-      success: true,}
+    res.status(200).json({success: true}
 data: urls as any,}
     });
     res.status(405).json({
@@ -121,14 +115,14 @@ error: 'Method not allowed'}
 export async function getServerSideProps({}
   params}
 }: {}
-  params: { shortCode: string,}
+  params: {shortCode: string}
 };
 }) {
   const shortCode = params.shortCode;
 
 const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {}
-  params: { shortCode: string,}
+  params: {shortCode: string}
 };
 }) {  const shortCode = params && params.shortCode;}
 }
@@ -142,8 +136,7 @@ const shortUrl = urlStorage && urlStorage.get(shortCode);
     })
  ,
 } else {
-    res.status(405).json({
-      success: false,}
+    res.status(405).json({success: false}
       error: 'Method not allowed'}
     })
   }
@@ -173,9 +166,8 @@ notFound: true,}
 shortUrl.clicks++;
   urlStorage.set(shortCode, shortUrl);
   // Redirect to original URL;
-return {
-    redirect: {
-      destination: shortUrl.originalUrl,}
+return {redirect: {
+      destination: shortUrl.originalUrl}
 permanent: false,}
     },
   };

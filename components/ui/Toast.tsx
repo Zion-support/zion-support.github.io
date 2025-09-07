@@ -155,17 +155,17 @@ interface ToastContainerProps  {toasts: Toast[];
 export const ToastContainer: React.FC<ToastContainerProps /> = ({ toasts,onRemove   }) => {
 
 
-return (className=\"flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200\">
+return (className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200">
 "
-          <X className=\"w-4 h-4 text-white/60 hover:text-white\" />;
+          <X className="w-4 h-4 text-white/60 hover:text-white" />;
         </button>;
       </div>;"
-          className=\"flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200\">
+          className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200">
 "
-          <X className=\"w-4 h-4 text-white/60 hover:text-white\" />;}
+          <X className="w-4 h-4 text-white/60 hover:text-white" />;}
         </button>;}
       </div>;{/* Progress bar */}"
-      <div className=\"absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden\" />;
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden" />;
         <motion&& motion.div;
           className={`h-full ${toast && toast.type === 'success' ? 'bg-green-400' :;
             toast && toast.type === 'error' ? 'bg-red-400' :;

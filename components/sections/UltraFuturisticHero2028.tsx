@@ -171,7 +171,7 @@ whileHover={{ scale: 1.05 }}
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }
 }
-            className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 hover:border-cyan-300 flex items-center space-x-2'          className=\"flex flex-col sm:flex-row gap-4 justify-center items-center mb-16\" />;
+            className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 hover:border-cyan-300 flex items-center space-x-2'          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16" />;
           <motion&& motion.button;
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }
@@ -186,14 +186,14 @@ whileHover={{ scale: 1.05 }}
             className='group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm' />;
             <Play className='w-5 h-5' />            <span />Watch Demo</span>          >;
             <span />Explore 2028 Services</span>;"
-            <ArrowRight className=\"w-5 h-5 group-hover:translate-x-1 transition-transform duration-300\" />;
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />;
           </motion && motion.button>;
           <motion&& motion.button;
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }
 }"
-            className=\"group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm\" />;"
-            <Play className=\"w-5 h-5\" />;
+            className="group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm" />;"
+            <Play className="w-5 h-5" />;
             <span />Watch Demo</span>;
           </motion && motion.button>;
         </motion && motion.div>;{/* Features Grid */}
@@ -341,7 +341,7 @@ href='/contact'
       </div>
 
 "
-              className=\"bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 hover:border-purple-300\">;
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 hover:border-purple-300">;
               Get Started;
             </Link>;
           </div>;

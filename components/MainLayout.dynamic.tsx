@@ -1,4 +1,4 @@
-import React from \"react\";
+import React from "react";
 
 interface MainLayoutProps {
   className?: string;}
@@ -6,11 +6,11 @@ interface MainLayoutProps {
 }
 
 const MainLayout: React.FC<MainLayoutProps /> = ({
-  className = \"\",}
+  className = "",}
   children,}
 }) => {}
   return (}
-    <div data-testid=\"ainlayout\" className={className} />
+    <div data-testid="ainlayout" className={className} />
       {children || <div />MainLayout Component</div>}
     </div>
   );

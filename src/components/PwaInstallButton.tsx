@@ -32,9 +32,9 @@ const onClick = async () => {if (!promptEvent) {toast('Installation not availabl
 }),logErrorToProduction('PWA install error:', { data: err })}
  
 };
-  return (<div className=\"fixed bottom-4 right-4 z-50\" />;
+  return (<div className="fixed bottom-4 right-4 z-50" />;
       <Button onClick={onClick} disabled={isInstalling} />;"
-        {isInstalling && <Loader2 className=\"mr-2 h-4 w-4 animate-spin\" />}
+        {isInstalling && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
         Install App;
       </Button>;
     </div>;

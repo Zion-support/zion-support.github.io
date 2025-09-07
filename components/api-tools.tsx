@@ -419,8 +419,8 @@ key={category}
                         Visit API;
                       </Button>
 
-                        className=\"bg-indigo-600 hover:bg-indigo-700\">;
-                        <ExternalLink className=\"w-4 h-4 mr-2\" />;
+                        className="bg-indigo-600 hover:bg-indigo-700">;
+                        <ExternalLink className="w-4 h-4 mr-2" />;
                         Visit API;
                       </Button>;
 

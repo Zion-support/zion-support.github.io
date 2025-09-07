@@ -42,7 +42,7 @@ type CarouselPlugin = any;
 
 type CarouselProps = {opts?: CarouselOptions;
   plugins?: CarouselPlugin;"
-  orientation?: \"horizontal\" | \"vertical\";}
+  orientation?: "horizontal" | "vertical";}
   setApi?: (api: CarouselApi) => void;}
 }
 
@@ -154,7 +154,7 @@ className={cn(&quot;relative&quot; className)}
 
         </div>;
       </CarouselContext.Provider>;"
-    )})Carousel.displayName = \"Carousel\";
+    )})Carousel.displayName = "Carousel";
 
 
 )
@@ -187,7 +187,7 @@ const CarouselContent = React.forward_ref<;
         {...props}
       />;
     </div>;"
-  )})CarouselContent.displayName = \"CarouselContent\";
+  )})CarouselContent.displayName = "CarouselContent";
 
 const CarouselItem = React.forwardRef<;
   HTMLDivElement;
@@ -258,10 +258,10 @@ const CarouselPrevious = React.forward_ref<;
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props} />;"
-      <ArrowLeft className=\"h-4 w-4\" />;"
-      <span className=\"sr-only\" />Previous slide</span>;
+      <ArrowLeft className="h-4 w-4" />;"
+      <span className="sr-only" />Previous slide</span>;
     </Button>;"
-  )})CarouselPrevious.displayName = \"CarouselPrevious\";
+  )})CarouselPrevious.displayName = "CarouselPrevious";
 
 
 

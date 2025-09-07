@@ -300,9 +300,9 @@ className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.
                     {activeDropdown === item.name && (}
                       <motion.div;}
 onClick={() = /> handleDropdownToggle(item && item.name)}
-                    className=\"w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200\">
+                    className="w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200">
 "
-                    <div className=\"flex items-center space-x-2\" />;
+                    <div className="flex items-center space-x-2" />;
                       {item && item.icon}
                       <span />{item && item.name}</span>;
                     </div>;

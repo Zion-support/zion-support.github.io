@@ -108,10 +108,10 @@ if ( {) {$2;}
           border-radius: 0.5rem;
           font-size: 1rem;
           cursor: pointer;
-          margin-right: 1rem;        \">;
+          margin-right: 1rem;        ">;
           Try Again;
         </button>;"
-        <button onclick=\"window.location.href='/'\" style=\";
+        <button onclick="window.location.href='/'" style=";
           background: #666;
           color: white;
           border: none;
@@ -133,13 +133,13 @@ const error_div = document.create_element ('div')error_div.style.css_text = `;
       width: 100%;
       height: 100%;private showFatalErrorMessage(): void {// Create a user-friendly error message;
     errorDiv.innerHTML = `;"
-      <div style=\"text-align: center, padding: 2rem, max-width: 500px,\" />;"
-        <h2 style=\"margin-bottom: 1rem,\" />Connection Issue</h2>;"
-        <p style=\"margin-bottom: 1.5rem, line-height: 1.5,\" />;
+      <div style="text-align: center, padding: 2rem, max-width: 500px," />;"
+        <h2 style="margin-bottom: 1rem," />Connection Issue</h2>;"
+        <p style="margin-bottom: 1.5rem, line-height: 1.5," />;
           We're having trouble loading some parts of the application.;
           This might be due to a poor network connection or a temporary server issue.;
         </p>;"
-        <button onclick=\"window.location.reload()\" style=\";
+        <button onclick="window.location.reload()" style=";
 /**;
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery;
  * Handles automatic retry, cache clearing, and graceful degradation;}
@@ -158,17 +158,17 @@ class ChunkErrorHandler {background: #0070f3;
           font-size: 1rem;
           cursor: pointer;
           margin-right: 1rem;"
-        \" />;
+        " />;
           Try Again;
         </button>;"
-        <button onclick=\"window.location.href='/'\" style=\";
+        <button onclick="window.location.href='/'" style=";
 background: #666;
           color: white;
           border: none;
           padding: 0.75rem 1.5rem;
           border-radius: 0.5rem;
           font-size: 1rem;"
-          cursor: pointer;\" />;
+          cursor: pointer;" />;
           Go Home;
         </button>;}
       </div>;}
@@ -182,18 +182,18 @@ background: #666;
 
 const errorDiv = document.createElement('div'),errorDiv.style.cssText = `;
       position: fixed,top: 0,left: 0,width: 100%,height: 100%,background: rgba(0, 0, 0, 0.8),color: white,display: flex,align-items: center,justify-content: center,z-index: 999999,font-family: system-ui, -apple-system, sans-serif,`,errorDiv.innerHTML = `;"
-      <div style=\"text-align: center, padding: 2rem, max-width: 500px,\" />;"
-        <h2 style=\"margin-bottom: 1rem,\" />Connection Issue</h2>;"
-        <p style=\"margin-bottom: 1.5rem, line-height: 1.5,\" />;
+      <div style="text-align: center, padding: 2rem, max-width: 500px," />;"
+        <h2 style="margin-bottom: 1rem," />Connection Issue</h2>;"
+        <p style="margin-bottom: 1.5rem, line-height: 1.5," />;
           We're having trouble loading some parts of the application.;
           This might be due to a poor network connection or a temporary server issue.;
         </p>;"
-        <button onclick=\"window.location.reload()\" style=\";"
-          background: #0070f3,color: white,border: none,padding: 0.75rem 1.5rem,border-radius: 0.5rem,font-size: 1rem,cursor: pointer,margin-right: 1rem,\" />;
+        <button onclick="window.location.reload()" style=";"
+          background: #0070f3,color: white,border: none,padding: 0.75rem 1.5rem,border-radius: 0.5rem,font-size: 1rem,cursor: pointer,margin-right: 1rem," />;
           Try Again;
         </button>;"
-        <button onclick=\"window.location.href='/'\" style=\";"
-          background: #666,color: white,border: none,padding: 0.75rem 1.5rem,border-radius: 0.5rem,font-size: 1rem,cursor: pointer,\" />;
+        <button onclick="window.location.href='/'" style=";"
+          background: #666,color: white,border: none,padding: 0.75rem 1.5rem,border-radius: 0.5rem,font-size: 1rem,cursor: pointer," />;
           Go Home;
         </button>;}
       </div>;}
@@ -216,7 +216,7 @@ export const chunkErrorHandler = new ChunkErrorHandler()// Export for manual usa
 export default chunkErrorHandler;
 
 export default chunkErrorHandler;"
-        \">;
+        ">;
           Try Again;
         </button>;
       background: rgba (0, 0, 0, 0.8)color: white;
@@ -227,13 +227,13 @@ export default chunkErrorHandler;"
       font - family: system - ui, -apple - system, sans - serif;
     `;
     error_div.innerHTML = `;"
-      <div style=\"text - align: center; padding: 2rem; max - width: 500px;\" />;"
-        <h2 style=\"margin - bottom: 1rem;\" />Connection Issue</h2>;"
-        <p style=\"margin - bottom: 1.5rem; line - height: 1.5;\" />;
+      <div style="text - align: center; padding: 2rem; max - width: 500px;" />;"
+        <h2 style="margin - bottom: 1rem;" />Connection Issue</h2>;"
+        <p style="margin - bottom: 1.5rem; line - height: 1.5;" />;
           We're having trouble loading some parts of the application.;
           This might be due to a poor network connection or a temporary server issue.;
         </p>;"
-        <button onclick=\"window.location.reload ()\" style=\";
+        <button onclick="window.location.reload ()" style=";
           background: #0070f3;
           color: white;
           border: none;
@@ -241,9 +241,9 @@ export default chunkErrorHandler;"
           border - radius: 0.5rem;
           font - size: 1rem;
           cursor: pointer;"
-          margin - right: 1rem;        \" />;
+          margin - right: 1rem;        " />;
           Try Again;"
-        </button>;<button onclick=\"window.location.href='/'\" style=\";
+        </button>;<button onclick="window.location.href='/'" style=";
           background: #666;
           color: white;
           border: none;
@@ -251,7 +251,7 @@ export default chunkErrorHandler;"
           border - radius: 0.5rem;
           font - size: 1rem;
           cursor: pointer;"
-        \" />;
+        " />;
           Go Home;
         </button>;
       </div>;
@@ -279,12 +279,12 @@ export const chunkErrorHandler = new ChunkErrorHandler ()// Export for manual us
 export default chunkErrorHandler;
 
 export default chunkErrorHandler;"
-        \">;
+        ">;
           Try Again;
         </button>;"
-        <button onclick=\"window.location.href='/'\" style=\";
+        <button onclick="window.location.href='/'" style=";
 "
-export default chunkErrorHandler;<button onclick=\"window.location.href='/'\" style=\";
+export default chunkErrorHandler;<button onclick="window.location.href='/'" style=";
 
 export default chunkErrorHandler;
 }
@@ -302,13 +302,13 @@ export const chunkErrorHandler = new ChunkErrorHandler()// Export for manual usa
 export default chunkErrorHandler;
 
 export default chunkErrorHandler;"
-        \">;
+        ">;
           Try Again;
         </button>;"
-        <button onclick=\"window.location.href='/'\" style=\";
+        <button onclick="window.location.href='/'" style=";
 
 export default chunkErrorHandler;"
-        <button onclick=\"window.location.href='/'\" style=\";
+        <button onclick="window.location.href='/'" style=";
 
 export default chunkErrorHandler;
 }

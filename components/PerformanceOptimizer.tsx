@@ -38,8 +38,7 @@ interface PerformanceMetrics {
 }
 } from 'lucide-react';
 
-interface PerformanceMetrics {
-  load_time: number;
+interface PerformanceMetrics {load_time: number;
 
   firstContentfulPaint: number;
   largestContentfulPaint: number;
@@ -47,8 +46,7 @@ interface PerformanceMetrics {
   firstInputDelay: number;
 
 
-  className = '',
-}
+  className = ''}
               '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';}
           }optimizedCount++;
         }

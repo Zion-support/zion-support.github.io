@@ -27,7 +27,7 @@ const edition =
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader(}
     'Content-Disposition'}
-    `attachment; filename=\"zion-protocol-${edition}.pdf\"`
+    `attachment; filename="zion-protocol-${edition}.pdf"`
   );
 
 export default async function handler(
@@ -44,7 +44,7 @@ const edition =
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader(}
     'Content-Disposition'}"
-    `attachment; filename=\"zion-protocol-${edition}.pdf\"`
+    `attachment; filename="zion-protocol-${edition}.pdf"`
   );
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

@@ -1,5 +1,5 @@
 
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return {hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
@@ -115,33 +115,33 @@ const [sortBy, setSortBy] = useState('name');
 
 const [showFilters, setShowFilters] = useState(false);
 
-    { value: 'All',}
+    {value: 'All'}
   label: 'All Prices',}
 },
-{ value: '0-1000',}
+{value: '0-1000'}
   label: '$0 - $1,000' },
-    { value: '1001-2500',}
+    {value: '1001-2500'}
   label: '$1,001 - $2,500' },
-    { value: '2501-5000',}
+    {value: '2501-5000'}
   label: '$2,501 - $5,000' },
-    { value: '5001+',}
+    {value: '5001+'}
   label: '$5,001+' },
   ];
 
 const sortOptions = [
-    { value: 'name',}
+    {value: 'name'}
   label: 'Name A-Z',}
 },
-    { value: 'price',}
+    {value: 'price'}
   label: 'Price Low-High',}
 },
-    { value: 'popularity',}
+    {value: 'popularity'}
   label: 'Most Popular',}
 },
-    { value: 'category',}
+    {value: 'category'}
   label: 'Category',}
 },
-{ value: 'roi',}
+{value: 'roi'}
   label: 'Highest ROI',}
 },
   ];
@@ -277,7 +277,7 @@ color: 'from-emerald-500 to-green-600'}
   ];
 
 const containerVariants = {}
-    hidden: { opacity: 0,}
+    hidden: {opacity: 0}
 }
 
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
@@ -286,30 +286,30 @@ const containerVariants = {}
 const popular_services  = getPopularRevolutionaryServices ()// Enhanced service categories with better descriptions;
 
 const enhanced_categories = [
-  {name: 'Quantum AI & Cognitive Computing',}
+  {name: 'Quantum AI & Cognitive Computing'}
   description:;}
         'Revolutionary quantum AI solutions with human - level reasoning capabilities',icon: <Brain className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Quantum AI & Cognitive Computing').length,color: 'from - purple - 500 to - indigo - 600',},name: 'Autonomous Manufacturing & Industry 4.0',
   description:;
-        'Next - generation autonomous manufacturing with zero human intervention',icon: <Factory className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Autonomous Manufacturing & Industry 4.0').length,color: 'from - orange - 500 to - red - 600',},{name: 'Quantum Blockchain & DeFi',}
+        'Next - generation autonomous manufacturing with zero human intervention',icon: <Factory className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Autonomous Manufacturing & Industry 4.0').length,color: 'from - orange - 500 to - red - 600',},{name: 'Quantum Blockchain & DeFi'}
   description:;}
-        'Quantum - secured blockchain platforms with infinite scalability',icon: <Globe className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Quantum Blockchain & DeFi').length,color: 'from - green - 500 to - emerald - 600',},{name: 'AI Biomedical Research & Drug Discovery',}
+        'Quantum - secured blockchain platforms with infinite scalability',icon: <Globe className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Quantum Blockchain & DeFi').length,color: 'from - green - 500 to - emerald - 600',},{name: 'AI Biomedical Research & Drug Discovery'}
   description:;}
-        'AI - powered platforms for accelerated drug discovery and medical research',icon: <FlaskIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'AI Biomedical Research & Drug Discovery').length,color: 'from - blue - 500 to - indigo - 600',},{name: 'Quantum Cybersecurity & Threat Detection',}
+        'AI - powered platforms for accelerated drug discovery and medical research',icon: <FlaskIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'AI Biomedical Research & Drug Discovery').length,color: 'from - blue - 500 to - indigo - 600',},{name: 'Quantum Cybersecurity & Threat Detection'}
   description:;}
-        'Quantum - resistant cybersecurity with AI - powered threat detection',icon: <ShieldCheck className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Quantum Cybersecurity & Threat Detection').length,color: 'from - red - 500 to - pink - 600',},{name: 'Space Technology & Satellite Optimization',}
+        'Quantum - resistant cybersecurity with AI - powered threat detection',icon: <ShieldCheck className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Quantum Cybersecurity & Threat Detection').length,color: 'from - red - 500 to - pink - 600',},{name: 'Space Technology & Satellite Optimization'}
   description:;}
-        'Revolutionary platforms for space exploration and satellite optimization',icon: <Rocket className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Space Technology & Satellite Optimization').length,color: 'from - indigo - 500 to - purple - 600',},{name: 'AI Content Creation & Marketing',}
-  description: 'Quantum - powered content creation at infinite scale',icon: <FileText className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'AI Content Creation & Marketing').length,color: 'from - teal - 500 to - cyan - 600',},{name: 'Quantum Computing as a Service',}
-  description: 'Enterprise quantum computing with real quantum processors',icon: <Cpu className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Quantum Computing as a Service').length,color: 'from - violet - 500 to - purple - 600',},{name: 'Autonomous Vehicles & Smart Transportation',}
+        'Revolutionary platforms for space exploration and satellite optimization',icon: <Rocket className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Space Technology & Satellite Optimization').length,color: 'from - indigo - 500 to - purple - 600',},{name: 'AI Content Creation & Marketing'}
+  description: 'Quantum - powered content creation at infinite scale',icon: <FileText className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'AI Content Creation & Marketing').length,color: 'from - teal - 500 to - cyan - 600',},{name: 'Quantum Computing as a Service'}
+  description: 'Enterprise quantum computing with real quantum processors',icon: <Cpu className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Quantum Computing as a Service').length,color: 'from - violet - 500 to - purple - 600',},{name: 'Autonomous Vehicles & Smart Transportation'}
   description:;}
-        'AI platforms for autonomous vehicles and smart transportation',icon: <CarIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Autonomous Vehicles & Smart Transportation').length,color: 'from - emerald - 500 to - green - 600',},{name: 'Smart Energy & Renewable Energy',}
+        'AI platforms for autonomous vehicles and smart transportation',icon: <CarIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Autonomous Vehicles & Smart Transportation').length,color: 'from - emerald - 500 to - green - 600',},{name: 'Smart Energy & Renewable Energy'}
   description:;}
         'AI platforms for smart energy grids and renewable energy optimization',icon: <LeafIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600',},  ];      description: 'AI platforms for smart energy grids and renewable energy optimization',
-  icon: <LeafIcon className=\"w - 6 h - 6\" />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600';
+  icon: <LeafIcon className="w - 6 h - 6" />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600';
     }
 
 const container_variants = {}
-    hidden: { opacity: 0,}
+    hidden: {opacity: 0}
 },
     visible: {
       opacity: 1;
@@ -368,7 +368,7 @@ const itemVariants = {}
   }
 
 const itemVariants = {hidden: { y: 20, opacity: 0,}
-},visible: {y: 0,opacity: 1,transition: {duration: 0 && 0.5,},};
+},visible: {y: 0,opacity: 1,transition: {duration: 0 && 0.5},};
   return (<UltraFuturisticBackground variant='quantum' intensity='high' />;
       <div className='min-h-screen' />;
         <Head />;
@@ -414,7 +414,7 @@ rel='canonical'
                 initial={{ opacity: 0, y: 30 ,}
 }
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 ,}
+                transition={{duration: 0.8 }
 }
 
                />
@@ -543,14 +543,14 @@ variant='futuristic'
               initial='hidden'
               whileInView='visible'
 
-              viewport={{ once: true ,}
+              viewport={{once: true }
 }
              />;
               {enhancedCategories.map((category, index) => (<motion.div;}
                   key={category.name}
                   variants={itemVariants}
                   whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 ,}
+                  whileTap={{scale: 0 && 0.95 }
 } />;
 
                   <UltraFuturisticCard;
@@ -617,13 +617,13 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
 }
               initial='hidden';
               whileInView='visible';
-              viewport={{ once: true ,}
+              viewport={{once: true }
 }
              />;
               {popularServices.slice(0, 6).map((service, index) => (<motion.div;}
                   key={service.id}
                   variants={itemVariants}
-                  whileHover={{ y: -10 ,}
+                  whileHover={{y: -10 }
 }
                  />;
                   <UltraFuturisticCard;
@@ -741,14 +741,14 @@ type='text'
 
               initial='hidden'
               whileInView='visible'
-              viewport={{ once: true ,}
+              viewport={{once: true }
 }
              />
               {filteredServices.map((service, index) => (}
                 <motion.div;}
 key={service.id}
                   variants={itemVariants}
-                  whileHover={{ y: -5 ,}
+                  whileHover={{y: -5 }
 } />;
                   <UltraFuturisticCard;
                     variant={service && service.variant as any}
@@ -896,7 +896,7 @@ className='text-center py-16'}
 }
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 ,}
+                transition={{duration: 0.6 }
 }
                />;
 <div className='text-6xl mb-4' />🔍</div>;
@@ -1145,7 +1145,7 @@ className='max-w-4xl mx-auto'
 }
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 ,}
+              transition={{duration: 0.8 }
 }
              />
 

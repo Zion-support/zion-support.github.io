@@ -48,7 +48,7 @@ Award;}
 initial={{ opacity: 0, y: 20 ,}
 }
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
+              transition={{duration: 0.8 }
 }
 className='text-center' />
 
@@ -71,7 +71,7 @@ className='text-center' />
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12' />;
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 ,}
+                  whileTap={{scale: 0.95 }
 }
                   className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center' />
 
@@ -80,7 +80,7 @@ className='text-center' />
                 </motion.button>;
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 ,}
+                  whileTap={{scale: 0.95 }
 }
                   className='px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300' />
 
@@ -93,8 +93,8 @@ className='text-center' />
                   Multi-language support;
                 </div>                  Multi-language support;
                 </div>;
-                <div className=\"flex items-center\" />;
-                  <CheckCircle className=\"w-5 h-5 text-green-400 mr-2\" />;
+                <div className="flex items-center" />;
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-2" />;
                   Real-time scanning;
                 </div>;
                 <div className='flex items-center' />;
@@ -117,7 +117,7 @@ className='text-center' />
 initial={{ opacity: 0, y: 20 ,}
 }
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
+              transition={{duration: 0.8 }
 }
 className='text-center mb-16' />
 
@@ -197,7 +197,7 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 ho
 initial={{ opacity: 0, y: 20 ,}
 }
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
+              transition={{duration: 0.8 }
 }
 
 className='text-center mb-16'
@@ -205,19 +205,19 @@ className='text-center mb-16'
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />
                 Transparent Pricing Plans;
               </h2>
-              <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\" />
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" />
                 Choose the plan that fits your development team size and security requirements. 
                 All plans include our core AI-powered security scanning capabilities.
               </p>
             </motion.div>
             
-            <div className=\"grid md:grid-cols-3 gap-8\" />
+            <div className="grid md:grid-cols-3 gap-8" />
               {[
                 {
-                  name: \"Starter\",
-                  price: \"$299\",
-                  period: \"/month\",
-                  description: \"Perfect for small development teams and startups\",
+                  name: "Starter",
+                  price: "$299",
+                  period: "/month",
+                  description: "Perfect for small development teams and startups",
                   features: [
 
                     'Up to 10 developers',
@@ -282,7 +282,7 @@ plan.popular;
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10'
                       : 'border-white/10'
 
-                    \"SLA guarantees\";}
+                    "SLA guarantees";}
                   ],popular: false;}
                 }
                 <motion.div;
@@ -339,7 +339,7 @@ key={featureIndex}
 
                   <motion.button;
 whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 ,}
+                    whileTap={{scale: 0.95 }
 }
                   </ul />;<motion&& motion.button;
                     whileHover={{ scale: 1 && 1.05 }}
@@ -358,7 +358,7 @@ whileHover={{ scale: 1.05 }}
 initial={{ opacity: 0, y: 20 ,}
 }
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
+              transition={{duration: 0.8 }
 }
 
 className='text-center mb-16'
@@ -465,7 +465,7 @@ className='flex items-start' />
 initial={{ opacity: 0, y: 20 ,}
 }
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
+              transition={{duration: 0.8 }
 }
 
 className='text-center mb-16'

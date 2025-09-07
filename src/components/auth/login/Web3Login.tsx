@@ -19,19 +19,19 @@ export function Web3Login() {;
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { useAuth  } from '@/hooks/useAuth';
-import { useWallet as useAppWallet } from \"../../../context/WalletContext ;
+import { useWallet as useAppWallet } from "../../../context/WalletContext ;
 import { Wallet } from 'lucide-react'import { toast  } from 'sonner';
 import { logErrorToProduction } from '@/utils/productionLogger';
 "
-export function Web3Login() {const handleWeb3Login = async () => {if (!isWalletSystemAvailable) {toast(\"Web3 login unavailable\", {description: \"The Web3 login system is currently not available. Please ensure your Reown Project ID is configured.}
+export function Web3Login() {const handleWeb3Login = async () => {if (!isWalletSystemAvailable) {toast("Web3 login unavailable", {description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured.}
 };
   return;
 "
-const handleWeb3Login = async () => {if (!isWalletSystemAvailable) {toast(\"Web3 login unavailable\", {description: \"The Web3 login system is currently not available. Please ensure your Reown Project ID is configured.}
+const handleWeb3Login = async () => {if (!isWalletSystemAvailable) {toast("Web3 login unavailable", {description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured.}
 };
   return;
 "
-const handleWeb3Login = async () => {if (!isWalletSystemAvailable) {toast(\"Web3 login unavailable\", {description: \"The Web3 login system is currently not available. Please ensure your Reown Project ID is configured.}
+const handleWeb3Login = async () => {if (!isWalletSystemAvailable) {toast("Web3 login unavailable", {description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured.}
 });
   return;}
     try {setIsLoading(true)// Check if Ethereum provider (e.g., MetaMask) is available;

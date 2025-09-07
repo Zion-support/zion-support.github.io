@@ -50,7 +50,7 @@ function SignUpForm() {
     }try {setShowVerificationMessage(false), // Reset verification message;}
       if (signupMode) {if (result?.error) {throw new Error(result.error as any), // Cast to any if type is AuthError;}
         }if (result?.emailVerificationRequired) {setShowVerificationMessage(true)} else {// Only navigate if email verification is not required;}"
-          router.push(\"/mobile\")if (result?.emailVerificationRequired) {setShowVerificationMessage(true)} else {// Only navigate if email verification is not required;if (error) {throw new Error(error)}router.push(\"/mobile\")router.push(\"/mobile\")}
+          router.push("/mobile")if (result?.emailVerificationRequired) {setShowVerificationMessage(true)} else {// Only navigate if email verification is not required;if (error) {throw new Error(error)}router.push("/mobile")router.push("/mobile")}
     } catch (err: any) {logErrorToProduction('Signup/Login error:', { data: err })setError(err.message |'An unexpected error occurred. Please try again.')} finally {setIsLoading(false)}
   }
 

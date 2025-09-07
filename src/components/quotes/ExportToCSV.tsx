@@ -8,7 +8,7 @@ interface ExportToCSVProps {
 }
 }
 
-export const ExportToCSV = ({ quotes, filename = \"quote-requests\" }: ExportToCSVProps) => ;
+export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => ;
   const handleExport = (// Define CSV Headers;
 
 const headers = [
@@ -44,7 +44,7 @@ const csvContent = [
   headers.join()...rows.map(row =>;
         row.map(cell =>;
           // Escape commas and quotes in cell values;"
-          typeof cell === 'string' && (cell.includes() |cell.includes('\"'))? `\"${cell.replace(/\"/g, '\"\"')}\"`;
+          typeof cell === 'string' && (cell.includes() |cell.includes('"'))? `"${cell.replace(/"/g, '""')}"`;
             : cell;
         ).join())const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' })const url = URL.createObjectURL(blob;
   const link = document.createElement('a')link.setAttribute('href', url)link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`)document.body.appendChild(link)// Download file and clean up;
@@ -77,7 +77,7 @@ const csv_content = [
           .map (cell =>;
             // Escape commas and quotes in cell values;
             typeof cell === 'string' &&;"
-            (cell.includes (', ') || cell.includes ('\"'))? `\"${cell.replace (/\"/g, '\"\"')}\"`;
+            (cell.includes (', ') || cell.includes ('"'))? `"${cell.replace (/"/g, '""')}"`;
               : cell).join (', '))].join ('\n')// Create download link;
 
 const blob = new Blob ([csv_content], { type: 'text / csv;charset = utf - 8;' })const url = URL.createObjectURL (blob;
@@ -88,7 +88,7 @@ interface ExportToCSVProps {
 }
 }
 "
-export const ExportToCSV = ({ quotes, filename = \"quote - requests\" }: ExportToCSVProps) =>: any ;
+export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToCSVProps) =>: any ;
   const handle_export = () =>: any {// Define CSV Headers;
 
 const headers = [
@@ -118,7 +118,7 @@ const csv_content = [
   headers.join ()...rows.map (row =>;
         row.map (cell =>;
           // Escape commas and quotes in cell values;"
-          typeof cell === 'string' && (cell.includes () || cell.includes ('\"'))? `\"${cell.replace (/\"/g, '\"\"')}\"`;
+          typeof cell === 'string' && (cell.includes () || cell.includes ('"'))? `"${cell.replace (/"/g, '""')}"`;
             : cell).join ())].join ('\n')// Create download link;
 
 const blob = new Blob ([csv_content], { type: 'text / csv, charset = utf - 8, ' })const url = URL.createObjectURL (blob;
@@ -128,14 +128,14 @@ const blob = new Blob ([csv_content], { type: 'text / csv, charset = utf - 8, ' 
       <Download size={16} />;
       Export CSV;
     </Button>)}"
-'\";
+'";
   } }"
-  return (import { Button } from \"@/components/ui/button\",import type { QuoteRequest } from \"@/types/quotes\",interface ExportToCSVProps {
+  return (import { Button } from "@/components/ui/button",import type { QuoteRequest } from "@/types/quotes",interface ExportToCSVProps {
   quotes: QuoteRequest[],filename?: string;}
 }
 }
 "
-export const ExportToCSV = ({ quotes, filename = \"quote-requests\" }: ExportToCSVProps) => ;
+export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => ;
   const handleExport = (// Define CSV Headers;
 
 const headers = [
@@ -156,21 +156,21 @@ const csvContent = [
   headers.join(),...rows.map(row =>;
         row.map(cell =>;
           // Escape commas and quotes in cell values;"
-          typeof cell === 'string' && (cell.includes() || cell.includes('\"'))? `\"${cell.replace(/\"/g, '\"\"')}\"`;
+          typeof cell === 'string' && (cell.includes() || cell.includes('"'))? `"${cell.replace(/"/g, '""')}"`;
             : cell;"
-        ).join())'\"},)}].join('\n'),// Create download link;
+        ).join())'"},)}].join('\n'),// Create download link;
 
 const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),const url = URL.createObjectURL(blob);
   const link = document.createElement('a'),link.setAttribute('href', url),link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`),document.body.appendChild(link),// Download file and clean up;
     link.click(),setTimeout(() => {document.body.removeChild(link),URL.revokeObjectURL(url)}, 100)},return (<Button;"
-      variant=\"outline\";
+      variant="outline";
 
 interface ExportToCSVProps {
   quotes: QuoteRequest[],filename?: string;}
 }
 }
 "
-export const ExportToCSV = ({ quotes, filename = \"quote-requests\" }: ExportToCSVProps) = /> ;
+export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) = /> ;
   const handleExport = (// Define CSV Headers;
 
 const headers = [
@@ -201,7 +201,7 @@ const csvContent = [
   headers && headers.join()...rows && rows.map(row => ;
         row && row.map(cell => ;
           // Escape commas and quotes in cell values;"
-          typeof cell === 'string' && (cell && cell.includes() || cell && cell.includes('\"'))? `\"${cell && cell.replace(/\"/g, '\"\"')}\"` ;
+          typeof cell === 'string' && (cell && cell.includes() || cell && cell.includes('"'))? `"${cell && cell.replace(/"/g, '""')}"` ;
             : cell;
         ).join())].join('\n')// Create download link;
 
@@ -212,17 +212,17 @@ const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' })const ur
       Export CSV;
     </Button>;
   )}return (<Button;"
-      variant=\"outline\";
+      variant="outline";
       onClick = {handleExport}"
-      className=\"flex items-center gap-2\";
+      className="flex items-center gap-2";
       disabled={quotes && quotes.length === 0} />;
       <Download size={16} />;
       Export CSV;
     </Button>;"
-  )}'\"},<Button;"
-      variant=\"outline\";
+  )}'"},<Button;"
+      variant="outline";
       on_click = {handle_export }"
-      className=\"flex items - center gap - 2\";
+      className="flex items - center gap - 2";
       disabled={quotes.length === 0}
      />;
       <Download size={16} />;
@@ -237,7 +237,7 @@ const csvContent = [
           .map(cell =>;
             // Escape commas and quotes in cell values;
             typeof cell === 'string' &&;"
-            (cell.includes(',') || cell.includes('\"'))? `\"${cell.replace(/\"/g, '\"\"')}\"`;
+            (cell.includes(',') || cell.includes('"'))? `"${cell.replace(/"/g, '""')}"`;
               : cell;
           ).join(','))].join('\n')// Create download link;
 
@@ -248,4 +248,4 @@ const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })const ur
       <Download size={16} />;
       Export CSV;
     </Button>;"
-)}'\";"
+)}'";"

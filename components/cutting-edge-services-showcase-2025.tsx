@@ -50,7 +50,7 @@ const matchesCategory =
   });
 
 const containerVariants = {}
-    hidden: { opacity: 0,}
+    hidden: {opacity: 0}
 }
 ;
 
@@ -89,7 +89,7 @@ const filtered_services = all_services.filter (service => {
     return matches_search && matches_category;
 
 const container_variants = {}
-    hidden: { opacity: 0,}
+    hidden: {opacity: 0}
 },
     visible: {
       opacity: 1;
@@ -141,7 +141,7 @@ name='keywords'
               initial={{ opacity: 0, y: 30 ,}
 }
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
+              transition={{duration: 0.8 }
 }
 
 className='text-center'
@@ -238,7 +238,7 @@ className='flex flex-col lg:flex-row gap-6 items-center justify-between'
 }
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
-              viewport={{ once: true ,}
+              viewport={{once: true }
 } />;
               {/* Search */}
 
@@ -357,7 +357,7 @@ className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
                         </h3>;
                         <p className='text - white / 70 text - sm leading - relaxed' />;
                           {service.description}</h3>;
-                        <p className=\"text-white/70 text-sm leading-relaxed\" />;
+                        <p className="text-white/70 text-sm leading-relaxed" />;
                           {service.description}
 
 
@@ -478,9 +478,9 @@ href='/contact'
                           /{service && service.pricing.starter && starter.period}
                         </span>                      </div>;
                     </div>;
-                        className=\"inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105\">;
+                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
                         Get Started;
-                        <ArrowRight className=\"ml-2 w-4 h-4\" />;
+                        <ArrowRight className="ml-2 w-4 h-4" />;
                       </a>;
                     </div>;
 
@@ -501,7 +501,7 @@ href='/contact'
             {filteredServices && filteredServices.length === 0 && (;}
               <motion&& motion.div;}
 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 ,}
+                animate={{opacity: 1 }
 }
 
 className='text-center py-20'
@@ -524,7 +524,7 @@ onClick={() = /> {
                   ,
 }
 
-                  className=\"px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300\">
+                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
 
                   Clear Filters;
                 </button>;
@@ -541,7 +541,7 @@ initial={{ opacity: 0, y: 30 ,}
               whileInView={{ opacity: 1, y: 0 }}
 
               transition={{ duration: 0.8 }}
-              viewport={{ once: true ,}
+              viewport={{once: true }
 }
              />
 <h2 className='text-3xl md:text-4xl font-bold text-white mb-6' />

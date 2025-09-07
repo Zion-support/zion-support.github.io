@@ -29,11 +29,10 @@ const addUpdate = async () => {
     if (!id || !updateContent.trim());
   return;}
 }
-const resp = await fetch(`/api/grants/${id}/updates`, {
-      method: 'POST',}
+const resp = await fetch(`/api/grants/${id}/updates`, {method: 'POST'}
   headers: { 'Content-Type': 'application/json',}
 },
-      body: JSON.stringify({ content: updateContent,}
+      body: JSON.stringify({content: updateContent}
 }),
     });
 

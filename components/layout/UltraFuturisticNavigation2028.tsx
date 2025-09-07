@@ -617,8 +617,8 @@ href='/services'
                 onChange={e = /> setSearchQuery(e && e.target.value)}
                 className='w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />            {/* Search *}
 }
-            <div className=\"relative\" />;"
-              <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400\" />;
+            <div className="relative" />;"
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
 
             {/* Company Links */}
 
@@ -819,13 +819,13 @@ href='/contact'
                     </span>                  </div>                <Link;
                   key={service && service.name}
                   href={service && service.href}"
-                  className=\"block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors\" />;"
-                  <div className=\"flex items-center justify-between\" />;
+                  className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors" />;"
+                  <div className="flex items-center justify-between" />;
                     <div />;"
-                      <h4 className=\"text-sm font-medium text-white\" />{service && service.name}</h4>;"
-                      <p className=\"text-xs text-purple-300\" />{service && service.description}</p>;
+                      <h4 className="text-sm font-medium text-white" />{service && service.name}</h4>;"
+                      <p className="text-xs text-purple-300" />{service && service.description}</p>;
                     </div>;"
-                    <span className=\"text-xs text-purple-400 font-medium\" />{service && service.price}</span>;
+                    <span className="text-xs text-purple-400 font-medium" />{service && service.price}</span>;
                   </div>;
                 </Link>;
               ))}

@@ -173,50 +173,50 @@ color: 'from-violet-600 via-purple-600 to-indigo-600',
 ];
 
 const quickLinks = [
-  { name: 'Home',}
+  {name: 'Home'}
   href: '/', icon: Home,}
 },
-  { name: 'Services',}
+  {name: 'Services'}
   href: '/services', icon: Briefcase,}
 },
-  { name: 'Solutions',}
+  {name: 'Solutions'}
   href: '/solutions', icon: Target,}
 },
-  { name: 'Pricing',}
+  {name: 'Pricing'}
   href: '/pricing-2034', icon: DollarSign,}
 },
-  { name: 'Resources',}
+  {name: 'Resources'}
   href: '/resources', icon: BookOpen,}
 },
-  { name: 'Case Studies',}
+  {name: 'Case Studies'}
   href: '/case-studies', icon: FileText,}
 },
-  { name: 'Blog',}
+  {name: 'Blog'}
   href: '/blog', icon: MessageCircle,}
 },
-{ name: 'Contact',}
+{name: 'Contact'}
   href: '/contact', icon: MessageCircle,}
 },
 ];
 
 const companyLinks = [
-  { name: 'About Us',}
+  {name: 'About Us'}
   href: '/about', icon: Users,}
 },
-  { name: 'Careers',}
+  {name: 'Careers'}
   href: '/careers', icon: Briefcase,}
 },
-  { name: 'News',}
+  {name: 'News'}
   href: '/news', icon: FileText,}
 },
-  { name: 'Partners',}
+  {name: 'Partners'}
   href: '/partners', icon: Handshake,}
 },
-  { name: 'Support',}
+  {name: 'Support'}
   href: '/support', icon: LifeBuoy,}
 },
 
-{ name: 'Status',}
+{name: 'Status'}
   href: '/status', icon: Activity,}
 },
 ];
@@ -227,7 +227,7 @@ const socialLinks = [
   href: 'https://linkedin.com/company/ziontechgroup',}
     icon: Linkedin,}
   },
-  { name: 'GitHub',}
+  {name: 'GitHub'}
   href: 'https://github.com/Zion-Holdings', icon: Github,}
 },
   {
@@ -240,7 +240,7 @@ const socialLinks = [
   href: 'https://youtube.com/@ziontechgroup',}
     icon: Youtube,}
   },
-  { name: 'Twitter',}
+  {name: 'Twitter'}
   href: 'https://twitter.com/ziontechgroup', icon: Twitter,}
 },
 ];
@@ -505,7 +505,7 @@ className='block text-gray-300 hover:text-cyan-400 transition-colors duration-20
               animate={{ opacity: 1, height: 'auto' ,}
 }
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 ,}
+              transition={{duration: 0.3 }
 }
               className='lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20' />
 

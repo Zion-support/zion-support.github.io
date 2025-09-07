@@ -6,7 +6,7 @@ export default async function handler(
 res: NextApiResponse;
 ) {
   if (req.method !== 'POST')}
-    return res.status(405).json({ error: 'Method not allowed',}
+    return res.status(405).json({error: 'Method not allowed'}
 });
 
 const { moduleTitle, moduleContent } = req.body || {},
@@ -26,11 +26,10 @@ const prompt = `Summarize the following module for a founder preparing to deploy
 const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
   messages: [
-{
-          role: 'system',}
+{role: 'system'}
   content: 'You are a concise, practical course assistant.',}
         },
-        { role: 'user',}
+        {role: 'user'}
   content: prompt,}
 },
       ],
@@ -38,7 +37,7 @@ const completion = await client.chat.completions.create({
     });
 
 const text = completion.choices?.[0]?.message?.content ?? '';
-    return res.status (200).json ({ summary: text.trim (),}
+    return res.status (200).json ({summary: text.trim ()}
 });
   } catch (err) {}
   }

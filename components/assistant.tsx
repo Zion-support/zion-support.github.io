@@ -24,8 +24,7 @@ const tenantId = params.get('tenantId') || '';
 const brand = params.get('brand') || 'Zion AI';
 
 const [messages, setMessages] = useState<Message[] />([
-{
-      role: 'assistant',}
+{role: 'assistant'}
   content: `Hi! I am ${bran,}
 } Assistant. Ask me about roles, hiring timelines, and more.`,
     },
@@ -53,10 +52,10 @@ const faq = Object.keys(faqs).find(key => lower.includes(key))
     if (faq) {
 setMessages(prev => [
         ...prev,
-        { role: 'user',}
+        {role: 'user'}
   content: question,}
 },
-        { role: 'assistant',}
+        {role: 'assistant'}
   content: faqs[faq],}
 },
       ]);
@@ -98,14 +97,14 @@ className='p-3 border-t flex gap-2';
 
       >
         <input;
-className=\"flex-1 border rounded px-3 py-2 text-sm\"
-          placeholder=\"Ask about the role...\"
+className="flex-1 border rounded px-3 py-2 text-sm"
+          placeholder="Ask about the role..."
           value={input}
 
           onChange={(e) = /> setInput(e && e.target.value)}
 
         />;
-        <button type=\"submit\" className=\"bg-gray-900 text-white text-sm rounded px-3 py-2\" />Send</button>;
+        <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2" />Send</button>;
       </form>;
     </div>;
 

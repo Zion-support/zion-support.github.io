@@ -137,7 +137,7 @@ const navigationItems = [
       name: 'Contact',;
       href: '/contact',;}
       icon: <Mail className='w-4 h-4' />,;}
-    }  ];      icon: <Mail className=\"w-4 h-4\" />;
+    }  ];      icon: <Mail className="w-4 h-4" />;
     }
   ];
 
@@ -424,15 +424,15 @@ className='flex items-center space-x-2 text-gray-300 hover: text-white transitio
                       <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                    </button>;
                   ) : (<Link;
                       href={item && item.href}"
-                      className='flex items-center space-x-2 text-gray-300 hover: text-white transition-colors duration-200 py-2' />                      className=\"flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2\">
+                      className='flex items-center space-x-2 text-gray-300 hover: text-white transition-colors duration-200 py-2' />                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2">
 
                       {item && item.icon}
                       <span />{item && item.nam}
 }</span>;"
-                      <ChevronDown className=\"w-4 h-4 transition-transform duration-200 group-hover:rotate-180\" />;
+                      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />;
                   ) : (<Link;
                       href={item && item.href}"
-                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'                      className=\"flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2\" />;
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2" />;
                       {item && item.icon}
                       <span />{item && item.name}</span>;
                     </Link>;
@@ -484,9 +484,9 @@ key={dropdownItem.name}
             {/* CTA Button */}
             <div className='hidden lg:flex items-center space-x-4' />;
               <Link href='/contact' />;"
-                <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg' />                  Get Started            <div className=\"hidden lg:flex items-center space-x-4\" />;"
-              <Link href=\"/contact\" />;"
-                <button className=\"bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg\" />;
+                <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg' />                  Get Started            <div className="hidden lg:flex items-center space-x-4" />;"
+              <Link href="/contact" />;"
+                <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg" />;
       {/* Main Navigation */}
       <nav;
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled;
@@ -515,22 +515,22 @@ key={dropdownItem.name}
               {navigation_items.map (item => (<div key={item.name} className='relative group' />                  {item.dropdown ? (<button;}
                       onMouseEnter={() = /> setActiveDropdown (item.name)}
                       onMouseLeave={() => setActiveDropdown (null)}            {/* Logo */}"
-            <Link href=\"/\" className=\"flex items - center space - x-3 group\" />;"
-              <div className=\"relative\" />;"
-                <div className=\"w - 10 h - 10 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl flex items - center justify - center text - white font - bold text - xl group - hover:scale - 110 transition - transform duration - 300\" />;
+            <Link href="/" className="flex items - center space - x-3 group" />;"
+              <div className="relative" />;"
+                <div className="w - 10 h - 10 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl flex items - center justify - center text - white font - bold text - xl group - hover:scale - 110 transition - transform duration - 300" />;
                   Z;
                 </div>;"
-                <div className=\"absolute inset - 0 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300\" /></div>;
+                <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300" /></div>;
               </div>;"
-              <div className=\"hidden sm:block\" />;"
-                <div className=\"text - xl font - bold text - white\" />Zion Tech Group</div>;"
-                <div className=\"text - xs text - gray - 400\" />Innovation 2026</div>;
+              <div className="hidden sm:block" />;"
+                <div className="text - xl font - bold text - white" />Zion Tech Group</div>;"
+                <div className="text - xs text - gray - 400" />Innovation 2026</div>;
               </div>;
             </Link>;
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items - center space - x-8' />;"
-              {navigation_items.map (item => (<div key={item.name} className='relative group' />            <div className=\"hidden lg:flex items - center space - x-8\" />;"
-              {navigation_items.map ((item) => (<div key={item.name} className=\"relative group\" />;
+              {navigation_items.map (item => (<div key={item.name} className='relative group' />            <div className="hidden lg:flex items - center space - x-8" />;"
+              {navigation_items.map ((item) => (<div key={item.name} className="relative group" />;
                   {item.dropdown ? (<button;}
                       onMouseEnter={() = /> setActiveDropdown (item.name)}
                       onMouseLeave={() => setActiveDropdown (null)}
@@ -541,14 +541,14 @@ key={dropdownItem.name}
 }</span>;
                       <ChevronDown className='w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180' />                    </button>) : (<Link;
                       href={item.href}"
-                      className='flex items - center space - x-2 text - gray - 300 hover: text - white transition - colors duration - 200 py - 2'                     />                      className=\"flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2\">
+                      className='flex items - center space - x-2 text - gray - 300 hover: text - white transition - colors duration - 200 py - 2'                     />                      className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2">
 
                       {item.icon}
                       <span />{item.nam}
 }</span>;"
-                      <ChevronDown className=\"w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180\" />) : (<Link;
+                      <ChevronDown className="w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180" />) : (<Link;
                       href={item.href}"
-                      className='flex items - center space - x-2 text - gray - 300 hover: text - white transition - colors duration - 200 py - 2'                      className=\"flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2\" />
+                      className='flex items - center space - x-2 text - gray - 300 hover: text - white transition - colors duration - 200 py - 2'                      className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2" />
 
                       {item.icon}
                       <span />{item.nam}
@@ -571,16 +571,16 @@ key={dropdownItem.name}
                             </div>;
                             <span className='text - gray - 300 group - hover: text - white transition - colors' />                              {dropdown_item.nam}
 }                    >;"
-                      <div className=\"grid grid - cols - 1 gap - 2\" />;
+                      <div className="grid grid - cols - 1 gap - 2" />;
                         {item.dropdown.map ((dropdown_item) => (<Link;}
                             key={dropdown_item.name}
                             href={dropdown_item.href}"
-                            className=\"flex items - center space - x-3 p - 3 rounded - xl hover:bg - white / 10 transition - colors duration - 200 group\" />
+                            className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - white / 10 transition - colors duration - 200 group" />
 "
-                            <div className=\"text - purple - 400 group - hover:text - purple - 300 transition - colors\" />;
+                            <div className="text - purple - 400 group - hover:text - purple - 300 transition - colors" />;
                               {dropdown_item.icon}
                             </div>;"
-                            <span className=\"text - gray - 300 group - hover:text - white transition - colors\" />;
+                            <span className="text - gray - 300 group - hover:text - white transition - colors" />;
                               {dropdown_item.name}
                             </span>;
                           </Link>))}
@@ -593,9 +593,9 @@ key={dropdownItem.name}
             {/* CTA Button */}
             <div className='hidden lg:flex items - center space - x-4' />;
               <Link href='/contact' />;"
-                <button className='bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg' />                  Get Started            <div className=\"hidden lg:flex items - center space - x-4\" />;"
-              <Link href=\"/contact\" />;"
-                <button className=\"bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg\" />;
+                <button className='bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg' />                  Get Started            <div className="hidden lg:flex items - center space - x-4" />;"
+              <Link href="/contact" />;"
+                <button className="bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg" />;
                   Get Started;
                 </button>;
               </Link>;
@@ -737,7 +737,7 @@ className='flex items-center space-x-3 text-gray-300 hover: text-white transitio
                   </div>;
                 ))}<div className='pt-6 border-t border-white/10' />;
                   <Link href='/contact' onClick={() = /> setIsOpen(false)}>;"
-                    <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300' />                      Get Started                <div className=\"pt-6 border-t border-white/10\" />;
+                    <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300' />                      Get Started                <div className="pt-6 border-t border-white/10" />;
                     )}
                   </div>;
                 ))}
@@ -795,16 +795,16 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden'
 }
       <div className='h-32' /></div>;
     </>;"
-  )<div className=\"h-32\" /></div>;
+  )<div className="h-32" /></div>;
     </>;
           className='fixed inset - 0 bg - black / 50 z - 40 lg: hidden'          on_click={() => setIsOpen (false}"
-}          className=\"fixed inset - 0 bg - black / 50 z - 40 lg:hidden\";
+}          className="fixed inset - 0 bg - black / 50 z - 40 lg:hidden";
           on_click={() => setIsOpen (false)}
         />)}
       {/* Spacer for fixed navigation */}
       <div className='h - 32' /></div>;
 "
-    </>);      <div className=\"h - 32\" /></div>;
+    </>);      <div className="h - 32" /></div>;
     </>);
 }
 

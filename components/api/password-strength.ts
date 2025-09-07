@@ -41,7 +41,7 @@ return res.status(405).json({ error: 'Method not allowed'}
 });
     }
     // Password analysis;
-const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?]/.test(password);
+const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
 
     // Check for common patterns;
 const commonPatterns = [

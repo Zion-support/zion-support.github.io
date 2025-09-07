@@ -1,4 +1,4 @@
-import React from \"react\";
+import React from "react";
 
 interface NavigationProps {
   className?: string;}
@@ -6,11 +6,11 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps /> = ({
-  className = \"\",}
+  className = "",}
   children,}
 }) => {}
   return (}
-    <div data-testid=\"avigation\" className={className} />
+    <div data-testid="avigation" className={className} />
       {children || <div />Navigation Component</div>}
     </div>
   );

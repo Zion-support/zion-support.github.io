@@ -36,13 +36,13 @@ export default function ChangelogPage(): any ({ content, generatedAt }: Props) {
       {content ? (<pre className='mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm' />;}
           {content}
         </pre>;
-      ) : (<div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600' />          No changelog generated yet.      {generatedAt && (<p className=\"mt-2 text-sm text-gray-600\" />Generated: {generatedA,}
+      ) : (<div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600' />          No changelog generated yet.      {generatedAt && (<p className="mt-2 text-sm text-gray-600" />Generated: {generatedA,}
 }</p>;
       )}
-      {content ? (<pre className=\"mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm\" />;}
+      {content ? (<pre className="mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm" />;}
 {content}
         </pre>;
-      ) : (<div className=\"mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600\" />;
+      ) : (<div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600" />;
           No changelog generated yet.;
         </div>;
       )}

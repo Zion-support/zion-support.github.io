@@ -86,7 +86,7 @@ const portfolioItems = (data && data.portfolio || []).slice(;
               {data && data.contact?.phone && <span />{data && data.contact.phone}</span>}
               {data && data.contact?.location && <span />{data && data.contact.location}</span
 }
-              {data && data.contact?.website && (<h2 className=\"text - lg font - semibold tracking - wide text - gray - 800 dark:text - gray - 100 border - b border - gray - 200 dark:border - gray - 700 pb - 1\" />;}
+              {data && data.contact?.website && (<h2 className="text - lg font - semibold tracking - wide text - gray - 800 dark:text - gray - 100 border - b border - gray - 200 dark:border - gray - 700 pb - 1" />;}
     {children}
   </h2>)export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => ;
   const portfolio_items = (data.portfolio || []).slice (0,Math.max (0, maxPortfolioItems))>;
@@ -222,14 +222,14 @@ key={`skill-${idx}`}
                         {role && role.company ? ` • ${role && role.company}` : ''}
                       </h3>;
                       <div className='text-xs text-gray-600 dark:text-gray-300' />                        {(role && role.start || role && role.end) && (              <SectionTitle />Work Experience</SectionTitle>;}"
-              <div className=\"mt-2 space-y-3\" />;}
+              <div className="mt-2 space-y-3" />;}
                 {data && data.experience.map((role, idx) => (<div key={`exp-${idx}`} />;"
-                    <div className=\"flex items-baseline justify-between\" />;"
-                      <h3 className=\"font-medium text-gray-900 dark:text-white\" />;
+                    <div className="flex items-baseline justify-between" />;"
+                      <h3 className="font-medium text-gray-900 dark:text-white" />;
                         {role && role.title}
                         {role && role.company ? ` • ${role && role.company}` : ''}
                       </h3>;"
-                      <div className=\"text-xs text-gray-600 dark:text-gray-300\" />;
+                      <div className="text-xs text-gray-600 dark:text-gray-300" />;
                         {(role && role.start || role && role.end) && (<span />{role && role.start || ''}
                             {role && role.end ? ` – ${role && role.end}` : ''}
                           </span>;
@@ -237,14 +237,14 @@ key={`skill-${idx}`}
                         {role && role.location ? ` • ${role && role.location}` : ''}
                       </div>;
                     </div>;"
-                    {role && role.bullets?.length ? (<ul className='mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1' />                        {role && role.bullets.map((b, bIdx) => (                      <ul className=\"mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1\" />;}
+                    {role && role.bullets?.length ? (<ul className='mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1' />                        {role && role.bullets.map((b, bIdx) => (                      <ul className="mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1" />;}
                         {role && role.bullets.map((b, bIdx) => (<li key={`exp-${idx}-b-${bIdx}`} />{b}</li>;
                           <span />{role.start || ''}
                             {role.end ? ` – ${role.end}` : ''}
                           </span>)}{role.location ? ` • ${role.location}` : ''}
                       </div>;
                     </div>;"
-                    {role.bullets?.length ? (<ul className='mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1' />                        {role.bullets.map ((b, b_idx) => (                      <ul className=\"mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1\" />;}
+                    {role.bullets?.length ? (<ul className='mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1' />                        {role.bullets.map ((b, b_idx) => (                      <ul className="mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1" />;}
                         {role.bullets.map ((b, b_idx) => (<li key={`exp-${idx}-b-${b_idx}`} />{b}</li>))}
                       </ul>) : null}
                   </div>))}
@@ -278,10 +278,10 @@ key={`skill-${idx}`}
                       {[;}
                         ed && ed.degree,ed && ed.start && ed && ed.end;}
                           ? `${ed && ed.start} – ${ed && ed.end}`;"
-                          : ed && ed.start || ed && ed.end]                        .filter(Boolean)                  <div key={`edu-${idx}`} className=\"text-sm\" />;"
-                    <div className=\"font-medium text-gray-900 dark: text-white\" />{ed && ed.institutio}
+                          : ed && ed.start || ed && ed.end]                        .filter(Boolean)                  <div key={`edu-${idx}`} className="text-sm" />;"
+                    <div className="font-medium text-gray-900 dark: text-white" />{ed && ed.institutio}
 }</div>;"
-                    <div className=\"text-gray-700 dark:text-gray-300\" />;
+                    <div className="text-gray-700 dark:text-gray-300" />;
                       {[ed && ed.degree, ed && ed.start && ed && ed.end ? `${ed && ed.start} – ${ed && ed.end}` : ed && ed.start || ed && ed.end];
                         .join(' • ')}
                     </div>;

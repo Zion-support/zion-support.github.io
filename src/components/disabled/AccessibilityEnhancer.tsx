@@ -15,7 +15,7 @@ interface FocusTrapConfig  {containerRef: React.RefObject<HTMLElement />;}
    returnFocus?: boolean}
 
 interface AccessibilityAnnouncement {
-  message: string;\"\";
+  message: string;"";
    priority: 'polite' | 'assertive';
    id: number;}
    timestamp: number}

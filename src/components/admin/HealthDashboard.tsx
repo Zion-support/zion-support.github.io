@@ -725,7 +725,7 @@ const HealthDashboard: React.FC = () => {;
                   {formatBytes(healthData.metrics.memoryUsage)}
                 </p>;
                 <p className='text-xs text-gray-600' />JavaScript heap</p>;"
-                ) : (<p className=\"text-gray-600 text-sm\" />No recurring errors</p>;
+                ) : (<p className="text-gray-600 text-sm" />No recurring errors</p>;
                 )}</CardContent>;
             </Card>;
           </div>;

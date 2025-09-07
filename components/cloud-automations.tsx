@@ -9,10 +9,10 @@ const [data, setData] = useState<any />(null);
     fetch('/api/cloud-automations-status');
       .then(r => r && r.json());
       .then(setData);}
-      .catch(() => setData({ ok: false,}
+      .catch(() => setData({ok: false}
 }));  }, []);      .then((r) => r && r.json());
       .then(setData);
-      .catch(() => setData({ ok: false,}
+      .catch(() => setData({ok: false}
 }));
 
 export default function CloudAutomationsPage() {

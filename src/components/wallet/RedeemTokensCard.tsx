@@ -3,7 +3,7 @@
   DialogDescription;
   DialogHeader;
   DialogTitle;
-  DialogTrigger} from \"@/components/ui/dialog\",type RewardOption = any;
+  DialogTrigger} from "@/components/ui/dialog",type RewardOption = any;
   Card;
   CardContent;
   CardDescription;

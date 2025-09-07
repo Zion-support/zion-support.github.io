@@ -49,35 +49,35 @@ if ( {) {$2;}
           error.message ||;}
           'There was an error generating your enhanced profile. Please try again.',variant: 'destructive'})} finally {setIsGenerating (false)}
  
-})if (error) {throw new Error(error.message)name: user?.displayName || \"\",title: \"\",bio: \"\",location: \"\",skills: \"\",hourlyRate: \"\",availability: \"available\",enhancedProfile: true}
+})if (error) {throw new Error(error.message)name: user?.displayName || "",title: "",bio: "",location: "",skills: "",hourlyRate: "",availability: "available",enhancedProfile: true}
 }),// Handle adding skill tags;
 
 const handleAddSkill = () => ;"
-  const skillInput = form.getValues(\"skills\"),if (skillInput && !skillTags.includes(skillInput)) {setSkillTags([...skillTags, skillInput]),form.setValue(\"skills\", \"\")}
+  const skillInput = form.getValues("skills"),if (skillInput && !skillTags.includes(skillInput)) {setSkillTags([...skillTags, skillInput]),form.setValue("skills", "")}
   },// Handle removing skill tags;
 
 const handleRemoveSkill = (setSkillTags(skillTags.filter((s) => s !== skill),) => {
   return $3;}
 }
 },// Handle key press in skills input (add on enter;"
-  const handleSkillKeyPress = (if (e.key === \"Enter\") {e.preventDefault(),handleAddSkill()export function TalentRegistrationForm() {// Remove the useToast() hook since we're importing the toast function directly;
+  const handleSkillKeyPress = (if (e.key === "Enter") {e.preventDefault(),handleAddSkill()export function TalentRegistrationForm() {// Remove the useToast() hook since we're importing the toast function directly;
 ) => {
   return $3;}
 }
 const { user } = useAuth(),const [isSubmitting, setIsSubmitting] = useState(false),const [skillTags, setSkillTags] = useState<string[] />([]),const [isGenerating, setIsGenerating] = useState(false),const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null />(null),const [uploadedAvatar, setUploadedAvatar] = useState<string | null />(null),// Initialize form with default values;
 "
-const form = useForm<TalentFormValues />({resolver: zodResolver(talentProfileSchema) as any,defaultValues: {name: user?.displayName || \"\",title: \"\",bio: \"\",location: \"\",skills: \"\",hourlyRate: \"\",availability: \"available\",enhancedProfile: true}
+const form = useForm<TalentFormValues />({resolver: zodResolver(talentProfileSchema) as any,defaultValues: {name: user?.displayName || "",title: "",bio: "",location: "",skills: "",hourlyRate: "",availability: "available",enhancedProfile: true}
 }),// Handle adding skill tags;
 
 const handleAddSkill = () => ;"
-  const skillInput = form.getValues(\"skills\"),if (skillInput && !skillTags.includes(skillInput)) {setSkillTags([...skillTags, skillInput]),form.setValue(\"skills\", \"\")}
+  const skillInput = form.getValues("skills"),if (skillInput && !skillTags.includes(skillInput)) {setSkillTags([...skillTags, skillInput]),form.setValue("skills", "")}
   },// Handle removing skill tags;
 
 const handleRemoveSkill = (setSkillTags(skillTags.filter((s) => s !== skill),) => {
   return $3;}
 }
 },// Handle key press in skills input (add on enter;"
-  const handleSkillKeyPress = (if (e.key === \"Enter\") {e.preventDefault(),handleAddSkill()) => {
+  const handleSkillKeyPress = (if (e.key === "Enter") {e.preventDefault(),handleAddSkill()) => {
   return $3;}
 }
   },// Handle avatar upload;
@@ -89,13 +89,13 @@ const handleAvatarUpload = (const file = e.target.files?.[0],if (file) ;) => {
   },// Generate enhanced profile with AI;
 
 const generateEnhancedProfile = async () => ;"
-  const formData = form.getValues(),if (!formData.bio || formData.bio.length < 20) {toast({title: \"More information needed\",description: \"Please provide at least a detailed bio before generating enhanced content.}
+  const formData = form.getValues(),if (!formData.bio || formData.bio.length < 20) {toast({title: "More information needed",description: "Please provide at least a detailed bio before generating enhanced content.}
 });
   return;
   },// Generate enhanced profile with AI;
 
 const generateEnhancedProfile = async () => ;"
-  const formData = form.getValues(),if (!formData.bio || formData.bio.length < 20) {toast({title: \"More information needed\",description: \"Please provide at least a detailed bio before generating enhanced content.}
+  const formData = form.getValues(),if (!formData.bio || formData.bio.length < 20) {toast({title: "More information needed",description: "Please provide at least a detailed bio before generating enhanced content.}
 });
   return;
     }try {setIsGenerating(true),// Call the Supabase Edge Function;}
@@ -105,11 +105,11 @@ const { data, error } = await supabase.functions.invoke('talent-profile-enhancer
         }
       }),if (error) {throw new Error(error.message)}// Check if data exists before type assertion;
       if (data && typeof data === 'object') {}} catch (error: any) {logErrorToProduction('Error generating enhanced profile:', { data: error}"
-}),toast({title: \"Generation failed\",description: error.message || \"There was an error generating your enhanced profile. Please try again.\",variant: \"destructive\"})} finally {setIsGenerating(false)}
+}),toast({title: "Generation failed",description: error.message || "There was an error generating your enhanced profile. Please try again.",variant: "destructive"})} finally {setIsGenerating(false)}
  
 },// Apply generated content to form;
 "
-const applyGeneratedContent = (if (generatedContent) {form.setValue(\"bio\", generatedContent.summary),// Extract all skills from categorized skills and properly type cast them;
+const applyGeneratedContent = (if (generatedContent) {form.setValue("bio", generatedContent.summary),// Extract all skills from categorized skills and properly type cast them;
 
 const allCategorizedSkills = generatedContent.categorizedSkills;
   const newSkills: string[] = [],// Safely extract and flatten skills from each category;) => {
@@ -141,8 +141,8 @@ interface CategorizedSkills  {programming: string[];
   platforms: string[];
   softSkills: string[];}
   other: string[];}"
-})\";"
-availability: z && z.enum ([\"available\", \"limited\", \"unavailable\"])enhancedProfile: z && z.boolean () .default (true
+})";"
+availability: z && z.enum (["available", "limited", "unavailable"])enhancedProfile: z && z.boolean () .default (true
 })type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';}//Handle removing skill tags const handleRemoveSkill = (setSkillTags (skillTags && skillTags.filter ( (s) => s !== skill) ,) => {
   return $3;}
 }
@@ -254,27 +254,27 @@ const getCategoryColor = (switch (category) {case 'programming':;
 }
     }},// Send notification email;
 "
-const sendEnhancementNotification = async (userId: string, email: string) => {try {await supabase.functions.invoke('send-email', {body: {to: email,subject: \"Your Zion Talent Profile Has Been Enhanced\",html: `;"
-          <div style=\"font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;\" />;"
-            <h2 style=\"color: #6D28D9;\" />Profile Enhancement Complete</h2>;
+const sendEnhancementNotification = async (userId: string, email: string) => {try {await supabase.functions.invoke('send-email', {body: {to: email,subject: "Your Zion Talent Profile Has Been Enhanced",html: `;"
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;" />;"
+            <h2 style="color: #6D28D9;" />Profile Enhancement Complete</h2>;
             <p />Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
             <p />We've added a professional summary and categorized your skills to help you stand out.</p>;
             <p />You can review and edit these enhancements in your profile dashboard.</p>;}"
-            <div style=\"margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;\" />;}"
-              <p style=\"color: #666; font-size: 12px;\" />© ${new Date().getFullYear()} Zion Marketplace</p>;
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;" />;}"
+              <p style="color: #666; font-size: 12px;" />© ${new Date().getFullYear()} Zion Marketplace</p>;
             </div>;
           </div>;
   // Handle form submission;
 
 const onSubmit = async (values: TalentFormValues,) => {if (skillTags.length === 0) {toast({to: email,subject: 'Your Zion Talent Profile Has Been Enhanced',
   html: `;"
-          <div style=\"font - family: Arial, sans - serif; max - width: 600px; margin: 0 auto;\" />;"
-            <h2 style=\"color: #6D28D9;\" />Profile Enhancement Complete</h2>;
-            <p  /> Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
-            <p  /> We've added a professional summary and categorized your skills to help you stand out.</p>;
-            <p  /> You can review and edit these enhancements in your profile dashboard.</p>;}"
-            <div style=\"margin - top: 30px; padding - top: 20px; border - top: 1px solid #eee;\" />;}"
-              <p style=\"color: #666; font - size: 12px;\" />© ${new Date ().getFullYear ()} Zion Marketplace</p>;
+          <div style="font - family: Arial, sans - serif; max - width: 600px; margin: 0 auto;" />;"
+            <h2 style="color: #6D28D9;" />Profile Enhancement Complete</h2>;
+            <p /> Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
+            <p /> We've added a professional summary and categorized your skills to help you stand out.</p>;
+            <p /> You can review and edit these enhancements in your profile dashboard.</p>;}"
+            <div style="margin - top: 30px; padding - top: 20px; border - top: 1px solid #eee;" />;}"
+              <p style="color: #666; font - size: 12px;" />© ${new Date ().getFullYear ()} Zion Marketplace</p>;
             </div>;
           </div>;
           `}})} catch (error) {logErrorToProduction ('Failed to send notification email:', {data: error})}
@@ -292,12 +292,12 @@ if ( {) {$2;}
 })return;
     }
     setIsSubmitting (true)try {// For actual implementation with Supabase;}"
-      if (!user?.id) {throw new Error('User not authenticated')title: \"Skills required\",description: \"Please add at least one skill to your profile.\",variant: \"destructive}
+      if (!user?.id) {throw new Error('User not authenticated')title: "Skills required",description: "Please add at least one skill to your profile.",variant: "destructive}
 }),return;
     }setIsSubmitting(true),try {// For actual implementation with Supabase;}"
-      if (!user?.id) {throw new Error(\"User not authenticated\")}})setIsSubmitting(true),try {// For actual implementation with Supabase;}"
-      if (!user?.id) {throw new Error(\"User not authenticated\")}// Enhance profile if not already done;"
-      let finalSummary = \"\",let finalSkills = skillTags,if (values.enhancedProfile && !generatedContent) {try ;}
+      if (!user?.id) {throw new Error("User not authenticated")}})setIsSubmitting(true),try {// For actual implementation with Supabase;}"
+      if (!user?.id) {throw new Error("User not authenticated")}// Enhance profile if not already done;"
+      let finalSummary = "",let finalSkills = skillTags,if (values.enhancedProfile && !generatedContent) {try ;}
   const { data: aiData}
 } = await supabase.functions.invoke('talent-profile-enhancer', {body: {talentData: {name: values.name,title: values.title,bio: values.bio,skills: skillTags,location: values.location;}
   },// Handle form submission;
@@ -309,12 +309,12 @@ const onSubmit = async (values: TalentFormValues,) => {if (skillTags && skillTag
     }setIsSubmitting(true)try {// For actual implementation with Supabase;}
       if (!user?.id) {throw new Error('User not authenticated')}// Enhance profile if not already done;
       let finalSummary = '';"
-      let finalSkills  = skillTags;if (values && values.enhancedProfile && !generatedContent) {const onSubmit = async (values: TalentFormValues) => {if (skillTags.length === 0) {toast({title: \"Skills required\",description: \"Please add at least one skill to your profile.\",variant: \"destructive}
+      let finalSkills  = skillTags;if (values && values.enhancedProfile && !generatedContent) {const onSubmit = async (values: TalentFormValues) => {if (skillTags.length === 0) {toast({title: "Skills required",description: "Please add at least one skill to your profile.",variant: "destructive}
 });
   return;
     }setIsSubmitting(true),try {// For actual implementation with Supabase;}"
-      if (!user?.id) {throw new Error(\"User not authenticated\")}// Enhance profile if not already done;"
-      let finalSummary = \"\",let finalSkills = skillTags,if (values.enhancedProfile && !generatedContent) {try ;}
+      if (!user?.id) {throw new Error("User not authenticated")}// Enhance profile if not already done;"
+      let finalSummary = "",let finalSkills = skillTags,if (values.enhancedProfile && !generatedContent) {try ;}
   const { data: aiData}
 } = await supabase && supabase.functions.invoke('talent-profile-enhancer',{body: {talentData: {name: values && values.name,title: values && values.title,bio: values && values.bio,skills: skillTags,location: values && values.location}
 }
@@ -361,10 +361,10 @@ if ( {) {$2;}
           }
         } catch (error) {logErrorToProduction('Error enhancing profile:', { data: error}
 }),// Continue with submission even if enhancement fails;"
-          finalSummary = \"\";
+          finalSummary = "";
         } catch (error) {logErrorToProduction('Error enhancing profile:', { data: error}
 }),// Continue with submission even if enhancement fails;"
-          finalSummary = \"\";
+          finalSummary = "";
         }
       } else if (generatedContent) {finalSummary = generatedContent.summary;}
       }// Get user email for notification;
@@ -375,7 +375,7 @@ const { data: userData}
       setTimeout((,) => {toast({title: 'Profile Created Successfully',
   description:;}
             'Your talent profile has been published and is now visible in the directory.';}"
-        })title: \"Profile Created Successfully\",description: \"Your talent profile has been published and is now visible in the directory.
+        })title: "Profile Created Successfully",description: "Your talent profile has been published and is now visible in the directory.
 }),// Send notification email if we have user email;
         if (userEmail && values.enhancedProfile && user?.id) {sendEnhancementNotification(user.id, userEmail)}setIsSubmitting(false)}, 1500)setIsSubmitting(false)}, 1500),// Here would be the actual code to save the profile to Supabase;
       /*;
@@ -470,8 +470,8 @@ import {Form;
   FormField;
   FormItem;}
   FormLabel;}"
-  FormMessage} from \"@/components/ui/form\",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from \"@/components/ui/card\",import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound  } from 'lucide-react';"
-import { toast } from \"@/components/ui/use-toast\",import { supabase } from \"@/integrations/supabase/client\",// Define form schema;
+  FormMessage} from "@/components/ui/form",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound  } from 'lucide-react';"
+import { toast } from "@/components/ui/use-toast",import { supabase } from "@/integrations/supabase/client",// Define form schema;
 
 const talentProfileSchema  = null;return (<div className='max-w-4xl mx-auto p-4 md:p-6' />;
       <Card className='bg-zion-blue-dark border-zion-blue-light' />;
@@ -511,13 +511,13 @@ const talentProfileSchema  = null;return (<div className='max-w-4xl mx-auto p-4 
                               <Input;
                                 className='pl - 10 bg - zion - blue border - zion - blue - light text - white';
                                 placeholder='Your full name';logErrorToProduction('Error creating profile:', { data: error}"
-}),toast({title: \"Error Creating Profile\",description: error.message || \"There was an error creating your profile. Please try again.\",variant: \"destructive}
+}),toast({title: "Error Creating Profile",description: error.message || "There was an error creating your profile. Please try again.",variant: "destructive}
 }),setIsSubmitting(false)// Get user email for notification;
 
 const { data: userData}
 } = await supabase.auth.getUser(),const userEmail = (userData as any).user?.email,// Create the talent profile;
       // In a real implementation, this would save to Supabase;"
-      setTimeout(() = /> {toast({title: \"Profile Created Successfully\",description: \"Your talent profile has been published and is now visible in the directory.}
+      setTimeout(() = /> {toast({title: "Profile Created Successfully",description: "Your talent profile has been published and is now visible in the directory.}
 }),// Send notification email if we have user email;
         if (userEmail && values.enhancedProfile && user?.id) {sendEnhancementNotification(user.id, userEmail)}setIsSubmitting(false)}, 1500),// Here would be the actual code to save the profile to Supabase;
       /*;
@@ -528,36 +528,36 @@ const { error } = await supabase;
           hourly_rate: Number(values.hourlyRate),availability_status: values.availability,// Other fields would be handled here;
         }),if (error) throw error,*/;
     } catch (error: any) {logErrorToProduction('Error creating profile:', { data: error}"
-}),toast({title: \"Error Creating Profile\",description: error.message || \"There was an error creating your profile. Please try again.\",variant: \"destructive\"})setIsSubmitting(false)}
+}),toast({title: "Error Creating Profile",description: error.message || "There was an error creating your profile. Please try again.",variant: "destructive"})setIsSubmitting(false)}
  ,"
-}return (<div className=\"max-w-4xl mx-auto p-4 md:p-6\" />;"
-      <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;
+}return (<div className="max-w-4xl mx-auto p-4 md:p-6" />;"
+      <Card className="bg-zion-blue-dark border-zion-blue-light" />;
         <CardHeader />;"
-          <CardTitle className=\"text-2xl text-white\" />Create Your Talent Profile</CardTitle>;"
-          <CardDescription className=\"text-zion-slate\" />;
+          <CardTitle className="text-2xl text-white" />Create Your Talent Profile</CardTitle>;"
+          <CardDescription className="text-zion-slate" />;
             Showcase your skills and experience to potential clients and employers.;
           </CardDescription>;
         </CardHeader>;
         <Form {...form} />;
           <form onSubmit={form.handleSubmit(onSubmit)} />;"
-            <CardContent className=\"space-y-8\" />;
+            <CardContent className="space-y-8" />;
               {/* Basic Information */}"
-              <div className=\"space-y-4\" />;"
-                <h3 className=\"text-lg font-medium text-white\" />Basic Information</h3>;"
-                <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\" />;"
-                  <div className=\"col-span-1\" />;
+              <div className="space-y-4" />;"
+                <h3 className="text-lg font-medium text-white" />Basic Information</h3>;"
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6" />;"
+                  <div className="col-span-1" />;
                     <FormField;
                       control={form.control}"
-                      name=\"name\";
+                      name="name";
                       render={({ field }: { field: any}
 }) = /> (<FormItem />;"
-                          <FormLabel className=\"text-zion-slate-light\" />Full Name</FormLabel>;
+                          <FormLabel className="text-zion-slate-light" />Full Name</FormLabel>;
                           <FormControl />;"
-                            <div className=\"relative\" />;"
-                              <UserRound className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4\" />;
+                            <div className="relative" />;"
+                              <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                               <Input;"
-                                className=\"pl-10 bg-zion-blue border-zion-blue-light text-white\";"
-                                placeholder=\"Your full name\";
+                                className="pl-10 bg-zion-blue border-zion-blue-light text-white";"
+                                placeholder="Your full name";
                                 {...field}
                               />;
                             </div>;
@@ -659,13 +659,13 @@ const { error } = await supabase;
                             className='w-full h-full object-cover';
                             loading='lazy'                          />;
       logErrorToProduction('Error creating profile:', { data: error}"
-}),toast({title: \"Error Creating Profile\",description: error.message || \"There was an error creating your profile. Please try again.\",variant: \"destructive}
+}),toast({title: "Error Creating Profile",description: error.message || "There was an error creating your profile. Please try again.",variant: "destructive}
 }),setIsSubmitting(false)// Get user email for notification;
 
 const { data: userData}
 } = await supabase.auth.getUser(),const userEmail = (userData as any).user?.email,// Create the talent profile;
       // In a real implementation, this would save to Supabase;"
-      setTimeout(() => {toast({title: \"Profile Created Successfully\",description: \"Your talent profile has been published and is now visible in the directory.}
+      setTimeout(() => {toast({title: "Profile Created Successfully",description: "Your talent profile has been published and is now visible in the directory.}
 }),// Send notification email if we have user email;
         if (userEmail && values.enhancedProfile && user?.id) {sendEnhancementNotification(user.id, userEmail)}setIsSubmitting(false)}, 1500),// Here would be the actual code to save the profile to Supabase;
       /*;
@@ -676,41 +676,41 @@ const { error } = await supabase;
           hourly_rate: Number(values.hourlyRate),availability_status: values.availability,// Other fields would be handled here;
         }),if (error) throw error,*/;
     } catch (error: any) {logErrorToProduction('Error creating profile:', { data: error}"
-}),toast({title: \"Error Creating Profile\",description: error.message || \"There was an error creating your profile. Please try again.\",variant: \"destructive\"})setIsSubmitting(false)}
+}),toast({title: "Error Creating Profile",description: error.message || "There was an error creating your profile. Please try again.",variant: "destructive"})setIsSubmitting(false)}
  ,"
-}return (<div className=\"max-w-4xl mx-auto p-4 md:p-6\" />;"
-      <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;
+}return (<div className="max-w-4xl mx-auto p-4 md:p-6" />;"
+      <Card className="bg-zion-blue-dark border-zion-blue-light" />;
         <CardHeader />;"
-          <CardTitle className=\"text-2xl text-white\" />Create Your Talent Profile</CardTitle>;"
-          <CardDescription className=\"text-zion-slate\" />;
+          <CardTitle className="text-2xl text-white" />Create Your Talent Profile</CardTitle>;"
+          <CardDescription className="text-zion-slate" />;
             Showcase your skills and experience to potential clients and employers.;
           </CardDescription>;
         </CardHeader>;
         <Form {...form} />;
           <form onSubmit={form.handleSubmit(onSubmit)} />;"
-            <CardContent className=\"space-y-8\" />;
+            <CardContent className="space-y-8" />;
               {/* Basic Information */}"
-              <div className=\"space-y-4\" />;"
-                <h3 className=\"text-lg font-medium text-white\" />Basic Information</h3>;"
-                <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\" />;"
-                  <div className=\"col-span-1\" />;
+              <div className="space-y-4" />;"
+                <h3 className="text-lg font-medium text-white" />Basic Information</h3>;"
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6" />;"
+                  <div className="col-span-1" />;
                     <FormField;
                       control={form.control}"
-                      name=\"name\";
+                      name="name";
                       render={({ field }: { field: any}
 }) = /> (<FormItem />;"
-                          <FormLabel className=\"text-zion-slate-light\" />Full Name</FormLabel>;
+                          <FormLabel className="text-zion-slate-light" />Full Name</FormLabel>;
                           <FormControl />;"
-                            <div className=\"relative\" />;"
-                              <UserRound className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4\" />;
+                            <div className="relative" />;"
+                              <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                               <Input;"
-                                className=\"pl-10 bg-zion-blue border-zion-blue-light text-white\";"
-                                placeholder=\"Your full name\";
+                                className="pl-10 bg-zion-blue border-zion-blue-light text-white";"
+                                placeholder="Your full name";
                                 {...field}
                               />;
                             </div>;
                           </FormControl>;"
-                          <FormMessage className=\"text-red-400\" />;
+                          <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}</div>;<label className='flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors' />;
                       <Upload className='mr-2 h-4 w-4' />;
@@ -719,103 +719,103 @@ const { error } = await supabase;
                         accept='image/*';
                         className='hidden';
                         onChange={handleAvatarUpload}                      />;"
-                          <FormMessage className=\"text-red-400\" />;
+                          <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
                     />;
                   </div>;"
-                  <div className=\"col-span-1\" />;
+                  <div className="col-span-1" />;
                     <FormField;
                       control={form.control}"
-                      name=\"title\";
+                      name="title";
                       render={({ field }: { field: any}
 }) = /> (<FormItem />;"
-                          <FormLabel className=\"text-zion-slate-light\" />Professional Title</FormLabel>;
+                          <FormLabel className="text-zion-slate-light" />Professional Title</FormLabel>;
                           <FormControl />;"
-                            <div className=\"relative\" />;"
-                              <Briefcase className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4\" />;
+                            <div className="relative" />;"
+                              <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                               <Input;"
-                                className=\"pl-10 bg-zion-blue border-zion-blue-light text-white\";"
-                                placeholder=\"e.g., Senior Software Developer\";
+                                className="pl-10 bg-zion-blue border-zion-blue-light text-white";"
+                                placeholder="e.g., Senior Software Developer";
                                 {...field}
                               />;
                             </div>;
                           </FormControl>;"
-                          <FormMessage className=\"text-red-400\" />;
+                          <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
                     />;
                   </div>;"
-                  <div className=\"col-span-1\" />;
+                  <div className="col-span-1" />;
                     <FormField;
                       control={form.control}"
-                      name=\"location\";
+                      name="location";
                       render={({ field }: { field: any}
 }) = /> (<FormItem />;"
-                          <FormLabel className=\"text-zion-slate-light\" />Location</FormLabel>;
+                          <FormLabel className="text-zion-slate-light" />Location</FormLabel>;
                           <FormControl />;"
-                            <div className=\"relative\" />;"
-                              <MapPin className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4\" />;
+                            <div className="relative" />;"
+                              <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                               <Input;"
-                                className=\"pl-10 bg-zion-blue border-zion-blue-light text-white\";"
-                                placeholder=\"City, State/Province, Country\";
+                                className="pl-10 bg-zion-blue border-zion-blue-light text-white";"
+                                placeholder="City, State/Province, Country";
                                 {...field}
                               />;
                             </div>;
                           </FormControl>;"
-                          <FormMessage className=\"text-red-400\" />;
+                          <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
                     />;
                   </div>;"
-                  <div className=\"col-span-1\" />;
+                  <div className="col-span-1" />;
                     <FormField;
                       control={form.control}"
-                      name=\"hourlyRate\";
+                      name="hourlyRate";
                       render={({ field }: { field: any}
 }) = /> (<FormItem />;"
-                          <FormLabel className=\"text-zion-slate-light\" />Hourly Rate (USD)</FormLabel>;
+                          <FormLabel className="text-zion-slate-light" />Hourly Rate (USD)</FormLabel>;
                           <FormControl />;"
-                            <div className=\"relative\" />;"
-                              <span className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate\" />$</span>;
+                            <div className="relative" />;"
+                              <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />$</span>;
                               <Input;"
-                                className=\"pl-8 bg-zion-blue border-zion-blue-light text-white\";"
-                                placeholder=\"e.g., 85\";
+                                className="pl-8 bg-zion-blue border-zion-blue-light text-white";"
+                                placeholder="e.g., 85";
                                 {...field}
                               />;
                             </div>;
                           </FormControl>;"
-                          <FormMessage className=\"text-red-400\" />;
+                          <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
                     />;
                   </div>;
                 </div>;
                 {/* Upload Avatar */}"
-                <div className=\"space-y-2\" />;"
-                  <FormLabel className=\"text-zion-slate-light\" />Profile Picture</FormLabel>;"
-                  <div className=\"flex items-center gap-6\" />;"
-                    <div className=\"relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light\" />;
+                <div className="space-y-2" />;"
+                  <FormLabel className="text-zion-slate-light" />Profile Picture</FormLabel>;"
+                  <div className="flex items-center gap-6" />;"
+                    <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light" />;
                       {uploadedAvatar ? (<AspectRatio ratio={1/1} />;
                           <img;
                             src={uploadedAvatar}"
-                            alt=\"Avatar preview\";"
-                            className=\"w-full h-full object-cover\";"
-                            loading=\"lazy\";
+                            alt="Avatar preview";"
+                            className="w-full h-full object-cover";"
+                            loading="lazy";
                           />;
                         </AspectRatio>;"
-                      ) : (<div className=\"flex items-center justify-center h-full\" />;"
-                          <UserRound className=\"h-10 w-10 text-zion-slate opacity-50\" />;
+                      ) : (<div className="flex items-center justify-center h-full" />;"
+                          <UserRound className="h-10 w-10 text-zion-slate opacity-50" />;
                         </div>;
                       )}
                     </div>;"
-                    <label className=\"flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors\" />;"
-                      <Upload className=\"mr-2 h-4 w-4\" />;
+                    <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors" />;"
+                      <Upload className="mr-2 h-4 w-4" />;
                       <span />Upload Photo</span>;
                       <input;"
-                        type=\"file\";"
-                        accept=\"image/*\";"
-                        className=\"hidden\";
+                        type="file";"
+                        accept="image/*";"
+                        className="hidden";
                         onChange={handleAvatarUpload}
                       />;
                     </label>;
@@ -847,7 +847,7 @@ const { error } = await supabase;
                     </div>;
                     <label className='flex items - center justify - center px - 4 py - 2 rounded - md bg - zion - purple hover:bg - zion - purple - dark text - white cursor - pointer transition - colors' />;
                       <Upload className='mr - 2 h - 4 w - 4' />;
-                      <span  /> Upload Photo</span>;
+                      <span /> Upload Photo</span>;
                       <input;
                         type='file';
                         accept='image/*';
@@ -860,16 +860,16 @@ const { error } = await supabase;
                     JPG, PNG, or GIF format.;
                   </p>;
                 </div>;"
-              </div>;<Separator className=\"bg-zion-blue-light/50\" />;
+              </div>;<Separator className="bg-zion-blue-light/50" />;
               {/* Bio Section */}"
-              <div className=\"space-y-4\" />;"
-                <h3 className=\"text-lg font-medium text-white\" />Professional Bio</h3>;
+              <div className="space-y-4" />;"
+                <h3 className="text-lg font-medium text-white" />Professional Bio</h3>;
                 <FormField;
                   control={form.control}"
-                  name=\"bio\";
+                  name="bio";
                   render={({ field }: { field: any}
 }) = /> (<FormItem />;"
-                      <FormLabel className=\"text-zion-slate-light\" />About Yourself</FormLabel>;
+                      <FormLabel className="text-zion-slate-light" />About Yourself</FormLabel>;
                       <FormControl />;
                         <Textarea;
                           className='h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white';
@@ -911,7 +911,7 @@ const { error } = await supabase;
                 {/* AI Enhancement Option */}
                 <FormField;
                   control={form.control}"
-                  name=\"enhancedProfile\";
+                  name="enhancedProfile";
                   render={({ field }: { field: any}
 }) = /> (<FormItem className='flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded - md' />;
                       <div className='space - y-0.5' />;
@@ -935,16 +935,16 @@ const { error } = await supabase;
                         : 'Generate Enhanced Profile'}
                     </Button>;
                   </div>;</FormLabel>;"
-                        <FormDescription className=\"text-zion-slate-light\" />;
+                        <FormDescription className="text-zion-slate-light" />;
                           Let AI help optimize your profile for better visibility and engagement;
                         </FormDescription>;
                       </div>;
                       <FormControl />;
                         <Switch;"
-                          aria-label=\"AI profile enhancement\";
+                          aria-label="AI profile enhancement";
                           checked={field.value}
                           onCheckedChange={field.onChange}"
-                          className=\"data-[state=checked]:bg-zion-purple\";
+                          className="data-[state=checked]:bg-zion-purple";
                         />;
                       </FormControl>;
                     </FormItem>;
@@ -958,20 +958,20 @@ const { error } = await supabase;
                       <h4 className='text-white font-medium flex items-center' />;
                         <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />;
                         AI-Generated Content;"
-                      </h4>;{generatedContent && (<div className=\"bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4\" />;"
-                    <div className=\"flex items-center justify-between mb-3\" />;"
-                      <h4 className=\"text-white font-medium flex items-center\" />;"
-                        <Sparkles className=\"w-4 h-4 mr-2 text-zion-purple\" />;
+                      </h4>;{generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4" />;"
+                    <div className="flex items-center justify-between mb-3" />;"
+                      <h4 className="text-white font-medium flex items-center" />;"
+                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />;
                         AI-Generated Content;
                       </h4>;}
                       <Button;}
                         onClick={applyGeneratedContent} />;"
-                        <Check className='mr-1 h-3 w-3' /> Apply;type=\"button\";"
-                        size=\"sm\";"
-                        className=\"bg-zion-purple hover:bg-zion-purple-dark text-white\";
+                        <Check className='mr-1 h-3 w-3' /> Apply;type="button";"
+                        size="sm";"
+                        className="bg-zion-purple hover:bg-zion-purple-dark text-white";
                         onClick={applyGeneratedContent}
                       >;"
-                        <Check className=\"mr-1 h-3 w-3\" /> Apply;</Button>;
+                        <Check className="mr-1 h-3 w-3" /> Apply;</Button>;
                     </div>;<div className='space-y-4' />;
                       <div />;
                         <h5 className='text-zion-slate-light text-sm mb-1' />;
@@ -980,16 +980,16 @@ const { error } = await supabase;
                         <p className='text-zion-slate italic' />;
                           {generatedContent && generatedContent.summary}
                         </p>;"
-                      </div>;{generatedContent && generatedContent.categorizedSkills && (<div />;<h5 className=\"text-zion-slate-light text-sm mb-1\" />Categorized Skills</h5>;}"
-                          <div className=\"flex flex-wrap gap-2 mt-1\" />;}"
-                            {Object.entries(generatedContent.categorizedSkills).map(([category, skills]) => (<div key={category} className=\"flex items-center gap-2\" />;
+                      </div>;{generatedContent && generatedContent.categorizedSkills && (<div />;<h5 className="text-zion-slate-light text-sm mb-1" />Categorized Skills</h5>;}"
+                          <div className="flex flex-wrap gap-2 mt-1" />;}"
+                            {Object.entries(generatedContent.categorizedSkills).map(([category, skills]) => (<div key={category} className="flex items-center gap-2" />;
                                 <Badge;className={`w-fit ${getCategoryColor(category as CategoryType)}`} />
 
                                   {category}</Badge>;"
-                                <div className=\"flex flex-wrap gap-1\" />;
+                                <div className="flex flex-wrap gap-1" />;
                                   {skills.map((skill: string) => (<Badge;}
                                       key={skill}"
-                                      className=\"bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none\" />
+                                      className="bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none" />
 {skil}
 }
                                     </Badge>;
@@ -1007,17 +1007,17 @@ const { error } = await supabase;
                 <div className='space-y-4' />;
                   <h3 className='text-lg font-medium text-white' />;
                     Skills & Expertise;"
-                  </h3>;<div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\" />;
+                  </h3>;<div className="grid grid-cols-1 md:grid-cols-2 gap-8" />;
                 {/* Skills Section */}"
-                <div className=\"space-y-4\" />;"
-                  <h3 className=\"text-lg font-medium text-white\" />Skills & Expertise</h3>;
+                <div className="space-y-4" />;"
+                  <h3 className="text-lg font-medium text-white" />Skills & Expertise</h3>;
                   <FormField;
                     control={form.control}"
-                    name=\"skills\";
+                    name="skills";
                     render={({ field }: { field: any}
 }) = /> (<FormItem />;"
-                        <FormLabel className=\"text-zion-slate-light\" />Skills</FormLabel>;"
-                        <div className=\"flex gap-2\" />;
+                        <FormLabel className="text-zion-slate-light" />Skills</FormLabel>;"
+                        <div className="flex gap-2" />;
                           <FormControl />;
                             <Input;
                               className='flex-1 bg-zion-blue border-zion-blue-light text-white';
@@ -1045,71 +1045,71 @@ const { error } = await supabase;
                     {skillTags.length === 0 && (<p className='text-zion-slate text-sm italic' />;
                         No skills added yet;
                       </p>;"
-                            type=\"button\";"
-                            variant=\"outline\";}"
-                            className=\"border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white\";}
+                            type="button";"
+                            variant="outline";}"
+                            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";}
                             onClick={handleAddSkill}
                           >;
                             Add;
                           </Button>;
                         </div>;"
-                        <FormDescription className=\"text-zion-slate\" />;
+                        <FormDescription className="text-zion-slate" />;
                           Press Enter or click Add to include a skill;
                         </FormDescription>;"
-                        <FormMessage className=\"text-red-400\" />;
+                        <FormMessage className="text-red-400" />;
                       </FormItem>;
                     )}
                   />;"
-                  <div className=\"flex flex-wrap gap-2 mt-2\" />;
+                  <div className="flex flex-wrap gap-2 mt-2" />;
                     {skillTags.map(skill => (<Badge;}
                         key={skill}"
-                        className=\"bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1\" />
+                        className="bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1" />
 
                         {skil}
 }
                         <button;"
-                          type=\"button\";
+                          type="button";
                           onClick={() = /> handleRemoveSkill(skill)}"
-                          className=\"rounded-full hover:bg-zion-purple-dark/20 p-0.5\">
+                          className="rounded-full hover:bg-zion-purple-dark/20 p-0.5">
 "
-                          <X className=\"h-3 w-3\" />;
+                          <X className="h-3 w-3" />;
                         </button>;
                       </Badge>;
                     ))}
                     {skillTags && skillTags.length === 0 && (<p className='text-zion-slate text-sm italic' />;
                         No skills added yet;"
-                      </p>;type=\"button\";"
-                            variant=\"outline\";}"
-                            className=\"border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white\";}
+                      </p>;type="button";"
+                            variant="outline";}"
+                            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";}
                             onClick={handleAddSkill}
                           >;
                             Add;
                           </Button>;
                         </div>;"
-                        <FormDescription className=\"text-zion-slate\" />;
+                        <FormDescription className="text-zion-slate" />;
                           Press Enter or click Add to include a skill;
                         </FormDescription>;"
-                        <FormMessage className=\"text-red-400\" />;
+                        <FormMessage className="text-red-400" />;
                       </FormItem>;
                     )}
                   />;"
-                  <div className=\"flex flex-wrap gap-2 mt-2\" />;
+                  <div className="flex flex-wrap gap-2 mt-2" />;
                     {skillTags.map(skill => (<Badge;}
                         key={skill}"
-                        className=\"bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1\" />
+                        className="bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1" />
 
                         {skil}
 }
                         <button;"
-                          type=\"button\";
+                          type="button";
                           onClick={() = /> handleRemoveSkill(skill)}"
-                          className=\"rounded-full hover:bg-zion-purple-dark/20 p-0.5\">
+                          className="rounded-full hover:bg-zion-purple-dark/20 p-0.5">
 "
-                          <X className=\"h-3 w-3\" />;
+                          <X className="h-3 w-3" />;
                         </button>;
                       </Badge>;
                     ))}"
-                    {skillTags.length === 0 && (<p className=\"text-zion-slate text-sm italic\" />No skills added yet</p>;)}</div>;
+                    {skillTags.length === 0 && (<p className="text-zion-slate text-sm italic" />No skills added yet</p>;)}</div>;
                 </div>;{/* Availability Section */}className='text-white flex items-center gap-2'>;
                                 <div className='h-2 w-2 rounded-full bg-green-500' /></div>;
                                 Available Now;
@@ -1223,8 +1223,8 @@ const { error } = await supabase;
                   <h3 className='text - lg font - medium text - white' />;
                     Skills & Expertise;
                   </h3>;"
-                  <FormField;<div className=\"space-y-4\" />;"
-                  <h3 className=\"text-lg font-medium text-white\" />Availability</h3>;
+                  <FormField;<div className="space-y-4" />;"
+                  <h3 className="text-lg font-medium text-white" />Availability</h3>;
                   <FormField;
                     control={form.control}
                     name='skills';
@@ -1284,75 +1284,75 @@ const { error } = await supabase;
                     control={form.control}
                     name='availability';
                     render={({ field }: { field: any}"
-}) = /> (<FormItem className=\"space-y-4\" />;"
-                        <FormLabel className=\"text-zion-slate-light\" />Current Status</FormLabel>;
+}) = /> (<FormItem className="space-y-4" />;"
+                        <FormLabel className="text-zion-slate-light" />Current Status</FormLabel>;
                         <FormControl />;"
-                          <div className=\"space-y-2\" />;"
-                            <div className=\"flex items-center space-x-2\" />;
+                          <div className="space-y-2" />;"
+                            <div className="flex items-center space-x-2" />;
                               <input;"
-                                type=\"radio\";"
-                                id=\"available\";"
-                                value=\"available\";"
-                                checked={field.value === \"available\"}"
-                                onChange={() = /> field.onChange(\"available\")}"
-                                className=\"text-zion-purple focus:ring-zion-purple\";
+                                type="radio";"
+                                id="available";"
+                                value="available";"
+                                checked={field.value === "available"}"
+                                onChange={() = /> field.onChange("available")}"
+                                className="text-zion-purple focus:ring-zion-purple";
                               />;"
-                              <label htmlFor=\"available\" className=\"text-white flex items-center gap-2\" />;"
-                                <div className=\"h-2 w-2 rounded-full bg-green-500\" /></div>;
+                              <label htmlFor="available" className="text-white flex items-center gap-2" />;"
+                                <div className="h-2 w-2 rounded-full bg-green-500" /></div>;
                                 Available Now;
                               </label>;
                             </div>;"
-                            <div className=\"flex items-center space-x-2\" />;
+                            <div className="flex items-center space-x-2" />;
                               <input;"
-                                type=\"radio\";"
-                                id=\"limited\";"
-                                value=\"limited\";"
-                                checked={field.value === \"limited\"}"
-                                onChange={() = /> field.onChange(\"limited\")}"
-                                className=\"text-zion-purple focus:ring-zion-purple\";
+                                type="radio";"
+                                id="limited";"
+                                value="limited";"
+                                checked={field.value === "limited"}"
+                                onChange={() = /> field.onChange("limited")}"
+                                className="text-zion-purple focus:ring-zion-purple";
                               />;"
-                              <label htmlFor=\"limited\" className=\"text-white flex items-center gap-2\" />;"
-                                <div className=\"h-2 w-2 rounded-full bg-yellow-500\" /></div>;
+                              <label htmlFor="limited" className="text-white flex items-center gap-2" />;"
+                                <div className="h-2 w-2 rounded-full bg-yellow-500" /></div>;
                                 Limited Availability;
                               </label>;
                             </div>;"
-                            <div className=\"flex items-center space-x-2\" />;
+                            <div className="flex items-center space-x-2" />;
                               <input;"
-                                type=\"radio\";"
-                                id=\"unavailable\";"
-                                value=\"unavailable\";"
-                                checked={field.value === \"unavailable\"}"
-                                onChange={() = /> field.onChange(\"unavailable\")}"
-                                className=\"text-zion-purple focus:ring-zion-purple\";
+                                type="radio";"
+                                id="unavailable";"
+                                value="unavailable";"
+                                checked={field.value === "unavailable"}"
+                                onChange={() = /> field.onChange("unavailable")}"
+                                className="text-zion-purple focus:ring-zion-purple";
                               />;"
-                              <label htmlFor=\"unavailable\" className=\"text-white flex items-center gap-2\" />;"
-                                <div className=\"h-2 w-2 rounded-full bg-red-500\" /></div>;
+                              <label htmlFor="unavailable" className="text-white flex items-center gap-2" />;"
+                                <div className="h-2 w-2 rounded-full bg-red-500" /></div>;
                                 Currently Unavailable;
                               </label>;
                             </div>;
                           </div>;
                         </FormControl>;"
-                        <FormMessage className=\"text-red-400\" />;
+                        <FormMessage className="text-red-400" />;
                       </FormItem>;
                     )}<FormMessage className='text - red - 400' />;
                       </FormItem>)}/>;
                 </div>;
               </div>;"
-            </CardContent>;<CardFooter className=\"border-t border-zion-blue-light pt-6\" />;"
-              <div className=\"flex flex-col sm:flex-row gap-4 w-full sm:justify-between\" />;
+            </CardContent>;<CardFooter className="border-t border-zion-blue-light pt-6" />;"
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" />;
                 <Button;"
-                  type=\"button\";"
-                  variant=\"outline\";"
-                  className=\"border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white\" />
+                  type="button";"
+                  variant="outline";"
+                  className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" />
 
                   Save as Draft;
                 </Button>;
                 <Button;"
-                  type=\"submit\";"
-                  className=\"bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white\";
+                  type="submit";"
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
                   disabled={isSubmitting}
                  />;"
-                  {isSubmitting ? \"Creating Profile...\" : \"Create Profile\"}</Button>;
+                  {isSubmitting ? "Creating Profile..." : "Create Profile"}</Button>;
               </div>;
             </CardFooter>;
           </form>;
@@ -1386,14 +1386,14 @@ const { error } = await supabase;
 }//Generate enhanced profile with AI return;}//Call the Supabase Edge Function const {data, error ';}
 }= await supabase.functions.invoke ('talent - profile - enhancer', {body: {talent_data: {name: form_data.name, title: form_data.title, bio: form_data.bio,  skills: skill_tags, location: form_data.location;}
 })}else {';"
-  //Fallback for mock / development mode log_warn ('Mock AI response - using fallback content')setGeneratedContent ({\";"
-  summary: \"Experienced professional with expertise in modern technologies and best practices.\";"
-categorized_skills: {\";"
-  programming: [\"JavaScript\", \"TypeScript\", \"React\" ];\";"
-devops: [\"Docker\", \"CI / CD\", \"AWS\" ];\";"
-platforms: [\"Node.js\", \"Next.js\", \"Vercel\" ];\";"
-soft_skills: [\"Communication\", \"Problem Solving\",  \"Team Leadership\" ];\";}"
-other: [\"Project Management\", \"Technical Writing\" ];}
+  //Fallback for mock / development mode log_warn ('Mock AI response - using fallback content')setGeneratedContent ({";"
+  summary: "Experienced professional with expertise in modern technologies and best practices.";"
+categorized_skills: {";"
+  programming: ["JavaScript", "TypeScript", "React" ];";"
+devops: ["Docker", "CI / CD", "AWS" ];";"
+platforms: ["Node.js", "Next.js", "Vercel" ];";"
+soft_skills: ["Communication", "Problem Solving",  "Team Leadership" ];";}"
+other: ["Project Management", "Technical Writing" ];}
 })toast ({}catch (error: any) {';}
   logErrorToProduction ('Error generating enhanced profile:', {data: error;}
 })toast ({}finally {setIsGenerating (false)}
@@ -1418,8 +1418,8 @@ if () {) {$2;}
 }
 })}
 //Get category color //Send notification email const sendEnhancementNotification = async (user_id: string, email: string) => {try {';}"
-  await supabase.functions.invoke ('send - email', {body: {'\";}"
-  <p  /> Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p  /> We've added a professional summary and categorized your skills to help you stand out.</p> <p  /> You can review and edit these enhancements in your profile dashboard.</p> <div style=\"margin - top: 30px, padding - top: 20px, border - top: 1px solid #eee, \" /> <p style=\"color: #666,  font - size: 12px, \" />© $ {new Date () .getFullYear ()}Zion Marketplace</p>;
+  await supabase.functions.invoke ('send - email', {body: {'";}"
+  <p /> Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p /> We've added a professional summary and categorized your skills to help you stand out.</p> <p /> You can review and edit these enhancements in your profile dashboard.</p> <div style="margin - top: 30px, padding - top: 20px, border - top: 1px solid #eee, " /> <p style="color: #666,  font - size: 12px, " />© $ {new Date () .getFullYear ()}Zion Marketplace</p>;
 }
 //Handle form submission const on_submit = async (values: TalentFormValues) => {// Check condition;}
 if ( {) {$2;}
@@ -1446,31 +1446,31 @@ if ( {) {$2;}
 })// Check condition;
 if (throw error) {$2;}
 }"
-*/ setIsSubmitting (false)}\";"
-return (<div className=\"max - w-4xl mx - auto p - 4 md:p - 6\" /> <Card className=\"bg - zion - blue - dark border - zion - blue - light\" /> <CardHeader /> <CardTitle className=\"text - 2xl text - white\" />Create Your Talent Profile</CardTitle> <CardDescription className=\"text - zion - slate\" /> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {...form;}"
-} /> <form on_submit= {form.handle_submit (on_submit) \";}"
-} /> <CardContent className=\"space - y-8\" /> {/* Basic Information */ \";}"
-}<div className=\"space - y-4\" /> <h3 className=\"text - lg font - medium text - white\" />Basic Information</h3> <div className=\"grid grid - cols - 1 md:grid - cols - 2 gap - 6\" /> <div className=\"col - span - 1\"  /> <FormField <FormItem /> <FormLabel className=\"text - zion - slate - light\" />Full Name</FormLabel> <FormControl /> <div className=\"relative\" /> <UserRound className=\"absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4\" /> <Input /> </div> </FormControl> <FormMessage className=\"text - red - 400\" /> </FormItem>) \";"
-}/> </div> <div className=\"col - span - 1\"  /> <FormField <FormItem /> <FormLabel className=\"text - zion - slate - light\" />Professional Title</FormLabel> <FormControl /> <div className=\"relative\" /> <Briefcase className=\"absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4\" /> <Input /> </div> </FormControl> <FormMessage className=\"text - red - 400\" /> </FormItem>) \";"
-}/> </div> <div className=\"col - span - 1\"  /> <FormField <FormItem /> <FormLabel className=\"text - zion - slate - light\" />Location</FormLabel> <FormControl /> <div className=\"relative\" /> <MapPin className=\"absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4\" /> <Input /> </div> </FormControl> <FormMessage className=\"text - red - 400\" /> </FormItem>) \";"
-}/> </div> <div className=\"col - span - 1\"  /> <FormField <FormItem /> <FormLabel className=\"text - zion - slate - light\" />Hourly Rate (USD) </FormLabel> <FormControl /> <div className=\"relative\" /> <span className=\"absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate\" />$</span> <Input /> </div> </FormControl> <FormMessage className=\"text - red - 400\" /> </FormItem>)}/> </div> </div> {/* Upload Avatar */ \";}"
-}<div className=\"space - y-2\" /> <FormLabel className=\"text - zion - slate - light\" />Profile Picture</FormLabel> <div className=\"flex items - center gap - 6\" /> <div className=\"relative w - 24 h - 24 rounded - full overflow - hidden bg - zion - blue - light border border - zion - blue - light\" /> {uploaded_avatar ? (<AspectRatio ratio= {1 / 1;}"
-} /> <img src= {uploaded_avatar \";}"
-}alt=\"Avatar preview\" className=\"w - full h - full object - cover\" loading=\"lazy\" /> </AspectRatio>) : (<div className=\"flex items - center justify - center h - full\" /> <UserRound className=\"h - 10 w - 10 text - zion - slate opacity - 50\" /> </div>) \";"
-}</div> <label className=\"flex items - center justify - center px - 4 py - 2 rounded - md bg - zion - purple hover:bg - zion - purple - dark text - white cursor - pointer transition - colors\" /> <Upload className=\"mr - 2 h - 4 w - 4\" /> <span  /> Upload Photo</span> <input type=\"file\" accept=\"image/*\" className=\"hidden\" on_change= {handleAvatarUpload \";}"
-}/> </label> </div> <p className=\"text - sm text - zion - slate\" /> For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className=\"bg - zion - blue - light / 50\" /> {/* Bio Section */ \";}"
-}<div className=\"space - y-4\" /> <h3 className=\"text - lg font - medium text - white\"  />Professional Bio</h3> <FormField <FormItem /> <FormLabel className=\"text - zion - slate - light\" />About Yourself</FormLabel> <FormControl /> <Textarea </FormDescription /> </FormItem>)}/> {/* AI Enhancement Option */ \";}"
-}<FormField <FormItem className=\"flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded - md\" /> <div className=\"space - y-0.5\" /> <FormLabel className=\"text - white flex items - center\" /> <Sparkles className=\"w - 4 h - 4 mr - 2 text - zion - purple\" /> AI Profile Enhancement </FormLabel> <FormDescription className=\"text - zion - slate - light\"  /> Let AI help optimize your profile for better visibility and engagement </FormDescription> </div> <FormControl /> <Switch /> </FormControl> </FormItem>) \";"
-}/> <Button type=\"button\" variant=\"outline\" className=\"border - zion - purple text - zion - purple hover:bg - zion - purple / 10\" on_click={generateEnhancedProfile;}
+*/ setIsSubmitting (false)}";"
+return (<div className="max - w-4xl mx - auto p - 4 md:p - 6" /> <Card className="bg - zion - blue - dark border - zion - blue - light" /> <CardHeader /> <CardTitle className="text - 2xl text - white" />Create Your Talent Profile</CardTitle> <CardDescription className="text - zion - slate" /> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {...form;}"
+} /> <form on_submit= {form.handle_submit (on_submit) ";}"
+} /> <CardContent className="space - y-8" /> {/* Basic Information */ ";}"
+}<div className="space - y-4" /> <h3 className="text - lg font - medium text - white" />Basic Information</h3> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6" /> <div className="col - span - 1"  /> <FormField <FormItem /> <FormLabel className="text - zion - slate - light" />Full Name</FormLabel> <FormControl /> <div className="relative" /> <UserRound className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";"
+}/> </div> <div className="col - span - 1"  /> <FormField <FormItem /> <FormLabel className="text - zion - slate - light" />Professional Title</FormLabel> <FormControl /> <div className="relative" /> <Briefcase className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";"
+}/> </div> <div className="col - span - 1"  /> <FormField <FormItem /> <FormLabel className="text - zion - slate - light" />Location</FormLabel> <FormControl /> <div className="relative" /> <MapPin className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";"
+}/> </div> <div className="col - span - 1"  /> <FormField <FormItem /> <FormLabel className="text - zion - slate - light" />Hourly Rate (USD) </FormLabel> <FormControl /> <div className="relative" /> <span className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate" />$</span> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>)}/> </div> </div> {/* Upload Avatar */ ";}"
+}<div className="space - y-2" /> <FormLabel className="text - zion - slate - light" />Profile Picture</FormLabel> <div className="flex items - center gap - 6" /> <div className="relative w - 24 h - 24 rounded - full overflow - hidden bg - zion - blue - light border border - zion - blue - light" /> {uploaded_avatar ? (<AspectRatio ratio= {1 / 1;}"
+} /> <img src= {uploaded_avatar ";}"
+}alt="Avatar preview" className="w - full h - full object - cover" loading="lazy" /> </AspectRatio>) : (<div className="flex items - center justify - center h - full" /> <UserRound className="h - 10 w - 10 text - zion - slate opacity - 50" /> </div>) ";"
+}</div> <label className="flex items - center justify - center px - 4 py - 2 rounded - md bg - zion - purple hover:bg - zion - purple - dark text - white cursor - pointer transition - colors" /> <Upload className="mr - 2 h - 4 w - 4" /> <span /> Upload Photo</span> <input type="file" accept="image/*" className="hidden" on_change= {handleAvatarUpload ";}"
+}/> </label> </div> <p className="text - sm text - zion - slate" /> For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className="bg - zion - blue - light / 50" /> {/* Bio Section */ ";}"
+}<div className="space - y-4" /> <h3 className="text - lg font - medium text - white"  />Professional Bio</h3> <FormField <FormItem /> <FormLabel className="text - zion - slate - light" />About Yourself</FormLabel> <FormControl /> <Textarea </FormDescription /> </FormItem>)}/> {/* AI Enhancement Option */ ";}"
+}<FormField <FormItem className="flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded - md" /> <div className="space - y-0.5" /> <FormLabel className="text - white flex items - center" /> <Sparkles className="w - 4 h - 4 mr - 2 text - zion - purple" /> AI Profile Enhancement </FormLabel> <FormDescription className="text - zion - slate - light"  /> Let AI help optimize your profile for better visibility and engagement </FormDescription> </div> <FormControl /> <Switch /> </FormControl> </FormItem>) ";"
+}/> <Button type="button" variant="outline" className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10" on_click={generateEnhancedProfile;}
 }disabled= {is_generating;}
 } /> </Button> </div>)}{/* Generated Content Display */;}"
-}{\";}"
-  generated_content && (<div className=\"bg - zion - blue - light / 20 border border - zion - blue - light rounded - md p - 4\" /> <div className=\"flex items - center justify - between mb - 3\" /> <h4 className=\"text - white font - medium flex items - center\" /> <Sparkles className=\"w - 4 h - 4 mr - 2 text - zion - purple\" /> AI - Generated Content </h4> <Button type=\"button\" size=\"sm\" className=\"bg - zion - purple hover:bg - zion - purple - dark text - white\" on_click={applyGeneratedContent \";}"
-} /> <Check className=\"mr - 1 h - 3 w - 3\" /> Apply </Button> </div> <div className=\"space - y-4\" /> <div /> <h5 className=\"text - zion - slate - light text - sm mb - 1\" />Professional Summary</h5> <p className=\"text - zion - slate italic\" /> {generated_content.summary;}"
-}</p> </div> {\";}"
-  generated_content.categorized_skills && (<div /> <h5 className=\"text - zion - slate - light text - sm mb - 1\" />Categorized Skills</h5> <div className=\"flex flex - wrap gap - 2 mt - 1\" /> {Object.entries (generated_content.categorized_skills) .map ( ([category, skills]) => (<div key= {category \";}"
-}className=\"flex items - center gap - 2\" /> <Badge className= {`w - fit $ {getCategoryColor (category as CategoryType)}`;} /> {category \";}"
-}</Badge> <div className=\"flex flex-wrap gap-1\" /> {skills.map ( (skill: string) => (<Badge key= {</Button />;
+}{";}"
+  generated_content && (<div className="bg - zion - blue - light / 20 border border - zion - blue - light rounded - md p - 4" /> <div className="flex items - center justify - between mb - 3" /> <h4 className="text - white font - medium flex items - center" /> <Sparkles className="w - 4 h - 4 mr - 2 text - zion - purple" /> AI - Generated Content </h4> <Button type="button" size="sm" className="bg - zion - purple hover:bg - zion - purple - dark text - white" on_click={applyGeneratedContent ";}"
+} /> <Check className="mr - 1 h - 3 w - 3" /> Apply </Button> </div> <div className="space - y-4" /> <div /> <h5 className="text - zion - slate - light text - sm mb - 1" />Professional Summary</h5> <p className="text - zion - slate italic" /> {generated_content.summary;}"
+}</p> </div> {";}"
+  generated_content.categorized_skills && (<div /> <h5 className="text - zion - slate - light text - sm mb - 1" />Categorized Skills</h5> <div className="flex flex - wrap gap - 2 mt - 1" /> {Object.entries (generated_content.categorized_skills) .map ( ([category, skills]) => (<div key= {category ";}"
+}className="flex items - center gap - 2" /> <Badge className= {`w - fit $ {getCategoryColor (category as CategoryType)}`;} /> {category ";}"
+}</Badge> <div className="flex flex-wrap gap-1" /> {skills.map ( (skill: string) => (<Badge key= {</Button />;
               </div>;
             </CardFooter>;
           </form>;
@@ -1478,12 +1478,12 @@ return (<div className=\"max - w-4xl mx - auto p - 4 md:p - 6\" /> <Card classNa
       </Card>;}
     </div>;)}//Generate enhanced profile with AI return;
 }//Call the Supabase Edge Function const {data, error ';}= await supabase && supabase.functions.invoke ('talent-profile-enhancer', {body: {talentData: {name: formData && formData.name, title: formData && formData.title, bio: formData && formData.bio,  skills: skillTags, location: formData && formData.location ;}= await supabase.functions.invoke ('talent-profile-enhancer', {body: {talentData: {name: formData.name, title: formData.title, bio: formData.bio,  skills: skillTags, location: formData.location ;})}else {';"
-  //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content')setGeneratedContent ({\";"
-  summary: \"Experienced professional with expertise in modern technologies and best practices.\";"
-categorizedSkills: {\";"
-  programming: [\"JavaScript\", \"TypeScript\", \"React\" ];\";}"
-devops: [\"Docker\", \"CI/CD\", \"AWS\" ];\";platforms: [\"Node && Node.js\", \"Next && Next.js\", \"Vercel\" ];\";platforms: [\"Node.js\", \"Next.js\", \"Vercel\" ];\";softSkills: [\"Communication\", \"Problem Solving\",  \"Team Leadership\" ];\";}"
-other: [\"Project Management\", \"Technical Writing\" ] ;})toast ({;}catch (error: any) {';}
+  //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content')setGeneratedContent ({";"
+  summary: "Experienced professional with expertise in modern technologies and best practices.";"
+categorizedSkills: {";"
+  programming: ["JavaScript", "TypeScript", "React" ];";}"
+devops: ["Docker", "CI/CD", "AWS" ];";platforms: ["Node && Node.js", "Next && Next.js", "Vercel" ];";platforms: ["Node.js", "Next.js", "Vercel" ];";softSkills: ["Communication", "Problem Solving",  "Team Leadership" ];";}"
+other: ["Project Management", "Technical Writing" ] ;})toast ({;}catch (error: any) {';}
   logErrorToProduction ('Error generating enhanced profile:', {data: error ;}
 })toast ({;}finally {setIsGenerating (false)}//Apply generated content to form const applyGeneratedContent = (if (generatedContent) {//Extract all skills from categorized skills and properly type cast them;
   const allCategorizedSkills = generatedContent && generatedContent.categorizedSkills;
@@ -1498,8 +1498,8 @@ if (Array.isArray (categorySkills) ) {categorySkills.forEach (skill => {';
   if (typeof skill === 'string' && skill && !skillTags.includes (skill) ) {;) => {
   return $3;}
 }"
-})}//Get category color //Send notification email const sendEnhancementNotification = async (userId: string, email: string) => {try {';await supabase && supabase.functions.invoke ('send-email', {await supabase.functions.invoke ('send-email', {body: {'\";}"
-  <p />Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p />We've added a professional summary and categorized your skills to help you stand out.</p> <p />You can review and edit these enhancements in your profile dashboard.</p> <div style=\"margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, \" /> <p style=\"color: #666,  font-size: 12px, \" />© $ {new Date () .getFullYear ()}Zion Marketplace</p> ;}//Handle form submission const onSubmit = async (values: TalentFormValues) => {if (skillTags && skillTags.length === 0) }
+})}//Get category color //Send notification email const sendEnhancementNotification = async (userId: string, email: string) => {try {';await supabase && supabase.functions.invoke ('send-email', {await supabase.functions.invoke ('send-email', {body: {'";}"
+  <p />Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p />We've added a professional summary and categorized your skills to help you stand out.</p> <p />You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, " /> <p style="color: #666,  font-size: 12px, " />© $ {new Date () .getFullYear ()}Zion Marketplace</p> ;}//Handle form submission const onSubmit = async (values: TalentFormValues) => {if (skillTags && skillTags.length === 0) }
 }//Handle form submission;
   const onSubmit = async (values: TalentFormValues) => {if (skillTags.length === 0) {toast (;}
   return;}
@@ -1514,72 +1514,72 @@ if (Array.isArray (categorySkills) ) {categorySkills.forEach (skill => {';
 }) ), //Default skill level hourly rate: Number (values && values.hourlyRate)availability status: values && values.availability;user id: user.id, name: values.name, title: values.title, bio: values.bio, summary: finalSummary, location: values.location,  skills: finalSkills.map (name => ({name, level: 4 ;}
 }) ), //Default skill level hourly rate: Number (values.hourlyRate)availability status: values.availability;//Other fields would be handled here ;
 })if (error) throw error;"
-*/ setIsSubmitting (false)}\";return (<div className=\"max-w-4xl mx-auto p-4 md:p-6\" /> <Card className=\"bg-zion-blue-dark border-zion-blue-light\" /> <CardHeader /> <CardTitle className=\"text-2xl text-white\" />Create Your Talent Profile</CardTitle> <CardDescription className=\"text-zion-slate\" /> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form{...form;}"
-} /> <formonSubmit= {form && form.handleSubmit (onSubmit) \";}"
-return (<div className=\"max-w-4xl mx-auto p-4 md:p-6\" /> <Card className=\"bg-zion-blue-dark border-zion-blue-light\" /> <CardHeader /> <CardTitle className=\"text-2xl text-white\" />Create Your Talent Profile</CardTitle> <CardDescription className=\"text-zion-slate\" /> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {...form ;}"
-} /> <form onSubmit= {form.handleSubmit (onSubmit) \";} /> <CardContent className=\"space-y-8\" /> {/* Basic Information */ \";}"
-}<div className=\"space-y-4\" /> <h3 className=\"text-lg font-medium text-white\" />Basic Information</h3> <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\" /> <div className=\"col-span-1\"  /> <FormField <FormItem /> <FormLabel className=\"text-zion-slate-light\" />Full Name</FormLabel> <FormControl /> <div className=\"relative\" /> <UserRound className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4\" /> <Input /> </div> </FormControl> <FormMessage className=\"text-red-400\" /> </FormItem>) \";"
-}/> </div> <div className=\"col-span-1\"  /> <FormField <FormItem /> <FormLabel className=\"text-zion-slate-light\" />Professional Title</FormLabel> <FormControl /> <div className=\"relative\" /> <Briefcase className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4\" /> <Input /> </div> </FormControl> <FormMessage className=\"text-red-400\" /> </FormItem>) \";"
-}/> </div> <div className=\"col-span-1\"  /> <FormField <FormItem /> <FormLabel className=\"text-zion-slate-light\" />Location</FormLabel> <FormControl /> <div className=\"relative\" /> <MapPin className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4\" /> <Input /> </div> </FormControl> <FormMessage className=\"text-red-400\" /> </FormItem>) \";"
-}/> </div> <div className=\"col-span-1\"  /> <FormField <FormItem /> <FormLabel className=\"text-zion-slate-light\" />Hourly Rate (USD) </FormLabel> <FormControl /> <div className=\"relative\" /> <span className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate\" />$</span> <Input /> </div> </FormControl> <FormMessage className=\"text-red-400\" /> </FormItem>)}/> </div> </div> {/* Upload Avatar */ \";}"
-}<div className=\"space-y-2\" /> <FormLabel className=\"text-zion-slate-light\" />Profile Picture</FormLabel> <div className=\"flex items-center gap-6\" /> <div className=\"relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light\" /> {uploadedAvatar ? (<AspectRatioratio= {1/1;}"
-} /> <imgsrc= {uploadedAvatar \";}"
-}alt=\"Avatar preview\" className=\"w-full h-full object-cover\" loading=\"lazy\" /> </AspectRatio>) : (<div className=\"flex items-center justify-center h-full\" /> <UserRound className=\"h-10 w-10 text-zion-slate opacity-50\" /> </div>) \";"
-}</div> <label className=\"flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors\" /> <Upload className=\"mr-2 h-4 w-4\" /> <span />Upload Photo</span> <inputtype=\"file\" accept=\"image/*\" className=\"hidden\" onChange= {handleAvatarUpload \";}
+*/ setIsSubmitting (false)}";return (<div className="max-w-4xl mx-auto p-4 md:p-6" /> <Card className="bg-zion-blue-dark border-zion-blue-light" /> <CardHeader /> <CardTitle className="text-2xl text-white" />Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate" /> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form{...form;}"
+} /> <formonSubmit= {form && form.handleSubmit (onSubmit) ";}"
+return (<div className="max-w-4xl mx-auto p-4 md:p-6" /> <Card className="bg-zion-blue-dark border-zion-blue-light" /> <CardHeader /> <CardTitle className="text-2xl text-white" />Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate" /> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {...form ;}"
+} /> <form onSubmit= {form.handleSubmit (onSubmit) ";} /> <CardContent className="space-y-8" /> {/* Basic Information */ ";}"
+}<div className="space-y-4" /> <h3 className="text-lg font-medium text-white" />Basic Information</h3> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" /> <div className="col-span-1"  /> <FormField <FormItem /> <FormLabel className="text-zion-slate-light" />Full Name</FormLabel> <FormControl /> <div className="relative" /> <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";"
+}/> </div> <div className="col-span-1"  /> <FormField <FormItem /> <FormLabel className="text-zion-slate-light" />Professional Title</FormLabel> <FormControl /> <div className="relative" /> <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";"
+}/> </div> <div className="col-span-1"  /> <FormField <FormItem /> <FormLabel className="text-zion-slate-light" />Location</FormLabel> <FormControl /> <div className="relative" /> <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";"
+}/> </div> <div className="col-span-1"  /> <FormField <FormItem /> <FormLabel className="text-zion-slate-light" />Hourly Rate (USD) </FormLabel> <FormControl /> <div className="relative" /> <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />$</span> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>)}/> </div> </div> {/* Upload Avatar */ ";}"
+}<div className="space-y-2" /> <FormLabel className="text-zion-slate-light" />Profile Picture</FormLabel> <div className="flex items-center gap-6" /> <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light" /> {uploadedAvatar ? (<AspectRatioratio= {1/1;}"
+} /> <imgsrc= {uploadedAvatar ";}"
+}alt="Avatar preview" className="w-full h-full object-cover" loading="lazy" /> </AspectRatio>) : (<div className="flex items-center justify-center h-full" /> <UserRound className="h-10 w-10 text-zion-slate opacity-50" /> </div>) ";"
+}</div> <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors" /> <Upload className="mr-2 h-4 w-4" /> <span />Upload Photo</span> <inputtype="file" accept="image/*" className="hidden" onChange= {handleAvatarUpload ";}
   uploadedAvatar ? (<AspectRatio ratio= {1/1 ;}"
-} /> <img src= {uploadedAvatar \";}"
-}alt=\"Avatar preview\" className=\"w-full h-full object-cover\" loading=\"lazy\" /> </AspectRatio>) : (<div className=\"flex items-center justify-center h-full\" /> <UserRound className=\"h-10 w-10 text-zion-slate opacity-50\" /> </div>) \";"
-}</div> <label className=\"flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors\" /> <Upload className=\"mr-2 h-4 w-4\" /> <span />Upload Photo</span> <input type=\"file\" accept=\"image/*\" className=\"hidden\" onChange= {handleAvatarUpload \";}/> </label> </div> <p className=\"text-sm text-zion-slate\" /> For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className=\"bg-zion-blue-light/50\" /> {/* Bio Section */ \";}"
-}<div className=\"space-y-4\" /> <h3 className=\"text-lg font-medium text-white\"  />Professional Bio</h3> <FormField <FormItem /> <FormLabel className=\"text-zion-slate-light\" />About Yourself</FormLabel> <FormControl /> <Textarea </FormDescription /> </FormItem>)}/> {/* AI Enhancement Option */ \";}<FormField <FormItem className=\"flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md\" /> <div className=\"space-y-0 && 0.5\" /> <FormLabel className=\"text-white flex items-center\" /> <Sparkles className=\"w-4 h-4 mr-2 text-zion-purple\" /> AI Profile Enhancement </FormLabel> <FormDescription className=\"text-zion-slate-light\"  /> Let AI help optimize your profile for better visibility and engagement </FormDescription> </div> <FormControl /> <Switch /> </FormControl> </FormItem>) \";"
-}/> <Buttontype=\"button\" variant=\"outline\" className=\"border-zion-purple text-zion-purple hover:bg-zion-purple/10\" onClick={generateEnhancedProfile;}
+} /> <img src= {uploadedAvatar ";}"
+}alt="Avatar preview" className="w-full h-full object-cover" loading="lazy" /> </AspectRatio>) : (<div className="flex items-center justify-center h-full" /> <UserRound className="h-10 w-10 text-zion-slate opacity-50" /> </div>) ";"
+}</div> <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors" /> <Upload className="mr-2 h-4 w-4" /> <span />Upload Photo</span> <input type="file" accept="image/*" className="hidden" onChange= {handleAvatarUpload ";}/> </label> </div> <p className="text-sm text-zion-slate" /> For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className="bg-zion-blue-light/50" /> {/* Bio Section */ ";}"
+}<div className="space-y-4" /> <h3 className="text-lg font-medium text-white"  />Professional Bio</h3> <FormField <FormItem /> <FormLabel className="text-zion-slate-light" />About Yourself</FormLabel> <FormControl /> <Textarea </FormDescription /> </FormItem>)}/> {/* AI Enhancement Option */ ";}<FormField <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md" /> <div className="space-y-0 && 0.5" /> <FormLabel className="text-white flex items-center" /> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI Profile Enhancement </FormLabel> <FormDescription className="text-zion-slate-light"  /> Let AI help optimize your profile for better visibility and engagement </FormDescription> </div> <FormControl /> <Switch /> </FormControl> </FormItem>) ";"
+}/> <Buttontype="button" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={generateEnhancedProfile;}
 }disabled= {isGenerating;}"
-}<FormField <FormItem className=\"flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md\" /> <div className=\"space-y-0.5\" /> <FormLabel className=\"text-white flex items-center\" /> <Sparkles className=\"w-4 h-4 mr-2 text-zion-purple\" /> AI Profile Enhancement </FormLabel> <FormDescription className=\"text-zion-slate-light\"  /> Let AI help optimize your profile for better visibility and engagement </FormDescription> </div> <FormControl /> <Switch /> </FormControl> </FormItem>) \";"
-}/> <Button type=\"button\" variant=\"outline\" className=\"border-zion-purple text-zion-purple hover:bg-zion-purple/10\" onClick={generateEnhancedProfile ;}
+}<FormField <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md" /> <div className="space-y-0.5" /> <FormLabel className="text-white flex items-center" /> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI Profile Enhancement </FormLabel> <FormDescription className="text-zion-slate-light"  /> Let AI help optimize your profile for better visibility and engagement </FormDescription> </div> <FormControl /> <Switch /> </FormControl> </FormItem>) ";"
+}/> <Button type="button" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={generateEnhancedProfile ;}
 }disabled= {isGenerating ;} /> </Button> </div>)}{/* Generated Content Display */ ;}"
-}{\";generatedContent && (<div className=\"bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4\" /> <div className=\"flex items-center justify-between mb-3\" /> <h4 className=\"text-white font-medium flex items-center\" /> <Sparkles className=\"w-4 h-4 mr-2 text-zion-purple\" /> AI-Generated Content </h4> <Buttontype=\"button\" size=\"sm\" className=\"bg-zion-purple hover:bg-zion-purple-dark text-white\" onClick={applyGeneratedContent \";}"
-} /> <Check className=\"mr-1 h-3 w-3\" /> Apply </Button> </div> <div className=\"space-y-4\" /> <div /> <h5 className=\"text-zion-slate-light text-sm mb-1\" />Professional Summary</h5> <p className=\"text-zion-slate italic\" /> {generatedContent && generatedContent.summary ;}"
-}</p> </div> {\";}"
-  generatedContent && generatedContent.categorizedSkills && (<div /> <h5 className=\"text-zion-slate-light text-sm mb-1\" />Categorized Skills</h5> <div className=\"flex flex-wrap gap-2 mt-1\" /> {Object && Object.entries (generatedContent && generatedContent.categorizedSkills) .map ( ([category, skills]) => (<divkey= {category \";}"
-}className=\"flex items-center gap-2\" /> <BadgeclassName= {`w-fit $ {getCategoryColor (category as CategoryType)}`;"
-} /> {category \";}"
-}</Badge> <div className=\"flex flex-wrap gap-1\" /> {skills && skills.map ( (skill: string) => (<Badgekey= {skill \";}"
-}className=\"bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none\" /> {generatedContent && (<div className=\"bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4\" /> <div className=\"flex items-center justify-between mb-3\" /> <h4 className=\"text-white font-medium flex items-center\" /> <Sparkles className=\"w-4 h-4 mr-2 text-zion-purple\" /> AI-Generated Content </h4> <Button type=\"button\" size=\"sm\" className=\"bg-zion-purple hover:bg-zion-purple-dark text-white\" onClick={applyGeneratedContent \";}"
-} /> <Check className=\"mr-1 h-3 w-3\" /> Apply </Button> </div> <div className=\"space-y-4\" /> <div /> <h5 className=\"text-zion-slate-light text-sm mb-1\" />Professional Summary</h5> <p className=\"text-zion-slate italic\" /> {generatedContent.summary ;}"
-}</p> </div> {\";}"
-  generatedContent.categorizedSkills && (<div /> <h5 className=\"text-zion-slate-light text-sm mb-1\" />Categorized Skills</h5> <div className=\"flex flex-wrap gap-2 mt-1\" /> {Object.entries (generatedContent.categorizedSkills) .map ( ([category, skills]) => (<div key= {category \";}"
-}className=\"flex items-center gap-2\" /> <Badge className= {`w-fit $ {getCategoryColor (category as CategoryType)}` ;"
-} /> {category \";}"
-}</Badge> <div className=\"flex flex-wrap gap-1\" /> {skills.map ( (skill: string) => (<Badge key= {skill \";}"
-}className=\"bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none\"  /> {skill ;}"
-}</Badge>) )}</div> </div>) )}</div> </div>)}</div> </div>) \";"
-}</div> <Separator className=\"bg-zion-blue-light/50\" /> {/* Skills and Availability */ \";}"
-}<div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\" /> {/* Skills Section */ \";}<div className=\"space-y-4\" /> <h3 className=\"text-lg font-medium text-white\"  />Skills & Expertise</h3> <FormField <FormItem /> <FormLabel className=\"text-zion-slate-light\" />Skills</FormLabel> <div className=\"flex gap-2\" /> <FormControl /> <Input /> </FormControl> <Buttontype=\"button\" variant=\"outline\" className=\"border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white\" onClick={handleAddSkill \";}"
-} /> Add </Button> </div> <FormDescription className=\"text-zion-slate\" /> Press Enter or click Add to include a skill </FormDescription> <FormMessage className=\"text-red-400\" /> </FormItem>) \";"
-}/> <div className=\"flex flex-wrap gap-2 mt-2\" /> {skillTags && skillTags.map (skill => (<Badgekey= {skill \";}"
-}className=\"bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1 && 1.5 flex items-center gap-1\" /> {skill \";}"
-}<button className=\"rounded-full hover: bg-zion-purple-dark/20 p-0 && 0.5\"  /> <X className=\"h-3 w-3\" /> </button> </Badge>) ,"
-}{\";}"
-  skillTags && skillTags.length === 0 && (<p className=\"text-zion-slate text-sm italic\" />No skills added yet</p>)}<div className=\"space-y-4\" /> <h3 className=\"text-lg font-medium text-white\"  />Skills & Expertise</h3> <FormField <FormItem /> <FormLabel className=\"text-zion-slate-light\" />Skills</FormLabel> <div className=\"flex gap-2\" /> <FormControl /> <Input /> </FormControl> <Button type=\"button\" variant=\"outline\" className=\"border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white\" onClick={handleAddSkill \";}"
-} /> Add </Button> </div> <FormDescription className=\"text-zion-slate\" /> Press Enter or click Add to include a skill </FormDescription> <FormMessage className=\"text-red-400\" /> </FormItem>) \";"
-}/> <div className=\"flex flex-wrap gap-2 mt-2\" /> {skillTags.map (skill => (<Badge key= {skill \";}"
-}className=\"bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1\"  /> {skill \";}"
-}<button className=\"rounded-full hover: bg-zion-purple-dark/20 p-0.5\"  /> <X className=\"h-3 w-3\" /> </button> </Badge>) ,"
-}{\";}"
-  skillTags.length === 0 && (<p className=\"text-zion-slate text-sm italic\" />No skills added yet</p>)}</div> </div> {/* Availability Section */ \";}"
-}<div className=\"space-y-4\" /> <h3 className=\"text-lg font-medium text-white\"  />Availability</h3> <FormField <FormLabel className=\"text-zion-slate-light\" />Current Status</FormLabel> <FormControl /> <div className=\"space-y-2\" /> <div className=\"flex items-center space-x-2\"  /> <input /> <label htmlFor=\"available\" className=\"text-white flex items-center gap-2\" /> <div className=\"h-2 w-2 rounded-full bg-green-500\" /></div> Available Now </label> </div> <div className=\"flex items-center space-x-2\"  /> <input /> <label htmlFor=\"limited\" className=\"text-white flex items-center gap-2\" /> <div className=\"h-2 w-2 rounded-full bg-yellow-500\" /></div> Limited Availability </label> </div> <div className=\"flex items-center space-x-2\"  /> <input /> <label htmlFor=\"unavailable\" className=\"text-white flex items-center gap-2\" /> <div className=\"h-2 w-2 rounded-full bg-red-500\" /></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=\"text-red-400\" /> </FormItem>) \";"
-}/> </div> </div> </CardContent> <CardFooter className=\"border-t border-zion-blue-light pt-6\" /> <div className=\"flex flex-col sm: flex-row gap-4 w-full sm:justify-between\"  /> <Button type=\"button\" variant=\"outline\" className=\"border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white\"  /> Save as Draft </Button> <Button </Button /> </div> </CardFooter> </form> </Form> </Card> </div>)}',"
-}skill \";"
-}className=\"bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none\" > {skill;}"
-}</Badge>) )}</div> </div>) )}</div> </div>)}</div> </div>) \";"
-}</div> <Separator className=\"bg - zion - blue - light / 50\" /> {/* Skills and Availability */ \";}"
-}<div className=\"grid grid - cols - 1 md:grid - cols - 2 gap - 8\" /> {/* Skills Section */ \";}"
-}<div className=\"space - y-4\" /> <h3 className=\"text - lg font - medium text - white\"  />Skills & Expertise</h3> <FormField <FormItem /> <FormLabel className=\"text - zion - slate - light\" />Skills</FormLabel> <div className=\"flex gap - 2\" /> <FormControl /> <Input /> </FormControl> <Button type=\"button\" variant=\"outline\" className=\"border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white\" on_click={handleAddSkill \";}"
-} /> Add </Button> </div> <FormDescription className=\"text - zion - slate\" /> Press Enter or click Add to include a skill </FormDescription> <FormMessage className=\"text - red - 400\" /> </FormItem>) \";"
-}/> <div className=\"flex flex - wrap gap - 2 mt - 2\" /> {skill_tags.map (skill => (<Badge key= {skill \";}"
-}className=\"bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none pl - 2 pr - 1 py - 1.5 flex items - center gap - 1\"  /> {skill \";}"
-}<button className=\"rounded - full hover: bg - zion - purple - dark / 20 p - 0.5\"  /> <X className=\"h - 3 w - 3\" /> </button> </Badge>) ,"
-}{\";}"
-  skill_tags.length === 0 && (<p className=\"text - zion - slate text - sm italic\" />No skills added yet</p>)}</div> </div> {/* Availability Section */ \";}"
-}<div className=\"space - y-4\" /> <h3 className=\"text - lg font - medium text - white\"  />Availability</h3> <FormField <FormLabel className=\"text - zion - slate - light\" />Current Status</FormLabel> <FormControl /> <div className=\"space - y-2\" /> <div className=\"flex items - center space - x-2\"  /> <input /> <label html_for=\"available\" className=\"text - white flex items - center gap - 2\" /> <div className=\"h - 2 w - 2 rounded - full bg - green - 500\" /></div> Available Now </label> </div> <div className=\"flex items - center space - x-2\"  /> <input /> <label html_for=\"limited\" className=\"text - white flex items - center gap - 2\" /> <div className=\"h - 2 w - 2 rounded - full bg - yellow - 500\" /></div> Limited Availability </label> </div> <div className=\"flex items - center space - x-2\"  /> <input /> <label html_for=\"unavailable\" className=\"text - white flex items - center gap - 2\" /> <div className=\"h - 2 w - 2 rounded - full bg - red - 500\" /></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=\"text - red - 400\" /> </FormItem>) \";"
-}/> </div> </div> </CardContent> <CardFooter className=\"border - t border - zion - blue - light pt - 6\" /> <div className=\"flex flex - col sm: flex - row gap - 4 w - full sm:justify - between\"  /> <Button type=\"button\" variant=\"outline\" className=\"border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white\"  /> Save as Draft </Button> <Button </Button /> </div> </CardFooter> </form> </Form> </Card> </div>)}'\","
-}'\";"
+}{";generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4" /> <div className="flex items-center justify-between mb-3" /> <h4 className="text-white font-medium flex items-center" /> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI-Generated Content </h4> <Buttontype="button" size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white" onClick={applyGeneratedContent ";}"
+} /> <Check className="mr-1 h-3 w-3" /> Apply </Button> </div> <div className="space-y-4" /> <div /> <h5 className="text-zion-slate-light text-sm mb-1" />Professional Summary</h5> <p className="text-zion-slate italic" /> {generatedContent && generatedContent.summary ;}"
+}</p> </div> {";}"
+  generatedContent && generatedContent.categorizedSkills && (<div /> <h5 className="text-zion-slate-light text-sm mb-1" />Categorized Skills</h5> <div className="flex flex-wrap gap-2 mt-1" /> {Object && Object.entries (generatedContent && generatedContent.categorizedSkills) .map ( ([category, skills]) => (<divkey= {category ";}"
+}className="flex items-center gap-2" /> <BadgeclassName= {`w-fit $ {getCategoryColor (category as CategoryType)}`;"
+} /> {category ";}"
+}</Badge> <div className="flex flex-wrap gap-1" /> {skills && skills.map ( (skill: string) => (<Badgekey= {skill ";}"
+}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none" /> {generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4" /> <div className="flex items-center justify-between mb-3" /> <h4 className="text-white font-medium flex items-center" /> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI-Generated Content </h4> <Button type="button" size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white" onClick={applyGeneratedContent ";}"
+} /> <Check className="mr-1 h-3 w-3" /> Apply </Button> </div> <div className="space-y-4" /> <div /> <h5 className="text-zion-slate-light text-sm mb-1" />Professional Summary</h5> <p className="text-zion-slate italic" /> {generatedContent.summary ;}"
+}</p> </div> {";}"
+  generatedContent.categorizedSkills && (<div /> <h5 className="text-zion-slate-light text-sm mb-1" />Categorized Skills</h5> <div className="flex flex-wrap gap-2 mt-1" /> {Object.entries (generatedContent.categorizedSkills) .map ( ([category, skills]) => (<div key= {category ";}"
+}className="flex items-center gap-2" /> <Badge className= {`w-fit $ {getCategoryColor (category as CategoryType)}` ;"
+} /> {category ";}"
+}</Badge> <div className="flex flex-wrap gap-1" /> {skills.map ( (skill: string) => (<Badge key= {skill ";}"
+}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"  /> {skill ;}"
+}</Badge>) )}</div> </div>) )}</div> </div>)}</div> </div>) ";"
+}</div> <Separator className="bg-zion-blue-light/50" /> {/* Skills and Availability */ ";}"
+}<div className="grid grid-cols-1 md:grid-cols-2 gap-8" /> {/* Skills Section */ ";}<div className="space-y-4" /> <h3 className="text-lg font-medium text-white"  />Skills & Expertise</h3> <FormField <FormItem /> <FormLabel className="text-zion-slate-light" />Skills</FormLabel> <div className="flex gap-2" /> <FormControl /> <Input /> </FormControl> <Buttontype="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" onClick={handleAddSkill ";}"
+} /> Add </Button> </div> <FormDescription className="text-zion-slate" /> Press Enter or click Add to include a skill </FormDescription> <FormMessage className="text-red-400" /> </FormItem>) ";"
+}/> <div className="flex flex-wrap gap-2 mt-2" /> {skillTags && skillTags.map (skill => (<Badgekey= {skill ";}"
+}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1 && 1.5 flex items-center gap-1" /> {skill ";}"
+}<button className="rounded-full hover: bg-zion-purple-dark/20 p-0 && 0.5"  /> <X className="h-3 w-3" /> </button> </Badge>) ,"
+}{";}"
+  skillTags && skillTags.length === 0 && (<p className="text-zion-slate text-sm italic" />No skills added yet</p>)}<div className="space-y-4" /> <h3 className="text-lg font-medium text-white"  />Skills & Expertise</h3> <FormField <FormItem /> <FormLabel className="text-zion-slate-light" />Skills</FormLabel> <div className="flex gap-2" /> <FormControl /> <Input /> </FormControl> <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" onClick={handleAddSkill ";}"
+} /> Add </Button> </div> <FormDescription className="text-zion-slate" /> Press Enter or click Add to include a skill </FormDescription> <FormMessage className="text-red-400" /> </FormItem>) ";"
+}/> <div className="flex flex-wrap gap-2 mt-2" /> {skillTags.map (skill => (<Badge key= {skill ";}"
+}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"  /> {skill ";}"
+}<button className="rounded-full hover: bg-zion-purple-dark/20 p-0.5"  /> <X className="h-3 w-3" /> </button> </Badge>) ,"
+}{";}"
+  skillTags.length === 0 && (<p className="text-zion-slate text-sm italic" />No skills added yet</p>)}</div> </div> {/* Availability Section */ ";}"
+}<div className="space-y-4" /> <h3 className="text-lg font-medium text-white"  />Availability</h3> <FormField <FormLabel className="text-zion-slate-light" />Current Status</FormLabel> <FormControl /> <div className="space-y-2" /> <div className="flex items-center space-x-2"  /> <input /> <label htmlFor="available" className="text-white flex items-center gap-2" /> <div className="h-2 w-2 rounded-full bg-green-500" /></div> Available Now </label> </div> <div className="flex items-center space-x-2"  /> <input /> <label htmlFor="limited" className="text-white flex items-center gap-2" /> <div className="h-2 w-2 rounded-full bg-yellow-500" /></div> Limited Availability </label> </div> <div className="flex items-center space-x-2"  /> <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2" /> <div className="h-2 w-2 rounded-full bg-red-500" /></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";"
+}/> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6" /> <div className="flex flex-col sm: flex-row gap-4 w-full sm:justify-between"  /> <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"  /> Save as Draft </Button> <Button </Button /> </div> </CardFooter> </form> </Form> </Card> </div>)}',"
+}skill ";"
+}className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none" > {skill;}"
+}</Badge>) )}</div> </div>) )}</div> </div>)}</div> </div>) ";"
+}</div> <Separator className="bg - zion - blue - light / 50" /> {/* Skills and Availability */ ";}"
+}<div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8" /> {/* Skills Section */ ";}"
+}<div className="space - y-4" /> <h3 className="text - lg font - medium text - white"  />Skills & Expertise</h3> <FormField <FormItem /> <FormLabel className="text - zion - slate - light" />Skills</FormLabel> <div className="flex gap - 2" /> <FormControl /> <Input /> </FormControl> <Button type="button" variant="outline" className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" on_click={handleAddSkill ";}"
+} /> Add </Button> </div> <FormDescription className="text - zion - slate" /> Press Enter or click Add to include a skill </FormDescription> <FormMessage className="text - red - 400" /> </FormItem>) ";"
+}/> <div className="flex flex - wrap gap - 2 mt - 2" /> {skill_tags.map (skill => (<Badge key= {skill ";}"
+}className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none pl - 2 pr - 1 py - 1.5 flex items - center gap - 1"  /> {skill ";}"
+}<button className="rounded - full hover: bg - zion - purple - dark / 20 p - 0.5"  /> <X className="h - 3 w - 3" /> </button> </Badge>) ,"
+}{";}"
+  skill_tags.length === 0 && (<p className="text - zion - slate text - sm italic" />No skills added yet</p>)}</div> </div> {/* Availability Section */ ";}"
+}<div className="space - y-4" /> <h3 className="text - lg font - medium text - white"  />Availability</h3> <FormField <FormLabel className="text - zion - slate - light" />Current Status</FormLabel> <FormControl /> <div className="space - y-2" /> <div className="flex items - center space - x-2"  /> <input /> <label html_for="available" className="text - white flex items - center gap - 2" /> <div className="h - 2 w - 2 rounded - full bg - green - 500" /></div> Available Now </label> </div> <div className="flex items - center space - x-2"  /> <input /> <label html_for="limited" className="text - white flex items - center gap - 2" /> <div className="h - 2 w - 2 rounded - full bg - yellow - 500" /></div> Limited Availability </label> </div> <div className="flex items - center space - x-2"  /> <input /> <label html_for="unavailable" className="text - white flex items - center gap - 2" /> <div className="h - 2 w - 2 rounded - full bg - red - 500" /></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";"
+}/> </div> </div> </CardContent> <CardFooter className="border - t border - zion - blue - light pt - 6" /> <div className="flex flex - col sm: flex - row gap - 4 w - full sm:justify - between"  /> <Button type="button" variant="outline" className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white"  /> Save as Draft </Button> <Button </Button /> </div> </CardFooter> </form> </Form> </Card> </div>)}'","
+}'";"

@@ -163,8 +163,8 @@ const contactInfo = {mobile: '+1 302 464 0950'}
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' }
         : 'bg-transparent'}
     } ${className}`} />
-      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />"
-        <div className=\"flex items-center justify-between h-20\" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />"
+        <div className="flex items-center justify-between h-20" />
           <motion.div;
 initial={{ opacity: 0, x: -20 }
 }
@@ -263,7 +263,7 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
                 )}
               </div>;
             ))}href={item.href}"
-                    className=\"text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50\">
+                    className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50">
 
                           className='absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl overflow - hidden'>
 
@@ -271,10 +271,10 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
                             <div className='grid gap - 3' />                              {item.dropdown_items?.map ((dropdown_item, idx) => (<Link;}
                                   key={dropdown_item.name}
                                   href={dropdown_item.href}"
-                                  className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 300 group / item'                          className=\"absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl overflow - hidden\" />
+                                  className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 300 group / item'                          className="absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl overflow - hidden" />
 "
-                          <div className=\"p - 4\" />;"
-                            <div className=\"grid gap - 3\" />;
+                          <div className="p - 4" />;"
+                            <div className="grid gap - 3" />;
                                 <Link;
                                   key={dropdown_item.name}
                                   href={dropdown_item.href}
@@ -299,13 +299,13 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
                                   <div className={`w - 10 h - 10 bg - gradient - to - r ${dropdown_item.color} rounded - lg flex items - center justify - center group - hover / item: scale - 110 transition - transform duration - 300
 } />
 "
-                                    <dropdown_item.icon className=\"w - 5 h - 5 text - white\" />;
+                                    <dropdown_item.icon className="w - 5 h - 5 text - white" />;
                                   </div>;
                                   <div />;"
-                                    <div className=\"text - white font - medium group - hover / item:text - cyan - 300 transition - colors\" />;
+                                    <div className="text - white font - medium group - hover / item:text - cyan - 300 transition - colors" />;
                                       {dropdown_item.name}
                                     </div>;"
-                                    {dropdown_item.name === 'View All Services' && (<div className=\"text - xs text - gray - 400\" />Explore our complete portfolio</div>)}
+                                    {dropdown_item.name === 'View All Services' && (<div className="text - xs text - gray - 400" />Explore our complete portfolio</div>)}
                                   </div>;
                                 </Link>))}
                             </div>;
@@ -314,7 +314,7 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
                     </AnimatePresence>;
                   </div>) : (<Link;
                     href={item.href}"
-                    className='text - gray - 300 hover: text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50'                   />                    className=\"text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50\">
+                    className='text - gray - 300 hover: text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50'                   />                    className="text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50">
 
                     {item.name}
                   </Link>)}
@@ -519,8 +519,8 @@ className='block text-gray-300 hover: text-white transition-colors duration-300 
               {/* Mobile Navigation Items */}
               {navigation_items.map (item => (                <div key={item.name} />;
                   {item.has_dropdown ? (<div />;
-                      <button           />;}"
-            <div className=\"px - 4 py - 6 space - y-4\" />;}
+                      <button />;}"
+            <div className="px - 4 py - 6 space - y-4" />;}
               {/* Mobile Navigation Items */}
               {navigation_items.map ((item) => (<div key={item.name} />;
                   {item.has_dropdown ? (<div />;
@@ -560,14 +560,14 @@ className='block text-gray-300 hover: text-white transition-colors duration-300 
                           {item.dropdown_items?.map ((dropdown_item) => (<Link;}
                               key={dropdown_item.name}
                               href={dropdown_item.href}"
-                              className=\"flex items - center space - x-3 p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 300\";
+                              className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 300";
                               on_click={() = /> setIsOpen (false)}
                             >;
                               <div className={`w - 8 h - 8 bg - gradient - to - r ${dropdown_item.color} rounded - lg flex items - center justify - center`} />
 "
-                                <dropdown_item.icon className=\"w - 4 h - 4 text - white\" />;
+                                <dropdown_item.icon className="w - 4 h - 4 text - white" />;
                               </div>;"
-                              <span className=\"text - gray - 300 hover:text - white transition - colors\" />;
+                              <span className="text - gray - 300 hover:text - white transition - colors" />;
                                 {dropdown_item.name}
                               </span>;
                             </Link>))}
@@ -575,7 +575,7 @@ className='block text-gray-300 hover: text-white transition-colors duration-300 
                     </div>) : (<Link;
                       href={item.href}
                       className='block text - gray - 300 hover: text - white transition - colors duration - 300 py - 3 px - 4 rounded - lg hover:bg - gray - 800 / 50'                      on_click={() = /> setIsOpen (false}"
-}                      className=\"block text - gray - 300 hover:text - white transition - colors duration - 300 py - 3 px - 4 rounded - lg hover:bg - gray - 800 / 50\";
+}                      className="block text - gray - 300 hover:text - white transition - colors duration - 300 py - 3 px - 4 rounded - lg hover:bg - gray - 800 / 50";
                       on_click={() => setIsOpen (false)}
                     >;
                       {item.name}

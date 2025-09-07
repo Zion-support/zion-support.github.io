@@ -595,7 +595,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
     description: 'Documentation, support, and learning resources',
   children: [
     href: '/enterprise - it',
-  icon: <Shield className=\"w - 5 h - 5\" />,
+  icon: <Shield className="w - 5 h - 5" />,
     badge: 'Enterprise',
   featured: true,
     children: [;
@@ -942,7 +942,7 @@ key={child && child.name}
                                     </div>;
                                   )}
                                 </div>;"
-                                <ArrowRight className='w-4 h-4 opacity-50' />                              </Link>                                <ArrowRight className=\"w-4 h-4 opacity-50\" />;
+                                <ArrowRight className='w-4 h-4 opacity-50' />                              </Link>                                <ArrowRight className="w-4 h-4 opacity-50" />;
                               </Link>;
                             ))}
                           </div>;
@@ -986,17 +986,17 @@ key={child && child.name}
                   className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200'>;
                   <Mail className='w-4 h-4' />;
                   <span className='hidden xl: inline' />{contactInfo && contactInfo.emai}"
-}</span>                </a>              <div className=\"flex items-center gap-4 text-sm text-gray-400\" />;
+}</span>                </a>              <div className="flex items-center gap-4 text-sm text-gray-400" />;
                 <a href={`tel: ${contactInfo && contactInfo.mobile},"
-} className=\"flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200\" />;"
-                  <Phone className=\"w-4 h-4\" />;"
-                  <span className=\"hidden xl: inline\" />{contactInfo && contactInfo.mobil}
+} className="flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200" />;"
+                  <Phone className="w-4 h-4" />;"
+                  <span className="hidden xl: inline" />{contactInfo && contactInfo.mobil}
 }</span>;
                 </a>;
                 <a href={`mailto: ${contactInfo && contactInfo.email},"
-} className=\"flex items-center gap-2 hover:text-purple-400 transition-colors duration-200\" />;"
-                  <Mail className=\"w-4 h-4\" />;"
-                  <span className=\"hidden xl: inline\" />{contactInfo && contactInfo.emai}
+} className="flex items-center gap-2 hover:text-purple-400 transition-colors duration-200" />;"
+                  <Mail className="w-4 h-4" />;"
+                  <span className="hidden xl: inline" />{contactInfo && contactInfo.emai}
 }</span>;
               </div>;
             </div>;{/* Mobile Menu Button */}
@@ -1007,10 +1007,10 @@ key={child && child.name}
 
               {isOpen ? (<X className='w-6 h-6' />;}
               ) : (<Menu className='w-6 h-6' />;}"
-              )}            </button>              className=\"lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200\";"
-              aria-label=\"Toggle mobile menu\">
+              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200";"
+              aria-label="Toggle mobile menu">
 "
-              {isOpen ? <X className=\"w-6 h-6\" /> : <Menu className=\"w-6 h-6\" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </div>;
         </div>;
             {/* Mobile Menu Button */}
@@ -1021,10 +1021,10 @@ key={child && child.name}
 
               {isOpen ? (<X className='w-6 h-6' />;}
               ) : (<Menu className='w-6 h-6' />;}"
-              )}            </button>              className=\"lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200\";"
-              aria-label=\"Toggle mobile menu\">
+              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200";"
+              aria-label="Toggle mobile menu">
 "
-              {isOpen ? <X className=\"w-6 h-6\" /> : <Menu className=\"w-6 h-6\" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </div>;
         </div>;
           </div>;
@@ -1316,7 +1316,7 @@ href={`mailto: ${contactInfo.email}`}
 };
 
 }, []);"
-</div> <div /> <div className=\"text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent\"  /> Zion Tech Group </div> <div className=\"text - xs text - gray - 400\"  />Revolutionary Technology</div> </div> </a> > {}
+</div> <div /> <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent"  /> Zion Tech Group </div> <div className="text - xs text - gray - 400"  />Revolutionary Technology</div> </div> </a> > {}
   item.icon;}
 }<span /> {}
   item.name;}
@@ -1335,7 +1335,7 @@ href={`mailto: ${contactInfo.email}`}
 }className= {`flex items - center gap - 3 p - 3 rounded - xl transition - all duration - 200 $ {child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover:bg - cyan - 500 / 20': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';}
 }`;
 }on_click= {close_dropdowns;}"
-} />)}</div> <ArrowRight className=\"w - 4 h - 4 opacity - 50\" /> </a>) )}</div> </div> </motion.div>)}</AnimatePresence> </div>) )}</div> <Link key= {action.name;}
+} />)}</div> <ArrowRight className="w - 4 h - 4 opacity - 50" /> </a>) )}</div> </div> </motion.div>)}</AnimatePresence> </div>) )}</div> <Link key= {action.name;}
 }href= {action.href;}
 }className= {`flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 $ {action.primary ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white hover:from - cyan - 600 hover:to - blue - 600 shadow - lg shadow - cyan - 500 / 25': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';}
 }`;

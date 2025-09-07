@@ -8,10 +8,10 @@ interface PerformanceMetrics  {load_time: number;
   firstInputDelay: number;}
   timeToInteractive: number;}
 }
-    return \"text-red-600\";
+    return "text-red-600";
   }
   if (!metrics) return null;"
-  return (<div className=\"fixed bottom-4 right-4 z-50\" />;
+  return (<div className="fixed bottom-4 right-4 z-50" />;
       <button;
         onClick={() = /> setIsVisible(!isVisible)}
                 <span;
@@ -82,33 +82,33 @@ if ( {) {$2;}
 if (.length > 0) {) {$2;}
 }
           set_metrics ((prev) => ({ ...prev, ...new_metrics }) as PerformanceMetrics,)}"
-      })observer.observe ({entry_types: [\"paint\", \"largest - contentful - paint\", \"layout - shift\"]})// Get load time;"
-      window.addEventListener (\"load\", () => {const load_time =;}
+      })observer.observe ({entry_types: ["paint", "largest - contentful - paint", "layout - shift"]})// Get load time;"
+      window.addEventListener ("load", () => {const load_time =;}
           performance.timing.loadEventEnd - performance.timing.navigation_start;}
         set_metrics ((prev) => ({ ...prev, load_time }) as PerformanceMetrics)})return () => observer.disconnect ()}
   }, [])const getScoreColor = (value: number,thresholds: { good: number; needs_improvement: number}
 },) =>: any {// Check condition;}"
-if (return \"text - green - 600\") {$2;}
+if (return "text - green - 600") {$2;}
 }
     // Check condition;"
-if (return \"text - yellow - 600\") {$2;}
+if (return "text - yellow - 600") {$2;}
 }"
-    return \"text - red - 600\";
+    return "text - red - 600";
   }// Check condition;
 if (return null) {$2;}
 }"
-  return (<div className=\"fixed bottom - 4 right-4 z-50\" />;
+  return (<div className="fixed bottom - 4 right-4 z-50" />;
       <button;
         on_click={() = /> setIsVisible (!is_visible)}"
-        className=\"bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg hover:bg - blue-700 transition-colors\">
+        className="bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg hover:bg - blue-700 transition-colors">
 
         📊 Performance;
       </button>;"
-      {is_visible && (<div className=\"absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p-6 w-80 border\" />;"
-          <h3 className=\"text - lg font-semibold mb-4\" />Performance Metrics</h3>;"
-          <div className=\"space-y-3\" />;"
-            {metrics.load_time && (<div className=\"flex justify-between items-center\" />;"
-                <span className=\"text-sm font-medium\" />Load Time:</span>;}
+      {is_visible && (<div className="absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p-6 w-80 border" />;"
+          <h3 className="text - lg font-semibold mb-4" />Performance Metrics</h3>;"
+          <div className="space-y-3" />;"
+            {metrics.load_time && (<div className="flex justify-between items-center" />;"
+                <span className="text-sm font-medium" />Load Time:</span>;}
                 <span;}
                   className={`text - sm font - mono ${getScoreColor (metrics.load_time, { good: 2000, needs_improvement: 4000 })}`} />
 
@@ -118,8 +118,8 @@ if (return null) {$2;}
     </div>
   );
 }"
-            {metrics.firstContentfulPaint && (<div className=\"flex justify-between items-center\" />;"
-                <span className=\"text-sm font-medium\" />FCP:</span>;}
+            {metrics.firstContentfulPaint && (<div className="flex justify-between items-center" />;"
+                <span className="text-sm font-medium" />FCP:</span>;}
                 <span;}
                   className={`text - sm font - mono ${getScoreColor (metrics.firstContentfulPaint, { good: 1800, needs_improvement: 3000 })}`} />
 
@@ -129,8 +129,8 @@ if (return null) {$2;}
     </div>
   );
 }"
-            {metrics.largestContentfulPaint && (<div className=\"flex justify-between items-center\" />;"
-                <span className=\"text-sm font-medium\" />LCP:</span>;}
+            {metrics.largestContentfulPaint && (<div className="flex justify-between items-center" />;"
+                <span className="text-sm font-medium" />LCP:</span>;}
                 <span;}
                   className={`text - sm font - mono ${getScoreColor (metrics.largestContentfulPaint, { good: 2500, needs_improvement: 4000 })}`} />
 
@@ -140,8 +140,8 @@ if (return null) {$2;}
     </div>
   );
 }"
-            {metrics.cumulativeLayoutShift && (<div className=\"flex justify-between items-center\" />;"
-                <span className=\"text-sm font-medium\" />CLS:</span>;}
+            {metrics.cumulativeLayoutShift && (<div className="flex justify-between items-center" />;"
+                <span className="text-sm font-medium" />CLS:</span>;}
                 <span;}
                   className={`text - sm font - mono ${getScoreColor (metrics.cumulativeLayoutShift, { good: 0.1, needs_improvement: 0.25 })}`} />
 
@@ -152,8 +152,8 @@ if (return null) {$2;}
   );
 }
           </div>;"
-          <div className=\"mt - 4 pt-4 border-t\" />;"
-            <div className=\"text - xs text-gray-500\" />;
+          <div className="mt - 4 pt-4 border-t" />;"
+            <div className="text - xs text-gray-500" />;
               Core Web Vitals monitoring in real - time;
             </div>;
           </div>

@@ -24,9 +24,9 @@ type InsightResponse = {
   maxHourlyUsd: number;
 
   confidence: number; // 0..1;}
-trendMonthly: { label: string; value: number,}
+trendMonthly: {label: string; value: number}
 }[];
-  regionalComparison: { region: string; medianHourlyUsd: number,}
+  regionalComparison: {region: string; medianHourlyUsd: number}
 }[];
   tags: string[];
   gptRecommendation?: string;
@@ -67,7 +67,7 @@ const now = new Date ();
 
 const seed = prng (seed_key);
 
-const series: { label: string; value: number,}
+const series: {label: string; value: number}
 }[] = [];
 
   let current = baseMonthly * 0.92; // start slightly below base;
@@ -92,7 +92,7 @@ const completion = await client.chat.completions.create({model: 'gpt-4o-mini';
   content:;}
             'You are a compensation analyst. Be specific and concise. Use USD.';}
         }
-        { role: 'user',}
+        {role: 'user'}
   content: prompt }
 
       ]
@@ -110,7 +110,7 @@ export default async function handler(
 res: NextApiResponse<InsightResponse | { error: string } />
 ) {
   if (req.method !== 'POST') {}
-    return res.status(405).json({ error: 'Method not allowed',}
+    return res.status(405).json({error: 'Method not allowed'}
 });
   }
 
@@ -190,8 +190,7 @@ const trend = buildTrend(
 const byRegion = groupBy(TALENT_PROFILES, p => extractCountry(p.location));
 
 const regionalComparison = Object.entries(byRegion)
-    .map(([r, list]) => ({
-      region: r,}
+    .map(([r, list]) => ({region: r}
       medianHourlyUsd: Math.round(median(list.map(p => p.hourlyRateUsd))),}
     }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)

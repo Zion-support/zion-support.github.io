@@ -107,9 +107,9 @@ export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ ch
 
 useEffect ( () => {// Preload critical resources;
 
-const preloadCriticalResources = (\"\";
+const preloadCriticalResources = ("";
 "
-const criticalFonts = [';https: //fonts.googleapis.com / css2?family = Orbitron:wght@400;600 & display = swap''      ]';criticalFonts.forEach (font => {\"\";
+const criticalFonts = [';https: //fonts.googleapis.com / css2?family = Orbitron:wght@400;600 & display = swap''      ]';criticalFonts.forEach (font => {"";
 ) => {
   return $3;}
 }
@@ -123,12 +123,12 @@ const optimizeImages = () => ;
 
 const observer = new IntersectionObserver ( (entries) => {entries.forEach (entry => {if (entry.isIntersecting) ;
   const target = entry.target as HTMLElement;}"
-            if (target.dataset.src) {\"\";}
+            if (target.dataset.src) {"";}
 target.style.backgroundImage = `url (${target.dataset.src}) `              target.removeAttribute ('data - src') '              observer.unobserve (target) '            }"
-          }\", \";
+          }", ";
 })}, { rootMargin: '50px'}"
-}') ';// Observe lazy load elements;\"\";
+}') ';// Observe lazy load elements;"";
 
 const lazyElements = document.querySelectorAll ('[data - src]') '    lazyElements.forEach (el => observer.observe (el) ) ';return () => {observer.disconnect () }
   }, [])return <>{children}</>}"
-\"`\";"
+"`";"

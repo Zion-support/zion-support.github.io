@@ -10,19 +10,19 @@ import { toast  } from '@/hooks/use-toast';
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
 import { Sparkles  } from 'lucide-react';
 import { Progress  } from '@/components/ui/progress';
-import React from \"react\",import { Badge } from \"@/components/ui/badge\",import { Button } from \"@/components/ui/button\",import {Card;
+import React from "react",import { Badge } from "@/components/ui/badge",import { Button } from "@/components/ui/button",import {Card;
   CardContent;
   CardDescription;
   CardFooter;}
   CardHeader;}"
-  CardTitle} from \"@/components/ui/card\",export function UsageStats() {const handleSaveChanges  = null;return (<div className=\"space-y-8\" />;
+  CardTitle} from "@/components/ui/card",export function UsageStats() {const handleSaveChanges  = null;return (<div className="space-y-8" />;
       <div />;"
-        <h3 className=\"text-xl font-medium mb-4\" />Usage Limits & Settings</h3>;"
-        <p className=\"text-muted-foreground mb-6\" />;
+        <h3 className="text-xl font-medium mb-4" />Usage Limits & Settings</h3>;"
+        <p className="text-muted-foreground mb-6" />;
           Configure usage limits for your team to manage your subscription resources.;
         </p>;
       </div>;"
-return (<div className=\"grid grid-cols-1 lg:grid-cols-2 gap-6\" />;
+return (<div className="grid grid-cols-1 lg:grid-cols-2 gap-6" />;
         <Card />;
           <CardHeader />;
             <CardTitle />Job Postings</CardTitle>;
@@ -155,10 +155,10 @@ return (<div className=\"grid grid-cols-1 lg:grid-cols-2 gap-6\" />;
           </CardFooter>;
         </Card>;
       </div>;"
-      <div className=\"bg-muted/50 rounded-lg p-6 flex items-center justify-between\" />;"
-        <div className=\"flex items-center gap-4\" />;"
-          <div className=\"h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center\" />;"
-            <Sparkles className=\"h-5 w-5 text-primary\" />;
+      <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between" />;"
+        <div className="flex items-center gap-4" />;"
+          <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center" />;"
+            <Sparkles className="h-5 w-5 text-primary" />;
           </div>;
           <div />;
             <h3 className='font-medium' />Need higher limits?</h3>;
@@ -190,7 +190,7 @@ export function UsageStats() {const handleSaveChanges = (toast({title: 'Limits u
       </div>;<div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 6' />;
         <Card />;
           <CardHeader />;
-            <CardTitle  /> Job Postings</CardTitle>;<CardDescription />Set monthly limits for job postings across your organization;
+            <CardTitle /> Job Postings</CardTitle>;<CardDescription />Set monthly limits for job postings across your organization;
             </CardDescription>;
           </CardHeader>;<CardContent className='space - y-4' />;
             <div />;
@@ -213,7 +213,7 @@ export function UsageStats() {const handleSaveChanges = (toast({title: 'Limits u
           </CardFooter>;
         </Card>;<Card />;
           <CardHeader />;
-            <CardTitle  /> Candidate Contacts</CardTitle>;<CardDescription />Limit the number of direct candidate contacts per month;
+            <CardTitle /> Candidate Contacts</CardTitle>;<CardDescription />Limit the number of direct candidate contacts per month;
             </CardDescription>;
           </CardHeader>;<CardContent className='space - y-4' />;
             <div />;
@@ -236,7 +236,7 @@ export function UsageStats() {const handleSaveChanges = (toast({title: 'Limits u
           </CardFooter>;
         </Card>;<Card />;
           <CardHeader />;
-            <CardTitle  /> AI Features</CardTitle>;<CardDescription />Set the AI usage limits for matching and content generation;
+            <CardTitle /> AI Features</CardTitle>;<CardDescription />Set the AI usage limits for matching and content generation;
             </CardDescription>;
           </CardHeader>;<CardContent className='space - y-4' />;
             <div />;
@@ -259,7 +259,7 @@ export function UsageStats() {const handleSaveChanges = (toast({title: 'Limits u
           </CardFooter>;
         </Card>;<Card />;
           <CardHeader />;
-            <CardTitle  /> Budget Controls</CardTitle>;<CardDescription />Set spending caps for premium features and services;
+            <CardTitle /> Budget Controls</CardTitle>;<CardDescription />Set spending caps for premium features and services;
             </CardDescription>;
           </CardHeader>;<CardContent className='space - y-4' />;
             <div />;
@@ -304,9 +304,9 @@ export function UsageStats() {const handleSaveChanges = (toast({title: 'Limits u
               enterprise.;
             </p>;
           </div>;
-        </div>;<Button  /> Contact Us</Button>;
+        </div>;<Button /> Contact Us</Button>;
       </div>
     </div>
   );"
-}\"}</div>;"
-  ))}\";"
+}"}</div>;"
+  ))}";"

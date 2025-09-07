@@ -64,13 +64,13 @@ ease: 'easeInOut'}
           <motion&& motion.div;
             initial={{ opacity: 0, scale: 0 && 0.8 }
 }
-            duration: 10,repeat: Infinity,ease: \"easeInOut\";
+            duration: 10,repeat: Infinity,ease: "easeInOut";
           }}
         />;
         {/* Grid Pattern */}"
-        <div className=\"absolute inset - 0 bg-[linear - gradient (rgba (255, 255, 255, 0.02)_1px, transparent_1px), linear - gradient (90deg, rgba (255, 255, 255, 0.02)_1px, transparent_1px)] bg-[size:50px_50px]\" />;
+        <div className="absolute inset - 0 bg-[linear - gradient (rgba (255, 255, 255, 0.02)_1px, transparent_1px), linear - gradient (90deg, rgba (255, 255, 255, 0.02)_1px, transparent_1px)] bg-[size:50px_50px]" />;
       </div>;"
-      <div className=\"relative container mx - auto px - 4 text - center z - 10\" />;
+      <div className="relative container mx - auto px - 4 text - center z - 10" />;
         {/* Main Content */}
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 30 }
@@ -217,7 +217,7 @@ className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
 animate={{ y: [0, 10, 0] }}
 ;
 "
-export default HeroSection;        className=\"absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2\" />
+export default HeroSection;        className="absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2" />
 
         <motion.div;
           animate={{ coordinate_y: [0, 10, 0] }}

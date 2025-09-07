@@ -1,12 +1,12 @@
 import React from 'react';
 
-export const BrowserRouter = ({ children }: { children: any,}
+export const BrowserRouter = ({ children }: {children: any}
 }) => children;
 
-export const Routes = ({ children }: { children: any,}
+export const Routes = ({ children }: {children: any}
 }) => children;
 
-export const Route = ({ element }: { element: any,}
+export const Route = ({ element }: {element: any}
 }) => element;
 
 export const Link = (props: any) => ;
@@ -15,7 +15,7 @@ export const Link = (props: any) => ;
 export;
   const NavLink = Link;
 
-export const Navigate = ({ to }: { to: string,}
+export const Navigate = ({ to }: {to: string}
 }) => null;
 
 export const MemoryRouter = BrowserRouter;

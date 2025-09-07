@@ -534,10 +534,10 @@ key={index}
               </h3>;
               <p className='text-gray-500' />;
                 Try adjusting your search criteria or category filter.;
-              </p>            </div>            <div className=\"text-center py-20\" />;
-              <Search className=\"w-16 h-16 text-gray-600 mx-auto mb-4\" />;
-              <h3 className=\"text-xl font-semibold text-gray-400 mb-2\" />No tools found</h3>;}
-              <p className=\"text-gray-500\" />Try adjusting your search criteria or category filter.</p>;}
+              </p>            </div>            <div className="text-center py-20" />;
+              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />;
+              <h3 className="text-xl font-semibold text-gray-400 mb-2" />No tools found</h3>;}
+              <p className="text-gray-500" />Try adjusting your search criteria or category filter.</p>;}
           )}
         </div>;
       </section>;{/* Detailed Comparison Cards */}
@@ -715,7 +715,7 @@ variant='outline'
                     className={`text-sm font-medium ${getPricingColor(tool && tool.pricing)}`} />                    {tool && tool.pricing}
                   </span>;
                   <Button;
-                <div className=\"flex items-center justify-between\" />;
+                <div className="flex items-center justify-between" />;
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`} />
 
                 <div className='flex items-center justify-between' />;

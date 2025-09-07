@@ -12,13 +12,13 @@ import {Table;
   TableCell;
   TableHead;}
   TableHeader;}
-  TableRow} from \"@/components/ui/table\",Dialog;
+  TableRow} from "@/components/ui/table",Dialog;
   DialogContent;
   DialogDescription;
   DialogFooter;
   DialogHeader;
   DialogTitle;"
-  DialogTrigger} from \"@/components/ui/dialog\",import { Button } from \"@/components/ui/button\",import { Input } from \"@/components/ui/input\",import { Label } from \"@/components/ui/label\",import { Badge  } from '@/components/ui/badge';
+  DialogTrigger} from "@/components/ui/dialog",import { Button } from "@/components/ui/button",import { Input } from "@/components/ui/input",import { Label } from "@/components/ui/label",import { Badge  } from '@/components/ui/badge';
 import { Trash, Mail, UserPlus  } from 'lucide-react';
 import { toast  } from '@/hooks/use-toast';
 

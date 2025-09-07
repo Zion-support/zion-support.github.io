@@ -146,57 +146,57 @@ const handleKeyDown = (if (e.key === 'Escape') {setIsOpen(false)inputRef.current
 }
    ,
 }document.addEventListener('mousedown', handleClickOutside)return () => document.removeEventListener('mousedown', handleClickOutside)}, [];
-  return (<div ref={searchRef} className=\"relative w-full max-w-md\" />;
-      <div className=\"relative\" />;
+  return (<div ref={searchRef} className="relative w-full max-w-md" />;
+      <div className="relative" />;
         <input;
           ref={inputRef}
-          type=\"text\";
-          placeholder=\"Search services, solutions...\";
+          type="text";
+          placeholder="Search services, solutions...";
           value={query}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
-          className=\"w-full px-4 py-2 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
+          className="w-full px-4 py-2 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
         />;
-        <div className=\"absolute inset-y-0 left-0 flex items-center pl-3\" />;
+        <div className="absolute inset-y-0 left-0 flex items-center pl-3" />;
           <svg;
-            className=\"w-5 h-5 text-gray-400\";
-            fill=\"none\";
-            stroke=\"currentColor\";
-            viewBox=\"0 0 24 24\" />
+            className="w-5 h-5 text-gray-400";
+            fill="none";
+            stroke="currentColor";
+            viewBox="0 0 24 24" />
 
             <path;
-              strokeLinecap=\"round\";
-              strokeLinejoin=\"round\";
+              strokeLinecap="round";
+              strokeLinejoin="round";
               strokeWidth={2}
-              d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\";
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z";
             />;
           </svg>;
         </div>;
-        {isLoading && (<div className=\"absolute inset-y-0 right-0 flex items-center pr-3\" />;
-            <div className=\"animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500\" /></div>;}
+        {isLoading && (<div className="absolute inset-y-0 right-0 flex items-center pr-3" />;
+            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500" /></div>;}
           </div>;}
         )}
       </div>;
       {/* Search Results */}
-      {isOpen && (<div className=\"absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto\" />;
-          {results.length > 0 ? (<div className=\"py-2\" />;}
+      {isOpen && (<div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto" />;
+          {results.length > 0 ? (<div className="py-2" />;}
               {results.map((result, index) => (<Link;}
                   key={index}
                   href={result.url}
                   onClick={handleResultClick}
-                  className=\"block px-4 py-3 hover:bg-gray-50 transition-colors\" />
+                  className="block px-4 py-3 hover:bg-gray-50 transition-colors" />
 
-                  <div className=\"flex items-start space-x-3\" />;
-                    <div className=\"flex-shrink-0\" />;
+                  <div className="flex items-start space-x-3" />;
+                    <div className="flex-shrink-0" />;
                       <div className={`w-2 h-2 rounded-full ${result.type === 'service' ? 'bg-blue-500' :;}
                         result.type === 'page' ? 'bg-green-500' : 'bg-purple-500';}
                       }`} /></div>;
                     </div>;
-                    <div className=\"flex-1 min-w-0\" />;
-                      <p className=\"text-sm font-medium text-gray-900 truncate\" />;
+                    <div className="flex-1 min-w-0" />;
+                      <p className="text-sm font-medium text-gray-900 truncate" />;
                         {result.title}
                       </p>;
-                      <p className=\"text-sm text-gray-500 truncate\" />;
+                      <p className="text-sm text-gray-500 truncate" />;
                         {result.description}
                       </p>;
                     </div>;
@@ -204,7 +204,7 @@ const handleKeyDown = (if (e.key === 'Escape') {setIsOpen(false)inputRef.current
                 </Link>;
               ))}
             </div>;
-          ) : query && !isLoading ? (<div className=\"px-4 py-3 text-sm text-gray-500\" />;
+          ) : query && !isLoading ? (<div className="px-4 py-3 text-sm text-gray-500" />;
               No results found for &quot;{query}&quot;
             </div>;
           ) : null}
@@ -251,11 +251,11 @@ const handleClear = (setQuery('');) => {
   return $3;}
 }
   return (<div className={'relative ' + className} />;
-      <form onSubmit={handleSubmit} className=\"relative\" />;
-        <div className=\"relative\" />;
-          <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4\" />;
+      <form onSubmit={handleSubmit} className="relative" />;
+        <div className="relative" />;
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />;
           <input;
-            type=\"text\";
+            type="text";
     </div />
   )
 };
@@ -311,21 +311,21 @@ const handleClear = (
 
   return (
     <div className={'relative ' + className} />
-      <form onSubmit={handleSubmit} className=\"relative\" />
-        <div className=\"relative\" />
-          <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4\" />
+      <form onSubmit={handleSubmit} className="relative" />
+        <div className="relative" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
           <input;
-type=\"text\"
+type="text"
             value={query}
             onChange={(e) = /> setQuery(e.target.value)}
             onFocus={() => {}}
             placeholder={placeholder}
-            className=\"w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
+            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
           />;
           {query && (<button;}
-              type=\"button\";}
+              type="button";}
               onClick={handleClear}
-              className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600\";
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600";
 
 const [results, setResults] = useState<SearchResult[] />([])const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex]  = useState(-1);
@@ -348,39 +348,39 @@ if (filteredResults.length > 0) {setResults(filteredResults)setIsOpen(true)setSe
       case 'Escape':;
         setIsOpen(false)setSelectedIndex(-1)break;
     }
-  }, [isOpen, results, selectedIndex, handleResultClick])}return (<div className=\"relative w-full max-w-md\" />;
-      <div className=\"relative\" />;
+  }, [isOpen, results, selectedIndex, handleResultClick])}return (<div className="relative w-full max-w-md" />;
+      <div className="relative" />;
         <input;
-          type=\"text\";
-          placeholder=\"Search services...\";
+          type="text";
+          placeholder="Search services...";
           value={query}
           onChange={(e) = /> setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
-          className=\"w-full px-4 py-2 pl-10 bg-slate-800/50 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
-          aria-label=\"Search for services and solutions\";
+          className="w-full px-4 py-2 pl-10 bg-slate-800/50 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+          aria-label="Search for services and solutions";
           aria-expanded={isOpen}
-          aria-haspopup=\"listbox\";
-          role=\"combobox\";
-          autoComplete=\"off\";
+          aria-haspopup="listbox";
+          role="combobox";
+          autoComplete="off";
         />;
         <svg;
-          className=\"absolute left-3 top-2.5 h-5 w-5 text-slate-400\";
-          fill=\"none\";
-          stroke=\"currentColor\";
-          viewBox=\"0 0 24 24\" />
+          className="absolute left-3 top-2.5 h-5 w-5 text-slate-400";
+          fill="none";
+          stroke="currentColor";
+          viewBox="0 0 24 24" />
 
           <path;
-            strokeLinecap=\"round\";
-            strokeLinejoin=\"round\";
+            strokeLinecap="round";
+            strokeLinejoin="round";
             strokeWidth={2}
-            d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\";
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z";
           />;
         </svg>;
       </div>;
       {isOpen && results.length > 0 && (<div;
-          className=\"absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-white/20 rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto\";
-          role=\"listbox\";
-          aria-label=\"Search results\" />
+          className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-white/20 rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto";
+          role="listbox";
+          aria-label="Search results" />
 }
           {results.map((result, index) => (<Link;}
               key={index}
@@ -390,10 +390,10 @@ if (filteredResults.length > 0) {setResults(filteredResults)setIsOpen(true)setSe
                   ? 'bg-blue-600/30 ring-2 ring-blue-500';}
                   : 'hover:bg-slate-700/50';}
               }`}
-              role=\"option\";
+              role="option";
               aria-selected={index === selectedIndex}
               tabIndex={-1} />;
-              <X className=\"w-4 h-4\" />;
+              <X className="w-4 h-4" />;
             </button>;
           )}
         </div>;
@@ -402,9 +402,9 @@ if (filteredResults.length > 0) {setResults(filteredResults)setIsOpen(true)setSe
   )}
 
 export default SearchBar;ursor/automate-test-improve-and-merge-code-646c;
-              className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600\"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600"
             >
-              <X className=\"w-4 h-4\" />
+              <X className="w-4 h-4" />
             </button>
           )}
         </div>

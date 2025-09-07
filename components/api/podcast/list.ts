@@ -13,7 +13,7 @@ const EPISODES_PATH = path.join(
 
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);}
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true,}
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, {recursive: true}
 });
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
@@ -33,7 +33,7 @@ const simplified = episodes.map(e => ({
 },
   }));
 
-  return res.status(200).json({ episodes: simplified,}
+  return res.status(200).json({episodes: simplified}
 });
   return res.status(200).json({ episodes: simplified }),
 }

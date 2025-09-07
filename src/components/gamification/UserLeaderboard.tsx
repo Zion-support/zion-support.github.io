@@ -120,7 +120,7 @@ interface UserLeaderboardProps {
 </Trophy>
 
         </CardTitle>;
-        <CardDescription  /> Top users by points</CardDescription>;
+        <CardDescription /> Top users by points</CardDescription>;
       </CardHeader>;
 
       <CardContent>;

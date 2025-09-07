@@ -17,8 +17,7 @@ const title = String(formData.get('title') |'New lead');
     setMessage(null)
     try {
 
-      const res = await fetch('/api/vendors/lead', {
-        method: 'POST',}
+      const res = await fetch('/api/vendors/lead', {method: 'POST'}
   headers: { 'Content-Type': 'application/json',}
 },
 body: JSON.stringify({ vendorId: vendor.id, title }),

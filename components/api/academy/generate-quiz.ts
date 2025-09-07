@@ -90,7 +90,7 @@ question: `Which topic is central to ${moduleTitl,) => {
   try {}
     const client = new OpenAI({ apiKey });
 
-const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {\"questions\":[{\"question\":string,\"options\":string[],\"answerIndex\":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleConten}
+const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleConten}
 }`;
 
 const completion = await client.chat.completions.create({
