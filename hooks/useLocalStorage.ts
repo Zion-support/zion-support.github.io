@@ -12,7 +12,6 @@ export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
       const valueToStore = value instanceof Function ? value(storedValue) :value;import { useState, useEffect } from 'react';
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
-<<<<<<< HEAD
   // Get from local storage then parse stored json or return initialValue
 
 interface UseLocalStorageProps {
@@ -20,9 +19,6 @@ interface UseLocalStorageProps {
 }
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
-=======
-  // Get from local storage then parse stored json or return initialValueexport const useLocalStorage = <T>(key: string, initialValue: T) => {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
     try {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
@@ -56,9 +52,4 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 };
 };
 };
-<<<<<<< HEAD
 };
-=======
-};
-export default useLocalStorage;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e

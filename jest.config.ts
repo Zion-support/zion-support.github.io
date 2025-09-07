@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { Config } from "jest";
 import nextJest from "next/jest.js";
 const createJestConfig = nextJest({ dir: "./" });
@@ -20,10 +19,6 @@ const config: Config = {
 export default createJestConfig(config);
 import type { Config } from "jest";
 import nextJest from "next/jest.js";
-=======
-import type { Config } from 'jest';
-import nextJest from 'next/jest.js';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files
@@ -58,7 +53,6 @@ const config: Config = {
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-<<<<<<< HEAD
 export default createJestConfig(config);
 import type { Config } from "jest";
 import nextJest from "next/jest.js";
@@ -79,6 +73,3 @@ const config: Config = {
   },
 };
 export default createJestConfig(config);
-=======
-export default createJestConfig(config);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e

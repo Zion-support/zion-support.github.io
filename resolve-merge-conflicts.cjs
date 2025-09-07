@@ -87,10 +87,8 @@ class MergeConflictResolver {
     // Handle different conflict patterns
     const conflictPatterns = [
       // Standard conflict markers
-      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g,
-      // Modified/delete conflicts
-      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g
-    ];
+      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)      // Modified/delete conflicts
+      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)    ];
 
     for (const pattern of conflictPatterns) {
       resolvedContent = resolvedContent.replace(pattern, (match, incoming) => {
@@ -101,11 +99,9 @@ class MergeConflictResolver {
     // Clean up any remaining conflict markers
     resolvedContent = resolvedContent
       .replace(/<<<<<<< HEAD[\s\S]*?=======/g, '')
-      .replace(/>>>>>>> [^\n]+/g, '')
-      .replace(/^<<<<<<< HEAD$/gm, '')
+      .replace(/      .replace(/^<<<<<<< HEAD$/gm, '')
       .replace(/^=======$/gm, '')
-      .replace(/^>>>>>>> [^\n]+$/gm, '');
-
+      .replace(/^
     // Write resolved content
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
     this.resolvedFiles.push(filePath);

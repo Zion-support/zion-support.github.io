@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs'
 import path from 'path'
 const baseUrl = 'https://ziontechgroup.com'
@@ -26,5 +25,3 @@ const baseUrl = 'https://ziontechgroup.com'
   const publicDir = path.join(process.cwd(), 'public'
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml')
   console.log(' Sitemap generated successfully at public/sitemap.xml')
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

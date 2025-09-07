@@ -120,12 +120,8 @@ export default function MicroSaasPage() {
                 </Link>
                 <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   View Demo
-<<<<<<< HEAD
                 </Link>
 import React from 'react';
-=======
-                </Link>import React from 'react';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -743,12 +739,8 @@ export default function MicroSaas() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-<<<<<<< HEAD
                 Ready to Transform Your Business?
               </h2>
-=======
-                Ready to Transform Your Business?              </h2>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
               <p className="text-xl mb-8 max-w-3xl mx-auto">
                 Discover how our micro SaaS solutions can solve your specific business challenges
               </p>
@@ -766,18 +758,11 @@ export default function MicroSaas() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
 }
           </section>
-=======
-}          </section>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
         </main>
       </ErrorBoundary>
     </>
   )
 }
-<<<<<<< HEAD
 }
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e

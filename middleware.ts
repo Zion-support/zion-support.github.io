@@ -3,11 +3,7 @@ import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
   const response = NextResponse.next();
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
   // Security headers
   response.headers.set("X-Frame-Options", "DENY");
   response.headers.set("X-Content-Type-Options", "nosniff");
@@ -22,12 +18,8 @@ export function middleware(request: NextRequest) {
     "Content-Security-Policy",
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;",
   );
-<<<<<<< HEAD
 
   return response;
-=======
-    return response;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 }
 
 export const config = {
