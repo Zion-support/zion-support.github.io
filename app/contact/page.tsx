@@ -1,172 +1,157 @@
-'use client';'
-import React, { useState } from 'react';'
-import { EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline';'
-import Link from 'next/link';'
-import { ArrowRightIcon } from '@heroicons/react/24/outline';'
+'use client';
+
+import React, { useState } from 'react';
+
 export default function ContactPage() {
-}
-return (;
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">"
-      <div className="container mx-auto px-4 py-20">"
-        <div className="text-center mb-16">"
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">"
-            Get In Touch
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Form submitted:', formData);
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Contact Us
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
-            Ready to transform your business with our AI solutions and enterprise services?
-            Let's discuss your project and create something amazing together.'
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-            Ready to transform your business? Let&apos;s discuss your project and discover how our solutions can accelerate your growth.
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-            Ready to transform your business? Let&apos;s discuss your project and discover how our solutions can accelerate your growth.
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
-            Ready to transform your business with our AI solutions and enterprise services?
-            Let's discuss your project and create something amazing together.'
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-            Ready to transform your business? Let&apos;s discuss your project and discover how our solutions can accelerate your growth.
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
-            Ready to transform your business with our AI solutions and enterprise services?
-            Let's discuss your project and create something amazing together.'
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
-            Ready to transform your business with our AI solutions and enterprise services?
-            Let's discuss your project and create something amazing together.'
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-            Ready to transform your business? Let&apos;s discuss your project and discover how our solutions can accelerate your growth.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ready to transform your business with cutting-edge technology? 
+            Get in touch with our team of experts.
           </p>
         </div>
-        <div className="max-w-4xl mx-auto">"
-          <div className="grid grid-cols-1 "lg":grid-cols-2 gap-12">"
-            {/* Contact Information */
-}
-            <div className="space-y-8">"
-              <div>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h2>"
-                <div className="space-y-4">"
-                  <div className="flex items-center">"
-                    <span className="text-blue-600 mr-3">📧</span>"
-                    <span className="text-gray-700">contact@ziontechgroup.com</span>"
-                  </div>
-                  <div className="flex items-center">"
-                    <span className="text-blue-600 mr-3">📞</span>"
-                    <span className="text-gray-700">+1 (302) 464-0950</span>"
-                  </div>
-                  <div className="flex items-center">"
-                    <span className="text-blue-600 mr-3">🌐</span>"
-                    <a href=""https"://ziontechgroup.com" className="text-gray-700 "hover":text-blue-600">"
-                      ziontechgroup.com
-                    </a>
-                  </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              Get in Touch
+            </h2>
+            
+            <div className="space-y-6 mb-8">
+              <div className="flex items-center">
+                <svg className="h-6 w-6 text-blue-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <div>
+                  <p className="font-semibold text-gray-900">Email</p>
+                  <p className="text-gray-600">contact@ziontechgroup.com</p>
                 </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Why Choose Us?</h3>"
-                <ul className="space-y-2 text-gray-600">"
-                  <li>• 1000+ successful projects delivered</li>
-                  <li>• 24/7 technical support</li>
-                  <li>• Enterprise-grade security</li>
-                  <li>• Custom AI solutions</li>
-                  <li>• Rapid development cycles</li>
-                </ul>
+              
+              <div className="flex items-center">
+                <svg className="h-6 w-6 text-blue-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <div>
+                  <p className="font-semibold text-gray-900">Phone</p>
+                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center">
+                <svg className="h-6 w-6 text-blue-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <div>
+                  <p className="font-semibold text-gray-900">Address</p>
+                  <p className="text-gray-600">123 Tech Street, Innovation City, IC 12345</p>
+                </div>
               </div>
             </div>
-            {/* CTA Section */}
-            <div className="bg-white rounded-xl shadow-lg p-8">"
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Ready to Get Started?</h2>"
-              <p className="text-gray-600 mb-8">"
-                Contact us today for a free consultation and discover how our AI solutions,
-can transform your business.
-              </p>
-              <div className="space-y-4">"
-                <a,
-href=""mailto":contact@ziontechgroup.com""
-                  className="block w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold "hover":bg-blue-700 transition-colors text-center""
-                >
-                  Send us an Email
-                  <ArrowRightIcon className="h-5 w-5 ml-2 inline" />"
-                </a>
-                <a,
-href=""tel":+13024640950""
-                  className="block w-full border-2 border-white text-white px-8 py-4 rounded-lg font-semibold "hover":bg-white "hover":text-blue-600 transition-colors text-center""
-                >
-                  Call Now
-                </a>
-            {submitStatus === 'success' && ('
-              <div className="mb-6 p-4 bg-green-900 border border-green-700 rounded-lg flex items-center">"
-                <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />"
-                <span className="text-green-300">Message sent successfully! We&apos;ll get back to you soon.</span>"
-              </div>
-            )}
-            {/* CTA Section */}
-            <div className="bg-white rounded-xl shadow-lg p-8">"
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Ready to Get Started?</h2>"
-              <p className="text-gray-600 mb-8">"
-                Contact us today for a free consultation and discover how our AI solutions,
-can transform your business.
-              </p>
-              <div className="space-y-4">"
-                <a,
-href=""mailto":contact@ziontechgroup.com""
-                  className="block w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold "hover":bg-blue-700 transition-colors text-center""
-                >
-                  Send us an Email
-                  <ArrowRightIcon className="h-5 w-5 ml-2 inline" />"
-                </a>
-                <a,
-href=""tel":+13024640950""
-                  className="block w-full border-2 border-white text-white px-8 py-4 rounded-lg font-semibold "hover":bg-white "hover":text-blue-600 transition-colors text-center""
-                >
-                  Call Now
-                </a>
-            {/* CTA Section */}
-            <div className="bg-white rounded-xl shadow-lg p-8">"
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Ready to Get Started?</h2>"
-              <p className="text-gray-600 mb-8">"
-                Contact us today for a free consultation and discover how our AI solutions,
-can transform your business.
-              </p>
-              <div className="space-y-4">"
-                <a,
-href=""mailto":contact@ziontechgroup.com""
-                  className="block w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold "hover":bg-blue-700 transition-colors text-center""
-                >
-                  Send us an Email
-                  <ArrowRightIcon className="h-5 w-5 ml-2 inline" />"
-                </a>
-                <a,
-href=""tel":+13024640950""
-                  className="block w-full border-2 border-white text-white px-8 py-4 rounded-lg font-semibold "hover":bg-white "hover":text-blue-600 transition-colors text-center""
-                >
-                  Call Now
-                </a>
-              </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Why Contact Us?
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-600">Free consultation</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-600">Custom solutions</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-600">24/7 support</span>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-        {/* Map Section (Placeholder) */}
-        <div className="py-20 bg-white">"
-          <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center">"
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Find Us on the Map</h2>"
-            <div className="bg-gray-200 h-96 rounded-2xl flex items-center justify-center text-gray-500 text-xl">"
-              [Google Maps Embed Placeholder]
-            </div>
-          </div>
-        </div>
-        {/* Final CTA */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-700 py-20">"
-          <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center">"
-            <h2 className="text-4xl "md":text-5xl font-bold text-white mb-6">"
-              Ready to Transform Your Business?
+
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              Send us a Message
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">"
-              Let&apos;s discuss how Zion Tech Group can help you achieve your goals.
-            </p>
-            <Link,
-href="/services""
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold "hover":bg-blue-50 transition-all duration-200 shadow-lg "hover":shadow-xl transform "hover":-translate-y-1 inline-flex items-center""
-            >
-              View Our Services
-              <ArrowRightIcon className="h-5 w-5 ml-2" />"
-            </Link>
+            
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  value={formData.message}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  required
+                />
+              </div>
+              
+              <button
+                type="submit"
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center"
+              >
+                Send Message
+                <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
       </div>

@@ -5,9 +5,9 @@ import Link from 'next/link';'
 
 interface ServiceCardProps {
 }
-"title": string;
+title: string;
   "href": string;
-  "description": string;
+  description: string;
   bullets?: string[];
   icon?: string;
   className?: string;
@@ -17,7 +17,7 @@ export default function ServiceCard() {
 
 }
 
-return (;
+return (
     <Link,
 href={href
 }

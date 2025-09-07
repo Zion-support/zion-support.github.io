@@ -5,7 +5,7 @@ interface CaseStudyProps {
 "company": string;
   "industry": string;
   "result": string;
-  "description": string;
+  description: string;
   "metrics": string[];
 }
 
@@ -13,7 +13,7 @@ export default function CaseStudy() {
 
 }
 
-return (;
+return (
     <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 "hover":shadow-xl transition-shadow">"
       <div className="mb-4">"
         <h3 className="text-xl font-bold text-gray-900 mb-1">{company"

@@ -13,7 +13,7 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard() {
 }
-return (;
+return (
     <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">"
       <div className="flex items-center mb-4">"
         {avatar ? (

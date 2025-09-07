@@ -18,7 +18,7 @@ export default function LoadingSpinner() {'
   
 };
 
-return (;
+return (
     <div className={`flex justify-center items-center ${className}`}>`      <div,
 className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}`
         role="status""

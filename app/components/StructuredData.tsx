@@ -1,5 +1,5 @@
 interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'Service' | 'BreadcrumbList';
+  type: 'Organization' | 'WebSite' | 'Service' | 'BreadcrumbList'
   data: any;
 }
 

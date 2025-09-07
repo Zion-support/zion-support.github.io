@@ -5,7 +5,7 @@ interface PricingTierProps {
 "name": string;
   "price": string;
   period?: string;
-  "description": string;
+  description: string;
   "features": string[];
   isPopular?: boolean;
   buttonText?: string;
@@ -19,7 +19,7 @@ export default function PricingTier() {
 
   const classes = colorClasses[color];
 
-return (;
+return (
     <div className={`relative bg-white rounded-lg shadow-lg border-2 ${isPopular ? classes.border : 'border-gray-200'} p-8`}>`      {isPopular && (
         <div className={`absolute -top-4 left-1/2 transform -translate-x-1/2 ${classes.bg} text-white px-4 py-1 rounded-full text-sm font-semibold`}>`          Most Popular
         </div>
