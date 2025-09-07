@@ -399,12 +399,8 @@ export default function HomePage() {
           </h2>
           <p className="text-2xl text-blue-100 mb-4 max-w-4xl mx-auto animate-slide-up font-medium">
             Let&apos;s discuss your project and create a custom solution that drives
-<<<<<<< HEAD
             real business value. Our team has delivered 1000+ successful
             projects across various industries. Contact us today for a free consultation.
-=======
-            real business value.
->>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
           </p>
           <p className="text-lg text-blue-200 mb-12 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s' }}>
             Our team has delivered 1000+ successful projects across various industries.

@@ -5,12 +5,6 @@ export default {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
-<<<<<<< HEAD
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}'
-=======
->>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
   ],
   theme: {
     extend: {
@@ -82,14 +76,7 @@ export default {
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
           '100%': { transform: 'translateY(0px)', opacity: '1' }
-=======
-          '100%': { transform: 'translateY(0)', opacity: '1' },
->>>>>>> a37d0146a279e87fedd9d69d2a332111065044d5
         },
         slideDown: {
           '0%': { transform: 'translateY(-20px)', opacity: '0' },
@@ -167,17 +154,9 @@ export default {
       },
     },
   },
-<<<<<<< HEAD
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
 };
-<<<<<<< HEAD
-=======
-=======
-  plugins: [],
-};
->>>>>>> a37d0146a279e87fedd9d69d2a332111065044d5
->>>>>>> 66636f0649a4af9daff867918bf1282f740567c2

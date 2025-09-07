@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
 export const metadata = {
   title: 'Ai Hr Management | Zion Tech Group',
   description: 'Professional ai hr management services for your business needs.',
@@ -47,7 +44,4 @@ export default function ServicePage() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 66636f0649a4af9daff867918bf1282f740567c2

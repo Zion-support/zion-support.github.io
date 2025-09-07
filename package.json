@@ -4,14 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
-    "dev": "vite",
-    "build": "vite build",
-=======
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
->>>>>>> cursor/expand-services-advertise-and-build-project-e77d
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
@@ -355,24 +350,16 @@
     "@esbuild/linux-x64": "^0.25.9"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@eslint/eslintrc": "^3.3.1",
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^9.35.0",
-=======
     "@types/next": "^8.0.7",
-    "@types/node": "^18.0.0",
+    "@types/node": "^20.0.0",
     "@types/node-cron": "^3.0.11",
     "@types/react": "19.1.12",
-    "@types/react-dom": "^17.0.0",
+    "@types/react-dom": "^18.2.0",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.57.1",
->>>>>>> cursor/expand-services-advertise-and-build-project-e77d
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.35.0",
     "eslint-config-next": "^14.2.32",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^4.6.2",
