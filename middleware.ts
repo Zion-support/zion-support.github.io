@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-<<<<<<< HEAD
   const response = NextResponse.next();
 
   // Security headers
@@ -28,19 +27,10 @@ export function middleware(request: NextRequest) {
   response.headers.set('Content-Security-Policy', csp);
 
   return response;
-=======
-  // Placeholder for middleware logic
-  return NextResponse.next();
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 
 export const config = {
   matcher: [
-<<<<<<< HEAD
     '/((?!api|_next/static|_next/image|favicon.ico).*)'
   ]
-=======
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 };
