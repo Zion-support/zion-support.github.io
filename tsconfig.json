@@ -60,8 +60,6 @@
     ".next/types/**/*.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
     "app/**/*.ts",
     "app/**/*.tsx",
     "components/**/*.ts",
