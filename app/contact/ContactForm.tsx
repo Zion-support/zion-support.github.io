@@ -2,16 +2,15 @@
 
 import React, { useState } from 'react';
 import { 
-  EnvelopeIcon,
-  PhoneIcon,
-  MapPinIcon,
-  ClockIcon,
-  CheckCircleIcon,
-  ExclamationTriangleIcon
-} from '@heroicons/react/24/outline';
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  CheckCircle,
+  AlertTriangle
+} from 'lucide-react';
 
 export default function ContactForm() {
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,23 +18,20 @@ export default function ContactForm() {
     service: '',
     budget: '',
     message: ''
+  });
   
-});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
-
-    const { name, value 
-} = e.target;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent)  => {
-
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -50,8 +46,7 @@ export default function ContactForm() {
         service: '',
         budget: '',
         message: ''
-      
-});
+      });
     } catch {
       setSubmitStatus('error');
     } finally {
@@ -68,12 +63,7 @@ export default function ContactForm() {
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Ready to transform your business with cutting-edge technology? 
-<<<<<<< HEAD
-          Let&apos;
-s discuss your project and create a custom solution.
-=======
           Let&apos;s discuss your project and create a custom solution.
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
         </p>
       </div>
 
@@ -87,7 +77,7 @@ s discuss your project and create a custom solution.
             
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <PhoneIcon className="w-5 h-5 text-blue-600" />
+                <Phone className="w-5 h-5 text-blue-600" />
                 <div>
                   <p className="font-medium text-gray-900">Phone</p>
                   <p className="text-gray-600">+1 302 464 0950</p>
@@ -95,7 +85,7 @@ s discuss your project and create a custom solution.
               </div>
               
               <div className="flex items-center space-x-3">
-                <EnvelopeIcon className="w-5 h-5 text-blue-600" />
+                <Mail className="w-5 h-5 text-blue-600" />
                 <div>
                   <p className="font-medium text-gray-900">Email</p>
                   <p className="text-gray-600">kleber@ziontechgroup.com</p>
@@ -103,15 +93,15 @@ s discuss your project and create a custom solution.
               </div>
               
               <div className="flex items-center space-x-3">
-                <MapPinIcon className="w-5 h-5 text-blue-600" />
+                <MapPin className="w-5 h-5 text-blue-600" />
                 <div>
                   <p className="font-medium text-gray-900">Address</p>
-                  <p className="text-gray-600">364 E Main St STE 1008 < br />Middletown DE 19709</p>
+                  <p className="text-gray-600">364 E Main St STE 1008 <br />Middletown DE 19709</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
-                <ClockIcon className="w-5 h-5 text-blue-600" />
+                <Clock className="w-5 h-5 text-blue-600" />
                 <div>
                   <p className="font-medium text-gray-900">Business Hours</p>
                   <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
@@ -123,7 +113,7 @@ s discuss your project and create a custom solution.
           {/* Quick Response Promise */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
             <div className="flex items-center space-x-3 mb-3">
-              <CheckCircleIcon className="w-6 h-6 text-blue-600" />
+              <CheckCircle className="w-6 h-6 text-blue-600" />
               <h3 className="font-semibold text-blue-900">Quick Response Guarantee</h3>
             </div>
             <p className="text-blue-800">
@@ -143,14 +133,9 @@ s discuss your project and create a custom solution.
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
                 <div className="flex items-center">
-                  <CheckCircleIcon className="w-5 h-5 text-green-600 mr-2" />
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
                   <p className="text-green-800">
-<<<<<<< HEAD
-                    Thank you! Your message has been sent successfully. We&apos;
-ll get back to you within one business day.
-=======
                     Thank you! Your message has been sent successfully. We&apos;ll get back to you within one business day.
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
                   </p>
                 </div>
               </div>
@@ -159,7 +144,7 @@ ll get back to you within one business day.
             {submitStatus === 'error' && (
               <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
                 <div className="flex items-center">
-                  <ExclamationTriangleIcon className="w-5 h-5 text-red-600 mr-2" />
+                  <AlertTriangle className="w-5 h-5 text-red-600 mr-2" />
                   <p className="text-red-800">
                     Sorry, there was an error sending your message. Please try again or contact us directly.
                   </p>

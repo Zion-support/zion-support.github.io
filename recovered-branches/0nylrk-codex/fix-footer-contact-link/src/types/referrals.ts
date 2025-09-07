@@ -1,7 +1,9 @@
 export type ReferralStatus = 'pending' | 'completed' | 'expired';
 ;
 export interface ReferralCode {
+
 export interface ReferralCode {;
+
   id: string;
   user_id: string;
   code: string;
@@ -9,11 +11,13 @@ export interface ReferralCode {;
   id: string;
   user_id: string;
   code: string;
-  created_at: string;
-    updated_at: string
+  created_at: string
+  updated_at: string
 }export interface Referral {
+
 export interface Referral {;
 export interface Referral {
+
 export interface Referral {;
 export interface Referral {
   id: string;
@@ -31,6 +35,7 @@ export interface Referral {
   reward_issued_at: string | null
 }
 export interface ReferralReward {
+
 export interface ReferralReward {;
   id: string;
   user_id: string;
@@ -40,14 +45,18 @@ export interface ReferralReward {;
   created_at: string;
   expires_at: string | null;
 }
+
 export interface ReferralStats {;
+
   totalReferrals: number;
   pendingReferrals: number;
   completedReferrals: number;
   totalRewards: number;
 }
+
   totalRewards: number  expires_at: string | null;
 }
+
 ;
 export interface ReferralStats {;
   totalReferrals: number,;
@@ -57,3 +66,89 @@ export interface ReferralStats {;
 }
 ;
 }}
+
+export type ReferralStatus = "pending" | "completed" | "expired";"
+export interface ReferralCode {
+  // TODO: Implement
+}
+export interface ReferralCode {;
+
+  id: string;,
+
+  user_id: string;
+  code: string;,
+  created_at: string;
+
+  updated_at: string;
+
+
+export interface Referral {;
+
+export interface Referral {
+  // TODO: Implement
+  // TODO: Implement
+}
+
+export interface Referral {;
+export interface Referral {
+  // TODO: Implement
+  referrer_id: string;
+  referred_id: string | null;,
+  referral_code: string;
+  status: ReferralStatus;,
+  ip_address: string | null;
+  email: string | null;,
+  referred_user_type: string | null;
+  referrer_user_type: string | null;,
+  created_at: string;
+
+  completed_at: string | null;,
+  reward_issued: boolean;
+  reward_issued_at: string | null;
+
+
+export interface ReferralReward {;
+
+  reward_issued: boolean;,
+export interface ReferralReward {
+  // TODO: Implement
+  // TODO: Implement
+  referral_id: string;,"
+  reward_type: "credit" | "visibility";"
+  amount: number | null;,
+  expires_at: string | null;
+
+
+
+export interface ReferralStats {;
+  created_at: string;
+  expires_at: string | null;
+
+}
+export interface ReferralStats {;
+
+
+
+  totalReferrals: number;,
+  pendingReferrals: number;
+  completedReferrals: number;,
+  totalRewards: number;
+
+
+}
+  totalRewards: number  expires_at: string | null;
+}
+;
+  totalReferrals: number,;
+  pendingReferrals: number,;
+
+  completedReferrals: number;,
+  totalRewards: number;
+}
+;
+
+
+
+"
+pr-12325
+

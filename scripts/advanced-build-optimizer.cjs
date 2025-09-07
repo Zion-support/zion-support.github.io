@@ -1,9 +1,25 @@
 
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+
 const { execSync } = require('child_process')
+<<<<<<< HEAD
 console.log('⚡ Starting Advanced Build Optimization...')
+  log(message, type = 'info')
+        "status"""
+        "message"""
+        "impact"""
+            'module.exports = {\n  "compress"}""
+          '"build"""
+          '"start"""
+            "node"""
+            "npm"""
+            "analyzerMode"""
+        if (&& !config.includes('"content")""
+    && !config.includes('"content")""
+            'module.exports = {\n  "mode": "jit"}""
+            "message": """
+          resolve({ "size": 0, "message"})""
+=======
+console.log('⚡ Starting Advanced Build Optimization...)
   log(message, type = 'info')
         "status"
         "message"
@@ -91,5 +107,4 @@ console.log('⚡ Starting Advanced Build Optimization...')
           "impact"
           resolve({ "size": 0, "message"})
           resolve({ "size": 0, "message"})
-
-    this.log(' Build Optimization "Summary")
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

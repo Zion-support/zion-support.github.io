@@ -3,24 +3,62 @@ import { Routes, Route  } from 'react-router-dom';
 import './App.css',
 import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
+
 class ErrorBoundary extends React.Component {
+
+import React, { Suspense } from 'react';''
+import { Routes, Route  } from 'react-router-dom';''
+import './App.css',''
+import { ThemeProvider } from "./components/ThemeProvider",""
+import { WhitelabelProvider } from "./context/WhitelabelContext","
+class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
+
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+import { ThemeProvider } from "./components/ThemeProvider",""
+import { WhitelabelProvider } from "./context/WhitelabelContext","
+class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  
+  componentDidCatch(error, errorInfo) {"
+    console.error('Error caught by boundary:', error, errorInfo);
+pr-12325
+  
+  componentDidCatch(error, errorInfo) {"
+    console.error('Error caught by boundary:', error, errorInfo);'
+
+  }
   render() {
+export default App;
+export default App;
+
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
+
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App ;
@@ -38,6 +76,7 @@ import {
   EnterpriseRoutes
   CommunityRoutes
   DeveloperRoutes
+
 import {;
   AuthRoutes,;
   DashboardRoutes,;
@@ -68,6 +107,7 @@ const ITOnsiteServicesPage = React && React.lazy(;
 );
 const OpenAppRedirect = React && React.lazy(() => import("./pages/OpenAppRedirect"));
 const ContactPage = React && React.lazy(() => import("./pages/Contact"));
+
 const baseRoutes = [;
   { path: "/", element: <Home /> },;
   { path: "/match", element: <AIMatcherPage /> },;
@@ -92,7 +132,9 @@ import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
+
 const App = () => {;
+
   return (
     <WhitelabelProvider>;
       <ThemeProvider defaultTheme="dark">;
@@ -182,8 +224,8 @@ const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPa
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
 const ContactPage = React.lazy(() => import('./pages/Contact')),
 export default App,
-import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { Suspense } from 'react',;
+import { Routes, Route } from 'react-router-dom',;
 import './App.css',;
 import { ThemeProvider } from "./components/ThemeProvider",;
 import { WhitelabelProvider } from "./context/WhitelabelContext",;
@@ -285,8 +327,175 @@ const App = () =>: any {
           </Routes>;
         </Suspense>;
         <Toaster />;
+
+export default App;  )
+},
+
+export default App;
+
+export default App;
+export default App;
+      return <div>Something went wrong.</div>;'
+  { path: "/", element: <Home /> },;"
+"
+  { path: "/match", element: <AIMatcherPage /> },;"
+  { path: "/login", element: <Login /> },;"
+  { path: "/signup", element: <Signup /> },;"
+  { path: "/talent", element: <TalentDirectory /> },;"
+  { path: "/talents", element: <TalentsPage /> },;"
+  { path: "/services", element: <ServicesPage /> },;"
+  { path: "/it-onsite-services", element: <ITOnsiteServicesPage /> },;"
+  { path: "/categories", element: <Categories /> },;"
+  { path: "/equipment", element: <EquipmentPage /> },;"
+  { path: "/analytics", element: <Analytics /> },;"
+  { path: "/mobile-launch", element: <MobileLaunchPage /> },;"
+  { path: "/open-app", element: <OpenAppRedirect /> },;"
+  { path: "/community", element: <CommunityPage /> },;"
+  { path: "/contact", element: <ContactPage /> },;"
+
+    <WhitelabelProvider>;
+      <ThemeProvider defaultTheme="dark">;"
+        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>;"
+
+          <Routes>;
+
+              <Route key={path} path={path} element={element} />;
+  { path: "/", element: <Home /> },"
+  { path: "/match", element: <AIMatcherPage /> },"
+  { path: "/login", element: <Login /> },"
+  { path: "/signup", element: <Signup /> },"
+  { path: "/talent", element: <TalentDirectory /> },"
+  { path: "/talents", element: <TalentsPage /> },"
+  { path: "/services", element: <ServicesPage /> },"
+  { path: "/it - onsite - services", element: <ITOnsiteServicesPage /> },"
+  { path: "/categories", element: <Categories /> },"
+  { path: "/equipment", element: <EquipmentPage /> },"
+  { path: "/analytics", element: <Analytics /> },"
+  { path: "/mobile - launch", element: <MobileLaunchPage /> },"
+  { path: "/open - app", element: <OpenAppRedirect /> },"
+  { path: "/community", element: <CommunityPage /> },"
+  { path: "/contact", element: <ContactPage /> },"
+
+      <ThemeProvider default_theme="dark">;"
+        <Suspense fallback={<div className="p - 4 text - center">Loading...</div>}>;"
+
+
+              <Route key={path} path={path} element={element} />))}
+            <Route path="/auth/*" element={<AuthRoutes />} />;"
+            <Route path="/dashboard/*" element={<DashboardRoutes />} />;"
+            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />;"
+            <Route path="/talent/*" element={<TalentRoutes />} />;"
+            <Route path="/admin/*" element={<AdminRoutes />} />;"
+            <Route path="/mobile/*" element={<MobileAppRoutes />} />;"
+            <Route path="/content/*" element={<ContentRoutes />} />;"
+            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />;"
+            <Route path="/community/*" element={<CommunityRoutes />} />;"
+            <Route path="/developers/*" element={<DeveloperRoutes />} />;"
+            <Route path="*" element={<ErrorRoutes />} />;"
+
+          ;
+        <Toaster />;
+  { path: '/', element: <Home /> },
+
+  { path: '/match', element: <AIMatcherPage /> },
+
+  { path: '/login', element: <Login /> },
+
+  { path: '/signup', element: <Signup /> },
+
+  { path: '/talent', element: <TalentDirectory /> },
+
+  { path: '/talents', element: <TalentsPage /> },
+
+  { path: '/services', element: <ServicesPage /> },
+
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
+
+  { path: '/categories', element: <Categories /> },
+
+  { path: '/equipment', element: <EquipmentPage /> },
+
+  { path: '/analytics', element: <Analytics /> },
+
+  { path: '/mobile-launch', element: <MobileLaunchPage /> },
+
+  { path: '/open-app', element: <OpenAppRedirect /> },
+
+  { path: '/community', element: <CommunityPage /> },
+
+  { path: '/contact', element: <ContactPage /> }],
+
+    <WhitelabelProvider>
+
+      <ThemeProvider defaultTheme="dark">"
+        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>"
+
+          <Routes>
+
+              <Route key={path} path={path} element={element} />
+            <Route path="/auth/*" element={<AuthRoutes />} />"
+            <Route path="/dashboard/*" element={<DashboardRoutes />} />"
+            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />"
+            <Route path="/talent/*" element={<TalentRoutes />} />"
+            <Route path="/admin/*" element={<AdminRoutes />} />"
+            <Route path="/mobile/*" element={<MobileAppRoutes />} />"
+            <Route path="/content/*" element={<ContentRoutes />} />"
+            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />"
+            <Route path="/community/*" element={<CommunityRoutes />} />"
+            <Route path="/developers/*" element={<DeveloperRoutes />} />"
+            <Route path="*" element={<ErrorRoutes />} />"
+
+          
+        
+        <Toaster />
+        <SonnerToaster position="top-right" />"
+
+      
+  { path: '/', element: <Home /> },;
+
+  { path: '/match', element: <AIMatcherPage /> },;
+
+  { path: '/login', element: <Login /> },;
+
+  { path: '/signup', element: <Signup /> },;
+
+  { path: '/talent', element: <TalentDirectory /> },;
+
+  { path: '/talents', element: <TalentsPage /> },;
+
+  { path: '/services', element: <ServicesPage /> },;
+
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },;
+
+  { path: '/categories', element: <Categories /> },;
+
+  { path: '/equipment', element: <EquipmentPage /> },;
+
+  { path: '/analytics', element: <Analytics /> },;
+
+  { path: '/mobile-launch', element: <MobileLaunchPage /> },;
+
+  { path: '/open-app', element: <OpenAppRedirect /> },;
+
+  { path: '/community', element: <CommunityPage /> },;
+
+  { path: '/contact', element: <ContactPage /> }],;
+
+
+
+
+
+
+
+
+        <SonnerToaster position="top-right" />;"
+
+    ;"
+        <SonnerToaster position="top - right" />;"
+
+    );"
+pr-12325
 export default App;  )
 },
 export default App;
-=======export default App;
 export default App;

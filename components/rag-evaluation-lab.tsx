@@ -1,20 +1,19 @@
-
-
 import React from 'react',
 import SEO from '../components/SEO';
-
 import Link from 'next/link';
-
-export default function RAGEvaluationLabPage() {return (<>;
+export default function RAGEvaluationLabPage() {
+	return (
+		<>
 			<SEO title;
 							{ title: 'Dashboards & Reports', desc: 'Team dashboards, API access, and exportable reports.' }
-						].map((f) => (<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">;
-								<h3 className="text-lg font-semibold text-white">{f.title}</h3>;
-								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>;
-							</div>;
+						].map((f) => (
+							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
+								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
+							</div>
 						))}
-
 					</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <>;
@@ -24,17 +23,54 @@ export default function RAGEvaluationLabPage() {return (<>;
               {
                 title: 'Grounding & Faithfulness'
                 desc: 'Measure factual consistency, citation quality, and hallucination rate.'
-
               }
-              {<div;
+              {
+              <div
                 key={f && f.title}
                 className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur'>;
                 <h3 className='text-lg font-semibold text-white'>{f && f.title}</h3>;
                 <p className='mt-2 text-sm text-gray-300'>{f && f.desc}</p>;
               </div>;
-
             ))}
-
+                    /mo;
+                  </span>;
+                </p>;
+              </div>;
+						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
+						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
+						<span className="text-gray-400">Call: +1 302 464 0950</span>
+					</div>
+				</div>
+			</section>
+		</>
+	)
+}
+          <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
+            <Link;
+              href='/contact';
+              className='px - 5 py - 3 rounded - lg bg - cyan - 400 text - black font - semibold';
+            >;
+              Start Evaluating;
+            </Link>;
+            <a;
+              href='mailto:kleber@ziontechgroup.com';
+              className='px - 5 py - 3 rounded - lg border border - white / 20';
+            >;
+              Email: kleber@ziontechgroup.com;
+            </a>;
+            <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
+          </div>;
+        </div>;
+      </section>;
+    </>);					<div className="mt - 12 flex flex - wrap items-center gap-4">;
+      <Link href="/contact" className="px - 5 py - 3 rounded - lg bg - cyan - 400 text-black font-semibold">Start Evaluating</Link>;
+      <a href="mailto:kleber@ziontechgroup.com" className="px - 5 py - 3 rounded-lg border border-white / 20">Email: kleber@ziontechgroup.com</a>;
+      <span className="text-gray-400">Call: +1 302 464 0950</span>;
+    </div>;
+    </div>;
+  </section>;
+  </>);
+}
           </div>
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
@@ -72,28 +108,25 @@ export default function RAGEvaluationLabPage() {return (<>;
               </div>
             </div>
             <p className='mt-4 text-sm text-gray-400'>
-
-              Market references: {' ,
-}
-              <a;
-                className='underline hover:text-cyan-300';
-                href='https://humanloop.com';
-                target='_blank';
-                rel='noreferrer'>
-
-                Humanloop;
-              </a>;
+              Market references:{' '}
+              <a
+                className='underline hover:text-cyan-300'
+                href='https://humanloop.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Humanloop
+              </a>
               ,{' '}
-              <a;
-                className='underline hover:text-cyan-300';
-                href='https://arize.com';
-                target='_blank';
-                rel='noreferrer'>
-
-                Arize;
-              </a>;
+              <a
+                className='underline hover:text-cyan-300'
+                href='https://arize.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Arize
+              </a>
               ,{' '}
-
               <a
                 className='underline hover:text-cyan-300'
                 href='https://promptfoo.dev'
@@ -124,4 +157,4 @@ export default function RAGEvaluationLabPage() {return (<>;
       </section>
     </>
   );
-
+origin/cursor/automate-test-improve-and-merge-code-2533

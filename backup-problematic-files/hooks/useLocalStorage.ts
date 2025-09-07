@@ -1,7 +1,8 @@
 
 interface UseLocalStorageProps {
-  // Add props here as needed
+  // TODO: Implement
 }
+  // Add props here as needed;
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
     }
@@ -11,8 +12,6 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
     try {
       const valueToStore =
         value instanceof Function ? value(storedValue) : value;
-      setStoredValue(valueToStore)if (typeof window !== 'undefined') {window.localStorage.setItem(key, JSON.stringify(valueToStore))}
-    } catch (error) {}return [storedValue, setValue] as const;
       setStoredValue(valueToStore);
 
       if (typeof window !== 'undefined') {
@@ -29,5 +28,5 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 };
 }
 }
-}
-}
+};
+pr-12325

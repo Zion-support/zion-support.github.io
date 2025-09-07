@@ -14,7 +14,7 @@
    marketPrice: string;
    contactInfo: {
    phone: string;
-   emai;
+   emai
     l: string;
    websit
     e: string} "recommendedFor": string[] limitation

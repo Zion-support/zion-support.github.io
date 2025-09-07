@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 
 // Database utilities
 export interface DatabaseConfig {
@@ -10,6 +8,7 @@ export interface DatabaseConfig {
   password: string;
   ssl?: boolean;
 }
+
 
 export interface QueryResult<T = any> {
   rows: T[];
@@ -51,22 +50,7 @@ export class DatabaseManager {
     } catch (error) {
       throw error;
     }
-  }
-}
 
-// File system utilities
-function getFilePath(fileName: string): string {
-  const dataDir = path.join(process.cwd(), 'data');
-  if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir, { recursive: true });
-  }
-  return path.join(dataDir, fileName);
-}
-
-export function readJsonFile<T>(fileName: string, defaultValue: T): T {
-  try {
-    const filePath = getFilePath(fileName);
-    if (fs.existsSync(filePath)) {
       const content = fs.readFileSync(filePath, 'utf8');
       return JSON.parse(content);
     }
@@ -100,4 +84,4 @@ const defaultConfig: DatabaseConfig = {
 };
 
 // Singleton database instance
-export const db = new DatabaseManager(defaultConfig);
+

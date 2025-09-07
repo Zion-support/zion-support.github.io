@@ -7,7 +7,7 @@ export type LegalStructure =;
   | 'DAO-native Wrapper';
 
 export default function CharterGenerator() {const [legalStructure, setLegalStructure] =;
-    useState<LegalStructure>('Cayman Foundation')const [protocolName, setProtocolName] = useState('Zion');
+    useState<LegalStructure />('Cayman Foundation')const [protocolName, setProtocolName] = useState('Zion');
   const [tokenSymbol, setTokenSymbol] = useState('ZION$');
   const [includeContributorRules, setIncludeContributorRules] = useState(true);
   const [includeGrants, setIncludeGrants] = useState(true);
@@ -15,13 +15,13 @@ export default function CharterGenerator() {const [legalStructure, setLegalStruc
   const charterText = useMemo(() => ;
   const name = protocolName.trim() || 'Zion';
 
-const symbol  = tokenSymbol.trim() || 'ZION$';
-
+const symbol  = tokenSymbol.trim() || 'ZION$';}
+}
 const header = `${name} Foundation Charter`;
 
-const preamble  = `This Charter establishes a legally-neutral foundation (the "Foundation") to steward the ${name} Protocol, an open, decentralized AI protocol dedicated to sovereignty, open knowledge, and verifiable trust.`;
+const preamble  = `This Charter establishes a legally-neutral foundation (the \"Foundation\") to steward the ${name} Protocol, an open, decentralized AI protocol dedicated to sovereignty, open knowledge, and verifiable trust.`;
 
-const registry  = `1. Legal Neutrality and Registry\n- Structure: ${legalStructur,
+const registry  = `1. Legal Neutrality and Registry\n- Structure: ${legalStructur}
 }.\n- Purpose: Maintain global neutrality, operate outside the control of any single jurisdiction, and coordinate public-good infrastructure for the ${name} Protocol.\n- Scope: Non-custodial oversight, standard-setting, and community enablement.`;
 
 const mission  = `2. Mission and Scope\n- Protect, evolve, and safeguard the ${name} Protocol as a public good.\n- Champion open knowledge, reproducible research, and transparent governance.\n- Promote sovereignty for users, developers, and nation/community DAOs.`;
@@ -49,84 +49,84 @@ const transparency  = `9. Transparency and Reporting\n- Quarterly reports: finan
 const amendments  = `10. Amendments\n- Amendable via DAO supermajority or Foundation supermajority plus DAO simple majority.\n- All amendments versioned and time-stamped on IPFS and Git repositories.`;
 
 const liability = `11. Limitations and Disclaimers\n- No warranties; the ${name} Protocol is experimental.\n- The Foundation does not offer securities and does not guarantee token value.\n- Jurisdictional compliance: local obligations remain with individual actors.`;return [;
-      header,'',preamble,'',registry,'',mission,'',neutrality,'',treasury,'',contributors,'',dao,'',grants,'',governance,'',transparency,'',amendments,'',liability,];
+      header,'',preamble,'',registry,'',mission,'',neutrality,'',treasury,'',contributors,'',dao,'',grants,'',governance,'',transparency,'',amendments,'',liability];
       .filter(Boolean).join('\n')}, [;
-    legalStructure,protocolName,tokenSymbol,includeContributorRules,includeGrants,includeDAOIntegration,])return (<div className='space-y-6'>;
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
-        <div className='space-y-4 p-4 rounded-lg border border-gray-200 dark:border-gray-800'>;
-          <h2 className='text-lg font-semibold'>Charter Settings</h2>;
-          <label className='block text-sm'>;
+    legalStructure,protocolName,tokenSymbol,includeContributorRules,includeGrants,includeDAOIntegration])return (<div className='space-y-6' />;
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-6' />;
+        <div className='space-y-4 p-4 rounded-lg border border-gray-200 dark:border-gray-800' />;
+          <h2 className='text-lg font-semibold' />Charter Settings</h2>;
+          <label className='block text-sm' />;
             Protocol Name;
             <input;
               className='mt-1 w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2';
               value={protocolName}
-              onChange={e => setProtocolName(e.target.value)}
+              onChange={e = /> setProtocolName(e.target.value)}
             />;
           </label>;
-          <label className='block text-sm'>;
+          <label className='block text-sm' />;
             Token Symbol;
             <input;
               className='mt-1 w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2';
               value={tokenSymbol}
-              onChange={e => setTokenSymbol(e.target.value)}
+              onChange={e = /> setTokenSymbol(e.target.value)}
             />;
           </label>;
-          <label className='block text-sm'>;
+          <label className='block text-sm' />;
             Legal Structure;
             <select;
               className='mt-1 w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2';
               value={legalStructure}
-              onChange={e =>;
+              onChange={e = />;}
                 setLegalStructure(e.target.value as LegalStructure)}
             >;
-              <option value='Cayman Foundation'>Cayman Foundation</option>;
-              <option value='Swiss Verein'>Swiss Verein</option>;
-              <option value='US 501(c)(6)'>US 501(c)(6)</option>;
-              <option value='DAO-native Wrapper'>;
+              <option value='Cayman Foundation' />Cayman Foundation</option>;
+              <option value='Swiss Verein' />Swiss Verein</option>;
+              <option value='US 501(c)(6)' />US 501(c)(6)</option>;
+              <option value='DAO-native Wrapper' />;
                 DAO-native legal wrapper (e.g., Otoco)</option>;
             </select>;
           </label>;
-          <div className='flex items-center gap-3'>;
+          <div className='flex items-center gap-3' />;
             <input;
               id='contrib';
               type='checkbox';
               checked={includeContributorRules}
-              onChange={e => setIncludeContributorRules(e.target.checked)}
+              onChange={e = /> setIncludeContributorRules(e.target.checked)}
             />;
-            <label htmlFor='contrib' className='text-sm'>;
+            <label htmlFor='contrib' className='text-sm' />;
               Include contributor program rules;
             </label>;
           </div>;
-          <div className='flex items-center gap-3'>;
+          <div className='flex items-center gap-3' />;
             <input;
               id='dao';
               type='checkbox';
               checked={includeDAOIntegration}
-              onChange={e => setIncludeDAOIntegration(e.target.checked)}
+              onChange={e = /> setIncludeDAOIntegration(e.target.checked)}
             />;
-            <label htmlFor='dao' className='text-sm'>;
+            <label htmlFor='dao' className='text-sm' />;
               Include DAO integration;
             </label>;
           </div>;
-          <div className='flex items-center gap-3'>;
+          <div className='flex items-center gap-3' />;
             <input;
               id='grants';
               type='checkbox';
               checked={includeGrants}
-              onChange={e => setIncludeGrants(e.target.checked)}
+              onChange={e = /> setIncludeGrants(e.target.checked)}
             />;
-            <label htmlFor='grants' className='text-sm'>;
+            <label htmlFor='grants' className='text-sm' />;
               Include multiverse grants;
             </label>;
           </div>;
         </div>;
-        <div className='space-y-4 p-4 rounded-lg border border-gray-200 dark:border-gray-800'>;
-          <h2 className='text-lg font-semibold'>Export</h2>;
-          <div className='flex gap-3'>;
+        <div className='space-y-4 p-4 rounded-lg border border-gray-200 dark:border-gray-800' />;
+          <h2 className='text-lg font-semibold' />Export</h2>;
+          <div className='flex gap-3' />;
             <button;
               className='px-3 py-2 rounded bg-cyan-600 text-white hover:bg-cyan-700';
-              onClick = {() => ;
-  const blob = new Blob([charterText], {type: 'text/markdown;charset = utf-8',})const url = URL.createObjectURL(blob;
+              onClick = {() = /> ;}
+  const blob = new Blob([charterText], {type: 'text/markdown;charset = utf-8'})const url = URL.createObjectURL(blob;
   const a = document.createElement('a')a.href = url;
                 a.download = `${protocolName || 'zion'}-foundation-charter.md`;
                 a.click()URL.revokeObjectURL(url)}}
@@ -135,15 +135,15 @@ const liability = `11. Limitations and Disclaimers\n- No warranties; the ${name}
             </button>;
             <button;
 className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700';
-              onClick={() => navigator.clipboard.writeText(charterText)}
+              onClick={() = /> navigator.clipboard.writeText(charterText)}
             >;
               Copy to clipboard;
             </button>;
           </div>;
         </div>;
       </div>;
-      <div>;
-<h2 className='text-lg font-semibold mb-2'>;
+      <div />;
+<h2 className='text-lg font-semibold mb-2' />;
           Generated Charter Preview;
         </h2>;
         <textarea;
@@ -153,4 +153,4 @@ className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700';
         />;
       </div>;
     </div>;
-  )
+  )"

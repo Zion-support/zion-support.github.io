@@ -1,4 +1,16 @@
-id?: string;
+
+
+import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';
+import { supabase } from '@/integrations / supabase / client';
+import { AuthContext } from '@/context / auth / AuthContext';
+import type { UserDetails as AuthUserDetails } from "@/types / auth";"
+// Define types for our context;
+export interface UserDetails {
+  // TODO: Implement
+}
+pr-12325
+  id?: string;
+
   name?: string;
   email?: string;
   user_type?: string;
@@ -7,6 +19,7 @@ id?: string;
   headline?: string;
   profile_complete?: boolean;
   role?: string;
+
   id?: string;
   name?: string;
   email?: string;
@@ -22,6 +35,17 @@ import { AuthContext } from "@/context/auth/AuthContext";
 import type { UserDetails as AuthUserDetails } from "@/types/auth";
 // Define types for our context
 export interface UserDetails {
+
+  role?: string;"
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",""
+import { supabase } from "@/integrations/supabase/client",""
+import { AuthContext } from "@/context/auth/AuthContext";""
+import type { UserDetails as AuthUserDetails } from "@/types/auth";"
+
+// Define types for our context;
+export interface UserDetails {
+  // TODO: Implement
+}
   id?: string;
   name?: string;
   email?: string;
@@ -31,9 +55,24 @@ export interface UserDetails {
   headline?: string;
   profileComplete?: boolean;
   role?: string;
+
+
+  userType?: string;
+  displayName?: string;
+  avatarUrl?: string;
+  profileComplete?: boolean;
+  role?: string;"
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",""
+import { supabase } from "@/integrations/supabase/client",""
+import { AuthContext } from "@/context/auth/AuthContext";""
+import type { UserDetails as AuthUserDetails } from "@/types/auth";"
+// Define types for our context;
+  // TODO: Implement
+pr-12325
   permissions?: string[],
   companyId?: string;
   bio?: string;
+
   createdAt?: string;
   updatedAt?: string
 }
@@ -42,6 +81,17 @@ import { AuthContext } from "@/context/auth/AuthContext",
 import type { UserDetails as AuthUserDetails } from "@/types/auth",
 // Define types for our context
 export interface UserDetails {
+  updatedAt?: string;
+export interface AuthContextType {
+  // TODO: Implement
+}"
+import { AuthContext } from "@/context/auth/AuthContext",""
+import type { UserDetails as AuthUserDetails } from "@/types/auth","
+
+// Define types for our context;
+  // TODO: Implement
+pr-12325
+}
   id?: string,
   name?: string,
   email?: string,
@@ -54,12 +104,23 @@ export interface UserDetails {
   permissions?: string[],
   companyId?: string,
   bio?: string,
+
   createdAt?: string,
   updatedAt?: string
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import { supabase } from "@/integrations/supabase/client";
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
 import { AuthContext } from "@/context/auth/AuthContext",;
 import type { UserDetails as AuthUserDetails } from "@/types/auth",;
+  companyId?: string,
+  bio?: string,
+  createdAt?: string,
+  updatedAt?: string;"
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",;""
+import { supabase } from "@/integrations/supabase/client",;""
+import { AuthContext } from "@/context/auth/AuthContext",;""
+import type { UserDetails as AuthUserDetails } from "@/types/auth",;"
+pr-12325
+
 // Define types for our context;
 export interface UserDetails {;
   id?: string,;
@@ -74,15 +135,33 @@ export interface UserDetails {;
   permissions?: string[],;
   companyId?: string,;
   bio?: string,;
+
   createdAt?: string,;
   updatedAt?: string;
+}
+"
+// Define types for our context;
+  // TODO: Implement
+pr-12325
+}
+  id?: string;
+  name?: string;
+  email?: string;
+  user_type?: string;
+  display_name?: string;
+  avatar_url?: string;
+  headline?: string;
+  profile_complete?: boolean;
+  role?: string;
+
 }
 ;
 export interface AuthContextType {;
   user: UserDetails | null,;
-  isAuthenticated: boolean,;
-  isLoading: boolean,;
+  isAuthenticated: boolean,;}
+  isLoading: boolean,;}
   signIn: (email: string, password: string) => Promise<{ error: any }>,;
+
   signOut: () => Promise<void>,;
   signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
   // Aliases for compatibility with other components;
@@ -91,16 +170,28 @@ export interface AuthContextType {;
   signup: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
   resetPassword: (email: string) => Promise<{ error: any }>,;
   updateProfile: (data: Partial<UserDetails>) => Promise<{ error: any }>,;
+</void>
+  signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
+
+  login: (email: string, password: string) => Promise<{ error: any }>,;
+  logout: () => Promise<void>,;
+  signup: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
+
+  resetPassword: (email: string) => Promise<{ error: any }>,;
+  updateProfile: (data: Partial<UserDetails>) => Promise<{ error: any }>,;
+
+pr-12325
   loginWithGoogle: () => Promise<void>,;
   loginWithFacebook: () => Promise<void>,;
   loginWithTwitter: () => Promise<void>,;
   loginWithWeb3: () => Promise<void>;
 }  // Mock auth functions for now - these would connect to Supabase in a real implementation
+
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth    // Mock implementation
     setUser({
-      id: "id",
-    email: "google@example.com"
+      id: "google-user-id"
+      email: "google@example.com"
       displayName: "Google User"
       name: "Google User"
       profileComplete: true
@@ -127,12 +218,15 @@ export interface AuthContextType {;
       name: "Twitter User"
       profileComplete: true
     })
+
   };
+
   const signOut = async () => {;
     // This would be replaced with actual Supabase auth;
     console && console.log("Sign out attempted");
     setUser(null)
 };
+
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {;
     // This would be replaced with actual Supabase auth;
     console && console.log("Sign up attempted with:", email, userData);
@@ -140,23 +234,28 @@ export interface AuthContextType {;
     setUser({ ;
       id: "mock-user-id", ;
       email, ;
+
   },
+
     // // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
+
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
   }
   return context
 }
+
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
+
       console.warn("No wallet detected"),
       return
 ;
@@ -252,3 +351,187 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     signIn;
     signOut;
     signUp;
+</void>
+  signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
+</UserDetails>
+  login: (email: string, password: string) => Promise<{ error: any }>,;
+  logout: () => Promise<void>,;
+</void>
+  signup: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
+</UserDetails>
+  resetPassword: (email: string) => Promise<{ error: any }>,;
+  updateProfile: (data: Partial<UserDetails>) => Promise<{ error: any }>,;
+</UserDetails>
+  loginWithGoogle: () => Promise<void>,;
+</void>
+  loginWithFacebook: () => Promise<void>,;
+</void>
+  loginWithTwitter: () => Promise<void>,;
+</void>
+  loginWithWeb3: () => Promise<void>;
+</void>
+  signIn: (email: string, password: string) => Promise<{ error: any }>
+  signOut: () => Promise<void>
+  signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
+
+  login: (email: string, password: string) => Promise<{ error: any }>
+  logout: () => Promise<void>
+  signup: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
+
+  resetPassword: (email: string) => Promise<{ error: any }>
+  updateProfile: (data: Partial<UserDetails>) => Promise<{ error: any }>
+
+  loginWithGoogle: () => Promise<void>
+  loginWithFacebook: () => Promise<void>
+  loginWithTwitter: () => Promise<void>
+
+  loginWithWeb3: () => Promise<void>
+  const [user, setUser] = useState<UserDetails | null>(null),
+
+
+
+
+  const [user, setUser] = useState<UserDetails | null>(null);
+
+  const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
+
+
+  const updateProfile = async (data: Partial<UserDetails>) => {
+
+
+  const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {;
+
+  const [user, setUser] = useState<UserDetails | null>(null),;
+
+
+  const updateProfile = async (data: Partial<UserDetails>) => {;
+
+  sign_in: (email: string, password: string) => Promise<{ error: any }>,
+  sign_out: () => Promise < void>,
+  sign_up: (email: string, password: string, user_data?: Partial < UserDetails>) => Promise<{ error: any }>,
+  // Aliases for compatibility with other components;
+  login: (email: string, password: string) => Promise<{ error: any }>,
+  logout: () => Promise < void>,
+  signup: (email: string, password: string, user_data?: Partial < UserDetails>) => Promise<{ error: any }>,
+  reset_password: (email: string) => Promise<{ error: any }>,
+  update_profile: (data: Partial < UserDetails>) => Promise<{ error: any }>,
+  loginWithGoogle: () => Promise < void>,
+  loginWithFacebook: () => Promise < void>,
+  loginWithTwitter: () => Promise < void>,
+  loginWithWeb3: () => Promise < void>;
+// Create a provider component;
+export /**
+ * AuthProvider - Function description;
+ */
+function AuthProvider() {
+  const [user, set_user] = useState < UserDetails | null>(null);
+  const [is_loading, setIsLoading] = useState (true);
+  // Mock auth functions for now - these would connect to Supabase in a real implementation;
+  const sign_in = async (email: string, password: string) => {
+    // This would be replaced with actual Supabase auth;"
+    console.log ("Sign in attempted with:", email);"
+    // Mock successful sign - in;
+    set_user ({"
+      id: "mock - user - id","
+      email,"
+      display_name: "Mock User",""
+      name: "Mock User",""
+      avatar_url: "","
+      profile_complete: true,"
+      role: "enterprise_admin",""
+      permissions: ["billing_access", "admin_access", "team_management"];""
+      company_id: "company - 123";")
+    });
+    return { error: null }
+  const sign_out = async () => {
+    // This would be replaced with actual Supabase auth;"
+    console.log ("Sign out attempted");"
+    set_user (null);
+  const sign_up = async (email: string, password: string, user_data?: Partial < UserDetails>) => {
+    // This would be replaced with actual Supabase auth;"
+    console.log ("Sign up attempted with:", email, user_data);"
+    // Mock successful sign - up;
+      display_name: user_data?.name || "New User",""
+      name: user_data?.name || "New User","
+      user_type: user_data?.user_type,
+      profile_complete: false;)
+  const reset_password = async (email: string) => {
+    // Mock implementation;"
+    console.log ("Password reset requested for:", email);"
+  const update_profile = async (data: Partial < UserDetails>) => {
+    // Mock implementation;"
+    console.log ("Profile update requested with:", data);"
+    // Check condition;
+if ( {) {
+  $2;
+      set_user ({ ...user, ...data });
+  const loginWithGoogle = async () => {"
+    console.log ("Google login requested");"
+    // Mock implementation;
+      id: "google - user - id",""
+      email: "google@example.com",""
+      display_name: "Google User",""
+      name: "Google User","
+      profile_complete: true;)
+  const loginWithFacebook = async () => {"
+    console.log ("Facebook login requested");"
+    // Mock implementation;
+      id: "facebook - user - id",""
+      email: "facebook@example.com",""
+      display_name: "Facebook User",""
+      name: "Facebook User","
+  const loginWithTwitter = async () => {"
+    console.log ("Twitter login requested");"
+    // Mock implementation;
+      id: "twitter - user - id",""
+      email: "twitter@example.com",""
+      display_name: "Twitter User",""
+      name: "Twitter User","
+  const loginWithWeb3 = async () => {"
+    console.log ("Web3 login requested");"
+    const ethereum = (window as any).ethereum;
+    // Check condition;
+      console.warn ("No wallet detected");"
+      return;
+
+  };
+  const loginWithGoogle = async () => {;"
+    console && console.log("Google login requested");"
+    // Mock implementation;
+    setUser({ ;"
+      id: "google-user-id", ;""
+      email: "google@example && example.com", ;")
+    }),;
+  },;
+  const resetPassword = async (email: string) => {;
+    // Mock implementation;"
+    // // // console.log("Password reset requested for:", email),;"
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+
+  return <AuthContext && AuthContext.Provider value={value}>{children}</AuthContext && AuthContext.Provider>;
+
+  signIn:(email:string, password:string) => Promise<{ error:any }>,;
+  signOut:() => Promise<void>,;
+  signUp:(email:string, password:string, userData?:Partial<UserDetails>) => Promise<{ error:any }>,;
+
+  login:(email:string, password:string) => Promise<{ error:any }>,;
+  logout:() => Promise<void>,;
+  signup:(email:string, password:string, userData?:Partial<UserDetails>) => Promise<{ error:any }>,;
+
+  resetPassword:(email:string) => Promise<{ error:any }>,;
+  updateProfile:(data:Partial<UserDetails>) => Promise<{ error:any }>,;
+
+  loginWithGoogle:() => Promise<void>,;
+  loginWithFacebook:() => Promise<void>,;
+  loginWithTwitter:() => Promise<void>,;
+  loginWithWeb3:() => Promise<void>;
+
+  const signUp = async (email:string, password:string, userData?:Partial<UserDetails>) => {;
+
+  const updateProfile = async (data:Partial<UserDetails>) => {;
+pr-12325
+</UserDetails>
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+</AuthContext>"
+

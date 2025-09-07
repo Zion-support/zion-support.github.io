@@ -1,4 +1,137 @@
-#!/""usr/bin/env""
+<<<<<<< HEAD
+#!/""usr/bin/env""""
+const fs = require("fs")""
+const path = require("path")""
+const { execSync, spawn } = require("child_process")""
+      this.projectRoot,logs"""
+      "performance-monitor.log"""
+      "performance-history.json"""
+  "buildTime"""
+      "bundleSize"""
+      "loadTime"""
+      "memoryUsage"""
+      "cpuUsage"""
+      "errorRate"""
+  console.log("" Intelligent Performance Monitor Initialized")""
+  fs.mkdirSync(logDir, { "recursive"})""
+  const data = fs.readFileSync(this.performanceHistory, "utf8")""
+  "totalMeasurements"""
+          "averageBuildTime"""
+          "averageBundleSize"""
+          "averageLoadTime"""
+          "performanceTrends"""
+          "bottlenecks"""
+          "optimizations"""
+  console.error("Error loading performance "history": ")""
+// console.log("" Starting continuous performance monitoring...")""
+  console.log("" Measuring application performance...")""
+// console.log("" Measuring application performance...")""
+    console.log(" Measuring application performance...")""
+  "timestamp"""
+      "recommendations"""
+  console.error(" Error during performance "measurement": ")""
+this.logError("Performance measurement failed")""
+  console.log("� Measuring build performance...")""
+  "type": "build"""
+          "severity": "warning","message"""
+          "suggestion": "Consider optimizing build configuration, using build caching, or parallel builds"}"""
+  console.error("Error measuring build "performance")""
+          "suggestion": "Consider optimizing build configuration, using build caching, or parallel builds"""
+  console.error("Error measuring build "performance": ")""
+  // Check if it"""
+      if (fs.existsSync("next.config.js") || fs.existsSync("next.config.mjs")""
+        execSync("npm run build")""
+  "cwd"""
+          "stdio": "pipe"""
+  // Check if it"""
+          "timeout"""
+  "success"""
+          "duration"""
+          "errors"""
+      // Check if it"""
+      if (fs.existsSync("vite.config.js") || fs.existsSync("vite.config.ts")""
+  console.log(""� Measuring bundle size...")""
+      const buildDirs = ["dist", "build", ".next", "out"]""
+  "type": "bundle"""
+          "severity": "warning`,"message"""`;
+          "suggestion": `Consider code splitting, tree shaking, or removing unused dependencies"}"""
+  console.error("Error measuring bundle "size": ")""
+          "suggestion": "Consider code splitting, tree shaking, or removing unused dependencies"}"""
+  const fullPath = path.join(dirPath, ")""
+  const fullPath = path.join(dirPath, ")"`;
+    } catch (error) {  console.error(`Error calculating size for ${dirPath  }:```)"
+  if (bytes === 0) return "0 Bytes"""
+    const sizes = ["Bytes", "KB", "MB", "GB"]""
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " """
+// console.log(""⚡ Measuring runtime performance...")""
+  console.log("⚡ Measuring runtime performance...")""
+  "type": "memory"""
+          "suggestion": "Check for memory leaks, optimize data structures, or increase memory limits"}"""
+  "type": "cpu"""
+          "severity": "warning","message": "CPU usage (${systemMetrics.cpu}%) exceeds threshold (${this.thresholds.cpuUsage}%)"""
+          "suggestion": "Optimize algorithms, implement caching, or use worker threads for heavy operations"""
+  console.error("Error measuring runtime "performance")""
+          "suggestion": "Check for memory leaks, optimize data structures, or increase memory limits"""
+  console.error("Error measuring runtime "performance": ")""
+  console.error("Error getting system "metrics": ")""
+      return { "memory": 0, "cpu"}""
+  console.error("Error getting system "metrics": ", error);      return { "memory": 0, "cpu"}""
+  console.log("🧠 Analyzing performance data...")""
+  "type": "trend"""
+            "severity": "info"""
+            "message": "Build time is trending upward"""
+            "suggestion": "Investigate recent changes that may be affecting build performance"""
+            "message": "Bundle size is trending upward"""
+            "suggestion": "Review recent dependencies and code changes for size impact"""
+        "severity": "critical"""
+        "message": "Build time is critically slow"""
+        "impact": "High"""
+        "suggestion": "Immediate investigation required - check build configuration and dependencies"""
+  type: "build"""
+        "message": "Bundle size is critically large"""
+        "suggestion": "Immediate optimization required - implement code splitting and tree shaking"""
+        "severity": "high"""
+        "message": "Memory usage is significantly high"""
+        "impact": "Medium"""
+        "suggestion": "Investigate memory leaks and optimize data handling"""
+  "category": "build"""
+        "priority": "high"""
+        "suggestion": "Implement build caching using tools like Turborepo or Nx"""
+        "expectedImpact": "20-40% reduction in build time"""
+        "priority": "medium"""
+        "suggestion": "Use parallel builds for independent modules"""
+        "expectedImpact": "15-25% reduction in build time"""
+  "category": "bundle"""
+        "suggestion": "Implement dynamic imports and code splitting"""
+        "expectedImpact": "30-50% reduction in initial bundle size"""
+  category: "bundle"""
+        "suggestion": "Remove unused dependencies and implement tree shaking"""
+        "expectedImpact": "10-20% reduction in bundle size"""
+  "category": "runtime"""
+        "suggestion": "Implement memory pooling and object reuse"""
+        "expectedImpact": "25-40% reduction in memory usage"""
+  console.error("Error saving performance "history": ")""
+      "metrics"""
+  fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + "\n"""
+  console.error("Error logging performance "results": ")""
+      "error"""
+      "stack"""
+  fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + "\n"""
+  console.error("Error logging "error": ")""
+  console.log("� Setting up build monitoring...")""
+    process.on("message")""
+  if (message && message.type === "build")""
+// console.log(" Build started - monitoring performance...")""
+  console.log("⚡ Setting up runtime monitoring...")""
+    process.on("exit")""
+    process.on("uncaughtException")""
+    process.on("unhandledRejection")""
+  console.log("� Process exiting - saving final performance data...")""
+  console.error("� Uncaught "exception": ")""
+    this.logError("Uncaught exception")""
+  console.error("� Unhandled "rejection": ")""`;
+=======
+#!/usr/bin/env
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -24,7 +157,7 @@ const { execSync, spawn } = require("child_process")
       "memoryUsage"
       "cpuUsage"
       "errorRate"
-  console.log("" Intelligent Performance Monitor Initialized")
+  console.log( Intelligent Performance Monitor Initialized")
   fs.mkdirSync(logDir, { "recursive"})
   const data = fs.readFileSync(this.performanceHistory, "utf8")
   "totalMeasurements"
@@ -50,9 +183,9 @@ const { execSync, spawn } = require("child_process")
         "performanceTrends"
         "bottlenecks"
         "optimizations"
-// console.log("" Starting continuous performance monitoring...")
-  console.log("" Measuring application performance...")
-// console.log("" Measuring application performance...")
+// console.log( Starting continuous performance monitoring...")
+  console.log( Measuring application performance...")
+// console.log( Measuring application performance...")
     console.log(" Measuring application performance...")
   "timestamp"
       "buildTime"
@@ -112,7 +245,7 @@ this.logError("Performance measurement failed")
   "success"
         "duration"
         "errors"
-  console.log(""� Measuring bundle size...")
+  console.log(� Measuring bundle size...")
       const buildDirs = ["dist", "build", ".next", "out"]
   "type": "bundle"
           "severity": "warning`,"message"
@@ -124,12 +257,12 @@ this.logError("Performance measurement failed")
   console.error("Error measuring bundle "size": ")
   console.error("Error measuring bundle "size": ")
   const fullPath = path.join(dirPath, ")
-  const fullPath = path.join(dirPath, ")
-    } catch (error) {  console.error(`Error calculating size for ${dirPath  }:```)
+  const fullPath = path.join(dirPath, ")"
+    } catch (error) {  console.error(`Error calculating size for ${dirPath  }:```)"
   if (bytes === 0) return "0 Bytes"
     const sizes = ["Bytes", "KB", "MB", "GB"]
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " "
-// console.log(""⚡ Measuring runtime performance...")
+// console.log(⚡ Measuring runtime performance...")
   console.log("⚡ Measuring runtime performance...")
   "type": "memory"
           "severity": "warning","message"
@@ -251,5 +384,4 @@ this.logError("Performance measurement failed")
   console.error("� Uncaught "exception": ")
     this.logError("Uncaught exception")
   console.error("� Unhandled "rejection": ")
-
-    this.logError("Unhandled rejection")
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

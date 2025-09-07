@@ -3,6 +3,13 @@
 
 
 command = "npm ci && npm run build"
+<<<<<<< HEAD
+<<<<<<< HEAD
+publish = ".next"
+=======
+publish = "dist"
+>>>>>>> pr-12325
+=======
 publish = "dist"
 
 [build.environment]
@@ -17,6 +24,7 @@ NODE_OPTIONS = "--max-old-space-size=4096"
 command = "npm ci && npm run build"
 publish = ".next"
 publish = "dist"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
 [build.environment]
 NODE_VERSION = "20"

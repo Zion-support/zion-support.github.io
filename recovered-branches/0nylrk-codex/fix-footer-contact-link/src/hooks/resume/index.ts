@@ -1,3 +1,6 @@
+
+
+pr-12325
 import { useState  } from 'react';
 import { Resume  } from '@/types/resume';
 import { useFetchResume  } from './useFetchResume';
@@ -8,6 +11,7 @@ import { useSkills  } from './useSkills';
 import { useCertifications  } from './useCertifications';
 import { useResumeList  } from './useResumeList';
 export function useResume() {  const [resume, setResume] = useState<Resume | null>(null);
+
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
   const workOperations = useWorkExperience();
@@ -31,9 +35,11 @@ export * from './use_skills';
 export * from './use_certifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
+
 ;
-import { useState } from 'react';
-import { Resume } from '@/types/resume';
+
+import { useState } from 'react',;
+import { Resume } from '@/types/resume',;
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
 import { useWorkExperience } from './useWorkExperience',;
@@ -114,3 +120,43 @@ export * from './useSkills',;
 export * from './useCertifications',;
 export * from './useResumeList';
 export * from './useResumeUtils';
+export function useResume() {
+import {useState} from 'react';
+import {Resume} from '@/types/resume';
+import {useFetchResume} from './useFetchResume';
+import {useResumeActions} from './useResumeActions';
+import {useWorkExperience} from './useWorkExperience';
+import {useEducation} from './useEducation';
+import {useSkills} from './useSkills';
+import {useCertifications} from './useCertifications';
+import {useResumeList} from './useResumeList';
+
+
+import { useState  } from 'react';''
+import { Resume  } from '@/types/resume';''
+import { useFetchResume  } from './useFetchResume';''
+import { useResumeActions  } from './useResumeActions';''
+import { useWorkExperience  } from './useWorkExperience';''
+import { useEducation  } from './useEducation';''
+import { useSkills  } from './useSkills';''
+import { useCertifications  } from './useCertifications';''
+import { useResumeList  } from './useResumeList';'
+export function useResume() {'
+import {useState} from 'react';''
+import {Resume} from '@/types/resume';''
+import {useFetchResume} from './useFetchResume';''
+import {useResumeActions} from './useResumeActions';''
+import {useWorkExperience} from './useWorkExperience';''
+import {useEducation} from './useEducation';''
+import {useSkills} from './useSkills';''
+import {useCertifications} from './useCertifications';''
+import {useResumeList} from './useResumeList';'
+export function useResume() {;
+
+
+  const [resume, setResume] = useState<Resume | null>(null);
+
+  const [resume, setResume] = useState<Resume | null>(null),;
+pr-12325
+</Resume>'
+

@@ -1,4 +1,49 @@
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+const fs = require('fs')
+const path = require('path')
+        item.endsWith('.test.tsx')
+        item.endsWith('.test.ts')
+        item.endsWith('.test.jsx')
+        item.endsWith('.test.js')
+    const corruptionPatterns = [/describe\([^)]*\)\s*\{\}\s*
+      /expect\([^)]*\)\s*\.toBeInTheDocument\s*\(\)\s*\}\)\s*
+      /render\(<[^>]*>\s*\)\s*
+<<<<<<< HEAD
+      .replace('.test.tsx', )
+      .replace('.test.ts', )
+      .replace('.test.jsx', )
+      .replace('.test.js', )
+    return `import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import ${componentName} from './${componentName}
+describe('${componentName}')
+=======
+      .replace('.test.tsx, )
+      .replace('.test.ts, )
+      .replace('.test.jsx, )
+      .replace('.test.js, )
+    return `import React from 'react'
+import { render, screen } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import ${componentName} from './${componentName}
+describe('${componentName})
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+  it('renders without crashing')
+    expect(screen.getByRole('main')
+  it('displays expected content')
+      const content = fs.readFileSync(filePath,utf8)
+    this.log(' Starting Test File Fixer')
+    console.log(' Test file fixing completed')
+<<<<<<< HEAD
+<<<<<<< HEAD
+    console.error(' Test file fixing "failed")
+=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -139,30 +184,10 @@ fixer
     console.error('❌ Test file fixing failed:', error.message);
     process.exit(1);
   });
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-        item.endsWith('.test.tsx')
-        item.endsWith('.test.ts')
-        item.endsWith('.test.jsx')
-        item.endsWith('.test.js')
-    const corruptionPatterns = [/describe\([^)]*\)\s*\{\}\s*'
-      /expect\([^)]*\)\s*\.toBeInTheDocument\s*\(\)\s*\}\)\s*'
-      /render\(<[^>]*>\s*\)\s*'
-      .replace('.test.tsx', '')
-      .replace('.test.ts', '')
-      .replace('.test.jsx', '')
-      .replace('.test.js', '')
-    return `import React from 'react'
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import ${componentName} from './${componentName}'
-describe('${componentName}')
-  it('renders without crashing')
-    expect(screen.getByRole('main')
-  it('displays expected content')
-      const content = fs.readFileSync(filePath, 'utf8')
-    this.log(' Starting Test File Fixer')
-    console.log(' Test file fixing completed')
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+    console.error(' Test file fixing "failed")""`;
+>>>>>>> pr-12325
+=======
     console.error(' Test file fixing "failed")
-
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

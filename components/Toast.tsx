@@ -1,101 +1,135 @@
-import React, {createContext,useContext,useState,useCallback,useEffect,} from 'react';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  useEffect,
+} from "react";
 
-interface Toast  {id: string;
+interface Toast {
+  id: string;
   type: "success" | "error" | "warning" | "info";
   title: string;
   message?: string;
   duration?: number;
-  action?: {label: string;
-    onClick: () => void;
-}}
+  action?: {
+    label: string;
+    onClick: () => void
+};
+}
 
 interface ToastContextType {
   toasts: Toast[];
   addToast: (toast: Omit<Toast, "id">) => string;
   removeToast: (id: string) => void;
   clearToasts: () => void;
-
 }
 
-const ToastContext = createContext<ToastContextType | undefined>(undefined)export const useToast = () => ;
-  const context = useContext(ToastContext)if (!context) {throw new Error("useToast must be used within a ToastProvider")}
- ;
-  return context;
-}
+const ToastContext = createContext<ToastContextType | undefined>(undefined);
+
+export const useToast = () => {
+  const context = useContext(ToastContext);
+  if (!context) {
+    throw new Error("useToast must be used within a ToastProvider");
+  }
+  return context
+};
 
 interface ToastProviderProps {
   children: React.ReactNode;
   maxToasts?: number;
-
 }
 
-export const ToastProvider: React.FC<ToastProviderProps> = ({ children,maxToasts = 5,   }) => {
+export const ToastProvider: React.FC<ToastProviderProps> = ({
+  children,
+  maxToasts = 5,
+}) => {
+  const [toasts, setToasts] = useState<Toast[]>([]);
 
+  const addToast = useCallback(
+    (toast: Omit<Toast, "id">) => {
+      const id = `toast_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      const newToast: Toast = {
+        id,
+        duration: 5000,
+        ...toast,
+      };
 
-const [toasts, setToasts]  =;
-  useState<Toast[]>([])const addToast = useCallback((toast: Omit<Toast, "id">) => ;
-  const id = `toast_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      setToasts((prev) => {
+        const updated = [...prev, newToast];
+        return updated.slice(-maxToasts);
+      });
 
-const newToast: Toast = {id,duration: 5000,...toast,}setToasts((prev) => ;
-  const updated = [...prev, newToast];
-        return updated.slice(-maxToasts)})// Auto remove toast after duration;
-      if (newToast.duration && newToast.duration > 0) {setTimeout(() => {removeToast(id)}, newToast.duration)}return id;
-    },[maxToasts],)const removeToast = useCallback((id: string) => {setToasts((prev) => prev.filter((toast) => toast.id !== id),
-}, [];
-  const clearToasts = useCallback(() => {setToasts([])}, [];
-  return (<ToastContext.Provider;
+      // Auto remove toast after duration
+      if (newToast.duration && newToast.duration > 0) {
+        setTimeout(() => {
+          removeToast(id);
+        }, newToast.duration);
+      }
+
+      return id;
+    },
+    [maxToasts],
+  );
+
+  const removeToast = useCallback((id: string) => {
+    setToasts((prev) => prev.filter((toast) => toast.id !== id));
+  }, []);
+
+  const clearToasts = useCallback(() => {
+    setToasts([]);
+  }, []);
+
+  return (
+    <ToastContext.Provider
       value={{ toasts, addToast, removeToast, clearToasts }}
-    >;
+    >
       {children}
-      <ToastContainer toasts={toasts} onRemove={removeToast} />;
-    </ToastContext.Provider>;
-  )}
+      <ToastContainer toasts={toasts} onRemove={removeToast} />
+    </ToastContext.Provider>
+  )
+};
 
 interface ToastContainerProps {
   toasts: Toast[];
   onRemove: (id: string) => void;
-
 }
 
-const ToastContainer: React.FC<ToastContainerProps> = ({ toasts,onRemove,   }) => {
-
-
-return (<div className="fixed top-4 right-4 z-50 space-y-2">;
-      {toasts.map((toast) => (<ToastItem key={toast.id} toast={toast} onRemove={onRemove} />;
+const ToastContainer: React.FC<ToastContainerProps> = ({
+  toasts,
+  onRemove,
+}) => {
+  return (
+    <div className="fixed top-4 right-4 z-50 space-y-2">
+      {toasts.map((toast) => (
+        <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
       ))}
-    </div>;
-  )}
+    </div>
+  )
+};
 
 interface ToastItemProps {
   toast: Toast;
   onRemove: (id: string) => void;
-
-
 }
 
-const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove    }) => {
-
-
-
+const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
   const [isVisible, setIsVisible] = useState(false);
-
-const [isLeaving, setIsLeaving] = useState(false);
+  const [isLeaving, setIsLeaving] = useState(false);
 
   useEffect(() => {
-
     // Trigger entrance animation
     const timer = setTimeout(() => setIsVisible(true), 10);
     return () => clearTimeout(timer);
   }, []);
 
-const handleRemove = () => {
+  const handleRemove = () => {
     setIsLeaving(true);
     setTimeout(() => onRemove(toast.id), 300)
 };
 
-const getToastStyles = () => {
-   ;
-  const baseStyles =
+  const getToastStyles = () => {
+    const baseStyles =
       "max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden transform transition-all duration-300 ease-in-out";
 
     if (isLeaving) {
@@ -105,17 +139,17 @@ const getToastStyles = () => {
     if (isVisible) {
       return `${baseStyles} translate-x-0 opacity-100`;
     }
-
-
+    
     return `${baseStyles} translate-x-full opacity-0`
 };
 
+    return `${baseStyles} translate-x-full opacity-0`;
+  };
 
-const getIconAndColor = () => {
+  const getIconAndColor = () => {
     switch (toast.type) {
       case "success":
-       ;
-  return {
+        return {
           icon: "✓",
           bgColor: "bg-green-50",
           iconColor: "text-green-400",
@@ -150,7 +184,7 @@ const getIconAndColor = () => {
     }
   };
 
-const { icon, bgColor, iconColor, titleColor, messageColor } =
+  const { icon, bgColor, iconColor, titleColor, messageColor } =
     getIconAndColor();
 
   return (
@@ -162,24 +196,22 @@ const { icon, bgColor, iconColor, titleColor, messageColor } =
             <p className={`text-sm font-medium ${titleColor}`}>{toast.title}</p>
             {toast.message && (
               <p className={`mt-1 text-sm ${messageColor}`}>{toast.message}</p>
-
             )}
-            {toast.action && (<div className="mt-2">;
-                <button;
+            {toast.action && (
+              <div className="mt-2">
+                <button
                   onClick={toast.action.onClick}
-                  className={`text-sm font-medium ${titleColor} hover: underline`}>
-
-                  {toast.action.labe,
-}
-                </button>;
-              </div>;
+                  className={`text-sm font-medium ${titleColor} hover:underline`}
+                >
+                  {toast.action.label}
+                </button>
+              </div>
             )}
-          </div>;
-          <div className="ml-4 flex-shrink-0 flex">;
-            <button;
+          </div>
+          <div className="ml-4 flex-shrink-0 flex">
+            <button
               onClick={handleRemove}
-              className={`inline-flex ${titleColor} hover: opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-${toast.type === "success" ? "green" : toast.type === "error" ? "red" : toast.type === "warning" ? "yellow" : "blue"}-50`}
-
+              className={`inline-flex ${titleColor} hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-${toast.type === "success" ? "green" : toast.type === "error" ? "red" : toast.type === "warning" ? "yellow" : "blue"}-50`}
             >
               <span className="sr-only">Close</span>
               <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -194,16 +226,24 @@ const { icon, bgColor, iconColor, titleColor, messageColor } =
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 // Convenience hooks for different toast types
 export const useToastNotifications = () => {
- ;
   const { addToast } = useToast();
 
   return {
-
+    success: (title: string, message?: string, options?: Partial<Toast>) => 
+      addToast({ type: 'success', title, message, ...options }),
+    error: (title: string, message?: string, options?: Partial<Toast>) => 
+      addToast({ type: 'error', title, message, ...options }),
+    warning: (title: string, message?: string, options?: Partial<Toast>) => 
+      addToast({ type: 'warning', title, message, ...options }),
+    info: (title: string, message?: string, options?: Partial<Toast>) => 
+      addToast({ type: 'info', title, message, ...options }),
+  }
+};
     success: (title: string, message?: string, options?: Partial<Toast>) =>
       addToast({ type: "success", title, message, ...options }),
     error: (title: string, message?: string, options?: Partial<Toast>) =>
@@ -212,7 +252,5 @@ export const useToastNotifications = () => {
       addToast({ type: "warning", title, message, ...options }),
     info: (title: string, message?: string, options?: Partial<Toast>) =>
       addToast({ type: "info", title, message, ...options }),
-  }
+  };
 };
-
-

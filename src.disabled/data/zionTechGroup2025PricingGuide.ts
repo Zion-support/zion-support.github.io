@@ -4,7 +4,7 @@
    billing: 'month' | 'year' | 'project' | 'hour'',
   description: string;
    features: string[];
-   benefit;
+   benefit
     s: string[];
    bestFo
     r: string[];

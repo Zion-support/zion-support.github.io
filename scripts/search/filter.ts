@@ -4,7 +4,7 @@ export type AccessLevel = 'public' | 'private' | 'admin';export interface Search
   rating?: number;
   price?: number;
   location?: string;
-  skills?: string[];
-  keywords?: string[];
+  skills?: string[];}
+  keywords?: string[];}
 }
 }

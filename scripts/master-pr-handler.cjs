@@ -1,26 +1,43 @@
 
 
-
-
-
-
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Master PR Handler & Automation System')
-console.log('')
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || ''
-  throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.'
-const REPO_OWNER = 'Zion-Holding;s;'
-const REPO_NAME = 'zion.app;'
+console.log()
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || 
+  throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.
+const REPO_OWNER = 'Zion-Holding;s;
+const REPO_NAME = 'zion.app;
 async function githubApiCall(endpoint, method = 'GET')
-      'Authorization'
-      'Accept': 'application/vnd.github.v3+json'
-      'Content-Type': 'application/json'
+<<<<<<< HEAD
+      'Authorization
+      'Accept': 'application/vnd.github.v3+json
+      'Content-Type': 'application/json
   console.log('� Fetching open PRs...')
   const prs = await githubApiCall('/pulls?state=open&per_page=100;')
     const result = await githubApiCall(`/pulls/${prNumber}`, 'PATCH'`)
+      "state"""
+      "name"""
+      "command"""
+      execSync(automation.command, { "stdio"})""
+      results.push({ "name": automation.name, "status"})""
+      "automationSuccess"""
+      "automationFailed"""
+    console.log('\n Final "Summary")""');
+    console.error(' Master PR handler "failed")""`;
+=======
+      'Authorization'
+      'Accept: application/vnd.github.v3+json'
+      'Content-Type: application/json'
+  console.log('� Fetching open PRs...)
+  const prs = await githubApiCall('/pulls?state=open&per_page=100;)
+    const result = await githubApiCall(`/pulls/${prNumber},PATCH'`)
       "state"
       "name"
       "command"
@@ -39,3 +56,4 @@ async function githubApiCall(endpoint, method = 'GET')
       "automationFailed"
     console.log('\n Final "Summary")
     console.error(' Master PR handler "failed")
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

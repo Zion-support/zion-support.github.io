@@ -1,9 +1,88 @@
+import { GradientHeading } from '@/components/GradientHeading';
+import { Clock, Map, DollarSign } from 'lucide-react';
 
-;
-import { GradientHeading  } from '@/components/GradientHeading';
-import { Clock, Map, DollarSign  } from 'lucide-react';
+import { GradientHeading } from "@/components/GradientHeading";
+import { Clock, Map, DollarSign } from 'lucide-react'
+origin/cursor/automate-test-improve-and-merge-code-2533
+export function PageHero() {
+  return (
+    <div className='text-center mb-12'>
+      <GradientHeading className='mb-4'>
+        Global IT Onsite Services
+      </GradientHeading>
+      <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
+        Professional IT onsite support services with transparent pricing across
+        190+ countries worldwide
+      </p>
 
-export function PageHero() {return (<div className='text-center mb-12'>;
+      
+      <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mt-12">
+        <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
+          <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
+            <Map className="h-8 w-8 text-zion-cyan" />
+
+          </div>
+          <h3 className='text-xl font-bold text-white mb-2'>Global Coverage</h3>
+          <p className='text-zion-slate-light'>
+            IT onsite services available in over 190 countries and territories
+            worldwide
+          </p>
+        </div>
+
+        
+        <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
+          <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
+            <Clock className="h-8 w-8 text-zion-cyan" />
+
+          </div>
+          <h3 className="text-xl font-bold text-white mb-2">Rapid Response</h3>
+          <p className="text-zion-slate-light">Guaranteed 4-hour response time for critical issues in most major cities</p>
+        </div>
+
+import { GradientHeading } from "@/components/GradientHeading";
+import { Clock, Map, DollarSign } from 'lucide-react'
+
+export function PageHero() {
+  return (
+    <div className="text-center mb-12">
+      <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>
+      <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+        Professional IT onsite support services with transparent pricing across 190+ countries worldwide
+      </p>
+      <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mt-12">
+        <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
+          <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
+            <Map className="h-8 w-8 text-zion-cyan" />
+          </div>
+          <h3 className="text-xl font-bold text-white mb-2">Global Coverage</h3>
+          <p className="text-zion-slate-light">IT onsite services available in over 190 countries and territories worldwide</p>
+        </div>
+        <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
+          <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
+            <Clock className="h-8 w-8 text-zion-cyan" />
+          </div>
+          <h3 className="text-xl font-bold text-white mb-2">Rapid Response</h3>
+          <p className="text-zion-slate-light">Guaranteed 4-hour response time for critical issues in most major cities</p>
+        </div>
+
+        
+        <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
+          <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
+            <DollarSign className="h-8 w-8 text-zion-cyan" />
+          </div>
+
+          <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>
+          <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>
+        </div>
+      </div>
+
+    </div>
+
+import { GradientHeading } from '@/components/GradientHeading';
+import { Clock, Map, DollarSign } from 'lucide-react';
+export function PageHero() {;
+  return (
+    <div className='text-center mb-12'>;
       <GradientHeading className='mb-4'>;
         Global IT Onsite Services;
       </GradientHeading>;
@@ -11,63 +90,52 @@ export function PageHero() {return (<div className='text-center mb-12'>;
         Professional IT onsite support services with transparent pricing across;
         190+ countries worldwide;
       </p>;
-      <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mt-12">;
-        <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">;
-          <div className="bg-zion-purple/20 p-3 rounded-full mb-4">;
-            <Map className="h-8 w-8 text-zion-cyan" />;
-          </div>;
-          <h3 className='text-xl font-bold text-white mb-2'>Global Coverage</h3>;
-          <p className='text-zion-slate-light'>;
-            IT onsite services available in over 190 countries and territories;
-            worldwide;
-          </p>;
-        </div>;
-        <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">;
-          <div className="bg-zion-purple/20 p-3 rounded-full mb-4">;
-            <Clock className="h-8 w-8 text-zion-cyan" />;
-          </div>;
-          <h3 className="text-xl font-bold text-white mb-2">Rapid Response</h3>;
-          <p className="text-zion-slate-light">Guaranteed 4-hour response time for critical issues in most major cities</p>;
-        </div>;
 
-export function PageHero() {return (<div className="text-center mb-12">;
-      <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>;
-      <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
-        Professional IT onsite support services with transparent pricing across 190+ countries worldwide;
-      </p>;
-      <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mt-12">;
-        <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">;
-          <div className="bg-zion-purple/20 p-3 rounded-full mb-4">;
-            <Map className="h-8 w-8 text-zion-cyan" />;
-          </div>;
-          <h3 className="text-xl font-bold text-white mb-2">Global Coverage</h3>;
-          <p className="text-zion-slate-light">IT onsite services available in over 190 countries and territories worldwide</p>;
-        </div>;
-        <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">;
-          <div className="bg-zion-purple/20 p-3 rounded-full mb-4">;
-            <Clock className="h-8 w-8 text-zion-cyan" />;
-          </div>;
-          <h3 className="text-xl font-bold text-white mb-2">Rapid Response</h3>;
-          <p className="text-zion-slate-light">Guaranteed 4-hour response time for critical issues in most major cities</p>;
-        </div>;
-        <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">;
-          <div className="bg-zion-purple/20 p-3 rounded-full mb-4">;
-            <DollarSign className="h-8 w-8 text-zion-cyan" />;
-          </div>;
-          <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>;
-          <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>;
-        </div>;
-      </div>;
-    </div>;
+export function PageHero() {
+  return (
+    <div className="text-center mb-12">"
+</div>"
+      <GradientHeading className="mb-4">Global IT Onsite Services""
+      <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">"
+</p>
 
-export function PageHero() {return (<div className='text-center mb-12'>;
+
+      "
+      <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mt-12">"
+        <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">"
+          <div className="bg-zion-purple/20 p-3 rounded-full mb-4">"
+            <Map className="h-8 w-8 text-zion-cyan" />"
+
+          <h3 className="text-xl font-bold text-white mb-2">Global Coverage</h3>""
+          <p className="text-zion-slate-light">IT onsite services available in over 190 countries and territories worldwide</p>"
+        </div>
+
+
+            <Clock className="h-8 w-8 text-zion-cyan" />"
+
+          <h3 className="text-xl font-bold text-white mb-2">Rapid Response</h3>""
+          <p className="text-zion-slate-light">Guaranteed 4-hour response time for critical issues in most major cities</p>"
+      </p>"
+
+
+
+            <DollarSign className="h-8 w-8 text-zion-cyan" />"
+
+
+
+          <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>""
+          <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>"
+
+
+
+    <div className='text-center mb-12'>;
       <GradientHeading className='mb-4'>;
-        Global IT Onsite Services;
-      </GradientHeading>;
+
+      ;
       <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>;
-        Professional IT onsite support services with transparent pricing across;
-        190+ countries worldwide;
-      </p>;<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12'>;
+      </p>;
+pr-12325
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12'>;
         <div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>;
           <div className='bg-zion-purple/20 p-3 rounded-full mb-4'>;
             <Map className='h-8 w-8 text-zion-cyan' />;
@@ -77,7 +145,9 @@ export function PageHero() {return (<div className='text-center mb-12'>;
             IT onsite services available in over 190 countries and territories;
             worldwide;
           </p>;
-        </div>;<div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>;
+        </div>;
+
+        <div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>;
           <div className='bg-zion-purple/20 p-3 rounded-full mb-4'>;
             <Clock className='h-8 w-8 text-zion-cyan' />;
           </div>;
@@ -86,7 +156,9 @@ export function PageHero() {return (<div className='text-center mb-12'>;
             Guaranteed 4-hour response time for critical issues in most major;
             cities;
           </p>;
-        </div>;<div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>;
+        </div>;
+
+        <div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>;
           <div className='bg-zion-purple/20 p-3 rounded-full mb-4'>;
             <DollarSign className='h-8 w-8 text-zion-cyan' />;
           </div>;
@@ -99,8 +171,15 @@ export function PageHero() {return (<div className='text-center mb-12'>;
           </p>        </div>;
       </div>;
     </div>;
-  )}</div>;
-  )export function PageHero() {return (<div className="text-center mb-12">;
+  )
+};
+    </div>
+  )
+import { GradientHeading } from "@/components/GradientHeading";
+import { Clock, Map, DollarSign } from 'lucide-react';
+export function PageHero() {;
+  return (;
+    <div className="text-center mb-12">;
       <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>;
       <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
         Professional IT onsite support services with transparent pricing across 190+ countries worldwide;
@@ -129,14 +208,18 @@ export function PageHero() {return (<div className='text-center mb-12'>;
         </div>;
       </div>;
     </div>;
-  )}
-  )}
-import { GradientHeading  } from '@/components / GradientHeading';
-
-export /**;
- * PageHero - Function description;
- */;
-function PageHero() {return (<div className='text - center mb - 12'>;
+  );
+}
+  );
+}
+import { GradientHeading } from '@/components / GradientHeading';
+import { Clock, Map, DollarSign } from 'lucide-react';
+export /**
+ * PageHero - Function description
+ */
+function PageHero() {
+  return (
+    <div className='text - center mb - 12'>;
       <GradientHeading className='mb - 4'>;
         Global IT Onsite Services;
       </GradientHeading>;
@@ -144,6 +227,44 @@ function PageHero() {return (<div className='text - center mb - 12'>;
         Professional IT onsite support services with transparent pricing across;
         190+ countries worldwide;
       </p>;
+
+          </div>;
+          <h3 className='text-xl font-bold text-white mb-2'>Global Coverage</h3>;
+          <p className='text-zion-slate-light'>;
+            <Clock className='h-8 w-8 text-zion-cyan' />;
+
+          <h3 className='text-xl font-bold text-white mb-2'>Rapid Response</h3>;
+            <DollarSign className='h-8 w-8 text-zion-cyan' />;
+
+          <h3 className='text-xl font-bold text-white mb-2'>;
+</h3>
+          </h3>;
+          </p>        </div>;
+    <div className="text-center mb-12">;"
+      <GradientHeading className="mb-4">Global IT Onsite Services;""
+      <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;"
+      </p>;"
+      <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mt-12">;"
+        <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">;"
+          <div className="bg-zion-purple/20 p-3 rounded-full mb-4">;"
+            <Map className="h-8 w-8 text-zion-cyan" />;"
+
+          </div>;"
+          <h3 className="text-xl font-bold text-white mb-2">Global Coverage</h3>;""
+          <p className="text-zion-slate-light">IT onsite services available in over 190 countries and territories worldwide</p>;"
+            <Clock className="h-8 w-8 text-zion-cyan" />;"
+
+          <h3 className="text-xl font-bold text-white mb-2">Rapid Response</h3>;""
+          <p className="text-zion-slate-light">Guaranteed 4-hour response time for critical issues in most major cities</p>;"
+            <DollarSign className="h-8 w-8 text-zion-cyan" />;"
+
+          <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>;""
+          <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>;"
+    <div className='text - center mb - 12'>;
+      <GradientHeading className='mb - 4'>;
+
+      <p className='text - xl text - zion - slate - light max - w-3xl mx - auto'>;
+pr-12325
 <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 mt - 12'>;
         <div className='bg - zion - blue - light p - 6 rounded - lg border border - zion - purple / 20 flex flex - col items - center text - center'>;
           <div className='bg - zion - purple / 20 p - 3 rounded - full mb - 4'>;
@@ -176,17 +297,17 @@ function PageHero() {return (<div className='text - center mb - 12'>;
             Clear per - incident pricing includes transportation and first hour;
             onsite;
           </p>        </div>;
-      </div>
-    </div>
-  );
+      </div>;
+    </div>);
 }
           <h3 className="text - xl font - bold text - white mb-2">Transparent Pricing</h3>;
           <p className="text - zion - slate-light">Clear per - incident pricing includes transportation and first hour onsite</p>;
-
-export /**;
- * PageHero - Function description;
- */;
-function PageHero() {return (<div className="text - center mb-12">;
+export /**
+ * PageHero - Function description
+ */
+function PageHero() {
+  return (
+    <div className="text - center mb-12">;
       <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>;
       <p className="text - xl text - zion - slate - light max - w-3xl mx-auto">;
         Professional IT onsite support services with transparent pricing across 190+ countries worldwide;
@@ -213,21 +334,55 @@ function PageHero() {return (<div className="text - center mb-12">;
           <h3 className="text - xl font - bold text - white mb-2">Transparent Pricing</h3>;
           <p className="text - zion - slate-light">Clear per - incident pricing includes transportation and first hour onsite</p>;
         </div>;
+      </div>;
+    </div>);
+}
+        <div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>
+          <div className='bg-zion-purple/20 p-3 rounded-full mb-4'>
+            <DollarSign className='h-8 w-8 text-zion-cyan' />
+          </div>
+          <h3 className='text-xl font-bold text-white mb-2'>
+            Transparent Pricing
+          </h3>
+          <p className='text-zion-slate-light'>
+            Clear per-incident pricing includes transportation and first hour
+            onsite
+          </p>
+        </div>
       </div>
     </div>
   );
-}<div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>;
-          <div className='bg-zion-purple/20 p-3 rounded-full mb-4'>;
-            <DollarSign className='h-8 w-8 text-zion-cyan' />;
-          </div>;
-          <h3 className='text-xl font-bold text-white mb-2'>;
-            Transparent Pricing;
-          </h3>;
-          <p className='text-zion-slate-light'>;
-            Clear per-incident pricing includes transportation and first hour;
-            onsite;
-          </p>;
-        </div>;
-      </div>;
-    </div>;
-  )}
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+          <h3 className='text - xl font - bold text - white mb - 2'>Global Coverage</h3>;
+          <p className='text - zion - slate - light'>;
+            <Clock className='h - 8 w - 8 text - zion - cyan' />;
+
+          <h3 className='text - xl font - bold text - white mb - 2'>Rapid Response</h3>;
+            <DollarSign className='h - 8 w - 8 text - zion - cyan' />;
+
+          <h3 className='text - xl font - bold text - white mb - 2'>;
+      </div>;)
+    </div>);
+          <h3 className="text - xl font - bold text - white mb - 2">Transparent Pricing</h3>;""
+          <p className="text - zion - slate - light">Clear per - incident pricing includes transportation and first hour onsite</p>;""
+    <div className="text - center mb - 12">;"
+      <GradientHeading className="mb - 4">Global IT Onsite Services;""
+      <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">;"
+      <div className="grid grid - cols - 1 md: grid - cols - 3 gap - 8 mt - 12">;"
+        <div className="bg - zion - blue - light p - 6 rounded - lg border border - zion - purple / 20 flex flex - col items - center text - center">;"
+          <div className="bg - zion - purple / 20 p - 3 rounded - full mb - 4">;"
+            <Map className="h - 8 w - 8 text - zion - cyan" />;"
+
+          <h3 className="text - xl font - bold text - white mb - 2">Global Coverage</h3>;""
+          <p className="text - zion - slate - light">IT onsite services available in over 190 countries and territories worldwide</p>;"
+            <Clock className="h - 8 w - 8 text - zion - cyan" />;"
+
+          <h3 className="text - xl font - bold text - white mb - 2">Rapid Response</h3>;""
+          <p className="text - zion - slate - light">Guaranteed 4 - hour response time for critical issues in most major cities</p>;"
+            <DollarSign className="h - 8 w - 8 text - zion - cyan" />;"
+
+          <p className="text - zion - slate - light">Clear per - incident pricing includes transportation and first hour onsite</p>;"
+    </div>);"
+pr-12325

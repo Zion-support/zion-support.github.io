@@ -9,17 +9,7 @@ export interface Project {
   talentId?: string;
   budget: number;
   deadline: string;
-  createdAt: string;
-  updatedAt: string;
-}
 
-export interface Milestone {
-  id: string;
-  title: string;
-  description?: string;
-  dueDate: string;
-  amount: number;
-  status: 'pending' | 'completed' | 'cancelled';
   createdAt: string;
   updatedAt: string;
 }
@@ -33,6 +23,24 @@ export interface CreateProjectPayload {
 }
 
 export interface UpdateProjectPayload {
+  documents: Array<{,
+  id: string;
+    name: string;,
+  url: string;
+    uploadedAtIso: string;
+  notes: Array<{,
+    content: string;,
+  authorId: string;
+    createdAtIso: string;
+  createdAt: string;,
+  updatedAt: string;
+
+  // TODO: Implement
+  title: string;,
+  description: string;
+
+  // TODO: Implement
+pr-12325
   title?: string;
   description?: string;
   status?: Project['status'];
@@ -40,19 +48,13 @@ export interface UpdateProjectPayload {
   deadline?: string;
 }
 
-// Mock storage
-const projects: Project[] = [];
 
-export function getProjectById(id: string): Project | null {
-  return projects.find(p => p.id === id) || null;
-}
-
-export function getAllProjects(): Project[] {
   return projects;
 }
 
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
+
     ...project,
     id: `project_${Date.now()}`,
     createdAt: new Date().toISOString(),
@@ -62,16 +64,17 @@ export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updat
   return newProject;
 }
 
-export function updateProject(id: string, updates: Partial<Project>): Project | null {
+
   const project = projects.find(p => p.id === id);
   if (!project) return null;
   
-  Object.assign(project, updates, { updatedAt: new Date().toISOString() });
+
   return project;
 }
 
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
+
     ...milestone,
     id: `milestone_${Date.now()}`,
     status: 'pending',
@@ -82,7 +85,10 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   project.milestones = project.milestones || [];
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
+
   
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
   return newMilestone;
 }
 
@@ -94,7 +100,10 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
   
   Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project.updatedAt = new Date().toISOString();
+
   
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
   return milestone;
 }
 
@@ -106,6 +115,4 @@ export function deleteMilestone(project: Project, milestoneId: string): boolean 
   
   project.milestones.splice(index, 1);
   project.updatedAt = new Date().toISOString();
-  
-  return true;
-}
+

@@ -1,24 +1,39 @@
 
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+
 const { execSync } = require('child_process')
+<<<<<<< HEAD
   console.log(' Starting Enhanced Syntax Fixer...')
     const files = findCodeFiles('.;')
         const originalContent = fs.readFileSync(file, 'utf8')
         if (&& !content.match(/}\s*export default')
             if (&& !prevLine.endsWith(')
     && !prevLine.endsWith('}')
-              lines[exportLineIndex - 1] = prevLine + '}'
+              lines[exportLineIndex - 1] = prevLine + '}
               content = lines.join('\n')
               fixes.push('Added missing closing brace before export')
-        content = content.replace(/<(\w+)([^>]*?)\s*>\s*<\/\1>/g, '<$1$2></$1>'
+        content = content.replace(/<(\w+)([^>]*?)\s*>\s*<\/\1>/g, '<$1$2></$1>
           if (.endsWith(')
-    .endsWith('}') && !value.trim().endsWith('}') && !value.trim().endsWith(')'
+    .endsWith('}') && !value.trim().endsWith('}') && !value.trim().endsWith(')
           if (.endsWith('}')
     .endsWith('}')
           if (&& !body.trim().endsWith(')
     && !body.trim().endsWith('}') && !body.trim().endsWith('}')
-    const reportPath = 'enhanced-syntax-fix-report.json;'
-
-    console.error(' Enhanced syntax fixer "failed")
+=======
+  console.log(' Starting Enhanced Syntax Fixer...)
+    const files = findCodeFiles('.;)
+        const originalContent = fs.readFileSync(file,utf8)
+        if (&& !content.match(/}\s*export default')
+            if (&& !prevLine.endsWith(')
+    && !prevLine.endsWith(})
+              lines[exportLineIndex - 1] = prevLine + }
+              content = lines.join('\n')
+              fixes.push('Added missing closing brace before export')
+        content = content.replace(/<(\w+)([^>]*?)\s*>\s*<\/\1>/g,<$1$2></$1>'
+          if (.endsWith(')
+    .endsWith(}) && !value.trim().endsWith(}) && !value.trim().endsWith(')
+          if (.endsWith(})
+    .endsWith(})
+          if (&& !body.trim().endsWith(')
+    && !body.trim().endsWith(}) && !body.trim().endsWith(})
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    const reportPath = 'enhanced-syntax-fix-report.json;

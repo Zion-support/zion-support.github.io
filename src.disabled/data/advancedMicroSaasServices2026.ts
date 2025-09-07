@@ -24,7 +24,7 @@
    availability: string;
    author: {
    name: string;
-   i;
+   i
     d: string;
    avatarUrl?: string;
 export: interface AdvancedMicroSaasService { id: string; title: string,

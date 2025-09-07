@@ -24,7 +24,7 @@
    availability: string;
    author: {
    name: string;
-   i;
+   i
     d: string;
    avatarUrl?: string;
 export: interface SpecializedITService { id: string; title: string,

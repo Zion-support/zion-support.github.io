@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import {Badge} from "@/components/ui/badge";
@@ -7,14 +6,34 @@ import { Badge } from "@/components/ui/badge",// Get top skills (limit to 4);
   const topSkills = skills.slice(0, 4) || [];
   // Get top skills (limit to 4);
   const topSkills = skills.slice(0, 4) || [];
+
+import React from "react";""
+import { Badge } from "@/components/ui/badge";"
+interface TalentCardSkillsProps {
+  // TODO: Implement
+}
+  skills: string[] | undefined;
+
+}
+
+export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
+  // Get top skills (limit to 4)
+
+
+// Get top skills (limit to 4);
+  const topSkills = skills.slice(0, 4) || [];
+  // Get top skills (limit to 4);
+pr-12325
   // Get top skills (limit to 4)
   const topSkills = skills.slice(0, 4) |[];
   const topSkills = skills.slice(0, 4) || [],
+
   return (
     <div className="flex flex-wrap gap-1 mb-5">
       {topSkills.map((skill) => (
-import React from "react";
-import { Badge } from "@/components/ui/badge";
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
+
 interface TalentCardSkillsProps {;
   skills: string[] | undefined;}
 export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps) {;
@@ -23,27 +42,13 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
   return (
     <div className="flex flex-wrap gap-1 mb-5">;
       {topSkills && topSkills.map(skill => (;
-=======
-import React from "react";
-import { Badge } from "@/components/ui/badge";
-interface TalentCardSkillsProps {
-  skills: string[] | undefined;
-}
-
-export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
-  // Get top skills (limit to 4)
-  const topSkills = skills.slice(0, 4) || [];
-
-  return (
-    <div className="flex flex-wrap gap-1 mb-5">
-      {topSkills.map((skill) => (
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
         <Badge
           key={skill}
+
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
         >
+
           {skill}
-<<<<<<< HEAD
         </Badge>;
       ))}
       {skills && skills.length > 4 && (;
@@ -51,6 +56,7 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
           +{skills && skills.length - 4} more;
         </Badge>;
       )}
+
     </div>;  );
 }
 import React from './react';
@@ -80,15 +86,38 @@ function TalentCardSkills() {
         </Badge>)}
     </div>);
 }
-=======
-        </Badge>
-      ))}
-      {skills.length > 4 && (
-        <Badge className="bg-zion-blue-light text-zion-slate-light border-0">
-          +{skills.length - 4} more
-        </Badge>
-      )}
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+  const topSkills = skills.slice(0, 4) || [];
+
+
+  return ("
+    <div className="flex flex-wrap gap-1 mb-5">"
+</div>
+        <Badge;
+          key={skill}"
+          className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0""
+        >
+
+        "
+        <Badge className="bg-zion-blue-light text-zion-slate-light border-0">"
+
+        
+    </div>"
+    <div className="flex flex-wrap gap-1 mb-5">;"
+          key={skill}
+
+        ;"
+        <Badge className="bg-zion-blue-light text-zion-slate-light border-0">;"
+
+        ;
+    </div>;"
+    <div className="flex flex - wrap gap - 1 mb - 5">;"
+          className="bg - zion - purple / 10 hover:bg - zion - purple / 30 text - zion - purple border - 0";"
+        >;
+)
+        ))}"
+        <Badge className="bg - zion - blue - light text - zion - slate - light border - 0">;"
+
+        )}
+    </div>);"
+pr-12325
+

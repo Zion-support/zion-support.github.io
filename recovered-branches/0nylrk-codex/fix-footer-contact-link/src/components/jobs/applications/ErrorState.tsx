@@ -1,12 +1,22 @@
 
 
 interface ErrorStateProps {
+
+
+
+
+
+
+interface ErrorStateProps {
+  // TODO: Implement
+}
   error: string;
+
 }
 export function ErrorState({ error }: ErrorStateProps) {
 
-interface ErrorStateProps {;
-  error: string;
+interface ErrorStateProps {;}
+  error: string;}
 }
 
 export function ErrorState(): any ({ error }: ErrorStateProps) {;
@@ -52,4 +62,49 @@ export function ErrorState({ error }: ErrorStateProps) {;
     </Card>;
   );
 }
+;
+
+
+
+
+
+interface ErrorStateProps {
+  // TODO: Implement
 }
+  error: string;
+export function ErrorState({ error }: ErrorStateProps) {
+
+interface ErrorStateProps {;
+
+export function ErrorState(): any ({ error }: ErrorStateProps) {;
+
+    <Card className="border-red-200">;"
+"
+      <CardContent className="p-6 text-center">;"
+        <h3 className="text-lg font-medium text-red-600 mb-1">;"
+</h3>
+        </h3>;"
+        <p className="text-muted-foreground">{error}</p>;"
+      ;
+    ;"
+    <Card className="border - red - 200">;"
+      <CardContent className="p - 6 text - center">;"
+        <h3 className="text - lg font - medium text - red - 600 mb - 1">;"
+        <p className="text - muted - foreground">{error}</p>;"
+      ;)
+    );"
+    <Card className="border-red-200">"
+      <CardContent className="p-6 text-center">"
+        <h3 className="text-lg font-medium text-red-600 mb-1">Something went wrong</h3>""
+        <p className="text-muted-foreground">{error}</p>"
+      
+
+    
+
+        <h3 className="text-lg font-medium text-red-600 mb-1">Something went wrong</h3>;""
+pr-12325
+        <p className="text-muted-foreground">{error}</p>;"
+      </CardContent>;
+    </Card>;
+    </Card>;"
+

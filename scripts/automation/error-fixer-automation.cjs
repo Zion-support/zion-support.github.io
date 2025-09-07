@@ -1,38 +1,130 @@
-#!/""usr/bin/env""
+#!/usr/bin/env
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
 const glob = require("glob")
     this.reportsDir = path.join(this.projectRoot, "error-reports")
-// console.log("" Starting Error Fixer Automation...")
-      console.log("" Error Fixer Automation completed successfully!")
-      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues"")
+// console.log( Starting Error Fixer Automation...")
+      console.log( Error Fixer Automation completed successfully!")
+      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues)
   console.error(" Error Fixer Automation "failed": ")
       this.logError("Error Fixer Automation failed")
-// console.log("" Error Fixer Automation completed successfully!")
-      console.log(")
-      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues```)
+// console.log( Error Fixer Automation completed successfully!")
+      console.log(")"
+      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues```)"
+<<<<<<< HEAD
+  fs.mkdirSync(this.reportsDir, { "recursive"})""
+  console.log("" Fixing merge conflicts...")""
+    const files = glob.sync("**/*.{js,jsx,ts,tsx}")""
+  "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]""
+  const content = fs.readFileSync(file, "utf8")""
+          content.includes("")""
+          content.includes(">>>>>>>")""
+          content.includes(")""
+              /\n([\s\S]*?)\n              "$1"""
+  "type": "merge_conflict"""
+            "description": "Removed merge conflict markers"""`;
+  "type": `merge_conflict;""
+            "description": ""`;
+      } catch (error) {  this.logError(Error fixing merge conflicts in ${file  }`, error``)"
+            "description": "Removed merge conflict markers"}""`;
+});")}`)} catch (error) {this.logError(Error fixing merge conflicts in ${file}`, error``)""
+  console.log("" Fixing syntax errors...")""
+  "pattern"""
+        "replacement": "$1 = {\n  $2,\n  $3\n}"""
+        "description": "Fix object literal syntax"""
+        "replacement": "export function $1"""
+        "description": "Remove duplicate function declarations"""
+          /import\s+{\s*([^}]+)\s*}\s+from\s+[""]([^"]+)["];\s*import\s+{\s*\1\s*}\s+from\s+[""]\2[""]/g, ""replacement": "import { $1 } from $2, ""description": "Remove duplicate imports", "}", """
+          /import\s+{\s*([^}]+)\s*}\s+from\s+[""]([^"]+)["];\s*import\s+{\s*\1\s*}\s+from\s+[""]\2["]/g, ""replacement": "import { $1 } from $2", ""description": "Remove duplicate imports", "}", """
+          /import\s+{\s*([^}]+)\s*}\s+from\s+["]([^""]+)["];\s*import\s+{\s*\1\s*}\s+from\s+["]\2[""]/g, ""replacement": "import { $1 } from $2"", ""description": "Remove duplicate imports"", "}", """"
+  let content = fs.readFileSync(file, "utf8")""
+  "type": "syntax_error"""
+            "description": "Fixed syntax errors"""
+      } catch (error) {  this.logError(Error fixing syntax in ${file  }, error")""
+  console.log("" Fixing unused imports...")""
+      execSync("npm run lint -- --fix")""
+  "cwd"""
+        "stdio": "pipe"""
+  "type": "unused_imports"""
+        "description": "Fixed unused imports with ESLint --fix"""
+  this.logError("Error fixing unused imports")""
+  console.log("" Fixing TypeScript errors...")""
+    const files = glob.sync("**/*.{ts,tsx}")""
+            /import\s+React\s+from\s+["]react[""];\s*import\s+React\s+from\s+[""]react[""]/g,import React from """
+            /import\s+React\s+from\s+["]react["];\s*import\s+React\s+from\s+[""]react[""]/g,import React from "react";""
+            /interface\s+(\w+)\s*{[^}]*}\s*interface\s+\1/g,interface $1"""
+          .replace(/(\w+)\s*=\s*([^]+)\s*$/gm, "$1 = $2;"""
+          .replace(/\bundefined\""b/g"", "null")""
+  "type": "typescript_error"""
+            "description": """
+            /import\s+React\s+from\s+[""]react["];\s*import\s+React\s+from\s+["]react["]/g,import React from "react""""
+          .replace(/\bundefined\"b/g", "null")""
+            "description": "Fixed TypeScript errors"""`;
+  console.log(`" Fixing linting errors..."`)""
+  "type": "linting_error"""
+        "description": "Fixed linting errors with ESLint --fix"""
+  this.logError("Error fixing linting errors")""
+  console.log(" Fixing duplicate declarations..."")""
+          /(export\s+)?(function|const|let|var)\s+(\w+)[^]*;?\s*(export\s+)?(function|const|let|var)\s+\3/g,$1$2 $3"""
+          /import\s+{\s*([^}]+)\s*}\s+from\s+[""]([^"]+)["];\s*import\s+{\s*\1\s*}\s+from\s+[""]\2[""]/g,import { $1  } from "$2"""
+          /import\s+{\s*([^}]+)\s*}\s+from\s+["]([^"]+)[""];\s*import\s+{\s*\1\s*}\s+from\s+[""]\2["]/g,import { $1  } from "$2"""
+          /import\s+{\s*([^}]+)\s*}\s+from\s+["]([^"]+)[""];\s*import\s+{\s*\1\s*}\s+from\s+["]\2[""]/g,import { $1  } from "$2"""
+  "type": "duplicate_declaration"""
+            "description": "Removed duplicate declarations"""`;
+  console.log(`" Fixing missing exports..."`)""
+        if (content !== originalContent")""
+  "type": "missing_export"""
+            "description": "Added missing exports"""
+      } catch (error) {  this.logError("Error fixing exports in ${file  }")""
+  console.log("" Fixing import errors...")""
+          .replace(/from\s+[""]([^"]+)["]""
+  if (importPath.startsWith(".") && !importPath.includes(".")) {return from "${importPath}.js"""
+            return match}"""
+          .replace(/from\s+["]\.\.\/([^"]+)[""]/g, "from ../$1"""
+          .replace(/from\s+[""]\.\/([^""]+)["]/g, "from ./$1""""
+  "type": "import_error"""
+            "description": "Fixed import errors"""
+      } catch (error) {  this.logError("Error fixing imports in ${file  }")""
+  console.log("" Fixing undefined variables...")""
+          .replace(/\bnavigate\s*\(/g, "router(")""
+          .replace(/\breject\s*\(/g, "throw new Error(")""
+  "type": "undefined_variable"""
+            "description": "Fixed undefined variables"""
+      } catch (error) {  this.logError(Error fixing undefined variables in ${file  }, error")""
+  console.log("" Fixing console statements...")""
+        if (process.env.NODE_ENV === "production")""
+            /console\.(log|warn|error|info|debug)\s*\(/g,// console.$1(")""
+  "type": "console_statement"""
+            "description": "Fixed console statements"""
+      } catch (error) {  this.logError(Error fixing console statements in ${file  }, error")""
+  "timestamp": new Date().toISOString(),"duration": """
+      "fixesApplied"""
+      "errorsFound"""
+      "summary"""
+        "totalErrors"""
+        "successRate"""`;
+  "timestamp": new Date().toISOString(),"duration": `${duration}ms;""
+=======
   console.error(" Error Fixer Automation "failed": ")
       this.logError("Error Fixer Automation failed")
   fs.mkdirSync(this.reportsDir, { "recursive"})
-  console.log("" Fixing merge conflicts...")
+  console.log( Fixing merge conflicts...")
     const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
   const content = fs.readFileSync(file, "utf8")
           content.includes("")
-          content.includes(">>>>>>>")
           content.includes(")
-          content.includes(">>>>>>>")
               /\n([\s\S]*?)\n              "$1"
               /\n([\s\S]*?)\n              "$1"
   "type": "merge_conflict"
             "description": "Removed merge conflict markers"
-  "type": `merge_conflict
-            "description": "
-      } catch (error) {  this.logError(Error fixing merge conflicts in ${file  }`, error``)
+  "type": `merge_conflict;
+            "description": 
+      } catch (error) {  this.logError(Error fixing merge conflicts in ${file  }, error``)"
             "description": "Removed merge conflict markers"}
-});")}`)} catch (error) {this.logError(Error fixing merge conflicts in ${file}`, error``)
-  console.log("" Fixing syntax errors...")
+});")}`)} catch (error) {this.logError(Error fixing merge conflicts in ${file}, error``)
+  console.log( Fixing syntax errors...")
   "pattern"
         "replacement": "$1 = {\n  $2,\n  $3\n}"
         "description": "Fix object literal syntax"
@@ -40,8 +132,8 @@ const glob = require("glob")
         "replacement": "export function $1"
         "description": "Remove duplicate function declarations"
   "pattern"
-          /import\s+{\s*([^}]+)\s*}\s+from\s+[""]([^"]+)["];\s*import\s+{\s*\1\s*}\s+from\s+[""]\2[""]/g, ""replacement": "import { $1 } from $2, ""description": "Remove duplicate imports", "}", "
-          /import\s+{\s*([^}]+)\s*}\s+from\s+[""]([^"]+)["];\s*import\s+{\s*\1\s*}\s+from\s+[""]\2["]/g, ""replacement": "import { $1 } from $2", ""description": "Remove duplicate imports", "}", "
+          /import\s+{\s*([^}]+)\s*}\s+from\s+[]([^"]+)["];\s*import\s+{\s*\1\s*}\s+from\s+[]\2[]/g, replacement": "import { $1 } from $2, description": "Remove duplicate imports", "}", "
+          /import\s+{\s*([^}]+)\s*}\s+from\s+[]([^"]+)["];\s*import\s+{\s*\1\s*}\s+from\s+[]\2["]/g, replacement": "import { $1 } from $2", description": "Remove duplicate imports", "}", "
 const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
   "pattern"
@@ -51,7 +143,7 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
         "replacement": "export function $1"
         "description": "Remove duplicate function declarations"
   "pattern"
-          /import\s+{\s*([^}]+)\s*}\s+from\s+["]([^""]+)["];\s*import\s+{\s*\1\s*}\s+from\s+["]\2[""]/g, ""replacement": "import { $1 } from $2"", ""description": "Remove duplicate imports"", "}", ""
+          /import\s+{\s*([^}]+)\s*}\s+from\s+["]([^]+)["];\s*import\s+{\s*\1\s*}\s+from\s+["]\2[]/g, replacement": "import { $1 } from $2, description": "Remove duplicate imports, "}", 
     const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
   let content = fs.readFileSync(file, "utf8")
@@ -60,7 +152,7 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "type": "syntax_error"
             "description": "Fixed syntax errors"
       } catch (error) {  this.logError(Error fixing syntax in ${file  }, error")
-  console.log("" Fixing unused imports...")
+  console.log( Fixing unused imports...")
       execSync("npm run lint -- --fix")
   "cwd"
         "stdio": "pipe"
@@ -70,18 +162,18 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "type": "unused_imports"
         "description": "Fixed unused imports with ESLint --fix"
   this.logError("Error fixing unused imports")
-  console.log("" Fixing TypeScript errors...")
+  console.log( Fixing TypeScript errors...")
     const files = glob.sync("**/*.{ts,tsx}")
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
   let content = fs.readFileSync(file, "utf8")
-            /import\s+React\s+from\s+["]react[""];\s*import\s+React\s+from\s+[""]react[""]/g,import React from "
-            /import\s+React\s+from\s+["]react["];\s*import\s+React\s+from\s+[""]react[""]/g,import React from "react";
+            /import\s+React\s+from\s+["]react[];\s*import\s+React\s+from\s+[]react[]/g,import React from "
+            /import\s+React\s+from\s+["]react["];\s*import\s+React\s+from\s+[]react[]/g,import React from "react";
             /interface\s+(\w+)\s*{[^}]*}\s*interface\s+\1/g,interface $1"
           .replace(/(\w+)\s*=\s*([^]+)\s*$/gm, "$1 = $2;"
-          .replace(/\bundefined\""b/g"", "null")
+          .replace(/\bundefined\b/g, "null")
   "type": "typescript_error"
             "description": "
-            /import\s+React\s+from\s+[""]react["];\s*import\s+React\s+from\s+["]react["]/g,import React from "react""
+            /import\s+React\s+from\s+[]react["];\s*import\s+React\s+from\s+["]react["]/g,import React from "react
             /interface\s+(\w+)\s*{[^}]*}\s*interface\s+\1/g,interface $1"
           .replace(/(\w+)\s*=\s*([^]+)\s*$/gm, "$1 = $2;"
           .replace(/\bundefined\"b/g", "null")
@@ -97,15 +189,15 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "type": "linting_error"
         "description": "Fixed linting errors with ESLint --fix"
   this.logError("Error fixing linting errors")
-  console.log(" Fixing duplicate declarations..."")
+  console.log(" Fixing duplicate declarations...)
     const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
   let content = fs.readFileSync(file, "utf8")
           /(export\s+)?(function|const|let|var)\s+(\w+)[^]*;?\s*(export\s+)?(function|const|let|var)\s+\3/g,$1$2 $3"
-          /import\s+{\s*([^}]+)\s*}\s+from\s+[""]([^"]+)["];\s*import\s+{\s*\1\s*}\s+from\s+[""]\2[""]/g,import { $1  } from "$2"
+          /import\s+{\s*([^}]+)\s*}\s+from\s+[]([^"]+)["];\s*import\s+{\s*\1\s*}\s+from\s+[]\2[]/g,import { $1  } from "$2"
           /(export\s+)?(function|const|let|var)\s+(\w+)[^]*;?\s*(export\s+)?(function|const|let|var)\s+\3/g,$1$2 $3"
-          /import\s+{\s*([^}]+)\s*}\s+from\s+["]([^"]+)[""];\s*import\s+{\s*\1\s*}\s+from\s+[""]\2["]/g,import { $1  } from "$2"
-          /import\s+{\s*([^}]+)\s*}\s+from\s+["]([^"]+)[""];\s*import\s+{\s*\1\s*}\s+from\s+["]\2[""]/g,import { $1  } from "$2"
+          /import\s+{\s*([^}]+)\s*}\s+from\s+["]([^"]+)[];\s*import\s+{\s*\1\s*}\s+from\s+[]\2["]/g,import { $1  } from "$2"
+          /import\s+{\s*([^}]+)\s*}\s+from\s+["]([^"]+)[];\s*import\s+{\s*\1\s*}\s+from\s+["]\2[]/g,import { $1  } from "$2"
   "type": "duplicate_declaration"
             "description": "
   "type": "duplicate_declaration"
@@ -123,23 +215,23 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "type": "missing_export"
             "description": "Added missing exports"
       } catch (error) {  this.logError("Error fixing exports in ${file  }")
-  console.log("" Fixing import errors...")
+  console.log( Fixing import errors...")
     const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
     const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
   let content = fs.readFileSync(file, "utf8")
-          .replace(/from\s+[""]([^"]+)["]
+          .replace(/from\s+[]([^"]+)["]
   if (importPath.startsWith(".") && !importPath.includes(".")) {return from "${importPath}.js"
             return match}"
-          .replace(/from\s+["]\.\.\/([^"]+)[""]/g, "from ../$1"
-          .replace(/from\s+[""]\.\/([^""]+)["]/g, "from ./$1""
+          .replace(/from\s+["]\.\.\/([^"]+)[]/g, "from ../$1"
+          .replace(/from\s+[]\.\/([^]+)["]/g, "from ./$1
   "type": "import_error"
             "description": "Fixed import errors"
   "type": "import_error"
             "description": "Fixed import errors"
       } catch (error) {  this.logError("Error fixing imports in ${file  }")
-  console.log("" Fixing undefined variables...")
+  console.log( Fixing undefined variables...")
     const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
     const files = glob.sync("**/*.{js,jsx,ts,tsx}")
@@ -147,7 +239,7 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   let content = fs.readFileSync(file, "utf8")
           .replace(/\bnavigate\s*\(/g, "router(")
           .replace(/\breject\s*\(/g, "throw new Error(")
-          .replace(/\bundefined\""b/g"", "null")
+          .replace(/\bundefined\b/g, "null")
   "type": "undefined_variable"
             "description": "Fixed undefined variables"
           .replace(/\bnavigate\s*\(/g, "router(")
@@ -156,7 +248,7 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "type": "undefined_variable"
             "description": "Fixed undefined variables"
       } catch (error) {  this.logError(Error fixing undefined variables in ${file  }, error")
-  console.log("" Fixing console statements...")
+  console.log( Fixing console statements...")
     const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
     const files = glob.sync("**/*.{js,jsx,ts,tsx}")
@@ -175,12 +267,10 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
       "summary"
         "totalErrors"
         "successRate"
-  "timestamp": new Date().toISOString(),"duration": `${duration}ms
+  "timestamp": new Date().toISOString(),"duration": `${duration}ms;
       "fixesApplied"
       "errorsFound"
       "summary"
         "totalErrors"
         "successRate"
-
-
-      console.error('Automation "failed")
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

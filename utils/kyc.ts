@@ -1,14 +1,18 @@
-export type KycRole = 'individual' | 'enterprise';
 
-export interface KycDocumentMeta {
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
 }
 
+
 export interface KycProfile {
   user_id: string;
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  // TODO: Implement
+  user_id: string;,
+pr-12325
   role: KycRole;
   fullLegalName?: string;
   business_name?: string;
@@ -16,6 +20,8 @@ export interface KycProfile {
   country?: string;
   dateOfBirth?: string;
   documents: KycDocumentMeta[];
+  documents: KycDocumentMeta[];,
+pr-12325
   status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
   aml_status: 'unknown' | 'clear' | 'match' | 'review';
   flags?: string[];
@@ -26,19 +32,14 @@ export interface KycProfile {
     at: string;
     by: string;
     action: string;
-    details?: any;
-  }>;
-}
 
-export function getRequiredDocuments(role: KycRole): string[] {
-  if (role === 'individual') {
     return ['government_id', 'proof_of_address'];
   } else {
     return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
   }
 }
 
-export function validateKycSubmission(profile: KycProfile): { ok: boolean; missing: string[] } {
+
   const missing: string[] = [];
   
   if (!profile.fullLegalName && !profile.business_name) {
@@ -48,17 +49,14 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean; missi
   if (!profile.country) {
     missing.push('country');
   }
-  
-  if (profile.role === 'individual' && !profile.dateOfBirth) {
-    missing.push('dateOfBirth');
-  }
-  
+
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
   }
   
   return { ok: missing.length === 0, missing };
 }
+
 
 export function generateKycDocumentId(): string {
   return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -73,4 +71,4 @@ export function isKycProfileComplete(profile: KycProfile): boolean {
 export function isKycProfileExpired(profile: KycProfile): boolean {
   if (!profile.expiresAt) return false;
   return new Date(profile.expiresAt) < new Date();
-}
+

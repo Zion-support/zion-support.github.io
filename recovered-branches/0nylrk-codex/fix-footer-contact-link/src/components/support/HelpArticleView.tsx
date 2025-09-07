@@ -5,9 +5,9 @@ import { ThumbsUp, ThumbsDown } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
-<<<<<<< HEAD
   articleId: string
 }
+
   // Find the article in all categories
   let article,
   for (const category of HELP_CATEGORIES) {
@@ -15,38 +15,51 @@ interface HelpArticleViewProps {
     if (found) {
       article = found,
       break
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 import { ThumbsUp, ThumbsDown } from "lucide-react",;
 import { toast } from "@/components/ui/use-toast",;
 import { HELP_CATEGORIES } from "./help-content",;
 interface HelpArticleViewProps {;
-=======
-  articleId: string;
+
+
+import React, { useState } from "react";""
+import { Button } from "@/components/ui/button";""
+import { Card } from "@/components/ui/card";""
+import { ThumbsUp, ThumbsDown } from "lucide-react";""
+import { toast } from "@/components/ui/use-toast";""
+import { HELP_CATEGORIES } from "./help-content";"
+interface HelpArticleViewProps {
+  // TODO: Implement
 }
+  articleId: string;
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-  const [feedbackGiven, setFeedbackGiven] = useState<
-    "helpful" | "not-helpful" | null
+  const [feedbackGiven, setFeedbackGiven] = useState<"
+    "helpful" | "not-helpful" | null;"
   >(null);
 
-  // Find the article in all categories
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+  // Find the article in all categories;
+pr-12325
   let article;
+
   for (const category of HELP_CATEGORIES) {
     const found = category.articles.find((a) => a.id === articleId);
     if (found) {
-      article = found;
-      break;
+      article = found;}
+      break;}
     }
   }
-<<<<<<< HEAD
+
+
   if (!article) {
     return <div>Article not found</div>;
   }
+
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type),
+    
     // In a real implementation, this would send feedback to the server
     toast({
       title: "Thank you for your feedback!",
@@ -58,58 +71,24 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     <div>
       <Card className="p-6">
         <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
-        <div className="flex items-center text-sm text-zion-slate-light mb-6">
-          <span>Last updated: {formatDate(article.lastUpdated)}</span>
-        </div>
-=======
-
-  if (!article) {
-    return <div>Article not found</div>;
-  }
-
-  const handleFeedback = (type: "helpful" | "not-helpful") => {
-    (setFeedbackGiven(type),
-      // In a real implementation, this would send feedback to the server
-      toast({
-        title: "Thank you for your feedback!",
-        description:
-          type === "helpful"
-            ? "We're glad this article was helpful."
-            : "We'll work on improving this article.",
-      }));
-  };
-
-  return (
-    <div>
-      <Card className="p-6">
-        <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
 
         <div className="flex items-center text-sm text-zion-slate-light mb-6">
           <span>Last updated: {formatDate(article.lastUpdated)}</span>
         </div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
         <div className="prose dark:prose-invert max-w-none mb-8">
           {article.content.split("\n").map((paragraph, idx) => (
             <p key={idx}>{paragraph}</p>
           ))}
         </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
         <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">
           <div className="flex flex-col sm:flex-row items-center justify-between">
             <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">
               Was this article helpful?
             </div>
-<<<<<<< HEAD
-            <div className="flex items-center space-x-3">              <Button
-=======
 
-            <div className="flex items-center space-x-3">
-              <Button
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+            <div className="flex items-center space-x-3">              <Button
                 variant="outline"
                 size="sm"
                 className={
@@ -123,10 +102,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
                 <ThumbsUp className="h-4 w-4 mr-2" />
                 Yes
               </Button>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
               <Button
                 variant="outline"
                 size="sm"
@@ -143,10 +119,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
           {feedbackGiven === "not-helpful" && (
             <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">
               <p className="text-sm text-zion-slate-light mb-2">
@@ -166,7 +139,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     </div>
   );
 }
-<<<<<<< HEAD
+
                 on_click={() => handle_feedback ("not - helpful")}
                 disabled={feedback_given !== null}
               >;
@@ -186,6 +159,113 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
                 className="bg - zion - purple hover:bg - zion - purple-light";
               >;
                 Contact Support;
+    <div>
+</div>"
+      <Card className="p-6">"
+</Card>"
+        <h2 className="text-2xl font-bold mb-4">{article.title}</h2>""
+        <div className="flex items-center text-sm text-zion-slate-light mb-6">"
+</div>
+          <span>Last updated: {formatDate(article.lastUpdated)}</span>
+        </div>
+"
+        <div className="prose dark:prose-invert max-w-none mb-8">"
+</div>
+            <p key={idx}>{paragraph}</p>
+        </div>
+"
+        <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">"
+</div>"
+          <div className="flex flex-col sm:flex-row items-center justify-between">"
+</div>"
+            <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">"
+</div>
+            </div>
+"
+            <div className="flex items-center space-x-3">"
+</div>
+    return <div>Article not found</div>;
+    <div>;
+</div>"
+      <Card className="p-6">;"
+</Card>"
+        <h2 className="text-2xl font-bold mb-4">{article && article.title}</h2>;""
+        <div className="flex items-center text-sm text-zion-slate-light mb-6">;"
+</div>
+          <span>Last updated: {formatDate(article && article.lastUpdated)}</span>;
+        </div>;"
+        <div className="prose dark:prose-invert max-w-none mb-8">;"
+</div>
+            <p key={idx}>{paragraph}</p>;
+        </div>;"
+        <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">;"
+</div>"
+          <div className="flex flex-col sm:flex-row items-center justify-between">;"
+</div>"
+            <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">;"
+</div>
+            </div>;"
+            <div className="flex items-center space-x-3">;"
+</div>
+              <Button;"
+                variant="outline"""
+                size="sm""
+                className={"
+                  feedbackGiven === "helpful"""
+                    ? "bg-green-100 dark:bg-green-900/30"""
+                    : """
+                }"
+                onClick={() => handleFeedback("helpful")}"
+</Button>"
+                <ThumbsUp className="h-4 w-4 mr-2" />"
+</ThumbsUp>
+              </Button>
+
+              <Button;"
+                variant="outline"""
+                size="sm""
+                className={"
+                  feedbackGiven === "not-helpful"""
+                    ? "bg-red-100 dark:bg-red-900/30"""
+                    : """
+                }"
+                onClick={() => handleFeedback("not-helpful")}"
+</Button>"
+                <ThumbsDown className="h-4 w-4 mr-2" />"
+</ThumbsDown>
+              </Button>
+            </div>
+          </div>"
+            <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">"
+</div>"
+              <p className="text-sm text-zion-slate-light mb-2">"
+</p>
+              </p>
+              <Button;"
+                size="sm"""
+                className="bg-zion-purple hover:bg-zion-purple-light""
+              >
+</Button>
+              </Button>
+            </div>
+        </div>
+      </Card>
+    </div>"
+                <ThumbsDown className="h - 4 w - 4 mr - 2" />;"
+</ThumbsDown>
+              </Button>;
+            </div>;
+          </div>;"
+            <div className="mt - 4 bg - zion - blue - dark p - 4 rounded - md">;"
+</div>"
+              <p className="text - sm text - zion - slate - light mb - 2">;"
+</p>
+              </p>;
+              <Button;"
+                size="sm";""
+                className="bg - zion - purple hover:bg - zion - purple - light";"
+              >;
+</Button>
               </Button>;
             </div>)}
         </div>;
@@ -199,6 +279,7 @@ function format_date (date: string): string {
     day: "numeric",
   });
 }
+
 ;
 function formatDate(date:string):string {;
   return new Date(date).toLocaleDateString("en-US", {;
@@ -225,17 +306,83 @@ function formatDate(date:string):string {;
     </div>
   );
 }
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+
+  if (!article) {
+    return <div>Article not found</div>;
+    <div>
+</div>"
+      <Card className="p-6">"
+"
+        <h2 className="text-2xl font-bold mb-4">{article.title}</h2>""
+        <div className="flex items-center text-sm text-zion-slate-light mb-6">"
+</div>
+          <span>Last updated: {formatDate(article.lastUpdated)}</span>
+        <div className="prose dark:prose-invert max-w-none mb-8">"
+            <p key={idx}>{paragraph}</p>
+        <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">"
+          <div className="flex flex-col sm:flex-row items-center justify-between">"
+            <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">"
+            <div className="flex items-center space-x-3">"
+    <div>;
+      <Card className="p-6">;"
+        <h2 className="text-2xl font-bold mb-4">{article && article.title}</h2>;""
+        <div className="flex items-center text-sm text-zion-slate-light mb-6">;"
+          <span>Last updated: {formatDate(article && article.lastUpdated)}</span>;
+        </div>;"
+        <div className="prose dark:prose-invert max-w-none mb-8">;"
+            <p key={idx}>{paragraph}</p>;
+        <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">;"
+          <div className="flex flex-col sm:flex-row items-center justify-between">;"
+            <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">;"
+            <div className="flex items-center space-x-3">;"
+              <Button;"
+                variant="outline"""
+                size="sm""
+                className={"
+                  feedbackGiven === "helpful"""
+                    ? "bg-green-100 dark:bg-green-900/30"""
+                    : """
+                }"
+                onClick={() => handleFeedback("helpful")}"
+                <ThumbsUp className="h-4 w-4 mr-2" />"
+
+              
+
+                  feedbackGiven === "not-helpful"""
+                    ? "bg-red-100 dark:bg-red-900/30"""
+                onClick={() => handleFeedback("not-helpful")}"
+                <ThumbsDown className="h-4 w-4 mr-2" />"
+
+              
+            <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">"
+              <p className="text-sm text-zion-slate-light mb-2">"
+</p>
+                size="sm"""
+                className="bg-zion-purple hover:bg-zion-purple-light""
+              >
+
+              
+      
+                <ThumbsDown className="h - 4 w - 4 mr - 2" />;"
+
+              ;
+            </div>;
+            <div className="mt - 4 bg - zion - blue - dark p - 4 rounded - md">;"
+              <p className="text - sm text - zion - slate - light mb - 2">;"
+              </p>;
+                size="sm";""
+                className="bg - zion - purple hover:bg - zion - purple - light";"
+              >;
+
+            </div>)}
+    </div>);"
+pr-12325
+    </div>);"
+

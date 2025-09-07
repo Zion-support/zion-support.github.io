@@ -1,18 +1,42 @@
 class ErrorBoundary extends React.Component {
+
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
+
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  // TODO: Implement
+}
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+pr-12325
+  
+    console.error('Error caught by boundary:', error, errorInfo);'
+
+  }
   render() {
+
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -54,6 +78,7 @@ import { UserProfile } from "@/types/auth",
 import { toast } from "@/hooks/use-toast";
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped
+
   const { id } = useParams() as { id?: string }
   const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
@@ -74,11 +99,12 @@ export default function TalentProfilePage() {
   useEffect(() => {
     if (error) {
       toast({
-        title: "title",
-    description: "There was a problem loading this talent profile. Please try again."
+        title: "Error loading profile"
+        description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+
+import React, { useState, useEffect } from "react",;
+import { useParams, useNavigate } from "react-router-dom",;
 import { TalentProfile } from "@/components/profile/TalentProfile",;
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",;
 import { ProfileErrorState } from "@/components/profile/ProfileErrorState",;
@@ -133,6 +159,7 @@ export default function TalentProfilePage() {;
   }, [error]),;
   if (isLoading) {;
     return <ProfileLoadingState />;
+
   }
   if (error |!profile) {
     return <ProfileErrorState error={error} />
@@ -167,3 +194,123 @@ export default function TalentProfilePage() {;
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
+    return <ProfileLoadingState />;
+
+    return <ProfileErrorState error={error} />
+
+    <div className="min-h-screen bg-zion-blue pb-12">"
+</div>
+      <TalentProfile;
+        profile={profile} 
+;
+  const handleRequestHire = () => {;
+"
+    <div className="min-h-screen bg-zion-blue pb-12">;"
+        profile={profile} ;
+
+  },
+
+  return ("
+
+
+
+        onRequestHire={handleRequestHire}
+        onMessageTalent={handleMessageTalent}
+      />
+
+      <BackToDirectoryButton />
+
+      <StickyAction>
+        <div className="p-2 flex gap-2">"
+          <Button;"
+            size="sm"""
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark""
+            onClick={handleRequestHire}
+          >
+            <Handshake className="mr-2 h-4 w-4" />"
+
+          
+
+    return <ProfileErrorState error={error} />;
+</ProfileErrorState>"
+    <div className="min-h-screen bg-zion-blue pb-12">;"
+</div>
+      <TalentProfile;
+        profile={profile} 
+
+        onRequestHire={handleRequestHire}
+        onMessageTalent={handleMessageTalent}
+      />;
+
+      <BackToDirectoryButton />;
+
+</BackToDirectoryButton>
+      <StickyAction>;
+        <div className="p-2 flex gap-2">;"
+            onClick={handleRequestHire}>;
+            <Handshake className="mr-2 h-4 w-4" />;"
+
+            variant="outline"""
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10""
+            onClick={handleMessageTalent}>;
+            <MessageSquare className="mr-2 h-4 w-4" />;"
+
+
+    <div className="min - h-screen bg - zion - blue pb - 12">;"
+
+
+        <div className="p - 2 flex gap - 2">;"
+            size="sm";""
+            className="bg - zion - purple text - white hover:bg - zion - purple - dark";"
+            on_click={handleRequestHire}
+          >;
+            <Handshake className="mr - 2 h - 4 w - 4" />;"
+
+            variant="outline";""
+            className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";"
+            on_click={handleMessageTalent}
+            <MessageSquare className="mr - 2 h - 4 w - 4" />;"
+
+        </div>;
+      <HireRequestModal;
+        talent={profile}
+        isOpen={isHireModalOpen})
+        onClose={() => setIsHireModalOpen(false)}
+
+        is_open={isHireModalOpen}
+        on_close={() => setIsHireModalOpen (false)}
+
+      <MessageTalentModal;
+        is_open={isMessageModalOpen}
+        on_close={() => setIsMessageModalOpen (false)}
+
+    </div>);
+        isOpen={isMessageModalOpen}
+        onClose={() => setIsMessageModalOpen(false)}
+
+      <HireRequestModal ;
+        talent={profile}        isOpen={isHireModalOpen}
+        onClose={_() => setIsHireModalOpen(false)}
+
+
+<TalentProfile profile= {
+  profile;
+}onRequestHire= {
+  handleRequestHire;
+}onMessageTalent= {
+  handleMessageTalent;
+}/> <BackToDirectoryButton /> {
+}<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now  <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message  </div>  {"
+}<HireRequestModal talent= {
+}isOpen= {
+  isHireModalOpen;
+}onClose= {
+  () => setIsHireModalOpen (false) 
+
+}<MessageTalentModal talent= {
+  isMessageModalOpen;
+  () => setIsMessageModalOpen (false) 
+
+}/> </div>) "
+pr-12325
+

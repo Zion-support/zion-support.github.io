@@ -1,26 +1,9 @@
-export interface SearchFilters {
-  keywords?: string[];
-  skills?: string[];
-  location?: string;
-  type?: string;
-  minPrice?: number;
-  maxPrice?: number;
-  experience?: string;
-  availability?: string;
+
 }
 
-export interface SearchResults {
-  all: any[];
-  talent: any[];
-  jobs: any[];
-  projects: any[];
-}
-
-export async function parseQueryToFilters(
   query: string,
 ): Promise<SearchFilters> {
   const filters: SearchFilters = {};
-
   if (!query || query.trim().length === 0) {
     return filters;
   }
@@ -112,10 +95,4 @@ export async function parseQueryToFilters(
     filters.skills = skills;
   }
 
-  return filters;
-}
 
-export const suggestDidYouMean = (query: string) => {
-  // Add did you mean functionality here
-  return null;
-};

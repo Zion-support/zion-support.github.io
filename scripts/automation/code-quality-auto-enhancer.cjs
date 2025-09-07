@@ -1,35 +1,53 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class CodeQualityAutoEnhancer {}
   constructor() {}
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.reportsDir = path.join(this.projectRoot, 'error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
     this.checkInterval = parseInt(process.env.QUALITY_CHECK_INTERVAL) || 3600000; // 1 hour;
     this.autoEnhanceEnabled = process.env.AUTO_ENHANCE_ENABLED === 'true';
-    
+=======
+    this.reportsDir = path.join(this.projectRoot,error-reports');
+    this.logsDir = path.join(this.projectRoot,automation/logs');
+    this.checkInterval = parseInt(process.env.QUALITY_CHECK_INTERVAL) || 3600000; // 1 hour;
+    this.autoEnhanceEnabled = process.env.AUTO_ENHANCE_ENABLED ===true;
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
-        fs.mkdirSync(dir, { "recursive": true })};
+        fs.mkdirSync(dir, { "recursive": true })};"
     }
 });
     
     this.enhancementsApplied = 0;
-    this.qualityHistory = []};
+    this.qualityHistory = []};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
     console.log(`[${timestamp}] [${level}] ${message}`)};
   async runCodeQualityChecks() {}
     this.log('Running code quality checks...', 'INFO');
-    
     const checks = [{ "name": 'ESLint', "command": 'npm run lint' },]
       { "name": 'Prettier', "command": 'npm run format:check' },
       { "name": 'TypeScript', "command": 'npm run type-check' },
       { "name": 'Test Coverage', "command": 'npm run test:coverage' };
+=======
+    console.log(`[${timestamp}] [${level}] ${message})};
+  async runCodeQualityChecks() {}
+    this.log('Running code quality checks...,INFO');
+    const checks = [{ "name": ESLint, "command": npm run lint}]
+      { "name": Prettier, "command": npm run format:check},
+      { "name": TypeScript, "command": npm run type-check},
+      { "name": Test Coverage, "command": npm run test:coverage};
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     ];
 
     const results = {};
@@ -37,53 +55,72 @@ class CodeQualityAutoEnhancer {}
 
     for (const check of checks) {}
       try {}
-        execSync(check.command, { "stdio": 'pipe' }
+<<<<<<< HEAD
+        execSync(check.command, { "stdio": 'pipe' }')
+        results[check.name] = { "success": true, "issues": [], "count": 0 }} catch (error) {}""
+=======
+        execSync(check.command, { "stdio": pipe})
 });
         results[check.name] = { "success": true, "issues": [], "count": 0 }} catch (error) {}
-        const output = error.stdout?.toString() || error.stderr?.toString() || '';
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+        const output = error.stdout?.toString() || error.stderr?.toString() || ;
         const issues = this.parseQualityIssues(output, check.name);
-        results[check.name] = { "success": false, issues, "count": issues.length };
+        results[check.name] = { "success": false, issues, "count": issues.length };"
         totalIssues += issues.length};
     };
     return { results, totalIssues }};
   parseQualityIssues(output, checkType) {}
-    const issues = [];
+    const issues = [];"
     const lines = output.split('\n');
-    
     for (const line of lines) {}
       if (line.includes('error') || line.includes('warning') || line.includes('failed')) {}
         const match = line.match(/([^:]+):(\d+):(\d+)/);
         if (match) {}
           issues.push({})
+<<<<<<< HEAD
+            "file": match[1].trim(),""
+            "line": parseInt(match[2]),""
+            "column": parseInt(match[3]),""
+            "message": line.split(' - ')[1] || line,
+            "type": checkType;"
+          })} else {}
+          issues.push({})"
+            "file": 'unknown',
+            "line": 0,""
+            "column": 0,""
+            "message": line.trim(),""
+=======
             "file": match[1].trim(),
             "line": parseInt(match[2]),
             "column": parseInt(match[3]),
-            "message": line.split(' - ')[1] || line,
-            "type": checkType;
+            "message": line.split(' -)[1] || line,
+            "type": checkType;"
           })} else {}
-          issues.push({})
-            "file": 'unknown',
+          issues.push({})"
+            "file": unknown,
             "line": 0,
             "column": 0,
             "message": line.trim(),
-            "type": checkType;
+            "type": checkType;"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
           })};
-      };
-    };
     return issues};
   async applyCodeEnhancements(issues) {}
-    if (!this.autoEnhanceEnabled) {}
+    if (!this.autoEnhanceEnabled) {}"
+<<<<<<< HEAD
       this.log('Auto-enhancement is disabled', 'INFO');
+=======
+      this.log('Auto-enhancement is disabled,INFO');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       return 0};
     let enhancementsApplied = 0;
     
     for (const issue of issues) {}
-      try {}
         if (await this.applyEnhancement(issue)) {}
           enhancementsApplied++};
-      } catch (error) {}
+<<<<<<< HEAD
+      } catch (error) {}`;
         this.log(`Failed to apply "enhancement": ${error.message}`, 'ERROR')};
-    };
     return enhancementsApplied};
   async applyEnhancement(issue) {}
     switch (issue.type) {}
@@ -94,220 +131,235 @@ class CodeQualityAutoEnhancer {}
       case 'TypeScript':
         return await this.applyTypeScriptEnhancement(issue);
       case 'Test Coverage':
+=======
+      } catch (error) {}
+        this.log(`Failed to apply "enhancement": ${error.message},ERROR')};
+    };
+    return enhancementsApplied};
+  async applyEnhancement(issue) {}
+    switch (issue.type) {}
+      case 'ESLint: 
+        return await this.applyESLintEnhancement(issue);
+      case 'Prettier: 
+        return await this.applyPrettierEnhancement(issue);
+      case 'TypeScript: 
+        return await this.applyTypeScriptEnhancement(issue);
+      case 'Test Coverage: 
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         return await this.applyTestCoverageEnhancement(issue);
-      "default": return false};
-  };
+      "default": return false};"
   async applyESLintEnhancement(issue) {}
-    try {}
+    try {}"
+<<<<<<< HEAD
       if (issue.file && issue.file !== 'unknown') {}
         const content = fs.readFileSync(issue.file, 'utf8');
+=======
+      if (issue.file && issue.file !==unknown') {}
+        const content = fs.readFileSync(issue.file,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         const lines = content.split('\n');
-        
         // Apply common ESLint fixes;
-        const enhancements = [this.fixUnusedVariables.bind(this),]
+        const enhancements = [this.fixUnusedVariables.bind(this)]
           this.fixMissingSemicolons.bind(this),
           this.fixUnusedImports.bind(this),
           this.fixConsoleStatements.bind(this),
           this.fixPreferConst.bind(this),
           this.fixNoVar.bind(this),
           this.fixTrailingSpaces.bind(this);
-        ];
 
         let originalContent = content;
         let modifiedContent = content;
 
         for (const enhancement of enhancements) {}
-          try {}
             const result = enhancement(lines, issue);
             if (result.modified) {}
-              modifiedContent = result.content;
+<<<<<<< HEAD
+              modifiedContent = result.content;`;
               this.log(`Applied ESLint enhancement to ${issue.file}: ${result.description}`, 'INFO')};
-          } catch (enhancementError) {}
+          } catch (enhancementError) {}`;
             this.log(`ESLint enhancement failed for ${issue.file}: ${enhancementError.message}`, 'WARN')};
+        if (modifiedContent !== originalContent) {}
+          fs.writeFileSync(issue.file, modifiedContent);
+          return true};
+      return false} catch (error) {}`;
+      this.log(`Failed to apply ESLint "enhancement": ${error.message}`, 'ERROR');
+=======
+              modifiedContent = result.content;
+              this.log(`Applied ESLint enhancement to ${issue.file}: ${result.description},INFO')};
+          } catch (enhancementError) {}
+            this.log(`ESLint enhancement failed for ${issue.file}: ${enhancementError.message},WARN')};
         };
         if (modifiedContent !== originalContent) {}
           fs.writeFileSync(issue.file, modifiedContent);
           return true};
       };
       return false} catch (error) {}
-      this.log(`Failed to apply ESLint "enhancement": ${error.message}`, 'ERROR');
+      this.log(`Failed to apply ESLint "enhancement": ${error.message},ERROR');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       return false};
-  };
   async applyPrettierEnhancement(issue) {}
+<<<<<<< HEAD
+      // Run Prettier auto-fix;
+      if (issue.file && issue.file !== 'unknown') {}`;
+        execSync(`npx prettier --write "${issue.file}"`, { "stdio": 'pipe' }')
+      this.log(`Failed to apply Prettier "enhancement": ${error.message}`, 'ERROR');
+  async applyTypeScriptEnhancement(issue) {}
+=======
     try {}
       // Run Prettier auto-fix;
-      if (issue.file && issue.file !== 'unknown') {}
-        execSync(`npx prettier --write "${issue.file}"`, { "stdio": 'pipe' }
+      if (issue.file && issue.file !==unknown') {}
+        execSync(`npx prettier --write "${issue.file}"`, { "stdio": pipe})
 });
         return true};
       return false} catch (error) {}
-      this.log(`Failed to apply Prettier "enhancement": ${error.message}`, 'ERROR');
+      this.log(`Failed to apply Prettier "enhancement": ${error.message},ERROR');
       return false};
   };
   async applyTypeScriptEnhancement(issue) {}
     try {}
-      if (issue.file && issue.file !== 'unknown') {}
-        const content = fs.readFileSync(issue.file, 'utf8');
+      if (issue.file && issue.file !==unknown') {}
+        const content = fs.readFileSync(issue.file,utf8);
         const lines = content.split('\n');
-        
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         // Apply common TypeScript enhancements;
-        const enhancements = [this.fixAnyType.bind(this),]
+        const enhancements = [this.fixAnyType.bind(this)]
           this.fixMissingImports.bind(this),
           this.fixTypeAnnotations.bind(this),
           this.fixInterfaceIssues.bind(this),
           this.fixGenericTypes.bind(this),
           this.fixOptionalProperties.bind(this);
-        ];
 
-        let originalContent = content;
-        let modifiedContent = content;
 
+<<<<<<< HEAD
+              this.log(`Applied TypeScript enhancement to ${issue.file}: ${result.description}`, 'INFO')};
+            this.log(`TypeScript enhancement failed for ${issue.file}: ${enhancementError.message}`, 'WARN')};
+      this.log(`Failed to apply TypeScript "enhancement": ${error.message}`, 'ERROR');
+=======
         for (const enhancement of enhancements) {}
           try {}
             const result = enhancement(lines, issue);
             if (result.modified) {}
               modifiedContent = result.content;
-              this.log(`Applied TypeScript enhancement to ${issue.file}: ${result.description}`, 'INFO')};
+              this.log(`Applied TypeScript enhancement to ${issue.file}: ${result.description},INFO')};
           } catch (enhancementError) {}
-            this.log(`TypeScript enhancement failed for ${issue.file}: ${enhancementError.message}`, 'WARN')};
+            this.log(`TypeScript enhancement failed for ${issue.file}: ${enhancementError.message},WARN')};
         };
         if (modifiedContent !== originalContent) {}
           fs.writeFileSync(issue.file, modifiedContent);
           return true};
       };
       return false} catch (error) {}
-      this.log(`Failed to apply TypeScript "enhancement": ${error.message}`, 'ERROR');
+      this.log(`Failed to apply TypeScript "enhancement": ${error.message},ERROR');
       return false};
   };
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   async applyTestCoverageEnhancement(issue) {}
-    try {}
       // Generate test files for uncovered code;
       const uncoveredFiles = this.findUncoveredFiles();
       
       for (const file of uncoveredFiles) {}
         await this.generateTestFile(file)};
-      return uncoveredFiles.length > 0} catch (error) {}
+<<<<<<< HEAD
+      return uncoveredFiles.length > 0} catch (error) {}`;
       this.log(`Failed to apply test coverage "enhancement": ${error.message}`, 'ERROR');
+  fixUnusedVariables(lines, issue) {}
+    if (issue.message.includes('is assigned a value but never used')) {}
+      const varMatch = issue.message.match(/'([^']+)' is assigned a value but never used/);
+=======
+      return uncoveredFiles.length > 0} catch (error) {}
+      this.log(`Failed to apply test coverage "enhancement": ${error.message},ERROR');
       return false};
   };
   fixUnusedVariables(lines, issue) {}
     if (issue.message.includes('is assigned a value but never used')) {}
-      const varMatch = issue.message.match(/'([^']+)' is assigned a value but never used/);
+      const varMatch = issue.message.match(/([^]+) is assigned a value but never used/);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       if (varMatch) {}
         const varName = varMatch[1];
         const lineIndex = issue.line - 1;
         const line = lines[lineIndex];
         
         // Comment out unused variable;
-        if (line.includes(varName)) {}
+        if (line.includes(varName)) {}`;
           lines[lineIndex] = `// ${line} // eslint-disable-line no-unused-vars`;`
           
           return {}
+<<<<<<< HEAD
+            "modified": true,""
+            "content": lines.join('\n'),`;
+=======
             "modified": true,
             "content": lines.join('\n'),
-            "description": `Commented out unused variable ${varName}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+            "description": `Commented out unused variable ${varName}"
           }};
-      };
-    };
+    };"
     return { "modified": false, "content": lines.join('\n') }};
   fixMissingSemicolons(lines, issue) {}
     if (issue.message.includes('Missing semicolon')) {}
-      const lineIndex = issue.line - 1;
-      const line = lines[lineIndex];
+<<<<<<< HEAD
       
       if (!line.trim().endsWith(';') && !line.trim().endsWith('{') && !line.trim().endsWith('}')) {}
         lines[lineIndex] = line + ';';
-        
+          "content": lines.join('\n'),
+          "description": 'Added missing semicolon
+  fixUnusedImports(lines, issue) {}
+    if (issue.message.includes('is defined but never used')) {}
+      const importMatch = issue.message.match(/'([^']+)' is defined but never used/);
+=======
+      const lineIndex = issue.line - 1;
+      const line = lines[lineIndex];
+      '
+      if (!line.trim().endsWith(';) && !line.trim().endsWith('{) && !line.trim().endsWith(})) {}
+        lines[lineIndex] = line +;;
         return {}
           "modified": true,
           "content": lines.join('\n'),
-          "description": 'Added missing semicolon'
+          "description": Added missing semicolon
         }};
     };
     return { "modified": false, "content": lines.join('\n') }};
   fixUnusedImports(lines, issue) {}
     if (issue.message.includes('is defined but never used')) {}
-      const importMatch = issue.message.match(/'([^']+)' is defined but never used/);
+      const importMatch = issue.message.match(/([^]+) is defined but never used/);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       if (importMatch) {}
         const importName = importMatch[1];
         
         // Find and remove unused import;
-        for (let i = 0; i < lines.length; i++) {}
-          if (lines[i].includes(`import ${importName}`) || lines[i].includes(`{ ${importName} }`)) {`}
+<<<<<<< HEAD
+        for (let i = 0; i < lines.length; i++) {}`;
+          if (lines[i].includes(`import ${importName}`) || lines[i].includes(`{ ${importName} }`)) {`}`;
             lines[i] = `// ${lines[i]} // eslint-disable-line no-unused-vars`;`
             
-            return {}
-              "modified": true,
-              "content": lines.join('\n'),
-              "description": `Commented out unused import ${importName}
-            }};
-        };
-      };
-    };
-    return { "modified": false, "content": lines.join('\n') }};
+              "description": `Commented out unused import ${importName}"
   fixConsoleStatements(lines, issue) {}
     if (issue.message.includes('Unexpected console statement')) {}
-      const lineIndex = issue.line - 1;
-      const line = lines[lineIndex];
       
-      if (line.includes('console.')) {}
+      if (line.includes('console.')) {}`;
         lines[lineIndex] = `// ${line} // eslint-disable-line no-console`;`
         
-        return {}
-          "modified": true,
-          "content": lines.join('\n'),
-          "description": 'Commented out console statement'
-        }};
-    };
-    return { "modified": false, "content": lines.join('\n') }};
+          "description": 'Commented out console statement
   fixPreferConst(lines, issue) {}
     if (issue.message.includes('Use const instead of let')) {}
-      const lineIndex = issue.line - 1;
-      const line = lines[lineIndex];
       
       if (line.includes('let ')) {}
         lines[lineIndex] = line.replace('let ', 'const ');
-        
-        return {}
-          "modified": true,
-          "content": lines.join('\n'),
-          "description": 'Changed let to const'
-        }};
-    };
-    return { "modified": false, "content": lines.join('\n') }};
+          "description": 'Changed let to const
   fixNoVar(lines, issue) {}
     if (issue.message.includes('Unexpected var, use let or const instead')) {}
-      const lineIndex = issue.line - 1;
-      const line = lines[lineIndex];
       
       if (line.includes('var ')) {}
         lines[lineIndex] = line.replace('var ', 'const ');
-        
-        return {}
-          "modified": true,
-          "content": lines.join('\n'),
-          "description": 'Changed var to const'
-        }};
-    };
-    return { "modified": false, "content": lines.join('\n') }};
+          "description": 'Changed var to const
   fixTrailingSpaces(lines, issue) {}
     if (issue.message.includes('Trailing spaces not allowed')) {}
-      const lineIndex = issue.line - 1;
-      const line = lines[lineIndex];
       
       if (line.endsWith(' ')) {}
         lines[lineIndex] = line.trimEnd();
         
-        return {}
-          "modified": true,
-          "content": lines.join('\n'),
-          "description": 'Removed trailing spaces'
-        }};
-    };
-    return { "modified": false, "content": lines.join('\n') }};
+          "description": 'Removed trailing spaces
   fixAnyType(lines, issue) {}
-    const lineIndex = issue.line - 1;
-    const line = lines[lineIndex];
     
     if (line.includes('any') && issue.message.includes('any')) {}
       // Replace 'any' with more specific types;
@@ -315,104 +367,205 @@ class CodeQualityAutoEnhancer {}
         .replace(/: any/g, ': unknown');
         .replace(/as any/g, 'as unknown');
         .replace(/<any>/g, '<unknown>');
-      
-      if (fixedLine !== line) {}
-        lines[lineIndex] = fixedLine;
+=======
+        for (let i = 0; i < lines.length; i++) {}
+          if (lines[i].includes(`import ${importName}) || lines[i].includes(`{ ${importName} }`)) {`}
+            lines[i] = `// ${lines[i]} // eslint-disable-line no-unused-vars`;`
+            
+            return {}
+              "modified": true,
+              "content": lines.join('\n'),
+              "description": `Commented out unused import ${importName}"
+            }};
+        };
+      };
+    };"
+    return { "modified": false, "content": lines.join('\n') }};
+  fixConsoleStatements(lines, issue) {}
+    if (issue.message.includes('Unexpected console statement')) {}
+      const lineIndex = issue.line - 1;
+      const line = lines[lineIndex];
+      '
+      if (line.includes('console.)) {}
+        lines[lineIndex] = `// ${line} // eslint-disable-line no-console`;`
+        
         return {}
           "modified": true,
           "content": lines.join('\n'),
-          "description": 'Replaced any with unknown type'
+          "description": Commented out console statement
         }};
     };
     return { "modified": false, "content": lines.join('\n') }};
-  fixMissingImports(lines, issue) {}
-    if (issue.message.includes('Cannot find module') || issue.message.includes('Module not found')) {}
-      const importMatch = issue.message.match(/Cannot find module ['"]([^'"]+)['"]/);
-      if (importMatch) {}
-        const moduleName = importMatch[1];
-        
-        // Add missing import at the top of the file;
-        const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
-        
-        // Find the last import statement;
-        let lastImportIndex = -1;
-        for (let i = 0; i < lines.length; i++) {}
-          if (lines[i].trim().startsWith('import ')) {}
-            lastImportIndex = i};
-        };
-        if (lastImportIndex >= 0) {}
-          lines.splice(lastImportIndex + 1, 0, importStatement)} else {}
-          lines.unshift(importStatement)};
+  fixPreferConst(lines, issue) {}
+    if (issue.message.includes('Use const instead of let')) {}
+      const lineIndex = issue.line - 1;
+      const line = lines[lineIndex];
+      '
+      if (line.includes('let ')) {}
+        lines[lineIndex] = line.replace('let ,const ');
         return {}
           "modified": true,
           "content": lines.join('\n'),
-          "description": `Added missing import for ${moduleName}
+          "description": Changed let to const
         }};
     };
+    return { "modified": false, "content": lines.join('\n') }};
+  fixNoVar(lines, issue) {}
+    if (issue.message.includes('Unexpected var, use let or const instead')) {}
+      const lineIndex = issue.line - 1;
+      const line = lines[lineIndex];
+      '
+      if (line.includes('var ')) {}
+        lines[lineIndex] = line.replace('var ,const ');
+        return {}
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": Changed var to const
+        }};
+    };
+    return { "modified": false, "content": lines.join('\n') }};
+  fixTrailingSpaces(lines, issue) {}
+    if (issue.message.includes('Trailing spaces not allowed')) {}
+      const lineIndex = issue.line - 1;
+      const line = lines[lineIndex];
+      '
+      if (line.endsWith(' ')) {}
+        lines[lineIndex] = line.trimEnd();
+        
+        return {}
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": Removed trailing spaces
+        }};
+    };
+    return { "modified": false, "content": lines.join('\n') }};
+  fixAnyType(lines, issue) {}
+    const lineIndex = issue.line - 1;
+    const line = lines[lineIndex];
+    '
+    if (line.includes('any') && issue.message.includes('any')) {}
+      // Replace 'any' with more specific types;
+      const fixedLine = line;
+        .replace(/: any/g, : unknown');
+        .replace(/as any/g,as unknown');
+        .replace(/<any>/g,<unknown>');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+</any>
+        for (let i = 0; i < lines.length; i++) {}
+          if (lines[i].trim().startsWith('import ')) {}
+            lastImportIndex = i};
+        if (lastImportIndex >= 0) {}
+          lines.splice(lastImportIndex + 1, 0, importStatement)} else {}
+          lines.unshift(importStatement)};
+<<<<<<< HEAD
+          "description": `Added missing import for ${moduleName}"
+  fixTypeAnnotations(lines, issue) {}
+    
+=======
+        return {}
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": `Added missing import for ${moduleName}"
+        }};
+    };"
     return { "modified": false, "content": lines.join('\n') }};
   fixTypeAnnotations(lines, issue) {}
     const lineIndex = issue.line - 1;
     const line = lines[lineIndex];
-    
+    '
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     if (issue.message.includes('implicitly has an any type')) {}
       // Add type annotation;
       const varMatch = line.match(/(const|let|var)\s+(\w+)\s*=/);
-      if (varMatch) {}
         const varName = varMatch[2];
+<<<<<<< HEAD
+        const fixedLine = line.replace()`;
+          new RegExp(`(${varMatch[1]}\\s+${varName}\\s*)=`),`
+          "$"1": unknown =""
+=======
         const fixedLine = line.replace()
           new RegExp(`(${varMatch[1]}\\s+${varName}\\s*)=`),`
-          "$"1": unknown ="
+          "$"1": unknown =
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         );
         
         if (fixedLine !== line) {}
           lines[lineIndex] = fixedLine;
-          return {}
-            modified: true,
-            "content": lines.join('\n'),
-            "description": `Added type annotation for ${varName}
-          }};
-      };
-    };
-    return { "modified": false, "content": lines.join('\n') }};
+            modified: true,"
+<<<<<<< HEAD
+            "description": `Added type annotation for ${varName}"
   fixInterfaceIssues(lines, issue) {}
     if (issue.message.includes('Property') && issue.message.includes('does not exist on type')) {}
       const propMatch = issue.message.match(/Property '([^']+)' does not exist on type '([^']+)'/);
+=======
+            "content": lines.join('\n'),
+            "description": `Added type annotation for ${varName}"
+          }};
+      };
+    };"
+    return { "modified": false, "content": lines.join('\n') }};
+  fixInterfaceIssues(lines, issue) {}
+    if (issue.message.includes('Property') && issue.message.includes('does not exist on type')) {}
+      const propMatch = issue.message.match(/Property '([^]+) does not exist on type '([^]+)/);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       if (propMatch) {}
         const propName = propMatch[1];
         const typeName = propMatch[2];
         
         // Try to find and extend the interface;
-        for (let i = 0; i < lines.length; i++) {}
+<<<<<<< HEAD
           if (lines[i].includes(`interface ${typeName}`) || lines[i].includes(`type ${typeName}`)) {`}
+=======
+        for (let i = 0; i < lines.length; i++) {}
+          if (lines[i].includes(`interface ${typeName}) || lines[i].includes(`type ${typeName})) {`}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
             // Add the missing property;
-            const indent = lines[i].match(/^\s*/)[0];
+            const indent = lines[i].match(/^\s*/)[0];`;
             lines.splice(i + 1, 0, `${indent}  ${propName}?: unknown;`);
             
-            return {}
-              "modified": true,
-              "content": lines.join('\n'),
-              "description": `Added missing property ${propName} to ${typeName}
-            }};
-        };
-      };
-    };
-    return { "modified": false, "content": lines.join('\n') }};
+<<<<<<< HEAD
+              "description": `Added missing property ${propName} to ${typeName}"
   fixGenericTypes(lines, issue) {}
-    const lineIndex = issue.line - 1;
-    const line = lines[lineIndex];
     
     if (issue.message.includes('Generic type') && issue.message.includes('requires')) {}
       // Add generic type parameters;
       const genericMatch = line.match(/(\w+<)([^>]*)(>)/);
-      if (genericMatch && !genericMatch[2].trim()) {}
+      if (genericMatch && !genericMatch[2].trim()) {}`;
         const fixedLine = line.replace(genericMatch[0], `${genericMatch[1]}unknown${genericMatch[3]}`);
+        
+            "description": 'Added generic type parameter
+  fixOptionalProperties(lines, issue) {}
+    
+    if (issue.message.includes('Object is possibly undefined')) {}
+      // Add optional chaining;
+      const fixedLine = line.replace(/\.(\w+)/g, '?.$1');
+          "description": 'Added optional chaining
+=======
+            return {}
+              "modified": true,
+              "content": lines.join('\n'),
+              "description": `Added missing property ${propName} to ${typeName}"
+            }};
+        };
+      };
+    };"
+    return { "modified": false, "content": lines.join('\n') }};
+  fixGenericTypes(lines, issue) {}
+    const lineIndex = issue.line - 1;
+    const line = lines[lineIndex];
+    '
+    if (issue.message.includes('Generic type') && issue.message.includes('requires')) {}
+      // Add generic type parameters;
+      const genericMatch = line.match(/(\w+<)([^>]*)(>)/);
+      if (genericMatch && !genericMatch[2].trim()) {}
+        const fixedLine = line.replace(genericMatch[0], `${genericMatch[1]}unknown${genericMatch[3]});
         
         if (fixedLine !== line) {}
           lines[lineIndex] = fixedLine;
           return {}
             "modified": true,
             "content": lines.join('\n'),
-            "description": 'Added generic type parameter'
+            "description": Added generic type parameter
           }};
       };
     };
@@ -420,20 +573,20 @@ class CodeQualityAutoEnhancer {}
   fixOptionalProperties(lines, issue) {}
     const lineIndex = issue.line - 1;
     const line = lines[lineIndex];
-    
-    if (issue.message.includes('Object is possibly undefined')) {}
+    '
+    if (issue.message.includes('Object is possibly undefined)) {}
       // Add optional chaining;
-      const fixedLine = line.replace(/\.(\w+)/g, '?.$1');
-      
+      const fixedLine = line.replace(/\.(\w+)/g,?.$1);
       if (fixedLine !== line) {}
         lines[lineIndex] = fixedLine;
         return {}
           "modified": true,
           "content": lines.join('\n'),
-          "description": 'Added optional chaining'
+          "description": Added optional chaining
         }};
     };
     return { "modified": false, "content": lines.join('\n') }};
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   findUncoveredFiles() {}
     // This is a simplified version - in a real implementation, you'd parse coverage reports;
     const uncoveredFiles = [];
@@ -443,42 +596,60 @@ class CodeQualityAutoEnhancer {}
       const testFile = this.getTestFilePath(file);
       if (!fs.existsSync(testFile)) {}
         uncoveredFiles.push(file)};
-    };
     return uncoveredFiles};
   getTestFilePath(sourceFile) {}
+<<<<<<< HEAD
     const relativePath = path.relative(path.join(this.projectRoot, 'src'), sourceFile);
     const testPath = path.join(this.projectRoot, 'tests', relativePath.replace(/\.(js|jsx|ts|tsx)$/, '.test.$1'));
+=======
+    const relativePath = path.relative(path.join(this.projectRoot,src'), sourceFile);
+    const testPath = path.join(this.projectRoot,tests, relativePath.replace(/\.(js|jsx|ts|tsx)$/,.test.$1));
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     return testPath};
   async generateTestFile(sourceFile) {}
-    try {}
       const testFile = this.getTestFilePath(sourceFile);
       const testDir = path.dirname(testFile);
       
       if (!fs.existsSync(testDir)) {}
-        fs.mkdirSync(testDir, { "recursive": true })};
-      const fileName = path.basename(sourceFile, path.extname(sourceFile));
+        fs.mkdirSync(testDir, { "recursive": true })};"
+<<<<<<< HEAD
+      const fileName = path.basename(sourceFile, path.extname(sourceFile));"`;
       const testContent = `import { render, screen } from '@testing-library/react';
 import ${fileName} from '../${path.relative(testDir, sourceFile)}';
-
 describe('${fileName}', () => {}
   test('renders without crashing', () => {}
+=======
+      const fileName = path.basename(sourceFile, path.extname(sourceFile));"
+      const testContent = `import { render, screen } from '@testing-library/react';
+import ${fileName} from '../${path.relative(testDir, sourceFile)};
+describe('${fileName}, () => {}
+  test('renders without crashing, () => {}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     render(<${fileName} />);
     // Add more specific tests here;
   })}
-});
+});`;
 `;`
       
-      fs.writeFileSync(testFile, testContent);
+<<<<<<< HEAD
+      fs.writeFileSync(testFile, testContent);`;
       this.log(`Generated test "file": ${testFile}`, 'INFO');
-      
-      return true} catch (error) {}
+      return true} catch (error) {}`;
       this.log(`Failed to generate test "file": ${error.message}`, 'ERROR');
+  getAllSourceFiles() {}
+    const sourceFiles = [];
+    const srcDir = path.join(this.projectRoot, 'src');
+=======
+      fs.writeFileSync(testFile, testContent);
+      this.log(`Generated test "file": ${testFile},INFO');
+      return true} catch (error) {}
+      this.log(`Failed to generate test "file": ${error.message},ERROR');
       return false};
   };
   getAllSourceFiles() {}
     const sourceFiles = [];
-    const srcDir = path.join(this.projectRoot, 'src');
-    
+    const srcDir = path.join(this.projectRoot,src');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     if (!fs.existsSync(srcDir)) {}
       return sourceFiles};
     const walkDir = (dir) => {}
@@ -491,98 +662,136 @@ describe('${fileName}', () => {}
         if (stat.isDirectory()) {}
           walkDir(filePath)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {}
           sourceFiles.push(filePath)};
-      };
-    };
     
     walkDir(srcDir);
-    return sourceFiles};
+<<<<<<< HEAD
   async runQualityEnhancement() {}
     this.log('Starting code quality enhancement...');
-    
+=======
+    return sourceFiles};
+  async runQualityEnhancement() {}
+    this.log('Starting code quality enhancement...);
     try {}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       // Run quality checks;
       const checkResult = await this.runCodeQualityChecks();
       
       if (checkResult.totalIssues === 0) {}
+<<<<<<< HEAD
         this.log('No quality issues found - no enhancements needed', 'INFO');
-        return};
+        return};`;
       this.log(`Found ${checkResult.totalIssues} quality issues, applying enhancements...`, 'INFO');
-      
+=======
+        this.log('No quality issues found - no enhancements needed,INFO');
+        return};
+      this.log(`Found ${checkResult.totalIssues} quality issues, applying enhancements...`,INFO');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       // Apply enhancements;
       const allIssues = Object.values(checkResult.results);
         .filter(result => !result.success);
         .flatMap(result => result.issues);
       
       const enhancementsApplied = await this.applyCodeEnhancements(allIssues);
-      
+<<<<<<< HEAD
+      `;
       this.log(`Applied ${enhancementsApplied} enhancements out of ${allIssues.length} issues`, 'INFO');
-      
+=======
+      '
+      this.log(`Applied ${enhancementsApplied} enhancements out of ${allIssues.length} issues`,INFO');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       // Run quality checks again to see if enhancements worked;
       const postCheckResult = await this.runCodeQualityChecks();
       
       const report = {}
+<<<<<<< HEAD
+        "timestamp": new Date().toISOString(),""
+=======
         "timestamp": new Date().toISOString(),
-        "initialIssues": checkResult.totalIssues,
-        enhancementsApplied,
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+        "initialIssues": checkResult.totalIssues,"
+        enhancementsApplied,"
         "remainingIssues": postCheckResult.totalIssues,
         "improvement": checkResult.totalIssues - postCheckResult.totalIssues,
-        "details": {}
-          before: checkResult.results,
-          "after": postCheckResult.results;
-        };
-      };
+        "details": {}"
+          before: checkResult.results,"
+          "after": postCheckResult.results;"
       
-      // Save report;
+      // Save report;`;
       const reportPath = path.join(this.reportsDir, `quality-enhancement-report-${Date.now()}.json`);
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       
       // Update quality history;
       this.qualityHistory.push(report);
       if (this.qualityHistory.length > 50) {}
-        this.qualityHistory = this.qualityHistory.slice(-50)};
-      this.log(`Code quality enhancement completed. Report saved to ${reportPath}`, 'INFO')} catch (error) {`}
+<<<<<<< HEAD
+        this.qualityHistory = this.qualityHistory.slice(-50)};"`;
+      this.log(`Code quality enhancement completed. Report saved to ${reportPath}`, 'INFO')} catch (error) {`}`;
       this.log(`Code quality enhancement "failed": ${error.message}`, 'ERROR')};
-  };
   async startEnhancer() {}
     this.log('Starting code quality auto-enhancer...');
-    
+=======
+        this.qualityHistory = this.qualityHistory.slice(-50)};"
+      this.log(`Code quality enhancement completed. Report saved to ${reportPath},INFO')} catch (error) {`}
+      this.log(`Code quality enhancement "failed": ${error.message},ERROR')};
+  };
+  async startEnhancer() {}
+    this.log('Starting code quality auto-enhancer...);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     // Run initial enhancement;
     await this.runQualityEnhancement();
     
     // Set up periodic enhancement;
     setInterval(async () => {}
+<<<<<<< HEAD
+        await this.runQualityEnhancement()} catch (error) {}`;
+        this.log(`Error in periodic "enhancement": ${error.message}`, 'ERROR')};
+=======
       try {}
         await this.runQualityEnhancement()} catch (error) {}
-        this.log(`Error in periodic "enhancement": ${error.message}`, 'ERROR')};
+        this.log(`Error in periodic "enhancement": ${error.message},ERROR')};
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     }, this.checkInterval);
-
     this.log(`Code quality auto-enhancer started. Running every ${this.checkInterval / 1000} seconds.`)};
   getStatus() {}
+<<<<<<< HEAD
+      "running": true,""
+      "qualityHistory": this.qualityHistory.length,""
+      "checkInterval": this.checkInterval,""
+=======
     return {}
       "running": true,
       "qualityHistory": this.qualityHistory.length,
       "checkInterval": this.checkInterval,
-      "autoEnhanceEnabled": this.autoEnhanceEnabled;
-    }};
-};
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+      "autoEnhanceEnabled": this.autoEnhanceEnabled;"
 // Main execution;
 if (require.main === module) {}
   const enhancer = new CodeQualityAutoEnhancer();
   
-  // Handle graceful shutdown;
+  // Handle graceful shutdown;"
+<<<<<<< HEAD
   process.on('SIGINT', () => {}
     enhancer.log('Shutting down code quality auto-enhancer...');
     process.exit(0)}
-});
 
   process.on('SIGTERM', () => {}
-    enhancer.log('Shutting down code quality auto-enhancer...');
+
+  // Start enhancer;
+  enhancer.startEnhancer().catch(error => {})`;
+    enhancer.log(`Failed to start "enhancer": ${error.message}`, 'ERROR');
+=======
+  process.on('SIGINT, () => {}
+    enhancer.log('Shutting down code quality auto-enhancer...);
+    process.exit(0)}
+});
+'
+  process.on('SIGTERM, () => {}
+    enhancer.log('Shutting down code quality auto-enhancer...);
     process.exit(0)}
 });
 
   // Start enhancer;
   enhancer.startEnhancer().catch(error => {})
-    enhancer.log(`Failed to start "enhancer": ${error.message}`, 'ERROR');
+    enhancer.log(`Failed to start "enhancer": ${error.message},ERROR');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     process.exit(1)})};
-
-module.exports = CodeQualityAutoEnhancer;

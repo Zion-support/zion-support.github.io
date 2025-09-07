@@ -10,6 +10,7 @@ import AppMetadataManager from "@/pages/admin/AppMetadataManager",
 import SupportRequests from "@/pages/admin/SupportRequests",
 import FraudDetection from "@/pages/admin/FraudDetection",
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",
+
 const AdminRoutes = () => {
 // Admin Pages;
 import QuoteManager from "@/pages/admin/QuoteManager";
@@ -26,12 +27,14 @@ const AdminRoutes = () => {;
       <Route
         path="/admin/quotes"
         element={
-import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
+
+import { Fragment } from "react",;
+import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 ;
 import TokenManager from "@/pages/admin/TokenManager";
 import IntegrationsPage from "@/pages/admin/IntegrationsPage";
+
 import TokenManager from "@/pages/admin/TokenManager",
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",
 const AdminRoutes = () => {
@@ -113,19 +116,20 @@ const AdminRoutes = () => {
   )
 }
 export default AdminRoutes;
+
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 // Admin Pages;
-import QuoteManager from "QuoteManager";
-import ReviewsModeration from "ReviewsModeration";
-import WhitelabelManager from "WhitelabelManager";
-import PartnerManager from "PartnerManager";
-import AppMetadataManager from "AppMetadataManager";
-import SupportRequests from "SupportRequests";
-import FraudDetection from "FraudDetection";
-import TokenManager from "TokenManager";
-import IntegrationsPage from "IntegrationsPage";
+import QuoteManager from "@/pages/admin/QuoteManager",;
+import ReviewsModeration from "@/pages/admin/ReviewsModeration",;
+import WhitelabelManager from "@/pages/admin/WhitelabelManager",;
+import PartnerManager from "@/pages/admin/PartnerManager",;
+import AppMetadataManager from "@/pages/admin/AppMetadataManager",;
+import SupportRequests from "@/pages/admin/SupportRequests",;
+import FraudDetection from "@/pages/admin/FraudDetection",;
+import TokenManager from "@/pages/admin/TokenManager",;
+import IntegrationsPage from "@/pages/admin/IntegrationsPage",;
 const AdminRoutes = () => {;
   return (;
     <Routes>;
@@ -140,6 +144,7 @@ const AdminRoutes = () => {;
           </ProtectedRoute>;
         }
       />
+
       />;
       <Route
         path="/admin/whitelabel"
@@ -149,6 +154,7 @@ const AdminRoutes = () => {;
           </ProtectedRoute>;
         }
       />
+
       />;
       <Route
         path="/admin/partners"
@@ -158,6 +164,7 @@ const AdminRoutes = () => {;
           </ProtectedRoute>;
         }
       />
+
       />;
       <Route
         path="/admin/app-metadata"
@@ -167,6 +174,7 @@ const AdminRoutes = () => {;
           </ProtectedRoute>;
         }
       />
+
       />;
       <Route
         path="/admin/support-requests"
@@ -176,6 +184,7 @@ const AdminRoutes = () => {;
           </ProtectedRoute>;
         }
       />
+
       />;
       <Route
         path="/admin/fraud-detection"
@@ -185,6 +194,7 @@ const AdminRoutes = () => {;
           </ProtectedRoute>;
         }
       />
+
       />;
       <Route
         path="/admin/tokens"
@@ -194,9 +204,11 @@ const AdminRoutes = () => {;
           </ProtectedRoute>;
         }
       />
+
       <Route
         path="/admin/integrations"
         element={
+
       <Route
         path="/admin/integrations"
         element={
@@ -208,7 +220,9 @@ const AdminRoutes = () => {;
     </Routes>;
   )
 };
+
 export default AdminRoutes;
+
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
@@ -236,5 +250,145 @@ const AdminRoutes = () =>: any {
     </Routes>
   )
 };
+
 export default AdminRoutes;
 ;
+
+import { Fragment } from "react";""
+import { Route, Routes } from "react-router-dom";""
+import { ProtectedRoute } from "@/components/ProtectedRoute";"
+// Admin Pages;"
+import QuoteManager from "@/pages/admin/QuoteManager",""
+import ReviewsModeration from "@/pages/admin/ReviewsModeration",""
+import WhitelabelManager from "@/pages/admin/WhitelabelManager",""
+import PartnerManager from "@/pages/admin/PartnerManager",""
+import AppMetadataManager from "@/pages/admin/AppMetadataManager",""
+import SupportRequests from "@/pages/admin/SupportRequests",""
+import FraudDetection from "@/pages/admin/FraudDetection",""
+import TokenManager from "@/pages/admin/TokenManager",""
+import IntegrationsPage from "@/pages/admin/IntegrationsPage","
+const AdminRoutes = () => {
+  return (
+    <Routes>;
+
+      <Route;"
+        path="/admin/quotes""
+        element={
+          <ProtectedRoute adminOnly={true}>;
+
+            <QuoteManager />;
+
+          ;
+        path="/admin/reviews";"
+        element={;
+
+            <ReviewsModeration />;
+
+        path="/admin/whitelabel";"
+
+            <WhitelabelManager />;
+
+        path="/admin/partners";"
+
+            <PartnerManager />;
+
+        path="/admin/app-metadata";"
+
+            <AppMetadataManager />;
+
+        path="/admin/support-requests";"
+
+            <SupportRequests />;
+
+        path="/admin/fraud-detection";"
+
+            <FraudDetection />;
+
+        path="/admin/tokens";"
+
+            <TokenManager />;
+
+        path="/admin/integrations";"
+
+            <IntegrationsPage />;
+
+        path="/admin/reviews""
+
+
+        path="/admin/whitelabel""
+
+
+        path="/admin/partners""
+
+
+        path="/admin/app-metadata""
+
+
+        path="/admin/support-requests""
+
+
+        path="/admin/fraud-detection""
+
+
+        path="/admin/tokens""
+
+
+        path="/admin/integrations""
+
+
+
+
+        path="/admin / quotes";"
+          <ProtectedRoute admin_only={true}>;
+
+
+    "
+</Route>
+
+            <QuoteManager />;
+</QuoteManager>
+          </ProtectedRoute>;
+
+    </Routes>"
+<Routes> <Route path="/admin/quotes" element= {"
+
+  <ProtectedRoute adminOnly= {
+  true;
+}> <QuoteManager />  
+}/> <Route <ReviewsModeration />  
+
+}/> <Route <WhitelabelManager />  
+
+}/> <Route <PartnerManager />  
+
+}/> <Route <AppMetadataManager />  
+
+}/> <Route <SupportRequests />  
+
+}/> <Route <FraudDetection />  
+
+}/> <Route <TokenManager />  
+
+}/> <Route <IntegrationsPage />  
+)
+}/> ) "
+pr-12325
+}> <QuoteManager /> </ProtectedRoute> 
+}/> <Route <ReviewsModeration /> </ProtectedRoute> 
+</Route>
+}/> <Route <WhitelabelManager /> </ProtectedRoute> 
+</Route>
+}/> <Route <PartnerManager /> </ProtectedRoute> 
+</Route>
+}/> <Route <AppMetadataManager /> </ProtectedRoute> 
+</Route>
+}/> <Route <SupportRequests /> </ProtectedRoute> 
+</Route>
+}/> <Route <FraudDetection /> </ProtectedRoute> 
+</Route>
+}/> <Route <TokenManager /> </ProtectedRoute> 
+</Route>
+}/> <Route <IntegrationsPage /> </ProtectedRoute> 
+</Route>)
+}/> </Routes>) "
+

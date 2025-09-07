@@ -1,3 +1,5 @@
+
+
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth";
 import { checkNewRegistration } from "@/utils/authUtils";
@@ -7,10 +9,12 @@ import { checkNewRegistration } from "@/utils/authUtils",
 import { useNavigate } from 'react-router-dom',      }
     }, 0);
     }, 0),
+
     // Check if user needs to complete onboarding
     if (!mappedUser.profileComplete && navigate) {
       setOnboardingStep('profile'),      description: `You're now signed in as ${mappedUser && mappedUser.displayName || mappedUser && mappedUser.email}`,;
       variant: "default"}),;
+
     // Check for new registration and send welcome email if needed;
     setTimeout(() => {;
       if (mappedUser) {;
@@ -73,13 +77,15 @@ if ( {) {
   return {
     handleSignedIn;
     handleSignedOut;
+
     handleSignedOut
   },
+
   return {
     handleSignedIn,
     handleSignedOut
-import { toast } from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
+import { toast } from "@/hooks/use-toast",;
+import type { UserProfile } from "@/types/auth",;
 import { checkNewRegistration } from "@/utils/authUtils",;
 import { useNavigate } from 'react-router-dom',;
 /**;
@@ -93,6 +99,7 @@ export function useAuthEventHandlers(): any (;
   }
 }  }
 }
+
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
 import { checkNewRegistration } from "@/utils/authUtils",;
@@ -158,3 +165,38 @@ toast ({
 }
   }
 }
+
+
+
+import {toast} from "@/hooks/use-toast";""
+import type { UserProfile } from "@/types/auth";""
+import {checkNewRegistration} from "@/utils/authUtils";""
+import {useNavigate} from 'react-router-dom';
+import { toast } from "@/hooks/use-toast",""
+import { checkNewRegistration } from "@/utils/authUtils";""
+import { useNavigate } from 'react-router-dom';
+import type { UserProfile } from "@/types/auth",""
+import { checkNewRegistration } from "@/utils/authUtils",""
+import { useNavigate } from 'react-router-dom',
+/**
+ * Custom hook for auth event handling;
+ */
+export function useAuthEventHandlers(
+
+  setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
+
+  setOnboardingStep: React.Dispatch<React.SetStateAction<string | null>>
+
+  setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,;
+
+  setOnboardingStep: React && React.Dispatch<React && React.SetStateAction<string | null>>;
+
+
+
+  setUser:React.Dispatch<React.SetStateAction<UserProfile | null>>,;
+
+  setOnboardingStep:React.Dispatch<React.SetStateAction<string | null>>;
+)
+pr-12325
+</React>)'
+

@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * TypeScript Error Fixer Service;
  * Automatically fixes TypeScript-specific errors;
@@ -6,8 +6,8 @@
 
 const fs = // // require('fs');
 const path = // // require('path');
-const { execSync } = // // require('child_process');
 <<<<<<< HEAD
+const { execSync } = // // require('child_process');
 class TypeScriptErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -28,13 +28,13 @@ class TypeScriptErrorFixer {}
       level,
       message,
       data,
-      service: 'typescript-error-fixer'
+      service: 'typescript-error-fixer
     };
-<<<<<<< HEAD
+
     if (level === 'error') {}
-      console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
-      console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
-      console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {`}
+      console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}`;
+      console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}`;
+      console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {`}`;
       console.log(`[${timestamp}] DEBUG: ${message}`, data)};
     this.writeToLog(logEntry)};
   writeToLog(logEntry) {}
@@ -45,7 +45,6 @@ class TypeScriptErrorFixer {}
     fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')};
   async start() {}
     this.log('info', 'Starting TypeScript Error Fixer Service...');
-    
     try {}
       this.ensureDirectories();
       await this.performTypeScriptFixes();
@@ -53,12 +52,10 @@ class TypeScriptErrorFixer {}
       this.setupSignalHandlers();
       
       this.log('info', 'TypeScript Error Fixer Service started successfully');
-<<<<<<< HEAD
       setInterval(async () => {}
         await this.performTypeScriptFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start TypeScript Error Fixer Service', error);
       process.exit(1)};
-  };
   ensureDirectories() {}
     const dirs = ['logs/pm2', 'backups/typescript-fixes', 'temp', 'fixed-files'];
     dirs.forEach(dir => {})
@@ -68,38 +65,28 @@ class TypeScriptErrorFixer {}
     })};
   async performTypeScriptFixes() {}
     this.log('info', 'Starting TypeScript error fixing process...');
-    
-    try {}
       this.resetCounters();
       const errors = await this.getTypeScriptErrors();
       
       if (errors.length === 0) {}
         this.log('info', 'No TypeScript errors found');
-        return};
+        return};`;
       this.log('info', `Found ${errors.length} TypeScript errors`);
-
       for (const error of errors) {}
         if (this.fixesApplied >= 50) break; // Limit fixes per run;
-        try {}
-          await this.fixTypeScriptError(error)} catch (fixError) {}
+          await this.fixTypeScriptError(error)} catch (fixError) {}`;
           this.log('error', `Failed to fix error in ${error.file}`, fixError);
           this.fixesFailed++};
-      };
-      await this.generateFixReport();
+      await this.generateFixReport();`;
       this.log('info', `TypeScript fixing completed. Applied: ${this.fixesApplied}, Failed: ${this.fixesFailed}, Skipped: ${this.fixesSkipped}`)} catch (error) {`}
       this.log('error', 'Error during TypeScript fixing process', error)};
-  };
   resetCounters() {}
-    this.fixesApplied = 0;
-    this.fixesFailed = 0;
-    this.fixesSkipped = 0;
     this.fixedFiles.clear()};
   async getTypeScriptErrors() {}
-    try {}
       const result = execSync('npx tsc --noEmit --json', { })
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe'
+        stdio: 'pipe
       }
 });
       
@@ -108,13 +95,11 @@ class TypeScriptErrorFixer {}
         return parsed.errors || []};
       return []} catch (error) {}
       // Parse stderr for errors;
-      const stderr = error.stderr ? error.stderr.toString() : '';
+      const stderr = error.stderr ? error.stderr.toString() : ;
       return this.parseTypeScriptErrors(stderr)};
-  };
   parseTypeScriptErrors(stderr) {}
     const errors = [];
     const lines = stderr.split('\n');
-    
     lines.forEach(line => {})
       const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
       if (match) {}
@@ -123,57 +108,43 @@ class TypeScriptErrorFixer {}
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
-          code: 'TS_ERROR'
-        })};
-    }
-});
+          code: 'TS_ERROR
     
     return errors};
   async fixTypeScriptError(error) {}
     if (!error.file || !fs.existsSync(error.file)) {}
       this.fixesSkipped++;
-      return};
     this.log('info', `Fixing TypeScript error in: ${error.file}`);
-    
-    try {}
       const content = fs.readFileSync(error.file, 'utf8');
       const lines = content.split('\n');
-      
       if (error.line > lines.length) {}
-        this.fixesSkipped++;
         return};
       const lineIndex = error.line - 1;
       const line = lines[lineIndex];
       
       if (this.shouldSkipLine(line)) {}
-        this.fixesSkipped++;
-        return};
       const fixedLine = await this.fixTypeScriptLine(line, error, lines, lineIndex);
       
       if (fixedLine !== line) {}
         lines[lineIndex] = fixedLine;
         const fixedContent = lines.join('\n');
-        
         // Create backup;
         await this.createBackup(error.file);
         
         // Write fixed content;
         fs.writeFileSync(error.file, fixedContent, 'utf8');
-        
         this.fixesApplied++;
         this.fixedFiles.add(error.file);
-<<<<<<< HEAD
+`;
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
-    } catch (error) {}
+    } catch (error) {}`;
       this.log('error', `Error fixing TypeScript error in ${error.file}`, error);
-      this.fixesFailed++};
-  };
   shouldSkipLine(line) {}
     const trimmed = line.trim();
     return !trimmed || 
-           trimmed.startsWith('//') || 
-           trimmed.startsWith('/*') || 
+           trimmed.startsWith('//') ||
+           trimmed.startsWith('/*') ||
            trimmed.startsWith('*') ||
            trimmed.startsWith('import') ||
            trimmed.startsWith('export')};
@@ -193,8 +164,8 @@ class TypeScriptErrorFixer {}
     if (!nameMatch) return line;
     
     const undefinedName = nameMatch[1];
-<<<<<<< HEAD
-    // Try to find the name in the file;
+
+    // Try to find the name in the file;`;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
     const matches = line.match(namePattern);
     
@@ -205,71 +176,60 @@ class TypeScriptErrorFixer {}
       // Check if it should be declared;
       if (this.shouldBeDeclared(undefinedName, allLines)) {}
         return this.addVariableDeclaration(line, undefinedName)};
-    };
     return line};
   fixTypeError(line, error, allLines, lineIndex) {}
     // Fix 'any' type issues;
     if (error.message.includes('implicitly has an \'any\' type')) {}
       const varMatch = line.match(/(\w+)\s*[:=]/);
       if (varMatch) {}
-        const varName = varMatch[1];
+        const varName = varMatch[1];`;
         return line.replace(new RegExp(`\\b${varName}\\b`), `${varName}: any`)};
-    };
     // Fix missing return type;
     if (error.message.includes('implicitly has an \'any\' return type')) {}
       if (line.includes('function') || line.includes('=>')) {}
         return line.replace(/(\w+\s*\([^)]*\)\s*\{?)/, '$1: any {')};
-    };
-    return line};
   fixModuleError(line, error, allLines, lineIndex) {}
     const moduleMatch = error.message.match(/Cannot find module '([^']+)'/);
     if (!moduleMatch) return line;
     
     const moduleName = moduleMatch[1];
-<<<<<<< HEAD
+
     // Try to fix common module issues;
     if (moduleName.startsWith('@/')) {}
       const fixedModule = moduleName.replace('@/', './src/');
       return line.replace(moduleName, fixedModule)};
-    if (moduleName.startsWith('./') && !moduleName.endsWith('.ts') && !moduleName.endsWith('.js')) {}
+    if (moduleName.startsWith('./') && !moduleName.endsWith('.ts') && !moduleName.endsWith('.js')) {}`;
       return line.replace(moduleName, `${moduleName}.ts`)};
-    return line};
   fixPropertyError(line, error, allLines, lineIndex) {}
     const propertyMatch = error.message.match(/Property '([^']+)' does not exist on type/);
     if (!propertyMatch) return line;
     
     const propertyName = propertyMatch[1];
-<<<<<<< HEAD
+
     // Add type assertion;
-    if (line.includes('.' + propertyName)) {}
+    if (line.includes('.' + propertyName)) {}`;
       return line.replace(new RegExp(`\\.${propertyName}`), `['${propertyName}']`)};
-    return line};
   fixParameterError(line, error, allLines, lineIndex) {}
-    if (error.message.includes('Parameter \'') && error.message.includes('\' implicitly has an \'any\' type')) {}
+    if (error.message.includes('Parameter \) && error.message.includes('\' implicitly has an \'any\' type')) {}
       const paramMatch = line.match(/(\w+)\s*[,)]/);
       if (paramMatch) {}
-        const paramName = paramMatch[1];
+        const paramName = paramMatch[1];`;
         return line.replace(new RegExp(`\\b${paramName}\\b`), `${paramName}: any`)};
-    };
-    return line};
   shouldBeImported(name, allLines) {}
     // Check if it's a common React/Node.js global;
     const commonGlobals = ['React', 'useState', 'useEffect', 'console', 'document', 'window', 'process'];
     return commonGlobals.includes(name)};
   shouldBeDeclared(name, allLines) {}
-    // Check if it's used before declaration;
+    // Check if it's used before declaration;`;
     const namePattern = new RegExp(`\\b${name}\\b`, 'g');
     let firstUsage = -1;
     let declaration = -1;
-<<<<<<< HEAD
+
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
         if (firstUsage === -1) firstUsage = index;
         if (line.includes('const') || line.includes('let') || line.includes('var') || line.includes('function')) {}
           declaration = index};
-      };
-    }
-});
     
     return firstUsage !== -1 && (declaration === -1 || declaration > firstUsage)};
   addImportStatement(name, allLines) {}
@@ -280,25 +240,21 @@ class TypeScriptErrorFixer {}
       if (allLines[i].trim().startsWith('import')) {}
         importIndex = i + 1} else if (allLines[i].trim() && !allLines[i].trim().startsWith('//')) {}
         break};
-    };
-    // Add import statement;
+    // Add import statement;`;
     allLines.splice(importIndex, 0, `import { ${name} } from 'react';`);
-    
     return allLines.join('\n')};
   addVariableDeclaration(line, name) {}
-    // Add variable declaration;
+    // Add variable declaration;`;
     return `const ${name} = undefined; // TODO: Define ${name}\n${line}`};
   async createBackup(filePath) {}
-    try {}
       const backupDir = path.join(this.projectRoot, 'backups', 'typescript-fixes');
       const fileName = path.basename(filePath);
-      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');`;
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
       
-      fs.copyFileSync(filePath, backupPath);
-      this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}
+      fs.copyFileSync(filePath, backupPath);`;
+      this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}`;
       this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};
-  };
   async generateFixReport() {}
     const report = {}
       timestamp: new Date().toISOString(),
@@ -311,11 +267,8 @@ class TypeScriptErrorFixer {}
       },
       fixedFiles: Array.from(this.fixedFiles),
       recommendations: this.generateRecommendations();
-    };
-
     const reportPath = path.join(this.projectRoot, 'error-reports', `typescript-fix-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
     this.log('info', `TypeScript fix report generated: ${reportPath}`);
     return report};
   generateRecommendations() {}
@@ -324,27 +277,20 @@ class TypeScriptErrorFixer {}
     if (this.fixesFailed > 0) {}
       recommendations.push({})
         priority: 'high',
-        action: 'Review failed TypeScript fixes manually',
-        description: `${this.fixesFailed} TypeScript fixes failed and need manual intervention
-      })};
+        action: 'Review failed TypeScript fixes manually',`;
+        description: `${this.fixesFailed} TypeScript fixes failed and need manual intervention;
     if (this.fixesApplied > 0) {}
-      recommendations.push({})
         priority: 'medium',
-        action: 'Run TypeScript compiler to verify fixes',
-        description: `${this.fixesApplied} TypeScript fixes were applied, verify compilation
-      })};
+        action: 'Run TypeScript compiler to verify fixes',`;
+        description: `${this.fixesApplied} TypeScript fixes were applied, verify compilation;
     return recommendations};
   startContinuousFixing() {}
     this.log('info', 'Starting continuous TypeScript fixing...');
-    
-    setInterval(async () => {}
       await this.performTypeScriptFixes()}, 600000); // 10 minutes;
-  };
   setupSignalHandlers() {}
     process.on('SIGUSR2', async () => {}
       this.log('info', 'Received SIGUSR2 signal, triggering immediate TypeScript fix...');
       await this.performTypeScriptFixes()})};
-};
 // Start the service;
 const fixer = new TypeScriptErrorFixer();
 
@@ -352,28 +298,21 @@ const fixer = new TypeScriptErrorFixer();
 process.on('SIGINT', () => {}
   fixer.log('info', 'Received SIGINT, shutting down gracefully...');
   process.exit(0)}
-});
 
 process.on('SIGTERM', () => {}
   fixer.log('info', 'Received SIGTERM, shutting down gracefully...');
-  process.exit(0)}
-});
 
 // Handle uncaught errors;
 process.on('uncaughtException', (error) => {}
   fixer.log('error', 'Uncaught exception', error);
   process.exit(1)}
-});
 
 process.on('unhandledRejection', (reason, promise) => {}
-  fixer.log('error', 'Unhandled rejection', { reason, promise }
-});
-  process.exit(1)}
-});
+  fixer.log('error', 'Unhandled rejection', { reason, promise }')
 
 // Start the service;
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
-  process.exit(1)}
-<<<<<<< HEAD
-});
+=======
+const { execSync } = // // require('child_process');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

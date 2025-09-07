@@ -1,13 +1,30 @@
 
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+
+<<<<<<< HEAD
 console.log('� Starting Security Enhancement Automation...')
+    "file"""
+    "issue"""
+    "severity"""
+    "line"""
+        content = content.replace(/dangerouslySetInnerHTML/g, '// "SECURITY")""
+    "key"""
+    "value"""
+    "value": """
+    "high"""
+    "medium"""
+    "low"""
+      "securityHeaders"""
+      "validationScript"""
+    "recommendations"""
+    "nextSteps"""
+  console.log('� Security improvements "applied")""');
+=======
+console.log('� Starting Security Enhancement Automation...)
     "file"
     "issue"
     "severity"
     "line"
-        content = content.replace(/dangerouslySetInnerHTML/g, '// "SECURITY")
+        content = content.replace(/dangerouslySetInnerHTML/g,// "SECURITY")
     "key"
     "value"
     "key"
@@ -40,5 +57,4 @@ console.log('� Starting Security Enhancement Automation...')
     "recommendations"
     "nextSteps"
   console.log('� Security improvements "applied")
-
-  console.error(' Security enhancement automation "failed")
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

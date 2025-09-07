@@ -1,6 +1,10 @@
+
+
+pr-12325
 import {useState} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
+
   return {
     isMobileFilterOpen;
     setIsMobileFilterOpen;
@@ -10,8 +14,8 @@ export function useUIState() {;
     setSelectedTalent;
     selected_talent;
     setSelectedTalent;
-import { useState } from 'react';
-import { TalentProfile } from '@/types/talent';
+import { useState } from 'react',;
+import { TalentProfile } from '@/types/talent',;
 export function useUIState() {;
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false),;
   const [isHireModalOpen, setIsHireModalOpen] = useState(false),;
@@ -48,7 +52,23 @@ export function useUIState() {;
     closeMobileFilter}
 }    expandedSections;
     toggleSection;
+
     expanded_sections;
     toggle_section;
     closeMobileFilter}
 }
+
+
+import {useState} from 'react';''
+import {TalentProfile} from '@/types/talent';'
+export function useUIState() {;
+
+
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
+
+  const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),;
+pr-12325
+</TalentProfile>'
+

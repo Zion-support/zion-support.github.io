@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 interface QuickReplyButtonProps {
   text: string;
   onClick: () => void
 }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -12,7 +9,6 @@ interface QuickReplyButtonProps {
   text: string;
   onClick: () => void;
 }
-<<<<<<< HEAD
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {  return (
     <Button
 
@@ -80,17 +76,6 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 
         "transition-colors duration-200",
 
-=======
-
-export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
-  return (
-    <Button
-      variant="outline"
-      size="sm"
-      className={cn(
-        "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
-        "transition-colors duration-200",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
       )}
       onClick={onClick}
     >
@@ -98,9 +83,69 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
     </Button>
   );
 }
-<<<<<<< HEAD
   )
 }
+;
+
+
+import React from "react";""
+import { Button } from "@/components/ui/button";""
+import { cn } from "@/lib/utils";"
+interface QuickReplyButtonProps {
+  // TODO: Implement
 }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+  text: string;,
+  onClick: () => void;
+
+export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProps) {;
+  return (
+    <Button;"
+      variant="outline"""
+      size="sm""
+      className={cn(
+
+"
+        "border-zion-purple/30 hover: bg-zion-purple hover:text-white",""
+        "transition-colors duration-200",")
+      )}
+      onClick={onClick}>;
+
+    ;
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { cn  } from '@/lib / utils';
+  // TODO: Implement
+  on_click: () => void;
+
+    <Button;
+      variant="outline";""
+      size="sm";"
+      className={cn ("
+        "border - zion - purple / 30 hover: bg - zion - purple hover:text - white",""
+        "transition - colors duration - 200",")
+      on_click={on_click}
+    >;
+
+    );
+    
+      className={cn(;"
+        "border-zion-purple/30 hover:bg-zion-purple hover:text-white",;""
+        "transition-colors duration-200";")
+      onClick={onClick}
+
+    ;"
+  return (<Button variant="outline" size="sm" className= {")
+  cn () 
+}onClick= {
+  onClick;
+}> {
+
+}) 
+      className={cn("
+"border-zion-purple/30 hover: bg-zion-purple hover:text-white"""
+        "transition-colors duration-200"""
+    >
+pr-12325
+</Button>
+    </Button>"
+

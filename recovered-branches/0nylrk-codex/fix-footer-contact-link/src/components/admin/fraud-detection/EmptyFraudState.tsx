@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { ShieldAlert  } from './lucide-react';
@@ -9,16 +9,19 @@ import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 interface EmptyFraudStateProps {
   has_filters: boolean;
+
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
 import { Button } from "@/components/ui/button",
 import { ShieldAlert } from "lucide-react",
+
     </div>;
 );
-=======        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
-import React from "react";
-import { Button } from "@/components/ui/button";
+
+        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
+import React from "react",;
+import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from "lucide-react",;
 interface EmptyFraudStateProps {;
   hasFilters: boolean,;
@@ -36,7 +39,8 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
 };
   )
 };
-import React from "React";
+
+import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from "lucide-react",;
 ;
@@ -68,39 +72,72 @@ export const EmptyFraudState:React.FC<EmptyFraudStateProps> = ({ ;
       )}
 </div>
   );
-}
-};
-  )
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from "lucide-react";
-interface EmptyFraudStateProps {
-  hasFilters: boolean;
-  onResetFilters: () => void;
+
 }
 
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
-  hasFilters,
-  onResetFilters,
-}) => {
-  return (
-    <div className="text-center py-12">
-      <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
-      <h3 className="text-lg font-medium">No fraud flags found</h3>
-      <p className="text-muted-foreground mb-6">
-        {hasFilters
-          ? "Try adjusting your filters"
-          : "You don't have any fraud flags yet"}
-      </p>
-      {hasFilters && (
-        <Button variant="outline" onClick={onResetFilters}>
-          Clear Filters
-        </Button>
-      )}
-    </div>
-  );
 };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+
+  )
+};
+
+import React from './react';''
+import { Button  } from '@/components / ui / button';''
+import { ShieldAlert  } from './lucide-react';'
+interface EmptyFraudStateProps {
+  // TODO: Implement
+}
+  has_filters: boolean;'
+import React from "react",""
+import { Button } from "@/components/ui/button";""
+import { ShieldAlert } from "lucide-react";"
+interface EmptyFraudStateProps {
+  // TODO: Implement
+}
+  has_filters: boolean;
+import React from "react",""
+import { Button } from "@/components/ui/button";""
+import { ShieldAlert } from "lucide-react";"
+  // TODO: Implement
+
+
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
+
+"
+    <div className="text-center py-12">"
+</div>"
+      <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />"
+      <h3 className="text-lg font-medium">No fraud flags found</h3>""
+      <p className="text-muted-foreground mb-6">"
+</p>
+    </div>;"
+        <Button variant="outline" onClick={onResetFilters}>"
+
+        
+        <Button variant="outline" onClick={onResetFilters}>Clear Filters"
+export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
+  has_filters,
+  onResetFilters,)
+}) => {
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
+    <div className="text - center py - 12">;"
+      <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb - 4" />;"
+      <h3 className="text - lg font - medium">No fraud flags found</h3>;""
+      <p className="text - muted - foreground mb - 6">;"
+      </p>;"
+        <Button variant="outline" on_click={onResetFilters}>;"
+)
+        )}
+    </div>);"
+        <Button variant="outline" onClick={onResetFilters}>Clear Filters;"
+    </div>;
+    </div>
+export const EmptyFraudState:React.FC<EmptyFraudStateProps> = ({ ;
+    <div className="text-center py-12">;"
+      <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;"
+      <h3 className="text-lg font-medium">No fraud flags found</h3>;""
+      <p className="text-muted-foreground mb-6">;"
+
+        
+</div>)"
+pr-12325
+

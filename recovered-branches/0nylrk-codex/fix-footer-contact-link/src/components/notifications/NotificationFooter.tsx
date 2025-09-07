@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   on_close: () => void;
 }
 
@@ -15,15 +14,6 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
     navigate('/notifications')
   },
   
-=======
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
-interface NotificationFooterProps {
-  onClose: () => void;
-}
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({
   onClose,
 }) => {
@@ -31,7 +21,6 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
 
   const handleViewAll = () => {
     onClose();
-<<<<<<< HEAD
     navigate("/notifications")
 };
 
@@ -44,6 +33,29 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
         onClick={handleViewAll}>;
 export const NotificationFooter: React.FC < NotificationFooterProps> = ({
   on_close,
+
+import React from "react";""
+import { Button } from "@/components/ui/button";""
+import { useNavigate } from "react-router-dom";"
+interface NotificationFooterProps {
+  // TODO: Implement
+}
+  onClose: () => void;
+
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({
+"
+    <div className="p-3 text-center border-t border-zion-blue-light">;"
+</div>
+    <div className="p-3 text-center border-t border-zion-blue-light">"
+      <Button;"
+        variant="link"""
+        size="sm"""
+        className="text-zion-slate-light text-xs""
+        onClick={handleViewAll}>;
+
+export const NotificationFooter: React.FC < NotificationFooterProps> = ({
+  on_close,)
+pr-12325
 }) => {
   const navigate = use_navigate ();
 ;
@@ -64,22 +76,27 @@ export const NotificationFooter: React.FC < NotificationFooterProps> = ({
       </Button>;
     </div>);
 }
-}
-=======
-    navigate("/notifications");
-  };
+;
+  // TODO: Implement
+    on_close ();"
+    navigate ("/notifications");"
+  return ("
+    <div className="p - 3 text - center border - t border - zion - blue - light">;"
+        variant="link";""
+        size="sm";""
+        className="text - zion - slate - light text - xs";"
+        on_click={handleViewAll}
+      >;
 
-  return (
-    <div className="p-3 text-center border-t border-zion-blue-light">
-      <Button
-        variant="link"
-        size="sm"
-        className="text-zion-slate-light text-xs"
+      ;)
+    </div>);
+export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }) => {;
+        className="text-zion-slate-light text-xs";"
         onClick={handleViewAll}
-      >
-        View all notifications
-      </Button>
-    </div>
-  );
-};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+
+    </div>;"
+},; return (<div className="p-3 text-center border-t border-zion-blue-light" > <Button > View all notifications  </div>)"
+      
+    </div>"
+pr-12325
+

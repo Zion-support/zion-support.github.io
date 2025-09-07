@@ -23,7 +23,7 @@ function fixFile(filePath) {
     }
 
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
 
     // Fix common syntax errors
     content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{const\s+(\w+)\s*=\s*([^;]+)([^;])/g, 'const $1: React.FC = () => {\n  const $2 = $3;\n');

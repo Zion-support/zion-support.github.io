@@ -1,10 +1,8 @@
-
-;
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }return this.props.children;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-}ursor/fix-website-loading-errors-and-merge-6662;
-ursor/automate-test-improve-and-merge-code-646c;
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -13,6 +11,18 @@ ursor/automate-test-improve-and-merge-code-646c;
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  // TODO: Implement
+}
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+pr-12325
   
   render() {
     if (this.state.hasError) {
@@ -22,33 +32,42 @@ ursor/automate-test-improve-and-merge-code-646c;
     return this.props.children;
   }
 }
-
-
 import React from 'react';
 import Link from 'next/link';
-const routes  = [{ "name": 'Home', "href": '/' }const routes = [{ "name": 'Home', "href": '/' }const routes = [{ "name": 'Home', "href": '/' }{ "name": 'Solutions', "href": '/solutions' },{ "name": 'Services', "href": '/services' },{ "name": 'Pricing', "href": '/pricing' },{ "name": 'About', "href": '/about' },{ "name": 'Careers', "href": '/careers' },{ "name": 'Blog', "href": '/blog' },{ "name": 'Contact', "href": '/contact' },{ "name": 'Docs', "href": '/docs' },{ "name": 'Privacy', "href": '/privacy' },{ "name": 'Terms', "href": '/terms' },{ "name": 'Cookies', "href": '/cookies' }];
-export default function SitemapPage() {return (<main className="max-w-4xl mx-auto px-4 py-16">;
+const routes = [{ "name": 'Home', "href": '/' },;
+  { "name": 'Solutions', "href": '/solutions' },;
+  { "name": 'Services', "href": '/services' },;
+  { "name": 'Pricing', "href": '/pricing' },;
+  { "name": 'About', "href": '/about' },;
+  { "name": 'Careers', "href": '/careers' },;
+  { "name": 'Blog', "href": '/blog' },;
+  { "name": 'Contact', "href": '/contact' },;
+  { "name": 'Docs', "href": '/docs' },;
+  { "name": 'Privacy', "href": '/privacy' },;
+  { "name": 'Terms', "href": '/terms' },;
+  { "name": 'Cookies', "href": '/cookies' },;
+];
+export default function SitemapPage() {;
+  return (
+    <main className="max-w-4xl mx-auto px-4 py-16">;
       <h1 className="text-3xl font-bold mb-6">Sitemap</h1>;
       <ul className="space-y-3">;
-        {routes && routes.map((r) => (<li key={r && r.href}>;
+        {routes && routes.map((r) => (;
+          <li key={r && r.href}>;
             <Link href={r && r.href} className="text-blue-600 "hover": underline">{r && r.name}</Link>;
           </li>;
         ))}
       </ul>;
     </main>;
-  )import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' }]; export default function SitemapPage() { return ( <main className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-3xl font-bold mb-6">Sitemap</h1> <ul className="space-y-3"> {routes.map((r) => ( <li key={r.href}> <Link href={r.href} className="text-blue-600 hover:underline">{r.name}</Link> </li> ))} </ul> </main> )}
-import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' }]; export default function SitemapPage() { return ( <main className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-3xl font-bold mb-6">Sitemap</h1> <ul className="space-y-3"> {routes && routes.map((r) => ( <li key={r && r.href}> <Link href={r && r.href} className="text-blue-600 hover:underline">{r && r.name}</Link> </li> ))} </ul> </main> )}
-ursor/automate-test-improve-and-merge-code-646c;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
-const routes = [{ "name": 'Home', "href": '/' },{ "name": 'Solutions', "href": '/solutions' },{ "name": 'Services', "href": '/services' },{ "name": 'Pricing', "href": '/pricing' },{ "name": 'About', "href": '/about' },{ "name": 'Careers', "href": '/careers' },{ "name": 'Blog', "href": '/blog' },{ "name": 'Contact', "href": '/contact' },{ "name": 'Docs', "href": '/docs' },{ "name": 'Privacy', "href": '/privacy' },{ "name": 'Terms', "href": '/terms' },{ "name": 'Cookies', "href": '/cookies' }
-  { "name": 'Cookies', "href": '/cookies' }
-  { "name": 'Cookies', "href": '/cookies' }
   );
 
-import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' }]; export default function SitemapPage() { return ( <main className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-3xl font-bold mb-6">Sitemap</h1> <ul className="space-y-3"> {routes.map((r) => ( <li key={r.href}> <Link href={r.href} className="text-blue-600 hover:underline">{r.name}</Link> </li> ))} </ul> </main> )}
-import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' }]; export default function SitemapPage() { return ( <main className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-3xl font-bold mb-6">Sitemap</h1> <ul className="space-y-3"> {routes && routes.map((r) => ( <li key={r && r.href}> <Link href={r && r.href} className="text-blue-600 hover:underline">{r && r.name}</Link> </li> ))} </ul> </main> )}
-
+import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' },]; export default function SitemapPage() { return ( <main className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-3xl font-bold mb-6">Sitemap</h1> <ul className="space-y-3"> {routes.map((r) => ( <li key={r.href}> <Link href={r.href} className="text-blue-600 hover:underline">{r.name}</Link> </li> ))} </ul> </main> )}
+import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' },]; export default function SitemapPage() { return ( <main className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-3xl font-bold mb-6">Sitemap</h1> <ul className="space-y-3"> {routes.map((r) => ( <li key={r.href}> <Link href={r.href} className="text-blue-600 hover:underline">{r.name}</Link> </li> ))} </ul> </main> )}
+import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' },]; export default function SitemapPage() { return ( <main className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-3xl font-bold mb-6">Sitemap</h1> <ul className="space-y-3"> {routes.map((r) => ( <li key={r.href}> <Link href={r.href} className="text-blue-600 hover:underline">{r.name}</Link> </li> ))} </ul> </main> )}
+import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' },]; export default function SitemapPage() { return ( <main className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-3xl font-bold mb-6">Sitemap</h1> <ul className="space-y-3"> {routes.map((r) => ( <li key={r.href}> <Link href={r.href} className="text-blue-600 hover:underline">{r.name}</Link> </li> ))} </ul> </main> )}
+import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' },]; export default function SitemapPage() { return ( <main className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-3xl font-bold mb-6">Sitemap</h1> <ul className="space-y-3"> {routes && routes.map((r) => ( <li key={r && r.href}> <Link href={r && r.href} className="text-blue-600 hover:underline">{r && r.name}</Link> </li> ))} </ul> </main> )}
+import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' },]; export default function SitemapPage() { return ( <main className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-3xl font-bold mb-6">Sitemap</h1> <ul className="space-y-3"> {routes && routes.map((r) => ( <li key={r && r.href}> <Link href={r && r.href} className="text-blue-600 hover:underline">{r && r.name}</Link> </li> ))} </ul> </main> )}
+import Link from 'next/link';
 const routes = [{ "name": 'Home', "href": '/' },
   { "name": 'Solutions', "href": '/solutions' },
   { "name": 'Services', "href": '/services' },
@@ -60,29 +79,41 @@ const routes = [{ "name": 'Home', "href": '/' },
   { "name": 'Docs', "href": '/docs' },
   { "name": 'Privacy', "href": '/privacy' },
   { "name": 'Terms', "href": '/terms' },
-  { "name": 'Cookies', "href": '/cookies' }
+  { "name": 'Cookies', "href": '/cookies' },
 ];
-export default function SitemapPage() {return (<main className="max-w-4xl mx-auto px-4 py-16">;
-      <h1 className="text-3xl font-bold mb-6">Sitemap</h1>;
-      <ul className="space-y-3">;
-        {routes.map((r) => (<li key={r.href}>;
-            <Link href={r.href} className="text-blue-600 "hover": underline">{r.name}</Link>;
-          </li>;
+export default function SitemapPage() {
+  return (
+    <main className="max-w-4xl mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold mb-6">Sitemap</h1>
+      <ul className="space-y-3">
+        {routes.map((r) => (
+          <li key={r.href}>
+            <Link href={r.href} className="text-blue-600 "hover": underline">{r.name}</Link>
+          </li>
         ))}
-      </ul>;
-    </main>;
-  )}class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }return this.props.children;
-  }
+      </ul>
+    </main>
+  );
 }
-const routes = [{ "name": 'Home', "href": '/' }{ "name": 'Solutions', "href": '/solutions' },{ "name": 'Services', "href": '/services' },{ "name": 'Pricing', "href": '/pricing' },{ "name": 'About', "href": '/about' },{ "name": 'Careers', "href": '/careers' },{ "name": 'Blog', "href": '/blog' },{ "name": 'Contact', "href": '/contact' },{ "name": 'Docs', "href": '/docs' },{ "name": 'Privacy', "href": '/privacy' },{ "name": 'Terms', "href": '/terms' },{ "name": 'Cookies', "href": '/cookies' }];
-export default function SitemapPage() {return (<main className="max-w-4xl mx-auto px-4 py-16">;
-      <h1 className="text-3xl font-bold mb-6">Sitemap</h1>;
-      <ul className="space-y-3">;
-        {routes && routes.map((r) => (<li key={r && r.href}>;
-            <Link href={r && r.href} className="text-blue-600 "hover": underline">{r && r.name}</Link>;
+import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' },]; export default function SitemapPage() { return ( <main className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-3xl font-bold mb-6">Sitemap</h1> <ul className="space-y-3"> {routes && routes.map((r) => ( <li key={r && r.href}> <Link href={r && r.href} className="text-blue-600 hover:underline">{r && r.name}</Link> </li> ))} </ul> </main> )}
+import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' },]; export default function SitemapPage() { return ( <main className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-3xl font-bold mb-6">Sitemap</h1> <ul className="space-y-3"> {routes && routes.map((r) => ( <li key={r && r.href}> <Link href={r && r.href} className="text-blue-600 hover:underline">{r && r.name}</Link> </li> ))} </ul> </main> )}
+    <main className="max-w-4xl mx-auto px-4 py-16">;"
+</main>"
+      <h1 className="text-3xl font-bold mb-6">Sitemap</h1>;""
+      <ul className="space-y-3">;"
+</ul>
+          <li key={r && r.href}>;
+</li>"
+            <Link href={r && r.href} className="text-blue-600 "hover": underline">{r && r.name};"
           </li>;
-        ))}
       </ul>;
-    </main>;
-  )ursor/automate-test-improve-and-merge-code-646c;
+    </main>;"
+import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' },]; export default function SitemapPage() { return ( <main className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-3xl font-bold mb-6">Sitemap</h1> <ul className="space-y-3"> {routes.map((r) => ( <li key={r.href}> <Link href={r.href} className="text-blue-600 hover:underline">{r.name} </li> ))} </ul> </main> )}""
+import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' },]; export default function SitemapPage() { return ( <main className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-3xl font-bold mb-6">Sitemap</h1> <ul className="space-y-3"> {routes && routes.map((r) => ( <li key={r && r.href}> <Link href={r && r.href} className="text-blue-600 hover:underline">{r && r.name} </li> ))} </ul> </main> )}""
+    <main className="max-w-4xl mx-auto px-4 py-16">"
+      <h1 className="text-3xl font-bold mb-6">Sitemap</h1>""
+      <ul className="space-y-3">"
+          <li key={r.href}>
+            <Link href={r.href} className="text-blue-600 "hover": underline">{r.name}"
+          </li>
+pr-12325

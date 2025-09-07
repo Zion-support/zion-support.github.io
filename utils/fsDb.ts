@@ -1,9 +1,9 @@
-import { promises as fs } from 'fs';
+
 import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 
-export function readJson<T>(filePath: string, defaultValue: T): T {
+
   try {
     const fullPath = path.join(DATA_DIR, filePath);
     const data = fs.readFileSync(fullPath, "utf8");
@@ -51,10 +51,9 @@ export async function writeJsonAsync<T>(
   }
 }
 
-// File system database utilities
-export const fs_db = {
+
   read: (path: string) => null,
+
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
-  delete: (path: string) => null
-};
+

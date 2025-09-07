@@ -40963,12 +40963,29 @@
     }
   ],
   "summary": {
+    "totalIssues": 5972,
+    "missingMeta": 5276,
+    "headingIssues": 544,
+    "imageIssues": 0,
+    "improvements": 2
+  },
+  "recommendations": [
+    "Add 2042 missing required meta tags",
+    "Fix 544 heading structure issues",
+    "Implement structured data (JSON-LD)",
+    "Add Open Graph tags for social sharing",
+    "Optimize page loading speed",
+    "Use semantic HTML elements",
+    "Implement breadcrumbs navigation"
+  ]
+}
 
     "overall": "poor",
     "totalIssues": 2383,
     "recommendations": []
   }
 }
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   "timestamp": "2025-09-07T00:10:53.613Z",
   "optimizations": [
     "Meta tags analysis completed",

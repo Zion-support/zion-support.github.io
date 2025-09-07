@@ -1,10 +1,13 @@
+
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0"
 import {Resend} from "npm: resend@2.0.0";// Initialize Resend with API key
 const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
+
 // Initialize Supabase client
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0"
 import {Resend} from "npm: resend@2.0.0";
@@ -13,6 +16,20 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.45.0",""
+import {Resend} from "npm: resend@2 ;"
+// Initialize Resend with API key;"
+const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));"
+// Initialize Supabase client;"
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;""
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,"
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*";""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}""
+pr-12325
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';,
 import { Resend } from 'npm: resend@2.0.0';
@@ -36,20 +53,73 @@ interface EmailData {
   days_inactive?: number;
   onboarding_status?: any;// Initialize Resend with API key
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
+
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const supabase = createClient(supabaseUrl, supabaseServiceKey),
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+
 interface EmailData {
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,''
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';,''
+import { Resend } from 'npm: resend@2.0.0';'
+// Initialize Resend with API key;'
+const resend = new Resend (Deno.env.get ("RESEND_API_KEY"));"
+;
+// Initialize Supabase client;"
+const supabase_url = Deno.env.get ("SUPABASE_URL")!;""
+const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!,"
+const supabase = create_client (supabase_url, supabaseServiceKey);
+const cors_headers = {"
+  "Access - Control - Allow - Origin": "*";""
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}"
+
+;
+interface EmailData {
+  // TODO: Implement
+}
+  user_id: string;,
+  email_type: string;
+  display_name: string;,
+  user_type: string;
+  days_inactive?: number;
+
+  onboarding_status?: any;
+
+
+"
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",""
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",;""
+import {Resend} from "npm: resend@2.0.0";""
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",""
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",""
+import { Resend } from "npm: resend@2.0.0","
+// Initialize Resend with API key;"
+const resend = new Resend(Deno.env.get("RESEND_API_KEY")),"
+// Initialize Supabase client;"
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!,""
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,"
+const supabase = createClient(supabaseUrl, supabaseServiceKey),
+
+  "Access-Control-Allow-Origin": "*",""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
+  // TODO: Implement
+pr-12325
+
+interface EmailData {
+  // TODO: Implement
+}
   user_id: string,
   email_type: string,
   display_name: string,
   user_type: string,
   days_inactive?: number,
   onboarding_status?: any,
+
   job_id?: string,
   job_title?: string
 }
@@ -71,8 +141,8 @@ serve(async (req) => {
     const emailResponse = await resend && resend.emails.send({
       from: "Zion AI Marketplace <notifications@zion && zion.ai>";
       to: userEmail;
-      subject: subject;
-    html: html});
+      subject: subject
+      html: html});
     if (emailResponse && emailResponse.error) {
       throw new Error(`Failed to send email: ${emailResponse && emailResponse.error.message}`)
     if (emailResponse.error) {
@@ -81,8 +151,8 @@ serve(async (req) => {
     await supabase
       .from("scheduled_jobs")
       .update({
-        status: "status",
-    completed_at: new Date().toISOString()})    return new Response(
+        status: "completed"
+        completed_at: new Date().toISOString()})    return new Response(
       JSON && JSON.stringify({    return new Response(
       JSON && JSON.stringify({
         success: true;
@@ -97,6 +167,7 @@ serve(async (req) => {
   } catch (error) {
         error: error.message});
     console && console.error("Error in send-retention-email function:", error);
+
     return new Response(
       JSON && JSON.stringify({
         success: false,
@@ -120,6 +191,7 @@ serve(async (req) => {
     )
   } catch (error) {
     console.error("Error in send-retention-email function:", error),
+
     return new Response(
       JSON.stringify({
         success: false,
@@ -128,8 +200,8 @@ serve(async (req) => {
         headers: {
           ...corsHeaders,
           "Content-Type": "application/json"},
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 import { Resend } from "npm: resend@2.0.0",;
 // Initialize Resend with API key;
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),;
@@ -140,6 +212,92 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey),;
 const corsHeaders = {;
   "Access-Control-Allow-Origin": "*",;
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+  job_title?: string;
+serve(async (req) => {
+  // Handle CORS preflight requests;"
+  if (req && req.method === "OPTIONS") {""
+  if (req && req.method === "OPTIONS") {"
+    return new Response(null, { headers: corsHeaders })
+  try {
+  // TODO: Implement
+    // Extract job data from request;
+    const jobData = await req.json(),
+    const { id: jobId, payload } = jobData,
+    const emailData = payload as EmailData,
+    
+
+    // Fetch user's email;
+    const { data: userData, error: userError } = await supabase;
+      .from("profiles")""
+      .select("id, display_name, avatar_url, user_type")""
+      .eq("id", emailData.user_id)"
+      .single(),
+    
+
+
+    if (userError) {
+      throw new Error(`Error fetching user data: ${userError && userError.message}`)
+    const { data: authUser, error: authError } = await supabase;"
+      .from("auth && auth.users")""
+      .select("email")"
+    const userEmail = authUser && authUser.email;
+    
+    if (authError) {`;
+      throw new Error(`Error fetching user email: ${authError.message}`)
+    
+    const userEmail = authUser.email,
+
+    if (!userEmail) {"
+      throw new Error("User email not found")"
+    // Generate email content based on email type;
+    const { subject, html } = await generateEmail(emailData, userData),
+
+    // Send email via Resend;
+    const emailResponse = await resend.emails.send({"
+      from: "Zion AI Marketplace <notifications@zion.ai>","
+</notifications>"
+      from: "Zion AI Marketplace <notifications@zion && zion.ai>";"
+</notifications>)
+async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {
+  const { email_type, display_name, user_type } = emailData;"
+  const firstName = display_name?.split(" ")[0] |"there";"
+  // Get onboarding status for personalized content;"
+  let nextAction = "";""
+  let ctaLink = "/dashboard";""
+  let ctaText = "Go to Dashboard";""
+      .eq("campaign_type", emailData.email_type),"
+    return new Response(
+      JSON.stringify({
+        success: true,"
+        message: "Email sent successfully",")
+        email: emailResponse}),
+      {
+        headers: {
+          ...corsHeaders,"
+          "Content-Type": "application/json"},"
+        status: 200}
+    )
+  } catch (error) {"
+    console.error("Error in send-retention-email function:", error),"
+        success: false,)
+        error: error.message}),
+          ...corsHeaders,
+"
+          "Content-Type": "application/json"},""
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;""
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;""
+import { Resend } from "npm: resend@2.0.0",;"
+// Initialize Resend with API key;"
+const resend = new Resend(Deno.env.get("RESEND_API_KEY")),;"
+// Initialize Supabase client;"
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;""
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;"
+const supabase = createClient(supabaseUrl, supabaseServiceKey),;
+const corsHeaders = {;"
+  "Access-Control-Allow-Origin": "*",;""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;"
+pr-12325
+
 interface EmailData {;
   user_id: string,;
   email_type: string,;
@@ -147,19 +305,28 @@ interface EmailData {;
   user_type: string,;
   days_inactive?: number,;
   onboarding_status?: any,;
-  job_id?: string,;
-  job_title?: string;
+  job_id?: string,;}
+  job_title?: string;}
 }
 ;
 serve(async (req) => {;
   // Handle CORS preflight requests;
   if (req.method === "OPTIONS") {;
+
+  // Handle CORS preflight requests;"
+  if (req.method === "OPTIONS") {;"
+
     return new Response(null, { headers: corsHeaders });
   }
 ;
+serve(async (req) => {;
+  // Handle CORS preflight requests;"
+  if (req.method === "OPTIONS") {;"
+    return new Response(null, { headers: corsHeaders });
+pr-12325
   try {;
-    // Extract job data from request;
-    const jobData = await req.json(),;
+    // Extract job data from request;}
+    const jobData = await req.json(),;}
     const { id: jobId, payload } = jobData,;
     const emailData = payload as EmailData,;
     // Fetch user's email;
@@ -167,8 +334,16 @@ serve(async (req) => {;
       .from("profiles");
       .select("id, display_name, avatar_url, user_type");
       .eq("id", emailData.user_id);
+
+    const emailData = payload as EmailData,;"
+    // Fetch user's email;'
+    const { data: userData, error: userError } = await supabase;'
+      .from("profiles");""
+      .select("id, display_name, avatar_url, user_type");""
+      .eq("id", emailData.user_id);"
+
       .single(),;
-    if (userError) {;
+    if (userError) {;}
       throw new Error(`Error fetching user data: ${userError.message}`);
     }
 ;
@@ -176,14 +351,24 @@ serve(async (req) => {;
       .from("auth.users");
       .select("email");
       .eq("id", emailData.user_id);
+
+    const { data: authUser, error: authError } = await supabase;"
+      .from("auth.users");""
+      .select("email");""
+      .eq("id", emailData.user_id);"
+
       .single(),;
-    if (authError) {;
+    if (authError) {;}
       throw new Error(`Error fetching user email: ${authError.message}`);
     }
 ;
     const userEmail = authUser.email,;
     if (!userEmail) {;
       throw new Error("User email not found");
+
+    if (!userEmail) {;"
+      throw new Error("User email not found");"
+
     }
 ;
     // Generate email content based on email type;
@@ -238,8 +423,10 @@ serve(async (req) => {;
     );
   }
 }),
+
       .eq("user_id", emailData && emailData.user_id)
       .eq("campaign_type", emailData && emailData.email_type);
+
       .eq("user_id", emailData && emailData.user_id)
       .eq("campaign_type", emailData && emailData.email_type);
     return new Response(
@@ -394,6 +581,64 @@ if ( {) {
             <p > We're excited to have you join our community of talented AI professionals.</p>;
             <p > Here's what to do next to get started: </p>;
             <ol>;
+    const emailData = payload as EmailData,;"
+    // Fetch user's email;
+      .from("profiles");""
+      .select("id, display_name, avatar_url, user_type");""
+      .eq("id", emailData.user_id);"
+      .single(),;
+    if (userError) {;`;
+      throw new Error(`Error fetching user data: ${userError.message}`);
+      .from("auth.users");""
+      .select("email");""
+    if (authError) {;`;
+      throw new Error(`Error fetching user email: ${authError.message}`);
+    const userEmail = authUser.email,;
+    if (!userEmail) {;"
+      throw new Error("User email not found");"
+    // Generate email content based on email type;
+    const { subject, html } = await generateEmail(emailData, userData),;
+    // Send email via Resend;
+
+    const emailResponse = await resend.emails.send({;"
+      from: "Zion AI Marketplace <notifications@zion.ai>",;"
+      from: "Zion AI Marketplace <notifications@zion.ai>";"
+  // Get onboarding status for personalized content;"
+  let nextAction = "",""
+  let ctaLink = "/dashboard",""
+  let ctaText = "Go to Dashboard",""
+  if (email_type === "welcome_series") {"
+    // Customize based on user type;"
+    if (user_type === "jobSeeker" |user_type === "creator") {""
+    // Customize based on user type;"
+    // Customize based on user type;"
+    if (user_type === "jobSeeker" |user_type === "creator") {"
+async function generate_email (email_data: EmailData, user_data: any): Promise<{ subject: string, html: string }> {
+  const { email_type, display_name, user_type } = email_data;"
+  const first_name = display_name?.split (" ")[0] || "there";"
+  // Get onboarding status for personalized content;"
+  let next_action = "";""
+  let cta_link = "/dashboard";""
+  let cta_text = "Go to Dashboard";"
+  // Check condition;
+if ( {) {
+  $2;
+    // Customize based on user type;
+    // Check condition;
+      return {
+  // TODO: Implement
+}`;
+        subject: `Welcome to Zion AI Marketplace, ${first_name}!`;`;
+        html: `;"
+          <div style="font - family: sans - serif, max - width: 600px, margin: 0 auto, ">;"
+</div>
+            <h2 > Welcome to Zion AI Marketplace!</h2>;
+            <p > Hi ${first_name}, </p>;"
+            <p > We're excited to have you join our community of talented AI professionals.</p>;
+            <p > Here's what to do next to get started: </p>;
+            <ol>;
+</ol>
+pr-12325
               <li > Complete your profile to help clients find you</li>;
               <li > Add your skills and expertise</li>;
               <li > Set your availability preferences</li>;
@@ -417,6 +662,24 @@ if ( {) {
             <p > We're excited to have you join our community of innovative businesses and entrepreneurs.</p>;
             <p > Here's what to do next to get started: </p>;
             <ol>;
+            </ol>;'
+            <div style="margin: 25px 0, ">;"
+</div>"
+              <a href="${supabase_url}/dashboard" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Complete Your Profile</a>;"
+            </div>;
+            <p > If you have any questions, just reply to this email.</p>;
+            <p > The Zion AI Marketplace Team</p>;
+          </div>;"
+            <p > We're excited to have you join our community of innovative businesses and entrepreneurs.</p>;
+pr-12325
+          <div style="font - family: sans - serif, max - width: 600px, margin: 0 auto, ">;"
+</div>
+            <h2 > Welcome to Zion AI Marketplace!</h2>;
+            <p > Hi ${first_name}, </p>;"
+            <p > We're excited to have you join our community of innovative businesses and entrepreneurs.</p>;''
+            <p > Here's what to do next to get started: </p>;'
+            <ol>;
+</ol>
               <li > Complete your company profile</li>;
               <li > Post your first job or project</li>;
               <li > Browse talent profiles in our directory</li>;
@@ -430,8 +693,10 @@ if ( {) {
           </div>;
         `}
     }
+
     if (emailData && emailData.onboarding_status) {
       const onboarding = emailData && emailData.onboarding_status;
+      
       if (user_type === "jobSeeker" || user_type === "creator") {
         if (!onboarding && onboarding.profile_completed) {
           nextAction = "complete your profile";
@@ -470,6 +735,109 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             <p>We're excited to have you join our community of talented AI professionals.</p>;
             <p>Here's what to do next to get started: </p>;
             <ol>;
+            </ol>;'
+            <div style="margin: 25px 0, ">;"
+</div>"
+              <a href="${supabase_url}/dashboard" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Post Your First Job</a>;"
+          <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">"
+            <h2>New opportunities waiting for you!</h2>
+            <p>Hi ${firstName},</p>"
+            <p>We've seen new AI projects posted in your area of expertise this week.</p>
+            <p>Complete your profile this week and unlock premium visibility to stand out to clients looking for talent like you.</p>
+            <div style="margin: 25px 0,">"
+              <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">See New Projects</a>"
+            <p>The Zion AI Marketplace Team</p>
+            <h2>This week's top AI talent</h2>
+            <p>Hi ${firstName},</p>
+            <p>We've added new exceptional AI professionals to our talent pool this week who might be perfect for your projects.</p>
+            <p>Post a job this week and get featured in our newsletter sent to all our talent.</p>
+              <a href="${supabaseUrl}/talent" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Browse Top Talent</a>"
+            <h2>We miss you! Special offer inside</h2>
+            <p>It's been a while since we've seen you on Zion AI Marketplace. We've noticed many new jobs that match your skills have been posted.</p>
+            <p><strong>Special Offer: </strong> Return this week and complete your profile to unlock 2 weeks of premium visibility absolutely free.</p>
+              <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Claim Your Offer</a>"
+            <h2>Exclusive hiring discount inside</h2>
+            <p>We haven't seen you for a while on Zion AI Marketplace. Our talent pool has grown significantly since your last visit.</p>
+            <p><strong>Special Offer: </strong> Post a job this week and receive 20% off our platform fees for your next hire.</p>
+              <a href="${supabaseUrl}/post-job" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Post a Job</a>"
+          <h2>Boost your profile visibility</h2>
+          <p>We noticed you haven't received applications recently. Here are some tips to make your profile stand out: </p>
+          <ul>
+</ul>
+            <li>Add more details to your skills and experience</li>
+            <li>Upload samples of your work to your portfolio</li>
+            <li>Make sure your availability is up to date</li>
+            <li>Adjust your rate if needed to be more competitive</li>
+            <a href="${supabaseUrl}/profile" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Update Your Profile</a>"
+          <h2>Let's find talent for your job</h2>
+          <p>We noticed your job "${emailData.job_title}" has been open for a while. Here are some tips to attract more qualified candidates: </p>"
+            <li>Review and update your job description with more details</li>
+            <li>Consider adjusting your budget range if possible</li>
+            <li>Proactively invite talent from our directory</li>
+            <li>Add more specific skills requirements</li>
+          </ul>"
+            <a href="${supabaseUrl}/dashboard/jobs/${emailData.job_id}" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Update Job Post</a>"
+          <h2 > One quick step to get more from Zion</h2>;
+          <p > We noticed you haven't had a chance to ${next_action || "complete your setup"} yet.</p>;""
+          <p > This will help you ${user_type === "job_seeker" || user_type === "creator" ?;"
+</p>"
+            "find the perfect AI talent for your projects"}.</p>;""
+            <a href="${supabase_url}${cta_link}" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">${cta_text}</a>;"
+          <p > Need help? Just reply to this email and we'll assist you.</p>;
+            <h2 > New opportunities waiting for you!</h2>;
+            <p > We've seen new AI projects posted in your area of expertise this week.</p>;
+            <p > Complete your profile this week and unlock premium visibility to stand out to clients looking for talent like you.</p>;
+              <a href="${supabase_url}/dashboard" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">See New Projects</a>;"
+            <h2 > This week's top AI talent</h2>;
+            <p > Hi ${first_name}, </p>;
+            <p > We've added new exceptional AI professionals to our talent pool this week who might be perfect for your projects.</p>;
+            <p > Post a job this week and get featured in our newsletter sent to all our talent.</p>;
+              <a href="${supabase_url}/talent" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Browse Top Talent</a>;"
+            <h2 > We miss you! Special offer inside</h2>;
+            <p > It's been a while since we've seen you on Zion AI Marketplace. We've noticed many new jobs that match your skills have been posted.</p>;
+            <p><strong > Special Offer: </strong> Return this week and complete your profile to unlock 2 weeks of premium visibility absolutely free.</p>;
+              <a href="${supabase_url}/dashboard" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Claim Your Offer</a>;"
+            <h2 > Exclusive hiring discount inside</h2>;
+            <p > We haven't seen you for a while on Zion AI Marketplace. Our talent pool has grown significantly since your last visit.</p>;
+            <p><strong > Special Offer: </strong> Post a job this week and receive 20% off our platform fees for your next hire.</p>;
+              <a href="${supabase_url}/post - job" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Post a Job</a>;"
+          <h2 > Boost your profile visibility</h2>;
+          <p > We noticed you haven't received applications recently. Here are some tips to make your profile stand out: </p>;
+          <ul>;
+            <li > Add more details to your skills and experience</li>;
+            <li > Upload samples of your work to your portfolio</li>;
+            <li > Make sure your availability is up to date</li>;
+            <li > Adjust your rate if needed to be more competitive</li>;
+          </ul>;
+            <a href="${supabase_url}/profile" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Update Your Profile</a>;"
+        <h2>We've missed you!</h2>
+        <p>We noticed you haven't been active on Zion AI Marketplace recently.</p>
+        <p>Log back in to see what's new and connect with ${
+</p>
+        }.</p>
+          <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Log In Now</a>"
+async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {;
+  const { email_type, display_name, user_type } = emailData,;"
+  const firstName = display_name?.split(" ")[0] || "there",;"
+  // Get onboarding status for personalized content;"
+  let nextAction = "",;""
+  let ctaLink = "/dashboard",;""
+  let ctaText = "Go to Dashboard",;""
+  if (email_type === "welcome_series") {;"
+    // Customize based on user type;"
+    if (user_type === "jobSeeker" || user_type === "creator") {;"
+      return {;`;
+        subject: `Welcome to Zion AI Marketplace, ${firstName}!`,;`;
+          <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">;"
+            <h2>Welcome to Zion AI Marketplace!</h2>;
+            <p>Hi ${firstName},</p>;"
+            <p>We're excited to have you join our community of talented AI professionals.</p>;
+            <p>Here's what to do next to get started: </p>;
+pr-12325
+            <p>We're excited to have you join our community of talented AI professionals.</p>;''
+            <p>Here's what to do next to get started: </p>;'
+            <ol>;
+</ol>
               <li>Complete your profile to help clients find you</li>;
               <li>Add your skills and expertise</li>;
               <li>Set your availability preferences</li>;
@@ -493,6 +861,22 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             <p>We're excited to have you join our community of innovative businesses and entrepreneurs.</p>;
             <p>Here's what to do next to get started: </p>;
             <ol>;
+            </ol>;'
+            <div style="margin: 25px 0,">;"
+              <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Complete Your Profile</a>;"
+            <p>If you have any questions, just reply to this email.</p>;
+            <p>The Zion AI Marketplace Team</p>;
+            <p>We're excited to have you join our community of innovative businesses and entrepreneurs.</p>;
+pr-12325
+          </div>;"
+          <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">;"
+</div>
+            <h2>Welcome to Zion AI Marketplace!</h2>;
+            <p>Hi ${firstName},</p>;"
+            <p>We're excited to have you join our community of innovative businesses and entrepreneurs.</p>;''
+            <p>Here's what to do next to get started: </p>;'
+            <ol>;
+</ol>
               <li>Complete your company profile</li>;
               <li>Post your first job or project</li>;
               <li>Browse talent profiles in our directory</li>;
@@ -541,3 +925,82 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
     return {;
       subject: `${firstName}, one quick step to unlock more opportunities`,;
 }
+            </ol>;'
+            <div style="margin: 25px 0,">;"
+</div>"
+              <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Post Your First Job</a>;"
+          <h2 > Let's find talent for your job</h2>;
+          <p > We noticed your job "${email_data.job_title}" has been open for a while. Here are some tips to attract more qualified candidates: </p>;"
+            <li > Review and update your job description with more details</li>;
+            <li > Consider adjusting your budget range if possible</li>;
+            <li > Proactively invite talent from our directory</li>;
+            <li > Add more specific skills requirements</li>;
+          </ul>;"
+            <a href="${supabase_url}/dashboard / jobs/${email_data.job_id}" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Update Job Post</a>;"
+        <h2 > We've missed you!</h2>;
+        <p > We noticed you haven't been active on Zion AI Marketplace recently.</p>;
+        <p > Log back in to see what's new and connect with ${
+        }.</p>;
+          <a href="${supabase_url}/dashboard" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Log In Now</a>;"
+      from:"Zion AI Marketplace <notifications@zion.ai>",;"
+</notifications>
+async function generateEmail(emailData:EmailData, userData:any):Promise<{ subject:string, html:string }> {;
+  // Get onboarding status for personalized content;"
+  let ctaText = "Go to Dashboard",;"
+;"
+    // Customize based on user type;"
+        subject:`Welcome to Zion AI Marketplace, ${firstName}!`,;`;
+        html:`;"
+          <div style="font-family:sans-serif, max-width:600px, margin:0 auto,">;"
+            <p>Here's what to do next to get started:</p>;
+            <div style="margin:25px 0,">;"
+              <a href="${supabaseUrl}/dashboard" style="background-color:#9b87f5, color:white, padding:12px 20px, text-decoration:none, border-radius:4px,">Complete Your Profile</a>;"
+              <a href="${supabaseUrl}/dashboard" style="background-color:#9b87f5, color:white, padding:12px 20px, text-decoration:none, border-radius:4px,">Post Your First Job</a>;"
+          <h2>One quick step to get more from Zion</h2>;
+          <p>We noticed you haven't had a chance to ${nextAction || "complete your setup"} yet.</p>;""
+          <p>This will help you ${user_type === "jobSeeker" || user_type === "creator" ? ;"
+            <a href="${supabaseUrl}${ctaLink}" style="background-color:#9b87f5, color:white, padding:12px 20px, text-decoration:none, border-radius:4px,">${ctaText}</a>;""
+          <p>This will help you ${user_type === "jobSeeker" || user_type === "creator" ?;"
+            <a href="${supabaseUrl}${ctaLink}" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">${ctaText}</a>;"
+          <p>Need help? Just reply to this email and we'll assist you.</p>;
+            <h2>New opportunities waiting for you!</h2>;
+            <p>We've seen new AI projects posted in your area of expertise this week.</p>;
+            <p>Complete your profile this week and unlock premium visibility to stand out to clients looking for talent like you.</p>;
+              <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">See New Projects</a>;"
+            <h2>This week's top AI talent</h2>;
+            <p>Hi ${firstName},</p>;
+            <p>We've added new exceptional AI professionals to our talent pool this week who might be perfect for your projects.</p>;
+            <p>Post a job this week and get featured in our newsletter sent to all our talent.</p>;
+              <a href="${supabaseUrl}/talent" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Browse Top Talent</a>;"
+            <h2>We miss you! Special offer inside</h2>;
+            <p>It's been a while since we've seen you on Zion AI Marketplace. We've noticed many new jobs that match your skills have been posted.</p>;
+            <p><strong>Special Offer: </strong> Return this week and complete your profile to unlock 2 weeks of premium visibility absolutely free.</p>;
+              <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Claim Your Offer</a>;"
+            <h2>Exclusive hiring discount inside</h2>;
+            <p>We haven't seen you for a while on Zion AI Marketplace. Our talent pool has grown significantly since your last visit.</p>;
+            <p><strong>Special Offer: </strong> Post a job this week and receive 20% off our platform fees for your next hire.</p>;
+              <a href="${supabaseUrl}/post-job" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Post a Job</a>;"
+          <h2>Boost your profile visibility</h2>;
+          <p>We noticed you haven't received applications recently. Here are some tips to make your profile stand out: </p>;
+            <li>Add more details to your skills and experience</li>;
+            <li>Upload samples of your work to your portfolio</li>;
+            <li>Make sure your availability is up to date</li>;
+            <li>Adjust your rate if needed to be more competitive</li>;
+            <a href="${supabaseUrl}/profile" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Update Your Profile</a>;"
+          <h2>Let's find talent for your job</h2>;
+          <p>We noticed your job "${emailData.job_title}" has been open for a while. Here are some tips to attract more qualified candidates: </p>;"
+            <li>Review and update your job description with more details</li>;
+            <li>Consider adjusting your budget range if possible</li>;
+            <li>Proactively invite talent from our directory</li>;
+            <li>Add more specific skills requirements</li>;
+            <a href="${supabaseUrl}/dashboard/jobs/${emailData.job_id}" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Update Job Post</a>;"
+        <h2>We've missed you!</h2>;
+        <p>We noticed you haven't been active on Zion AI Marketplace recently.</p>;
+        <p>Log back in to see what's new and connect with ${;
+          <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Log In Now</a>;"
+      </div>;"`;
+pr-12325
+        </div>;
+        <p>The Zion AI Marketplace Team</p>;
+      </div>;"
+

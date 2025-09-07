@@ -1,3 +1,5 @@
+
+
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -46,21 +48,65 @@ import {Sparkles} from "lucide-react";
           onChange={(e) => setTargetAudience(e.target.value)}
           placeholder="e.g. Developers, Marketers, Startups"
           className="bg-zion-blue border border-zion-blue-light text-white"
+
       <Button 
       <Button
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
       <Button 
-import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Sparkles } from "lucide-react",;    category?: string;
     keyFeatures?: string;
+
+
+
+interface AIListingFormProps {
+  // TODO: Implement
+}
+  onSubmit: (formData: {,
+  title: string;
+    category: string;,
+  keyFeatures: string;
+    targetAudience: string;
+import React, { useState } from "react";""
+import {useToast} from "@/hooks/use-toast";""
+import {Button} from "@/components/ui/button";""
+import {Input} from "@/components/ui/input";""
+import {Textarea} from "@/components/ui/textarea";""
+import {Sparkles} from "lucide-react";""
+import React, { useState } from "react",""
+import { useToast } from "@/hooks/use-toast",""
+import { Button } from "@/components/ui/button",""
+import { Input } from "@/components/ui/input",""
+import { Textarea } from "@/components/ui/textarea";""
+import { Sparkles } from "lucide-react";""
+import { Textarea } from "@/components/ui/textarea",""
+import { Sparkles } from "lucide-react","
+interface AIListingFormProps {
+  // TODO: Implement
+}
+  onSubmit: (formData: {,
+  title: string;
+    category: string;,
+  keyFeatures: string;
+    targetAudience: string;)
+  }) => void;
+  isLoading: boolean;
+  }) => void,
+  isLoading: boolean,
+
+  initialValues?: {
+    title?: string,
+    category?: string,
+    keyFeatures?: string,
     targetAudience?: string;
   }
 }
+
 export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
   const { toast } = useToast();          onChange={(e) => setKeyFeatures(e && e.target.value)}
           placeholder="Briefly describe the main features or benefits";
@@ -76,6 +122,7 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
           placeholder="e && e.g. Developers, Marketers, Startups";
           className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
+
         />;
       </div>;
       <Button;        <Input
@@ -98,6 +145,7 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
             Generate Optimized Content;
           </>;
         )}
+
       </Button>;
     </div>;
   );
@@ -133,3 +181,159 @@ function AIListingForm() {
   const [key_features, setKeyFeatures] = useState (initial_values.key_features || "");
   const [target_audience, setTargetAudience] = useState (initial_values.target_audience || "");
 ;
+
+
+interface AIListingFormProps {
+  // TODO: Implement
+}
+  onSubmit: (formData: {,
+  title: string;
+    category: string;,
+  keyFeatures: string;
+    targetAudience: string;
+import React, { useState } from "react";""
+import {useToast} from "@/hooks/use-toast";""
+import {Button} from "@/components/ui/button";""
+import {Input} from "@/components/ui/input";""
+import {Textarea} from "@/components/ui/textarea";""
+import {Sparkles} from "lucide-react";""
+import React, { useState } from "react",""
+import { useToast } from "@/hooks/use-toast",""
+import { Button } from "@/components/ui/button",""
+import { Input } from "@/components/ui/input",""
+import { Textarea } from "@/components/ui/textarea";""
+import { Sparkles } from "lucide-react";""
+import { Textarea } from "@/components/ui/textarea",""
+import { Sparkles } from "lucide-react","
+  // TODO: Implement
+    targetAudience: string;)
+  }) => void;
+  isLoading: boolean;
+  }) => void,
+  isLoading: boolean,
+
+  initialValues?: {
+    title?: string,
+    category?: string,
+    keyFeatures?: string,
+    targetAudience?: string;
+
+
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
+
+  const handleSubmit = () => {
+    if (!title |!category) {
+      toast({"
+        title: "Missing required fields"","
+  description: "Please provide at least a title and category."""
+        variant: "destructive"")
+      }),
+      return;
+    onSubmit({
+      title,
+      category,
+      keyFeatures,
+      targetAudience;)
+    })
+
+  },
+
+
+  return ("
+    <div className="space-y-4">"
+</div>"
+      <div className="space-y-2">"
+        <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>"
+        <Input;"
+          id="title""
+          value={title})
+          onChange={(e) => setTitle(e.target.value)}
+
+        <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>"
+          id="category""
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+
+        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>"
+        <Textarea;"
+          id="keyFeatures""
+          value={keyFeatures}
+          onChange={(e) => setKeyFeatures(e.target.value)}
+
+        <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>"
+          id="targetAudience""
+          value={targetAudience}
+          onChange={(e) => setTargetAudience(e.target.value)}
+
+      <Button;
+        onClick={handleSubmit}
+        disabled={isLoading |!title |!category}
+      <Button;"
+import React, { useState } from "react",;""
+import { useToast } from "@/hooks/use-toast",;""
+import { Button } from "@/components/ui/button",;""
+import { Input } from "@/components/ui/input",;""
+import { Textarea } from "@/components/ui/textarea",;""
+import { Sparkles } from "lucide-react",;"
+interface AIListingFormProps {;
+  onSubmit: (formData: {;,
+  title: string,;
+    category: string,;
+    keyFeatures: string,;
+"
+    <div className="space-y-4">;"
+      <div className="space-y-2">;"
+        <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;"
+          value={title}
+          onChange={(e) => setTitle(e && e.target.value)}
+
+      </div>;"
+        <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;"
+          id="category";"
+
+        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;"
+          id="keyFeatures";"
+
+        <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;"
+          id="targetAudience";"
+
+          onChange={(e) => setCategory(e && e.target.value)}
+
+          onChange={(e) => setKeyFeatures(e && e.target.value)}
+
+          onChange={(e) => setTargetAudience(e && e.target.value)}
+
+      </div>;
+
+
+        disabled={isLoading |!title |!category}"
+        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2""
+      >
+
+          <>Generating Optimized Content...</>
+        ) : (
+          <>"
+            <Sparkles className="h-4 w-4 mr-2" />"
+
+          </>)
+        )}
+
+        />;
+        disabled={isLoading || !title || !category}"
+        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2">;"
+
+          <>Generating Optimized Content...</>;
+        ) : (;
+          <>;"
+            <Sparkles className="h-4 w-4 mr-2" />;"
+
+          </>;)
+
+
+      ;
+pr-12325
+        )}
+      </Button>;
+
+    </div>;"
+

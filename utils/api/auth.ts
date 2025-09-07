@@ -1,6 +1,6 @@
 export interface User {
+interface User {
   id: string;
-  email: string;
   role: 'client' | 'talent' | 'admin';
   name?: string;
 }
@@ -10,6 +10,8 @@ export interface AuthContext {
   login: (email: string, password: string) => Promise<User | null>;
   logout: () => void;
   register: (email: string, password: string, role: User['role']) => Promise<User | null>;
+  email: string;
+  name: string;
 }
 
 export function validateUser(userId: string, role: string): User | null {
@@ -18,26 +20,46 @@ export function validateUser(userId: string, role: string): User | null {
   
   return {
     id: userId,
+    role: role as 'client' | 'talent' | 'admin',
     email: '',
-    role: role as User['role']
+    name: ''
   };
 }
+import { NextApiRequest, NextApiResponse } from "next";
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+ursor/fix-website-loading-errors-and-merge-6662
 
 
+
+import { NextApiRequest, NextApiResponse } from 'next';
+main
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
     return null;
   }
-  
-  // Mock user for testing
-  return {
-    id: '1',
-    email: 'test@example.com',
-    role: 'client'
-  };
+
+}
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+origin/cursor/automate-test-improve-and-merge-code-2533
+  // TODO: Implement
+}
+  id: string;,
+  email: string;
+  role: 'client' | 'talent' | 'admin';
+  name?: string;
+
+  // TODO: Implement
+  user: User | null;,
+  login: (email: string, password: string) => Promise<User | null>;
+
+  register: (email: string, password: string, role: User['role']) => Promise<User | null>;
+pr-12325
 }

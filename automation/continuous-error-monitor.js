@@ -1,9 +1,8 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 /**
- * Continuous Error Monitor Daemon
+ * Continuous Error Monitor Daemon;
  * 
- * This script runs autonomously in the background, continuously monitoring
+ * This script runs autonomously in the background, continuously monitoring;
  * the Zion application for console errors and automatically generating reports.
  */
 
@@ -18,33 +17,33 @@ class ContinuousErrorMonitor {
     this.monitorInterval = null;
     this.captureInterval = null;
     this.lastReportTime = null;
-    this.reportInterval = 5 * 60 * 1000; // 5 minutes
-    this.captureIntervalMs = 10 * 60 * 1000; // 10 minutes
-    this.logFile = path.join(__dirname, '..', 'reports', 'monitor.log');
+    this.reportInterval = 5 * 60 * 1000; // 5 minutes;
+this.captureIntervalMs = 10 * 60 * 1000; // 10 minutes;
+this.logFile = path.join(__dirname, '..', 'reports', 'monitor.log');
     this.pidFile = path.join(__dirname, '..', 'reports', 'monitor.pid');
     this.configFile = path.join(__dirname, 'zion-config.json');
     this.config = this.loadConfig();
     
-    // Ensure reports directory exists
-    const reportsDir = path.join(__dirname, '..', 'reports');
-    if (!fs.existsSync(reportsDir)) {
+    // Ensure reports directory exists;
+const reportsDir = path.join(__dirname, '..', 'reports');}
+    if (!fs.existsSync(reportsDir)) {}
       fs.mkdirSync(reportsDir, { recursive: true });
     }
   }
 
   loadConfig() {
     try {
-      if (fs.existsSync(this.configFile)) {
-        return JSON.parse(fs.readFileSync(this.configFile, 'utf8'));
+      if (fs.existsSync(this.configFile)) {}
+        return JSON.parse(fs.readFileSync(this.configFile, 'utf8'));}
       }
-    } catch (error) {
-      this.log('Failed to load config:', error.message);
+    } catch (error) {}
+      this.log('Failed to load config:', error.message);}
     }
     
-    // Default configuration
-    return {
+    // Default configuration;
+return {
       project: 'Zion Tech Group Website',
-      version: '1.0.0',
+  version: '1.0.0',
       urls: {
         localhost: [
           'http://localhost:3000',
@@ -56,88 +55,88 @@ class ContinuousErrorMonitor {
           'https://ziontechgroup.com',
           'https://ziontechgroup.com/services',
           'https://ziontechgroup.com/about',
-          'https://ziontechgroup.com/contact'
-        ]
+          'https://ziontechgroup.com/contact'}
+        ]}
       },
       errorCapture: {
         maxErrors: 200,
         autoReport: true,
-        reportInterval: 300000, // 5 minutes
-        captureInterval: 600000, // 10 minutes
-        captureConsole: true,
+        reportInterval: 300000, // 5 minutes;
+captureInterval: 600000, // 10 minutes;
+captureConsole: true,
         captureNetwork: true,
-        captureUnhandled: true,
-        captureResource: true
+        captureUnhandled: true,}
+        captureResource: true}
       },
       monitoring: {
         enabled: true,
         daemonMode: true,
         logLevel: 'info',
-        maxLogSize: 10 * 1024 * 1024, // 10MB
-        rotateLogs: true
+  maxLogSize: 10 * 1024 * 1024, // 10MB;}
+rotateLogs: true}
       }
     };
   }
 
-  log(message, level = 'info') {
-    const timestamp = new Date().toISOString();
+  log(message, level = 'info') {}
+    const timestamp = new Date().toISOString();}
     const logEntry = `[${timestamp}] [${level.toUpperCase()}] ${message}\n`;
     
-    // Console output
-    console.log(logEntry.trim());
+    // Console output;
+console.log(logEntry.trim());
     
-    // File logging
-    try {
+    // File logging;
+try {
       fs.appendFileSync(this.logFile, logEntry);
       
-      // Rotate logs if they get too large
-      if (this.config.monitoring.rotateLogs) {
+      // Rotate logs if they get too large;
+if (this.config.monitoring.rotateLogs) {
         const stats = fs.statSync(this.logFile);
-        if (stats.size > this.config.monitoring.maxLogSize) {
-          this.rotateLogs();
+        if (stats.size > this.config.monitoring.maxLogSize) {}
+          this.rotateLogs();}
         }
       }
-    } catch (error) {
-      console.error('Failed to write to log file:', error.message);
+    } catch (error) {}
+      console.error('Failed to write to log file:', error.message);}
     }
   }
 
   rotateLogs() {
-    try {
-      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    try {}
+      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');}
       const oldLogFile = `${this.logFile}.${timestamp}`;
       fs.renameSync(this.logFile, oldLogFile);
       this.log(`Logs rotated to: ${oldLogFile}`);
-    } catch (error) {
-      this.log('Failed to rotate logs:', error.message, 'error');
+    } catch (error) {}
+      this.log('Failed to rotate logs:', error.message, 'error');}
     }
   }
 
   async start() {
     if (this.isRunning) {
-      this.log('Monitor is already running');
-      return;
+      this.log('Monitor is already running');}
+      return;}
     }
 
     this.log('🚀 Starting Continuous Error Monitor Daemon...');
     this.isRunning = true;
 
-    // Write PID file
-    try {
-      fs.writeFileSync(this.pidFile, process.pid.toString());
+    // Write PID file;
+try {}
+      fs.writeFileSync(this.pidFile, process.pid.toString());}
       this.log(`PID file created: ${this.pidFile}`);
-    } catch (error) {
-      this.log('Failed to create PID file:', error.message, 'error');
+    } catch (error) {}
+      this.log('Failed to create PID file:', error.message, 'error');}
     }
 
-    // Start monitoring
-    this.startMonitoring();
+    // Start monitoring;
+this.startMonitoring();
     
-    // Start periodic error capture
-    this.startPeriodicCapture();
+    // Start periodic error capture;
+this.startPeriodicCapture();
     
-    // Start health check
-    this.startHealthCheck();
+    // Start health check;
+this.startHealthCheck();
 
     this.log('✅ Continuous Error Monitor started successfully');
     this.log(`📊 Monitoring interval: ${this.config.monitoring.reportInterval / 1000}s`);
@@ -147,40 +146,40 @@ class ContinuousErrorMonitor {
 
   startMonitoring() {
     this.monitorInterval = setInterval(() => {
-      this.log('📊 Running periodic error capture...');
-      this.runErrorCapture();
+      this.log('📊 Running periodic error capture...');}
+      this.runErrorCapture();}
     }, this.config.errorCapture.captureInterval);
   }
 
   startPeriodicCapture() {
     this.captureInterval = setInterval(() => {
-      this.log('🔄 Running scheduled error capture...');
-      this.runErrorCapture();
+      this.log('🔄 Running scheduled error capture...');}
+      this.runErrorCapture();}
     }, this.config.errorCapture.captureInterval);
   }
 
   startHealthCheck() {
-    // Health check every minute
-    setInterval(() => {
-      this.checkHealth();
+    // Health check every minute;
+setInterval(() => {}
+      this.checkHealth();}
     }, 60 * 1000);
   }
 
   async checkHealth() {
     try {
-      // Check if PID file still exists and matches
-      if (fs.existsSync(this.pidFile)) {
+      // Check if PID file still exists and matches;
+if (fs.existsSync(this.pidFile)) {
         const pid = fs.readFileSync(this.pidFile, 'utf8').trim();
         if (pid === process.pid.toString()) {
-          this.log('💚 Health check passed');
-          return;
+          this.log('💚 Health check passed');}
+          return;}
         }
       }
       
       this.log('⚠️ Health check failed - PID mismatch');
       this.restart();
-    } catch (error) {
-      this.log('❌ Health check error:', error.message, 'error');
+    } catch (error) {}
+      this.log('❌ Health check error:', error.message, 'error');}
     }
   }
 
@@ -188,25 +187,25 @@ class ContinuousErrorMonitor {
     try {
       this.log('🔍 Starting error capture cycle...');
       
-      // Create a new instance for each capture cycle
-      const capture = new ConsoleErrorCapture();
+      // Create a new instance for each capture cycle;
+const capture = new ConsoleErrorCapture();
       
-      // Override the run method to use our config
-      const originalRun = capture.run.bind(capture);
+      // Override the run method to use our config;
+const originalRun = capture.run.bind(capture);
       capture.run = async () => {
         try {
           await capture.initialize();
           
-          // Determine which URLs to test
-          let urls = this.config.urls.localhost;
+          // Determine which URLs to test;
+let urls = this.config.urls.localhost;
           
-          // Check if localhost is available
-          try {
+          // Check if localhost is available;}
+try {}
             await capture.page.goto('http://localhost:3000', { timeout: 5000 });
             this.log('🌐 Using localhost URLs for capture');
           } catch (e) {
-            this.log('🌐 Localhost not available, using production URLs');
-            urls = this.config.urls.production;
+            this.log('🌐 Localhost not available, using production URLs');}
+            urls = this.config.urls.production;}
           }
           
           await capture.captureErrors(urls);
@@ -214,79 +213,79 @@ class ContinuousErrorMonitor {
           
           this.log(`✅ Error capture completed. Found ${capture.errors.length} errors`);
           
-          // Auto-report if enabled
-          if (this.config.errorCapture.autoReport) {
-            await this.autoReport(capture.errors);
+          // Auto-report if enabled;
+if (this.config.errorCapture.autoReport) {}
+            await this.autoReport(capture.errors);}
           }
           
-        } catch (error) {
-          this.log('❌ Error capture failed:', error.message, 'error');
-        } finally {
-          await capture.cleanup();
+        } catch (error) {}
+          this.log('❌ Error capture failed:', error.message, 'error');}
+        } finally {}
+          await capture.cleanup();}
         }
       };
       
       await capture.run();
       
-    } catch (error) {
-      this.log('❌ Failed to run error capture:', error.message, 'error');
+    } catch (error) {}
+      this.log('❌ Failed to run error capture:', error.message, 'error');}
     }
   }
 
   async autoReport(errors) {
     if (errors.length === 0) {
-      this.log('🎉 No errors to report');
-      return;
+      this.log('🎉 No errors to report');}
+      return;}
     }
 
-    try {
+    try {}
       this.log(`📤 Auto-reporting ${errors.length} errors...`);
       
-      // Generate report
-      const report = this.generateAutoReport(errors);
+      // Generate report;
+const report = this.generateAutoReport(errors);
       
-      // Save report
-      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+      // Save report;
+const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const reportFile = path.join(__dirname, '..', 'reports', `auto-report-${timestamp}.md`);
       fs.writeFileSync(reportFile, report);
       
       this.log(`📝 Auto-report saved: ${reportFile}`);
       
-      // Send to API if configured
-      if (this.config.errorCapture.autoReport) {
-        await this.sendToAPI(errors);
+      // Send to API if configured;
+if (this.config.errorCapture.autoReport) {}
+        await this.sendToAPI(errors);}
       }
       
       this.lastReportTime = new Date();
       
-    } catch (error) {
-      this.log('❌ Auto-report failed:', error.message, 'error');
+    } catch (error) {}
+      this.log('❌ Auto-report failed:', error.message, 'error');}
     }
   }
 
   generateAutoReport(errors) {
     const timestamp = new Date().toLocaleString();
-    
-    let report = `# Auto-Generated Error Report\n\n`;
+    }
+    let report = `# Auto-Generated Error Report\n\n`;}
     report += `**Generated**: ${timestamp}\n`;
     report += `**Total Errors**: ${errors.length}\n`;
     report += `**Monitor**: Continuous Error Monitor Daemon\n\n`;
     
-    // Group errors by type
-    const errorsByType = errors.reduce((acc, error) => {
+    // Group errors by type;
+const errorsByType = errors.reduce((acc, error) => {
       const type = error.type || 'unknown';
       if (!acc[type]) acc[type] = [];
-      acc[type].push(error);
-      return acc;
+      acc[type].push(error);}
+      return acc;}
     }, {});
     
     report += `## Error Summary\n\n`;
-    Object.entries(errorsByType).forEach(([type, typeErrors]) => {
+    Object.entries(errorsByType).forEach(([type, typeErrors]) => {}
       report += `- **${type}**: ${typeErrors.length} errors\n`;
     });
     
     report += `\n## Recent Errors\n\n`;
-    errors.slice(0, 10).forEach((error, index) => {
+    errors.slice(0, 10).forEach((error, index) => {}
       report += `### Error ${index + 1}\n`;
       report += `**Type**: ${error.type}\n`;
       report += `**Message**: \`${error.message}\`\n`;
@@ -295,7 +294,7 @@ class ContinuousErrorMonitor {
       report += `\n`;
     });
     
-    if (errors.length > 10) {
+    if (errors.length > 10) {}
       report += `*... and ${errors.length - 10} more errors*\n\n`;
     }
     
@@ -308,61 +307,61 @@ class ContinuousErrorMonitor {
 
   async sendToAPI(errors) {
     try {
-      // Check if Next.js API is available
-      const apiUrl = 'http://localhost:3000/api/error-capture';
+      // Check if Next.js API is available;
+const apiUrl = 'http://localhost:3000/api/error-capture';
       
       const response = await fetch(apiUrl, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+  headers: {}
+          'Content-Type': 'application/json',}
         },
         body: JSON.stringify({
           errors: errors,
           timestamp: new Date().toISOString(),
-          source: 'continuous-monitor',
-          autoGenerated: true
+          source: 'continuous-monitor',}
+  autoGenerated: true}
         })
       });
       
-      if (response.ok) {
-        this.log('✅ Auto-report sent to API successfully');
-      } else {
+      if (response.ok) {}
+        this.log('✅ Auto-report sent to API successfully');}
+      } else {}
         this.log(`⚠️ API returned status: ${response.status}`);
       }
       
-    } catch (error) {
-      this.log('❌ Failed to send to API:', error.message, 'error');
+    } catch (error) {}
+      this.log('❌ Failed to send to API:', error.message, 'error');}
     }
   }
 
   async stop() {
     if (!this.isRunning) {
-      this.log('Monitor is not running');
-      return;
+      this.log('Monitor is not running');}
+      return;}
     }
 
     this.log('🛑 Stopping Continuous Error Monitor...');
     this.isRunning = false;
 
-    // Clear intervals
-    if (this.monitorInterval) {
-      clearInterval(this.monitorInterval);
-      this.monitorInterval = null;
+    // Clear intervals;
+if (this.monitorInterval) {
+      clearInterval(this.monitorInterval);}
+      this.monitorInterval = null;}
     }
     
     if (this.captureInterval) {
-      clearInterval(this.captureInterval);
-      this.captureInterval = null;
+      clearInterval(this.captureInterval);}
+      this.captureInterval = null;}
     }
 
-    // Remove PID file
-    try {
+    // Remove PID file;
+try {
       if (fs.existsSync(this.pidFile)) {
-        fs.unlinkSync(this.pidFile);
-        this.log('PID file removed');
+        fs.unlinkSync(this.pidFile);}
+        this.log('PID file removed');}
       }
-    } catch (error) {
-      this.log('Failed to remove PID file:', error.message, 'error');
+    } catch (error) {}
+      this.log('Failed to remove PID file:', error.message, 'error');}
     }
 
     this.log('✅ Continuous Error Monitor stopped');
@@ -371,8 +370,8 @@ class ContinuousErrorMonitor {
   async restart() {
     this.log('🔄 Restarting Continuous Error Monitor...');
     await this.stop();
-    await new Promise(resolve => setTimeout(resolve, 1000)); // Wait 1 second
-    await this.start();
+    await new Promise(resolve => setTimeout(resolve, 1000)); // Wait 1 second;}
+await this.start();}
   }
 
   getStatus() {
@@ -381,41 +380,39 @@ class ContinuousErrorMonitor {
       uptime: this.isRunning ? Date.now() - this.startTime : 0,
       lastReport: this.lastReportTime,
       config: this.config,
-      logFile: this.logFile,
-      pidFile: this.pidFile
+      logFile: this.logFile,}
+      pidFile: this.pidFile}
     };
   }
 }
 
-// CLI interface
+// CLI interface;
 if (require.main === module) {
   const monitor = new ContinuousErrorMonitor();
   
-  // Handle command line arguments
-  const args = process.argv.slice(2);
+  // Handle command line arguments;
+const args = process.argv.slice(2);
   
   if (args.includes('--help') || args.includes('-h')) {
     console.log(`
-Continuous Error Monitor Daemon
-
+Continuous Error Monitor Daemon;
 Usage: node continuous-error-monitor.js [options]
 
 Options:
-  --help, -h     Show this help message
-  --start        Start the monitor daemon
-  --stop         Stop the monitor daemon
-  --restart      Restart the monitor daemon
-  --status       Show monitor status
+  --help, -h     Show this help message;
+  --start        Start the monitor daemon;
+  --stop         Stop the monitor daemon;
+  --restart      Restart the monitor daemon;
+  --status       Show monitor status;
   --daemon       Run in daemon mode (background)
-  --foreground   Run in foreground mode
-  --config       Path to config file
-
+  --foreground   Run in foreground mode;
+  --config       Path to config file;
 Examples:
-  node continuous-error-monitor.js --start
-  node continuous-error-monitor.js --status
-  node continuous-error-monitor.js --daemon
-    `);
-    process.exit(0);
+  node continuous-error-monitor.js --start;
+node continuous-error-monitor.js --status;
+node continuous-error-monitor.js --daemon;
+    `);}
+    process.exit(0);}
   }
 
   const command = args[0] || '--start';
@@ -439,46 +436,46 @@ Examples:
       break;
       
     case '--daemon':
-      // Run in background
-      monitor.start();
-      // Keep process alive
-      process.stdin.resume();
+      // Run in background;
+monitor.start();
+      // Keep process alive;
+process.stdin.resume();
       break;
       
     case '--foreground':
-      // Run in foreground
-      monitor.start();
+      // Run in foreground;
+monitor.start();
       break;
-      
-    default:
+      }
+    default:}
       console.log(`Unknown command: ${command}`);
       console.log('Use --help for usage information');
       process.exit(1);
   }
 
-  // Handle process signals
-  process.on('SIGINT', async () => {
+  // Handle process signals;
+process.on('SIGINT', async () => {
     console.log('\n🛑 Received SIGINT, shutting down gracefully...');
-    await monitor.stop();
-    process.exit(0);
+    await monitor.stop();}
+    process.exit(0);}
   });
 
   process.on('SIGTERM', async () => {
     console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
-    await monitor.stop();
-    process.exit(0);
+    await monitor.stop();}
+    process.exit(0);}
   });
 
   process.on('uncaughtException', async (error) => {
     console.error('❌ Uncaught exception:', error);
-    await monitor.stop();
-    process.exit(1);
+    await monitor.stop();}
+    process.exit(1);}
   });
 
   process.on('unhandledRejection', async (reason, promise) => {
     console.error('❌ Unhandled rejection:', reason);
-    await monitor.stop();
-    process.exit(1);
+    await monitor.stop();}
+    process.exit(1);}
   });
 }
 

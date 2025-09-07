@@ -1,6 +1,6 @@
+export interface TokenSet {
 export type UIKitKind = "ios" | "android" | "web";
 
-export interface TokenSet {
   colors: Record<string, string>;
   typography: Record<string, any>;
   spacing: Record<string, number>;
@@ -14,6 +14,7 @@ export interface UIKit {
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
   return {
+
     colors: {
       primary: "#007AFF",
       secondary: "#5856D6",
@@ -32,7 +33,7 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       md: 16,
       lg: 24,
       xl: 32,
-    }
+
   };
 }
 
@@ -53,4 +54,4 @@ export async function buildUIKit(
     },
     tokens,
   };
-}
+

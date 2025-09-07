@@ -1,4 +1,6 @@
+pr-12325
 export type ProjectParticipants = {
+
   clientUserId: string;
   talentUserId: string;
 }
@@ -9,7 +11,17 @@ export interface Milestone {
   id: string;
   title: string;
   description?: string;
+  title: string;
+  description?: string;
   due_date: string;
+  clientUserId: string;,
+  talentUserId: string;
+}
+export type Project = {  id: string;,
+  title: string;
+  description?: string;
+  due_date: string;,
+pr-12325
   amount_usd: number;
   status: MilestoneStatus;
   attachments?: MilestoneAttachment[];
@@ -17,28 +29,38 @@ export interface Milestone {
   updated_at: string;
 }
 
-export interface MilestoneAttachment {
+
   id: string;
   name: string;
   url: string;
   type: string;
   size: number;
-}
 
-export interface CreateMilestoneRequest {
-  title: string;
-  description?: string;
-  due_date: string;
-  amount_usd: number;
 }
 
 export interface UpdateMilestoneRequest {
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
   title?: string;
   description?: string;
   due_date?: string;
   amount_usd?: number;
   status?: MilestoneStatus;
   attachments?: MilestoneAttachment[];
+
+
+
+
+
+
+export function isOverdue(milestone: Milestone): boolean {
+  if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {
+    return false;
+  }
+  return new Date(milestone.dueDate) < new Date();
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  updatedAt: string;
+
 }
 
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
@@ -50,9 +72,4 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 }
 
 export function getDaysUntilDue(milestone: Milestone): number | null {
-  if (!milestone.due_date) return null;
-  const dueDate = new Date(milestone.due_date);
-  const now = new Date();
-  const diffTime = dueDate.getTime() - now.getTime();
-  return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-}
+

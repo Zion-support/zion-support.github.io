@@ -1,3 +1,4 @@
+
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 
@@ -22,12 +23,14 @@ export default function Layout({
   ogDescription,
   ogUrl
 }: LayoutProps) {
+
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         
@@ -46,9 +49,7 @@ export default function Layout({
         
         <link rel="canonical" href={ogUrl || "https://ziontechgroup.com"} />
       </Head>
-      <div className="min-h-screen bg-gray-50">
-        {children}
-      </div>
+      {children}
     </>
   );
-}
+

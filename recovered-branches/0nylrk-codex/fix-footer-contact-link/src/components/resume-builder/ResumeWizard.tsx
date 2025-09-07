@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ResumeWizard, as, WizardComponent  } from './wizard';
 export /**
  * ResumeWizard - Function description
@@ -11,20 +10,38 @@ import {ResumeWizard, as, WizardComponent} from './wizard';
 export function ResumeWizard() {;
   return <WizardComponent />;
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 import { ResumeWizard, as, WizardComponent } from "./wizard";
 export function ResumeWizard() {
   return <WizardComponent />;
 }
-<<<<<<< HEAD
 ;
 
-import { ResumeWizard as WizardComponent } from './wizard';
+import { ResumeWizard as WizardComponent } from './wizard',;
 ;
 export function ResumeWizard() {;
   return <WizardComponent />,;
 } 
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+
+import { ResumeWizard, as, WizardComponent } from "./wizard";"
+export function ResumeWizard() {
+  return <WizardComponent />;
+
+
+
+
+
+  return <WizardComponent />,;
+
+
+  return <WizardComponent />
+
+
+"
+pr-12325
+</WizardComponent>
+  return <WizardComponent />;
+</WizardComponent>
+  return <WizardComponent />;
+</WizardComponent>"
+

@@ -1,10 +1,13 @@
-{
-    id: "id",
+
+
+  {
+    id: "getting-started"
     name: "Getting Started"
     description: "Learn the basics of using the Zion AI Marketplace"
     icon: <HelpCircle className="h-6 w-6 text-zion-purple" />
     articles: [
       {
+
         id: "create-account",
       {
         id: "platform-navigation",
@@ -48,12 +51,14 @@
       }
     ]
   },
+
         id: "talent-profile",
         title: "Setting up a talent profile",
         content: "Your profile is your professional identity on the Zion AI Marketplace. Follow these steps to create a profile that stands out:\n\n1. Upload a professional headshot\n2. Create a compelling headline that summarizes your expertise\n3. Write a detailed bio highlighting your experience and specialties\n4. Add your skills, rating your proficiency level for each\n5. Showcase your portfolio with examples of past work\n6. List your education and certifications\n7. Set your availability and preferred working hours\n8. Specify your rate range\n\nCompleteness is important - profiles with all sections filled out receive up to 30% more views and engagement from potential clients.",
         lastUpdated: "2023-10-15",
         tags: ["profile", "talent"]
       },
+
       },
       {
         id: "portfolio-creation",
@@ -64,6 +69,7 @@
       }
     ]
   },
+
         id: "payment-methods",
         title: "Accepted payment methods",
         content: "Zion AI Marketplace supports a variety of payment methods to accommodate users worldwide. Currently accepted payment methods include:\n\n• Credit Cards (Visa, Mastercard, American Express, Discover)\n• PayPal\n• Bank Transfers (ACH for US, SEPA for Europe)\n• Wire Transfers for international payments\n• Cryptocurrency (Bitcoin, Ethereum)\n\nTo add or update your payment method:\n1. Go to Settings > Billing & Payments\n2. Select 'Add Payment Method'\n3. Follow the prompts to enter your information\n4. Set your preferred default payment method\n\nAll payment information is securely encrypted and stored in compliance with PCI DSS standards.",
@@ -86,6 +92,7 @@
       }
     ]
   },
+
       }
     ];
         id: "file-dispute",
@@ -104,3 +111,41 @@
       {
         id: "dispute-prevention",
         title: "Tips for preventing disputes",
+
+
+import React from "react",""
+import { HelpCategory } from "./types","
+import {
+  // TODO: Implement
+}
+  HelpCircle,
+  CreditCard, 
+  Users, 
+  Calendar, 
+  Briefcase;"
+} from "lucide-react","
+export const HELP_CATEGORIES: HelpCategory[] = [
+  {"
+    id: "getting-started"","
+  name: "Getting Started"""
+    description: "Learn the basics of using the Zion AI Marketplace"","
+  icon: <HelpCircle className="h-6 w-6 text-zion-purple" />"
+"
+    icon: <Briefcase className="h-6 w-6 text-zion-cyan" />"
+    icon: <Users className="h-6 w-6 text-zion-purple" />"
+    icon: <CreditCard className="h-6 w-6 text-zion-cyan" />"
+    icon: <Calendar className="h-6 w-6 text-zion-purple" />"
+    icon: <HelpCircle className="h-6 w-6 text-zion-purple" />,;"
+    icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,;"
+    icon: <Users className="h-6 w-6 text-zion-purple" />,;"
+    icon: <CreditCard className="h-6 w-6 text-zion-cyan" />,;"
+    icon: <Calendar className="h-6 w-6 text-zion-purple" />,;"
+    icon: <HelpCircle className="h - 6 w - 6 text - zion - purple" />,"
+    icon: <Briefcase className="h - 6 w - 6 text - zion - cyan" />,"
+    icon: <Users className="h - 6 w - 6 text - zion - purple" />,"
+    icon: <CreditCard className="h - 6 w - 6 text - zion - cyan" />,"
+    icon: <Calendar className="h - 6 w - 6 text - zion - purple" />,"
+]"
+pr-12325
+</Calendar>]"
+

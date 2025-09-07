@@ -1,3 +1,4 @@
+
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -5,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
 
 export type ProposalMeta = {
+interface ProposalMeta {
   id: string;
   createdAt: string;
   updatedAt: string;
@@ -16,7 +18,7 @@ export type ProposalMeta = {
   supportingMultiverses: string[];
   languages: string[];
   status: ProposalStatus;
-  artifacts: {
+
     markdownPath?: string;
     jsonPath?: string;
     pdfPath?: string;
@@ -32,6 +34,12 @@ export type ProposalPayload = {
   type: string;
   regionalScope: string;
   budgetOrResolution: string;
+export type ProposalPayload = {title: string;,
+  targetInstitution: string;
+  type: string;,
+  regionalScope: string;
+  budgetOrResolution: string;,
+pr-12325
   supportingMultiverses: string[];
   contentMarkdown: string;
   language?: string;
@@ -103,16 +111,11 @@ export function listProposals(): ProposalMeta[] {
   });
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
+</string>
+  return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
+pr-12325
 
-export function getProposal(id: string): ProposalMeta | null {
-  try {
-    const metaPath = path.join(dataDir, id, 'meta.json');
-    if (!fs.existsSync(metaPath)) return null;
-    return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
-  } catch {
-    return null;
-  }
-}
+
 
 export function savePdf(id: string, pdfBytes: Uint8Array): string {
   ensureDirs();
@@ -131,4 +134,4 @@ export function updateArtifacts(
     ...meta,
     artifacts: { ...meta.artifacts, ...artifacts },
   }));
-}
+

@@ -4,12 +4,12 @@ import { Users, Rocket, Brain, Atom, Shield, Cloud;
   ArrowRight, MapPin, Clock, DollarSign, Star, Zap
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-      title: "Senior AI Engineer",department: "AI & Machine Learning",location: "San Francisco, CA / Remote";export default function CareersPage() {const openPositions = [;
-    {title: "Senior AI Engineer",department: "AI & Machine Learning",location: "San Francisco, CA / Remote";
-      type: "Full-time",experience: "5+ years",salary: "$150,000 - $200,000",description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients",requirements: [;"Advanced degree in Computer Science, AI, or related field";
+
       title: "Senior AI Engineer",
       department: "AI & Machine Learning",;
+
       location: "San Francisco, CA / Remote";
+
 export default function CareersPage() {;
   const openPositions = [;
     {;
@@ -21,6 +21,7 @@ export default function CareersPage() {;
       salary: "$150,000 - $200,000",
   description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients",;
       requirements: [;
+
         "Advanced degree in Computer Science, AI, or related field";
         "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
         "Experience with large-scale AI model deployment";
@@ -29,10 +30,9 @@ export default function CareersPage() {;
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
     }
     {
-      title: "title",
-    department: "Quantum Computing"
+      title: "Quantum Computing Researcher"
+      department: "Quantum Computing"
       location: "San Francisco, CA / Remote";
-      type: "Full - time",experience: "3+ years",salary: "$120, 000 - $180, 000",description: "Research and develop quantum algorithms and quantum - resistant cryptography solutions",requirements: [;
       type: "Full - time",
       experience: "3+ years",
       salary: "$120, 000 - $180, 000",
@@ -75,7 +75,6 @@ export default function CareersPage() {;
       title: "Product Manager"
       department: "Product"
       location: "San Francisco, CA / Remote";
-      type: "Full - time",experience: "5+ years",salary: "$140, 000 - $190, 000",description: "Lead product strategy and development for our technology solutions portfolio",requirements: [;
       type: "Full - time",
       experience: "5+ years",
       salary: "$140, 000 - $190, 000",
@@ -121,10 +120,11 @@ export default function CareersPage() {;
                 <p className="text-white/70">{benefit && benefit.description}</p>;
               </motion && motion.div>;
             ))}
+
           </div>;
         </div>;
-      </section>;{/* Open Positions */}
       </section>;
+
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -149,7 +149,9 @@ export default function CareersPage() {;
                         <p className="text-white/70">{position && position.department}</p>;
                       </div>;
                     </div>;
+
                     <p className="text-white/80 mb-4">{position && position.description}</p>;
+
                     <div className="flex flex-wrap gap-4 mb-4">;
                       <div className="flex items-center gap-2 text-white/70">;
                         <MapPin className="w-4 h-4" />;
@@ -168,22 +170,27 @@ export default function CareersPage() {;
                         <span>{position && position.salary}</span>;
                       </div>;
                     </div>;
+
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Requirements</h4>;
                       <ul className="space-y-1">;
                         {position && position.requirements.map((req, idx) => (;
                           <li key={idx} className="text-sm text-white/80 flex items-center">;
                             <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2" />;
+
                             {req}
                           </li>
                         ))}
+
                       </ul>;
                     </div>;
+
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>;
                       <div className="flex flex-wrap gap-2">;
                         {position && position.benefits.map((benefit) => (;
                           <span key={benefit} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">;
+
                             {benefit}
                           </span>
                         ))}
@@ -201,6 +208,7 @@ export default function CareersPage() {;
           </div>
         </div>
       </section>
+
                       </div>;
                     </div>;
                   </div>;
@@ -209,7 +217,6 @@ export default function CareersPage() {;
       icon: Rocket,
       color: "from - orange - 500 to - red - 500";
     }
-  ];return (<UltraAdvancedFuturisticBackground>;
   ];
 ;
   return (
@@ -275,7 +282,6 @@ export default function CareersPage() {;
             </p>;
           </motion.div>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">;
-            {benefits.map ((benefit, index) => (<motion.div;
             {benefits.map ((benefit, index) => (
               <motion.div;
                 key={benefit.title}
@@ -310,7 +316,6 @@ export default function CareersPage() {;
             </p>;
           </motion.div>;
           <div className="space-y-6">;
-            {open_positions.map ((position, index) => (<motion.div;
             {open_positions.map ((position, index) => (
               <motion.div;
                 key={position.title}
@@ -363,7 +368,6 @@ export default function CareersPage() {;
                     <div className="mb-4">;
                       <h4 className="text - sm font - semibold text - white / 60 mb - 2 uppercase tracking-wider">Benefits</h4>;
                       <div className="flex flex - wrap gap-2">;
-                        {position.benefits.map ((benefit) => (<span key={benefit} className="text - xs bg - white / 5 text - white / 70 px - 2 py-1 rounded">;
                         {position.benefits.map ((benefit) => (
                           <span key={benefit} className="text - xs bg - white / 5 text - white / 70 px - 2 py-1 rounded">;
                             {benefit}
@@ -383,3 +387,28 @@ export default function CareersPage() {;
           </div>;
 }
 }
+import React from 'react';
+import { motion } from 'framer-motion';
+import MainLayout from '../components/layout/MainLayout';
+
+import React from 'react';''
+import { motion } from 'framer-motion';''
+import MainLayout from '../components/layout/MainLayout';'
+const Page = () => {
+  return (
+    <MainLayout;
+      title="Careers - Zion Tech Group"""
+      description="Join our team and help shape the future of technology""
+    >
+"
+      <div className="min-h-screen bg-gray-50">"
+</div>"
+        <div className="container mx-auto px-4 py-16">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Careers</h1>""
+          <p className="text-xl text-gray-600">Join our innovative team! Check back soon for exciting career opportunities.</p>"
+        </div>
+    )"
+pr-12325
+      </div>
+    </MainLayout>)"
+

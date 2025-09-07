@@ -1,0 +1,47 @@
+
+
+#!/usr/bin/env node
+/**
+ * Fix Critical Errors - Comprehensive fix for all critical syntax errors;
+ */
+
+const fs = require('fs')
+const path = require('path')
+  log(message, type = 'INFO')
+<<<<<<< HEAD
+      'INFO': 'ℹ
+      'SUCCESS': 
+      'ERROR': 
+      'WARNING': '⚠
+      'PROGRESS': '�
+        return { "success": false, "error"}""
+        { "pattern": /:\s*'(\w+)'/g, "replacement": ': $1', "description"}""
+        { "pattern": /'(\w+);/g, "replacement": '$1;', "description"}""
+        { "pattern": /(\w+):\s*(\w+)\s*(\w+):/g, "replacement": '$1: $2,\n  $"3": ', "description"}""
+        { "pattern": /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, "replacement": 'const $1: React.FC = () => {', "description"}""
+        { "pattern": /const\s+\[(\w+),\s*set(\w+),\s*(\w+)\s*\]\s*=\s*useState/g, "replacement": 'const [$1, set$2] = useState', "description"}""
+        { "pattern": /(\w+):\s*'([^']+)'\s*(\w+):/g, "replacement": "$1: '$2',\n  $"3": ", "description"}""
+        { "pattern": /(\w+)="([^"]+)"\s*(\w+)=/g, "replacement": '$1="$2"\n  $3=', "description"}""
+        { "pattern": /(\w+):\s*'([^']+)'\s*}/g, "replacement": "$1: '$2'\n}", "description"""
+        { "pattern": /(\w+)\s*(\w+)\s*]/g, "replacement": '$1,\n  $2\n]', "description"}""
+        { "pattern": /(\w+)\s*\(\s*\)\s*=>\s*{/g, "replacement": '$1 = () => {', "description"}""
+        { "pattern": /"([^"]+)""/g, "replacement": '"$1"', "description"}""
+        { "pattern": /<\/div>"/g, "replacement": '</div>', "description"}""
+=======
+      'INFO: ℹ'
+      'SUCCESS: ERROR: WARNING: ⚠'
+      'PROGRESS: �'
+        return { "success": false, "error"}
+        { "pattern": /:\s*(\w+)/g, "replacement": : $1, "description"}
+        { "pattern": /(\w+);/g, "replacement": $1;, "description"}
+        { "pattern": /(\w+):\s*(\w+)\s*(\w+):/g, "replacement": $1: $2,\n  $"3": , "description"}
+        { "pattern": /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, "replacement": const $1: React.FC = () => {, "description"}
+        { "pattern": /const\s+\[(\w+),\s*set(\w+),\s*(\w+)\s*\]\s*=\s*useState/g, "replacement": const [$1, set$2] = useState, "description"}
+        { "pattern": /(\w+):\s*([^]+)\s*(\w+):/g, "replacement": "$1: $2,\n  $"3": ", "description"}
+        { "pattern": /(\w+)="([^"]+)"\s*(\w+)=/g, "replacement": $1="$2"\n  $3=, "description"}
+        { "pattern": /(\w+):\s*([^]+)\s*}/g, "replacement": "$1: $2\n}", "description"
+        { "pattern": /(\w+)\s*(\w+)\s*]/g, "replacement": $1,\n  $2\n], "description"}
+        { "pattern": /(\w+)\s*\(\s*\)\s*=>\s*{/g, "replacement": $1 = () => {, "description"}
+        { "pattern": /"([^"]+)/g, "replacement": "$1", "description"}
+        { "pattern": /<\/div>"/g, "replacement": </div>, "description"}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

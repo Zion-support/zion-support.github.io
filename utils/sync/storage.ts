@@ -1,3 +1,4 @@
+
 // Sync storage utilities
 export interface SyncJob {
   id: string;
@@ -40,6 +41,7 @@ export interface SyncConnection {
   createdAt: string;
   updatedAt: string;
 }
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface SyncMapping {
   id: string;
@@ -69,6 +71,27 @@ export interface SyncLog {
 }
 
 class SyncStorage {
+}
+
+
+export function readState(): SyncState {;
+  return { ...state };
+
+export function updateState(updates: Partial<SyncState>): void {;
+
+    filters?: Record<string, any>;
+</string>
+    mappings?: Record<string, string>;
+  metadata?: Record<string, any>;
+    credentials?: Record<string, string>;
+    options?: Record<string, any>;
+  fieldMappings: Record<string, string>;
+  transformations?: Array<{
+    field: string;,
+  type: 'format' | 'convert' | 'calculate' | 'filter';
+    config: Record<string, any>;
+  details?: Record<string, any>;
+pr-12325
   private jobs: Map<string, SyncJob> = new Map();
   private connections: Map<string, SyncConnection> = new Map();
   private mappings: Map<string, SyncMapping> = new Map();
@@ -203,4 +226,4 @@ export function formatDuration(startTime: string, endTime?: string): string {
   } else {
     return `${seconds}s`;
   }
-}
+

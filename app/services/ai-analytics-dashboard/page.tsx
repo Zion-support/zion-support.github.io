@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export const metadata = {
   title: 'App | Zion Tech Group',
@@ -36,6 +34,7 @@ export default function ServicePage() {
                 View All Services
               </Link>
             </div>
+
           </div>
         </div>
       </div>

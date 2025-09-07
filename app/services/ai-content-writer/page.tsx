@@ -1,10 +1,9 @@
 import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { ArrowRight } from 'lucide-react';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
-  title: 'App | Zion Tech Group',
-  description: 'Professional services for your business needs.',
-  keywords: 'services, business, technology'
+
 };
 
 export default function ServicePage() {
@@ -12,11 +11,7 @@ export default function ServicePage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            App
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional services designed to meet your business requirements.
+
           </p>
         </div>
         <div className="max-w-6xl mx-auto">
@@ -37,6 +32,7 @@ export default function ServicePage() {
               </Link>
             </div>
           </div>
+
         </div>
       </div>
     </div>

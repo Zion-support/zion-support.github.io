@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+#!/usr/bin/env node,"}),"""
+,"}),"""
+const fs = require(,"}),"""
+        "stdio"""
+        return { "exists": false, "message"}""
+        "priority"""
+        "action"""
+        "message"""
+  '\n Dependency Monitor "Summary"""
+  '\n "Recommendations"""
+  '\n� "CRITICAL"""
+        "encoding"""
+        return { exists: fals,e, "message"}""
+        "return"""
+=======
 #!/usr/bin/env node,"}),"
 ,"}),"
 const fs = require(,"}),"
@@ -32,5 +48,4 @@ const fs = require(,"}),"
         "action"
       '\n Dependency Monitor "Summary"
   '\n "Recommendations"
-<<<<<<< HEAD
-      '\n� "CRITICAL"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

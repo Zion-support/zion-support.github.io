@@ -1,4 +1,48 @@
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const automationFiles = ['automation/dependency-fixer.cjs']
+  'automation/typescript-fixer.cjs
+  'automation/health-check.cjs
+  'automation/security-scanner.cjs
+  'automation/performance-optimizer.cjs
+    let content = fs.readFileSync(filePath, 'utf8')
+    const fileName = path.basename(filePath, '.cjs')
+    let className = 
+      case 'dependency-fixer
+        className = 'DependencyFixer
+      case 'typescript-fixer
+        className = 'TypeScriptFixer
+      case 'health-check
+        className = 'HealthChecker
+      case 'security-scanner
+        className = 'SecurityScanner
+      case 'performance-optimizer
+        className = 'PerformanceOptimizer
+      .replace(/\[\],/g, '[];')
+      .replace(/\{\},/g, '{};')
+      .replace(/\),/g, ');
+      .replace(/\],/g, '];')
+      .replace(/\[\];/g, '[];')
+      .replace(/\{\};/g, '{};')
+      .replace(/\);/g, ');
+      .replace(/\];/g, '];')
+      .replace(/\/[^\/]*\/gi,/g, (match) => match.replace(/,$/, )
+      .replace(/return files\.filter\(file => ;/g, 'return files.filter(file => {'})
+      .replace(/^\s*;\s*$/gm, )
+      .replace(/:\s*\[\],/g, ': [];')
+      .replace(/:\s*\{\},/g, ': {};')
+      .replace(/\(\s*\[\],/g, '([];')
+      .replace(/\(\s*\{\},/g, '({};')
+<<<<<<< HEAD
+      .replace(/script1\."async")
+      .replace(/script1\."src")
+      .replace(/['"]react;['"]/g, ")
+      .replace(/['"]framer-motion;['"]/g, ")
+      .replace(/['"]lucide-react;['"]/g, ")
+=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -556,17 +600,26 @@ fixer
     console.error('❌ Comprehensive Automation Fixer failed:', error.message);
     process.exit(1);
   });
-#!/usr/bin/env node;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+      .replace(/script1\."async")""
+      .replace(/script1\."src")""
+      .replace(/['"]react;['"]/g, ")""
+      .replace(/['"]framer-motion;['"]/g, ")""
+      .replace(/['"]lucide-react;['"]/g, ")""
+>>>>>>> pr-12325
+=======
+#!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
-const automationFiles = ['automation/dependency-fixer.cjs']
+const automationFiles = [automation/dependency-fixer.cjs]
   'automation/typescript-fixer.cjs'
   'automation/health-check.cjs'
   'automation/security-scanner.cjs'
   'automation/performance-optimizer.cjs'
-    let content = fs.readFileSync(filePath, 'utf8')
-    const fileName = path.basename(filePath, '.cjs')
-    let className = ''
+    let content = fs.readFileSync(filePath,utf8)
+    const fileName = path.basename(filePath,.cjs')
+    let className = 
       case 'dependency-fixer'
         className = 'DependencyFixer'
       case 'typescript-fixer'
@@ -577,24 +630,24 @@ const automationFiles = ['automation/dependency-fixer.cjs']
         className = 'SecurityScanner'
       case 'performance-optimizer'
         className = 'PerformanceOptimizer'
-      .replace(/\[\],/g, '[];')
-      .replace(/\{\},/g, '{};')
-      .replace(/\),/g, ');'
-      .replace(/\],/g, '];')
-      .replace(/\[\];/g, '[];')
-      .replace(/\{\};/g, '{};')
-      .replace(/\);/g, ');'
-      .replace(/\];/g, '];')
-      .replace(/\/[^\/]*\/gi,/g, (match) => match.replace(/,$/, '')
-      .replace(/return files\.filter\(file => ;/g, 'return files.filter(file => {'})
-      .replace(/^\s*;\s*$/gm, '')
-      .replace(/:\s*\[\],/g, ': [];')
-      .replace(/:\s*\{\},/g, ': {};')
-      .replace(/\(\s*\[\],/g, '([];')
-      .replace(/\(\s*\{\},/g, '({};')
+      .replace(/\[\],/g,[];)
+      .replace(/\{\},/g,{};)
+      .replace(/\),/g,);
+      .replace(/\],/g, ];)
+      .replace(/\[\];/g,[];)
+      .replace(/\{\};/g,{};)
+      .replace(/\);/g,);
+      .replace(/\];/g, ];)
+      .replace(/\/[^\/]*\/gi,/g, (match) => match.replace(/,$/, )
+      .replace(/return files\.filter\(file => ;/g,return files.filter(file => {})
+      .replace(/^\s*;\s*$/gm, )
+      .replace(/:\s*\[\],/g, : [];)
+      .replace(/:\s*\{\},/g, : {};)
+      .replace(/\(\s*\[\],/g,([];)
+      .replace(/\(\s*\{\},/g,({};)
       .replace(/script1\."async")
       .replace(/script1\."src")
-      .replace(/['"]react;['"]/g, ")
-      .replace(/['"]framer-motion;['"]/g, ")
-      .replace(/['"]lucide-react;['"]/g, ")
-
+      .replace(/["]react;["]/g, ")
+      .replace(/["]framer-motion;["]/g, ")
+      .replace(/["]lucide-react;["]/g, ")
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

@@ -31,7 +31,6 @@ import React from 'react';
 });
 export const createMockProps = (overrides = {}) => ({
 
-
     </ThemeProvider>;
   );
 },;
@@ -58,12 +57,22 @@ export const mockNextRouter = () => ({;
   defaultLocale: 'en',;
   domainLocales: [],;
   isPreview: false;
-
 });
 export const createMockProps = (overrides = {}) => ({;
-  ...overrides;
-
-
-
 
 });
+    <ThemeProvider attribute="class" default_theme="light">;"
+
+    ;"
+  options?: Omit<RenderOptions, 'wrapper'>;
+)
+pr-12325
+
+import React from 'react';'
+  return ('
+    <ThemeProvider attribute="class" default_theme="light">;"
+</ThemeProvider>
+    </ThemeProvider>;"
+  options?: Omit<RenderOptions, 'wrapper'>;'
+</RenderOptions>)'
+

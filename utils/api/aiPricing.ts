@@ -1,18 +1,22 @@
 // Stub AI pricing utility - placeholder for missing functionality;
 
-},
-
-
-},
-
-export const calculateAICost = async (usage: any) => {
+},export const calculateAICost = async (usage: any) => {
   // Placeholder implementation;
+  return { cost: 0, success: true }
+}
+},
+
+
+
+export const calculateAICost = async (usage: any) => {}
+  // Placeholder implementation;}
   return { cost: 0, success: true }
 }
 
 
 export const getAIPricing = async (service: string) => {;
   // Placeholder implementation;
+
 
 export const getAIPricing = async (service: string) => {;
   // Placeholder implementation;
@@ -20,26 +24,29 @@ export const getAIPricing = async (service: string) => {;
 },;
 export const calculateAICost = async (usage: any) => {;
   // Placeholder implementation;
-  return { cost: 0, success: true }
   return { price: 99, currency: 'USD', success: true   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-},;
-export const calculateAICost = async (usage: any) => {;
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
   // Placeholder implementation;
-  return { cost: 0, success: true   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+  return { cost: 0, success: true   } catch (error) {"
+
+};
+  // Placeholder implementation;
+
+"
+pr-12325
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 
 };
 };
 };
-export const getAIPricing = async (service: string) => {;
-  // Placeholder implementation;
+export const getAIPricing = async (service: string) => {;}
+  // Placeholder implementation;}
 };
 
 };
+"

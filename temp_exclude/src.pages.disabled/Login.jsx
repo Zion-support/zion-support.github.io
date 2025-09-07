@@ -1,14 +1,13 @@
 
 import React from 'react';
-interface ModernNavigationProps  {// Add props here as needed;
-}
-export default function ModernNavigation() {return (<div>;
-      <h1>ModernNavigation</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  )}
 interface LoginProps {
   // Add props here as needed
+import React from 'react';'
+interface LoginProps {
+  // TODO: Implement
+}
+  // Add props here as needed;
+pr-12325
 }
 export default function Login({ }: LoginProps) {
   return (
@@ -18,28 +17,10 @@ export default function Login({ }: LoginProps) {
     </div>
   );
 }
+}}
 }
-}
-}
-interface ModernNavigationProps  {// Add props here as needed;
-}
-export default function ModernNavigation() {return (<div>;
-      <h1>ModernNavigation</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  )}
-interface LoginProps {
-  // Add props here as needed
-}
-export default function Login({ }: LoginProps) {
-  return (
-    <div>
+</div>
       <h1>Login</h1>
       <p>This component is currently under development.</p>
-    </div>
-  );
-}
-}
-}
-}
-
+    </div>)'
+pr-12325

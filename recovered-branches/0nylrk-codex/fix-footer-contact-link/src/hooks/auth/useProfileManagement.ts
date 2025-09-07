@@ -1,14 +1,15 @@
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
+
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
     try {
       setIsLoading(true)
-      if (!data.id) {import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
+      if (!data.id) {import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {;
   const updateProfile = async (data: Partial<UserProfile>) => {;
@@ -16,6 +17,7 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       setIsLoading(true),;
       if (!data.id) {;
       }
+
       // Update profiles table
       const { error: profileError } = await supabase
         .from("profiles")
@@ -39,6 +41,7 @@ if ( {) {
         toast ({
           title: "Profile update failed",
   description: profile_error.message,
+
           variant: "destructive"});
         return { error: profile_error }
       }
@@ -55,6 +58,7 @@ if ( {) {
     } catch (error: any) {
       console.error ("Profile update error:", error);
       toast ({
+
         title: "Profile update failed",
   description: error && error.message || "An unexpected error occurred",
         variant: "destructive"});
@@ -69,10 +73,12 @@ if ( {) {
       return { error }
     } finally {
       setIsLoading(false)
+
   return { updateProfile }
 };
   return { updateProfile }
 };
+
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
@@ -144,6 +150,7 @@ export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => 
   const updateProfile = async (data: Partial<UserProfile>) => {
   setIsLoading (true);
 if (!data.id) {
+  
 }//Update user metadata const {
   error: authError 
 }= await supabase.auth.updateUser ({
@@ -175,6 +182,7 @@ return {
   success: true 
 }
 }catch (error: any) {
+  
 }finally {
   setIsLoading (false) 
 }
@@ -186,5 +194,52 @@ return {
   return { updateProfile }
 };
   return { updateProfile }
+};
+
+import { supabase } from "@/integrations/supabase/client",""
+import { toast } from "@/hooks/use-toast";""
+import type { UserProfile } from "@/types/auth";""
+import { toast } from "@/hooks/use-toast",""
+import type { UserProfile } from "@/types/auth","
+export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
+  const updateProfile = async (data: Partial<UserProfile>) => {
+
+
+  const update_profile = async (data: Partial < UserProfile>) => {
+    try {
+  // TODO: Implement
 }
-}
+      setIsLoading (true),
+      // Check condition;
+if ( {) {
+  $2;
+}"
+        return { error: "User ID is required" }"
+      // Update user metadata;
+      const { error: auth_error } = await supabase.auth.update_user ({
+        data: {,
+  display_name: data.display_name;
+          user_type: data.user_type,)
+          headline: data.headline}});
+;
+      // Check condition;
+        toast ({"
+          title: "Profile update failed";",
+  description: auth_error.message,)"
+          variant: "destructive"});"
+        return { error: auth_error }
+
+"
+        return { error: authError }
+import { supabase } from "@/integrations/supabase/client",;""
+import { toast } from "@/hooks/use-toast",;""
+import type { UserProfile } from "@/types/auth",;"
+export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {;
+  const updateProfile = async (data: Partial<UserProfile>) => {;
+
+  const updateProfile = async (data:Partial<UserProfile>) => {;
+pr-12325
+</UserProfile>
+  const updateProfile = async (data: Partial<UserProfile>) => {
+</UserProfile>"
+

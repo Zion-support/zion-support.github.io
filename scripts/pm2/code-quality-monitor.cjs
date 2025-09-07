@@ -1,6 +1,14 @@
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+
+<<<<<<< HEAD
+#!/usr/bin/env node,"}),"""
+,"}),"""
+const fs = require(,"}),"""
+        "lines"""
+            "message"""
+            "severity"""
+            "type"""
 =======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 #!/usr/bin/env node,"}),"
 ,"}),"
 const fs = require(,"}),"
@@ -35,8 +43,4 @@ const fs = require(,"}),"
                 "type"
                 "severity"
         "type"
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-        "message"        "message"
-        "message"        "message"
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

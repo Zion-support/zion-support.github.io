@@ -1,50 +1,87 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 import { execSync, spawn } from;
+<<<<<<< HEAD
+  'child_process
+  'fs
+  'path
+  'true
+    this.logFile = 'error-reports/lint-error-auto-fixer-report.json
+    console.log('🧹 Lint Error Auto Fixer started')
+    this.autoFixLint: = process.env.AUTO_FIX_LINT ===';true
+    this.logFile =';error-reports/lint-error-auto-fixer-report.json
+  '🧹 Lint: Error Auto Fixer started
+    console.log(' Checking lint errors...')
+      const output = execSync('npm run lint')
+        stdio: 'pipe,
+  warnings: this.parseLintOutput(output, 'warning')
+        stdio: ,
+  warnings: this.parseLintOutput(output, ';warning')
+        errors: this.parseLintOutput(output, 'error')
+    const lines = output.split('\\n')
+          type: 'lint
+  
+=======
   'child_process'
   'fs'
   'path'
-  'true'
+  'true
     this.logFile = 'error-reports/lint-error-auto-fixer-report.json'
     console.log('🧹 Lint Error Auto Fixer started')
-    this.autoFixLint: = process.env.AUTO_FIX_LINT ===';true''
-    this.logFile =';error-reports/lint-error-auto-fixer-report.json''
+    this.autoFixLint: = process.env.AUTO_FIX_LINT ==;true
+    this.logFile =';error-reports/lint-error-auto-fixer-report.json
   '🧹 Lint: Error Auto Fixer started'
-    console.log(' Checking lint errors...')
+    console.log(' Checking lint errors...)
       const output = execSync('npm run lint')
-        stdio: "stdio",
-    warnings: this.parseLintOutput(output, 'warning')
-        stdio: '
-        warnings: this.parseLintOutput(output, ';warning')
-        errors: this.parseLintOutput(output, 'error')
-        warnings: this.parseLintOutput(output, 'warning')
+        stdio: pipe,
+  warnings: this.parseLintOutput(output,warning')
+        stdio: ,
+  warnings: this.parseLintOutput(output,;warning')
+        errors: this.parseLintOutput(output,error')
+        warnings: this.parseLintOutput(output,warning')
     const lines = output.split('\\n')
-          type: 'lint'
+          type: lint'
   '
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       console.log(')
-  '
+  ');
       execSync(')
+<<<<<<< HEAD
   ', { stdio: '}
-      console.log(')
-  '
       console.log('ESLint auto-fix had issues, trying manual fixes...')
       const content = fs.readFileSync(file, 'utf8')
       const lines = content.split('\\n')
-      const content = fs.readFileSync(file, 'utf8')
-      const lines = content.split('\\n')
       switch (rule) {'}
-        case 'no-unused-vars'
-        case: 'no-console';';:'
-        case: 'quotes';';:'
-        case: 'semi';';:'
-        case: 'indent';';:'
-        case: 'no-trailing-spaces';';:'
-  eol-last';: modified: = this.fixEolLast(lines)'
-        case: 'prefer-const '
+        case 'no-unused-vars
+        case: 'no-console';';:,
+  case: 'quotes';';:
+        case: 'semi';';:,
+  case: 'indent';';:
+        case: 'no-trailing-spaces';';:
+  eol-last';: modified: = this.fixEolLast(lines),
+  case: 'prefer-const 
         fs.writeFileSync(file + '.backup')
-        const newContent = lines.join(')
+=======
+  , { stdio: }
+      console.log(')
   '
-    const varMatch = message.match(/'(.+?)'
+      console.log('ESLint auto-fix had issues, trying manual fixes...)
+      const content = fs.readFileSync(file,utf8)
+      const lines = content.split('\\n')
+      const content = fs.readFileSync(file,utf8)
+      const lines = content.split('\\n')
+      switch (rule) {}
+        case 'no-unused-vars'
+        case: no-console';;:,
+  case: quotes';;: 
+        case: semi';;:,
+  case: indent';;: 
+        case: no-trailing-spaces';;: 
+  eol-last';: modified: = this.fixEolLast(lines),
+  case: prefer-const '
+        fs.writeFileSync(file +.backup')
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+        const newContent = lines.join(')
+  
+    const varMatch = message.match(/'(.+?)
     if (line.includes('console.')
     if (message.includes('single quotes')
-<<<<<<< HEAD
-      lines[lineIndex] = line.replace(/"/g, ")
