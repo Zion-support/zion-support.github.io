@@ -1,49 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-// console.log(' Starting Master Automation Orchestrator...')
-console.log('=====')
-    "status"
-      "encoding"
-      "stdio"
-const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")
-  console.log('\n "Recommendations")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
-  console.log('\n "Recommendations")
-  console.log('\n "Recommendations")
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -53,8 +7,9 @@ const { execSync } = require('child_process');
 class MasterAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.startTime = new Date();
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+    this.logFile = path.join(this.reportsDir, 'master-automation.log');
     this.results = {
       scripts: [],
       tests: { passed: 0, failed: 0 },
@@ -62,6 +17,13 @@ class MasterAutomationOrchestrator {
       improvements: [],
       errors: []
     };
+    this.ensureDirectories();
+  }
+
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
   }
 
   log(message, type = 'INFO') {
@@ -73,45 +35,27 @@ class MasterAutomationOrchestrator {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
     }[type] || 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-  }
-
-  async runCommand(command, description, options = {}) {
-    this.log(`Running: ${description}`);
-=======
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.logFile = path.join(this.reportsDir, 'master-automation.log');
-    this.ensureDirectories();
-  }
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
+    const logMessage = `${prefix} [${timestamp}] ${message}`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
-  async runCommand(command, description) {
-    this.log(`🚀 Starting: ${description}`);
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+  async runCommand(command, description, options = {}) {
+    this.log(`Running: ${description}`);
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
         stdio: 'pipe',
         encoding: 'utf8',
+        timeout: 300000, // 5 minutes timeout
+        maxBuffer: 1024 * 1024 * 10, // 10MB buffer
         ...options,
       });
-<<<<<<< HEAD
-      this.log(`✅ ${description} completed successfully`);
+      this.log(`✅ ${description} completed successfully`, 'SUCCESS');
       return { success: true, output: result };
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+      this.results.errors.push(`${description}: ${error.message}`);
       return {
         success: false,
         error: error.message,
@@ -144,11 +88,6 @@ class MasterAutomationOrchestrator {
     } catch (error) {
       this.log(`❌ Error running ${description}: ${error.message}`, 'ERROR');
       this.results.errors.push(`${description}: ${error.message}`);
-=======
-      this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`);
       return { success: false, error: error.message };
     }
   }
@@ -375,7 +314,6 @@ class MasterAutomationOrchestrator {
       return { success, report, failedAutomations };
     } catch (error) {
       this.log(`❌ Master automation orchestration failed: ${error.message}`);
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       return { success: false, error: error.message };
     }
   }
@@ -579,32 +517,18 @@ class MasterAutomationOrchestrator {
   }
 }
 
-<<<<<<< HEAD
 // Run the master automation orchestrator
 if (require.main === module) {
   const orchestrator = new MasterAutomationOrchestrator();
-  orchestrator.run().catch(console.error);
-=======
-// Run the automation
-if (require.main === module) {
-  const automation = new MasterAutomationOrchestrator();
-  automation.run().then(result => {
-    if (result.success) {
+  orchestrator.run().then(result => {
+    if (result && result.success) {
       console.log('✅ Master automation orchestration completed successfully');
       process.exit(0);
     } else {
       console.log('❌ Master automation orchestration failed');
       process.exit(1);
     }
-  });
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+  }).catch(console.error);
 }
 
 module.exports = MasterAutomationOrchestrator;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

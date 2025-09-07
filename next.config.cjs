@@ -14,8 +14,7 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   experimental: {
-    forceSwcTransforms: false,
-  },
+    forceSwcTransforms: false},
   // Ensure standard Next.js page extensions are recognized alongside any custom route files
   pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
   images: {
@@ -27,24 +26,18 @@ const nextConfig = {
   },
   experimental: {
     esmExternals: false,
-    newNextLinkBehavior: true,
-  },
+    newNextLinkBehavior: true},
   typescript: {
-    ignoreBuildErrors: true,
-  },
+    ignoreBuildErrors: true},
   eslint: {
-    ignoreDuringBuilds: true,
-  },
+    ignoreDuringBuilds: true},
   typescript: {
-    ignoreBuildErrors: true,
-  },
+    ignoreBuildErrors: true},
   images: {
     domains: ['ziontechgroup.com'],
-    unoptimized: true,
-  },
+    unoptimized: true},
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
+    removeConsole: process.env.NODE_ENV === 'production'},
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
     config.module.rules.push({
@@ -62,16 +55,14 @@ const nextConfig = {
         /contracts/,
         /hardhat/,
         /^components\//, // Exclude root components directory
-      ],
-    });
+      ]});
 
     // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
-      tls: false,
-    };
+      tls: false};
 
     return config;
   },
@@ -82,9 +73,7 @@ const nextConfig = {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
     // number of pages that should be kept simultaneously without being disposed
-    pagesBufferLength: 2,
-  },
-};
+    pagesBufferLength: 2}};
 
 module.exports = nextConfig;
 =======

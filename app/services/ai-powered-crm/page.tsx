@@ -10,6 +10,71 @@ export const metadata = {
   keywords: 'AI CRM, customer relationship management, sales automation, lead scoring, customer insights, AI-powered sales'
 };
 
+function FeatureCard({ title, description, icon }: {
+  title: string;
+  description: string;
+  icon: string;
+}) {
+  return (
+    <div className="bg-white p-6 rounded-lg shadow-lg">
+      <div className="text-3xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function PricingTier({ name, price, features, popular = false }: {
+  name: string;
+  price: string;
+  features: string[];
+  popular?: boolean;
+}) {
+  return (
+    <div className={`bg-white p-6 rounded-lg shadow-lg ${popular ? 'ring-2 ring-blue-500' : ''}`}>
+      {popular && (
+        <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+          Most Popular
+        </div>
+      )}
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">{name}</h3>
+      <div className="text-3xl font-bold text-blue-600 mb-4">{price}</div>
+      <ul className="space-y-2 mb-6">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center">
+            <span className="text-green-500 mr-2">✓</span>
+            <span className="text-gray-600">{feature}</span>
+          </li>
+        ))}
+      </ul>
+      <button className={`w-full py-2 px-4 rounded-lg font-semibold transition-colors ${
+        popular 
+          ? 'bg-blue-600 text-white hover:bg-blue-700' 
+          : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+      }`}>
+        Get Started
+      </button>
+    </div>
+  );
+}
+
+function TestimonialCard({ quote, author, role, company }: {
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+}) {
+  return (
+    <div className="bg-white p-6 rounded-lg shadow-lg">
+      <p className="text-gray-600 mb-4 italic">"{quote}"</p>
+      <div>
+        <p className="font-semibold text-gray-900">{author}</p>
+        <p className="text-sm text-gray-500">{role}, {company}</p>
+      </div>
+    </div>
+  );
+}
+
 export default function AIPoweredCRMPage() {
   return (
     <div className="space-y-16">

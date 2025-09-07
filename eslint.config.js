@@ -1,11 +1,12 @@
 import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import typescript from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
 import globals from 'globals';
 
 export default [
+  js.configs.recommended,
   {
     ignores: [
       'node_modules/**',
@@ -73,26 +74,7 @@ export default [
       'structural-*.js',
       'system-*.js',
       'ultimate-*.js',
-      '*.js',
-      'src_backup_temp/**',
-      'temp-backup/**',
-      'temp_exclude/**',
-      'temp_components/**',
-      'temp_broken_files/**',
-      'temp_working/**',
-      'zion-os.disabled/**',
-      'zion-ai-assistant/**',
-      'tools/**',
-      'utils/**',
-      'recovered-branches/**',
-      'pages._archive_corrupted/**',
-      'pages.bak/**',
-      'pages.disabled_full/**',
-      'pages_api.disabled/**',
-      'pages_backup_conflicts/**',
-      'pages_disabled/**',
-      'src.pages.disabled/**',
-      'vite.config-backup.ts'
+      '*.js'
     ],
   },
   {
@@ -112,7 +94,7 @@ export default [
         beforeAll: 'readonly',
         afterAll: 'readonly',
       },
-      parser: typescriptParser,
+      parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -140,8 +122,6 @@ export default [
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'prefer-const': 'error',
       'no-debugger': 'warn',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
     },
     settings: {
       react: {
