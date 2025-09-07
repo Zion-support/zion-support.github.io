@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 
       modified = true;
     }
@@ -350,3 +351,16 @@ if (require.main === module) {;
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
 
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+console.log('🔧 Comprehensive syntax error fixing...');
+// Function to fix specific syntax patterns
+function fixFileContent(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    // Fix merge conflict markers
+    if (content.includes('
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

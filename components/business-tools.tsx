@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 } from 'lucide-react';import {ExternalLink;
   Check;
@@ -130,6 +131,411 @@ import React from 'react';
       trend: '🔒 Critical';
       color: 'text-orange-400';
     },  ];      color: 'text-cyan-400';
+=======
+} from 'lucide-react';
+import {
+  ExternalLink
+  Check
+  Star
+  Zap
+  Users
+  Globe
+  BarChart3
+  Bot
+  Cloud
+  Lock
+  Database
+  Code
+  Palette
+  Search
+  Mail
+  Calendar
+  CreditCard
+  FileText
+  Video
+  Music
+  Image
+  Globe2
+  Smartphone
+  Monitor
+  Server
+  Cpu
+  HardDrive
+  Brain
+  Target
+  TrendingUp
+  Shield
+  Rocket
+  Briefcase
+  Cog
+  Lightbulb
+  ChartBar
+  Clock
+  CheckCircle
+  AlertCircle
+  MessageSquare;
+} from 'lucide-react';import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
+export default function BusinessToolsPage() {
+  const businessTools = [
+    {
+      category: "category",
+    tools: [
+        {
+          name: 'Notion'
+          description:
+            'All-in-one workspace for notes, docs, projects, and team collaboration.'
+          features: [
+            'Templates'
+            'Database views'
+            'Real-time editing'
+            'Integrations'
+            'Team spaces'
+          ]
+          website: 'https://notion.so'
+          icon: <FileText className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-gray-800 to-black'
+          popular: true
+        }
+        {
+          name: 'Asana'
+          description:
+            'Work management platform for teams to organize, track, and manage their work.'
+          features: [
+            'Task management'
+            'Project timelines'
+            'Team collaboration'
+            'Workflow automation'
+            'Reporting'
+          ]
+          pricing: 'Free - $10.99/month'
+          website: 'https://asana.com'
+          icon: <CheckCircle className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-pink-500 to-red-600'
+        }
+        {
+          name: 'Monday.com'
+          description:
+            'Visual project management platform with customizable workflows and automation.'
+          features: [
+            'Visual boards'
+            'Automation'
+            'Time tracking'
+            'Integrations'
+            'Analytics'
+          ]
+          pricing: '$8/month - $16/month'
+          website: 'https://monday.com'
+          icon: <Calendar className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-red-500 to-pink-600'
+        }
+      ]
+};
+      category: 'Communication & Collaboration',
+      tools: [
+        {
+          name: 'Slack'
+          description:
+            'Team communication platform for modern businesses with channels and integrations.'
+          features: [
+            'Channels'
+            'Direct messages'
+            'File sharing'
+            'Integrations'
+            'Search'
+          ]
+          website: 'https://slack.com'
+          icon: <MessageSquare className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-purple-500 to-pink-600'
+          popular: true
+        }
+        {
+          name: 'Microsoft Teams'
+          description:
+            'Unified communication platform with chat, video meetings, and file collaboration.'
+          features: [
+            'Chat'
+            'Video meetings'
+            'File sharing'
+            'Office integration'
+            'Security'
+          ]
+          pricing: 'Free - $6/month'
+          website: 'https://teams.microsoft.com'
+          icon: <Users className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
+        }
+        {
+          name: 'Zoom'
+          description:
+            'Video conferencing platform for meetings, webinars, and team collaboration.'
+          features: [
+            'HD video'
+            'Screen sharing'
+            'Recording'
+            'Webinars'
+            'Breakout rooms'
+          ]
+          pricing: 'Free - $14.99/month'
+          website: 'https://zoom.us'
+          icon: <Video className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+        }
+      ]
+    },    {          icon: <Video className="w-6 h-6" />
+          color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+        }
+      ]
+    }
+      category: 'Marketing & Sales'
+      tools: [
+        {
+          name: 'HubSpot'
+          description:
+            'All-in-one inbound marketing, sales, and customer service platform.'
+          features: [
+            'CRM'
+            'Email marketing'
+            'Lead generation'
+            'Analytics'
+            'Automation'
+          ]
+          website: 'https://hubspot.com'
+          icon: <Target className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-orange-500 to-red-600'
+          popular: true
+        }
+        {
+          name: 'Mailchimp'
+          description:
+            'Email marketing platform for growing businesses and creators.'
+          features: [
+            'Email templates'
+            'Automation'
+            'Analytics'
+            'Audience segmentation'
+            'A/B testing'
+          ]
+          pricing: 'Free - $13/month'
+          website: 'https://mailchimp.com'
+          icon: <Mail className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-yellow-500 to-orange-600'
+        }
+        {
+          name: 'Salesforce'
+          description:
+            'Customer relationship management platform for sales, service, and marketing.'
+          features: [
+            'Sales CRM'
+            'Service cloud'
+            'Marketing automation'
+            'Analytics'
+            'AppExchange'
+          ]
+          pricing: '$25/month - $300/month'
+          website: 'https://salesforce.com'
+          icon: <TrendingUp className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
+        }
+      ]
+    },    {          icon: <TrendingUp className="w-6 h-6" />
+          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
+        }
+      ]
+    }
+      category: 'Finance & Accounting'
+      tools: [
+        {
+          name: 'QuickBooks'
+          description:
+            'Small business accounting software for invoicing, expenses, and financial reporting.'
+          features: [
+            'Invoicing'
+            'Expense tracking'
+            'Financial reports'
+            'Tax preparation'
+            'Bank integration'
+          ]
+          website: 'https://quickbooks.intuit.com'
+          icon: <CreditCard className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+          popular: true
+        }
+        {
+          name: 'Stripe'
+          description: 'Payment processing platform for internet businesses.'
+          features: [
+            'Global payments'
+            'Subscription billing'
+            'Fraud prevention'
+            'Developer APIs'
+            'Analytics'
+          ]
+          pricing: '2.9% + 30¢ per transaction'
+          website: 'https://stripe.com'
+          icon: <CreditCard className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-purple-500 to-blue-600'
+        }
+        {
+          name: 'Xero'
+          description:
+            'Cloud-based accounting software for small businesses and accountants.'
+          features: [
+            'Bank reconciliation'
+            'Invoicing'
+            'Expense claims'
+            'Multi-currency'
+            'Payroll'
+          ]
+          pricing: '$13/month - $70/month'
+          website: 'https://xero.com'
+          icon: <ChartBar className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+        }
+      ]
+    },    {          icon: <ChartBar className="w-6 h-6" />
+          color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+        }
+      ]
+    }
+      category: 'Design & Creative'
+      tools: [
+        {
+          name: 'Figma'
+          description:
+            'Collaborative interface design tool for teams building digital products.'
+          features: [
+            'Real-time collaboration'
+            'Design systems'
+            'Prototyping'
+            'Developer handoff'
+            'Plugins'
+          ]
+          website: 'https://figma.com'
+          icon: <Palette className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-purple-500 to-pink-600'
+          popular: true
+        }
+        {
+          name: 'Canva'
+          description:
+            'Create professional designs with drag-and-drop simplicity.'
+          features: [
+            'Templates library'
+            'Stock photos'
+            'Brand kit'
+            'Team collaboration'
+            'Video editing'
+          ]
+          pricing: 'Free - $12.99/month'
+          website: 'https://canva.com'
+          icon: <Image className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+        }
+        {
+          name: 'Adobe Creative Cloud'
+          description:
+            'Complete creative software suite for design, photography, and video.'
+          features: [
+            'Photoshop'
+            'Illustrator'
+            'InDesign'
+            'Premiere Pro'
+            'After Effects'
+          ]
+          pricing: '$52.99/month'
+          website: 'https://adobe.com/creativecloud'
+          icon: <Palette className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-orange-500 to-red-600'
+        }
+      ]
+    },    {          icon: <Palette className="w-6 h-6" />
+          color: 'bg-gradient-to-br from-orange-500 to-red-600'
+        }
+      ]
+    }
+      category: 'Analytics & Business Intelligence'
+      tools: [
+        {
+          name: 'Google Analytics'
+          description:
+            'Free web analytics service that tracks and reports website traffic.'
+          features: [
+            'Real-time data'
+            'Audience insights'
+            'Conversion tracking'
+            'E-commerce'
+            'Goals'
+          ]
+          website: 'https://analytics.google.com'
+          icon: <BarChart3 className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-blue-500 to-green-600'
+          popular: true
+        }
+        {
+          name: 'Tableau'
+          description:
+            'Data visualization and business intelligence platform for analytics.'
+          features: [
+            'Interactive dashboards'
+            'Data blending'
+            'Real-time analytics'
+            'Mobile support'
+            'Collaboration'
+          ]
+          pricing: '$70/month - $35/month'
+          website: 'https://tableau.com'
+          icon: <ChartBar className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
+        }
+        {
+          name: 'Mixpanel'
+          description:
+            'Product analytics platform for understanding user behavior and product usage.'
+          features: [
+            'Event tracking'
+            'Funnel analysis'
+            'Cohort analysis'
+            'A/B testing'
+            'Real-time data'
+          ]
+          pricing: 'Free - $25/month'
+          website: 'https://mixpanel.com'
+          icon: <TrendingUp className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-purple-500 to-pink-600'
+        }
+      ]
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+      category: 'Analytics & Business Intelligence',
+      tools: [;
+        {
+          name: 'Google Analytics',
+  const businessInsights = [
+    {
+      title: 'Remote Work Tools'
+      description:
+        'Essential tools for distributed teams and hybrid work environments.'
+      trend: '📈 Growing Demand'
+      color: 'text-green-400',      trend: '📈 Growing Demand'
+      color: 'text-green-400'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
     {title: 'Security & Compliance';
       description: 'Tools ensuring data protection and regulatory compliance.';
@@ -138,6 +544,7 @@ import React from 'react';
     },      color: 'text-orange-400';
     }
     }
+<<<<<<< HEAD
   ];const productivityTips = [;
     {title: 'Start with Free Tiers',description:;
         'Most tools offer free versions to test before committing to paid plans.',icon: <CheckCircle className='w-6 h-6 text-green-400' />,},title: 'Focus on Integration',description:;
@@ -161,6 +568,9 @@ import React from 'react';
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">;
             Discover the most powerful business tools that successful companies use to manage projects, communicate effectively, market their products, and grow their operations. Real pricing and features.;
       title: 'Security & Compliance',description: 'Tools ensuring data protection and regulatory compliance.',trend: '🔒 Critical',color: 'text-orange-400',},];
+=======
+  ];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const productivityTips = [;
     {title: 'Start with Free Tiers',description:;
         'Most tools offer free versions to test before committing to paid plans.',icon: <CheckCircle className='w-6 h-6 text-green-400' />,},{title: 'Focus on Integration',description:;
@@ -260,10 +670,18 @@ import React from 'react';
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
       {/* Business Tools */}<section className="section-padding bg-gradient-cursor">;
+=======
+          </div>
+        </div>
+      </section>
+      {/* Business Tools */}
+      <section className="section-padding bg-gradient-cursor">
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
                 <h3 className="text-xl font-bold text-white mb-3">{insight && insight.title}</h3>;
                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">{insight && insight.description}</p>;
@@ -371,8 +789,14 @@ variant='primary';
                     </Button>;
                   </Card>;
                       </ul>;
+<<<<<<< HEAD
                     </div>;<Button;
                     <Button;
+=======
+                    </div>;
+                    <Button
+                    <Button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       href={tool && tool.website}
                       variant='primary';
                       size='sm';
@@ -391,6 +815,7 @@ variant='primary';
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
               Maximize the value of your business tools with these proven;
@@ -400,6 +825,19 @@ variant='primary';
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
             {productivityTips.map((tip, index) => (</div>;
       </section>;{/* Productivity Tips */}
+=======
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Maximize the value of your business tools with these proven
+              strategies and best practices.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {productivityTips.map((tip, index) => (
+        </div>;
+      </section>;
+      {/* Productivity Tips */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
           <div className='text-center mb-16'>;
@@ -467,6 +905,7 @@ variant='primary';
             </p>;
           </div>;
       {/* Productivity Tips */}
+<<<<<<< HEAD
 <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
           <div className='text-center mb-16'>;
@@ -503,6 +942,35 @@ variant='primary';
           </div>;
         </div>;
       </section>;
+=======
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-16'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Maximize the value of your business tools with these proven
+              strategies and best practices.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {productivityTips.map((tip, index) => (
+              <Card
+                key={index}
+                  {tip.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{tip.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{tip.description}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             ))}
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>;
@@ -564,6 +1032,7 @@ variant='primary';
             >;
               Explore Micro SaaS;
             </Button>;
+<<<<<<< HEAD
             <Button;
 href='/contact';
               variant='outline';
@@ -594,10 +1063,43 @@ href='/contact';
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl";
             >;
               Get Business Consultation;
+=======
+            <Button
+              href='/contact'
+              variant='outline'
+              size='lg'
+      <section className="section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="container-cursor text-center relative z-10">
+          <h2 className="text-responsive-lg font-bold text-white mb-8">
+            Ready to Transform Your Business Operations?
+          </h2>
+          <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+            These business tools can streamline your operations, improve team collaboration, and drive growth. 
+            Start with the essentials and build your tech stack strategically.
+          </p>
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
+            <Button
+              href="/micro-saas"
+              variant="secondary"
+              size="lg"
+              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
+            >
+              Explore Micro SaaS
+            </Button>
+            <Button
+              href="/contact"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
+            >
+              Get Business Consultation
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
     </>)}
               className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'            >              href="/micro-saas";
               variant="secondary";
@@ -614,3 +1116,13 @@ href='/contact';
       </section>;
     </>;
   )}
+=======
+    </>);
+}
+              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'            >              href="/micro-saas"
+              variant="secondary"
+              size="lg"
+              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
+              Explore Micro SaaS
+            </Button>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

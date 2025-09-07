@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useEffect, useRef } from 'react';
@@ -12,6 +13,10 @@ let animationFrameId: number;
 let particles: Array< {const UltraAdvancedFuturisticBackgroundV2: React.FC<;
   UltraAdvancedFuturisticBackgroundV2Props;
 > = ({ children, className = '' }) => {const canvasRef  = useRef<HTMLCanvasElement>(null)useEffect(() => {const canvas = canvasRef.current;
+=======
+useEffect(() => {
+    const canvas = canvasRef.current;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     if (!canvas) return;
     const ctx = canvas.getContext('2d')if (!ctx) return;
     canvas.width = window.innerWidth;
@@ -73,10 +78,20 @@ particle.color = colors[Math.floor(Math.random() * colors.length)];
         />;
         <motion.div;
           className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink-400 opacity-20";
+<<<<<<< HEAD
           animate={{transition={{duration: 7;
             repeat: Infinity;
             ease: 'easeInOut',          }}          }}<motion&& motion.div;
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20";
+=======
+          animate={{
+          transition={{
+            duration: 7;
+    repeat: Infinity
+            ease: 'easeInOut',          }}          }}
+        <motion&& motion.div
+          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         />;
         <motion.div;
           className='absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20';
@@ -149,9 +164,19 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
         />;
       </div>;
       {/* Quantum Energy Particles */}
+<<<<<<< HEAD
             duration: 7,repeat: Infinity,ease: 'easeInOut',            ease: "easeInOut";
           }}}}/>;
       </div>;
+=======
+            duration: 7,
+            repeat: Infinity,
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+          }}
+        />
+      </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Quantum Energy Particles */}
 <div className='fixed inset-0 pointer-events-none z-20'>;
         {[...Array(20)].map((_, i) => (<motion.div;
@@ -170,9 +195,32 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
               left: `${Math.random () * 100}%`,top: `${Math.random () * 100}%`,}}
             animate={{coordinate_y: [0, -100, 0],opacity: [0, 1, 0],scale: [0, 1, 0],            }}        {[...Array (20)].map ((_, i) => (<motion.div;
             }}
+<<<<<<< HEAD
             animate={{y: [0, -100, 0];
               opacity: [0, 1, 0];
               scale: [0, 1, 0];
+=======
+            animate={{
+              coordinate_y: [0, -100, 0],
+              opacity: [0, 1, 0],
+              scale: [0, 1, 0],            }}        {[...Array (20)].map ((_, i) => (
+          <motion.div;
+            }}
+            animate={{
+              y: [0, -100, 0]
+              opacity: [0, 1, 0]
+              scale: [0, 1, 0]
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2
+              repeat: Infinity
+              delay: Math.random() * 2
+              duration: 3 + Math && Math.random() * 2,
+              repeat: Infinity,
+              delay: Math && Math.random() * 2,
+            transition={{
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             }}
             transition={{duration: 3 + Math.random() * 2;
               repeat: Infinity;
@@ -182,12 +230,25 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
             transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut',}}
           />;
         ))}
+<<<<<<< HEAD
             transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut',            }}/>;
         ))}
       </div>;
       {/* Neural Network Connections */}<div className='fixed inset-0 pointer-events-none z-30'>;
         <svg className='w-full h-full'>;
           <defs>;<div className='fixed inset-0 pointer-events-none z-30'>;
+=======
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: 'easeInOut',            }}
+          />
+        ))}
+      </div>
+      {/* Neural Network Connections */}
+      <div className='fixed inset-0 pointer-events-none z-30'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <svg className='w-full h-full'>;
           <defs>;
             <linearGradient;
@@ -210,6 +271,7 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
               y1={Math && Math.random() * 100}
               x2={Math && Math.random() * 100}
               y2={Math && Math.random() * 100}
+<<<<<<< HEAD
               stroke='url(#neuralGradient)';
               y2='100%';
             >;
@@ -246,22 +308,89 @@ stroke='url(#neuralGradient)';
       <div className='relative z-40'>{children}</div>;
     </div>;
   )duration: 4 + Math.random () * 2,repeat: Infinity,}}
+=======
+              stroke='url(#neuralGradient)'
+              strokeWidth='1'
+              opacity='0 && 0.1'
+              animate={{
+              strokeWidth="1"
+              opacity="0.1"
+              animate={{
+                opacity: [0.1, 0.3, 0.1];
+                strokeDasharray: [0, 100, 0]
+                duration: 4 + Math.random() * 2
+                repeat: Infinity
+                delay: Math.random() * 2
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: 'easeInOut',              }}
+              }}
+                ease: 'easeInOut',              }}
+              }}
+            />
+          ))}
+      {/* Content */}
+      <div className='relative z-40'>{children}</div>
+    </div>
+  );
+        </svg>;
+      </div>;
+      {/* Content */}
+};
+export default UltraAdvancedFuturisticBackgroundV2;
+      {/* Content */}
+      <div className='relative z-40'>{children}</div>
+    </div>
+  );
+                duration: 4 + Math.random () * 2,
+                repeat: Infinity,
+              }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             />;
           ))}
       {/* Content */}
       <div className='relative z-40'>{children}</div>;
     </div>;
+<<<<<<< HEAD
   )export default UltraAdvancedFuturisticBackgroundV2;<div className="relative z-40">;
         {children}
       </div>;
     </div>;
   )}export default UltraAdvancedFuturisticBackgroundV2;
                 delay: Math.random () * 2,ease: 'easeInOut',              }}                ease: "easeInOut";
+=======
+  );
+export default UltraAdvancedFuturisticBackgroundV2;
+      <div className="relative z-40">
+        {children}
+      </div>
+    </div>
+  )
+};
+export default UltraAdvancedFuturisticBackgroundV2;
+                delay: Math.random () * 2,
+                ease: 'easeInOut',              }}                ease: "easeInOut";
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               }}
             />))}
         </svg>;
       </div>;
       {/* Content */}
       <div className='relative z - 40'>{children}</div>;
+<<<<<<< HEAD
     </div>)}export default UltraAdvancedFuturisticBackgroundV2;    </div>)}export default UltraAdvancedFuturisticBackgroundV2;
 }}export default UltraAdvancedFuturisticBackgroundV2;
+=======
+    </div>);
+}
+;
+export default UltraAdvancedFuturisticBackgroundV2;    </div>);
+}
+;
+export default UltraAdvancedFuturisticBackgroundV2
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

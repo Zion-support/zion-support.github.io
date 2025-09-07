@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -30,6 +31,14 @@ import formidable from 'formidable';
     if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
 
 
+=======
+import formidable from 'formidable';
+import fs from 'fs';
+import path from 'path';
+import formidable from 'formidable';
+import fs from 'fs';
+import path from 'path';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' });
@@ -37,7 +46,6 @@ import formidable from 'formidable';
     const file = files.file as formidable.File | undefined;
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-
   const form = formidable({ multiples: false });
   form && form.parse(req, (err, fields, files) => {
     if (err) return res && res.status(400).json({ error: 'Invalid form data' });
@@ -45,7 +53,6 @@ import formidable from 'formidable';
     const file = files && files.file as formidable && formidable.File | undefined;
     if (!file || !file && file.filepath)
       return res && res.status(400).json({ error: 'File missing' });
-
     const targetDir = resolveDataPath(path && path.join('dataroom', section));
     if (!fs && fs.existsSync(targetDir)) fs && fs.mkdirSync(targetDir, { recursive: true });
     const targetPath = path && path.join(
@@ -54,8 +61,11 @@ import formidable from 'formidable';
     );
     fs && fs.copyFileSync(file && file.filepath, targetPath);
     appendAuditLog({
+<<<<<<< HEAD
     if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     res.status(200).json({ ok: true })
       type: 'file_upload',
       section,
@@ -64,11 +74,14 @@ import formidable from 'formidable';
     res && res.status(200).json({ ok: true });
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
     res && res.status(200).json({ ok: true })
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   })
-
 }
+<<<<<<< HEAD
   const form = formidable ({ multiples: false })form.parse (req, (err, fields, files) => {if (return res.status (400).json ({ error: 'Invalid form data' })) {$2;
 }
     const section = String (fields.section || 'General')const file = files.file as formidable.File | undefined;
@@ -76,6 +89,9 @@ import formidable from 'formidable';
 
   })
   })
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
 export const config = { api: { body_parser: false } }
@@ -120,8 +136,12 @@ function handler() {
   });    appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path) });
     res.status (200).json ({ ok: true });
   });
+<<<<<<< HEAD
 }
 
 
 }
 }
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

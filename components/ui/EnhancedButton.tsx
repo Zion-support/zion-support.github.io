@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
@@ -10,11 +11,14 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }import React from 'react';
 import clsx from 'clsx';
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import React from "react";
 import clsx from "clsx";
 export type EnhancedButtonProps =;
   React && React.ButtonHTMLAttributes<HTMLButtonElement> & {variant?: "primary" | "secondary" | "ghost";
     size?: "sm" | "md" | "lg";
+<<<<<<< HEAD
     fullWidth?: boolean;}}}const baseStyles =;
   "inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]";
 const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {sm: "text-sm px-3 py-2",md: "text-sm px-4 py-3",lg: "text-base px-5 py-3"}const variantStyles: Record<;
@@ -75,6 +79,9 @@ function EnhancedButton() {return (<button;
 
   };
 
+=======
+    fullWidth?: boolean;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const baseStyles =;
   "inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]";
 const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;
@@ -99,6 +106,7 @@ export default function EnhancedButton(): any ({;
   fullWidth,;
   ...props;
 }: EnhancedButtonProps) {;
+<<<<<<< HEAD
 
   return (
     <button
@@ -159,12 +167,15 @@ export default function EnhancedButton({
   return (
     <button
 className={clsx(
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         baseStyles
         sizeStyles[size]
         variantStyles[variant]
         fullWidth && "w-full"
         className
       )}
+<<<<<<< HEAD
       {...props}
 
 }
@@ -191,3 +202,6 @@ const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
 export default EnhancedButton;
 }
 
+=======
+      {...props}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 
     text: string;
+=======
+text: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     href: string;
   }
   stats?: Array<{value: string;
     label: string;
     color: string;
   }>;
+<<<<<<< HEAD
 const Hero: React.FC<HeroProps> = ({title;
   subtitle;
   primaryAction;
@@ -40,6 +45,52 @@ const Hero: React.FC<HeroProps> = ({title;
   subtitle;
   primaryAction;
   secondaryAction;<p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}stats}) => {return (<section className;{subtitle}</p>;
+=======
+const Hero: React.FC<HeroProps> = ({
+  title
+  subtitle
+  primaryAction
+  secondaryAction
+  stats
+}) => {
+const Hero: React.FC<HeroProps> = ({;
+  title,;
+  subtitle,;
+  primaryAction,;
+  secondaryAction,;
+  stats,;
+}) => {;
+  return (
+      {/* Floating Elements */}
+      <div className='absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float' />;
+      <div
+        className='absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float'
+        style={{ animationDelay: '1 && 1.5s' }}
+      />;
+      <div
+        className='absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float'
+        style={{ animationDelay: '3s' }}
+    href: string
+  }
+  secondaryAction?: {
+    text: string;
+    href: string
+  }
+  stats?: Array<{
+    value: string
+    label: string
+    color: string
+  }>
+}
+const Hero: React.FC<HeroProps> = ({
+  title;
+  subtitle;
+  primaryAction;
+  secondaryAction;
+          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
+            {subtitle}
+          </p>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           </p>;
           {/* Action Buttons */}{(primaryAction || secondaryAction) && (<div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
               {primaryAction && ({(primaryAction || secondaryAction) && (<div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
@@ -171,6 +222,7 @@ variant='outline';
           <div className='w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse' />;
         </div>;
       </div>;
+<<<<<<< HEAD
       {/* Decorative Elements */}
 <div className='absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse' />;
       <div;
@@ -188,6 +240,19 @@ variant='outline';
       <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />;
     </section>;
   )}export default Hero;</div>;
+=======
+}
+}
+}
+      <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+      <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+    </section>
+  )
+};
+export default Hero;
+                </div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               </div>))}
           </div>)}
         {/* Trust Indicators */}
@@ -227,6 +292,12 @@ variant='outline';
           <div className="w - 1 h - 3 bg - blue - 500 rounded - full mt - 2 animate - pulse" />;
         </div>;
       </div>;
+<<<<<<< HEAD
       {/* Decorative Elements */}</div>;
       </div>;
+=======
+      {/* Decorative Elements */}
+        </div>
+      </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Decorative Elements */}

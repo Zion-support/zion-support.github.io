@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
   categories?: {communication?: number;
@@ -12,30 +13,42 @@
 
 
 
+=======
+categories?: {
+    communication?: number;
+    qualityOfWork?: number;
+    timeliness?: number;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
+<<<<<<< HEAD
  </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {submitting ? 'Submitting...' : 'Submit Review' ;
 }</button> </form>)}type Props = {type Props = {type Props = {initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;}import React, { useState } from 'react';
+=======
+ </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;
+  submitting ? 'Submitting...' : 'Submit Review' ;
+}</button> </form>) 
+};
+type Props = {;
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
+};import React, { useState } from 'react';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import StarRating from './StarRating';
 export type ReviewFormValues = {projectId: string,fromRole: 'client' | 'talent',fromId: string,rating: number,text: string,categories?: {communication?: number;
     qualityOfWork?: number;
@@ -68,10 +81,13 @@ function handle_submit() {e.prevent_default ()set_submitting (true)set_message (
   };
   anonymous?: boolean;
 };
+<<<<<<< HEAD
 
 type Props = {
+=======
+type Props = {;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
-
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
@@ -82,6 +98,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
   const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
+<<<<<<< HEAD
 
     wouldWorkWithAgain?: boolean;
   }
@@ -120,6 +137,8 @@ function handle_submit() {
           text,
           anonymous,
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           categories: {
             communication
             qualityOfWork
@@ -128,6 +147,7 @@ function handle_submit() {
           }
         })
       });
+<<<<<<< HEAD
 
 
   async function handleSubmit(): any (e: React && React.FormEvent) {;
@@ -156,6 +176,8 @@ function handle_submit() {
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {;
       setMessage(err && err.message);
@@ -163,6 +185,7 @@ function handle_submit() {
       setSubmitting(false);    }
   }
   return (
+<<<<<<< HEAD
 
     <form onSubmit={handleSubmit} className='space-y-6'>;
       <div>;
@@ -172,6 +195,8 @@ function handle_submit() {
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -194,6 +219,7 @@ function handle_submit() {
             qualityOfWork;
             timeliness;
             wouldWorkWithAgain}})});
+<<<<<<< HEAD
 
 
     }
@@ -227,6 +253,8 @@ function handle_submit() {
 <label className='block text-sm font-medium mb-2'>Your Review</label>;
         <textarea;
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500';
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
@@ -234,18 +262,25 @@ function handle_submit() {
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
+<<<<<<< HEAD
           onChange={e => setText(e && e.target.value)}          required;
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <input
           id='anonymous'
           type='checkbox'
           checked={anonymous}
+<<<<<<< HEAD
 
           onChange={e => setAnonymous(e && e.target.checked)}
         />;
@@ -270,6 +305,8 @@ function handle_submit() {
               value={communication |0}
               onChange={v => setCommunication(v)}
       set_submitting (false)}
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       set_submitting (false);
     }
   }
@@ -317,6 +354,7 @@ function handle_submit() {
           <span className='pill'>Optional</span>;
         </div>;<div className='enhanced - card'>;
         </div>;
+<<<<<<< HEAD
 
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
@@ -329,10 +367,13 @@ function handle_submit() {
         </div>;<div className='enhanced - card'>;
               on_change={v => setQualityOfWork (v)}
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<< HEAD
 
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
@@ -361,18 +402,23 @@ function handle_submit() {
 }export default ReviewForm;</button>;{message && <p className='text-sm'>{message}</p>}
               on_change={v => set_timeliness (v)}
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<< HEAD
 
               onChange={e => setWouldWorkWithAgain(e && e.target.checked)}
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             />;
           </div>;
           <span className='pill'>Optional</span>        </div>;
       </div>;
-
       </button>;
+<<<<<<< HEAD
 
 
       {message && <p className='text-sm'>{message}</p>}
@@ -405,6 +451,8 @@ type='submit';
         {submitting ? 'Submitting...' : 'Submit Review'}
 
       </button>;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {message && <p className='text - sm'>{message}</p>}
     </form>);
 }
@@ -414,4 +462,3 @@ export default ReviewForm;    </form>);
 ;
 export default ReviewForm;
 ;
-

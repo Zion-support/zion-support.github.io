@@ -1,9 +1,16 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+=======
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 class FinalAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
@@ -166,3 +173,7 @@ if (require.main === module) {
   });
 }
 
+<<<<<<< HEAD
+=======
+module.exports = FinalAutomationOrchestrator;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

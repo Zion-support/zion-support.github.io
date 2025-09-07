@@ -32,6 +32,7 @@ export default function handler() {if (!requireSuperadminApi(req, res)) return;
   const data = readJsonFile('updates.json', [] as any[]);
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
+<<<<<<< HEAD
 
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data)
@@ -40,6 +41,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data)
 }
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -59,6 +62,7 @@ function handler() {
 }
   const data = readJsonFile ('updates.json', [] as any[]);
   res.status (200).json (data);
+<<<<<<< HEAD
 }
 
 
@@ -79,3 +83,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 }
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

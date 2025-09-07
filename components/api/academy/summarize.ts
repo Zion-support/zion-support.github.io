@@ -1,9 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+<<<<<<< HEAD
 export default async function handler() {if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' })})const fallback = () => res && res.status(200).json({summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`})export default async function handler() {if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })const { moduleTitle, moduleContent } = req.body || {},const apiKey = null;
     res.status(200).json({summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`;
     })if (!apiKey) return fallback()try {const client = new OpenAI({ apiKey })const prompt  = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;{role: 'system';
           content: 'You are a concise, practical course assistant.';
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+    });
+  const fallback = () => res && res.status(200).json({
+    summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
+  if (!apiKey) return fallback();
+  try {
+    const client = new OpenAI({ apiKey });
+    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
+        {
+          role: "role",
+    content: 'You are a concise, practical course assistant.'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         }
         { role: 'user', content: prompt }
       ];
@@ -17,4 +32,9 @@ export default async function handler() {if (req && req.method !== 'POST') retur
 }
   }
   }
+<<<<<<< HEAD
   }return res.status(200).json({ summary: text.trim() })} catch (err) {return fallback()}}
+=======
+  }
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

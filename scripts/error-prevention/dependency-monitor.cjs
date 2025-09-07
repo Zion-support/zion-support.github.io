@@ -17,8 +17,12 @@ class DependencyMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
+<<<<<<< HEAD
 
     
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
@@ -40,8 +44,12 @@ class DependencyMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       child.on('close', (code) => {}
         if ( {})
           console.log('Dependency check passed ✓')) {}
@@ -60,8 +68,12 @@ class DependencyMonitor {}
     const outdatedPackages = lines.filter(line => )
       line.includes('→') && !line.includes('Package');
    ;);
+<<<<<<< HEAD
 
     
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     if ( {})
       console.log('Outdated packages "found": ')) {}
      {}
@@ -88,8 +100,12 @@ class DependencyMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       child.on('close', (code) => {}
         if ( {})
           console.log('Package integrity check passed ✓')) {}
@@ -129,5 +145,9 @@ if ( {})
 });
   
   monitor.start().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 module.exports = DependencyMonitor;

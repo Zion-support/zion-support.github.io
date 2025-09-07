@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node
@@ -145,13 +146,14 @@ if (require.main === module) {
 module.exports = GitAutomation;
 const fs = require("fs");"const path = require("path");"const { exec } = require("child_process");"const { promisify } = require("util");const execAsync = promisify(exec);class GitAutomation { constructor() {" this.logFile = path.join(__dirname, "logs", "git-automation.log"); this.repoPath = process.cwd(); } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile, logMessage); } async runCommand(command, options = {}) { try { const { stdout, stderr } = await execAsync(command, { cwd: this.repoPath," timeout: 60000, .options});" return { success: true, stdout, stderr }; } catch (error) {"` this.log(`Command failed: ${command} - ${error.message}`); return {" success: false,"" stdout: error.stdout | ""," stderr: error.stderr | error.message}; } } async getCurrentBranch() {" const result = await this.runCommand("git branch --show-current"); return result.success ? result.stdout.trim() : null; } async getStatus() {" const result = await this.runCommand("git status --porcelain");" return result.success ? result.stdout.trim() : ""; } async hasUncommittedChanges() { const status = await this.getStatus(); return status.length > 0; } async addAllChanges() {" this.log("Adding all changes.");" const result = await this.runCommand("git add ."); return result.success; } async commitChanges(message) {"` this.log(`Committing changes: ${message}`);"` const result = await this.runCommand(`git commit -m "${message}"`); return result.success; } async pushChanges(branch = null) { const currentBranch = branch | (await this.getCurrentBranch()); if (!currentBranch) {" this.log("No current branch found"); return false; }` this.log(`Pushing changes to ${currentBranch}.`);` const result = await this.runCommand(`git push origin ${currentBranch}`); return result.success; } async pullChanges() {" this.log("Pulling latest changes.");" const result = await this.runCommand("git pull origin"); return result.success; } async mergeMain() { const currentBranch = await this.getCurrentBranch();" if (!currentBranch | currentBranch === "main") {" this.log("Already on main branch or no branch detected"); return false; }` this.log(`Merging main into ${currentBranch}.`); / First pull main const pullResult = await this.runCommand(" "git checkout main && git pull origin main" ); if (!pullResult.success) {" this.log("Failed to pull main branch"); return false; } / Switch back to current branch const checkoutResult = await this.runCommand(` `git checkout ${currentBranch}` ); if (!checkoutResult.success) {" this.log("Failed to switch back to current branch"); return false; } / Merge main" const mergeResult = await this.runCommand("git merge main"); if (!mergeResult.success) {" this.log("Failed to merge main branch"); return false; } return true; } async createPullRequest(title, body) {"` this.log(`Creating pull request: ${title}`); / Push changes first const pushResult = await this.pushChanges(); if (!pushResult) {" this.log("Failed to push changes for PR"); return false; } / Create PR using GitHub CLI if available"` const prCommand = `gh pr create --title "${title}" --body "${body}"`; const result = await this.runCommand(prCommand); if (result.success) {" this.log("Pull request created successfully"); } else { this.log(" "Failed to create pull request (GitHub CLI may not be available)" ); } return result.success; } async autoCommitAndPush() { const hasChanges = await this.hasUncommittedChanges(); if (!hasChanges) {" this.log("No changes to commit"); return false; } / Add all changes const addResult = await this.addAllChanges(); if (!addResult) {" this.log("Failed to add changes"); return false; } / Commit with timestamp const timestamp = new Date().toISOString();"` const commitMessage = `Auto-commit: Error fixes and improvements - ${timestamp}`; const commitResult = await this.commitChanges(commitMessage); if (!commitResult) {" this.log("Failed to commit changes"); return false; } / Push changes const pushResult = await this.pushChanges(); if (!pushResult) {" this.log("Failed to push changes"); return false; }" this.log("Successfully committed and pushed changes"); return true; } async syncWithMain() {" this.log("Syncing with main branch."); const currentBranch = await this.getCurrentBranch(); if (!currentBranch) {" this.log("No current branch found"); return false; }" if (currentBranch === "main") { / Just pull latest changes return await this.pullChanges(); } else { / Merge main into current branch return await this.mergeMain(); } } async performDailySync() {" this.log("Performing daily sync."); / Pull latest changes const pullResult = await this.pullChanges(); if (!pullResult) {" this.log("Failed to pull latest changes"); return false; } / Check for uncommitted changes const hasChanges = await this.hasUncommittedChanges(); if (hasChanges) {" this.log("Found uncommitted changes, committing them."); await this.autoCommitAndPush(); } / Sync with main if not on main const syncResult = await this.syncWithMain(); if (!syncResult) {" this.log("Failed to sync with main"); return false; }" this.log("Daily sync completed successfully"); return true; } async start() {" this.log("Git Automation started"); / Perform initial sync await this.performDailySync(); / Set up periodic sync every 6 hours setInterval( async () => { await this.performDailySync(); }, 6 * 60 * 60 * 1000 ); / Set up daily full sync setInterval( async () => {" this.log("Running daily full sync."); await this.performDailySync(); }, 24 * 60 * 60 * 1000 ); }}/ Start the automation if this script is run directlyif (require.main === module) { const automation = new GitAutomation(); automation.start().catch(error => {"" console.error("Git Automation failed: ", error); process.exit(1); });}module.exports = GitAutomation;""`"`
 
+=======
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
-
 const execAsync = promisify(exec);
-
 class GitAutomation {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'git-automation.log');
@@ -159,7 +161,11 @@ class GitAutomation {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -171,7 +177,6 @@ class GitAutomation {}
         "timeout": 60000,
         ...options}
 });
-
       return { "success": true, stdout, stderr };
     } catch (error) {}
       this.log(`Command "failed": ${command} - ${error.message}`);
@@ -225,7 +230,6 @@ class GitAutomation {}
       return false;
     };
     this.log(`Merging main into ${currentBranch}...`);
-
     // First pull main;
     const pullResult = await this.runCommand()
       'git checkout main && git pull origin main'
@@ -252,7 +256,6 @@ class GitAutomation {}
   };
   async createPullRequest(title, body) {}
     this.log(`Creating pull "request": ${title}`);
-
     // Push changes first;
     const pushResult = await this.pushChanges();
     if (!pushResult) {}
@@ -262,7 +265,6 @@ class GitAutomation {}
     // Create PR using GitHub CLI if available;
     const prCommand = `gh pr create --title "${title}" --body "${body}"`;`
     const result = await this.runCommand(prCommand);
-
     if (result.success) {}
       this.log('Pull request created successfully');
     } else {}
@@ -303,7 +305,6 @@ class GitAutomation {}
   };
   async syncWithMain() {}
     this.log('Syncing with main branch...');
-
     const currentBranch = await this.getCurrentBranch();
     if (!currentBranch) {}
       this.log('No current branch found');
@@ -319,7 +320,6 @@ class GitAutomation {}
   };
   async performDailySync() {}
     this.log('Performing daily sync...');
-
     // Pull latest changes;
     const pullResult = await this.pullChanges();
     if (!pullResult) {}
@@ -343,10 +343,8 @@ class GitAutomation {}
   };
   async start() {}
     this.log('Git Automation started');
-
     // Perform initial sync;
     await this.performDailySync();
-
     // Set up periodic sync every 6 hours;
     setInterval()
       async () => {}
@@ -354,7 +352,6 @@ class GitAutomation {}
       },
       6 * 60 * 60 * 1000;
     );
-
     // Set up daily full sync;
     setInterval()
       async () => {}
@@ -375,7 +372,26 @@ if (require.main === module) {}
 });
 };
 module.exports = GitAutomation;
+<<<<<<< HEAD
 
 module.exports = GitAutomation;
 module.exports = GitAutomation;
 
+=======
+module.exports = GitAutomation;
+module.exports = GitAutomation;
+module.exports = GitAutomation;
+module.exports = GitAutomation;
+module.exports = GitAutomation;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

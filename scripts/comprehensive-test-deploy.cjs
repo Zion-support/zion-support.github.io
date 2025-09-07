@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
     this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);
@@ -19,6 +20,10 @@ suite.runComprehensiveSuite().catch(console.error);
 
 
 
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -26,8 +31,8 @@ const { execSync } = require('child_process')
 // console.log(' Comprehensive Test & Deploy Suite')
 console.log('=')
   log(message, type = 'info')
-        encoding: 'utf8'
-        stdio: 'pipe'
+        encoding: "encoding",
+    stdio: 'pipe'
       this.log(` ${description} completed successfully`, 'success'`)
       this.log(` ${description} failed: ${error.message}`, 'error'`)
     this.log('🧪 Running comprehensive tests...')

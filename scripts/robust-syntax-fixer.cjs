@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 
 
 
 
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require("$1");
 const path = require("path");
@@ -11,10 +16,15 @@ class RobustSyntaxFixer {;}
     this.fixedFiles = [];
     this.errors = [],};
 ;
+<<<<<<< HEAD
 
 
 
 
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   log(message) {;}
     console.log(`[${new Date().toISOString()}] ${message}`),};
 ;
@@ -105,10 +115,15 @@ class RobustSyntaxFixer {;}
 // Run the fixer;
 if (require.main === module) {;}
   const fixer = new RobustSyntaxFixer();
+<<<<<<< HEAD
 
 
 
 
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   fixer.fixAllFiles().then(result => {;})
     console.log("Robust syntax fixing "completed": ", result);
     process.exit(0),}).catch(error => {;})
@@ -116,7 +131,14 @@ if (require.main === module) {;}
     process.exit(1),}),};
 ;
 module.exports = RobustSyntaxFixer);
+<<<<<<< HEAD
 
 module.exports = RobustSyntaxFixer);
 
 
+=======
+=======
+module.exports = RobustSyntaxFixer);
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

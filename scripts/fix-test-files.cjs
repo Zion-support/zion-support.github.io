@@ -12,5 +12,9 @@ const { execSync } = require('child_process')
           return match + ''
       const jsxIssues = [{ "pattern": /render\(<([^>]+)>\s*\)/g, "replacement"}
         { "pattern": /expect\(screen\.getByTestId\('([^']+)'\)\)\.toBeInTheDocument\(\)/g, "replacement": 'expect(screen.getByTestId("$1"})
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       const componentImportRegex = /import\s+(\w+)\s+from\s+['"]([^'')]

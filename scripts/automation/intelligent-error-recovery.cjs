@@ -3,8 +3,12 @@
  * Intelligent Error Recovery System;
  * Automatically detects and recovers from various types of errors;
  */
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -21,5 +25,9 @@ const { execSync } = require('child_process')
                 "type"
                 "severity"
             execSync('npm run "lint")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             execSync('npm run "lint")

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   Menu;
   X;
@@ -11,12 +12,63 @@
   Globe;
   ChevronDown;Globe,ChevronDown,} from 'lucide-react';
 import Link from 'next/link';import {Menu, X, Home, Brain, Cpu, Rocket,Phone, Mail, MapPin, Globe, ChevronDown;
+=======
+Menu
+  X
+  Home
+  Brain
+  Cpu
+  Rocket
+  Phone
+  Mail
+  MapPin
+  Globe
+  ChevronDown;
+  Globe,;
+  ChevronDown,;
+} from 'lucide-react';
+import Link from 'next/link';import { ;
+  Menu, X, Home, Brain, Cpu, Rocket, ;
+  Phone, Mail, MapPin, Globe, ChevronDown;
+} from 'lucide-react';
+import Link from 'next/link';
+import { 
+  Menu, X, Home, Brain, Cpu, Rocket, 
+  Phone, Mail, MapPin, Globe, ChevronDown
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
  } from 'lucide-react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { Menu, X, Home, Brain, Cpu, Rocket,import React, { useState, useEffect  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Menu, X, Home, Brain, Cpu, Rocket;Phone, Mail, MapPin, Globe, ChevronDown;
   } from 'lucide-react';
+=======
+const Navigation: React.FC = () => {
+import Link from 'next/link';
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+    {
+      name: "name",
+    href: '/services'
+      icon: Rocket;
+    dropdown: [
+  Menu,
+  X,
+  Home,
+  Brain,
+  Cpu,
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ChevronDown,
+} from 'lucide-react';
+import Link from 'next/link';import {
+  Menu, X, Home, Brain, Cpu, Rocket,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   Phone, Mail, MapPin, Globe, ChevronDown;
  } from 'lucide-react';
 const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false)const [isScrolled, setIsScrolled] = useState(false)const [activeDropdown, setActiveDropdown]  = useState<string | null>(null)const Navigation: React.FC;
@@ -155,10 +207,19 @@ import Link from 'next / link';import { Menu, X, Home, Brain, Cpu, Rocket,Phone,
                                   </Link>;
                                 )})}                          >;
                             <div className="grid grid-cols-1 gap-3">;
+<<<<<<< HEAD
                               {item && item.dropdown.map((dropdownItem) => {const Icon = dropdownItem && dropdownItem.icon;
                                 return (<Link;
                             </div>;
                           </motion.div>;
+=======
+                              {item && item.dropdown.map((dropdownItem) => {;
+                                const Icon = dropdownItem && dropdownItem.icon;
+                                return (
+                                  <Link
+                            </div>
+                          </motion.div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                         )}
                       </AnimatePresence>;
                     </div>;
@@ -197,8 +258,13 @@ import Link from 'next / link';import { Menu, X, Home, Brain, Cpu, Rocket,Phone,
                   )}
                 </div>;
               ))}
+<<<<<<< HEAD
             </div>;
                 href="/contact";
+=======
+            </div>
+                href="/contact"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
               <motion&& motion.button;
@@ -249,6 +315,7 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </motion && motion.nav>;{/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (<motion&& motion.div;
@@ -266,11 +333,15 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
           </div>;
         </div>;
       </motion.nav>;
+=======
+      </motion && motion.nav>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (<motion.div;
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
             exit={{ opacity: 0, x: '100%' }}transition={{ duration: 0.3 }}
 className='fixed inset-0 z-40 lg:hidden';
           >;
@@ -281,14 +352,33 @@ className='fixed inset-0 z-40 lg:hidden';
             <div;
               className="absolute inset-0 bg-black/50 backdrop-blur-sm";
               onClick={() => setIsOpen(false)}/>;
+=======
+            exit={{ opacity: 0, x: '100%' }}
+          >
+            {/* Backdrop */}
+            <div
+              className='absolute inset-0 bg-black/50 backdrop-blur-sm'
+              onClick={() => setIsOpen(false)}
+            {/* Backdrop */}
+            <div 
+              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+              onClick={() => setIsOpen(false)}
+            />
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             {/* Mobile Menu */}
             <motion&& motion.div;
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
+<<<<<<< HEAD
               exit={{ x: '100%' }}transition={{ duration: 0.3 }}
 className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl';
             >;
               <div className='p-6'>;
+=======
+              exit={{ x: '100%' }}
+            >
+              <div className='p-6'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 {/* Close Button */}
                 <div className='flex justify-end mb-6'>;
                   <motion&& motion.button;
@@ -331,6 +421,7 @@ className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl bo
                         </div>;
                       ) : (<Link;
                           href={item && item.href}
+<<<<<<< HEAD
                           onClick={() => setIsOpen(false)}className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300';
 className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300';
                         >;
@@ -356,6 +447,33 @@ className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 trans
                       <Phone className='w-4 h-4 text-cyan-400' />;
                       <span>{contactInfo.mobile}</span>;
                         <Link;
+=======
+                          onClick={() => setIsOpen(false)}
+                          className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
+                        >
+                          <item.icon className='w-5 h-5 text-cyan-400' />
+                          <span className='text-white font-medium'>
+                            {item.name}
+                          </span>                        </Link>
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                </div>
+                      )}
+                    </div>;
+                  ))}
+                {/* Contact Information */}
+                <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
+                  <h3 className='text-cyan-400 font-semibold mb-3'>
+                    Contact Information
+                  </h3>
+                  <div className='space-y-2 text-sm'>
+                    <div className='flex items-center space-x-2 text-gray-300'>
+                      <Phone className='w-4 h-4 text-cyan-400' />
+                      <span>{contactInfo.mobile}</span>
+                        <Link
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                           href={item && item.href}
                           onClick={() => setIsOpen(false)}
                           className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300';
@@ -421,7 +539,15 @@ className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 trans
         )}
       </AnimatePresence>;
     </>;
+<<<<<<< HEAD
   )}export default Navigation;  )}export default Navigation;
+=======
+  )
+};
+export default Navigation;  )
+};
+export default Navigation;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                           </div>;
                           <div className="pl - 4 space - y-2">;
                             {item.dropdown.map ((dropdown_item) => {const Icon = dropdown_item.icon;
@@ -499,6 +625,7 @@ className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 trans
             </motion.div>;
           </motion.div>)}
       </AnimatePresence>;
+<<<<<<< HEAD
     </>)}export default Navigation)}export default Navigation;)export default Navigation;  )}
 export default Navigation;export default Navigation;</div>;
                     <div className='flex items-center space-x-2 text-gray-300'>;
@@ -529,3 +656,18 @@ export default Navigation;export default Navigation;</div>;
       </AnimatePresence>;
     </>;
 )}export default Navigation;
+=======
+    </>);
+}
+;
+export default Navigation);
+}
+;
+export default Navigation;
+;
+  );
+export default Navigation;  )
+}
+export default Navigation;
+export default Navigation;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

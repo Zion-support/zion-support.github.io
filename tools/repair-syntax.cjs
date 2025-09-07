@@ -1,5 +1,6 @@
-
-
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:tools/repair-syntax.cjs
 #!/usr/bin/env node;
 /*
   Automated syntax repair for widespread mangling and merge markers.

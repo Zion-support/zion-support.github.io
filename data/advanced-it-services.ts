@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
   {{id: string;
 export interface AdvancedITService  {id: string;name: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -1065,6 +1069,7 @@ export interface AdvancedITService  {id: string;name: string;
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 
 
   {
@@ -1092,6 +1097,10 @@ export interface AdvancedITService  {id: string;name: string;
     popular: true,
 
       mobile: '+1 302 464 0950',
+=======
+  {
+=======      mobile: '+1 302 464 0950',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -1742,8 +1751,11 @@ export interface AdvancedITService  {id: string;name: string;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -1812,11 +1824,10 @@ export interface AdvancedITService  {id: string,name: string,tagline: string,pri
     ],
     popular: true,
     icon: '🌐',
-    marketPosition:
-      'Advanced edge orchestration platform competing with AWS Greengrass and Azure IoT Edge'
+    marketPosition: "marketPosition",
     targetAudience:
       'IoT companies, Manufacturing, Smart cities, Transportation, Healthcare'
-    trialDays: 30
+    trialDays: 30;
     setupTime: '2 weeks'
     category: 'Edge Computing'
     realService: true
@@ -2772,6 +2783,5 @@ export const advancedITServices: AdvancedITService[] = [;
   }
 
 export interface AdvancedITService {;
-
   }
 ];

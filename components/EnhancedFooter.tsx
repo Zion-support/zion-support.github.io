@@ -1,11 +1,38 @@
+<<<<<<< HEAD
 
   Brain,Mail,Phone,MapPin,Globe,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
 import React from 'react';
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
+=======
+Brain,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+import React from 'react';
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
 }
 import Link from 'next/link';
+<<<<<<< HEAD
 import {Brain,Mail,Phone,MapPin,Globe,Github,Linkedin,Twitter,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
 import { Facebook,Twitter,Linkedin,Instagram,Mail,Phone,MapPin,ArrowUp,Globe,Shield,FileText,HelpCircle,} from 'lucide-react';
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
@@ -38,6 +65,88 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
     }
     {const socialLinks = [;
     { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },{name: 'LinkedIn',href: 'https://linkedin && linkedin.com/company/ziontechgroup',icon: Linkedin,},{name: 'Twitter',href: 'https://twitter && twitter.com/ziontechgroup',icon: Twitter,},{ name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },return (<footer className='bg-slate-950 border-t border-white/10'>;
+=======
+import {;
+  Brain,;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Globe,;
+  Github,;
+  Linkedin,;
+  Twitter,;
+} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+import React from 'react';
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next/link';
+import {;
+  Brain,;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Globe,;
+  Github,;
+  Linkedin,;
+  Twitter,;
+} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+const EnhancedFooter: React.FC = () => {;
+  const currentYear = new Date().getFullYear(),;
+  const footerSections = [;
+    {;
+      title: 'Services',;
+      links: [;
+        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },;
+        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },;
+        { name: 'Edge Computing', href: '/edge-computing-orchestration' },;
+        { name: 'Space Technology', href: '/space-technology' },;
+        {;
+          name: 'View All Services',;
+          href: '/comprehensive-2025-services-showcase',;
+        },;
+      ],;
+    },    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+    {
+      name: "name",
+    href: 'https://linkedin.com/company/ziontechgroup'
+      icon: Linkedin
+    }
+    {
+  const socialLinks = [;
+    { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
+    {;
+      name: 'LinkedIn',;
+      href: 'https://linkedin && linkedin.com/company/ziontechgroup',;
+      icon: Linkedin,;
+    },;
+    {;
+      name: 'Twitter',;
+      href: 'https://twitter && twitter.com/ziontechgroup',;
+      icon: Twitter,;
+    },;
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+  return (
+    <footer className='bg-slate-950 border-t border-white/10'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className='max-w-7xl mx-auto px-6 py-16'>;
         {/* Main Footer Content */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12'>;
@@ -54,6 +163,7 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
               </div>;
               <div className='flex items-center space-x-3 text-white/70'>;
                 <Phone className='w-4 h-4' />;
+<<<<<<< HEAD
                 <a;
                   href='tel:+13024640950';
   Brain,Mail,Phone,MapPin,Globe,Github,href={link.href}
@@ -102,6 +212,18 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
               <ul className='space-y-2'>;
                 {section.links.map(link => (<li key={link.name}>;
                     <Link;
+=======
+                <a
+                  href='tel:+13024640950'
+import Link from 'next/link';
+import {
+  Brain,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Github,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       href={link.href}
                       className='text-white/70 hover:text-white transition-colors duration-200';
                     >;
@@ -243,6 +365,7 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
             </div>;{/* Social Links */}}export default EnhancedFooter;  )<div className='pt-8 border-t border-white/10'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
             {/* Copyright */}
+<<<<<<< HEAD
             <div className='text-white/60 text-sm'>;
               © {currentYear} Zion Tech Group. All rights reserved.;
             </div>;
@@ -277,6 +400,18 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
         </div>;
       </div>;
     </footer>;
+=======
+            <div className="text-white/60 text-sm">;
+            </div>;
+            {/* Social Links */}
+};export default EnhancedFooter;  );
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const scrollToTop = () => {";
     window && window.scrollTo({ top: 0, behavior: "smooth" })</Link>;
                   </li>))}
@@ -504,9 +639,20 @@ company updates.;
       <buttononClick="{scrollToTop}
         className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50;
         aria-label="Scroll to top">";
+<<<<<<< HEAD
         <ArrowUp className="w-5 h-5"  />;</button>,</footer>,)}"';<div className="border - t border - gray - 800 pt - 8">";
           <div className="flex flex - col md: flex - row justify - between items - center">";
             <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">,© {current_year} Zion Tech Group. All rights reserved.;
+=======
+        <ArrowUp className="w-5 h-5"  />;
+      </button>,;
+    </footer>,;
+  )}"';
+        <div className="border - t border - gray-800 pt-8">";
+          <div className="flex flex - col md: flex - row justify-between items-center">";
+            <div className="text - gray - 400 text - sm mb-4 md:mb-0">,
+              © {current_year} Zion Tech Group. All rights reserved.;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             </div>";
             <div className="flex items - center space - x-6">";
               <div className="flex items - center space - x-4">;
@@ -529,6 +675,7 @@ company updates.;
   )}export default EnhancedFooter;  )}</button>;
     </footer>;
   )}"';
+<<<<<<< HEAD
       {/* Scroll to Top Button */}
       <button;
         onClick={scrollToTop}
@@ -539,3 +686,9 @@ company updates.;
       </button>;
     </footer>;
   )}
+=======
+  )
+};export default EnhancedFooter;  )
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -18,6 +18,7 @@ function isSupabaseConfigured() {return !!process.env.NEXT_PUBLIC_SUPABASE_URL &
     pageSize: pageSize ? Number(pageSize) : 20;sort;
     order: (order as any) |'desc';
     page: page ? Number(page) : 0;
+<<<<<<< HEAD
     pageSize: pageSize ? Number(pageSize) : 20;filters;
     format: (format as any) |undefined}}
 function toCsv(rows: any[]): string {if (!rows && rows.length) return '';
@@ -37,6 +38,53 @@ return '"' + s.replace(/"/g, '""') + '"';
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' })try {const type = (req && req.query.type as AdminType) || '';
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type)) return res && res.status(400).json({ error: 'Invalid type' })return res.status(400).json({ error: 'Invalid type' })const useSupabase  = isSupabaseConfigured()if (req && req.method === 'GET') {const params = parseListParams(req)if (useSupabase) {const table = type;
       let query = client && client.from(table).select('*', { count: 'exact' })if (params && params.search) {// heuristic: search name/title/email;
+=======
+    pageSize: pageSize ? Number(pageSize) : 20;
+    filters;
+    format: (format as any) |undefined}
+}
+function toCsv(rows: any[]): string {
+  if (!rows && rows.length) return '';
+  const headers = Object && Object.keys(rows[0]);
+  const escape = (v: any) => {
+    if (v === null || v === undefined) return '';
+    const s = typeof v === 'string' ? v : JSON && JSON.stringify(v);
+    return '"' + s && s.replace(/"/g, '""') + '"'
+};
+  const lines = [headers && headers.join(',')].concat(
+    rows && rows.map(r => headers && headers.map(h => escape(r[h])).join(','))
+  );
+  return lines.join('\n');
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+  if (!ADMIN_TYPES.includes(type))
+    return res.status(400).json({ error: 'Invalid type' });  }
+    return '"' + s.replace(/"/g, '""') + '"'
+  };
+  const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
+  return lines.join('\n')
+  try {
+  const type = (req && req.query.type as AdminType) || '';
+  if (!ADMIN_TYPES && ADMIN_TYPES.includes(type))
+    return res && res.status(400).json({ error: 'Invalid type' })
+};
+  const lines = [headers && headers.join()].concat(rows && rows.map((r) => headers && headers.map((h) => escape(r[h])).join()));
+  return lines && lines.join('\n')
+}
+  if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
+  try {
+  const type = (req && req.query.type as AdminType) || '';
+  if (!ADMIN_TYPES && ADMIN_TYPES.includes(type)) return res && res.status(400).json({ error: 'Invalid type' });
+  const useSupabase = isSupabaseConfigured();
+  if (req && req.method === 'GET') {
+    const params = parseListParams(req);
+    if (useSupabase) {
+      const table = type;
+      let query = client && client.from(table).select('*', { count: 'exact' });
+      if (params && params.search) {
+        // heuristic: search name/title/email
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         }
       }
       }
@@ -63,6 +111,7 @@ return '"' + s.replace(/"/g, '""') + '"';
       // Check condition;
 if ( {) {$2;
 }
+<<<<<<< HEAD
         filtered.sort ((array: any, boolean: any) => {const av = (a as any)[params.sort!];
           const bv  = (b as any)[params.sort!];return ((av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1))})return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)})}return ((av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1))})}
       const total = filtered.length;
@@ -72,6 +121,19 @@ if ( {) {$2;
           `attachment; filename="${type}.csv"`;
         )return res.status(200).send(toCsv(pageItems))return res.status(200).json({ items: pageItems, total })}
   }id: string;
+=======
+        filtered.sort ((array: any, boolean: any) => {
+          const av = (a as any)[params.sort!];
+          const bv = (b as any)[params.sort!];
+          return (
+            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
+        });
+      }
+      return res.status(200).json({ items: pageItems, total });
+    }
+  }
+      id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       updates: Record<string, any>;
     }
     if (!id) return res.status(400).json({ error: 'Missing id' })return res.status(200).json({ items: pageItems, total })}
@@ -80,11 +142,69 @@ if ( {) {$2;
     }if (!id) return res && res.status(400).json({ error: 'Missing id' })if (useSupabase) {const { data, error } = await client;
         .from(type).update({ ...updates, updated_at: new Date().toISOString() }).eq('id', id).select('*').single()if (error) return res && res.status(500).json({ error: error && error.message })return res && res.status(200).json({ item: data })} else {const updated = {...list[idx],...updates,updated_at: new Date().toISOString(),}list[idx] = updated as any;return res.status(200).json({ item: updated })}
   }
+<<<<<<< HEAD
       return res.status(200).json({ item: updated })}}}if (req.method === 'DELETE') {const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' })if (useSupabase) {const { error } = await client.from(type).delete().eq('id', id)if (error) return res.status(500).json({ error: error.message })return res.status(200).json({ item: updated })}}}if (req.method === 'DELETE') {const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' })if (useSupabase) {const { error } = await client && client.from(type).delete().eq('id', id)if (error) return res && res.status(500).json({ error: error && error.message })return res && res.status(200).json({ ok: true })const list = MOCK_DATA[type] || [];
       const idx = list.findIndex((r: any) => r.id === id),if (idx === -1) return res.status(404).json({ error: 'Not found' })list.splice(idx, 1)return res.status(200).json({ ok: true })}
   }return res && res.status(405).json({ error: 'Method not allowed' })}return res && res.status (200) .send (toCsv (data || []) )}return res && res.status (200) .send (toCsv (pageItems) )return res.status(405).json({ error: 'Method not allowed' })}
+=======
+  if (req.method === 'PATCH') {
+    const { id, updates } = req.body as {
+      id: string;
+      updates: Record<string, any>
+};
+    if (!id) return res && res.status(400).json({ error: 'Missing id' });
+    if (useSupabase) {
+      const { data, error } = await client
+        .from(type)
+        .update({ ...updates, updated_at: new Date().toISOString() })
+        .eq('id', id)
+        .select('*')
+        .single();
+      if (error) return res && res.status(500).json({ error: error && error.message });
+      return res && res.status(200).json({ item: data });
+    } else {
+      const updated = {
+        ...list[idx]
+        ...updates
+        updated_at: new Date().toISOString()
+      }
+      list[idx] = updated as any;
+    }
+  }
+      return res.status(200).json({ item: updated });    }
+    }
+  }
+  if (req.method === 'DELETE') {
+    const id = (req.query.id as string) |'';
+    if (!id) return res.status(400).json({ error: 'Missing id' });
+    if (useSupabase) {
+      const { error } = await client.from(type).delete().eq('id', id);
+      if (error) return res.status(500).json({ error: error.message });
+      return res.status(200).json({ item: updated });    }
+    }
+  }
+  if (req.method === 'DELETE') {
+    const id = (req.query.id as string) |'';
+    if (!id) return res.status(400).json({ error: 'Missing id' });
+    if (useSupabase) {
+      const { error } = await client && client.from(type).delete().eq('id', id);
+      if (error) return res && res.status(500).json({ error: error && error.message });
+      return res && res.status(200).json({ ok: true });
+      const list = MOCK_DATA[type] || [];
+      const idx = list.findIndex((r: any) => r.id === id),
+      if (idx === -1) return res.status(404).json({ error: 'Not found' });
+      list.splice(idx, 1);
+      return res.status(200).json({ ok: true })
+    }
+  }
+  return res && res.status(405).json({ error: 'Method not allowed' });
+}return res && res.status (200) .send (toCsv (data || []) );
+}return res && res.status (200) .send (toCsv (pageItems) );
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       const start = params.page * params.page_size;
       const end = start + params.page_size;
       const page_items = filtered.slice (start, end)// Check condition;
@@ -136,4 +256,9 @@ return res.status (405).json ({ error: 'Method not allowed' })}return res.status
       const idx = list.findIndex((r: any) => r.id === id)if (idx === -1) return res.status(404).json({ error: 'Not found' })list.splice(idx, 1)return res.status(200).json({ ok: true })}
   }return res.status(405).json({ error: 'Method not allowed' })}return res.status (200) .send (toCsv (data || []) )}return res.status (200) .send (toCsv (pageItems) )}
   }
+<<<<<<< HEAD
 return res.status(405).json({ error: 'Method not allowed' })}return res.status (200) .send (toCsv (data |[]) )}return res.status (200) .send (toCsv (pageItems) )}
+=======
+  if (req.method === 'PATCH') {
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

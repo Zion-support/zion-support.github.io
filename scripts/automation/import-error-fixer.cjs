@@ -12,5 +12,9 @@ const glob = require('glob')
         newContent = "
       const importLines = newContent.match(/import\s+.*\s+from\s+['"][^'')]
         this.log(`Remaining "errors"`)
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       this.log(`Error during import fixing "process"`)

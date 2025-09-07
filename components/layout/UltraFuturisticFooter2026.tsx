@@ -1,4 +1,5 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import {Phone,Mail,MapPin,Globe,ArrowRight,Star,Shield,Brain,DollarSign,Dna,Rocket,Users,Award,Zap,Facebook,Twitter,Linkedin,Instagram,Youtube,Github,} from 'lucide-react';import {Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield,Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github;
@@ -13,6 +14,38 @@ const contactInfo = {mobile: '+1 302 464 0950';
 const contactInfo = null;
                 and healthcare biotech solutions. Transforming businesses with cutting-edge technology.;
 {name: 'AI Predictive Enterprise Analytics', href: '/ai-predictive-enterprise-analytics';
+=======
+import { motion } from 'framer-motion';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Star,
+  Shield,
+  Brain,
+  DollarSign,
+  Dna,
+  Rocket,
+  Users,
+  Award,
+  Zap,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,;
+  Github,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
+  Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
+  Facebook, Twitter, Linkedin, Instagram, Youtube, Github
+const contactInfo = {
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 {name: 'AI Autonomous Customer Success', href: '/ai-autonomous-customer-success';
 }
@@ -257,6 +290,7 @@ const socialLinks = [;
                 solutions. Transforming businesses with cutting-edge technology.;
               </p>;
               {/* Contact Info */}
+<<<<<<< HEAD
               <div className='space-y-3'>;
                 <div className='flex items-center text-gray-300'>;
                   <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.mobile}</span>;
@@ -277,6 +311,29 @@ const socialLinks = [;
             </motion.div>;
           </div>;
               </p>;
+=======
+              <div className='space-y-3'>
+                <div className='flex items-center text-gray-300'>
+                  <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center text-gray-300'>
+                  <Mail className='w-4 h-4 mr-3 text-cyan-400' />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className='flex items-center text-gray-300'>
+                  <MapPin className='w-4 h-4 mr-3 text-cyan-400' />
+                  <span>{contactInfo.address}</span>
+                </div>
+                <div className='flex items-center text-gray-300'>
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.website}</span>                <div className="flex items-center text-gray-300">
+                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />
+                  <span>{contactInfo.website}</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+              </p>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               {/* Contact Info */}
                   <Globe className="w-4 h-4 mr-3 text-cyan-400" />;
                   <span>{contactInfo.website}</span>;
@@ -303,8 +360,15 @@ const socialLinks = [;
                 </div>;
               </div>;
             </motion && motion.div>;
+<<<<<<< HEAD
           </div>;{/* Service Categories */}
           {serviceCategories && serviceCategories.map((category, index) => (<motion&& motion.div;
+=======
+          </div>;
+          {/* Service Categories */}
+          {serviceCategories && serviceCategories.map((category, index) => (;
+            <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}href={service.href}
@@ -335,12 +399,23 @@ const socialLinks = [;
               </ul>;
             </motion && motion.div>;
           ))}
+<<<<<<< HEAD
         {/* Additional Links */}<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>;
           {/* Company Links */}
           <motion&& motion.div;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}{/* Company Links */}<motion.div;
           {/* Company Links */}
           <motion&& motion.div;
+=======
+        {/* Additional Links */}
+          {/* Company Links */}
+          <motion&& motion.div
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}
+          {/* Company Links */}
+          <motion.div
+          {/* Company Links */}
+          <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -404,12 +479,22 @@ className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center 
                   <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />;
                 </Link>;
               ))}
+<<<<<<< HEAD
             </div>;
           </motion.div>;
         </div>;
             </div>;
           </motion && motion.div>;
         </div>;))}
+=======
+            </div>
+          </motion.div>
+        </div>
+            </div>;
+          </motion && motion.div>;
+        </div>;
+              ))}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Newsletter Signup */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
@@ -450,6 +535,7 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
               Be the first to know about breakthrough solutions and industry trends.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
+<<<<<<< HEAD
               <input;
                 type="email";
                 placeholder="Enter your email";
@@ -463,6 +549,19 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
             </div>;
           </div>;
         </motion.div>;
+=======
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+              />
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </motion.div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 Subscribe;
               </button>;
             </div>;
@@ -528,7 +627,13 @@ className='border-t border-gray-800 pt-8';
         </motion.div>;
       </div>;
     </footer>;
+<<<<<<< HEAD
   )}className='border - t border - gray - 800 pt - 8';
+=======
+  );
+}
+          className='border - t border - gray - 800 pt - 8';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         >;
           <div className='flex flex - col md:flex - row justify - between items - center'>;
             <div className='text - gray - 400 text - sm mb - 4 md:mb - 0'>;
@@ -578,5 +683,13 @@ className='border-t border-gray-800 pt-8';
           </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
   )</footer>;
   )}}
+=======
+  );
+    </footer>
+  );
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

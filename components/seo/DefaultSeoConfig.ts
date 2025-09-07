@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import type { DefaultSeoProps } from 'next-seo';
@@ -24,6 +25,12 @@ export default config;
 
 
 
+=======
+additionalMetaTags: [
+{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
+    { name: 'theme-color', content: '#111827' }]}
+export default config;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { DefaultSeoProps } from 'next - seo';
   default_title: 'Zion Tech Solutions';
   title_template: '%s | Zion Tech Solutions',description: 'Engineering services, AI / ML, DevOps, and product development by Zion.';
@@ -38,6 +45,7 @@ import type { DefaultSeoProps } from 'next - seo';
 export default config;
 const config: DefaultSeoProps;
 export default config;
+<<<<<<< HEAD
 ;
 
 
@@ -45,3 +53,6 @@ export default config;
 export default config
 
 
+=======
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

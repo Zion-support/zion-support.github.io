@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -887,6 +888,10 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
   {
 
     id: 'ai-consciousness-evolution-2030'
+=======
+{
+    id: "id",
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     name: 'AI Consciousness Evolution 2030'
     tagline: 'Next-generation AI consciousness development'
     price: '$39,999'
@@ -904,7 +909,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
       'Quantum AI consciousness'
       'Quantum AI evolution'
     ]
-    popular: true
+    popular: true;
     marketPosition:
       'Leading quantum AI computing platform for 2030. Revolutionary technology combination.'
     targetAudience:

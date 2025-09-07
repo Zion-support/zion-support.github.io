@@ -221,5 +221,9 @@ this.log("Dashboard generated successfully at ${htmlPath}")
   dashboard.log("Shutting down gracefully...")
   process.on("SIGTERM")
   dashboard.log("Shutting down gracefully...")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)

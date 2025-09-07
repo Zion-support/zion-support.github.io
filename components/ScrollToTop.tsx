@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 const ScrollToTop: React.FC = () => {export default function ScrollToTop() {const [isVisible, setIsVisible]  = useState(false)const ScrollToTop: React.FC = () => {const [isVisible, setIsVisible] = useState(false)useEffect(() => {const toggleVisibility = () => {if (window.pageYOffset > 300) {setIsVisible(true)} else {setIsVisible(false)import React, { useState, useEffect } from 'react';
@@ -8,6 +9,53 @@ setIsVisible(true)} else {setIsVisible(false)}
     })}window && window.addEventListener('scroll', toggleVisibility)return () => window && window.removeEventListener('scroll', toggleVisibility)}, [])setIsVisible(true)} else {setIsVisible(false)}
     }window && window.addEventListener('scroll', toggleVisibility)return () => window && window.removeEventListener('scroll', toggleVisibility)return () => window && window.removeEventListener('scroll', toggleVisibility)}, [])const scrollToTop = () => {window && window.scrollTo({top: 0,behavior: 'smooth',})}behavior: 'smooth'})behavior: 'smooth'})}if (!isVisible) {return null;
   }return (<button;
+=======
+const ScrollToTop: React.FC = () => {
+export default function ScrollToTop() {;
+  const [isVisible, setIsVisible] = useState(false);
+const ScrollToTop: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+      behavior: 'smooth'
+    })
+};
+    window.addEventListener('scroll', toggleVisibility);
+  }, []);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0;
+    behavior: 'smooth'
+    })
+};
+    window && window.addEventListener('scroll', toggleVisibility);
+    return () => window && window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }
+    };
+    window && window.addEventListener('scroll', toggleVisibility);
+    return () => window && window.removeEventListener('scroll', toggleVisibility);    return () => window && window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+  const scrollToTop = () => {;
+    window && window.scrollTo({;
+      top: 0,;
+      behavior: 'smooth',;
+    })
+};      behavior: 'smooth'});
+      behavior: 'smooth'})
+  };
+  if (!isVisible) {
+    return null;
+  }
+  return (
+    <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       onClick={scrollToTop}
       className="fixed bottom-8 right-8 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2";
       aria-label="Scroll to top";
@@ -38,9 +86,17 @@ setIsVisible(true)} else {setIsVisible(false)}
   )}
 }
 export default ScrollToTop;
+<<<<<<< HEAD
   )}export default ScrollToTop;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
+=======
+  )
+};
+export default ScrollToTop;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 }
 export default ScrollToTop;  )}
@@ -54,10 +110,59 @@ export default ScrollToTop;export default /**;
 function ScrollToTop() {const [is_visible, setIsVisible]  = useState (false)useEffect (() => {const toggle_visibility = () =>: any {// Check condition;
 if ( {) {$2;
 }
+<<<<<<< HEAD
         setIsVisible (true)} else {setIsVisible (false)}
     }window.addEventListener ('scroll', toggle_visibility)return () => window.removeEventListener ('scroll', toggle_visibility)}, [])setIsVisible (true)} else {setIsVisible (false)}
     }window.addEventListener ('scroll', toggle_visibility)return () => window.removeEventListener ('scroll', toggle_visibility)return () => window.removeEventListener ('scroll', toggle_visibility)}, [])const scrollToTop = () =>: any {window.scroll_to ({top: 0,behavior: 'smooth',})}      behavior: 'smooth'})}return (<>;
       {is_visible && (<button;
+=======
+export default ScrollToTop;
+origin/main
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+export default ScrollToTop;
+export default ScrollToTop;
+;
+export default /**
+ * ScrollToTop - Function description
+ */
+function ScrollToTop() {
+  const [is_visible, setIsVisible] = useState (false);
+;
+  useEffect (() => {
+    const toggle_visibility = () =>: any {
+      // Check condition
+if ( {) {
+  $2
+}
+        setIsVisible (true);
+      } else {
+        setIsVisible (false);      }
+    }
+;
+    window.addEventListener ('scroll', toggle_visibility);
+    return () => window.removeEventListener ('scroll', toggle_visibility);  }, []);        setIsVisible (true);
+      } else {
+        setIsVisible (false);
+      }
+    }
+;
+    window.addEventListener ('scroll', toggle_visibility);
+    return () => window.removeEventListener ('scroll', toggle_visibility);    return () => window.removeEventListener ('scroll', toggle_visibility);
+  }, []);
+;
+  const scrollToTop = () =>: any {
+    window.scroll_to ({
+      top: 0,
+      behavior: 'smooth',
+    });  }      behavior: 'smooth'});
+  }
+;
+  return (
+    <>;
+      {is_visible && (
+        <button;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           on_click={scrollToTop}
           className='fixed bottom - 8 right - 8 z - 40 w - 12 h - 12 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - full shadow - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 110 hover:shadow - xl hover:shadow - cyan - 500 / 25 flex items - center justify - center group';
           aria - label='Scroll to top';
@@ -89,4 +194,14 @@ if ( {) {$2;
             />;
           </svg>;
         </button>)}
+<<<<<<< HEAD
     </>)}export default ScrollToTop)}export default ScrollToTop;)}export default ScrollToTop;
+=======
+    </>);
+}
+;
+export default ScrollToTop);
+}
+;
+export default ScrollToTop;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

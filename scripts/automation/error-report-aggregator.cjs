@@ -132,5 +132,9 @@ class $1 {}
 ;
 // Run the error report aggregator;
 const aggregator = new ErrorReportAggregator();
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 aggregator.run().catch(console.error);

@@ -38,11 +38,15 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
   website: 'https://ziontechgroup.com'};
 
+=======
+  website: 'https://ziontechgroup.com',};
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const contact = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'}
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
@@ -96,7 +100,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     marketPosition:
       'Accelerates ML platform maturity versus building from scratch.'
     targetAudience: 'ML platform teams and data engineering'
-    trialDays: 14
+    trialDays: 14;
     setupTime: '1-3 days'
     category: 'AI & Data',    features: [
     marketPosition: 'Accelerates ML platform maturity versus building from scratch.';
@@ -3069,7 +3073,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
 ];
     real_service: true,
     technology: ['Feast - compatible, PostgreSQL, Redis, Next.js'],
-
     integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery'],
     use_cases: ['Real - time features, Batch features, A / B parity'],
     roi: 'Reduce feature delivery time by 60–80%',
@@ -4131,7 +4134,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     link: 'https://ziontechgroup.com/services/managed-ml-feature-store-starter', marketPosition: 'Accelerates ML platform maturity versus building from scratch.',
     targetAudience: 'ML platform teams and data engineering', trialDays: 14,
     setupTime: '1-3 days', category: 'AI & Data',
-
     id: 'managed-ml-feature-store-starter',
     name: 'Managed ML Feature Store Starter',
     tagline: 'Production-ready feature store with governance and lineage',
@@ -4142,7 +4144,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     trialDays: 14,
     setupTime: '1-3 days',
     category: 'AI & Data',
-
     realService: true,
     technology: ['Feast-compatible, PostgreSQL, Redis, Next.js'];
     integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery'];
@@ -5124,6 +5125,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'DOM diff–based selector healingAuto-wait and idempotent steps',
       'Proxies and device profilesRun history and replays',
       'Webhooks and schedules'
+<<<<<<< HEAD
       'Playbook suggestionsAuto status page updatesRoot-cause timelinesSlack/PagerDuty bridgesPostmortem draftsService dependency mapping'
     ];
     popular: false, icon: '🆘',
@@ -5432,6 +5434,8 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '🕹️',
@@ -5458,9 +5462,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 5,
     reviews: 3,
     reviews: 3
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'sso-scim-accelerator',
@@ -5473,23 +5480,28 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'SAML/OIDC providers ready-to-goSCIM provisioning adapters',
       'End-to-end test suitesBranding and theming',
       'Audit logs and support runbooks'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '🔐',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
-
     link: 'https://ziontechgroup.com/services/sso-scim-accelerator',
     marketPosition:
       'Faster enterprise deals with standard-compliant integration.',
     marketPosition: 'Faster enterprise deals with standard-compliant integration.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'SaaS teams targeting enterprise',
     trialDays: 14,
     setupTime: '3-7 days',
@@ -5509,9 +5521,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 4,
     reviews: 2,
     reviews: 2
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'api-performance-optimizer-pro',
@@ -5524,23 +5539,28 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Synthetic latency monitoringAdaptive rate-limit tuner',
       'Multi-region load testingSchema & contract validation',
       'Auto-caching recommendationsChange-impact reports'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '⚡',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
-
     link: 'https://ziontechgroup.com/services/api-performance-optimizer-pro',
     marketPosition:
       'Faster and cheaper than custom JMeter/K6 pipelines with expert guidance.',
     marketPosition: 'Faster and cheaper than custom JMeter/K6 pipelines with expert guidance.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Platform and API teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -5560,10 +5580,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 12,
     rating: 4.8,
     reviews: 9
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai-rag-starter-blueprint',
@@ -5576,10 +5599,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Document ingestion & chunkingEmbeddings & vector DB (Pinecone/Weaviate/PGVector)',
       'Prompt templates & guardrailsEvaluation harness (quality, toxicity, grounding)',
       'Observability dashboardsOne-click deploys'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '🧠',
@@ -5607,10 +5633,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 15,
     rating: 4.8,
     reviews: 7
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'browser-automation-copilot',
@@ -5623,10 +5652,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Step-based DSLResilient selectors & healing',
       'Proxy pools & rotationCaptcha solve workflows',
       'Audit logs & video replayScheduler & webhooks'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '🧩',
@@ -5635,9 +5667,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Cheaper than bespoke Playwright farms, with managed reliability',
     marketPosition: 'Cheaper than bespoke Playwright farms, with managed reliability',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Ops, growth, QA teams',
     trialDays: 14,
     setupTime: '2 hours',
@@ -5657,10 +5692,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 22,
     rating: 4.6,
     reviews: 12
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'cloud-cost-anomaly-guard',
@@ -5673,10 +5711,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Anomaly detection & seasonalityService & tag attribution',
       'Slack and email alertsTerraform fix suggestions',
       'Forecast & budget guardrailsMulti-cloud support'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '💸',
@@ -5704,9 +5745,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 11,
     reviews: 5,
     reviews: 5
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'serverless-batch-orchestrator-pro',
@@ -5719,10 +5763,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'YAML job specsCross-cloud scheduler',
       'Retries & DLQNotification hooks',
       'Cost-aware windowsAudit & run history'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '⏱️',
@@ -5731,9 +5778,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Lower cost than managed workflow engines for periodic jobs.',
     marketPosition: 'Lower cost than managed workflow engines for periodic jobs.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Data engineering, platform, ops',
     trialDays: 14,
     setupTime: '2 hours',
@@ -5754,10 +5804,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 34,
     rating: 4.6,
     reviews: 14
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'seo-technical-auditor-pro',
@@ -5770,10 +5823,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Automated crawlingCWV and Lighthouse checks',
       'Broken link detectionSchema.org suggestions',
       'PR autofix workflowsSitemap & robots validation'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '🔍',
@@ -5782,9 +5838,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Dev-friendly alternative to enterprise SEO suites for tech hygiene.',
     marketPosition: 'Dev-friendly alternative to enterprise SEO suites for tech hygiene.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Growth, web, SEO engineering',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -5805,10 +5864,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 58,
     rating: 4.7,
     reviews: 31
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'gdpr-cookie-consent-manager-pro',
@@ -5821,10 +5883,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'IAB TCF supportRegion-based policies',
       'Consent logs & exportsA/B banner optimization',
       'CMP integrationsAccessibility first UI'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '🛡️',
@@ -5852,10 +5917,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 40,
     rating: 4.5,
     reviews: 16
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai-meeting-notes-summarizer-pro',
@@ -5868,10 +5936,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Auto-record & transcribeSpeaker diarization',
       'Action item extractionCRM & PM sync',
       'PII redactionTeam workspace'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '📝',
@@ -5880,9 +5951,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Lightweight, privacy-first alternative to heavy meeting bots.',
     marketPosition: 'Lightweight, privacy-first alternative to heavy meeting bots.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Sales, success, product, ops',
     trialDays: 14,
     setupTime: '15 minutes',
@@ -5902,10 +5976,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 120,
     rating: 4.6,
     reviews: 52
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai-code-migration-assistant-pro',
@@ -5918,10 +5995,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Typed codemodsTest-aware refactors',
       'Multi-repo orchestrationRisk scoring & rollbacks',
       'CI validationChangelogs & docs'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '🧩',
@@ -5940,10 +6020,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Next.js/React upgrades, Typescript migrations, Policy refactors'
     ],
     useCases: ['Next.js/React upgrades, Typescript migrations, Policy refactors'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     roi: 'Cut upgrade time by 60–80%',
     competitors: ['Sourcegraph Cody, AWS CodeGuru'],
     marketSize: '$9B DevTools AI',
@@ -5956,10 +6039,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 18,
     rating: 4.5,
     reviews: 10
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'incident-statuspage-automation-pro',
@@ -5972,10 +6058,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'SLO-triggered updatesRCA templates',
       'Subscriber messagingIncident timeline',
       'Webhook & chat opsAnalytics & CSAT'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '🚨',
@@ -6003,10 +6092,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 25,
     rating: 4.6,
     reviews: 12
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'multi-cloud-backup-automation-pro',
@@ -6019,10 +6111,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Snapshot policiesImmutability & WORM',
       'Cross-cloud recoveryKey rotation & KMS',
       'Drills & audit logsCost-aware tiers'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '🗄️',
@@ -6050,10 +6145,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 14,
     rating: 4.7,
     reviews: 8
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'customer-feedback-insights-pro',
@@ -6066,10 +6164,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Omnichannel ingestionLLM theme clustering',
       'Churn signal alertsRoadmap prioritization',
       'VOC dashboardsCSV & API export'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '💬',
@@ -6097,9 +6198,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 63,
     reviews: 24,
     reviews: 24
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai-sales-sequences-pro',
@@ -6112,10 +6216,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'ICP & persona modelingSequence generator',
       'Deliverability checksSend window optimizer',
       'A/B copy testingCRM sync'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '📈',
@@ -6143,9 +6250,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 210,
     reviews: 77,
     reviews: 77
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'data-pipeline-optimizer-pro',
@@ -6158,10 +6268,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Throughput profilerParallelism tuner',
       'Schema drift alertsCost guardrails',
       'Auto-remediationRunbook suggestions'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '📦',
@@ -6189,9 +6302,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 11,
     reviews: 6,
     reviews: 6
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'sso-rapid-integration-pro',
@@ -6204,10 +6320,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'SAML & OIDCSCIM provisioning',
       'Branded login pagesRole & group mapping',
       'Audit logsTenant isolation'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '🔐',
@@ -6237,10 +6356,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     reviews: 19
   }
   ,
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   {
     id: 'finops-cost-anomaly-guard',
     name: 'FinOps Cost Anomaly Guard',
@@ -6252,10 +6374,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Real-time anomaly detectionBudget guardrails & alerts',
       'Auto-tagging verificationSavings recommendations',
       'Slack/Email integrationsMulti-cloud coverage (AWS/Azure/GCP)'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '💸',
@@ -6264,9 +6389,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:;
       'Alternative to building internal FinOps bots and dashboards; quick ROI.',
     marketPosition: 'Alternative to building internal FinOps bots and dashboards, quick ROI.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'FinOps, platform and SRE teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -6282,10 +6410,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     technology: ['AWS Cost Explorer, GCP Billing, Azure Cost, Node.js, Next.js'],
     integrations: ['Slack, Email, PagerDuty, Jira'],
     useCases: ['Budget overrun prevention, Tag hygiene, Commitment utilization'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     roi: '5–20% monthly savings within 60 days',
     competitors: ['Anodot, CloudZero, Vantage'],
     marketSize: '$10B cloud cost optimization',
@@ -6298,10 +6429,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 11,
     rating: 4.7,
     reviews: 6
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'gdpr-dsar-automation-suite',
@@ -6314,10 +6448,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Identity verification & consentCross-system data discovery',
       'Automatic PII redactionDeadline tracking & SLAs',
       'Export bundles & receiptsPolicy templates'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '✅',
@@ -6326,9 +6463,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Comparable to Transcend and OneTrust modules; simpler setup for SMBs.',
     marketPosition: 'Comparable to Transcend and OneTrust modules, simpler setup for SMBs.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Legal, security, and data teams',
     trialDays: 14,
     setupTime: '3 days',
@@ -6349,10 +6489,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 8,
     rating: 4.8,
     reviews: 5
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'incident-copilot-pro',
@@ -6365,10 +6508,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Playbook suggestionsAuto status page updates',
       'Root-cause timelinesSlack/PagerDuty bridges',
       'Postmortem draftsService dependency mapping'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '🆘',
@@ -6377,9 +6523,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Complements PagerDuty/Statuspage with AI-assisted analysis and docs.',
     marketPosition: 'Complements PagerDuty/Statuspage with AI-assisted analysis and docs.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'SRE, platform and support teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -6400,10 +6549,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 9,
     rating: 4.7,
     reviews: 4
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai-sales-prospecting-studio',
@@ -6416,10 +6568,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'ICP filters & enrichmentPersonalized sequences',
       'Deliverability checksLinkedIn assist',
       'Reply classificationCRM sync'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '📈',
@@ -6428,9 +6583,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:;
       'Faster personalization than generic sequencers; built-in compliance.',
     marketPosition: 'Faster personalization than generic sequencers, built-in compliance.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Growth and sales teams',
     trialDays: 14,
     setupTime: '2 hours',
@@ -6451,9 +6609,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 17,
     reviews: 10,
     reviews: 10
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'data-contracts-health-monitor',
@@ -6466,10 +6627,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Schema diff & validationData quality checks',
       'Lineage-based ownershipSLA monitors',
       'Contract registryAuto ticketing'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '🧾',
@@ -6478,9 +6642,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Pragmatic contracts vs. bespoke dbt rules; team-friendly UX.',
     marketPosition: 'Pragmatic contracts vs. bespoke dbt rules, team-friendly UX.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Data platform & analytics engineering',
     trialDays: 14,
     setupTime: '2 days',
@@ -6501,10 +6668,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 6,
     rating: 4.6,
     reviews: 3
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai-powered-email-responder',
@@ -6517,10 +6687,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Priority and intent detectionSafe auto-send rules with approvals',
       'Knowledge-grounded answers (RAG)Shared inbox and assignments',
       'Analytics and SLA dashboards'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '✉️',
@@ -6529,9 +6702,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Lightweight vs. heavy helpdesk suites; faster time-to-value.',
     marketPosition: 'Lightweight vs. heavy helpdesk suites, faster time-to-value.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Support, sales, ops, founders',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -6542,10 +6718,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     useCases: ['Support inboxSales replies', 'Backoffice'],
     roi: 'Reduce manual email time by 50–80%',
     competitors: ['Front + AIZendesk AI'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     marketSize: '$9B shared inbox',
     growthRate: '15% CAGR',
     variant: 'ai-futuristic',
@@ -6556,10 +6735,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 6,
     rating: 4.7,
     reviews: 3
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'mobile-first-survey-tool',
@@ -6572,10 +6754,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Branching & pipingTheme & embed widgets',
       'QR & link distributionReal-time dashboards',
       'Exports & webhooks'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '📱',
@@ -6593,10 +6778,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     useCases: ['NPSMarket research', 'UX surveys'],
     roi: 'Increase completion rates 1.5–2.5x',
     competitors: ['TypeformSurveyMonkey'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     marketSize: '$5B surveys',
     growthRate: '12% CAGR',
     variant: 'holographic-advanced',
@@ -6607,9 +6795,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 3,
     reviews: 2,
     reviews: 2
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ecommerce-returns-management-saas',
@@ -6622,10 +6813,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Return portal & policiesLabel generation',
       'Reason codes & workflowsWarehouse disposition',
       'Refund & exchange APIs'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '📦',
@@ -6643,10 +6837,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     useCases: ['RMA automationRefunds', 'Analytics'],
     roi: 'Cut return handling time by 40–70%',
     competitors: ['Loop ReturnsReturnly'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     marketSize: '$3B returns tech',
     growthRate: '18% CAGR',
     variant: 'neural-quantum',
@@ -6657,10 +6854,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 4,
     rating: 4.7,
     reviews: 2
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai-email-responder-pro',
@@ -6673,20 +6873,26 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Inbox categorization & prioritiesDraft reply suggestions with tone controls',
       'Policy filters and PII redactionCRM sync and tags',
       'Auto follow-ups and SLAs'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '📧',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: '/services/ai-email-responder-pro',
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Support, sales, operations, founders',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -6707,10 +6913,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 32,
     rating: 4.7,
     reviews: 14
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'mobile-first-survey-studio',
@@ -6723,20 +6932,26 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Branching logic and conditionsBeautiful mobile templates',
       'Real‑time charts & exportsUTM and webhook integrations',
       'NPS/CSAT/CES presets'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '📱',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-300',
     link: '/services/mobile-first-survey-studio',
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Marketing, CX, product research',
     trialDays: 14,
     setupTime: '20 minutes',
@@ -6757,9 +6972,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 18,
     reviews: 6,
     reviews: 6
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'affiliate-tracking-hub',
@@ -6772,10 +6990,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Referral links and attributionCommission rules and schedules',
       'Fraud checks and blacklistsAnalytics & tax exports',
       'Webhook and API'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '🔗',
@@ -6803,9 +7024,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 11,
     reviews: 5,
     reviews: 5
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'podcast-transcription-studio',
@@ -6818,20 +7042,26 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Diarization & timestampsChapters and show notes',
       'Vocabulary hintsExport SRT/VTT/Docs',
       'SEO landing pages'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '🎙️',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-300',
     link: '/services/podcast-transcription-studio',
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Podcasters, media teams, agencies',
     trialDays: 7,
     setupTime: '10 minutes',
@@ -6852,10 +7082,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 20,
     rating: 4.6,
     reviews: 9
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ecommerce-returns-portal',
@@ -6868,20 +7101,26 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Return reasons & RMA flowLabel creation and tracking',
       'Status pages and notificationsExchange or refund rules',
       'Analytics and exports'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '📦',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: '/services/ecommerce-returns-portal',
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Shopify/WooCommerce merchants',
     trialDays: 14,
     setupTime: '1 hour',
@@ -6902,10 +7141,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 14,
     rating: 4.5,
     reviews: 7
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'msP-it-helpdesk-lite',
@@ -6918,20 +7160,26 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Tickets and SLAsKB and canned replies',
       'Client portal and rolesAlerts → ticket rules',
       'Email ingest & automation'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '🛠️',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
     link: '/services/msp-it-helpdesk-lite',
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'MSPs and internal IT teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -6952,9 +7200,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 16,
     reviews: 8,
     reviews: 8
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai-privacy-compliance-copilot',
@@ -6967,10 +7218,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Automated system discovery and RoPA builderDPIA templates with AI risk suggestions',
       'DSAR intake, identity verification, redactionPolicy generation and version control',
       'Evidence exports (ISO 27001/SOC2 mappings)'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '🛡️',
@@ -6979,9 +7233,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Alternative to Transcend/OneTrust for SMB/mid-market with faster time-to-value.',
     marketPosition: 'Alternative to Transcend/OneTrust for SMB/mid-market with faster time-to-value.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Legal, security, compliance teams',
     trialDays: 14,
     setupTime: '2–4 days',
@@ -6992,10 +7249,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     useCases: ['DPIA/RoPA automationDSAR processing', 'Evidence collection'],
     roi: 'Reduce manual privacy ops hours by 60–80%',
     competitors: ['OneTrustTranscend', 'Securiti'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     marketSize: '$8B privacy tech',
     growthRate: '20% CAGR',
     variant: 'holographic-matrix',
@@ -7006,10 +7266,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 9,
     rating: 4.7,
     reviews: 6
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'sales-copilot-for-outreach',
@@ -7022,10 +7285,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Adaptive sequencing and send windowsFirmographic and technographic personalization',
       'Meeting transcription and action itemsAuto-log to Salesforce/HubSpot',
       'Safety guardrails and opt-out handling'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '🚀',
@@ -7034,9 +7300,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Combines best of Outreach/Salesloft with native AI writing and logging.',
     marketPosition: 'Combines best of Outreach/Salesloft with native AI writing and logging.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'SDRs, AEs, RevOps',
     trialDays: 14,
     setupTime: '1 day',
@@ -7047,10 +7316,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     useCases: ['Outbound sequencesCall notes', 'CRM hygiene'],
     roi: 'Increase replies by 2–3x, reduce admin time 50%',
     competitors: ['OutreachSalesloft'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     marketSize: '$6B sales engagement',
     growthRate: '18% CAGR',
     variant: 'holographic-matrix',
@@ -7061,10 +7333,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 21,
     rating: 4.6,
     reviews: 12
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'security-evidence-automation-lite',
@@ -7077,10 +7352,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Cloud config collectors (AWS/GCP/Azure)Access review workflows and attestations',
       'Vulnerability snapshot with exceptionsTicket sampling and change history',
       'Auditor-ready exports'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '📁',
@@ -7089,9 +7367,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Streamlined alternative to full GRC suites for smaller teams.',
     marketPosition: 'Streamlined alternative to full GRC suites for smaller teams.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Security, compliance, platform',
     trialDays: 14,
     setupTime: '1–3 days',
@@ -7102,10 +7383,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     useCases: ['SOC2 evidenceISO controls', 'Audit prep'],
     roi: 'Save 40–60% audit prep time',
     competitors: ['DrataVanta (lite)'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     marketSize: '$3B compliance ops',
     growthRate: '22% CAGR',
     variant: 'holographic-matrix',
@@ -7116,9 +7400,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 11,
     reviews: 7,
     reviews: 7
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai-product-research-analyst',
@@ -7131,10 +7418,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Competitor monitoring and diffsUser review mining and clustering',
       'Opportunity scoring and tagsWeekly executive briefings',
       'Export to slides and docs'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '🧭',
@@ -7152,10 +7442,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     useCases: ['Market scansVoice of customer', 'Roadmap inputs'],
     roi: 'Cut research time by 70%',
     competitors: ['CrayonKlue (lite)'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     marketSize: '$2B CI tools',
     growthRate: '15% CAGR',
     variant: 'holographic-matrix',
@@ -7166,9 +7459,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 18,
     reviews: 10,
     reviews: 10
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'marketing-brief-generator-pro',
@@ -7181,10 +7477,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Persona and JTBD inputsChannel mix recommendations',
       'Creative prompts and examplesBenchmark KPIs by industry',
       'Export to Google Docs/Slides'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '📝',
@@ -7193,9 +7492,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Faster planning vs manual templates and agencies for SMBs.',
     marketPosition: 'Faster planning vs manual templates and agencies for SMBs.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Marketing managers, agencies, founders',
     trialDays: 7,
     setupTime: '30 minutes',
@@ -7206,10 +7508,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     useCases: ['Campaign planningBrief standardization', 'Rapid iteration'],
     roi: 'Reduce planning time 80%',
     competitors: ['Notion templatesAgency briefs'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     marketSize: '$1B planning tools',
     growthRate: '12% CAGR',
     variant: 'holographic-matrix',
@@ -7220,9 +7525,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 25,
     reviews: 9,
     reviews: 9
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'customer-feedback-hub',
@@ -7235,10 +7543,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'NPS/CSAT and feedback widgetsTopic clustering and trends',
       'Product area routing rulesRoadmap linkage and voting',
       'Weekly summaries to Slack'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '💬',
@@ -7256,11 +7567,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     useCases: ['Feedback centralizationPrioritization', 'VOC analytics'],
     roi: 'Improve roadmap-fit and customer satisfaction',
     competitors: ['CannyProductboard (lite)'],
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     marketSize: '$1.2B feedback tools',
-
     growthRate: '14% CAGR',
     variant: 'holographic-matrix',
     contactInfo: contact,
@@ -7270,9 +7583,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 15,
     reviews: 8,
     reviews: 8
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'real-time-feature-flags-lite',
@@ -7285,10 +7601,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Edge evaluation and low latencySDKs for JS, Node, Python',
       'Audit log and approvalsExperiments and rollouts',
       'Usage quotas'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '🚩',
@@ -7307,10 +7626,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     technology: ['Edge runtimeKV store', 'SDKs'],
     integrations: ['VercelCloudflare', 'Netlify'],
     useCases: ['Kill switchesExperiments', 'Progressive rollout'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     roi: 'Speed up releases and reduce incidents',
     competitors: ['LaunchDarkly (lite)'],
     marketSize: '$2B feature flagging',
@@ -7323,9 +7645,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 10,
     reviews: 5,
     reviews: 5
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai-legal-clause-recommender',
@@ -7338,10 +7663,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Risk heatmap and clause classificationSuggested language with alternatives',
       'Counterparty playbooks and historyExport redlines to Word',
       'Audit and approval workflows'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '⚖️',
@@ -7350,9 +7678,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Focused legal assistant for faster reviews, not a replacement.',
     marketPosition: 'Focused legal assistant for faster reviews, not a replacement.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'In-house legal, procurement',
     trialDays: 7,
     setupTime: '1–2 days',
@@ -7363,10 +7694,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     useCases: ['Playbook adherenceNegotiation prep', 'Drafting'],
     roi: 'Reduce review cycle 30–50%',
     competitors: ['Ironclad (assist)LinkSquares (assist)'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     marketSize: '$1B legal tech AI',
     growthRate: '18% CAGR',
     variant: 'holographic-matrix',
@@ -7377,9 +7711,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 8,
     reviews: 4,
     reviews: 4
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai-incident-analysis-bot',
@@ -7392,10 +7729,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Timeline and RCA suggestionsChange correlation and diffs',
       'Duplicate detection and clusteringRemediation proposals with context',
       'Report and postmortem draft'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '🧯',
@@ -7404,9 +7744,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Faster learning loop layered on top of existing APM/alerting.',
     marketPosition: 'Faster learning loop layered on top of existing APM/alerting.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'SRE, platform, dev teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -7417,10 +7760,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     useCases: ['Incident summarizationRegression detection', 'Runbook upkeep'],
     roi: 'Reduce MTTR and toil',
     competitors: ['FireHydrant (assist)Rootly (assist)'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     marketSize: '$5B incident mgmt',
     growthRate: '17% CAGR',
     variant: 'holographic-matrix',
@@ -7431,9 +7777,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 7,
     reviews: 3,
     reviews: 3
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai-data-quality-monitor',
@@ -7446,10 +7795,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Schema and distribution monitoringDrift detection and anomaly alerts',
       'Ownership inference and routingFix suggestions and PR templates',
       'Dashboards and SLAs'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '📊',
@@ -7458,9 +7810,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Lightweight alternative to heavy data observability tools.',
     marketPosition: 'Lightweight alternative to heavy data observability tools.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Data engineering, analytics',
     trialDays: 14,
     setupTime: '2–4 hours',
@@ -7472,10 +7827,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     technology: ['Warehouse APIsAnomaly detection', 'LLM'],
     integrations: ['SnowflakeBigQuery', 'Redshiftdbt'],
     useCases: ['Data SLAsIncident routing', 'Automated fixes'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     roi: 'Reduce broken dashboards and ML drift',
     competitors: ['Monte Carlo (lite)'],
     marketSize: '$3B data ops',
@@ -7488,9 +7846,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 12,
     reviews: 6,
     reviews: 6
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai-ux-copy-optimizer',
@@ -7503,10 +7864,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'Copy suggestions with tone controlsExperiment setup in minutes',
       'Segmentation and resultsExport diffs and PRs',
       'Design tool plugins'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: false,
     icon: '✍️',
@@ -7515,9 +7879,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     marketPosition:
       'Complements product analytics by focusing on copy changes.',
     marketPosition: 'Complements product analytics by focusing on copy changes.',
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     targetAudience: 'Product, design, growth',
     trialDays: 7,
     setupTime: '30 minutes',
@@ -7529,10 +7896,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     technology: ['LLMExperiments', 'SDK'],
     integrations: ['FigmaLaunchDarkly', 'Heap'],
     useCases: ['ActivationOnboarding', 'Paywall copy'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     roi: 'Lift conversion 5–15%',
     competitors: ['Mutiny (lite)'],
     marketSize: '$1B CRO tools',
@@ -7545,9 +7915,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     customers: 14,
     reviews: 5,
     reviews: 5
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai-governance-policy-center',
@@ -7560,10 +7933,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
       'System registry and ownershipRisk assessment and mitigations',
       'Prompt evals and guardrailsApproval workflows and logs',
       'Policy templates and training'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     popular: true,
     icon: '📚',
@@ -7582,10 +7958,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     technology: ['RegistryEvals', 'Workflows'],
     integrations: ['GitHubJira', 'Slack'],
     useCases: ['Model registryRisk tracking', 'Policy compliance'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     roi: 'Reduce policy drift and audit risk',
     competitors: ['Holistic AI (lite)'],
     marketSize: '$1 && 1.5B AI governance',
@@ -7739,6 +8118,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
     reviews: 2
   }
 ];
+<<<<<<< HEAD
 
 ;
 
@@ -7748,3 +8128,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
 
 
 
+=======
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

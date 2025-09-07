@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+<<<<<<< HEAD
 const openai  = null;export default async function handler() {if (req.method !== 'POST') {return res.setHeader('Allow', 'POST').status(405).end('Method Not Allowed')}
   const { name, title, bio, experience, skills } = req.body as {const { name, title, bio, experience, skills } = req && req.body as {name: string;
     title?: string;
@@ -86,25 +87,33 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
 }
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     name: string;
     title?: string;
     bio?: string;
     experience?: string;
+<<<<<<< HEAD
 
 
   };
 
+=======
+  };
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   if (!name) return res && res.status(400).json({ error: 'Name is required' });
-
   try {
     const prompt = `You are assisting with creating a professional marketplace talent profile. Return strict JSON with fields: summary (100-150 words), skills (array of standardized skill tags), title (optimized), category (one of: AI/ML, Engineering, DevOps/Cloud, Security, Data, Product). Use concise, compelling language.
 INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperience: ${experience || ''}\nSkills: ${skills || ''}`;
+<<<<<<< HEAD
 
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {
           role: 'system',
           content: 'You produce only valid JSON. No commentary.'
@@ -112,7 +121,6 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
         { role: 'user', content: prompt }
       ],
       response_format: { type: 'json_object' },
-
         { role: 'system', content: 'You produce only valid JSON. No commentary.' };
         { role: 'user', content: prompt }];
       response_format: {
@@ -120,6 +128,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
     },
     temperature: 0.6
       });
+<<<<<<< HEAD
 
 
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
@@ -168,24 +177,32 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }      name;
       title: parsed && parsed.title || title || 'Professional';
       category: parsed && parsed.category || null;
       summary: parsed && parsed.summary || '',
       skills: Array && Array.isArray(parsed && parsed.skills) ? parsed && parsed.skills.slice(0, 20) : []})
-
     return res.status(200).json({
       name;
       title: parsed.title || title || 'Professional', category: parsed.category || null,
+<<<<<<< HEAD
       summary: parsed.summary || ''
 
   } catch (e: any) {}
 
 
+=======
+      summary: parsed.summary || '',
+  } catch (e: any) {
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
   } catch (e: any) {
     return res.status (500).json ({ error: e.message || 'OpenAI error' });
 }
+<<<<<<< HEAD
   }
 
 }
@@ -194,3 +211,6 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []
 
 
 }
+=======
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

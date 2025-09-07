@@ -18,7 +18,12 @@ interface PasswordStrengthResult  {password: string;
   strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
   score: number;
   feedback: string[];
+<<<<<<< HEAD
   details: {entropy: number;
+=======
+  details: {
+    entropy: number
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   suggestions: string[];
 }
@@ -27,6 +32,7 @@ export default async function handler(// Calculate score;
     score += Math && Math.min(length * 2, 20), // Length contribution (max 20)score += hasLowercase ? 10 : 0;
     score += hasNumbers ? 10 : 0;
     score += hasSymbols ? 15 : 0;
+<<<<<<< HEAD
     score += entropy > 50 ? 15 : 0; // High entropy bonus;
     score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns;
     // Generate suggestions;
@@ -41,6 +47,25 @@ export default async function handler(// Calculate score;
         hasSymbols;
         hasCommonPatterns;
         entropy: Math.round(entropy * 100) / 100;
+=======
+    score += entropy > 50 ? 15 : 0; // High entropy bonus
+    score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns
+    // Generate suggestions
+    const suggestions: string[] = []
+    if (score < 50) {
+      password
+      strength;
+    score: Math.max(0, Math.min(100, score))
+      feedback
+      details: {
+        length
+        hasUppercase
+        hasLowercase
+        hasNumbers
+        hasSymbols
+        hasCommonPatterns
+        entropy: Math.round(entropy * 100) / 100
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       }
       suggestions;
     }
@@ -79,14 +104,36 @@ interface PasswordStrengthResult  {password: string;
     hasUppercase: boolean;
     hasLowercase: boolean;
     hasNumbers: boolean;
+<<<<<<< HEAD
     hasSymbols: boolean;hasCommonPatterns: boolean;
     hasCommonPatterns: boolean;entropy: number;
+=======
+    hasSymbols: boolean;
+    hasCommonPatterns: boolean
+    entropy: number
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   suggestions: string[];
 }
+<<<<<<< HEAD
 export default async function handler() {if (req.method !== 'POST') {return res.status(405).json({ error: 'Method not allowed' })}    return res.status(405).json({ error: 'Method not allowed' })}
   try {const { password }  = req.body;if (!password |typeof password !== 'string') {return res.status(400).json({ error: 'Password is required' })}
     // Password analysis;
+=======
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse<PasswordStrengthResult | { error: string }>
+) {
+  if (req.method !== 'POST') {;
+    return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
+  }
+  try {
+    const { password } = req.body;
+    if (!password |typeof password !== 'string') {
+      return res.status(400).json({ error: 'Password is required' });
+    }
+    // Password analysis
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     const length = password.length;
     const hasUppercase = /[A-Z]/.test(password)const hasLowercase = /[a-z]/.test(password)const hasNumbers = /\d/.test(password)const hasSymbols = /[!@#$%^&*()_+\-=\[\]{}':"\\|,.<>\/?]/.test(password)req: NextApiRequest;
   res: NextApiResponse<PasswordStrengthResult | { error: string }>;
@@ -154,6 +201,10 @@ const feedback: string[] = [];
     }
     res.status(200).json(result)} catch (error) {console.error('Password strength check error:', error)res.status(500).json({ error: 'Internal server error' })}
 }
+<<<<<<< HEAD
   }}
     res.status(500).json({ error: 'Internal server error' })}
 }
+=======
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

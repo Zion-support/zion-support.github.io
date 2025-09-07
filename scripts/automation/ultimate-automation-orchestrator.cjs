@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -40,5 +44,9 @@ const { execSync } = require('child_process')
       this.log(`⚠ Final test run "failed"`)
     return { "status"}
       "overallStatus"
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       this.log(`Ultimate Automation Orchestrator "failed"`)

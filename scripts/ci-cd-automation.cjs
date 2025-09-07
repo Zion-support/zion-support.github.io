@@ -19,10 +19,16 @@ class CICDAutomation {}
     }};
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
+<<<<<<< HEAD
 
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
     
+=======
+<<<<<<< HEAD
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
+    console.log(logMessage);
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     this.report.steps.push({})
       timestamp,
       type,
@@ -109,5 +115,9 @@ if ( {})
      {}
   const automation = new CICDAutomation}(;);
   automation.run().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 module.exports = CICDAutomation;

@@ -214,5 +214,9 @@ const path = require('path')
       return { "success": true, "message"}
     const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")
       "operation"
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       this.log(" Git automation workflow "failed": ${error.message}")

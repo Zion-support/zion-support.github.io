@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 
 interface Message  {role: 'user' | 'assistant';
   content: string;export default function Assistant() {const params =;
+=======
+interface Message {;
+  role: 'user' | 'assistant';
+  content: string;
+export default function Assistant() {;
+  const params =;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     typeof window !== 'undefined';
       ? new URLSearchParams(window && window.location.search): new URLSearchParams()const tenantId = params && params.get('tenantId') || '';
   const brand = params && params.get('brand') || 'Zion AI';
   const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
+<<<<<<< HEAD
 export default function Assistant() {const [messages, setMessages] = useState<Message[]>([;
     {role: 'assistant',content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`,},const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams()const tenantId = params.get('tenantId') |'';
   const brand  = params.get('brand') |'Zion AI';import { useEffect, useMemo, useState  } from 'react';
@@ -25,6 +34,54 @@ export default function Assistant() {const params =;
         ...prev,{ role: 'user', content: question },{ role: 'assistant', content: faqs[faq] },])return;}
     ])}
   return (<div className='min-h-full h-full w-full flex flex-col bg-white'>;
+=======
+export default function Assistant() {;
+  const [messages, setMessages] = useState<Message[]>([;
+    {;
+      role: 'assistant',;
+      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`,;
+    },;
+  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
+  const tenantId = params.get('tenantId') |'';
+  const brand = params.get('brand') |'Zion AI';
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      role: "role",
+    content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`
+    }
+  ]);
+  const [input, setInput] = useState('');
+  const faqs: Record<string, string> = useMemo(;
+    () => ({;
+      'is this role remote':;
+        'Many roles support remote or hybrid work. Check the job description for specifics.',;
+      'how soon do you hire':;
+        'Typical timelines range from 2-4 weeks depending on role and interview availability.',;
+      'what is the interview process':;
+        'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.',;
+    }),;
+    [];
+  );
+    { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
+  const [input, setInput] = useState('');
+  const faqs: Record<string, string> = useMemo(() => ({;
+    'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics && specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability && availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
+  async function handleAsk(): any (question: string) {;
+    const lower = question && question.toLowerCase();
+    const faq = Object && Object.keys(faqs).find(key => lower && lower.includes(key)),;
+    if (faq) {;
+      setMessages(prev => [;
+        ...prev,;
+        { role: 'user', content: question },;
+        { role: 'assistant', content: faqs[faq] },;
+      ]);
+      return;
+    }
+    ]);
+  }
+  return (
+    <div className='min-h-full h-full w-full flex flex-col bg-white'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className='px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2'>;
         <span className='font-semibold'>{brand}</span>;
         <span className='text-gray-400'>Applicant Assistant</span>;
@@ -41,6 +98,7 @@ export default function Assistant() {const params =;
                 : 'text-gray-900 font-medium';
             }>            {m && m.content}    }
     // Basic fallback;
+<<<<<<< HEAD
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }])}
           >;
             {m.content}
@@ -56,6 +114,14 @@ className='p-3 border-t flex gap-2';
           className="flex-1 border rounded px-3 py-2 text-sm";
           placeholder="Ask about the role...";
           value={input}onChange={(e) => setInput(e && e.target.value)}
+=======
+    setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
+        <input
+          className="flex-1 border rounded px-3 py-2 text-sm"
+          placeholder="Ask about the role..."
+          value={input}
+          onChange={(e) => setInput(e && e.target.value)}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         />;
         <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>;
       </form>;
@@ -67,11 +133,29 @@ className='p-3 border-t flex gap-2';
       </form>;
     </div>;
 }
+<<<<<<< HEAD
   )))}import { useEffect, useMemo, useState  } from 'react';interface Message  {role: 'user' | 'assistant';
   content: string;export default /**;
  * Assistant - Function description;
  */;
 function Assistant() {const params =;
+=======
+  );
+  );
+  );
+}
+import {useEffect, useMemo, useState} from 'react';
+;
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+;
+export default /**
+ * Assistant - Function description
+ */
+function Assistant() {
+  const params =;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     typeof window !== 'undefined';
       ? new URLSearchParams (window.location.search): new URLSearchParams ()const tenant_id = params.get ('tenant_id') || '';
   const brand  = params.get ('brand') || 'Zion AI';const [messages, set_messages] = useState < Message[]>([interface Message { role: 'user' | 'assistant', content: string }
@@ -153,8 +237,18 @@ if ( {) {$2;
         />;
         <button type="submit" className="bg - gray - 900 text - white text - sm rounded px-3 py-2">Send</button>;
       </form>;
+<<<<<<< HEAD
     </div>)/>;
         <button type=&quot;submit&quot; className=&quot;bg-gray-900 text-white text-sm rounded px-3 py-2&quot;>Send</button>;
       </form>;
     </div>;
   )})
+=======
+    </div>);
+        />
+        <button type=&quot;submit&quot; className=&quot;bg-gray-900 text-white text-sm rounded px-3 py-2&quot;>Send</button>
+      </form>
+    </div>
+  )
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 import {Menu,X,ChevronDown,Search,Phone,Mail,MapPin,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Microscope,DollarSign,Home,Users,Briefcase,BookOpen,MessageCircle,} from 'lucide-react';import {Menu, X, ChevronDown, Search, Phone, Mail, MapPin,Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,Microscope, DollarSign, Home, Users, Briefcase,BookOpen, MessageCircle;
 const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',}website: 'https://ziontechgroup.com';
@@ -17,6 +18,53 @@ const contactInfo  = null;const serviceCategories = [;
         href: '/autonomous-ai-agents-platform-2026';
         description: 'Create autonomous AI agents';
         price: '$199/month';
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,;
+  MessageCircle,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, 
+  BookOpen, MessageCircle 
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
+}
+const serviceCategories = [
+  {
+    title: "title",
+    icon: Brain;
+    color: 'from-purple-600 to-pink-600'
+    description: 'Next-generation AI solutions'
+    services: [
+      {
+        name: 'AI Consciousness Simulation'
+        href: '/ai-consciousness-simulation-platform'
+        description: 'Simulate human consciousness'
+        price: '$4,999/month'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       }
       {name: 'AI Healthcare Companion';
         href: '/ai-healthcare-companion-2026';
@@ -78,6 +126,7 @@ const contactInfo  = null;const serviceCategories = [;
         description: 'Next-gen security';
         price: '$2,999/month';
       }
+<<<<<<< HEAD
       {}name: 'AI Business Intelligence',href: '/autonomous-business-intelligence-network',description: 'Self-evolving BI',price: '$1,299/month',},],},];      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization-ai', description: 'AI supply chain optimization', price: '$899/month' },{ name: 'Autonomous Marketing AI', href: '/autonomous-marketing-ai-platform', description: 'Self-optimizing marketing', price: '$1,499/month' }{ name: 'AI Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-gen security', price: '$2,999/month' }{ name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
     ];
   }];componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
@@ -91,6 +140,153 @@ import Link from 'next / link';
   }{ name: 'Space Debris Management', href: '/space-debris-management-ai-platform', description: 'AI space safety', price: '$5,999/month' }{ name: 'AI Climate Prediction', href: '/ai-climate-prediction-platform', description: 'Climate change prediction', price: '$1,999/month' }{ name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing-ai-platform', description: 'Self-optimizing manufacturing', price: '$3,499/month' }
     ];
   }title: 'Healthcare & Life Sciences',icon: Microscope,color: 'from - teal - 600 to - cyan - 600',description: 'Healthcare innovation',const companyLinks = [;
+=======
+    ]
+  },  {      { name: 'Holographic Metaverse', href: '/holographic-metaverse-development-platform', description: '3D holographic experiences', price: '$2,999/month' }
+      { name: 'Space Debris Management', href: '/space-debris-management-ai-platform', description: 'AI space safety', price: '$5,999/month' }
+      { name: 'AI Climate Prediction', href: '/ai-climate-prediction-platform', description: 'Climate change prediction', price: '$1,999/month' }
+      { name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing-ai-platform', description: 'Self-optimizing manufacturing', price: '$3,499/month' }
+    ]
+  }
+    title: 'Enterprise IT Solutions 2026'
+    icon: Shield
+    color: 'from-red-600 to-orange-600'
+    description: 'Enterprise-grade solutions'
+    services: [
+      {
+        name: 'Zero Trust Architecture'
+        href: '/zero-trust-network-architecture-2026'
+        description: 'Next-gen security'
+        price: 'Custom pricing'
+      }
+      {
+        name: 'Edge Computing Orchestration'
+        href: '/edge-computing-orchestration-2026'
+        description: 'Intelligent edge computing'
+        price: 'Custom pricing'
+      }
+      {
+        name: '5G Private Networks'
+        href: '/5g-private-network-solutions-2026'
+        description: 'Enterprise 5G'
+        price: 'Custom pricing'
+      }
+      {
+        name: 'Blockchain Infrastructure'
+        href: '/blockchain-infrastructure-platform-2026'
+        description: 'Enterprise blockchain'
+        price: 'Custom pricing'
+      }
+    ]
+  },  {      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture-2026', description: 'Next-gen security', price: 'Custom pricing' }
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2026', description: 'Intelligent edge computing', price: 'Custom pricing' }
+      { name: '5G Private Networks', href: '/5g-private-network-solutions-2026', description: 'Enterprise 5G', price: 'Custom pricing' }
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform-2026', description: 'Enterprise blockchain', price: 'Custom pricing' }
+    ]
+  }
+    title: 'Healthcare & Life Sciences'
+    icon: Microscope
+    color: 'from-teal-600 to-cyan-600'
+    description: 'Healthcare innovation'
+    services: [
+      {
+        name: 'AI Drug Discovery'
+        href: '/ai-drug-discovery-platform'
+        description: 'Accelerate drug development'
+        price: '$4,999/month'
+      }
+      {
+        name: 'Autonomous Healthcare AI'
+        href: '/autonomous-healthcare-ai-platform'
+        description: 'Self-learning healthcare'
+        price: '$2,499/month'
+      }
+      {
+        name: 'Quantum Machine Learning'
+        href: '/quantum-machine-learning-platform'
+        description: 'Quantum AI research'
+        price: '$6,999/month'
+      }
+      {
+        name: 'AI Legal Research'
+        href: '/ai-legal-research-platform'
+        description: 'Revolutionary legal tech'
+        price: '$899/month'
+      }
+    ]
+  },  {      { name: 'AI Drug Discovery', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$4,999/month' }
+      { name: 'Autonomous Healthcare AI', href: '/autonomous-healthcare-ai-platform', description: 'Self-learning healthcare', price: '$2,499/month' }
+      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', description: 'Quantum AI research', price: '$6,999/month' }
+      { name: 'AI Legal Research', href: '/ai-legal-research-platform', description: 'Revolutionary legal tech', price: '$899/month' }
+    ]
+  }
+    title: 'Financial Technology'
+    icon: DollarSign
+    color: 'from-emerald-600 to-green-600'
+    description: 'Fintech solutions'
+    services: [
+      {
+        name: 'Autonomous Supply Chain'
+        href: '/autonomous-supply-chain-optimization-ai'
+        description: 'AI supply chain optimization'
+        price: '$899/month'
+      }
+      {
+        name: 'Autonomous Marketing AI'
+        href: '/autonomous-marketing-ai-platform'
+        description: 'Self-optimizing marketing'
+        price: '$1,499/month'
+      }
+      {
+        name: 'AI Cybersecurity'
+        href: '/ai-cybersecurity-platform'
+        description: 'Next-gen security'
+        price: '$2,999/month'
+      }
+      {
+  }
+        name: 'AI Business Intelligence',
+        href: '/autonomous-business-intelligence-network',
+        description: 'Self-evolving BI',
+        price: '$1,299/month',
+      },
+    ],
+  },];      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization-ai', description: 'AI supply chain optimization', price: '$899/month' },
+      { name: 'Autonomous Marketing AI', href: '/autonomous-marketing-ai-platform', description: 'Self-optimizing marketing', price: '$1,499/month' };
+      { name: 'AI Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-gen security', price: '$2,999/month' };
+      { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
+    ]
+  }
+];
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Unbreakable encryption', price: '$3,999/month' };
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-algorithm-platform', description: 'Quantum trading algorithms', price: '$12,999/month' };
+      { name: 'Quantum Internet Infrastructure', href: '/quantum-internet-infrastructure-platform', description: 'Build the quantum internet', price: '$15,999/month' }
+    ]
+};
+      { name: 'Space Debris Management', href: '/space-debris-management-ai-platform', description: 'AI space safety', price: '$5,999/month' };
+      { name: 'AI Climate Prediction', href: '/ai-climate-prediction-platform', description: 'Climate change prediction', price: '$1,999/month' };
+      { name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing-ai-platform', description: 'Self-optimizing manufacturing', price: '$3,499/month' }
+    ]
+};
+    title: 'Healthcare & Life Sciences',
+    icon: Microscope,
+    color: 'from - teal - 600 to - cyan - 600',
+    description: 'Healthcare innovation',
+const companyLinks = [
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   { name: 'Home', href: '/', icon: Home }
   { name: 'About Us', href: '/about', icon: Users }
   { name: '2026 Services', href: '/2026-services-showcase', icon: Rocket }
@@ -125,12 +321,28 @@ const UltraAdvancedNavigation2026 = () => {const [isOpen, setIsOpen] = useState(
         {name: 'Cloud Solutions',href: '/services?category=cloud',description: 'Cloud infrastructure and services',},{name: 'Cybersecurity',href: '/services?category=security',description: 'Advanced security solutions',},{name: 'Data Analytics',href: '/services?category=analytics',description: 'Business intelligence and analytics',},{name: 'DevOps',href: '/services?category=devops',description: 'Development and operations',},],},  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },{ name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },{ name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },{ name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ];
     }
+<<<<<<< HEAD
   const contactInfo = {phone: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709',  }address: '364 E Main St STE 1008 Middletown DE 19709';
   }const contactInfo = {phone: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',  }address: '364 E Main St STE 1008 Middletown DE 19709';const contactInfo = {phone: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709',  }address: '364 E Main St STE 1008 Middletown DE 19709';
+=======
+  const contactInfo = {
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
+  }
+  const contactInfo = {;
+    phone: '+1 302 464 0950',;
+    email: 'kleber@ziontechgroup && ziontechgroup.com',;
+    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
+  const contactInfo = {
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
 const company_links = [;
   { name: 'Home', href: '/', icon: Home },{ name: 'About Us', href: '/about', icon: Users },{ name: '2026 Services', href: '/2026 - services - showcase', icon: Rocket },{name: 'Innovative 2026',href: '/2026 - innovative - services - showcase',icon: Zap,},{name: 'Ultimate 2026',href: '/ultimate - 2026 - services - showcase',icon: Sparkles,},{name: '2026 Pricing',href: '/revolutionary - 2026 - pricing',icon: DollarSign,},{ name: 'Case Studies', href: '/case - studies', icon: Briefcase },{ name: 'Blog & Resources', href: '/blog', icon: BookOpen },{ name: 'Careers', href: '/careers', icon: Users },{ name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Innovative 2026', href: '/2026 - innovative - services - showcase', icon: Zap },{ name: 'Ultimate 2026', href: '/ultimate - 2026 - services - showcase', icon: Sparkles },{ name: '2026 Pricing', href: '/revolutionary - 2026 - pricing', icon: DollarSign },{ name: 'Case Studies', href: '/case - studies', icon: Briefcase },{ name: 'Blog & Resources', href: '/blog', icon: BookOpen },{ name: 'Careers', href: '/careers', icon: Users },{ name: 'Contact', href: '/contact', icon: MessageCircle }
@@ -144,8 +356,63 @@ const UltraAdvancedNavigation2026 = () =>: any {const [is_open, setIsOpen] = use
         {name: 'Cloud Solutions',href: '/services?category = cloud',description: 'Cloud infrastructure and services',},{name: 'Cybersecurity',href: '/services?category = security',description: 'Advanced security solutions',},{name: 'Data Analytics',href: '/services?category = analytics',description: 'Business intelligence and analytics',},{name: 'DevOps',href: '/services?category = devops',description: 'Development and operations',},],},  ];        { name: 'Cloud Solutions', href: '/services?category = cloud', description: 'Cloud infrastructure and services' },{ name: 'Cybersecurity', href: '/services?category = security', description: 'Advanced security solutions' },{ name: 'Data Analytics', href: '/services?category = analytics', description: 'Business intelligence and analytics' },{ name: 'DevOps', href: '/services?category = devops', description: 'Development and operations' }
       ];
     }
+<<<<<<< HEAD
   const contact_info = {phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',  }    address: '364 E Main St STE 1008 Middletown DE 19709';
   }return (<>;
+=======
+      name: 'Quantum Tech',
+      href: '/services?category = quantum',
+      icon: Atom,
+      color: 'from - purple - 500 to - indigo - 500',
+      description: 'Quantum computing and space technology',
+      name: 'Metaverse',
+      href: '/services?category = metaverse',
+      icon: Globe,
+      color: 'from - pink - 500 to - rose - 500',
+      description: 'Virtual worlds and digital reality',
+      name: 'Enterprise IT',
+      href: '/services?category = enterprise',
+      icon: Zap,
+      color: 'from - green - 500 to - emerald - 500',
+      description: 'Enterprise solutions and infrastructure',
+            {/* Logo */}
+      sub_items: [;
+        {
+          name: 'Cloud Solutions',
+          href: '/services?category = cloud',
+          description: 'Cloud infrastructure and services',
+        },
+        {
+          name: 'Cybersecurity',
+          href: '/services?category = security',
+          description: 'Advanced security solutions',
+        },
+        {
+          name: 'Data Analytics',
+          href: '/services?category = analytics',
+          description: 'Business intelligence and analytics',
+        },
+        {
+          name: 'DevOps',
+          href: '/services?category = devops',
+          description: 'Development and operations',
+        },
+      ],
+    },  ];        { name: 'Cloud Solutions', href: '/services?category = cloud', description: 'Cloud infrastructure and services' },
+        { name: 'Cybersecurity', href: '/services?category = security', description: 'Advanced security solutions' },
+        { name: 'Data Analytics', href: '/services?category = analytics', description: 'Business intelligence and analytics' },
+        { name: 'DevOps', href: '/services?category = devops', description: 'Development and operations' }
+      ];
+    }
+  const contact_info = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',  }    address: '364 E Main St STE 1008 Middletown DE 19709';
+  }
+;
+  return (
+    <>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Enhanced Navigation Bar */}
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items - center space - x-8'>;
@@ -461,12 +728,15 @@ className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors durati
           </div>;
         </div>;
       </nav>;
+<<<<<<< HEAD
             </button>;
           </div>;
         </div>;
       </nav>;{/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {isOpen && (<motion&& motion.div;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {is_open && (<motion.div;
@@ -475,8 +745,15 @@ className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors durati
             exit={{ opacity: 0 }}transition={{ duration: 0.2 }}
 className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden';
             onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}onClick={() => setIsOpen(false)}>;
             <motion.div;
+=======
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
+            onClick={() => setIsOpen(false)}
+          >
+            <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             onClick={() => setIsOpen(false)}
           >;
             <motion&& motion.div;
@@ -595,8 +872,14 @@ href='/pricing';
                     Get Started Today;
                   </Link>;
                 </div>;
+<<<<<<< HEAD
               </div>;<div className="h-20"></div>;
     </>;
+=======
+              </div>;
+      <div className="h-20"></div>
+    </>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Spacer for fixed navigation */}
   )}
 export default UltraAdvancedNavigation2026;
@@ -605,6 +888,7 @@ export default UltraAdvancedNavigation2026;
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}
       <div className='h - 20'></div>;
+<<<<<<< HEAD
     </>)}export default UltraAdvancedNavigation2026;    </>)}
 export default UltraAdvancedNavigation2026;href='/contact';
                     className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium';
@@ -650,3 +934,24 @@ export default UltraAdvancedNavigation2026;href='/contact';
   )}
 export default UltraAdvancedNavigation2026;export default UltraAdvancedNavigation2026;
 export default UltraAdvancedNavigation2026;}}export default UltraAdvancedNavigation2026;
+=======
+    </>);
+}
+;
+export default UltraAdvancedNavigation2026;    </>);
+}
+export default UltraAdvancedNavigation2026;
+;
+      {/* Spacer for fixed navigation */}
+      <div className='h-20'></div>
+    </>
+  );
+export default UltraAdvancedNavigation2026;    </>
+  );
+}
+export default UltraAdvancedNavigation2026;
+export default UltraAdvancedNavigation2026;
+export default UltraAdvancedNavigation2026
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

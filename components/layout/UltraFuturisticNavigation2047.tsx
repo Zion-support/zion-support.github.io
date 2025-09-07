@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Menu,ChevronDown,X,Phone,Mail,ArrowRight,Brain,Rocket,Target,Atom,Shield,DollarSign,BarChart3,Globe,Grid,Heart,Database,Cpu,Palette,Cloud,Network,TrendingUp,ShoppingCart,Settings,Building,Monitor,Zap,Eye,Infinity,Sparkles,Users,Lock,Code,Server,Layers,Globe2,Star,Award,Clock,CheckCircle,Zap as ZapIcon,Phone as PhoneIcon,Search,User,Bell,Cog,LogOut,Home,Info,FileText,Users as UsersIcon,Bot,MessageCircle,Linkedin,Twitter,Github,import {Menu,ChevronDown,X,Phone,Mail,ArrowRight,Brain,Rocket,Target,Atom,Shield,DollarSign,BarChart3,Globe,Grid,Heart,Database,Cpu,Palette,Cloud,Network,TrendingUp,ShoppingCart,Settings,Building,Monitor,Zap,Eye,Infinity,Sparkles,Users,Lock,Code,Server,Layers,Globe2,Star,Award,Clock,CheckCircle,Zap as ZapIcon,Phone as PhoneIcon,Search,User,Bell,Cog,LogOut,Home,Info,FileText,Users as UsersIcon,Bot,MessageCircle,Linkedin,Twitter,Github,Youtube,MapPin,} from 'lucide-react';
 import React, { useState, useEffect } from 'react',import Link from 'next/link';
@@ -71,6 +72,334 @@ import Link from 'next / link';
   ChevronDown,X,Phone,Mail,ArrowRight,Brain,Rocket,Target,Atom,Shield,DollarSign,BarChart3,Globe,Grid,Heart,Database,Cpu,Palette,Cloud,Network,TrendingUp,ShoppingCart,Settings,Building,Monitor,Zap,Eye,Infinity,Sparkles,Users,Lock,Code,Server,Layers,Globe2,Star,Award,Clock,CheckCircle,Zap as ZapIcon,Phone as PhoneIcon,Search,User,Bell,Cog,LogOut,Home,Info,FileText,Users as UsersIcon,Bot,MessageCircle,Linkedin,Twitter,Github,Youtube,MapPin,} from 'lucide-react';
 interface NavigationItem  {name: string;
   href: string;  icon?: React.ReactNode;import { href: string;  icon?: React.ReactNode;import {Menu, ChevronDown, X, Phone, Mail, ArrowRight;Brain, Rocket, Target, Atom, Shield;
+=======
+import {
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+import {
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,;
+  MapPin,;
+} from 'lucide-react';
+import {
+  Menu
+  ChevronDown
+  X
+  Phone
+  Mail
+  ArrowRight
+  Brain
+  Rocket
+  Target
+  Atom
+  Shield
+  DollarSign
+  BarChart3
+  Globe
+  Grid
+  Heart
+  Database
+  Cpu
+  Palette
+  Cloud
+  Network
+  TrendingUp
+  ShoppingCart
+  Settings
+  Building
+  Monitor
+  Zap
+  Eye
+  Infinity
+  Sparkles
+  Users
+  Lock
+  Code
+  Server
+  Layers
+  Globe2
+  Star
+  Award
+  Clock
+  CheckCircle
+  Zap as ZapIcon
+  Phone as PhoneIcon
+  Search
+  User
+  Bell
+  Cog
+  LogOut
+  Home
+  Info
+  FileText
+  Users as UsersIcon
+  Bot
+  MessageCircle
+  Linkedin
+  Twitter
+  Github
+  Youtube
+  MapPin;
+} from 'lucide-react';
+interface NavigationItem {
+  name: string;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,;
+  MapPin,;
+} from 'lucide-react';
+import {
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,;
+  MapPin,;
+} from 'lucide-react';
+interface NavigationItem {
+  name: string;
+  href: string;  icon?: React.ReactNode;import {
+  href: string;  icon?: React.ReactNode;import { ;
+  Menu, ChevronDown, X, Phone, Mail, ArrowRight;
+  Brain, Rocket, Target, Atom, Shield;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   DollarSign, BarChart3, Globe, Grid, Heart, Database;
   Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor;
   Zap, Eye, Infinity, Sparkles, Users, Lock, Code, Server, Layers, Globe2;
@@ -91,7 +420,27 @@ interface NavigationItem  {name: string;
   category?: string;color?: string;
 }
   color?: string;
+<<<<<<< HEAD
   color?: string;  color?: string;
+=======
+  color?: string;  color?: string
+}
+  color?: string;
+const navigationItems: NavigationItem[] = [
+  {
+    name: "name",
+    href: '/'
+    icon: <Home className='w-5 h-5' />,    description: 'Main pages and core information'
+    category: 'core'
+    color: 'from-emerald-500 to-cyan-500'
+    children: [
+      {    icon: <Home className="w-5 h-5" />
+    description: 'Main pages and core information'
+    category: 'core'
+    color: 'from-emerald-500 to-cyan-500'
+    children: [
+      {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
   color?: string;const navigationItems: NavigationItem[] = [;
   {name: 'Home & Core';
@@ -107,6 +456,7 @@ interface NavigationItem  {name: string;
     children: [;
       {}
 const navigation_items: NavigationItem[] = [;
+<<<<<<< HEAD
   {name: 'Home & Core',href: '/',icon: <Home className='w - 5 h - 5' />,    description: 'Main pages and core information',category: 'core',color: 'from - emerald - 500 to - cyan - 500',children: [;
       {    icon: <Home className="w - 5 h - 5" />,description: 'Main pages and core information',category: 'core',color: 'from - emerald - 500 to - cyan - 500',children: [;
       {name: 'Home',href: '/',description: 'Main homepage',icon: <Home className='w - 4 h - 4' />,color: 'from - emerald - 500 to - cyan - 500',featured: true,},{name: 'About Us',href: '/about',description: 'Company information and mission',icon: <Info className='w - 4 h - 4' />,color: 'from - blue - 500 to - cyan - 500',},{name: 'Contact',href: '/contact',description: 'Get in touch with our team',icon: <Mail className='w - 4 h - 4' />,color: 'from - purple - 500 to - pink - 500',},{name: 'Team',href: '/team',description: 'Meet our leadership team',icon: <Users className='w - 4 h - 4' />,color: 'from - orange - 500 to - red - 500',},],},{name: 'Advanced Solutions',href: '/solutions',icon: <Rocket className='w-5 h-5' />,    description: 'Cutting-edge technology solutions',category: 'solutions',color: 'from-blue-500 to-cyan-500',children: [;
@@ -115,6 +465,109 @@ const navigation_items: NavigationItem[] = [;
     description: 'Company information and support',category: 'company',color: 'from-gray-500 to-slate-500',children: [;
       {href: '/about',description: 'Our story and mission',icon: <Info className='w-4 h-4' />,featured: true,},{name: 'Careers',href: '/careers',description: 'Join our team',icon: <Users className='w-4 h-4' />,color: 'from-green-500 to-emerald-500',},{name: 'Support',href: '/support',description: 'Get help and support',icon: <MessageCircle className='w-4 h-4' />,color: 'from-blue-500 to-cyan-500',},{name: 'Privacy Policy',href: '/privacy',description: 'Privacy and data protection',icon: <Shield className='w-4 h-4' />,color: 'from-red-500 to-pink-500',},],},];        icon: <Shield className="w-4 h-4" />,color: 'from-red-500 to-pink-500';
     name: 'AI & Technology Services',href: '/services',icon: <Brain className='w - 5 h - 5' />,    description: 'Advanced AI and technology solutions',        name: 'Home',href: '/',description: 'Main homepage',icon: <Home className="w - 4 h - 4" />,color: 'from - emerald - 500 to - cyan - 500',featured: true;
+=======
+  {
+    name: 'Home & Core',
+    href: '/',
+    icon: <Home className='w - 5 h - 5' />,    description: 'Main pages and core information',
+    category: 'core',
+    color: 'from - emerald - 500 to - cyan - 500',
+    children: [;
+      {    icon: <Home className="w-5 h-5" />,
+    description: 'Main pages and core information',
+    category: 'core',
+    color: 'from - emerald - 500 to - cyan - 500',
+    children: [;
+      {
+        name: 'Home',
+        href: '/',
+        description: 'Main homepage',
+        icon: <Home className='w - 4 h - 4' />,
+        color: 'from - emerald - 500 to - cyan - 500',
+        featured: true,
+      },
+      {
+        name: 'About Us',
+        href: '/about',
+        description: 'Company information and mission',
+        icon: <Info className='w - 4 h - 4' />,
+        color: 'from - blue - 500 to - cyan - 500',
+      },
+      {
+        name: 'Contact',
+        href: '/contact',
+        description: 'Get in touch with our team',
+        icon: <Mail className='w - 4 h - 4' />,
+        color: 'from - purple - 500 to - pink - 500',
+      },
+      {
+        name: 'Team',
+        href: '/team',
+        description: 'Meet our leadership team',
+        icon: <Users className='w - 4 h - 4' />,
+        color: 'from - orange - 500 to - red - 500',
+      },
+    ],
+  },
+  {
+    name: 'Advanced Solutions',
+    href: '/solutions',
+    icon: <Rocket className='w-5 h-5' />,    description: 'Cutting-edge technology solutions',
+    category: 'solutions',
+    color: 'from-blue-500 to-cyan-500',
+    children: [
+      {
+    description: 'Cutting-edge technology solutions',
+    category: 'solutions',
+    color: 'from-blue-500 to-cyan-500',
+    children: [
+    description: 'Knowledge base and insights',
+    category: 'resources',
+    color: 'from-orange-500 to-red-500',
+    children: [
+    description: 'Company information and support',
+    category: 'company',
+    color: 'from-gray-500 to-slate-500',
+    children: [
+      {
+        href: '/about',
+        description: 'Our story and mission',
+        icon: <Info className='w-4 h-4' />,
+        featured: true,
+      },
+      {
+        name: 'Careers',
+        href: '/careers',
+        description: 'Join our team',
+        icon: <Users className='w-4 h-4' />,
+        color: 'from-green-500 to-emerald-500',
+      },
+      {
+        name: 'Support',
+        href: '/support',
+        description: 'Get help and support',
+        icon: <MessageCircle className='w-4 h-4' />,
+        color: 'from-blue-500 to-cyan-500',
+      },
+      {
+        name: 'Privacy Policy',
+        href: '/privacy',
+        description: 'Privacy and data protection',
+        icon: <Shield className='w-4 h-4' />,
+        color: 'from-red-500 to-pink-500',
+      },
+    ],
+  },];        icon: <Shield className="w-4 h-4" />,
+        color: 'from-red-500 to-pink-500'
+    name: 'AI & Technology Services',
+    href: '/services',
+    icon: <Brain className='w - 5 h - 5' />,    description: 'Advanced AI and technology solutions',        name: 'Home',
+        href: '/',
+        description: 'Main homepage',
+        icon: <Home className="w-4 h-4" />,
+        color: 'from - emerald - 500 to - cyan - 500',
+        featured: true;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       }
       {name: 'About Us',href: '/about',description: 'Company information and mission',icon: <Info className="w - 4 h - 4" />,color: 'from - blue - 500 to - cyan - 500';
       }
@@ -122,6 +575,7 @@ const navigation_items: NavigationItem[] = [;
       }
       {name: 'Team',href: '/team',description: 'Meet our leadership team',icon: <Users className="w - 4 h - 4" />,color: 'from - orange - 500 to - red - 500';
       }
+<<<<<<< HEAD
     ];name: 'Home & Core';
     href: '/';
     icon: <Home className;
@@ -129,6 +583,23 @@ const UltraFuturisticNavigation2047 = () => {const [isOpen, setIsOpen] = useStat
     }window.addEventListener('resize', handleResize)return () => window.removeEventListener('resize', handleResize)}, [])return (<nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>;
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
         <div className='flex justify-between items-center h-16'>;
+=======
+    ];
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false)
+};
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsOpen(false);
+  }, []);
+  return (
+    <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex justify-between items-center h-16'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           {/* Logo */}
           <div className='flex-shrink-0'>;
             <Link href='/' className='flex items-center space-x-2'>;
@@ -146,6 +617,7 @@ const UltraFuturisticNavigation2047 = () => {const [isOpen, setIsOpen] = useStat
               </span>;
             </Link>;
           </div>;
+<<<<<<< HEAD
                 Zion Tech Group;
               </span>;
             </Link>;
@@ -173,6 +645,17 @@ className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border
                     >;
                       <div className='space-y-4'>;
                         {item.children?.map(child => (transition={{ duration: 0 && 0.2 }}
+=======
+          {/* Desktop Navigation */}
+          <div className='hidden lg:flex lg:items-center lg:space-x-8'>;
+            {navigationItems && navigationItems.map(item => (;
+              <div key={item && item.name} className='relative group'>;
+                <button
+                    >
+                      <div className='space-y-4'>
+                        {item.children?.map(child => (
+                      transition={{ duration: 0 && 0.2 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'>;
                       <div className='space-y-4'>;
                         {item && item.children?.map(child => (<Link;
@@ -192,9 +675,15 @@ className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border
                                 )}</div>;
 <p className='text-sm text-gray-400 mt-1'>;
                                 {child.description}
+<<<<<<< HEAD
                               </p>;
                             </div>;
                           </Link>;
+=======
+                              </p>                              <p className="text-sm text-gray-400 mt-1">{child.description}</p>
+                            </div>
+                          </Link>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                         ))}
                       </div>;
                     </motion && motion.div>;
@@ -205,6 +694,7 @@ className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border
           {/* Contact Info & CTA */}<div className='hidden lg:flex lg:items-center lg:space-x-4'>;
             <div className='flex items-center space-x-4 text-sm text-gray-400'>;<div className='hidden lg:flex lg:items-center lg:space-x-4'>;
             <div className='flex items-center space-x-4 text-sm text-gray-400'>;
+<<<<<<< HEAD
               <a;
                 href={`tel:${contactInfo.mobile}`}
                 className='flex items-center space-x-1 hover:text-white transition-colors';
@@ -229,6 +719,32 @@ className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border
             >;
               Get Started;
               <ArrowRight className="ml-2 w-4 h-4" />;
+=======
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className='flex items-center space-x-1 hover:text-white transition-colors'
+              >
+                <Phone className='w-4 h-4' />                <span>{contactInfo.mobile}</span>
+              </a>
+            </div>
+            <Link          <div className="hidden lg:flex lg:items-center lg:space-x-4">
+            <div className="flex items-center space-x-4 text-sm text-gray-400">
+              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
+                <Phone className="w-4 h-4" />
+              </a>
+            </div>
+            <Link
+              href='/contact'
+                <span>{contactInfo.mobile}</span>
+              </a>
+            </div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-4 h-4" />
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'>;
               Get Started;
               <ArrowRight className='ml-2 w-4 h-4' />            </Link>;
@@ -254,10 +770,17 @@ href='/contact';
               {isOpen ? (<X className='block h-6 w-6' />;
               ) : (<Menu className='block h-6 w-6' />;
               )}
+<<<<<<< HEAD
             </button>;
           </div>;
         </div>;
       </div>;
+=======
+            </button>
+          </div>
+        </div>
+      </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             </button>;
           </div>;
         </div>;
@@ -267,12 +790,21 @@ href='/contact';
         {isOpen && (<motion&& motion.div;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
+<<<<<<< HEAD
             exit={{ opacity: 0, height: 0 }}transition={{ duration: 0.3 }}
 className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50';
           >;
             <div className='px-2 pt-2 pb-3 space-y-1'>;
               {navigationItems.map(item => (<div key={item.name}>;
                   <button;
+=======
+            exit={{ opacity: 0, height: 0 }}
+          >
+            <div className='px-2 pt-2 pb-3 space-y-1'>
+              {navigationItems.map(item => (
+                <div key={item.name}>
+                  <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     onClick={() => handleDropdownToggle(item && item.name)}
                     className='w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200';
                   >;
@@ -312,8 +844,15 @@ className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.3 }}transition={{ duration: 0.2 }}className='ml-4 mt-2 space-y-1';
                           <Link;
+=======
+            transition={{ duration: 0.3 }}
+                        transition={{ duration: 0.2 }}
+                        className='ml-4 mt-2 space-y-1'
+                          <Link
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                             key={child.name}
                             href={child.href}
                             className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}                      >;
@@ -442,8 +981,27 @@ export default UltraFuturisticNavigation2047;export default UltraFuturisticNavig
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
           </motion.div>;
         )}
       </AnimatePresence>;
     </nav>;
 )}export default UltraFuturisticNavigation2047;
+=======
+export default UltraFuturisticNavigation2047;
+          </motion.div>)}
+      </AnimatePresence>;
+    </nav>);
+}
+;
+export default UltraFuturisticNavigation2047);
+}
+;
+export default UltraFuturisticNavigation2047;
+;
+  );
+export default UltraFuturisticNavigation2047;  )
+}
+export default UltraFuturisticNavigation2047;
+export default UltraFuturisticNavigation2047;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

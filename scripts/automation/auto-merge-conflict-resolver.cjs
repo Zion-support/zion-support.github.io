@@ -132,5 +132,9 @@ this.log(" Found ${branches.length} cursor branches to process")
       this.log("� Auto Merge Conflict Resolver completed!");this.log(" "Summary": ");this.log("   - Branches processed: ${report.summary.totalBranches}");this.log("   - Successful "merges": ${report.summary.successfulBranches}");this.log("   - Failed "merges": ${report.summary.failedBranches}");this.log("   - Conflicts "resolved": ${report.summary.totalConflicts}");this.log("   - "Duration": ${Math.round(report.duration / 1000)}s"
       return report} catch (error) {this.log(" Fatal "error": ${error.message}", "ERROR")
   console.log(")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   console.error(" Auto merge conflict resolution "failed": ")

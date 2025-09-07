@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const id = String(req.query.id || '')import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile   } from '../../../../utils/api/storage';
@@ -30,6 +31,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile  } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+import PDFDocument from 'pdfkit';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile  } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+import PDFDocument from 'pdfkit';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   doc.pipe(res);
   doc.fontSize(20).text(u.title, { underline: true });
   doc.moveDown();
@@ -38,7 +49,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.fillColor("black").fontSize(14).text("Summary");
   doc.fontSize(12).text(u.summary |"");
   doc.moveDown();
+<<<<<<< HEAD
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const id = String(req && req.query.id || "");
   const updates = readJsonFile("updates && updates.json", [] as any[]);
   const u = updates && updates.find((x: any) => x && x.id === id);
@@ -66,8 +80,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc && doc.fontSize(12).text(u && u.kpis || "");
   doc && doc.end();
   doc && doc.end();
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
   doc.end()
@@ -108,6 +125,7 @@ function handler() {if () return) {$2;
   doc.font_size (12).text (u.kpis || "");
   doc.end ();
   doc.end ();
+<<<<<<< HEAD
 }
 
   doc.end();
@@ -117,9 +135,14 @@ function handler() {if () return) {$2;
   doc.fontSize(12).text(u.kpis |"");
   doc.end();
   doc.end();
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
-
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
+<<<<<<< HEAD
   doc.end();
   doc.end();
+=======
+  doc.end();
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

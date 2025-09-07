@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
@@ -18,6 +19,9 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
           content='Actionable architectural pattern synthesized from live site signals.';
 
   return (
+=======
+return (
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Pattern — Trigger Homepage Sitemap</title>;
@@ -47,9 +51,12 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
+<<<<<<< HEAD
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',;
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -68,9 +75,7 @@ export default /**;
  */;
 function Page() {return (<div className='min - h-screen bg - slate - 950 text - white'>;
   );export default function Page() {;
-
 export default function Page() {
-
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
@@ -133,8 +138,11 @@ function Page() {
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;}export default function Page() {return (}
       </Head>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
         <h1 className="text - 3xl font - extrabold">Pattern — Trigger Homepage Sitemap</h1>;
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Context</h2><p > Signals indicate recurring needs around <strong > trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 > Problem</h2><p > How do we design a robust, observable, and cost - efficient approach?</p><h2 > Forces</h2><ul><li > Latency and throughput trade - offs</li><li > Quality and evaluation</li><li > Security and governance</li></ul><h2 > Solution</h2><p > Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2 > Consequences</h2><p > Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />;
@@ -169,7 +177,6 @@ function Page() {
 ursor/fix-website-loading-errors-and-merge-6662;
     </div>);
 }
-
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>'
           }}
@@ -181,11 +188,14 @@ ursor/fix-website-loading-errors-and-merge-6662;
     </div>
   );export default function Page() {
   return (
+<<<<<<< HEAD
 
 export default function Page() {
   return (
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Pattern — Trigger Homepage Sitemap</title>
@@ -199,6 +209,7 @@ export default function Page() {
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/automation</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
       </main>
+<<<<<<< HEAD
 
 
     <div className="min-h-screen bg-slate-950 text-white">
@@ -233,10 +244,11 @@ export default function Page() {
     </div>
   );
 }
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     </div>;
   );
 }
-
   )
 import Head from 'next/head';
 export default function Page(req, res) {
@@ -307,6 +319,10 @@ export default function Page() {return (<div className="min-h-screen bg-slate-95
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ;
 
 
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

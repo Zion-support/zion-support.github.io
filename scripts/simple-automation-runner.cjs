@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node;
@@ -107,22 +108,22 @@ const path = require('path')
       await this.runSecurityAudit();
       await this.applyImprovements();
 
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       return size}}
-
     totalSize = getDirectorySize(buildDir);
-
     const recommendations = [];
     if ( { // > 1MB
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (jsSize > 512 * 1024) { // > 512KB
       recommendations.push('JavaScript bundle is large, consider optimization')}
-
     return {) {
      { // > 1MB
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (jsSize > 512 * 1024) { // > 512KB
       recommendations.push('JavaScript bundle is large, consider optimization')}
-
     return {}
       "totalSize": totalSize,
       "jsSize": jsSize,
@@ -130,7 +131,6 @@ const path = require('path')
       "recommendations": recommendations
     }}
 }
-
 if (require.main === module) {
   const runner = new SimpleAutomationRunner();
   runner.run().catch(error => {
@@ -138,13 +138,14 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
-
 module.exports = { runSimpleAutomation }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
     "overallStatus"

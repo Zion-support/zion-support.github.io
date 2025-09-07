@@ -25,7 +25,12 @@ class FinalAutomationSuite {
 
   log(message) {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD:final-automation-suite.cjs
 
+=======
+    console.log(`[${timestamp}] ${message}`);
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38:backup-problematic-files/final-automation-suite.cjs
     this.errors = []}
   log(message) {
     const timestamp = new Date().toISOString();
@@ -59,9 +64,26 @@ const path = require("path")
 
         cwd: this.projectRoot,
         encoding: "utf8",
+<<<<<<< HEAD:final-automation-suite.cjs
         timeout: 300000, // 5 minutes timeout
         stdio: "pipe"
 
+=======
+        timeout: 300000, // 5 minutes timeout;
+    stdio: "pipe"
+      const result = execSync(command, { 
+        cwd: this.projectRoot, 
+        encoding: 'utf8',
+        stdio: 'pipe'
+      });
+      this.log(`✅ Success: ${description}`);
+      this.changes.push({ action: description, status: 'success', result });
+      return result;
+    } catch (error) {
+      this.log(`❌ Error: ${description} - ${error.message}`);
+      this.errors.push({ action: description, error: error.message });
+      throw error;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38:backup-problematic-files/final-automation-suite.cjs
     }
   }
 
@@ -112,14 +134,11 @@ const path = require("path")
       return false}
 
   }
-
   async createAdditionalScripts() {
     this.log("🔧 Creating additional automation scripts...");
-    
     const scripts = [{
 
 const { execSync } = require("child_process");
-
 class AutoDeployment {
   constructor() {
 
@@ -258,7 +277,10 @@ const path = require("path")
         // Skip files that can't be read
       }
     }
+<<<<<<< HEAD:final-automation-suite.cjs
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38:backup-problematic-files/final-automation-suite.cjs
     console.log("Found " + issues.length + " code quality issues");
     if (issues.length > 0) {
       console.log("Issues found:");
@@ -269,7 +291,10 @@ const path = require("path")
     
     return issues;
   }
+<<<<<<< HEAD:final-automation-suite.cjs
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38:backup-problematic-files/final-automation-suite.cjs
     if (issues.length > 0) {
       issues.forEach(issue => {
         })}
@@ -290,7 +315,24 @@ const path = require("path")
           files.push(fullPath)}
       }
     }
+<<<<<<< HEAD:final-automation-suite.cjs
 
+=======
+    return files;
+  }}
+    return files;
+  }
+    return files}
+    return files}
+  }
+    return files}
+    return files}
+  }
+    return files}
+    return files}
+    return files;
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38:backup-problematic-files/final-automation-suite.cjs
 }
 
 const checker = new CodeQualityChecker();
@@ -382,7 +424,21 @@ class PerformanceMonitor {
     const buildDir = path.join(this.projectRoot, ".next");
     if (fs.existsSync(buildDir)) {
       const buildSize = this.getDirectorySize(buildDir);
+<<<<<<< HEAD:final-automation-suite.cjs
 
+=======
+      metrics.buildSize = buildSize;
+    }
+        // Check node_modules size
+      metrics.buildSize = buildSize;
+    }
+      metrics.buildSize = buildSize}
+      metrics.buildSize = buildSize}
+      metrics.buildSize = buildSize}
+      metrics.buildSize = buildSize}
+      metrics.buildSize = buildSize;
+    }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38:backup-problematic-files/final-automation-suite.cjs
     // Check node_modules size
     const nodeModulesDir = path.join(this.projectRoot, "node_modules");
     if (fs.existsSync(nodeModulesDir)) {
@@ -405,7 +461,10 @@ class PerformanceMonitor {
     if (!fs.existsSync(dir)) {
       return size;
     }
+<<<<<<< HEAD:final-automation-suite.cjs
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38:backup-problematic-files/final-automation-suite.cjs
       metrics.nodeModulesSize = nodeModulesSize}
     );
     // Save metrics to file
@@ -426,7 +485,24 @@ class PerformanceMonitor {
         size += this.getDirectorySize(fullPath)} else {
         size += stat.size}
     }
+<<<<<<< HEAD:final-automation-suite.cjs
 
+=======
+    return size;
+  }}
+    return size;
+  }
+    return size}
+    return size}
+  }
+    return size}
+    return size}
+  }
+    return size}
+    return size}
+    return size;
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38:backup-problematic-files/final-automation-suite.cjs
 }
 
 const monitor = new PerformanceMonitor();
@@ -472,6 +548,15 @@ monitor.monitorPerformance();"
 
     }
   }
+<<<<<<< HEAD:final-automation-suite.cjs
+=======
+      fs.mkdirSync(scriptsDir, { "recursive": true })}
+    for (const script of scripts) {
+      const scriptPath = path.join(scriptsDir, script.name);
+      fs.writeFileSync(scriptPath, script.content);
+      this.log(`✅ Created ${script.name}`)}
+    return { "success": true, "scriptsCreated": scripts.length }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38:backup-problematic-files/final-automation-suite.cjs
   async addAllChanges() {
     this.log("📦 Adding all changes to git...");
 
@@ -678,12 +763,22 @@ export default TestimonialCard;
   async commitChanges() {
     this.log("📝 Committing changes...");
     try {
+<<<<<<< HEAD:final-automation-suite.cjs
 
       const commitMessage = ""feat": comprehensive automation improvements
       const commitMessage = ""feat": comprehensive automation improvements
       const commitMessage = `feat: comprehensive automation improvements
       const commitMessage = `feat: comprehensive automation improvements
 
+=======
+      const commitMessage = `feat: comprehensive automation improvements
+      const commitMessage = `feat: comprehensive automation improvements
+      const commitMessage = ""feat": comprehensive automation improvements
+      const commitMessage = ""feat": comprehensive automation improvements
+      const commitMessage = ""feat": comprehensive automation improvements
+      const commitMessage = ""feat": comprehensive automation improvements
+      const commitMessage = `feat: comprehensive automation improvements
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38:backup-problematic-files/final-automation-suite.cjs
 - Resolved merge conflicts in automation files
 - Fixed syntax issues in JSX and TypeScript files
 - Created comprehensive conflict resolution scripts
@@ -699,7 +794,19 @@ Total files processed: 6,678+ files
 
 Scripts created: 8 new automation scripts
 Enhancements: Performance, Security, SEO, Accessibility`;
+<<<<<<< HEAD:final-automation-suite.cjs
       
+=======
+      execSync(`git commit -m "${commitMessage}"`, { cwd: this.projectRoot });      this.log("✅ Changes committed successfully");
+Scripts created: 8 new automation scripts
+Enhancements: Performance, Security, SEO, Accessibility`;
+      execSync(`git commit -m "${commitMessage}"`, { cwd: this.projectRoot });      this.log("✅ Changes committed successfully");
+      return true} catch (error) {
+      this.log(`❌ Failed to commit "changes": ${error.message}`);
+      return false}
+      await this.runCommand("git add .", "Staging changes");
+      await this.runCommand('git commit -m "fix: resolve merge conflicts and improve automation"', "Committing changes");
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38:backup-problematic-files/final-automation-suite.cjs
       execSync(`git commit -m "${commitMessage}"`, { cwd: this.projectRoot });
 
 Scripts "created": 8 new automation scripts
@@ -751,7 +858,10 @@ Enhancements: Performance, Security, SEO, Accessibility`;
         execSync(`git push -u origin ${featureBranch}`, { cwd: this.projectRoot });
         this.log(`✅ Created feature branch: ${featureBranch}`);
       }
+<<<<<<< HEAD:final-automation-suite.cjs
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38:backup-problematic-files/final-automation-suite.cjs
         execSync(`git checkout -b ${featureBranch}`, { "cwd": this.projectRoot });
         execSync(`git push -u origin ${featureBranch}`, { "cwd": this.projectRoot });
         this.log(`✅ Created feature "branch": ${featureBranch}`)}
@@ -1176,7 +1286,17 @@ Enhancements: Performance, Security, SEO, Accessibility`;
     this.log(`📋 Final report generated: ${reportPath}`);
     return report;
   }
+<<<<<<< HEAD:final-automation-suite.cjs
 
+=======
+    this.log(`📋 Final report "generated": ${reportPath}`);
+    return report}
+    this.log(`📋 Final report "generated": ${reportPath}`);
+    return report}
+    this.log(`📋 Final report generated: ${reportPath}`);
+    return report;
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38:backup-problematic-files/final-automation-suite.cjs
   async run() {
     this.log("🚀 Starting Final Automation Suite...");
     
@@ -1505,8 +1625,12 @@ if (require.main === module) {
   const suite = new FinalAutomationSuite();
   suite.run().catch(console.error);
 }
+<<<<<<< HEAD:final-automation-suite.cjs
 
 <<<<<<< HEAD
 =======
 module.exports = FinalAutomationSuite;
 >>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+=======
+module.exports = FinalAutomationSuite;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38:backup-problematic-files/final-automation-suite.cjs

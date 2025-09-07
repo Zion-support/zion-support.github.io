@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const fs = require('fs')
 const path = require('path')
@@ -194,14 +195,20 @@ if (performanceMetrics.recommendations.length > 0) {
   console.log('\n✅ No performance issues detected');
 }
 
+=======
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 // Save report
 fs.writeFileSync('performance-metrics.json', JSON.stringify(performanceMetrics, null, 2));
 console.log('\n📄 Performance report saved to performance-metrics.json');
-
 // Exit after a delay to prevent rapid restarts
 setTimeout(() => {
   process.exit(0);
 }, 1000);
+<<<<<<< HEAD
 
 =======
 class PerformanceMonitor {
@@ -434,3 +441,7 @@ if (require.main === module) {
 
 module.exports = PerformanceMonitor;
 >>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

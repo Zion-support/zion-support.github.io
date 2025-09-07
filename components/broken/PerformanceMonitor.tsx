@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
@@ -62,23 +63,38 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {})
+=======
+const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+  return new Promise ( (resolve) => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+  //Wait for page to be fully loaded if (document.readyState === 'complete') {
+})
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
   return new Promise ( (resolve) => {;
   if (typeof window !== 'undefined' && 'performance' in window) {;
   //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;
+<<<<<<< HEAD
 
 }) ;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
 if (newMetrics && newMetrics.loadTime > 3000) {;
   const formatTime = (ms: number) : string => {;
   if (ms === 0) return 'N/A';
+<<<<<<< HEAD
 
 
 
 };
 
 
+=======
+};
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
@@ -90,13 +106,18 @@ const getPerformanceScore = () => {
 let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   totalMetrics++;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 else score += 25 
-
 };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
@@ -274,6 +295,7 @@ if (return 'N / A') {$2;
 if (return `$ {) {$2;
 ;
 export default PerformanceMonitor;
+<<<<<<< HEAD
 ;
 export default PerformanceMonitor;
 }
@@ -355,3 +377,6 @@ if (return 'Needs Improvement') {$2;
 }
 }export default PerformanceMonitor;export default PerformanceMonitor;
 }}}
+=======
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,4 +1,23 @@
+<<<<<<< HEAD
 
+=======
+Brain
+  Cloud
+  RefreshCw
+  Wifi
+  Shield
+  BarChart3
+  ArrowRight
+  Zap;} from 'lucide-react';import {
+  Brain,
+  Cloud,
+  RefreshCw,
+  Wifi,
+  Shield,
+  BarChart3,
+  ArrowRight,;
+  Zap,;} from 'lucide-react';import { ;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   Brain;
   Cloud;
   RefreshCw;
@@ -6,12 +25,57 @@
   Shield;
   BarChart3;
   ArrowRight;
+<<<<<<< HEAD
   Zap;} from 'lucide-react';import {'use client';
 import {Brain,Cloud,RefreshCw,Wifi,Shield,BarChart3,ArrowRight,Zap,} from 'lucide-react';import {Brain;
   Cloud;
   RefreshCw;
   Wifi;
   Shield;
+=======
+  Zap
+const ServicesSection: React.FC = () => {
+  const services = [;
+    {
+      icon: Brain,
+      title: 'AI Development',
+    {
+      icon: Wifi,
+      title: 'IoT Platforms',
+      description: 'Connected device solutions and IoT platform development.',
+    {
+      icon: BarChart3,
+      title: 'Data Analytics',
+      description: 'Advanced analytics and business intelligence solutions.',
+      features: [;
+        'Big Data Processing',
+        'Real - time Dashboards',
+        'Predictive Modeling',
+        'Data Visualization',
+      ],
+      color: 'from - teal - 500 to - blue - 500',
+      href: '/services / data - analytics',
+    },  ];      features: ['Big Data ProcessingReal - time DashboardsPredictive ModelingData Visualization'],
+      color: 'from - teal - 500 to - blue - 500',
+      href: '/services / data - analytics';
+    }
+  const container_variants = {
+    hidden: { opacity: 0 },
+import {;
+  Brain,;
+  Cloud,;
+  RefreshCw,;
+  Wifi,;
+  Shield,;
+  BarChart3,;
+  ArrowRight,;
+  Zap,;} from 'lucide-react';import { ;
+  Brain;
+  Cloud, ;
+  RefreshCw, ;
+  Wifi, ;
+  Shield, ;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   BarChart3;
   ArrowRight;
   Zap;
@@ -45,6 +109,7 @@ const ServicesSection: React.FC = () => {const services = [;
   const containerVariants = {hidden: { opacity: 0 },visible: {opacity: 1,transition: {staggerChildren: 0 && 0.1,},},  }const cardVariants = {hidden: { opacity: 0, y: 20 },visible: { opacity: 1, y: 0 },        staggerChildren: 0 && 0.1;
       }
     }
+<<<<<<< HEAD
   const cardVariants = {hidden: { opacity: 0, y: 20 },visible: { opacity: 1, y: 0 },}description:;
         'Custom AI solutions and machine learning models tailored to your business needs.',features: [;
         'Machine Learning Models','Natural Language Processing','Computer Vision','Predictive Analytics',],color: 'from-blue-500 to-cyan-500',href: '/services/ai-development',},{icon: Cloud,title: 'Cloud Architecture',description:;
@@ -86,6 +151,80 @@ const ServicesSection: React.FC = () => {const services = [;
       {/* Background Elements */}return (<section className="py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden">;
       {/* Background Elements */}
         <motion.div;
+=======
+  const cardVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: { opacity: 1, y: 0 },
+};
+  return (
+    <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>;
+      {/* Background Elements */}
+      <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
+  return (
+    <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">;
+      {/* Background Elements */}
+        {/* Section Header */}
+      }
+    }
+  }
+;
+  const card_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: { opacity: 1, coordinate_y: 0 },
+  }
+  };
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+  return (
+    <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden'>;
+      {/* Background Elements */}
+  return (
+    <section className="py - 20 bg - gradient - to - b from - gray - 900 to-black relative overflow-hidden">;
+      {/* Background Elements */}
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.8 }}
+          viewport={{ once: true }}
+        >
+          <motion.div;
+    stagger_children: 0.1,
+      },
+    },  }
+;
+  const card_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: { opacity: 1, coordinate_y: 0 },        stagger_children: 0.1;
+      }
+    }
+  }
+;
+  const card_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: { opacity: 1, coordinate_y: 0 },
+  }
+    hidden: { opacity: 0, y: 20 },
+  };
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+  return (
+    <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden'>;
+      {/* Background Elements */}
+  return (
+    <section className="py - 20 bg - gradient - to - b from - gray - 900 to-black relative overflow-hidden">;
+      {/* Background Elements */}
+        <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -130,8 +269,14 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">;
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth ;
             for businesses across all industries.;
+<<<<<<< HEAD
         </motion && motion.div>;{/* Services Grid */}
         <motion&& motion.div;
+=======
+        </motion && motion.div>;
+        {/* Services Grid */}
+        <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           variants={containerVariants}
 initial='hidden';
           whileInView='visible';
@@ -173,11 +318,20 @@ className='group relative';
                 {/* Content */}
                 <h3 className="text - 2xl font - bold text - white mb - 4 group - hover:text - blue - 400 transition - colors duration - 300">;
                   {service.title}
+<<<<<<< HEAD
                   <span className="font-medium">Learn More</span>;
                   <ArrowRight className="w-4 h-4" />;
                 </Link>;
                 </ul>;{/* CTA */}
                 <Link;
+=======
+                  <span className="font-medium">Learn More</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                </ul>;
+                {/* CTA */}
+                <Link
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   href={service && service.href}
                   className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-1'>;
                   <span className='font-medium'>Learn More</span>;
@@ -212,7 +366,11 @@ className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 
               </div>;
             </motion.div>;
           ))}
+<<<<<<< HEAD
         </motion.div>;
+=======
+        </motion.div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />;
               </div>;
             </motion && motion.div>;
@@ -222,6 +380,7 @@ className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+<<<<<<< HEAD
           viewport={{ once: true }}className='text-center';
         >;
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>;
@@ -234,6 +393,20 @@ className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 
             </p>;
             <Link;
               href='/contact';
+=======
+          viewport={{ once: true }}
+        >
+          <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+              Ready to Transform Your Business?
+            </h3>
+            <p className='text-gray-300 mb-6'>
+              Let&apos;s discuss how our technology solutions can drive your
+              success and accelerate your growth.
+            </p>
+            <Link
+              href='/contact'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1'>;
               <span>Get Started Today</span>;
               <ArrowRight className='w-5 h-5' />            </Link>        >;
@@ -254,7 +427,15 @@ className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 
         </motion && motion.div>;
       </div>;
     </section>;
+<<<<<<< HEAD
   )}export default ServicesSection;  )}export default ServicesSection;
+=======
+  )
+};
+export default ServicesSection;  )
+};
+export default ServicesSection;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   className='inline - flex items - center space - x-2 text - blue - 400 hover:text - blue - 300 transition - colors duration - 300 group - hover:translate - x-1';
                 >;
                   <span className='font - medium'>Learn More</span>;
@@ -309,6 +490,7 @@ className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 
           </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
     </section>)}export default ServicesSection)}export default ServicesSection;export default ServicesSection;
   )}className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1';
             >;
@@ -320,3 +502,16 @@ className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 
       </div>;
     </section>;
 )}export default ServicesSection;
+=======
+    </section>);
+}
+;
+export default ServicesSection);
+}
+;
+export default ServicesSection;
+export default ServicesSection;
+  )
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { import Link from 'next/link';
 import { Check;
@@ -20,6 +21,55 @@ import { Check;
   MapPin;
   ExternalLink; } from 'lucide-react';
   Check,Star,Users,TrendingUp,DollarSign,Clock,Shield,Zap,Rocket,Brain,Atom,Globe,Target,ArrowRight,Phone,Mail,MapPin,ExternalLink,} from 'lucide-react';
+=======
+import { motion } from 'framer-motion';
+import {
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {
+  Check
+  Star
+  Users
+  TrendingUp
+  DollarSign
+  Clock
+  Shield
+  Zap
+  Rocket
+  Brain
+  Atom
+  Globe
+  Target
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  ExternalLink;} from 'lucide-react';
+  Check,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  Shield,
+  Zap,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Target,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,;
+  ExternalLink,;} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
+  Check, Star, Users, TrendingUp, DollarSign, Clock, ;
+  MapPin,;
+  ExternalLink,;} from 'lucide-react';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import { Check, Star, Users, TrendingUp, DollarSign, Clock,MapPin,ExternalLink,} from 'lucide-react';
@@ -49,8 +99,14 @@ export default function PricingPage() {const [selectedCategory, setSelectedCateg
     acc[category].push(service)return acc;
   }, {} as Record<string, typeof filteredServices>)answer: 'Yes, all our services offer a 14-day free trial with full access to all features. No credit card required.';
     }
+<<<<<<< HEAD
     {question: 'What payment methods do you accept?';
       answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can be invoiced.';
+=======
+    {
+      question: "question",
+    answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can be invoiced.'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
     {question: 'Do you offer volume discounts?';
       answer: 'Yes, we offer volume discounts for teams and organizations. Contact our sales team for custom pricing.';
@@ -62,6 +118,7 @@ export default function PricingPage() {const [selectedCategory, setSelectedCateg
       answer: 'No setup fees for any of our plans. You can start using our services immediately after signing up.';
     }
   ];
+<<<<<<< HEAD
   const filteredServices = selectedCategory === 'All';
     ? microSaasServices;
     : microSaasServices.filter(service => service.category === selectedCategory)export default function PricingPage() {const [selectedCategory, setSelectedCategory] = useState('All')const [selectedPriceRange, setSelectedPriceRange] = useState('All')// Combine all services;
@@ -156,6 +213,17 @@ export default function PricingPage() {const [selectedCategory, setSelectedCateg
       </Head>;
       <UltraFuturisticNavigation2029 />;
 <main className='relative z-10 pt-20'>;
+=======
+  const filteredServices = selectedCategory === 'All'
+    ? microSaasServices
+    : microSaasServices.filter(service => service.category === selectedCategory);
+  const yearlyDiscount = 0.2, // 20% discount for yearly billing
+  const filteredServices = selectedCategory === 'All' ;
+    ? microSaasServices ;
+    : microSaasServices && microSaasServices.filter(service => service && service.category === selectedCategory);
+  const yearlyDiscount = 0 && 0.2, // 20% discount for yearly billing;
+  return (
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Hero Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 text-center'>;
           <motion.div;
@@ -226,12 +294,16 @@ className='max-w-4xl mx-auto';
               >;
                 {categories && categories.map(category => (<option key={category} value={category}>{category}</option>;
                 ))}
+<<<<<<< HEAD
             transition={{ duration: 0.8 }}))}
               <p>Showing {filteredServices.length} services in {Object.keys(servicesByCategory).length} categories</p>;
             </div>;
           </motion.div>;
         </section>;
                   </option>;
+=======
+            transition={{ duration: 0.8 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 ))}
               </select>;
             </div>;
@@ -410,7 +482,16 @@ className='max-w-4xl mx-auto';
                 </div>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
         </section>;
+=======
+        </section>
+        {/* Contact CTA Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -427,9 +508,16 @@ className='max-w-4xl mx-auto';
               viewport={{ once: true }}>;
               <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>;
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+<<<<<<< HEAD
                   {' '}))}
                 </div>;
               </motion.div>;
+=======
+                  {' '}
+                  ))}
+                </div>
+              </motion.div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             ))}
         </section>;
         {/* Contact CTA Section */}
@@ -521,6 +609,7 @@ className='max-w-4xl mx-auto';
                 </div>;
               </div>;
               {/* Additional Info */}
+<<<<<<< HEAD
 <div className='mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20'>;
                 <h3 className='text-xl font-semibold text-white mb-4'>;
                   Why Choose Zion Tech Group?;
@@ -562,6 +651,26 @@ className='max-w-4xl mx-auto';
   )}whileInView= {{opacity: 1, y: 0;
 }transition= {{duration: 0.8;
 }viewport= {{</p>;
+=======
+                    <span>Cutting-edge 2029 technology</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </main>
+  );
+}whileInView= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+  duration: 0.8
+}viewport= {
+  {
+                          </p>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                           {/* Key Features */}
                           <div className='mb - 6'>;
                             <h4 className='text - sm font - medium text - gray - 400 mb - 3'>;
@@ -786,10 +895,26 @@ className='max-w-4xl mx-auto';
         </section>;
       </main>;
       <UltraFuturisticFooter2029 />;
+<<<<<<< HEAD
     </UltraFuturisticBackground2029>)}whileInView= {{opacity: 1, coordinate_y: 0;
 }transition= {{duration: 0.8;
 }viewport= {once: true;
 }> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }}
 }
 }> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)once: true;
+=======
+    </UltraFuturisticBackground2029>);
+;
+}whileInView= {
+  {
+  opacity: 1, coordinate_y: 0;
+}transition= {
+  {
+  duration: 0.8;
+}viewport= {
+  once: true 
+}> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)

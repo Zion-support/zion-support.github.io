@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require("$1")
 const path = require("$1")
@@ -155,5 +159,9 @@ process.on("SIGINT")
       case "report":";        await launcher.generateReport();"
       case "help":";      default"
   } catch (error) {launcher.log(` Command failed``})
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   Menu,X,ChevronDown,Search,User,Settings,LogOut,Bell,Globe,Zap,Brain,Rocket,Dna,DollarSign,Lock,Wifi,Truck,Gamepad2,Bot,Factory,Car,} from "lucide-react";
 import Link from 'next/link';
 interface EnhancedNavigationProps  {className?: string;
@@ -194,6 +195,57 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
         {name: "AI & Machine Learning";
           href: "/services?category=ai-ml";
           icon: <Brain className="w-4 h-4" />;
+=======
+Menu,
+  X,
+  ChevronDown,
+  Search,
+  User,
+  Settings,
+  LogOut,
+  Bell,
+  Globe,
+  Zap,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,
+  Wifi,
+  Truck,
+  Gamepad2,
+  Bot,
+  Factory,
+  Car,;
+} from "lucide-react";
+import Link from "next/link";
+interface EnhancedNavigationProps {;
+  className?: string;
+}
+const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
+  className = ""
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const navigationItems = [
+    {
+      name: "name",
+    href: "/services"
+      icon: <Brain className="w-4 h-4" />
+      dropdown: [
+        {
+          name: "AI & Machine Learning"
+          href: "/services?category=ai-ml"
+          icon: <Brain className="w-4 h-4" />
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         }
         {name: "Quantum Computing";
           href: "/services?category=quantum";
@@ -239,6 +291,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
           href: "/services?category=vehicles";
           icon: <Car className="w-4 h-4" />;
         }
+<<<<<<< HEAD
       ];
       hasDropdown: true;
       dropdownItems: [;
@@ -246,6 +299,16 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
       href: "/solutions";
       hasDropdown: true;
       dropdownItems: [;
+=======
+      ]
+      hasDropdown: true;
+    dropdownItems: [
+    {
+      name: "Solutions"
+      href: "/solutions"
+      hasDropdown: true
+      dropdownItems: [
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         { name: "Enterprise Solutions", href: "/solutions?type=enterprise" }
         { name: "Startup Solutions", href: "/solutions?type=startup" }
         { name: "Government Solutions", href: "/solutions?type=government" }
@@ -263,11 +326,22 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     address: "364 E Main St STE 1008 Middletown DE 19709";
     website: "https://ziontechgroup.com";
   }
+<<<<<<< HEAD
   ];];
   return (<nav;
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled;
           ? "bg-black/80 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10";
           : "bg-transparent";
+=======
+  ];
+  ];
+  return (
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-black/80 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10"
+          : "bg-transparent"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       } ${className}`}>;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex items-center justify-between h-20">;
@@ -491,7 +565,12 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                   )}
                 </div>;
               ))}
+<<<<<<< HEAD
               {/* Contact Info */}<div className="pt-4 border-t border-cyan-500/20">;
+=======
+              {/* Contact Info */}
+              <div className="pt-4 border-t border-cyan-500/20">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <div className="space-y-2 text-sm text-gray-400">;
                   <div className="flex items-center space-x-2">;
                     <Globe className="w-4 h-4" />;
@@ -502,7 +581,12 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                     <span>{contactInfo && contactInfo.email}</span>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
               </div>;{/* Mobile CTA */}
+=======
+              </div>;
+              {/* Mobile CTA */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               <div className="pt-4">;
                 <Link;
                   href="/contact";
@@ -637,8 +721,21 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                   Get Started Today;
                 </Link>;
               </div>;
+<<<<<<< HEAD
             </div>;</motion.div>)}
       </AnimatePresence>;
     </nav>)}
 export default EnhancedNavigation;})export default EnhancedNavigation;
 })}export default EnhancedNavigation;
+=======
+            </div>;
+          </motion.div>)}
+      </AnimatePresence>;
+    </nav>);
+}
+export default EnhancedNavigation
+};
+)
+};
+export default EnhancedNavigation;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

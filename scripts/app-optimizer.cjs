@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -19,5 +23,9 @@ console.log('\n App Optimization "Summary")
 // console.log(`   - Bundle "size"`)
 console.log(`   - Total "images"`)
 // console.log('\n "Improvements")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   console.log('\n "Recommendations")

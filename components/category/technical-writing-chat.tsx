@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import type { NextPage } from 'next';
@@ -5,6 +6,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 const TechnicalWritingChat: NextPage = () => {return (<div>;
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -24,7 +27,10 @@ const TechnicalWritingChat: NextPage = () => {;
       </main>
     </div>
       </Head>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <main>;
         <h1>TechnicalWritingChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -48,22 +54,28 @@ ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
 export default TechnicalWritingChat;
+<<<<<<< HEAD
 
 
 
 
 
+=======
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const TechnicalWritingChat: NextPage = () => {
   return (
     <div>
       <Head>
-
         <title>TechnicalWritingChat - Zion Tech Solutions</title>
         <title>TechnicalWritingChat - Zion Tech Solutions</title>
         <title>TechnicalWritingChat - Zion Tech Solutions</title>
-
         <title>TechnicalWritingChat - Zion Tech Solutions</title>
-
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -113,6 +125,7 @@ export default TechnicalWritingChat;<title>TechnicalWritingChat - Zion Tech Solu
 }
 ;
 export default TechnicalWritingChat;
+<<<<<<< HEAD
 ;
     <div>
       <Head>
@@ -136,3 +149,6 @@ export default TechnicalWritingChat
 
         <title>TechnicalWritingChat - Zion Tech Solutions</title>
         <title>TechnicalWritingChat - Zion Tech Solutions</title>
+=======
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

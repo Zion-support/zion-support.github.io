@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import type { NextPage } from 'next';
@@ -14,6 +15,8 @@ const WebDevelopmentChat: NextPage = () => {return (<div>;
       </Head>;<meta name="description" content="WebDevelopmentChat blog post" />;
       </Head>;
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -30,6 +33,7 @@ const WebDevelopmentChat: NextPage = () => {;
       <Head>;
         <title>WebDevelopmentChat - Zion Tech Solutions</title>;
         <meta name="description" content="WebDevelopmentChat blog post" />{" "}
+<<<<<<< HEAD
 
 
 const WebDevelopmentChat: NextPage = () => {
@@ -40,6 +44,9 @@ const WebDevelopmentChat: NextPage = () => {
       </Head>;
 
 
+=======
+      </Head>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <main>
         <h1>WebDevelopmentChat</h1>
         <p>Blog content coming soon...</p>
@@ -47,7 +54,6 @@ const WebDevelopmentChat: NextPage = () => {
       </main>
     </div>
       </Head>;
-
       <main>;
         <h1>WebDevelopmentChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -68,11 +74,14 @@ ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
 export default WebDevelopmentChat;
+<<<<<<< HEAD
 
 
 
         <title>WebDevelopmentChat - Zion Tech Solutions</title>
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -116,6 +125,7 @@ export default WebDevelopmentChat;<title>WebDevelopmentChat - Zion Tech Solution
 }
 ;
 export default WebDevelopmentChat;
+<<<<<<< HEAD
 ;
     <div>
       <Head>
@@ -139,3 +149,6 @@ export default WebDevelopmentChat
 
         <title>WebDevelopmentChat - Zion Tech Solutions</title>
         <title>WebDevelopmentChat - Zion Tech Solutions</title>
+=======
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

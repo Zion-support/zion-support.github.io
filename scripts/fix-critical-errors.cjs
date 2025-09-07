@@ -1,16 +1,27 @@
+<<<<<<< HEAD
 
 
 
 
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 /**
  * Fix Critical Errors - Comprehensive fix for all critical syntax errors;
  */
+<<<<<<< HEAD
 
 
 
 
 
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -39,8 +50,16 @@ const path = require('path')
       this.log("Error fixing ${filePath}: ${error.message}")
     this.log(" Total Fixes "Applied": ${report.totalFixes}")
     this.log(" Total "Errors": ${report.totalErrors}")
+<<<<<<< HEAD
       this.log("Critical Errors Fix "failed")
 
       this.log("Critical Errors Fix "failed")
 
 
+=======
+this.log("Critical Errors Fix "failed")
+=======
+      this.log("Critical Errors Fix "failed")
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

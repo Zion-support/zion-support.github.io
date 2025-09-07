@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { Search,TrendingUp,CheckCircle,AlertTriangle,ArrowRight,Target,BarChart3,Globe,Smartphone,Zap,export default function SEOAnalyzerToolPage() {} from 'lucide-react';
 export default function SEOAnalyzerToolPage() {const [isAnalyzing, setIsAnalyzing] = useState(false)const [analysisResults, setAnalysisResults] = useState(null)const [url, setUrl]  = useState(''){}
     {category: 'Content SEO';
@@ -30,6 +31,39 @@ export default function SEOAnalyzerToolPage() {const [isAnalyzing, setIsAnalyzin
         'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.';
       color: 'bg-gradient-to-br from-green-500 to-emerald-600';
       gradient: 'from-green-400 to-emerald-500';
+=======
+import {
+  Search,
+  TrendingUp,
+  CheckCircle,
+  AlertTriangle,
+  ArrowRight,
+  Target,
+  BarChart3,
+  Globe,
+  Smartphone,;
+  Zap,;
+export default function SEOAnalyzerToolPage() {;
+} from 'lucide-react';
+export default function SEOAnalyzerToolPage() {;
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResults, setAnalysisResults] = useState(null);
+  const [url, setUrl] = useState('');
+    {
+    }
+    {
+      category: "category",
+    factors: [
+        'Keyword density'
+        'Content relevance'
+        'Readability scores'
+        'Content freshness'
+        'Multimedia optimization'
+        'Schema markup'
+      ]
+      icon: ''
+      color: 'text-purple-400'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
     {icon: <Target className='w-8 h-8 text-white' />;
       title: 'Keyword Research';
@@ -81,6 +115,7 @@ export default function SEOAnalyzerToolPage() {const [isAnalyzing, setIsAnalyzin
         '10 website analyses/monthBasic SEO metricsKeyword research (100 keywords)On-page SEO analysisEmail supportBasic reporting';
       ];
       popular: false;
+<<<<<<< HEAD
     }{const pricing = [;
     {name: 'Starter',price: '$39',period: '/month',description: 'Perfect for small businesses and bloggers',features: [;
         '10 website analyses / month','Basic SEO metrics','Keyword research (100 keywords)','On - page SEO analysis',name: 'Starter';
@@ -104,6 +139,32 @@ export default function SEOAnalyzerToolPage() {const [isAnalyzing, setIsAnalyzin
 {type: 'error',message: 'Missing meta description',priority: 'high',},{type: 'warning';
             message: 'Title tag too long (65 characters)';
             priority: 'medium';
+=======
+    }
+      name: 'Professional',
+      price: '$89',
+      period: '/month',
+      description: 'Ideal for growing businesses and agencies',
+      name: 'Enterprise',
+      price: '$249',
+      period: '/month',
+      description: 'For large organizations and SEO agencies',
+    setIsAnalyzing(true);
+    // Simulate SEO analysis
+    setTimeout(() => {
+      setAnalysisResults({
+        url: url;
+    overallScore: 78
+        onPageScore: 82
+        technicalScore: 75
+        contentScore: 80
+        mobileScore: 85
+        issues: [
+          {
+            type: 'error'
+            message: 'Missing meta description'
+            priority: 'high'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }
           {{keyword: 'website optimization';
             volume: '12K';
@@ -114,6 +175,7 @@ export default function SEOAnalyzerToolPage() {const [isAnalyzing, setIsAnalyzin
             volume: '15K';
             difficulty: 'high';
           }
+<<<<<<< HEAD
         ];
   const handleAnalyzeSEO = async () => {if (!url && url.trim()) return;
     setIsAnalyzing(true)// Simulate SEO analysis;
@@ -124,12 +186,82 @@ export default function SEOAnalyzerToolPage() {const [isAnalyzing, setIsAnalyzin
           'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets';
         ];
         keywords: [;
+=======
+        ]
+  const handleAnalyzeSEO = async () => {;
+    if (!url && url.trim()) return;
+    setIsAnalyzing(true);
+    // Simulate SEO analysis;
+    setTimeout(() => {;
+      setAnalysisResults({;
+        url: url,;
+        overallScore: 78,;
+        onPageScore: 82,;
+        technicalScore: 75,;
+        contentScore: 80,;
+        mobileScore: 85,;
+        issues: [;
+          {;
+            type: 'error',;
+            message: 'Missing meta description',;
+            priority: 'high',;
+          },;
+          {;
+            type: 'warning',;
+            message: 'Title tag too long (65 characters)',;
+            priority: 'medium',;
+          },;
+          {;
+            type: 'info',;
+            message: 'Consider adding more internal links',;
+            priority: 'low',;
+          },;
+        ],;
+        recommendations: [;
+          'Optimize meta descriptions for better click-through rates',;
+          'Improve page load speed by optimizing images',;
+          'Add more relevant internal links to improve site structure',;
+          'Implement schema markup for rich snippets',;
+        ],,
+  keywords: [;
+          {;
+            keyword: 'website optimization',;
+            volume: '12K',;
+            difficulty: 'medium',;
+          },;
+          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' },;
+          {;
+            keyword: 'search engine optimization',;
+            volume: '15K',;
+            difficulty: 'high',;
+          },;
+        ],;
+      });
+      setIsAnalyzing(false);
+    }, 4000)
+};        recommendations: [
+          'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
+        ],
+  keywords: [
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           { keyword: 'website optimization', volume: '12K', difficulty: 'medium' }
           { keyword: 'SEO tools', volume: '8K', difficulty: 'low' }
         ];
           { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' }
+<<<<<<< HEAD
         ];
       })setIsAnalyzing(false)}, 4000)}}return (return (<>;
+=======
+        ]
+      });
+      setIsAnalyzing(false);
+    }, 4000)
+}
+};
+  return (
+  return (
+    <>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <Head>;
         <title>SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis &;
           Optimization;
@@ -274,11 +406,34 @@ href='/contact';
           </div>;
               <Card;
                 key={index}
+<<<<<<< HEAD
                 className="card-hover group border-gradient-green";
               className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl';
             >;
               Schedule Demo;
             </Button>;
+=======
+                className="card-hover group border-gradient-green"
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+      {/* SEO Factors Section */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+              Comprehensive SEO Analysis
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              We analyze every aspect of your website's SEO to provide
+              actionable insights and recommendations.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {seoFactors.map((category, index) => (
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           </div>;
         </div>;
       </section>;
@@ -411,6 +566,14 @@ href='/contact';
                 </ul>;
               </Card>;
             ))}
+<<<<<<< HEAD
+=======
+          </div>
+        </div>
+      </section>
+      {/* Demo Analysis Results */}
+      {analysisResults && (
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           </div>;
         </div>;
       </section>;
@@ -475,7 +638,12 @@ href='/contact';
               <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
                 SEO Analysis Results;
               </h2>;
+<<<<<<< HEAD
               <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;Here's a sample analysis of a website. Get comprehensive;
+=======
+              <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+                Here's a sample analysis of a website. Get comprehensive;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 insights for your own website.;
               </p>;
             </div>;
@@ -645,6 +813,7 @@ href='/contact';
                         <span className='text-gray-300'>{issue.message}</span>;
                         <div className='text-xs text-gray-500 mt-1'>;
                           Priority: {issue.priority}
+<<<<<<< HEAD
                         </div>;
                       </div>;
                         </div>                      </div>;
@@ -654,6 +823,28 @@ href='/contact';
                 </div>;
               </Card>;
             </div>;
+=======
+                        </div>                      </div>                  {analysisResults.issues.map((issue, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      {issue.type === 'error' ? (
+                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                      ) : issue.type === 'warning' ? (
+                        <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
+                      ) : (
+                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                      )}
+                      <div>
+                        <span className="text-gray-300">{issue.message}</span>
+                        <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
+                      </div>
+                        </div>                      </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   ))}
             {/* Recommendations and Keywords */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
@@ -737,7 +928,31 @@ href='/contact';
                           {keyword.difficulty}</span>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
                   ))}<div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
+=======
+              <Card className="border-gradient-green">
+                <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>
+                <div className="space-y-4">
+                  {analysisResults.keywords.map((keyword, index) => (
+                    <div key={index} className="border-b border-gray-700 pb-3 last:border-b-0">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="font-semibold text-white">{keyword.keyword}</span>
+                        <span className="text-sm text-gray-400">Volume: {keyword.volume}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-gray-400">Difficulty: {keyword.difficulty}</span>
+                        <span className={`px-2 py-1 rounded text-xs ${
+                          keyword.difficulty === 'low' ? 'bg-green-500/20 text-green-400' :
+                          keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                          'bg-red-500/20 text-red-400'
+                        }`}>
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+            <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               {/* Overall Score */}
               <Card className='border - gradient - green text - center'>;
                 <h3 className='text - 2xl font - bold mb - 6 text - white'>;
@@ -997,10 +1212,18 @@ href='/contact';
                       {feature}
                     </li>;
                   ))}
+<<<<<<< HEAD
                 <Button;
 href='/contact';
                   size='lg';
                       {feature}</li>;
+=======
+                <Button
+                  href='/contact'
+                  size='lg'
+                      {feature}
+                    </li>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   ))}
                 </ul>;
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
@@ -1010,6 +1233,7 @@ href='/contact';
                 </Button>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -1019,6 +1243,17 @@ href='/contact';
         </div>;
       </section>;
               </Card>;
+=======
+          </div>
+        </div>
+      </section>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+              </Card>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
                   Get Started;
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
@@ -1071,6 +1306,10 @@ href='/contact';
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </section>;
     </>;
   )}
+=======
+      </section>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

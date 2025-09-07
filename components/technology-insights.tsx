@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 export default function TechnologyInsightsPage() {const technologyTrends = [;
     {id: 'quantum-computing';
       title: 'Quantum Computing in 2025';
@@ -11,6 +12,25 @@ export default function TechnologyInsightsPage() {const technologyTrends = [;
       category: 'AI/ML';
       readTime: '12 min read';
       featured: false;
+=======
+export default function TechnologyInsightsPage() {
+  const technologyTrends = [
+    {
+      id: "id",
+    title: 'Quantum Computing in 2025'
+      description:
+        'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
+      readTime: '15 min read',
+      featured: true
+};
+    {
+      id: 'edge-ai'
+      title: 'Edge AI Revolution'
+      description: 'How edge computing is transforming AI deployment and enabling real-time intelligent applications.'
+      category: 'AI/ML'
+      readTime: '12 min read'
+      featured: false
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
     {id: 'autonomous-vehicles';
       title: 'Autonomous Vehicle Technology';
@@ -20,6 +40,7 @@ export default function TechnologyInsightsPage() {const technologyTrends = [;
       featured: false;
     },      featured: false;
     }
+<<<<<<< HEAD
   ];const researchAreas = [;
     {title: 'Autonomous Systems Research',,description:;
         'Pioneering research in building truly autonomous systems that can operate independently.',focus: [;
@@ -27,6 +48,43 @@ export default function TechnologyInsightsPage() {const technologyTrends = [;
         'Research into responsible AI development and ethical considerations for autonomous systems.',focus: ['Ethical AI', 'Bias Detection', 'Transparency', 'Accountability'],icon: '⚖️',},{title: 'Human-AI Collaboration',,description:;
         'Exploring how humans and AI can work together effectively and safely.',focus: [;
         'Human-AI Interface','Collaborative Decision Making','Safety Protocols','Trust Building',],icon: '🤝',},  ],description: 'Exploring how humans and AI can work together effectively and safely.',focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],icon: '🤝';
+=======
+  ];
+  const researchAreas = [;
+    {;
+      title: 'Autonomous Systems Research',,
+  description:;
+        'Pioneering research in building truly autonomous systems that can operate independently.',;
+      focus: [;
+        'Decision Making',;
+        'Self-Learning',;
+        'Adaptive Behavior',;
+        'System Integration',;
+      ],;
+      icon: '🔬',;
+    },;
+      title: 'AI Ethics & Governance',,
+  description:;
+        'Research into responsible AI development and ethical considerations for autonomous systems.',;
+      focus: ['Ethical AI', 'Bias Detection', 'Transparency', 'Accountability'],;
+      icon: '⚖️',;
+    },;
+    {;
+      title: 'Human-AI Collaboration',,
+  description:;
+        'Exploring how humans and AI can work together effectively and safely.',;
+      focus: [;
+        'Human-AI Interface',;
+        'Collaborative Decision Making',;
+        'Safety Protocols',;
+        'Trust Building',;
+      ],;
+      icon: '🤝',;
+    },  ],
+  description: 'Exploring how humans and AI can work together effectively and safely.',;
+      focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],;
+      icon: '🤝';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
         <main className='container mx-auto px-6 py-12'>;
@@ -55,6 +113,7 @@ export default function TechnologyInsightsPage() {const technologyTrends = [;
             <h1 className='text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent'>;
               Technology Insights;
             </h1>;
+<<<<<<< HEAD
             <p className='text - xl text - white / 80 max - w-3xl mx - auto'>;Research insights, technology trends, and thought leadership in;
               AI, automation, and emerging technologies;
             </p>;
@@ -97,6 +156,9 @@ export default function TechnologyInsightsPage() {const technologyTrends = [;
               Technology Insights;
             </h1>;
             <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
+=======
+            <p className='text - xl text - white / 80 max - w-3xl mx - auto'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               Research insights, technology trends, and thought leadership in;
               AI, automation, and emerging technologies;
             </p>;
@@ -132,11 +194,20 @@ export default function TechnologyInsightsPage() {const technologyTrends = [;
                     </Link>;
                   </div>;
                 ))}
+<<<<<<< HEAD
               </div>;
             </div>;
                       href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
                       Read More <span className='ml-1'>→</span>                    </Link>      </Head>;<div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
+=======
+              </div>
+            </div>
+                      href={`/blog/${trend && trend.id}`}
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
+                      Read More <span className='ml-1'>→</span>                    </Link>      </Head>;
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <main className="container mx-auto px-6 py-12">;
           <section className="text-center mb-16">;
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">;
@@ -244,6 +315,7 @@ export default function TechnologyInsightsPage() {const technologyTrends = [;
                 ))}
               </div>;
             </div>;
+<<<<<<< HEAD
             {/* Innovation Lab */}
 <div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>;
@@ -278,6 +350,86 @@ export default function TechnologyInsightsPage() {const technologyTrends = [;
 <div className='text-center'>;
                     <div className='text-6xl mb-4'>🧪</div>;
                     <p className='text-white/60 text-sm'>Innovation Lab</p>;
+=======
+            {/* Whitepapers */}
+            {/* Whitepapers */}
+            <div className='mb-16'>
+              <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
+                Research Whitepapers
+              </h2>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+                {whitepapers.map((paper, index) => (
+                  <div
+                    key={index}
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'
+                  >
+                    <div className='flex items-center justify-between mb-3'>
+                      <span className='px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full'>
+                        {paper.category}
+                      </span>
+                      <span className='text-white/60 text-sm'>
+                        {paper.pages} pages
+                      </span>
+                    </div>
+                    <h3 className='text-xl font-bold mb-3 text-white'>
+                      {paper.title}
+                    </h3>
+                    <p className='text-white/70 mb-4'>{paper.description}</p>
+                    <Link
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>
+                      <span className="text-white/60 text-sm">{paper.pages} pages</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-white">{paper.title}</h3>
+                    <p className="text-white/70 mb-4">{paper.description}</p>
+                    <Link
+                      href={paper.downloadUrl}
+                      className="inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
+                    >
+                      Download PDF <span className="ml-1">→</span>
+                    </Link>
+                      Download PDF <span className='ml-1'>→</span>                    </Link>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Innovation Lab */}
+            <div className='mb-16'>
+              <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
+                Innovation Lab
+              </h2>
+              <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
+                  <div>
+                    <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
+                      Cutting-Edge Research
+                    </h3>
+                    <p className='text-white/80 mb-6'>
+                      Our innovation lab is dedicated to exploring the frontiers
+                      of technology, conducting research in autonomous systems
+                      AI ethics, and human-AI collaboration. We work with
+                      leading institutions and industry partners to advance the
+                      state of the art.
+                    </p>
+                    <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>
+                    <p className="text-white/80 mb-6">
+                      Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
+                    </p>
+                    <ul className="space-y-2 text-white/70">
+                      <li>• Advanced AI research and development</li>
+                      <li>• Autonomous system prototyping</li>
+                      <li>• Ethical AI framework development</li>
+                      <li>• Industry collaboration and partnerships</li>
+                    </ul>
+                  </div>
+                    <p className="text-white/60 text-sm">Innovation Lab</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   </div>;
                 </div>;
               </div>;
@@ -314,6 +466,7 @@ export default function TechnologyInsightsPage() {const technologyTrends = [;
           </section>;
         </main>;
       </div>;
+<<<<<<< HEAD
   )}
 }
     </>)}
@@ -330,3 +483,14 @@ export default function TechnologyInsightsPage() {const technologyTrends = [;
       </div>;
     </>;
   )}
+=======
+  );
+}
+}
+    </>);
+}
+  );
+}
+    </>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

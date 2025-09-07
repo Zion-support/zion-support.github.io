@@ -304,5 +304,9 @@ this.log("Summary report "generated": ${summaryFile}")
     if (healthData.dependencies.status === "CRITICAL")
     if (healthData.files.status === "CRITICAL")
     if (healthData.files.status === "CRITICAL")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")

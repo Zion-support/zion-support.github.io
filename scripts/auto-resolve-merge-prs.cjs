@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 
 
 
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -58,7 +63,6 @@ function resolveConflictsFiles() {}
 };
 async function main() {}
   const { owner, repo } = getRepoFromGit();
-  
   sh('git fetch origin');
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   // Stash local changes to avoid checkout conflicts;

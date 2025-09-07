@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* eslint-env node */;
 /* eslint-disable no-undef */;
 module.exports = {/* eslint - env node */;
@@ -104,3 +105,24 @@ module.exports = {env: {node: true,es2021: true;
     }
   }
 }
+=======
+module.exports = {
+  env: {
+    node: true,
+    es2021: true,
+    browser: true
+  },
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  rules: {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "no-console": "off",
+    "react/no-unescaped-entities": "warn"
+  }
+};
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { Brain, Heart, Eye, MessageCircle, Users, Shield;import {Brain,Heart,Eye,MessageCircle,Users,Shield,Zap,TrendingUp,CheckCircle,ArrowRight,Star,Phone,Mail,MapPin,Globe,Cpu,Lock,BarChart3,Smartphone,Database,Cloud,Server,ShieldCheck,} from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
@@ -12,9 +13,61 @@ const AIEmotionalIntelligencePlatform2029 = () => {const contactInfo = {mobile: 
         'Optimizes communication and content based on emotional context',color: 'from-orange-500 to-red-600',},{icon: Shield,title: 'Emotional Health Monitoring',description:;
         'Tracks emotional patterns and provides insights for mental health support',color: 'from-indigo-500 to-purple-600',},];const benefits = [;
     'Improve customer satisfaction by 85%','Reduce customer churn by 60%','Enhance team collaboration and communication','Optimize marketing campaigns with emotional insights','Improve mental health support and monitoring','Create empathetic AI interactions and experiences',Zap, TrendingUp, CheckCircle, ArrowRight, Star;
+=======
+import { motion } from 'framer-motion';
+import {
+  Brain,
+  Heart,
+  Eye,
+  MessageCircle,
+  Users,
+  Shield,
+  Zap,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Cpu,
+  Lock,
+  BarChart3,
+  Smartphone,
+  Database,
+  Cloud,
+  Server,;
+  ShieldCheck,;
+} from 'lucide-react';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+  Brain,
+  Heart,
+  Eye,
+  MessageCircle,
+  Users,
+  Shield,
+  Zap,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Cpu,
+  Lock,
+  BarChart3,
+  Smartphone,
+  Database,
+  Cloud,
+  Zap, TrendingUp, CheckCircle, ArrowRight, Star;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
   Smartphone, Database, Cloud, Server, ShieldCheck;
  } from 'lucide-react';
+<<<<<<< HEAD
   const contactInfo = {mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -26,6 +79,23 @@ const AIEmotionalIntelligencePlatform2029 = () => {const contactInfo = {mobile: 
       description:;
         'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time';
       color: 'from-violet-500 to-purple-600';
+=======
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
+  const contactInfo = {
+    mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  }
+  const features = [
+    {
+      icon: Brain;
+    title: 'Real-time Emotion Detection'
+      description:
+        'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time'
+      color: 'from-violet-500 to-purple-600'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
       icon: Heart;
       title: 'Emotional Response Generation';
@@ -92,8 +162,14 @@ const AIEmotionalIntelligencePlatform2029  = null;];
     }{title: 'HR and Recruitment',description: 'Emotional intelligence assessment and team building',icon: Users,color: 'from-purple-500 to-indigo-600',},      color: 'from-purple-500 to-indigo-600';
     }{title: 'Healthcare Diagnostics',description: 'Emotional state monitoring for healthcare professionals',icon: Shield,color: 'from-teal-500 to-cyan-600',},      color: 'from-teal-500 to-cyan-600';
     }
+<<<<<<< HEAD
   ];];
       popular: false;
+=======
+  ];
+      ];
+      popular: false
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
   return (<>;
       <Head>;
@@ -268,6 +344,7 @@ className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from
             >;
               <Brain className="w-4 h-4 mr-2" />;
               🚀 2029 Revolutionary AI Technology;
+<<<<<<< HEAD
             </motion && motion.div>;{/* Main Heading */}
             <motion&& motion.h1;
               initial={{ opacity: 0, y: 30 }}
@@ -279,6 +356,19 @@ className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight';
               </span>;
               <br />;
               <span className='text-white'>Platform</span>            </motion.h1>            >;
+=======
+            </motion && motion.div>;
+            {/* Main Heading */}
+            <motion&& motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                AI Emotional Intelligence
+              </span>
+              <br />
+              <span className='text-white'>Platform</span>            </motion.h1>            >
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               transition={{ duration: 1, delay: 0.3 }}
               className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight";
             >;
@@ -301,8 +391,14 @@ className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight';
               </span>;
               <br />;
               <span className="text-white">Platform</span>;
+<<<<<<< HEAD
             </motion && motion.h1>;{/* Subheading */}
             <motion&& motion.p;
+=======
+            </motion && motion.h1>;
+            {/* Subheading */}
+            <motion&& motion.p
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}transition={{ duration: 1, delay: 0 && 0.5 }}
               className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>;
@@ -311,6 +407,7 @@ className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight';
               Transform your business with emotional intelligence.            </motion && motion.p>              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";
             >;
               Revolutionary AI platform that reads, understands, and responds to human emotions in real-time across all communication channels. Transform your business with emotional intelligence.;
+<<<<<<< HEAD
             </motion && motion.p>;transition={{ duration: 1, delay: 0.5 }}
 className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed';
             >;
@@ -318,28 +415,49 @@ className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-rela
               human emotions in real-time across all communication channels.;
               Transform your business with emotional intelligence.;
             </motion.p>;
+=======
+            </motion && motion.p>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             {/* CTA Buttons */}
             <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
               animate={{ opacity: 1, y: 0 }}transition={{ duration: 1, delay: 0.7 }}
 className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12';
             >;
               <Link;
                 href='/contact';
+=======
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <Link
+                href='/contact'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 className='group relative px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 hover:from-violet-600 hover:to-purple-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25'>;
                 <span className='flex items-center'>;
                   Get Started Today;
                   <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />;
                 </span>;
                 <div className='absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-400 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300'></div>;
+<<<<<<< HEAD
               </Link>;<Link;
                 href='#pricing';
+=======
+              </Link>;
+              <Link
+                href='#pricing'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 className='group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10'>;
                 <span className='flex items-center'>;
                   View Pricing;
                   <ArrowRight className='ml-2 w-5 h-5' />                </span>            >;
+<<<<<<< HEAD
               <Link;
                 href="/contact";
+=======
+              <Link
+                href="/contact"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 className="group relative px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 hover:from-violet-600 hover:to-purple-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">;
                 <span className="flex items-center">;
                   Get Started Today;
@@ -355,10 +473,16 @@ className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12';
                   <ArrowRight className='ml-2 w-5 h-5' />;
                 </span>;
               </Link>;
+<<<<<<< HEAD
             </motion.div>;
+=======
+              <Link
+                href="#pricing"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             {/* Key Stats */}
             <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
               animate={{ opacity: 1, y: 0 }}transition={{ duration: 1, delay: 0.9 }}
 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto';
             >;
@@ -391,6 +515,39 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto';
                   $8.2B;
                 </div>;
                 <div className='text-sm text-gray-400'>Market Size by 2029</div>              </div>            >;
+=======
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-violet-400 mb-2'>
+                  85%
+                </div>
+                <div className='text-sm text-gray-400'>
+                  Customer Satisfaction Increase
+                </div>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-purple-400 mb-2'>
+                  60%
+                </div>
+                <div className='text-sm text-gray-400'>
+                  Customer Churn Reduction
+                </div>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-pink-400 mb-2'>
+                  24/7
+                </div>
+                <div className='text-sm text-gray-400'>
+                  Emotional Monitoring
+                </div>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-blue-400 mb-2'>
+                  $8.2B
+                </div>
+                <div className='text-sm text-gray-400'>Market Size by 2029</div>              </div>            >
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               transition={{ duration: 1, delay: 0.9 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto";
             >;
@@ -419,6 +576,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
       {/* Features Section */}
+<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-black to-gray-900">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -456,6 +614,35 @@ className='text-center mb-16';
           </motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {features.map((feature, index) => (<motion.div;
+=======
+      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+      {/* Features Section */}
+      <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Revolutionary{' '}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Revolutionary <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">Features</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI Emotional Intelligence Platform combines cutting-edge technology with human understanding to create truly empathetic AI systems.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 key={feature.title}
               <span className='bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent'>;
                 Features;
@@ -481,9 +668,16 @@ className='text-center mb-16';
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+<<<<<<< HEAD
                 viewport={{ once: true }}>;
                 <div className={`flex justify-center mb-6`}>;
                   <div;
+=======
+                viewport={{ once: true }}
+              >
+                <div className={`flex justify-center mb-6`}>
+                  <div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     className={`p-4 rounded-xl bg-gradient-to-r ${feature && feature.color} bg-opacity-20`}>;
                     <feature && feature.icon className='w-8 h-8 text-white' />;
                   </div>;
@@ -515,16 +709,33 @@ className='text-center mb-16';
                 </h3>;
                 <p className='text-gray-300 text-center leading-relaxed'>;
                   {feature.description}
+<<<<<<< HEAD
                 </p>;
               </motion.div>;
             ))}
           </div>;
         </div>;
       </section>;
+=======
+                </p>              </motion.div>              >
+                <div className={`flex justify-center mb-6`}>
+                  <div className={`p-4 rounded-xl bg-gradient-to-r ${feature.color} bg-opacity-20`}>
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 text-center">{feature.title}</h3>
+                <p className="text-gray-300 text-center leading-relaxed">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             ))}
       {/* Benefits Section */}<section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+<<<<<<< HEAD
           <motion&& motion.div;
           </div>;
         </div>;
@@ -554,6 +765,35 @@ className='text-center mb-16';
           >;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Transform Your{' '}
+=======
+          <motion&& motion.div
+          </div>
+        </div>
+      </section>
+      {/* Benefits Section */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Transform Your{' '}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Transform Your <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Business</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience unprecedented improvements in customer satisfaction, team collaboration, and business outcomes.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 Business;
               </span>;
@@ -585,12 +825,22 @@ className='text-center mb-16';
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+<<<<<<< HEAD
                 viewport={{ once: true }}<span className='text-white text-lg'>{benefit}</span>              </motion.div>;
               </motion.div>;
             ))}
           </div>;
         </div>;
       </section>;
+=======
+                viewport={{ once: true }}
+                <span className='text-white text-lg'>{benefit}</span>              </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             ))}
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
@@ -614,6 +864,7 @@ className='flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purpl
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
+<<<<<<< HEAD
             viewport={{ once: true }}>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Powerful{' '}className="text-center mb-16";
@@ -641,6 +892,24 @@ className='text-center mb-16';
           </motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {useCases.map((useCase, index) => (<motion.div;
+=======
+            viewport={{ once: true }}
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Powerful{' '}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Powerful <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Use Cases</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From customer service to healthcare, our platform transforms industries with emotional intelligence.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 key={useCase.title}
               <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
                 Use Cases;
@@ -665,9 +934,16 @@ className='text-center mb-16';
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+<<<<<<< HEAD
                 viewport={{ once: true }}>;
                 <div className={`flex justify-center mb-6`}>;
                   <div;
+=======
+                viewport={{ once: true }}
+              >
+                <div className={`flex justify-center mb-6`}>
+                  <div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     className={`p-4 rounded-xl bg-gradient-to-r ${useCase && useCase.color} bg-opacity-20`}>;
                     <useCase && useCase.icon className='w-8 h-8 text-white' />;
                   </div>;
@@ -699,16 +975,33 @@ className='text-center mb-16';
                 </h3>;
                 <p className='text-gray-300 text-center leading-relaxed'>;
                   {useCase.description}
+<<<<<<< HEAD
                 </p>;
               </motion.div>;
             ))}
           </div>;
         </div>;
       </section>;
+=======
+                </p>              </motion.div>              >
+                <div className={`flex justify-center mb-6`}>
+                  <div className={`p-4 rounded-xl bg-gradient-to-r ${useCase.color} bg-opacity-20`}>
+                    <useCase.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 text-center">{useCase.title}</h3>
+                <p className="text-gray-300 text-center leading-relaxed">{useCase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             ))}
       {/* Pricing Section */}<section id='pricing' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="pricing" className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+<<<<<<< HEAD
           <motion&& motion.div;
           </div>;
         </div>;
@@ -749,6 +1042,35 @@ className='text-center mb-16';
           </motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             {Object.entries(pricing).map(([key, plan], index) => (<motion.div;
+=======
+          <motion&& motion.div
+          </div>
+        </div>
+      </section>
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Choose Your{' '}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Flexible pricing options designed to scale with your business needs.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {Object.entries(pricing).map(([key, plan], index) => (
+              <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>;
                 Plan;
               </span>;
@@ -811,6 +1133,7 @@ href='/contact';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div;
       {/* Contact Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
@@ -822,6 +1145,17 @@ href='/contact';
             viewport={{ once: true }}className='text-center mb-16';
           >;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+=======
+      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               Ready to{' '}
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 Transform;
@@ -899,7 +1233,12 @@ href='/contact';
               Contact us today to learn how our AI Emotional Intelligence;
               Platform can revolutionize your customer experience and business;
               outcomes.;
+<<<<<<< HEAD
             </p>;initial={{ opacity: 0, y: 30 }}
+=======
+            </p>;
+              initial={{ opacity: 0, y: 30 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
               viewport={{ once: true }}className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'>;
@@ -955,6 +1294,7 @@ href='/contact';
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+<<<<<<< HEAD
             viewport={{ once: true }}>;
             <Link;
               href='/contact';
@@ -963,6 +1303,18 @@ href='/contact';
                 Get Started Today;
                 <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />              </span>          >;
 }export default AIEmotionalIntelligencePlatform2029;
+=======
+            viewport={{ once: true }}
+          >
+            <Link
+              href='/contact'
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25'>;
+              <span className='flex items-center'>;
+                Get Started Today;
+                <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />              </span>          >
+};
+export default AIEmotionalIntelligencePlatform2029;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12'>            <motion.div          >;
             <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
@@ -1020,6 +1372,7 @@ href='/contact';
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+<<<<<<< HEAD
             viewport={{ once: true }}}export default AIEmotionalIntelligencePlatform2029;className='text-center';
           >;
             <Link;
@@ -1037,3 +1390,9 @@ href='/contact';
       <UltraFuturisticFooter2028 />;
     </>;
 )}export default AIEmotionalIntelligencePlatform2029;
+=======
+            viewport={{ once: true }}
+};
+export default AIEmotionalIntelligencePlatform2029;
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

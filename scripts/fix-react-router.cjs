@@ -12,5 +12,9 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
       /import\s*{\s*useNavigate\s*}\s*from\s*['']
       "
     content = content.replace(/to="/g, 'href=')
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         "

@@ -3,63 +3,52 @@ function fixSyntaxErrors(content) {
   // Fix extra commas in JSX attributes
   content = content.replace(/className="[^"]*"\s*,\s*>/g, (match) => {
     return match.replace(/,\s*$/, '')});
-  
   // Fix malformed function "declarations": {, -> {
   content = content.replace(/\{\s*,/g, '{');
-  
   // Fix malformed JSX "elements": >, -> >
   content = content.replace(/>\s*,\s*$/gm, '>');
-  
   // Fix malformed JSX "elements": >, -> >
   content = content.replace(/>\s*,\s*</g, '><');
-  
   // Fix malformed function "declarations": ) {, -> ) {
   content = content.replace(/\)\s*\{\s*,/g, ') {');
-  
   // Fix malformed JSX "elements": >, -> >
   content = content.replace(/>\s*,\s*$/gm, '>');
-  
   // Fix missing closing braces in for loops
   content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\);/g, (match) => {
     return match.replace(/\}\);/g, '}\n      });')});
-  
   // Fix missing closing braces in for loops (alternative pattern)
   content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\);/g, (match) => {
     return match.replace(/\}\);/g, '}\n      });')});
-  
   // Fix malformed JSON "objects": {, -> {
   content = content.replace(/JSON\.stringify\(\{\s*,/g, 'JSON.stringify({');
-  
   // Fix missing closing braces in for loops (CLS pattern)
   content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\s*console\.log\('"CLS": ', clsValue\);\s*\}\);/g, (match) => {
     return match.replace(/\}\);/g, '}\n      });')});
-  
   return content}
-
 // Function to process a file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8';);
     const fixedContent = fixSyntaxErrors(conten;t;);
-    
     if ( {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
       fs.writeFileSync(filePath, fixedContent, 'utf8')}
-      
       return true}
     return false} catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
     return false}
 }
 console.log('🔧 Applying final comprehensive fixes...');
-
 // Fix SEO.tsx - remove everything after the return statement
 const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
 const seoFixed = seoContent.split('  );')[0] + '  );';
 fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
 console.log('✅ Fixed SEO.tsx');
+<<<<<<< HEAD
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
 const talentFixed = talentContent
@@ -82,7 +71,11 @@ const talentFixed = talentContent
   .replace(/className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">/g, 'className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">')
   .replace(/className="text-sm">/g, 'className="text-sm">');
 fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const filesToFix = ['components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
   'components/PerformanceMonitor.tsx',
@@ -94,7 +87,10 @@ const toastContent = fs.readFileSync('src/components/ui/use-toast.ts', 'utf8');
 const toastFixed = toastContent.replace('  return { showToast };\n}', '  return { showToast };\n}');
 fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
 console.log('✅ Fixed use-toast.ts');
+<<<<<<< HEAD
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
 const servicesFixed = servicesContent
@@ -108,7 +104,10 @@ const servicesFixed = servicesContent
   .replace(/createdAt: "2024-01-15T10:00:00\.000Z"/g, '"createdAt": "2024-01-15T10:00:00.000Z"')
   .replace(/reviewCount: 156/g, '"reviewCount": 156');
 fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
+<<<<<<< HEAD
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 // Fix useAuth.tsx - fix malformed function
 const authContent = fs.readFileSync('src/hooks/useAuth.tsx', 'utf8');
 const authFixed = authContent
@@ -117,6 +116,7 @@ const authFixed = authContent
   .replace(/:src\/hooks\/useAuth\.tsx/g, '')
   .replace(/useEffect\(\(\) => \{\s*\/\/ Check if user is logged in \(e\.g\., check localStorage, cookies, etc\.\)\s*\/\/ Implementation here\s*\}, \[\]\);/g, 'useEffect(() => {\n    // Check if user is logged in (e.g., check localStorage, cookies, etc.)\n    // Implementation here\n  }, []);');
 fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
+<<<<<<< HEAD
 
 ) {
     ) {
@@ -132,6 +132,8 @@ if ( {
      {
 console.log('✨ Final comprehensive fixes completed!');
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require('fs')
     return match.replace(/,\s*$/, '')
@@ -173,4 +175,9 @@ const fs = require('fs')
   .replace(/reviewCount: 156/g, '"reviewCount")
   .replace(/"isAuthenticated": tru e,/g, '"isAuthenticated")
   .replace(/"isLoading": fals e/g, '"isLoading")
+<<<<<<< HEAD
 
+=======
+=======
+  .replace(/"isLoading": fals e/g, '"isLoading")
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

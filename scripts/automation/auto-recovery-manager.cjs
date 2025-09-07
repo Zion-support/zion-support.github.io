@@ -238,6 +238,10 @@ this.log( Unreadable file "recovered")
         "recoveredIssues"
         "recoveryRate"
       "recoveryResults"
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]

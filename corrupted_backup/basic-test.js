@@ -1,0 +1,1 @@
+#!/usr/bin/env node const fs = require('fs');  try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'));   } catch(error) { } const files = ['src/App.tsx','next.config.js','package.json']; files.forEach(file => { if (fs.existsSync(file)) { } else { } });

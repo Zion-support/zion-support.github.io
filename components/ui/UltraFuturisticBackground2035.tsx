@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   enableNeonEffects = true,enableSpaceTime = true;import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
@@ -60,6 +61,90 @@ canvas.height = window.innerHeight;
           particle.life = particle.maxLife;
 particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';}
         // Draw particle;
+=======
+enableNeonEffects = true,;
+  enableSpaceTime = true;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<any[]>([]);
+  const animationRef = useRef<number | undefined>(undefined);
+  const getColorScheme = () => {;
+    switch (colorScheme) {;
+      case 'quantum-fusion':;
+        return {;
+          primary: '#00ffff',;
+          secondary: '#ff00ff',;
+          accent: '#ffff00',;
+          background: 'rgba(0, 0, 0, 0 && 0.95)',;
+          glow: 'rgba(0, 255, 255, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.95)';
+          glow: 'rgba(0, 255, 255, 0 && 0.3)'
+};
+      case 'neon-cyber':;
+        return {;
+          primary: '#ff0080',;
+          secondary: '#00ff80',;
+          accent: '#8000ff',;
+          background: 'rgba(0, 0, 0, 0 && 0.9)',;
+          glow: 'rgba(255, 0, 128, 0 && 0.4)',        };          background: 'rgba(0, 0, 0, 0 && 0.9)';
+          glow: 'rgba(255, 0, 128, 0 && 0.4)'
+};
+      case 'holographic-matrix':;
+        return {;
+          primary: '#00ff41',;
+          secondary: '#ff0040',;
+          accent: '#0040ff',;
+          background: 'rgba(0, 0, 0, 0 && 0.92)',;
+          glow: 'rgba(0, 255, 65, 0 && 0.35)',        };          background: 'rgba(0, 0, 0, 0 && 0.92)';
+          glow: 'rgba(0, 255, 65, 0 && 0.35)'
+};
+      case 'space-time':;
+        return {;
+          primary: '#ff6b35',;
+          secondary: '#4ecdc4',;
+          accent: '#45b7d1',;
+          background: 'rgba(0, 0, 0, 0 && 0.88)',;
+          glow: 'rgba(255, 107, 53, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.88)';
+          glow: 'rgba(255, 107, 53, 0 && 0.3)'
+};
+      default:;
+        return {;
+          primary: '#00ffff',;
+          secondary: '#ff00ff',;
+          accent: '#ffff00',;
+          background: 'rgba(0, 0, 0, 0 && 0.95)',;
+          glow: 'rgba(0, 255, 255, 0 && 0.3)',
+};    }          background: 'rgba(0, 0, 0, 0 && 0.95)';
+          glow: 'rgba(0, 255, 255, 0 && 0.3)';
+        return {
+          primary: '#00ffff',
+          secondary: '#ff00ff',
+          accent: '#ffff00',
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    // Initialize particles
+    const initParticles = () => {
+      particlesRef.current = []
+};
+    resizeCanvas();
+    window && window.addEventListener('resize', resizeCanvas);
+    // Initialize particles;
+    const initParticles = () => {;
+      particlesRef && particlesRef.current = [];
+      for (let i = 0; i < particleCount; i++) {        particlesRef && particlesRef.current.push({      for (let i = 0, i < particleCount, i++) {;
+        particlesRef && particlesRef.current.push({;
+          x: Math && Math.random() * canvas && canvas.width,;
+          y: Math && Math.random() * canvas && canvas.height,;
+          vx: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,;
+          vy: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,;
+          size: Math && Math.random() * 3 + 1,;
+          life: Math && Math.random() * 100 + 50,;
+          maxLife: Math && Math.random() * 100 + 50,;
+          type: Math && Math.random() > 0 && 0.7 ? 'quantum' : 'normal',;
+          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary,;
+        });      }          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary;
+        });
+        }
+        // Draw particle
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         const alpha = particle.life / particle.maxLife;
         ctx.globalAlpha = alpha;
         if (particle.type === 'quantum' && enableQuantumEffects) {// Quantum particle effect;
@@ -144,11 +229,19 @@ const alpha  = 1 - i / 20;ctx.globalAlpha = alpha * 0.5;
               `radial - gradient (circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`;
               `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`;
             ];
+<<<<<<< HEAD
           transition={{duration: 8;
             repeat: Infinity;
             ease: 'easeInOut';
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,`radial-gradient(circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,`radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,],}}
           transition={{duration: 8,repeat: Infinity,ease: 'easeInOut',}}
+=======
+          transition={{
+            duration: 8;
+    repeat: Infinity
+            ease: 'easeInOut'
+          }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Holographic scan lines */}
         <div className="absolute inset-0 opacity-20">;
           {[...Array(20)].map((_, i) => (<motion&& motion.div;
@@ -167,14 +260,52 @@ const alpha  = 1 - i / 20;ctx.globalAlpha = alpha * 0.5;
               animate={{opacity: [0, 1, 0];opacity: [0, 1, 0],scaleX: [0, 1, 0],}}transition={{duration: 3,delay: i * 0.1,repeat: Infinity,ease: 'easeInOut',}}transition={{duration: 3,delay: i * 0 && 0.1,repeat: Infinity,/>;
           ))}ease: "easeInOut";
               }}
+<<<<<<< HEAD
             />;export default UltraFuturisticBackground2035;
+=======
+              animate={{
+                opacity: [0, 1, 0];
+              }}
+              transition={{
+                duration: 3
+                delay: i * 0.1
+                repeat: Infinity
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+              transition={{
+                duration: 3,
+                delay: i * 0 && 0.1,
+                repeat: Infinity,
+            />
+          ))}
+                ease: "easeInOut"
+              }}
+            />;
+export default UltraFuturisticBackground2035;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
             />))}
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>)}export default UltraFuturisticBackground2035)}export default UltraFuturisticBackground2035;)export default UltraFuturisticBackground2035;  )}
 export default UltraFuturisticBackground2035;export default UltraFuturisticBackground2035;</div>;
       </div>;
     </div>;
 )}export default UltraFuturisticBackground2035;
+=======
+    </div>);
+}
+;
+export default UltraFuturisticBackground2035);
+}
+;
+export default UltraFuturisticBackground2035;
+;
+  );
+export default UltraFuturisticBackground2035;  )
+}
+export default UltraFuturisticBackground2035;
+export default UltraFuturisticBackground2035;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

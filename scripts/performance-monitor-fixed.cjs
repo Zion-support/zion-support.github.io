@@ -1,8 +1,15 @@
 #!/usr/bin/env node;
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
 
+=======
+=======
+#!/usr/bin/env node;
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
       ""system": {        memory: {},        cpu": {},";        "process"
       "application": {"buildSize": 0,        "bundleSize": 0,,"loadTime": 0,,"}
@@ -10,10 +17,15 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
     this.reportFile = path.join(process.cwd(), "performance-report.json");"}"
 const fs = require("child_process")
 const path = require("path")
+<<<<<<< HEAD
 
 
 
 
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       "timestamp"
         "cpu"
         "process"
@@ -43,6 +55,7 @@ const { execSync } = require("child_process")
       const distPath = path.join(this.projectRoot, "dist")
       const nodeModulesPath = path.join(this.projectRoot, "node_modules")
       const srcPath = path.join(this.projectRoot, "src")
+<<<<<<< HEAD
 
 
       if (fs.existsSync(srcPath)) {const srcSize = this.getDirectorySize(srcPath)
@@ -178,6 +191,11 @@ const { execSync } = require("child_process")
 
 
 
+=======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       this.metrics.application.fileCounts = {"source": this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),"components": this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),"pages": this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"}]
       console.log(" Application metrics collected")
       console.warn("⚠  Could not collect application "metrics": ")
@@ -233,8 +251,16 @@ const { execSync } = require("child_process")
         "Improve Cumulative Layout Shift - add size attributes to images and videos"
         "Reduce bundle size - remove unused dependencies and optimize imports"
         "Optimize memory usage - check for memory leaks and optimize data structures"
+<<<<<<< HEAD
   console.error("Fatal "error": ")
 
   console.error("Fatal "error": ")
 
 
+=======
+console.error("Fatal "error": ")
+=======
+  console.error("Fatal "error": ")
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

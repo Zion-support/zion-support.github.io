@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface Innovative2026EmergingTechService  {id: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -645,7 +649,6 @@ reviews: 25;
       description:;
         'Revolutionary quantum internet platform that provides ultra - secure communication, quantum key distribution, and next - generation networking capabilities for government, financial, and critical infrastructure.',
       features: [;
-
         'Quantum key distribution (QKD)',
         'Quantum secure communication',
         'Quantum network infrastructure',
@@ -666,17 +669,21 @@ reviews: 25;
       reviews: 30
     }
   ];
+<<<<<<< HEAD
 
 
 export const getPopularEmergingTechServices = () => {;
 
 
+=======
+export const getPopularEmergingTechServices = () => {;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.popular);
 };
-      id: 'quantum-internet-platform-2026'
-      name: 'Quantum Internet Platform 2026'
+      id: "id",
+    name: 'Quantum Internet Platform 2026'
       tagline: 'Ultra-secure quantum communication network for the future'
       price: '$5,999'
       period: '/month'
@@ -694,8 +701,8 @@ export const getPopularEmergingTechServices = () => {;
         '24/7 network operations'
         'Government compliance features'
       ]
-      popular: false
-      icon: '🌐'
+      popular: false;
+    icon: '🌐'
       color: 'from-cyan-500 to-blue-600'
       textColor: 'text-cyan-400'
       link: 'https://ziontechgroup.com/services/quantum-internet-platform-2026'
@@ -913,7 +920,6 @@ export const getEmergingTechServicesByPriceRange = (
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service && service.price.replace('$', '').replace(',', ''));
     return price >= minPrice && price <= maxPrice;
-
 export interface Innovative2026EmergingTechService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1144,14 +1150,17 @@ export const getEmergingTechServicesByCategory = (category: string) => {
     service.category.toLowerCase().includes(category.toLowerCase())
   )
 };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service && service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice
   })
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026EmergingTechService {;
   id: string,;
   name: string,;
@@ -1193,8 +1202,11 @@ export interface Innovative2026EmergingTechService {;
   reviews: number;
 
 };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: any {
@@ -1239,9 +1251,15 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
   return innovative2026EmergingTechServices.filter (service => {
     const price = parse_int (service.price.replace ('$', '').replace (, ''));
     return price >= min_price && price <= max_price;
+<<<<<<< HEAD
   });
 
 
 
 
 };
+=======
+  })
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

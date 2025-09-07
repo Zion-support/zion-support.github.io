@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
@@ -85,6 +86,8 @@ try {
 }
 
 console.log('🎉 Merge conflict resolution completed!');
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 class MergeConflictResolver {
   constructor() {
     this.resolvedFiles = [];
@@ -215,6 +218,7 @@ class MergeConflictResolver {
 const resolver = new MergeConflictResolver();
 resolver.resolveMergeConflicts().catch(console.error);
 module.exports = MergeConflictResolver;
+<<<<<<< HEAD
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
@@ -428,3 +432,9 @@ main();
 ursor/integrate-build-improve-and-re-verify-7ffc
         content = content.replace(/
           const parts = match.split('
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

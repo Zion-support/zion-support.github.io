@@ -48,7 +48,20 @@ function fixFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
     let modified = false;
+<<<<<<< HEAD
 
+=======
+// Fix common syntax errors
+    const fixes = [
+      // Fix files that start with just a closing brace
+      {
+        pattern: /^[\s\n]*\}\s*$/,
+        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
+      },
+      // Fix merge conflict markers
+      {
+        pattern: /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         replacement: ''
       },
       // Fix malformed function declarations
@@ -131,7 +144,10 @@ function walkDirectory(dir) {
     } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       }
     }
 
@@ -142,11 +158,18 @@ function walkDirectory(dir) {
   } catch (error) {
     console.error(`Error reading directory ${dir}:`, error.message);
   }
+<<<<<<< HEAD
   
   return fixedCount;
+=======
+return fixedCount;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 
 console.log('Starting syntax error fixes...');
 const fixedCount = walkDirectory('/workspace');
 console.log(`Fixed ${fixedCount} files`);
+<<<<<<< HEAD
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -111,4 +111,11 @@ function VendorsPage() {return (<div className="space - y-6">;
     </div>)}
 export const getServerSideProps: GetServerSideProps < Props> = async () => {const { list_vendors } = await import ('../../utils / vendor - store')const vendors = list_vendors ()return { props: { vendors } }
 }  return { props: { vendors } }
+<<<<<<< HEAD
 }}export const getServerSideProps: GetServerSideProps<Props> = async () => {const { listVendors } = await import('../../utils/vendor-store')const vendors = listVendors()return { props: { vendors } }}
+=======
+}
+
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

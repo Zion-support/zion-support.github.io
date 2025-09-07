@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 export default function AISolutionsPage() {const aiSolutions = [;
     {'Predictive Analytics';
         'Pattern Recognition';
@@ -8,6 +9,18 @@ export default function AISolutionsPage() {const aiSolutions = [;
       ],      icon: '🧠';
       category: 'Core AI';
       complexity: 'Advanced';
+=======
+export default function AISolutionsPage() {
+  const aiSolutions = [
+    {
+        'Predictive Analytics'
+        'Pattern Recognition'
+        'Anomaly Detection'
+        'Recommendation Systems'
+      ],      icon: "icon",
+    category: 'Core AI'
+      complexity: 'Advanced'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
         'Predictive Analytics','Pattern Recognition','Anomaly Detection','Recommendation Systems',],      icon: '🧠',category: 'Core AI',complexity: 'Advanced';
 }{id: 'natural-language-processing';
@@ -166,6 +179,7 @@ export default function AISolutionsPage() {const aiSolutions = [;
                     <h3 className="text-xl font-bold mb-3 text-white">{solution && solution.title}</h3>;
                     <p className="text-white/70 mb-4">{solution && solution.description}</p>;
                     <ul className="space-y-1 mb-4">;
+<<<<<<< HEAD
                       {solution && solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="text-sm text-white/60 flex items-center">;
                     </ul>;
                     <Link;
@@ -175,6 +189,20 @@ export default function AISolutionsPage() {const aiSolutions = [;
                     >;
                       Learn More <span className='ml-1'>→</span>;
                     </Link>;
+=======
+                      {solution && solution.features.map((feature, featureIndex) => (;
+                        <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
+                    </ul>
+                    <Link
+                      href={`/services#${solution.id}`}
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
+                    >
+                      Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      Learn More <span className="ml-1">→</span>
+                    </Link>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                           {feature}
                         </li>;
                       ))}
@@ -201,6 +229,7 @@ export default function AISolutionsPage() {const aiSolutions = [;
                     <h3 className="text - xl font - bold mb-3 text-white">{solution.title}</h3>;
                     <p className="text-white / 70 mb-4">{solution.description}</p>;
                     <ul className="space-y-1 mb-4">;
+<<<<<<< HEAD
                       {solution.features.map ((feature, feature_index) => (<li key={feature_index} className="text - sm text-white / 60 flex items-center">;</div>;
                 ))}</div>;
             </div>;{/* Industry Use Cases */}
@@ -210,6 +239,22 @@ export default function AISolutionsPage() {const aiSolutions = [;
               </h2>;
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
                 {useCases.map((useCase, index) => ())}
+=======
+                      {solution.features.map ((feature, feature_index) => (
+                        <li key={feature_index} className="text - sm text-white / 60 flex items-center">;
+                  </div>
+                ))}
+              </div>;
+            </div>;
+            {/* Industry Use Cases */}
+            <div className='mb-16'>
+              <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
+                Industry Applications
+              </h2>
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+                {useCases.map((useCase, index) => (
+                ))}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             {/* Industry Use Cases */}
             <div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>;
@@ -238,6 +283,7 @@ export default function AISolutionsPage() {const aiSolutions = [;
                   </div>;
                 ))}
             {/* Technologies */}
+<<<<<<< HEAD
 <div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>;
                 Technologies We Use;
@@ -257,6 +303,29 @@ export default function AISolutionsPage() {const aiSolutions = [;
                 </div>;
               </div>;
             </div>;{tech}
+=======
+            <div className='mb-16'>
+              <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
+                Technologies We Use
+              </h2>
+              <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
+                <div className='flex flex-wrap justify-center gap-4'>
+                  {technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20'                    >
+                    >
+                      {tech}
+                    </span>;
+                  ))}
+                </div>
+              </div>
+            </div>
+                </div>;
+              </div>;
+            </div>;
+                      {tech}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     </span>;
                   ))}
             {/* Success Stories */}<div className='mb-16'>;
@@ -299,6 +368,7 @@ export default function AISolutionsPage() {const aiSolutions = [;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
                   href="/contact";
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105";
 <div className='mb-16'>;
@@ -368,6 +438,15 @@ export default function AISolutionsPage() {const aiSolutions = [;
     </>)}href='/automation-insights';
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200';
                 >;
+=======
+                  href="/contact"
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
+                >
+                  Start Your AI Journey
+                </Link>
+                <Link
+                  href="/automation-insights"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   Explore Insights;
                 </Link>;
               </div>;
@@ -375,5 +454,15 @@ export default function AISolutionsPage() {const aiSolutions = [;
           </section>;
         </main>;
       </div>;
+<<<<<<< HEAD
     </>;
   )}
+=======
+}
+  );
+}
+}
+}
+    </>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

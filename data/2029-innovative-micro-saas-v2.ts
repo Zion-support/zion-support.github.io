@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
   id: string;
 export interface InnovativeMicroSaasService2029V2  {id: string;name: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -204,7 +208,6 @@ export interface InnovativeMicroSaasService2029V2  {id: string;name: string;
   contactInfo: {
     mobile: string;
     email: string;
-
     address: string;
   }
   category: string;
@@ -214,8 +217,8 @@ export interface InnovativeMicroSaasService2029V2  {id: string;name: string;
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] =
   [
     {
-      id: 'ai-powered-customer-success-platform'
-      name: 'AI-Powered Customer Success Platform'
+      id: "id",
+    name: 'AI-Powered Customer Success Platform'
       tagline: 'Predict and prevent customer churn with AI-driven insights'
       price: '$2,499/month'
       description:
@@ -238,8 +241,8 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       competitors: ['Gainsight', 'Totango', 'ClientSuccess']
       marketSize: '$3.2B'
       growthRate: '35% annually'
-      realImplementation: true
-      contactInfo: {
+      realImplementation: true;
+    contactInfo: {
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -503,12 +506,18 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
         'Workforce planning'
       ]
     }
+<<<<<<< HEAD
   ];    price: "$2,499/month";
     description: "Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies.";
 
 
     description: "Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies.";
 
+=======
+  ];    price: "$2,499/month",
+  description: "Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies.",
+  description: "Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies.";
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     features: [
       "AI-powered churn prediction";
       "Automated customer health scoring";
@@ -851,7 +860,6 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       "Automated retention campaigns",
       "Customer journey mapping",
       "ROI tracking and reporting"
-
     benefits: [
       "Reduce employee turnover by 35%",
       "Improve hiring success rate by 45%",
@@ -860,6 +868,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     ],
     useCases: [
       "Talent acquisition optimization";
+<<<<<<< HEAD
       "Employee retention strategies";
     benefits: [
       technology: [;
@@ -1668,3 +1677,6 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
 
 ];
 
+=======
+      "Employee retention strategies";
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

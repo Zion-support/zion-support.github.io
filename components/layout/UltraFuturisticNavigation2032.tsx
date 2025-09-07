@@ -1,4 +1,5 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 import {Menu;
   X;
@@ -82,11 +83,178 @@ import {Menu;
   Menu,X,ChevronDown,Search,Phone,Mail,MapPin,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Microscope,DollarSign,Home,Users,Briefcase,BookOpen,MessageCircle,Star,TrendingUp,Target,Layers,Cpu,Database,Cloud,Lock,ShieldCheck,Earth,Factory,Car,Building,GraduationCap,Scale,Palette,Camera,Video,Music,Gamepad2,Heart,Leaf,Sun,Moon,Wind,Droplets,Mountain,Code,Wrench,Smartphone,BarChart3,Eye,Network,Server,HardDrive,Monitor,Laptop,Watch,Headphones,Speaker,Mic,Keyboard,Mouse,CpuIcon,DatabaseIcon,CloudIcon,LockIcon,ShieldIcon,GlobeIcon,ZapIcon,SparklesIcon,BrainIcon,AtomIcon,MenuIcon,CloseIcon,ChevronRightIcon,} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin,Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,Microscope, DollarSign, Home, Users, Briefcase,import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;BookOpen, MessageCircle, Star, TrendingUp, Target;
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Microscope
+  DollarSign
+  Home
+  Users
+  Briefcase
+  BookOpen
+  MessageCircle
+  Star
+  TrendingUp
+  Target
+  Layers
+  Cpu
+  Database
+  Cloud
+  Lock
+  ShieldCheck
+  Earth
+  Factory
+  Car
+  Building
+  GraduationCap
+  Scale
+  Palette
+  Camera
+  Video
+  Music
+  Gamepad2
+  Heart
+  Leaf
+  Sun
+  Moon
+  Wind
+  Droplets
+  Mountain
+  Code
+  Wrench
+  Smartphone
+  BarChart3
+  Eye
+  Network
+  Server
+  HardDrive
+  Monitor
+  Laptop
+  Watch
+  Headphones
+  Speaker
+  Mic
+  Keyboard
+  Mouse
+  CpuIcon
+  DatabaseIcon
+  CloudIcon
+  LockIcon
+  ShieldIcon
+  GlobeIcon
+  ZapIcon
+  SparklesIcon
+  BrainIcon
+  AtomIcon
+  MenuIcon
+  CloseIcon
+  ChevronRightIcon;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+  Microscope, DollarSign, Home, Users, Briefcase
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,
+  Network,
+  Server,
+  HardDrive,
+  Monitor,
+  Laptop,
+  Watch,
+  Headphones,
+  Speaker,
+  Mic,
+  Keyboard,
+  Mouse,
+  CpuIcon,
+  DatabaseIcon,
+  CloudIcon,
+  LockIcon,
+  ShieldIcon,
+  GlobeIcon,
+  ZapIcon,
+  SparklesIcon,
+  BrainIcon,
+  AtomIcon,
+  MenuIcon,
+  CloseIcon,;
+  ChevronRightIcon,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
+  BookOpen, MessageCircle, Star, TrendingUp, Target;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
   Palette, Camera, Video, Music, Gamepad2, Heart;
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;
+<<<<<<< HEAD
   Network, Server, HardDrive, Monitor;Laptop, Watch, Headphones, Speaker, Mic;
   Keyboard, Mouse, CpuIcon, DatabaseIcon;
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
@@ -101,12 +269,30 @@ const contactInfo  = null;const serviceCategories = [;
     services: [;
 ];];
     title: '⚛️ Quantum & Emerging Tech 2030',icon: AtomIcon,color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',description: 'Quantum computing and beyond',const mainNavigation = [;
+=======
+  Network, Server, HardDrive, Monitor;
+const serviceCategories = [
+  {
+    title: "title",
+    icon: BrainIcon;
+    color: 'from-violet-600 via-purple-600 to-indigo-600'
+    description: 'Next-generation AI consciousness and emotional intelligence'
+    services: [
+];
+];
+    title: '⚛️ Quantum & Emerging Tech 2030',
+    icon: AtomIcon,
+    color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
+    description: 'Quantum computing and beyond',
+const mainNavigation = [
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
   { name: 'Solutions', href: '/solutions', icon: Layers }
   { name: 'Pricing', href: '/pricing', icon: DollarSign }
   { name: 'Resources', href: '/resources', icon: BookOpen }
   { name: 'Case Studies', href: '/case-studies', icon: TrendingUp }
+<<<<<<< HEAD
   { name: 'Blog', href: '/blog', icon: MessageCircle }{name: 'AI Consciousness Evolution Platform',href: '/ai-consciousness-evolution-platform',description: 'Develop genuine AI consciousness',price: '$19,999/month',},{name: 'AI Emotional Intelligence Platform';
         href: '/ai-emotional-intelligence-platform';
         description: 'Real-time emotion analysis and response';
@@ -174,6 +360,29 @@ const contactInfo  = null;const serviceCategories = [;
       }
       {name: 'Synthetic Biology Automation Platform',href: '/synthetic-biology-automation-platform',description: 'Automate biology research',price: '$3,999/month',},],},];const mainNavigation = [;
   { name: 'Home', href: '/', icon: Home },{ name: 'Services', href: '/services', icon: Briefcase },{ name: 'Solutions', href: '/solutions', icon: Layers },{ name: 'Pricing', href: '/pricing', icon: DollarSign },{ name: 'Resources', href: '/resources', icon: BookOpen },{ name: 'Case Studies', href: '/case-studies', icon: TrendingUp },{ name: 'Blog', href: '/blog', icon: MessageCircle },{ name: 'Contact', href: '/contact', icon: MessageCircle },];
+=======
+  { name: 'Blog', href: '/blog', icon: MessageCircle }
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'News', href: '/news' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Support', href: '/support' },
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<number | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+const mainNavigation = [;
+  { name: 'Home', href: '/', icon: Home },;
+  { name: 'Services', href: '/services', icon: Briefcase },;
+  { name: 'Solutions', href: '/solutions', icon: Layers },;
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },;
+  { name: 'Resources', href: '/resources', icon: BookOpen },;
+  { name: 'Case Studies', href: '/case-studies', icon: TrendingUp },;
+  { name: 'Blog', href: '/blog', icon: MessageCircle },;
+  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const companyLinks = [;
   { name: 'About Us', href: '/about' },{ name: 'Careers', href: '/careers' },{ name: 'News', href: '/news' },{ name: 'Partners', href: '/partners' },{ name: 'Support', href: '/support' },{ name: 'Status', href: '/status' },];
 export default function UltraFuturisticNavigation2032() {const [isOpen, setIsOpen] = useState(false)const [activeCategory, setActiveCategory] = useState<number | null>(null)const [isScrolled, setIsScrolled] = useState(false)useEffect(() => {const handleScroll = () => {const mainNavigation = [;
@@ -181,6 +390,7 @@ export default function UltraFuturisticNavigation2032() {const [isOpen, setIsOpe
 ];const companyLinks = [;
   { name: 'About Us', href: '/about' },{ name: 'Careers', href: '/careers' },{ name: 'News', href: '/news' },{ name: 'Partners', href: '/partners' },{ name: 'Support', href: '/support' },{ name: 'Status', href: '/status' },];  { name: 'Status', href: '/status' }
 ];
+<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false)const [activeCategory, setActiveCategory] = useState<number | null>(null)const [isScrolled, setIsScrolled] = useState(false)useEffect(() => {const handleScroll = () => {setIsScrolled(window && window.scrollY > 20)}window && window.addEventListener('scroll', handleScroll)return () => window && window.removeEventListener('scroll', handleScroll)}, [])setIsScrolled(window && window.scrollY > 20)}window && window.addEventListener('scroll', handleScroll)return () => window && window.removeEventListener('scroll', handleScroll)const toggleMenu = () => setIsOpen(!isOpen)const closeMenu  = () => setIsOpen(false)setIsScrolled(window.scrollY > 20)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const toggleMenu = () => setIsOpen(!isOpen)const closeMenu  = () => setIsOpen(false)return (<>;
       {/* Top Contact Bar */}<Link href="/" className="flex items-center space-x-3 group">;
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
@@ -268,6 +478,36 @@ export default function UltraFuturisticNavigation2032() {const [isOpen, setIsOpe
                 </div>;
               </div>;
             </Link>;
+=======
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<number | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {;
+    const handleScroll = () => {;
+      setIsScrolled(window && window.scrollY > 20)
+};
+    window && window.addEventListener('scroll', handleScroll);
+    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window && window.scrollY > 20)
+};
+    window && window.addEventListener('scroll', handleScroll);
+    return () => window && window.removeEventListener('scroll', handleScroll);
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
+  return (
+    <>;
+      {/* Top Contact Bar */}
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Rocket className="w-7 h-7 text-white" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </div>
+                <div className="text-xs text-gray-400">2030 Future Technology</div>
+              </div>
+            </Link>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             <Link href='/' className='flex items-center space-x-3 group'>;
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
                 <Rocket className='w-7 h-7 text-white' />;
@@ -279,12 +519,23 @@ export default function UltraFuturisticNavigation2032() {const [isOpen, setIsOpe
                 <div className='text-xs text-gray-400'>;
                   2030 Future Technology;
                 </div>              </div>;
+<<<<<<< HEAD
             </Link>;{/* Services Dropdown */}<div className='relative group'>;
+=======
+            </Link>;
+              {/* Services Dropdown */}
+              <div className='relative group'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <button className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'>;
                   <Briefcase className='w-4 h-4 group-hover:scale-110 transition-transform' />;
                   <span>Services</span>;
                   <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform' />;
+<<<<<<< HEAD
                 </button>;{/* Mega Menu */}
+=======
+                </button>;
+                {/* Mega Menu */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4'>;
                   <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20'>;
                     <div className='grid grid-cols-2 gap-8'>;
@@ -558,8 +809,14 @@ export default function UltraFuturisticNavigation2032() {const [isOpen, setIsOpe
                   Get Started;
                 </button>;
               </Link>;
+<<<<<<< HEAD
             </div>;{/* Mobile Menu Button */}
             <button;
+=======
+            </div>;
+            {/* Mobile Menu Button */}
+            <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               onClick={toggleMenu}
 className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors';
             >;
@@ -588,12 +845,21 @@ className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-g
         {isOpen && (<motion&& motion.div;
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
             exit={{ opacity: 0, x: '100%' }}transition={{ duration: 0.3 }}
 className='fixed inset-0 z-50 lg:hidden';
           >;
             <div;
               className='absolute inset-0 bg-black/80 backdrop-blur-xl';
               onClick={closeMenu}/>;
+=======
+            exit={{ opacity: 0, x: '100%' }}
+          >
+            <div
+              className='absolute inset-0 bg-black/80 backdrop-blur-xl'
+              onClick={closeMenu}
+            />;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             <div className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 overflow-y-auto'>;
               <div className='p-6'>;
                 <div className='flex items-center justify-between mb-8'>;
@@ -700,10 +966,21 @@ className='fixed inset-0 z-50 lg:hidden';
                         <Briefcase className='w-5 h-5' />;
                         <span>Services</span>;
                       </span>;
+<<<<<<< HEAD
                       <ChevronRightIcon;
                         className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`}/>;
                     </button>;{activeCategory === 0 && (<div className='pl-8 space-y-2'>;
                         {serviceCategories && serviceCategories.map((category, index) => (<div key={index} className='space-y-2'>;
+=======
+                      <ChevronRightIcon
+                        className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`}
+                      />;
+                    </button>;
+                    {activeCategory === 0 && (;
+                      <div className='pl-8 space-y-2'>;
+                        {serviceCategories && serviceCategories.map((category, index) => (;
+                          <div key={index} className='space-y-2'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                             <div className='text-sm font-medium text-cyan-400 py-2'>;
                               {category && category.title}
                             </div>                            {category && category.services.map((service, serviceIndex) => (                    <button;
@@ -738,6 +1015,7 @@ className='fixed inset-0 z-50 lg:hidden';
                         ))}
                       </div>;
                     )}
+<<<<<<< HEAD
                   {/* Company Links */}<div className='pt-4 border-t border-gray-700/50'>;
                     <div className='text-sm font-medium text-gray-400 mb-3'>;
                       Company;
@@ -783,6 +1061,42 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                     </div>;
                   </div>;
                   {/* CTA Button */}<div className='pt-4'>;
+=======
+                  {/* Company Links */}
+                      ))}
+                  {/* Contact Info */}
+                  <div className='pt-4 border-t border-gray-700/50'>
+                    <div className='text-sm font-medium text-gray-400 mb-3'>
+                      Contact
+                    </div>
+                    <div className='space-y-2 text-sm text-gray-400'>
+                      <div className='flex items-center space-x-2'>
+                        <Phone className='w-4 h-4 text-cyan-400' />
+                        <span>{contactInfo.mobile}</span>
+                      </div>
+                      <div className='flex items-center space-x-2'>
+                        <Mail className='w-4 h-4 text-purple-400' />
+                        <span>{contactInfo.email}</span>
+                      </div>
+                      <div className='flex items-center space-x-2'>
+                        <MapPin className='w-4 h-4 text-pink-400' />
+                        <span className='text-xs'>{contactInfo.address}</span>                      </div>                        <span>{contactInfo.mobile}</span>
+                        <span>{contactInfo.mobile}</span>
+                      ))}
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Mail className="w-4 h-4 text-purple-400" />
+                        <span>{contactInfo.email}</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <MapPin className="w-4 h-4 text-pink-400" />
+                        <span className="text-xs">{contactInfo.address}</span>
+                      </div>
+                    </div>
+                  </div>
+                  {/* CTA Button */}
+                  <div className='pt-4'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     <Link href='/contact' onClick={closeMenu}>;
                       <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'>                        Get Started Today                  <div className="pt-4">;
                     <Link href="/contact" onClick={closeMenu}>;
@@ -944,6 +1258,7 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}
       <div className='h - 20' />;
+<<<<<<< HEAD
     </>)<div className="h - 20" />;
     </>)}<div className='pt-4'>;
                     <Link href='/contact' onClick={closeMenu}>;
@@ -962,3 +1277,8 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
 <div className='h-20' />;
     </>;
   )
+=======
+    </>);      <div className="h-20" />;
+    </>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

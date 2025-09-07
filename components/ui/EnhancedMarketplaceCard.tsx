@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 ursor/automate-test-improve-and-merge-code-646c;
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+=======
+<h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
       <div className="mt-auto flex items-center justify-between">;
@@ -9,6 +13,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 import Image from 'next/image';
 interface EnhancedMarketplaceCardProps  {title: string, description: string;
   price?: string;
+<<<<<<< HEAD
   href: string, image?: string;
 import { Star, Heart, ShoppingCart  } from 'lucide-react';
 interface MarketplaceCardProps  {title: string;
@@ -145,6 +150,9 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
 
 export default EnhancedMarketplaceCard;
 
+=======
+  href: string, image?: string
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 interface MarketplaceCardProps {
   title: string;
   description: string;
@@ -153,6 +161,7 @@ interface MarketplaceCardProps {
   image: string;
   onAddToCart?: () => void;
   onFavorite?: () => void;
+<<<<<<< HEAD
 }}
 export default EnhancedMarketplaceCard;const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({title,description,price,rating,image,onAddToCart,onFavorite;
 }) => {return (<div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">;
@@ -235,3 +244,6 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
 };
 
 export default EnhancedMarketplaceCard;
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

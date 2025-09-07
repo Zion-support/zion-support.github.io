@@ -67,8 +67,12 @@ function $1() {}
   fs.writeFileSync(f, updated, "utf8');
         changed += 1};
     } catch (e) {}
+<<<<<<< HEAD
 
   
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 } catch (e) {}
   // ignore file-level errors} catch (e) {}
   // ignore file-level errors};
@@ -76,5 +80,9 @@ function $1() {}
   console.log(`Cleaned ${changed} files.`)};
 ;
 if (require.main === module) {}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   main()};

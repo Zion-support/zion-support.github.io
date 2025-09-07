@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import { defineConfig, devices  } from '@playwright/test';
@@ -6,6 +7,9 @@ import { defineConfig, devices } from '@playwright/test',export default defineCo
     trace:'on-first-retry'}export default defineConfig({testDir:'tests/e2e',use:{baseURL:process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',trace:'on-first-retry'},projects:[;
 
 import { defineConfig, devices } from '@playwright/test',;
+=======
+import { defineConfig, devices } from '@playwright/test';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ;
 export default defineConfig({;
   testDir:'tests/e2e',;
@@ -271,6 +275,7 @@ import { define_config, devices } from '@playwright / test',export default defin
 }
     }
     {
+<<<<<<< HEAD
       name: "Desktop Firefox"
 
       use: {
@@ -311,12 +316,16 @@ import { define_config, devices } from '@playwright / test',export default defin
       use: {
         browser_name: 'webkit';
         browser_name: 'webkit';
+=======
+      name: "name",
+    use: {        browser_name: 'webkit';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
     }
     {
-
       name: "Mobile Chrome"
       use: {
+<<<<<<< HEAD
 
         browser_name: 'chromium',
         ...devices['Pixel 5'];
@@ -405,3 +414,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 });
 ursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
+});
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

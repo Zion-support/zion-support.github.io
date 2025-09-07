@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { createServerClient  } from '../../../utils/supabase/server';
       supabase;
       supabase;
@@ -27,6 +28,8 @@ function handler() {  try {export default async /**;
 function handler() {try {const supabase = createServerClient ()const talent_id = (req.query.talent_id as string) || null,const [views_r, invites_r, apps_r, tags_r] = await Promise.all_settled ([;
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       supabase
         .from('profile_views')
         .select('id, talent_id')
@@ -55,22 +58,30 @@ function handler() {try {const supabase = createServerClient ()const talent_id =
         { label: 'node', value: 1 }
         { label: 'ai', value: 1 }
       ]
+<<<<<<< HEAD
 
     });
 
 
+=======
+    });
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+  }
+}
+<<<<<<< HEAD
+
+
   }
 
 }
 
-
-  }
-
 }
 
 }
-
+=======
 }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -121,4 +132,8 @@ function handler() {
 }}
   }
 }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

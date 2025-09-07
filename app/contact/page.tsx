@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
+<<<<<<< HEAD
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -39,6 +40,18 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Contact Us
+          </h1>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Ready to transform your business with cutting-edge technology? Let&apos;s
+            discuss how we can help you achieve your goals.
+          </p>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         </div>
 
         <div>

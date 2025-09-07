@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
     log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
     log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
@@ -43,6 +44,10 @@ main();
 
 
 
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

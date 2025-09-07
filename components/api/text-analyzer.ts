@@ -1,8 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface TextAnalysisResult  {}
 }
+<<<<<<< HEAD
 export default async function handler() {}
   try {const { text }  = req && req.body;// Basic statistics;
+=======
+export default async function handler(
+  req: NextApiRequest;
+    res: NextApiResponse<TextAnalysisResult | { error: string }>
+) {
+  }
+  try {
+    const { text } = req && req.body;
+    // Basic statistics
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
     const words = text;
@@ -146,6 +157,9 @@ const fleschReadingEase = Math.max(0,Math.min(100;
         bigrams;
   }
   }
+<<<<<<< HEAD
 }console.error('Text analysis error:', error)res.status(500).json({ error: 'Internal server error' })}
     res.status(500).json({ error: 'Internal server error' })}
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }

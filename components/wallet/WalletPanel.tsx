@@ -1,9 +1,27 @@
+<<<<<<< HEAD
 
 ;
 type Tx = {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }}
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
+type Tx = {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
     return this.props.children;
   }
@@ -17,6 +35,7 @@ type Tx = any;
   if (typeof window === 'undefined') return 'demo-user';
   const fromStorage = window && window.localStorage.getItem('zion_user_id')if (fromStorage) return fromStorage;
   const generated = 'demo-user';
+<<<<<<< HEAD
   window && window.localStorage.setItem('zion_user_id', generated)return generated;export default function WalletPanel() {const [summary, setSummary] = useState<Summary | null>(null)const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>('earnings';
   )const [ethAddress, setEthAddress] = useState<string | null>(null)type Tx = {id: string;
   type: "earn" | "burn" | "issue" | "revoke" | "redeem";
@@ -27,6 +46,47 @@ type Tx = any;
 }type Summary = {wallet: { userId: string, balance: number },transactions: Tx[],config: { usdPerToken: number, symbol: string }
 }if (typeof window === "undefined") return "demo-user";
   const [summary, setSummary] = useState<Summary | null>(null)const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings")const [ethAddress, setEthAddress] = useState<string | null>(null)const userId = useMemo(() => getUserId(), [])refresh()}, [])const balance = summary?.wallet.balance ?? 0;
+=======
+  window && window.localStorage.setItem('zion_user_id', generated);
+  return generated;
+export default function WalletPanel() {;
+  const [summary, setSummary] = useState<Summary | null>(null);
+  const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
+    'earnings'
+  );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {
+  id: string;
+    type: "earn" | "burn" | "issue" | "revoke" | "redeem"
+  amount: number
+  reason: string
+  id: string,
+  type: "earn" | "burn" | "issue" | "revoke" | "redeem",
+  amount: number,
+  reason: string,
+export default function WalletPanel() {;
+  const [summary, setSummary] = useState<Summary | null>(null);
+  const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(;
+    'earnings';
+  );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {;
+  id: string,;
+  type: "earn" | "burn" | "issue" | "revoke" | "redeem",;
+  amount: number,;
+  reason: string,;
+  createdAt: string
+};
+type Summary = {;
+  wallet: { userId: string, balance: number },;
+  transactions: Tx[],;
+  config: { usdPerToken: number, symbol: string }
+};
+  if (typeof window === "undefined") return "demo-user";
+  const [summary, setSummary] = useState<Summary | null>(null);
+  const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
+  const [ethAddress, setEthAddress] = useState<string | null>(null);
+  const userId = useMemo(() => getUserId(), []);
+    refresh()
+  }, []);
+  const balance = summary?.wallet.balance ?? 0;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const symbol = summary?.config.symbol ?? "ZION$";
   const earnings = (summary?.transactions |[]).filter((t) =>;
     ["earn", "issue"].includes(t.type))const spending = (summary?.transactions |[]).filter((t) =>;
@@ -40,10 +100,26 @@ type Tx = any;
     if (balance < 500) return 500;
     if (balance < 1000) return 1000;}
   }
+<<<<<<< HEAD
   async function redeem() {if (!amount |amount <= 0) return;
     const res = await fetch('/api/wallet/redeem', {method: 'POST';
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, amount })try {const accounts = await eth && eth.request({ method: "eth_requestAccounts" }),setEthAddress(accounts?.[0] || null)} catch (e) {console && console.error(e)}}
+=======
+  async function redeem(amount: number) {
+    if (!amount |amount <= 0) return;
+    const res = await fetch('/api/wallet/redeem', {
+      method: "method",
+    headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ userId, amount })
+    try {;
+      const accounts = await eth && eth.request({ method: "eth_requestAccounts" }),;
+      setEthAddress(accounts?.[0] || null);
+    } catch (e) {;
+      console && console.error(e)
+};
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
   }
   return (<div className='space-y-6'>;
@@ -277,12 +353,19 @@ const res = await fetch('/api/wallet/redeem', {method: 'POST',headers: { 'Conten
             </div>;
     } catch (e) {console.error(e)}
   }
+<<<<<<< HEAD
 })}
+=======
+}
+  );
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             <div className='text - xs text - gray - 500'>;
               Coming soon: Redeem for branded perks and courses.;
             </div>          </div>            <div className="text - xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>;
           </div>)}
       </div>;
+<<<<<<< HEAD
     </div>)}>;
                 Redeem 500;
               </button>;
@@ -295,3 +378,15 @@ const res = await fetch('/api/wallet/redeem', {method: 'POST',headers: { 'Conten
       </div>;
     </div>;
 )}})}
+=======
+    </div>);
+}
+          </div>
+        )}
+      </div>
+    </div>
+);
+}
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

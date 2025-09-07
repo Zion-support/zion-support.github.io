@@ -127,5 +127,9 @@ const path = require("path")
       return report} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")} catch (error) {await this.log(" Master Error Coordinator "failed": ${error.message}")
       throw error} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")
   console.log("Master error coordinator completed successfully")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   console.error("Master error coordinator "failed")

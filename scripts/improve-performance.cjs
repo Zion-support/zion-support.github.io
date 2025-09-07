@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -5,6 +6,11 @@
 
 
 
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const fs = require('fs');
 const path = require('path');
 function improvePerformance() {}
@@ -17,15 +23,11 @@ const nextConfig = {}
   "compress": true,
   "poweredByHeader": false,
   "generateEtags": false,
-  
-  
   // Image optimization;
   "images": {}
     formats: ['image/webp', 'image/avif'],
     "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]},
-  
-  
   // Bundle optimization;
   "webpack": (config, { dev, isServer }) => {}
     if ( {})
@@ -46,8 +48,6 @@ const nextConfig = {}
             "name": 'vendors',
             "chunks": 'all'}}}};
     return confi}g},
-  
-  
   // Headers for performance;
   async headers() {}
     return [;]
@@ -66,10 +66,9 @@ const nextConfig = {}
           {}
             "key": 'Referrer-Policy',
             "value": 'origin-when-cross-origin'}]}]}};
-
 module.exports = nextConfig;";
-      
       fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent);
+<<<<<<< HEAD
       
 
       
@@ -77,10 +76,16 @@ module.exports = nextConfig;";
 
             
 
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       console.log('Performance improvements completed')} catch (error) {}
       console.error('Performance improvement "failed": ', error.message)};
   };
 };
+<<<<<<< HEAD
 
 improvePerformance();
       improvePerformance();
@@ -95,3 +100,8 @@ improvePerformance();
 
 
 
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

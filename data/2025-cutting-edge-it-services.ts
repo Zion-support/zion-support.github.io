@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export const cuttingEdgeITServices2025 = [;
@@ -472,9 +473,11 @@ export const cuttingEdgeITServices2025 = [;
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const cuttingEdgeITServices2025 = [
   {
-    id: 'quantum-cloud-infrastructure-platform'
+    id: "id",
     name: 'Quantum Cloud Infrastructure Platform'
     description:
       'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'
@@ -491,8 +494,8 @@ export const cuttingEdgeITServices2025 = [
     ]
     pricing: {
       starter: {
-        price: 399
-        period: 'month'
+        price: 399;
+    period: 'month'
         features: [
           'Basic quantum infrastructure'
           'Standard security protocols'
@@ -895,6 +898,7 @@ export const cuttingEdgeITServices2025 = [
   }
 export const cuttingEdgeITServices2025 = [
   {
+<<<<<<< HEAD
 
 
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
@@ -947,6 +951,11 @@ export const cuttingEdgeITServices2025 = [
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
 
+=======
+;
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const cuttingEdgeITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -1167,5 +1176,9 @@ ursor/fix-website-loading-errors-and-merge-6662;
 ];
 ];
 ;
+<<<<<<< HEAD
   }
 ];
+=======
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

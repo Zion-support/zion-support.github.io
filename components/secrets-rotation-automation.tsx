@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
@@ -26,22 +27,27 @@ import React from 'react',export default function SecretsRotationAutomationPage(
     "Cloud KMS and Vault support";
   ];return (<>;
   
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
 
 import React from "react";
@@ -58,8 +64,12 @@ export default /**
 function SecretsRotationAutomationPage() {
   const features = [;
 
+=======
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export default function SecretsRotationAutomationPage() {
-
   const features = [
     "Automated key and secret rotation"
     "JIT credentials with expirations"
@@ -68,7 +78,6 @@ export default function SecretsRotationAutomationPage() {
     "Cloud KMS and Vault support"
   ];
   return (
-
 export default function SecretsRotationAutomationPage() {
   const features = [
     "Automated key and secret rotation",
@@ -130,6 +139,7 @@ export default function SecretsRotationAutomationPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
+<<<<<<< HEAD
   return (return (return (</a>;
           </div>;
         </section>;
@@ -141,6 +151,8 @@ export default function SecretsRotationAutomationPage() {
       </main>;
 
     </>);
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   return (
     <>;
       <SEO;
@@ -176,10 +188,13 @@ return (return (return (return (<>;
             {features.map((f) => (<div;
             {features.map ((f) => (
               <div;
+<<<<<<< HEAD
 return (
   return (
   return (
   return (
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     <>
       <SEO
         title="Secrets Rotation Automation"
@@ -197,7 +212,6 @@ return (
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
             {features.map((f) => (
               <div
-
                 key={f}
                 className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10";
               >;
@@ -564,8 +578,15 @@ return (
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
     </>;
   )}</a>;
           </div>;
         </section>;
       </main>;
+=======
+            </a>;
+          </div>;
+        </section>;
+      </main>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

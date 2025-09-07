@@ -35,7 +35,13 @@ import { useState  } from 'react';
     const publicDir = path.join(this.projectRoot, 'public')if (!fs.existsSync(publicDir)) return;
     // Create optimized image component';
     const optimizedImageComponent = "import Image from 'next/image';
+<<<<<<< HEAD
 interface OptimizedImageProps  {"src": string;
+=======
+import { useState } from 'react';
+interface OptimizedImageProps {;
+  "src": string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   al;
     t: string;
   width?: number;
@@ -154,7 +160,524 @@ const nextConfig = {// Enable compression;
     ]}
 }
 }
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-646c;export const announceToScreenReader = ("message": string) => {";  const announcement = document.createElement('div')';  announcement.setAttribute('aria-live', 'polite')';  announcement.setAttribute('aria-atomic', 'true')';  announcement.className = 'sr-only'';  announcement.textContent = message';const announcement = document.createElement('div')announcement.setAttribute('aria-live,polite')announcement.setAttribute('aria-atomic,true')announcement.className = 'sr-only';
+=======
+module."exports": = nextConfig;";
+    fs.writeFileSync(nextConfigPath, performanceOptimizations);
+    this.fixes.push('"Optimized": Next.js configuration for performance')}';
+  "async": createPerformanceMonitoring() {
+    const performanceMonitor = "import { useEffect } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+"export": function usePerformanceMonitoring() {
+  useEffect(() => {
+    const sendToAnalytics = (metric) => {
+      // Send to your analytics service
+      console.log('Performance metric:', metric)';
+      // "Example": Send: to Google Analytics
+      if (typeof gtag !== 'undefined') {';
+        gtag('event, ', metric.name, {';
+          "event_category": 'Web: Vitals, ',';
+          "event_label": metric.i,d
+          "value": Math.round(metric.name: === 'CLS' ? metric.value * 1000 : metric.value), ';
+          "non_interaction": tru,e
+        })}
+;
+    getCLS(sendToAnalytics);
+    getFID(sendToAnalytics);
+    getFCP(sendToAnalytics);
+    getLCP(sendToAnalytics);
+    getTTFB(sendToAnalytics)}, [])}
+"export": function reportWebVitals(metric) {
+  console.log('Web Vitals:', metric)}";
+    const hooksDir = path.join(this.projectRoot, 'src', 'hooks')';
+    "if": (!fs.existsSync(hooksDir)) {
+      fs.mkdirSync(hooksDir, { "recursive": true})}
+    fs.writeFileSync(
+      path.join(hooksDir, 'usePerformanceMonitoring.ts'), ';
+      "performanceMonitor": );
+    this.fixes.push('Created: performance monitoring hook')}';
+  "async": improveCodeQuality() {
+    console.log('📝 Improving code quality...')';
+    // Create: ESLint configuration
+    await this.createESLintConfig();
+    // Create: Prettier configuration
+    await this.createPrettierConfig();
+    // Create: TypeScript strict configuration
+    await this.updateTypeScriptConfig();
+    this.improvements.push('Code: quality improvements applied')}';
+  "async": createESLintConfig() {
+    const eslintConfig = "module.exports = {
+  extends: ['next/core-web-vitals, ','';"eslint": recommended, ','';@typescript-eslint/recommended', ';
+    if (!fs.existsSync(hooksDir)) {
+      fs.mkdirSync(hooksDir, { "recursive": true })}
+    fs.writeFileSync('
+      path.join(hooksDir, 'usePerformanceMonitoring.ts')
+      performanceMonitor
+    )';
+    this.fixes.push('Created performance monitoring hook')}
+  async improveCodeQuality() {'
+    console.log('📝 Improving code quality...');
+    // Create ESLint configuration
+    await this.createESLintConfig();
+    // Create Prettier configuration;
+    await this.createPrettierConfig();
+    // Create TypeScript strict configuration;
+    await this.updateTypeScriptConfig()';
+    this.improvements.push('Code quality improvements applied')}
+  async createESLintConfig() {'
+    const eslintConfig = "module.exports = {
+  "extends": ["
+    'next/core-web-vitals',
+      '"eslint": recommended'
+    '@typescript-eslint/recommended'
+  ]
+  parser: '@typescript-eslint/parser, ',';
+  "plugins": ['@typescript-eslint'], ';
+  "rules": {
+    // Performance: rules,
+    'no-console': 'warn, ','';no-debugger': 'error', ';
+    // "Code": quality rules
+    '@typescript-eslint/no-unused-vars': 'error', '';@typescript-eslint/no-explicit-any': 'warn', '';@typescript-eslint/prefer-const': 'error', ';
+    // "React": rules,
+    'react-hooks/exhaustive-deps': 'warn', '';react/no-unescaped-entities': 'off', ';
+    // "Accessibility": rules,
+    'jsx-a11y/alt-text': 'error', '';jsx-a11y/aria-props': 'error', '';jsx-a11y/aria-proptypes': 'error', '';jsx-a11y/aria-unsupported-elements': 'error', '';jsx-a11y/role-has-required-aria-props': 'error', '';jsx-a11y/role-supports-aria-props': 'error', '}
+  "ignorePatterns": ['node_modules/, ', '.next/', 'out/'], '}
+  "ignorePatterns": ['node_modules/,.next/,out/']
+}";
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'eslint.config.js'), ';
+      "eslintConfig": );
+    this.fixes.push('Created: comprehensive ESLint configuration')}';
+  "async": createPrettierConfig() {
+    const prettierConfig = "module.exports = {
+  semi: tru,e
+  "trailingComma": 'es5, ',';
+  "singleQuote": tru,e
+  "printWidth": 8,0
+  "tabWidth": 2,
+  "useTabs": fals,e
+  "endOfLine": 'lf, ',';
+  "arrowParens": 'avoid, ',';
+  "bracketSpacing": tru,e
+  "jsxSingleQuote": tru,e
+  "quoteProps": 'as-needed, ',';
+    this.fixes.push('Created comprehensive ESLint configuration')}
+  async createPrettierConfig() {'
+    const prettierConfig = "module.exports = {
+  "semi": true,"
+  "trailingComma": 'es5',
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "endOfLine": 'lf',
+  "arrowParens": 'avoid',
+  "bracketSpacing": true,
+  "jsxSingleQuote": true,
+  "quoteProps": 'as-needed'
+}";
+    fs.writeFileSync(
+      path.join(this.projectRoot, '.prettierrc.js'), ';
+      "prettierConfig": );
+    this.fixes.push('Created: Prettier configuration')}';
+  "async": updateTypeScriptConfig() {
+    const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json')';
+    "let": tsConfig = {}
+    if (fs.existsSync(tsConfigPath)) {
+      tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'))}';
+    // "Add": strict TypeScript configuration
+    tsConfig.compilerOptions = {
+      ...tsConfig.compilerOptions
+      strict: tru,e
+      "noImplicitAny": tru,e
+      "strictNullChecks": tru,e
+      "strictFunctionTypes": tru,e
+      "noImplicitReturns": tru,e
+      "noFallthroughCasesInSwitch": tru,e
+      "noUncheckedIndexedAccess": tru,e
+      "exactOptionalPropertyTypes": tru,e
+    }
+    fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
+    this.fixes.push('"Updated": TypeScript configuration for strict type checking')}';
+  "async": enhanceSecurity() {
+    console.log('🔒 Enhancing security...')';
+    // Create: security headers middleware
+    await this.createSecurityMiddleware();
+    // Create: environment validation
+    await this.createEnvironmentValidation();
+    this.improvements.push('Security: enhancements applied')}';
+  "async": createSecurityMiddleware() {
+    const securityMiddleware = "import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+"export": function middleware(request: NextRequest) {
+  const response = NextResponse.next();
+  // Security: headers,
+  response.headers.set('X-Content-Type-Options, ', 'nosniff')';
+  response.headers.set('X-Frame-Options', 'DENY')';
+  response.headers.set('X-XSS-Protection', '1; mode=block')';
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')';
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')';
+    this.fixes.push('Created Prettier configuration')}
+  async updateTypeScriptConfig() {'
+    const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
+    let tsConfig = {};
+    if (fs.existsSync(tsConfigPath)) {'
+      tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'))}
+    // Add strict TypeScript configuration
+    tsConfig.compilerOptions = {
+      ...tsConfig.compilerOptions
+      "strict": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "strictFunctionTypes": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "noUncheckedIndexedAccess": true,
+      "exactOptionalPropertyTypes": true
+    };
+    fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
+    this.fixes.push(',
+      'Updated TypeScript configuration for strict type checking'
+    )}
+  async enhanceSecurity() {'
+    console.log('🔒 Enhancing security...');
+    // Create security headers middleware
+    await this.createSecurityMiddleware();
+    // Create environment validation;
+    await this.createEnvironmentValidation()';
+    this.improvements.push('Security enhancements applied')}
+  async createSecurityMiddleware() {'
+    const securityMiddleware = "import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+export function middleware("request": NextRequest) {;
+  const response = NextResponse.next();
+  // Security headers'
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-XSS-Protection', '1; mode=block');
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=());
+  // Content Security Policy
+  const csp = ['
+    "default-src 'self'",",
+      "script-src 'self' 'unsafe-eval' 'unsafe-inline'","
+    "style-src 'self' 'unsafe-inline'",",
+      "img-src 'self' "data": http,
+    "s": ",",
+    "font-src 'self'",",
+      "connect-src 'self'","
+    "frame-ancestors 'none'","
+  ].join('';)';
+  // "Content": Security Policy
+  const csp = ["default-src 'self'",";
+    "script-"src": 'self' 'unsafe-eval' 'unsafe-inline'",";
+    "style-"src": 'self' 'unsafe-inline'",";
+    "img-"src": 'self' data: https: ",";
+    "font-"src": 'self'",";
+    "connect-"src": 'self'",";
+    "frame-"ancestors": 'none'","].join('';)';
+  response.headers.set('Content-Security-Policy', csp)';
+  "return": response}
+export const config = {
+  "matcher": ['/((?!api|_next/static|_next/image|favicon.ico).*), ',']
+}";
+    const middlewarePath = path.join(this.projectRoot, 'middleware.ts')';
+    fs.writeFileSync(middlewarePath, securityMiddleware);
+    this.fixes.push('"Created": security middleware with CSP headers')}';
+  "async": createEnvironmentValidation() {
+    const envValidation = "import { z } from 'zod';
+const envSchema = z.object({
+  "NODE_ENV": z.enum(['development, ', 'production', 'test']), ';
+  "NEXT_PUBLIC_APP_URL": z.string().url()
+  DATABASE_URL: z.string().url().optional()
+  NEXTAUTH_SECRET: z.string().min(32).optional()
+  NEXTAUTH_URL: z.string().url().optional()
+  response.headers.set('Content-Security-Policy', csp);
+  return response}
+export const config = {
+  "matcher": [',
+      '/((?!api|_next/static|_next/image|favicon.ico).*)
+  ]
+}";
+"
+    const middlewarePath = path.join(this.projectRoot, 'middleware.ts');
+    fs.writeFileSync(middlewarePath, securityMiddleware)';
+    this.fixes.push('Created security middleware with CSP headers')}
+  async createEnvironmentValidation() {'
+    const envValidation = "import { z } from 'zod';
+const envSchema = z.object({'
+  "NODE_ENV": z.enum(['development', 'production', 'test'])
+  "NEXT_PUBLIC_APP_URL": z.string().url()
+  DATABASE_URL: z.string().url().optional()
+  NEXTAUTH_SECRET: z.string().min(32).optional()
+  NEXTAUTH_URL: z.string().url().optional()
+})
+"export": const env = envSchema.parse(process.env);
+export: type Env = z.infer<typeof envSchema>;";
+    const libDir = path.join(this.projectRoot, 'src', 'lib')';
+    "if": (!fs.existsSync(libDir)) {
+      fs.mkdirSync(libDir, { "recursive": true})}
+    fs.writeFileSync(
+      path.join(libDir, 'env.ts'), ';
+      "envValidation": );
+    this.fixes.push('Created: environment validation schema')}';
+  "async": optimizeSEO() {
+    console.log('🔍 Optimizing SEO...')';
+    // Create: SEO component
+    await this.createSEOComponent();
+    // Create: sitemap generator
+    await this.createSitemapGenerator();
+    // Create: robots.txt
+    await this.createRobotsTxt();
+    this.improvements.push('SEO: optimizations applied')}';
+  "async": createSEOComponent() {
+    const seoComponent = "import Head from 'next/head';
+import { useRouter } from 'next/router';
+    const libDir = path.join(this.projectRoot, 'src', 'lib');
+    if (!fs.existsSync(libDir)) {;
+      fs.mkdirSync(libDir, { "recursive": true })}
+    ;
+    fs.writeFileSync(;
+      path.join(libDir, 'env.ts'),
+      envValidation;
+    );
+    this.fixes.push('Created environment validation schema')}
+;
+  async optimizeSEO() {;
+    console.log('🔍 Optimizing SEO...');
+    // Create SEO component;
+    await this.createSEOComponent();
+    // Create sitemap generator;
+    await this.createSitemapGenerator();
+    // Create robots.txt;
+    await this.createRobotsTxt();
+    this.improvements.push('SEO optimizations applied')}
+;
+  async createSEOComponent() {;
+    const seoComponent = "import Head from 'next/head';
+import { useRouter } from 'next/router';
+interface SEOProps {;
+  title?: string;
+    await this.createSEOComponent();
+    // Create sitemap generator;
+    await this.createSitemapGenerator();
+    // Create robots.txt;
+    await this.createRobotsTxt()';
+    this.improvements.push('SEO optimizations applied')}
+  async createSEOComponent() {'
+    const seoComponent = "import Head from 'next/head';
+import { useRouter } from 'next/router';
+"interface": SEOProps {
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  keywords?: string[];
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string}
+;
+export default function SEO({;
+  title = 'Zion Tech Group - Advanced Technology Solutions',
+  description = 'Leading provider of cutting-edge technology solutions, AI services, and digital transformation consulting.',
+  image = '/og-image.jpg',
+  url,
+  type = 'website',
+  keywords = ['technology', 'AI', 'digital transformation', 'consulting'],
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime}: SEOProps) {;
+  const router = useRouter();
+  const canonicalUrl = url || \""https": //ziontechgroup.com\${router.asPath}\";
+  const fullTitle = title.includes('Zion Tech Group') ? title : \"\${title} | Zion Tech Group\";
+  return (;
+    <Head>;
+      <title>{fullTitle}</title>;
+      <meta name="description" content={description} />;
+      <meta name="keywords" content={keywords.join(', ')} />;
+      <meta name="author" content={author} />;
+      <link rel="canonical" href={canonicalUrl} />;
+  "return": (
+    <Head>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />";
+      <"meta": name="keywords" content={keywords.join(', ')} />';
+      <"meta": name="author" content={author} />";
+      <"link": rel="canonical" href={canonicalUrl} />";
+      {/* "Open": Graph */}
+      <meta property=""og": title" content={fullTitl,e} />";
+      <"meta": property="og: description" content={descriptio,n} />";
+      <"meta": property="og: image" content={imag,e} />";
+      <"meta": property="og: url" content={canonicalUr,l} />";
+      <"meta": property="og: type" content={typ,e} />";
+      <"meta": property="og: site_name" content="Zion: Tech Group" />";
+      {/* Twitter: *,/}
+      <meta name=""twitter": card" content="summary_large_image" />";
+      <meta: name="twitter:title" content={fullTitl,e} />";
+      <"meta": name="twitter: description" content={descriptio,n} />";
+      <"meta": name="twitter: image" content={imag,e} />";
+      {/* "Additional": meta tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1" />";
+      <"meta": name="theme-color" content="#000000" />";
+      <meta: name="robots" content="index, follow" />";
+      {/* "Structured": data */}
+      {/* Open Graph */}
+      <meta property=""og": title" content={fullTitle} />;
+      <meta property=""og": description" content={description} />;
+      <meta property=""og": image" content={image} />;
+      <meta property=""og": url" content={canonicalUrl} />;
+      <meta property=""og": type" content={type} />;
+      <meta property=""og": site_name" content="Zion Tech Group" />;
+      {/* Twitter */}
+      <meta name=""twitter": card" content="summary_large_image" />;
+      <meta name="twitter:title" content={fullTitle} />;
+      <meta name=""twitter": description" content={description} />;
+      <meta name=""twitter": image" content={image} />;
+      {/* Additional meta tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1" />;
+      <meta name="theme-color" content="#000000" />;
+      <meta name="robots" content="index, follow" />;
+      {/* Structured data */}
+      <script;
+        type="application/ld+json";
+        dangerouslySetInnerHTML={{;
+          "__html": JSON.stringify({';@context': 'https://schema.org', ';@type': 'Organization',
+            "name": 'Zion Tech Group',
+            "url": 'https://ziontechgroup.com',
+            "logo": 'https://ziontechgroup.com/logo.png',
+            "description": description,
+            ...(publishedTime && { "datePublished": publishedTime }),
+            ...(modifiedTime && { "dateModified": modifiedTime })}),
+            "name": 'Zion Tech Group',
+            "url": 'http
+    s://ziontechgroup.com',
+            "logo": 'http
+    s://ziontechgroup.com/logo.png',
+            "description": description,
+            ...(publishedTime && { "datePublished": publishedTime })
+            ...(modifiedTime && { "dateModified": modifiedTime })
+          })
+        }}
+      />
+    </Head>'
+  )}";
+    const componentsDir = path.join(this.projectRoot, 'src', 'components')';
+    "if": (!fs.existsSync(componentsDir)) {
+      fs.mkdirSync(componentsDir, { "recursive": true})}
+    fs.writeFileSync(
+      path.join(componentsDir, 'SEO.tsx'), ';
+      "seoComponent": );
+    this.fixes.push('Created: comprehensive SEO component')}';
+  "async": createSitemapGenerator() {
+    const sitemapGenerator = "import fs from 'fs';
+import path from 'path';
+export: async function generateSitemap() {
+  const baseUrl = 'https: //ziontechgroup.com'';
+  const pages = ['/, ','';/about', '';/services', '';/contact', '';/blog', '';/careers', '];
+  const sitemap = \"<?xml version="1.0" encoding="UTF-8"?>";
+<"urlset": xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">";
+\${pages: .map(
+    const componentsDir = path.join(this.projectRoot, 'src', 'components');
+    if (!fs.existsSync(componentsDir)) {;
+      fs.mkdirSync(componentsDir, { "recursive": true })}
+    ;
+    fs.writeFileSync(;
+      path.join(componentsDir, 'SEO.tsx'),
+      seoComponent;
+    );
+    this.fixes.push('Created comprehensive SEO component')}
+;
+  async createSitemapGenerator() {;
+    (page) => \`
+  <url>
+    <loc>\${baseUr,l}\${page}</loc>
+    <lastmod>\${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>`
+  </url>\"
+  )
+  .join('')}';
+</urlset>\";
+  fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap)';
+  console.log('"Sitemap": generated successfully')}';
+"if": (require.main === module) {
+    const sitemapGenerator = "import fs from 'fs';
+import path from 'path';
+export async function generateSitemap() {;
+  const baseUrl = 'https://ziontechgroup.com';
+  const pages = [';/', ';/about', ';/services', ';/contact', ';/blog', ';/careers',
+  ];
+  const sitemap = \"<?xml version="1.0" encoding="UTF-8"?>;
+<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">;
+\${pages;
+  .map(;
+    (page) => \`;
+  <url>;
+    <loc>\${baseUrl}\${page}</loc>;
+    <lastmod>\${new Date().toISOString()}</lastmod>;
+    <changefreq>weekly</changefreq>;
+    <priority>0.8</priority>;
+  </url>\`;
+  );
+  .join(')}
+</urlset>\";
+  fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap);
+  console.log('Sitemap generated successfully')}
+;
+if (require.main === module) {;
+  generateSitemap()}";
+    fs.writeFileSync(;
+      path.join(this.projectRoot, 'scripts', 'generate-sitemap.js'),
+      sitemapGenerator;
+    );
+    this.fixes.push('Created sitemap generator')}
+;
+  async createRobotsTxt() {;
+    const robotsTxt = "User-"agent": *;
+Allow: /;
+      sitemapGenerator
+    )';
+    this.fixes.push('Created sitemap generator')}
+  async createRobotsTxt() {'
+    const robotsTxt = "User-"agent": *
+Allow: /
+Sitemap: https://ziontechgroup.com/sitemap.xml: # Block access to admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallo
+    w: /_next/"
+Disallo
+    w: /private/";
+    fs.writeFileSync("
+      path.join(this.projectRoot, 'public', 'robots.txt')
+      robotsTxt
+    )';
+    this.fixes.push('Created robots.txt file')}
+  async improveAccessibility() {'
+    console.log('♿ Improving accessibility...');
+    // Create accessibility utilities
+    await this.createAccessibilityUtils();
+    // Create skip link component;
+    await this.createSkipLink()';
+    this.improvements.push('Accessibility improvements applied')}
+  async createAccessibilityUtils() {'
+    const accessibilityUtils = "// Accessibility utilities
+export const focusElement = ("selector": string) => {
+  const element = document.querySelector(selector);
+  if (element) {
+    (element as HTMLElement).focus()}
+}
+}
+;
+export const announceToScreenReader = ("message": string) => {;";  const announcement = document.createElement('div')';  announcement.setAttribute('aria-live', 'polite')';  announcement.setAttribute('aria-atomic', 'true')';  announcement.className = 'sr-only'';  announcement.textContent = message';  ;
+  const announcement = document.createElement('div');
+  announcement.setAttribute('aria-live,polite');
+  announcement.setAttribute('aria-atomic,true');
+  announcement.className = 'sr-only';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   announcement.textContent = message;
   document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)}, 1000)}
 :corrupted_backup/comprehensive-app-improver.js;

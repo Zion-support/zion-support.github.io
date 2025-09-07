@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export const innovativeITInfrastructureServices2025 = [;
@@ -354,6 +355,10 @@ export const innovativeITInfrastructureServices2025 = [
   {
 
 
+=======
+=======export const innovativeITInfrastructureServices2025 = [
+  {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.'
       'Quantum-enhanced edge processing with 1000x speed improvement'
       'Intelligent workload distribution and optimization'
@@ -378,7 +383,7 @@ export const innovativeITInfrastructureServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com'
     },
   {
-    id: 'autonomous-devops-intelligence-platform'
+    id: "id",
     name: 'Autonomous DevOps Intelligence Platform'
     description:
       'Intelligent DevOps platform that autonomously manages software development, deployment, and operations using AI, machine learning, and advanced automation.'
@@ -396,8 +401,8 @@ export const innovativeITInfrastructureServices2025 = [
     ]
     pricing: {
       starter: {
-        price: 149
-        period: 'month'
+        price: 149;
+    period: 'month'
         features: [
           'Basic DevOps automation'
           'Standard CI/CD'
@@ -538,7 +543,6 @@ export const innovativeITInfrastructureServices2025 = [
       'Compliance tools'
     ]
     compliance: [
-
       'SOC2',
       'ISO 27001',
       'Uptime Institute',
@@ -739,9 +743,13 @@ export const innovativeITInfrastructureServices2025 = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
+<<<<<<< HEAD
 
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
     market_size: '$31.2B',
+=======
+      'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'    market_size: '$31.2B',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     target_audience:;
       'Data center operators, cloud providers, enterprise businesses, colocation facilities',
     competitive_advantage:;
@@ -996,5 +1004,9 @@ ursor/fix-website-loading-errors-and-merge-6662;
 ];
 ];
 ;
+<<<<<<< HEAD
   }
 ];
+=======
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

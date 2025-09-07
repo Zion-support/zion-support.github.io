@@ -1,79 +1,143 @@
+interface MilestoneSuggestionsProps {
 
-interface MilestoneSuggestionsProps  {project_name: string;
-  scope_summary: string;
-  start_date: Date; import React, { useState } from 'react';
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks / useMilestoneGenerator';
-import { Loader2, Sparkles, Check  } from 'lucide-react';
-import { Badge  } from '@/components / ui / badge';
-  projectName: string;
-  scopeSummary: string;
-  startDate: Date; import React, { useState } from 'react';
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
-import { Badge  } from '@/components/ui/badge';
-interface MilestoneSuggestionsProps  {endDate?: Date;
-  projectType: string;
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string,onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void;
-import React, { useState } from 'react';
-import { Button   } from '@/components/ui/button';
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator   } from '@/hooks/useMilestoneGenerator';
-import { Card, CardContent, CardHeader, CardTitle   } from '@/components/ui/card';
-import { Badge   } from '@/components/ui/badge';
-import { format, parseISO  } from 'date-fns';
-interface MilestoneSuggestionsProps  {projectName: string;
-  scopeSummary: string;
-  startDate: Date;
+interface MilestoneSuggestionsProps {
+
   endDate?: Date;
   projectType: string;
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;export function MilestoneSuggestions() {const { generateMilestones, generatedMilestones, isGenerating } =;
-    useMilestoneGenerator()const [showSuggestions, setShowSuggestions]  = useState(false)const handleGenerateMilestones = async () => {const input: MilestoneInput = {scope: `${projectName}: ${scopeSummary}`,startDate: startDate.toISOString(),endDate: endDate ? endDate.toISOString() : null,projectType: projectType || 'Other'}const milestones  = await generateMilestones(input)if (milestones.length > 0) {setShowSuggestions(true)if (onMilestonesGenerated) {onMilestonesGenerated(milestones)export function MilestoneSuggestions({import { Button  } from '@/components/ui/button';
-import {GeneratedMilestone,MilestoneInput,useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Loader2, Sparkles, Check } from 'lucide-react';import { Badge  } from '@/components/ui/badge';
-interface MilestoneSuggestionsProps  {projectName: string;
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string,
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void
+
+export function MilestoneSuggestions({
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import {;
+  GeneratedMilestone,;
+  MilestoneInput,;
+  useMilestoneGenerator,;
+} from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Loader2, Sparkles, Check } from 'lucide-react';import { Badge } from '@/components/ui/badge';
+import { format, parseISO } from 'date-fns';
+
+interface MilestoneSuggestionsProps {;
+  projectName: string;
   scopeSummary: string;
   startDate: Date;import React, { useState } from 'react';
-}export function MilestoneSuggestions(): any ({projectName,scopeSummary,startDate,endDate,projectType,onMilestonesGenerated}: MilestoneSuggestionsProps) {const { generateMilestones, generatedMilestones, isGenerating } =;
-    useMilestoneGenerator()const [showSuggestions, setShowSuggestions] = useState(false)const handleGenerateMilestones = async () => {const input: MilestoneInput = {scope: `${projectName}: ${scopeSummary}`,startDate: startDate && startDate.toISOString(),endDate: endDate ? endDate && endDate.toISOString() : null,projectType: projectType || 'Other'}const milestones  = await generateMilestones(input)if (milestones && milestones.length > 0) {setShowSuggestions(true)if (onMilestonesGenerated) {onMilestonesGenerated(milestones)}  projectName: string,scopeSummary: string,startDate: Date,endDate?: Date;
-  projectType: string,onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
-}export function MilestoneSuggestions(): any ({projectName;
+import { Button } from '@/components/ui/button';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+}
+
+export function MilestoneSuggestions(): any ({;
+  projectName,;
+  scopeSummary,;
+  startDate,;
+  endDate,;
+  projectType,;
+  onMilestonesGenerated,;
+}: MilestoneSuggestionsProps) {;
+  const { generateMilestones, generatedMilestones, isGenerating } =;
+    useMilestoneGenerator();
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const handleGenerateMilestones = async () => {;
+    const input: MilestoneInput = {;
+      scope: `${projectName}: ${scopeSummary}`,;
+      startDate: startDate && startDate.toISOString(),;
+      endDate: endDate ? endDate && endDate.toISOString() : null,;
+      projectType: projectType || 'Other',;
+    };
+
+    const milestones = await generateMilestones(input);
+
+    if (milestones && milestones.length > 0) {;
+      setShowSuggestions(true);
+      if (onMilestonesGenerated) {;
+        onMilestonesGenerated(milestones);      }  projectName: string,;
+  scopeSummary: string,;
+  startDate: Date,;
+  endDate?: Date;
+  projectType: string,;
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+}
+
+export function MilestoneSuggestions(): any ({;
+  projectName;
   scopeSummary;
   startDate;
   endDate;
-  projectType;}: MilestoneSuggestionsProps) { const { generateMilestones, generatedMilestones, isGenerating  } = useMilestoneGenerator(),const [ showSuggestions, setShowSuggestions ] = useState(false),onMilestonesGenerated;
-}: MilestoneSuggestionsProps) {const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator()const [showSuggestions, setShowSuggestions] = useState(false)const handleGenerateMilestones  = null;}
+  projectType;
+
+}: MilestoneSuggestionsProps) { const { generateMilestones, generatedMilestones, isGenerating  } = useMilestoneGenerator(),
+  const [ showSuggestions, setShowSuggestions ] = useState(false),
+
+      }
     }
-  }return format (parseISO (date_string), 'MMM dd, yyyy')return date_string;
-    }}},return (const formatDate = (dateString: string) => {try {return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) {return dateString;
+  };
+
+      return format (parseISO (date_string), 'MMM dd, yyyy');
+      return date_string;
     }
-  }}export function MilestoneSuggestions() {const handleGenerateMilestones = async () => {const input: MilestoneInput = {scope: `${projectName}: ${scopeSummary}`,startDate: startDate.toISOString(),endDate: endDate ? endDate.toISOString() : null,return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) {return dateString;
+
+  return (
+
+  const formatDate = (dateString: string) => {
+    try {
+      return format(parseISO(dateString), 'MMM dd, yyyy')
+    } catch (error) {
+      return dateString
     }
-  }return (<div className="space-y-4">;
-      {!showSuggestions && (<Button;
-          variant="outline";
+  };
+
+}
+
+export function MilestoneSuggestions({
+  projectName,
+  scopeSummary,
+  startDate,
+  endDate,
+  projectType,
+  onMilestonesGenerated
+}: MilestoneSuggestionsProps) {
+
+  const handleGenerateMilestones = async () => {
+    const input: MilestoneInput = {
+      scope: `${projectName}: ${scopeSummary}`,
+      startDate: startDate.toISOString(),
+      endDate: endDate ? endDate.toISOString() : null,
+
+  return (
+    <div className="space-y-4">
+      {!showSuggestions && (
+        <Button
+
+          variant="outline"
           onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scopeSummary || !startDate}className="w-full";
-        >;
-          {isGenerating ? (<>;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-          variant='outline';
-          onClick={handleGenerateMilestones}
-          disabled={isGenerating |!scopeSummary |!startDate}
-          className='w-full'        >;
-          {isGenerating ? (<>;
-              <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-              Generating milestones...;
-            </>;
-          ) : (<>;
-              <Sparkles className="mr-2 h-4 w-4" />;
-<Sparkles className='mr-2 h-4 w-4' />;
-              Suggest Project Milestones with AI;
-            </>;
+          disabled={isGenerating || !scopeSummary || !startDate}
+
+          className="w-full"
+        >
+          {isGenerating ? (
+            <>
+
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Generating milestones...
+            </>
+          ) : (
+            <>
+
+              <Sparkles className="mr-2 h-4 w-4" />
+
+              Suggest Project Milestones with AI
+            </>
           disabled={isGenerating || !scopeSummary || !startDate}
           className='w-full'>;
-          {isGenerating ? (<>;
+          {isGenerating ? (;
+            <>;
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />              Generating milestones...;
             </>;
-          ) : (<>;
+          ) : (;
+            <>;
               <Sparkles className='mr-2 h-4 w-4' />              Suggest Project Milestones with AI;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
           variant="outline";
@@ -81,72 +145,81 @@ interface MilestoneSuggestionsProps  {projectName: string;
           disabled={isGenerating || !scopeSummary || !startDate}
           className="w-full";
         >;
-          {isGenerating ? (<>;
+          {isGenerating ? (;
+            <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Generating milestones...;
             </>;
-          ) : (<>;
+          ) : (;
+            <>;
               <Sparkles className='mr-2 h-4 w-4' />              <Sparkles className="mr-2 h-4 w-4" />;
               Suggest Project Milestones with AI;
-            </>;)}
-        </Button>;
-      )}<CardHeader className="pb-3">;
-            <CardTitle className="text-lg flex items-center">;
-              <Sparkles className="h-5 w-5 mr-2 text-primary" />;
-      {showSuggestions && generatedMilestones.length > 0 && (<Card>;
-<CardHeader className='pb-3'>;
-            <CardTitle className='text-lg flex items-center'>;
-              <Sparkles className='h-5 w-5 mr-2 text-primary' />;
-              AI-Suggested Milestones;
-            </CardTitle>;
-          </CardHeader>;
-          <CardContent>;
-            <div className="space-y-3">;
-<div className='space-y-3'>;
-              {generatedMilestones.map((milestone, index) => (<div key={index} className="p-3 border rounded-lg bg-muted/10">;
-                  <div className="flex items-center justify-between mb-1">;
-                    <div className="font-medium flex items-center">;
+            </>;
+
+          )}
+        </Button>
+      )}
+
+          <CardHeader className="pb-3">
+
+            <CardTitle className="text-lg flex items-center">
+              <Sparkles className="h-5 w-5 mr-2 text-primary" />
+              AI-Suggested Milestones
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+
+            <div className="space-y-3">
+              {generatedMilestones.map((milestone, index) => (
+                <div key={index} className="p-3 border rounded-lg bg-muted/10">
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="font-medium flex items-center">
                       {milestone.title}
-                      <Badge variant="secondary" className="ml-2 text-xs">;
-                        AI Suggested;
-                      </Badge>;
-                    </div>;
-                    <div className='text-sm text-muted-foreground'>;
+                      <Badge variant="secondary" className="ml-2 text-xs">
+
+                        AI Suggested
+                      </Badge>
+                    </div>
+                    <div className='text-sm text-muted-foreground'>
                       Due: {formatDate(milestone.dueDate)}
-                    </div>;
-                  </div>;
-            <div className="space-y-3">;
-              {generatedMilestones.map((milestone, index) => (<div key={index} className="p-3 border rounded-lg bg-muted/10">;
-                  <div className="flex items-center justify-between mb-1">;
-                    <div className="font-medium flex items-center">;
+                    </div>
+                  </div>
+
+            <div className="space-y-3">
+
+              {generatedMilestones.map((milestone, index) => (
+                <div key={index} className="p-3 border rounded-lg bg-muted/10">
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="font-medium flex items-center">
                       {milestone.title}
-                      <Badge variant="secondary" className="ml-2 text-xs">;
-                        AI Suggested;
-                      </Badge>;
-                    </div>;
-                    <div className="text-sm text-muted-foreground">;
+                      <Badge variant="secondary" className="ml-2 text-xs">
+                        AI Suggested
+                      </Badge>
+                    </div>
+                    <div className="text-sm text-muted-foreground">
                       Due: {formatDate(milestone.dueDate)}
-                    </div>;
-                  </div>;
-                  <p className="text-sm text-muted-foreground">{milestone.description}</p>;
-                  <div className="flex justify-between items-center mt-2 text-sm">;
-                  <p className='text-sm text-muted-foreground'>;
-                    {milestone.description}
-                  </p>;
-                  <div className='flex justify-between items-center mt-2 text-sm'>;
-                    <span>Estimated: {milestone.estimatedHours} hours</span>;
-                  </div>;
-                </div>;
-              ))}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">;
-                <Check className="h-4 w-4 mr-1 text-green-500" />;
-<div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>;
-                <Check className='h-4 w-4 mr-1 text-green-500' />;
-                These milestones will be added to your contract;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      )}{showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (<Card>;
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-muted-foreground">{milestone.description}</p>
+                  <div className="flex justify-between items-center mt-2 text-sm">
+                    <span>Estimated: {milestone.estimatedHours} hours</span>
+                  </div>
+                </div>
+              ))}
+
+              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
+
+                <Check className="h-4 w-4 mr-1 text-green-500" />
+                These milestones will be added to your contract
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      )}
+
+      {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;
+        <Card>;
           <CardHeader className='pb-3'>;
             <CardTitle className='text-lg flex items-center'>;
               <Sparkles className='h-5 w-5 mr-2 text-primary' />              AI-Suggested Milestones;
@@ -161,7 +234,8 @@ interface MilestoneSuggestionsProps  {projectName: string;
           </CardHeader>;
           <CardContent>;
             <div className='space-y-3'>;
-              {generatedMilestones && generatedMilestones.map((milestone, index) => (<div key={index} className='p-3 border rounded-lg bg-muted/10'>;
+              {generatedMilestones && generatedMilestones.map((milestone, index) => (;
+                <div key={index} className='p-3 border rounded-lg bg-muted/10'>;
                   <div className='flex items-center justify-between mb-1'>;
                     <div className='font-medium flex items-center'>                      {milestone && milestone.title}
                       <Badge variant='secondary' className='ml-2 text-xs'>;
@@ -178,7 +252,8 @@ interface MilestoneSuggestionsProps  {projectName: string;
                   <div className='flex justify-between items-center mt-2 text-sm'>                    <span>Estimated: {milestone && milestone.estimatedHours} hours</span>;
                   <p className="text-sm text-muted-foreground">{milestone && milestone.description}</p>;
                   <div className="flex justify-between items-center mt-2 text-sm">;
-              {generatedMilestones && generatedMilestones.map((milestone, index) => (<div key={index} className="p-3 border rounded-lg bg-muted/10">;
+              {generatedMilestones && generatedMilestones.map((milestone, index) => (;
+                <div key={index} className="p-3 border rounded-lg bg-muted/10">;
                   <div className="flex items-center justify-between mb-1">;
                     <div className="font-medium flex items-center">;
                       {milestone && milestone.title}
@@ -195,7 +270,9 @@ interface MilestoneSuggestionsProps  {projectName: string;
                     <span>Estimated: {milestone && milestone.estimatedHours} hours</span>;
                   </div>;
                 </div>;
-              ))}<div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>;
+              ))}
+
+              <div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>;
                 <Check className='h-4 w-4 mr-1 text-green-500' />                These milestones will be added to your contract              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">;
                 <Check className="h-4 w-4 mr-1 text-green-500" />;
                 These milestones will be added to your contract;
@@ -205,15 +282,20 @@ interface MilestoneSuggestionsProps  {projectName: string;
         </Card>;
       )}
     </div>;
-  )<div className='space - y-4'>;
-      {!show_suggestions && (<Button;
+  );
+
+    <div className='space - y-4'>;
+      {!show_suggestions && (
+        <Button;
           variant='outline';
           on_click={handleGenerateMilestones}
           disabled={is_generating || !scope_summary || !start_date}
           className='w - full'        >;
-          {is_generating ? (<>;
+          {is_generating ? (
+            <>;
               <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />              Generating milestones...;
-            </>) : (<>;
+            </>) : (
+            <>;
               <Sparkles className='mr - 2 h - 4 w - 4' />              Suggest Project Milestones with AI;
               <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
           variant="outline";
@@ -221,15 +303,18 @@ interface MilestoneSuggestionsProps  {projectName: string;
           disabled={is_generating || !scope_summary || !start_date}
           className="w - full";
         >;
-          {is_generating ? (<>;
+          {is_generating ? (
+            <>;
               <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
               Generating milestones...;
-            </>) : (<>;
+            </>) : (
+            <>;
               <Sparkles className='mr - 2 h - 4 w - 4' />              <Sparkles className="mr - 2 h - 4 w - 4" />;
               Suggest Project Milestones with AI;
             </>)}
         </Button>)}
-      {show_suggestions && generated_milestones.length > 0 && (<Card>;
+      {show_suggestions && generated_milestones.length > 0 && (
+        <Card>;
           <CardHeader className='pb - 3'>;
             <CardTitle className='text - lg flex items - center'>;
               <Sparkles className='h - 5 w - 5 mr - 2 text - primary' />              AI - Suggested Milestones;
@@ -244,7 +329,8 @@ interface MilestoneSuggestionsProps  {projectName: string;
           </CardHeader>;
           <CardContent>;
             <div className='space - y-3'>;
-              {generated_milestones.map ((milestone, index) => (<div key={index} className='p - 3 border rounded - lg bg - muted / 10'>;
+              {generated_milestones.map ((milestone, index) => (
+                <div key={index} className='p - 3 border rounded - lg bg - muted / 10'>;
                   <div className='flex items - center justify - between mb - 1'>;
                     <div className='font - medium flex items - center'>                      {milestone.title}
                       <Badge variant='secondary' className='ml - 2 text - xs'>;
@@ -261,7 +347,8 @@ interface MilestoneSuggestionsProps  {projectName: string;
                   <div className='flex justify - between items - center mt - 2 text - sm'>                    <span > Estimated: {milestone.estimated_hours} hours</span>;
                   <p className="text - sm text - muted - foreground">{milestone.description}</p>;
                   <div className="flex justify - between items - center mt - 2 text - sm">;
-              {generated_milestones.map ((milestone, index) => (<div key={index} className="p - 3 border rounded - lg bg - muted / 10">;
+              {generated_milestones.map ((milestone, index) => (
+                <div key={index} className="p - 3 border rounded - lg bg - muted / 10">;
                   <div className="flex items - center justify - between mb - 1">;
                     <div className="font - medium flex items - center">;
                       {milestone.title}
@@ -286,13 +373,24 @@ interface MilestoneSuggestionsProps  {projectName: string;
             </div>;
           </CardContent>;
         </Card>)}
-    </div>)}
-<Button variant="outline" on_click={handleGenerateMilestones;
+    </div>);
+}
+<Button variant="outline" on_click={
+  handleGenerateMilestones;
 }> {";
-  is_generating ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Generating milestones... </>) : (<> <Sparkles className="mr - 2 h - 4 w - 4" /> Suggest Project Milestones with AI </>)}</Button>)}AI - Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) ";
-}<div className="flex items - center justify - center mt - 4 text - sm text - muted - foreground" > <Check className="h - 4 w - 4 mr - 1 text - green - 500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)}</div>)}"}}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)}</div>)}"}</div>;
-  )}</div>;
-  )}<Button variant="outline" onClick={handleGenerateMilestones ;
-}> {";
-  isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>)}</Button>)}AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) ";
-}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)}</div>)}";
+  is_generating ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Generating milestones... </>) : (<> <Sparkles className="mr - 2 h - 4 w - 4" /> Suggest Project Milestones with AI </>);
+}</Button>);
+}AI - Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) ";
+}<div className="flex items - center justify - center mt - 4 text - sm text - muted - foreground" > <Check className="h - 4 w - 4 mr - 1 text - green - 500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>);
+}</div>);
+}"}
+
+}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
+}</div>) 
+}"};
+;
+
+    </div>;
+  );
+}
+}

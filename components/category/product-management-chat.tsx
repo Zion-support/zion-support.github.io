@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+<<<<<<< HEAD
   return (import Link from 'next/link';
 import Seo from '../../components/seo/Seo';
 const ProductManagementChat: NextPage = () => {return (return (<div>;
@@ -8,9 +9,10 @@ const ProductManagementChat: NextPage = () => {return (return (<div>;
 
   return (
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const ProductManagementChat: NextPage = () => {
   return (
-
     <div>
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />
       <main>
@@ -21,8 +23,11 @@ const ProductManagementChat: NextPage = () => {
     </div>
   )
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     <div>;
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
       <main>;
@@ -43,8 +48,11 @@ const ProductManagementChat: NextPage = () => {
   );
 };
 export default ProductManagementChat;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import Link from 'next / link';
 import Seo from '../../components / seo / Seo';
   return (<div>;
@@ -69,6 +77,7 @@ const ProductManagementChat: NextPage;
 }
 ;
 export default ProductManagementChat;
+<<<<<<< HEAD
 ;
 export default ProductManagementChat;
 
@@ -90,3 +99,6 @@ export default ProductManagementChat
 
 export default ProductManagementChat;
 export default ProductManagementChat;
+=======
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

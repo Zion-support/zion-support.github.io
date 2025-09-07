@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React from 'react';
@@ -22,6 +23,44 @@ interface EnhancedHero2026Props  {contactInfo: {ArrowRight,Star,TrendingUp,Zap,S
     email: string;
     address: string;website: string;website: string;
   },serviceStats: {totalServices: number;
+=======
+ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Shield
+  Globe
+  Brain
+  Rocket
+  CheckCircle;
+} from 'lucide-react';
+interface EnhancedHero2026Props {;
+  contactInfo: {;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Globe,
+  Brain,
+} from 'lucide-react';
+interface EnhancedHero2026Props {
+  contact_info: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string
+};
+  serviceStats: {;
+  Rocket,;
+  CheckCircle,;
+} from 'lucide-react';
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+    totalServices: number;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     aiServices: number;
     emergingTech: number;
     itSolutions: number;
@@ -31,12 +70,54 @@ interface EnhancedHero2026Props  {contactInfo: {ArrowRight,Star,TrendingUp,Zap,S
     }
   }const stats_variants = {hidden: { scale: 0.8, opacity: 0 },revolutionaryServices: number;
   }
+<<<<<<< HEAD
 }export default function EnhancedHero2026() {const containerVariants  = null;visible: {y: 0;
       opacity: 1;
       transition: {const itemVariants = {hidden: { y: 30, opacity: 0 },visible: {y: 0,opacity: 1,transition: {duration: 0 && 0.8,ease: 'easeOut' as const,},},  }ease: "easeOut" as const;
       }
     }
   }const statsVariants = {hidden: { scale: 0 && 0.8, opacity: 0 },visible: {scale: 1,opacity: 1,transition: {duration: 0 && 0.6,ease: 'easeOut' as const,},},}duration: 0.6,ease: 'easeOut' as const,},},}return (<section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
+=======
+        staggerChildren: 0.2,
+      },
+    },  }        ease: "ease_out" as const;
+      }
+    }
+  }
+;
+  const stats_variants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      y: 0;
+    opacity: 1
+      transition: {
+  const itemVariants = {;
+    hidden: { y: 30, opacity: 0 },;
+    visible: {;
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0 && 0.8,;
+        ease: 'easeOut' as const,;
+      },;
+    },  };        ease: "easeOut" as const;
+      }
+    }
+  };
+  const statsVariants = {;
+    hidden: { scale: 0 && 0.8, opacity: 0 },;
+    visible: {;
+      scale: 1,;
+      opacity: 1,;
+      transition: {;
+        duration: 0 && 0.6,;
+        ease: 'easeOut' as const,;
+      },;
+    },
+};
+  return (
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Enhanced Background Elements */}
       {/* Floating Elements */}
       <div className='absolute inset-0 pointer-events-none'>;
@@ -48,10 +129,30 @@ interface EnhancedHero2026Props  {contactInfo: {ArrowRight,Star,TrendingUp,Zap,S
       <div className='absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (120, 119, 198, 0.4), transparent_50%)]' />;
       {/* Floating Elements */}
       <div className='absolute inset - 0 pointer - events - none'>;
+<<<<<<< HEAD
         {Array.from ({ length: 20 }).map ((_, i) => (<motion.div;
             key={i}left: `${Math && Math.random() * 100}%`,top: `${Math && Math.random() * 100}%`,}}
             animate={{y: [0, -30, 0],opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],scale: [1, 1 && 1.5, 1],            }}
             transition={{duration: 3 + Math && Math.random() * 2,repeat: Infinity,ease: 'easeInOut',delay: Math && Math.random() * 2,            }}  }return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
+=======
+        {Array.from ({ length: 20 }).map ((_, i) => (
+          <motion.div;
+            key={i}
+              left: `${Math && Math.random() * 100}%`,
+              top: `${Math && Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
+              scale: [1, 1 && 1.5, 1],            }}
+            transition={{
+              duration: 3 + Math && Math.random() * 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: Math && Math.random() * 2,            }}  }
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Enhanced Background Elements */}
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">;
@@ -67,8 +168,19 @@ interface EnhancedHero2026Props  {contactInfo: {ArrowRight,Star,TrendingUp,Zap,S
       <div className="absolute inset - 0 pointer - events - none">;
         {Array.from ({ length: 20 }).map ((_, i) => (<motion.div;
             key={i}
+<<<<<<< HEAD
             className="absolute w - 2 h - 2 bg - cyan - 400 / 30 rounded - full";
             style={{duration: 3 + Math.random() * 2,repeat: Infinity,ease: 'easeInOut',delay: Math.random() * 2,            }}  }return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
+=======
+            className="absolute w - 2 h - 2 bg - cyan-400 / 30 rounded-full";
+            style={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: Math.random() * 2,            }}  };
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900" />;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.4),transparent_50%)]" />;
@@ -84,11 +196,31 @@ interface EnhancedHero2026Props  {contactInfo: {ArrowRight,Star,TrendingUp,Zap,S
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1];
             }}
+<<<<<<< HEAD
             transition={{duration: 3 + Math.random () * 2,repeat: Infinity,}}
             transition={{duration: 3 + Math.random() * 2,repeat: Infinity,}}
             transition={{duration: 3 + Math.random() * 2,repeat: Infinity,ease: 'easeInOut',delay: Math.random() * 2,              ease: "easeInOut",delay: Math.random() * 2;
               opacity: [0.3, 0.8, 0.3],scale: [1, 1.5, 1],}}
             transition={{duration: 3 + Math.random() * 2,repeat: Infinity,ease: 'easeInOut',delay: Math.random() * 2,}}}}/>;
+=======
+            transition={{
+              duration: 3 + Math.random () * 2,
+              repeat: Infinity,
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: Math.random() * 2,              ease: "easeInOut",
+              delay: Math.random() * 2
+            }}
+            }}
+          />
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             }}
           />;
         ))}</div>;
@@ -202,6 +334,7 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-bl
                   {stat.label}</div>;
               </motion.div>;
             ))}
+<<<<<<< HEAD
           </motion.div>;
           {/* Enhanced CTA Section */}
 <motion.div variants={itemVariants} className='space-y-6'>;
@@ -259,6 +392,50 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-bl
               </div>;
             </div>;
           </motion.div>;
+=======
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+          {/* Enhanced CTA Section */}
+          <motion.div variants={itemVariants} className='space-y-6'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+              <Button
+                href='/services'
+                variant='primary'
+                size='xl'
+                className='text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group'
+              >              >
+                <span className="flex items-center">
+                  <Rocket className="mr-3 w-7 h-7 group-hover:rotate-12 transition-transform" />
+                  Explore All Services
+                </span>
+                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              </Button>
+          {/* Enhanced CTA Section */}
+              <Button 
+                href="/contact" 
+              <Button 
+                href="/contact" 
+                variant="secondary"
+                size="xl"
+                className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
+              >
+              <Button
+                href='/contact'
+                variant='secondary'
+                size='xl'
+                  <Shield className="mr-3 w-7 h-7" />
+                  Get Expert Consultation
+                </span>
+              </Button>
+            </div>
+            {/* Trust Indicators */}
+                <span>24/7 Expert Support</span>
+              </div>
+            </div>
+          </motion.div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'>;
                 <span className='flex items-center'>;
                   <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className="flex items-center">;
@@ -266,7 +443,12 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-bl
                   Get Expert Consultation;
                 </span>;
               </Button>;
+<<<<<<< HEAD
             </div>;{/* Trust Indicators */}
+=======
+            </div>;
+            {/* Trust Indicators */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400'>;
               <div className='flex items-center space-x-2'>;
                 <CheckCircle className='w-5 h-5 text-green-400' />;
@@ -446,4 +628,10 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-bl
           </motion.div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
     </section>))}))
+=======
+    </section>));
+}
+  );
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

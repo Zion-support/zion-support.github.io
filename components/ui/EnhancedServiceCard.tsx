@@ -605,6 +605,18 @@ export default EnhancedServiceCard;<div className="absolute inset-0 rounded-2xl 
       </div>;
       {/* Hover Effect Border */}
       <div className='absolute inset - 0 rounded - 2xl border - 2 border - transparent bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500' />;
+<<<<<<< HEAD
     </motion.div>)}export default EnhancedServiceCard;    </motion.div>)}export default EnhancedServiceCard;}<div className='absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
     </motion.div>;
   )}export default EnhancedServiceCard;
+=======
+    </motion.div>);
+}
+;
+export default EnhancedServiceCard;    </motion.div>);
+}
+;
+export default EnhancedServiceCard
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

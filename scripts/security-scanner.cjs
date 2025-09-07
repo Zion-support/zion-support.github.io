@@ -11,8 +11,8 @@ const { execSync } = require('child_process')
     }[type] || 'ℹ'
     this.log('Scanning dependencies for vulnerabilities...', 'SECURITY')
       const auditOutput = execSync('npm audit --json')
-        stdio: 'pipe'
-        encoding: 'utf8'
+        stdio: "stdio",
+    encoding: 'utf8'
           const severity = vuln.severity || 'low'
             type: 'dependency'
             description: vuln.description || 'No description available'
@@ -23,5 +23,10 @@ const { execSync } = require('child_process')
     this.log('Scanning code for security issues...', 'SECURITY')
         pattern: /password\s*=\s*['"][^'']
         pattern: /api[_-]?key\s*=\s*['"][^'']
+<<<<<<< HEAD
 
         pattern: /secret\s*=\s*['"][^'']
+=======
+<<<<<<< HEAD;
+    pattern: /secret\s*=\s*['"][^'']
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -32,7 +32,11 @@ class ComprehensiveAutomationRunner {
       this.log(`❌ ${scriptName} failed: ${error.message}`, 'ERROR');
       this.results.push({ script: scriptName, success: false, error: error.message });
       return { success: false, error: error.message };
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 console.log('🚀 Starting Comprehensive Automation Runner...');
 
 class ComprehensiveAutomationRunner {
@@ -64,13 +68,23 @@ class ComprehensiveAutomationRunner {
     } catch (error) {
       this.log(`❌ ${scriptName} failed: ${error.message}`);
       return { success: false, script: scriptName, error: error.message };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
   }
 
   async runAllAutomations() {
+<<<<<<< HEAD
 
     const automations = [
+=======
+=======
+const automations = [
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       { name: 'Master Orchestrator', path: 'automation/master-orchestrator.cjs' },
       { name: 'Comprehensive App Improvement Suite', path: 'automation/comprehensive-app-improvement-suite.cjs' },
       { name: 'Continuous Improvement Orchestrator', path: 'automation/continuous-improvement-orchestrator.cjs' },
@@ -116,7 +130,14 @@ class ComprehensiveAutomationRunner {
 // Run all automations
 const runner = new ComprehensiveAutomationRunner();
 runner.runAllAutomations().catch(console.error);
+<<<<<<< HEAD
 
+=======
+    this.log('🎯 Starting Comprehensive Automation Runner');
+    this.log('📋 Running all automation scripts...');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     const scripts = [
       { path: 'automation/master-orchestrator.cjs', name: 'Master Orchestrator' },
       { path: 'automation/comprehensive-app-improvement-suite.cjs', name: 'Comprehensive App Improvement Suite' },
@@ -164,4 +185,9 @@ if (require.main === module) {
 }
 
 module.exports = ComprehensiveAutomationRunner;
+<<<<<<< HEAD
 
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

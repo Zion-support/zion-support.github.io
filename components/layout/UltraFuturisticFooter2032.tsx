@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom,Phone;
   Mail;
@@ -36,14 +37,105 @@ import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom,Phone;
   MessageCircle as MessageCircleIcon;
   Star as StarIcon;} from 'lucide-react';import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Phone,Mail,MapPin,Globe,Zap,Brain,Atom,Rocket,Shield,Cpu,Target,Microscope,Users,Facebook,Twitter,Linkedin,Instagram,Youtube,Github,ArrowRight,Heart,Star,Award,CheckCircle,Home,Briefcase,BookOpen,MessageCircle,DollarSign,TrendingUp,Target as TargetIcon,Users as UsersIcon,Briefcase as BriefcaseIcon,BookOpen as BookOpenIcon,MessageCircle as MessageCircleIcon,Star as StarIcon,} from 'lucide-react';import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom,import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;Rocket, Shield, Cpu, Target, Microscope, Users;
+=======
+import { motion } from 'framer-motion';
+import { 
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
+import {
+  Phone
+  Mail
+  MapPin
+  Globe
+  Zap
+  Brain
+  Atom
+  Rocket
+  Shield
+  Cpu
+  Target
+  Microscope
+  Users
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Youtube
+  Github
+  ArrowRight
+  Heart
+  Star
+  Award
+  CheckCircle
+  Home
+  Briefcase
+  BookOpen
+  MessageCircle
+  DollarSign
+  TrendingUp
+  Target as TargetIcon
+  Users as UsersIcon
+  Briefcase as BriefcaseIcon
+  BookOpen as BookOpenIcon
+  MessageCircle as MessageCircleIcon
+  Star as StarIcon;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cpu,
+  Target,
+  Microscope,
+  Users,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  ArrowRight,
+  Heart,
+  Star,
+  Award,
+  CheckCircle,
+  Home,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  DollarSign,
+  TrendingUp,
+  Target as TargetIcon,
+  Users as UsersIcon,
+  Briefcase as BriefcaseIcon,
+  BookOpen as BookOpenIcon,
+  MessageCircle as MessageCircleIcon,;
+  Star as StarIcon,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+  Rocket, Shield, Cpu, Target, Microscope, Users;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
   Home, Briefcase, BookOpen, MessageCircle, DollarSign;
   TrendingUp, Target as TargetIcon, Users as UsersIcon;
+<<<<<<< HEAD
   Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon;{name: 'Home';
     href: '/';
     icon: Home;
     description: 'Welcome to Zion Tech Group';
+=======
+  Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon;
+  {
+    name: "name",
+    href: '/'
+    icon: Home;
+    description: 'Welcome to Zion Tech Group'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   {name: 'Services';
     href: '/services';
@@ -208,6 +300,7 @@ const footerVariants = {hidden: { opacity: 0, y: 50 }
           className="space-y-16">;
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
+<<<<<<< HEAD
             {/* Company Info */}}export default function UltraFuturisticFooter2032() {return (<motion.div variants={itemVariants} className='lg:col-span-1'>;
               <div className='flex items-center space-x-3 mb-6'>;
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/30'>;
@@ -272,6 +365,24 @@ const footerVariants = {hidden: { opacity: 0, y: 50 }
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
                 {serviceCategories.map((category, index) => (<div key={index} className='space-y-4'>;
                     <h4 className='text-lg font-medium text-white'>;
+=======
+            {/* Company Info */}
+};
+export default function UltraFuturisticFooter2032() {
+  return (
+                    {contactInfo.website}
+                    {contactInfo.website}
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+                Our Revolutionary Services
+              </h3>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                {serviceCategories.map((category, index) => (
+                  <div key={index} className='space-y-4'>
+                    <h4 className='text-lg font-medium text-white'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       {category.title}
                     </h4>;
                     <ul className='space-y-2'>                      {category.services.map((service, serviceIndex) => (<li key={serviceIndex}>;
@@ -289,6 +400,7 @@ const footerVariants = {hidden: { opacity: 0, y: 50 }
                             className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'                            className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform">;
                             {service && service.name}
                           </Link>;
+<<<<<<< HEAD
                         </li>;<motion.div variants={itemVariants} className="lg:col-span-2">;
               <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">;
                 Our Revolutionary Services;
@@ -311,6 +423,35 @@ className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
                   </div>;
                 ))}</div>;
             </motion.div>;
+=======
+                        </li>;
+            <motion.div variants={itemVariants} className="lg:col-span-2">
+              <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Our Revolutionary Services
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {serviceCategories.map((category, index) => (
+                  <div key={index} className="space-y-4">
+                    <h4 className="text-lg font-medium text-white">{category.title}</h4>
+                    <ul className="space-y-2">
+                      {category.services.map((service, serviceIndex) => (
+                        <li key={serviceIndex}>
+                          <Link
+                            href={service.href}
+                            className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform"
+                          >
+                            {service.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>;
+                  </div>;
+                ))}
+                Quick Access
+              </h3>
+              </div>;
+            </motion && motion.div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             {/* Quick Links & Company Info */}
 <motion.div variants={itemVariants} className='lg:col-span-1'>;
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -364,6 +505,7 @@ className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
                 <ul className='space-y-2'>                  {companyInfo.map((item, index) => (<li key={index}>;
                       <Link;
                         href={item.href}
+<<<<<<< HEAD
                         className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >              <div className="mb-8">;
                 <h4 className="text-lg font-medium text-white mb-4">Company</h4>;
                 <ul className="space-y-2">;
@@ -373,6 +515,18 @@ className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
                       <Link;
                         href={item.href}className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm";
                       >;
+=======
+                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >              <div className="mb-8">
+                <h4 className="text-lg font-medium text-white mb-4">Company</h4>
+                <ul className="space-y-2">
+                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
+                  {companyInfo.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+                        className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm"
+                      >
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                         {item.name}
                       </Link>;
                     </li>;
@@ -393,11 +547,21 @@ className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
                         {item && item.name}
                       </Link>;
                     </li>;
+<<<<<<< HEAD
                   ))}{/* Company Info */}
               <div className='mb-8'>;
                 <h4 className='text-lg font-medium text-white mb-4'>Company</h4>;
                 <ul className='space-y-2'>                  {companyInfo.map((item, index) => (<li key={index}>;
                       <Link;
+=======
+                  ))}
+              {/* Company Info */}
+              <div className='mb-8'>
+                <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
+                <ul className='space-y-2'>                  {companyInfo.map((item, index) => (
+                    <li key={index}>
+                      <Link
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                         href={item.href}
                   {companyInfo.map((item, index) => (<li key={index}>;
                       <Link;
@@ -409,9 +573,16 @@ className='text-slate-300 hover:text-purple-300 transition-colors duration-200 t
                       </Link>;
                     </li>;
                   ))}
+<<<<<<< HEAD
                 </ul>;
               </div>;
               {/* Social Links */}<div>;
+=======
+                </ul>
+              </div>
+              {/* Social Links */}
+              <div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <h4 className='text-lg font-medium text-white mb-4'>;
                   Follow Us;
                 </h4>;
@@ -443,6 +614,7 @@ className='text-slate-300 hover:text-purple-300 transition-colors duration-200 t
           {/* Newsletter Signup */}
           <motion.div;
             variants={itemVariants}
+<<<<<<< HEAD
             className='border-t border-cyan-500/30 pt-12';
           >;
             <div className='text-center'>;
@@ -469,6 +641,20 @@ target='_blank';
                     >;
                       <social.icon className='w-5 h-5' />;
                     </a>;
+=======
+            className='border-t border-cyan-500/30 pt-12'
+          >
+            <div className='text-center'>
+              <h3 className='text-2xl font-bold text-white mb-4'>
+                <input
+                  type='email'
+                  placeholder='Enter your email address'
+                  className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300'
+          <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-12">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                    </a>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   ))}
                 </div>;
               </div>;
@@ -477,11 +663,19 @@ target='_blank';
           {/* Newsletter Signup */}
 <motion.div;
             variants={itemVariants}
+<<<<<<< HEAD
             className='border-t border-cyan-500/30 pt-12';
           >;
             <div className='text-center'>;
               <h3 className='text-2xl font-bold text-white mb-4'>;
                 Stay Ahead with Future Technology;
+=======
+            className='border-t border-cyan-500/30 pt-12'
+          >
+            <div className='text-center'>
+              <h3 className='text-2xl font-bold text-white mb-4'>
+                Stay Ahead with Future Technology
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           {/* Newsletter Signup */}
           <motion.div;
             variants={item_variants}
@@ -496,6 +690,7 @@ target='_blank';
                 advances, space technology innovations, and autonomous systems;
                 development. Join our community of future technology pioneers.;
               </p>;
+<<<<<<< HEAD
               </h3>;
               <p className="text-slate-300 mb-8 max-w-2xl mx-auto">;
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.;
@@ -514,6 +709,13 @@ target='_blank';
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105'>;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
+=======
+              </h3>
+              <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+                Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 />;
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105'>                  Subscribe                Stay Ahead with Future Technology;
               </h3>;
@@ -562,8 +764,16 @@ target='_blank';
         </motion && motion.button>;
       </div>;
     </footer>;
+<<<<<<< HEAD
   ))}
   )}
+=======
+  );
+  );
+}
+  );
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           </motion.div>;
         </motion.div>;
       </div>;
@@ -586,6 +796,7 @@ target='_blank';
           <ArrowRight className="w - 6 h - 6 transform rotate-[-90deg]" />;
         </motion.button>;
       </div>;
+<<<<<<< HEAD
     </footer>)className='text-slate-400 hover:text-cyan-300 transition-colors';
                 >;
                   Cookie Policy;
@@ -608,3 +819,7 @@ target='_blank';
       </div>;
     </footer>;
   )}
+=======
+    </footer>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

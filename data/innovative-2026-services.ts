@@ -654,6 +654,7 @@ export const innovative2026Services: Innovative2026Service[] = [
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
     reviews: 234
     real_implementation: true,
     implementation_details: 'Advanced emotional intelligence platform with real - time emotion detection, analysis, and response generation capabilities.';
@@ -1417,3 +1418,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     reviews: 234;
   }
 ;
+=======
+    reviews: 234;  }
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -216,5 +216,9 @@ export * from "@testing-"library/react""
   const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   "analyzerMode": "static"
           "openAnalyzer"
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     fs.writeFileSync(path.join(this.projectRoot, ")

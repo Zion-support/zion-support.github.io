@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 
 ;
 import React from 'react';
 import Head from 'next/head';
 interface SEOProps  {title?: string;
 
+=======
+import React from './react';
+import Head from './next / head';
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 interface SEOProps {
   title?: string;
   description?: string;
@@ -29,10 +35,20 @@ import Head from './next / head';interface SEOProps  {interface SEOProps  {title
   description?: string;
   keywords?: string;
 }
+<<<<<<< HEAD
 }) => {const SEO: React.FC<SEOProps> = ({title = "Zion Tech Group - Technology Solutions",description = "Leading provider of AI services, IT solutions, and micro SaaS development.",keywords = "AI services, IT solutions, micro SaaS, technology consulting"}) => {return (}
   image?: string;
   url?: string;
   type?: string;export default function SEO() {const router = useRouter()const canonicalUrl = url || `https://zion.app${router.asPath}`;
+=======
+}) => {
+const SEO: React.FC<SEOProps> = ({;
+  title = "Zion Tech Group - Technology Solutions",;
+  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",;
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
+}) => {;
+  return (
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 export default SEO;
 }
@@ -42,6 +58,7 @@ export default SEO;interface SEOProps  {title?: string;
   image?: string;
   url?: string;
   type?: string;
+<<<<<<< HEAD
 }const SEO: React.FC<SEOProps> = ({title = 'Zion Tech Group - Leading Technology Solutions',description = 'Zion Tech Group provides cutting-edge technology solutions including web development, mobile apps, cloud solutions, and AI/ML services.',keywords = 'technology, web development, mobile apps, cloud solutions, AI, machine learning, software development',image = '/images/og-image.jpg',url = 'https: //ziontechgroup.com',type = 'website';
 }) => {const fullTitle = title.includes('Zion Tech')? title;
     : `${title} | Zion Tech Group`;return (<Head>;
@@ -99,3 +116,18 @@ export default SEO;interface SEOProps  {title?: string;
     </Head>
   );
 }
+=======
+export default function SEO({
+  title = "Zion Tech Group - Advanced AI Solutions",
+  description = "Leading provider of AI-powered automation, blockchain solutions, and enterprise software development.",
+  image = "/og-image.jpg",
+  url,
+  type = "website",
+}: SEOProps) {
+  const router = useRouter();
+  const canonicalUrl = url || `https://zion.app${router.asPath}`;
+}
+export default SEO;
+}
+export default SEO;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

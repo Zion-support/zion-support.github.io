@@ -238,5 +238,9 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
       )} catch (error) {  this.log(`Failed to commit test "improvements": ${error.message  }`, "ERROR"`)
   const fullPath = path.join(dir, ")
   files.push(...this.getAllFiles(fullPath")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")

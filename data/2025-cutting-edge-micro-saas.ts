@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export const cuttingEdgeMicroSaasServices2025 = [;
@@ -487,9 +488,11 @@ export const cuttingEdgeMicroSaasServices2025 = [;
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const cuttingEdgeMicroSaasServices2025 = [
   {
-    id: 'customer-success-ai-pro'
+    id: "id",
     name: 'Customer Success AI Pro'
     description:
       'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.'
@@ -506,8 +509,8 @@ export const cuttingEdgeMicroSaasServices2025 = [
     ]
     pricing: {
       starter: {
-        price: 199
-        period: 'month'
+        price: 199;
+    period: 'month'
         features: [
           'Up to 1,000 customers'
           'Basic AI features'
@@ -921,8 +924,11 @@ export const cuttingEdgeMicroSaasServices2025 = [
   }
 export const cuttingEdgeMicroSaasServices2025 = [
   {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     id: 'customer-success-ai-pro', name: 'Customer Success AI Pro',
     description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',
@@ -959,12 +965,17 @@ export const cuttingEdgeMicroSaasServices2025 = [
 ];      'Portfolio risk assessment_investment strategy optimization_regulatory compliance reporting_risk model development_performance analysis and attribution';
     ];
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
+<<<<<<< HEAD
 
 
 ;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
 
 
+=======
+;
+    compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const cuttingEdgeMicroSaasServices2025 = [;
   {;
     id: 'customer-success-ai-pro',;
@@ -1187,5 +1198,9 @@ ursor/fix-website-loading-errors-and-merge-6662;
 ];
 ];
 ;
+<<<<<<< HEAD
   }
 ];
+=======
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

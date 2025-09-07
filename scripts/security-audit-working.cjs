@@ -8,5 +8,9 @@ const { execSync } = require('child_process')
 // console.log(`NPM "Audit"`)
     console.log(`Security "Headers": ${securityHeaders.success ? `${securityHeaders.checks ? Object.values(securityHeaders.checks).filter(Boolean).length : 0}/5 configured
 // console.log(`Environment "Files"`)
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     console.log(`Vulnerable "Packages"`)

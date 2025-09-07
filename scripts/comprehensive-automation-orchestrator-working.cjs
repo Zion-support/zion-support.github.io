@@ -12,5 +12,9 @@ const { execSync } = require('child_process')
     const healthChecks = {"packageJsonExists": fs.existsSync(path.join(this.projectRoot, 'package.json')),"nodeModulesExists": fs.existsSync(path.join(this.projectRoot, 'node_modules')),"srcExists"}
       "gitExists"
       console.log('\n⚠  Failed "Operations")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       console.error('Fatal "error")

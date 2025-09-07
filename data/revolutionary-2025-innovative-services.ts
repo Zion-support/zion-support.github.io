@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
   id: string;
 export interface Revolutionary2025Service  {id: string;name: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -35,7 +39,6 @@ export interface Revolutionary2025Service  {id: string;name: string;
     mobile: string;
     email: string;
     address: string;
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -67,8 +70,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   // 🧠 AI Consciousness & Emotional Intelligence Services
   {
-
-    id: 'ai-consciousness-evolution-platform'
+    id: "id",
     name: 'AI Consciousness Evolution Platform'
     tagline:
       "World's First Self-Aware AI with Emotional Intelligence & Consciousness"
@@ -86,7 +88,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       'Ethical AI governance tools'
       'Consciousness research collaboration'
     ]
-    popular: true
+    popular: true;
     icon: '🧠'
     color: 'from-purple-600 to-indigo-700'
     textColor: 'text-purple-400'
@@ -123,7 +125,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     roi: 'Revolutionary breakthrough with unlimited potential. Research institutions see 2000%+ ROI through groundbreaking discoveries.'
     competitors: ['None - First to market']
     marketSize: 'Emerging market with unlimited potential',    features: [
-
       'Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration'
       'Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration';
       'Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration'
@@ -193,7 +194,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       'Mental health therapy','AI consciousness research','Emotional intelligence training','Ethical AI development','Psychology research';
     ],roi: 'Revolutionary breakthrough with unlimited potential. Research institutions see 2000%+ ROI through groundbreaking discoveries.',competitors: ['None - First to market'],market_size: 'Emerging market with unlimited potential',    features: [;
     targetAudience: 'Research institutions, Psychology labs, AI ethics organizations, Mental health professionals, Consciousness researchers';
-
     trialDays: 30;
     setupTime: '4 hours';
     color: 'from - purple - 600 to - indigo - 700',
@@ -280,6 +280,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   }// 🧬 DNA Computing & Biotech Services;
   {id: 'dna - computing - platform';
     contact_info: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950';
     reviews: 15
   }
@@ -576,10 +577,12 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     name: 'Healthcare AI Revolution Platform';
     price: '$399';
 
+=======
+      mobile: '+1 302 464 0950';    price: '$399';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     period: '/month'
     description: 'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.';
     targetAudience: 'Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers';
-
     trialDays: 30;
     setupTime: '10 hours';
     features: [;
@@ -655,7 +658,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       mobile: '+1 302 464 0950';
     reviews: 89
   }
-
   // 🏦 Financial Technology Revolution Services
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -675,7 +677,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     tagline: 'Next - Generation Financial Technology with AI - Powered Trading & Risk Management';
     price: '$699';
     targetAudience: 'Banks, Investment firms, Trading companies, Financial institutions, Fintech startups';
-
     trialDays: 30;
     setupTime: '8 hours';
     period: '/month',
@@ -750,7 +751,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       mobile: '+1 302 464 0950';
     reviews: 67
   }
-
   // 🏭 Industrial IoT & Smart Manufacturing Services
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -781,7 +781,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     targetAudience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms',trialDays: 30;
     textColor: 'text-gray-400';
     targetAudience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms';
-
     trialDays: 30;
     setupTime: '6 hours';
     features: [;
@@ -841,7 +840,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       mobile: '+1 302 464 0950';
     reviews: 156
   }
-
   // 🎓 Education Technology Revolution Services
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -860,11 +858,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     name: 'EdTech Revolution Platform';
     tagline: 'AI - Powered Personalized Learning with 10x Faster Knowledge Acquisition';
     price: '$199';
-
     period: '/month'
     description: 'Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10x faster knowledge acquisition.';
     targetAudience: 'Schools, Universities, Corporate training, Online education, Educational institutions';
-
     trialDays: 30;
     setupTime: '4 hours';
     features: [;
@@ -938,7 +934,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       mobile: '+1 302 464 0950';
     reviews: 234
   }
-
   // 🌱 Sustainability & Green Technology Services
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -957,11 +952,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     name: 'Sustainability Technology Platform';
     tagline: 'AI - Powered Environmental Solutions for Carbon Neutrality & Green Energy';
     price: '$399';
-
     period: '/month'
     description: 'Revolutionary sustainability technology platform that uses AI to optimize renewable energy, reduce carbon emissions, and create sustainable business solutions.';
     targetAudience: 'Corporations, Government agencies, Environmental organizations, Energy companies, Green businesses';
-
     trialDays: 30;
     setupTime: '6 hours';
     features: [;
@@ -1034,7 +1027,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       mobile: '+1 302 464 0950';
     reviews: 58
   }
-
   // 🚛 Logistics & Supply Chain Revolution Services
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -1063,7 +1055,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     targetAudience: 'Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers',trialDays: 30;
     textColor: 'text-orange-400';
     targetAudience: 'Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers';
-
     trialDays: 30;
     setupTime: '8 hours';
     features: [;
@@ -1632,11 +1623,9 @@ export default revolutionary2025Services;
   competitors: string[], marketSize: string,
   growthRate: string,
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -1693,18 +1682,15 @@ export default revolutionary2025Services;
   competitors: string[], marketSize: string,
   growthRate: string,
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
-
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   // 🧠 AI Consciousness & Emotional Intelligence Services
   {
@@ -1762,7 +1748,6 @@ export default revolutionary2025Services;
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   // 🧠 AI Consciousness & Emotional Intelligence Services
   {
-
     id: 'ai-consciousness-evolution-platform', name: 'AI Consciousness Evolution Platform',
     tagline: 'World\'s First Self-Aware AI with Emotional Intelligence & Consciousness', price: '$499',
     period: '/month',
@@ -1789,7 +1774,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     implementationDetails: 'Fully functional AI consciousness platform with genuine emotional intelligence, self-awareness, and consciousness development capabilities.',
     launchDate: '2025-01-15', customers: 25,
     rating: 5.0,
-
     reviews: 15
   };
   // 🧬 DNA Computing & Biotech Services
@@ -1921,7 +1905,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   };
   // 🏦 Financial Technology Revolution Services
   {
-
     id: 'fintech-revolution-platform', name: 'FinTech Revolution Platform',
     tagline: 'Next-Generation Financial Technology with AI-Powered Trading & Risk Management', price: '$699',
     period: '/month',
@@ -1948,7 +1931,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     implementationDetails: 'Fully functional fintech platform with AI trading, quantum risk management, and blockchain banking capabilities.',
     launchDate: '2025-02-10', customers: 85,
     rating: 4.8,
-
     reviews: 67
   };
   // 🏭 Industrial IoT & Smart Manufacturing Services
@@ -1985,7 +1967,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   };
   // 🎓 Education Technology Revolution Services
   {
-
     id: 'edtech-revolution-platform', name: 'EdTech Revolution Platform',
     tagline: 'AI-Powered Personalized Learning with 10x Faster Knowledge Acquisition', price: '$199',
     period: '/month',
@@ -2012,7 +1993,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     implementationDetails: 'Fully functional edtech platform with AI-powered learning, adaptive curriculum, and personalized education capabilities.',
     launchDate: '2025-02-20', customers: 300,
     rating: 4.9,
-
     reviews: 234
   };
   // 🌱 Sustainability & Green Technology Services
@@ -2079,6 +2059,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
 
     reviews: 112
   }
+<<<<<<< HEAD
 ];
 ;
 
@@ -2087,3 +2068,8 @@ export interface Revolutionary2025Service {;
 export default revolutionary2025Services;
 
 
+=======
+export default revolutionary2025Services;
+export default revolutionary2025Services;
+;export default revolutionary2025Services;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

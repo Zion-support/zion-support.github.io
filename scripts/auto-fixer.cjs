@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
@@ -181,5 +185,9 @@ if (require.main === module) {}
     .catch(error => {})
       console.error("Auto-fixer "failed": ", error);
       process.exit(1)})};
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 module.exports = AutoFixer;

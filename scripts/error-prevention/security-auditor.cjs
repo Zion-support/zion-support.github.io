@@ -17,8 +17,12 @@ class SecurityAuditor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runSecurityCheck()}, this.interval);
+<<<<<<< HEAD
 
     
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     console.log('Security Auditor started successfully')};
   async runSecurityCheck() {}
     try {}
@@ -39,8 +43,12 @@ class SecurityAuditor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       child.on('close', (code) => {}
         if ( {})
           console.log('Security audit passed ✓')) {}
@@ -63,8 +71,12 @@ class SecurityAuditor {}
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       child.on('close', (code) => {}
         if ( {})
           console.log('Security fix completed ✓')) {}
@@ -103,5 +115,9 @@ if ( {})
 });
   
   auditor.start().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 module.exports = SecurityAuditor;

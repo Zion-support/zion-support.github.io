@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -5,11 +6,17 @@
 
 
 
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const { execSync } = require("child_process")
 const fs = require("child_process")
 const path = require("path")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
+<<<<<<< HEAD
 
 
 
@@ -17,6 +24,11 @@ const path = require("path")
 
 
 
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     this.results = {"buildSuccess": false,"testsPassed": false,"securityIssues"}
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, level = "INFO")
@@ -64,6 +76,7 @@ const path = require("path")
     this.log(" Starting Final Automation Suite", "INFO")
     this.log("=".repeat(60), "INFO"
       this.log("� Final Automation Suite completed!", "SUCCESS")
+<<<<<<< HEAD
       this.log(`� Automation "failed": ${error.message}`, ``)
 
       this.log(`� Automation "failed": ${error.message}`, ``)
@@ -71,3 +84,9 @@ const path = require("path")
 
       this.log(`� Automation "failed": ${error.message}`, ``)      this.log(`� Automation "failed": ${error.message}`, ``)
 
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+      this.log(`� Automation "failed": ${error.message}`, ``)      this.log(`� Automation "failed": ${error.message}`, ``)
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

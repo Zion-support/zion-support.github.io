@@ -1,6 +1,11 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import {import Head from 'next / head';
+=======
+import {
+import Head from 'next / head';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
   Code,Database,Globe,Shield,Zap,Bot,BarChart3,Lock,ArrowRight,CheckCircle,Star,ExternalLink,Play,BookOpen,Code;
@@ -11,6 +16,7 @@ import Button from '../components / ui / Button';
   Bot;
   BarChart3;
   Code;
+<<<<<<< HEAD
   Database,Globe,Shield,Zap,Bot,BarChart3,import { Code;
   Database;
   Globe;
@@ -18,12 +24,29 @@ import Button from '../components / ui / Button';
   Zap;
   Bot;
   BarChart3;Lock;
+=======
+  Database
+  Globe
+  Shield
+  Zap
+  Bot
+  BarChart3
+  Code;
+  Database,
+  Globe,
+  Shield,
+  Zap,
+  Bot,
+  BarChart3,
+  Lock;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   ArrowRight;
   CheckCircle;
   Star;
   ExternalLink;
   Play;
   BookOpen;
+<<<<<<< HEAD
   Github;free: '1,000 operations/month';
         pro: '$119/month';
         enterprise: 'Custom';
@@ -38,6 +61,263 @@ import Button from '../components / ui / Button';
     }Terminal;
  } from 'lucide-react';
 export default function ApiToolsPage() {const apiTools = null;
+=======
+  Github;
+        free: "free",
+    pro: '$119/month'
+        enterprise: 'Custom'
+      }
+      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500'
+      website: 'https://encrypt.api'
+      docs: 'https://docs.encrypt.api'
+      github: 'https://github.com/encrypt-api'
+      status: 'Live'
+      users: '4,200+'
+      responseTime: '<20ms'
+    }
+        free: '1,000 operations/month',
+        pro: '$119/month',
+        enterprise: 'Custom',
+      },
+      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500',
+      website: 'https://encrypt.api',
+      docs: 'https://docs.encrypt.api',
+      github: 'https://github.com/encrypt-api',
+      status: 'Live',
+      users: '4,200+',
+      responseTime: '<20ms',
+    },;
+  ];
+  const categories = [
+    'All'
+    'Development'
+    'Data'
+    'Location'
+    'Security'
+    'Integration'
+    'AI/ML'
+    'Analytics'
+  ];
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+export default function ApiToolsPage() {;
+  const apiTools = [;
+    {;
+      icon: <Code className='w-8 h-8 text-white' />,,
+  description:;
+        'Generate production-ready code in multiple languages using natural language descriptions and AI.',;
+      features: [;
+        'Support for 20+ programming languages',;
+        'Real-time code completion and suggestions',;
+        'Custom code templates and patterns',;
+        'Integration with popular IDEs',;
+        'Code review and optimization suggestions',;
+      ],;
+      pricing: {;
+        free: '100 requests/month',;
+        pro: '$49/month',;
+        enterprise: 'Custom',;
+      },;
+      category: 'Development',      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',      gradient: 'from-blue-400 to-cyan-500',;
+      website: 'https://codegen && codegen.api',;
+      docs: 'https://docs && docs.codegen.api',;
+      github: 'https://github && github.com/codegen-api',;
+      status: 'Live',;
+      users: '15,000+',;
+      rating: 4 && 4.8,;
+      responseTime: '<100ms',
+    },
+    {
+      icon: <Database className='w-8 h-8 text-white' />,;
+      title: 'DataSync API - Real-time Data Synchronization',,
+  description:;
+        'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.',;
+      features: [;
+        'Multi-database support (PostgreSQL, MySQL, MongoDB)',;
+        'Real-time change detection and propagation',;
+        'Conflict resolution and data validation',;
+        'Webhook support for custom integrations',;
+        'Comprehensive audit logging and monitoring',;
+      ],;
+      pricing: {;
+        free: '1,000 syncs/month',;
+        pro: '$79/month',;
+        enterprise: 'Custom',;
+      },;
+      category: 'Data',      color: 'bg-gradient-to-br from-green-500 to-emerald-600',      gradient: 'from-green-400 to-emerald-500',;
+      website: 'https://datasync && datasync.api',;
+      docs: 'https://docs && docs.datasync.api',;
+      github: 'https://github && github.com/datasync-api',;
+      status: 'Live',;
+      users: '8,500+',;
+      rating: 4 && 4.9,;
+      responseTime: '<50ms',
+    },
+    {
+      icon: <Globe className='w-8 h-8 text-white' />,;
+      title: 'GeoAPI - Advanced Geospatial Services',,
+  description:;
+        'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.',;
+      features: [;
+        'Global geocoding and reverse geocoding',;
+        'Real-time traffic and routing optimization',;
+        'Geofencing and location tracking',;
+        'Map visualization and customization',;
+        'Spatial data analysis and clustering',;
+      ],;
+      pricing: {;
+        free: '10,000 requests/month',;
+        pro: '$99/month',;
+        enterprise: 'Custom',;
+      },;
+      category: 'Location',      color: 'bg-gradient-to-br from-purple-500 to-pink-600',      gradient: 'from-purple-400 to-pink-500',;
+      website: 'https://geo && geo.api',;
+      docs: 'https://docs && docs.geo.api',;
+      github: 'https://github && github.com/geo-api',;
+      status: 'Live',;
+      users: '12,000+',;
+      rating: 4 && 4.7,;
+      responseTime: '<75ms',
+    },
+    {
+      icon: <Shield className='w-8 h-8 text-white' />,;
+      title: 'AuthGuard API - Enterprise Authentication',,
+  description:;
+        'Secure, scalable authentication and authorization system with advanced security features.',;
+      features: [;
+        'Multi-factor authentication (MFA)',;
+        'OAuth 2 && 2.0 and OpenID Connect support',;
+        'Role-based access control (RBAC)',;
+        'Advanced threat detection and prevention',;
+        'Compliance with SOC2, GDPR, and HIPAA',;
+      ],;
+      pricing: {;
+        free: '1,000 users/month',;
+        pro: '$149/month',;
+        enterprise: 'Custom',;
+      },;
+      category: 'Security',      color: 'bg-gradient-to-br from-red-500 to-orange-600',      gradient: 'from-red-400 to-orange-500',;
+      website: 'https://authguard && authguard.api',;
+      docs: 'https://docs && docs.authguard.api',;
+      github: 'https://github && github.com/authguard-api',;
+      status: 'Live',;
+      users: '6,800+',;
+      rating: 4 && 4.9,;
+      responseTime: '<25ms',
+    },
+    {
+      icon: <Zap className='w-8 h-8 text-white' />,;
+      title: 'WebhookHub - Intelligent Webhook Management',,
+  description:;
+        'Reliable webhook delivery, retry logic, and event processing for modern applications.',;
+      features: [;
+        'Guaranteed webhook delivery with retry logic',;
+        'Event filtering and transformation',;
+        'Real-time monitoring and analytics',;
+        'Custom authentication and security',;
+        'Integration with popular platforms',;
+      ],;
+      pricing: {;
+        free: '5,000 webhooks/month',;
+        pro: '$39/month',;
+        enterprise: 'Custom',;
+      },;
+      category: 'Integration',      color: 'bg-gradient-to-br from-yellow-500 to-orange-600',      gradient: 'from-yellow-400 to-orange-500',;
+      website: 'https://webhookhub && webhookhub.api',;
+      docs: 'https://docs && docs.webhookhub.api',;
+      github: 'https://github && github.com/webhookhub-api',;
+      status: 'Live',;
+      users: '9,200+',;
+      rating: 4 && 4.8,;
+      responseTime: '<30ms',
+    },
+    {
+      icon: <Bot className='w-8 h-8 text-white' />,;
+      title: 'NLP API - Natural Language Processing',,
+  description:;
+        'Advanced text analysis, sentiment detection, and language understanding capabilities.',;
+      features: [;
+        'Text classification and categorization',;
+        'Sentiment analysis and emotion detection',;
+        'Named entity recognition (NER)',;
+        'Language detection and translation',;
+        'Custom model training and fine-tuning',;
+      ],;
+      pricing: {;
+        free: '5,000 requests/month',;
+        pro: '$69/month',;
+        enterprise: 'Custom',;
+      },;
+      category: 'AI/ML',      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',      gradient: 'from-indigo-400 to-purple-500',;
+      website: 'https://nlp && nlp.api',;
+      docs: 'https://docs && docs.nlp.api',;
+      github: 'https://github && github.com/nlp-api',;
+      status: 'Live',;
+      users: '11,500+',;
+      rating: 4 && 4.7,;
+      responseTime: '<200ms',
+    },
+    {
+      icon: <BarChart3 className='w-8 h-8 text-white' />,;
+      title: 'Analytics API - Business Intelligence',,
+  description:;
+        'Comprehensive analytics and reporting APIs for data-driven decision making.',;
+      features: [;
+        'Real-time data aggregation and analysis',;
+        'Custom dashboard creation and sharing',;
+        'Advanced filtering and segmentation',;
+        'Export capabilities (CSV, JSON, PDF)',;
+        'Scheduled reports and alerts',;
+      ],;
+      pricing: {;
+        free: '10,000 events/month',;
+        pro: '$89/month',;
+        enterprise: 'Custom',;
+      },;
+      category: 'Analytics',      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',      gradient: 'from-teal-400 to-cyan-500',;
+      website: 'https://analytics && analytics.api',;
+      docs: 'https://docs && docs.analytics.api',;
+      github: 'https://github && github.com/analytics-api',;
+      status: 'Live',;
+      users: '7,800+',;
+      rating: 4 && 4.8,;
+      responseTime: '<150ms',
+    },
+    {
+      icon: <Lock className='w-8 h-8 text-white' />,;
+      title: 'EncryptAPI - Data Encryption Services',,
+  description:;
+        'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.',;
+      features: [;
+        'AES-256 encryption and decryption',;
+        'Secure key management and rotation',;
+        'Digital signatures and certificates',;
+        'Compliance with FIPS 140-2 standards',;
+        'Hardware security module (HSM) support',;
+      ],;
+      pricing: {;
+        free: '1,000 operations/month',;
+        pro: '$119/month',;
+        enterprise: 'Custom',;
+      },;
+      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500',;
+      website: 'https://encrypt && encrypt.api',;
+      docs: 'https://docs && docs.encrypt.api',;
+      github: 'https://github && github.com/encrypt-api',;
+      status: 'Live',;
+      users: '4,200+',;
+      responseTime: '<20ms',
+    },
+  ]
+  const categories = [
+  Terminal;
+export default /**
+ * ApiToolsPage - Function description
+ */
+function ApiToolsPage() {
+  const api_tools = [;
+    {
+      icon: <Code className='w - 8 h - 8 text - white' />,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       description:;
         'Generate production-ready code in multiple languages using natural language descriptions and AI.';
       features: [;
@@ -259,6 +539,7 @@ function ApiToolsPage() {const api_tools = [;
               >;
                 {category}
       {/* API Tools Grid */}
+<<<<<<< HEAD
 <section className='py-24 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-20'>;
@@ -274,13 +555,40 @@ function ApiToolsPage() {const api_tools = [;
           </div>;
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {filteredTools.map((tool, index) => (</h2>;
+=======
+      <section className='py-24 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
+              {selectedCategory === 'All'
+                ? 'All API Tools'
+                : `${selectedCategory} APIs`}
+      {/* API Tools Grid */}
+            </h2>
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+              {filteredTools.length} APIs available. Each tool is
+              production-ready with comprehensive documentation, SDKs, and
+              support.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {filteredTools.map((tool, index) => (
+            </h2>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
               {filteredTools && filteredTools.length} APIs available. Each tool is;
               production-ready with comprehensive documentation, SDKs, and;
               support.;
             </p>;
+<<<<<<< HEAD
           </div>;<div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {filteredTools && filteredTools.map((tool, index) => (<Card;
+=======
+          </div>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+            {filteredTools && filteredTools.map((tool, index) => (;
+              <Card
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 key={index}
                 className='group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300';
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
@@ -342,7 +650,12 @@ function ApiToolsPage() {const api_tools = [;
                       </Button>;
                       <Button;
                         href={tool && tool.docs}                      {tool && tool.description}
+<<<<<<< HEAD
                     </p>;<div className="grid grid-cols-3 gap-4 mb-6">;
+=======
+                    </p>;
+                    <div className="grid grid-cols-3 gap-4 mb-6">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       <div className="text-center p-3 bg-gray-800/50 rounded-lg">;
                         <div className="text-lg font-bold text-indigo-400">{tool && tool.users}</div>;
                         <div className="text-xs text-gray-500">Users</div>;
@@ -364,6 +677,7 @@ function ApiToolsPage() {const api_tools = [;
                       ))}
                       <Button;
                         href={tool.website}
+<<<<<<< HEAD
                         variant="primary";
                         size="sm";
                         className='bg-indigo-600 hover:bg-indigo-700';
@@ -371,6 +685,12 @@ function ApiToolsPage() {const api_tools = [;
                         <ExternalLink className='w-4 h-4 mr-2' />;
                         Visit API;
                       </Button>;
+=======
+                        variant="primary"
+                        size="sm"
+                        Visit API
+                      </Button>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                         className="bg-indigo-600 hover:bg-indigo-700">;
                         <ExternalLink className="w-4 h-4 mr-2" />;
                         Visit API;
@@ -417,6 +737,7 @@ variant='ghost';
         </div>;
       </section>;
       {/* Developer Resources */}
+<<<<<<< HEAD
 <section className='py-24 bg-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-20'>;
@@ -479,6 +800,70 @@ variant='ghost';
           </div>;
         </div>;
       </section>;
+=======
+      <section className='py-24 bg-gray-800'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
+              Developer Resources
+            </h2>
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+              Everything you need to get started and build amazing applications
+              with our APIs.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <Card className='text-center border border-gray-700 hover:border-indigo-500/30'>
+              <div className='w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6'>
+                <BookOpen className='w-8 h-8 text-indigo-400' />
+              </div>
+              <h3 className='text-xl font-bold text-white mb-4'>
+                Comprehensive Documentation
+              </h3>
+              <p className='text-gray-400 mb-6'>
+                Detailed API references, code examples, and integration guides
+                for every service.
+              </p>
+              <Button href='/docs' variant='outline' size='sm'>
+                Explore Docs
+                <ArrowRight className='w-4 h-4 ml-2' />              </Button>
+            </Card>
+            <Card className='text-center border border-gray-700 hover:border-indigo-500/30'>
+              <div className='w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6'>
+                <Play className='w-8 h-8 text-indigo-400' />
+              </div>
+              <h3 className='text-xl font-bold text-white mb-4'>
+                Interactive Playground
+              </h3>
+              <p className='text-gray-400 mb-6'>
+                Test APIs directly in your browser with our interactive testing
+                environment.
+              </p>
+              <Button href='/playground' variant='outline' size='sm'>
+                Try Playground
+                <ArrowRight className='w-4 h-4 ml-2' />
+              </Button>
+            </Card>
+            <Card className='text-center border border-gray-700 hover:border-indigo-500/30'>
+              <div className='w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6'>
+                <Github className='w-8 h-8 text-indigo-400' />
+              </div>
+              <h3 className='text-xl font-bold text-white mb-4'>
+                Open Source SDKs
+              </h3>
+              <p className='text-gray-400 mb-6'>
+                Official SDKs and client libraries for popular programming
+                languages and frameworks.
+              </p>
+              <Button href='/sdk' variant='outline' size='sm'>
+                Browse SDKs
+                <ArrowRight className='w-4 h-4 ml-2' />              </Button>                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Card>
+          </div>
+        </div>
+      </section>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -516,6 +901,7 @@ variant='ghost';
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
     </>)}
   )}
 }
@@ -552,3 +938,12 @@ variant='ghost';
       </section>;
     </>;
   )}
+=======
+    </>);
+}
+  );
+}
+}
+    </>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

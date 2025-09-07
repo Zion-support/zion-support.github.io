@@ -924,5 +924,9 @@ if (require.main === module) {}
   }, 60000)};
 ;
 module.exports = PM2SyncMonitor;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 module.exports = PM2SyncMonitor;

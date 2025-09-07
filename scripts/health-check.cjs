@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -283,3 +284,19 @@ if (require.main === module) {
 }
 
 module.exports = { main, checkPackageJson, checkDependencies, checkBuildOutput };
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+console.log('� Running Health Check...')
+  "status"
+      "status"
+      "status"
+    execSync('npm run build', { "stdio"})
+    execSync('npm run lint', { "stdio"})
+    execSync('npm run type-check', { "stdio"})
+<<<<<<< HEAD
+console.log('� Overall "status")
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

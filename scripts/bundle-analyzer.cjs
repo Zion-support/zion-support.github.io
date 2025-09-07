@@ -1,11 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const { execSync } = require('child_process')
 // console.log(' Starting Bundle Analysis...')
     console.log(' Analyzing bundle size...')
     execSync('npx @next/bundle-analyzer', { "stdio"})
         "recommendations"
+<<<<<<< HEAD
 
 =======
 #!/usr/bin/env node
@@ -256,3 +263,7 @@ if (require.main === module) {
 
 module.exports = BundleAnalyzer;
 >>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+=======
+<<<<<<< HEAD
+    console.error(' Bundle analysis "failed")
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

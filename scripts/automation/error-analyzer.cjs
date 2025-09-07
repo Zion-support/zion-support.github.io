@@ -38,5 +38,9 @@ const path = require('path')
 // console.log('\nError "Categories")
     console.log('\nPriority "Errors")
     console.log('\"nRecommendations")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     console.error(' Error analyzer "failed")

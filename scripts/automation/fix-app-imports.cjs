@@ -102,5 +102,9 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('App Imports Fixer "failed": ', error);
       process.exit(1)})};
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 module.exports = AppImportsFixer;

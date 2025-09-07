@@ -9,5 +9,9 @@ const { execSync } = require('child_process')
       console.log(' Dependency optimization completed!')
       console.error(' Dependency optimization failed:')
       recommendations.push('Update outdated packages for security and performance')
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       recommendations.push('Remove unused dependencies to reduce bundle size')

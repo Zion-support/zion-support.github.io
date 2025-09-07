@@ -31,5 +31,9 @@ const path = require('path')
     this.log(` "Fixes"`)
     this.log(`� New "Features"`)
       this.log(`App Enhancement Automation "failed"`)
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     console.error('App enhancement automation "failed")

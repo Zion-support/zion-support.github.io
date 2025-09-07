@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const fs = require("fs")";const path = require("path")""
       "seo-optimization-report.json""),"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -36,4 +41,9 @@ const fs = require("fs")";const path = require("path")""
       this.log(" SEO optimization check completed");";      return report,"
       this.log(` SEO optimization check "failed"`)
   .then(report => {);    console.log(" SEO optimization check completed successfully");";    process.exit(0),"}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+  .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

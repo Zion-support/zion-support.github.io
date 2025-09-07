@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   width?: number;
   height?: number;
@@ -37,12 +38,28 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   priority = false,
   quality = 75,
 }) => {
+=======
+width?: number;
+  height?: number;
+  class_name?: string;
+  priority?: boolean;
+  quality?: number;
+}
+const OptimizedImage: React.FC < OptimizedImageProps> = ({
+  src;
+  alt;
+  width = 800;
+  height = 600;
+=======
+>>>>>>> 
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   return (
     <Image
       src={src}
       alt={alt}
       width={width}
       height={height}
+<<<<<<< HEAD
       className={className}
       priority={priority}
       quality={quality}
@@ -54,3 +71,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 export default OptimizedImage;
 
 
+=======
+ a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+=======
+>>>>>>>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

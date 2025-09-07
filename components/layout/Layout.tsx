@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import React, { ReactNode } from 'react';
@@ -111,3 +112,9 @@ export default function Layout({ children, title = "Zion Tech Group", descriptio
     </>
   );
 }
+=======
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

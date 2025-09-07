@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export const innovativeMicroSaasSolutions2025 = [;
   {pricing: {starter: {'Analytics tools','Social media platforms','Marketing tools';
@@ -354,11 +355,15 @@ export const innovativeMicroSaasSolutions2025 = [
   {
 
 
+=======
+export const innovativeMicroSaasSolutions2025 = [
+  {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     pricing: {
       starter: {
-        price: 49
-        period: 'month'
-        features: [
+        price: 49;
+    period: "period",
+    features: [
           'Up to 1,000 feedback items/month'
           'Basic sentiment analysis'
           'Email support'
@@ -603,7 +608,6 @@ export const innovativeMicroSaasSolutions2025 = [
   },;
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
   },;
-
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
     ];
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];

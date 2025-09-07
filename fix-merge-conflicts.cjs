@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 const fs = require('fs');
@@ -24,12 +25,38 @@ function fixMergeConflicts(filePath) {
     // Write the cleaned content back
     fs.writeFileSync(filePath, content, 'utf8');
     return true;
+=======
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    // Remove all merge conflict markers and keep the first version
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*? [^\n]+/g, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    // Clean up any remaining conflict markers
+    content = content.replace(/<<<<<<< HEAD/g, '');
+    content = content.replace(/=======/g, '');
+    content = content.replace(/>>>>>>> [^\n]+/g, '');
+    // Clean up multiple empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    // Clean up any orphaned text
+    content = content.replace(/^\s*origin\/[^\n]+\n/gm, '');
+    content = content.replace(/^\s*cursor\/[^\n]+\n/gm, '');
+    content = content.replace(/^\s*main\n/gm, '');
+>>>>>>> 
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
 
     return false;
   }
 }
+<<<<<<< HEAD
 
   let fixedCount = 0;
 
@@ -67,19 +94,33 @@ function fixMergeConflicts(filePath) {
 
         }
 
+=======
+function findAndFixFiles(dir) {
+  const files = fs.readdirSync(dir);
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
     if (stat.isDirectory()) {
+<<<<<<< HEAD
       fixedCount += findAndFixConflicts(filePath);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
       if (fixMergeConflicts(filePath)) {
         fixedCount++;
 
+=======
+      if (!['node_modules', '.git', '.next', 'backup', 'pages_backup_conflict'].includes(file)) {
+        findAndFixFiles(filePath);
+      }
+    } else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+      const content = fs.readFileSync(filePath, 'utf8');
+      if (content.includes('<<<<<<< HEAD')) {
+        fixMergeConflicts(filePath);
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       }
     }
   }
+<<<<<<< HEAD
 
   return files;
 }
@@ -129,3 +170,11 @@ for (const dir of otherDirs) {
 
 }
 
+=======
+}
+console.log('Fixing merge conflicts...');
+findAndFixFiles('./pages');
+findAndFixFiles('./components');
+findAndFixFiles('./src');
+console.log('Done!');
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

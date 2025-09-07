@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { getVendorBySlug, register_vendor } from '../../../utils / vendor - store';
 export default /**;
  * handler - Function description;
@@ -40,6 +41,11 @@ export default function handler() {if (req.method !== 'POST')if (req.method !== 
     return res.status(405).json({ error: 'Method not allowed' });
 
 
+=======
+  if (req.method !== 'POST')
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const {
     slug
     name
@@ -59,19 +65,22 @@ export default function handler() {if (req.method !== 'POST')if (req.method !== 
     services_offered,
     team_size,
     about,
-
       slug,
       name,
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [],
       teamSize: Number(teamSize || 0),
+<<<<<<< HEAD
 
       about,  try {
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {};
   if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
   if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
   try {
+<<<<<<< HEAD
 
     const vendor = registerVendor({
       slug;
@@ -80,19 +89,21 @@ export default function handler() {if (req.method !== 'POST')if (req.method !== 
     const vendor = registerVendor({
       slug;
       name;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
       teamSize: Number(teamSize || 0);
       about;
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
       caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
     res && res.status(201).json({ vendor })
-
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }
     });
     res && res.status(201).json({ vendor });
   } catch (e: any) {
+<<<<<<< HEAD
 
     res && res.status(500).json({ error: e && e.message });
   }    res && res.status(500).json({ error: e && e.message })
@@ -101,6 +112,10 @@ export default function handler() {if (req.method !== 'POST')if (req.method !== 
 
     verification_docs,
     case_studies
+=======
+    verification_docs,
+    case_studies,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   } = req.body || {}
   if (return res.status (400).json ({ error: 'Missing required fields' })) {$2;
 }
@@ -135,6 +150,7 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
     res.status (201).json ({ vendor });
   } catch (e: any) {
     res.status (500).json ({ error: e.message });
+<<<<<<< HEAD
   }    res.status (500).json ({ error: e.message });
   }
 }
@@ -145,3 +161,6 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
 }
   }
 }
+=======
+  }    res.status (500).json ({ error: e.message });
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

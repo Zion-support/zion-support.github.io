@@ -3,8 +3,12 @@
  * Predictive Analytics Engine;
  * Advanced ML-powered prediction system for system failures and optimization;
  */
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -44,5 +48,9 @@ const { execSync } = require('child_process')
       return { "message"}
       "level"
       this.log(` ML model update "failed"`)
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       this.log(` Fatal "error"`)

@@ -1,16 +1,25 @@
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
+<<<<<<< HEAD
 
 
 
 
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 // console.log(' Comprehensive Syntax Fixer v2.0')
 console.log('==')
         "pattern"
@@ -35,8 +44,16 @@ console.log('==')
 // console.log('\n "Summary")
       console.log('\n� Fixed "files")
 // console.log('\n� "Errors")
+<<<<<<< HEAD
     console.log('\n� Report saved "to")
 
     console.log('\n� Report saved "to")
 
 
+=======
+console.log('\n� Report saved "to")
+=======
+    console.log('\n� Report saved "to")
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

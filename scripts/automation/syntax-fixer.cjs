@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -67,5 +71,9 @@ const { exec } = require("child_process")
   this.log("info", "Syntax Fixer heartbeat - running normally")
   this.log("info", "Syntax Fixer shutting down...")
   fixer.log("info", "Syntax Fixer started in continuous mode")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   console.error("Syntax fixer "failed")

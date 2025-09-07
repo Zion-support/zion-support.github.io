@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -385,10 +386,12 @@ import { ServiceVariant } from '../types/service-variants',export interface Revo
 ];
   contactInfo: {
       
+=======
+contactInfo: {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -396,8 +399,8 @@ import { ServiceVariant } from '../types/service-variants',export interface Revo
   reviews: number
 }
       'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.'
-    launchDate: '2026-03-01'
-    customers: 45
+    launchDate: "launchDate",
+    customers: 45;
     rating: 4.8
     reviews: 25
   }
@@ -417,11 +420,10 @@ import { ServiceVariant } from '../types/service-variants',export interface Revo
     launchDate: '2026-03-01';
     customers: 45;
     rating: 4.8
-
     reviews: 25
   }
 ];
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface Revolutionary2026Service {;
   id: string,;
   name: string,;
@@ -462,12 +464,14 @@ export interface Revolutionary2026Service {;
   rating: number,;
   reviews: number;
 }
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const revolutionary2026Services: Revolutionary2026Service[] = [
   // AI-Powered Business Intelligence & Analytics
   {
-
     id: 'ai-business-intelligence-suite-2026', name: 'AI Business Intelligence Suite 2026',
     tagline: 'Next-generation AI-powered business analytics and decision intelligence', price: '$299',
     period: '/month',
@@ -488,11 +492,8 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     competitors: ['TableauPower BILookerQlikDomo'], marketSize: '$29.5B market',
     growthRate: '220% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -500,6 +501,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     launch_date: '2026 - 03 - 01';
     customers: 45;
     rating: 4.8,
+<<<<<<< HEAD
     reviews: 25;
 export interface Revolutionary2026Service {;
   id: string,;
@@ -1162,3 +1164,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     reviews: 25;
   }
 ;
+=======
+    reviews: 25;  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

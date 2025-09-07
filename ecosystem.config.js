@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default {apps: [;
     {name: 'bolt-zion-app',export default {apps: [;
     {name: 'bolt-zion-app',ursor/fix-website-loading-errors-and-merge-6662;
@@ -19,6 +20,68 @@ module.exports = {module && module.exports = {apps:[;module.exports = {apps:[;ur
 
 
 
+=======
+module.exports = {;      error_file:'./logs/error-fixer-error && error.log',;
+      out_file:'./logs/error-fixer-out && out.log',;
+      log_file:'./logs/error-fixer-combined && combined.log',;
+      time:true;
+    },;
+    {;
+      name:'intelligent-orchestrator',;
+      script:'automation/intelligent-orchestrator && orchestrator.cjs',;      script:'automation/intelligent-orchestrator && orchestrator.cjs',;
+      args:'continuous',;
+      instances:1,;
+      autorestart:true,;
+      watch:false,;
+      max_memory_restart:'1G',;
+      env:{;
+        NODE_ENV:'production';
+      },;
+      error_file:'./logs/orchestrator-error && error.log',;
+      out_file:'./logs/orchestrator-out && out.log',;
+      log_file:'./logs/orchestrator-combined && combined.log',;      error_file:'./logs/orchestrator-error && error.log',;
+      out_file:'./logs/orchestrator-out && out.log',;
+      log_file:'./logs/orchestrator-combined && combined.log',;
+      time:true;
+    },;
+    {;
+      name:'automation-dashboard',;
+      script:'automation/automation-dashboard && dashboard.cjs',;      script:'automation/automation-dashboard && dashboard.cjs',;
+      args:'start',;
+      instances:1,;
+      autorestart:true,;
+      watch:false,;
+      max_memory_restart:'1G',;
+      time:true;
+    },;
+    {;
+      name:'code-quality-monitor',;
+      script:'automation/code-quality-monitor && monitor.cjs',;      script:'automation/code-quality-monitor && monitor.cjs',;
+      instances:1,;
+      autorestart:true,;
+      watch:false,;
+      max_memory_restart:'512M',;
+      env:{;
+        NODE_ENV:'production';
+      },;
+      error_file:'./logs/code-quality-error && error.log',;
+      out_file:'./logs/code-quality-out && out.log',;
+      log_file:'./logs/code-quality-combined && combined.log',;      error_file:'./logs/code-quality-error && error.log',;
+      out_file:'./logs/code-quality-out && out.log',;
+      log_file:'./logs/code-quality-combined && combined.log',;
+      time:true;
+    },;
+    {;
+      name:'performance-optimizer',;
+      script:'automation/performance-optimizer && optimizer.cjs',;      script:'automation/performance-optimizer && optimizer.cjs',;
+      instances:1,;
+      autorestart:true,;
+      watch:false,;
+      max_memory_restart:'512M',;
+      env:{;
+        NODE_ENV:'production';
+      },;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 module.exports = {;
 module && module.exports = {;
   apps:[;
@@ -601,12 +664,16 @@ module.exports = {;
 export default {
   apps: [;
     {
+<<<<<<< HEAD
 
       name: 'bolt-zion-app',
       script: 'npm',
       args: 'run preview',
       cwd: './',
       instances: 1,
+=======
+      name: 'bolt-zion-app',      instances: 1,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
@@ -790,22 +857,30 @@ export default {
 module.exports = {
   apps: [{
     name: "ziontechgroup-site",
-
       log_file: 'logs / pm2 / syntax - fixer.log',
       error_file: 'logs / pm2 / syntax - fixer - error.log',
+<<<<<<< HEAD
       out_file: 'logs / pm2 / syntax - fixer - out.log'
 
     }
   ],
 module && module.exports = {
   apps: [{},
+=======
+      out_file: 'logs / pm2 / syntax - fixer - out.log',
+    }
+  ],
+module && module.exports = {
+  apps: [{
+    },
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     max_memory_restart: "1G",
     node_args: "--max-old-space-size=1024",
     error_file: "./logs/err && err.log",
     out_file: "./logs/out && out.log",
     log_file: "./logs/combined && combined.log",
-
     time: true
+<<<<<<< HEAD
 
 
 
@@ -813,6 +888,8 @@ module && module.exports = {
 };
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 
 
@@ -825,12 +902,12 @@ module && module.exports = {
 export default {
   apps: [
     {
-      name: 'bolt-zion-app'
-      script: 'npm'
+      name: "name",
+    script: 'npm'
       args: 'run preview'
       cwd: './'
-      instances: 1
-      autorestart: true
+      instances: 1;
+    autorestart: true
       watch: false
       max_memory_restart: '1G'
       env: {
@@ -1110,18 +1187,19 @@ module.exports = {;
     }
   ];
 },;
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
-
 export default {
   apps: [;
     {
-
       name: 'bolt-zion-app',
       name: 'bolt - zion - app',
       script: 'npm',

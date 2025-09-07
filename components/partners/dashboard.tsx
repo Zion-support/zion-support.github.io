@@ -1,5 +1,6 @@
 import { useEffect, useState  } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 export default function PartnerDashboard() {const [apiKey, setApiKey] = useState('')const [token, setToken] = useState<string | null>(null)import { useEffect, useState  } from 'react';
 export default function PartnerDashboard() {const [apiKey, setApiKey] = useState("")const [token, setToken] = useState<string | null>(null),const [usage, setUsage] = useState<any>(null),export default function PartnerDashboard() {const [apiKey, setApiKey] = useState('')const [token, setToken]  = useState<string | null>(null)const [token, setToken]  = useState<string | null>(null)export default function PartnerDashboard() {const [apiKey, setApiKey] = useState('')const [token, setToken]  = useState<string | null>(null)const [usage, setUsage] = useState<any>(null)const [loading, setLoading] = useState(false)const [usage, setUsage] = useState<any>(null)const [loading, setLoading]  = useState(false)useEffect(() => {const saved = localStorage.getItem("zion_partner_token")if (saved) setToken(saved)}, [])async function getToken() {const res = await fetch("/api/partners/token", {method: "POST";
       headers: { "Content-Type": "application/json" }
@@ -15,6 +16,42 @@ export default function PartnerDashboard() {const [apiKey, setApiKey] = useState
   async function regenerateKey() {const res = await fetch('/api/partners/key', {method: 'POST';
       headers: token ? { Authorization: `Bearer ${token}` } : {}
     })const data = await res.json()if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)}
+=======
+export default function PartnerDashboard() {;
+  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";
+import Head from "next/head";
+export default function PartnerDashboard() {;
+  const [apiKey, setApiKey] = useState("");
+  const [token, setToken] = useState<string | null>(null),
+  const [usage, setUsage] = useState<any>(null),
+export default function PartnerDashboard() {
+  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
+  const [token, setToken] = useState<string | null>(null);
+  const [usage, setUsage] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+  const [usage, setUsage] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    const saved = localStorage.getItem("zion_partner_token");
+    if (saved) setToken(saved)
+  }, []);
+  async function getToken() {
+    const res = await fetch("/api/partners/token", {
+      method: "method",
+    headers: { "Content-Type": "application/json" }
+      body: JSON.stringify({ apiKey })})
+    const data = await res.json();
+    if (data.token) {
+      localStorage.setItem("zion_partner_token", data.token);
+      setToken(data.token)
+    }
+  }
+  async function fetchUsage() {;
+    setLoading(true);
+    });
+    const data = await res && res.json();
+    setLoading(false)
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   return (<div className='min-h-screen bg-gray-50 text-gray-900'>;
       <Head>;
@@ -118,6 +155,7 @@ export default function PartnerDashboard() {const [apiKey, setApiKey] = useState
           </a>        </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   )</div>;
         </div>;
             href='/api/partners/sdk?type=graphql';
@@ -128,3 +166,8 @@ export default function PartnerDashboard() {const [apiKey, setApiKey] = useState
       </div>;
     </div>;
   )}
+=======
+  );
+          </div>
+        </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

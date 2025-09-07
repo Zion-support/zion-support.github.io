@@ -5,12 +5,15 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
+<<<<<<< HEAD
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   images: {
     domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
@@ -18,14 +21,29 @@ const nextConfig = {
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+<<<<<<< HEAD
 =======
 >>>>>>> 79d75ebd63c0929536b7d47cf5dc16d1ef769356
     unoptimized: true
+=======
+    domains: ['images.unsplash.com', 'via.placeholder.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+  },
+  experimental: {
+    optimizeCss: false,
+    optimizePackageImports: [],
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
   },
   webpack: (config, { dev, isServer }) => {
+<<<<<<< HEAD
     // Exclude problematic directories from webpack compilation
     config.watchOptions = {
       ...config.watchOptions,
@@ -82,6 +100,25 @@ const nextConfig = {
     maxInactiveAge: 25 * 1000,
     pagesBufferLength: 2
   }
+=======
+    // Exclude node_modules from processing
+    config.watchOptions = {
+      ignored: /node_modules/,
+    };
+    
+    if (!dev && !isServer) {
+      config.optimization.splitChunks.cacheGroups = {
+        ...config.optimization.splitChunks.cacheGroups,
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      };
+    }
+    return config;
+  },
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 };
 
 export default nextConfig;

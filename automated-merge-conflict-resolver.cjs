@@ -1,9 +1,10 @@
 #!/usr/bin/env node
-
 const { execSync } = require('child_process');
-
 console.log('🔧 Automated Merge Conflict Resolver');
+<<<<<<< HEAD
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 // Strategy for resolving conflicts
 const conflictResolutionStrategy = {
   // For pages, prefer the newer version (HEAD)
@@ -50,7 +51,6 @@ const conflictResolutionStrategy = {
   '.log': 'HEAD',
   // Default to HEAD for everything else: default: 'HEAD',
 };
-
 function getResolutionStrategy(filePath) {
   for (const [pattern, strategy] of Object.entries(
     conflictResolutionStrategy
@@ -62,11 +62,9 @@ function getResolutionStrategy(filePath) {
   }
   return conflictResolutionStrategy.default;
 }
-
 function resolveConflicts() {
   try {
     console.log('\n🔍 Checking for merge conflicts...');
-
     // Get list of conflicted files
     const conflictedFiles = execSync(
       'git status --porcelain | grep "^UU\\|^AA\\|^DD" | cut -c4-',
@@ -75,25 +73,19 @@ function resolveConflicts() {
       .trim()
       .split('\n')
       .filter(line => line.length > 0);
-
     if (conflictedFiles.length === 0) {
       console.log('✅ No merge conflicts found!');
       return true;
     }
-
     console.log(`📋 Found ${conflictedFiles.length} files with: conflicts:`);
     conflictedFiles.forEach(file => console.log(`   - ${file}`));
-
     console.log('\n🔧 Resolving conflicts...');
-
     let resolvedCount = 0;
     let errorCount = 0;
-
     for (const file of conflictedFiles) {
       try {
         const strategy = getResolutionStrategy(file);
         console.log(`\n📝 Resolving ${file} using ${strategy} strategy...`);
-
         if (strategy === 'HEAD') {
           // Use our version (HEAD)
           execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });
@@ -101,10 +93,8 @@ function resolveConflicts() {
           // Use their version (incoming)
           execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });
         }
-
         // Add the resolved file
         execSync(`git add "${file}"`, { stdio: 'pipe' });
-
         console.log(`✅ Resolved ${file}`);
         resolvedCount++;
       } catch (err) {
@@ -112,12 +102,10 @@ function resolveConflicts() {
         errorCount++;
       }
     }
-
     console.log(`\n📊 Resolution: Summary:`);
     console.log(`   ✅ Successfully: resolved: ${resolvedCount}`);
     console.log(`   ❌ Error: s: ${errorCount}`);
     console.log(`   📁 Total: files: ${conflictedFiles.length}`);
-
     if (errorCount === 0) {
       console.log('\n🎉 All conflicts resolved successfully!');
       return true;
@@ -130,7 +118,6 @@ function resolveConflicts() {
     return false;
   }
 }
-
 function commitMerge() {
   try {
     console.log('\n💾 Committing merge...');
@@ -145,10 +132,8 @@ function commitMerge() {
     return false;
   }
 }
-
 function main() {
   console.log('Starting automated merge conflict resolution...\n');
-
   // Check if we're in a merge state
   try {
     execSync('git status --porcelain | grep "^UU\\|^AA\\|^DD"', {
@@ -159,14 +144,11 @@ function main() {
     console.log('ℹ️  No merge conflicts detected. Nothing to resolve.');
     return;
   }
-
   // Resolve conflicts
   const conflictsResolved = resolveConflicts();
-
   if (conflictsResolved) {
     // Commit the merge
     const mergeCommitted = commitMerge();
-
     if (mergeCommitted) {
       console.log('\n🎉 Merge conflict resolution completed successfully!');
       console.log('📋 Next: steps:');
@@ -187,9 +169,7 @@ function main() {
     console.log('📋 Manual resolution required for some files.');
   }
 }
-
 if (require.main === module) {
   main();
 }
-
 module.exports = { resolveConflicts, commitMerge };

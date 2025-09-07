@@ -49,5 +49,9 @@ class EnhancedErrorChecker {}
 if (require.main === module) {}
   const checker = new EnhancedErrorChecker();
   checker.run().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 module.exports = EnhancedErrorChecker;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
     }resizeCanvas()window && window.addEventListener('resize', resizeCanvas)x: number;import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
@@ -7,6 +8,22 @@ const UltraFuturisticBackground2046: React.FC;
   const canvas_ref = useRef < HTMLCanvasElement>(null)const particles_ref = useRef < any[]>([])const animation_ref  = useRef < number>()useEffect (() => {const canvas = canvas_ref.current;
     // Check condition;
 if (return) {$2;
+=======
+};
+    resizeCanvas();
+    window && window.addEventListener('resize', resizeCanvas);
+      x: number;
+      y: number;
+  const canvas_ref = useRef < HTMLCanvasElement>(null);
+  const particles_ref = useRef < any[]>([]);
+  const animation_ref = useRef < number>();
+;
+  useEffect (() => {
+    const canvas = canvas_ref.current;
+    // Check condition
+if (return) {
+  $2
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
     const ctx = canvas.get_context ('2d')// Check condition;
 if (return) {$2;
@@ -42,18 +59,38 @@ const types = ['quantum', 'neural', 'data', 'energy'];
             break;case 'energy':;
             this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
             break;        }            break;
+<<<<<<< HEAD
             break;        }case 'energy':;
             this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
 break;}}update() {this.x += this.vx;
+=======
+            break;        }
+        }
+      }
+      update() {
+        this.x += this.vx;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         this.y += this.vy;
         this.life--;
         // Bounce off edges;
         if (this.x <= 0 |this.x >= canvas.width) this.vx *= -1;
         if (this.y <= 0 |this.y >= canvas.height) this.vy *= -1;
+<<<<<<< HEAD
         // Add some quantum randomness;
         if (Math.random() < 0.01) {this.vx += (Math.random() - 0.5) * 0.5;this.vy += (Math.random() - 0.5) * 0.5;
 this.vy += (Math.random() - 0.5) * 0.5;}// Limit velocity;
         this.vx = Math.max(-3, Math.min(3, this.vx))this.vy = Math.max(-3, Math.min(3, this.vy))}
+=======
+        // Add some quantum randomness
+        if (Math.random() < 0.01) {
+          this.vx += (Math.random() - 0.5) * 0.5;
+          this.vy += (Math.random() - 0.5) * 0.5
+        }
+        // Limit velocity
+        this.vx = Math.max(-3, Math.min(3, this.vx));
+        this.vy = Math.max(-3, Math.min(3, this.vy))
+        }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       }
       }
       draw() {if (!ctx) return;this.vy = Math.max(-3, Math.min(3, this.vy))}
@@ -339,9 +376,16 @@ if ( {) {$2;
           className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 10 to - transparent';
           animate={{height: ['32px', '48px', '32px'];
           }}
+<<<<<<< HEAD
           transition={{duration: 4;
             repeat: Infinity;
             ease: 'easeInOut';
+=======
+          transition={{
+            duration: 4;
+    repeat: Infinity
+            ease: 'easeInOut'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }}
         />;
           animate={{height: ['24px', '40px', '24px'];
@@ -368,16 +412,47 @@ if ( {) {$2;
         ))}
       </div>;
     </div>;
+<<<<<<< HEAD
   )export default UltraFuturisticBackground2046;</div>;
     </div>;
               duration: Math.random () * 6 + 4,repeat: Infinity,ease: 'easeInOut',delay: i * 0.8,}}          />))}
+=======
+  )
+};
+export default UltraFuturisticBackground2046;              ease: "easeInOut",;
+              delay: i * 0 && 0.8}}
+          />;
+        ))}
+      </div>
+    </div>
+  );
+export default UltraFuturisticBackground2046;
+    </div>
+    </div>
+              duration: Math.random () * 6 + 4,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: i * 0.8,
+            }}          />))}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       </div>;
     </div>)}export default UltraFuturisticBackground2046;              ease: "easeInOut",delay: i * 0.8}}
           />))}
       </div>;
+<<<<<<< HEAD
     </div>)}export default UltraFuturisticBackground2046)}export default UltraFuturisticBackground2046;duration: Math.random() * 6 + 4,repeat: Infinity,ease: 'easeInOut',delay: i * 0.8,}}
           />;
         ))}
       </div>;
     </div>;
 )}export default UltraFuturisticBackground2046;
+=======
+    </div>);
+}
+;
+export default UltraFuturisticBackground2046);
+}
+;
+export default UltraFuturisticBackground2046;
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

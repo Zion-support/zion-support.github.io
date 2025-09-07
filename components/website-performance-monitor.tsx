@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 } from 'lucide-react';import React, { useState } from 'react',import Head from 'next/head',import Card from '../components/ui/Card',import Button from '../components/ui/Button';
 import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock  } from 'lucide-react';
@@ -19,6 +20,30 @@ export default function WebsitePerformanceMonitorPage() {const [isAnalyzing, set
         '24/7 monitoring of your website performance with instant alerts and notifications.';
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600';
       gradient: 'from-blue-400 to-cyan-500';
+=======
+} from 'lucide-react';
+import {
+  Activity
+  Zap
+  TrendingUp
+  AlertTriangle
+  CheckCircle
+  ArrowRight
+  Monitor
+  Gauge
+  BarChart3
+  Clock;
+} from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
+export default function WebsitePerformanceMonitorPage() {
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResults, setAnalysisResults] = useState(null);
+  const features = [
+    {
+      icon: <Monitor className='w-8 h-8 text-white' />
+      description: "description",
+    color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      gradient: 'from-blue-400 to-cyan-500'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
     {icon: <Gauge className='w-8 h-8 text-white' />;
       title: 'Performance Metrics';
@@ -42,6 +67,7 @@ export default function WebsitePerformanceMonitorPage() {const [isAnalyzing, set
       gradient: 'from-purple-400 to-indigo-500';
     }
   ];
+<<<<<<< HEAD
   const metrics = [;
     {name: 'Core Web Vitals';
       description:;
@@ -51,6 +77,123 @@ export default function WebsitePerformanceMonitorPage() {const [isAnalyzing, set
         'Mobile-first performance testing and optimization recommendations.',icon: '📱',color: 'text-orange-400',},{name: 'SEO Impact',description:;
         'Performance metrics that directly affect your search engine rankings and visibility.',icon: '🔍',color: 'text-cyan-400',},{name: 'User Experience',description:;
         'Real user experience metrics and conversion impact analysis.',icon: '👥',color: 'text-pink-400',},];
+=======
+  const metrics = [
+    {
+      name: 'Core Web Vitals'
+      description:
+        'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.'
+      icon: '⚡'
+      color: 'text-blue-400'
+    }
+    {
+      name: 'Page Load Time'
+      description:
+        'Comprehensive analysis of page load performance across different devices and locations.'
+      icon: '🚀'
+      color: 'text-green-400'
+    }
+    {
+      name: 'Uptime Monitoring'
+      description:
+        '99.9% uptime monitoring with instant alerts for any downtime or performance issues.'
+      icon: '🔄'
+      color: 'text-purple-400'
+    }
+    {
+      name: 'Mobile Performance'
+      description:
+        'Mobile-first performance testing and optimization recommendations.'
+      icon: '📱'
+      color: 'text-orange-400'
+    }
+    {
+      name: 'SEO Impact'
+      description:
+        'Performance metrics that directly affect your search engine rankings and visibility.'
+      icon: '🔍'
+      color: 'text-cyan-400'
+    }
+    {
+      name: 'User Experience'
+      description:
+  ];
+  const pricing = [
+    {
+      name: 'Starter'
+      price: '$29'
+      period: '/month'
+      description: 'Perfect for small websites and blogs'
+      features: [
+        '5 websites monitored'
+        'Basic performance metrics'
+        'Daily monitoring'
+        'Email alerts'
+        'Basic reporting'
+        'Core Web Vitals tracking'
+      ]
+      popular: false
+    },    {        '5 websites monitoredBasic performance metricsDaily monitoringEmail alertsBasic reportingCore Web Vitals tracking'
+      ];
+      popular: false
+    }
+      name: 'Professional'
+      price: '$79'
+      period: '/month'
+      description: 'Ideal for growing businesses and e-commerce sites'
+      features: [
+        '25 websites monitored'
+        'Advanced performance metrics'
+        'Real-time monitoring'
+        'SMS & email alerts'
+        'Advanced reporting'
+        'Performance optimization tips'
+        'API access'
+        'Team collaboration'
+      ]
+      popular: true
+    },    {
+      name: 'Enterprise'
+      price: '$199'
+      period: '/month',        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration'
+      ];
+      popular: true
+export default function WebsitePerformanceMonitorPage() {;
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResults, setAnalysisResults] = useState(null)
+};
+    {;
+      name: 'Page Load Time',,
+  description: 'Comprehensive analysis of page load performance across different devices and locations.',;
+      icon: '🚀',;
+      color: 'text-green-400'
+};
+    {;
+      name: 'Uptime Monitoring',,
+  description: '99 && 99.9% uptime monitoring with instant alerts for any downtime or performance issues.',;
+      icon: '🔄',;
+      color: 'text-purple-400'
+};
+    {;
+      name: 'Mobile Performance',,
+  description: 'Mobile-first performance testing and optimization recommendations.',;
+      icon: '📱',;
+      color: 'text-orange-400'
+};
+    {;
+      name: 'SEO Impact',,
+  description: 'Performance metrics that directly affect your search engine rankings and visibility.',;
+      icon: '🔍',;
+      color: 'text-cyan-400'
+};
+    {;
+      name: 'User Experience',,
+  description: 'Real user experience metrics and conversion impact analysis.',;
+      icon: '👥',;
+      color: 'text-pink-400';
+    }
+  ];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const pricing = [;
     {name: 'Starter';
       price: '$29';
@@ -79,6 +222,7 @@ export default function WebsitePerformanceMonitorPage() {const [isAnalyzing, set
     }{name: 'SEO Impact',description: 'Performance metrics that directly affect your search engine rankings and visibility.',icon: '🔍',color: 'text-cyan-400';
     }{name: 'User Experience',description: 'Real user experience metrics and conversion impact analysis.',icon: '👥',color: 'text-pink-400';
     }
+<<<<<<< HEAD
   ];const pricing = [;
     {name: 'Starter',price: '$29',period: '/month',description: 'Perfect for small websites and blogs',features: [;
         '5 websites monitored','Basic performance metrics','Daily monitoring','Email alerts','Basic reporting','Core Web Vitals tracking',],popular: false,},    {        '5 websites monitoredBasic performance metricsDaily monitoringEmail alertsBasic reportingCore Web Vitals tracking';
@@ -119,6 +263,37 @@ export default function WebsitePerformanceMonitorPage() {const [isAnalyzing, set
         fid: '45ms';
         cls: '0.08';
         loadTime: '1.8s';
+=======
+      description: 'For large organizations with critical performance requirements',
+      features: [
+        'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 supportCustom integrationsWhite-label reportingSLA guaranteesOn-premise options'
+      ];
+      popular: false;
+    }
+  const handleAnalyzeWebsite = async () => {
+    setIsAnalyzing(true);
+    // Simulate website analysis
+    setTimeout(() => {
+      setAnalysisResults({
+        url: 'https://example.com'
+        overallScore: 87;
+    lcp: '2.1s'
+        fid: '45ms'
+        cls: '0.08'
+        loadTime: '1.8s'
+        recommendations: [
+  const handleAnalyzeWebsite = async () => {;
+    setIsAnalyzing(true);
+    // Simulate website analysis;
+    setTimeout(() => {;
+      setAnalysisResults({;
+        url: 'https://example && example.com',;
+        overallScore: 87,;
+        lcp: '2 && 2.1s',;
+        fid: '45ms',;
+        cls: '0 && 0.08',;
+        loadTime: '1 && 1.8s',;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         recommendations: [;
   const handleAnalyzeWebsite = async () => {setIsAnalyzing(true)// Simulate website analysis;
     setTimeout(() => {setAnalysisResults({url: 'https://example && example.com',overallScore: 87,lcp: '2 && 2.1s',fid: '45ms',cls: '0 && 0.08',loadTime: '1 && 1.8s',recommendations: [;
@@ -296,6 +471,7 @@ href='#pricing';
               </Card>;
             ))}
       {/* Metrics Section */}
+<<<<<<< HEAD
 <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -309,6 +485,22 @@ href='#pricing';
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {metrics.map((metric, index) => (<Card;
+=======
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+              Comprehensive Performance Metrics
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Track all the metrics that matter for your website's performance
+              and user experience.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {metrics.map((metric, index) => (
+              <Card
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     </p>;
                   </div>;
                 </div>;
@@ -365,6 +557,7 @@ href='#pricing';
           </div>;
               <Card;
                 key={index}
+<<<<<<< HEAD
                 className="card-hover border-gradient-blue text-center";
                 </p>              </Card>;
                 </p>;
@@ -389,6 +582,24 @@ href='#pricing';
               </p>;
             </div>;
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;<section className='section-padding bg-gradient-cursor-accent'>;
+=======
+                className="card-hover border-gradient-blue text-center"
+                </p>              </Card>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+            ))}
+      {/* Demo Analysis Section */}
+      {analysisResults && (
+          </div>;
+        </div>;
+      </section>;
+      {/* Demo Analysis Section */}
+      {analysisResults && (;
+        <section className='section-padding bg-gradient-cursor-accent'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           <div className='container-cursor'>;
             <div className='text-center mb-12'>;
               <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
@@ -485,6 +696,7 @@ href='#pricing';
               </Card>;
             </div>;
             {/* Recommendations */}
+<<<<<<< HEAD
 <Card className='border-gradient-blue mt-8'>;
               <h3 className='text-2xl font-bold mb-6 text-white'>;
                 Optimization Recommendations;
@@ -494,6 +706,18 @@ href='#pricing';
                     <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />;
                     <span className='text-gray-300'>{rec}</span>                  </div>;
                   </div>;
+=======
+            <Card className='border-gradient-blue mt-8'>
+              <h3 className='text-2xl font-bold mb-6 text-white'>
+                Optimization Recommendations
+              </h3>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                {analysisResults.recommendations.map((rec, index) => (
+                  <div key={index} className='flex items-start space-x-3'>
+                    <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
+                    <span className='text-gray-300'>{rec}</span>                  </div>
+                  </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             <Card className='border-gradient-blue mt-8'>;
               <h3 className='text-2xl font-bold mb-6 text-white'>;
                 Optimization Recommendations;
@@ -513,7 +737,12 @@ href='#pricing';
             </Card>;
           </div>;
         </section>;
+<<<<<<< HEAD
       )}Simple Pricing;
+=======
+      )}
+              Simple Pricing
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Pricing Section */}
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
@@ -750,10 +979,18 @@ href='#pricing';
                       {feature}
                     </li>;
                   ))}
+<<<<<<< HEAD
                 <Button;
 href='/contact';
                   size='lg';
                       {feature}</li>;
+=======
+                <Button
+                  href='/contact'
+                  size='lg'
+                      {feature}
+                    </li>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   ))}
                 </ul>;
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
@@ -763,6 +1000,7 @@ href='/contact';
                 </Button>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -772,6 +1010,17 @@ href='/contact';
         </div>;
       </section>;
               </Card>;
+=======
+          </div>
+        </div>
+      </section>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+              </Card>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
                   Get Started;
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
@@ -824,6 +1073,10 @@ href='/contact';
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </section>;
     </>;
   )}
+=======
+      </section>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

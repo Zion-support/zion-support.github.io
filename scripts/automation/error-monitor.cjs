@@ -295,5 +295,9 @@ const monitor = new ErrorMonitor();
 monitor.start().catch(error => {})
   console.error("Failed to start Error "Monitor": ", error);
   process.exit(1)}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 });

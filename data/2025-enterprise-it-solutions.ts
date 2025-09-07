@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
   {id: 'enterprise - api - governance - platform',name: 'Enterprise API Governance Platform',tagline:;
@@ -117,6 +118,9 @@
 	{id: 'enterprise-data-governance-automation', name: 'Enterprise Data Governance Automation',tagline: 'Automated data governance, compliance, and quality management for enterprise data',price: '$799', period: '/month',description: 'Comprehensive enterprise data governance platform that automates data quality management, compliance monitoring, and governance workflows across all enterprise data sources and systems.',features: [;
 ];	{];	{'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems';
       'Centralized API management',
+=======
+'Centralized API management',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'Security and access controls',
       'API lifecycle management',
       'Compliance and audit trails',
@@ -151,12 +155,12 @@
     useCases: [
       'Identity management, Access control, Security compliance, User provisioning'
     ]
-    roi: 'Reduce security incidents by 60% and improve compliance by 80%'
+    roi: "roi",
     competitors: ['Okta, Azure AD, AWS IAM, Ping Identity']
     marketSize: '$15B IAM market'
     growthRate: '28% CAGR'
     variant: 'ai-futuristic'
-    contactInfo: contact
+    contactInfo: contact;
     realImplementation: true
     implementationDetails:
       'Enterprise platform with identity engine, security controls, and compliance monitoring.',
@@ -245,7 +249,6 @@ const contact = {
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
-
 export const enterpriseITSolutions: MicroSaasService[] = [
 	{
 		id: 'enterprise-data-governance-automation', name: 'Enterprise Data Governance Automation',
@@ -253,9 +256,13 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     price: '$799', period: '/month',
 		description: 'Comprehensive enterprise data governance platform that automates data quality management, compliance monitoring, and governance workflows across all enterprise data sources and systems.',
     features: [
+<<<<<<< HEAD
 
 ];	{
 			'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems'
+=======
+];	{			'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 		];
 		popular: true;
 		icon: '🏛️';
@@ -508,14 +515,16 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		customers: 56;
 ];
 ;
+	}
+];
+<<<<<<< HEAD
 
 	}
 ];
 
-	}
-];
 
-
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   id: 'enterprise - data - governance - automation';
   name: 'Enterprise Data Governance Automation',
   tagline: 'Automated data governance, compliance, and quality management for enterprise data';
@@ -822,6 +831,7 @@ const contact  = null;
   rating: 4.8,
   reviews: 38;
 }
+<<<<<<< HEAD
 		rating: 4.8
 		reviews: 38
 
@@ -1215,3 +1225,8 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 		reviews: 38;
 	}
 ];
+=======
+=======	}
+];	}
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -53,5 +53,9 @@ function main() {}
   console.log(`Done. Files "updated": ${count}`)};
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 cursor/fix-lint-push-and-merge-to-main-f3c1;

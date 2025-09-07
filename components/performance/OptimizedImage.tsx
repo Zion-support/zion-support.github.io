@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import Image from "next/image";
 
@@ -37,3 +38,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 };
 
 export default OptimizedImage;
+=======
+import Image from 'next / image';
+;
+=======
+>>>>>>>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

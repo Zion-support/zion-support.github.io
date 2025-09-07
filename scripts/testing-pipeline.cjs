@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const { execSync } = require("$1")
 const fs = require("fs")
@@ -31,5 +35,9 @@ const fs = require("fs")
 // console.log(`"Passed"`)
     console.log(`"Failed"`)
 // console.log("=")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     console.log(`� Report saved "to"`)

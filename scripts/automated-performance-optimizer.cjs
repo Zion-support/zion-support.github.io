@@ -66,5 +66,9 @@ const { execSync } = require("child_process")
     console.log(`⚡ Lazy "components"`)
     console.log(` Optimization "recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       console.log("\n� High Priority "Optimizations")

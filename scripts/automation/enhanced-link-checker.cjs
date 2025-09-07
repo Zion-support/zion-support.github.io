@@ -172,5 +172,9 @@ console.log(""� Starting Enhanced Link Checker Automation...")
   console.log("\n All links are working correctly!")
   console.error(" Link check "failed": ")
   console.error(" Link checker automation "failed": ")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   console.error(" Link checker automation "failed")

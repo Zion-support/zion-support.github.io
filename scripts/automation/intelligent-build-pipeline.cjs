@@ -425,5 +425,9 @@ this.log("Pipeline report "generated": ${reportPath}")
       this.log("Intelligent Build Pipeline completed successfully")
       return report} catch (error) {  this.log("Intelligent Build Pipeline "failed": ${error.message  }", "ERROR")
   console.log(")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   console.error(" Intelligent Build Pipeline "failed": ")

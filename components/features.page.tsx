@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function FeaturesPage() {import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
 export default function FeaturesPage() {export default function FeaturesPage() {ursor/fix-website-loading-errors-and-merge-6662;
@@ -5,8 +6,10 @@ export default function FeaturesPage() {export default function FeaturesPage() {
 export default function FeaturesPage() {;
 
 
+=======
+export default function FeaturesPage() {;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
-
 export default function FeaturesPage() {
   return (
     <EnhancedLayout>;
@@ -126,6 +129,7 @@ export default function FeaturesPage() {return (<EnhancedLayout>;
   ))
     </EnhancedLayout>);
 }
+<<<<<<< HEAD
   return (
 
 
@@ -187,11 +191,14 @@ export default function FeaturesPage() {
     </EnhancedLayout>
   );
 }
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <MonitorSmartphone className="h-6 w-6 text-indigo-500" />
           <div className="mt-3 text-lg font-semibold">Mobile Milestones</div>
           <p className="mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>
       </div>
+<<<<<<< HEAD
     </EnhancedLayout>
 
   );
@@ -199,3 +206,6 @@ export default function FeaturesPage() {
 
   );
   );
+=======
+    </EnhancedLayout>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

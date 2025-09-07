@@ -59,8 +59,11 @@ const contact  = null;description:;
 // Additional 2025 real micro-SaaS, AI and IT services
 export const new2025Services: EnhancedRealMicroSaasService[] = [
   {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'Jailbreak and injection detection',
       'PII redaction and audit trail',
       'Hallucination and grounding score',
@@ -140,7 +143,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   }
   {
     id: 'serverless-cron-orchestrator';
-    name: 'Serverless Cron Orchestrator'
+    name: "name",
     tagline: 'Reliable schedules, retries and dead-lettering across clouds';
     price: '$59';
     period: '/month'
@@ -870,8 +873,12 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     technology: ['Next.jsLLM APIs'];
     integrations: ['HubSpotSalesforceOutreach'];
     use_cases: ['Outbound emails_lead nurturing_meeting booking'];
+<<<<<<< HEAD
     roi: 'Increase meetings by 20–50%';rating: 4 && 4.7,reviews: 21;
     reviews: 21
+=======
+    reviews: 21;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     competitors: ['SmartleadReply.io_apollo.io'];
     market_size: '$5B sales tech';
     growth_rate: '26% CAGR';
@@ -1556,6 +1563,7 @@ reviews: 6
   },;
 ];
     reviews: 6
+<<<<<<< HEAD
 
       'Model and dataset registryRisk and policy mappingsPII/PHI tagging and checksChange approvals and trailsReports and exports'
     ];
@@ -1574,12 +1582,17 @@ reviews: 6
     launchDate: '2025-03-07', customers: 10,
     rating: 4.6,
     reviews: 6
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
 ];
-
 ;
+<<<<<<< HEAD
 
 
 
 
 ];
+=======
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

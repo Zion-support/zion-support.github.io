@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const fs = require("child_process")
 const path = require("path")
     console.log("� Generating sitemap...")
@@ -18,8 +22,8 @@ Allow: /contact"
     console.log("� Adding meta tags...")
     const metaConfig = "
   "title": "Bolt.new Zion App - Advanced Web Development Solutions"
-  description: "Professional web development services with cutting-edge technology and innovative solutions."
-  keywords: "web development, react, nextjs, typescript, full-stack development"
+  description: "description",
+    keywords: "web development, react, nextjs, typescript, full-stack development"
   "author": "Zion Tech Group"
   viewport: "width=device-width, initial-scale=1"
   "robots": "index, follow"
@@ -29,7 +33,14 @@ Allow: /contact"
   "twitter": {card: "summary_large_image","title": "Bolt.new Zion App - Advanced Web Development Solutions","description": "Professional web development services with cutting-edge technology and innovative solutions."}
     image: "https://bolt.new.zion.app/og-image.jpg"
 "
+<<<<<<< HEAD
 
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
+=======
+<<<<<<< HEAD
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

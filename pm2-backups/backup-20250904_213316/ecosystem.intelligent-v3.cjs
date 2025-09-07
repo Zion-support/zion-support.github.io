@@ -13,7 +13,6 @@
  * - Security scanning and compliance
  * - Performance optimization
  */
-
 module.exports = {
   apps: [
     // Main Application with Intelligent Scaling
@@ -48,13 +47,12 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       merge_logs: true,
       time: true,
-      // Intelligent scaling based on CPU and memory
-      increment_var: 'NODE_APP_INSTANCES',
+      // Intelligent scaling based on CPU and memory;
+    increment_var: 'NODE_APP_INSTANCES',
       kill_timeout: 5000,
       listen_timeout: 3000,
       wait_ready: true
     },
-
     // AI-Powered Process Manager
     {
       name: 'ai-process-manager',
@@ -79,7 +77,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Intelligent Monitoring System
     {
       name: 'intelligent-monitor',
@@ -104,7 +101,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Smart Auto-Scaler
     {
       name: 'smart-auto-scaler',
@@ -131,7 +127,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Advanced Error Recovery System
     {
       name: 'error-recovery-system',
@@ -156,7 +151,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Intelligent Security Scanner
     {
       name: 'intelligent-security-scanner',
@@ -181,7 +175,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Performance Optimizer
     {
       name: 'performance-optimizer',
@@ -206,7 +199,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Smart Deployment Manager
     {
       name: 'smart-deployment-manager',
@@ -231,7 +223,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Intelligent Code Quality Manager
     {
       name: 'code-quality-manager',
@@ -256,7 +247,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Smart Resource Manager
     {
       name: 'smart-resource-manager',
@@ -281,7 +271,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Intelligent Git Workflow Manager
     {
       name: 'git-workflow-manager',
@@ -306,7 +295,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Advanced Analytics Engine
     {
       name: 'analytics-engine',
@@ -331,7 +319,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Intelligent Backup Manager
     {
       name: 'backup-manager',
@@ -356,7 +343,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Smart Health Checker
     {
       name: 'smart-health-checker',
@@ -381,7 +367,6 @@ module.exports = {
       merge_logs: true,
       time: true
     },
-
     // Intelligent Dashboard System
     {
       name: 'intelligent-dashboard',
@@ -405,7 +390,6 @@ module.exports = {
       time: true
     }
   ],
-
   // PM2 Deploy configuration for multiple environments
   deploy: {
     production: {

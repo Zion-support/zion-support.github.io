@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { X  } from 'lucide-react';
 type ChatMessage = {role: 'user' | 'assistant' | 'system';
@@ -31,10 +32,92 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
         })} else if (data?.meta?.intentMatched === true) {setFailedIntents(0)}return (<div className='fixed bottom-4 right-4 z-50'>      }
       if (data?.meta?.intentMatched === false) {setFailedIntents((n) => {if (data?.meta?.intentMatched === false) {setFailedIntents((n) => {const next = n + 1;
           if (next >= 3) {escalateSupport('Failed to match user intent 3+ times')}
+=======
+import { X } from 'lucide-react';
+type ChatMessage = {
+  role: 'user' | 'assistant' | 'system'
+  content: string
+  timestamp?: number
+}
+function generateSessionId(): string {
+  const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [failedIntents, setFailedIntents] = useState(0);
+  const [showEscalation, setShowEscalation] = useState(false);
+  const sessionIdRef = useRef<string>('');
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+    } catch {}
+  }
+  async function escalateSupport(reason: string) {
+    try {
+      await fetch('/api/support/escalate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+    } catch {}
+  }
+        method: "method",
+    headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          sessionId: sessionIdRef.current
+          reason;
+    tag: 'escalate'
+        })
+      });
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+    } catch {}
+  }
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+      setShowEscalation(true)
+      setShowEscalation(true);    } catch {}
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+    } catch {}
+  }
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+      setShowEscalation(true)
+      setShowEscalation(true);    } catch {}
+    } catch {}
+  }
+  async function onSend(messageText?: string) {
+    const text = (messageText ?? input).trim();
+    if (!text) return;
+          const next = n + 1;
+          if (next >= 3) {;
+            escalateSupport('Failed to match user intent 3+ times');
+          }
+          return next;
+        });
+      } else if (data?.meta?.intentMatched === true) {;
+        setFailedIntents(0);
+      }
+  return (
+    <div className='fixed bottom-4 right-4 z-50'>      }
+      if (data?.meta?.intentMatched === false) {
+        setFailedIntents((n) => {
+      if (data?.meta?.intentMatched === false) {;
+        setFailedIntents((n) => {;
+          const next = n + 1;
+          if (next >= 3) {;
+            escalateSupport('Failed to match user intent 3+ times');
+          }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           return next;
         })} else if (data?.meta?.intentMatched === true) {setFailedIntents(0)}
     }
   }
+<<<<<<< HEAD
+=======
+    <div className='fixed bottom-4 right-4 z-50'>
+  return (
+    }
+  }
+  return (
+    }
+  }
+  return (
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     <div className='fixed bottom-4 right-4 z-50'>;
   return (}
   }return (}
@@ -95,10 +178,18 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
                   }
                 >;
                   {m.content}
+<<<<<<< HEAD
                 </div>;
               </div>;
             ))})}
                   <button;
+=======
+                </div>
+              </div>
+            ))}
+            )}
+                  <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     key={q}
                     onClick={() => onSend(q)}
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">;
@@ -106,6 +197,18 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
                 {quickReplies && quickReplies.map((q) => (<button;
                     key={q}
                     onClick={() => onSend(q)}
+<<<<<<< HEAD
+=======
+                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
+                  >
+                    {q}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >;
                   >;
@@ -129,6 +232,7 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
                 ))}
               </div>;
             </div>;
+<<<<<<< HEAD
           )}className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
                     {q}
                   </button>;
@@ -138,6 +242,12 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
           )}<div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
 <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (<div className='flex gap-2'>;
+=======
+          )}
+          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
+            {!showEscalation ? (
+              <div className='flex gap-2'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (<div className='flex gap-2'>;
                 <input;
@@ -188,9 +298,21 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
             )}
           </div>;
         </div>;
+<<<<<<< HEAD
       )}}
   )}
 useEffect ( () => {// Check condition;
 if ( {) {$2;
 }</div>;
   )}
+=======
+      )}
+}
+  );
+}
+useEffect ( () => {
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })return await res.json()}const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',async function post() {try {const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify(body) })return await res && res.json()}/* eslint-disable no-console */;
 import fs from 'fs',import path from 'path',const HOST = process.env.SELF_HOST || 'http: //localhost:3000';
 async function post() {const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })return await res.json()}}
@@ -26,6 +27,17 @@ async function post(url: string, body: any) {
 import fs from 'fs',;
 import path from 'path',;
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000';
+=======
+  const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  return await res.json()
+}
+import fs from 'fs';
+import path from 'path';
+/* eslint-disable no-console */;
+import fs from 'fs';
+import path from 'path';
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 async function post(url: string, body: any) {;
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),;
   return await res.json();

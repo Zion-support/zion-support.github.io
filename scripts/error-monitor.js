@@ -180,8 +180,8 @@ export default ErrorMonitor} catch (error) {const errorOutput = error.stdout || 
   'error') || line.includes(
   'warning')) {
         errors.push({'
-          "type": 'eslint
-          message: line.trim()
+          "type": 'eslint;
+    message: line.trim()
           raw: line})}
     }
   }

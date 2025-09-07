@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   Menu;
   X;
@@ -28,6 +29,75 @@ interface UltraFuturisticNavigationProps  {className?: string;
           href: '/services/quantum';
           icon: Atom;
           color: 'from-cyan-500 to-blue-600';
+=======
+Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Atom
+  Shield;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,;
+  Shield,;
+} from 'lucide-react';
+interface UltraFuturisticNavigationProps {
+  className?: string;
+export default function UltraFuturisticNavigation({
+}: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
+import { motion, AnimatePresence } from 'framer-motion';
+import {;
+  Menu,;
+  X,;
+  ChevronDown,;
+  Search,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Rocket,;
+  Brain,;
+  Atom,;
+  Shield,;
+} from 'lucide-react';
+interface UltraFuturisticNavigationProps {;
+  className?: string;
+export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
+  const navigationItems = [
+    {
+      name: "name",
+    href: '/services'
+      hasDropdown: true;
+    dropdownItems: [
+        {
+          name: 'AI & Machine Learning'
+          href: '/services/ai-ml'
+          icon: Brain
+          color: 'from-purple-500 to-pink-600'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         }
         {name: 'Cybersecurity';
           href: '/services/cybersecurity';
@@ -39,6 +109,7 @@ interface UltraFuturisticNavigationProps  {className?: string;
           icon: Rocket;
           color: 'from-green-500 to-emerald-600';
         }
+<<<<<<< HEAD
         {{ name: 'Pricing', href: '/pricing' },  ];        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' },{ name: 'Quantum Computing', href: '/services/quantum', icon: Atom, color: 'from-cyan-500 to-blue-600' },{ name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-red-500 to-pink-600' },{ name: 'IT Solutions', href: '/services/it-solutions', icon: Rocket, color: 'from-green-500 to-emerald-600' },{ name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
       ];
     }{ name: 'Solutions', href: '/solutions' },{ name: 'About', href: '/about' },{ name: 'Contact', href: '/contact' },{ name: 'Pricing', href: '/pricing' }
@@ -54,6 +125,84 @@ interface UltraFuturisticNavigationProps  {className?: string;
         <div className='flex items-center justify-between h-20'>          {/* Logo */}  return (<navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled;
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl';
         : 'bg-transparent';
+=======
+        {
+          name: 'IT Solutions'
+          href: '/services/it-solutions'
+          icon: Rocket
+          color: 'from-green-500 to-emerald-600'
+        }
+        {
+    { name: 'Pricing', href: '/pricing' },  ];        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' },
+        { name: 'Quantum Computing', href: '/services/quantum', icon: Atom, color: 'from-cyan-500 to-blue-600' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-red-500 to-pink-600' },
+        { name: 'IT Solutions', href: '/services/it-solutions', icon: Rocket, color: 'from-green-500 to-emerald-600' },
+        { name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
+      ]
+    };
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' }
+    { name: 'Pricing', href: '/pricing' },  ];
+  ];
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  }
+    >
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex items-center justify-between h-20'>          {/* Logo */}  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled
+        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl'
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+        { name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
+      ]
+};
+    { name: 'Solutions', href: '/solutions' },;
+    { name: 'About', href: '/about' },;
+    { name: 'Contact', href: '/contact' },;
+    { name: 'Pricing', href: '/pricing' }
+    >;
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='flex items-center justify-between h-20'>          {/* Logo */}  return (
+    <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
+        : 'bg-transparent'
+    } ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className='flex items-center space-x-3'
+          >
+            <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl'>
+              <Rocket className='w-7 h-7 text-white' />
+            </div>
+            <div>
+              <div className='text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
+                Zion Tech Group
+              </div>
+              <div className='text-xs text-gray-400 -mt-1'>
+                Revolutionary Technology
+              </div>            </div>
+          </motion.div>
+          {/* Desktop Navigation */}
+          <div className='hidden lg:flex items-center space-x-8'>
+            {navigationItems.map((item, index) => (
+              <div key={item.name} className='relative group'>                {item.hasDropdown ? (          >
+        : 'bg-transparent'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     } ${className}`}>;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex items-center justify-between h-20">;
@@ -204,9 +353,16 @@ className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px
                   </Link>;
                 )}
               </div>;
+<<<<<<< HEAD
             ))}href={item.href}
                     className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50";
                   >;
+=======
+            ))}
+                    href={item.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                  >
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                           className='absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl overflow - hidden';
                         >;
                           <div className='p - 4'>;
@@ -262,13 +418,22 @@ className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
               <div className='flex items-center space-x-2'>;
                 <Phone className='w-4 h-4 text-cyan-400' />                <span>{contactInfo && contactInfo.mobile}</span>          <div className="hidden lg:flex items-center space-x-6">;
+<<<<<<< HEAD
             {/* Contact Info */}{/* CTA Button */}<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>;
               <Link;
                 href='/contact';
+=======
+            {/* Contact Info */}
+            {/* CTA Button */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                href='/contact'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30'>;
                 <Rocket className='w-4 h-4 mr-2' />                Get Started              <Link;
                 href="/contact";
           {/* Mobile Menu Button */}
+<<<<<<< HEAD
           <div className='lg:hidden'>;{/* Mobile Menu Button */}
           <div className="lg:hidden">;
 <div className='hidden lg:flex items-center space-x-6'>;
@@ -290,6 +455,9 @@ className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px
               </Link>;
             </motion.div>;
           </div>;
+=======
+          <div className='lg:hidden'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           {/* Mobile Menu Button */}
 <div className='lg:hidden'>;
             <button;
@@ -334,6 +502,7 @@ onClick={() =>;
                           }`}
                         />;
                       </button>;
+<<<<<<< HEAD
                       {activeDropdown === item.name && (<motion.div;
                         />;
                       </button>;{activeDropdown === item && item.name && (<motion&& motion.div;
@@ -341,6 +510,15 @@ onClick={() =>;
 className='ml-4 mt-2 space-y-2';
                         >;
                           {item.dropdownItems?.map(dropdownItem => (transition={{ duration: 0 && 0.2 }}
+=======
+                      {activeDropdown === item && item.name && (;
+                        <motion&& motion.div
+                          transition={{ duration: 0.2 }}
+                          className='ml-4 mt-2 space-y-2'
+                        >
+                          {item.dropdownItems?.map(dropdownItem => (
+                          transition={{ duration: 0 && 0.2 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                           className='ml-4 mt-2 space-y-2'>;
                           {item && item.dropdownItems?.map(dropdownItem => (<Link;
                               key={dropdownItem.name}
@@ -368,10 +546,18 @@ className='ml-4 mt-2 space-y-2';
                         </motion && motion.div>;
                       )}
                     </div>;
+<<<<<<< HEAD
                   ) : (<Link;
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}href={item.href}
 className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50';
                       onClick={() => setIsOpen(false)}>;
+=======
+                  ) : (;
+                    <Link
+                      className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}
+                      onClick={() => setIsOpen(false)}
+                    >
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       {item.name}
                     </Link>;
                   )}
@@ -398,6 +584,27 @@ className='block text-gray-300 hover:text-white transition-colors duration-300 p
                   )}
                 </div>;
               ))}
+<<<<<<< HEAD
+=======
+                  <span>{contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-3 text-gray-300'>
+                  <Mail className='w-4 h-4 text-purple-400' />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-3 text-gray-300'>
+                  <MapPin className='w-4 h-4 text-green-400' />
+                  <span className='text-sm'>{contactInfo.address}</span>                </div>
+              </div>
+              {/* Mobile CTA */}
+              <div className='pt-4'>                  <span>{contactInfo.mobile}</span>
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               {/* Mobile Contact Info */}
                   <span>{contactInfo.mobile}</span>;
                       onClick={() => setIsOpen(false)}
@@ -540,6 +747,7 @@ className='block text-gray-300 hover:text-white transition-colors duration-300 p
               </div>;
             </div>;
         )}
+<<<<<<< HEAD
 }</AnimatePresence>;
     </nav>;
   )})}
@@ -562,3 +770,20 @@ className='block text-gray-300 hover:text-white transition-colors duration-300 p
       </AnimatePresence>;
     </nav>;
   )}
+=======
+}
+      </AnimatePresence>;
+    </nav>;
+  );
+}
+  );
+}
+}
+  );
+  );
+}
+          </motion.div>)}
+      </AnimatePresence>;
+    </nav>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

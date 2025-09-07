@@ -1,6 +1,10 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+<<<<<<< HEAD
 import React from 'react';
+=======
+import { ArrowRight } from 'lucide-react';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI, Micro SaaS, FinTech & HealthTech Solutions',
@@ -128,6 +132,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Contact Information Section */}
       <section className="py-16 bg-gray-50 rounded-lg" aria-labelledby="contact-heading">
         <div className="max-w-6xl mx-auto px-4 text-center">
@@ -136,6 +141,14 @@ export default function HomePage() {
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Let's discuss your project and create a custom solution that drives real results for your business.
+=======
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600 text-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Let&apos;s discuss how we can help you achieve your goals with our technology solutions.
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

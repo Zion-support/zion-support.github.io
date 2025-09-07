@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 export default function ReportsIndex() {export default function ReportsIndex() {return (<div className='min-h-screen bg-slate-950 text-white'>;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export default function ReportsIndex() {;
 export default function ReportsIndex() {
   return (
@@ -40,11 +43,14 @@ export default function ReportsIndex() {
     <div className="min-h-screen bg-slate-950 text-white">;
       <main className="container mx-auto px-4 py-12 max-w-7xl">;
         {/* Header */}
+<<<<<<< HEAD
 
 
         {/* Back to Home */}
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Back to Home */}
         <div className='mt-12 text-center'>;
           <Link
@@ -104,6 +110,7 @@ function ReportsIndex() {
           </Link>;
         </div>;
       </main>;
+<<<<<<< HEAD
         <div className="mt-12 text-center">;
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">;
   )})}
@@ -187,6 +194,9 @@ export default function ReportsIndex() {return (<div className="min-h-screen bg-
         <div className="mt-12 text-center">
 
 
+=======
+        <div className="mt-12 text-center">
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
         {/* Content Categorizer Component */  } catch (error) {
     console.error("Error:", error);
@@ -205,6 +215,7 @@ export default function ReportsIndex() {return (<div className="min-h-screen bg-
           </Link>
         </div>
       </main>
+<<<<<<< HEAD
 
     </div>);
 }
@@ -215,10 +226,11 @@ export default function ReportsIndex() {return (<div className="min-h-screen bg-
     </div>
   );
 }
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     </div>;
   );
 }
-
   )
         <div className="mt-12 text-center">;
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">;
@@ -236,6 +248,7 @@ export default function ReportsIndex() {return (<div className="min-h-screen bg-
   }
 }
 ;
+<<<<<<< HEAD
 
     </div>);
 }
@@ -244,3 +257,9 @@ export default function ReportsIndex() {return (<div className="min-h-screen bg-
 
     </div>);
 }
+=======
+    </div>);
+}
+    </div>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

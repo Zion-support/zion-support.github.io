@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React from 'react';
@@ -16,12 +17,28 @@ interface Testimonial  {interface Testimonial  {id: string;
   rating: number;
   avatar: string;category: string;
 }const EnhancedTestimonialsSection: React.FC;category: string;  id: string;
+=======
+Star
+  Quote
+  Users
+  Award
+  TrendingUp
+  CheckCircle;
+  Star,
+  Quote,
+  Users,
+  Award,
+} from 'lucide-react';
+interface Testimonial {;
+  id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   title: string;
   company: string;
   content: string;
   rating: number;
   avatar: string;
+<<<<<<< HEAD
   category: string;
   category: string;  id: string,name: string,title: string,company: string,content: string,rating: number,avatar: string,}
 const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimonial[] = [;
@@ -34,6 +51,23 @@ const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimo
         "Implementing Zion Tech Group's AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departments, leading to 35% faster market response and 28% cost optimization.",rating: 5,avatar: 'RK',category: 'AI & Analytics',},];const stats = [;
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle },{ number: '50+', label: 'Enterprise Clients', icon: Users },{ number: '99.9%', label: 'Client Satisfaction', icon: Award },{ number: '4.9/5', label: 'Average Rating', icon: Star },];
   const renderStars = (rating: number) => {return Array.from({ length: 5 }, (_, i) => (<Star;
+=======
+  category: string;  id: string;
+    name: string
+  title: string
+  company: string
+  content: string
+  rating: number
+  avatar: string
+  category: string
+  category: string;  id: string,
+  name: string,
+  title: string,
+  company: string,
+  content: string,
+  rating: number,
+  avatar: string,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         key={i}
         className={`w - 4 h - 4 ${i < rating ? 'text - yellow - 400 fill - current' : 'text - gray - 400';
         }`}{/* Stats Section */}
@@ -71,6 +105,7 @@ const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimo
                 </p>;
                 {/* Author Info */}
                     {testimonial.avatar}
+<<<<<<< HEAD
                   </div>;
                   <div className="flex-1">;
                     <div className="font-semibold text-white">{testimonial.name}</div>;
@@ -118,6 +153,22 @@ const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimo
         {/* Testimonials Grid */}
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {testimonials.map(testimonial => (<div;
+=======
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-white/70">{testimonial.title}</div>
+                    <div className="text-xs text-blue-400">{testimonial.company}</div>
+                  </div>
+                </div>
+                {/* Category Badge */}
+                <div className="mt-4">
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
+                    {testimonial.category}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {testimonials.map(testimonial => (
+            <div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               key={testimonial.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
             >;
@@ -130,6 +181,7 @@ const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimo
                 {/* Rating */}<div className='flex items-center gap-1 mb-4'>                  {renderStars(testimonial.rating)}
                 </div>;
                 {/* Testimonial Text */}
+<<<<<<< HEAD
                 <p className='text-white/80 text-sm leading-relaxed mb-6'>                  "{testimonial.content}";
                 </p>;
                 {/* Author Info */}<div className='flex items-center gap-1 mb-4'>;
@@ -138,6 +190,16 @@ const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimo
                 {/* Testimonial Text */}<p className='text-white/80 text-sm leading-relaxed mb-6'>;
                   "{testimonial.content}";
                 </p>;
+=======
+                <p className='text-white/80 text-sm leading-relaxed mb-6'>                  "{testimonial.content}"
+                </p>
+                {/* Author Info */}
+                  {renderStars(testimonial.rating)}
+                </div>
+                {/* Testimonial Text */}
+                  "{testimonial.content}"
+                </p>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 {/* Author Info */}
 <div className='flex items-center gap-4'>;
                   <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm'>;
@@ -156,11 +218,29 @@ const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimo
                   </div>;
                 </div>;
                 {/* Category Badge */}
+<<<<<<< HEAD
 <div className='mt-4'>;
                   <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>;
                     {testimonial.category}{testimonial.category}</span>;
                 </div>;
               </div>;
+=======
+                <div className='mt-4'>
+                  <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                    {testimonial.category}                  <div className="flex-1">
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-white/70">{testimonial.title}</div>
+                    <div className="text-xs text-blue-400">{testimonial.company}</div>
+                </div>
+                {/* Category Badge */}
+                <div className='mt-4'>
+                  <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                <div className="mt-4">
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
+                    {testimonial.category}
+                    {testimonial.category}
+                  </span>
+                </div>
+              </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 {/* Testimonial Text */}
                 <p className='text-white/80 text-sm leading-relaxed mb-6'>                <p className="text-white/80 text-sm leading-relaxed mb-6">;
                   "{testimonial && testimonial.content}";
@@ -207,10 +287,16 @@ const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimo
               achieved. Let's discuss how Zion Tech Group can accelerate your;
               innovation journey.;
             </p>;
+<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;<div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />;
             </div>;
           ))}
         </div>;
+=======
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+          ))}
+        </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* CTA Section */}
 <div className='text-center mt-16'>;
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>;
@@ -280,5 +366,22 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>;
 )}export default EnhancedTestimonialsSection;
+=======
+export default EnhancedTestimonialsSection;
+    </section>);
+}
+;
+export default EnhancedTestimonialsSection);
+}
+;
+export default EnhancedTestimonialsSection;
+;
+  );
+export default EnhancedTestimonialsSection;  )
+}
+export default EnhancedTestimonialsSection;
+export default EnhancedTestimonialsSection;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

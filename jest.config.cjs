@@ -1,7 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const nextJest = require('next/jest')
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 
 module.exports = {
 
+<<<<<<< HEAD
+=======
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jsdom',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
@@ -20,6 +30,7 @@ module.exports = {
     '<rootDir>/**/*.(test|spec).(js|jsx|ts|tsx)'
   ],
   collectCoverageFrom: [
+<<<<<<< HEAD
     'components/**/*.{js,jsx,ts,tsx}',
     'pages/**/*.{js,jsx,ts,tsx}',
     'app/**/*.{js,jsx,ts,tsx}',
@@ -28,8 +39,18 @@ module.exports = {
     '!**/*.d.ts'
   ],
   testPathIgnorePatterns: [
-    '<rootDir>/.next/',
+=======
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/index.tsx',
+    '!src/main.tsx',
+  ],
+  testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+    '<rootDir>/build/',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+    '<rootDir>/.next/',
     '<rootDir>/out/',
     '<rootDir>/__tests__.disabled/',
     '<rootDir>/tests.disabled/',
@@ -92,6 +113,7 @@ module.exports = {
     '<rootDir>/automation/logs*/',
     '<rootDir>/automation/backup*/'
   ],
+<<<<<<< HEAD
   modulePathIgnorePatterns: [
     '<rootDir>/backup-problematic-files/',
     '<rootDir>/temp_exclude/',
@@ -131,6 +153,8 @@ module.exports = {
     '<rootDir>/automation/logs*/',
     '<rootDir>/automation/backup*/'
   ],
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   verbose: true,
   collectCoverage: false,
@@ -146,6 +170,7 @@ module.exports = {
   }
 }
 
+<<<<<<< HEAD
 =======
 module.exports = {
   preset: "ts-jest",
@@ -188,3 +213,6 @@ module.exports = {
   ]
 };
 >>>>>>> origin/chore/fix-automation-and-build
+=======
+module.exports = createJestConfig(customJestConfig)
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,4 +1,5 @@
 #!/usr/bin/env node;
+<<<<<<< HEAD
 
       { "encoding": "utf8" }
     );
@@ -88,6 +89,10 @@ module.exports = { resolveMergeConflict, findConflictedFiles }))
 
 
 
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")

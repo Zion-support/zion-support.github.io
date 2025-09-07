@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
@@ -20,28 +21,27 @@ function NotificationsPage() {return <NotificationCenter />;const NotificationCe
  */;
 function NotificationsPage() {return <NotificationCenter />;
 }
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
 
   return <NotificationCenter />;
@@ -50,6 +50,9 @@ import dynamic from 'next / dynamic';
 ;
 const NotificationCenter = dynamic (
   () => import ('../components / notifications / NotificationCenter'),
+=======
+import React from 'react';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   {
     ssr: false
   }
@@ -66,6 +69,7 @@ export default function NotificationsPage() {;
   ssr: false}),;
 export default function NotificationsPage() {;
   return <NotificationCenter />;
+<<<<<<< HEAD
 }
 ;
 export default /**
@@ -81,3 +85,6 @@ function NotificationsPage() {
   return <NotificationCenter />;
 }
 
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

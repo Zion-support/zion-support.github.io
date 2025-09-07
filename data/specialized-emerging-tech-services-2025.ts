@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface SpecializedEmergingTechService  {id: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -130,6 +134,7 @@ const contact = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',add
     ];
     technology: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms'];
     integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms'];
+<<<<<<< HEAD
     useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities'
     competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];
   }
@@ -217,5 +222,12 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
 
     popular: true, icon: '🧠'
 
+=======
+    useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: "roi",
+    competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];  }
+];
+;    ];
+    popular: true, icon: '🧠',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
 ];

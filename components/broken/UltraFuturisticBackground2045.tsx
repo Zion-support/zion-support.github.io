@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 
 ;
 ctx.fill ()ctx.restore ()// Remove dead particles and create new ones // Check condition;
 if ( {) {$2;
+=======
+ctx.fill ();
+ctx.restore ();
+// Remove dead particles and create new ones // Check condition
+if ( {) {
+  $2
+}
+  particles[index] = {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
   particles[index] = {}
  canvas && canvas.width = window && window.innerWidth;
@@ -123,11 +133,27 @@ canvas.height = window.innerHeight;
         {/* Animated Grid */}
         <motion.div;
           className='absolute inset - 0 opacity - 20';
+<<<<<<< HEAD
           style={{background_image: `;
               linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px),linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`,background_size: '50px 50px',}}
           animate={{background_position: ['0px 0px', '50px 50px'],}}
           transition={{duration: 20;
             repeat: Infinity;
+=======
+          style={{
+            background_image: `;
+              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px),
+              linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);
+            `,
+            background_size: '50px 50px',
+          }}
+          animate={{
+            background_position: ['0px 0px', '50px 50px'],
+          }}
+          transition={{
+            duration: 20;
+    repeat: Infinity
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             ease: 'linear',          }}      }
       {/* Animated Canvas Background */}
       <canvas;
@@ -276,8 +302,15 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounde
           transition={{duration: 3,repeat: Infinity,ease: 'easeInOut',          }}
         />;
         <motion.div;
+<<<<<<< HEAD
       {/* Gradient Overlays */}/>;
       </div>;{/* Gradient Overlays */}
+=======
+      {/* Gradient Overlays */}
+        />;
+      </div>;
+      {/* Gradient Overlays */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className='fixed inset-0 pointer-events-none z-20'>;
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />;
         <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5' />;y: [0, -20, 0],opacity: [0.2, 0.5, 0.2],}}
@@ -307,7 +340,12 @@ className='absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-40
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />;
         <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5' />;
       {/* Content */}
+<<<<<<< HEAD
       <div className='relative z-30'>{children}</div>;{/* Animated Border Effects */}
+=======
+      <div className='relative z-30'>{children}</div>;
+      {/* Animated Border Effects */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className='fixed inset-0 pointer-events-none z-40'>;
         <motion&& motion.div;
           className='absolute inset-0 border border-transparent';
@@ -340,8 +378,15 @@ className='absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-40
         />;
       </div>;
     </div>;
+<<<<<<< HEAD
   )export default UltraFuturisticBackground2045;
 export default UltraFuturisticBackground2045;}
+=======
+  );
+export default UltraFuturisticBackground2045;
+export default UltraFuturisticBackground2045;
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 }
 export default UltraFuturisticBackground2045;
@@ -352,8 +397,17 @@ export default UltraFuturisticBackground2045;
           }}
         />;
       </div>;
+<<<<<<< HEAD
     </div>)}  )}export default UltraFuturisticBackground2045;duration: 15,repeat: Infinity,ease: 'linear',}}
         />;
       </div>;
     </div>;
 )}export default UltraFuturisticBackground2045;
+=======
+    </div>);
+}  );
+}
+;
+export default UltraFuturisticBackground2045;
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

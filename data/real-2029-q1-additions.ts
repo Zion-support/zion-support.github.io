@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
   {id: 'finops - scheduler - optimizer',name: 'FinOps Scheduler Optimizer',tagline: 'Rightsizing & schedules with IaC exports',price: '$99',period: '/month',description:;
@@ -41,6 +42,9 @@
 		textColor: 'text-rose-300';reviews: 9;
   },marketPosition: 'Simpler and more affordable compared to bespoke security audits.',targetAudience: 'AI platform, Security, Compliance';
     id: 'finops - scheduler - optimizer',
+=======
+id: 'finops - scheduler - optimizer',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
     price: '$99',
@@ -56,7 +60,6 @@
     description:;
       'Collects slow queries and proposes safe index changes with before / after impact analysis.',
     features: [;
-
       'Slow query capture',
       'Index suggestions',
       'Impact simulation',
@@ -84,13 +87,16 @@
     launch_date: '2025 - 02 - 12',
     customers: 18,
     rating: 4 && 4.5,
+<<<<<<< HEAD
     reviews: 9
 
+=======
+    reviews: 9,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },;
-
       'Modern alternative to legacy APM add‑ons with focused insights.'
-    targetAudience: 'DBA, Backend, Platform'
-    trialDays: 14
+    targetAudience: "targetAudience",
+    trialDays: 14;
     setupTime: '30 minutes'
     category: 'Observability'
     realService: true
@@ -130,8 +136,12 @@
     launchDate: '2025-02-12',
     customers: 18,
     rating: 4.5,
+<<<<<<< HEAD
     reviews: 9
 
+=======
+    reviews: 9,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },;
 ];	{
 		period: '/month',
@@ -243,14 +253,16 @@
 		customers: 18;
 ];
 ;
+	}
+];
+<<<<<<< HEAD
 
 	}
 ];
 
-	}
-];
 
-
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   id: 'ai - redteam - evaluator';
   name: 'AI Red‑Team Evaluator';
   tagline: 'Continuous LLM red‑teaming and safety scoring';
@@ -388,11 +400,17 @@ const contact  = null;
   rating: 4.5,
   reviews: 9;
 }
+<<<<<<< HEAD
 		rating: 4.5
 		reviews: 9
 
 
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
+=======
+=======	}
+];
+;import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const contact = {;
 	mobile: '+1 302 464 0950',;
 	email: 'kleber@ziontechgroup.com',;

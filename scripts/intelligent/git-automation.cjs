@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -480,6 +481,20 @@ gitAutomation.start().catch(console.error);
 
 
 
+=======
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+#!/usr/bin/env node;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+const { execSync, spawn } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       "autoMerge"
       "conflictResolution"
       "branchProtection"
@@ -550,8 +565,12 @@ gitAutomation.start().catch(console.error);
       "status"
       console.error('Error saving "analysis")
       console.error('Error saving "notification")
+<<<<<<< HEAD
       console.error('Error loading "history")
 
       console.error('Error loading "history")
 
 
+=======
+      console.error('Error loading "history")
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

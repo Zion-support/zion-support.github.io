@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
   id: string;
 export interface InnovativeAIAutomationService  {id: string;name: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -35,12 +39,12 @@ export interface InnovativeAIAutomationService  {id: string;name: string;
     mobile: string;
     email: string;
     address: string;
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
 }reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =;
@@ -373,13 +377,15 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.9;
     reviews: 28;
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
   [
     // AI-Powered Autonomous Business Process Orchestrator
     {
-      id: 'ai-autonomous-business-orchestrator'
-      name: 'AI Autonomous Business Process Orchestrator'
+      id: "id",
+    name: 'AI Autonomous Business Process Orchestrator'
       tagline:
         'Fully autonomous business process management with zero human intervention'
       price: '$4,999'
@@ -398,8 +404,8 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
         'Advanced analytics & reporting'
         'Enterprise-grade security & audit trails'
       ]
-      popular: true
-      icon: '🚀'
+      popular: true;
+    icon: '🚀'
       color: 'from-purple-600 to-indigo-700'
       textColor: 'text-purple-400'
       link: 'https://ziontechgroup.com/ai-autonomous-business-orchestrator'
@@ -713,7 +719,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
     launchDate: '2025-03-01', customers: 35
     rating: 4.9
-
     reviews: 28
   text_color: string;
   link: string;
@@ -911,18 +916,18 @@ export interface InnovativeAIAutomationService  {id: string,name: string,tagline
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
-
   }
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-
   reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
   [
@@ -1275,7 +1280,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
     launchDate: '2025-03-01', customers: 35
     rating: 4.9
-
     reviews: 28
   }
 ;
@@ -1564,4 +1568,8 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.9,
     reviews: 28;
   }
+<<<<<<< HEAD
 ;
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

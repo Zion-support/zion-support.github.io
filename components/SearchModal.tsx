@@ -1,14 +1,29 @@
+<<<<<<< HEAD
 interface SearchResult  {interface SearchResult  {title: string,description: string;
+=======
+interface SearchResult {
+interface SearchResult {;
+  title: string,
+  description: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   url: string;
   category: string;
 }
 interface SearchModalProps  {is_open: boolean;
   on_close: () => void;
 }
+<<<<<<< HEAD
   {title: "Cybersecurity";
     description: "Security audits, penetration testing, and compliance";
     url: "/cybersecurity";
     category: "Services";
+=======
+  {
+    title: "title",
+    description: "Security audits, penetration testing, and compliance"
+    url: "/cybersecurity"
+    category: "Services"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   {{title: "About Us";
     description: "Learn about Zion Tech Group and our mission";
@@ -35,7 +50,14 @@ interface SearchModalProps  {is_open: boolean;
     url: "/pricing";
     category: "Company";
   }
+<<<<<<< HEAD
 ];export default function SearchModal() {interface SearchModalProps  {isOpen: boolean;
+=======
+];
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
+interface SearchModalProps {;
+  isOpen: boolean;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   onClose: () => void;
 }
 const searchData: SearchResult[] = [;

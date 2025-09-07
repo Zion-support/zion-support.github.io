@@ -13,8 +13,8 @@ const path = require('path')
       this.log(`Found ${fileIssues} issues in ${path.relative(this.projectRoot, filePath)}`, 'WARNING'
     const lines = content.split('\n')
       if (line.includes('console.log') && !line.includes('//')
-          type: 'console.log'
-          message: 'Console.log statement found'
+          type: "type",
+    message: 'Console.log statement found'
           severity: 'warning'
       if (line.includes('TODO') || line.includes('FIXME')
           type: 'todo'
@@ -47,5 +47,10 @@ const path = require('path')
       this.log(`\n⚠  ${this.stats.issuesFound} issues remain (some may require manual attention)`, 'WARNING'
     this.log(' Starting Code Quality Check', 'INFO')
         this.log('� No code quality issues found!', 'SUCCESS')
+<<<<<<< HEAD
 
       this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+=======
+<<<<<<< HEAD
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

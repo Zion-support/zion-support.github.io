@@ -12,6 +12,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'no-undef': 'off',
   },
+<<<<<<< HEAD
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -27,3 +28,17 @@ module.exports = {
     'optimization-reports/',
   ],
 };
+=======
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
+    dom: true
+  },
+  globals: {
+    KeyboardEvent: 'readonly',
+    MouseEvent: 'readonly',
+    Event: 'readonly'
+  }
+};
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

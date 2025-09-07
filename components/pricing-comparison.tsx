@@ -1,4 +1,5 @@
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { Check, X, Star, TrendingUp, DollarSign, Zap  } from 'lucide-react';
 export default function PricingComparisonPage() {const serviceComparisons = [;
 starter: '$19/month',professional: '$49/month',enterprise: '$199/month',},competitors: [;
@@ -14,6 +15,58 @@ starter: '$19/month',professional: '$49/month',enterprise: '$199/month',},compet
           rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations'];
           cons: ['Higher pricingLimited customizationNo unlimited plan'];
           savings: 'Save $20/month with Zion';
+=======
+import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
+export default function PricingComparisonPage() {
+  const serviceComparisons = [
+    {
+      service: "service",
+    zionPricing: {
+        starter: '$19/month'
+        professional: '$49/month'
+        enterprise: '$199/month'
+      }
+      competitors: [        {
+          name: 'Jasper AI'
+          pricing: '$39/month'
+          rating: '4.8/5'
+          pros: ['Excellent templates', 'Good AI quality', 'Wide integrations']
+          cons: [
+            'Higher pricing',
+            'Limited customization',
+            'No unlimited plan',
+          ],
+          savings: 'Save $20/month with Zion',
+        },        {
+          name: 'Copy.ai',
+          pricing: '$36/month',
+          rating: '4.6/5',
+          pros: ['Unlimited words', 'Good value', 'Simple interface'],
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO'],
+          savings: 'Save $17/month with Zion',
+        },        {
+          name: 'Writesonic',
+          pricing: '$19/month',
+          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations'],
+          cons: ['Higher pricingLimited customizationNo unlimited plan'],
+          savings: 'Save $20/month with Zion'
+};
+          name: 'Copy.ai',
+          pricing: '$36/month',
+          rating: '4.6/5',
+          pros: ['Unlimited words', 'Good value', 'Simple interface'],
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO'],
+          savings: 'Save $17/month with Zion',
+        },          pros: ['Unlimited wordsGood valueSimple interface'],
+          cons: ['Basic featuresLimited templatesNo advanced SEO'],
+          savings: 'Save $17/month with Zion'
+        },        {
+          name: 'Writesonic'
+          pricing: '$19/month'
+          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations']
+          cons: ['Higher pricingLimited customizationNo unlimited plan']
+          savings: 'Save $20/month with Zion'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         }
           name: 'Copy.ai';
           pricing: '$36/month';
@@ -174,10 +227,18 @@ href='/pricing';
                   </p>;
                 </Card>;
               ))}
+<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
         {/* Detailed Comparison */}<section id="comparison" className="py-24 bg-gray-800">;
+=======
+            </div>
+          </div>
+        </section>
+        {/* Detailed Comparison */}
+        <section id="comparison" className="py-24 bg-gray-800">
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               ))}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-20">;
@@ -350,12 +411,19 @@ href='/pricing';
                                     : 'text-gray-400';
                                 }`}
                               />;
+<<<<<<< HEAD
                             ))}<span className='text-sm text-gray-400 ml-2'>;
                               {competitor.rating}
                             </span>;
                           </div>;
                           <div className='mb-4'>;
                             <p className='text-lg font-semibold text-white'>;
+=======
+                            ))}
+                          </div>
+                          <div className='mb-4'>
+                            <p className='text-lg font-semibold text-white'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                               {competitor.pricing}
                             </p>;
                           </div>;
@@ -377,6 +445,7 @@ href='/pricing';
                               <ul className="text-gray-300 space-y-1">;
                                 {competitor && competitor.pros.map((pro, proIndex) => (<li key={proIndex} className="flex items-center">;
                                     <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />;
+<<<<<<< HEAD
                           </div>;
                           <div className="mb-4">;
                             <p className="text-lg font-semibold text-white">{competitor.pricing}</p>;
@@ -408,6 +477,30 @@ href='/pricing';
                                     className='flex items-center';
                                   >;
                                     <X className='w-3 h-3 text-red-400 mr-2 flex-shrink-0' />;
+=======
+                          </div>
+                          <div className="mb-4">
+                            <p className="text-lg font-semibold text-white">{competitor.pricing}</p>
+                          </div>
+                          <div className="space-y-2 mb-4 text-xs">
+                            <div>
+                              <p className="text-green-400 font-medium mb-1">Pros:</p>
+                              <ul className="text-gray-300 space-y-1">
+                                {competitor.pros.map((pro, proIndex) => (
+                                  <li key={proIndex} className="flex items-center">
+                                    <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                                    {pro}
+                                  </li>;
+                                ))}
+                              </ul>
+                            </div>
+                            <div>
+                              <p className="text-red-400 font-medium mb-1">Cons:</p>
+                              <ul className="text-gray-300 space-y-1">
+                                {competitor.cons.map((con, conIndex) => (
+                                  <li key={conIndex} className="flex items-center">
+                                    <X className="w-3 h-3 text-red-400 mr-2 flex-shrink-0" />
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                                     {con}
                                   </li>;
                                 ))}
@@ -501,6 +594,7 @@ href='/devops-automation';
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
                 className='bg-white text-indigo-600 hover:bg-gray-100'              >                href="/ai-content-generator";
                 variant="secondary";
                 size="lg";
@@ -517,3 +611,11 @@ href='/devops-automation';
       </div>;
     </>;
   )}
+=======
+                className='bg-white text-indigo-600 hover:bg-gray-100'              >                href="/ai-content-generator"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-indigo-600 hover:bg-gray-100"
+                Try AI Content Generator
+              </Button>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

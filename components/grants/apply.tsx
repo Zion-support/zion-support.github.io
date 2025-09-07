@@ -1,12 +1,15 @@
+<<<<<<< HEAD
 
 ;
 import { useState } from 'react';
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import {useState} from 'react';
-
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter   } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
+<<<<<<< HEAD
 const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants';
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {import { useState   } from 'react';
@@ -37,6 +40,8 @@ function ApplyGrantPage() {const router = use_router ()const [program, set_progr
       router.push (`/grants/${data.id}`)} catch (e: any) {set_error (e.message)} finally {} catch (e: any) {set_error (e.message)} finally {const save = async (submit: boolean) => {try {setLoading(true)setError(null),const resp = await fetch('/api/grants', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,budgetAmount: Number(budgetAmount || 0),budgetCurrency,supportingLinks: supportingLinks;
             .split('\n').map(s => s && s.trim()).filter(Boolean),pitchDeckUrl,region,sector: (sector as any) || undefined,submit})})const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch (e: any) {setError(e && e.message)} finally {setLoading(false)}          budgetAmount: Number(budgetAmount || 0),program;
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const categories: GrantCategory[] = [
   'Ecosystem Tools',
   'Talent Development',
@@ -44,6 +49,7 @@ const categories: GrantCategory[] = [
   'Research Grants'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
+<<<<<<< HEAD
 
 import { useState  } from 'react';
 import { useRouter  } from 'next/router';
@@ -54,6 +60,8 @@ const categories: GrantCategory[] = [
   'Regional Expansion'
   'Research Grants'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export default function ApplyGrantPage() {
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
@@ -69,14 +77,18 @@ export default function ApplyGrantPage() {;
   const [proposalSummary, setProposalSummary] = useState('');
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import {use_router} from 'next / router';
@@ -144,6 +156,8 @@ function ApplyGrantPage() {
     } finally {
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const save = async (submit: boolean) => {;
     try {;
       setLoading(true);
@@ -176,6 +190,7 @@ function ApplyGrantPage() {
       setError(e && e.message);
     } finally {;
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
+<<<<<<< HEAD
 
           program;
           projectName;
@@ -184,6 +199,8 @@ function ApplyGrantPage() {
           timeline;
           budgetAmount: Number(budgetAmount || 0),budgetCurrency;
           budgetAmount: Number(budgetAmount || 0),
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n').map((s) => s && s.trim()).filter(Boolean)set_loading (false)}          budget_amount: Number (budget_amount || 0),budget_currency;
@@ -198,7 +215,6 @@ function ApplyGrantPage() {
             .filter (Boolean);
           pitchDeckUrl;
           region;
-
           sector: (sector as any) || undefined,;
           submit})});
       const data = await resp && resp.json();
@@ -208,11 +224,12 @@ function ApplyGrantPage() {
       setError(e && e.message);
     } finally {;
       setLoading(false);
-
     }
+<<<<<<< HEAD
     }
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
-
           <textarea
             className='mt-1 w-full border rounded p-2'
             rows={3}
@@ -228,8 +245,14 @@ function ApplyGrantPage() {
           <textarea;
             className='mt-1 w-full border rounded p-2';
             rows={3}
+<<<<<<< HEAD
             value={supportingLinks}{error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>;
+=======
+            value={supportingLinks}
+        {error && <div className='text-sm text-red-600'>{error}</div>}
+        <div className='flex gap-3'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             onChange={e => setSupportingLinks(e && e.target.value)}
           />;
         </label>;
@@ -456,7 +479,27 @@ function ApplyGrantPage() {
           >;
             Save Draft;
           </button>;
+<<<<<<< HEAD
           <button;
+=======
+          <button
+            disabled={loading}
+            onClick={() => save(true)}
+  }
+    }
+  };
+  return (
+        {error && <div className='text-sm text-red-600'>{error}</div>}
+        <div className='flex gap-3'>
+          <button
+            disabled={loading}
+            onClick={() => save(false)}
+            className='px-4 py-2 border rounded disabled:opacity-50'
+          >
+            Save Draft
+          </button>
+          <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             disabled={loading}
             onClick={() => save(true)}
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
@@ -477,8 +520,11 @@ function ApplyGrantPage() {
       </div>
     </EnhancedLayout>
   );
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               <option value="USDC">USDC</option>;
               <option value="ZION$">ZION$</option>;
             </select>;
@@ -498,6 +544,7 @@ function ApplyGrantPage() {
             <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>;
               <option value="">Select sector</option>;
         </label>;
+<<<<<<< HEAD
 
 
   );
@@ -557,11 +604,16 @@ function ApplyGrantPage() {
   )}
 }
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   );
-
 );
 }
+<<<<<<< HEAD
   );
 }
   );
 }
+=======
+  );
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

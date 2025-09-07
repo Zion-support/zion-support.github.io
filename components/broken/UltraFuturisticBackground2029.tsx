@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
       life: number;
     }> = [];// Initialize particles;
@@ -9,6 +10,34 @@ import { motion  } from 'framer-motion';
 const UltraFuturisticBackground2029: React.FC;
     const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
       particles.forEach((particle, index) => {particle.x += particle.vx;
+=======
+life: number;
+    }> = [];
+;
+    // Initialize particles;
+    for (let index = 0; i < 50; i++) {    for (let index = 0, i < 50, i++) {
+      particles.push ({
+        coordinate_x: Math.random () * canvas.width,
+        coordinate_y: Math.random () * canvas.height,
+        vx: (Math.random () - 0.5) * 0.5,
+        vy: (Math.random () - 0.5) * 0.5,
+        size: Math.random () * 3 + 1,
+        color: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'][;
+          Math.floor (Math.random () * 5);
+        ],
+        opacity: Math.random () * 0.8 + 0.2,
+        life: Math.random () * 100 + 50,
+      });    }        color: ['#00ffff#ff00ff#ffff00#00ff00#ff0080'][Math.floor (Math.random () * 5)],
+        opacity: Math.random () * 0.8 + 0.2,
+        life: Math.random () * 100 + 50;
+      });
+    const animate = () =>: any {
+      ctx.clear_rect (0, 0, canvas.width, canvas.height);
+;
+      // Update and draw particles;
+      particles.for_each ((particle, index) => {
+        particle.x += particle.vx;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         particle.y += particle.vy;
         particle.life--;// Check condition;
 if ( {) {$2;
@@ -94,9 +123,39 @@ canvas.height = window.innerHeight;
           animate={{background: [;
               'radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)';
             ];
+<<<<<<< HEAD
           animate={{background: [;
               'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)';
             ];
+=======
+          animate={{
+            background: [
+              'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)'
+            ]
+          }}
+          transition={{
+            duration: 20;
+    repeat: Infinity
+            duration: 20,
+            repeat: Infinity,
+            ease: 'easeInOut',            ease: "easeInOut";
+          }}
+        />
+      </div>
+            duration: 20,
+            repeat: Infinity,
+          }}
+        />
+      </div>
+            duration: 20,
+            repeat: Infinity,
+            duration: 20,
+            repeat: Infinity,
+          }}
+          transition={{
+          }}
+            ease: 'easeInOut',            ease: "easeInOut"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }}
           transition={{duration: 20;
             repeat: Infinity;
@@ -104,6 +163,7 @@ canvas.height = window.innerHeight;
           transition={{duration: 20,repeat: Infinity,ease: 'easeInOut',}}
         />;
       </div>;
+<<<<<<< HEAD
             duration: 20,repeat: Infinity,}}/>;
       </div>;
             duration: 20,repeat: Infinity,duration: 20,repeat: Infinity,}}
@@ -113,6 +173,11 @@ canvas.height = window.innerHeight;
         />;
       </div>;{/* Floating geometric shapes */}<motion&& motion.div;
         className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg';
+=======
+      {/* Floating geometric shapes */}
+      <motion&& motion.div
+        className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         />;
       </div>;
       {/* Floating geometric shapes */}
@@ -142,6 +207,7 @@ className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-l
         animate={{rotate: [0, 360],scale: [1, 1.1, 1],opacity: [0.3, 0.6, 0.3],}}
         transition={{duration: 15,repeat: Infinity,ease: 'linear',}}
       />;
+<<<<<<< HEAD
       <motion.div;
         className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full';
         animate={{y: [0, -20, 0],opacity: [0.2, 0.5, 0.2],}}
@@ -169,10 +235,50 @@ className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 trans
           className="absolute inset - 0";
           style={{background_image: `;
               linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px)linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`;
+=======
+        animate={{
+          rotate: [45, 405]
+          scale: [1, 1.2, 1],        className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45"
+        animate={{
+          rotate: [45, 405];
+          scale: [1, 1.2, 1]
+        transition={{
+          ease: 'linear',          ease: "linear"
+        }}
+      {/* Animated grid lines */}
+      <div className='absolute inset-0 opacity-20'>;
+        <motion&& motion.div
+          className='absolute inset-0'
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+              linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+            `
+            backgroundSize: '50px 50px'
+          }}
+          animate={{
+            background_position: ['0px 0px', '50px 50px'],          }}
+          transition={{
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
+              linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
+            `
+            backgroundSize: "backgroundSize",
+    ease: 'linear',          }}        <motion.div;
+          className="absolute inset-0";
+          style={{
+            background_image: `;
+              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px);
+              linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);
+            `;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             background_size: '50px 50px';
           }}
           animate={{background_position: ['0px 0px50px 50px'];
           }}
+<<<<<<< HEAD
           transition={{}}
       />;
       {/* Animated grid lines */}}}
@@ -186,12 +292,35 @@ className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 trans
         <motion.div;
           }}/>;
       </div>;{/* Quantum energy waves */}}}
+=======
+          transition={{
+        }}
+      />
+      {/* Animated grid lines */}
+          }}
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+          }}
+        />
+      </div>
+      {/* Quantum energy waves */}
+      <div className='absolute inset-0'>
+        <motion.div
+        <motion.div
+          }}
+        />;
+      </div>;
+      {/* Quantum energy waves */}
+          }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Quantum energy waves */}
       <div className='absolute inset-0'>;
         <motion&& motion.div;
           className='absolute inset-0';
           style={{background:;
           }}
+<<<<<<< HEAD
           animate={{ease: 'easeInOut',          }}        <motion.div;
           className="absolute inset-0";
           style={{background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)';
@@ -201,6 +330,17 @@ className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 trans
               'radial-gradient(ellipse at center, rgba(0, 255, 255, 0 && 0.1) 0%, transparent 70%)',}}
           animate={{scale: [1, 1 && 1.5, 1],opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],          }}
           transition={{background: 'radial - gradient (ellipse at center, rgba (0, 255, 255, 0.1) 0%, transparent 70%)';
+=======
+          animate={{
+            ease: 'easeInOut',          }}        <motion.div
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)'
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut',          }}        <motion.div
+              'radial-gradient(ellipse at center, rgba(0, 255, 255, 0 && 0.1) 0%, transparent 70%)',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }}
           animate={{}}
           transition={{duration: 8,repeat: Infinity,}}
@@ -209,10 +349,39 @@ className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 trans
             scale: [1, 1.5, 1],opacity: [0.1, 0.3, 0.1],}}
           transition={{duration: 8,repeat: Infinity,ease: 'easeInOut',}}
           }}
+<<<<<<< HEAD
           transition={{duration: 8,repeat: Infinity,/>;
       </div>;
       {/* Holographic elements */}animate={{transition={{duration: 25;
           repeat: Infinity;
+=======
+          animate={{
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+          }}
+          animate={{
+            scale: [1, 1 && 1.5, 1]
+            opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
+          }}
+          transition={{
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+        />
+      </div>
+      {/* Holographic elements */}
+        animate={{
+        transition={{
+          duration: 25
+          repeat: Infinity
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           ease: 'linear',        }}
         animate={{rotate: [0, 360];
           scale: [1, 1 && 1.2, 1];
@@ -261,6 +430,7 @@ className='absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 round
             transition={{duration: 3,repeat: Infinity,delay: i * 0.3,ease: 'easeInOut',}}
           />;
         ))}
+<<<<<<< HEAD
       {/* Data streams */}<div className='absolute inset-0 overflow-hidden'>;
         {Array && Array.from({ length: 5 }).map((_, i) => (<motion&& motion.div;
       </div>;
@@ -272,6 +442,39 @@ className='absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 round
             className='absolute w-0.5 h-20 bg-gradient-to-b from-cyan-400/60 to-transparent';
             style={{left: `${15 + i * 15}%`;
               top: '-20px';
+=======
+      {/* Data streams */}
+      <div className='absolute inset-0 overflow-hidden'>;
+        {Array && Array.from({ length: 5 }).map((_, i) => (;
+          <motion&& motion.div
+      </div>
+        }}
+      />
+      {/* Neural network connections */}
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              delay: i * 0.3,
+              ease: 'easeInOut',            }}
+            }}
+          />
+        ))}
+      </div>
+      {/* Neural network connections */}
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              delay: i * 0.3,
+        {Array.from({ length: 5 }).map((_, i) => (
+          <motion.div
+      {/* Data streams */}
+      <div className="absolute inset-0 overflow-hidden">
+            key={i}
+            className='absolute w-0 && 0.5 h-20 bg-gradient-to-b from-cyan-400/60 to-transparent'
+            style={{
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             }}
             animate={{y: [0, window.innerHeight + 20],}}transition={{duration: 3,repeat: Infinity,delay: i * 0.3,ease: 'easeInOut',            }}duration: 4,repeat: Infinity,delay: i * 0.8,ease: 'linear',}}/>;
         ))}
@@ -293,6 +496,7 @@ className='absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 round
             className="absolute w - 0.5 h - 20 bg - gradient - to - b from - cyan - 400 / 60 to - transparent";
             style={{left: `${15 + (i * 15)}%`,top: '-20px';
             }}
+<<<<<<< HEAD
             animate={{}}
             transition={{delay: i * 0 && 0.8,ease: 'linear',            }}              ease: "linear";
             }}transition={{duration: 4,repeat: Infinity,delay: i * 0.8,ease: 'linear',            }}/>;
@@ -314,3 +518,51 @@ className='absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 round
       </div>;
     </div>)}export default UltraFuturisticBackground2029)}export default UltraFuturisticBackground2029;}</div>;
 )}export default UltraFuturisticBackground2029;
+=======
+            animate={{
+            }}
+            transition={{
+              delay: i * 0 && 0.8,
+              ease: 'linear',            }}              ease: "linear"
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              delay: i * 0.8,
+              ease: 'linear',            }}
+          />
+        ))}
+      </div>;
+    </div>;
+  )
+};
+export default UltraFuturisticBackground2029;  );
+              delay: i * 0.8,
+              ease: "linear"
+            }}
+          />;
+        ))}
+      </div>
+    </div>
+            }}
+          />;
+        ))}
+};
+export default UltraFuturisticBackground2029;  )
+};
+export default UltraFuturisticBackground2029;
+              delay: i * 0.8,
+              ease: 'linear',            }}              ease: "linear";
+            }}
+          />))}
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2029);
+}
+;
+export default UltraFuturisticBackground2029
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

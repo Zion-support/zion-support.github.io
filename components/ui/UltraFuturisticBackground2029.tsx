@@ -1,4 +1,4 @@
-  x: number;
+x: number;
   y: number;
   coordinate_x: number;
   coordinate_y: number;
@@ -8,6 +8,7 @@
   opacity: number;
   color: string;
   type: 'energy' | 'data' | 'quantum' | 'neon';
+<<<<<<< HEAD
   life: number;children: React.ReactNode;
   children,}: {children: React.ReactNode;
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null)const particlesRef = useRef<Particle[]>([])const energyFieldsRef = useRef<EnergyField[]>([])const animationRef  = useRef<number | undefined>(undefined)interface EnergyField  {x: number,y: number,radius: number,intensity: number,color: string,pulse: number;
@@ -32,6 +33,58 @@ canvas.height = window.innerHeight;
     const handleMouseMove = (e: MouseEvent) => {setMousePosition({ x: e.clientX, y: e.clientY })}window.addEventListener('mousemove', handleMouseMove)// Initialize particles with different types;
     const initParticles = () => {const particles: Particle[] = [];
       const colors = {neon: ['#ff0066#00ffff#ffff00#ff00ff'];
+=======
+  life: number;
+  children: React.ReactNode;
+  children,
+}: {;
+  children: React.ReactNode;
+}) {  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<Particle[]>([]);
+  const energyFieldsRef = useRef<EnergyField[]>([]);
+  const animationRef = useRef<number | undefined>(undefined);
+interface EnergyField {;
+  x: number,;
+  y: number,;
+  radius: number,;
+  intensity: number,;
+  color: string,;
+  pulse: number;
+}
+export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<Particle[]>([]);
+  const energyFieldsRef = useRef<EnergyField[]>([]);
+  const animationRef = useRef<number | undefined>(undefined);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  vx: number,
+  vy: number,
+  size: number,
+  opacity: number,
+  color: string,
+  type: 'energy' | 'data' | 'quantum' | 'neon',
+  life: number,
+}
+interface EnergyField {
+  coordinate_x: number,
+  coordinate_y: number,
+  radius: number,
+  intensity: number,
+  color: string,
+  pulse: number;
+}
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    // Mouse move handler for interactive effects
+    const handleMouseMove = (e: MouseEvent) => {
+    window.addEventListener('mousemove', handleMouseMove);
+    // Initialize particles with different types
+    const initParticles = () => {
+      const particles: Particle[] = [];
+      const colors = {
+        neon: ['#ff0066#00ffff#ffff00#ff00ff']
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       }
       for (let i = 0, i < 150, i++) {const type = ['energydataquantumneon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
           maxLife: 100;
@@ -142,9 +195,17 @@ for (let i = 0; i < 20; i++) {const x1 = Math.random() * canvas.width;
   }, [mousePosition])return ({/* Animated background canvas */}
       <canvas;
         ref={canvasRef}
+<<<<<<< HEAD
         className='absolute inset-0 w-full h-full pointer-events-none';
         style={{ zIndex: -1 }}transition={{duration: 8;
             repeat: Infinity;
+=======
+        className='absolute inset-0 w-full h-full pointer-events-none'
+        style={{ zIndex: -1 }}
+          transition={{
+            duration: 8;
+    repeat: Infinity
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             ease: 'easeInOut',      }
       {/* Animated background canvas */}
       <canvas;
@@ -182,24 +243,49 @@ for (let i = 0; i < 20; i++) {const x1 = Math.random() * canvas.width;
           transition={{duration: 12,repeat: Infinity,ease: 'easeInOut',          }}
         />;
         <motion.div;
+<<<<<<< HEAD
           className="absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45";
           animate={{transition={{duration: 10;
             repeat: Infinity;
             ease: 'easeInOut',          }}          }}}}scale: [1, 1.1, 1],}}
           transition={{duration: 12,repeat: Infinity,ease: 'easeInOut',}}
+=======
+          className="absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity-20 transform rotate-45";
+          animate={{
+          transition={{
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut',          }}          }}
+          }}
+          }}
+            duration: 10,
+            repeat: Infinity,
+        />
+      </div>
+      {/* Gradient overlays for depth */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         />;
         <motion.div;
           className='absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20';
           animate={{rotate: [-45, 315],opacity: [0.2, 0.6, 0.2],}}
           transition={{duration: 10,repeat: Infinity,ease: 'easeInOut',}}duration: 10,repeat: Infinity,/>;
       </div>;
+<<<<<<< HEAD
       {/* Gradient overlays for depth */}/>;
       </div>;{/* Gradient overlays for depth */}
+=======
+      {/* Gradient overlays for depth */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />;
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />;<div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />;
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />;
 <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />;
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />;
+<<<<<<< HEAD
+=======
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Content */}
       <div className='relative z-10'>{children}</div>;
     </div>;
@@ -226,5 +312,20 @@ for (let i = 0; i < 20; i++) {const x1 = Math.random() * canvas.width;
       <div className="relative z-10">;
         {children}
       </div>;
+<<<<<<< HEAD
     </div>;
   )})
+=======
+    </div>);
+}
+      <div className='relative z-10'>{children}</div>
+    </div>
+  );      {/* Content */}
+      <div className="relative z-10">
+        {children}
+      </div>
+    </div>
+  )
+}
+  );
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

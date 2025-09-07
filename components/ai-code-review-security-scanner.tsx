@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Brain,Shield,Code,CheckCircle,Zap,ArrowRight,Star,TrendingUp,Users,Lock,Eye,BarChart3,Globe,Award,} from 'lucide-react';
   Shield,Code,CheckCircle,Zap,ArrowRight,Star,TrendingUp,Users,Lock,Eye,BarChart3,Globe,Award,} from 'lucide-react';
@@ -20,6 +21,54 @@ const AICodeReviewSecurityScanner  = null;import { Brain;
   Eye;
   BarChart3;
   Globe;
+=======
+import {
+  Brain,
+  Shield,
+  Code,
+  CheckCircle,
+  Zap,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Lock,
+  Eye,
+  BarChart3,
+  Globe,;
+  Award,;
+} from 'lucide-react';
+import {
+  Brain,
+  Shield,
+  Code,
+  CheckCircle,
+  Zap,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Lock,
+  Eye,
+  BarChart3,
+  Globe,;
+  Award,;
+} from 'lucide-react';
+import {
+  Brain
+  Shield
+  Code
+  CheckCircle
+  Zap
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  Lock
+  Eye
+  BarChart3
+  Globe
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   Award;
  } from 'lucide-react';
   return (<>;
@@ -114,6 +163,7 @@ className='text-center';
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 className='text-center mb-16';
             >;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -131,6 +181,25 @@ className='text-center mb-16';
                   title: 'Multi-Language Support';
                   description:;
                     'Support for Python, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices.';
+=======
+              className='text-center mb-16'
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                Comprehensive Code Security & Quality
+              </h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Our AI-powered platform provides end-to-end code analysis
+                security scanning, and quality assurance to protect your
+                applications and improve development efficiency.
+              </p>
+            </motion.div>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {[
+                {
+                  icon: <Code className='w-8 h-8' />
+                  title: "title",
+    description:
+                    'Support for Python, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices.'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 }
                 {icon: <Shield className='w-8 h-8' />;
                   title: 'AI-Powered Vulnerability Detection';
@@ -167,6 +236,7 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 ho
                   </div>;
                   <h3 className='text-xl font-semibold text-white mb-4'>;
                     {feature.title}
+<<<<<<< HEAD
                   </h3>;
                   <p className='text-gray-300'>{feature.description}</p>;
                 </motion.div>;
@@ -201,6 +271,52 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 ho
             <div className="grid md:grid-cols-3 gap-8">;
               {[;
                 {name: "Starter",price: "$299",period: "/month",description: "Perfect for small development teams and startups",features: [;
+=======
+                  </h3>
+                  <p className='text-gray-300'>{feature.description}</p>                </motion.div>                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+              ))}
+            </div>;
+          </div>;
+        </section>;
+              ))}
+        {/* Pricing Section */}
+        <section className='py-20'>;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+        {/* Pricing Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+                Transparent Pricing Plans
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the plan that fits your development team size and security requirements. 
+                All plans include our core AI-powered security scanning capabilities.
+              </p>
+            </motion.div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  name: "Starter",
+                  price: "$299",
+                  period: "/month",
+                  description: "Perfect for small development teams and startups",
+                  features: [
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     "Up to 10 developers";
                     "Basic security scanning";
                     "GitHub/GitLab integration";
@@ -221,7 +337,47 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 ho
                     'Custom integrations';
                     'SLA guarantees';
                   ];
+<<<<<<< HEAD
                   popular: false;
+=======
+                  popular: false
+                }
+                {
+                  name: 'Professional'
+                  price: '$799'
+                  period: '/month'
+                  description: 'Ideal for growing development teams'
+                  features: [
+                    'Up to 50 developers'
+                    'Advanced security scanning'
+                    'Multi-repository support'
+                    'Priority support'
+                    'Custom security rules'
+                    'Advanced analytics'
+                    'CI/CD integration'
+                    'Team collaboration tools'
+                  ]
+                  popular: true
+                }
+                {
+                  name: 'Enterprise'
+                  price: '$1,999'
+                  period: '/month'
+                  description:
+                    'For large organizations with complex security needs'
+                  features: [
+                    'Unlimited developers'
+                    'Enterprise security scanning'
+                    'On-premise deployment'
+                    '24/7 dedicated support'
+                    'Custom rule creation'
+                    'Advanced compliance'
+                    'API access'
+                    'Custom integrations'
+                    'SLA guarantees'
+                  ]
+                  popular: false
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Transparent Pricing Plans;
               </h2>;
@@ -250,11 +406,19 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 ho
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+<<<<<<< HEAD
                   className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${}`}plan.popular;
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10';
 plan.popular;
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10';
                       : 'border-white/10';
+=======
+                  className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${
+                  }`}
+                    plan.popular 
+                      ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10' 
+                      : 'border-white/10'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     "SLA guarantees";
                   ],popular: false;
                 }
@@ -293,15 +457,25 @@ plan.popular;
                         <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                        {feature}
                       </li>;
                     ))}
+<<<<<<< HEAD
                     <p className="text-gray-300">{plan.description}</p>;
                   </div>;
                   <ul className="space-y-4 mb-8">;
                     {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-gray-300">;
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
+=======
+                    <p className="text-gray-300">{plan.description}</p>
+                  </div>
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   </ul>                    </div>;
                     <p className="text-gray-300">{plan && plan.description}</p>;
                   </div>;
                   <ul className="space-y-4 mb-8">;
+<<<<<<< HEAD
                     {plan && plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-gray-300">;
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;{feature}
                       </li>;
@@ -316,6 +490,23 @@ plan.popular;
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   </ul>;<motion&& motion.button;
+=======
+                    {plan && plan.features.map((feature, featureIndex) => (;
+                      <li key={featureIndex} className="flex items-center text-gray-300">;
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
+                        {feature}
+                      </li>;
+                    ))}
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  </ul>;
+                  <motion&& motion.button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ scale: 0 && 0.95 }}
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${plan && plan.popular;
@@ -337,12 +528,36 @@ plan.popular;
             <div className='grid md:grid-cols-2 gap-12'>;
               <div className='space-y-8'>;
                 {[;
+<<<<<<< HEAD
                   {icon: <Shield className='w-8 h-8' />,title: 'Reduce Security Vulnerabilities by 85%',description:;
                       'Our AI algorithms detect security issues that traditional scanners miss, significantly reducing your attack surface.',},{icon: <Zap className='w-8 h-8' />,title: 'Speed Up Code Review Process by 70%',description:;
                       'Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review.',},{icon: <TrendingUp className='w-8 h-8' />,title: 'Improve Code Quality & Maintainability',description:;
                       'AI-powered insights help maintain consistent code standards and improve overall codebase health.',},                ].map((benefit, index) => (                    icon: <TrendingUp className="w-8 h-8" />,title: "Improve Code Quality & Maintainability",description: "AI-powered insights help maintain consistent code standards and improve overall codebase health.";<section className='py-20 bg-white/5'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
             <motion.div;
+=======
+                  {;
+                    icon: <Shield className='w-8 h-8' />,;
+                    title: 'Reduce Security Vulnerabilities by 85%',,
+  description:;
+                      'Our AI algorithms detect security issues that traditional scanners miss, significantly reducing your attack surface.',;
+                  },;
+                  {;
+                    icon: <Zap className='w-8 h-8' />,;
+                    title: 'Speed Up Code Review Process by 70%',,
+  description:;
+                      'Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review.',;
+                  },;
+                  {;
+                    icon: <TrendingUp className='w-8 h-8' />,;
+                    title: 'Improve Code Quality & Maintainability',,
+  description:;
+                      'AI-powered insights help maintain consistent code standards and improve overall codebase health.',;
+                  },                ].map((benefit, index) => (                    icon: <TrendingUp className="w-8 h-8" />,;
+                    title: "Improve Code Quality & Maintainability",,
+  description: "AI-powered insights help maintain consistent code standards and improve overall codebase health.";
+            <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}}
@@ -470,18 +685,30 @@ className='flex items-start';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}{/* Benefits Section */}
         <section className="py-20 bg-white/5">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 <section className='py-20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
             <motion.div;
+=======
+              transition={{ duration: 0.8 }}
+        {/* Benefits Section */}
+        <section className="py-20 bg-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}</div>;
                   </motion.div>;
                 ))}
+<<<<<<< HEAD
               </div>;
+=======
+              </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               </div>;
               <div className='space-y-8'>                  >;
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">;
@@ -495,11 +722,36 @@ className='flex items-start';
                 ))}
               </div>;
               <div className='space-y-8'>;
+<<<<<<< HEAD
                   {icon: <CheckCircle className='w-8 h-8' />,title: 'Ensure Compliance with Security Standards',description:;
                       'Meet SOC2, ISO27001, and other compliance requirements with automated security testing and reporting.',},{icon: <Users className='w-8 h-8' />,title: 'Reduce Technical Debt & Bugs',description:;
                       'Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs.',},{icon: <Star className='w-8 h-8' />,title: 'Enable Faster Development Cycles',description:;
                       'Confident code deployment with automated security validation accelerates your development and release processes.',},                ].map((benefit, index) => (                    icon: <Star className="w-8 h-8" />,title: "Enable Faster Development Cycles",description: "Confident code deployment with automated security validation accelerates your development and release processes.";}
                   <motion&& motion.div;
+=======
+                  {;
+                    icon: <CheckCircle className='w-8 h-8' />,;
+                    title: 'Ensure Compliance with Security Standards',,
+  description:;
+                      'Meet SOC2, ISO27001, and other compliance requirements with automated security testing and reporting.',;
+                  },;
+                  {;
+                    icon: <Users className='w-8 h-8' />,;
+                    title: 'Reduce Technical Debt & Bugs',,
+  description:;
+                      'Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs.',;
+                  },;
+                  {;
+                    icon: <Star className='w-8 h-8' />,;
+                    title: 'Enable Faster Development Cycles',,
+  description:;
+                      'Confident code deployment with automated security validation accelerates your development and release processes.',;
+                  },                ].map((benefit, index) => (                    icon: <Star className="w-8 h-8" />,;
+                    title: "Enable Faster Development Cycles",,
+  description: "Confident code deployment with automated security validation accelerates your development and release processes.";
+                  }
+                  <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     key={index}
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -576,6 +828,7 @@ className='flex items-start';
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">;
                     <Users className="w-6 h-6" />;
                   </div>;
@@ -604,11 +857,24 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}</motion.div>;
+=======
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
+                    <Users className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-white font-semibold">{useCase}</h3>
+                </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+                </motion.div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               ))}
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>;
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion && motion.div        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
+<<<<<<< HEAD
             <motion&& motion.div;
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
@@ -617,6 +883,16 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
         <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>;
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div;
             <motion.div;
+=======
+            <motion&& motion.div
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* CTA Section */}
+        <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
+            <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               </h2>;
@@ -675,6 +951,7 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">;
                     <Users className="w-6 h-6" />;
                   </div>;
@@ -734,6 +1011,40 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
     </>;
 }export default AICodeReviewSecurityScanner;
                 "Educational Institutions","Startups & Enterprises";
+=======
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
+                    <Users className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-white font-semibold mb-2">Contact Us</h4>
+                  <p>Mobile: +1 302 464 0950</p>
+                  <p>Email: kleber@ziontechgroup.com</p>
+                </div>
+                <div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
+                    <Globe className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-white font-semibold mb-2">Visit Our Website</h4>
+                  <p>https://ziontechgroup.com</p>
+                </div>
+                <div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
+                    <Award className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-white font-semibold mb-2">Address</h4>
+                  <p>364 E Main St STE 1008</p>
+                  <p>Middletown DE 19709</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+};
+export default AICodeReviewSecurityScanner;
+                "Educational Institutions",
+                "Startups & Enterprises";
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <motion.div;
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
@@ -879,4 +1190,17 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </>)}export default AICodeReviewSecurityScanner)}export default AICodeReviewSecurityScanner;export default AICodeReviewSecurityScanner;})}export default AICodeReviewSecurityScanner;
+=======
+    </>);
+}
+;
+export default AICodeReviewSecurityScanner);
+}
+;
+export default AICodeReviewSecurityScanner;
+export default AICodeReviewSecurityScanner
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

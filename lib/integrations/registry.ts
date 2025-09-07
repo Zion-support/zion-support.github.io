@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import { IntegrationProviderMeta  } from './types';
@@ -14,9 +15,14 @@ import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
 
 
+=======
+import { IntegrationProviderMeta } from "./types";
+export const PROVIDERS: IntegrationProviderMeta[] = [
+import { IntegrationProviderMeta } from "./types";
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const PROVIDERS: IntegrationProviderMeta[] = [
   {
-    id: "salesforce"
+    id: "id",
     name: "Salesforce"
     category: "crm"
     description: "Enterprise CRM"
@@ -78,7 +84,6 @@ export function getProviderById(id: string): IntegrationProviderMeta | undefined
   }
 ];
 export function getProviderById(
-
 }
 import { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
@@ -114,4 +119,3 @@ export function getProviderById(
 }
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
-

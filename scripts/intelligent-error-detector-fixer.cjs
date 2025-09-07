@@ -55,5 +55,9 @@ const { execSync } = require("child_process")
       this.log(" Starting Intelligent Error Detector & Fixer")
       this.log("� Intelligent Error Detector & Fixer completed successfully")
       return { "success": true, "errors": this.errors, "fixes"}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       this.log(`� Error detection "failed": ${error.message}`, ``)

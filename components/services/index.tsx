@@ -1,7 +1,21 @@
+<<<<<<< HEAD
 
 ;
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (}React.useEffect ( () => {const next = services.filter ( (s) => {//Category const handle_submit = async (values: QuoteFormValues) => {const res = await fetch ('/api / quote - request', {method: 'POST', headers: {'Content-Type': 'application/json';
 }body: JSON.stringify ({service: values.serviceTitle, description: values.projectDescription, timeline: {start: values.timelineStart, end: values.timelineEnd;
+=======
+const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
+}React.useEffect ( () => {
+  const next = services.filter ( (s) => {
+  //Category const handle_submit = async (values: QuoteFormValues) => {
+  const res = await fetch ('/api / quote - request', {
+  method: 'POST', headers: {
+  'Content-Type': 'application/json' 
+};
+body: JSON.stringify ({
+  service: values.serviceTitle, description: values.projectDescription, timeline: {
+  start: values.timelineStart, end: values.timelineEnd
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 budgetRange: values.budgetRange;
 }
@@ -27,6 +41,7 @@ const mapLocalToServiceItem  = null;export default function ServicesIndexPage ()
 }
 budgetRange: values.budgetRange;
 }
+<<<<<<< HEAD
 <Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) )}</div> </div> </div> </div> <QuoteRequestModal open= {modalOpen;
 }onClose= {() => setModalOpen (false)}service= {selected;
 }onSubmit= {handleSubmit;
@@ -38,6 +53,36 @@ const mapLocalToServiceItem = (item: any): ServiceItem => ({slug: item.slug;
   priceRangeUSD: item.priceRangeUSD;
   categories: [item.category];
   rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10})const ServicesPage: NextPage = () => {const [services, setServices] = React.useState<ServiceItem[]>([])const [filtered, setFiltered] = React.useState<ServiceItem[]>([])const [filters, setFilters] = React.useState<Filters>({ categories: [] })const [modalOpen, setModalOpen] = React.useState(false)const [selected, setSelected] = React.useState<ServiceItem | null>(null)export default function ServicesIndexPage() {const all = (enhancedRealMicroSaasServices as unknown[])extraServices as any[];
+=======
+<Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) )
+}</div> </div> </div> </div> <QuoteRequestModal open= {
+  modalOpen
+}onClose= {
+  () => setModalOpen (false)
+}service= {
+  selected
+}onSubmit= {
+  handleSubmit
+}/> </div>)
+};export default ServicesPage;
+const mapLocalToServiceItem = (item: any): ServiceItem => ({
+  slug: item.slug;
+    title: item.name
+  description: item.description
+  provider: "provider",
+    priceRangeUSD: item.priceRangeUSD
+  categories: [item.category]
+  rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10})
+const ServicesPage: NextPage = () => {
+  const [services, setServices] = React.useState<ServiceItem[]>([]);
+  const [filtered, setFiltered] = React.useState<ServiceItem[]>([]);
+  const [filters, setFilters] = React.useState<Filters>({ categories: [] })
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const [selected, setSelected] = React.useState<ServiceItem | null>(null);
+export default function ServicesIndexPage() {
+  const all = (enhancedRealMicroSaasServices as unknown[])
+      extraServices as any[];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   'Content - Type': 'application / json';
 }
 body: JSON.stringify ({service: values.service_title, description: values.project_description, timeline: {start: values.timeline_start, end: values.timeline_end;
@@ -64,10 +109,17 @@ function ServicesIndexPage() {const all = (enhancedRealMicroSaasServices as unkn
     const set = new Set<string>()services && services.forEach((s) => s && s.categories.forEach((c) => set && set.add(c)))return Array && Array.from(set)}, [services])}
   }
               ))}
+<<<<<<< HEAD
             </div>;
           </div>;
         </div>;
       </div>;
+=======
+            </div>
+          </div>
+        </div>
+      </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     <UltraFuturisticBackground variant="quantum" intensity={1 && 1.5}>;
       <Head>;
         <title>Zion AI Marketplace - Services</title>;
@@ -125,19 +177,43 @@ if ( {) {$2;
               <div className="text-sm text-white / 70">{filtered.length} results</div>;
             </div>;
             <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols-3 gap-5">;
+<<<<<<< HEAD
               {filtered.map ((service) => (<EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}</div>;
           </div>;
         </div>;
       </div>;<QuoteRequestModal;
+=======
+              {filtered.map ((service) => (
+                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      <QuoteRequestModal
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         service={selected}
         onSubmit={handleSubmit}
+<<<<<<< HEAD
 export default ServicesPage;export default ServicesPage;<QuoteRequestModal;
+=======
+export default ServicesPage;
+export default ServicesPage;
+      <QuoteRequestModal;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         open={modal_open}
         on_close={() => setModalOpen (false)}
         service={selected}
         on_submit={handle_submit}
       />;
+<<<<<<< HEAD
     </div>)}export default ServicesPage;handleSubmit;
 }/> </div>)}export default ServicesPage;
+=======
+    </div>);
+}
+;
+export default ServicesPage;
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

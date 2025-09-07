@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 
 ;
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {innovativeRealMicroSaasServices2025 ;
  } from '../data/2025-innovative-real-micro-saas-services';
 import {innovativeAIServicesEnhanced2025 ;
  } from '../data/2025-innovative-ai-services-enhanced';
+=======
+import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import { ;
+  innovativeRealMicroSaasServices2025 ;
+} from '../data/2025-innovative-real-micro-saas-services';
+import { ;
+  innovativeAIServicesEnhanced2025 ;
+} from '../data/2025-innovative-ai-services-enhanced';
+import { ;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   innovativeITServicesEnhanced2025 ;
  } from '../data/2025-innovative-it-services-enhanced';
   emergingTechServicesEnhanced2025 ;
@@ -25,6 +35,7 @@ import { specializedITSolutions2026   } from '../data/2026-specialized-it-soluti
 import { emergingTechServices2026   } from '../data/2026-emerging-tech-services';
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026',import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { ArrowRight, Star, Brain, Atom, Shield, Zap;
   Users, Globe, TrendingUp, Rocket, Cpu, Lock;
   BarChart3, Cloud;
@@ -65,6 +76,115 @@ import Link from 'next / link';
 import { ArrowRight,Star,Brain,Atom,Shield,Zap,Users,Globe,TrendingUp,Rocket,Cpu,Lock,} from 'lucide-react';
 interface Homepage2025Props  {showInternalNav?: boolean;const Homepage2025: React.FC<Homepage2025Props> = ({showInternalNav = true,}) => {  const [activeSection, setActiveSection] = useState('hero')} from 'lucide-react';interface Homepage2025Props { showInternalNav?: boolean }const scrollToSection = (section_id: string) =>: any {const element = document.getElementById (section_id),// Check condition;
 if ( {) {$2;
+=======
+import {;
+  ArrowRight,;
+  Star,;
+  Brain,;
+  Atom,;
+  Shield,;
+  Zap,;
+  Users,;
+  Globe,;
+  TrendingUp,;
+  Rocket,;
+  Cpu,;
+  Lock,;
+import {
+} from 'lucide-react';
+  const [activeSection, setActiveSection] = useState('hero');
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    setIsVisible(true);
+    const interval = setInterval(() => {;
+      setCurrentServiceIndex(;
+        prev => (prev + 1) % innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.length;
+      );
+    }, 5000);
+    return () => clearInterval(interval);  }, []);      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+  const scrollToSection = (sectionId: string) => {;
+    const element = document && document.getElementById(sectionId),;
+    if (element) {;
+      element && element.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(sectionId);
+      setIsMobileMenuOpen(false);    }
+  };
+  const allServices = [      element && element.scrollIntoView({ behavior: 'smooth' }),;
+      setActiveSection(sectionId);
+      setIsMobileMenuOpen(false);
+    }
+  };
+  const allServices = [;
+    ...innovativeRealMicroSaasServices2025,;
+    ...innovativeAIServicesEnhanced2025,;
+    ...innovativeITServicesEnhanced2025,;
+    ...emergingTechServicesEnhanced2025,;
+    ...advancedAIAutomationServices,;
+    ...quantumCybersecurityServices,;
+    ...innovativeMicroSaasServices2026,;
+    ...specializedITSolutions2026,;
+    ...emergingTechServices2026,;
+  ];
+  const featuredServices = allServices;
+    .filter(service => service && service.popular);
+    .slice(0, 12);
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
+import { innovativeRealMicroSaasServices2025 } from '../data / 2025 - innovative - real - micro - saas - services';
+import { innovativeAIServicesEnhanced2025 } from '../data / 2025 - innovative - ai - services - enhanced';
+import { innovativeITServicesEnhanced2025 } from '../data / 2025 - innovative - it - services - enhanced';
+import { emergingTechServicesEnhanced2025 } from '../data / 2025 - emerging - tech - services - enhanced';import { advancedAIAutomationServices } from '../data / 2026 - advanced - ai - automation - services';import {
+  innovativeRealMicroSaasServices2025;
+} from '../data / 2025 - innovative - real - micro - saas - services';
+import {
+  innovativeAIServicesEnhanced2025;
+} from '../data / 2025 - innovative - ai - services - enhanced';
+import {
+  innovativeITServicesEnhanced2025;
+} from '../data / 2025 - innovative - it - services - enhanced';
+import {
+  emergingTechServicesEnhanced2025;
+} from '../data / 2025 - emerging - tech - services - enhanced';
+import { quantumCybersecurityServices } from '../data / 2026 - quantum - cybersecurity - services';
+import { innovativeMicroSaasServices2026 } from '../data / 2026 - innovative - micro - saas - expansion';
+import { specializedITSolutions2026 } from '../data / 2026 - specialized - it - solutions';
+import { emergingTechServices2026 } from '../data / 2026 - emerging - tech - services';
+import UltraFuturisticBackground2026 from './backgrounds / UltraFuturisticBackground2026';
+import UltraFuturisticServiceCard2026 from './ui / UltraFuturisticServiceCard2026';
+import Link from 'next/link';
+import {
+  ArrowRight,
+  Star,
+  Brain,
+  Atom,
+  Shield,
+  Zap,
+  Users,
+  Globe,
+  TrendingUp,
+  Rocket,
+  Cpu,
+  Lock,
+} from 'lucide-react';
+interface Homepage2025Props {;
+  showInternalNav?: boolean;
+const Homepage2025: React.FC<Homepage2025Props> = ({;
+  showInternalNav = true,;
+}) => {  const [activeSection, setActiveSection] = useState('hero');} from 'lucide-react';
+interface Homepage2025Props { showInternalNav?: boolean }
+;
+  const scrollToSection = (section_id: string) =>: any {
+    const element = document.getElementById (section_id),
+    // Check condition
+if ( {) {
+  $2
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
       element.scrollIntoView ({ behavior: 'smooth' })setActiveSection (section_id)setIsMobileMenuOpen (false)}
   }const all_services = [      element.scrollIntoView ({ behavior: 'smooth' }),setActiveSection (section_id)setIsMobileMenuOpen (false)}
@@ -84,6 +204,7 @@ if ( {) {$2;
     ...specializedITSolutions2026;
     ...emergingTechServices2026;
   ];
+<<<<<<< HEAD
       icon: Brain;
     }...emergingTechServices2026,];
   const featuredServices = allServices;
@@ -102,13 +223,52 @@ if ( {) {$2;
     }'Intelligent automation that streamlines operations and enhances productivity',icon: Zap,},];const itemVariants = {initial: { opacity: 0, y: 20 },animate: { opacity: 1, y: 0 },transition: { duration: 0.6 },}const staggerContainer = {initial: {}
     animate: {transition: {staggerChildren: 0.1,},},}return (<UltraFuturisticBackground2026 intensity='medium' theme='quantum'>;
       {showInternalNav && (<>;
+=======
+      icon: Brain
+    }
+    {
+      title: "title",
+    description:
+        'Next-generation quantum solutions for complex problem-solving and advanced cryptography'
+      icon: Atom
+    }
+    {
+      title: 'Cybersecurity Excellence'
+      description:
+        'Enterprise-grade security solutions with AI-powered threat detection and response'
+      icon: Shield
+    }
+    {
+      title: 'Process Automation'
+      description:
+        'Intelligent automation that streamlines operations and enhances productivity'
+      icon: Zap
+    },  ];      title: "Process Automation"
+      description: "Intelligent automation that streamlines operations and enhances productivity"
+      icon: Zap
+    }
+  const staggerContainer = {
+    initial: {}
+    animate: {
+      transition: {
+  return (
+    <UltraFuturisticBackground2026 intensity='medium' theme='quantum'>;
+      {showInternalNav && (;
+        <>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           {/* Navigation */}
           <nav className='fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10'>;
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
               <div className='flex justify-between items-center h-16'>;
                 <motion&& motion.div;
                   initial={{ opacity: 0, x: -20 }}
+<<<<<<< HEAD
                   animate={{ opacity: 1, x: 0 }}{/* Desktop Navigation */}<div className='hidden lg:flex space-x-8'>;
+=======
+                  animate={{ opacity: 1, x: 0 }}
+                {/* Desktop Navigation */}
+                <div className='hidden lg:flex space-x-8'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   {navigationSections && navigationSections.map(section => (                    <button}
   return (<UltraFuturisticBackground2026 intensity="medium" theme="quantum">;
       {showInternalNav && (<>;
@@ -142,6 +302,33 @@ if ( {) {$2;
                   {navigationSections.map(section => (                    <button;
                     <button;
                     <button;
+<<<<<<< HEAD
+=======
+                  {navigationSections.map(section => (                    <button  };
+  return (
+    <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
+      {showInternalNav && (
+        <>
+          {/* Navigation */}
+          <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex justify-between items-center h-16">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className="flex items-center space-x-2"
+                >
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
+                  <span className="text-white font-bold text-xl">ZionTech Group</span>
+                </motion.div>
+                {/* Desktop Navigation */}
+                <div className="hidden lg:flex space-x-8">
+                  {navigationSections.map((section) => (
+                    <button
+                  {navigationSections.map(section => (                    <button
+                    <button
+                    <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       key={section.id}
                       on_click={() => scrollToSection (section.id)}
                       className={`flex items - center space - x-2 text - sm font - medium transition - all duration - 300 ${active_section === section.id;
@@ -256,7 +443,12 @@ href='mailto:kleber@ziontechgroup.com';
             className='text-center max-w-6xl mx-auto relative z-10'>;
             <motion&& motion.div;
               animate={{ y: [0, 10, 0] }}
+<<<<<<< HEAD
               transition={{ duration: 2, repeat: Infinity }}<motion.div;
+=======
+              transition={{ duration: 2, repeat: Infinity }}
+          <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -385,6 +577,7 @@ href='mailto:kleber@ziontechgroup.com';
               animate={{ coordinate_y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
               {/* Enhanced CTA Section */}
+<<<<<<< HEAD
               <motion&& motion.div;
                 variants={itemVariants}<section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">;
         <div className="text-center z-10 max-w-6xl mx-auto">;
@@ -395,6 +588,13 @@ href='mailto:kleber@ziontechgroup.com';
       >;
         <div className='text-center z-10 max-w-6xl mx-auto'>;
           <motion.div;
+=======
+              <motion&& motion.div
+                variants={itemVariants}
+      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
+        <div className="text-center z-10 max-w-6xl mx-auto">
+          <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}className='text-center max-w-6xl mx-auto relative z-10';
@@ -406,6 +606,7 @@ href='mailto:kleber@ziontechgroup.com';
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.6, delay: 0.2 }}className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm';
               >;
                 <Star className='w-5 h-5' />;
@@ -418,6 +619,9 @@ href='mailto:kleber@ziontechgroup.com';
                 Pioneering the future of technology with innovative solutions;
                 that drive business transformation;
               </p>;
+=======
+                transition={{ duration: 0.6, delay: 0.2 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               {/* Enhanced CTA Section */}
               <motion.div;
                 variants={itemVariants}
@@ -456,6 +660,7 @@ href='mailto:kleber@ziontechgroup.com';
               {/* Enhanced CTA Section */}
               <motion.div;
                 variants={itemVariants}
+<<<<<<< HEAD
                 className="flex flex-col sm:flex-row gap-4 justify-center mb-8";
               >;
                 <Link href="/comprehensive-services-showcase-2026">;
@@ -478,6 +683,29 @@ href='mailto:kleber@ziontechgroup.com';
                   </button>;
                 </Link>;
               </motion.div>;
+=======
+                className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
+              >
+                <Link href="/comprehensive-services-showcase-2026">
+                  <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                    <span className="flex items-center gap-2">
+                      Explore 2026 Services
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </button>
+                </Link>
+                <Link href="/comprehensive-services-showcase-2025">
+                  <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+                    2025 Services Showcase
+                  </button>
+                </Link>
+                <Link href="/get-started">
+                  <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+                    Get Started
+                  </button>
+                </Link>
+              </motion.div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               {/* Trust Indicators */}
               <motion&& motion.div;
                 initial={{ opacity: 0, y: 20 }}
@@ -511,6 +739,7 @@ className='flex items-center justify-center space-x-6 text-sm text-gray-400';
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
+<<<<<<< HEAD
             viewport={{ once: true }}className='text-center mb-20';
           >;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -532,6 +761,32 @@ className='flex items-center justify-center space-x-6 text-sm text-gray-400';
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
             {features.map((feature, index) => (<motion.div;
+=======
+            viewport={{ once: true }}
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Comprehensive Technology Solutions
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              From AI-powered automation to quantum computing, we provide the
+              tools you need to stay ahead of the competition.
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Comprehensive Technology Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From AI-powered automation to quantum computing, we provide the tools you need to stay ahead of the competition.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {features.map((feature, index) => (
+              <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             className='text-center mb-20'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Comprehensive Technology Solutions;
@@ -567,6 +822,7 @@ className='flex items-center justify-center space-x-6 text-sm text-gray-400';
           <motion&& motion.div;
             className="text-center mb-16";
       {/* Enhanced Services Preview */}
+<<<<<<< HEAD
       <section className="py-20 px-4">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
@@ -595,6 +851,20 @@ className='flex items-center justify-center space-x-6 text-sm text-gray-400';
         <div className='max-w-6xl mx-auto'>;
           <motion.div;
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}initial={{ opacity: 0, y: 40 }}whileInView={{ opacity: 1, y: 0 }}
+=======
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 40 }}
+      {/* Enhanced Services Preview */}
+      <section className='py-20 px-4'>
+        <div className='max-w-6xl mx-auto'>
+          <motion.div
+            className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 key={index}
                 className='group relative overflow - hidden rounded - 2xl bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 10 cursor - pointer'                initial={{ opacity: 0, coordinate_y: 40 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -735,17 +1005,26 @@ onClick={() => (window.location.href = service.link)}
             ))}
           </div>;
           {/* Call to Action for Services Showcase */}
+<<<<<<< HEAD
           <motion.div;
             className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16";
             ))}
           </div>;
           {/* Call to Action for Services Showcase */}className='text-center mt-16';
+=======
+          <motion.div
+            className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
+            ))}
+          </div>
+          {/* Call to Action for Services Showcase */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
             viewport={{ once: true }}>;
             <a;
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             </h2>;
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
               Get in touch with our team to discuss how our innovative services can help you achieve your goals.;
@@ -840,6 +1119,37 @@ href='/comprehensive-services-showcase-2026';
           </div>;
           <motion.div;
 className='text-center';
+=======
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Get in touch with our team to discuss how our innovative services can help you achieve your goals.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Expert Team</h3>
+              <p className="text-gray-300 text-sm">Dedicated professionals ready to help</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-blue-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Fast Implementation</h3>
+              <p className="text-gray-300 text-sm">Quick setup and deployment</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
+              <p className="text-gray-300 text-sm">Round-the-clock assistance</p>
+            </div>
+          </div>
+          <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -874,6 +1184,7 @@ className='text-center';
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">;
                 Email Us;
               </a>;
+<<<<<<< HEAD
               <a;
                 href='tel:+13024640950';
                 className='bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'                href="tel:+13024640950";
@@ -928,11 +1239,45 @@ href='tel:+13024640950';
               href='https://ziontechgroup.com';
               className='text-cyan-400 hover:text-cyan-300 transition-colors';
             >;
+=======
+              <a
+                href='tel:+13024640950'
+                className='bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'                href="tel:+13024640950"
+                className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
+              >
+                Call Us
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+            <p className="mt-2">
+              Address: 364 E Main St STE 1008 Middletown DE 19709;
+    Phone: +1 302 464 0950
+              Email: kleber@ziontechgroup.com
+            </p>
+          </div>
+          <div className="flex justify-center space-x-6">
+            <a href="/comprehensive-services-showcase-2026" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              2026 Services
+            </a>
+            <a href="/comprehensive-services-showcase-2025" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              2025 Services
+            </a>
+            <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              Website
+            </a>
+          </div>
+        </div>
+      </footer>
+    </UltraFuturisticBackground2026>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               Website;
             </a>;
           </div>;
         </div>;
       </footer>;
+<<<<<<< HEAD
     </UltraFuturisticBackground2026>;
               Website;
             </a>;
@@ -941,3 +1286,17 @@ href='tel:+13024640950';
       </footer>;
 export default Homepage2025;export default Homepage2025;}export default Homepage2025;
     </UltraFuturisticBackground2026>)}export default Homepage2025)}export default Homepage2025;)}export default Homepage2025;
+=======
+export default Homepage2025;
+export default Homepage2025
+};
+export default Homepage2025;
+    </UltraFuturisticBackground2026>);
+}
+;
+export default Homepage2025);
+}
+;
+export default Homepage2025;
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

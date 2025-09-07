@@ -1,4 +1,5 @@
 import Head from 'next/head';
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { Brain,Shield,Zap,Target,Stethoscope,BarChart3,Cpu,Globe,Users,Award,CheckCircle,ArrowRight,Star,Phone,Mail,MapPin,} from 'lucide-react';
 import Layout from '../components/layout/Layout';import { Brain, Shield, Zap, Target, Stethoscope,Brain,Shield,Zap,Target,Stethoscope,BarChart3,Cpu,Globe,Users,Award,CheckCircle,ArrowRight,Star,Phone,Mail,MapPin,} from 'lucide-react';import { Brain, Shield, Zap, Target, Stethoscope;BarChart3, Cpu, Globe, Users, Award;
@@ -9,6 +10,56 @@ import Layout from '../components/layout/Layout';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com';
+=======
+import { motion } from 'framer-motion';
+import {
+  Brain,
+  Shield,
+  Zap,
+  Target,
+  Stethoscope,
+  BarChart3,
+  Cpu,
+  Globe,
+  Users,
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,;
+  MapPin,;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  Brain, Shield, Zap, Target, Stethoscope, ;
+  Brain,
+  Shield,
+  Zap,
+  Target,
+  Stethoscope,
+  BarChart3,
+  Cpu,
+  Globe,
+  Users,
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,;
+  MapPin,;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  Brain, Shield, Zap, Target, Stethoscope, ;
+  BarChart3, Cpu, Globe, Users, Award;
+  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
+ } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 const features = [;
   'AI-powered medical image analysis';
@@ -20,6 +71,7 @@ const features = [;
   'Mobile app integration';
   'HIPAA-compliant platform',];  website: 'https://ziontechgroup.com';
 }
+<<<<<<< HEAD
 const features = [;
   'AI-powered medical image analysisSymptom assessment algorithmsTreatment recommendation enginePatient history integrationReal-time diagnostic updatesMulti-specialty coverageMobile app integrationHIPAA-compliant platform';
 const pricingPlans = [;
@@ -37,6 +89,27 @@ const pricingPlans = [;
     price: 799;
     period: 'month',    features: ['Basic diagnostic tools3 medical specialtiesStandard reportingStandard support'];
     popular: false;
+=======
+const features = [
+  'AI-powered medical image analysisSymptom assessment algorithmsTreatment recommendation enginePatient history integrationReal-time diagnostic updatesMulti-specialty coverageMobile app integrationHIPAA-compliant platform'
+const pricingPlans = [
+  {
+    name: 'Starter'
+    price: 299;
+    period: 'month'
+    features: [
+      'Basic diagnostic tools'
+      '3 medical specialties'
+      'Standard reporting'
+      'Standard support'
+    ]
+    popular: false
+  },  {
+    name: 'Professional'
+    price: 799
+    period: 'month',    features: ['Basic diagnostic tools3 medical specialtiesStandard reportingStandard support']
+    popular: false
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   {name: 'Professional';
     price: 799;
@@ -54,6 +127,7 @@ const pricingPlans = [;
     period: 'month',    features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI accessPriority support'];
     popular: true;
   }
+<<<<<<< HEAD
   {name: 'Enterprise';
     price: 1999;
     period: 'month';
@@ -69,10 +143,42 @@ const pricingPlans = [;
     popular: false;
   }static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
+=======
+  {
+    name: 'Enterprise'
+    price: 1999
+    period: 'month'
+    features: [
+      'Custom AI models'
+      'White-label solution'
+      'Dedicated support'
+      'Custom integrations'
+      'Training included'
+    ]
+    popular: false
+  },];    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrationsTraining included']
+    popular: false
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
 }
 import React from 'react';
 import Head from 'next / head';
+<<<<<<< HEAD
+=======
+import { motion } from 'framer-motion';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin;
 } from 'lucide-react';
@@ -101,16 +207,24 @@ import Head from 'next / head';
           content='https://ziontechgroup.com/ai-diagnostic-platform';
         />;
       </Head>;
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
         <div className='absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black'></div>;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Background Elements */}
         <div className='absolute inset-0 overflow-hidden pointer-events-none'>;
           <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse'></div>;
           <div className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
           <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>;
         </div>;
+<<<<<<< HEAD
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>          <motion.div;
+=======
+          >
+        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>          <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -240,6 +354,7 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center';
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
+<<<<<<< HEAD
             viewport={{ once: true }}className='text-center mb-16';
           >;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
@@ -263,6 +378,31 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center';
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
             {features.map((feature, index) => (<motion.div;
+=======
+            viewport={{ once: true }}
+          >
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+              Revolutionary Medical Technology
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Experience the future of medical diagnostics with AI-powered
+              analysis and comprehensive healthcare solutions.
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {features.map((feature, index) => (          >
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Revolutionary Medical Technology
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the future of medical diagnostics with AI-powered analysis and comprehensive healthcare solutions.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             className='text-center mb-16'>;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Revolutionary Medical Technology;
@@ -284,6 +424,7 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center';
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+<<<<<<< HEAD
                 viewport={{ once: true }}className='bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300';
               >;
                 <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4'>;
@@ -291,6 +432,16 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center';
                 </div>;
                 <h3 className='text-lg font-semibold text-white mb-2'>;
                   {feature}</h3>              </motion && motion.div>              >;
+=======
+                viewport={{ once: true }}
+              >
+                <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4'>
+                  <CheckCircle className='w-6 h-6 text-white' />
+                </div>
+                <h3 className='text-lg font-semibold text-white mb-2'>
+                  {feature}
+                </h3>              </motion && motion.div>              >;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">;
                   <CheckCircle className="w-6 h-6 text-white" />;
                 </div>;
@@ -303,13 +454,20 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center';
                 </h3>;
               </motion.div>;
             ))}
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
+=======
+          </div>
+        </div>
+      </section>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             ))}
       {/* Pricing Section */}<section id='pricing' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="pricing" className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+<<<<<<< HEAD
           <motion&& motion.div;
           </div>;
         </div>;
@@ -346,6 +504,42 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center';
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             {pricingPlans.map((plan, index) => (<motion.div;
+=======
+          <motion&& motion.div
+          </div>
+        </div>
+      </section>
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+              Choose Your Plan
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Flexible pricing options designed for healthcare providers of all
+              sizes, from clinics to large hospital systems.
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (          >
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Choose Your Plan
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Flexible pricing options designed for healthcare providers of all sizes, from clinics to large hospital systems.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             className='text-center mb-16'>;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Choose Your Plan;
@@ -386,6 +580,7 @@ plan.popular;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
                     ${plan.price}
                     <span className='text - lg text - gray - 400 font - normal'>;
+<<<<<<< HEAD
                       /{plan.period}<span className="text-lg text-gray-400 font-normal">/{plan.period}</span>;
                   </div>;
                 </div>;
@@ -414,12 +609,37 @@ plan.popular;
         </div>;
       </section>;
                 </ul>;<button className='w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300'>                  Get Started                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300">;
+=======
+                      /{plan.period}
+                    <span className="text-lg text-gray-400 font-normal">/{plan.period}</span>
+                  </div>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300">
+                  Get Started
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+                </ul>;
+                <button className='w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300'>                  Get Started                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   Get Started;
                 </button>;
               </motion && motion.div>;
             ))}
           </div>;
         </div>;
+<<<<<<< HEAD
       </section>;{/* Contact Section */}
 <section;
         id='contact';
@@ -430,6 +650,20 @@ plan.popular;
       {/* Contact Section */}
       <section;
         id='contact';
+=======
+      </section>;
+      {/* Contact Section */}
+      <section
+        id='contact'
+        className='py-20 bg-gradient-to-b from-slate-900 to-black'
+      >
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+      {/* Contact Section */}
+      <section
+        id='contact'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         className='py-20 bg-gradient-to-b from-slate-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -437,6 +671,7 @@ plan.popular;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
+<<<<<<< HEAD
             viewport={{ once: true }}className='text-center mb-16';
           >;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
@@ -460,6 +695,30 @@ plan.popular;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             <motion.div;
+=======
+            viewport={{ once: true }}
+          >
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+              Ready to Transform Healthcare?
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Contact our team to learn more about how AI Diagnostic Pro
+              Platform can revolutionize your medical practice.
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Healthcare?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Contact our team to learn more about how AI Diagnostic Pro Platform can revolutionize your medical practice.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             className='text-center mb-16'>;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Healthcare?;
@@ -476,6 +735,7 @@ plan.popular;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Contact our team to learn more about how AI Diagnostic Pro Platform can revolutionize your medical practice.;
             </p>;
+<<<<<<< HEAD
           </motion && motion.div>;initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
@@ -496,6 +756,28 @@ plan.popular;
               <p className='text-gray-300'>{contactInfo.mobile}</p>;
             </motion.div>;
             <motion.div;
+=======
+          </motion && motion.div>;
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                <Phone className='w-8 h-8 text-white' />
+              </div>
+              <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>
+              <p className='text-gray-300'>{contactInfo.mobile}</p>            </motion.div>            >
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+              <p className="text-gray-300">{contactInfo.mobile}</p>
+            </motion.div>
+            <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <Phone className='w-8 h-8 text-white' />;
@@ -511,6 +793,7 @@ plan.popular;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+<<<<<<< HEAD
               viewport={{ once: true }}className='text-center';
             >;
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
@@ -528,6 +811,24 @@ plan.popular;
               <p className='text-gray-300'>{contactInfo.email}</p>;
             </motion.div>;
             <motion.div;
+=======
+              viewport={{ once: true }}
+            >
+              <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                <Mail className='w-8 h-8 text-white' />
+              </div>
+              <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>
+              <p className='text-gray-300'>{contactInfo.email}</p>            </motion.div>            >
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+              <p className="text-gray-300">{contactInfo.email}</p>
+            </motion.div>
+            <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <Mail className='w-8 h-8 text-white' />;
@@ -543,6 +844,7 @@ plan.popular;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
+<<<<<<< HEAD
               viewport={{ once: true }}className='text-center';
             >;
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
@@ -562,6 +864,26 @@ plan.popular;
           </div>;
         </div>;
       </section>;
+=======
+              viewport={{ once: true }}
+            >
+              <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                <MapPin className='w-8 h-8 text-white' />
+              </div>
+              <h3 className='text-xl font-semibold text-white mb-2'>Address</h3>
+              <p className='text-gray-300'>{contactInfo.address}</p>            </motion.div>            >
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+              <p className="text-gray-300">{contactInfo.address}</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <MapPin className='w-8 h-8 text-white' />;
@@ -693,5 +1015,12 @@ plan.popular;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
     </Layout>)})}</Layout>;
   )}
+=======
+    </Layout>);
+}
+  );
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -5,6 +6,11 @@
 
 
 
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 // Fix the specific syntax errors we identified
 const files = [
   'components/Footer.tsx',
@@ -15,96 +21,76 @@ const files = [
   'pages/contact.tsx',
   'pages/index.tsx'
 ];
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 files.forEach(file => {
   try {
     if (fs.existsSync(file)) {
       let content = fs.readFileSync(file, 'utf8');
       let modified = false;
-      
-      
       // Fix hover syntax
       if (content.includes('"hover":')) {
         content = content.replace(/"hover":\s*/g, 'hover:');
         modified = true;
       }
-      
-      
       // Fix focus syntax
       if (content.includes('"focus":')) {
         content = content.replace(/"focus":\s*/g, 'focus:');
         modified = true;
       }
-      
-      
       // Fix group-hover syntax
       if (content.includes('"group-hover":')) {
         content = content.replace(/"group-hover":\s*/g, 'group-hover:');
         modified = true;
       }
-      
-      
       // Fix responsive breakpoints
       if (content.includes('"sm":')) {
         content = content.replace(/"sm":\s*/g, 'sm:');
         modified = true;
       }
-      
-      
       if (content.includes('"md":')) {
         content = content.replace(/"md":\s*/g, 'md:');
         modified = true;
       }
-      
-      
       if (content.includes('"lg":')) {
         content = content.replace(/"lg":\s*/g, 'lg:');
         modified = true;
       }
-      
-      
       if (content.includes('"xl":')) {
         content = content.replace(/"xl":\s*/g, 'xl:');
         modified = true;
       }
-      
-      
       // Fix animation properties
       if (content.includes('"y":')) {
         content = content.replace(/"y":\s*/g, 'y:');
         modified = true;
       }
-      
-      
       if (content.includes('"opacity":')) {
         content = content.replace(/"opacity":\s*/g, 'opacity:');
         modified = true;
       }
-      
-      
       if (content.includes('"duration":')) {
         content = content.replace(/"duration":\s*/g, 'duration:');
         modified = true;
       }
-      
-      
       if (content.includes('"delay":')) {
         content = content.replace(/"delay":\s*/g, 'delay:');
         modified = true;
       }
-      
-      
       if (content.includes('"once":')) {
         content = content.replace(/"once":\s*/g, 'once:');
         modified = true;
       }
-      
-      
       if (modified) {
         fs.writeFileSync(file, content);
         console.log(`✅ Fixed ${file}`);
@@ -113,6 +99,7 @@ files.forEach(file => {
   } catch (error) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
+<<<<<<< HEAD
 }
 });
 
@@ -122,12 +109,20 @@ files.forEach(file => {
 
 
 
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 });
 }
 });
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 console.log('✅ Syntax fixes completed!');
 console.log('🎉 Ready for merge process!');
 #!/usr/bin/env node;
@@ -142,6 +137,7 @@ const util = require('util')
       await this.log(`Error finding conflicted "files"`)
       await this.log(`Encountered ${this.errors.length} "errors"`)
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
+<<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 
@@ -155,3 +151,13 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
+=======
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

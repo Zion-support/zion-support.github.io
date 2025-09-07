@@ -1022,6 +1022,7 @@
       "type": "any",
       "message": "TypeScript any type used - consider more specific typing"
     }
+<<<<<<< HEAD
 
   ]
 }
@@ -1029,6 +1030,11 @@
   ]
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+=======
+<<<<<<< HEAD
+  ]
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   ],
   "summary": {
     "consoleLogs": 8,
@@ -1036,6 +1042,7 @@
     "anyTypes": 193
   }
 }
+<<<<<<< HEAD
   ]
 }
 >>>>>>> main
@@ -1043,3 +1050,6 @@ ursor/automate-test-improve-and-merge-code-646c
   ]
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

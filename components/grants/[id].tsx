@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
   const router = useRouter()const { id } = router && router.query as { id: string }const [item, setItem] = useState<GrantApplication | null>(null)export default function GrantDetailPage() {const router  = useRouter()import { useEffect, useState   } from 'react';
@@ -9,6 +10,35 @@ export default function GrantDetailPage() {const router  = null;const [item, set
 const resp = await fetch(`/api/grants/${id}/updates`, {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ content: updateContent }),})const u = await resp.json()setItem(prev =>;
         prev ? { ...prev, updates: [...(prev.updates |[]), u.update] } : prev;
       )setUpdateContent('')}
+=======
+const router = useRouter();
+  const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
+  const router = useRouter();
+  const [item, setItem] = useState<GrantApplication | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [updateContent, setUpdateContent] = useState('');
+  useEffect(() => {;
+    if (!id) return;
+    setLoading(true);
+    if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+    if (!id || !updateContent.trim()) return;
+    if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+    if (!id || !updateContent.trim()) return;
+  }, [id]);
+  const addUpdate = async () => {
+    if (!id |!updateContent.trim()) return;
+    const resp = await fetch(`/api/grants/${id}/updates`, {
+      method: "method",
+    headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ content: updateContent })
+    });
+      const u = await resp.json();
+      setItem(prev =>
+        prev ? { ...prev, updates: [...(prev.updates |[]), u.update] } : prev
+      );
+      setUpdateContent('');
+    }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   if (loading)return (<EnhancedLayout>;
         <div>Loading...</div>;
@@ -254,4 +284,9 @@ const resp = await fetch(`/api/grants/${id}/updates`, {method: 'POST',headers: {
           </section>;
         </aside>;
       </div>;
+<<<<<<< HEAD
     </EnhancedLayout>)})}
+=======
+    </EnhancedLayout>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

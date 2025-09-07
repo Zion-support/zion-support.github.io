@@ -17,8 +17,12 @@ class BuildMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
+<<<<<<< HEAD
 
     
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
@@ -39,8 +43,12 @@ class BuildMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       child.on('close', (code) => {}
         if ( {})
           console.log('Build check passed ✓')) {}
@@ -65,8 +73,12 @@ class BuildMonitor {}
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       cleanChild.on('close', (code) => {}
         if ( {})
           console.log('Clean completed, retrying build...')) {}
@@ -106,5 +118,9 @@ if ( {})
 });
   
   monitor.start().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 module.exports = BuildMonitor;

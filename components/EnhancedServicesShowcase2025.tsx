@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useState, useEffect, useMemo } from 'react';
@@ -14,6 +15,20 @@ import { FaRocket;
   FaDatabase;
   FaNetworkWired;
   FaRobot;
+=======
+FaRocket
+  FaBrain
+  FaCloud
+  FaShieldAlt
+  FaChartLine
+  FaCogs
+  FaLightbulb
+  FaGlobe
+  FaMobile
+  FaDatabase
+  FaNetworkWired
+  FaRobot
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   FaSearch;
   } from 'react-icons/fa';
 import { SiNextdotjs;
@@ -28,6 +43,7 @@ import { SiNextdotjs;
   SiAws;
   SiGooglecloud;
   SiMicrosoftazure;
+<<<<<<< HEAD
   } from 'react-icons/si';
   FaBrain;
   FaCloud;
@@ -59,6 +75,46 @@ interface Service  {id: string;
   description: string;
     starter: number;
     professional: number;enterprise: number;
+=======
+} from 'react-icons/si';
+interface Service {;
+} from 'react-icons/si';
+interface Service {;
+  FaRocket,
+  FaBrain,
+  FaCloud,
+  FaShieldAlt,
+  FaChartLine,
+  FaCogs,
+  FaLightbulb,
+  FaGlobe,
+  FaMobile,
+  FaDatabase,
+  FaNetworkWired,
+  FaRobot,
+  FaSearch,
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiPrisma,
+  SiSupabase,
+  SiVercel,
+  SiDocker,
+  SiKubernetes,
+  SiAws,
+  SiGooglecloud,;
+  SiMicrosoftazure,;
+} from 'react-icons/si';
+interface Service {
+  id: string;
+  title: string,
+  description: string;
+    starter: number;
+    professional: number;
+    enterprise: number;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   technologies: string[];
   benefits: string[];color: string;  id: string;
@@ -68,6 +124,7 @@ interface Service  {id: string;
     enterprise: number;
   },technologies: string[];
   benefits: string[];
+<<<<<<< HEAD
 }interface ServiceCategory  {id: string;
   name: string;
   description: string;
@@ -108,6 +165,62 @@ interface Service  {id: string;
   },];    description: 'Cutting-edge artificial intelligence and machine learning solutions';
     icon: <FaBrain className="w-8 h-8" />;
     color: 'from-purple-500 to-pink-500';
+=======
+  color: string;  id: string;
+    name: string
+  description: string
+  icon: React.ReactNode
+  color: string
+}
+  color: string;  id: string,
+  name: string,
+  description: string,
+  icon: React.ReactNode,
+  color: string
+}
+const serviceCategories: ServiceCategory[] = [
+  {
+    id: "id",
+    name: 'AI & Machine Learning'
+    description:
+      'Cutting-edge artificial intelligence and machine learning solutions'
+    icon: <FaBrain className='w-8 h-8' />
+    color: 'from-purple-500 to-pink-500'
+  },  {
+    id: 'cloud'
+    name: 'Cloud & DevOps'
+    description: 'Scalable cloud infrastructure and development operations'
+    icon: <FaCloud className='w-8 h-8' />
+    color: 'from-blue-500 to-cyan-500'
+  },  {
+    id: 'security'
+    name: 'Cybersecurity'
+    description: 'Advanced security solutions for modern threats'
+    icon: <FaShieldAlt className='w-8 h-8' />
+    color: 'from-red-500 to-orange-500'
+  },  {
+    id: 'data'
+    name: 'Data & Analytics'
+    description: 'Comprehensive data management and analytics platforms'
+    icon: <FaDatabase className='w-8 h-8' />
+    color: 'from-green-500 to-emerald-500'
+  },  {
+    id: 'iot'
+    name: 'IoT & Edge Computing'
+    description: 'Internet of Things and edge computing solutions'
+    icon: <FaNetworkWired className='w-8 h-8' />
+    color: 'from-indigo-500 to-purple-500'
+  },  {
+    id: 'automation'
+    name: 'Process Automation'
+    description: 'Intelligent automation for business processes'
+    icon: <FaRobot className='w-8 h-8' />
+    color: 'from-yellow-500 to-orange-500'
+  },],
+  description: 'Cutting-edge artificial intelligence and machine learning solutions'
+    icon: <FaBrain className="w-8 h-8" />
+    color: 'from-purple-500 to-pink-500'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
     id: 'cloud';
     name: 'Cloud & DevOps';
@@ -141,6 +254,7 @@ interface Service  {id: string;
   },    icon: <FaNetworkWired className="w-8 h-8" />;
     color: 'from-indigo-500 to-purple-500';
   }
+<<<<<<< HEAD
   {id: 'automation';
     name: 'Process Automation';
     description: 'Intelligent automation for business processes';
@@ -152,6 +266,80 @@ interface Service  {id: string;
     description: 'Cutting-edge artificial intelligence and machine learning solutions';
     icon: <FaBrain className;
 export default EnhancedServicesShowcase2025;
+=======
+  {
+    id: 'automation'
+    name: 'Process Automation'
+    description: 'Intelligent automation for business processes'
+    icon: <FaRobot className='w-8 h-8' />
+    color: 'from-yellow-500 to-orange-500'
+  },    icon: <FaRobot className="w-8 h-8" />
+  {
+    id: 'ai-automation-suite'
+    title: 'AI-Powered Automation Suite'
+    description:
+      'Comprehensive automation platform leveraging artificial intelligence for business process optimization'
+    icon: <FaRobot className='w-6 h-6' />
+    features: [
+  {
+    id: 'security',
+    name: 'Cybersecurity',
+    description: 'Advanced security solutions for modern threats',
+  {
+    id: 'data',
+    name: 'Data & Analytics',
+    description: 'Comprehensive data management and analytics platforms',
+  {
+    id: 'iot',
+    name: 'IoT & Edge Computing',
+    description: 'Internet of Things and edge computing solutions',
+  {
+    id: 'automation',
+    name: 'Process Automation',
+    description: 'Intelligent automation for business processes',
+      starter: 299,
+      professional: 799,
+      enterprise: 1999
+    },
+      starter: 999,
+      professional: 2499,
+      enterprise: 4999
+    },
+      starter: 399,
+      professional: 999,
+      enterprise: 2499
+    },
+      starter: 299,
+      professional: 799,
+      enterprise: 1999
+    },
+    technologies: [;
+      'Apache Kafka',
+      'Apache Spark',
+      'Snowflake',
+      'Databricks',
+      'Airflow',
+    ],
+      'Improved data quality',
+      'Reduced integration costs',
+    ],
+  },  {
+    id: 'cloud - native - platform',
+    title: 'Cloud - Native Development Platform',
+    description: 'Modern cloud - native development and deployment platform',
+    icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs';
+    ];
+  {
+    id: 'cloud-native-platform',
+    title: 'Cloud-Native Development Platform',
+    description: 'Modern cloud-native development and deployment platform',
+  }
+  {
+  {
+    id: 'cloud-native-platform',
+    title: 'Cloud-Native Development Platform',
+    description: 'Modern cloud-native development and deployment platform',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ];
 const services: Service[] = [;
   {id: 'ai-automation-suite',title: 'AI-Powered Automation Suite',description:;
@@ -167,6 +355,7 @@ const services: Service[] = [;
       'Custom AI model training';
       'Multi-platform integration';
     ];
+<<<<<<< HEAD
     pricing: {starter: 299,professional: 799,enterprise: 1999,},technologies: [;
       'TensorFlow','PyTorch','OpenAI','LangChain','React','Node.js',],benefits: [;
       'Reduce manual tasks by 80%','Improve accuracy by 95%','24/7 automated operations','Scalable AI infrastructure',],},{id: 'quantum-computing-platform',title: 'Quantum Computing Platform',description:;
@@ -232,6 +421,22 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
           service.technologies.some(tech =>;
             tech.toLowerCase().includes(searchTerm.toLowerCase())))}
     return filtered.sort((a, b) => {switch (sortBy) {case 'price':;
+=======
+  }
+];
+const EnhancedServicesShowcase2025: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
+  const filteredServices = useMemo(() => {
+    let filtered = services;
+    if (selectedCategory !== 'all') {
+    }
+    return filtered.sort((a, b) => {
+      switch (sortBy) {
+        case 'price':
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           return a.pricing.starter - b.pricing.starter;
         case 'category':;
           return a.category.localeCompare(b.category)default:;
@@ -288,6 +493,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
         {/* Search and Filters */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.2 }}
 className='mb-12';
         >;
@@ -296,6 +502,15 @@ className='mb-12';
               <input;
                 type='text';
                 placeholder='Search services, technologies, or features...';
+=======
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
+            <div className='relative flex-1 max-w-md'>
+              <input
+                type='text'
+                placeholder='Search services, technologies, or features...'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 value={searchTerm}
             <select;
               value={sortBy}
@@ -383,19 +598,29 @@ className='mb-12';
         {/* Category Tabs */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.4 }}
 className='mb-12';
         >;
           <div className='flex flex-wrap justify-center gap-4'>;
             <button;
+=======
+          animate={{ opacity: 1, y: 0 }}
+            <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${selectedCategory === 'all';
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg';
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
+<<<<<<< HEAD
               }`}>;
               All Services;
             </button>;
 {serviceCategories.map(category => (<button;
+=======
+              }`}
+              <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${selectedCategory === category.id;
@@ -416,10 +641,17 @@ className='mb-12';
         {/* Services Grid */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.6 }}
 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
         >;
           {filteredServices.map((service, index) => (<motion.div;
+=======
+          animate={{ opacity: 1, y: 0 }}
+        >
+          {filteredServices.map((service, index) => (
+            <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -447,6 +679,7 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
               transition={{ duration: 0.6, delay: index * 0.1 }}
                   </p>;
                 </div>;
+<<<<<<< HEAD
               </div>;<p className='text-gray-300 mb-4 line-clamp-3'>;
                 {service && service.description}
               </p>;<div className='flex flex-wrap gap-2 mb-4'>;
@@ -455,6 +688,16 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
                   </span>;
                 ))}className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300';
                   >;
+=======
+              </div>;
+              <p className='text-gray-300 mb-4 line-clamp-3'>;
+                {service && service.description}
+              </p>;
+              <div className='flex flex-wrap gap-2 mb-4'>;
+                {service && service.technologies.slice(0, 3).map(tech => (;
+                  <span
+                    key={tech}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     {tech}
                   </span>;
                 ))}
@@ -502,8 +745,15 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
               </div>;
             </motion && motion.div>;
           ))}
+<<<<<<< HEAD
         </motion && motion.div>;{/* No Results */}
         {filteredServices && filteredServices.length === 0 && (<motion&& motion.div;
+=======
+        </motion && motion.div>;
+        {/* No Results */}
+        {filteredServices && filteredServices.length === 0 && (;
+          <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}className='text-center py-16';
           >;
@@ -524,6 +774,7 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
             exit={{ opacity: 0 }}
 className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4';
             onClick={closeModal}
+<<<<<<< HEAD
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}>;
             <motion.div;
               initial={{ scale: 0.9, opacity: 0 }}
@@ -533,6 +784,19 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
               <div className='flex items-start justify-between mb-6'>;
                 <div className='flex items-center gap-4'>;
                   <div className='p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl'>;
+=======
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={e => e.stopPropagation()}
+            >
+              <div className='flex items-start justify-between mb-6'>
+                <div className='flex items-center gap-4'>
+                  <div className='p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     {selectedService.icon}
                   </div>;
                   <div>;
@@ -573,8 +837,13 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                         <div className='w-2 h-2 bg-blue-500 rounded-full'></div>;
                         {feature}</li>;
                     ))}
+<<<<<<< HEAD
                   </ul>;
                 </div>;
+=======
+                  </ul>
+                </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     ))}
                 {/* Benefits */}<div>;
                   <h3 className='text-xl font-bold text-white mb-4'>;
@@ -613,6 +882,7 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                 <div className="flex flex-wrap gap-3">;
                   {selectedService.technologies.map((tech) => (<span;
                       key={tech}
+<<<<<<< HEAD
                       className="px-3 py-2 bg-white/10 rounded-lg text-gray-300";
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >;
                     >;
@@ -649,6 +919,28 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
             </motion.div>;
           </motion.div>;
         )}{/* Technologies */}
+=======
+                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >              <div className="mt-8">
+                <h3 className="text-xl font-bold text-white mb-4">Technologies</h3>
+                <div className="flex flex-wrap gap-3">
+                  {selectedService.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-2 bg-white/10 rounded-lg text-gray-300"
+                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >
+                    >
+                      {tech}
+                    </span>;
+                  ))}
+                </div>;
+              </div>;
+              {/* Pricing */}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+              {/* Technologies */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               <div className='mt-8'>;
                 <h3 className='text-xl font-bold text-white mb-4'>;
                   Technologies;
@@ -696,7 +988,15 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
             </motion && motion.div>;
           </motion && motion.div>;
         )}
+<<<<<<< HEAD
 }export default EnhancedServicesShowcase2025;  ))}export default EnhancedServicesShowcase2025;
+=======
+};
+export default EnhancedServicesShowcase2025;  );
+  )
+};
+export default EnhancedServicesShowcase2025;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               while_hover={{ coordinate_y: -5, scale: 1.02 }}
               className='bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - xl p - 6 cursor - pointer hover:bg - white / 20 transition - all duration - 300';
               on_click={() => handleServiceSelect (service)}
@@ -928,6 +1228,19 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
             </motion.div>;
           </motion.div>)}
       </AnimatePresence>;
+<<<<<<< HEAD
     </div>)}export default EnhancedServicesShowcase2025)}export default EnhancedServicesShowcase2025;export default EnhancedServicesShowcase2025;}</AnimatePresence>;
     </div>;
 )}export default EnhancedServicesShowcase2025;
+=======
+    </div>);
+}
+;
+export default EnhancedServicesShowcase2025);
+}
+;
+export default EnhancedServicesShowcase2025;
+export default EnhancedServicesShowcase2025
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

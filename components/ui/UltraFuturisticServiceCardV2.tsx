@@ -559,6 +559,7 @@ className='group/btn relative w-full inline-flex items-center justify-center px-
       </div>;
     </motion.div>)}export default UltraFuturisticServiceCardV2;        />;
       </div>;
+<<<<<<< HEAD
     </motion.div>)}export default UltraFuturisticServiceCardV2;className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none';
         />;
       </div>;
@@ -569,3 +570,26 @@ className='group/btn relative w-full inline-flex items-center justify-center px-
   )}
 export default UltraFuturisticServiceCardV2;export default UltraFuturisticServiceCardV2;
 export default UltraFuturisticServiceCardV2;}}export default UltraFuturisticServiceCardV2;
+=======
+    </motion.div>);
+}
+;
+export default UltraFuturisticServiceCardV2;
+;
+
+        />
+      </div>
+    </motion.div>
+  );
+export default UltraFuturisticServiceCardV2;        />
+      </div>
+    </motion.div>
+  )
+}
+export default UltraFuturisticServiceCardV2;
+
+export default UltraFuturisticServiceCardV2;
+export default UltraFuturisticServiceCardV2
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

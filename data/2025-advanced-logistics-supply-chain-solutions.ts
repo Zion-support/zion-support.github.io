@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface AdvancedLogisticsSupplyChainSolution2025  {id: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -321,11 +325,14 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       launchDate: '2025-02-18',
       customers: 178,
       rating: 4 && 4.8,
+<<<<<<< HEAD
       reviews: 112
 
+=======
+      reviews: 112,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     },;
   ];    features: [
-
 export interface AdvancedLogisticsSupplyChainSolution2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -347,6 +354,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
     technology: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];
     integrations: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'];
     useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];
+<<<<<<< HEAD
     roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.';
     competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
     marketSize: '$45B supply chain management market', growthRate: '28% annual growth';
@@ -546,6 +554,9 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
   }
 ];;
     roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.'
+=======
+    roi: "roi",
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
     marketSize: '$45B supply chain management market', growthRate: '28% annual growth'
     variant: 'logistics'

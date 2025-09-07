@@ -181,6 +181,10 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
       "summary"
         "totalErrors"
         "successRate"
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       console.error('Automation "failed")

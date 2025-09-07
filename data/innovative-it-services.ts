@@ -498,7 +498,6 @@ export interface InnovativeITService  {id: string,name: string,tagline: string,p
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
   {
@@ -514,6 +513,7 @@ export interface InnovativeITService  {id: string,name: string,tagline: string,p
       '5G optimization'
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🌐',
       'Edge Computing',
       'IoT',
@@ -542,6 +542,10 @@ export interface InnovativeITService  {id: string,name: string,tagline: string,p
     realImplementation: true
     implementationDetails:
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
+=======
+    icon: '🌐',    realImplementation: true;
+    implementationDetails: "implementationDetails",
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     launchDate: '2024-01-01'
     customers: 800
     rating: 4.9
@@ -754,7 +758,6 @@ export interface InnovativeITService  {id: string,name: string,tagline: string,p
     launchDate: '2024-01-20';
     customers: 2500;
     rating: 4.7
-
     reviews: 1250
   }
 ];
@@ -841,8 +844,12 @@ export const innovativeITServices: InnovativeITService[] = [;
     customers: 2500;
     rating: 4.7,
     reviews: 1250;
-
   }
+<<<<<<< HEAD
 ;
   }
 ];
+=======
+;  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

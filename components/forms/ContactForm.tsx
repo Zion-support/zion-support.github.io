@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import {Mail,Phone,MapPin,Send,CheckCircle,AlertCircle,'use client';
@@ -10,6 +11,45 @@ import { Mail;
   CheckCircle;
   AlertCircle;import {Mail,Phone,MapPin,Send,CheckCircle,AlertCircle,CheckCircle,AlertCircle,} from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle  } from 'lucide-react';
 const ContactForm: React.FC = () => {const [formData, setFormData] = useState({name: '',email: '',company: '',phone: '',service: '',message: '',AlertCircle,} from 'lucide-react';const ContactForm: React.FC = () => {const [formData, setFormData] = useState({name: '',email: '',company: '',phone: '',service: '',message: '',})const [isSubmitting, setIsSubmitting] = useState(false)const [submitStatus, setSubmitStatus] = useState<;
+=======
+import {;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Send,;
+  CheckCircle,;
+  AlertCircle,;
+'use client';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+  Mail
+  Phone
+  MapPin
+  Send
+  CheckCircle
+  AlertCircle;
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle,
+  AlertCircle,
+  CheckCircle,
+  AlertCircle,
+} from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+const ContactForm: React.FC = () => {;
+  const [formData, setFormData] = useState({;
+    name: '',;
+    email: '',;
+    company: '',;
+    phone: '',;
+    service: '',;
+    message: '',;
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     'idle' | 'success' | 'error';
   >('idle')...formData;
       [e && e.target.name]: e && e.target.value;
@@ -21,11 +61,49 @@ const ContactForm: React.FC = () => {const [formData, setFormData] = useState({n
     try {await new Promise(resolve => setTimeout(resolve, 2000))setSubmitStatus('success')setFormData({name: '',email: '',company: '',phone: '',service: '',message: '',})} catch (error) {setSubmitStatus('error')} finally {setIsSubmitting(false)}
     } finally {setIsSubmitting(false)} finally {setIsSubmitting(false)}
   }
+<<<<<<< HEAD
   const services = [;
 'AI Development','Cloud Architecture','Digital Transformation','IoT Platforms','Blockchain Solutions','Data Analytics','Other',];const contactInfo = [;
     {icon: Mail,title: 'Email Us',content: 'contact@ziontechgroup && ziontechgroup.com',href: 'mailto:contact@ziontechgroup && ziontechgroup.com',},    {icon: Phone,title: 'Call Us',content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup && ziontechgroup.com';
 }{icon: Phone,title: 'Call Us',content: '+1 (555) 123-4567',href: 'tel:+15551234567',},    {icon: MapPin,title: 'Visit Us',content: '123 Tech Street, Innovation City, IC 12345',href: '#',},return (<section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>;
       {/* Background Elements */}<div className='absolute inset-0'>;
+=======
+  const services = [
+    'AI Development'
+    'Cloud Architecture'
+    'Digital Transformation'
+    'IoT Platforms'
+    'Blockchain Solutions'
+    'Data Analytics'
+    'Other',  ];    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
+  ];
+  const contactInfo = [;
+    {;
+      icon: Mail,;
+      title: 'Email Us',;
+      content: 'contact@ziontechgroup && ziontechgroup.com',;
+      href: 'mailto:contact@ziontechgroup && ziontechgroup.com',;
+    },    {;
+      icon: Phone,;
+      title: 'Call Us',;
+      content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup && ziontechgroup.com'
+};
+    {;
+      icon: Phone,;
+      title: 'Call Us',;
+      content: '+1 (555) 123-4567',;
+      href: 'tel:+15551234567',;
+    },    {;
+      icon: MapPin,;
+      title: 'Visit Us',;
+      content: '123 Tech Street, Innovation City, IC 12345',;
+      href: '#',;
+    },;
+  return (
+    <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
+      {/* Background Elements */}
+      <div className='absolute inset-0'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0 && 0.1),transparent_50%)]' />;
       </div>;<div className='relative container mx-auto px-4'>        {/* Section Header */}      <div className="relative container mx-auto px-4">;];const contact_info = [;
@@ -39,6 +117,7 @@ const ContactForm: React.FC = () => {const [formData, setFormData] = useState({n
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]' />;
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]' />;
       </div>;
+<<<<<<< HEAD
       <div className='relative container mx-auto px-4'>;
         {/* Section Header */}
         <motion.div;
@@ -75,6 +154,46 @@ className='text-center mb-16';
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}<div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>;
           {/* Contact Information */}<motion.div;
           <motion&& motion.div;
+=======
+      <div className='relative container mx-auto px-4'>        {/* Section Header */}      <div className="relative container mx-auto px-4">;
+  ];
+;
+  const contact_info = [;
+    {
+      icon: Mail;
+    title: "title",
+    content: 'contact@ziontechgroup.com'
+      href: 'mailto:contact@ziontechgroup.com'
+        >
+          <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+            Let&apos;s Start a
+            <span className='block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
+              Conversation
+            </span>
+          </h2>
+          <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
+            Ready to transform your business? Get in touch with our team of
+            experts to discuss how we can help you achieve your technology
+            goals.
+          </p>
+        </motion.div>
+          <h2 className="text-4xl md: text-6xl font-bold text-white mb-6">
+            Let&apos,s Start a
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Conversation
+            </span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Ready to transform your business? Get in touch with our team of experts to discuss
+            how we can help you achieve your technology goals.
+          </p>
+        </motion.div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}
+          {/* Contact Information */}
+          <motion.div
+          <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -100,6 +219,7 @@ className='text-center mb-16';
                   href={info.href}initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
+<<<<<<< HEAD
                   viewport={{ once: true }}>;
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">;
                     <info.icon className="w-6 h-6 text-white" />;
@@ -117,12 +237,26 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                       {info.title}
                     </h4>;
                     <p className='text-gray-300 group-hover:text-blue-400 transition-colors duration-300'>;
+=======
+                  viewport={{ once: true }}
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <info.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-1">{info.title}</h4>
+                    <p className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300">
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       {info.content}
                     </p>;
                   </div>;
                 </motion.a>;
               ))}
+<<<<<<< HEAD
             </div>;
+=======
+            </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group'>;
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300'>;
                     <info && info.icon className='w-6 h-6 text-white' />;
@@ -186,6 +320,7 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                 </li>;
               </ul>;
             </motion && motion.div>;
+<<<<<<< HEAD
           </motion && motion.div>;className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6';
             >;
               <h4 className='text-lg font-semibold text-white mb-3'>;
@@ -211,14 +346,24 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
               </ul>;
             </motion.div>;
           </motion.div>;
+=======
+          </motion && motion.div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           {/* Contact Form */}
           <motion&& motion.div;
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+<<<<<<< HEAD
             viewport={{ once: true }}className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8';
           >;
             {submitStatus === 'success' ? (<motion.div;
+=======
+            viewport={{ once: true }}
+          >
+            {submitStatus === 'success' ? (
+              <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}<CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />;
                 <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>;
@@ -390,9 +535,14 @@ className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-w
                     placeholder='Tell us about your project or inquiry...';
                   />;
                 </div>;
+<<<<<<< HEAD
                 {submitStatus === 'error' && (<motion.div;
                   />;
                 </div>;{submitStatus === 'error' && (<motion&& motion.div;
+=======
+                {submitStatus === 'error' && (;
+                  <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4';
                   >;
@@ -416,7 +566,12 @@ type='submit';
                   )}
                 </button>;
               </form>;
+<<<<<<< HEAD
             )}export default ContactForm;
+=======
+            )}
+export default ContactForm;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <div>;
                   <label;
                     html_for='service';
@@ -514,9 +669,25 @@ type='submit';
           </motion.div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>)}export default ContactForm)}export default ContactForm;)export default ContactForm;  )}
 export default ContactForm;export default ContactForm;</motion.div>;
         </div>;
       </div>;
     </section>;
 )}export default ContactForm;
+=======
+    </section>);
+}
+;
+export default ContactForm);
+}
+;
+export default ContactForm;
+;
+  );
+export default ContactForm;  )
+}
+export default ContactForm;
+export default ContactForm;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

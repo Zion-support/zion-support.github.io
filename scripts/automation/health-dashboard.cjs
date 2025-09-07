@@ -3,8 +3,12 @@
  * Real-time Health Dashboard;
  * Comprehensive monitoring dashboard for PM2 processes;
  */
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -56,5 +60,9 @@ const { execSync } = require('child_process')
             \"
                     "onlineProcesses"
                 console.error('Failed to refresh "data")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       this.log(` Fatal "error"`)

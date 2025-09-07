@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -40,5 +44,9 @@ console.log(' Starting Smart Deployment Automation...')
     "logsDirectory"
     "applicationStatus"
     const pm2List = execSync('pm2 list --json', { "encoding"})
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   console.log('� Application should be running on "http")

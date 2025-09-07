@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
   Brain;
@@ -30,9 +31,66 @@
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import { Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;CheckCircle, ArrowRight, Zap, Target, Microscope;
+=======
+Brain
+  Atom
+  Shield
+  Rocket
+  Star
+  Award
+  TrendingUp
+  CheckCircle
+  ArrowRight
+  Zap
+  Target
+  Microscope
+  Lock
+  Cloud
+  BarChart3
+  Settings
+  Eye
+  Code
+  Palette
+  Search
+  Filter
+  Grid
+  List
+  ExternalLink
+  Phone
+  Mail
+  MapPin;} from 'lucide-react';import {
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Star,
+  Award,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Zap,
+  Target,
+  Microscope,
+  Lock,
+  Cloud,
+  BarChart3,
+  Settings,
+  Eye,
+  Code,
+  Palette,
+  Search,
+  Filter,
+  Grid,
+  List,
+  ExternalLink,
+  Phone,
+  Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
+  CheckCircle, ArrowRight, Zap, Target, Microscope;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+<<<<<<< HEAD
 import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-enterprise-it';
@@ -60,6 +118,62 @@ export default function CuttingEdgeServicesShowcase2025() {const [searchTerm, se
  */;
 function CuttingEdgeServicesShowcase2025() {const [search_term, setSearchTerm] = useState ('')const [selected_category, setSelectedCategory] = useState ('all')const [view_mode, setViewMode]  = useState<'grid' | 'list'>('grid')const all_services = [;
     ...cuttingEdgeAIServices2025,...cuttingEdgeQuantumServices2025,...cuttingEdgeEnterpriseITServices2025,...cuttingEdgeMicroSaasServices2025,];const filtered_services = all_services.filter (service => {const matches_search =;
+=======
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
+import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+  {
+    title: 'Quantum & Emerging Tech',
+    description: 'Breakthrough quantum computing and space technology solutions',
+    services: cuttingEdgeQuantumServices2025,
+    icon: Atom,
+  {
+    title: 'Enterprise IT',
+    description: 'Advanced enterprise infrastructure and security solutions',
+    services: cuttingEdgeEnterpriseITServices2025,
+    icon: Shield,
+  {
+    title: 'Micro SAAS',
+    description: 'Innovative business solutions for modern enterprises',
+    services: cuttingEdgeMicroSaasServices2025,
+    icon: Rocket,
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const allServices = [
+    ...cuttingEdgeAIServices2025;
+    ...cuttingEdgeQuantumServices2025;
+    ...cuttingEdgeEnterpriseITServices2025;
+    ...cuttingEdgeMicroSaasServices2025
+  ];
+  const filteredServices = allServices.filter(service => {
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
+    return matchesSearch && matchesCategory
+  const containerVariants = {
+    hidden: { opacity: 0 }
+;
+export default /**
+ * CuttingEdgeServicesShowcase2025 - Function description
+ */
+function CuttingEdgeServicesShowcase2025() {
+  const [search_term, setSearchTerm] = useState ('');
+  const [selected_category, setSelectedCategory] = useState ('all');
+  const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid');
+;
+  const all_services = [;
+    ...cuttingEdgeAIServices2025,
+    ...cuttingEdgeQuantumServices2025,
+    ...cuttingEdgeEnterpriseITServices2025,
+    ...cuttingEdgeMicroSaasServices2025,
+  ];
+;
+  const filtered_services = all_services.filter (service => {
+    const matches_search =;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
       service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
       service.tags.some (tag =>;
@@ -69,9 +183,47 @@ function CuttingEdgeServicesShowcase2025() {const [search_term, setSearchTerm] =
                         service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
                         service.tags.some (tag => tag.toLowerCase ().includes (search_term.toLowerCase ()))const matches_category = selected_category === 'all' || service.category === selected_category;
     return matches_search && matches_category;
+<<<<<<< HEAD
   const container_variants = {hidden: { opacity: 0 },visible: {opacity: 1;
       transition: {const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com',}const heroStats = [;
   {label: 'Cutting-Edge Services',value: '25+',icon: <Star className='w-5 h-5' />,},{label: 'Innovation Areas',value: '8+',icon: <Brain className='w-5 h-5' />,},{label: 'Market Coverage',value: '$500B+',icon: <TrendingUp className='w-5 h-5' />,},{label: 'Success Rate',value: '99 && 99.9%',icon: <Award className='w-5 h-5' />,},];  { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> },{ label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },{ label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },{ label: 'Success Rate', value: '99 && 99.9%', icon: <Award className="w-5 h-5" /> }
+=======
+  const container_variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1;
+    transition: {
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',
+};
+const heroStats = [;
+  {;
+    label: 'Cutting-Edge Services',;
+    value: '25+',;
+    icon: <Star className='w-5 h-5' />,;
+  },;
+  {;
+    label: 'Innovation Areas',;
+    value: '8+',;
+    icon: <Brain className='w-5 h-5' />,;
+  },;
+  {;
+    label: 'Market Coverage',;
+    value: '$500B+',;
+    icon: <TrendingUp className='w-5 h-5' />,;
+  },;
+  {;
+    label: 'Success Rate',;
+    value: '99 && 99.9%',;
+    icon: <Award className='w-5 h-5' />,;
+  },];  { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> },;
+  { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },;
+  { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },;
+  { label: 'Success Rate', value: '99 && 99.9%', icon: <Award className="w-5 h-5" /> }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const serviceCategories = [;
   {title: 'AI & Consciousness',description:;
       'Revolutionary AI platforms with consciousness and emotional intelligence',    services: cuttingEdgeAIServices2025,icon: Brain,color: 'from-violet-500 to-purple-600',gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',services: cuttingEdgeAIServices2025,icon: Brain,color: 'from-violet-500 to-purple-600',gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',count: cuttingEdgeAIServices2025 && cuttingEdgeAIServices2025.length,},{title: 'Quantum & Emerging Tech',description:;
@@ -93,6 +245,7 @@ export default function CuttingEdgeServicesShowcase2025() {const [searchTerm, se
                          service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()))const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
     return matchesSearch && matchesCategory;
+<<<<<<< HEAD
   const containerVariants = {hidden: { opacity: 0 },visible: {opacity: 1,transition: {staggerChildren: 0 && 0.1,},},  }staggerChildren: 0 && 0.1;
     visible: {coordinate_y: 0,opacity: 1,transition: {duration: 0.5,},},  }}return (<meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology." />;
         <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />;
@@ -150,6 +303,46 @@ className='text-center';
               </motion.h1>;
               <motion.p;
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed';
+=======
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };        staggerChildren: 0 && 0.1;
+    visible: {
+      coordinate_y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },  }
+};
+  return (
+        <meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology." />
+        <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+            >
+              <motion.h1
+                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
+                Cutting-Edge Services
+              <motion.p
+                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
+                  Showcase 2025
+                </span>
+              </motion.h1>
+              <motion.p 
+                className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -208,11 +401,19 @@ className='text-center';
                     </div>;
                     <div className='text-2xl md:text-3xl font-bold text-white mb-1'>;
                       {stat.value}
+<<<<<<< HEAD
                     </div>;
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div;
                 className="flex flex-col sm:flex-row gap-4 justify-center";
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>;
                   </div>;
+=======
+                    </div>
+                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
+                  </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 ))}
               </motion.div>;
               {/* CTA Buttons */}
@@ -263,6 +464,7 @@ className='text-center';
             <motion&& motion.div;
               className='flex flex-col lg:flex-row gap-6 items-center justify-between'              initial={{ opacity: 0, y: 20 }}        <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+<<<<<<< HEAD
             <motion&& motion.div;
               initial={{ opacity: 0, y: 20 }}href='#services';
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25';
@@ -286,6 +488,11 @@ className='text-center';
             <motion.div;
               className='flex flex-col lg:flex-row gap-6 items-center justify-between';
               initial={{ opacity: 0, y: 20 }}whileInView={{ opacity: 1, y: 0 }}
+=======
+            <motion&& motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
               {/* Search */}<div className='relative flex-1 max-w-md'>;
@@ -298,6 +505,7 @@ className='text-center';
                   value={searchTerm}
               {/* Category Filter */}
               <div className='flex flex-wrap gap-2'>              <div className="flex flex-wrap gap-2">;
+<<<<<<< HEAD
                 <button;
               <div className='flex flex-wrap gap-2'>                <button;
                   onChange={e => setSearchTerm(e.target.value)}
@@ -306,10 +514,19 @@ className='text-center';
               </div>;
               {/* Category Filter */}<div className='flex flex-wrap gap-2'>;
                 <button;
+=======
+                <button
+              <div className='flex flex-wrap gap-2'>                <button
+                />
+              </div>
+              {/* Category Filter */}
+                <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   onClick={() => setSelectedCategory('all')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === 'all';
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
                       : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
+<<<<<<< HEAD
                   }`}onClick={() => setSelectedCategory('all')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === 'all';
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
@@ -317,6 +534,9 @@ className='text-center';
                   }`}>;
                   All ({allServices.length})</button>;
 {serviceCategories.map(category => (<button;
+=======
+                  }`}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     key={category.title}
                     onClick={() => setSelectedCategory(category.title)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category.title;
@@ -329,12 +549,20 @@ className='text-center';
                         : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
                     }`}
                   >;
+<<<<<<< HEAD
                     {category && category.title} ({category && category.count})</button>;
                 ))}<button;
               </div>;
               {/* View Mode Toggle */}
 <div className='flex items-center gap-2'>;
                 <button;
+=======
+                    {category && category.title} ({category && category.count});
+                  </button>;
+                ))}
+                <button
+                <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${viewMode === 'grid';
                       ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50';
@@ -427,6 +655,7 @@ className='text-center';
                         </div>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
                     {/* Tags */}
 <div className='flex flex-wrap gap-2 mb-4'>;
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (<span;
@@ -444,6 +673,22 @@ className='text-center';
                       ))}
                     </div>;
                   </div>;
+=======
+                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
+                        >
+                          {tag}
+                        </span>;
+                      ))}
+                    {/* Market Info */}
+                    <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
+                      <span>Market: {service.marketSize}</span>
+                      <span className='text-cyan-400'>{service.category}</span>                    </div>
+                          {tag}
+                        </span>;
+                      ))}
+                    </div>
+                  </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   {/* Service Details */}
                         Key Features;
                       </h4>;
@@ -478,7 +723,13 @@ className='text-center';
                               <span>{feature}</span>;
                             </li>;
                           ))}                      </ul>;
+<<<<<<< HEAD
                     </div>;{/* Pricing */}{/* Pricing */}
+=======
+                    </div>;
+                    {/* Pricing */}
+                    {/* Pricing */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     <div className='mb - 6'>;
                       <h4 className='text - sm font - semibold text - cyan - 400 mb - 3 uppercase tracking - wider'>;
                         Starting From;
@@ -493,6 +744,7 @@ className='text-center';
                           /{service.pricing.starter.period}</h4>;
                       <div className="text-2xl font-bold text-white">;
                         ${service.pricing.starter.price}
+<<<<<<< HEAD
                         <span className="text-sm font-normal text-white/60">/{service.pricing.starter.period}</span>;
                         </span>;
                       </div>;
@@ -517,6 +769,14 @@ className='text-center';
                   </div>;
                   {/* Service Details */}</div>;
                     </div>;
+=======
+                        <span className="text-sm font-normal text-white/60">/{service.pricing.starter.period}</span>
+                    </div>
+                  </div>
+                  {/* Service Details */}
+                      </div>
+                    </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     </div>;
                     {/* Pricing */}
                     <div className='mb-6'>;
@@ -534,6 +794,7 @@ className='text-center';
                         <ArrowRight className="ml-2 w-4 h-4" />;
                       </a>;
                     </div>;
+<<<<<<< HEAD
                   </div>;{/* Hover Effect Overlay */}{/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />;
                 </motion && motion.div>;<div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />;
@@ -552,6 +813,34 @@ className='text-center';
                 </p>;
                 <button;
                   onClick={() => {setSearchTerm('')setSelectedCategory('all')}}className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                >              >;
+=======
+                  </div>;
+                  {/* Hover Effect Overlay */}
+                  {/* Hover Effect Overlay */}
+                  <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />;
+                </motion && motion.div>;
+              ))}
+            </motion && motion.div>;
+            {/* No Results */}
+            {filteredServices && filteredServices.length === 0 && (;
+              <motion&& motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+              >
+                <div className='text-6xl mb-4'>🔍</div>
+                <h3 className='text-2xl font-bold text-white mb-2'>
+                  No services found
+                </h3>
+                <p className='text-white/70 mb-6'>
+                  Try adjusting your search terms or category filter
+                </p>
+                <button
+                  onClick={() => {
+                    setSearchTerm('');
+                    setSelectedCategory('all');
+                  }}
+                  className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                >              >;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <div className="text-6xl mb-4">🔍</div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>;
@@ -569,11 +858,17 @@ className='text-center';
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div;
         {/* Contact CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
 <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>;
             <motion.div;
+=======
+        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -654,6 +949,7 @@ className='text-center';
                     className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300';
                   >;
                     {contactInfo.email}
+<<<<<<< HEAD
                   </a>;
                 </div>;
                 <div className='flex flex-col items-center'>;
@@ -671,6 +967,26 @@ className='text-center';
       </Layout>;
     </>;
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {)const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {hidden: {opacity: 0;
+=======
+                  </a>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">
+                    <MapPin className="w-6 h-6 text-cyan-400" />
+                  </div>
+                  <div className="text-white font-semibold">Address</div>
+                  <div className="text-white/70 text-sm">{contactInfo.address}</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </Layout>
+    </>
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
+  hidden: {
+  opacity: 0
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 visible: {opacity: 1, transition: {staggerChildren: 0.1;
 }
@@ -864,8 +1180,18 @@ visible: {y: 0, opacity: 1, transition: {</span>                      </div>;
 }
 visible: {opacity: 1, transition: {stagger_children: 0.1;
 }
+<<<<<<< HEAD
 const item_variants = {hidden: {coordinate_y: 20, opacity: 0;
 }duration: 0.5;
 }}
 }duration: 0.5;
+=======
+const item_variants = {
+  hidden: {
+  coordinate_y: 20, opacity: 0;
+}
+  duration: 0.5 
+};}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }

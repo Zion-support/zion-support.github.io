@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
 import ServiceCard from './src/components/ServiceCard';
@@ -51,6 +52,10 @@ export default function App(): React.JSX.Element {
     },
   ];
 
+=======
+
+export default function App(): React.JSX.Element {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   return (
     <main>
       <h1>Hello App</h1>

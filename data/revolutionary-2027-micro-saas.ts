@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
   id: string;
 export interface Revolutionary2027MicroSaas  {id: string;name: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -82,14 +86,13 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =;
   contactInfo: {
     mobile: string;
     email: string;
-
     address: string;
   }
 export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
   [
     {
-      id: '2027-revolutionary-micro-saas'
-      name: '2027 Revolutionary Micro SAAS Platform'
+      id: "id",
+    name: '2027 Revolutionary Micro SAAS Platform'
       tagline: 'Revolutionary micro SAAS for 2027'
       price: '$179/month'
       description:
@@ -103,8 +106,8 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
       ]
       link: '/services/2027-revolutionary-micro-saas'
       category: 'Revolutionary 2027 Micro SAAS'
-      realImplementation: true
-      contactInfo: {
+      realImplementation: true;
+    contactInfo: {
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -120,9 +123,9 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
       }
     }
   ];    features: [
-
       "Revolutionary features";
       "Transformative capabilities";
+<<<<<<< HEAD
       "Advanced technology";
 
 export interface Revolutionary2027MicroSaas {;
@@ -141,6 +144,10 @@ export interface Revolutionary2027MicroSaas {;
 export interface Revolutionary2027MicroSaas {;
   };
 
+=======
+      "Advanced technology";export interface Revolutionary2027MicroSaas {
+};
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
   [
     {
@@ -204,9 +211,7 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
     address: string;
   }
 }
-
 export interface Revolutionary2027MicroSaas {;
-
 export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = [
   {
     id: "2027-revolutionary-micro-saas",
@@ -233,4 +238,10 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = 
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
+<<<<<<< HEAD
 ];
+=======
+;    }
+  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

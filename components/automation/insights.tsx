@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 return (<div> <Head><title>Automation Insights — Zion</title></Head>) )return (<div> <Head><title>Automation Insights — Zion</title></Head>) )}</ul> </div> </div>)}</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {talentMd;
 }</pre>)}</section> </div>) import { useEffect, useState  } from 'react';
@@ -5,6 +6,28 @@ import Head from 'next/head';
 import { useEffect, useState   } from 'react';
 import Head from 'next/head',export default function AutomationInsightsPage() {const [intel, setIntel] = useState<any>(null)const [talentMd, setTalentMd] = useState<string>('')useEffect(() => {fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {})fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})return (<div> <Head><title > Automation Insights — Zion</title></Head>) )}</ul> </div> </div>)}</section>) : (<pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800" > {talent_md;
 }</pre>)}</section> </div>) import { useEffect, useState  } from 'react';
+=======
+return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
+ return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
+}</ul> </div> </div>) 
+}</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
+  talentMd
+}</pre>)
+}</section> </div>) import { useEffect, useState } from 'react';
+import Head from "Head";
+export default function AutomationInsightsPage() {
+  const [intel, setIntel] = useState<any>(null);
+  const [talentMd, setTalentMd] = useState<string>('');
+  useEffect(() => {
+    fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
+    fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
+return (<div> <Head><title > Automation Insights — Zion</title></Head>) );
+}</ul> </div> </div>);
+}</section>) : (<pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border-gray-800" > {
+  talent_md;
+}</pre>);
+}</section> </div>) import { useEffect, useState } from 'react';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import Head from 'next / head';
 export default /**;
  * AutomationInsightsPage - Function description;
@@ -60,5 +83,9 @@ function AutomationInsightsPage() {const [intel, set_intel] = useState < any>(nu
         ) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800">{talentMd}</pre>;
         )}
       </section>;
+<<<<<<< HEAD
     </div>;
 )}
+=======
+    </div>);
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

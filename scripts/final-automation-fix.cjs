@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require("$1")
 const path = require("$1")
@@ -59,5 +63,9 @@ const { execSync } = require("child_process")
       this.log(` Git operations "failed"`)
     this.log(" Starting Final Automation Fix")
       this.log("� Final Automation Fix completed successfully!")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       this.log(` Final automation fix "failed"`)
