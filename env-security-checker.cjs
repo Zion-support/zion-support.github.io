@@ -35,7 +35,7 @@ function scanForSecrets() {
     'utils/**/*.{js,jsx,ts,tsx}'
   ];
   
-  let foundSecrets = [];
+  const foundSecrets = [];
   
   filesToScan.forEach(pattern => {
     try {
@@ -83,7 +83,7 @@ function scanForSecrets() {
 function checkSensitiveFiles() {
   console.log('🔍 Checking for sensitive files...');
   
-  let foundSensitive = [];
+  const foundSensitive = [];
   
   sensitiveFiles.forEach(file => {
     if (fs.existsSync(file)) {
@@ -125,7 +125,7 @@ function checkGitignore() {
     'build'
   ];
   
-  let missingIgnores = [];
+  const missingIgnores = [];
   requiredIgnores.forEach(ignore => {
     if (!gitignore.includes(ignore)) {
       missingIgnores.push(ignore);

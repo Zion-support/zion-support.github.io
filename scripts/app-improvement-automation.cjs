@@ -112,7 +112,7 @@ class AppImprovementAutomation {
       // Check for performance optimizations
       const nextConfigPath = path.join(__dirname, '..', 'next.config.js');
       let performanceScore = 0;
-      let totalChecks = 5;
+      const totalChecks = 5;
       
       if (fs.existsSync(nextConfigPath)) {
         const config = fs.readFileSync(nextConfigPath, 'utf8');

@@ -7,7 +7,7 @@ console.log('🔧 Fixing remaining syntax errors...');
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
     
     // Fix common syntax issues
     content = content.replace(/import\s*{\s*{\s*([^}]+)\s*}/g, 'import { $1 }');
