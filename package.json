@@ -141,9 +141,8 @@
     "@types/jest": "^29.5.8",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
-    "autoprefixer": "^10.4.20",
-    "critters": "^0.0.23",
-    "eslint": "^8.57.0",
+    
+    "eslint": "^9.35.0",
     "eslint-config-next": "^15.5.2",
     "eslint-formatter-junit": "^8.40.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",

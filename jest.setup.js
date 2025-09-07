@@ -1,176 +1,74 @@
-require('@testing-library/jest-dom');
-import "@testing-library/jest-dom";
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-// Mock Next.js router
-jest.mock("next/router", () => ({
-  useRouter() {
-    return {
-
-      pathname: "/",
-      query: {},"
-      asPath: "/",
-
-// Jest setup file
+import '@testing-library/jest-dom';
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
-  useRouter() {
-    return {
-      route: '/';,
-      pathname: '/';,
-      query: {;},
-      asPath: '/';,
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-
-      push: jest.fn(),
-      pop: jest.fn(),
-      reload: jest.fn(),
-      back: jest.fn(),
-      prefetch: jest.fn().mockResolvedValue(undefined),
-      beforePopState: jest.fn(),
-      events: {
-        on: jest.fn(),
-        off: jest.fn(),
-<<<<<<< HEAD
-        emit: jest.fn()
-=======
-        emit: jest.fn(),
-      },
-      isFallback: false,
-    };
-  },
+	useRouter() {
+		return {
+			route: '/',
+			pathname: '/',
+			query: {},
+			asPath: '/',
+			push: jest.fn(),
+			back: jest.fn(),
+			replace: jest.fn(),
+			prefetch: jest.fn(),
+			beforePopState: jest.fn(),
+			events: {
+				on: jest.fn(),
+				off: jest.fn(),
+				emit: jest.fn(),
+			},
+		};
+	},
 }));
 
-// Mock Next.js Image component
-jest.mock('next/image', () => ({
-  __esModule: true,
-  default: (props) => {
-    return <img {...props} />;
-  },
-}));
+// Mock Next.js Image to standard img
+jest.mock('next/image', () => {
+	const React = require('react');
+	return function MockedImage({ src, alt, ...props }) {
+		return React.createElement('img', { src, alt, ...props });
+	};
+});
 
-// Mock Next.js Link component
-jest.mock("next/link", () => {
-  return function MockLink({ children, href, ...props }) {
-    return <a href={href} {...props}>{children}</a>;
-  },
-}));
+// Mock Next.js Link to anchor
+jest.mock('next/link', () => {
+	const React = require('react');
+	return ({ children, href, ...props }) => React.createElement('a', { href, ...props }, children);
+});
 
-// Global test setup
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
-
-// Mock IntersectionObserver
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
-
-// Mock matchMedia
+// Window matchMedia
 Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
+	writable: true,
+	value: jest.fn().mockImplementation((query) => ({
+		matches: false,
+		media: query,
+		onchange: null,
+		addListener: jest.fn(),
+		removeListener: jest.fn(),
+		addEventListener: jest.fn(),
+		removeEventListener: jest.fn(),
+		dispatchEvent: jest.fn(),
+	})),
 });
 
-// Mock IntersectionObserver
+// IntersectionObserver mock
+// @ts-ignore
 global.IntersectionObserver = class IntersectionObserver {
-=======
-jest.mock("next/image", () => {
-  const React = require("react");
-  return function MockedImage({ src, alt, ...props }) {
-    return React.createElement("img", { src, alt, ...props });
-  };
-});
-
-// Mock Next.js Link component
-jest.mock("next/link", () => {
-  const React = require("react");
-  return {
-    _esModule: true;,
-    default: ({ children;, href, ...props }) => {
-      return React.createElement("a", { href, ...props }, children);
-    },
-  };
-});
-
-// Mock window.matchMedia
-Object.defineProperty(window, "matchMedia", {
-  writable: true;,
-  value: jest.fn().mockImplementation((query) => ({
-
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-
->>>>>>> origin/chore/fix-lint-and-merge
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
+	constructor() {}
+	disconnect() {}
+	observe() {}
+	unobserve() {}
 };
 
-<<<<<<< HEAD
-// Mock ResizeObserver
+// ResizeObserver mock
+// @ts-ignore
 global.ResizeObserver = class ResizeObserver {
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
+	constructor() {}
+	disconnect() {}
+	observe() {}
+	unobserve() {}
 };
 
-<<<<<<< HEAD
-=======
-// Mock matchMedia
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({}
-    matches: false,
-
-    "media": query,
-    "onchange": null,
-    "addListener": jest.fn(), // deprecated
-    "removeListener": jest.fn(), // deprecated
-    "addEventListener": jest.fn(),
-    "removeEventListener": jest.fn(),
-    "dispatchEvent": jest.fn()}))});
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
-
->>>>>>> origin/chore/fix-lint-and-merge
-// Global test setup
 beforeEach(() => {
-  jest.clearAllMocks();
+	jest.clearAllMocks();
 });
-<<<<<<< HEAD
-=======
-
-});
-main
-// Mock Next.js Image component
-jest.mock('next/image', () => ({
-  __esModule: true;,
-  default: (props) => {
-    return <img {...props} />;
-  },
-}));
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
->>>>>>> origin/chore/fix-lint-and-merge
