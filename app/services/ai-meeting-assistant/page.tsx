@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
 import TestimonialCard from '@/components/TestimonialCard';
 import Link from 'next/link';
 
+=======
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 export const metadata = {
   title: 'Ai Meeting Assistant | Zion Tech Group',
   description: 'Professional ai meeting assistant services for your business needs.',
@@ -10,6 +13,7 @@ export const metadata = {
 
 export default function ServicePage() {
   return (
+<<<<<<< HEAD
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
@@ -54,6 +58,24 @@ export default function ServicePage() {
             <h3 className="text-xl font-semibold mb-3">Real-time Transcription</h3>
             <p className="text-gray-600">
               Get instant, accurate transcription of all your meetings with 95% accuracy in multiple languages.
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Meeting Assistant
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai meeting assistant services for your business needs.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai meeting assistant solutions designed for your specific business requirements.
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
             </p>
           </div>
           
@@ -71,6 +93,7 @@ export default function ServicePage() {
             </p>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* CTA Section */}
@@ -92,7 +115,7 @@ export default function ServicePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
             <blockquote className="text-gray-600 mb-4">
-              &ldquo;The AI Meeting Assistant has transformed our client meetings. We never miss important details and our follow-up is 100% accurate.&rdquo;
+              "The AI Meeting Assistant has transformed our client meetings. We never miss important details and our follow-up is 100% accurate."
             </blockquote>
             <div>
               <p className="font-semibold text-gray-900">Jennifer Martinez</p>
@@ -101,7 +124,7 @@ export default function ServicePage() {
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
             <blockquote className="text-gray-600 mb-4">
-              &ldquo;Our team meetings are now 50% more productive. The action item extraction is incredibly accurate and saves us hours of manual work.&rdquo;
+              "Our team meetings are now 50% more productive. The action item extraction is incredibly accurate and saves us hours of manual work."
             </blockquote>
             <div>
               <p className="font-semibold text-gray-900">David Kim</p>
@@ -110,7 +133,7 @@ export default function ServicePage() {
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
             <blockquote className="text-gray-600 mb-4">
-              &ldquo;As a consultant, this tool is invaluable. I can focus on the conversation knowing that every detail is being captured perfectly.&rdquo;
+              "As a consultant, this tool is invaluable. I can focus on the conversation knowing that every detail is being captured perfectly."
             </blockquote>
             <div>
               <p className="font-semibold text-gray-900">Lisa Thompson</p>
@@ -141,3 +164,9 @@ export default function ServicePage() {
     </div>
   );
 }
+=======
+      </div>
+    </div>
+  );
+}
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

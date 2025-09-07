@@ -2,7 +2,7 @@
 <<<<<<< HEAD
 =======
 =======
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 import React from 'react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
@@ -600,4 +600,4 @@ const ExpandedServicesPage: NextPage = () => {const micro = getServicesByCategor
       </section>;
     </MainLayout>;
   )}export default ExpandedServicesPage;
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

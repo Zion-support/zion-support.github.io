@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function Home() {
+  return (
+    <div>
+      <h1>Zion Tech Group</h1>
+      <p>AI, Micro SaaS, and IT Services</p>
+=======
+import React from 'react';
+import Link from 'next/link';
+import {
+  LightBulbIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  ShieldCheckIcon,
+  ChartBarIcon,
+  UserGroupIcon,
+  ArrowRightIcon,
+  CheckCircleIcon,
+  StarIcon,
+  RocketLaunchIcon
+} from '@heroicons/react/24/outline';
+=======
 import React from "react";
 import Link from "next/link";
 import { Metadata } from 'next';
@@ -31,6 +54,7 @@ export const metadata: Metadata = {
     },
   },
 };
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 
 interface CardProps {
   title: string;
@@ -380,7 +404,12 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+      </div>
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
       </section>
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     </div>
   );
 }

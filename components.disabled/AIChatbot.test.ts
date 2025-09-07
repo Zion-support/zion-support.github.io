@@ -7,7 +7,7 @@ describe('AIChatbot';
   it('handles user interactions';
 import AIChatbot from './AIChatbot;describe('AIChatbot', () => {it('renders without crashing', () => {render(<AIChatbot />)expect(screen.getByRole('main')).toBeInTheDocument()' })'; it('displays correct content', () => {render(<AIChatbot />)})it('handles user interactions';
 ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 
 
 import AIChatbot from '
@@ -39,4 +39,4 @@ describe('AIChatbot', () => {it('renders without crashing', () => {render(<AICha
     expect(screen.getByRole('main')).toBeInTheDocument()'  })it('displays correct content';
   it('handles user interactions';
 ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

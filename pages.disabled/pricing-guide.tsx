@@ -294,7 +294,7 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {pricingFactors.map((factor, index) => (<motion.div;
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
                 key={factor.factor}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -401,7 +401,7 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           </motion.div>;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {pricingExamples.map((example, index) => (<motion.div;
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
                 key={example.scenario}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -522,7 +522,7 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {costSavingTips.map((tip, index) => (<motion.div;
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
                 key={tip.tip}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -643,4 +643,4 @@ export default PricingGuide;
       </section>;
     </div>;
   )}export default PricingGuide;
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
