@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -109,7 +109,7 @@ export default function Home() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Let's discuss how we can help you achieve your goals with our technology solutions.
+            Let&apos;s discuss how we can help you achieve your goals with our technology solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

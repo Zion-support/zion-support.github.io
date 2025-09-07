@@ -1,12 +1,9 @@
 import React from 'react';
-function App() {
+
+export default function App(): React.JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Zion Tech Group</h1>
-        <p>Welcome to our application</p>
-      </header>
-    </div>
+    <main>
+      <h1>Hello App</h1>
+    </main>
   );
 }
-export default App;
