@@ -1,118 +1,24 @@
 {
-  "timestamp": "2025-09-06T17:31:43.872Z",
-  "duration": "46s",
-=======
-  "timestamp": "2025-09-06T20:40:15.907Z",
-  "duration": "124s",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  "timestamp": "2025-09-07T05:59:20.856Z",
+  "totalDuration": 44655,
+  "successfulTasks": 2,
+  "totalTasks": 3,
   "results": {
-    "syntaxFixes": 0,
-    "buildSuccess": false,
-    "testsPassed": 0,
-    "optimizations": 0,
-    "errors": [
-      {
-        "command": "npm run lint:fix",
-        "description": "ESLint Auto-fix",
-        "error": "spawnSync /bin/sh ETIMEDOUT"
-      },
-      {
-        "command": "npm run format",
-        "description": "Prettier Code Formatting",
-        "error": "spawnSync /bin/sh ETIMEDOUT"
-      },
-      {
-        "command": "npm run type-check",
-        "description": "TypeScript Type Checking",
-        "error": "spawnSync /bin/sh ETIMEDOUT"
-      },
-      {
-        "command": "npm run build",
-        "description": "Application Build",
-        "error": "spawnSync /bin/sh ETIMEDOUT"
-      },
-      {
-        "command": "npm run test:smoke",
-        "description": "Smoke Tests",
-        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n[napi-postinstall@0.3.3] Trying to install package \"@unrs/resolver-binding-linux-x64-gnu\" using npm\nError: Cannot parse /workspace/backup-problematic-files/temp-exclude/zion-os/package.json as JSON: Expected property name or '}' in JSON at position 2 (line 2 column 1)\n    at Object.worker (/workspace/node_modules/jest-haste-map/build/worker.js:267:13)\n    at execFunction (/workspace/node_modules/jest-worker/build/processChild.js:297:17)\n    at execHelper (/workspace/node_modules/jest-worker/build/processChild.js:285:5)\n    at execMethod (/workspace/node_modules/jest-worker/build/processChild.js:288:5)\n    at process.messageListener (/workspace/node_modules/jest-worker/build/processChild.js:196:7)\n    at process.emit (node:events:518:28)\n    at emit (node:internal/child_process:949:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)\n"
-      },
-      {
-        "command": "npm test -- --passWithNoTests",
-        "description": "Jest Tests",
-        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nError: Cannot parse /workspace/backup-problematic-files/temp-exclude/zion-os/package.json as JSON: Expected property name or '}' in JSON at position 2 (line 2 column 1)\n    at Object.worker (/workspace/node_modules/jest-haste-map/build/worker.js:267:13)\n    at execFunction (/workspace/node_modules/jest-worker/build/processChild.js:297:17)\n    at execHelper (/workspace/node_modules/jest-worker/build/processChild.js:285:5)\n    at execMethod (/workspace/node_modules/jest-worker/build/processChild.js:288:5)\n    at process.messageListener (/workspace/node_modules/jest-worker/build/processChild.js:196:7)\n    at process.emit (node:events:518:28)\n    at emit (node:internal/child_process:949:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)\n"
-      }
-    ]
+    "Comprehensive Automation Suite": true,
+    "Final Automation Suite": false,
+    "Execute All Scripts": true
   },
-  "summary": {
-    "syntaxFixes": 0,
-    "buildSuccess": false,
-    "testsPassed": 0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-    "totalErrors": 5
-  "timestamp": "2025-09-06T10:42:27.266Z",
-  "totalDuration": 60241,
-  "successfulTasks": 6,
-  "totalTasks": 8,
-  "results": {
-    "dependencyFix": {
-      "success": true,
-      "duration": 7037,
-      "errors": [],
-      "warnings": []
-    },
-    "codeQuality": {
-      "success": false,
-      "duration": 27333,
-      "errors": [],
-      "warnings": []
-    },
-    "securityAudit": {
-      "success": true,
-      "duration": 1719,
-      "errors": [],
-      "warnings": []
-    },
-    "buildOptimization": {
-      "success": true,
-      "duration": 6250,
-      "errors": [],
-      "warnings": []
-    },
-    "seoOptimization": {
-      "success": false,
-      "duration": 39,
-"errors": [],
-      "success": true,
-      "duration": 46,
-      "errors": [],
-      "warnings": []
-    },
-    "accessibilityImprovement": {
-      "success": false,
-      "duration": 9508,
-      "errors": [],
-      "warnings": []
-    },
-    "performanceOptimization": {
-      "success": true,
-      "duration": 6736,
-      "errors": [],
-      "warnings": []
-    },
-    "deployment": {
-      "success": true,
-      "duration": 1612,
-      "errors": [],
-      "warnings": []
+  "errors": [
+    {
+      "command": "node final-automation-suite-fixed.cjs",
+      "description": "Final Automation Suite",
+      "error": "Command failed: node final-automation-suite-fixed.cjs\n/workspace/final-automation-suite-fixed.cjs:4\nconst path = require(\"path\");\"\n                             ^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
     }
-<<<<<<< HEAD
-=======
-    "totalErrors": 6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-  }
+  ],
+  "fixes": [
+    "Fixed memory issues with Node.js heap size",
+    "Created missing automation scripts",
+    "Fixed ESLint configuration",
+    "Added comprehensive error handling"
+  ]
 }
