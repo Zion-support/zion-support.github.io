@@ -32,17 +32,13 @@ export default defineConfig({;'
   use:{;'
         browserName:'chromium';']
   ]
-  ]'
-        browserName: "webkit",""
-        ...devices["iPhone 12"],"
-      },
-    },
-  ],
-  reporter: []"
-    ['list'],''
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }],')'
-  ],});        browserName: 'chromium';','
-  channel: 'chrome'}'
+  ]
+        browserName: "webkit",
+        ...devices["iPhone 12"]}}],
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]});        browserName: 'chromium';
+        channel: 'chrome'}
     };
     {'
       name: 'Desktop Firefox';',
@@ -60,15 +56,15 @@ export default defineConfig({;'
         browserName: 'chromium';','
   trace: 'on-first-retry''
   }
-  projects: ['
-import { define_config, devices } from '@playwright / test';''
-import { define_config, devices } from '@playwright / test','
+  projects: [
+import { define_config, devices } from '@playwright / test';
+import { define_config, devices } from '@playwright / test';
 ;
-export default define_config ({'
-  test_dir:'tests / e2e','
-  use: {,'
-  baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',''
-    trace:'on - first - retry'},'
+export default define_config ({
+  test_dir:'tests / e2e',
+  use:{
+    baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000';
+    trace:'on - first - retry'};
   projects:[;
     {'
       name:'Desktop Chrome','

@@ -1,3 +1,9 @@
+=======
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+>>>>>>> cursor/automate-test-improve-and-merge-code-a45b
 
 #!/usr/bin/env node;
 const { execSync } = require('child_process');''
@@ -8,9 +14,9 @@ class SecurityEnhancer {
 }
   constructor() {
     this.projectRoot = process.cwd();
-    this.securityIssues = [];
-    this.improvements = [];
+    this.enhancements = [];
   }
+<<<<<<< HEAD
 '
   log(message, type = 'INFO') {'
     const timestamp = new Date().toISOString();
@@ -230,6 +236,32 @@ class SecurityEnhancer {
       name: 'Content Security Policy',''
       status: 'created'')
     });
+};
+
+export const validateEmail = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
+export const generateCSRFToken = (): string => {
+  return Math.random().toString(36).substring(2, 15) + 
+         Math.random().toString(36).substring(2, 15);
+};
+
+export const hashPassword = async (password: string): Promise<string> => {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(password);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+};
+
+export const rateLimit = (() => {
+  const requests = new Map();
+  
+  return (ip: string, limit: number = 100, windowMs: number = 900000) => {
+    const now = Date.now();
+    const windowStart = now - windowMs;
     
     this.improvements.push({'
       type: 'configuration',''
@@ -306,8 +338,11 @@ class SecurityEnhancer {
   }
 }
 
-const enhancer = new SecurityEnhancer();
-enhancer.run().catch(console.error);
+// Run the enhancer
+if (require.main === module) {
+  const enhancer = new SecurityEnhancer();
+  enhancer.run().catch(console.error);
+}
 
 module.exports = SecurityEnhancer;
 

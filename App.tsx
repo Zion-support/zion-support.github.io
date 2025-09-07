@@ -1,6 +1,10 @@
+=======
+import React from 'react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-a45b
 
 import React from 'react';'
 function App() {
+<<<<<<< HEAD
   return ('
     <div className="min-h-screen bg-gray-50">"
 </div>"

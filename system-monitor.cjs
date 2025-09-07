@@ -42,4 +42,7 @@ class SystemMonitor {
 
 const monitor = new SystemMonitor();
 monitor.generateReport().catch(console.error);
+<<<<<<< HEAD
 '
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-a45b
