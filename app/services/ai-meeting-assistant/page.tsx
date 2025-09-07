@@ -1,17 +1,5 @@
 import React from 'react';
-import TestimonialCard from '@/components/TestimonialCard';
 import Link from 'next/link';
-
-// Simple TestimonialCard component
-const TestimonialCard = ({ name, role, company, content }: { name: string; role: string; company: string; content: string }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md">
-    <p className="text-gray-600 mb-4">"{content}"</p>
-    <div>
-      <p className="font-semibold text-gray-900">{name}</p>
-      <p className="text-sm text-gray-500">{role}, {company}</p>
-    </div>
-  </div>
-);
 
 export const metadata = {
   title: 'AI Meeting Assistant | Zion Tech Group',
