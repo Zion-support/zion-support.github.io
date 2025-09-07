@@ -7,6 +7,36 @@ export const metadata = {
   description: "Comprehensive AI and technology solutions designed to transform your business operations.",
 };
 
+interface SolutionCardProps {
+  title: string;
+  description: string;
+  icon: string;
+  features: string[];
+  href: string;
+}
+
+function SolutionCard({ title, description, icon, features, href }: SolutionCardProps) {
+  return (
+    <Link href={href} className="group block">
+      <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 h-full">
+        <div className="text-4xl mb-4">{icon}</div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+          {title}
+        </h3>
+        <p className="text-gray-600 mb-4">{description}</p>
+        <ul className="space-y-2">
+          {features.map((feature, index) => (
+            <li key={index} className="text-sm text-gray-600 flex items-center">
+              <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+              {feature}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Link>
+  );
+}
+
 export default function SolutionsPage() {
   const solutions = [
     {
