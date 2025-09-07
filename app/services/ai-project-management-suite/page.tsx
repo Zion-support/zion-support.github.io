@@ -1,11 +1,7 @@
 import React from 'react';
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 export const metadata = {
-<<<<<<< HEAD
   title: 'AI Project Management Suite | Zion Tech Group',
   description: 'Intelligent project management with AI-powered task automation, resource optimization, risk prediction, and smart scheduling for enhanced team productivity.',
   keywords: 'AI project management, task automation, resource optimization, risk prediction, team productivity, project planning AI',
@@ -37,25 +33,9 @@ interface PricingTierProps {
   cta: string;
 }
 
-<<<<<<< HEAD
 function PricingTier({ name, price, period, description, features, popular = false, cta }: PricingTierProps) {
   return (
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
-=======
-function PricingTier({
-  name,
-  price,
-  period,
-  description,
-  features,
-  popular = false,
-  cta,
-}: PricingTierProps) {
-  return (
-    <div
-      className={`relative p-8 rounded-lg border-2 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"} shadow-lg`}
-    >
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -74,21 +54,8 @@ function PricingTier({
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
-<<<<<<< HEAD
             <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-=======
-            <svg
-              className="w-5 h-5 text-green-500 mr-3"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clipRule="evenodd"
-              />
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
             </svg>
             <span className="text-gray-700">{feature}</span>
           </li>
@@ -98,13 +65,8 @@ function PricingTier({
         href="mailto:kleber@ziontechgroup.com?subject=AI Project Management Suite Quote - {name}"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-<<<<<<< HEAD
             ? 'bg-blue-600 text-white hover:bg-blue-700'
             : 'bg-gray-900 text-white hover:bg-gray-800'
-=======
-            ? "bg-blue-600 text-white hover:bg-blue-700"
-            : "bg-gray-900 text-white hover:bg-gray-800"
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
         }`}
       >
         {cta}
@@ -143,13 +105,7 @@ export default function AIProjectManagementSuitePage() {
       {/* Key Features */}
       <section className="py-12">
         <div className="text-center mb-12">
-<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-gray-900 mb-4">AI-Powered Project Features</h2>
-=======
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            AI-Powered Project Features
-          </h2>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive AI solutions to optimize your project management and team collaboration.
           </p>
@@ -219,13 +175,7 @@ export default function AIProjectManagementSuitePage() {
       {/* How It Works */}
       <section className="py-12">
         <div className="text-center mb-12">
-<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
-=======
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            How It Works
-          </h2>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Simple 4-step process to implement AI-powered project management.
           </p>
@@ -243,11 +193,7 @@ export default function AIProjectManagementSuitePage() {
               2
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-3">AI Learning</h3>
-<<<<<<< HEAD
             <p className="text-gray-600">AI analyzes your team's work patterns and project history to optimize recommendations</p>
-=======
-            <p className="text-gray-600">AI analyzes your team&apos;s work patterns and project history to optimize recommendations</p>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
@@ -269,13 +215,7 @@ export default function AIProjectManagementSuitePage() {
       {/* Pricing */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing Plans</h2>
-=======
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Pricing Plans
-          </h2>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Choose the plan that fits your team size and project management needs.
           </p>
@@ -376,13 +316,7 @@ export default function AIProjectManagementSuitePage() {
 
       {/* Contact CTA */}
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-<<<<<<< HEAD
         <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Project Management?</h2>
-=======
-        <h2 className="text-3xl font-bold mb-4">
-          Ready to Transform Your Project Management?
-        </h2>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
         <p className="text-xl mb-8 max-w-2xl mx-auto">
           Start your free trial today and see how AI can revolutionize your project management processes.
         </p>
@@ -405,49 +339,6 @@ export default function AIProjectManagementSuitePage() {
           <p>Email: kleber@ziontechgroup.com</p>
         </div>
       </section>
-=======
-  title: 'Ai Project Management Suite | Zion Tech Group',
-  description: 'Professional ai project management suite services for your business needs.',
-  keywords: 'ai-project-management-suite, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Project Management Suite
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional ai project management suite services for your business needs.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored ai project management suite solutions designed for your specific business requirements.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your ai project management suite solutions run smoothly.
-            </p>
-          </div>
-        </div>
-      </div>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     </div>
   );
 }

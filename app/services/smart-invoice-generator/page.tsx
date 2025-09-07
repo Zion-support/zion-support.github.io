@@ -6,7 +6,6 @@ export const metadata = {
 
 export default function ServicePage() {
   return (
-<<<<<<< HEAD
     <div className="space-y-16">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -18,43 +17,10 @@ export default function ServicePage() {
             <p className="text-xl mb-8 leading-relaxed">
               AI-powered invoice automation with smart templates, payment tracking, and financial analytics. 
               Reduce billing time by 80% and get paid 30% faster.
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Smart Invoice Generator
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional smart invoice generator services for your business needs.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored smart invoice generator solutions designed for your specific business requirements.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your smart invoice generator solutions run smoothly.
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
             </p>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* Features Section */}
       <div id="features" className="py-16">
@@ -285,8 +251,3 @@ function TestimonialCard({
   );
 }
 */
-=======
-    </div>
-  );
-}
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

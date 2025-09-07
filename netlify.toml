@@ -1,18 +1,4 @@
 [build]
-
-command = "npm ci && npm run build"
-publish = "dist"
-
-[build.environment]
-
-  NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=4096"
-ursor/automate-test-improve-and-merge-code-646c
-NODE_VERSION = "20"
-NODE_OPTIONS = "--max-old-space-size=4096"
->>>>>>> main
-  command = "npm install --legacy-peer-deps && npm run build"
-  publish = ".next"
 command = "npm ci && npm run build"
 publish = ".next"
 
@@ -30,14 +16,6 @@ NODE_OPTIONS = "--max-old-space-size=4096"
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
-from = "/api/*"
-to = "/.netlify/functions/:splat"
-status = 200
->>>>>>> main
-
-from = "/api/*"
-to = "/.netlify/functions/:splat"
-status = 200
 
 # Security and caching headers for static assets
 [[headers]]
@@ -73,10 +51,6 @@ status = 200
   status = 200
 
 # Static redirects for specific routes
-
-# Static redirects for exported site
-ursor/automate-test-improve-and-merge-code-646c
-# Static redirects for exported site
 [[redirects]]
 from = "/ai-customer-success-platform"
 to = "/services/ai-customer-success-platform/"
@@ -113,21 +87,6 @@ to = "/services/smart-crm-intelligence-suite/"
 status = 301
 
 [[redirects]]
-
-from = "/affiliate-attribution-suite"
-to = "/services/affiliate-attribution-suite/"
-status = 301
-
-  from = "/affiliate-attribution-suite"
-  to = "/services/affiliate-attribution-suite/"
-  status = 301
-from = "/affiliate-attribution-suite"
-to = "/services/affiliate-attribution-suite/"
-status = 301
->>>>>>> main
-ursor/automate-test-improve-and-merge-code-646c
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
 from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
