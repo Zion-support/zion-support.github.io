@@ -94,6 +94,7 @@ export function TalentCardSaveButton(): any ({;
 
 
 import React from 'react';
+<<<<<<< HEAD
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib / utils';
 import { use_toast } from '@/hooks/ use - toast';
@@ -164,3 +165,21 @@ if ( {) {
 
 
 ;
+=======
+import { Heart  } from 'lucide-react';
+import { cn  } from '@/lib/utils';
+import { useToast  } from '@/hooks/use-toast';
+import { useRouter  } from 'next/router';
+interface TalentCardSaveButtonProps  {profileId: string;
+  profileName: string;
+  isSaved: boolean;
+  onToggleSave?: (id: string, isSaved: boolean) => void;
+  isAuthenticated: boolean;
+export function TalentCardSaveButton() {const { toast } = useToast()const router = null;
+          localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate";
+        )}/>;
+    </button>;
+  )}variant: "default";
+})}
+}/> </button>)}";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

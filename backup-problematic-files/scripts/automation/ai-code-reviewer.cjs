@@ -196,5 +196,9 @@ this.log(" AI Review Report "generated": ${reportPath}")
   this.log(" AI Code Reviewer starting...")
 this.log(")
   this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
+<<<<<<< HEAD
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

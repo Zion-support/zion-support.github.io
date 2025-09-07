@@ -8,5 +8,9 @@ const path = require('path')
       this.log('� Committing changes')
       this.log('� Pushing to current branch')
       const currentBranch = execSync('git branch --show-current')
+<<<<<<< HEAD
         "encoding"
         "encoding"
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

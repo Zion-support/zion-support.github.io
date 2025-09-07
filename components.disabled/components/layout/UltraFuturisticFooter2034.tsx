@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
@@ -26,3 +26,13 @@ export default function UltraFuturisticFooter2034() {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+;
+import React from 'react';
+export default function UltraFuturisticFooter2034() {return (<footer className="py-8 text-center text-sm text-gray-400">;
+      <span>© {new Date().getFullYear()} Zion Tech Group</span>;
+    </footer>;
+  )}
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

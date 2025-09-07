@@ -55,5 +55,9 @@ const { execSync } = require("child_process")
       this.log(" Starting Intelligent Error Detector & Fixer")
       this.log("� Intelligent Error Detector & Fixer completed successfully")
       return { "success": true, "errors": this.errors, "fixes"}
+<<<<<<< HEAD
       this.log(`� Error detection "failed": ${error.message}`, ``)
       this.log(`� Error detection "failed": ${error.message}`, ``)
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -72,5 +72,9 @@ const { execSync } = require("child_process")
       .replace(/{\s*}/g, "{}")
   const fullPath = path.join(dirPath, ")
   arrayOfFiles = await this.getAllFiles(fullPath")
+<<<<<<< HEAD
   const fullPath = path.join(dirPath, ")
   const fullPath = path.join(dirPath, ")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

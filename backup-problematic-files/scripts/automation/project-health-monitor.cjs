@@ -283,5 +283,9 @@ if ( {})
      {}
     const monitor = new ProjectHealthMonitor}(;);
     monitor.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = ProjectHealthMonitor;
 module.exports = ProjectHealthMonitor;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

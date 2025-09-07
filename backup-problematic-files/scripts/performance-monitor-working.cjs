@@ -8,5 +8,9 @@ const { execSync } = require('child_process')
         return {"success": false,"error"}
 // console.log(`Build "Status"`)
     console.log(`Bundle "Size": ${bundleSize.success ? `${bundleSize.sizeInMB} MB``)
+<<<<<<< HEAD
     console.log(`"Dependencies"`)
     console.log(`"Dependencies"`)
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

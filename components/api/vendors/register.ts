@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,6 +54,47 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(405).json({ error: 'Method not allowed' });
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+import { getVendorBySlug, register_vendor } from '../../../utils / vendor - store';
+export default /**;
+ * handler - Function description;
+ */;
+function handler() {if (return res.status (405).json ({ error: 'Method not allowed' })) {$2;
+}
+import { getVendorBySlug, registerVendor  } from '../../../utils/vendor-store';
+export default function handler() {if (req.method !== 'POST')if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })if (req.method !== 'POST')if (req.method !== 'POST')if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {},if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' })if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' })try {const vendor  = null;return res.status(405).json({ error: 'Method not allowed' })if (req.method !== 'POST')if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })const {slug;
+    name;
+    servicesOffered;
+    teamSize;
+    about;
+    verificationDocs;
+    caseStudies;
+  } = req.body |{}
+  if (!slug |!name)return res.status(400).json({ error: 'Missing required fields' })if (req && req.method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })const {slug,name,services_offered,team_size,about,const vendor = registerVendor({slug;
+      name;slug,name,servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [],teamSize: Number(teamSize || 0),verification_docs,case_studies;
+      about,  try {about,  try {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {}if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' })if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' })try {const vendor = registerVendor({slug;
+      name;const vendor = registerVendor({slug;
+      name;
+      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
+      teamSize: Number(teamSize || 0)about;
+      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []})res && res.status(201).json({ vendor })const vendor = registerVendor({slug;
+      name;
+      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
+      teamSize: Number(teamSize || 0)about;
+      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []})res && res.status(201).json({ vendor })const vendor = registerVendor({slug;
+      name;
+      verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : [];
+      caseStudies: Array.isArray(caseStudies) ? caseStudies : []})res.status(201).json({ vendor })} catch (e: any) {res && res.status(500).json({ error: e && e.message })}
+    })res && res.status(201).json({ vendor })} catch (e: any) {verification_docs,case_studies;
+    res && res.status(500).json({ error: e && e.message })}    res && res.status(500).json({ error: e && e.message })}}} catch (e: any) {res && res.status(500).json({ error: e && e.message })}
+      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [];
+    })res && res.status(201).json({ vendor })} catch (e: any) {verification_docs,case_studies;
+
+
+  if (req.method !== 'POST')
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 <<<<<<< HEAD
@@ -70,6 +112,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } = req.body |{}
   if (!slug |!name)
     return res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +134,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const {
@@ -99,6 +144,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     services_offered,
     team_size,
     about,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -112,6 +158,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
       slug,
       name,
@@ -143,11 +191,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
       teamSize: Number(teamSize || 0);
       about;
-<<<<<<< HEAD
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
       caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
     res && res.status(201).json({ vendor })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -170,6 +218,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }
@@ -179,16 +229,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     res && res.status(500).json({ error: e && e.message });
   }    res && res.status(500).json({ error: e && e.message })
   };
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -214,28 +268,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     verification_docs,
-    case_studies,
+    case_studies
   } = req.body || {}
-  if (
-    return res.status (400).json ({ error: 'Missing required fields' })) {
-  $2
+  if (return res.status (400).json ({ error: 'Missing required fields' })) {$2;
 }
-  if ()) {
-  $2
+  if ()) {$2;
 }
-    return res.status (409).json ({ error: 'Slug already taken' });
-  try {
-    const vendor = register_vendor ({
-      slug,
-      name,
-      services_offered: Array.is_array (services_offered) ? services_offered : [],
-      team_size: Number (team_size || 0),
-      about,  try {
-    const vendor = register_vendor ({
-      slug;
+    return res.status (409).json ({ error: 'Slug already taken' })try {const vendor = register_vendor ({slug,name,services_offered: Array.is_array (services_offered) ? services_offered : [],team_size: Number (team_size || 0),about,  try {const vendor = register_vendor ({slug;
       name;
       services_offered: Array.is_array (services_offered) ? services_offered : [];
+      team_size: Number (team_size || 0)about;
+      verification_docs: Array.is_array (verification_docs) ? verification_docs : [],case_studies: Array.is_array (case_studies) ? case_studies : []})res.status (201).json ({ vendor })} catch (e: any) {res.status (500).json ({ error: e.message })}
+verification_docs: Array.is_array (verification_docs) ? verification_docs : [],case_studies: Array.is_array (case_studies) ? case_studies : [];
+      case_studies: Array.is_array (case_studies) ? case_studies : [];
+      case_studies: Array.is_array (case_studies) ? case_studies : [];
+    })res.status (201).json ({ vendor })} catch (e: any) {res.status (500).json ({ error: e.message })}    res.status (500).json ({ error: e.message })}
+}res.status(500).json({ error: e.message })}    res.status(500).json({ error: e.message })}
+}}
+}
+}
+  }
+}
       team_size: Number (team_size || 0);
       about;
       verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
@@ -245,7 +301,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     res.status (500).json ({ error: e.message });
   }
 verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
-      case_studies: Array.is_array (case_studies) ? case_studies : [],
+      case_studies: Array.is_array (case_studies) ? case_studies : []
     });
     res.status (201).json ({ vendor });
   } catch (e: any) {
@@ -256,6 +312,7 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -264,10 +321,13 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
 =======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     res.status(500).json({ error: e.message });
   }    res.status(500).json({ error: e.message })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -287,3 +347,8 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+  }
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

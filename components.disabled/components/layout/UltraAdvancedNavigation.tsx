@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
@@ -12,10 +13,23 @@
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+<<<<<<< HEAD
+=======
+
+;
+module.exports = default function UltraAdvancedNavigation() { return null;}
+export default function UltraAdvancedNavigation() {}
+  return null;
+}export default function UltraAdvancedNavigation() {return null;
+}
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 module.exports = default function UltraAdvancedNavigation() { return null;}
 export default function UltraAdvancedNavigation() {}
   return null;
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,3 +62,5 @@ export default function UltraAdvancedNavigation() {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

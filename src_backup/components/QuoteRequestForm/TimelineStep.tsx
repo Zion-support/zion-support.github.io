@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 <div
 
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
@@ -44,16 +45,39 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               }`}
 
               onClick={() => updateFormData({ timeline: 'fixed' })}            >;
+=======
+
+;
+<div;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",import { cn  } from '@/lib/utils';
+import { QuoteFormData  } from '@/types/quotes';
+import { Popover;
+  PopoverContent;
+  PopoverTrigger;
+ } from '@/components/ui/popover';
+interface TimelineStepProps  {formData: QuoteFormData;
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+import { format } from "date-fns",import { Calendar } from "@/components/ui/calendar",import { Button } from "@/components/ui/button",import { Label } from "@/components/ui/label",import { CalendarIcon  } from 'lucide-react';
+import { cn } from "@/lib/utils",import { QuoteFormData } from "@/types/quotes",interface TimelineStepProps  {formData: QuoteFormData,updateFormData: (data: Partial<QuoteFormData>) => void;
+}export function TimelineStep() {return (<div className='space-y-6'>;
+      <div>;
+export function TimelineStep() {return (className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${formData.timeline === "fixed";
+                  ? "bg-zion-purple/20 border-zion-purple";
+                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
+              }`}<div className="space-y-6">;
+      <div>;
+              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${formData && formData.timeline === 'fixed';
+                  ? 'bg-zion-purple/20 border-zion-purple';
+                  : 'bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50';
+              }`}onClick={() => updateFormData({ timeline: 'fixed' })}            >;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/QuoteRequestForm/TimelineStep.tsx
               <h4 className='font-medium text-white'>Fixed Dates</h4>;
               <p className='text-sm text-zion-slate-light'>;
                 I have specific start and end dates;
               </p>;
-            </div>;
-
-
-            <div
-
+            </div>;<div;
               onClick={() => updateFormData({ timeline: "fixed" })}
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
             >
               <h4 className="font-medium text-white">Fixed Dates</h4>
               <p className="text-sm text-zion-slate-light">I have specific start and end dates</p>
@@ -85,30 +109,53 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                   <PopoverTrigger asChild>
                     <Button
 
+=======
+            >;
+              <h4 className="font-medium text-white">Fixed Dates</h4>;
+              <p className="text-sm text-zion-slate-light">I have specific start and end dates</p>;
+            </div>;
+            <div;
+              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${formData && formData.timeline === 'flexible';
+                  ? 'bg-zion-purple/20 border-zion-purple';
+                  : 'bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50';
+              }`}
+              onClick={() => updateFormData({ timeline: 'flexible' })}className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${formData && formData.timeline === 'flexible';
+                  ? 'bg-zion-purple/20 border-zion-purple';
+                  : 'bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50';
+              }`}
+              onClick={() => updateFormData({ timeline: "flexible" })}
+            >;
+              <h4 className="font-medium text-white">Flexible Timeline</h4>;
+              <p className="text-sm text-zion-slate-light">I'm flexible on the timing</p>;
+            </div>;
+          </div>;
+          {formData.timeline === 'fixed' && (<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-6'>;
+          {formData.timeline === "fixed" && (<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">;
+          </div>;
+              <div>;
+                <Label className='block mb-2 text-zion-slate-light'>;
+                  Start Date;
+                </Label>;
+                <Popover>;
+                  <PopoverTrigger asChild>;
+                    <Button;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/QuoteRequestForm/TimelineStep.tsx
             >;
               <h4 className='font-medium text-white'>Flexible Timeline</h4>;
               <p className='text-sm text-zion-slate-light'>;
-import { format } from 'date - fns';
-import { Calendar } from '@/components/ui/ calendar';
-import { Button } from '@/components/ui/ button';
-import { Label } from '@/components/ui/ label';
-import { CalendarIcon } from 'lucide-react';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/ popover';
-import { cn } from '@/lib / utils';
-import { QuoteFormData } from '@/types/ quotes';
-interface TimelineStepProps {
-  form_data: QuoteFormData;
+import { format  } from 'date - fns';
+import { Calendar  } from '@/components / ui / calendar';
+import { Button  } from '@/components / ui / button';
+import { Label  } from '@/components / ui / label';
+import { Popover,PopoverContent,PopoverTrigger} from '@/components / ui / popover';
+import { cn  } from '@/lib / utils';
+import { QuoteFormData  } from '@/types / quotes';
+interface TimelineStepProps  {form_data: QuoteFormData;
   updateFormData: (data: Partial < QuoteFormData>) => void;
-export /**
- * TimelineStep - Function description
- */
-function TimelineStep() {
-  return (
-    <div className='space - y-6'>;
+export /**;
+ * TimelineStep - Function description;
+ */;
+function TimelineStep() {return (<div className='space - y-6'>;
       <div>;
         <h3 className='text - xl font - semibold text - white mb - 4'>;
           When do you need this?;
@@ -116,8 +163,7 @@ function TimelineStep() {
         <div className='space - y-4'>;
           <div className='flex items - center space - x-4'>;
             <div;
-              className={`flex - 1 p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${
-                form_data.timeline === 'fixed';
+              className={`flex - 1 p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${form_data.timeline === 'fixed';
                   ? 'bg - zion - purple / 20 border - zion - purple';
                   : 'bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50';
               }`}
@@ -128,14 +174,14 @@ function TimelineStep() {
               </p>;
             </div>;
             <div;
-              className={`flex - 1 p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${
-                form_data.timeline === 'flexible';
+              className={`flex - 1 p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${form_data.timeline === 'flexible';
                   ? 'bg - zion - purple / 20 border - zion - purple';
                   : 'bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50';
               }`}
               on_click={() => updateFormData ({ timeline: 'flexible' })}
             >;
               <h4 className='font - medium text - white'>Flexible Timeline</h4>;
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
               <p className='text - sm text - zion - slate - light'>;
 
 
@@ -152,10 +198,18 @@ function TimelineStep() {
 
 
 
+=======
+              <p className='text - sm text - zion - slate - light'>;I'm flexible on the timing;
+              </p>;
+            </div>;
+          </div>;variant="outline";
+                      className={cn("w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",!formData.startDate && "text-zion-slate-light";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/QuoteRequestForm/TimelineStep.tsx
                       )}
-                    >
-                      <CalendarIcon className="mr-2 h-4 w-4" />
+                    >;
+                      <CalendarIcon className="mr-2 h-4 w-4" />;
                       {formData.startDate ? format(formData.startDate, "PPP") : <span>Pick a date</span>}
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">
@@ -186,14 +240,31 @@ function TimelineStep() {
                   <PopoverTrigger asChild>
                     <Button
 
+=======
+                    </Button>;
+                  </PopoverTrigger>;
+                  <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">;
+                    <Calendar;
+                      mode="single";
+                      selected={formData.startDate}
+                      onSelect={(date) => updateFormData({ startDate: date })}
+                      initialFocus;
+                      className="p-3 pointer-events-auto";
+                    />;
+                  </PopoverContent>;
+                </Popover>;
+              </div>;
+              <div>;
+                <Label className='block mb-2 text-zion-slate-light'>;
+                  End Date;
+                </Label>;
+                <Popover>;
+                  <PopoverTrigger asChild>;
+                    <Button;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/QuoteRequestForm/TimelineStep.tsx
                       selected={formData && formData.startDate}
                       onSelect={date => updateFormData({ startDate: date })}                      initialFocus;
-                      className='p-3 pointer-events-auto';
-
-
-
-          {form_data.timeline === 'fixed' && (
-            <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4 mt - 6'>;
+                      className='p-3 pointer-events-auto';{form_data.timeline === 'fixed' && (<div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4 mt - 6'>;
               <div>;
                 <Label className='block mb - 2 text - zion - slate - light'>;
                   Start Date;
@@ -202,13 +273,9 @@ function TimelineStep() {
                   <PopoverTrigger as_child>;
                     <Button;
                       variant='outline';
-                      className={cn (
-                        'w - full justify - start text - left font - normal bg - zion - blue border border - zion - blue - light hover:bg - zion - blue - dark',
-                        !form_data.start_date && 'text - zion - slate - light')}                    >;
+                      className={cn ('w - full justify - start text - left font - normal bg - zion - blue border border - zion - blue - light hover:bg - zion - blue - dark',!form_data.start_date && 'text - zion - slate - light')}                    >;
                       <CalendarIcon className='mr - 2 h - 4 w - 4' />;
-                      {form_data.start_date ? (
-                        format (form_data.start_date, 'PPP')) : (
-                        <span > Pick a date</span>)}
+                      {form_data.start_date ? (format (form_data.start_date, 'PPP')) : (<span > Pick a date</span>)}
                     </Button>;
                   </PopoverTrigger>;
                   <PopoverContent;
@@ -223,29 +290,35 @@ function TimelineStep() {
                     />;
                   </PopoverContent>;
                 </Popover>;
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
               </div>;
 
     <div className;
 origin/cursor/automate-test-improve-and-merge-code-2533
                         !formData.endDate && "text-zion-slate-light"
+=======
+              </div>;variant="outline";
+                      className={cn("w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",<div className;!formData.endDate && "text-zion-slate-light";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/QuoteRequestForm/TimelineStep.tsx
                       )}
-                    >
-                      <CalendarIcon className="mr-2 h-4 w-4" />
+                    >;
+                      <CalendarIcon className="mr-2 h-4 w-4" />;
                       {formData.endDate ? format(formData.endDate, "PPP") : <span>Pick a date</span>}
-                    </Button>
-                  </PopoverTrigger>
-                  <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">
-                    <Calendar
+                    </Button>;
+                  </PopoverTrigger>;
+                  <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">;
+                    <Calendar;
                       selected={formData.endDate}
                       onSelect={date => updateFormData({ endDate: date })}
-                      initialFocus
-                      className='p-3 pointer-events-auto'
-                    />
-                  </PopoverContent>
-                </Popover>
-              </div>
-            </div>
+                      initialFocus;
+                      className='p-3 pointer-events-auto';
+                    />;
+                  </PopoverContent>;
+                </Popover>;
+              </div>;
+            </div>;
           )}
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
         </div>
       </div>
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
@@ -253,24 +326,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+        </div>;
+      </div>;
+    </div>;
+  )}}"w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",!formData.endDate && "text-zion-slate-light";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/QuoteRequestForm/TimelineStep.tsx
                       )}
                     </Button>;
                   </PopoverTrigger>;
-                  <PopoverContent
-                    className='w-auto p-0 bg-zion-blue-dark border border-zion-blue-light'
+                  <PopoverContent;
+                    className='w-auto p-0 bg-zion-blue-dark border border-zion-blue-light';
                     align='start'>;
-                    <Calendar
-
+                    <Calendar;
                       initialFocus;
                       className='p-3 pointer-events-auto';
                       disabled={date =>;
-                        date < (formData && formData.startDate || new Date());
-
-                      mode="single"
-
-
+                        date < (formData && formData.startDate || new Date())mode="single";
                       selected={formData.endDate}
                       onSelect={date => updateFormData({ endDate: date })}
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
                       initialFocus
 
 
@@ -291,13 +366,18 @@ interface TimelineStepProps {;
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
   return (;
     <div className="space-y-6">;
+=======
+                      initialFocus;
+                      className="p-3 pointer-events-auto";
+interface TimelineStepProps  {formData: QuoteFormData,updateFormData: (data: Partial<QuoteFormData>) => void;
+}export function TimelineStep() {return (<div className="space-y-6">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/QuoteRequestForm/TimelineStep.tsx
       <div>;
         <h3 className="text-xl font-semibold text-white mb-4">When do you need this?</h3>;
         <div className="space-y-4">;
           <div className="flex items-center space-x-4">;
             <div;
-              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${;
-                formData.timeline === "fixed";
+              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${formData.timeline === "fixed";
                   ? "bg-zion-purple/20 border-zion-purple";
                   : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
               }`}
@@ -307,8 +387,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
               <p className="text-sm text-zion-slate-light">I have specific start and end dates</p>;
             </div>;
             <div;
-              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${;
-                formData.timeline === "flexible";
+              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${formData.timeline === "flexible";
                   ? "bg-zion-purple/20 border-zion-purple";
                   : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
               }`}
@@ -318,8 +397,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
               <p className="text-sm text-zion-slate-light">I'm flexible on the timing</p>;
             </div>;
           </div>;
-          {formData.timeline === "fixed" && (;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">;
+          {formData.timeline === "fixed" && (<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">;
               <div>;
                 <Label className='block mb - 2 text - zion - slate - light'>;
                   End Date;
@@ -328,13 +406,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                   <PopoverTrigger as_child>;
                     <Button;
                       variant='outline';
-                      className={cn (
-                        'w - full justify - start text - left font - normal bg - zion - blue border border - zion - blue - light hover:bg - zion - blue - dark',
-                        !form_data.end_date && 'text - zion - slate - light')}                    >;
+                      className={cn ('w - full justify - start text - left font - normal bg - zion - blue border border - zion - blue - light hover:bg - zion - blue - dark',!form_data.end_date && 'text - zion - slate - light')}                    >;
                       <CalendarIcon className='mr - 2 h - 4 w - 4' />;
-                      {form_data.end_date ? (
-                        format (form_data.end_date, 'PPP')) : (
-                        <span > Pick a date</span>)}
+                      {form_data.end_date ? (format (form_data.end_date, 'PPP')) : (<span > Pick a date</span>)}
                     </Button>;
                   </PopoverTrigger>;
                   <PopoverContent;
@@ -348,10 +422,10 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       initial_focus;
                       className='p - 3 pointer - events - auto';
                       disabled={date =>;
-                        date < (form_data.start_date || new Date ());
-                      }                    />;
+                        date < (form_data.start_date || new Date ())}                    />;
                   </PopoverContent>;
                 </Popover>;
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
               </div>;
 
 
@@ -367,3 +441,13 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              </div>;</div>)}
+        </div>;
+      </div>;
+    </div>)}selected={formData.endDate}
+                      onSelect={date => updateFormData({ endDate: date })}
+                      initialFocus;;
+    </div>;
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/QuoteRequestForm/TimelineStep.tsx

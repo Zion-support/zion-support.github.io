@@ -501,5 +501,9 @@ async function $1() {}
 if (require.main === module) {}
   main()};
 ;
+<<<<<<< HEAD
 module.exports = DependencyManager;
 module.exports = DependencyManager;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

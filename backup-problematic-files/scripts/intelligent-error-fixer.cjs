@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require('child_process')
       "status"
         "status"
@@ -34,5 +39,9 @@ const { execSync } = require('child_process')
           "type"
           "type"
     console.log('\n Error Fixing "Summary")
+<<<<<<< HEAD
     console.error('Error fixing "failed")
     console.error('Error fixing "failed")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -116,8 +121,11 @@ this.log("� Report "generated": ${reportFile}")
         return { "success": true, "errors": [], "fixed"}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log("� Build Error Detector completed!")
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

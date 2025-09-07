@@ -133,5 +133,9 @@ class ComprehensiveErrorFixer {}
 if (require.main === module) {}
   const fixer = new ComprehensiveErrorFixer();
   fixer.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = ComprehensiveErrorFixer;
 module.exports = ComprehensiveErrorFixer;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -34,6 +35,8 @@ class SecurityEnhancer {
 const enhancer = new SecurityEnhancer();
 enhancer.run().catch(console.error);
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 const fs = require('fs')
 
@@ -42,4 +45,7 @@ const fs = require('fs')
         'X-XSS-Protection': ;';1; mode=block'
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

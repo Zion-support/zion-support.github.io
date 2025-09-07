@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -22,5 +27,4 @@ console.log('===')
 // console.log('\n "Summary")
       console.log('\n� Fixed "files")
 // console.log('\n� "Errors")
-    console.log('\n� Report saved "to")
     console.log('\n� Report saved "to")

@@ -38,5 +38,9 @@ const path = require('path')
 // console.log('\nError "Categories")
     console.log('\nPriority "Errors")
     console.log('\"nRecommendations")
+<<<<<<< HEAD
     console.error(' Error analyzer "failed")
     console.error(' Error analyzer "failed")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

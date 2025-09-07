@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -28,5 +33,4 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
       "description"
       "features"
         <meta name="description" content="
-        <meta property="og:description" content="
         <meta property="og:description" content="

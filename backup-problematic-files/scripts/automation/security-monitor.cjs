@@ -227,5 +227,9 @@ class $1 {}
 
 // Run the security monitor;
 const monitor = new SecurityMonitor();
+<<<<<<< HEAD
 monitor.run().catch(console.error);
 monitor.run().catch(console.error);
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

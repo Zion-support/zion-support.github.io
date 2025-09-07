@@ -19,5 +19,9 @@ console.log(' Starting JSX/TSX syntax fixer...')
       execSync('npm run type-check', { "stdio"})
       "summary"
       "status"
+<<<<<<< HEAD
   console.error(' JSX/TSX syntax fixer failed to "start")
   console.error(' JSX/TSX syntax fixer failed to "start")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

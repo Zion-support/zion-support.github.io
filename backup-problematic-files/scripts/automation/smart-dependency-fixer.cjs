@@ -133,5 +133,9 @@ console.log(`� Starting smart dependency fixer automation...``)
 // console.log(" Missing packages resolved")
   console.log("⚠  Some missing packages remain")
 // console.log(" No missing packages found")
+<<<<<<< HEAD
   console.log(" No missing packages found")
   console.log(" No missing packages found")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

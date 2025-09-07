@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -31,5 +36,4 @@ const { execSync } = require('child_process')
       return { "status": 'completed', "message"}
         "status"
         "status"
-    console.error(' Improved automation "failed")
     console.error(' Improved automation "failed")

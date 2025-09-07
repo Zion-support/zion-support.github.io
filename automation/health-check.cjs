@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 #!/usr/bin/env node
 const { execSync } = require('child_process');
@@ -35,6 +38,7 @@ checks.forEach(check => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -50,6 +54,8 @@ checks.forEach(check => {
   "status": 'healthy'};
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 =======
 });
@@ -70,9 +76,11 @@ const path = require("path");
 class HealthChecker {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportPath = path.join(this.projectRoot, "health-check-report.json");
+    this.checks = [];
+    this.errors = [];
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -577,6 +585,8 @@ module.exports = HealthChecker;
 =======
 module.exports = HealthCheckMonitor;
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node
 const { execSync } = require('child_process');
 
@@ -607,8 +617,11 @@ checks.forEach(check => {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
+<<<<<<< HEAD
 main
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

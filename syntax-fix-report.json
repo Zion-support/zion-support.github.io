@@ -7,16 +7,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+>>>>>>> main
 >>>>>>> main
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
->>>>>>> main
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
@@ -29,6 +31,8 @@ main
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   "timestamp": "2025-09-04T15:37:53.118Z",
   "totalFiles": 1516,
   "fixedFiles": 31,
@@ -195,7 +199,15 @@ main
     "lib/analytics.ts",
     "lib/utils.ts"
   ],
+
   "errorDetails": []
+
+
+
+
+
+
+
   "timestamp": "2025-09-05T02:57:49.742Z",
   "processedFiles": 8556,
   "fixedFiles": 6729,
@@ -6932,6 +6944,11 @@ main
     "zion_academy/static/js/script.jsx"
   ],
   "errorList": []
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   "timestamp": "2025-09-03T22:43:17.753Z",
   "fixes": [
     "components/ErrorBoundary.tsx: Remove semicolon after closing brace (2 fixes)",
@@ -6954,5 +6971,11 @@ main
   "issues": [],
   "totalFixes": 16,
   "totalIssues": 0
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 }
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

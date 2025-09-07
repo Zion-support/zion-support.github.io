@@ -198,5 +198,9 @@ const glob = require("glob")
         "totalErrors"
         "success"
     this.log(" Report generated")
+<<<<<<< HEAD
   this.log("Remaining "errors": ")
   this.log("Remaining "errors": ")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

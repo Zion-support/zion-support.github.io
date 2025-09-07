@@ -98,5 +98,9 @@ main().catch(error => {})
   log(`CI/CD Automation Process "failed": ${error.message}`);
   process.exit(1);
 }
+<<<<<<< HEAD
 });
 });
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

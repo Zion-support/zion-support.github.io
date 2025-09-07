@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
@@ -11,6 +12,9 @@
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -72,6 +76,7 @@ async function runTests() {
   
   return report;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -489,3 +494,6 @@ module.exports = AutomatedTestingSuite;
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,41 +1,74 @@
+
+;
+"use client",import { useEffect, useRef, useState  } from './react';,// Skip link component for keyboard navigation;
+export /**;
+ * SkipLink - Function description;
+ */;
+function SkipLink() {return (<a;
+      href={`#${target_id}`}
+      className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
     <a;
       href={`#${target_id}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
 =======
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z-50";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     >;
       {children}
-    </a>);
-}
+    </a>)}export /**;
+ * LiveRegion - Function description;
+ */;
+function LiveRegion() {return (<div;
+      role={role}
+      aria - live={aria_live}
+      className="sr - only";
     <div;
       role={role}
       aria - live={aria_live}
+<<<<<<< HEAD
 <<<<<<< HEAD
       className="sr - only";
 =======
       className="sr-only";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      className="sr - only";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       aria - atomic="true";
     >;
       {message}
-    </div>);
-}
-    const handleKeyDown = (e: KeyboardEvent) => {;
-      if (e.key === "Tab") {;
-        if (e.shiftKey) {;
-          if (document.activeElement === firstElement) {;
-            firstElement.focus();
-          }
+    </div>)}// Focus trap for modals and dialogs;
+export function useFocusTrap() {const containerRef = useRef<HTMLDivElement>(null)useEffect(() => {if (!enabled || !containerRef.current) return,const container = containerRef.current;
+    const focusableElements = container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    ),const firstElement = focusableElements[0] as HTMLElement,const lastElement  = focusableElements[focusableElements.length - 1] as HTMLElement,const handleKeyDown = (e: KeyboardEvent) => {if (e.key === "Tab") {if (e.shiftKey) {if (document.activeElement === firstElement) {firstElement.focus()}
         }
       }
-  return (;
-    <div aria-live={priority} aria-atomic="true" className="sr-only">;
-      {announcements.map((announcement, index) => (;
-        <div key={index}>{announcement}</div>;
+  return (<div aria-live={priority} aria-atomic="true" className="sr-only">;
+      {announcements.map((announcement, index) => (<div key={index}>{announcement}</div>;
       ))}
     </div>;
+  )}// Progress indicator component;
+export function ProgressIndicator() {const percentage  = Math.round((value / max) * 100),return (<div className="space-y-2">;
+      <div className="flex justify-between text-sm">;const handleKeyDown = (e: KeyboardEvent) => {if (e.key === "Tab") {if (e.shiftKey) {if (document.activeElement === firstElement) {firstElement.focus()}
+        }
+      }return (<div aria-live={priority} aria-atomic="true" className="sr-only">;
+      {announcements.map((announcement, index) => (<div key={index}>{announcement}</div>;
+      ))}
+    </div>;
+  )}return (<div className="space-y-2">;
+      <div className="flex justify-between text-sm">;<span>{label}</span>;
+        <span>{percentage}%</span>;
+      </div>;
+      <div className="w - full bg-[var (--border)] rounded - full h - 2">;
+        <div;
+          className="bg-[var (--accent)] h - 2 rounded - full transition - all duration - 300";
+            e.preventDefault()lastElement.focus()}
+        } else {if (document.activeElement === lastElement) {e.preventDefault()firstElement.focus()}
   );
 }
     const handleKeyDown = (e: KeyboardEvent) => {;
@@ -47,6 +80,9 @@
           }
         } else {if (document.activeElement === lastElement) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             e.preventDefault();
             firstElement.focus();
           }
@@ -135,6 +171,7 @@ function ProgressIndicator() {
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
         <span>{label}</span>;
+<<<<<<< HEAD
         <span>{percentage}%</span>;
       </div>;
       <div className="w - full bg-[var (--border)] rounded - full h - 2">;
@@ -145,12 +182,18 @@ function ProgressIndicator() {
           }
         }
       }        <span>{label}</span>;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         <span>{percentage}%</span>;
       </div>;
-      <div className="w - full bg-[var (--border)] rounded - full h-2">;
+      <div className="w - full bg-[var (--border)] rounded - full h - 2">;
         <div;
+<<<<<<< HEAD
           className="bg-[var (--accent)] h - 2 rounded - full transition - all duration-300";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          className="bg-[var (--accent)] h - 2 rounded - full transition - all duration - 300";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           style={{ width: `${percentage}%` }}
           role="progressbar";
           aria - valuenow={value}
@@ -159,9 +202,14 @@ function ProgressIndicator() {
           aria - label={label}
         />;
       </div>;
+    </div>)}// Collapsible section component;
+export function CollapsibleSection() {const [isExpanded, setIsExpanded] = useState(defaultExpanded),const contentRef  = useRef<HTMLDivElement>(null),return (<div className="border border-[var(--border)] rounded-lg">;return (<div className="border border-[var(--border)] rounded-lg">;<button;
+        className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
+  return (<div className="border border-[var(--border)] rounded-lg">;  return (<div className="border border-[var(--border)] rounded-lg">;
     </div>);
 }
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="border border-[var(--border)] rounded-lg">;
       <button;
@@ -172,6 +220,11 @@ function ProgressIndicator() {
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify-between";
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    <div className="border border-[var(--border)] rounded-lg">;
+      <button;
+        className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         on_click={() => setIsExpanded (!is_expanded)}
         aria - expanded={is_expanded}
         aria - controls={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
@@ -181,20 +234,34 @@ function ProgressIndicator() {
           {is_expanded ? "−" : "+"}
         </span>;
       </button>;
-      <div;
+      <div;id={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
+        ref={content_ref}
+        className={`overflow - hidden transition - all duration - 300 ${is_expanded ? "max - h-96 opacity - 100" : "max - h-0 opacity - 0";}`}
+        aria - hidden={!is_expanded}
+      >;
+        <div className="px - 4 pb - 3">;
         }`}
         aria - hidden={!is_expanded}
       >;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="px - 4 pb - 3">;
 =======
         <div className="px - 4 pb-3">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        <div className="px - 4 pb - 3">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           {children}
         </div>;
       </div>;
+    </div>)}// Tooltip component with proper accessibility;
+export function Tooltip() {const [isVisible, setIsVisible] = useState(false),const [tooltipId] = useState(() => `tooltip-${Math.random().toString(36).substr(2, 9)}`),const positionClasses = {top: "bottom-full left-1/2 transform -translate-x-1/2 mb-2",bottom: "top-full left-1/2 transform -translate-x-1/2 mt-2",left: "right-full top-1/2 transform -translate-y-1/2 mr-2";
+    right: "left-full top-1/2 transform -translate-y-1/2 ml-2";
+  }return (<div className="relative inline-block">;return (<div className="relative inline-block">;  return (<div className="relative inline-block">;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <div className="relative inline - block">;
@@ -203,6 +270,11 @@ function ProgressIndicator() {
   return (;
     <div className="relative inline-block">;  return (;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  return (
+    <div className="relative inline - block">;
+  return (;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <div className="relative inline-block">;
       <div;
         onMouseEnter={() => setIsVisible (true)}
@@ -214,18 +286,20 @@ function ProgressIndicator() {
       >;
         {children}
       </div>;
-      {is_visible && (
-        <div;
+      {is_visible && (<div;
           id={tooltip_id}
           className={`absolute z - 50 px - 2 py - 1 text - sm text - white bg - gray - 900 rounded shadow - lg ${position_classes[position]}`}
           role="tooltip";
         >;
           {content}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate - 45" />;
 =======
+=======
+          <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate - 45" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate-45" />;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>)}
-    </div>);
-}
+    </div>)}

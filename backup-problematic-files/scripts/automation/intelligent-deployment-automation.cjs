@@ -4,6 +4,7 @@
  * Advanced deployment system with blue-green, canary, and rollback capabilities;
  * Features: Automated testing, health checks, gradual rollouts, intelligent rollbacks;
  */
+
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -110,5 +111,9 @@ const http = require('http')
       this.log(' Intelligent Deployment Automation is ready')
       process.on('SIGINT')
         this.log('� Shutting down Deployment Automation...')
+<<<<<<< HEAD
       this.log(` Fatal error: ${error.message}`, 'ERROR'`)
       this.log(` Fatal error: ${error.message}`, 'ERROR'`)
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

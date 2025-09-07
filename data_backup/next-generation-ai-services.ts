@@ -1,4 +1,12 @@
 
+;
+ursor/integrate-build-improve-and-re-verify-8f7d;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+ursor/integrate-build-improve-and-re-verify-8f7d;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+ursor/automate-test-improve-and-merge-code-646c;
+module.exports = interface NextGenerationAIService { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenerationAIServices NextGenerationAIService[] = [{ id,:,quantum-ai-brain-computer-interface","; name: "Quantum AI Brain-Computer Interface," tagline:,World\"s: "first quantum-enhanced AI with human-like reasonin",g;",","; price: "",$,2,999,period: "/month," description: "Revolutionary quantum AI platform that interfaces directly with neural signals,enabling breakthrough discoveries and cognitive enhancement with unprecedented accuracy.;,"; features[ "Quantum: "neural signal processin",g;",","; "Real-time: "brain activity monitorin",g;",","; "AI-powered: "cognitive enhancemen",t;",","; "Neural: "pattern recognitio",n;",","; "Secure: "quantum encryptio",n;",","; "Multi-modal: "interface suppor",t;",","; "Advanced: "analytics dashboar",d;",","; "API: "for research integratio",n;",","; "Compliance: "with medical standard",s;",","; "24/7: "quantum AI suppor",t;";","],popular: "true",icon:,","; color: "from-purple-600 to-indig,o-700" textColor:,text-purple-400; ","; link: "https "'"'";
 
 
 
@@ -12,32 +20,66 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 module.exports = interface NextGenerationAIService { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenerationAIServices NextGenerationAIService[] = [{ id,:,quantum-ai-brain-computer-interface","; name: "Quantum AI Brain-Computer Interface," tagline:,World\"s: "first quantum-enhanced AI with human-like reasonin",g;",","; price: "",$,2,999,period: "/month," description: "Revolutionary quantum AI platform that interfaces directly with neural signals,enabling breakthrough discoveries and cognitive enhancement with unprecedented accuracy.;,"; features[ "Quantum: "neural signal processin",g;",","; "Real-time: "brain activity monitorin",g;",","; "AI-powered: "cognitive enhancemen",t;",","; "Neural: "pattern recognitio",n;",","; "Secure: "quantum encryptio",n;",","; "Multi-modal: "interface suppor",t;",","; "Advanced: "analytics dashboar",d;",","; "API: "for research integratio",n;",","; "Compliance: "with medical standard",s;",","; "24/7: "quantum AI suppor",t;";","],popular: "true",icon:,; ","; color: "from-purple-600 to-indig,o-700" textColor:,text-purple-400; ","; link: "https "'"'"
 import React from 'react';
-interface NextgenerationaiservicesProps {
-  // Add props here as needed
+interface NextgenerationaiservicesProps  {// Add props here as needed;
+}}}
+}origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+ursor/integrate-build-improve-and-re-verify-8f7d;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+ursor/automate-test-improve-and-merge-code-646c;
+export default function Nextgenerationaiservices() {export default function Nextgenerationaiservices() {export default function Nextgenerationaiservices() {return (<div>;
+      <h1>Nextgenerationaiservices</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )}}}ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/integrate-build-improve-and-re-verify-8f7d;
+ursor/automate-test-improve-and-merge-code-646c;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
+ursor/integrate-build-improve-and-re-verify-8f7d;
 }
+}}}
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+ursor/integrate-build-improve-and-re-verify-8f7d;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+}ursor/automate-test-improve-and-merge-code-646c;
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export default function Nextgenerationaiservices({ }: NextgenerationaiservicesProps) {
+=======
+
+
+export default function Nextgenerationaiservices({}: NextgenerationaiservicesProps) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return (
     <div>
       <h1>Nextgenerationaiservices</h1>

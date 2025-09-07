@@ -1,6 +1,45 @@
+import crypto from 'crypto';
+// Merkle tree utilities;
+export const merkle = {// Merkle tree utilities;
+export const merkle = {// Add merkle tree functionality here;
+  create_tree: (leaves: string[]) => null,get_proof: (tree: any, leaf: string) => [],verify_proof: (proof: any[], leaf: string, root: string) => false;
+}export class MerkleTree {private root: MerkleNode | null = null;
+  private leaves: MerkleNode[] = [];constructor(data: any[]) {this.buildTree(data)}private buildTree(data: any[]): void {if (data.length === 0) return;// Create leaf nodes;
+    this.leaves = data.map((item) => ({hash: this.hashData(JSON.stringify(item)),data: item;
+      data: item;
+    }))// Build tree bottom-up;
+    let currentLevel  = [...this.leaves];while (currentLevel.length > 1) {const nextLevel: MerkleNode[]  = [];for (let i = 0; i < currentLevel.length; i += 2) {const left = currentLevel[i];
+        const right = currentLevel[i + 1] || left; // Duplicate last node if odd number;
+        const combinedHash = left.hash + right.hash;
+        const parent: MerkleNode = {hash: this.hashData(combinedHash),left,right;
+          right;
+        }nextLevel.push(parent)}currentLevel = nextLevel;
+    }this.root = currentLevel[0];
+  }private hashData(data: string): string {return crypto.createHash("sha256").update(data).digest("hex")}getRootHash(): string | null {return this.root?.hash || null;
+  }getProof(index: number): string[] {if (index >= this.leaves.length) return [];const proof: string[] = [];
+    let current = this.leaves[index];
+    let level  = [...this.leaves];while (level.length > 1) {const nextLevel: MerkleNode[] = [];
+      const currentIndex  = level.indexOf(current)if (currentIndex % 2 === 0) {// Left node, add right sibling;
+        if (currentIndex + 1 < level.length) {proof.push(level[currentIndex + 1].hash)}
+      } else {// Right node, add left sibling;
+        proof.push(level[currentIndex - 1].hash)}// Move to parent level;
+      for (let i = 0; i < level.length; i += 2) {const left = level[i];
+        const right  = level[i + 1] || left;const combinedHash = left.hash + right.hash;
+        const parent: MerkleNode = {hash: this.hashData(combinedHash),left,right;
+          right;
+        }nextLevel.push(parent)}level = nextLevel;
+      current = level[Math.floor(currentIndex / 2)];
+    }return proof;
+  }verifyProof(leafData: any, proof: string[], rootHash: string): boolean {let currentHash  = this.hashData(JSON.stringify(leafData))for (const siblingHash of proof) {currentHash = this.hashData(currentHash + siblingHash)}return currentHash === rootHash;
+  }getLeaves(): MerkleNode[] {return [...this.leaves];
+  }
+}export function createMerkleTree(data: any[]): MerkleTree {return new MerkleTree(data)}export function verifyMerkleProof(leafData: any,proof: string[],rootHash: string,): boolean {const tree = new MerkleTree([leafData])return tree.verifyProof(leafData, proof, rootHash)}
 import crypto from "crypto";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 // Merkle tree utilities;
 export const merkle = {
@@ -24,7 +63,7 @@ export class MerkleTree {
     // Create leaf nodes
     this.leaves = data.map((item) => ({
       hash: this.hashData(JSON.stringify(item)),
-      data: item,
+      data: item
     }));
 
     // Build tree bottom-up
@@ -41,7 +80,7 @@ export class MerkleTree {
         const parent: MerkleNode = {
           hash: this.hashData(combinedHash),
           left,
-          right,
+          right
         };
 
         nextLevel.push(parent);
@@ -91,7 +130,7 @@ export class MerkleTree {
         const parent: MerkleNode = {
           hash: this.hashData(combinedHash),
           left,
-          right,
+          right
         };
 
         nextLevel.push(parent);
@@ -131,5 +170,8 @@ export function verifyMerkleProof(
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

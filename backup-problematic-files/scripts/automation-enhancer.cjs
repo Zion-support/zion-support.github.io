@@ -87,5 +87,9 @@ const path = require("path")
       "timestamp"
       "enhancements"
       "totalEnhancements"
+<<<<<<< HEAD
     const reportPath = path.join(this.projectRoot, ")
     const reportPath = path.join(this.projectRoot, ")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

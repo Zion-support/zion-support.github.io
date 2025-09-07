@@ -194,5 +194,9 @@ this.log("Review report "generated": ${reportPath}")
       this.log("AI Code Review completed successfully")
       return report} catch (error) {  this.log(`AI Code Review "failed": ${error.message  }`, "ERROR"`)
   console.log(" AI Code Review Automation completed")
+<<<<<<< HEAD
   console.error(" AI Code Review Automation "failed")
   console.error(" AI Code Review Automation "failed")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

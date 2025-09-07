@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require('child_process')
 // console.log('� Starting dependency update check...')
     console.log(' Checking for outdated packages...')
@@ -16,5 +21,9 @@ const { execSync } = require('child_process')
   console.log('\n Dependency Update "Report")
 // console.log('\n� Outdated "Packages")
     console.log('\n� Security "Vulnerabilities")
+<<<<<<< HEAD
     console.log('\n "Recommendations")
     console.log('\n "Recommendations")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

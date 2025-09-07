@@ -1,6 +1,7 @@
 #!/bin/bash
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,6 +63,17 @@ for file in $files_with_conflicts; do
 >>>>>>> main
 =======
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+=======
+
+# Script to automatically resolve merge conflicts by choosing HEAD version
+echo "Fixing merge conflicts in all files..."
+
+# Find all files with merge conflicts
+files_with_conflicts=$(find ./app -name "*.tsx" -o -name "*.ts" | xargs grep -l "<<<<<<< HEAD")
+
+for file in $files_with_conflicts; do
+    echo "Fixing merge conflicts in: $file"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     
     # Create a temporary file
     temp_file=$(mktemp)
@@ -71,15 +83,19 @@ for file in $files_with_conflicts; do
     /^<<<<<<< HEAD/ { in_head = 1; next }
     /^=======/ { in_head = 0; in_other = 1; next }
     /^>>>>>>> / { in_other = 0; next }
+<<<<<<< HEAD
 =======
     /^/ { in_other = 0; next }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     in_other { next }
     { print }
     ' "$file" > "$temp_file"
     
     # Replace the original file
     mv "$temp_file" "$file"
+<<<<<<< HEAD
     
     echo "Fixed: $file"
 done
@@ -143,3 +159,8 @@ echo "Merge conflicts fixed!"
 =======
 echo "All merge conflicts have been resolved!"
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+=======
+done
+
+echo "Merge conflicts resolved in all files."
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

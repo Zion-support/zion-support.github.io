@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { JSX } from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React from 'react';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
@@ -52,6 +56,7 @@ export default function App() {
     },
   ];
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <ParticleBackground />
@@ -177,6 +182,8 @@ export default function App() {
     },
   ];
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export default function App(): JSX.Element {
 export default function App(): React.JSX.Element {
 export default function App(): React.JSX.Element {
@@ -190,6 +197,9 @@ export default function App(): JSX.Element {
     <main>
 
     </main>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   );
 }

@@ -110,9 +110,13 @@ class ErrorPreventionOrchestrator {}
   runCommand(command, args) {}
     return new Promise((resolve, reject) => {;}
       const child = spawn(command, args, { "stdio": 'inherit' };);
+<<<<<<< HEAD
       
       
       
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       child.on('close', (code) => {}
         if ( {})
           resolve()} else {}
@@ -156,6 +160,10 @@ switch (command) {}
   case 'logs':
     orchestrator.logs();
     break;
+<<<<<<< HEAD
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
     process.exit(1)};
     process.exit(1)};
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

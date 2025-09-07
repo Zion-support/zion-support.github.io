@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from "next/link";
 import React from 'react';
@@ -136,22 +137,13 @@ export default function ServicesOverviewPage() {
             Email Us
           </a>
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React from 'react';
-import Link from 'next/link';
-import { 
-  LightBulbIcon,
-  CpuChipIcon, 
-  GlobeAltIcon, 
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  ClockIcon,
-  CurrencyDollarIcon
-} from '@heroicons/react/24/outline';
+
 
 export const metadata = {
+<<<<<<< HEAD
   title: 'Services | Zion Tech Group',
   description: 'Explore our comprehensive range of AI, micro SaaS, and IT services designed to transform your business.',
 };
@@ -364,12 +356,44 @@ export default function ServicesPage() {
             </Link>
           </div>
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  title: 'Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions',
+  description: 'Comprehensive technology services including AI development, micro SaaS solutions, financial technology, healthcare technology, and educational technology. Transform your business with cutting-edge solutions.',
+  keywords: 'AI services, micro SaaS, FinTech, HealthTech, EdTech, technology solutions, software development, digital transformation'
+};
+
+export default function ServicePage() {
+  return (
+    <div className="space-y-16">
+      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          Our Services
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Comprehensive technology solutions to accelerate your digital transformation. 
+          From AI development to micro SaaS products, we deliver enterprise-grade solutions that drive real results.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=Services Inquiry"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Consultation
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         </div>
-      </div>
+      </section>
     </div>
   );
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 
 function StatCard({ number, label, description }: { 
   number: string; 
@@ -420,3 +444,5 @@ function ServiceCard({
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

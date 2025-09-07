@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -33,5 +38,4 @@ console.log('======')
     execSync('npm run build', { "stdio"})
       execSync('npm run export', { "stdio"})
   "status"
-    console.error('� Automation "failed")
     console.error('� Automation "failed")

@@ -1,12 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 <<<<<<< HEAD
 const { execSync } = require('child_process');
 
@@ -27,6 +33,8 @@ function resolveMergeConflicts(filePath) {
     // Clean up multiple newlines
     content = content.replace(/\n{3,}/g, '\n\n');
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     const lines = content.split('\n');
     const resolvedLines = [];
@@ -45,26 +53,37 @@ function resolveMergeConflicts(filePath) {
         resolvedLines.push(line);
       }
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Resolved conflicts in: ${filePath}`);
+    const resolvedContent = resolvedLines.join('\n');
+    
+    if (content !== resolvedContent) {
+      fs.writeFileSync(filePath, resolvedContent, 'utf8');
+      console.log(`Resolved conflicts in: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.error(`❌ Error processing ${filePath}:`, error.message);
 =======
     console.error(`Error processing ${filePath}:`, error.message);
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    console.error(`Error processing ${filePath}:`, error.message);
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return false;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Function to find all files with merge conflicts
 function findConflictedFiles() {
@@ -103,6 +122,8 @@ function findFilesWithConflictMarkers() {
         } catch (error) {
           // Skip files that can't be read
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Find all files with merge conflicts
 function findFilesWithConflicts(dir) {
   const files = [];
@@ -120,11 +141,15 @@ function findFilesWithConflicts(dir) {
         const content = fs.readFileSync(fullPath, 'utf8');
         if (content.includes('
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         }
       }
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   searchDirectory('.');
@@ -174,6 +199,8 @@ function main() {
 // Run the script
 main();
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   walkDir(dir);
   return files;
@@ -193,6 +220,9 @@ for (const file of filesWithConflicts) {
 
 console.log(`Resolved conflicts in ${resolvedCount} files`);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

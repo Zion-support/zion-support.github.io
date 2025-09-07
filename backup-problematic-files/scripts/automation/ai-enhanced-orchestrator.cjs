@@ -4,6 +4,7 @@
  * Advanced intelligent system for PM2 process management with ML capabilities;
  * Features: Predictive analytics, auto-scaling, intelligent deployment, security monitoring;
  */
+
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -35,5 +36,9 @@ const os = require('os')
         '1min'
         '5min'
         '15min'
+<<<<<<< HEAD
       const result = execSync('top -bn1 | grep "Cpu(s)"
       const result = execSync('top -bn1 | grep "Cpu(s)"
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

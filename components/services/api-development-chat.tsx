@@ -3,18 +3,32 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const ApiDevelopmentChat: NextPage = () => {return (<div>;
+      <Head>;
+const ApiDevelopmentChat: NextPage = () => {return (<div>;
+      <Head>;
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name="description" content="ApiDevelopmentChat service" />{" "}const ApiDevelopmentChat: NextPage = () => {return (<div>;
+      <Head></Head>;<meta name="description" content="ApiDevelopmentChat service" />;
+      </Head>;
+      </Head>;<meta name="description" content="ApiDevelopmentChat service" />;
+      </Head>;
 
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
 
 const ApiDevelopmentChat: NextPage = () => {
@@ -26,9 +40,6 @@ const ApiDevelopmentChat: NextPage = () => {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
 const ApiDevelopmentChat: NextPage = () => {;
   return (
     <div>;
@@ -38,10 +49,13 @@ const ApiDevelopmentChat: NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 const ApiDevelopmentChat: NextPage = () => {
@@ -52,6 +66,7 @@ const ApiDevelopmentChat: NextPage = () => {
       </Head>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -73,6 +88,8 @@ const ApiDevelopmentChat: NextPage = () => {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <main>
         <h1>ApiDevelopmentChat</h1>
         <p>Service details coming soon...</p>
@@ -84,6 +101,7 @@ const ApiDevelopmentChat: NextPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -93,15 +111,29 @@ const ApiDevelopmentChat: NextPage = () => {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <main>;
         <h1>ApiDevelopmentChat</h1>;
         <p>Service details coming soon...</p>;
         <a href="/services">Back to Services</a>;
       </main>;
     </div>;
+      </Head>;<main>;
+        <h1>ApiDevelopmentChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  )}
+export default ApiDevelopmentChat;<title>ApiDevelopmentChat - Zion Tech Solutions</title>;
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
+ursor/fix-website-loading-errors-and-merge-6662;
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
   );
 }
 export default ApiDevelopmentChat;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,11 +142,14 @@ export default ApiDevelopmentChat;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -140,12 +175,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
-const ApiDevelopmentChat: NextPage = () => {
-  return (
-    <div>;
+const ApiDevelopmentChat: NextPage = () => {return (<div>;
       <Head>;
         <title > ApiDevelopmentChat - Zion Tech Solutions</title>;
         <meta name="description" content="ApiDevelopmentChat service" />{" "}
@@ -155,11 +190,38 @@ const ApiDevelopmentChat: NextPage = () => {
         <p > Service details coming soon...</p>;
         <a href="/services">Back to Services</a>;
       </main>;
+    </div>)}export default ApiDevelopmentChat;<div>;
+      <Head>;
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name=&quot;description&quot; content=&quot;ApiDevelopmentChat service&quot; />;
+      </Head>;
+      <main>;
+        <h1>ApiDevelopmentChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href=&quot;/services&quot;>Back to Services</a>;
+      </main>;
+    </div>;
+  )},export default ApiDevelopmentChat;
+const ApiDevelopmentChat: NextPage = () => {return (<div>;
+      <Head>;
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name="description" content="ApiDevelopmentChat service" />{" "}
+      </Head>;
+      <main>;
+        <h1>ApiDevelopmentChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  )}
+export default ApiDevelopmentChat;<title>ApiDevelopmentChat - Zion Tech Solutions</title>;
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
     </div>);
 }
 ;
 export default ApiDevelopmentChat;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,6 +234,8 @@ export default ApiDevelopmentChat;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <div>
       <Head>
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>
@@ -190,12 +254,6 @@ export default ApiDevelopmentChat;
 export default ApiDevelopmentChat
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
 const ApiDevelopmentChat: NextPage = () => {
   return (
@@ -218,6 +276,7 @@ export default ApiDevelopmentChat;
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -234,3 +293,5 @@ export default ApiDevelopmentChat;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

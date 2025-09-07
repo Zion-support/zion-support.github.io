@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+/**
+ * Deployment Automation;
+ * Automates deployment processes;
+ */
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require('fs')
 const { execSync } = require('child_process')
   log(message, type = 'INFO')
@@ -13,6 +22,7 @@ const { execSync } = require('child_process')
     this.deployments.push('Created Dockerfile')
     this.log('Created Dockerfile', 'SUCCESS')
     const dockerCompose = ""version"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -572,3 +582,6 @@ module.exports = DeploymentAutomation;
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 console.log(' Starting Analytics Collection...')
   fs.writeFileSync('analytics-report.json')
   console.log(' Analytics collected and saved to analytics-report.json')
@@ -10,5 +15,9 @@ console.log(' Starting Analytics Collection...')
     'yarn.lock'
     '.env.local'
     '.env.example'
+<<<<<<< HEAD
     'next.config.js'
     'next.config.js'
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

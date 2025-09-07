@@ -181,5 +181,9 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
       "summary"
         "totalErrors"
         "successRate"
+<<<<<<< HEAD
       console.error('Automation "failed")
       console.error('Automation "failed")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

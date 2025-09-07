@@ -1,10 +1,13 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 ;const fs = require('fs');
 const path = require('path');
@@ -316,9 +319,12 @@ if (require.main === module) {;
 ;
 module.exports = AdvancedAppOptimizer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
  * Comprehensive optimization for the Zion Tech Group application;
  */
@@ -347,6 +353,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')
       this.log(` Total "optimizations"`)
       this.log(` Advanced App Optimization "failed"`)
     console.error('Advanced App Optimization "failed")
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1237,3 +1244,6 @@ module.exports = AdvancedAppOptimizer
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

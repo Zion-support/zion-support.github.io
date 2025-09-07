@@ -25,5 +25,9 @@ const glob = require('glob')
       const importRegex = /import\s+.*\s+from\s+['"]([^'')]
           "type"
           "description"
+<<<<<<< HEAD
   const backupPath = path.join(this.backupDir, path.basename(filePath) + "
   const backupPath = path.join(this.backupDir, path.basename(filePath) + "
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

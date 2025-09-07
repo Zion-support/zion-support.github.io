@@ -112,6 +112,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
 ;
         // Find the end marker;
         for (let j = marker.separator + 1; j < lines.length; j++) {}
+  if (lines[j].startsWith(">>>>>>>")) {}
   marker.end = j;
             marker.endMarker = lines[j];
             marker.otherBranch = lines[j].substring(8).trim();
@@ -491,5 +492,9 @@ if (require.main === module) {}
   resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
     process.exit(1)})};
 ;
+<<<<<<< HEAD
 module.exports = IntelligentConflictResolver;
 module.exports = IntelligentConflictResolver;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

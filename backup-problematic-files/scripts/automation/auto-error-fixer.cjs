@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -149,5 +154,9 @@ const { execSync } = require("child_process")
       "logFile"
   process.on("SIGINT")
   process.on("SIGINT")
+<<<<<<< HEAD
   process.on(")
   process.on(")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

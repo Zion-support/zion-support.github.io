@@ -9,5 +9,9 @@ const util = require("util")
   async log(message, level = "INFO")
       console.error(`Failed to write to log "file"`)
     await this.log(" Starting syntax error fixing...")
+<<<<<<< HEAD
     fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
     fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

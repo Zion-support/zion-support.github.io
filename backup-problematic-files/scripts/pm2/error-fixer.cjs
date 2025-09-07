@@ -159,5 +159,9 @@ if (require.main === module) {}
   }
 });
 };
+<<<<<<< HEAD
 module.exports = ErrorFixer;
 module.exports = ErrorFixer;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

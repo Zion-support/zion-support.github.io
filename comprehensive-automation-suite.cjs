@@ -5,6 +5,7 @@ const fs = require('fs');
 class ComprehensiveAutomationSuite {
   constructor() {
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.startTime = new Date();
     this.results = {
       dependencyFix: { success: false, duration: 0, errors: [], warnings: [] },
@@ -435,6 +436,8 @@ class ComprehensiveAutomationSuite {
 
     return recommendations;
 origin/cursor/automate-test-improve-and-merge-code-2bab
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
 
   async run() {

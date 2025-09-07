@@ -1,46 +1,66 @@
 }
+<<<<<<< HEAD:src_backup/components/ui/breadcrumb.tsx
 >(({ className, separator, ...props }, ref,) => (;
  
 import { cn } from "@/lib/utils"
  
+=======
+>(({ className, separator, ...props }, ref,) => (}
+>(({ className, separator, ...props }, ref,) => (import { cn  } from '@/lib/utils';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/breadcrumb.tsx
 const Breadcrumb = null;
-  BreadcrumbEllipsis}
-;
-const Breadcrumb = React.forwardRef<
-  HTMLElement
-  React.ComponentPropsWithoutRef<'nav'> & {
-    separator?: React.ReactNode
+  BreadcrumbEllipsis}const Breadcrumb = React.forwardRef<;
+  HTMLElement;
+  React.ComponentPropsWithoutRef<'nav'> & {separator?: React.ReactNode;
   }
+<<<<<<< HEAD:src_backup/components/ui/breadcrumb.tsx
 >(({ className, separator, ...props }, ref,) => (
 origin/cursor/automate-test-improve-and-merge-code-2533
   <nav
+=======
+>(({ className, separator, ...props }, ref,) => (<nav;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/breadcrumb.tsx
 import * as React from 'react';
-import { Slot } from '@radix - ui / react - slot';
-import { ChevronRight } from 'lucide-react';
-import { cn } from '@/lib / utils';
+import { Slot  } from '@radix - ui / react - slot';
+import { ChevronRight  } from 'lucide-react';
+import { cn  } from '@/lib / utils';
 const Breadcrumb = React.forward_ref<;
-  HTMLElement,
-  React.ComponentPropsWithoutRef<'nav'> & {
-    separator?: React.ReactNode;
+  HTMLElement,React.ComponentPropsWithoutRef<'nav'> & {separator?: React.ReactNode;
   }
->(({ class_name, separator, ...props }, ref, ) => (
-  <nav;
+>(({ class_name, separator, ...props }, ref, ) => (<nav;
     ref={ref}
-    aria-label='breadcrumb'
-    className={cn(
-      'inline-flex items-center gap-1 text-sm text-zion-slate-light',
-      className
+    aria-label='breadcrumb';
+    className={cn('inline-flex items-center gap-1 text-sm text-zion-slate-light',      className;
+    )}
+    {...props}'inline-flex items-center gap-1 text-sm text-zion-slate-light',className;
+    )}
+    {...props}import { Slot  } from '@radix-ui/react-slot';
+const Breadcrumb = React.forwardRef<;
+  HTMLElement,React.ComponentPropsWithoutRef<"nav"> & {separator?: React.ReactNode;
+  }
+>(({ className, separator, ...props }, ref) => (<nav;
+    ref={ref}
+    aria-label="breadcrumb";
+    className={cn("inline-flex items-center gap-1 text-sm text-zion-slate-light",className;
     )}
     {...props}
+<<<<<<< HEAD:src_backup/components/ui/breadcrumb.tsx
 
   />));
 Breadcrumb.display_name = 'Breadcrumb';
     ref = {ref, }
+=======
+  />;
+))/>))Breadcrumb.display_name = 'Breadcrumb';
+    ref = {ref }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/breadcrumb.tsx
     aria - label="breadcrumb";
-    class_name = {cn (
-      "inline - flex items - center gap - 1 text - sm text - zion - slate - light",
-      class_name), }
+    class_name = {cn ("inline - flex items - center gap - 1 text - sm text - zion - slate - light",class_name) }/>))Breadcrumb.display_name = 'Breadcrumb';
+    ref = {ref }
+    aria - label="breadcrumb";
+    class_name = {cn ("inline - flex items - center gap - 1 text - sm text - zion - slate - light",class_name) }
     {...props}
+<<<<<<< HEAD:src_backup/components/ui/breadcrumb.tsx
   />));
 Breadcrumb.display_name = 'Breadcrumb';
 
@@ -62,20 +82,27 @@ const BreadcrumbList = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ol
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  />))Breadcrumb.display_name = 'Breadcrumb';Breadcrumb.displayName = "Breadcrumb";
+const BreadcrumbList = React.forwardRef<;
+  HTMLOListElement,React.ComponentPropsWithoutRef<'ol'>;
+>(({ class_name, ...props }, ref) => (<ol;
+  />;
+))Breadcrumb.displayName = 'Breadcrumb';const BreadcrumbList = React.forwardRef<;
+  HTMLOListElement,React.ComponentPropsWithoutRef<'ol'>;
+>(({ className, ...props }, ref) => (<ol;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/breadcrumb.tsx
     ref={ref}
     className={cn ('flex items - center gap - 1.5', class_name)}    {...props}
-  />));
-BreadcrumbList.display_name = 'BreadcrumbList';
+  />))BreadcrumbList.display_name = 'BreadcrumbList';
 const BreadcrumbItem = React.forward_ref<;
-  HTMLLIElement,
-  React.ComponentPropsWithoutRef<'li'>;
->(({ class_name, ...props }, ref) => (
-  <li;
+  HTMLLIElement,React.ComponentPropsWithoutRef<'li'>;
+>(({ class_name, ...props }, ref) => (<li;
     ref={ref}
     className={cn ('inline - flex items - center gap - 1.5', class_name)}    {...props}
-  />));
-BreadcrumbItem.display_name = 'BreadcrumbItem';
+  />))BreadcrumbItem.display_name = 'BreadcrumbItem';
 const BreadcrumbLink = React.forward_ref<;
+<<<<<<< HEAD:src_backup/components/ui/breadcrumb.tsx
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<'a'> & {
     asChild?: boolean
@@ -110,81 +137,65 @@ const BreadcrumbSeparator = ({
 
 
   >
+=======
+  HTMLAnchorElement,React.ComponentPropsWithoutRef<'a'> & {asChild?: boolean;
+  }>(({ className, asChild = false, ...props }, ref) => {const Comp = asChild ? Slot : "a";
+  return (<Comp;
+      ref={ref}
+      className={cn("transition-colors hover:text-zion-cyan", className)}
+      {...props}
+    />;
+  )})BreadcrumbLink.displayName = "BreadcrumbLink";
+const BreadcrumbSeparator = ({}: React.ComponentProps<"li">) => (const BreadcrumbSeparator = ({children;
+  className;
+  ...props;
+}: React.ComponentProps<"li">) => (<li;
+    role="presentation";
+    aria-hidden="true";
+    className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
+    {...props}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/breadcrumb.tsx
     {children |<ChevronRight className='h-4 w-4' />}
-  </li>
-)
-
-  />;
-));
-Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
-    ref = {ref,}
-    aria-label="breadcrumb";
-    className = {cn(;
-      "inline-flex items-center gap-1 text-sm text-zion-slate-light",;
-      className;
-    ),}
-    {...props}
-  />;
-));
-Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
-
-  HTMLOListElement,;
-  React && React.ComponentPropsWithoutRef<'ol'>;
->(({ className, ...props }, ref) => (;
-
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { ChevronRight } from 'lucide-react'
- 
-import { cn } from "@/lib/utils"
-import { ChevronRight } from 'lucide-react';
- 
-const Breadcrumb = React.forwardRef<
-  HTMLElement,
-  React.ComponentPropsWithoutRef<"nav"> & {
-    separator?: React.ReactNode
-  }
->(({ className, separator, ...props }, ref) => (
-  <nav
+  </li>;
+)/>;
+))Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
     ref = {ref}
-    aria-label="breadcrumb"
-    className={cn(
-      "inline-flex items-center gap-1 text-sm text-zion-slate-light",
-      className
+    ref = {ref}
+    aria-label="breadcrumb";
+    className = {cn("inline-flex items-center gap-1 text-sm text-zion-slate-light",className;
+    )}
     )}
     {...props}
-  />
-))
-Breadcrumb.displayName = "Breadcrumb"
- 
-const BreadcrumbList = React.forwardRef<
+  />;
+))Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';HTMLOListElement,React && React.ComponentPropsWithoutRef<'ol'>;
+>(({ className, ...props }, ref) => (const Breadcrumb = React.forwardRef<;
+  HTMLElement,React.ComponentPropsWithoutRef<"nav"> & {separator?: React.ReactNode;
+  }
+>(({ className, separator, ...props }, ref) => (<nav;
+    ref = {ref}
+    aria-label="breadcrumb";
+    className={cn("inline-flex items-center gap-1 text-sm text-zion-slate-light",className;
+    )}
+    {...props}
+  />;
+))Breadcrumb.displayName = "Breadcrumb";
+const BreadcrumbList = React.forwardRef<;
   HTMLOListElement;
-  React.ComponentPropsWithoutRef<"ol">
->(({ className, ...props }, ref) => (
-
-  <ol
+  React.ComponentPropsWithoutRef<"ol">;
+>(({ className, ...props }, ref) => (<ol;
     ref={ref}
     className={cn('flex items-center gap-1 && 1.5', className)}    {...props}
   />;
-));
-BreadcrumbList && BreadcrumbList.displayName = 'BreadcrumbList';
-
-const BreadcrumbItem = React && React.forwardRef<;
-  HTMLLIElement,;
-  React && React.ComponentPropsWithoutRef<'li'>;
->(({ className, ...props }, ref) => (;
-  <li
+))BreadcrumbList && BreadcrumbList.displayName = 'BreadcrumbList';const BreadcrumbItem = React && React.forwardRef<;
+  HTMLLIElement,React && React.ComponentPropsWithoutRef<'li'>;
+>(({ className, ...props }, ref) => (<li;
     ref={ref}
     className={cn('inline-flex items-center gap-1 && 1.5', className)}    {...props}
   />;
-));
-BreadcrumbItem && BreadcrumbItem.displayName = 'BreadcrumbItem';
-
-const BreadcrumbLink = React && React.forwardRef<;
-  HTMLAnchorElement,;
-  React && React.ComponentPropsWithoutRef<'a'> & {;
-    asChild?: boolean;
+))BreadcrumbItem && BreadcrumbItem.displayName = 'BreadcrumbItem';const BreadcrumbLink = React && React.forwardRef<;
+  HTMLAnchorElement,React && React.ComponentPropsWithoutRef<'a'> & {asChild?: boolean;
   }
+<<<<<<< HEAD:src_backup/components/ui/breadcrumb.tsx
 >(({ className, asChild = false, ...props }, ref) => {;
   const Comp = asChild ? Slot : 'a';
 
@@ -203,14 +214,36 @@ const BreadcrumbSeparator = ({;
     aria-hidden='true'
 
   >;
+=======
+>(({ className, asChild = false, ...props }, ref) => {const Comp  = asChild ? Slot : 'a';/>;
+  )})BreadcrumbLink && BreadcrumbLink.displayName = 'BreadcrumbLink';const BreadcrumbSeparator = ({children,className,...props;
+}: React && React.ComponentProps<'li'>) => (<li;
+    role='presentation';
+    aria-hidden='true';
+    className={cn('[&>svg]:size-3 && 3.5 text-zion-slate-light/70', className)}    {...props}
+  >;
+    {children || <ChevronRight className='h-4 w-4' />}
+  </li>;
+)BreadcrumbSeparator && BreadcrumbSeparator.displayName = 'BreadcrumbSeparator';const BreadcrumbEllipsis = ({className,...props;
+}: React && React.ComponentProps<'span'>) => (  <span;
+    role='presentation';
+    aria-hidden='true';
+    className={cn('flex h-9 w-9 items-center justify-center', className)}    {...props}>;
+    &#8230,</span>;
+    role="presentation";
+    aria-hidden="true";
+    className={cn("flex h-9 w-9 items-center justify-center", className)}
+  <li;
+    role="presentation";
+    aria-hidden="true";
+    className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
+    {...props}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/breadcrumb.tsx
     {children || <ChevronRight className="h-4 w-4" />}
   </li>;
-);
-BreadcrumbSeparator && BreadcrumbSeparator.displayName = "BreadcrumbSeparator";
-
-const BreadcrumbEllipsis = ({;
-  className;
+)BreadcrumbSeparator && BreadcrumbSeparator.displayName = "BreadcrumbSeparator";const BreadcrumbEllipsis = ({className;
   ...props;
+<<<<<<< HEAD:src_backup/components/ui/breadcrumb.tsx
 }: React && React.ComponentProps<"span">) => (;
 
 
@@ -240,3 +273,37 @@ export {
   BreadcrumbEllipsis,
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}: React && React.ComponentProps<"span">) => (<span;
+    role="presentation";
+    aria-hidden="true";
+    className={cn("flex h-9 w-9 items-center justify-center", className)}export {BreadcrumbSeparator.displayName = "BreadcrumbSeparator";
+const BreadcrumbEllipsis = ({className;
+  ...props;
+export {Breadcrumb;
+  BreadcrumbList;
+  BreadcrumbItem;
+  BreadcrumbLink;
+    {...props}>;
+    &#8230,</span>;
+)BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';export {Breadcrumb,BreadcrumbList,BreadcrumbItem,BreadcrumbLink,export {Breadcrumb;
+  BreadcrumbList;
+  BreadcrumbItem;
+  BreadcrumbLink;
+export {BreadcrumbSeparator;
+  BreadcrumbEllipsis}BreadcrumbSeparator.displayName = "BreadcrumbSeparator";
+const BreadcrumbEllipsis = ({className,...props;
+}: React.ComponentProps<"span">) => (<span;
+    role="presentation";
+    aria-hidden="true";
+    className={cn("flex h-9 w-9 items-center justify-center", className)}
+    {...props}
+  >;
+    &#8230,className={cn('flex h-9 w-9 items-center justify-center', className)}
+    {...props}
+  >;
+    &#8230;
+  </span>;
+)BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';export {Breadcrumb,BreadcrumbList,BreadcrumbItem,BreadcrumbLink,BreadcrumbSeparator,export {BreadcrumbEllipsis;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/breadcrumb.tsx

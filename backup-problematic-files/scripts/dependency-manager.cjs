@@ -146,5 +146,9 @@ class DependencyManager {
 }
 // Run the dependency manager
 if (require.main === module) {const manager = new DependencyManager(),manager.run().catch(console.error)}
+<<<<<<< HEAD
 module.exports = DependencyManager;
 module.exports = DependencyManager;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,48 +1,35 @@
 import React from 'react';
+<<<<<<< HEAD
 
 export const metadata = {
   title: 'AI-Powered Financial Analytics Platform | Zion Tech Group',
   description: 'Advanced financial analytics with AI-driven insights, predictive modeling, risk assessment, and automated reporting. Make data-driven financial decisions with 95% accuracy predictions.',
   keywords: 'AI financial analytics, predictive modeling, risk assessment, financial forecasting, investment analysis, automated reporting'
+=======
+
+
+export const metadata = {
+  title: 'Ai Financial Analytics | Zion Tech Group',
+  description: 'Professional ai financial analytics services for your business needs.',
+  keywords: 'ai-financial-analytics, services, business, technology'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 
-export default function AIFinancialAnalyticsPage() {
+export default function ServicePage() {
   return (
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-emerald-50 to-blue-100 rounded-lg">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          AI-Powered Financial Analytics
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform your financial decision-making with AI-driven insights, predictive modeling, and automated risk assessment. 
-          Our platform provides 95% accuracy in financial predictions and reduces analysis time by 80%.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics Platform Inquiry"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get Free Analysis
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-        </div>
-      </section>
-
-      {/* Key Features */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Financial Intelligence</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI-powered platform analyzes complex financial data to provide actionable insights and predictions.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Financial Analytics
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai financial analytics services for your business needs.
           </p>
         </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
           <FeatureCard
             icon="📈"
             title="Predictive Financial Modeling"
@@ -395,11 +382,34 @@ function CaseStudy({ company, industry, result, description, metrics }: {
               {metric}
             </div>
           ))}
+=======
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai financial analytics solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai financial analytics solutions run smoothly.
+            </p>
+          </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         </div>
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 
 function SecurityFeature({ icon, title, description }: {
   icon: string;
@@ -414,3 +424,5 @@ function SecurityFeature({ icon, title, description }: {
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

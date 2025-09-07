@@ -1,8 +1,12 @@
 import Image from 'next/image';
+<<<<<<< HEAD
 import { useState } from 'react';
 
 interface ImageOptimizerProps {
   src: string;
+=======
+interface OptimizedImageProps  {src: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   alt: string;
   width?: number;
   height?: number;
@@ -11,6 +15,7 @@ interface ImageOptimizerProps {
   quality?: number;
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
+<<<<<<< HEAD
 }
 
 export default function ImageOptimizer({
@@ -79,3 +84,20 @@ export default function ImageOptimizer({
     </div>
   );
 }
+=======
+}const OptimizedImage: React.FC<OptimizedImageProps> = ({src,alt,width = 800,height = 600,className = '',priority = false,quality = 85,placeholder = 'blur',blurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==';
+}) => {return (<Image;
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+      priority={priority}
+      quality={quality}
+      placeholder={placeholder}
+      blurDataURL={blurDataURL}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
+      style={{objectFit: 'cover',}}
+    />;
+  )}export default OptimizedImage;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

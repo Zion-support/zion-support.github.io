@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require("child_process");
 class AutoFixer {}
   constructor() {}
@@ -153,8 +158,6 @@ class AutoFixer {}
       importErrors: await this.fixImportErrors();
       typescriptErrors: await this.fixTypeScriptErrors();
       totalFixes: 0;
-      importErrors: await this.fixImportErrors(), typescriptErrors: await this.fixTypeScriptErrors(),
-      totalFixes: 0,
       duration: 0};
     results.totalFixes = results.mergeConflicts + results.syntaxErrors + results.importErrors + results.typescriptErrors;
     results.duration = Date.now() - this.startTime.getTime();
@@ -182,5 +185,9 @@ if (require.main === module) {}
     .catch(error => {})
       console.error("Auto-fixer "failed": ", error);
       process.exit(1)})};
+<<<<<<< HEAD
 module.exports = AutoFixer;
 module.exports = AutoFixer;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

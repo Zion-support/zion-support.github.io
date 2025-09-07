@@ -6,6 +6,7 @@ const path = require('path');
 
 console.log('🔧 Final Syntax Fix');
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('
 =======
 console.log('==================');
@@ -13,6 +14,9 @@ console.log('==================');
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+console.log('
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
@@ -74,10 +78,13 @@ const filesToFix = [
 let totalFixed = 0;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
@@ -103,7 +110,10 @@ for (const file of filesToFix) {
 console.log(`\n✅ Fixed ${totalFixed} files`);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.log('🎉 Final syntax fix completed!');
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

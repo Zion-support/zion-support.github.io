@@ -214,5 +214,9 @@ if (require.main === module) {;}
   const testSuite = new ComprehensiveTestingSuite();
   testSuite.run().catch(console.error),};
 ;
+<<<<<<< HEAD
 module.exports = ComprehensiveTestingSuite;
 module.exports = ComprehensiveTestingSuite;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

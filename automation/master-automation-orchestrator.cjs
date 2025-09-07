@@ -5,6 +5,7 @@ const path = require('path');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,6 +37,9 @@ main
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync, spawn } = require('child_process');
 
 class MasterAutomationOrchestrator {
@@ -716,6 +720,7 @@ async function main() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log('======');
     console.log('====================');
     console.log('====================');
@@ -747,6 +752,11 @@ origin/automation-improvements-final
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+    console.log('
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log(`Total Tasks: ${report.summary.totalTasks}`);
     console.log(`Successful: ${report.summary.successful}`);
     console.log(`Failed: ${report.summary.failed}`);
@@ -757,6 +767,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       results.results
         .filter(r => r.status === 'failed')
         .forEach(r => console.log(`  - ${r.task}: ${r.error}`));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -794,6 +805,9 @@ origin/automation-improvements-final
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
 
     console.log('\n✅ Master automation orchestration completed');
@@ -817,6 +831,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     process.exit(1);
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -851,6 +866,9 @@ main();
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 =======
@@ -893,6 +911,7 @@ const { execSync, spawn } = require('child_process')
     this.log('\n� Phase "Results")
         this.log(`    "Errors"`)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 main();
 
@@ -944,3 +963,7 @@ main
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      this.log(`� Fatal error in "orchestrator"`)
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

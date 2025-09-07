@@ -315,5 +315,9 @@ if ( {})
      {}
   const optimizer = new EnhancedAppOptimizer}(;);
   optimizer.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = EnhancedAppOptimizer;
 module.exports = EnhancedAppOptimizer;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

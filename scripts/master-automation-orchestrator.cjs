@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -19,16 +20,24 @@ console.log('=====')
       "stdio"
 const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")
   console.log('\n "Recommendations")
+=======
+#!/usr/bin/env node
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 
 <<<<<<< HEAD
 <
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 class MasterAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.startTime = new Date();
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+    this.logFile = path.join(this.reportsDir, 'master-automation.log');
     this.results = {
       scripts: [],
       tests: { passed: 0, failed: 0 },
@@ -36,6 +45,13 @@ class MasterAutomationOrchestrator {
       improvements: [],
       errors: []
     };
+    this.ensureDirectories();
+  }
+
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
   }
 
   log(message, type = 'INFO') {
@@ -47,6 +63,7 @@ class MasterAutomationOrchestrator {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
     }[type] || 'ℹ️';
+<<<<<<< HEAD
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
@@ -69,24 +86,74 @@ class MasterAutomationOrchestrator {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
+=======
+    const logMessage = `${prefix} [${timestamp}] ${message}`;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
+<<<<<<< HEAD
   async runCommand(command, description) {
     this.log(`🚀 Starting: ${description}`);
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+  async runCommand(command, description, options = {}) {
+    this.log(`Running: ${description}`);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
         stdio: 'pipe',
         encoding: 'utf8',
+        timeout: 300000, // 5 minutes timeout
+        maxBuffer: 1024 * 1024 * 10, // 10MB buffer
         ...options,
       });
+<<<<<<< HEAD
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
     } catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`);
+=======
+      this.log(`✅ ${description} completed successfully`, 'SUCCESS');
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+      this.results.errors.push(`${description}: ${error.message}`);
+      return {
+        success: false,
+        error: error.message,
+        output: error.stdout || error.stderr,
+      };
+    }
+  }
+
+  async runScript(scriptPath, description) {
+    this.log(`\n🔄 Running: ${description}`);
+    
+    try {
+      const result = await this.runCommand(`node ${scriptPath}`, description);
+      
+      this.results.scripts.push({
+        name: description,
+        path: scriptPath,
+        success: result.success,
+        error: result.error
+      });
+      
+      if (result.success) {
+        this.log(`✅ ${description} completed successfully`, 'SUCCESS');
+      } else {
+        this.log(`❌ ${description} failed: ${result.error}`, 'ERROR');
+        this.results.errors.push(`${description}: ${result.error}`);
+      }
+      
+      return result;
+    } catch (error) {
+      this.log(`❌ Error running ${description}: ${error.message}`, 'ERROR');
+      this.results.errors.push(`${description}: ${error.message}`);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       return { success: false, error: error.message };
     }
   }
@@ -313,7 +380,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       return { success, report, failedAutomations };
     } catch (error) {
       this.log(`❌ Master automation orchestration failed: ${error.message}`);
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       return { success: false, error: error.message };
     }
   }
@@ -517,17 +587,26 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   }
 }
 
+<<<<<<< HEAD
 // Run the automation
 if (require.main === module) {
   const automation = new MasterAutomationOrchestrator();
   automation.run().then(result => {
     if (result.success) {
+=======
+// Run the master automation orchestrator
+if (require.main === module) {
+  const orchestrator = new MasterAutomationOrchestrator();
+  orchestrator.run().then(result => {
+    if (result && result.success) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       console.log('✅ Master automation orchestration completed successfully');
       process.exit(0);
     } else {
       console.log('❌ Master automation orchestration failed');
       process.exit(1);
     }
+<<<<<<< HEAD
   });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
@@ -548,3 +627,10 @@ module.exports = MasterAutomationOrchestrator;
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  }).catch(console.error);
+}
+
+module.exports = MasterAutomationOrchestrator;
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

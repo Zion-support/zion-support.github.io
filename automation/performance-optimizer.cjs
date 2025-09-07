@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,6 +55,8 @@ class PerformanceOptimizer {
     console.log(`⚡ [Performance Optimizer] ${message}`);
 =======
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
 
@@ -1449,6 +1452,7 @@ console.log(`Medium Priority: ${performanceReport.recommendations.filter(r => r.
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 console.log(`\n📄 Report saved to: ${reportPath}`);
 
+<<<<<<< HEAD
 =======
 console.log(`Recommendations: ${performanceReport.recommendations.length}`);
 console.log(`High Priority: ${performanceReport.recommendations.filter(r => r.priority === 'high').length}`);
@@ -1625,13 +1629,17 @@ main
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
+// Run if called directly
 if (require.main === module) {
   const optimizer = new PerformanceOptimizer();
-  optimizer.optimize().catch(console.error);
+  optimizer.start().catch(console.error);
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = PerformanceOptimizer;
 =======
@@ -1670,3 +1678,5 @@ main
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

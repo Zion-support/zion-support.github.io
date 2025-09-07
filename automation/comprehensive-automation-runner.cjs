@@ -34,6 +34,7 @@ class ComprehensiveAutomationRunner {
       return { success: false, error: error.message };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,6 +45,8 @@ class ComprehensiveAutomationRunner {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
@@ -84,6 +87,7 @@ class ComprehensiveAutomationRunner {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -106,10 +110,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
   }
 
   async runAllAutomations() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,6 +125,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     const scripts = [
@@ -299,40 +308,35 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const duration = endTime - this.startTime;
     
     const report = {
-      startTime: this.startTime.toISOString(),
-      endTime: endTime.toISOString(),
-      duration: `${duration}ms`,
+      timestamp: endTime.toISOString(),
+      duration: `${Math.round(duration / 1000)}s`,
       totalScripts: this.results.length,
       successful: this.results.filter(r => r.success).length,
       failed: this.results.filter(r => !r.success).length,
+      successRate: `${Math.round((this.results.filter(r => r.success).length / this.results.length) * 100)}%`,
       results: this.results
     };
 
-    const reportPath = path.join(this.projectRoot, 'automation-reports', 'comprehensive-automation-report.json');
-    const reportDir = path.dirname(reportPath);
-    
-    if (!fs.existsSync(reportDir)) {
-      fs.mkdirSync(reportDir, { recursive: true });
-    }
-    
+    const reportPath = path.join(this.projectRoot, 'automation-reports', 'comprehensive-automation-runner-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`\n📊 Automation Report Generated:`);
-    this.log(`   Total Scripts: ${report.totalScripts}`);
-    this.log(`   Successful: ${report.successful}`);
-    this.log(`   Failed: ${report.failed}`);
-    this.log(`   Duration: ${report.duration}`);
-    this.log(`   Report saved to: ${reportPath}`);
+
+    this.log(`\n📊 Comprehensive Automation Runner completed!`);
+    this.log(`📈 Success Rate: ${report.successRate}`);
+    this.log(`⏱️ Duration: ${report.duration}`);
+    this.log(`📄 Report saved to: ${reportPath}`);
   }
 }
 
-// Run if called directly
+// Run the automation runner
 if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
   runner.runAllAutomations().catch(console.error);
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 module.exports = ComprehensiveAutomationRunner;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -345,6 +349,7 @@ module.exports = ComprehensiveAutomationRunner;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 =======
@@ -354,3 +359,5 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

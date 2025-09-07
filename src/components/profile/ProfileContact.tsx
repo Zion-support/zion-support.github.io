@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 email?: string;
   profileName: string;
   profileType: 'service' | 'talent'
@@ -144,10 +145,24 @@ export function ProfileContact(): any ({;
 
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>;
+=======
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Textarea  } from '@/components/ui/textarea';
+import { Mail, Send  } from 'lucide-react';
+import { useState  } from 'react';
+import { toast  } from '@/hooks/use-toast';
+interface ProfileContactProps  {email?: string;
+  profileName: string;
+  profileType: 'service' | 'talent';
+}export function ProfileContact() {const [message, setMessage] = useState("")const [subject, setSubject] = useState("")const [isSending, setIsSending] = useState(false)const handleSendMessage = null;
+  return (<div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <h3 className='text-xl font-bold text-white mb-4 flex items-center'>;
         <Mail className='mr-2 h-5 w-5 text-zion-cyan' />;
         Contact;
       </h3>;
+<<<<<<< HEAD
 
       {email && (;
         <div className='mb-4 text-zion-slate-light'>;
@@ -164,10 +179,19 @@ export function ProfileContact(): any ({;
 
           >
 
+=======
+      {email && (<div className='mb-4 text-zion-slate-light'>;
+          <span className='block'>Email: </span>;
+          <a;
+            href={`mailto:${email}`}
+            className='text-zion-cyan hover:underline truncate block';
+          >;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             {email}
           </a>;
         </div>;
       )}
+<<<<<<< HEAD
 
 
             <Input
@@ -192,10 +216,21 @@ export function ProfileContact(): any ({;
               value={subject}
               onChange={(e) => setSubject(e && e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white";
+=======
+<form onSubmit={handleSendMessage}>;
+        <div className='space-y-4'>;
+          <div>;
+            <Input;
+              placeholder='Subject';
+              value={subject}
+              onChange={e => setSubject(e.target.value)}
+              className='bg-zion-blue border-zion-blue-light text-white';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               required;
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
             <Textarea
               placeholder={`Message to ${profileName}...`}
               value={message}
@@ -212,10 +247,28 @@ export function ProfileContact(): any ({;
             {isSending ? "Sending..." : "Send Message"}
 
 
+=======
+            <Textarea;
+              placeholder={`Message to ${profileName}...`}
+              value={message}
+onChange={e => setMessage(e.target.value)}
+              className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]';
+              required;
+            />;
+          </div>;
+          <Button;
+            type='submit';
+            className='w-full bg-zion-cyan hover:bg-zion-cyan/90';
+            disabled={isSending}
+          >;
+            <Send className='mr-2 h-4 w-4' />;
+            {isSending ? 'Sending...' : 'Send Message'}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           </Button>;
         </div>;
       </form>;
     </div>;
+<<<<<<< HEAD
   );
 
 
@@ -252,3 +305,8 @@ export function ProfileContact(): any ({;
 }'"}
 }
 ;
+=======
+  )`mailto:$ {email ;
+}` ";
+}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)}'";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

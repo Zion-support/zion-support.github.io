@@ -31,5 +31,9 @@ const path = require('path')
     this.log(` "Fixes"`)
     this.log(`� New "Features"`)
       this.log(`App Enhancement Automation "failed"`)
+<<<<<<< HEAD
     console.error('App enhancement automation "failed")
     console.error('App enhancement automation "failed")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,37 +1,29 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
   }
 }
 import React from 'react';
+interface ProductsAdminPageProps  {// Add props here as needed;
+}export default function ProductsAdminPage() {return (<div>;
+      <h1>ProductsAdminPage</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )}
+:src.pages.disabled/ProductsAdminPage.jsx;
 interface ProductsAdminPageProps {
   // Add props here as needed
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
-export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
+export default function ProductsAdminPage({}: ProductsAdminPageProps) {
   return (
     <div>
       <h1>ProductsAdminPage</h1>
@@ -40,21 +32,31 @@ export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 }
 
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 :src.pages.disabled/ProductsAdminPage.jsx
 }
 }
 }
 }
 }
+}:src.pages.disabled/ProductsAdminPage.jsx;
 :temp_exclude/src.pages.disabled/ProductsAdminPage.jsx
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 
@@ -68,5 +70,9 @@ export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
 }
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+:temp_exclude/src.pages.disabled/ProductsAdminPage.jsx;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

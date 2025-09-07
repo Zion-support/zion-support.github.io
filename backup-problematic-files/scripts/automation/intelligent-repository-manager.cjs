@@ -72,5 +72,9 @@
       this.log(`Error resolving "conflicts"`)
           this.log(`Error in monitoring "loop"`)
       this.log(`Error starting Intelligent Repository "Manager"`)
+<<<<<<< HEAD
     console.error('Failed to start Intelligent Repository "Manager")
     console.error('Failed to start Intelligent Repository "Manager")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

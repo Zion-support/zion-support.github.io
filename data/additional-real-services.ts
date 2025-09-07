@@ -1,5 +1,8 @@
-<<<<<<< HEAD
+
+;
+export interface AdditionalRealService  {export interface AdditionalRealService  {id: string;
 export interface AdditionalRealService {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -18,6 +21,8 @@ export interface AdditionalRealService {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string;
   name: string;
   tagline: string;
@@ -27,6 +32,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   link: string;
   category: string;
   real_implementation: boolean;
+  contact_info: {mobile: string;
+    email: string;
+}address: string;
+  }
+export const additionalEnhancedServices: AdditionalRealService[] = [;
+  {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  },{id: string;address: string;
+  }export const additionalEnhancedServices: AdditionalRealService[] = [;
+  {id: 'ai - automation - suite',name: 'AI Automation Suite',tagline: 'Intelligent automation for modern businesses',price: '$79 / month',description:;
+      'Comprehensive AI - powered automation platform that streamlines business processes and increases efficiency.',features: [;
+      'Workflow automation','AI decision making','Integration APIs','Custom workflows','Analytics dashboard';
+    ],link: '/services / ai - automation - suite',category: 'AI & Automation',real_implementation: true,contact_info: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  },{id: string, name: string,tagline: string, price: string,description: string, features: string[],link: string, category: string,realImplementation: boolean,contactInfo: {mobile: string, email: string,address: string;
+  id: string;
+id: string;name: string;
   contact_info: {
     mobile: string;
     email: string;
@@ -38,6 +60,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,12 +102,15 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,6 +135,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string;
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -120,9 +148,87 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   link: string;
   category: string;
   realImplementation: boolean;
+  contactInfo: {mobile: string;
+    email: string;
+    address: string;
+  }}
+}address: string;
+  }
+export const additionalEnhancedServices: AdditionalRealService[] = [;
+  {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  }
+];      mobile: "+1 302 464 0950";address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  }
+];      mobile: "+1 302 464 0950";mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  }
+];      mobile: "+1 302 464 0950";id: "ai-automation-suite",name: "AI Automation Suite",tagline: "Intelligent automation for modern businesses",price: "$79/month",description: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.",features: [;
+      "Workflow automation","AI decision making","Integration APIs","Custom workflows","Analytics dashboard";
+    ],link: "/services/ai-automation-suite",category: "AI & Automation",realImplementation: true,contactInfo: {mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  },{id: "data-warehouse-solution",name: "Data Warehouse Solution",tagline: "Enterprise-grade data management and analytics",price: "$149/month",description: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.",features: [;
+      "Data integration","Real-time processing","Advanced analytics","Scalable architecture","Security compliance";
+    ],link: "/services/data-warehouse-solution",category: "Data & Analytics",realImplementation: true,contactInfo: {address: "364 E Main St STE 1008 Middletown DE 19709";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+ursor/fix-website-loading-errors-and-merge-6662;
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    address: string;
+  }
+}export const additionalEnhancedServices: AdditionalRealService[] = [;
+  {id: "ai-automation-suite";
+    name: "AI Automation Suite";
+    tagline: "Intelligent automation for modern businesses";
+    price: "$79/month";
+    description: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.";
+    features: [;
+      "Workflow automation";
+      "AI decision making";
+      "Integration APIs";
+      "Custom workflows","Analytics dashboard";
+    ],link: "/services/ai-automation-suite";
+    category: "AI & Automation";
+    realImplementation: true;
+    contactInfo: {mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  },{id: "data-warehouse-solution";
+    name: "Data Warehouse Solution";
+    tagline: "Enterprise-grade data management and analytics";
+    price: "$149/month";
+    description: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.";
+    features: [;
+      "Data integration";
+      "Real-time processing";
+      "Advanced analytics";
+      "Scalable architecture","Security compliance";
+    ],link: "/services/data-warehouse-solution";
+    category: "Data & Analytics";
+    realImplementation: true;
+    contactInfo: {mobile: "+1 302 464 0950";email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }];];;
+    id: "ai-automation-suite",name: "AI Automation Suite",tagline: "Intelligent automation for modern businesses",price: "$79/month",description: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.",features: [;
+      "Workflow automation","AI decision making","Integration APIs","Custom workflows","Analytics dashboard";
+    ],link: "/services/ai-automation-suite",category: "AI & Automation",realImplementation: true,contactInfo: {mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  },{id: "data-warehouse-solution",name: "Data Warehouse Solution",tagline: "Enterprise-grade data management and analytics",price: "$149/month",description: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.",features: [;
+      "Data integration","Real-time processing","Advanced analytics","Scalable architecture","Security compliance";
+    ],link: "/services/data-warehouse-solution",category: "Data & Analytics",realImplementation: true,contactInfo: {mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  }];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -141,6 +247,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     address: string;
   }
@@ -148,6 +257,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
   {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -160,12 +270,15 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
 ];      mobile: "+1 302 464 0950";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -205,6 +318,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
   },
   {
@@ -224,6 +339,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     category: "Data & Analytics",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -295,11 +411,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -356,22 +477,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
   },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
+<<<<<<< HEAD
 =======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -390,3 +519,5 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -14,5 +19,4 @@ const corruptedFiles = ['pages/docs/api-reference.tsx']
     "email"
     "address"
     "site"
-        <meta name="description" content="
         <meta name="description" content="

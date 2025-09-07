@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);
@@ -34,8 +39,16 @@
 }
 
 // Run the enhanced orchestrator
+<<<<<<< HEAD
 main();
 #!/usr/bin/env node;
+=======
+
+main();
+
+#!/usr/bin/env node;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
@@ -91,5 +104,4 @@ console.log('======')
       { "name": 'Test Suite', "command": 'npm test || echo "No tests configured"}
     const phase5Tasks = [{ name: 'Metrics Generation', "command": 'echo "Generating final metrics..."}]
       { "name": 'Report Generation', "command": 'echo "Generating comprehensive report..."}
-      log('info', '"Recommendations")
       log('info', '"Recommendations")

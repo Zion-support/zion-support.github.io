@@ -1,13 +1,21 @@
+<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
 import React from 'react';
 import { BadgeCheck } from 'lucide-react';
 import { TalentCardAvatar } from './TalentCardAvatar';
 import { TalentCardAvailability } from './TalentCardAvailability';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/profile/talent-card/TalentCardHeader.tsx
 
-interface TalentCardHeaderProps {
-  fullName: string;
+yearsExperience;
+import React from 'react';
+import { BadgeCheck  } from 'lucide-react';
+import { TalentCardAvatar  } from './TalentCardAvatar';
+import { TalentCardAvailability  } from './TalentCardAvailability';
+interface TalentCardHeaderProps  {fullName: string;
   professionalTitle: string;
   profilePicture?: string;
   availabilityType: string;
+<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
   yearsExperience: number
 }
 
@@ -32,18 +40,20 @@ export function TalentCardHeader(): any ({;
 }: TalentCardHeaderProps) {;
   return (
     <div className='flex items-start gap-4 mb-4'>;
+=======
+  yearsExperience: number;
+}export function TalentCardHeader() {return (<div className='flex items-start gap-4 mb-4'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/profile/talent-card/TalentCardHeader.tsx
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />;
-
-      <div className='flex-1'>;
+export function TalentCardHeader(): any ({fullName,professionalTitle,profilePicture,availabilityType,yearsExperience}: TalentCardHeaderProps) {return (<div className='flex items-start gap-4 mb-4'>;
+      <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />;<div className='flex-1'>;
         <div className='flex items-center justify-between'>;
-          <h3 className='text-lg font-semibold text-white flex items-center gap-1'>;
-
-      <div className="flex-1">
-        <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-white flex items-center gap-1">
-
+          <h3 className='text-lg font-semibold text-white flex items-center gap-1'>;<div className="flex-1">;
+        <div className="flex items-center justify-between">;
+          <h3 className="text-lg font-semibold text-white flex items-center gap-1">;
             {fullName}
             {/* AI score could be used for verification badge */}
+<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
             {yearsExperience > 5 && (
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
             )}
@@ -51,37 +61,34 @@ export function TalentCardHeader(): any ({;
           </h3>
 
       </div>;
+=======
+            {yearsExperience > 5 && (<BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
+            )}</h3>;
     </div>;
-  );
-}
-
-import React from 'react';
-import { BadgeCheck } from 'lucide-react';
-import { TalentCardAvatar } from './TalentCardAvatar';
-import { TalentCardAvailability } from './TalentCardAvailability';
-import React from './react';
-import { TalentCardAvatar  } from './TalentCardAvatar';
-import { TalentCardAvailability  } from './TalentCardAvailability';
-interface TalentCardHeaderProps {
-  full_name: string;
+  )}}
+          </h3>;<TalentCardAvailability availabilityType={availabilityType} />;
+        </div>;</div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/profile/talent-card/TalentCardHeader.tsx
+    </div>;
+  )}import React from './react';
+import { TalentCardAvatar   } from './TalentCardAvatar';
+import { TalentCardAvailability   } from './TalentCardAvailability';
+interface TalentCardHeaderProps  {full_name: string;
   professional_title: string;
   profile_picture?: string;
   availability_type: string;
   years_experience: number;
-export /**
- * TalentCardHeader - Function description
- */
-function TalentCardHeader() {
-  return (
-    <div className='flex items - start gap - 4 mb - 4'>;
+export /**;
+ * TalentCardHeader - Function description;
+ */;
+function TalentCardHeader() {return (<div className='flex items - start gap - 4 mb - 4'>;
       <TalentCardAvatar profile_picture={profile_picture} full_name={full_name} />;
       <div className='flex - 1'>;
         <div className='flex items - center justify - between'>;
           <h3 className='text - lg font - semibold text - white flex items - center gap - 1'>;
             {full_name}
             {/* AI score could be used for verification badge */}
-            {years_experience > 5 && (
-              <BadgeCheck;
+            {years_experience > 5 && (<BadgeCheck;
                 className='h - 4 w - 4 text - zion - cyan';
                 aria - label='Verified Expert';
               />)}
@@ -90,6 +97,7 @@ function TalentCardHeader() {
         </div>;
         <p className='text - zion - cyan text - sm'>{professional_title}</p>;
       </div>;
+<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
     </div>);
 }
 ;
@@ -100,3 +108,11 @@ function TalentCardHeader() {
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    </div>)}<TalentCardAvailability availabilityType={availabilityType} />;
+        </div>;
+        <p className='text-zion-cyan text-sm'>{professionalTitle}</p>;
+      </div>;
+    </div>;
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/profile/talent-card/TalentCardHeader.tsx

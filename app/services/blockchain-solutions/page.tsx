@@ -1,8 +1,10 @@
-export const metadata = { 
+export const metadata = {
   title: 'Blockchain Solutions | Zion Tech Group',
-  description: 'Comprehensive blockchain development services including DeFi, NFTs, smart contracts, and Web3 applications.'
-}; 
+  description: 'Professional blockchain solutions services for your business needs.',
+  keywords: 'blockchain-solutions, services, business, technology'
+};
 
+<<<<<<< HEAD
 export default function BlockchainSolutionsPage() { 
   return ( 
     <div className="animate-fade-in">
@@ -371,31 +373,43 @@ function Plan({ name, price, duration, features }: {
 } 
 
 function ContactSection() {
+=======
+export default function ServicePage() {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return (
-    <div className="bg-gradient-to-r from-orange-50 to-purple-50 border border-orange-200 rounded-xl p-8 text-center">
-      <h3 className="text-3xl font-bold text-gray-900 mb-4">
-        Ready to Build on the Blockchain?
-      </h3>
-      <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-        Let's discuss your blockchain project and create innovative solutions that leverage 
-        the power of decentralized technology. Our team has built 30+ successful blockchain projects.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-lg"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 hover:text-white transition-colors text-lg"
-        >
-          Email Us
-        </a>
-      </div>
-      <div className="mt-6 text-sm text-gray-500">
-        <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Blockchain Solutions
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional blockchain solutions services for your business needs.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored blockchain solutions solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your blockchain solutions solutions run smoothly.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

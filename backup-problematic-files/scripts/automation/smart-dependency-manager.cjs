@@ -135,5 +135,9 @@ console.log(" Applied ${updatesApplied} smart updates")
       "dependencies"
 // console.log("� Starting Smart Dependency Manager...")
   console.log("� Starting Smart Dependency Manager...")
+<<<<<<< HEAD
   console.error(` Smart Dependency Manager "failed": "`)
   console.error(` Smart Dependency Manager "failed": "`)
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

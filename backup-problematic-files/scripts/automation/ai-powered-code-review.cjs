@@ -249,5 +249,9 @@ this.logError("Code review failed")
         .split("\n")
         .map(line => line.split(" ")
         .filter(file => file && !file.startsWith(".")
+<<<<<<< HEAD
   const content = fs.readFileSync(filePath, ")
   const content = fs.readFileSync(filePath, ")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

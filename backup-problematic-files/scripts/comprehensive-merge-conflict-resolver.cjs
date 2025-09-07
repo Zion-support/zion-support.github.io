@@ -31,6 +31,7 @@ class ComprehensiveMergeConflictResolver {}
     for (const file of allFiles) {}
       try {}
         const content = await fs.readFile(file, 'utf8');
+        if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {}
           if (!filesWithConflicts.includes(file)) {}
             filesWithConflicts.push(file)};
         };
@@ -128,5 +129,9 @@ class ComprehensiveMergeConflictResolver {}
 if (require.main === module) {}
   const resolver = new ComprehensiveMergeConflictResolver();
   resolver.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = ComprehensiveMergeConflictResolver;
 module.exports = ComprehensiveMergeConflictResolver;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

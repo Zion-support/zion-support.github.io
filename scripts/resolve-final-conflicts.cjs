@@ -4,6 +4,7 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('🔧 Resolving Final Conflicts');
 console.log('
 }
@@ -22,6 +23,11 @@ console.log('====');
 :backup-problematic-files/scripts/final-build-fix.cjs
 :scripts/resolve-final-conflicts.cjs
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+console.log('🔧 Resolving Final Conflicts');
+console.log('
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
@@ -102,6 +108,7 @@ for (const file of filesToFix) {
 
     let content = fs.readFileSync(file, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     const originalContent = content;
@@ -160,3 +167,6 @@ console.log('\n🎉 Final build fix completed!');
     // Check for merge conflict markers
 :scripts/resolve-final-conflicts.cjs
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

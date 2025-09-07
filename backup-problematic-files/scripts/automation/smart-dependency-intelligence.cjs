@@ -314,5 +314,9 @@ this.log("Intelligence report "generated": ${reportPath}")
   this.log(Smart Dependency Intelligence "failed": ${error.message}")
         "ERROR"
   console.log(` Smart Dependency Intelligence completed``)
+<<<<<<< HEAD
   console.error(" Smart Dependency Intelligence "failed": ")
   console.error(" Smart Dependency Intelligence "failed": ")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -644,5 +644,9 @@ if (require.main === module) {
     console.error('TypeScript error monitor "failed": ', error);
     process.exit(1)})}
 ;
+<<<<<<< HEAD
 module.exports = TypeScriptErrorMonitor
 module.exports = TypeScriptErrorMonitor
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

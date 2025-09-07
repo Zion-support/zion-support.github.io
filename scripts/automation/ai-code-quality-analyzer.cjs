@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -385,10 +386,15 @@ class AICodeQualityAnalyzer {
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Run the analyzer
 const analyzer = new AICodeQualityAnalyzer();
@@ -406,4 +412,9 @@ analyzer.analyzeCodeQuality();
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+// Run the analyzer
+const analyzer = new AICodeQualityAnalyzer();
+analyzer.run().catch(console.error);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 

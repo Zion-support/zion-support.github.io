@@ -5,6 +5,7 @@ const { execSync } = require('child_process');
 
 console.log('🔧 Resolving New Merge Conflicts');
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('
 =======
 console.log('=================================');
@@ -15,10 +16,14 @@ function resolveMergeConflicts(content) {
   return content
     .replace(/[a-f0-9]+/g, '');
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+console.log('
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -27,6 +32,9 @@ function fixCriticalSyntax(content) {
 :backup-problematic-files/scripts/final-critical-fix.cjs
 :scripts/resolve-new-merge-conflicts.cjs
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return content
     // Fix malformed JSX tags
     .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>')
@@ -100,6 +108,7 @@ for (const file of conflictFiles) {
 
     let content = fs.readFileSync(file, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     const originalContent = content;
@@ -158,3 +167,6 @@ console.log('\n🎉 Final critical fix completed!');
     // Check for merge conflict markers
 :scripts/resolve-new-merge-conflicts.cjs
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Milestone  } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -141,3 +142,10 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({ milestones, pa
     </Card>);
 }
 '";
+=======
+import { Milestone   } from '@/hooks/useMilestones';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { CreditCard  } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
+interface PaymentSummaryProps  {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

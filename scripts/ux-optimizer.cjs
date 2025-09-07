@@ -33,6 +33,7 @@ class UXOptimizer {
 const optimizer = new UXOptimizer();
 optimizer.optimize();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const fs = require('fs')
 const path = require('path')
@@ -45,4 +46,6 @@ const path = require('path')
             "recommendations"
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 

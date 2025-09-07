@@ -12,5 +12,9 @@ function log(message, level = 'INFO')
   "text"
   "sender"
   const jestSetupContent = "
+<<<<<<< HEAD
     log(` Test suite enhancement "failed"`)
     log(` Test suite enhancement "failed"`)
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -19,5 +19,9 @@ const path = require('path')
     fixed = fixed.replace(/['"]\s*;\s*$/gm, '')
     fixed = fixed.replace(/require\s*\(\s*['"]\s*;\s*['"]\s*\)/g, 'require("")
       this.log(`⚠ ${this.errors.length} files had "errors"`)
+<<<<<<< HEAD
       this.log(`� Script fixing "failed"`)
       this.log(`� Script fixing "failed"`)
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

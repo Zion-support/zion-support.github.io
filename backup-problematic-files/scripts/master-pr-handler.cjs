@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -35,5 +40,4 @@ async function githubApiCall(endpoint, method = 'GET')
       "automationSuccess"
       "automationFailed"
     console.log('\n Final "Summary")
-    console.error(' Master PR handler "failed")
     console.error(' Master PR handler "failed")

@@ -144,5 +144,9 @@ class $1 {}
 
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
+<<<<<<< HEAD
 monitor.run().catch(console.error);
 monitor.run().catch(console.error);
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

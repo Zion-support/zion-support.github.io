@@ -251,5 +251,9 @@ this.logError("Performance measurement failed")
   console.error("� Uncaught "exception": ")
     this.logError("Uncaught exception")
   console.error("� Unhandled "rejection": ")
+<<<<<<< HEAD
     this.logError("Unhandled rejection")
     this.logError("Unhandled rejection")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

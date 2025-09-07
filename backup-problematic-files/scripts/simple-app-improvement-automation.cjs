@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -28,5 +33,4 @@ console.log('🧪 Test "Summary")
 // console.log('� "Pages": ' + pageCount + ', "Components")
   console.log('⚠  "Alerts")
     console.log(' "Summary")
-    console.error('� Automation "failed")
     console.error('� Automation "failed")

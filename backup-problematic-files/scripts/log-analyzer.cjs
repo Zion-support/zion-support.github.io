@@ -34,5 +34,9 @@ const { execSync } = require('child_process')
         "priority"
         "message"
         "impact"
+<<<<<<< HEAD
       console.error('\n� Log Analyzer "failed")
       console.error('\n� Log Analyzer "failed")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

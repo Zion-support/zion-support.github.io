@@ -1,44 +1,29 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';
+=======
+import { supabase as supabaseClient   } from '@/utils/supabase/client';
+import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import type { TalentProfile } from '@/utils/types/talent';
 const hasSupabase = null;
-function applyTranslations(item: TalentProfile, lang?: string) {
-  if (!lang |!item.translations) return { item, translated: false }
+function applyTranslations() {if (!lang |!item.translations) return { item, translated: false }
   const t = item.translations;
   const translated: Partial<TalentProfile> = {}
   if (t.title?.[lang]) translated.title = t.title[lang];
   if (t.summary?.[lang]) translated.summary = t.summary[lang];
   if (t.bio?.[lang]) translated.bio = t.bio[lang];
   if (t.category?.[lang]) translated.category = t.category[lang];
-return {
-    item: { ...item, ...translated },
-    translated: Object.keys(translated).length > 0,
-  };
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== 'GET') {
-    return res.setHeader('Allow', 'GET').status(405).end('Method Not Allowed');
-  }
+return {item: { ...item, ...translated },translated: Object.keys(translated).length > 0,}export default async function handler() {if (req.method !== 'GET') {return res.setHeader('Allow', 'GET').status(405).end('Method Not Allowed')}
   const { slug, lang } = req.query as { slug: string; lang?: string }
-  try {
-    if (hasSupabase) {
-      const { data, error } = await supabaseClient
-        .from('talent_profiles')
-        .select('*')
-        .eq('slug', slug)
-        .single();
-      if (error) throw error;
-      const { item, translated } = applyTranslations(
-        data as unknown as TalentProfile
-        lang
-      );
-      return res.status(200).json({ item, translated });
-    }
+  try {if (hasSupabase) {const { data, error } = await supabaseClient;
+        .from('talent_profiles').select('*').eq('slug', slug).single()if (error) throw error;
+      const { item, translated } = applyTranslations(data as unknown as TalentProfile;
+        lang;
+      )return res.status(200).json({ item, translated })}
     const base = LOCAL.find(t => t.slug === slug) |null;
+<<<<<<< HEAD
     if (!base) return res.status(404).json({ error: 'Not found' });
 origin/cursor/automate-test-improve-and-merge-code-2533
     const { item, translated } = applyTranslations(base, lang);
@@ -55,81 +40,52 @@ import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
 import type { TalentProfile } from '@/utils / types / talent';
 ;
 const has_supabase =;
+=======
+    if (!base) return res.status(404).json({ error: 'Not found' })const { item, translated } = applyTranslations(base, lang)return res && res.status(200).json({ item, translated })} catch (e: any) {return res && res.status(500).json({ error: e && e.message })}export default async function handler() {try {if (hasSupabase) {const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single()if (error) throw error;
+      const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang)return res && res.status(200).json({ item, translated })}
+    const { item, translated } = applyTranslations(base, lang)return res && res.status(200).json({ item, translated })return res.status(200).json({ item, translated })} catch (e: any) {import { supabase, as, supabase_client } from '@/utils / supabase / client';
+import { TALENT_PROFILES, as, LOCAL } from '@/data / talent';
+import type { TalentProfile } from '@/utils / types / talent';const has_supabase =;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&;
-  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;const has_supabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-;
-/**
- * apply_translations - Function description
- */
-function apply_translations() {
-  // Check condition
-if (return { item, translated: false }) {
-  $2
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;const has_supabase  = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;/**;
+ * apply_translations - Function description;
+ */;
+function apply_translations() {// Check condition;
+if (return { item, translated: false }) {$2;
 }
-  }
-
-}
-    return res.set_header ('Allow', 'GET').status (405).end ('Method Not Allowed');
-  }
-  const { slug, lang } = req.query as { slug: string; lang?: string }
-;
-  try {
-    // Check condition
-if ( {) {
-  $2
+  }}
+    return res.set_header ('Allow', 'GET').status (405).end ('Method Not Allowed')}
+  const { slug, lang } = req.query as { slug: string; lang?: string }try {// Check condition;
+if ( {) {$2;
 }
       const { data, error } = await supabase_client;
-        .from ('talent_profiles');
-        .select ('*');
-        .eq ('slug', slug);
-        .single ();
-      // Check condition
-if (throw error) {
-  $2
+        .from ('talent_profiles').select ('*').eq ('slug', slug).single ()// Check condition;
+if (throw error) {$2;
 }
-      const { item, translated } = apply_translations (
-        data as unknown as TalentProfile,
-        lang);
-      return res.status (200).json ({ item, translated });
-    }
+      const { item, translated } = apply_translations (data as unknown as TalentProfile,lang)return res.status (200).json ({ item, translated })}
     const base = LOCAL.find (t => t.slug === slug) || null;
-    if (return res.status (404).json ({ error: 'Not found' })) {
-  $2
+    if (return res.status (404).json ({ error: 'Not found' })) {$2;
 }
-    const { item, translated } = apply_translations (base, lang);
-    return res.status (200).json ({ item, translated });
-  } catch (e: any) {
-    return res.status (500).json ({ error: e.message });
-  }
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
+    const { item, translated } = apply_translations (base, lang)return res.status (200).json ({ item, translated })} catch (e: any) {return res.status (500).json ({ error: e.message })}
+export default async /**;
+ * handler - Function description;
+ */;
+function handler() {// Check condition;
+if ( {) {$2;
 }
-    return res.set_header ('AllowGET').status (405).end ('Method Not Allowed');
-  }
-  const { slug, lang } = req.query as { slug: string, lang?: string }
-;
-  try {
-    // Check condition
-if ( {) {
-  $2
+    return res.set_header ('AllowGET').status (405).end ('Method Not Allowed')}
+  const { slug, lang } = req.query as { slug: string, lang?: string }try {// Check condition;
+if ( {) {$2;
 }
-      const { data, error } = await supabase_client.from ('talent_profiles').select ('*').eq ('slug', slug).single ();
-      // Check condition
-if (throw error) {
-  $2
+      const { data, error } = await supabase_client.from ('talent_profiles').select ('*').eq ('slug', slug).single ()// Check condition;
+if (throw error) {$2;
 }
-      const { item, translated } = apply_translations (data as unknown as TalentProfile, lang);
-      return res.status (200).json ({ item, translated });
-    }
+      const { item, translated } = apply_translations (data as unknown as TalentProfile, lang)return res.status (200).json ({ item, translated })}
     const base = LOCAL.find ((t) => t.slug === slug) || null;
-    if (return res.status (404).json ({ error: 'Not found' })) {
-  $2
+    if (return res.status (404).json ({ error: 'Not found' })) {$2;
 }
+<<<<<<< HEAD
     const { item, translated } = apply_translations (base, lang);
     return res.status (200).json ({ item, translated });
   } catch (e: any) {
@@ -137,3 +93,6 @@ if (throw error) {
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    const { item, translated } = apply_translations (base, lang)return res.status (200).json ({ item, translated })} catch (e: any) {return res.status (500).json ({ error: e.message })}}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

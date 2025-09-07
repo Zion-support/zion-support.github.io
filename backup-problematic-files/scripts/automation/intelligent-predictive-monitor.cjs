@@ -68,5 +68,9 @@ const path = require("path")
 // console.log(" Intelligent Predictive Monitor initialized successfully")
   console.log(" Intelligent Predictive Monitor initialized successfully")
   console.error(" Intelligent Predictive Monitor "failed": ")
+<<<<<<< HEAD
   console.error(" Intelligent Predictive Monitor "failed": ")
   console.error(" Intelligent Predictive Monitor "failed": ")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,6 +42,78 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired')cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})})describe("community category listing",() => { it("displays posts in Getting Hired category",() => { cy.visit("/community/getting-hired")cy.get("[data-testid="post-card"]") .its("length") .should("be.greaterThan",0)})})'"'";
+describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired')cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})}})'';
+ursor/automate-test-improve-and-merge-code-646c;
+describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired')cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})})describe("community category listing",() => { it("displays posts in Getting Hired category",() => { cy.visit("/community/getting-hired")cy.get("[data-testid="post-card"]") .its("length") .should("be.greaterThan",0)})})'"'";
+describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired')cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})}})'';
+ursor/fix-website-loading-errors-and-merge-6662;
+})'';
+})'';
+})'';
+})'';
+ursor/automate-test-improve-and-merge-code-646c;
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+describe ('community category listing', () => {it ('displays posts in Getting Hired category', () => {cy.visit ('/community / getting - hired')cy.get ('[data - testid="post - card"]').its ('length').should ('be.greater_than', 0)})})describe ('community category listing', () => { it ('displays posts in Getting Hired category', () => { cy.visit ('/community / getting - hired')cy.get ('[data - testid="post - card"]') .its ('length') .should ('be.greater_than', 0)})})describe ("community category listing", () => { it ("displays posts in Getting Hired category", () => { cy.visit ("/community / getting - hired")cy.get ("[data - testid="post - card"]") .its ("length") .should ("be.greater_than", 0)})})'"'";
+describe ('community category listing', () => { it ('displays posts in Getting Hired category', () => { cy.visit ('/community / getting - hired')cy.get ('[data - testid="post - card"]') .its ('length') .should ('be.greater_than', 0)})}
+})'';
+})'';ursor/integrate-build-improve-and-re-verify-8f7d;
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+ursor/automate-test-improve-and-merge-code-646c;
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+})'';
+describe('community category listing', () => {it('displays posts in Getting Hired category', () => {cy.visit('/community/getting-hired')cy.get('[data-testid="post-card"]').its('length').should('be.greaterThan', 0)})})
+describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired'); cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})});
+describe("community category listing",() => { it("displays posts in Getting Hired category",() => { cy.visit("/community/getting-hired"); cy.get("[data-testid="post-card"]") .its("length") .should("be.greaterThan",0)})});'"'"
+describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired'); cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 });''
 });''
 });''
@@ -70,6 +143,7 @@ describe ('community category listing', () => { it ('displays posts in Getting H
 });''
 });''
 });''
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,3 +183,6 @@ describe('community category listing', () => {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+});''
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

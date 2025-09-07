@@ -357,5 +357,9 @@ if (require.main === module) {}
   console.error("Test automation "failed": ", error);
     process.exit(1)})};
 ;
+<<<<<<< HEAD
 module.exports = TestAutomation;
 module.exports = TestAutomation;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

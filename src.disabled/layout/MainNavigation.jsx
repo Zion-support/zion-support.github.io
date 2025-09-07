@@ -1,11 +1,19 @@
 import React from 'react';
-interface MainNavigationProps {
-  // Add props here as needed
-
-
+interface MainNavigationProps  {// Add props here as needed;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+}export default function MainNavigation() {export default function MainNavigation() {return (<div>;
+      <h1>MainNavigation</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )}
+:src.disabled/layout/MainNavigation.jsx;
+}}
+ursor/add-new-services-and-deploy-updates-0462;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }
+:temp_exclude/src.disabled/layout/MainNavigation.jsx;
 
-export default function MainNavigation({ }: MainNavigationProps) {
+export default function MainNavigation({}: MainNavigationProps) {
   return (
     <div>
       <h1>MainNavigation</h1>
@@ -13,18 +21,33 @@ export default function MainNavigation({ }: MainNavigationProps) {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
-:src.disabled/layout/MainNavigation.jsx
+:src.disabled/layout/MainNavigation.jsx;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+ursor/add-new-services-and-deploy-updates-0462;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+}
+:temp_exclude/src.disabled/layout/MainNavigation.jsx;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 :temp_exclude/src.disabled/layout/MainNavigation.jsx
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

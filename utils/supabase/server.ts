@@ -2,15 +2,32 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl =
+;
+ursor/automate-test-improve-and-merge-code-646c;
+import { createClient  } from '@supabase/supabase-js';
+const supabaseUrl =;
   process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
+const supabaseKey =;
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";export function getServerSupabase() {return createClient(supabaseUrl, supabaseKey)}export function getServerSupabase() {return createClient(supabaseUrl, supabaseKey)}const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder && placeholder.supabase.co';
+const supabaseServiceKey  = process && process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-key';// Supabase server utilities;
+// Supabase server utilities;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+const supabaseServiceKey  = process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-key';const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
+const supabaseKey  = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';export function getServerSupabase() {return createClient(supabaseUrl, supabaseKey)}
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
 const supabaseKey =
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";
 
@@ -34,17 +51,20 @@ import { createClient } from '@supabase/supabase-js';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-key';
 
-import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -54,9 +74,27 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key'
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { createClient } from '@supabase/supabase-js';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
+const supabaseKey  = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';export function getServerSupabase() {return createClient(supabaseUrl, supabaseKey)}
+  // Mock implementation - replace with actual Supabase client;
+  return {from: (table: string) => ({select: () => ({eq: () => ({data: [];
+          error: null;
+        })})})}}const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
+const supabaseKey  = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';export function getClientSupabase() {return createClient(supabaseUrl, process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key')import { create_client   } from '@supabase / supabase - js';const supabase_url = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+const supabase_key  = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder - key';export /**;
+ * getServerSupabase - Function description;
+ */;
+function getServerSupabase() {return create_client (supabase_url, supabase_key)}ursor/fix-website-loading-errors-and-merge-6662;
+ursor/fix-website-loading-errors-and-merge-6662;
+export function getServerSupabase() {return createClient(supabaseUrl, supabaseKey)}ursor/fix-website-loading-errors-and-merge-6662;
+ursor/automate-test-improve-and-merge-code-646c;
+ursor/fix-website-loading-errors-and-merge-6662;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,6 +112,9 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key'
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export function getServerSupabase() {
   return createClient(supabaseUrl, supabaseKey);
 }
@@ -131,6 +172,7 @@ function getServerSupabase() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,6 +182,8 @@ function getServerSupabase() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 =======
@@ -156,6 +200,7 @@ export function getServerSupabase() {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -178,3 +223,5 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -19,5 +24,4 @@ const filesToFix = ['pages/api/docs.ts']
     "pattern"
     "replacement"
     "replacement": '"$1${$2}$3"
-    "replacement": '"$1\\\\\n  $2"
     "replacement": '"$1\\\\\n  $2"

@@ -29,5 +29,9 @@ import { execSync, spawn } from;
         execSync(`"npm": install ${moduleName}`, { "stdio"`})
         "replacement"
         "replacement"
+<<<<<<< HEAD
         execSync(`"npm": install ${packageName}`, { "stdio"`})
         execSync(`"npm": install ${packageName}`, { "stdio"`})
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

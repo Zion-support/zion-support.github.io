@@ -32,5 +32,9 @@ const fs = require(,"}),"
         "action"
       '\n Dependency Monitor "Summary"
   '\n "Recommendations"
+<<<<<<< HEAD
       '\n� "CRITICAL"
       '\n� "CRITICAL"
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

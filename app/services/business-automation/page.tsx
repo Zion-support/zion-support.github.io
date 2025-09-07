@@ -1,43 +1,24 @@
-export const metadata = { 
-  title: 'Business Process Automation | Zion Tech Group',
-  description: 'Comprehensive business process automation services including RPA, workflow automation, AI-powered automation, and digital transformation solutions.'
+export const metadata = {
+  title: 'Business Automation | Zion Tech Group',
+  description: 'Professional business automation services for your business needs.',
+  keywords: 'business-automation, services, business, technology'
 };
 
-export default function BusinessAutomationPage() {
+export default function ServicePage() {
   return (
-    <div className="animate-fade-in">
-      <section className="text-center py-12 md:py-20">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          Business Process Automation
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Streamline your business operations with intelligent automation solutions. 
-          From RPA to AI-powered workflows, we help you work smarter, not harder.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-      </section>
-
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Automation Solutions</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive automation services that transform your business processes and boost efficiency.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Business Automation
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional business automation services for your business needs.
           </p>
         </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
           <AutomationServiceCard
             title="Robotic Process Automation (RPA)"
             description="Automate repetitive tasks with software robots that work 24/7 without breaks"
@@ -290,49 +271,30 @@ function Pricing() {
           >
             Get Automation Consultation
           </a>
+=======
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored business automation solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your business automation solutions run smoothly.
+            </p>
+          </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         </div>
       </div>
-    </section>
-  );
-}
-
-function AutomationPlan({ name, price, duration, features, popular }: { 
-  name: string; 
-  price: string; 
-  duration: string;
-  features: string[]; 
-  popular: boolean;
-}) {
-  return (
-    <div className={`border rounded-xl p-8 bg-white relative ${popular ? 'border-orange-500 shadow-lg' : 'border-gray-200'}`}>
-      {popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-orange-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-            Most Popular
-          </span>
-        </div>
-      )}
-      <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-orange-600 mb-1">{price}</div>
-      <div className="text-gray-600 mb-6">{duration}</div>
-      <ul className="space-y-3 mb-8">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-orange-500 mr-3 mt-1">✓</span>
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <a
-        href="tel:+13024640950"
-        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-          popular 
-            ? 'bg-orange-600 text-white hover:bg-orange-700' 
-            : 'border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
-        }`}
-      >
-        Get Started
-      </a>
     </div>
   );
 }

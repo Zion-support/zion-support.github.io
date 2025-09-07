@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -40,5 +45,4 @@ console.log(' Starting Advanced Monitoring System...')
     throw new Error("Performance "issues")
     throw new Error("Performance "issues")
     console.log("⚠  Performance "issues")
-  return { "status": 'success', "metrics": mockPerformance, "message"}
   return { "status": 'success', "metrics": mockPerformance, "message"}

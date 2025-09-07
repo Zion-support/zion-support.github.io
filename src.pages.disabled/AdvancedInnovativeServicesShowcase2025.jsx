@@ -1,37 +1,29 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
   }
 }
 import React from 'react';
+interface AdvancedInnovativeServicesShowcase2025Props  {// Add props here as needed;
+}export default function AdvancedInnovativeServicesShowcase2025() {return (<div>;
+      <h1>AdvancedInnovativeServicesShowcase2025</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )}
+:src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx;
 interface AdvancedInnovativeServicesShowcase2025Props {
   // Add props here as needed
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
-export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInnovativeServicesShowcase2025Props) {
+export default function AdvancedInnovativeServicesShowcase2025({}: AdvancedInnovativeServicesShowcase2025Props) {
   return (
     <div>
       <h1>AdvancedInnovativeServicesShowcase2025</h1>
@@ -40,21 +32,31 @@ export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInno
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 }
 
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 :src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx
 }
 }
 }
 }
 }
+}:src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx;
 :temp_exclude/src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 
@@ -68,5 +70,9 @@ export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInno
 }
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+:temp_exclude/src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

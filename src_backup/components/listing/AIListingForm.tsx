@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/listing/AIListingForm.tsx
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -61,23 +62,69 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </label>
         <Input
           id='title'
+=======
+
+  }) => void;
+  isLoading: boolean;  initialValues?: {title?: string;
+    category?: string;
+    keyFeatures?: string;
+    targetAudience?: string;
+  }title: string;
+    category: string;
+    keyFeatures: string;
+    targetAudience: string;
+  },) => void;
+  isLoading: boolean;
+    title?: string;
+    category?: string;
+    keyFeatures?: string;
+    targetAudience?: string;
+  }
+import React, { useState } from 'react';
+import { useToast  } from '@/hooks/use-toast';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Textarea  } from '@/components/ui/textarea';
+import { Sparkles  } from 'lucide-react';
+import React, { useState } from "react",import { useToast } from "@/hooks/use-toast",import { Button } from "@/components/ui/button",interface AIListingFormProps  {onSubmit: (formData: {title: string;
+    category: string;
+    keyFeatures: string;
+    targetAudience: string;
+targetAudience?: string;
+  }export function AIListingForm() {const { toast } = useToast()const [title, setTitle] = useState(initialValues.title || '')const [category, setCategory] = useState(initialValues.category || '')const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || '';
+  )const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || '';
+  )const handleSubmit = () => {if (!title |!category) {toast({return;
+title: 'Missing required fields',description: 'Please provide at least a title and category.',variant: 'destructive';
+      })return;}
+    onSubmit({})}return (<div className='space-y-4'>;
+      <div className='space-y-2'>;
+        <label;
+          htmlFor='title';
+          className='text-sm font-medium text-zion-slate-light';
+        >;
+          Title;
+        </label>;
+        <Input;
+          id='title';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/listing/AIListingForm.tsx
           value={title}
           onChange={e => setTitle(e.target.value)}
-          placeholder='Enter your product or service title'
-          className='bg-zion-blue border border-zion-blue-light text-white'
-          disabled={isLoading}        />
-      </div>
-      <div className='space-y-2'>
-        <label
-          htmlFor='category'
-          className='text-sm font-medium text-zion-slate-light'
-        >
-          Category
-        </label>
-        <Input
-          id='category'
+          placeholder='Enter your product or service title';
+          className='bg-zion-blue border border-zion-blue-light text-white';
+          disabled={isLoading}        />;
+      </div>;
+      <div className='space-y-2'>;
+        <label;
+          htmlFor='category';
+          className='text-sm font-medium text-zion-slate-light';
+        >;
+          Category;
+        </label>;
+        <Input;
+          id='category';
           value={category}
           onChange={e => setCategory(e.target.value)}
+<<<<<<< HEAD:src_backup/components/listing/AIListingForm.tsx
           placeholder='e.g. AI Tool, Digital Product, Service'
           className='bg-zion-blue border border-zion-blue-light text-white'
           disabled={isLoading}        />
@@ -101,21 +148,49 @@ return (
 
         <Input
           id="category"
+=======
+          placeholder='e.g. AI Tool, Digital Product, Service';
+          className='bg-zion-blue border border-zion-blue-light text-white';
+          disabled={isLoading}        />;
+      targetAudience;
+    })}return (<div className="space-y-4">;
+        />;
+      </div>;
+      <div className="space-y-2">;
+        <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;
+return (disabled={isLoading || !title || !category}
+        className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'>        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
+          id="title";<Input;
+          id="category";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/listing/AIListingForm.tsx
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          placeholder="e.g. AI Tool, Digital Product, Service"
-          className="bg-zion-blue border border-zion-blue-light text-white"
+          placeholder="e.g. AI Tool, Digital Product, Service";
+          className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
+<<<<<<< HEAD:src_backup/components/listing/AIListingForm.tsx
         />
       </div>
 
 
 
           id="keyFeatures"
+=======
+        />;
+      </div>;
+      <div className="space-y-2">;
+        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
+        <Textarea;
+      <div className="space-y-2">;
+        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
+        <Textarea;
+          id="keyFeatures";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/listing/AIListingForm.tsx
           value={keyFeatures}
           onChange={(e) => setKeyFeatures(e && e.target.value)}
           placeholder="Briefly describe the main features or benefits";
           className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
+<<<<<<< HEAD:src_backup/components/listing/AIListingForm.tsx
           disabled={isLoading}
 
 import React, { useState } from "react";
@@ -133,38 +208,22 @@ interface AIListingFormProps {
     category: string,
     keyFeatures: string,
     targetAudience: string
+=======
+          disabled={isLoading}import { Star  } from 'lucide-react';
+interface AIListingFormProps  {onSubmit: (formData: {title: string,category: string,keyFeatures: string,targetAudience: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/listing/AIListingForm.tsx
   }) => void;
-  isLoading: boolean,
-  initialValues?: {
-    title?: string;
+  isLoading: boolean,initialValues?: {title?: string;
     category?: string;
     keyFeatures?: string;
-    targetAudience?: string
+    targetAudience?: string;
   }
-}
-
-
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) { const { toast  } = useToast(),
-  const [ title, setTitle ] = useState(initialValues.title || ""),
-  const [ category, setCategory ] = useState(initialValues.category || ""),
-  const [ keyFeatures, setKeyFeatures ] = useState(initialValues.keyFeatures || ""),
-  const [ targetAudience, setTargetAudience ] = useState(initialValues.targetAudience || ""),
-
-
-  const handleSubmit = () => {
-    if (!title || !category) {
-      toast({
-        title: "Missing required fields",
-        description: "Please provide at least a title and category.",
-        variant: "destructive"
-      });
-      return
-    }
-
-    onSubmit({
-      title;
+}export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) { const { toast  } = useToast(),const [ title, setTitle ] = useState(initialValues.title || ""),const [ category, setCategory ] = useState(initialValues.category || ""),const [ keyFeatures, setKeyFeatures ] = useState(initialValues.keyFeatures || ""),const [ targetAudience, setTargetAudience ] = useState(initialValues.targetAudience || ""),const handleSubmit = () => {if (!title || !category) {toast({title: "Missing required fields",description: "Please provide at least a title and category.",variant: "destructive";
+      })return;
+    }onSubmit({title;
       category;
       keyFeatures;
+<<<<<<< HEAD:src_backup/components/listing/AIListingForm.tsx
       targetAudience
     })
   };
@@ -182,17 +241,27 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         <Input
 
 
+=======
+      targetAudience;
+    })}return (<div className="space-y-4">;
+        />;
+        />;
+      </div>;
+      <div className="space-y-2">;
+        <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;
+        <Input;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/listing/AIListingForm.tsx
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          placeholder="Enter your product or service title"
-          className="bg-zion-blue border border-zion-blue-light text-white"
+          placeholder="Enter your product or service title";
+          className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
-        />
-      </div>
-      <div className="space-y-2">
-        <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Title">Title</label>
-        <Input
-          id="title"
+        />;
+      </div>;
+      <div className="space-y-2">;
+        <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Title">Title</label>;
+        <Input;
+          id="title";
     <div className='space - y-4'>;
       <div className='space - y-2'>;
         <label;
@@ -229,8 +298,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           html_for='key_features';
           className='text - sm font - medium text - zion - slate - light';
         >;
-          Key Features (Optional);
-        </label>;
+          Key Features (Optional)</label>;
         <Textarea;
           id='key_features';
           value={key_features}
@@ -244,8 +312,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           html_for='target_audience';
           className='text - sm font - medium text - zion - slate - light';
         >;
-          Target Audience (Optional);
-        </label>;
+          Target Audience (Optional)</label>;
         <Input;
           id='target_audience';
           value={target_audience}
@@ -271,101 +338,64 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         <label html_for="category" className="text - sm font - medium text - zion - slate - light" html_for="input - Category">Category</label>;
         <Input;
           id="category";
-          value={category}
-
-
-          id="targetAudience"
+          value={category}id="targetAudience";
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
-          placeholder="e.g. Developers, Marketers, Startups"
-          className="bg-zion-blue border border-zion-blue-light text-white"
-import React, { useState } from "react",;
-import { useToast } from "@/hooks/use-toast",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Sparkles } from 'lucide-react';
-interface AIListingFormProps {;
-  onSubmit: (formData: {;
-    title: string,;
-    category: string,;
-    keyFeatures: string,;
-    targetAudience: string;
-  }) => void,;
-  isLoading: boolean,;
-  initialValues?: {;
-    title?: string,;
-    category?: string,;
-    keyFeatures?: string,;
-    targetAudience?: string;
+          placeholder="e.g. Developers, Marketers, Startups";
+          className="bg-zion-blue border border-zion-blue-light text-white";
+import { Input } from "@/components/ui/input",import { Textarea } from "@/components/ui/textarea",interface AIListingFormProps  {onSubmit: (formData: {title: string,category: string,keyFeatures: string,targetAudience: string;
+  }) => void,isLoading: boolean,initialValues?: {title?: string,category?: string,keyFeatures?: string,targetAudience?: string;
   }
-}
-;
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
-  const { toast } = useToast(),;
-  const [title, setTitle] = useState(initialValues.title || ""),;
-  const [category, setCategory] = useState(initialValues.category || ""),;
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),;
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),;
-  const handleSubmit = () => {;
-    if (!title || !category) {;
-      toast({;
-        title: "Missing required fields",;
-        description: "Please provide at least a title and category.",;
-        variant: "destructive";
-      }),;
-      return;
-    }
-;
-    onSubmit({;
-      title,;
-      category,;
-      keyFeatures;
+}export function AIListingForm() {const { toast } = useToast(),const [title, setTitle] = useState(initialValues.title || ""),const [category, setCategory] = useState(initialValues.category || ""),const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),const handleSubmit = () => {if (!title || !category) {toast({title: "Missing required fields",description: "Please provide at least a title and category.",variant: "destructive";
+      }),return;
+    }onSubmit({title,category,keyFeatures;
       targetAudience;
-    });
-  };
-  return (;
-    <div className="space-y-4">;
+    })}return (<div className="space-y-4">;
       <div className="space-y-2">;
         <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
         <Input;
+<<<<<<< HEAD:src_backup/components/listing/AIListingForm.tsx
           id="title";
 
 
           value={title}
+=======
+          id="title";value={title}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/listing/AIListingForm.tsx
           onChange={(e) => setTitle(e.target.value)}
-          placeholder="Enter your product or service title"
-          className="bg-zion-blue border border-zion-blue-light text-white"
+          placeholder="Enter your product or service title";
+          className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
-        />
-      </div>
-      <div className="space-y-2">
-        <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Category">Category</label>
-        <Input
-          id="category"
+        />;
+      </div>;
+      <div className="space-y-2">;
+        <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Category">Category</label>;
+        <Input;
+          id="category";
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          placeholder="e.g. AI Tool, Digital Product, Service"
-          className="bg-zion-blue border border-zion-blue-light text-white"
+          placeholder="e.g. AI Tool, Digital Product, Service";
+          className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
-        />
-      </div>
-      <div className="space-y-2">
-        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Key Features (Optional)">Key Features (Optional)</label>
-        <Textarea
-          id="keyFeatures"
+        />;
+      </div>;
+      <div className="space-y-2">;
+        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Key Features (Optional)">Key Features (Optional)</label>;
+        <Textarea;
+          id="keyFeatures";
           value={keyFeatures}
           onChange={(e) => setKeyFeatures(e.target.value)}
-          placeholder="Briefly describe the main features or benefits"
-          className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
+          placeholder="Briefly describe the main features or benefits";
+          className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
           disabled={isLoading}
-        />
-      </div>
-      <div className="space-y-2">
-        <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Target Audience (Optional)">Target Audience (Optional)</label>
-        <Input
-          id="targetAudience"
+        />;
+      </div>;
+      <div className="space-y-2">;
+        <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Target Audience (Optional)">Target Audience (Optional)</label>;
+        <Input;
+          id="targetAudience";
           value={targetAudience}
+<<<<<<< HEAD:src_backup/components/listing/AIListingForm.tsx
           onChange={(e) => setTargetAudience(e.target.value)}
 
           placeholder="e.g. Developers, Marketers, Startups";
@@ -418,3 +448,58 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</Button> </div>) ;
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          onChange={(e) => setTargetAudience(e.target.value)}placeholder="e.g. Developers, Marketers, Startups";
+          className="bg-zion-blue border border-zion-blue-light text-white";disabled={isLoading}/>;
+      </div>;
+      <Button;onClick={handleSubmit}disabled={isLoading || !title || !category}className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
+        disabled={isLoading |!title |!category}
+        disabled={isLoading || !title || !category}disabled={isLoading}
+        onClick={handleSubmit}disabled={isLoading || !title || !category}className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
+      <Button;
+        onClick={handleSubmit}
+        disabled={isLoading || !title || !category}
+        className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2';
+      >;
+        {isLoading ? (<>Generating Optimized Content...</>;
+        ) : (<>;
+            <Sparkles className="h-4 w-4 mr-2" />;
+            <Sparkles className="h-4 w-4 mr-2" />;
+<Sparkles className='h-4 w-4 mr-2' />;
+            Generate Optimized Content;
+          </>;
+        )}
+      </Button>;
+    </div>;
+  )}: AIListingFormProps) {if (!title |!category) {toast ({return;
+}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
+  return;
+}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
+  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>)}</Button> </div>)}'";
+}
+        />;
+      </div>;
+      <Button;
+        onClick={handleSubmit}
+        disabled={isLoading || !title || !category}
+        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2">;
+        {isLoading ? (<>Generating Optimized Content...</>;
+        ) : (<>;
+            <Sparkles className='h-4 w-4 mr-2' />            Generate Optimized Content            <Sparkles className="h-4 w-4 mr-2" />;
+            Generate Optimized Content;
+          </>;
+  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>)}</Button> </div>)}'";
+}}
+}
+}<Sparkles className="h-4 w-4 mr-2" />;
+            Generate Optimized Content;
+          </>;
+        )}
+      </Button>;
+    </div>;
+  )return;
+}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
+  )}: AIListingFormProps) {if (!title || !category) {toast ({return;
+}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
+  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>)}</Button> </div>)}'";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/listing/AIListingForm.tsx

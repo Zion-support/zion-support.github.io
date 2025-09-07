@@ -342,5 +342,9 @@ if ( {})
      {}
     const optimizer = new SEOOptimizer}(;);
     optimizer.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = SEOOptimizer;
 module.exports = SEOOptimizer;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

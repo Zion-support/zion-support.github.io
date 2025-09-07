@@ -328,5 +328,9 @@ if ( {})
      {}
     const scanner = new SecurityScanner}(;);
     scanner.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = SecurityScanner;
 module.exports = SecurityScanner;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

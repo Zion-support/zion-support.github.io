@@ -1,9 +1,26 @@
 
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ai-enhancement/AIEnhancementPanel.tsx
 import React, { useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter   } from '@/components/ui/card';
+import { Textarea   } from '@/components/ui/textarea';
+import { Button   } from '@/components/ui/button';
+import { Input   } from '@/components/ui/input';
+import { Sparkles, Loader2, Copy, Check  } from 'lucide-react';
+import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIContentEnhancer';
+import {Card;
+  CardContent;
+  CardHeader;
+  CardTitle;
+  CardFooter;
+} from '@/components/ui/card'; import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
 import { Textarea  } from '@/components/ui/textarea';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 import React, { useState } from 'react'
@@ -68,47 +85,44 @@ import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
 } from '@/hooks/ useAIContentEnhancer';
 interface AIEnhancementPanelProps {
   title: string;
+=======
+  useAIContentEnhancer;
+  AIEnhancementOptions;
+} from '@/hooks/useAIContentEnhancer';
+interface AIEnhancementPanelProps  {Card,CardContent,CardHeader,CardTitle,CardFooter} from '@/components/ui/card';import React, { useState } from 'react';
+import {useAIContentEnhancer,AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
+interface AIEnhancementPanelProps  {title: string;
+  defaultOptions: AIEnhancementOptions;
+  onApply: (content: string) => void;
+  onClose?: () => void;
+  showInstructions?: boolean;import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',interface AIEnhancementPanelProps  {title: string,defaultOptions: AIEnhancementOptions,onApply: (content: string) => void,onClose?: () => void,showInstructions?: boolean,initialContent?: string;
+}export function AIEnhancementPanel({Card,CardContent,CardHeader,CardTitle,CardFooter} from '@/components / ui / card'; import React, { useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components / ui / card';
+import { Textarea  } from '@/components / ui / textarea';
+import { Button  } from '@/components / ui / button';
+import { Input  } from '@/components / ui / input';
+  useAIContentEnhancer,AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
+interface AIEnhancementPanelProps  {title: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ai-enhancement/AIEnhancementPanel.tsx
   default_options: AIEnhancementOptions;
   on_apply: (content: string) => void;
   on_close?: () => void;
   show_instructions?: boolean;
   initial_content?: string;
-export /**
- * AIEnhancementPanel - Function description
- */
-function AIEnhancementPanel() {
-  const [options, set_options] = useState < AIEnhancementOptions>({
-    ...default_options,
-    content: initial_content || default_options.content,
-  });
-  const [generated_content, setGeneratedContent] = useState < string>('');
-  const [copied, set_copied] = useState (false);
-  const { enhance_content, is_enhancing } = useAIContentEnhancer ();
-  const handle_generate = async () => {
-    const result = await enhance_content (options);
-    // Check condition
-if ( {) {
-  $2
+export /**;
+ * AIEnhancementPanel - Function description;
+ */;
+function AIEnhancementPanel() {const [options, set_options] = useState < AIEnhancementOptions>({...default_options,content: initial_content || default_options.content})const [generated_content, setGeneratedContent] = useState < string>('')const [copied, set_copied] = useState (false)const { enhance_content, is_enhancing } = useAIContentEnhancer ()const handle_generate = async () => {const result = await enhance_content (options)// Check condition;
+if ( {) {$2;
 }
-      setGeneratedContent (result);
-    }
+      setGeneratedContent (result)}
   }
-  const handleInputChange = (
-    e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>,
-    field: keyof AIEnhancementOptions;
-  , ) =>: any {
-    set_options ({
-      ...options,
-      [field]: e.target.value,
-    });
-
-  }
-  const handle_apply = () =>: any {
-    on_apply (generated_content);
-    if (on_close ()) {
-  $2
+  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>,field: keyof AIEnhancementOptions;
+  , ) =>: any {set_options ({...options,[field]: e.target.value})}
+  const handle_apply = () =>: any {on_apply (generated_content)if (on_close ()) {$2;
 }
   }
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
   const handle_copy = () =>: any {
     navigator.clipboard.write_text (generated_content);
     set_copied (true);
@@ -142,19 +156,21 @@ export function AIEnhancementPanel(): any ({;
 
 
             value={options && options.content}
+=======
+  const handle_copy = () =>: any {navigator.clipboard.write_text (generated_content)set_copied (true)set_timeout (() => set_copied (false), 2000)}initialContent?: string;
+export function AIEnhancementPanel(): any ({title,defaultOptions,onApply,onClose,showInstructions = true,initialContent = ''}: AIEnhancementPanelProps) {const [options, setOptions] = useState<AIEnhancementOptions>({...defaultOptions,content: initialContent || defaultOptions && defaultOptions.content})const [generatedContent, setGeneratedContent] = useState<string>('')const [copied, setCopied] = useState(false)const { enhanceContent, isEnhancing }  = useAIContentEnhancer()const handleGenerate = async () => {const result = await enhanceContent(options)if (result) {setGeneratedContent(result)}
+  }value={options && options.content}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ai-enhancement/AIEnhancementPanel.tsx
             onChange={e => handleInputChange(e, 'content')}          />;
-        </div>;
-
-
-        {/* Context input */}
+        </div>;{/* Context input */}
         <div className='space-y-2'>;
           <label className='text-sm font-medium'>Context (optional)</label>;
-          <Textarea
-            placeholder='Add any relevant context to guide the AI...'
-            className='min-h-[60px]'
-
+          <Textarea;
+            placeholder='Add any relevant context to guide the AI...';
+            className='min-h-[60px]';
             value={options && options.context}
             onChange={e => handleInputChange(e, 'context')}          />;
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
         </div>;
 
 
@@ -186,11 +202,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Sparkles className="h-5 w-5 text-primary" />
+=======
+        </div>;const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+    field: keyof AIEnhancementOptions;
+  ) => {setOptions({})}
+  const handleApply = () => {onApply(generatedContent)if (onClose) onClose()}
+  const handleCopy = () => {navigator.clipboard.writeText(generatedContent)setCopied(true)setTimeout(() => setCopied(false), 2000)}const handleCopy = () => {navigator.clipboard.writeText(generatedContent),setCopied(true),setTimeout(() => setCopied(false), 2000)[field]: e.target.value})},const handleApply = () => {onApply(generatedContent),if (onClose) onClose()},const handleCopy = () => {navigator.clipboard.writeText(generatedContent),setCopied(true),setTimeout(() => setCopied(false), 2000)},...options,initialContent?: string;
+export function AIEnhancementPanel({title;
+  defaultOptions;
+  onApply;
+  onClose;
+  showInstructions;return (<Card className="w-full max-w-2xl mx-auto">;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          <Sparkles className="h-5 w-5 text-primary" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ai-enhancement/AIEnhancementPanel.tsx
           {title}
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-4">
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent className="space-y-4">;
         {/* Input area */}
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
         <div className="space-y-2">
           <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
@@ -198,37 +230,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
+=======
+        <div className="space-y-2">;
+          <label className="text-sm font-medium">Content to enhance</label>;
+          <Textarea;
+            placeholder="Enter your content to enhance...";
+            className="min-h-[100px]";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ai-enhancement/AIEnhancementPanel.tsx
             value={options.content}
             onChange={(e) => handleInputChange(e, 'content')}
           />;
         </div>;
         {/* Context input */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Context (optional)</label>
-          <Textarea
-            placeholder="Add any relevant context to guide the AI..."
-            className="min-h-[60px]"
+        <div className="space-y-2">;
+          <label className="text-sm font-medium">Context (optional)</label>;
+          <Textarea;
+            placeholder="Add any relevant context to guide the AI...";
+            className="min-h-[60px]";
             value={options.context}
             onChange={(e) => handleInputChange(e, 'context')}
           />;
-        </div>;
-
-        {/* Instructions input (optional) */}
-        {showInstructions && (;
-          <div className='space-y-2'>;
+        </div>;{/* Instructions input (optional) */}
+        {showInstructions && (<div className='space-y-2'>;
             <label className='text-sm font-medium'>;
-              Special instructions (optional);
-            </label>;
-            <Input
-
-              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
-              value={options.instructions}
-
-          disabled={isEnhancing || (!options.content && !options.context)}        >
-
+              Special instructions (optional)</label>;
+            <Input;
+              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'";
+              value={options.instructions}disabled={isEnhancing || (!options.content && !options.context)}        >;
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
         )}
 
         {/* Generate button */}
@@ -256,28 +288,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           disabled={isEnhancing || (!options && options.content && !options && options.context)}>;
           {isEnhancing ? (;
             <>;
+=======
+        )}{/* Generate button */}<Button;
+          onClick={handleGenerate}className="w-full";
+          disabled={isEnhancing || !options.content && !options.context}
+        >;
+          {isEnhancing ? (<>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ai-enhancement/AIEnhancementPanel.tsx
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
               Enhancing...;
             </>;
-          ) : (;
-            <>;
+          ) : (<>;
               <Sparkles className='mr-2 h-4 w-4' />;
               Generate Enhanced Content;
             </>;
           )}
         </Button>;
-
-        {/* Output area */}
-
-        {generatedContent && (
-
-          <div className="space-y-2 mt-4">
-            <div className="flex justify-between items-center">
-              <label className="text-sm font-medium">Generated content</label>
-              <Button 
-                variant="ghost" 
-                size="sm" 
+          disabled={isEnhancing || (!options && options.content && !options && options.context)}>;
+          {isEnhancing ? (<>;
+              <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+              Enhancing...;
+            </>;
+          ) : (<>;
+              <Sparkles className='mr-2 h-4 w-4' />;
+              Generate Enhanced Content;
+            </>;
+          )}
+        </Button>;{/* Output area */}{generatedContent && (<div className="space-y-2 mt-4">;
+            <div className="flex justify-between items-center">;
+              <label className="text-sm font-medium">Generated content</label>;
+              <Button;
+                variant="ghost";
+                size="sm";
                 onClick={handleCopy}
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
                 className="h-8"
               >
 
@@ -287,10 +331,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>
+=======
+                className="h-8";
+              >;
+                {copied ? (<><Check className="h-4 w-4 mr-1" /> Copied</>;
+                ) : (<><Copy className="h-4 w-4 mr-1" /> Copy</>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ai-enhancement/AIEnhancementPanel.tsx
                 )}
               </Button>;
             </div>;
             <div className='relative'>;
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
               <Textarea
                 value={generatedContent}
 
@@ -331,6 +382,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
     <Card className='w - full max - w-2xl mx - auto'>;
+=======
+              <Textarea;
+                value={generatedContent}onChange={(e) => setGeneratedContent(e.target.value)}
+                className="min-h-[200px]";
+              />;
+            </div>;
+          </div>;
+        )}{generatedContent && (<CardFooter className='flex justify-between'>;
+          {onClose && (<Button variant='outline' onClick={onClose}>;
+              Cancel;
+            </Button>;
+      </CardContent>;{generatedContent && (<CardFooter className='flex justify-between'>;
+          {onClose && (<Button variant='outline' onClick={onClose}>;
+              Cancel;
+            </Button>;
+          )}</Card>;
+  )}<Card className='w - full max - w-2xl mx - auto'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ai-enhancement/AIEnhancementPanel.tsx
       <CardHeader>;
         <CardTitle className='flex items - center gap - 2'>;
           <Sparkles className='h - 5 w - 5 text - primary' />;
@@ -357,11 +426,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             on_change={e => handleInputChange (e, 'context')}          />;
         </div>;
         {/* Instructions input (optional) */}
-        {show_instructions && (
-          <div className='space - y-2'>;
+        {show_instructions && (<div className='space - y-2'>;
             <label className='text - sm font - medium'>;
-              Special instructions (optional);
-            </label>;
+              Special instructions (optional)</label>;
             <Input;
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'";
               value={options.instructions}
@@ -372,19 +439,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           on_click={handle_generate}
           className='w - full';
           disabled={is_enhancing || (!options.content && !options.context)}        >;
-          {is_enhancing ? (
-            <>;
+          {is_enhancing ? (<>;
               <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
               Enhancing...;
-            </>) : (
-            <>;
+            </>) : (<>;
               <Sparkles className='mr - 2 h - 4 w - 4' />;
               Generate Enhanced Content;
             </>)}
         </Button>;
         {/* Output area */}
-        {generated_content && (
-          <div className='space - y-2 mt - 4'>;
+        {generated_content && (<div className='space - y-2 mt - 4'>;
             <div className='flex justify - between items - center'>;
               <label className='text - sm font - medium'>Generated content</label>;
               <Button;
@@ -392,11 +456,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 size='sm';
                 on_click={handle_copy}
                 className='h - 8'              >;
-                {copied ? (
-                  <>;
+                {copied ? (<>;
                     <Check className='h - 4 w - 4 mr - 1' /> Copied;
-                  </>) : (
-                  <>;
+                  </>) : (<>;
                     <Copy className='h - 4 w - 4 mr - 1' /> Copy;
                   </>)}
               </Button>;
@@ -409,29 +471,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>)}
       </CardContent>;
-      {generated_content && (
-        <CardFooter className='flex justify - between'>;
-          {on_close && (
-            <Button variant='outline' on_click={on_close}>;
+      {generated_content && (<CardFooter className='flex justify - between'>;
+          {on_close && (<Button variant='outline' on_click={on_close}>;
               Cancel;
             </Button>)}
           <Button on_click={handle_apply}>Apply to Form</Button>;
         </CardFooter>)}
-    </Card>);
-}
-
-      )};
-    </Card>;
-  );
-};
-
-          <Button onClick={handleApply}>;
+    </Card>)})}</Card>;
+  )}<Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
         </CardFooter>;
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
       )}
 ;
 
     </Card>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      )}</Card>;
+  )}</Card>;
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ai-enhancement/AIEnhancementPanel.tsx

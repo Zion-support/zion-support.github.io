@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useResume } from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
@@ -202,10 +203,70 @@ if ( {) {
           >;
             <Plus className="h - 4 w - 4 mr - 2" />;
 
+=======
+
+import { useState  } from 'react';
+import { DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuSeparator;
+  DropdownMenuTrigger;
+  } from '@/components/ui/dropdown-menu';
+import { Button   } from '@/components/ui/button';
+import { Input   } from '@/components/ui/input';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle   } from '@/components/ui/dialog';
+import { import { useState  } from 'react';
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuSeparator;
+  DropdownMenuTrigger;
+ } from '@/components/ui/dropdown-menu';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+  Dialog;
+  DialogContent;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle;
+} from '@/components/ui/dialog';
+import { Save, ChevronDown, Plus, Loader2  } from 'lucide-react';
+import { Resume   } from '@/types/resume';
+import { useResume  } from '@/hooks/useResume';
+interface ResumeVersionSelectorProps  {currentResume: Resume;
+  onResumeChange: (resumeId: string) => void;
+  const handleCreateNewVersion = async () => {if (newResumeTitle.trim()) {setIsLoading(true)const resumeId = await createResume({ title: newResumeTitle.trim() })if (resumeId) {await fetchResume(resumeId)onResumeChange(resumeId)setSaveDialogOpen(false)setNewResumeTitle('')}
+      setIsLoading(false)}
+  }
+  return (<div className='flex items-center gap-2'>;
+      <span className='text-sm text-muted-foreground'>Resume:</span>;
+      <DropdownMenu>;
+        <DropdownMenuTrigger asChild>;
+          <Button variant='outline' size='sm' className='gap-2'>;
+            {currentResume?.basic_info?.title |'My Resume'}
+            <ChevronDown className='h-4 w-4' />;
+          </Button>;
+        </DropdownMenuTrigger>;
+        <DropdownMenuContent align='end'>;
+          {existingResumes.map(resume => (<DropdownMenuItem;
+              key={resume.id}
+              onClick={() => onResumeChange(resume.id!)}
+              className='cursor-pointer';
+            >;
+              {resume.basic_info.title}
+            </DropdownMenuItem>;
+          ))}
+          <DropdownMenuSeparator />;
+<DropdownMenuItem;
+            onClick={() => setSaveDialogOpen(true)}
+            className='cursor-pointer';
+          >;
+            <Plus className='h-4 w-4 mr-2' />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             Save as new version;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
+<<<<<<< HEAD
 
 
 
@@ -272,10 +333,22 @@ if ( {) {
             <Input;
               value={newResumeTitle}
               on_change={e => setNewResumeTitle (e.target.value)}
+=======
+<Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>;
+        <DialogContent className='sm:max-w-md'>;
+          <DialogHeader>;
+            <DialogTitle>Save as new resume version</DialogTitle>;
+          </DialogHeader>;
+          <div className='py-4'>;
+            <Input;
+              value={newResumeTitle}
+              onChange={e => setNewResumeTitle(e.target.value)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               placeholder='Enter resume title (e.g. DevOps Resume)';
             />;
           </div>;
           <DialogFooter>;
+<<<<<<< HEAD
             <Button variant='outline' on_click={() => setSaveDialogOpen (false)}>;
               Cancel;
             </Button>;
@@ -303,11 +376,24 @@ if ( {) {
               {is_loading && <Loader2 className='h - 4 w - 4 animate - spin' />}
               <Save className='h - 4 w - 4' />              Save              {is_loading && <Loader2 className="h - 4 w - 4 animate - spin" />}
               <Save className="h - 4 w - 4" />;
+=======
+            <Button variant='outline' onClick={() => setSaveDialogOpen(false)}>;
+              Cancel;
+            </Button>;
+            <Button;
+              onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() |isLoading}
+              className='gap-2';
+            >;
+              {isLoading && <Loader2 className='h-4 w-4 animate-spin' />}
+              <Save className='h-4 w-4' />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               Save;
             </Button>;
           </DialogFooter>;
         </DialogContent>;
       </Dialog>;
+<<<<<<< HEAD
 
 
 }
@@ -325,3 +411,8 @@ if ( {) {
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h - 4 w - 4 mr - 2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle > Save as new resume version</DialogTitle> </DialogHeader> <div className="py - 4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>);
 }";
 }
+=======
+    </div>;
+  )}> {resume.basic info.title ;
+}</DropdownMenuItem>) )}<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>)}";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

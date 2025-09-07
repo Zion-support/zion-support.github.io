@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 #!/usr/bin/env node
@@ -38,6 +39,8 @@ main
     // Remove merge conflict markers and keep the second version (after =======)
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 const fs = require('fs');
@@ -49,10 +52,13 @@ function resolveMergeConflicts(filePath) {
 function fixMergeConflicts(filePath) {
   try {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 ursor/integrate-build-improve-and-re-verify-9d47
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     const lines = content.split('\n');
     const fixedLines = [];
     let inConflict = false;
@@ -60,6 +66,7 @@ ursor/integrate-build-improve-and-re-verify-9d47
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
+<<<<<<< HEAD
 <<<<<<< HEAD
       
 ursor/integrate-build-improve-and-re-verify-9d47
@@ -89,6 +96,9 @@ ursor/integrate-build-improve-and-re-verify-9d47
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     // Clean up any remaining conflict markers
     content = content.replace(/<<<<<<< .*?\n?/g, '');
 <<<<<<< HEAD
@@ -105,6 +115,7 @@ ursor/integrate-build-improve-and-re-verify-9d47
     console.error(`Error fixing ${filePath}:`, error.message);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
@@ -119,10 +130,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 ursor/integrate-build-improve-and-re-verify-9d47
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return false;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,11 +176,14 @@ function fixFilesInDirectory(dirPath) {
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   let fixedCount = 0;
 =======
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
@@ -187,11 +205,13 @@ function fixMergeConflicts(filePath) {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       return false;
     }
-<<<<<<< HEAD
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 <<<<<<< HEAD
@@ -219,10 +239,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       const line = lines[i];
       
     let keepLines = false;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
 
+<<<<<<< HEAD
         keepVersion = true;
         continue;
       }
@@ -260,10 +283,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
+<<<<<<< HEAD
 /**
  * Merge Conflict Resolver
  * Automatically resolves merge conflicts by keeping HEAD version
@@ -273,9 +299,12 @@ class MergeConflictResolver {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
     this.errors = [];
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
-};
+}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -371,6 +400,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 <<<<<<< HEAD
+=======
+  }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   
   scanDirectory(dir);
   return files;
@@ -427,6 +459,7 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
       } else if (stat.isFile()) {
         const ext = path.extname(item);
         if (['.ts', '.tsx', '.js', '.jsx', '.json', '.css', '.html'].includes(ext)) {
@@ -451,6 +484,9 @@ function findAndFixConflicts(dir) {
 =======
 ursor/integrate-build-improve-and-re-verify-9d47
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
@@ -460,6 +496,7 @@ ursor/integrate-build-improve-and-re-verify-9d47
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
       if (fixMergeConflicts(filePath)) {
         fixedCount++;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -491,16 +528,21 @@ ursor/integrate-build-improve-and-re-verify-9d47
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
       }
     }
   }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return files;
 }
 
@@ -526,6 +568,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
 console.log('🎉 Merge conflict resolution complete!');
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
@@ -539,6 +582,8 @@ console.log('🎉 Merge conflict resolution complete!');
 main
 ursor/integrate-build-improve-and-re-verify-9d47
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return fixedCount;
 }
 
@@ -567,6 +612,7 @@ for (const dir of otherDirs) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 console.log('Merge conflict fixing completed!');
@@ -578,6 +624,8 @@ origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 // Main execution
@@ -592,6 +640,7 @@ const conflictedFiles = findFilesWithConflicts('/workspace');
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -667,3 +716,5 @@ console.log('Merge conflict resolution complete!');
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

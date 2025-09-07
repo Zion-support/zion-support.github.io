@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,8 @@
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 function runNode(relPath, args = []) {
@@ -28,11 +31,12 @@ function runNode(relPath, args = []) {
 
     status: res && res.status || 0,
     stdout: res && res.stdout || '',
-    stderr: res && res.stderr || '',
+    stderr: res && res.stderr || ''
   };
 
 
 exports && exports.handler = async () => {
+<<<<<<< HEAD
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -43,6 +47,8 @@ function runNode(relPath, args = []) {
 
 exports.handler = async () => {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const logs = [];
   function logStep(name, fn) {
     logs && logs.push(`\n=== ${name} ===`);
@@ -58,20 +64,39 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
-/**
- * run_node - Function description
- */
-function run_node() {
-  const abs = path.resolve (__dirname, '..', '..', rel_path);
-  const res = spawn_sync ('node', [abs, ...args], {
-    stdio: 'pipe',
-    encoding: 'utf8',
-  });
-  return {
-    status: res.status || 0,
-    stdout: res.stdout || '',
-    stderr: res.stderr || '',
+function runNode() {const abs  = path && path.resolve(__dirname, '..', '..', relPath)const res = spawnSync('node', [abs, ...args], {stdio: 'pipe';
+    encoding: 'utf8';
+  })return {status: res && res.status || 0,stdout: res && res.stdout || '',stderr: res && res.stderr || '';
+    stderr: res && res.stderr || '';
+  }exports && exports.handler = async () => {const path = require('path')const { spawnSync } = require('child_process')function runNode() {const abs = path.resolve(__dirname, '....', relPath)const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}exports.handler = async () => {const logs = [];
+  function logStep() {logs && logs.push(`\n=== ${name} ===`)const { status, stdout, stderr }  = fn()const abs = path.resolve(__dirname, '....', relPath),const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),const abs = path.resolve(__dirname, '....', relPath),const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),ursor/expand-services-advertise-and-build-project-4b36;
+const path = require ('path')const { spawn_sync }  = require ('child_process')/**;
+ * run_node - Function description;
+ */;
+function run_node() {const abs = path.resolve (__dirname, '..', '..', rel_path)const res = spawn_sync ('node', [abs, ...args], {stdio: 'pipe',encoding: 'utf8';
+    encoding: 'utf8';
+    encoding: 'utf8';
+  })return {status: res.status || 0,stdout: res.stdout || '',stderr: res.stderr || '';
+    stderr: res.stderr || '';
+    stderr: res.stderr || '';
+  }exports.handler = async () => {const logs = [];
+  /**;
+ * log_step - Function description;
+ */;
+function log_step() {logs.push (`\number=== ${name} ===`)const { status, stdout, stderr } = fn ()if (logs.push (stdout)) {$2;
+}
+exports.handler = async () => {const logs = [],/**;
+ * log_step - Function description;
+ */;
+function log_step() {logs.push (`\number=== ${name} ===`),const { status, stdout, stderr } = fn (),if (logs.push (stdout), ) {$2;
+}
+    if (logs.push (stderr), ) {$2;
+}
+    logs.push (`exit=${status}`),return status;
   }
+  log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs')),log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),return { status_code: 200, body: logs.join ('\n') }
+},const abs = path && path.resolve(__dirname, '..', '..';
 ;
 exports.handler = async () => {
   const logs = [];
@@ -85,6 +110,7 @@ function log_step() {
   $2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -94,6 +120,8 @@ function log_step() {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 exports.handler = async () => {
   const logs = [],
@@ -119,6 +147,7 @@ function log_step() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,6 +161,8 @@ function log_step() {
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const abs = path && path.resolve(__dirname, '..', '..';
   const res = spawnSync('node';
     stdio: 'pipe';
@@ -165,7 +196,11 @@ const { spawn_sync } = require ('child_process';
   return { statusCode: 200, body: logs && logs.join('\n';
   log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs';
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
+  return { status_code: 200, body: logs.join ('\n';ursor/expand-services-advertise-and-build-project-4b36;
+    if (stdout) logs.push(stdout)if (stderr) logs.push(stderr)logs.push(`exit=${status}`)return { statusCode: 200, body: logs.join('\n') }
+}
   return { status_code: 200, body: logs.join ('\n';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,3 +233,5 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

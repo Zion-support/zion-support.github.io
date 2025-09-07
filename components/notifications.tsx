@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,6 +20,30 @@
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
+  }
+}
+import React from 'react';
+  return <NotificationCenter />;
+}import dynamic from 'next / dynamic';const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'),import dynamic from 'next/dynamic';
+const NotificationCenter = null;
+const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'){ssr: false;
+  }
+)export default function NotificationsPage() {return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {ssr: false})export default function NotificationsPage() {const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'),{ssr: false}
+)export default function NotificationsPage() {return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {ssr: false}),export default function NotificationsPage() {return <NotificationCenter />;
+}}export default /**;
+ * NotificationsPage - Function description;
+ */;
+function NotificationsPage() {return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {ssr: false}),export default /**;
+ * NotificationsPage - Function description;
+ */;
+function NotificationsPage() {return <NotificationCenter />;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -41,6 +66,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,6 +76,8 @@ import React from 'react';
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
   return <NotificationCenter />;
@@ -60,6 +88,7 @@ import dynamic from 'next / dynamic';
 ;
 const NotificationCenter = dynamic (
   () => import ('../components / notifications / NotificationCenter'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -82,14 +111,19 @@ const NotificationCenter = dynamic(
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   {
     ssr: false
   }
 );
+<<<<<<< HEAD
 export default function NotificationsPage() {
   return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
   ssr: false})
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export default function NotificationsPage() {
 const NotificationCenter = dynamic(;
   () => import('../components/notifications/NotificationCenter'),;
@@ -104,6 +138,7 @@ export default function NotificationsPage() {;
   return <NotificationCenter />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -111,6 +146,9 @@ export default function NotificationsPage() {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 export default /**
  * NotificationsPage - Function description
@@ -126,6 +164,7 @@ function NotificationsPage() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -139,3 +178,5 @@ function NotificationsPage() {
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

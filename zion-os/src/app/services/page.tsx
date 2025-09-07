@@ -3,12 +3,33 @@
 import Link from 'next / link';
 =======
 import Link from 'next/link';
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+export default function ServicesPage() {return (export default function ServicesPage() {return (<div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;{/* Hero Section */}
+      <div className="bg - gradient - to - r from - blue - 600 to - purple - 600 py - 20">;
+        <div className="container mx - auto px - 6 text - center">;
+          <h1 className="text - 5xl font - bold mb - 6">Zion Tech Group Services</h1>;
+          <p className="text - xl text - blue - 100 max - w-3xl mx - auto">;
+            Comprehensive technology solutions for modern businesses. From AI - powered automation to enterprise IT infrastructure.;
+          </p>;
+          <div className="mt - 8">;
+            <a href="tel:+13024640950" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 50 transition - colors mr - 4">;
+              Call Now: +1 302 464 0950;
+            </a>;
+            <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
+export default /**;
+ * ServicesPage - Function description;
+ */;
+function ServicesPage() {return (<div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text-white">;
+import Link from 'next / link';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export default /**
  * ServicesPage - Function description
  */
 function ServicesPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
 
@@ -27,19 +48,28 @@ function ServicesPage() {
             <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
 =======
     <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text-white">;
+=======
+    <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       {/* Hero Section */}
-      <div className="bg - gradient - to - r from - blue - 600 to - purple - 600 py-20">;
-        <div className="container mx - auto px - 6 text-center">;
-          <h1 className="text - 5xl font - bold mb-6">Zion Tech Group Services</h1>;
-          <p className="text - xl text - blue - 100 max - w-3xl mx-auto">;
+      <div className="bg - gradient - to - r from - blue - 600 to - purple - 600 py - 20">;
+        <div className="container mx - auto px - 6 text - center">;
+          <h1 className="text - 5xl font - bold mb - 6">Zion Tech Group Services</h1>;
+          <p className="text - xl text - blue - 100 max - w-3xl mx - auto">;
             Comprehensive technology solutions for modern businesses. From AI - powered automation to enterprise IT infrastructure.;
           </p>;
-          <div className="mt-8">;
-            <a href="tel:+13024640950" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 50 transition - colors mr-4">;
+          <div className="mt - 8">;
+            <a href="tel:+13024640950" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 50 transition - colors mr - 4">;
               Call Now: +1 302 464 0950;
             </a>;
+<<<<<<< HEAD
             <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition-colors">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+            <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               Get Quote;
             </a>;
           </div>;
@@ -47,11 +77,17 @@ function ServicesPage() {
       </div>;
       {/* Contact Info Banner */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <div className="bg - zinc - 800 py - 4">;
         <div className="container mx - auto px - 6 text - center text - sm">;
           <span className="mr - 8">📱 +1 302 464 0950</span>;
           <span className="mr - 8">✉️ kleber@ziontechgroup.com</span>;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <div className="bg - zinc - 800 py-4">;
         <div className="container mx - auto px - 6 text - center text-sm">;
           <span className="mr-8">📱 +1 302 464 0950</span>;
@@ -62,6 +98,9 @@ function ServicesPage() {
       </div>;
       {/* AI Services Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
@@ -87,7 +126,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py-20">;
         <div className="container mx - auto px-6">;
           <div className="text - center mb-16">;
@@ -96,29 +138,36 @@ function ServicesPage() {
               Cutting - edge artificial intelligence solutions to transform your business operations;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
             {/* ZionGPT Core */}
-            <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition-all">;
-              <div className="text - 3xl mb-4">🧠</div>;
-              <h3 className="text - xl font - semibold mb-3">ZionGPT Core</h3>;
-              <p className="text - zinc - 300 mb-4">Enterprise - grade AI assistant with custom knowledge base integration and workflow automation.</p>;
-              <div className="space - y-2 text-sm">;
-                <div className="flex justify-between">;
+            <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition - all">;
+              <div className="text - 3xl mb - 4">🧠</div>;
+              <h3 className="text - xl font - semibold mb - 3">ZionGPT Core</h3>;
+              <p className="text - zinc - 300 mb - 4">Enterprise - grade AI assistant with custom knowledge base integration and workflow automation.</p>;
+              <div className="space - y-2 text - sm">;
+                <div className="flex justify - between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$299 / month</span>;
+                  <span className="text - green - 400">$299 / month</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Setup Fee:</span>;
-                  <span className="text - yellow-400">$1, 500</span>;
+                  <span className="text - yellow - 400">$1, 500</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* AI Content Generation */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition - all">;
               <div className="text - 3xl mb - 4">✍️</div>;
               <h3 className="text - xl font - semibold mb - 3">AI Content Generation</h3>;
@@ -134,7 +183,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition-all">;
               <div className="text - 3xl mb-4">✍️</div>;
               <h3 className="text - xl font - semibold mb-3">AI Content Generation</h3>;
@@ -142,20 +194,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$199 / month</span>;
+                  <span className="text - green - 400">$199 / month</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Setup Fee:</span>;
-                  <span className="text - yellow-400">$800</span>;
+                  <span className="text - yellow - 400">$800</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* AI - Powered Analytics */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition - all">;
               <div className="text - 3xl mb - 4">📊</div>;
               <h3 className="text - xl font - semibold mb - 3">AI - Powered Analytics</h3>;
@@ -171,7 +230,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition-all">;
               <div className="text - 3xl mb-4">📊</div>;
               <h3 className="text - xl font - semibold mb-3">AI - Powered Analytics</h3>;
@@ -179,20 +241,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$399 / month</span>;
+                  <span className="text - green - 400">$399 / month</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Setup Fee:</span>;
-                  <span className="text - yellow-400">$2, 000</span>;
+                  <span className="text - yellow - 400">$2, 000</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* AI Customer Support */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition - all">;
               <div className="text - 3xl mb - 4">💬</div>;
               <h3 className="text - xl font - semibold mb - 3">AI Customer Support</h3>;
@@ -208,7 +277,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition-all">;
               <div className="text - 3xl mb-4">💬</div>;
               <h3 className="text - xl font - semibold mb-3">AI Customer Support</h3>;
@@ -216,20 +288,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$249 / month</span>;
+                  <span className="text - green - 400">$249 / month</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Setup Fee:</span>;
-                  <span className="text - yellow-400">$1, 200</span>;
+                  <span className="text - yellow - 400">$1, 200</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* AI Process Automation */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition - all">;
               <div className="text - 3xl mb - 4">⚙️</div>;
               <h3 className="text - xl font - semibold mb - 3">AI Process Automation</h3>;
@@ -245,7 +324,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition-all">;
               <div className="text - 3xl mb-4">⚙️</div>;
               <h3 className="text - xl font - semibold mb-3">AI Process Automation</h3>;
@@ -253,20 +335,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$349 / month</span>;
+                  <span className="text - green - 400">$349 / month</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Setup Fee:</span>;
-                  <span className="text - yellow-400">$1, 800</span>;
+                  <span className="text - yellow - 400">$1, 800</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* AI Security & Compliance */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition - all">;
               <div className="text - 3xl mb - 4">🔒</div>;
               <h3 className="text - xl font - semibold mb - 3">AI Security & Compliance</h3>;
@@ -282,7 +371,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - blue - 500 transition-all">;
               <div className="text - 3xl mb-4">🔒</div>;
               <h3 className="text - xl font - semibold mb-3">AI Security & Compliance</h3>;
@@ -290,23 +382,32 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$499 / month</span>;
+                  <span className="text - green - 400">$499 / month</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Setup Fee:</span>;
-                  <span className="text - yellow-400">$2, 500</span>;
+                  <span className="text - yellow - 400">$2, 500</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / ai" className="block mt - 4 text - blue - 400 hover:text - blue - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="text - center mt - 12">;
             <a href="/services / ai" className="inline - block bg - blue - 600 hover:bg - blue - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition - colors">;
 =======
+=======
+          <div className="text - center mt - 12">;
+            <a href="/services / ai" className="inline - block bg - blue - 600 hover:bg - blue - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <div className="text - center mt-12">;
             <a href="/services / ai" className="inline - block bg - blue - 600 hover:bg - blue - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition-colors">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -317,6 +418,9 @@ function ServicesPage() {
       </section>;
       {/* IT Services Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - zinc - 800">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
@@ -342,7 +446,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - zinc-800">;
         <div className="container mx - auto px-6">;
           <div className="text - center mb-16">;
@@ -351,29 +458,36 @@ function ServicesPage() {
               Comprehensive IT infrastructure, cloud solutions, and digital transformation services;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
             {/* Cloud Infrastructure */}
-            <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition-all">;
-              <div className="text - 3xl mb-4">☁️</div>;
-              <h3 className="text - xl font - semibold mb-3">Cloud Infrastructure</h3>;
-              <p className="text - zinc - 300 mb-4">AWS, Azure, and Google Cloud setup, migration, and optimization services.</p>;
-              <div className="space - y-2 text-sm">;
-                <div className="flex justify-between">;
+            <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition - all">;
+              <div className="text - 3xl mb - 4">☁️</div>;
+              <h3 className="text - xl font - semibold mb - 3">Cloud Infrastructure</h3>;
+              <p className="text - zinc - 300 mb - 4">AWS, Azure, and Google Cloud setup, migration, and optimization services.</p>;
+              <div className="space - y-2 text - sm">;
+                <div className="flex justify - between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$150 / hour</span>;
+                  <span className="text - green - 400">$150 / hour</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Project Range:</span>;
-                  <span className="text - yellow-400">$5K - $50K</span>;
+                  <span className="text - yellow - 400">$5K - $50K</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* DevOps & CI / CD */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition - all">;
               <div className="text - 3xl mb - 4">🚀</div>;
               <h3 className="text - xl font - semibold mb - 3">DevOps & CI / CD</h3>;
@@ -389,7 +503,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition-all">;
               <div className="text - 3xl mb-4">🚀</div>;
               <h3 className="text - xl font - semibold mb-3">DevOps & CI / CD</h3>;
@@ -397,20 +514,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$175 / hour</span>;
+                  <span className="text - green - 400">$175 / hour</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Project Range:</span>;
-                  <span className="text - yellow-400">$8K - $75K</span>;
+                  <span className="text - yellow - 400">$8K - $75K</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* Cybersecurity */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition - all">;
               <div className="text - 3xl mb - 4">🛡️</div>;
               <h3 className="text - xl font - semibold mb - 3">Cybersecurity</h3>;
@@ -426,7 +550,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition-all">;
               <div className="text - 3xl mb-4">🛡️</div>;
               <h3 className="text - xl font - semibold mb-3">Cybersecurity</h3>;
@@ -434,20 +561,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$200 / hour</span>;
+                  <span className="text - green - 400">$200 / hour</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Project Range:</span>;
-                  <span className="text - yellow-400">$10K - $100K</span>;
+                  <span className="text - yellow - 400">$10K - $100K</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* Data Engineering */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition - all">;
               <div className="text - 3xl mb - 4">📈</div>;
               <h3 className="text - xl font - semibold mb - 3">Data Engineering</h3>;
@@ -463,7 +597,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition-all">;
               <div className="text - 3xl mb-4">📈</div>;
               <h3 className="text - xl font - semibold mb-3">Data Engineering</h3>;
@@ -471,20 +608,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$160 / hour</span>;
+                  <span className="text - green - 400">$160 / hour</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Project Range:</span>;
-                  <span className="text - yellow-400">$15K - $150K</span>;
+                  <span className="text - yellow - 400">$15K - $150K</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* API Development */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition - all">;
               <div className="text - 3xl mb - 4">🔌</div>;
               <h3 className="text - xl font - semibold mb - 3">API Development</h3>;
@@ -500,7 +644,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition-all">;
               <div className="text - 3xl mb-4">🔌</div>;
               <h3 className="text - xl font - semibold mb-3">API Development</h3>;
@@ -508,20 +655,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$140 / hour</span>;
+                  <span className="text - green - 400">$140 / hour</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Project Range:</span>;
-                  <span className="text - yellow-400">$8K - $80K</span>;
+                  <span className="text - yellow - 400">$8K - $80K</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* Digital Transformation */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition - all">;
               <div className="text - 3xl mb - 4">🔄</div>;
               <h3 className="text - xl font - semibold mb - 3">Digital Transformation</h3>;
@@ -537,7 +691,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - green - 500 transition-all">;
               <div className="text - 3xl mb-4">🔄</div>;
               <h3 className="text - xl font - semibold mb-3">Digital Transformation</h3>;
@@ -545,23 +702,32 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$250 / hour</span>;
+                  <span className="text - green - 400">$250 / hour</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Project Range:</span>;
-                  <span className="text - yellow-400">$25K - $500K</span>;
+                  <span className="text - yellow - 400">$25K - $500K</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / it" className="block mt - 4 text - green - 400 hover:text - green - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="text - center mt - 12">;
             <a href="/services / it" className="inline - block bg - green - 600 hover:bg - green - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition - colors">;
 =======
+=======
+          <div className="text - center mt - 12">;
+            <a href="/services / it" className="inline - block bg - green - 600 hover:bg - green - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <div className="text - center mt-12">;
             <a href="/services / it" className="inline - block bg - green - 600 hover:bg - green - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition-colors">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -572,6 +738,9 @@ function ServicesPage() {
       </section>;
       {/* Blockchain & Web3 Services Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
@@ -597,7 +766,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py-20">;
         <div className="container mx - auto px-6">;
           <div className="text - center mb-16">;
@@ -606,29 +778,36 @@ function ServicesPage() {
               Next - generation blockchain solutions, DeFi platforms, NFT marketplaces, and Web3 infrastructure;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
             {/* DeFi Platform Development */}
-            <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition-all">;
-              <div className="text - 3xl mb-4">💰</div>;
-              <h3 className="text - xl font - semibold mb-3">DeFi Platform Development</h3>;
-              <p className="text - zinc - 300 mb-4">Build next - generation decentralized finance platforms with lending, borrowing, and yield farming.</p>;
-              <div className="space - y-2 text-sm">;
-                <div className="flex justify-between">;
+            <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition - all">;
+              <div className="text - 3xl mb - 4">💰</div>;
+              <h3 className="text - xl font - semibold mb - 3">DeFi Platform Development</h3>;
+              <p className="text - zinc - 300 mb - 4">Build next - generation decentralized finance platforms with lending, borrowing, and yield farming.</p>;
+              <div className="space - y-2 text - sm">;
+                <div className="flex justify - between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$25K</span>;
+                  <span className="text - green - 400">$25K</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Project Range:</span>;
-                  <span className="text - yellow-400">$25K - $200K+</span>;
+                  <span className="text - yellow - 400">$25K - $200K+</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* NFT Marketplace */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition - all">;
               <div className="text - 3xl mb - 4">🎨</div>;
               <h3 className="text - xl font - semibold mb - 3">NFT Marketplace Development</h3>;
@@ -644,7 +823,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition-all">;
               <div className="text - 3xl mb-4">🎨</div>;
               <h3 className="text - xl font - semibold mb-3">NFT Marketplace Development</h3>;
@@ -652,20 +834,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$15K</span>;
+                  <span className="text - green - 400">$15K</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Project Range:</span>;
-                  <span className="text - yellow-400">$15K - $100K+</span>;
+                  <span className="text - yellow - 400">$15K - $100K+</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* Smart Contract Development */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition - all">;
               <div className="text - 3xl mb - 4">📜</div>;
               <h3 className="text - xl font - semibold mb - 3">Smart Contract Development</h3>;
@@ -681,7 +870,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition-all">;
               <div className="text - 3xl mb-4">📜</div>;
               <h3 className="text - xl font - semibold mb-3">Smart Contract Development</h3>;
@@ -689,20 +881,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$5K</span>;
+                  <span className="text - green - 400">$5K</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Project Range:</span>;
-                  <span className="text - yellow-400">$5K - $50K+</span>;
+                  <span className="text - yellow - 400">$5K - $50K+</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* Web3 Infrastructure */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition - all">;
               <div className="text - 3xl mb - 4">🌐</div>;
               <h3 className="text - xl font - semibold mb - 3">Web3 Infrastructure</h3>;
@@ -718,7 +917,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition-all">;
               <div className="text - 3xl mb-4">🌐</div>;
               <h3 className="text - xl font - semibold mb-3">Web3 Infrastructure</h3>;
@@ -726,20 +928,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$10K</span>;
+                  <span className="text - green - 400">$10K</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Project Range:</span>;
-                  <span className="text - yellow-400">$10K - $100K+</span>;
+                  <span className="text - yellow - 400">$10K - $100K+</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* DAO Development */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition - all">;
               <div className="text - 3xl mb - 4">🏛️</div>;
               <h3 className="text - xl font - semibold mb - 3">DAO Development</h3>;
@@ -755,7 +964,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition-all">;
               <div className="text - 3xl mb-4">🏛️</div>;
               <h3 className="text - xl font - semibold mb-3">DAO Development</h3>;
@@ -763,20 +975,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$20K</span>;
+                  <span className="text - green - 400">$20K</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Project Range:</span>;
-                  <span className="text - yellow-400">$20K - $150K+</span>;
+                  <span className="text - yellow - 400">$20K - $150K+</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* Blockchain Consulting */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition - all">;
               <div className="text - 3xl mb - 4">💡</div>;
               <h3 className="text - xl font - semibold mb - 3">Blockchain Consulting</h3>;
@@ -792,7 +1011,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 hover:border - orange - 500 transition-all">;
               <div className="text - 3xl mb-4">💡</div>;
               <h3 className="text - xl font - semibold mb-3">Blockchain Consulting</h3>;
@@ -800,23 +1022,32 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Consulting Rate:</span>;
-                  <span className="text - green-400">$250 / hour</span>;
+                  <span className="text - green - 400">$250 / hour</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Strategy Package:</span>;
-                  <span className="text - yellow-400">$25K - $75K</span>;
+                  <span className="text - yellow - 400">$25K - $75K</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / blockchain" className="block mt - 4 text - orange - 400 hover:text - orange - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="text - center mt - 12">;
             <a href="/services / blockchain" className="inline - block bg - orange - 600 hover:bg - orange - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition - colors">;
 =======
+=======
+          <div className="text - center mt - 12">;
+            <a href="/services / blockchain" className="inline - block bg - orange - 600 hover:bg - orange - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <div className="text - center mt-12">;
             <a href="/services / blockchain" className="inline - block bg - orange - 600 hover:bg - orange - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition-colors">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -827,6 +1058,9 @@ function ServicesPage() {
       </section>;
       {/* Micro SAAS Services Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - zinc - 800">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
@@ -852,7 +1086,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - zinc-800">;
         <div className="container mx - auto px-6">;
           <div className="text - center mb-16">;
@@ -861,29 +1098,36 @@ function ServicesPage() {
               Ready - to - deploy software solutions for specific business needs;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
             {/* Zion Marketplace */}
-            <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition-all">;
-              <div className="text - 3xl mb-4">🛒</div>;
-              <h3 className="text - xl font - semibold mb-3">Zion Marketplace</h3>;
-              <p className="text - zinc - 300 mb-4">Complete marketplace solution with job boards, talent matching, and project management.</p>;
-              <div className="space - y-2 text-sm">;
-                <div className="flex justify-between">;
+            <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition - all">;
+              <div className="text - 3xl mb - 4">🛒</div>;
+              <h3 className="text - xl font - semibold mb - 3">Zion Marketplace</h3>;
+              <p className="text - zinc - 300 mb - 4">Complete marketplace solution with job boards, talent matching, and project management.</p>;
+              <div className="space - y-2 text - sm">;
+                <div className="flex justify - between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$399 / month</span>;
+                  <span className="text - green - 400">$399 / month</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Setup Fee:</span>;
-                  <span className="text - yellow-400">$2, 500</span>;
+                  <span className="text - yellow - 400">$2, 500</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* Resume AI Builder */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition - all">;
               <div className="text - 3xl mb - 4">📝</div>;
               <h3 className="text - xl font - semibold mb - 3">Resume AI Builder</h3>;
@@ -899,7 +1143,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition-all">;
               <div className="text - 3xl mb-4">📝</div>;
               <h3 className="text - xl font - semibold mb-3">Resume AI Builder</h3>;
@@ -907,20 +1154,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$99 / month</span>;
+                  <span className="text - green - 400">$99 / month</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Setup Fee:</span>;
-                  <span className="text - yellow-400">$500</span>;
+                  <span className="text - yellow - 400">$500</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* Token Rewards System */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition - all">;
               <div className="text - 3xl mb - 4">🪙</div>;
               <h3 className="text - xl font - semibold mb - 3">Token Rewards System</h3>;
@@ -936,7 +1190,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition-all">;
               <div className="text - 3xl mb-4">🪙</div>;
               <h3 className="text - xl font - semibold mb-3">Token Rewards System</h3>;
@@ -944,20 +1201,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$299 / month</span>;
+                  <span className="text - green - 400">$299 / month</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Setup Fee:</span>;
-                  <span className="text - yellow-400">$3, 000</span>;
+                  <span className="text - yellow - 400">$3, 000</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* KYC / AML Verification */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition - all">;
               <div className="text - 3xl mb - 4">✅</div>;
               <h3 className="text - xl font - semibold mb - 3">KYC / AML Verification</h3>;
@@ -973,7 +1237,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition-all">;
               <div className="text - 3xl mb-4">✅</div>;
               <h3 className="text - xl font - semibold mb-3">KYC / AML Verification</h3>;
@@ -981,20 +1248,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$199 / month</span>;
+                  <span className="text - green - 400">$199 / month</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Setup Fee:</span>;
-                  <span className="text - yellow-400">$1, 500</span>;
+                  <span className="text - yellow - 400">$1, 500</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* DAO Governance Platform */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition - all">;
               <div className="text - 3xl mb - 4">🗳️</div>;
               <h3 className="text - xl font - semibold mb - 3">DAO Governance Platform</h3>;
@@ -1010,7 +1284,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition-all">;
               <div className="text - 3xl mb-4">🗳️</div>;
               <h3 className="text - xl font - semibold mb-3">DAO Governance Platform</h3>;
@@ -1018,20 +1295,27 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$449 / month</span>;
+                  <span className="text - green - 400">$449 / month</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Setup Fee:</span>;
-                  <span className="text - yellow-400">$4, 000</span>;
+                  <span className="text - yellow - 400">$4, 000</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
             {/* Zion Academy */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition - all">;
               <div className="text - 3xl mb - 4">🎓</div>;
               <h3 className="text - xl font - semibold mb - 3">Zion Academy</h3>;
@@ -1047,7 +1331,10 @@ function ServicesPage() {
                 </div>;
               </div>;
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 hover:border - purple - 500 transition-all">;
               <div className="text - 3xl mb-4">🎓</div>;
               <h3 className="text - xl font - semibold mb-3">Zion Academy</h3>;
@@ -1055,23 +1342,32 @@ function ServicesPage() {
               <div className="space - y-2 text-sm">;
                 <div className="flex justify-between">;
                   <span > Starting Price:</span>;
-                  <span className="text - green-400">$179 / month</span>;
+                  <span className="text - green - 400">$179 / month</span>;
                 </div>;
-                <div className="flex justify-between">;
+                <div className="flex justify - between">;
                   <span > Setup Fee:</span>;
-                  <span className="text - yellow-400">$1, 200</span>;
+                  <span className="text - yellow - 400">$1, 200</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="/services / saas" className="block mt - 4 text - purple - 400 hover:text - purple - 300 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Learn More →;
               </a>;
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="text - center mt - 12">;
             <a href="/services / saas" className="inline - block bg - purple - 600 hover:bg - purple - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition - colors">;
 =======
+=======
+          <div className="text - center mt - 12">;
+            <a href="/services / saas" className="inline - block bg - purple - 600 hover:bg - purple - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <div className="text - center mt-12">;
             <a href="/services / saas" className="inline - block bg - purple - 600 hover:bg - purple - 700 text - white px - 8 py - 3 rounded - lg font - semibold transition-colors">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -1082,6 +1378,9 @@ function ServicesPage() {
       </section>;
       {/* Call to Action */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600">;
         <div className="container mx - auto px - 6 text - center">;
           <h2 className="text - 4xl font - bold mb - 6">Ready to Transform Your Business?</h2>;
@@ -1098,28 +1397,34 @@ function ServicesPage() {
               </a>;
             </div>;
             <p className="text - blue - 100 text - sm">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple-600">;
         <div className="container mx - auto px - 6 text-center">;
           <h2 className="text - 4xl font - bold mb-6">Ready to Transform Your Business?</h2>;
           <p className="text - xl text - blue - 100 mb - 8 max - w-2xl mx-auto">;
             Let's discuss how our AI, IT, blockchain, and SAAS solutions can drive your digital transformation and business growth.;
           </p>;
-          <div className="space-y-4">;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center items-center">;
-              <a href="tel:+13024640950" className="bg - white text - blue - 600 px - 8 py - 4 rounded - lg font - semibold hover:bg - blue - 50 transition - colors text-lg">;
+          <div className="space - y-4">;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
+              <a href="tel:+13024640950" className="bg - white text - blue - 600 px - 8 py - 4 rounded - lg font - semibold hover:bg - blue - 50 transition - colors text - lg">;
                 📞 Call +1 302 464 0950;
               </a>;
-              <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 4 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors text-lg">;
+              <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 4 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors text - lg">;
                 ✉️ Schedule Consultation;
               </a>;
             </div>;
+<<<<<<< HEAD
             <p className="text - blue - 100 text-sm">;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+            <p className="text - blue - 100 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com;
             </p>;
           </div>;
         </div>;
       </section>;
-    </div>);
-}
+    </div>)}

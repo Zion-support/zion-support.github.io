@@ -16,5 +16,9 @@ const path = require('path')
       execSync('pm2 save', { "stdio"})
       execSync('pm2 status', { "stdio"})
 // console.log('\n� Automation "Schedule")
+<<<<<<< HEAD
     console.log('\n  Useful PM2 "Commands")
     console.log('\n  Useful PM2 "Commands")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

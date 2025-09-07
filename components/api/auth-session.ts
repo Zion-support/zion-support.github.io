@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,9 +11,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+import {getSessionFromReq,isInternalAgentRequest} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils/adminAuth';
+import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils/adminAuth';
+export default function handler() {const session = null;
+
 
 
 import {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+
 
 
 <<<<<<< HEAD
@@ -26,11 +35,14 @@ import {
 
 
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
+<<<<<<< HEAD
 import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = null;
     return
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req);
   const internal = isInternalAgentRequest(req)
@@ -38,14 +50,34 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
     return;
+export default function handler() {const session = getSessionFromReq(req)const internal = isInternalAgentRequest(req)if (!session && !internal) {return;
+  }res && res.status(200).json({ message: 'OK' })return;
   }
+  res && res.status(200).json({ message: 'OK' })}}
+    res.status (401).json ({ error: 'Unauthorized' })return;}
+    res.status(401).json({ error: 'Unauthorized' })return;
+  }
+  res.status(200).json({ message: 'OK' })}
+res.status (200).json ({ message: 'OK' })return;
+  }
+  res.status (200).json ({ message: 'OK' })}}ursor/fix-website-loading-errors-and-merge-6662;
+}}getSessionFromReq;
+  isInternalAgentRequest;
+  getSessionFromReq,isInternalAgentRequest} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils/adminAuth';
+export default function handler() {const session = getSessionFromReq(req)const internal = isInternalAgentRequest(req)if (!session && !internal) {res.status(401).json({ error: 'Unauthorized' })return;return;return;
+  }
+  res.status(200).json({ message: 'OK' })}
+res.status(200).json({ message: 'OK' })return;
 
 =======
 
@@ -55,6 +87,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ message: 'OK' });
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -67,11 +100,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
     res.status (401).json ({ error: 'Unauthorized' });
     return;
 
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,6 +120,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     res.status(401).json({ error: 'Unauthorized' });
     return
   }
@@ -96,6 +134,7 @@ res.status (200).json ({ message: 'OK' });    return;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,6 +142,8 @@ res.status (200).json ({ message: 'OK' });    return;
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 }
 
@@ -116,7 +157,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 
 
-import {
   getSessionFromReq
   isInternalAgentRequest;
   getSessionFromReq,;
@@ -127,6 +167,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const internal = isInternalAgentRequest(req)
   if (!session && !internal) {
     res.status(401).json({ error: 'Unauthorized' });
+<<<<<<< HEAD
 return;
   }
   res.status(200).json({ message: 'OK' });
@@ -153,3 +194,12 @@ res.status(200).json({ message: 'OK' });    return
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    return;
+
+  }
+  res.status(200).json({ message: 'OK' })}
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

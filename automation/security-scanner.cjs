@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,6 +62,8 @@ class SecurityScanner {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
   }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   async runSecurityScan() {
     const securityChecks = [
@@ -1936,7 +1939,9 @@ main
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }
 
+// Run the security scanner
 if (require.main === module) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const scanner = new SecurityScanner();
   scanner.scan().catch(console.error);
@@ -1944,6 +1949,8 @@ if (require.main === module) {
 
 module.exports = SecurityScanner;
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     const scanner = new SecurityScanner(),
     scanner.run().catch(console.error)
   }
@@ -1981,6 +1988,7 @@ scanner.runSecurityScan().catch(console.error);
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/main
@@ -1993,3 +2001,5 @@ main
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

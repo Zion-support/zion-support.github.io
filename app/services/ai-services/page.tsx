@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
@@ -6,10 +7,17 @@ export const metadata: Metadata = {
   title: 'AI Services | Zion Tech Group - Comprehensive AI Solutions',
   description: 'Complete AI services including machine learning, natural language processing, computer vision, and AI automation. Transform your business with cutting-edge artificial intelligence.',
   keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'
+=======
+export const metadata = {
+  title: 'AI Services | Zion Tech Group',
+  description: 'Comprehensive AI solutions including machine learning, natural language processing, computer vision, and intelligent automation.',
+  keywords: 'AI services, machine learning, NLP, computer vision, automation, artificial intelligence'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 
-export default function AIServicesPage() {
+function FeatureItem({ icon, title, description, benefits }: { icon: string; title: string; description: string; benefits: string[] }) {
   return (
+<<<<<<< HEAD
     <div className="animate-fade-in">
       <section className="text-center py-12">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -34,51 +42,96 @@ export default function AIServicesPage() {
           </a>
         </div>
       </section>
+=======
+    <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-2xl font-bold text-gray-900 mb-4">{title}</h3>
+      <p className="text-gray-600 mb-6">{description}</p>
+      <ul className="space-y-2">
+        {benefits.map((benefit, index) => (
+          <li key={index} className="flex items-center text-gray-600">
+            <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+            {benefit}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
-      {/* AI Service Categories */}
-      <section className="py-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our AI Service Categories</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AIServiceCard
-            title="AI Code Assistant"
-            description="Intelligent code generation, debugging, and optimization powered by advanced AI."
-            href="/services/ai-code-assistant"
+function CTA() {
+  return (
+    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center text-white">
+      <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
+      <p className="text-xl mb-8 max-w-2xl mx-auto">
+        Let our AI experts help you implement cutting-edge solutions that drive real business value.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/contact"
+          className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+        >
+          Get Started Today
+        </a>
+        <a
+          href="/services"
+          className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+        >
+          View All Services
+        </a>
+      </div>
+    </div>
+  );
+}
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">AI Services</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive AI solutions to transform your business. From machine learning to intelligent automation, 
+            we deliver cutting-edge AI technologies that drive real results.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <FeatureItem
             icon="🤖"
-            pricing="From $99/month"
-            features={["Code generation", "Bug detection", "Performance optimization", "Learning assistance"]
+            title="Machine Learning"
+            description="Custom ML models that learn from your data to make predictions and automate decisions."
+            benefits={[
+              "Predictive analytics",
+              "Pattern recognition",
+              "Automated decision making",
+              "Continuous learning"
+            ]}
           />
-          <AIServiceCard
-            title="AI Social Media Scheduler"
-            description="Intelligent social media scheduling with AI-powered content generation and optimal timing."
-            href="/services/ai-social-scheduler"
-            icon="📱"
-            pricing="From $49/month"
-            features={["Content generation", "Optimal timing", "Performance analytics", "Cross-platform management"]
-          />
-          <AIServiceCard
-            title="AI Project Manager"
-            description="Intelligent project management with AI-powered task automation and predictive analytics."
-            href="/services/ai-project-manager"
-            icon="📊"
-            pricing="From $199/month"
-            features={["Task automation", "Predictive analytics", "Team optimization", "Smart scheduling"]
-          />
-          <AIServiceCard
-            title="AI Customer Support"
-            description="Intelligent customer support automation with AI chatbots and sentiment analysis."
-            href="/services/ai-customer-support"
+          <FeatureItem
             icon="💬"
-            pricing="From $299/month"
-            features={["AI chatbots", "Sentiment analysis", "Multilingual support", "Smart routing"]
+            title="Natural Language Processing"
+            description="AI that understands and processes human language for chatbots, analysis, and automation."
+            benefits={[
+              "Chatbot development",
+              "Sentiment analysis",
+              "Text summarization",
+              "Language translation"
+            ]}
           />
-          <AIServiceCard
-            title="AI Data Analytics"
-            description="Advanced AI-powered data analytics with predictive modeling and real-time insights."
-            href="/services/ai-data-analytics"
-            icon="📈"
-            pricing="From $399/month"
-            features={["Predictive analytics", "Real-time dashboards", "Automated insights", "Natural language queries"]
+          <FeatureItem
+            icon="👁️"
+            title="Computer Vision"
+            description="AI that can see and interpret visual data for image recognition and analysis."
+            benefits={[
+              "Image classification",
+              "Object detection",
+              "Facial recognition",
+              "Quality inspection"
+            ]}
           />
+<<<<<<< HEAD
           <AIServiceCard
             title="AI Content Generator"
             description="AI-powered content creation for blogs, marketing materials, and social media posts."
@@ -148,52 +201,88 @@ export default function AIServicesPage() {
             description="Smart energy optimization and consumption analysis for buildings and facilities"
             features={["Energy optimization", "Consumption analysis", "Predictive maintenance", "Cost reduction", "Sustainability metrics", "Smart grid integration"]}
             price="$30k–$75k"
+=======
+          <FeatureItem
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             icon="⚡"
+            title="Process Automation"
+            description="Intelligent automation that streamlines workflows and reduces manual work."
+            benefits={[
+              "Workflow optimization",
+              "Task automation",
+              "Data processing",
+              "System integration"
+            ]}
           />
-          <AIServiceCard
-            title="AI E-commerce Personalization"
-            description="Advanced product recommendations and personalized shopping experiences"
-            features={["Product recommendations", "Dynamic pricing", "Inventory optimization", "Customer journey mapping", "Cross-selling", "Retention strategies"]}
-            price="$20k–$55k"
-            icon="🛒"
+          <FeatureItem
+            icon="📊"
+            title="Data Analytics"
+            description="AI-powered analytics that extract insights from complex datasets."
+            benefits={[
+              "Pattern discovery",
+              "Trend analysis",
+              "Anomaly detection",
+              "Business intelligence"
+            ]}
           />
-          <AIServiceCard
-            title="AI Quality Assurance"
-            description="Automated testing, quality control, and defect detection using computer vision and ML"
-            features={["Automated testing", "Defect detection", "Quality scoring", "Process monitoring", "Predictive maintenance", "Compliance checking"]}
-            price="$25k–$65k"
-            icon="🔍"
-          />
-          <AIServiceCard
-            title="AI Talent Acquisition"
-            description="Intelligent recruitment, candidate screening, and HR analytics"
-            features={["Resume screening", "Candidate matching", "Interview scheduling", "Skills assessment", "Diversity analytics", "Retention prediction"]}
-            price="$28k–$70k"
-            icon="👔"
-          />
-          <AIServiceCard
-            title="AI Environmental Monitoring"
-            description="Environmental data analysis, pollution detection, and sustainability reporting"
-            features={["Air quality monitoring", "Water quality analysis", "Waste management", "Carbon footprint tracking", "Sustainability reporting", "Compliance monitoring"]}
-            price="$35k–$80k"
-            icon="🌱"
-          />
-          <AIServiceCard
-            title="AI Sports Analytics"
-            description="Performance analysis, injury prediction, and strategic insights for sports teams"
-            features={["Performance analysis", "Injury prediction", "Tactical insights", "Player scouting", "Fan engagement", "Revenue optimization"]}
-            price="$40k–$100k"
-            icon="⚽"
-          />
-          <AIServiceCard
-            title="AI Insurance Risk Assessment"
-            description="Automated risk evaluation, fraud detection, and claims processing"
-            features={["Risk assessment", "Fraud detection", "Claims automation", "Underwriting support", "Customer profiling", "Pricing optimization"]}
-            price="$45k–$110k"
-            icon="🛡️"
+          <FeatureItem
+            icon="🔮"
+            title="Predictive Modeling"
+            description="Advanced models that forecast future trends and outcomes for better planning."
+            benefits={[
+              "Demand forecasting",
+              "Risk assessment",
+              "Market prediction",
+              "Resource optimization"
+            ]}
           />
         </div>
+
+        <div className="bg-white rounded-2xl p-12 mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Our AI Services?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Team</h3>
+              <p className="text-gray-600">
+                Our AI specialists have years of experience in machine learning, deep learning, and AI implementation across various industries.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Custom Solutions</h3>
+              <p className="text-gray-600">
+                Every AI solution is tailored to your specific business needs, ensuring maximum impact and ROI.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Proven Results</h3>
+              <p className="text-gray-600">
+                We've helped hundreds of companies implement AI solutions that deliver measurable business value.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Ongoing Support</h3>
+              <p className="text-gray-600">
+                Continuous monitoring, optimization, and support to ensure your AI solutions perform at their best.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Ready to implement AI in your business? Let's discuss your project.
+          </p>
+          <div className="bg-gray-100 rounded-lg p-6 max-w-md mx-auto">
+            <p>📞 +1-302-464-0950</p>
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p>📧 kleber@ziontechgroup.com</p>
+          </div>
+        </div>
+
+        <CTA />
       </div>
+<<<<<<< HEAD
       <p className="text-gray-600 mb-4">{description}</p>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
@@ -337,3 +426,8 @@ function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap:
 function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
 }
 }
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -114,5 +114,9 @@ const { execSync } = require("child_process")
         "default"
     } catch (error) {  this.log(` Command "failed"`})
   process.on("SIGINT")
+<<<<<<< HEAD
   process.on("SIGTERM")
   process.on("SIGTERM")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

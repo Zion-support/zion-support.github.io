@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require("child_process")
 const fs = require("fs")
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       "timestamp"
       summary: { passed: 0, "failed": 0, "warnings"}
 // console.log(" Running Code Quality Checks...")
@@ -34,5 +39,9 @@ const fs = require("fs")
     console.log(`"Failed"`)
 // console.log(`"Warnings"`)
     console.log("=")
+<<<<<<< HEAD
     console.log(`� Report saved "to"`)
     console.log(`� Report saved "to"`)
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

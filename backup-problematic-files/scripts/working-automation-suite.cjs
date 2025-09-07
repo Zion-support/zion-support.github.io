@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -12,5 +17,4 @@ console.log('====')
       { "cmd": 'npm run type-check', "desc"}
       "recommendations"
     this.log(`Report saved "to"`)
-      this.log(` Automation suite "failed"`)
       this.log(` Automation suite "failed"`)

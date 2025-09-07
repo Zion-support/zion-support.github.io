@@ -23,6 +23,7 @@ const manifest = { "functions": [], "generatedAt": new Date().toISOString() };";
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log("["netlify":manifest] wrote", manifestPath)} catch (e) {  console.log("["netlify":manifest] skipped (write failed)")}";process.exit(0);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 main
@@ -46,3 +47,6 @@ origin/chore/fix-build-nav-links
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

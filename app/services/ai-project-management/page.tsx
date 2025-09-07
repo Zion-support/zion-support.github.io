@@ -1,48 +1,33 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export const metadata = {
   title: 'AI-Powered Project Management Platform | Zion Tech Group',
   description: 'Intelligent project management with AI task prioritization, resource optimization, risk prediction, and automated reporting. Increase team productivity by 50% with smart project insights.',
   keywords: 'AI project management, task automation, resource optimization, project analytics, team productivity, smart scheduling'
+=======
+export const metadata = {
+  title: 'Ai Project Management | Zion Tech Group',
+  description: 'Professional ai project management services for your business needs.',
+  keywords: 'ai-project-management, services, business, technology'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 
-export default function AIProjectManagementPage() {
+export default function ServicePage() {
   return (
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-green-50 to-blue-100 rounded-lg">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          AI-Powered Project Management
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform your project management with AI-driven insights, automated task prioritization, and intelligent resource allocation. 
-          Our platform increases team productivity by 50% and reduces project delays by 70%.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Project Management Platform Inquiry"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Start Free Trial
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-        </div>
-      </section>
-
-      {/* Key Features */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Intelligent Project Management</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI-powered platform learns from your team's patterns to optimize workflows and predict project outcomes.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Project Management
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai project management services for your business needs.
           </p>
         </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
           <FeatureCard
             icon="🎯"
             title="AI Task Prioritization"
@@ -363,6 +348,28 @@ function CaseStudy({ company, industry, result, description, metrics }: {
               {metric}
             </div>
           ))}
+=======
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai project management solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai project management solutions run smoothly.
+            </p>
+          </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         </div>
       </div>
     </div>

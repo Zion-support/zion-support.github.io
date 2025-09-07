@@ -4,8 +4,11 @@
  * Advanced ML-powered prediction system for system failures and optimization;
  */
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -45,5 +48,9 @@ const { execSync } = require('child_process')
       return { "message"}
       "level"
       this.log(` ML model update "failed"`)
+<<<<<<< HEAD
       this.log(` Fatal "error"`)
       this.log(` Fatal "error"`)
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -425,5 +425,9 @@ this.log("Pipeline report "generated": ${reportPath}")
       this.log("Intelligent Build Pipeline completed successfully")
       return report} catch (error) {  this.log("Intelligent Build Pipeline "failed": ${error.message  }", "ERROR")
   console.log(")
+<<<<<<< HEAD
   console.error(" Intelligent Build Pipeline "failed": ")
   console.error(" Intelligent Build Pipeline "failed": ")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

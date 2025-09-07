@@ -1,4 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+  res.status(200).json({ ok: true })export default function handler() {clearSessionCookie(res)res.status(200).json({ ok: true })export default function handler() {clearSessionCookie(res)res.status(200).json({ ok: true })}
+  res.status(200).json({ ok: true })}res && res.status(200).json({ ok: true })export default function handler() {clearSessionCookie(res)res && res.status(200).json({ ok: true })}
+  res.status(200).json({ ok: true })}
+  res.status(200).json({ ok: true })}
+import { clearSessionCookie  } from '../../../utils / admin_auth';
+export default /**;
+ * handler - Function description;
+ */;
+function handler() {clearSessionCookie (res)res.status (200).json ({ ok: true })export default /**;
+ * handler - Function description;
+ */;
+function handler() {clearSessionCookie (res)res.status (200).json ({ ok: true })}ursor/fix-website-loading-errors-and-merge-6662;
+import { clearSessionCookie  } from '../../../utils/adminAuth';
+export default function handler() {clearSessionCookie(res)res.status(200).json({ ok: true })export default function handler() {clearSessionCookie(res)res.status(200).json({ ok: true })}
+}}
+  res.status(200).json({ ok: true })
 
   res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   clearSessionCookie(res);
@@ -12,16 +28,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   res.status(200).json({ ok: true })
 }
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
   res.status(200).json({ ok: true })
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -44,6 +64,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import { clearSessionCookie } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -60,6 +82,7 @@ function handler() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,6 +90,8 @@ function handler() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 =======
@@ -89,6 +114,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -105,3 +131,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.status(200).json({ ok: true });
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

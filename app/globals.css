@@ -2,56 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  html {
+    font-family: system-ui, sans-serif;
   }
-
-  body {
-    @apply text-gray-900 bg-white;
+  * {
+    @apply border-gray-200;
   }
 }
 
 @layer components {
-  .animate-fade-in {
-    animation: fadeIn 0.6s ease-in-out;
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors;
   }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-900 hover:bg-gray-300;
+  }
 }
 
 @layer utilities {
+<<<<<<< HEAD
   .focus-visible:focus {
     @apply outline-none ring-2 ring-blue-500 ring-offset-2;
   }
   
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   .text-balance {
     text-wrap: balance;
   }

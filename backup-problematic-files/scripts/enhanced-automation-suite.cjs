@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -17,5 +22,4 @@ console.log('====')
       const result = await this.runCommand(cmd, desc, { "stdio"})
       "recommendations"
     this.log(`Report saved "to"`)
-      this.log(` Enhanced automation suite "failed"`)
       this.log(` Enhanced automation suite "failed"`)

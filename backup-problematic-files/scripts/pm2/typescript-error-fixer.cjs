@@ -3,12 +3,16 @@
  * TypeScript Error Fixer Service;
  * Automatically fixes TypeScript-specific errors;
  */
+
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 class TypeScriptErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -17,6 +21,7 @@ class TypeScriptErrorFixer {}
     this.typeAnnotationFix = process.env.TYPE_ANNOTATION_FIX === 'true';
     this.interfaceGeneration = process.env.INTERFACE_GENERATION === 'true';
     this.maxComplexity = parseInt(process.env.MAX_COMPLEXITY) || 10;
+    
     this.fixesApplied = 0;
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
@@ -31,8 +36,11 @@ class TypeScriptErrorFixer {}
       service: 'typescript-error-fixer'
     };
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
@@ -47,15 +55,21 @@ class TypeScriptErrorFixer {}
     fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')};
   async start() {}
     this.log('info', 'Starting TypeScript Error Fixer Service...');
+    
     try {}
       this.ensureDirectories();
       await this.performTypeScriptFixes();
       this.startContinuousFixing();
       this.setupSignalHandlers();
+      
       this.log('info', 'TypeScript Error Fixer Service started successfully');
+<<<<<<< HEAD
       
       
       
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       setInterval(async () => {}
         await this.performTypeScriptFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start TypeScript Error Fixer Service', error);
@@ -70,13 +84,16 @@ class TypeScriptErrorFixer {}
     })};
   async performTypeScriptFixes() {}
     this.log('info', 'Starting TypeScript error fixing process...');
+    
     try {}
       this.resetCounters();
       const errors = await this.getTypeScriptErrors();
+      
       if (errors.length === 0) {}
         this.log('info', 'No TypeScript errors found');
         return};
       this.log('info', `Found ${errors.length} TypeScript errors`);
+
       for (const error of errors) {}
         if (this.fixesApplied >= 50) break; // Limit fixes per run;
         try {}
@@ -101,6 +118,7 @@ class TypeScriptErrorFixer {}
         stdio: 'pipe'
       }
 });
+      
       if (result) {}
         const parsed = JSON.parse(result);
         return parsed.errors || []};
@@ -112,6 +130,7 @@ class TypeScriptErrorFixer {}
   parseTypeScriptErrors(stderr) {}
     const errors = [];
     const lines = stderr.split('\n');
+    
     lines.forEach(line => {})
       const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
       if (match) {}
@@ -124,36 +143,48 @@ class TypeScriptErrorFixer {}
         })};
     }
 });
+    
     return errors};
   async fixTypeScriptError(error) {}
     if (!error.file || !fs.existsSync(error.file)) {}
       this.fixesSkipped++;
       return};
     this.log('info', `Fixing TypeScript error in: ${error.file}`);
+    
     try {}
       const content = fs.readFileSync(error.file, 'utf8');
       const lines = content.split('\n');
+      
       if (error.line > lines.length) {}
         this.fixesSkipped++;
         return};
       const lineIndex = error.line - 1;
       const line = lines[lineIndex];
+      
       if (this.shouldSkipLine(line)) {}
         this.fixesSkipped++;
         return};
       const fixedLine = await this.fixTypeScriptLine(line, error, lines, lineIndex);
+      
       if (fixedLine !== line) {}
         lines[lineIndex] = fixedLine;
         const fixedContent = lines.join('\n');
+        
         // Create backup;
         await this.createBackup(error.file);
+        
         // Write fixed content;
         fs.writeFileSync(error.file, fixedContent, 'utf8');
+        
         this.fixesApplied++;
         this.fixedFiles.add(error.file);
+<<<<<<< HEAD
         
         
         
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
     } catch (error) {}
@@ -170,6 +201,7 @@ class TypeScriptErrorFixer {}
            trimmed.startsWith('export')};
   async fixTypeScriptLine(line, error, allLines, lineIndex) {}
     let fixedLine = line;
+    
     // Fix common TypeScript errors;
     if (error.message.includes('Cannot find name')) {}
       fixedLine = this.fixUndefinedName(line, error, allLines, lineIndex)} else if (error.message.includes('Type')) {}
@@ -181,13 +213,19 @@ class TypeScriptErrorFixer {}
   fixUndefinedName(line, error, allLines, lineIndex) {}
     const nameMatch = error.message.match(/Cannot find name '([^']+)'/);
     if (!nameMatch) return line;
+    
     const undefinedName = nameMatch[1];
+<<<<<<< HEAD
     
     
     
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     // Try to find the name in the file;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
     const matches = line.match(namePattern);
+    
     if (matches) {}
       // Check if it should be imported;
       if (this.shouldBeImported(undefinedName, allLines)) {}
@@ -214,10 +252,15 @@ class TypeScriptErrorFixer {}
   fixModuleError(line, error, allLines, lineIndex) {}
     const moduleMatch = error.message.match(/Cannot find module '([^']+)'/);
     if (!moduleMatch) return line;
+    
     const moduleName = moduleMatch[1];
+<<<<<<< HEAD
     
     
     
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     // Try to fix common module issues;
     if (moduleName.startsWith('@/')) {}
       const fixedModule = moduleName.replace('@/', './src/');
@@ -228,10 +271,15 @@ class TypeScriptErrorFixer {}
   fixPropertyError(line, error, allLines, lineIndex) {}
     const propertyMatch = error.message.match(/Property '([^']+)' does not exist on type/);
     if (!propertyMatch) return line;
+    
     const propertyName = propertyMatch[1];
+<<<<<<< HEAD
     
     
     
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     // Add type assertion;
     if (line.includes('.' + propertyName)) {}
       return line.replace(new RegExp(`\\.${propertyName}`), `['${propertyName}']`)};
@@ -253,9 +301,13 @@ class TypeScriptErrorFixer {}
     const namePattern = new RegExp(`\\b${name}\\b`, 'g');
     let firstUsage = -1;
     let declaration = -1;
+<<<<<<< HEAD
     
     
     
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
         if (firstUsage === -1) firstUsage = index;
@@ -264,10 +316,12 @@ class TypeScriptErrorFixer {}
       };
     }
 });
+    
     return firstUsage !== -1 && (declaration === -1 || declaration > firstUsage)};
   addImportStatement(name, allLines) {}
     // Find the best place to add import;
     let importIndex = 0;
+    
     for (let i = 0; i < allLines.length; i++) {}
       if (allLines[i].trim().startsWith('import')) {}
         importIndex = i + 1} else if (allLines[i].trim() && !allLines[i].trim().startsWith('//')) {}
@@ -275,6 +329,7 @@ class TypeScriptErrorFixer {}
     };
     // Add import statement;
     allLines.splice(importIndex, 0, `import { ${name} } from 'react';`);
+    
     return allLines.join('\n')};
   addVariableDeclaration(line, name) {}
     // Add variable declaration;
@@ -285,6 +340,7 @@ class TypeScriptErrorFixer {}
       const fileName = path.basename(filePath);
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
+      
       fs.copyFileSync(filePath, backupPath);
       this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}
       this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};
@@ -298,17 +354,19 @@ class TypeScriptErrorFixer {}
         fixesFailed: this.fixesFailed,
         fixesSkipped: this.fixesSkipped,
         successRate: this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100;
-        successRate: this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100,
       },
       fixedFiles: Array.from(this.fixedFiles),
-      recommendations: this.generateRecommendations(),
+      recommendations: this.generateRecommendations();
     };
+
     const reportPath = path.join(this.projectRoot, 'error-reports', `typescript-fix-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
     this.log('info', `TypeScript fix report generated: ${reportPath}`);
     return report};
   generateRecommendations() {}
     const recommendations = [];
+
     if (this.fixesFailed > 0) {}
       recommendations.push({})
         priority: 'high',
@@ -324,6 +382,7 @@ class TypeScriptErrorFixer {}
     return recommendations};
   startContinuousFixing() {}
     this.log('info', 'Starting continuous TypeScript fixing...');
+    
     setInterval(async () => {}
       await this.performTypeScriptFixes()}, 600000); // 10 minutes;
   };
@@ -334,28 +393,37 @@ class TypeScriptErrorFixer {}
 };
 // Start the service;
 const fixer = new TypeScriptErrorFixer();
+
 // Handle graceful shutdown;
 process.on('SIGINT', () => {}
   fixer.log('info', 'Received SIGINT, shutting down gracefully...');
   process.exit(0)}
 });
+
 process.on('SIGTERM', () => {}
   fixer.log('info', 'Received SIGTERM, shutting down gracefully...');
   process.exit(0)}
 });
+
 // Handle uncaught errors;
 process.on('uncaughtException', (error) => {}
   fixer.log('error', 'Uncaught exception', error);
   process.exit(1)}
 });
+
 process.on('unhandledRejection', (reason, promise) => {}
   fixer.log('error', 'Unhandled rejection', { reason, promise }
 });
   process.exit(1)}
 });
+
 // Start the service;
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
+<<<<<<< HEAD
 });
 });
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

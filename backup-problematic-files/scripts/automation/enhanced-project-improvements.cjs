@@ -216,5 +216,9 @@ export * from "@testing-"library/react""
   const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   "analyzerMode": "static"
           "openAnalyzer"
+<<<<<<< HEAD
     fs.writeFileSync(path.join(this.projectRoot, ")
     fs.writeFileSync(path.join(this.projectRoot, ")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

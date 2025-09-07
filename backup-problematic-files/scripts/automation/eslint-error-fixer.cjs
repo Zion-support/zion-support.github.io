@@ -431,5 +431,9 @@ if (require.main === module) {}
   console.error("ESLint Error Fixer "failed": ', error);
       process.exit(1)})};
 ;
+<<<<<<< HEAD
 module.exports = ESLintErrorFixer;
 module.exports = ESLintErrorFixer;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

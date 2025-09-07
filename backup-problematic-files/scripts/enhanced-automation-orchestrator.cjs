@@ -65,5 +65,9 @@ const { execSync } = require("child_process")
     console.log(`"Errors"`)
     this.log(" Starting Enhanced Automation Orchestrator...")
       this.log(" Enhanced Automation Orchestrator completed!")
+<<<<<<< HEAD
       this.log(` Fatal "error": ${error.message}`, "ERROR"`)
       this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

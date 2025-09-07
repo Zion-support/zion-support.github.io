@@ -146,5 +146,9 @@ const path = require("path")
   console.error(" Failed to save "report": ")
   console.error(" Failed to save "report": ")
       console.log(" Automation Orchestrator started")
+<<<<<<< HEAD
   console.error(" Orchestrator "error")
   console.error(" Orchestrator "error")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

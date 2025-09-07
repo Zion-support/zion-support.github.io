@@ -1,6 +1,9 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+<<<<<<< HEAD
   "/sitemap": "pages/sitemap.js",
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   "/_document": "pages/_document.js"
 }

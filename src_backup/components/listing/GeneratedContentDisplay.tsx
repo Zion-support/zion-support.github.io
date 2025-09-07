@@ -1,8 +1,26 @@
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
 <Badge
+=======
+
+;
+import { ArrowRight  } from 'lucide-react';
+import { Card;
+  CardContent;
+  CardFooter;
+  CardHeader;
+  CardTitle;
+ } from '@/components/ui/card';
+interface GeneratedContent  {import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+<Badge;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/listing/GeneratedContentDisplay.tsx
                 key={index}
                 className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'>                {tag}              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
           <div className="flex flex-wrap gap-2">;
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
             {content && content.tags.map((tag, index) => (;
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
 
@@ -160,7 +178,89 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
 
+=======
+            {content && content.tags.map((tag, index) => (<Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;import React from "react",import { Button } from "@/components/ui/button",import { Badge } from "@/components/ui/badge",import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",interface GeneratedContent  {description: string,tags: string[],suggestedPrice: {min: number,max: number;
+  },keyPoints: string[];
+interface GeneratedContent  {description: string,tags: string[],suggestedPrice: {min: number,max: number;
+  },keyPoints: string[];
+}interface GeneratedContentDisplayProps  {content: GeneratedContent;
+  onApply: () => void;
+}export function GeneratedContentDisplay() {return (<Card className="border border-zion-blue-light bg-zion-blue-dark">;
+      <CardHeader>;
+        <CardTitle className="text-white">Generated Content</CardTitle>;
+      </CardHeader>;
+      <CardContent className="space-y-4">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/listing/GeneratedContentDisplay.tsx
         <div>;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>;
+          <p className="text-white">{content.description}</p>;
+        </div>;
+        <div>;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
+          <div className="flex flex-wrap gap-2">;
+            {content.tags.map((tag, index) => (<Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
+import { Card,CardContent,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
+interface GeneratedContent  {description: string;
+  tags: string[];
+  suggestedPrice: {min: number;
+    max: number;
+  },keyPoints: string[];
+}interface GeneratedContentDisplayProps  {content: GeneratedContent;
+  onApply: () => void;
+export function GeneratedContentDisplay() {return (<Card className='border border-zion-blue-light bg-zion-blue-dark'>;
+      <CardHeader>;
+        <CardTitle className='text-white'>Generated Content</CardTitle>;
+      </CardHeader>;
+      <CardContent className='space-y-4'>;
+        <div>;
+          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>;
+            Description;
+          </h3>;
+          <p className='text-white'>{content.description}</p>;
+        </div>;
+        <div>;
+          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>;
+            Tags;
+          </h3>;
+          <div className='flex flex-wrap gap-2'>;
+            {content.tags.map((tag, index) => (<Badge;
+                key={index}
+                className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30';
+              >;
+                {tag}</Badge>;
+            ))}<div>;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>;
+          <p className="text-white">;
+            ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}<div></div>;
+        </div>;
+<div>;
+          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>;
+            Suggested Price Range;
+          </h3>;
+          <p className='text-white'>;
+            ${content.suggestedPrice.min.toFixed(2)} - $;
+            {content.suggestedPrice.max.toFixed(2)}
+          </p>;
+        </div>;
+          </p>;
+        </div>;
+        <div>;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>;
+          <p className="text-white">;
+            ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
+          </p>;
+        </div>;
+        <div>;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>;
+          <ul className="list-disc pl-5 text-white space-y-1">;
+          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>;
+            Key Selling Points;
+          </h3>;
+          <ul className='list-disc pl-5 text-white space-y-1'>;
+            {content.keyPoints.map((point, index) => (<li key={index}>{point}</li>;
+            {content.keyPoints.map((point, index,) => (<li key={index}>{point}</li>;
+          </div>;
+        </div>;<div>;
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>;
             Suggested Price Range;
           </h3>;
@@ -168,9 +268,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ${content && content.suggestedPrice.min && min.toFixed(2)} - $;
             {content && content.suggestedPrice.max && max.toFixed(2)}
           </p>;
-        </div>;
-
-        <div>;
+        </div>;<div>;
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>;
             Key Selling Points;
           </h3>;
@@ -179,11 +277,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-white">;
             ${content && content.suggestedPrice.min && min.toFixed(2)} - ${content && content.suggestedPrice.max && max.toFixed(2)}
           </p>;
-        </div>;
-
-        <div>;
+        </div>;<div>;
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>;
           <ul className="list-disc pl-5 text-white space-y-1">;
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
             {content && content.keyPoints.map((point, index) => (;
             {content && content.keyPoints.map((point, index,) => (;
               <li key={index}>{point}</li>;
@@ -205,21 +302,23 @@ import {
 } from '@/components/ui/ card';
 interface GeneratedContent {
   description: string;
+=======
+            {content && content.keyPoints.map((point, index) => ({content && content.keyPoints.map((point, index,) => (<li key={index}>{point}</li>;))}import { Button  } from '@/components / ui / button';
+import { Badge  } from '@/components / ui / badge';
+  CardContent,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
+interface GeneratedContent  {description: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/listing/GeneratedContentDisplay.tsx
 tags: string[];
-suggested_price: {
-  min: number;
+suggested_price: {min: number;
 max: number;
 }
 key_points: string[];
-}interface GeneratedContentDisplayProps {
-  content: GeneratedContent;
+}interface GeneratedContentDisplayProps  {content: GeneratedContent;
   on_apply: () => void;
-export /**
- * GeneratedContentDisplay - Function description
- */
-function GeneratedContentDisplay() {
-  return (
-    <Card className='border border - zion - blue - light bg - zion - blue - dark'>;
+export /**;
+ * GeneratedContentDisplay - Function description;
+ */;
+function GeneratedContentDisplay() {return (<Card className='border border - zion - blue - light bg - zion - blue - dark'>;
       <CardHeader>;
         <CardTitle className='text - white'>Generated Content</CardTitle>;
       </CardHeader>;
@@ -235,15 +334,13 @@ function GeneratedContentDisplay() {
             Tags;
           </h3>;
           <div className='flex flex - wrap gap - 2'>;
-            {content.tags.map ((tag, index) => (
-              <Badge;
+            {content.tags.map ((tag, index) => (<Badge;
                 key={index}
                 className='bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30';
               >                {tag}              <Badge key={index} className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30">;
           <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Tags</h3>;
           <div className="flex flex - wrap gap - 2">;
-            {content.tags.map ((tag, index) => (
-              <Badge key={index} className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30">;
+            {content.tags.map ((tag, index) => (<Badge key={index} className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30">;
                 {tag}
               </Badge>))}
           </div>;
@@ -270,13 +367,10 @@ function GeneratedContentDisplay() {
         <div>;
           <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Key Selling Points</h3>;
           <ul className="list - disc pl - 5 text - white space - y-1">;
-            {content.key_points.map ((point, index) => (
-            {content.key_points.map ((point, index, ) => (
-              <li key={index}>{point}</li>))}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-          </ul>;
+            {content.key_points.map ((point, index) => ({content.key_points.map ((point, index, ) => (<li key={index}>{point}</li>))}</ul>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
       <CardFooter>;
 <<<<<<< HEAD
 =======
@@ -294,28 +388,35 @@ function GeneratedContentDisplay() {
     </Card>
   )
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
+=======
+      <CardFooter>;className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/listing/GeneratedContentDisplay.tsx
         >;
           Apply to My Listing;
           <ArrowRight className="ml-2 h-4 w-4" />;
         </Button>;
       </CardFooter>;
     </Card>;
-  );
-}
-
-        <Button;
+  )className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
+        >;
+          Apply to My Listing;
+          <ArrowRight className="ml-2 h-4 w-4" />;
+        </Button>;
+      </CardFooter>;
+    </Card>;
+  )}<Button;
           on_click={on_apply}
           className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white';
         >;
           Apply to My Listing;
           <ArrowRight className='ml - 2 h - 4 w - 4' />        </Button>;
       </CardFooter>;
-    </Card>);
-}          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover: from - zion - cyan - light hover:to - zion - cyan text - white";
+    </Card>)}          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover: from - zion - cyan - light hover:to - zion - cyan text - white";
         >;
           Apply to My Listing;
           <ArrowRight className="ml - 2 h - 4 w - 4" />;
       </CardFooter>;
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
     </Card>);
 }
 
@@ -337,3 +438,19 @@ className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-z
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    </Card>)}</ul>;
+        </div>;
+      </CardContent>;
+      <CardFooter>;
+        <Button;
+          onClick={onApply}
+className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white';
+        >;
+          Apply to My Listing;
+          <ArrowRight className='ml-2 h-4 w-4' />;
+        </Button>;
+      </CardFooter>;
+    </Card>;
+  )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/listing/GeneratedContentDisplay.tsx

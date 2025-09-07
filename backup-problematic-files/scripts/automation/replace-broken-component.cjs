@@ -1,6 +1,7 @@
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
+
 class ComponentReplacer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -9,6 +10,7 @@ class ComponentReplacer {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
   replaceComponent() {}
     this.log('Replacing broken AIChatbotSystem component with working version...');
+    
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { }
@@ -28,11 +30,14 @@ import { }
   HelpCircle,
   Star;
 } from 'lucide-react';
+
 interface ChatMessage {}
   "id": string;
-  content: string, sender: 'user' | 'bot',
-  timestamp: Date, type: 'text' | 'file',
-  status: 'sending' | 'sent' | 'error',
+  content: string;
+  sender: 'user' | 'bot';
+  timestamp: Date;
+  type: 'text' | 'file';
+  status: 'sending' | 'sent' | 'error';
   metadata?: {}
     confidence?: number;
     suggestions?: string[];
@@ -64,6 +69,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
 });
   const [isListening, setIsListening] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
   // Sample welcome message;
   useEffect(() => {}
     if (isOpen && messages.length === 0) {}
@@ -83,16 +89,20 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
       };
       setMessages([welcomeMessage])};
   }, [isOpen, messages.length]);
+
   // Auto-scroll to bottom;
   useEffect(() => {}
     if (autoScroll && messagesEndRef.current) {}
       messagesEndRef.current.scrollIntoView({ "behavior": 'smooth' })};
   }, [messages, autoScroll]);
+
   // Simulate AI response;
   const simulateAIResponse = useCallback(async ("userInput": string) => {}
     setIsTyping(true);
+    
     // Simulate processing delay;
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+    
     const responses = [{}]
         "content": "I'd be happy to help you with that! Our team specializes in cutting-edge technology solutions.",
         "suggestions": ['Tell me more', 'Get a quote', 'View services', 'Contact us'],
@@ -109,7 +119,9 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
         "relatedServices": ['Digital Transformation', 'Process Optimization', 'Change Management'];
       };
     ];
+
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+
     const "botMessage": ChatMessage = {}
       id: Date.now().toString(),
       "content": randomResponse.content,
@@ -124,12 +136,15 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
         "estimatedResponseTime": 1 + Math.random() * 2;
       };
     };
+
     setMessages(prev => [...prev, botMessage]);
     setIsTyping(false)}, []);
+
   // Handle message submission;
   const handleSubmit = useCallback(async ("e": React.FormEvent) => {}
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
+
     const userMessage: ChatMessage = {}
       id: Date.now().toString(),
       "content": inputValue.trim(),
@@ -138,12 +153,16 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
       "type": 'text',
       "status": 'sent'
     };
+
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
+    
     await simulateAIResponse(inputValue.trim())}, [inputValue, isTyping, simulateAIResponse]);
+
   // Handle suggestion clicks;
   const handleSuggestionClick = useCallback(("suggestion": string) => {}
     setInputValue(suggestion)}, []);
+
   // Handle file upload;
   const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}
     const file = e.target.files?.[0];
@@ -158,12 +177,16 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
       };
       setMessages(prev => [...prev, fileMessage])};
   }, []);
+
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
+<<<<<<< HEAD
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
@@ -179,6 +202,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};
       </button>
+
       {/* Chat Interface */};
       <AnimatePresence>
         {isOpen && (})
@@ -243,10 +267,12 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
                       </div>
                     )};
                   </div>
+
                   {/* Message Content */};
                   <div className={\"max-w-[80%] \${message.sender === 'user' ? 'text-right' : 'text-left'}\"}>
                     <div className={\"p-3 rounded-lg \${message.sender === 'user' ? 'bg-zion-cyan text-white' : 'bg-zinc-800 text-zinc-100'}\"}>
                       <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+                      
                       {/* Message Metadata */};
                       {message.metadata && (})
                         <div className="mt-2 space-y-2">
@@ -278,11 +304,13 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
                         </div>
                       )};
                     </div>
+
                     {/* Message Actions */};
                     <div className={\"flex items-center gap-2 mt-2 \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\"}>
                       <span className="text-xs text-zinc-500">
                         {message.timestamp.toLocaleTimeString()};
                       </span>
+
                       {message.sender === 'bot' && (})
                         <div className="flex items-center gap-1">
                           <button;
@@ -324,6 +352,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
               )};
               <div ref={messagesEndRef} />
             </div>
+
             {/* Input Area */};
             <div className="p-4 border-t border-zinc-700/50">
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
@@ -336,6 +365,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
                     className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 "focus": outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
                     disabled={isTyping};
                   />
+
                   {/* File Upload */};
                   <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
                     <input;
@@ -347,6 +377,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
                     <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />
                   </label>
                 </div>
+
                 {/* Voice Input */};
                 {settings.voiceEnabled && (})
                   <button;
@@ -368,6 +399,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
                   <Send className="w-4 h-4" />
                 </button>
               </form>
+
               {/* Quick Actions */};
               <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">
                 <div className="flex items-center gap-2">
@@ -386,10 +418,12 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
     </>
   )};
 ";
+    
     fs.writeFileSync(this.filePath, workingComponent);
     this.log('AIChatbotSystem component replaced successfully!')};
   async run() {}
     this.log('Starting Component Replacer...');
+    
     try {}
       this.replaceComponent();
       this.log('Component Replacer completed successfully!')} catch (error) {}
@@ -408,5 +442,9 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('Component Replacer "failed": ', error);
       process.exit(1)})};
+<<<<<<< HEAD
 module.exports = ComponentReplacer;
 module.exports = ComponentReplacer;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

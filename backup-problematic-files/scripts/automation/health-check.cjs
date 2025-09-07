@@ -134,5 +134,9 @@ class HealthChecker {}
 if (require.main === module) {}
     const healthChecker = new HealthChecker();
     healthChecker.run()};
+<<<<<<< HEAD
 module.exports = HealthChecker;
 module.exports = HealthChecker;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

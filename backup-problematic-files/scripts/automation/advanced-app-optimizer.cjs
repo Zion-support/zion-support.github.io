@@ -300,9 +300,13 @@ export class PerformanceMonitor {}
       
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
+<<<<<<< HEAD
       
       
       
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       // Log slow operations;
       if ( {})
         console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};
@@ -489,5 +493,9 @@ if ( {})
      {}
     const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = AdvancedAppOptimizer;
 module.exports = AdvancedAppOptimizer;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

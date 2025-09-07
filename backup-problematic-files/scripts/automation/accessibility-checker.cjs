@@ -494,5 +494,9 @@ if ( {})
      {}
     const checker = new AccessibilityChecker}(;);
     checker.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = AccessibilityChecker;
 module.exports = AccessibilityChecker;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -131,6 +132,8 @@ enhancer.run().catch(console.error);
 
 module.exports = AccessibilityEnhancer;
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 const fs = require("$1")
@@ -200,4 +203,7 @@ const path = require("path")
       this.log(` Failed to create accessibility "styles"`)
     this.log("♿ Starting accessibility enhancement...")
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

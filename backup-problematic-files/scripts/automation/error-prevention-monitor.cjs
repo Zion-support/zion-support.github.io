@@ -642,5 +642,9 @@ if (require.main === module) {
 }
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();
+<<<<<<< HEAD
 monitor.run();
 monitor.run();
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

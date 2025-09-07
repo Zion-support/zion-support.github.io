@@ -8,5 +8,9 @@ console.log('🧪 Starting Comprehensive Test Runner...')
     addTest('Unit Tests', 'skipped', 0, { "reason"})
     runCommand('PYTHONPATH="$(pwd)/zion_academy" python3 -m unittest discover -s zion_academy/tests -p "test_*.py"
     addTest('Python Unit Tests', 'skipped', 0, { "reason"})
+<<<<<<< HEAD
 console.log('\n Test Results "Summary")
 console.log('\n Test Results "Summary")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

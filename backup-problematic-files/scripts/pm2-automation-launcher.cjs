@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require("$1")
 const path = require("$1")
 const { execSync, spawn } = require("child_process")
@@ -154,5 +159,9 @@ process.on("SIGINT")
       case "report":";        await launcher.generateReport();"
       case "help":";      default"
   } catch (error) {launcher.log(` Command failed``})
+<<<<<<< HEAD
 process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
 process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

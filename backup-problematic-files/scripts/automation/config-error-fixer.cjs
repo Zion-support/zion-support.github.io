@@ -156,5 +156,9 @@ this.log(`� Report "generated"`)
   this.log(" Starting Config Error Fixer...")
   this.log("� No configuration issues found!")
         return { "success": true, "issues": [], "fixed"}
+<<<<<<< HEAD
       this.log("� Config Error Fixer completed!")
       this.log("� Config Error Fixer completed!")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

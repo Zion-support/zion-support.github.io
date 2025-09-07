@@ -2,11 +2,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+;
+  id: string;
+export interface PracticalMicroSaas2027  {id: string;name: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string;
 =======
 =======
@@ -22,6 +29,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   link: string;
   category: string;
   realImplementation: boolean;
+  contactInfo: {mobile: string;
+    email: string;
+export interface PracticalMicroSaas2027  {address: string;
+  }id: string,name: string,tagline: string,price: string,description: string,features: string[],link: string,category: string,realImplementation: boolean,contactInfo: {mobile: string,email: string,address: string;
+  }
+}address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];id: string, name: string,tagline: string, price: string,description: string, features: string[],link: string, category: string,realImplementation: boolean,contactInfo: {export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [;
+  {id: "2027-practical-micro-saas", name: "2027 Practical Micro SAAS Platform",tagline: "Practical micro SAAS for 2027", price: "$129/month",description: "Practical micro SAAS platform designed for 2027 with real-world business applications.",id: '2027-practical-micro-saas';
+    name: '2027 Practical Micro SAAS Platform';
+    tagline: 'Practical micro SAAS for 2027';
+    price: '$129/month';
+    description:;
+      'Practical micro SAAS platform designed for 2027 with real-world business applications.';
+    address: string;
+  }
+}export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [;
+  {id: "2027-practical-micro-saas";
+    name: "2027 Practical Micro SAAS Platform";
+    tagline: "Practical micro SAAS for 2027";
+    price: "$129/month";
+    description: "Practical micro SAAS platform designed for 2027 with real-world business applications.";features: [;
   contactInfo: {
     mobile: string;
     email: string;
@@ -47,6 +77,7 @@ export interface PracticalMicroSaas2027 {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -61,6 +92,8 @@ export interface PracticalMicroSaas2027 {;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -68,6 +101,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -80,6 +114,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -88,7 +124,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   contactInfo: {
 export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
   {
-<<<<<<< HEAD
     id: "2027-practical-micro-saas", name: "2027 Practical Micro SAAS Platform",
     tagline: "Practical micro SAAS for 2027", price: "$129/month",
     description: "Practical micro SAAS platform designed for 2027 with real-world business applications.",
@@ -98,6 +133,7 @@ export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
     price: '$129/month'
     description:
       'Practical micro SAAS platform designed for 2027 with real-world business applications.'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -122,11 +158,29 @@ export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     features: [
       "Practical solutions";
       "Business applications";
       "Real-world use cases";
+<<<<<<< HEAD
       "Easy integration",
+=======
+      "Easy integration";
+      "Affordable pricing";
+    ];
+    link: "/services/2027-practical-micro-saas", category: "Practical Micro SAAS 2027",realImplementation: true,contactInfo: {"Easy integration","Affordable pricing";
+    ],link: "/services/2027-practical-micro-saas";
+    category: "Practical Micro SAAS 2027";
+    realImplementation: true;
+    contactInfo: {mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       "Affordable pricing"
     ],
     link: "/services/2027-practical-micro-saas";
@@ -151,8 +205,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
+];id: "2027-practical-micro-saas",name: "2027 Practical Micro SAAS Platform",tagline: "Practical micro SAAS for 2027",price: "$129/month",description: "Practical micro SAAS platform designed for 2027 with real-world business applications.",features: [;
+      "Practical solutions","Business applications","Real-world use cases","Easy integration","Affordable pricing";
+    ],link: "/services/2027-practical-micro-saas",category: "Practical Micro SAAS 2027",realImplementation: true,contactInfo: {mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  }];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
 ];
 ;
+<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
@@ -184,10 +249,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -203,3 +280,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

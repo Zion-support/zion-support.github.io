@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -20,10 +21,26 @@ export interface CodeSample {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+;
+export type HttpMethod = any;
+export interface CodeSample  {language: 'curl' | 'javascript' | 'python';
+  code: string;export interface RateLimitInfo  {tier: 'free' | 'partner' | 'internal';
+  limitPerMinute: number;
+  burst?: number;;;export interface ErrorCode  {code: string;
+  http_status: number;
+  message: string;;export interface EndpointSpec  {export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';export interface CodeSample  {language: 'curl' | 'javascript' | 'python';
+  code: string;export interface RateLimitInfo  {tier: 'free' | 'partner' | 'internal';
+  limitPerMinute: number;
+  burst?: number;export interface ErrorCode  {code: string;
+  httpStatus: number;
+  message: string;export interface EndpointSpec  {ursor/fix-website-loading-errors-and-merge-6662;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
   burst?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,10 +61,13 @@ export interface RateLimitInfo {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface ErrorCode {
   code: string;
   http_status: number;
   message: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,6 +90,8 @@ export interface EndpointSpec {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export interface CodeSample {;
@@ -90,6 +112,7 @@ export interface EndpointSpec {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -105,6 +128,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string;
   title: string;
   description: string;
@@ -120,9 +145,51 @@ samples: CodeSample[];
   rateLimits?: RateLimitInfo[];
 origin/cursor/automate-test-improve-and-merge-code-2533
   errors?: ErrorCode[];
+  tags?: string[];auth: Array<'jwt' | 'oauth' | 'wallet' | 'apiKey' | 'none'>;
+  query?: Record<string, string>;
+  params?: Record<string, string>;
+  requestBodySchema?: unknown;
+  responseBodySchema?: unknown;
+samples: CodeSample[];
+  rateLimits?: RateLimitInfo[];errors?: ErrorCode[];
   tags?: string[];
-<<<<<<< HEAD
+export interface SectionSpec  {export interface SectionSpec  {versions: string[]; // e && e.g., ['v1'] or ['v1','v2'];
+export interface SectionSpec  {versions: string[]; // e.g., ['v1'] or ['v1', 'v2'];
+  versions: string[]; // e.g., ['v1'] or ['v1','v2'];
+export interface SectionSpec  {versions: string[]; // e.g., ['v1'] or ['v1','v2'];
+export interface SectionSpec  {export interface SectionSpec  {export interface SectionSpec  {ursor/fix-website-loading-errors-and-merge-6662;
+  id: string;
+  title: string;
+  description?: string;
+  endpoints: EndpointSpec[];;export interface ApiDocsSpec  {export interface ApiDocsSpec  {export interface ApiDocsSpec  {export interface ApiDocsSpec  {export interface ApiDocsSpec  {ursor/fix-website-loading-errors-and-merge-6662;
+  product: 'Zion OS';
+  versions: string[]; // available versions;
+  default_version: string;
+  sections: SectionSpec[];export type Visibility = 'public' | 'partner' | 'internal';
+export interface CodeSample  {language: 'curl' | 'javascript' | 'python';
+  code: string;
+export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+  lastUpdatedIso: string;  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;;
+export type Visibility = 'public' | 'partner' | 'internal';export interface CodeSample  {language: 'curl' | 'javascript' | 'python',code: string;
+}
+export interface RateLimitInfo  {tier: 'free' | 'partner' | 'internal', limitPerMinute: number,burst?: number;
+}
+export interface ErrorCode  {code: string, http_status: number,message: string;
+}
+export interface EndpointSpec {}
+export interface EndpointSpec  {id: string, title: string,description: string, path: string,method: HttpMethod, visibility: Visibility,query?: Record<string, string>;
+  params?: Record<string, string>;
+  id: string, title: string,description: string, path: string,method: HttpMethod, visibility: Visibility,auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>,query?: Record < string, string>;
+  params?: Record < string, string>;
+  requestBodySchema?: unknown;
+  responseBodySchema?: unknown;
+  lastUpdatedIso: string;
+  lastUpdatedIso: string;
+  lastUpdatedIso: string;
+}}}
+  tags?: string[];
 export interface SectionSpec {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -150,12 +217,15 @@ export interface SectionSpec {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+export interface SectionSpec {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 
 export interface SectionSpec {;
 
-<<<<<<< HEAD
 export interface SectionSpec {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -171,10 +241,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string;
   title: string;
   description?: string;
   endpoints: EndpointSpec[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -183,10 +256,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface ApiDocsSpec {
 
 
 export interface ApiDocsSpec {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -212,10 +288,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
   sections: SectionSpec[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -243,6 +322,8 @@ export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export type Visibility = 'public' | 'partner' | 'internal';
 ;
 export interface CodeSample {
@@ -258,7 +339,6 @@ export interface ErrorCode {
   message: string;
 }
 export interface EndpointSpec {
-<<<<<<< HEAD
   id: string, title: string,
   description: string, path: string,
   method: HttpMethod, visibility: Visibility,
@@ -272,6 +352,7 @@ export interface EndpointSpec {
   params?: Record < string, string>;
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
+<<<<<<< HEAD
   lastUpdatedIso: string
 
 <<<<<<< HEAD
@@ -298,6 +379,10 @@ export interface EndpointSpec {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  lastUpdatedIso: string
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 }
 
@@ -306,9 +391,27 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 }
 }
+}ursor/fix-website-loading-errors-and-merge-6662;
+export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',export type Visibility = 'public' | 'partner' | 'internal',export interface CodeSample  {language: 'curl' | 'javascript' | 'python',code: string;
+}export interface RateLimitInfo  {tier: 'free' | 'partner' | 'internal',limitPerMinute: number,burst?: number;
+}export interface ErrorCode  {code: string,httpStatus: number,message: string;
+}export interface EndpointSpec  {id: string,title: string,description: string,path: string,method: HttpMethod,visibility: Visibility,auth: Array<'jwt' | 'oauth' | 'wallet' | 'apiKey' | 'none'>,query?: Record<string string>,params?: Record<string string>,requestBodySchema?: unknown,responseBodySchema?: unknown,samples: CodeSample[],rateLimits?: RateLimitInfo[],errors?: ErrorCode[],tags?: string[],versions: string[], // e.g., ['v1'] or ['v1v2'];
+}export interface SectionSpec  {id: string,title: string,description?: string,endpoints: EndpointSpec[];
+}export interface ApiDocsSpec  {product: 'Zion OS',versions: string[], // available versions;
+  defaultVersion: string,sections: SectionSpec[];
+  lastUpdatedIso: string;
+}lastUpdatedIso: string;
+}
+  lastUpdatedIso: string;
+}
+ursor/fix-website-loading-errors-and-merge-6662;
+  lastUpdatedIso: string;
+  lastUpdatedIso: string;
+}
 }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -326,6 +429,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
 export type Visibility = 'public' | 'partner' | 'internal',;
 export interface CodeSample {;
@@ -382,9 +487,9 @@ export interface ApiDocsSpec {;
 
 
 
-<<<<<<< HEAD
   lastUpdatedIso: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -410,3 +515,5 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

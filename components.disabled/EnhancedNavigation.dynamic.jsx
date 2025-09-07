@@ -1,20 +1,50 @@
+const EnhancedNavigation = dynamic(() => import("./EnhancedNavigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedNavigation' ,';
+</p>';
+</p>';
+</p>';
+</p>';
+ursor/automate-test-improve-and-merge-code-646c;
+</p>';
+</p>';
+</p>';
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/automate-test-improve-and-merge-code-646c;
+</p>';
+</p>';
+</p>';
+</p>';
+ursor/automate-test-improve-and-merge-code-646c;
+</p>';
+</p>';
+</p>';
 const EnhancedNavigation = dynamic(() => import("./EnhancedNavigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedNavigation' ,'
 </p>'
 </p>'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 </p>'
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 </p>'
 
 
 </p>'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 </p>'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+</p>'
+
+</p>'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 </p>'
 </p>'

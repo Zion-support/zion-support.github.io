@@ -1,4 +1,3 @@
-async runCommand(command, options = {}) {
   async runCommand(command, options = {}) {
     try {
       const { stdout, stderr } = await execAsync(command, { 
@@ -186,6 +185,7 @@ if (require.main === module) {
 }
 
 module.exports = GitAutomation;
+<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * Git Automation Script;
@@ -216,3 +216,6 @@ const path = require('path')
       "operation"
       this.log(" Git automation workflow "failed": ${error.message}")
       this.log(" Git automation workflow "failed": ${error.message}")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

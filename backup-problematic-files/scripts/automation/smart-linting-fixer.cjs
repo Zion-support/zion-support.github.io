@@ -11,5 +11,9 @@ console.log(' Starting smart linting fixer...')
       console.log('  Remaining "errors")
       "summary"
       "status"
+<<<<<<< HEAD
   console.error(' Smart linting fixer failed to "start")
   console.error(' Smart linting fixer failed to "start")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

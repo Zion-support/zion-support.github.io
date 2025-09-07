@@ -1,3 +1,28 @@
+
+;
+"use client",export function StructuredData() {const structuredData = {"@context": "https://schema.org","@type": "SoftwareApplication","name": "Zion OS","description": "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.","url": "https://ziontechgroup.com","applicationCategory": "BusinessApplication","operatingSystem": "Web","offers": {"@type": "Offer","price": "0","priceCurrency": "USD";
+    },"provider": {"@type": "Organization","name": "Zion Tech Group","url": "https://ziontechgroup.com","logo": "https://ziontechgroup.com/logo.png","sameAs": [;
+        "https://twitter.com/ziontechgroup","https://github.com/ziontechgroup","https://linkedin.com/company/ziontechgroup";
+      ];
+    },"featureList": [;
+      "Marketplace & Jobs","AI Governance","Token Systems","Identity & KYC","AI-Powered Tools","Modular Architecture";
+    ],"screenshot": "https://ziontechgroup.com/screenshot.png","softwareVersion": "1.0.0","releaseNotes": "Initial release with core features for launching digital economies","aggregateRating": {"@type": "AggregateRating","ratingValue": "4.8","ratingCount": "150","bestRating": "5","worstRating": "1";
+    },"author": {"@type": "Organization","name": "Zion Tech Group","url": "https://ziontechgroup.com";
+    }
+  }return ("use client",export /**;
+ * StructuredData - Function description;
+ */;
+function StructuredData() {const structured_data = {"@context": "https://schema.org","@type": "SoftwareApplication","name": "Zion OS","description": "Launch sovereign AI - powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.","url": "https://ziontechgroup.com","application_category": "BusinessApplication","operating_system": "Web","offers": {"@type": "Offer","price": "0","price_currency": "USD";
+    },"provider": {"@type": "Organization","name": "Zion Tech Group","url": "https://ziontechgroup.com","logo": "https://ziontechgroup.com / logo.png","same_as": [;
+        "https://twitter.com / ziontechgroup","https://github.com / ziontechgroup","https://linkedin.com / company / ziontechgroup";
+      ];
+    },"feature_list": [;
+      "Marketplace & Jobs","AI Governance","Token Systems","Identity & KYC","AI - Powered Tools","Modular Architecture";
+    ],"screenshot": "https://ziontechgroup.com / screenshot.png","software_version": "1.0.0","release_notes": "Initial release with core features for launching digital economies","aggregate_rating": {"@type": "AggregateRating","rating_value": "4.8","rating_count": "150","best_rating": "5","worst_rating": "1";
+    },"author": {"@type": "Organization","name": "Zion Tech Group","url": "https://ziontechgroup.com";
+    }
+  }
+  return (  return (<script;
 "use client",
 export /**
  * StructuredData - Function description
@@ -26,6 +51,9 @@ function StructuredData() {
         "https://github.com / ziontechgroup",
         "https://linkedin.com / company / ziontechgroup";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 "use client";
 export function StructuredData() {const structuredData = {;
     "@context": "https://schema.org";
@@ -49,9 +77,12 @@ export function StructuredData() {const structuredData = {;
         "https://github.com/ziontechgroup";
         "https://linkedin.com/company/ziontechgroup";
       ];
+<<<<<<< HEAD
 =======
 =======      ];
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     },
     "feature_list": [;
       "Marketplace & Jobs",
@@ -78,13 +109,17 @@ export function StructuredData() {const structuredData = {;
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
   return (;
 =======
   return (  return (;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  return (
+  return (;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <script;
       type="application / ld + json";
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}
-    />);
-}
+    />)}

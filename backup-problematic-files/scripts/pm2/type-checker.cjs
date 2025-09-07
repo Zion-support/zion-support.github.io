@@ -422,5 +422,9 @@ if (require.main === module) {}
 });
   };
 };
+<<<<<<< HEAD
 module.exports = TypeChecker;
 module.exports = TypeChecker;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

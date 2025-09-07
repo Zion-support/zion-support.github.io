@@ -1,18 +1,28 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+;
+export interface FuturisticInnovation2028  {export interface FuturisticInnovation2028  {id: string;
+export interface FuturisticInnovation2028 {  id: string;export interface FuturisticInnovation2028  {id: string;name: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface FuturisticInnovation2028 {
 <<<<<<< HEAD
   id: string;
 export interface FuturisticInnovation2028 {  id: string;
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 export interface FuturisticInnovation2028 {
 
@@ -26,6 +36,60 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   link: string;
   category: string;
   real_implementation: boolean;
+  contact_info: {mobile: string;
+    email: string;address: string;
+  }export interface FuturisticInnovation2028  {id: string,name: string,tagline: string,price: string,description: string,features: string[],link: string,category: string,realImplementation: boolean,contactInfo: {mobile: string,email: string,address: string;
+  }
+}ursor/fix-website-loading-errors-and-merge-6662;
+    address: string;
+  }
+export const futuristic2028Services: FuturisticInnovation2028[] = [;
+  {}
+  {address: string;
+  {address: string;
+  }export const futuristic2028Services: FuturisticInnovation2028[] = [;
+  {id: '2028 - futuristic - innovation',name: '2028 Futuristic Innovation Platform',tagline: 'Futuristic innovations for 2028',price: '$399 / month',description:;
+      'Futuristic innovation platform that showcases breakthrough technologies for 2028.',features: [;
+      'Futuristic innovations','Breakthrough technologies','Future capabilities','Innovation platform','Expert insights';
+      'Expert insights';
+      'Expert insights';
+    ],link: '/services / 2028 - futuristic - innovation',category: 'Futuristic Innovations 2028',real_implementation: true,contact_info: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  }
+];      mobile: "+1 302 464 0950";address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  }
+];      mobile: "+1 302 464 0950";address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  }
+];      mobile: "+1 302 464 0950";email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];id: "2028-futuristic-innovation",name: "2028 Futuristic Innovation Platform",tagline: "Futuristic innovations for 2028",price: "$399/month",description: "Futuristic innovation platform that showcases breakthrough technologies for 2028.",features: [;
+      "Futuristic innovations","Breakthrough technologies","Future capabilities","Innovation platform","Expert insights";
+    ],link: "/services/2028-futuristic-innovation",category: "Futuristic Innovations 2028",realImplementation: true,contactInfo: {ursor/fix-website-loading-errors-and-merge-6662;
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];id: string, name: string,tagline: string, price: string,description: string, features: string[],link: string, category: string,realImplementation: boolean,contactInfo: {mobile: string, email: string,address: string;
+  }
+}
+export const futuristic2028Services: FuturisticInnovation2028[] = [;
+  {id: "2028-futuristic-innovation", name: "2028 Futuristic Innovation Platform",tagline: "Futuristic innovations for 2028", price: "$399/month",description: "Futuristic innovation platform that showcases breakthrough technologies for 2028.",id: '2028-futuristic-innovation';
+    name: '2028 Futuristic Innovation Platform';
+    tagline: 'Futuristic innovations for 2028';
+    price: '$399/month';
+    description:;
+      'Futuristic innovation platform that showcases breakthrough technologies for 2028.';
+    address: string;
+  }
+}export const futuristic2028Services: FuturisticInnovation2028[] = [;
+  {id: "2028-futuristic-innovation";
+    name: "2028 Futuristic Innovation Platform";
+    tagline: "Futuristic innovations for 2028";
+    price: "$399/month";
+    description: "Futuristic innovation platform that showcases breakthrough technologies for 2028.";features: [;
   contact_info: {
     mobile: string;
     email: string;
@@ -38,6 +102,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -48,6 +113,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface FuturisticInnovation2028 {;
   id: string,;
   name: string,;
@@ -61,6 +128,7 @@ export interface FuturisticInnovation2028 {;
   contactInfo: {;
     mobile: string,;
     email: string,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -86,12 +154,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     address: string;
   }
 export const futuristic2028Services: FuturisticInnovation2028[] = [
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,6 +181,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     address: string;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    address: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
 ;
 export const futuristic2028Services: FuturisticInnovation2028[] = [;
@@ -125,7 +199,7 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [;
       'Breakthrough technologies',
       'Future capabilities',
       'Innovation platform',
-      'Expert insights',
+      'Expert insights'
     ],
     link: '/services / 2028 - futuristic - innovation',
     category: 'Futuristic Innovations 2028',
@@ -134,18 +208,18 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [;
 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
 ];      mobile: "+1 302 464 0950";
 
-<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
 
+<<<<<<< HEAD
 =======
 
 
@@ -169,10 +243,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -188,6 +265,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -201,6 +280,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export const futuristic2028Services: FuturisticInnovation2028[] = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     id: "2028-futuristic-innovation", name: "2028 Futuristic Innovation Platform",
     tagline: "Futuristic innovations for 2028", price: "$399/month",
     description: "Futuristic innovation platform that showcases breakthrough technologies for 2028.",
@@ -210,6 +292,7 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
     price: '$399/month'
     description:
       'Futuristic innovation platform that showcases breakthrough technologies for 2028.'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -234,6 +317,8 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     features: [
       "Futuristic innovations";
       "Breakthrough technologies";
@@ -241,12 +326,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Innovation platform";
+      "Expert insights";
+    ];
+    link: "/services/2028-futuristic-innovation", category: "Futuristic Innovations 2028",realImplementation: true,contactInfo: {mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com","Innovation platform","Expert insights";
+    ],link: "/services/2028-futuristic-innovation";
+    category: "Futuristic Innovations 2028";
+    realImplementation: true;
+    contactInfo: {mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];id: "2028-futuristic-innovation",name: "2028 Futuristic Innovation Platform",tagline: "Futuristic innovations for 2028",price: "$399/month",description: "Futuristic innovation platform that showcases breakthrough technologies for 2028.",features: [;
+      "Futuristic innovations","Breakthrough technologies","Future capabilities","Innovation platform","Expert insights";
+    ],link: "/services/2028-futuristic-innovation",category: "Futuristic Innovations 2028",realImplementation: true,contactInfo: {mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  }];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
       "Expert insights"
     ];
     link: "/services/2028-futuristic-innovation", category: "Futuristic Innovations 2028",
     realImplementation: true,
     contactInfo: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -268,6 +378,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -276,16 +388,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
+<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
@@ -318,10 +434,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -335,3 +463,5 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

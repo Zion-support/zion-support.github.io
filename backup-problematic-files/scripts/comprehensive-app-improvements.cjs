@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -123,3 +124,7 @@ class ComprehensiveAppImprover {
 // Run the comprehensive app improver
 const improver = new ComprehensiveAppImprover();
 improver.run().catch(console.error);
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

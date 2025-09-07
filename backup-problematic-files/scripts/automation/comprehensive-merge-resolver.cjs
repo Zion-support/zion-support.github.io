@@ -127,5 +127,9 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
         "mergesSuccessful"
         "errors"
       "successRate"
+<<<<<<< HEAD
     const reportPath = path.join(this.logsDir, ")
     const reportPath = path.join(this.logsDir, ")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require("$1")
 const path = require("path")
       let content = fs.readFileSync(filePath, "utf8")
@@ -18,5 +23,9 @@ const path = require("path")
       "pages/help.tsx"
       "pages/pricing-guide.tsx"
       "pages/pricing.tsx"
+<<<<<<< HEAD
       "
       "
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

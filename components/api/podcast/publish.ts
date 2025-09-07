@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -29,12 +30,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const rssUrl = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const rssUrl  = null;export default async function handler() {(process.env.SITE_URL |'http://localhost:3000') + '/podcast.xml';
+  return res.status(200).json({ ok: true, rssUrl })export default async function handler() {(process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
+  return res.status(200).json({ ok: true, rssUrl })export default async function handler() {try {if (req && req.method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })const rssUrl =;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const rssUrl  = (process.env.SITE_URL |'http: //localhost:3000') + '/podcast.xml';return res.status(200).json({ ok: true, rssUrl })}
+    (process && process.env.SITE_URL || 'http://localhost:3000') + '/podcast && podcast.xml';
+  return res && res.status(200).json({ ok: true, rssUrl })export default async function handler() {try {if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' })const rssUrl = (process && process.env.SITE_URL || 'http: //localhost:3000') + '/podcast && podcast.xml';
+  return res && res.status(200).json({ ok: true, rssUrl })}export default async /**;
+ * handler - Function description;
+ */;
+function handler() {if (return res.status (405).json ({ error: 'Method not allowed' })) {$2;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     (process.env.SITE_URL |'http://localhost:3000') + '/podcast.xml';
   return res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
@@ -58,6 +76,7 @@ export default async function handler(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,6 +89,8 @@ export default async function handler(
 }
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     (process && process.env.SITE_URL || 'http://localhost:3000') + '/podcast && podcast.xml';
   return res && res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -79,6 +100,7 @@ export default async function handler(
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -96,6 +118,8 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 export default async /**
  * handler - Function description
@@ -107,14 +131,13 @@ function handler() {
 }
   const rss_url =;
     (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
-  return res.status (200).json ({ ok: true, rss_url });export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
+  return res.status (200).json ({ ok: true, rss_url })export default async /**;
+ * handler - Function description;
+ */;
+function handler() {if (return res.status (405).json ({ error: 'Method not allowed' })) {$2;
 }
   const rss_url = (process.env.SITE_URL || 'http: //localhost:3000') + '/podcast.xml';
+<<<<<<< HEAD
   return res.status (200).json ({ ok: true, rss_url });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,13 +190,27 @@ function handler() {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   const rssUrl =
-    (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
-  return res.status(200).json({ ok: true, rssUrl });
-  return res.status(200).json({ ok: true, rssUrl })
+=======
+  return res.status (200).json ({ ok: true, rss_url })}}ursor/fix-website-loading-errors-and-merge-6662;
 }
+}}
+}}if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })const rssUrl =;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+    (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
+  return res.status(200).json({ ok: true, rssUrl })return res.status(200).json({ ok: true, rssUrl })}
+  return res.status (200).json ({ ok: true, rss_url });
+}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+
+}
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 }
 
@@ -184,7 +221,10 @@ function handler() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

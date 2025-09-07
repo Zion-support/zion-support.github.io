@@ -4,8 +4,11 @@
  * AI-powered auto-scaling system for PM2 processes;
  */
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -34,5 +37,9 @@ const { execSync } = require('child_process')
         "action"
       this.log(` Strategy optimization "failed"`)
       "onlineProcesses"
+<<<<<<< HEAD
       this.log(` Fatal "error"`)
       this.log(` Fatal "error"`)
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

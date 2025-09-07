@@ -1,6 +1,15 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const DataPipelineEngineeringChat: NextPage = () => {return (<div>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -9,9 +18,9 @@ const DataPipelineEngineeringChat: NextPage = () => {;
     <div>;
       <Head>;
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
-        <meta
-          name="description"
-          content="DataPipelineEngineeringChat service"
+        <meta;
+          name="description";
+          content="DataPipelineEngineeringChat service";
         />{" "}
       <main>
         <h1>DataPipelineEngineeringChat</h1>
@@ -29,6 +38,20 @@ const DataPipelineEngineeringChat: NextPage = () => {;
         <a href="/services">Back to Services</a>;
       </main>;
     </div>;
+      </Head>;<main>;
+        <h1>DataPipelineEngineeringChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  )}
+export default DataPipelineEngineeringChat;const DataPipelineEngineeringChat: NextPage = () => {return (<div>;
+      <Head>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
 export default DataPipelineEngineeringChat;
@@ -41,12 +64,6 @@ export default DataPipelineEngineeringChat;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
 const DataPipelineEngineeringChat: NextPage = () => {
   return (
@@ -59,6 +76,7 @@ const DataPipelineEngineeringChat: NextPage = () => {
 
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,12 +97,12 @@ const DataPipelineEngineeringChat: NextPage = () => {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
-const DataPipelineEngineeringChat: NextPage = () => {
-  return (
-    <div>;
+const DataPipelineEngineeringChat: NextPage = () => {return (<div>;
       <Head>;
         <title > DataPipelineEngineeringChat - Zion Tech Solutions</title>;
         <meta;
@@ -97,11 +115,41 @@ const DataPipelineEngineeringChat: NextPage = () => {
         <p > Service details coming soon...</p>;
         <a href="/services">Back to Services</a>;
       </main>;
+    </div>)}export default DataPipelineEngineeringChat;<div>;
+      <Head>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <meta name=&quot;description&quot; content=&quot;DataPipelineEngineeringChat service&quot; />;
+      </Head>;
+      <main>;
+        <h1>DataPipelineEngineeringChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href=&quot;/services&quot;>Back to Services</a>;
+      </main>;
+    </div>;
+  )},export default DataPipelineEngineeringChat;
+const DataPipelineEngineeringChat: NextPage = () => {return (<div>;
+      <Head>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <meta;
+          name="description";
+          content="DataPipelineEngineeringChat service";
+        />{" "}
+      </Head>;
+      <main>;
+        <h1>DataPipelineEngineeringChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  )}
+export default DataPipelineEngineeringChat;<title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
     </div>);
 }
 ;
 export default DataPipelineEngineeringChat;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -114,6 +162,8 @@ export default DataPipelineEngineeringChat;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <div>
       <Head>
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
@@ -132,12 +182,6 @@ export default DataPipelineEngineeringChat;
 export default DataPipelineEngineeringChat
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
 const DataPipelineEngineeringChat: NextPage = () => {
   return (
@@ -163,6 +207,7 @@ export default DataPipelineEngineeringChat;
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -177,3 +222,5 @@ export default DataPipelineEngineeringChat;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

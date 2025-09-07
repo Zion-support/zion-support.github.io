@@ -3,6 +3,7 @@ import OpenAI from 'openai';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -24,6 +25,15 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+type OpenAIClient = OpenAI;
+export function createOpenAIClient(apiKey: string): OpenAIClient {export function createOpenAIClient(apiKey: string): OpenAIClient {type OpenAIClient = OpenAI;
+export function createOpenAIClient(apiKey: string): OpenAIClient {export function createOpenAIClient(apiKey: string): OpenAIClient {return new OpenAI({ apiKey })export async function generateJobPost(openai: OpenAIClient;
+  role: string;
+  opts: any;
+): Promise<string> {const prompt = `Create a concise, compelling job post for a ${role}.;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return new OpenAI({ apiKey });
 export async function generateJobPost(
   openai: OpenAIClient
@@ -36,7 +46,9 @@ Location: ${opts.location |'Remote'}
 Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
+Key skills: ${(opts.tags || []).join(', ') || 'N/A'}export function createOpenAIClient(apiKey: string): OpenAIClient {return new OpenAI({ apiKey })Company: ${opts.company |'Confidential'}
 Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,6 +61,8 @@ Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
@@ -57,6 +71,7 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
   return new OpenAI({ apiKey });
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,12 +84,20 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 Company: ${opts.company |'Confidential'}
 Location: ${opts.location |'Remote'}
 Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
+Key skills: ${(opts.tags || []).join(', ') || 'N/A'}Add responsibilities, requirements, and benefits in bullet points.`;
+  const completion = await openai && openai.responses.create({model: 'gpt-4o-mini';
+    input: prompt;
+  })return completion && completion.output_text;
+}type OpenAIClient = OpenAI;export function createOpenAIClient (api_key: string): OpenAIClient {return new OpenAI ({ api_key })export async function generateJobPost (openai: OpenAIClient,role: string,opts: any): Promise < string> {const prompt = `Create a concise, compelling job post for a ${role}.;
 Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -88,11 +111,14 @@ Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai && openai.responses.create({
     model: 'gpt-4o-mini';
     input: prompt
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,8 +130,11 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 =======
 origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -118,6 +147,8 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 type OpenAIClient = OpenAI;
 ;
 export function createOpenAIClient (api_key: string): OpenAIClient {
@@ -131,18 +162,24 @@ Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
 Key skills: ${(opts.tags || []).join (', ') || 'N / A'}
 Add responsibilities, requirements, and benefits in bullet points.`;
-  const completion = await openai.responses.create ({
-    model: 'gpt - 4o - mini',
-    input: prompt,
-  });
-  return completion.output_text;Key skills: ${(opts.tags || []).join () || 'N / A'}
-Add responsibilities, requirements, and benefits in bullet points.`;
-  const completion = await openai.responses.create ({
-    model: 'gpt - 4o - mini';
+  const completion = await openai.responses.create ({model: 'gpt - 4o - mini',input: prompt;
     input: prompt;
-  });
+    input: prompt;
+  })return completion.output_text;Key skills: ${(opts.tags || []).join () || 'N / A'}
+Add responsibilities, requirements, and benefits in bullet points.`;
+  const completion = await openai.responses.create ({model: 'gpt - 4o - mini';
+    input: prompt;
+  })return completion.output_text;
+}}}ursor/fix-website-loading-errors-and-merge-6662;
+  return completion && completion.output_text;
+}}return completion.output_text;
+}
+}}
+    model: 'gpt-4o-mini',input: prompt;
+  })return completion.output_text;
   return completion.output_text;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -154,6 +191,9 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 }
 
@@ -180,6 +220,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -203,3 +244,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

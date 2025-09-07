@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   compress: true,
@@ -76,6 +79,22 @@ const nextConfig = {
 
 export default nextConfig;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+=======
+<<<<<<< HEAD
+/** @type {import(
+  'next').NextConfig} */
+const nextConfig = {
+<<<<<<< HEAD
+=======
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
@@ -100,8 +119,40 @@ module.exports = nextConfig;
   },
   images: {
     domains: ['ziontechgroup.com', 'localhost', 'images.unsplash.com', 'via.placeholder.com'],
-    unoptimized: true,
+    unoptimized: true
   },
+    ignoreDuringBuilds: true,
+  reactStrictMode: false,
+  swcMinify: false,
+  compress: true,
+  poweredByHeader: false,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  experimental: {
+    forceSwcTransforms: false},
+  // Ensure standard Next.js page extensions are recognized alongside any custom route files
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
+  images: {
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+  },
+  experimental: {
+    esmExternals: false,
+    newNextLinkBehavior: true},
+  typescript: {
+    ignoreBuildErrors: true},
+  eslint: {
+    ignoreDuringBuilds: true},
+  typescript: {
+    ignoreBuildErrors: true},
+  images: {
+    domains: ['ziontechgroup.com'],
+    unoptimized: true},
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production'},
   webpack: (config, { dev, isServer }) => {
     // Exclude problematic directories from the build
     config.module.rules.push({
@@ -117,27 +168,65 @@ module.exports = nextConfig;
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
-        /hardhat/,
-      ],
+        /hardhat/
+      ]
     });
+        /^components\//, // Exclude root components directory
+      ]});
 
     // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
-      tls: false,
-    };
+      tls: false};
 
     return config;
   },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js']
+};
+  pageExtensions: ['tsxtsjsx', 'js'],
+  onDemandEntries: {
+    // period (in ms) where the server will keep pages in the buffer
+    maxInactiveAge: 25 * 1000,
+    // number of pages that should be kept simultaneously without being disposed
+    pagesBufferLength: 2}};
+
+module.exports = nextConfig;
+<<<<<<< HEAD
+=======
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+  typescript: {
+    ignoreBuildErrors: true
+<<<<<<< HEAD
+  },
+  experimental: {
+    esmExternals: false
+  }
 };
 
 module.exports = nextConfig;
+<<<<<<< HEAD
 <<<<<<< HEAD:next.config.js
 >>>>>>> 8fd25f885ef5f7c479ebfaa3c8ff4946200161f8:next.config.cjs
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc:next.config.cjs
+=======
+=======
+  }
+};
+
+export default nextConfig;
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export const metadata = {
   title: "AI Customer Insights | Zion Tech Group",
@@ -226,10 +227,53 @@ export default function AICustomerInsightsPage() {
         </div>
         <div className="mt-4 text-sm text-gray-500">
           <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+=======
+export const metadata = {
+  title: 'Ai Customer Insights | Zion Tech Group',
+  description: 'Professional ai customer insights services for your business needs.',
+  keywords: 'ai-customer-insights, services, business, technology'
+};
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Customer Insights
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai customer insights services for your business needs.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai customer insights solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai customer insights solutions run smoothly.
+            </p>
+          </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 
 function FeatureItem({ icon, title, description }: { icon: string; title: string; description: string }) {
@@ -288,3 +332,6 @@ function StepCard({ step, title, description }: { step: string; title: string; d
     </div>
   );
 }
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

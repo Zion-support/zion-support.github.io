@@ -1,54 +1,46 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import SEOEnhancer from '../SEOEnhancer';
-
-interface MainLayoutProps {
-  children: React.ReactNode;
+interface MainLayoutProps  {children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
   ogImage?: string;
-}
-
-const MainLayout: React.FC<MainLayoutProps> = ({
-  children,
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
-  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',
-  ogImage = '/og-image.jpg',
-}) => {
-  return (
-    <>
-      <SEOEnhancer
+}const MainLayout: React.FC<MainLayoutProps> = ({children,title = 'Zion Tech Group - Leading Technology Solutions Provider',description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',ogImage = '/og-image.jpg'}) => {return (<>;
+      <SEOEnhancer;
         title={title}
         description={description}
         keywords={keywords}
         ogImage={ogImage}
-      />
-      <PerformanceOptimizer
+      />;
+      <PerformanceOptimizer;
         preloadImages={['/hero-bg.jpg', '/services-bg.jpg', '/team-bg.jpg']}
-        preloadFonts={[
-          'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap',
-        ]}
-      />
-      <AccessibilityEnhancer>
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main id="main-content" className="flex-grow" role="main">
+        preloadFonts={[;
+          'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap']}
+      />;
+      <AccessibilityEnhancer>;
+        <div className="min-h-screen flex flex-col">;
+          <Header />;
+          <main id="main-content" className="flex-grow" role="main">;
             {children}
+<<<<<<< HEAD
           </main>
           <Footer />
         </div>
@@ -68,3 +60,12 @@ export default MainLayout;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          </main>;
+          <Footer />;
+        </div>;
+      </AccessibilityEnhancer>;
+    </>;
+  )}export default MainLayout;
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

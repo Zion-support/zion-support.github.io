@@ -3,8 +3,11 @@
  * Fix Team Page - Targeted fix for team.tsx;
  */
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require('fs')
   const filePath = './pages/team.tsx'
     console.log(' Team page not found')
@@ -85,5 +88,9 @@ const fs = require('fs')
               "fontWeight"
               "display"
               "border"
+<<<<<<< HEAD
               "transition"
               "transition"
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

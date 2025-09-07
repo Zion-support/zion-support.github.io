@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,12 +35,38 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+import React from 'react';  import '@testing-library/jest-dom'; import ContactFormEnhanced from '../components/ContactFormEnhanced.dynamic'; describe('ContactFormEnhanced',() => { test('renders without crashing',() => { render(<ContactFormEnhanced />)expect( screen.getByTestId('contactformenhanced') ).toBeInTheDocument()})test('displays correct content',() => { render(<ContactFormEnhanced />)})test('handles user interactions',() => { render(<ContactFormEnhanced />)})test('applies correct styling',() => { render(<ContactFormEnhanced />)})})ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent  } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import ContactFormEnhanced from '../components/ContactFormEnhanced.dynamic';
+describe('ContactFormEnhanced', () => {test('renders without crashing', () => {render(<ContactFormEnhanced />)expect(screen.getByTestId('contactformenhanced')).toBeInTheDocument()})})})test('displays correct content', () => {render(<ContactFormEnhanced />)})test('handles user interactions', () => {render(<ContactFormEnhanced />)})test('applies correct styling', () => {render(<ContactFormEnhanced />)})})const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import ContactFormEnhanced from "./components/ContactFormEnhanced.dynamic"; describe('ContactFormEnhanced', () => { test('renders without crashing', () => { render(<ContactFormEnhanced />)expect( screen.getByTestId("contactformenhanced.dynamic") ).toBeInTheDocument()})test('displays correct content', () => { render(<ContactFormEnhanced />)})test('handles user interactions', () => { render(<ContactFormEnhanced />)})test('applies correct styling', () => { render(<ContactFormEnhanced />)})})''";
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+describe('ContactFormEnhanced';
+  test('renders without crashing';
+      screen.getByTestId('contactformenhanced.dynamic';
+  test('displays correct content';
+  test('handles user interactions';
+  test('applies correct styling';
+const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import ContactFormEnhanced from "./components/ContactFormEnhanced.dynamic"; describe('ContactFormEnhanced', () => { test('renders without crashing', () => { render(<ContactFormEnhanced />)expect( screen.getByTestId("contactformenhanced.dynamic") ).toBeInTheDocument()})test('displays correct content', () => { render(<ContactFormEnhanced />)})test('handles user interactions', () => { render(<ContactFormEnhanced />)})test("applies correct styling";
+})})ursor/automate-test-improve-and-merge-code-646c;
+})})test('displays correct content', () => {render(<ContactFormEnhanced />)// Add specific content tests based on component;
+  })test('handles user interactions', () => {render(<ContactFormEnhanced />)// Add interaction tests based on component functionality;
+  })test('applies correct styling', () => {render(<ContactFormEnhanced />)// Add styling tests if needed;
+  })})
 import ContactFormEnhanceddynamic from '../components/ContactFormEnhanced.dynamic';
+<<<<<<< HEAD
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 describe('ContactFormEnhanceddynamic', () => {
   test('renders without crashing', () => {
     render(<ContactFormEnhanceddynamic />);
@@ -54,6 +81,7 @@ describe('ContactFormEnhanceddynamic', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
@@ -61,6 +89,8 @@ describe('ContactFormEnhanceddynamic', () => {
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 });
 });
 import _React from 'react';  import '@testing-library/jest-dom'; import ContactFormEnhanceddynamic from '../components/ContactFormEnhanced.dynamic'; describe('ContactFormEnhanceddynamic',() => { test('renders without crashing',() => { render(<ContactFormEnhanceddynamic />); expect( screen.getByTestId('contactformenhanced.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<ContactFormEnhanceddynamic />)}); test('handles user interactions',() => { render(<ContactFormEnhanceddynamic />)}); test('applies correct styling',() => { render(<ContactFormEnhanceddynamic />)})});
@@ -76,8 +106,6 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ContactF
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ContactFormEnhanceddynamic from "./components/ContactFormEnhanced.dynamic"; describe("ContactFormEnhanceddynamic",() => { test("renders without crashing",() => { render(<ContactFormEnhanceddynamic />); expect( screen.getByTestId("contactformenhanced.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<ContactFormEnhanceddynamic />)}); test("handles user interactions",() => { render(<ContactFormEnhanceddynamic />)}); test("applies correct styling",() => { render(<ContactFormEnhanceddynamic />)})});''"
 
-import _React from 'react';  import '@testing-library/jest-dom'; import ContactFormEnhanceddynamic from '../components/ContactFormEnhanced.dynamic'; describe('ContactFormEnhanceddynamic',() => { test('renders without crashing',() => { render(<ContactFormEnhanceddynamic />); expect( screen.getByTestId('contactformenhanced.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<ContactFormEnhanceddynamic />)}); test('handles user interactions',() => { render(<ContactFormEnhanceddynamic />)}); test('applies correct styling',() => { render(<ContactFormEnhanceddynamic />)})});
-import _React from 'react';  import '@testing-library/jest-dom'; import ContactFormEnhanceddynamic from '../components/ContactFormEnhanced.dynamic'; describe('ContactFormEnhanceddynamic',() => { test('renders without crashing',() => { render(<ContactFormEnhanceddynamic />); expect( screen.getByTestId('contactformenhanced.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<ContactFormEnhanceddynamic />)}); test('handles user interactions',() => { render(<ContactFormEnhanceddynamic />)}); test('applies correct styling',() => { render(<ContactFormEnhanceddynamic />)})});
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
@@ -93,6 +121,7 @@ describe('ContactFormEnhanceddynamic'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ContactFormEnhanceddynamic from "./components/ContactFormEnhanced.dynamic"; describe('ContactFormEnhanceddynamic', () => { test("renders without crashing",() => { render(<ContactFormEnhanceddynamic />); expect( screen.getByTestId("contactformenhanced.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<ContactFormEnhanceddynamic />)}); test("handles user interactions",() => { render(<ContactFormEnhanceddynamic />)}); test("applies correct styling"
+<<<<<<< HEAD
 <<<<<<< HEAD
 });
 });
@@ -127,3 +156,8 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ContactF
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+});
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

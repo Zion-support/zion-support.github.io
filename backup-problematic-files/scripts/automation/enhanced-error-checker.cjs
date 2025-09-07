@@ -2,6 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
+
 class EnhancedErrorChecker {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -48,5 +49,9 @@ class EnhancedErrorChecker {}
 if (require.main === module) {}
   const checker = new EnhancedErrorChecker();
   checker.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = EnhancedErrorChecker;
 module.exports = EnhancedErrorChecker;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

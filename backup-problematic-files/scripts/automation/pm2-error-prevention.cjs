@@ -128,5 +128,9 @@ const { execSync } = require("child_process")
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
+<<<<<<< HEAD
   console.log("� Received SIGTERM, shutting down gracefully...")
   console.log("� Received SIGTERM, shutting down gracefully...")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

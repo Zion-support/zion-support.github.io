@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require("fs")
 const path = require("path")
 const { exec } = require("child_process")
@@ -66,5 +71,9 @@ const { exec } = require("child_process")
   this.log("info", "Syntax Fixer heartbeat - running normally")
   this.log("info", "Syntax Fixer shutting down...")
   fixer.log("info", "Syntax Fixer started in continuous mode")
+<<<<<<< HEAD
   console.error("Syntax fixer "failed")
   console.error("Syntax fixer "failed")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

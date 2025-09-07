@@ -1,6 +1,9 @@
+import React from \'react\';import _React from 'react';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 import React from \'react\';
 
 import _React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -9,4 +12,7 @@ import _React from 'react';
 import _React from 'react';
 import _React from 'react';
 import _React from 'react';
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 origin/cursor/integrate-build-improve-and-re-verify-c7b5

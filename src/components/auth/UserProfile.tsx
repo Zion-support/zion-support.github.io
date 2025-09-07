@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useEffect, useState } from 'react';
 import {supabase} from '@/utils/ supabase / client';
@@ -176,12 +177,17 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
 
     return (
       <Card className='w-full max-w-sm'>;
+=======
+
+    return (<Card className='w-full max-w-sm'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
             <User className='h-5 w-5' />;
             Not Signed In;
           </CardTitle>;
         </CardHeader>;
+<<<<<<< HEAD
         <CardContent>;
           <Button onClick={handleSignIn} className='w-full'>;
             <LogIn className='h-4 w-4 mr-2' />;
@@ -211,6 +217,24 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
       </CardContent>
     </Card>
 
+=======
+        <CardContent>;Sign In;
+          </Button>;
+        </CardContent>;
+      </Card>;
+    )}
+  return (Sign Out;
+        </Button>;
+      </CardContent>;
+    </Card>;
+  )}
+}<Button onClick={handleSignOut} variant="outline" className="w-full">;
+          <LogOut className="h-4 w-4 mr-2" />;
+          Sign Out;
+        </Button>;
+      </CardContent>;
+    </Card>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <Card className='w-full max-w-sm'>;
       <CardHeader>;
         <CardTitle className='flex items-center gap-2'>;
@@ -236,14 +260,13 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
               {new Date(user && user.created_at).toLocaleDateString()}
             </span>;
           </div>;
-        </div>;
-
-        <Button onClick={handleSignOut} variant='outline' className='w-full'>;
+        </div>;<Button onClick={handleSignOut} variant='outline' className='w-full'>;
           <LogOut className='h-4 w-4 mr-2' />;
           Sign Out;
         </Button>;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
   );
 
 
@@ -253,9 +276,12 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
   // Check condition
 if ( {) {
   $2
+=======
+  ))}// Check condition;
+if ( {) {$2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
-    return (
-      <Card className='w - full max - w-sm'>;
+    return (<Card className='w - full max - w-sm'>;
         <CardHeader>;
           <CardTitle className='flex items - center gap - 2'>;
             <User className='h - 5 w - 5' />;
@@ -268,10 +294,8 @@ if ( {) {
             Sign In;
           </Button>;
         </CardContent>;
-      </Card>);
-  }
-  return (
-    <Card className='w - full max - w-sm'>;
+      </Card>)}
+  return (<Card className='w - full max - w-sm'>;
       <CardHeader>;
         <CardTitle className='flex items - center gap - 2'>;
           <User className='h - 5 w - 5' />;
@@ -301,5 +325,9 @@ if ( {) {
           <LogOut className='h - 4 w - 4 mr - 2' />;
           Sign Out;
         </Button>;
+<<<<<<< HEAD
       </CardContent>;
     </Card>);
+=======
+      </CardContent>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

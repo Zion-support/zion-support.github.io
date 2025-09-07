@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node
 
 const fs = require('fs');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+=======
+console.log('🔧 Ultimate Syntax Fix');
+console.log('
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
   return content
@@ -130,4 +139,7 @@ try {
   console.log('⚠️  Failed to push syntax fixes:', error.message);
 }
 
+<<<<<<< HEAD
 console.log('\n🎉 Ultimate syntax fix completed!');
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
