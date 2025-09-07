@@ -88,6 +88,7 @@ import React from 'react';
               Cutting-edge space technology solutions that enable satellite operations, 
               space research, and exploration missions for the next generation.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#services"
@@ -102,7 +103,7 @@ import React from 'react';
                 Get Started
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       {/* Space Services Grid */}
@@ -152,6 +153,24 @@ import React from 'react';
               Discover how space technology is transforming industries and 
               enabling new capabilities across the globe.
             </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {applications.map((app, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-purple-400/50 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <app.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{app.title}</h3>
+                <p className="text-gray-400 text-sm">{app.description}</p>
+              </motion.div>
+            ))}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {applications.map((app, index) => (

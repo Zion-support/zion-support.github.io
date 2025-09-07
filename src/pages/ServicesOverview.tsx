@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 import { 
   Brain, 
-  Cloud, 
   Shield, 
   Rocket, 
   Cpu, 
@@ -492,6 +491,7 @@ export default function ServicesOverview() {
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our innovative solutions can drive your success and give you a competitive edge
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact"
