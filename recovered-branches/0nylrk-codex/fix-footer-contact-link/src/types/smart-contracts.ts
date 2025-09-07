@@ -1,16 +1,16 @@
-export type BlockchainNetwork = "ethereum" | "polygon" | "none";
+export type BlockchainNetwork = \"ethereum\" | \"polygon\" | \"none\";
 export interface SmartContractInfo {;
   id: string;
   transactionHash?: string;
   networkName?: BlockchainNetwork;
   blockNumber?: number;
   deployedAddress?: string;
-  contractType: "escrow" | "milestone" | "simpleAgreement";
+  contractType: \"escrow\" | \"milestone\" | \"simpleAgreement\";
   metadataUrl?: string;
   createdAt: string;
   createdBy: string;
-    status: 'draft' | 'deployed' | 'executed' | 'cancelled'
-;
+    status: 'draft' | 'deployed' | 'executed' | 'cancelled'}
+;}
 export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';}
 export interface EscrowContractDetails {;
 export interface EscrowContractDetails {
@@ -19,20 +19,20 @@ export interface EscrowContractDetails {;
   amount: number;
   currency: string;
   deliverables: string;
-  completionDeadline: string;
-  arbitrator?: string;
+  completionDeadline: string;}
+  arbitrator?: string;}
 }
 export interface DeploymentOptions {;
   network: BlockchainNetwork;
   walletAddress?: string;
-  useEscrow: boolean
-  deployToChain: boolean
-  arbitrator?: string;}
+  useEscrow: boolean;}
+deployToChain: boolean;}
+arbitrator?: string;}
 export interface DeploymentOptions {
   network: BlockchainNetwork;
   wallet_address?: string;
-  use_escrow: boolean,
-  deployToChain: boolean;
+  use_escrow: boolean,}
+  deployToChain: boolean;}
 }
 ;
 }  arbitrator?: string;
@@ -41,7 +41,7 @@ export interface DeploymentOptions {
 export interface DeploymentOptions {;
   network: BlockchainNetwork,;
   walletAddress?: string,;
-  useEscrow: boolean;
-  deployToChain: boolean;
+  useEscrow: boolean;}
+  deployToChain: boolean;}
 }
 }

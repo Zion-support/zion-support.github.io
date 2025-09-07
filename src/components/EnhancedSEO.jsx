@@ -1,7 +1,7 @@
  export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';import { Helmet } from 'react-helmet-async';';
 ';
 
-export default function EnhancedSEO ({' title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions',' description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.',' keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical,' ogImage = 'https: ''';';
+export default function EnhancedSEO ({' title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions',' description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.',' keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical,' ogImage = 'https: ''';';}
 import { Helmet  } from 'react-helmet-async';
 '';
 '';
@@ -30,7 +30,8 @@ const defaultStructuredData = {}
     '@context': 'https://schema.org', @type': 'Organization',''';
     name: 'Zion Tech Group', '''';
     url: 'https://ziontechgroup.com','''';
-    logo: 'https://ziontechgroup.com/images/logo.png', description: description, address:  ,
+    logo: 'https://ziontechgroup.com/images/logo.png',
+  description: description, address:  ,
 }
 '';
 '';
@@ -67,9 +68,9 @@ const defaultStructuredData = {}
 const finalStructuredData = structuredData;
     ? { ...defaultStructuredData, ...structuredData }
     : defaultStructuredData;
-  return ()<Helmet>;
+  return ()<Helmet />;
       {/* Basic Meta Tags */}
-      <title>{title}</title>;
+      <title />{title}</title>;
       <meta name='description' content={description} />'''';
       <meta name='keywords' content={keywords} />'''';
       <meta name='author' content='Zion Tech Group' />'''';
@@ -85,35 +86,35 @@ const finalStructuredData = structuredData;
       />;
 '''';
       {/* Open Graph Tags */}'''';
-      <meta property='og: title' content={titl,
+      <meta property='og: title' content={titl,}
 } />'''';
-      <meta property='og: description' content={descriptio,
+      <meta property='og: description' content={descriptio,}
 } />'''';
-      <meta property='og: type' content={ogTyp,
+      <meta property='og: type' content={ogTyp,}
 } />'''';
-      <meta property='og: url' content={currentUr,
+      <meta property='og: url' content={currentUr,}
 } />'''';
-      <meta property='og: image' content={ogImag,
+      <meta property='og: image' content={ogImag,}
 } />'''';
       <meta property='og:image:width' content='1200' />'''';
       <meta property='og:image:height' content='630' />'''';
-      <meta property='og: image:alt' content={titl,
+      <meta property='og: image:alt' content={titl,}
 } />'''';
       <meta property='og:site_name' content='Zion Tech Group' />'''';
       <meta property='og:locale' content='en_US' />;
 '''';
       {/* Twitter Card Tags */}'''';
-      <meta name='twitter: card' content={twitterCar,
+      <meta name='twitter: card' content={twitterCar,}
 } />'''';
       <meta name='twitter:site' content='@ziontechgroup' />'''';
       <meta name='twitter:creator' content='@ziontechgroup' />'''';
-      <meta name='twitter: title' content={titl,
+      <meta name='twitter: title' content={titl,}
 } />'''';
-      <meta name='twitter: description' content={descriptio,
+      <meta name='twitter: description' content={descriptio,}
 } />'''';
-      <meta name='twitter: image' content={ogImag,
+      <meta name='twitter: image' content={ogImag,}
 } />'''';
-      <meta name='twitter: image:alt' content={titl,
+      <meta name='twitter: image:alt' content={titl,}
 } />;
 '''';
       {/* Additional Meta Tags for Better SEO */}'''';
@@ -124,7 +125,7 @@ const finalStructuredData = structuredData;
       <meta name='format-detection' content='telephone=no' />;
 '''';
       {/* Structured Data */}'''';
-      <script type='application/ld+json'>;
+      <script type='application/ld+json' />;
         {JSON.stringify(finalStructuredData)}
       </script>;
 '''';

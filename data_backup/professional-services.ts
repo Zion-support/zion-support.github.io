@@ -3,7 +3,7 @@
 ursor/automate-test-improve-and-merge-code-646c;
 
 export interface ProfessionalService {
-  "id": string;
+  \"id\": string;
   name: string;
   tagline: string;
   price: string;
@@ -13,98 +13,98 @@ export interface ProfessionalService {
   category: string;
   realImplementation: boolean;
   contactInfo: {mobile: string;
-    email: string;
-address: string,
+    email: string;}
+address: string,}
 }
 
-export const "professionalServices": ProfessionalService[] = [{id: "it-consulting","name": "IT Consulting Services","tagline": "Expert IT consulting for business growth","price": "$120/hour","description": "Professional IT consulting services to help businesses optimize their technology investments.",features[;
-      "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support";
-    ],"link": "/services/it-consulting","category": "Professional Services","realImplementation": true,"contactInfo": {mobile: "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709";
+export const \"professionalServices\": ProfessionalService[] = [{id: \"it-consulting\",\"name\": \"IT Consulting Services\",\"tagline\": \"Expert IT consulting for business growth\",\"price\": \"$120/hour\",\"description\": \"Professional IT consulting services to help businesses optimize their technology investments.\",features[;
+      \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\";}
+    ],\"link\": \"/services/it-consulting\",\"category\": \"Professional Services\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
 ]}}}
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }ursor/integrate-build-improve-and-re-verify-8f7d;
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }ursor/automate-test-improve-and-merge-code-646c;
 
-export interface ProfessionalService  {"id": string;
-
-export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,
+export interface ProfessionalService  {\"id\": string;
+}
+export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
 };
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,
+export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
 };
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,
+export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
 };
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,
+export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
 };
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,
+export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
 };
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
 export interface ProfessionalService {
-  "id": string;
+  \"id\": string;
   name: string;
   tagline: string;
   price: string;
@@ -114,108 +114,108 @@ export interface ProfessionalService {
   category: string;
   realImplementation: boolean;
   contactInfo: {mobile: string;
-    email: string;
-address: string,
+    email: string;}
+address: string,}
 }
 
-export const "professionalServices": ProfessionalService[] = [{id: "it-consulting","name": "IT Consulting Services","tagline": "Expert IT consulting for business growth","price": "$120/hour","description": "Professional IT consulting services to help businesses optimize their technology investments.",features[;
-      "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support";
-    ],"link": "/services/it-consulting","category": "Professional Services","realImplementation": true,"contactInfo": {mobile: "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709";
+export const \"professionalServices\": ProfessionalService[] = [{id: \"it-consulting\",\"name\": \"IT Consulting Services\",\"tagline\": \"Expert IT consulting for business growth\",\"price\": \"$120/hour\",\"description\": \"Professional IT consulting services to help businesses optimize their technology investments.\",features[;
+      \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\";}
+    ],\"link\": \"/services/it-consulting\",\"category\": \"Professional Services\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
 ]}}}
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }ursor/fix-syntax-push-and-merge-to-main-40de;
 
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
 export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
-}
-
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
-}
-
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
-}
-
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
-}
-
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
-}
-
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
-}
-
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
-}
-
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
-}
-
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
-}
-
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
-}
-
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
-}
-
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
-}
-
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
-}
-
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
-}
-
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
-}
-
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
-}
-
-export interface ProfessionalService {
-  "id": string;
+  \"id\": string;
   name: string;
   tagline: string;
   price: string;
@@ -225,92 +225,92 @@ export interface ProfessionalService {
   category: string;
   realImplementation: boolean;
   contactInfo: {mobile: string;
-    email: string;
-address: string,
+    email: string;}
+address: string,}
 }
 
-export const "professionalServices": ProfessionalService[] = [{id: "it-consulting","name": "IT Consulting Services","tagline": "Expert IT consulting for business growth","price": "$120/hour","description": "Professional IT consulting services to help businesses optimize their technology investments.",features[;
-      "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support";
-    ],"link": "/services/it-consulting","category": "Professional Services","realImplementation": true,"contactInfo": {mobile: "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709";
+export const \"professionalServices\": ProfessionalService[] = [{id: \"it-consulting\",\"name\": \"IT Consulting Services\",\"tagline\": \"Expert IT consulting for business growth\",\"price\": \"$120/hour\",\"description\": \"Professional IT consulting services to help businesses optimize their technology investments.\",features[;
+      \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\";}
+    ],\"link\": \"/services/it-consulting\",\"category\": \"Professional Services\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
 ]}}}ursor/automate-test-improve-and-merge-code-646c;
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService {
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,
+export interface ProfessionalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]}}}
 address: strin,
 };
 
-export const "professionalServices": ProfessionalService[] = [{
-    id: "it-consulting",
-    "name": "IT Consulting Services",
-    "tagline": "Expert IT consulting for business growth",
-    "price": "$120/hour",
-    "description": "Professional IT consulting services to help businesses optimize their technology investments.",
+export const \"professionalServices\": ProfessionalService[] = [{
+    id: \"it-consulting\",
+    \"name\": \"IT Consulting Services\",
+    \"tagline\": \"Expert IT consulting for business growth\",
+    \"price\": \"$120/hour\",
+    \"description\": \"Professional IT consulting services to help businesses optimize their technology investments.\",
     features[
-      "Technology assessment",
-      "Strategic planning",
-      "Implementation guidance",
-      "Performance optimization",
-      "Ongoing support"
+      \"Technology assessment\",
+      \"Strategic planning\",
+      \"Implementation guidance\",
+      \"Performance optimization\",
+      \"Ongoing support\"
     ],
-    "link": "/services/it-consulting",
-    "category": "Professional Services",
-    "realImplementation": true,
-    "contactInfo": {
-      mobile: "+1 302 464 0950",
-      "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    \"link\": \"/services/it-consulting\",
+    \"category\": \"Professional Services\",
+    \"realImplementation\": true,
+    \"contactInfo\": {
+      mobile: \"+1 302 464 0950\",
+      \"email\": \"kleber@ziontechgroup.com\",}
+      \"address\": \"364 E Main St STE 1008 Middletown DE 19709\"}
 ]}}}
 
-export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,
+export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
 };
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,
+export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
 };
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,
+export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
 };
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,
+export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
 };
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,
+export interface ProfessionalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
 };
 
-export const professionalServices: ProfessionalService[] = [ { id: "it-consulting",name: "IT Consulting Services",tagline: "Expert IT consulting for business growth",price: "$120/hour",description: "Professional IT consulting services to help businesses optimize their technology investments.",features[ "Technology assessment","Strategic planning","Implementation guidance","Performance optimization","Ongoing support" ],link: "/services/it-consulting",category: "Professional Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]},
+export const professionalServices: ProfessionalService[] = [ { id: \"it-consulting\",name: \"IT Consulting Services\",tagline: \"Expert IT consulting for business growth\",price: \"$120/hour\",description: \"Professional IT consulting services to help businesses optimize their technology investments.\",features[ \"Technology assessment\",\"Strategic planning\",\"Implementation guidance\",\"Performance optimization\",\"Ongoing support\" ],link: \"/services/it-consulting\",category: \"Professional Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }

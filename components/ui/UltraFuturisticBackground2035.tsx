@@ -15,82 +15,91 @@ interface UltraFuturisticBackground2035Props {
   enableQuantumEffects?: boolean;
   enableNeonEffects?: boolean;
 
-  enableSpaceTime?: boolean
-
+  enableSpaceTime?: boolean}
+}
 }
 
-const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props> = ({
+const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props /> = ({
   intensity;
 
-const canvasRef = useRef<HTMLCanvasElement>(null);
+const canvasRef = useRef<HTMLCanvasElement />(null);
 
-const particlesRef = useRef<any[]>([]);
+const particlesRef = useRef<any[] />([]);
 
-const animationRef = useRef<number | undefined>(undefined);
+const animationRef = useRef<number | undefined />(undefined);
 
-const getColorScheme = () => {;
+const getColorScheme = (;
     switch (colorScheme) {;
       case 'quantum-fusion':;
         return {;
           primary: '#00ffff',;
           secondary: '#ff00ff',;
           accent: '#ffff00',;
-          background: 'rgba(0, 0, 0, 0 && 0.95)',;
+          background: 'rgba(0, 0, 0, 0 && 0.95)',;) => {
+  return $3;}
+}
           glow: 'rgba(0, 255, 255, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.95)';
 
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
         }case 'neon-cyber':;
-        return {primary: '#ff0080',secondary: '#00ff80',accent: '#8000ff',background: 'rgba(0, 0, 0, 0 && 0.9)',glow: 'rgba(255, 0, 128, 0 && 0.4)',        }background: 'rgba(0, 0, 0, 0 && 0.9)';
+        return {primary: '#ff0080',
+  secondary: '#00ff80',accent: '#8000ff',}
+  background: 'rgba(0, 0, 0, 0 && 0.9)',glow: 'rgba(255, 0, 128, 0 && 0.4)',        }background: 'rgba(0, 0, 0, 0 && 0.9)';
           glow: 'rgba(255, 0, 128, 0 && 0.4)';
         }case 'holographic-matrix':;
-        return {primary: '#00ff41',secondary: '#ff0040',accent: '#0040ff',background: 'rgba(0, 0, 0, 0 && 0.92)',glow: 'rgba(0, 255, 65, 0 && 0.35)',        }background: 'rgba(0, 0, 0, 0 && 0.92)';
+        return {primary: '#00ff41',
+  secondary: '#ff0040',accent: '#0040ff',}
+  background: 'rgba(0, 0, 0, 0 && 0.92)',glow: 'rgba(0, 255, 65, 0 && 0.35)',        }background: 'rgba(0, 0, 0, 0 && 0.92)';
           glow: 'rgba(0, 255, 65, 0 && 0.35)';
         }case 'space-time':;
-        return {primary: '#ff6b35',secondary: '#4ecdc4',accent: '#45b7d1',background: 'rgba(0, 0, 0, 0 && 0.88)',glow: 'rgba(255, 107, 53, 0 && 0.3)',        }background: 'rgba(0, 0, 0, 0 && 0.88)';
+        return {primary: '#ff6b35',
+  secondary: '#4ecdc4',accent: '#45b7d1',}
+  background: 'rgba(0, 0, 0, 0 && 0.88)',glow: 'rgba(255, 107, 53, 0 && 0.3)',        }background: 'rgba(0, 0, 0, 0 && 0.88)';
           glow: 'rgba(255, 107, 53, 0 && 0.3)';
         }default:;
-        return {primary: '#00ffff',secondary: '#ff00ff',accent: '#ffff00',background: 'rgba(0, 0, 0, 0 && 0.95)',glow: 'rgba(0, 255, 255, 0 && 0.3)',}}          background: 'rgba(0, 0, 0, 0 && 0.95)';
+        return {primary: '#00ffff',
+  secondary: '#ff00ff',accent: '#ffff00',}
+  background: 'rgba(0, 0, 0, 0 && 0.95)',glow: 'rgba(0, 255, 255, 0 && 0.3)',}}          background: 'rgba(0, 0, 0, 0 && 0.95)';
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
 
         return {
           primary: '#00ffff',
-          secondary: '#ff00ff',
+  secondary: '#ff00ff',
           accent: '#ffff00',
-
-          background: 'rgba(0, 0, 0, 0.95)',
-glow: 'rgba(0, 255, 255, 0.3)',
+  background: 'rgba(0, 0, 0, 0.95)',}
+glow: 'rgba(0, 255, 255, 0.3)',}
         };
       case 'neon-cyber':
         return {
           primary: '#ff0080',
-          secondary: '#00ff80',
+  secondary: '#00ff80',
           accent: '#8000ff',
-          background: 'rgba(0, 0, 0, 0.9)',
-glow: 'rgba(255, 0, 128, 0.4)',
+  background: 'rgba(0, 0, 0, 0.9)',}
+glow: 'rgba(255, 0, 128, 0.4)',}
         };
       case 'holographic-matrix':
         return {
           primary: '#00ff41',
-          secondary: '#ff0040',
+  secondary: '#ff0040',
           accent: '#0040ff',
-          background: 'rgba(0, 0, 0, 0.92)',
-glow: 'rgba(0, 255, 65, 0.35)',
+  background: 'rgba(0, 0, 0, 0.92)',}
+glow: 'rgba(0, 255, 65, 0.35)',}
         };
       case 'space-time':
         return {
           primary: '#ff6b35',
-          secondary: '#4ecdc4',
+  secondary: '#4ecdc4',
           accent: '#45b7d1',
-          background: 'rgba(0, 0, 0, 0.88)',
-glow: 'rgba(255, 107, 53, 0.3)',
+  background: 'rgba(0, 0, 0, 0.88)',}
+glow: 'rgba(255, 107, 53, 0.3)',}
         };
       default:
         return {
           primary: '#00ffff',
-          secondary: '#ff00ff',
+  secondary: '#ff00ff',
           accent: '#ffff00',
-          background: 'rgba(0, 0, 0, 0.95)',
-glow: 'rgba(0, 255, 255, 0.3)',
+  background: 'rgba(0, 0, 0, 0.95)',}
+glow: 'rgba(0, 255, 255, 0.3)',}
         };
     }
 
@@ -104,15 +113,17 @@ const colors = getColorScheme(;
 const ctx = canvas.getContext('2d')if (!ctx);
   return;
 
-const resizeCanvas = () => {canvas.width = window.innerWidth;
-canvas.height = window.innerHeight
+const resizeCanvas = (canvas.width = window.innerWidth;
+canvas.height = window.innerHeight) => {
+  return $3;}
+}
 };
 
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-    // Initialize particles
-    const initParticles = () => {
+    // Initialize particles;
+const initParticles = (
       particlesRef.current = [];
 
 for (let i = 0; i < particleCount; i++) {
@@ -125,14 +136,16 @@ for (let i = 0; i < particleCount; i++) {
           life: Math.random() * 100 + 50,
           maxLife: Math.random() * 100 + 50,
           type: Math.random() > 0.7 ? 'quantum' : 'normal',
-color: Math.random() > 0.5 ? colors.primary : colors.secondary,
+color: Math.random() > 0.5 ? colors.primary : colors.secondary,) => {
+  return $3;}
+}
         });
       }
 
     }
     initParticles()// Animation loop;
 
-const animate = () => {ctx.fillStyle = colors.background;
+const animate = (ctx.fillStyle = colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
       particlesRef.current.forEach((particle, index) => {// Update position;
         particle.x += particle.vx;
@@ -147,11 +160,12 @@ const animate = () => {ctx.fillStyle = colors.background;
           particle.y = Math.random() * canvas.height;
           particle.life = particle.maxLife;
 
-particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';
+particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';) => {
+  return $3;}
+}
         }
-        // Draw particle
-
-        const alpha = particle.life / particle.maxLife;
+        // Draw particle;
+const alpha = particle.life / particle.maxLife;
         ctx.globalAlpha = alpha;
         if (particle.type === 'quantum' && enableQuantumEffects) {// Quantum particle effect;
           ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2)ctx.fillStyle = colors.accent;
@@ -163,31 +177,31 @@ particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = colors.glow;
           ctx.fill();
-
-ctx.shadowBlur = 0;
+}
+ctx.shadowBlur = 0;}
         } else {
-          // Normal particle
-          ctx.beginPath();
+          // Normal particle;
+ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = particle.color;
-
-ctx.fill();
+}
+ctx.fill();}
         }
       });
-      // Draw holographic grid
-      if (enableHolographic) {
-
-drawHolographicGrid(ctx, colors);
+      // Draw holographic grid;
+if (enableHolographic) {
+}
+drawHolographicGrid(ctx, colors);}
       }
 
-      // Draw neon effects
-      if (enableNeonEffects) {
-drawNeonEffects(ctx, colors);
+      // Draw neon effects;
+if (enableNeonEffects) {}
+drawNeonEffects(ctx, colors);}
       }
 
-      // Draw space-time effects
-      if (enableSpaceTime) {
-drawSpaceTimeEffects(ctx, colors);
+      // Draw space-time effects;
+if (enableSpaceTime) {}
+drawSpaceTimeEffects(ctx, colors);}
       }
 
       animationRef.current = requestAnimationFrame(animate)
@@ -198,8 +212,8 @@ drawSpaceTimeEffects(ctx, colors);
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       if (animationRef.current) {
-
-cancelAnimationFrame(animationRef.current);
+}
+cancelAnimationFrame(animationRef.current);}
       }
 
     }
@@ -222,19 +236,19 @@ const time  = Date.now() * 0.001;ctx.strokeStyle = colors.primary;
 for (let x = 0; x < ctx.canvas.width; x += gridSize) {
       ctx.beginPath();
       ctx.moveTo(x, 0);
-      ctx.lineTo(x, ctx.canvas.height);
-      ctx.stroke();
+      ctx.lineTo(x, ctx.canvas.height);}
+      ctx.stroke();}
     }
 
     for (let y = 0; y < ctx.canvas.height; y += gridSize) {
       ctx.beginPath();
       ctx.moveTo(0, y);
       ctx.lineTo(ctx.canvas.width, y);
-
-      ctx.stroke();
+}
+      ctx.stroke();}
     }
-    // Animated diagonal lines
-    ctx.strokeStyle = colors.secondary;
+    // Animated diagonal lines;
+ctx.strokeStyle = colors.secondary;
     ctx.globalAlpha = 0.2;
 
 for (let i = 0; i < 5; i++) {
@@ -242,17 +256,17 @@ for (let i = 0; i < 5; i++) {
       ctx.beginPath();
       ctx.moveTo(offset, 0);
       ctx.lineTo(offset + 200, ctx.canvas.height);
-
-ctx.stroke();
+}
+ctx.stroke();}
     }
   }
 
-const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
+const drawNeonEffects = (
    ;
   const time = Date.now() * 0.001;
 
-// Neon orbs
-    for (let i = 0; i < 3; i++) {
+// Neon orbs;
+for (let i = 0; i < 3; i++) {
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
 
 const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height;
@@ -269,7 +283,9 @@ const size = 30 + Math.sin(time + i) * 10;
       ctx.arc(x, y, size * 0.6, 0, Math.PI * 2);
       ctx.fillStyle = colors.primary;
 
-ctx.fill();
+ctx.fill();) => {
+  return $3;}
+}
     }
 
   }
@@ -289,25 +305,25 @@ const x = centerX + Math.cos(angle) * radius;
 
 const y = centerY + Math.sin(angle) * radius;
 
-const alpha  = 1 - i / 20;ctx.globalAlpha = alpha * 0.5;
-      ctx.fillStyle = colors.accent;
+const alpha  = 1 - i / 20;ctx.globalAlpha = alpha * 0.5;}
+      ctx.fillStyle = colors.accent;}
       ctx.beginPath()ctx.arc(x, y, 2, 0, Math.PI * 2)ctx.fill()}
-  }return (<div className='fixed inset-0 -z-10 overflow-hidden'>;
+  }return (<div className='fixed inset-0 -z-10 overflow-hidden' />;
       <canvas;
         ref={canvasRef}
         className='w-full h-full';
-        style={{background: colors.background;
+        style={{background: colors.background;}
         }}
 
       />
       {/* Additional overlay effects */}
-      <div className='absolute inset-0 pointer-events-none'>;
+      <div className='absolute inset-0 pointer-events-none' />;
         {/* Quantum energy field */}
-        <motion&& motion.div
-          className='absolute inset-0'
+        <motion&& motion.div;
+className='absolute inset-0'
           animate={{
-            background: [
-
+            background: [}
+}
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
@@ -315,39 +331,39 @@ const alpha  = 1 - i / 20;ctx.globalAlpha = alpha * 0.5;
           }}
           transition={{
             duration: 8,
-            repeat: Infinity,
-ease: 'easeInOut',
+            repeat: Infinity,}
+ease: 'easeInOut',}
           }}
 
         {/* Holographic scan lines */}
-        <div className="absolute inset-0 opacity-20">;
-          {[...Array(20)].map((_, i) => (<motion&& motion.div;
+        <div className=\"absolute inset-0 opacity-20\" />;
+          {[...Array(20)].map((_, i) => (<motion&& motion.div;}
                 opacity: [0, 1, 0],scale_x: [0, 1, 0],              }}          }}
         />;
         {/* Holographic scan lines */}
-        <div className="absolute inset - 0 opacity - 20">;
-          {[...Array (20)].map ((_, i) => (<motion.div;
+        <div className=\"absolute inset - 0 opacity - 20\" />;
+          {[...Array (20)].map ((_, i) => (<motion.div;}
               key={i}
-              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
+              className=\"absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent\";
               style={{}}
               animate={{opacity: [0, 1, 0];
-                scaleX: [0, 1, 0];
-                top: `${(i / 20) * 10,
+                scaleX: [0, 1, 0];}
+                top: `${(i / 20) * 10,}
 }%`,color: colors.primary;
               }}
 
               animate={{
 
-                opacity: [0, 1, 0],
-                scaleX: [0, 1, 0],
+                opacity: [0, 1, 0],}
+                scaleX: [0, 1, 0],}
               }}
 
 
               transition={{
                 duration: 3,
                 delay: i * 0.1,
-                repeat: Infinity,
-ease: 'easeInOut',
+                repeat: Infinity,}
+ease: 'easeInOut',}
               }}
 
 
@@ -361,8 +377,8 @@ ease: 'easeInOut',
 
 
 
-            />
-
+            />}
+}
           ))}
 
         </div>

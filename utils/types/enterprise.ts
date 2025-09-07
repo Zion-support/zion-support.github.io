@@ -11,8 +11,8 @@ export interface CompanyUsageLimits {;
   amountUsd: number;
   periodStartIso: string;
   periodEndIso: string;
-  status: 'paid' | 'open' | 'void' | 'past_due';
-
+  status: 'paid' | 'open' | 'void' | 'past_due';}
+}
 }
 export interface CompanyRecord {id: string;
   name: string;
@@ -29,32 +29,32 @@ export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
 export interface CompanyUsageLimits {
   monthlyJobPosts: number,
   budgetCapUsd: number;
-
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+}
+}
+  } catch (error) {}
+    console.error(\"Error:\", error);}
+    return res.status(500).json({ error: \"Internal server error\" });
   }
 
 }
 export interface CompanyPlan {
   tier: 'teams' | 'business' | 'enterprise - custom',
   seats_purchased: number,
-  seats_used: number,
-  usage_limits: CompanyUsageLimits;
+  seats_used: number,}
+  usage_limits: CompanyUsageLimits;}
 }
 export interface CompanyMember {
   id: string,
   email: string,
-  name: string,
-  role: EnterpriseRole;
+  name: string,}
+  role: EnterpriseRole;}
 }
 export interface CompanyActivityEvent {
   id: string,
   timestamp_iso: string,
   actor_email: string,
-  action: string,
-  meta?: Record < string unknown>;
+  action: string,}
+  meta?: Record < string unknown>;}
 }
 export interface InvoiceRecord {
   id: string,
@@ -62,8 +62,8 @@ export interface InvoiceRecord {
   number: string,
   amount_usd: number,
   periodStartIso: string,
-  periodEndIso: string,
-  status: 'paid' | 'open' | 'void' | 'past_due';
+  periodEndIso: string,}
+  status: 'paid' | 'open' | 'void' | 'past_due';}
 }
 export interface CompanyRecord {
   id: string,
@@ -75,11 +75,11 @@ export interface CompanyRecord {
   brandColor?: string,;
   plan: CompanyPlan,;
   members: CompanyMember[];
-  activity: CompanyActivityEvent[];
-  invoices: InvoiceRecord[];
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+  activity: CompanyActivityEvent[];}
+  invoices: InvoiceRecord[];}
+  } catch (error) {}
+    console.error(\"Error:\", error);}
+    return res.status(500).json({ error: \"Internal server error\" });
   }
 
 
@@ -90,9 +90,9 @@ export interface CompanyRecord {
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+  } catch (error) {}
+    console.error(\"Error:\", error);}
+    return res.status(500).json({ error: \"Internal server error\" });
   }
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];

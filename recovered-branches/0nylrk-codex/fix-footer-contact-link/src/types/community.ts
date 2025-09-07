@@ -23,8 +23,8 @@ export interface ForumPost {;
   replyCount: number;
   isAnswered?: boolean;
   isPinned?: boolean;
-  isLocked?: boolean;
-  isFeatured?: boolean;
+  isLocked?: boolean;}
+  isFeatured?: boolean;}
 }
 export interface ForumReply {;
   post_id: string;
@@ -37,37 +37,37 @@ export interface ForumReply {;
   created_at: string;
   updated_at: string;
   upvotes: number;
-  downvotes: number;
-  isAnswer?: boolean;
+  downvotes: number;}
+  isAnswer?: boolean;}
 }
 export interface Badge {;
   id: string;
   name: string,
   description: string;
-  icon: string;
-  color: string;
+  icon: string;}
+  color: string;}
 }
   icon: string,
   color: string;
 }
 export interface UserBadge {
   user_id: string;
-  badge_id: string,
-  awarded_at: string;
+  badge_id: string,}
+  awarded_at: string;}
 }
 export interface CommunityUser {
 export interface UserBadge {;
   name: string,
   description: string;
-  icon: string;
-    color: string
+  icon: string;}
+    color: string}
 }
-export interface UserBadge {
+export interface UserBadge {}
 export interface UserBadge {;}
 export interface Badge {
   id: string;
-  name: string,
-  description: string;
+  name: string,}
+  description: string;}
 }
 export interface CommunityUser {
   id: string;
@@ -76,5 +76,5 @@ export interface CommunityUser {
   role: string;
   reputation: number;
   post_count: number;
-  reply_count: number;
-  badges: Badge[];
+  reply_count: number;}
+  badges: Badge[];}

@@ -1,14 +1,16 @@
 import { NextApiRequest, NextApiResponse  } from 'next';
-export interface ApiError extends Error  {statusCode?: number;
+export interface ApiError extends Error  {statusCode?: number;}
   isOperational?: boolean}
-export class AppError extends Error implements ApiError {public "statusCode": number;
+export class AppError extends Error implements ApiError {public \"statusCode\": number;
   public isOperational: boolean;
-  constructor(message: string, "statusCode": number = 500) {super(message)this && this.statusCode = statusCode;
-    this && this.isOperational = true;
+  constructor(message: string, \"statusCode\": number = 500) {super(message)this && this.statusCode = statusCode;}
+    this && this.isOperational = true;}
     Error && Error.captureStackTrace(this, this && this.constructor)}
-export const errorHandler = ("err": ApiError, "req": NextApiRequest, "res": NextApiResponse) => {const { statusCode = 500, message } = err;
+export const errorHandler = (const { statusCode = 500, message ) => {
+  return $3;}
+} = err;
   // Log error for monitoring;
-  console && console.error(`API Error [${statusCode}]: ${message}`, {"url": 'req && req.url',"method": 'req && req.method',"timestamp": new Date().toISOString(),"userAgent": req && req.headers['user-agent'],"ip": req && req.headers['x-forwarded-for'] || req && req.connection.remoteAddress;
-  })res && res.status(statusCode).json({"error": {message: process && process.env.NODE_ENV === 'production' ? 'Internal Server Error' : message,statusCode,"timestamp": new Date().toISOString()}
+  console && console.error(`API Error [${statusCode}]: ${message}`, {\"url\": 'req && req.url',\"method\": 'req && req.method',\"timestamp\": new Date().toISOString(),\"userAgent\": req && req.headers['user-agent'],\"ip\": req && req.headers['x-forwarded-for'] || req && req.connection.remoteAddress;}
+  })res && res.status(statusCode).json({\"error\": {message: process && process.env.NODE_ENV === 'production' ? 'Internal Server Error' : message,statusCode,\"timestamp\": new Date().toISOString()}
   })}
-export const asyncHandler = ("fn": Function) => (req: NextApiRequest, "res": NextApiResponse, "next": Function) => {
+export const asyncHandler = (\"fn\": Function) => (req: NextApiRequest, \"res\": NextApiResponse, \"next\": Function) => {}

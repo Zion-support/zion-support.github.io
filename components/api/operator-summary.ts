@@ -1,15 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const r = null;
+  try {}
+    const r = null;}
     res.status(200).json({ summary, timestamp: new Date().toISOString() })
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-    const r = await fetch(
-      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.hos,
+  req: NextApiRequest;
+res: NextApiResponse;
+) {}
+    const r = await fetch(}
+      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.hos,}
 }/api/metrics`
     );
 
@@ -32,20 +32,20 @@ const tx =;
 
 const instances =  ;
   const summary = [
-      `Marketplace steady: ${jobs2,
+      `Marketplace steady: ${jobs2,}
 } jobs posted in the last 24h, fill rates improving`
       `DAO engagement at ${voters}% voter participation with active delegates`
-      `Token momentum: ${wallet,
+      `Token momentum: ${wallet,}
 } active wallets; daily volume around ${Number(tx).toLocaleString()}`
-      `Multiverse scale: ${instance,
+      `Multiverse scale: ${instance,}
 } active sub-instances with cross-instance flows`
       `Treasury stable and contributors earning consistently across regions`
     ];
 
-    res.status(200).json({ summary, timestamp: new Date().toISOString(),
+    res.status(200).json({ summary, timestamp: new Date().toISOString(),}
 });
-  } catch (e) {
-    res.status (200).json ({ summary: [], error: 'Failed to compute summary',
+  } catch (e) {}
+    res.status (200).json ({ summary: [], error: 'Failed to compute summary',}
 });
   }
 

@@ -27,7 +27,10 @@ const education_schema = z.object ({institution: z.string ().min (1, 'Institutio
 export /**;
  * EducationFormFields - Function description;
  */;
-function EducationFormFields() {const [is_loading, setIsLoading] = useState (false)const [error, set_error] = useState < string | null>(null)const form = use_form < EducationFormValues>({resolver: zod_resolver (education_schema),default_values: {institution: '',degree: '',field_of_study: '',start_date: format (new Date (), 'yyyy - MM - dd'),is_current: false,description: '',location: ''}})const handle_submit = async (data: EducationFormValues) => {setIsLoading (true)set_error (null)try {await on_submit (data)} catch (err: any) {set_error (err.message || 'An error occurred')} finally {setIsLoading (false)}
+function EducationFormFields() {const [is_loading, setIsLoading] = useState (false)const [error, set_error] = useState < string | null>(null)const form = use_form < EducationFormValues>({resolver: zod_resolver (education_schema),default_values: {institution: '',
+  degree: '',field_of_study: '',
+  start_date: format (new Date (), 'yyyy - MM - dd'),is_current: false,description: '',}
+  location: ''}})const handle_submit = async (data: EducationFormValues) => {setIsLoading (true)set_error (null)try {await on_submit (data)} catch (err: any) {set_error (err.message || 'An error occurred')} finally {setIsLoading (false)}
   }FormMessage} from '@/components/ui/form';
 import { Education  } from '@/types/resume';
 import { useForm   } from 'react-hook-form';
@@ -41,48 +44,48 @@ import { Checkbox   } from '@/components/ui/checkbox';
 import { Form;
   FormControl;
   FormField;
-  FormItem;
-  FormLabel;
+  FormItem;}
+  FormLabel;}
   FormMessage  } from '@/components/ui/form';
 import { useState   } from 'react';
 import { EducationFormFieldsProps   } from './types';
 // Define schema for form validation;
-const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.handle_submit (handle_submit)} className='space - y-4'>;
-        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+const educationSchema  = null;return (<Form {...form} />;<form on_submit={form.handle_submit (handle_submit)} className='space - y-4' />;
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4' />;
           <FormField;
             control={form.control}
             name='institution';
-            render={({ field }: { field: any }) => (              <FormItem>;
-                <FormLabel > Institution</FormLabel>;
-                <FormControl>;
+            render={({ field }: { field: any }) = /> (              <FormItem />;
+                <FormLabel  /> Institution</FormLabel>;
+                <FormControl />;
                   <Input;
                     placeholder='University of California, MIT, etc.';{...field}
                   />;
                 </FormControl>;
-                <FormMessage />;control={form.control}name="institution";
-            render={({ field }: { field: any }) => (<FormItem>;
-                <FormLabel>Institution</FormLabel>;
-                <FormControl>;
-                  <Input placeholder="University of California, MIT, etc." {...field} />;
+                <FormMessage />;control={form.control}name=\"institution\";
+            render={({ field }: { field: any }) => (<FormItem />;
+                <FormLabel />Institution</FormLabel>;
+                <FormControl />;
+                  <Input placeholder=\"University of California, MIT, etc.\" {...field} />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
             )}/>;<FormField;
             control={form && form.control}
             name='degree';
-            render={({ field }: { field: any }) => (              <FormItem>;
-                <FormLabel>Degree</FormLabel>;
-                <FormControl>;
+            render={({ field }: { field: any }) = /> (              <FormItem />;
+                <FormLabel />Degree</FormLabel>;
+                <FormControl />;
                   <Input;
-                    placeholder="Bachelor's, Master's, Ph && Ph.D, etc.";
-              </FormItem>)}
+                    placeholder=\"Bachelor's, Master's, Ph && Ph.D, etc.\";
+              </FormItem />)}
           />;
           <FormField;
-            control={form.control}name="degree";
-            render={({ field }: { field: any }) => (<FormItem>;
-                <FormLabel>Degree</FormLabel>;
-                <FormControl>;
-                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />;
+            control={form.control}name=\"degree\";
+            render={({ field }: { field: any }) = /> (<FormItem />;
+                <FormLabel />Degree</FormLabel>;
+                <FormControl />;
+                  <Input placeholder=\"Bachelor's, Master's, Ph.D, etc.\" {...field} />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
@@ -90,81 +93,81 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
         </div>;<FormField;
           control={form.control}
           name='field_of_study';
-          render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel>Field of Study</FormLabel>;
-              <FormControl>;
+          render={({ field }: { field: any }) = /> (            <FormItem />;
+              <FormLabel />Field of Study</FormLabel>;
+              <FormControl />;
                 <Input;
                   placeholder='Computer Science, Engineering, etc.';
-              </FormItem>)}
+              </FormItem />)}
           />;
         </div>;
         <FormField;
-          control={form.control}name="field_of_study";
-          render={({ field }: { field: any }) => (<FormItem>;
-              <FormLabel>Field of Study</FormLabel>;
-              <FormControl>;
-                <Input placeholder="Computer Science, Engineering, etc." {...field} />;
+          control={form.control}name=\"field_of_study\";
+          render={({ field }: { field: any }) = /> (<FormItem />;
+              <FormLabel />Field of Study</FormLabel>;
+              <FormControl />;
+                <Input placeholder=\"Computer Science, Engineering, etc.\" {...field} />;
               </FormControl>;
               <FormMessage />;
             </FormItem>;
-          )}/>;<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+          )}/>;<div className='grid grid-cols-1 md:grid-cols-2 gap-4' />;
           <FormField;
-            control={form.control}render={({ field }: { field: any }) => (<FormItem>;
-                <FormLabel>Start Date</FormLabel>;
-                <FormControl>;
-            render={({ field }: { field: any }) => (<FormItem>;
-                <FormLabel>Start Date</FormLabel>;
-                <FormControl>;
+            control={form.control}render={({ field }: { field: any }) = /> (<FormItem />;
+                <FormLabel />Start Date</FormLabel>;
+                <FormControl />;
+            render={({ field }: { field: any }) => (<FormItem />;
+                <FormLabel />Start Date</FormLabel>;
+                <FormControl />;
                   <Input type='date' {...field} value={field && field.value || ''} />                </FormControl>;
                 <FormMessage />;
               </FormItem>;<Input type='date' {...field} value={field.value || ''} />                </FormControl>;
                 <FormMessage />;
               </FormItem>;
                   <Input;
-                    type="date";
+                    type=\"date\";
                     {...field}
                     value={field.value || ''}/>;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;)}/>;/>;
-          <div className='space-y-4'>;
+          <div className='space-y-4' />;
             <FormField;
               control={form.control}<Checkbox;
                       checked = {field && field.value}
                       onCheckedChange = {field && field.onChange}
                     />;
                   </FormControl>;
-                  <div className='space-y-1 leading-none'>;
-                    <FormLabel>I am currently studying here</FormLabel>;
+                  <div className='space-y-1 leading-none' />;
+                    <FormLabel />I am currently studying here</FormLabel>;
                   </div>;
                 </FormItem>;checked={field.value}
                       onCheckedChange={field.onChange}
                     />;
                   </FormControl>;
-                  <div className="space-y-1 leading-none">;
-                    <FormLabel>I am currently studying here</FormLabel>;
+                  <div className=\"space-y-1 leading-none\" />;
+                    <FormLabel />I am currently studying here</FormLabel>;
                   </div>;
                 </FormItem>;
-              )}/>;{!form && form.watch('is_current') && (<FormField;
+              )}/>;{!form && form.watch('is_current') && (<FormField;}
                 control={form && form.control}
                 name='end_date';
             />;
-            {!form.watch('is_current') && (<FormField;
+            {!form.watch('is_current') && (<FormField;}
                 control={form.control}
-                name="end_date";
-                render={({ field }: { field: any }) => (<FormItem>;
-                    <FormLabel>End Date</FormLabel>;
-                    <FormControl>;
+                name=\"end_date\";
+                render={({ field }: { field: any }) = /> (<FormItem />;
+                    <FormLabel />End Date</FormLabel>;
+                    <FormControl />;
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>;
                       <Input;
-                        type="date";
+                        type=\"date\";
                         {...field}value={field.value || ''}/>;
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
-                render={({ field }: { field: any }) => (<FormItem>;
-                    <FormLabel>End Date</FormLabel>;
-                    <FormControl>;
+                render={({ field }: { field: any }) => (<FormItem />;
+                    <FormLabel />End Date</FormLabel>;
+                    <FormControl />;
                       <Input type='date' {...field} value={field && field.value || ''} />                    </FormControl>;
                     <FormMessage />;
                   </FormItem>;
@@ -174,42 +177,42 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
         </div>;<FormField;
           control={form.control}
           name='location';
-          render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel>Location (Optional)</FormLabel>;
+          render={({ field }: { field: any }) = /> (            <FormItem />;
+              <FormLabel />Location (Optional)</FormLabel>;
             </FormItem>)}
         />;
-        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4' />;
           <FormField;
             control={form.control}
             name='start_date';
-            render={({ field }: { field: any }) => (<FormItem>;
-                <FormLabel > Start Date</FormLabel>;
-                <FormControl>;
+            render={({ field }: { field: any }) = /> (<FormItem />;
+                <FormLabel  /> Start Date</FormLabel>;
+                <FormControl />;
                   <Input type='date' {...field} value={field.value || ''} />                </FormControl>;
                 <FormMessage />;
               </FormItem>)}
           />;
-          <div className='space - y-4'>;
+          <div className='space - y-4' />;
             <FormField;
               control={form.control}
               name='is_current';
-              render={({ field }: { field: any }) => (<FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
+              render={({ field }: { field: any }) = /> (<FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2' />                  <FormControl />;
                     <Checkbox;
                       checked = {field.value }
                       onCheckedChange = {field.on_change }
                     />;
                   </FormControl>;
-                  <div className='space - y-1 leading - none'>;
-                    <FormLabel > I am currently studying here</FormLabel>;
+                  <div className='space - y-1 leading - none' />;
+                    <FormLabel  /> I am currently studying here</FormLabel>;
                   </div>;
                 </FormItem>)}
             />;
-            {!form.watch ('is_current') && (<FormField;
+            {!form.watch ('is_current') && (<FormField;}
                 control={form.control}
                 name='end_date';
-                render={({ field }: { field: any }) => (<FormItem>;
-                    <FormLabel > End Date</FormLabel>;
-                    <FormControl>;
+                render={({ field }: { field: any }) = /> (<FormItem />;
+                    <FormLabel  /> End Date</FormLabel>;
+                    <FormControl />;
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>;
                     <FormMessage />;
                   </FormItem>)}
@@ -219,41 +222,41 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
         <FormField;
           control={form.control}/>;<FormField;
           control={form && form.control}control={form.control}name='description';
-          render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel>Description (Optional)</FormLabel>;
-              <FormControl>;
+          render={({ field }: { field: any }) = /> (            <FormItem />;
+              <FormLabel />Description (Optional)</FormLabel>;
+              <FormControl />;
                 <Textarea;
                   placeholder='Notable achievements, courses, activities...';
                   className='min-h-[100px]';
-            </FormItem>)}
+            </FormItem />)}
         />;
         <FormField;
           control={form.control}
           name='description';
-          render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel > Description (Optional)</FormLabel>;
-              <FormControl>;
+          render={({ field }: { field: any }) = /> (            <FormItem />;
+              <FormLabel  /> Description (Optional)</FormLabel>;
+              <FormControl />;
                 <Textarea;
                   placeholder='Notable achievements, courses, activities...';
                   className='min - h-[100px]';
-          name="location";
-          render={({ field }: { field: any }) => (<FormItem>;
-              <FormLabel>Location (Optional)</FormLabel>;
-              <FormControl>;
-                <Input placeholder="Cambridge, MA" {...field} />;
+          name=\"location\";
+          render={({ field }: { field: any }) = /> (<FormItem />;
+              <FormLabel />Location (Optional)</FormLabel>;
+              <FormControl />;
+                <Input placeholder=\"Cambridge, MA\" {...field} />;
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}/>;
         <FormField;
           control={form.control}
-          name="description";
-          render={({ field }: { field: any }) => (<FormItem>;
-              <FormLabel>Description (Optional)</FormLabel>;
-              <FormControl>;
+          name=\"description\";
+          render={({ field }: { field: any }) = /> (<FormItem />;
+              <FormLabel />Description (Optional)</FormLabel>;
+              <FormControl />;
                 <Textarea;
-                  placeholder="Notable achievements, courses, activities...";
-                  className="min-h-[100px]";
+                  placeholder=\"Notable achievements, courses, activities...\";
+                  className=\"min-h-[100px]\";
                   {...field}
                 />;
               </FormControl>;
@@ -262,12 +265,12 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
         </div>;
       </form>;
     </Form>;
-  )/>;{error && (<Alert variant='destructive'>;
-            <AlertDescription>{error}</AlertDescription>;
+  )/>;{error && (<Alert variant='destructive' />;}
+            <AlertDescription />{error}</AlertDescription>;
           </Alert>;
-        )}<div className='flex justify-between pt-2'>;
-          <Button type='button' variant='outline' onClick={onCancel}>            {isEditing ? 'Cancel' : 'Back'}
-          </Button>;<Button type='submit' disabled={isLoading}>;
+        )}<div className='flex justify-between pt-2' />;
+          <Button type='button' variant='outline' onClick={onCancel} />            {isEditing ? 'Cancel' : 'Back'}
+          </Button>;<Button type='submit' disabled={isLoading} />;
             {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
             {isEditing ? 'Update' : 'Add'} Education;
           </Button>;
@@ -276,13 +279,13 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
     </Form>;
   )}</FormItem>)}
         />;
-        {error && (<Alert variant='destructive'>;
-            <AlertDescription>{error}</AlertDescription>;
+        {error && (<Alert variant='destructive' />;}
+            <AlertDescription />{error}</AlertDescription>;
           </Alert>)}
-        <div className='flex justify - between pt - 2'>;
-          <Button type='button' variant='outline' on_click={on_cancel}>            {is_editing ? 'Cancel' : 'Back'}
+        <div className='flex justify - between pt - 2' />;
+          <Button type='button' variant='outline' on_click={on_cancel} />            {is_editing ? 'Cancel' : 'Back'}
           </Button>;
-          <Button type='submit' disabled={is_loading}>;
+          <Button type='submit' disabled={is_loading} />;
             {is_loading && <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />}
             {is_editing ? 'Update' : 'Add'} Education;
           </Button>;

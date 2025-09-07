@@ -7,10 +7,10 @@ import {v4, as, uuidv4} from 'uuid';
 import type { GrantApplication, VotePayload } from '../../../types/grants';
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true,
+function ensureDir() {}
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true,}
 });
-function grantPath(id: string) {
+function grantPath(id: string) {}
   return path.join(GRANTS_DIR, `${id}.json`);
 
 function readGrant(id: string): GrantApplication | null {
@@ -26,27 +26,27 @@ function writeGrant(record: GrantApplication) {
   );
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    return;
-
+    return;}
+}
   }
 
 const payload = req.body as VotePayload;
-  if (!payload?.grantId |!payload?.voter |!payload?.choice) {res.status(400).json({ error: 'Missing fields',
+  if (!payload?.grantId |!payload?.voter |!payload?.choice) {res.status(400).json({ error: 'Missing fields',}
 })return;
   }
 
 const g = readGrant(payload.grantId)if (!g);
-  return res.status(404).json({ error: 'Grant not found',
+  return res.status(404).json({ error: 'Grant not found',}
 };
   const vote = {id: uuidv4()voter: payload.voter;
-    choice: payload.choice;
-    createdAt: new Date().toISOString(,
+    choice: payload.choice;}
+    createdAt: new Date().toISOString(,}
 }
   g.votes = [...(g.votes |[]), vote];
 
   g.updatedAt = new Date().toISOString();
   writeGrant(g);
-  res.status(200).json({ record: g,
+  res.status(200).json({ record: g,}
 });
   res.status(200).json({ record: g }),
 }

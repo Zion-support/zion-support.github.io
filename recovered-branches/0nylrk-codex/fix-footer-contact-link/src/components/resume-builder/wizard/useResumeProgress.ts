@@ -1,30 +1,36 @@
-<<<<<<< HEAD
+<<<<<<< HEAD;
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
-export const useResumeProgress = (resume: Resume | null) => {;  const [progress, setProgress] = useState(0);
-=======
-import { useState, useEffect } from "react";
-import { Resume } from "@/types/resume";
-export const useResumeProgress = (resume: Resume | null) => {
+export const useResumeProgress = (;  const [progress, setProgress] = useState(0);
+=======) => {
+  return $3;}
+}
+import { useState, useEffect } from \"react\";
+import { Resume } from \"@/types/resume\";
+export const useResumeProgress = (
   const [progress, setProgress] = useState(0);
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-  useEffect(() => {
-    // Calculate progress based on completed sections
-    if (!resume) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+useEffect(() => {
+    // Calculate progress based on completed sections;
+if (!resume) {
       setProgress(0);
-      return;
+      return;) => {
+  return $3;}
+}
     }
-<<<<<<< HEAD
+<<<<<<< HEAD;
 import { useState, useEffect } from 'react';
 import { Resume } from '@/types/resume';
-export const useResumeProgress = (resume: Resume | null) => {;
+export const useResumeProgress = (;
   const [progress, setProgress] = useState(0),;
   useEffect(() => {;
     // Calculate progress based on completed sections;
-    // Check condition
+    // Check condition;
 if ( {) {
-  $2
+  $2) => {
+  return $3;}
+}
 }
       set_progress (0);
       return;
@@ -34,8 +40,8 @@ if ( {) {
     // Basic info is always considered (1 point);
     completed += 1,;
     // Work experience (1 point if at least one entry);
-    if (resume.work_experience && resume.work_experience.length > 0) {;
-      completed += 1;      completed += 1;
+    if (resume.work_experience && resume.work_experience.length > 0) {;}
+      completed += 1;      completed += 1;}
     }
 =======
 
@@ -45,61 +51,63 @@ if ( {) {
     completed += 1;
 
     // Work experience (1 point if at least one entry)
-    if (resume.work_experience && resume.work_experience.length > 0) {
-      completed += 1;
+    if (resume.work_experience && resume.work_experience.length > 0) {}
+      completed += 1;}
     }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
     // Education (1 point if at least one entry)
-    if (resume.education && resume.education.length > 0) {
-      completed += 1;
+    if (resume.education && resume.education.length > 0) {}
+      completed += 1;}
     }
-<<<<<<< HEAD
+<<<<<<< HEAD;
 =======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
     // Skills (1 point if at least one entry)
-    if (resume.skills && resume.skills.length > 0) {
-      completed += 1;
+    if (resume.skills && resume.skills.length > 0) {}
+      completed += 1;}
     }
-<<<<<<< HEAD
+<<<<<<< HEAD;
 =======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
     // Certifications (1 point if at least one entry)
-    if (resume.certifications && resume.certifications.length > 0) {
-      completed += 1;
+    if (resume.certifications && resume.certifications.length > 0) {}
+      completed += 1;}
     }
-<<<<<<< HEAD
-    const progressPercentage = (completed / 5) * 100;
+<<<<<<< HEAD;
+const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage);
   }, [resume]);
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2}
 }
-    if (resume && resume.education && resume && resume.education.length > 0) {
-      completed += 1
+    if (resume && resume.education && resume && resume.education.length > 0) {}
+      completed += 1}
     }
       completed += 1;
-    if (resume && resume.skills && resume && resume.skills.length > 0) {
-      completed += 1
+    if (resume && resume.skills && resume && resume.skills.length > 0) {}
+      completed += 1}
     }
       completed += 1;
-    if (resume && resume.certifications && resume && resume.certifications.length > 0) {
-      completed += 1
+    if (resume && resume.certifications && resume && resume.certifications.length > 0) {}
+      completed += 1}
     }};
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
 ;
-export const useResumeProgress = (resume:Resume | null) => {;
+export const useResumeProgress = (;
   const [progress, setProgress] = useState(0),;
   ;
   useEffect(() => {;
     // Calculate progress based on completed sections;
     if (!resume) {;
       setProgress(0),;
-      return,;
+      return,;) => {
+  return $3;}
+}
     }
     ;
     let completed = 0,;
@@ -108,23 +116,23 @@ export const useResumeProgress = (resume:Resume | null) => {;
     completed += 1,;
     ;
     // Work experience (1 point if at least one entry);
-    if (resume.work_experience && resume.work_experience.length > 0) {;
-      completed += 1,;
+    if (resume.work_experience && resume.work_experience.length > 0) {;}
+      completed += 1,;}
     }
     ;
     // Education (1 point if at least one entry);
-    if (resume.education && resume.education.length > 0) {;
-      completed += 1,;
+    if (resume.education && resume.education.length > 0) {;}
+      completed += 1,;}
     }
     ;
     // Skills (1 point if at least one entry);
-    if (resume.skills && resume.skills.length > 0) {;
-      completed += 1,;
+    if (resume.skills && resume.skills.length > 0) {;}
+      completed += 1,;}
     }
     ;
     // Certifications (1 point if at least one entry);
-    if (resume.certifications && resume.certifications.length > 0) {;
-      completed += 1,;
+    if (resume.certifications && resume.certifications.length > 0) {;}
+      completed += 1,;}
     }
     ;
     const progressPercentage = (completed / 5) * 100,;
@@ -134,13 +142,13 @@ export const useResumeProgress = (resume:Resume | null) => {;
   return progress,;
 },; useEffect ( () => {
   // Calculate progress based on completed sections if (!resume) {
-  // Basic info is always considered (1 point) completed += 1;
-// Work experience (1 point if at least one entry) return progress 
+  // Basic info is always considered (1 point) completed += 1;}
+// Work experience (1 point if at least one entry) return progress }
 };
-  return progress
+  return progress;
 };
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
 =======
 
     const progressPercentage = (completed / 5) * 100;
@@ -149,4 +157,4 @@ export const useResumeProgress = (resume:Resume | null) => {;
 
   return progress;
 };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;

@@ -1,15 +1,19 @@
 import React from 'react';
-const BlogSection = ({ className }) => {return (<div className={className || ''}>;
-      <h1>BlogSection</h1>;
-      <p>This component is under development.</p>;
+const BlogSection = (return (<div className={className || '') = /> {
+  return $3;}
+} />;
+      <h1 />BlogSection</h1>;
+      <p />This component is under development.</p>;
     </div>;
   )}
 
-const BlogSection = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>BlogSection</h1>
-      <p>This component is under development.</p>
+const BlogSection = (
+  return () => {
+  return $3;}
+}
+    <div className={className || ''} />
+      <h1 />BlogSection</h1>
+      <p />This component is under development.</p>
     </div>
   )
 }

@@ -1,15 +1,15 @@
 // Contact information;
 export interface ContactInfo  {phone: string;
   email: string;
-  address: string;
-  site: string;
+  address: string;}
+  site: string;}
 }// Service interfaces;
 export interface Service  {id: string;
   name: string,description: string;
   category: 'micro-saas' | 'ai-services' | 'it-services';
   price: {min: number;
-    max: number;
-    currency: string;
+    max: number;}
+    currency: string;}
 }features: string[];
   technologies: string[];
   deliveryTime: string;
@@ -19,24 +19,24 @@ export interface Service  {id: string;
 }export interface ServiceCategory  {title: string,description: string;
   count: number;
   features: string[];
-  href: string;
-  color: string;
+  href: string;}
+  color: string;}
 }// SEO and performance;
 export interface SEOProps  {}export interface PerformanceMetrics  {fcp?: number;
   lcp?: number;
   fid?: number;
-  cls?: number;
-  ttfb?: number;
+  cls?: number;}
+  ttfb?: number;}
 }// Loading and error states;
 export interface LoadingState  {isLoading: boolean;
-  error?: string;
-  progress?: number;
+  error?: string;}
+  progress?: number;}
 }export interface ErrorInfo  {message: string;
   code?: string;
   details?: any;
   timestamp: string;
-  userAgent?: string;
-  url?: string;
+  userAgent?: string;}
+  url?: string;}
 }// Form interfaces;
 export interface ContactForm  {name: string;
   email: string;
@@ -44,18 +44,18 @@ export interface ContactForm  {name: string;
   phone?: string;
   service: string;
   budget?: string;
-  message: string;
-  preferredContact: 'email' | 'phone' | 'both';
+  message: string;}
+  preferredContact: 'email' | 'phone' | 'both';}
 }export interface FormField  {name: string;
   label: string;
   type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';
-  required: boolean;
-  placeholder?: string;
+  required: boolean;}
+  placeholder?: string;}
   options?: { value: string; label: string }[];
   validation?: {min?: number;
     max?: number;
-    pattern?: string;
-    message?: string;
+    pattern?: string;}
+    message?: string;}
 }}// Team and company;
 export interface TeamMember  {id: string;
   name: string;
@@ -64,18 +64,18 @@ export interface TeamMember  {id: string;
   image: string;
   skills: string[];
   linkedin?: string;
-  github?: string;
-  twitter?: string;
+  github?: string;}
+  twitter?: string;}
 }export interface CompanyInfo  {name: string;
   tagline: string,description: string;
   address: {street: string;
     city: string;
     state: string;
-    zip: string;
-    country: string;
+    zip: string;}
+    country: string;}
 }contact: {phone: string;
-    email: string;
-    website: string;
+    email: string;}
+    website: string;}
 }certifications: string[];
 }// Content interfaces;
 export interface Testimonial  {id: string;
@@ -84,8 +84,8 @@ export interface Testimonial  {id: string;
   position: string;
   content: string;
   rating: number;
-  image?: string;
-  project?: string;
+  image?: string;}
+  project?: string;}
 }export interface CaseStudy  {id: string;
   title: string;
   client: string;
@@ -96,8 +96,8 @@ export interface Testimonial  {id: string;
   technologies: string[];
   duration: string;
   teamSize: number;
-  image: string;
-  featured?: boolean;
+  image: string;}
+  featured?: boolean;}
 }export interface BlogPost  {id: string;
   title: string;
   excerpt: string;
@@ -108,8 +108,8 @@ export interface Testimonial  {id: string;
   tags: string[];
   category: string;
   image: string;
-  featured?: boolean;
-  readTime: number;
+  featured?: boolean;}
+  readTime: number;}
 }// Pricing;
 export interface PricingTier  {id: string;
   name: string;
@@ -118,29 +118,29 @@ export interface PricingTier  {id: string;
   period: 'month' | 'year' | 'one-time';
   features: string[];
   limitations?: string[];
-  popular?: boolean;
-  cta: string,description: string;
+  popular?: boolean;}
+  cta: string,description: string;}
 }// API interfaces;
 export interface ApiRequest  {method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   url: string;
   data?: any;
-  params?: Record<string, any>;
-  headers?: Record<string, string>;
-}export interface ApiResponse<T>  {success: boolean;
+  params?: Record<string, any />;}
+  headers?: Record<string, string />;}
+}export interface ApiResponse<T />  {success: boolean;
   data?: T;
-  error?: string;
-  message?: string;
+  error?: string;}
+  message?: string;}
 }export interface PaginationParams  {page: number;
   limit: number;
-  sort?: string;
-  order?: 'asc' | 'desc';
-}export interface PaginatedResponse<T>  {data: T[];
+  sort?: string;}
+  order?: 'asc' | 'desc';}
+}export interface PaginatedResponse<T />  {data: T[];
   pagination: {page: number;
     limit: number;
     total: number;
     pages: number;
-    hasNext: boolean;
-    hasPrev: boolean;
+    hasNext: boolean;}
+    hasPrev: boolean;}
 }}// User and preferences;
 export interface User  {id: string;
   email: string;
@@ -156,26 +156,26 @@ export interface User  {id: string;
   preferences: {theme: 'light' | 'dark' | 'auto';
     language: string;
     notifications: {email: boolean;
-      push: boolean;
-      sms: boolean;
+      push: boolean;}
+      sms: boolean;}
 }export interface UserPreferences  {theme: 'light' | 'dark' | 'system';
   language: string;
   accessibility: AccessibilitySettings;
   notifications: {email: boolean;
-    browser: boolean;
-    marketing: boolean;
+    browser: boolean;}
+    marketing: boolean;}
 }}export interface AccessibilitySettings  {highContrast: boolean;
   fontSize: number;
-  reducedMotion: boolean;
-  screenReader: boolean;
+  reducedMotion: boolean;}
+  screenReader: boolean;}
 }// Navigation;
 export interface NavigationItem  {name: string;
   href: string;
-  submenu?: NavigationItem[];
-  external?: boolean;
+  submenu?: NavigationItem[];}
+  external?: boolean;}
 }export interface SocialLink  {platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
-  url: string;
-  label: string;
+  url: string;}
+  label: string;}
 }// Notifications;
 export interface Notification  {id: string;
   type: 'info' | 'success' | 'warning' | 'error';
@@ -186,8 +186,8 @@ export interface Notification  {id: string;
   action?: {label: string;
     url: string;
   category: 'system' | 'project' | 'team' | 'client' | 'billing';
-  priority: 'low' | 'medium' | 'high';
-  expires?: Date;
+  priority: 'low' | 'medium' | 'high';}
+  expires?: Date;}
 }// Project management;
 export interface Project  {id: string;
   name: string,description: string;
@@ -196,34 +196,34 @@ export interface Project  {id: string;
   startDate: Date;
   endDate: Date;
   budget: {allocated: number;
-    spent: number;
-    currency: string;
+    spent: number;}
+    currency: string;}
 }team: {lead: string;
-    members: string[];
-    external: string[];
+    members: string[];}
+    external: string[];}
 }client: {name: string;
-    contact: string;
-    industry: string;
+    contact: string;}
+    industry: string;}
 }deliverables: {name: string,description: string;
-    status: 'pending' | 'in-progress' | 'completed' | 'review';
-    dueDate: Date;
+    status: 'pending' | 'in-progress' | 'completed' | 'review';}
+    dueDate: Date;}
   }[];
   risks: {description: string;
     probability: 'low' | 'medium' | 'high';
-    impact: 'low' | 'medium' | 'high';
-    mitigation: string;
+    impact: 'low' | 'medium' | 'high';}
+    mitigation: string;}
   }[];
-  dependencies: {project: string;
-    type: 'blocking' | 'influencing',description: string;
+  dependencies: {project: string;}
+    type: 'blocking' | 'influencing',description: string;}
   }[];
   metrics: {name: string;
     value: number;
-    unit: string;
-    target: number;
+    unit: string;}
+    target: number;}
   }[];
   lessons: {learned: string;
-    category: 'technical' | 'process' | 'communication' | 'management';
-    impact: 'positive' | 'negative' | 'neutral';
+    category: 'technical' | 'process' | 'communication' | 'management';}
+    impact: 'positive' | 'negative' | 'neutral';}
   }[];
 }// Component props;
 export interface BaseComponentProps  {children?: React.ReactNode;
@@ -234,11 +234,11 @@ export interface BaseComponentProps  {children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
   loading?: boolean;
-  error?: string;
-  required?: boolean;
+  error?: string;}
+  required?: boolean;}
 }// Environment;
 export interface Environment  {NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_APP_URL?: string;
-  NEXT_PUBLIC_GA_ID?: string;
-  NEXT_PUBLIC_SENTRY_DSN?: string;
+  NEXT_PUBLIC_GA_ID?: string;}
+  NEXT_PUBLIC_SENTRY_DSN?: string;}

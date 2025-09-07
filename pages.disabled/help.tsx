@@ -17,8 +17,8 @@ import {
   Search,
   Users,
   Video,
-  Within,
-  Yes,
+  Within,}
+  Yes,}
 } from 'lucide-react';
 
 

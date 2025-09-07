@@ -1,24 +1,24 @@
 
 
-import fs from 'fs',
+import fs from 'fs';,
 import path from 'path';
 import type { GetStaticProps } from 'next';
 
 type Item = any;
   return (
-    <div className="space-y-8">
-      <header className="space-y-2">
-        <h1 className="text-3xl font-bold">Tech Radar</h1>
-        <p className="text-gray-600 dark:text-gray-300">Trending packages and projects across ecosystems.</p>
+    <div className=\"space-y-8\" />
+      <header className=\"space-y-2\" />
+        <h1 className=\"text-3xl font-bold\" />Tech Radar</h1>
+        <p className=\"text-gray-600 dark:text-gray-300\" />Trending packages and projects across ecosystems.</p>
       </header>
-      <section>
-        <h2 className="font-semibold text-lg mb-3">PyPI (30 days)</h2>
-        <ul className="grid md:grid-cols-2 gap-3">
-          {pypi.map((it, i) => (
-            <li key={i} className="p-4 rounded-lg border border-gray-200 dark: border-gray-800">
-              <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
-              {typeof it.downloads === 'number' && (
-                <div className="text-xs text-gray-500">Downloads: {it.downloads.toLocaleString()}</div>
+      <section />
+        <h2 className=\"font-semibold text-lg mb-3\" />PyPI (30 days)</h2>
+        <ul className=\"grid md:grid-cols-2 gap-3\" />
+          {pypi.map((it, i) => (}
+            <li key={i} className=\"p-4 rounded-lg border border-gray-200 dark: border-gray-800\" />
+              <a href={it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font-medium text-blue-600 dark:text-cyan-400\" />{it.name}</a>
+              {typeof it.downloads === 'number' && (}
+                <div className=\"text-xs text-gray-500\" />Downloads: {it.downloads.toLocaleString()}</div>
               )}
             </li>
           ),
@@ -28,36 +28,36 @@ type Item = any;
       </section>;
 
 
-      <section>;
-        <h2 className="font-semibold text-lg mb-3">PyPI (30 days)</h2>;
-        <ul className="grid md:grid-cols-2 gap-3">;
-          {pypi.map((it, i) => (<li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">;
-              <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark: text-cyan-400">{it.nam,
+      <section />;
+        <h2 className=\"font-semibold text-lg mb-3\" />PyPI (30 days)</h2>;
+        <ul className=\"grid md:grid-cols-2 gap-3\" />;
+          {pypi.map((it, i) => (<li key={i} className=\"p-4 rounded-lg border border-gray-200 dark:border-gray-800\" />;
+              <a href={it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font-medium text-blue-600 dark: text-cyan-400\" />{it.nam,}
 }</a>;
-              {typeof it.downloads === 'number' && (<div className="text-xs text-gray-500">Downloads: {it.downloads.toLocaleString(,
+              {typeof it.downloads === 'number' && (<div className=\"text-xs text-gray-500\" />Downloads: {it.downloads.toLocaleString(,}
 }</div>;
               )}
             </li>;
           ))}</ul>;
-      </section>;<section>;
-        <h2 className="font-semibold text-lg mb-3">crates && crates.io</h2>;
-        <ul className="grid md:grid-cols-2 gap-3">;
-          {crates && crates.map((it, i) => (<li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">;
-              <a href={it && it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark: text-cyan-400">{it && it.nam,
+      </section>;<section />;
+        <h2 className=\"font-semibold text-lg mb-3\" />crates && crates.io</h2>;
+        <ul className=\"grid md:grid-cols-2 gap-3\" />;
+          {crates && crates.map((it, i) => (<li key={i} className=\"p-4 rounded-lg border border-gray-200 dark:border-gray-800\" />;
+              <a href={it && it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font-medium text-blue-600 dark: text-cyan-400\" />{it && it.nam,}
 }</a>;
-              {it && it.description && <div className="text-sm text-gray-600 dark: text-gray-300">{it && it.description}</div,
+              {it && it.description && <div className=\"text-sm text-gray-600 dark: text-gray-300\" />{it && it.description}</div,
 }
             </li>;
           ))}
         </ul>;
-      </section>;{langs && langs.map((lang) => (<section key={lang}>;
-          <h2 className="font-semibold text-lg mb-3">GitHub Trending: {lan,
+      </section>;{langs && langs.map((lang) => (<section key={lang} />;
+          <h2 className=\"font-semibold text-lg mb-3\" />GitHub Trending: {lan,}
 }</h2>;
-          <ul className="grid md:grid-cols-2 gap-3">;
-            {(github[lang] || []).map((it, i) => (<li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">;
-                <a href={it && it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark: text-cyan-400">{it && it.nam,
+          <ul className=\"grid md:grid-cols-2 gap-3\" />;
+            {(github[lang] || []).map((it, i) => (<li key={i} className=\"p-4 rounded-lg border border-gray-200 dark:border-gray-800\" />;
+                <a href={it && it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font-medium text-blue-600 dark: text-cyan-400\" />{it && it.nam,}
 }</a>;
-                {it && it.description && <div className="text-sm text-gray-600 dark: text-gray-300">{it && it.description}</div,
+                {it && it.description && <div className=\"text-sm text-gray-600 dark: text-gray-300\" />{it && it.description}</div,
 }
               </li>;))}
           </ul>;
@@ -69,41 +69,41 @@ export default /**;
  * TechRadar - Function description;
  */;
 function TechRadar() {const langs = Object.keys (github;
-  return (<div className="space-y-8">;
-      <header className="space-y-2">;
-        <h1 className="text-3xl font-bold">Tech Radar</h1>;
-        <p className="text - gray - 600 dark:text-gray-300">Trending packages and projects across ecosystems.</p>;
+  return (<div className=\"space-y-8\" />;
+      <header className=\"space-y-2\" />;
+        <h1 className=\"text-3xl font-bold\" />Tech Radar</h1>;
+        <p className=\"text - gray - 600 dark:text-gray-300\" />Trending packages and projects across ecosystems.</p>;
       </header>;
-      <section>;
-        <h2 className="font - semibold text-lg mb-3">PyPI (30 days)</h2>;
-        <ul className="grid md:grid - cols-2 gap-3">;
-          {pypi.map ((it, i) => (<li key={i} className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800">;
-              <a href={it.url} target="_blank" rel="noreferrer" className="font - medium text - blue - 600 dark: text-cyan-400">{it.nam,
+      <section />;
+        <h2 className=\"font - semibold text-lg mb-3\" />PyPI (30 days)</h2>;}
+        <ul className=\"grid md:grid - cols-2 gap-3\" />;}
+          {pypi.map ((it, i) => (<li key={i} className=\"p - 4 rounded - lg border border - gray - 200 dark:border-gray-800\" />;
+              <a href={it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font - medium text - blue - 600 dark: text-cyan-400\" />{it.nam,}
 }</a>;
-              {typeof it.downloads === 'number' && (<div className="text - xs text-gray-500">Downloads: {it.downloads.toLocaleString ()}</div>)}
+              {typeof it.downloads === 'number' && (<div className=\"text - xs text-gray-500\" />Downloads: {it.downloads.toLocaleString ()}</div>)}
             </li>),
 }
         </ul>;
       </section>;
-      <section>;
-        <h2 className="font - semibold text-lg mb-3">crates.io</h2>;
-        <ul className="grid md:grid - cols-2 gap-3">;
-          {crates.map ((it, i) => (<li key={i} className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800">;
-              <a href={it.url} target="_blank" rel="noreferrer" className="font - medium text - blue - 600 dark: text-cyan-400">{it.nam,
+      <section />;
+        <h2 className=\"font - semibold text-lg mb-3\" />crates.io</h2>;
+        <ul className=\"grid md:grid - cols-2 gap-3\" />;
+          {crates.map ((it, i) => (<li key={i} className=\"p - 4 rounded - lg border border - gray - 200 dark:border-gray-800\" />;
+              <a href={it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font - medium text - blue - 600 dark: text-cyan-400\" />{it.nam,}
 }</a>;
-              {it.description && <div className="text - sm text - gray - 600 dark: text-gray-300">{it.description}</div>}
+              {it.description && <div className=\"text - sm text - gray - 600 dark: text-gray-300\" />{it.description}</div>}
             </li>),
 }
         </ul>;
       </section>;
-      {langs.map ((lang) => (<section key={lang}>;
-          <h2 className="font - semibold text-lg mb-3">GitHub Trending: {lan,
+      {langs.map ((lang) => (<section key={lang} />;
+          <h2 className=\"font - semibold text-lg mb-3\" />GitHub Trending: {lan,}
 }</h2>;
-          <ul className="grid md:grid - cols-2 gap-3">;
-            {(github[lang] || []).map ((it, i) => (<li key={i} className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800">;
-                <a href={it.url} target="_blank" rel="noreferrer" className="font - medium text - blue - 600 dark: text-cyan-400">{it.nam,
+          <ul className=\"grid md:grid - cols-2 gap-3\" />;
+            {(github[lang] || []).map ((it, i) => (<li key={i} className=\"p - 4 rounded - lg border border - gray - 200 dark:border-gray-800\" />;
+                <a href={it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font - medium text - blue - 600 dark: text-cyan-400\" />{it.nam,}
 }</a>;
-                {it.description && <div className="text - sm text - gray - 600 dark: text-gray-300">{it.description}</div>}
+                {it.description && <div className=\"text - sm text - gray - 600 dark: text-gray-300\" />{it.description}</div>}
               </li>),
 }
           </ul>;

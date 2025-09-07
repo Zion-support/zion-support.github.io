@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-
+<<<<<<< HEAD;
 ;
   }
 }import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler() {if (req.method !== 'POST') {res.status(405).json({ error: 'Method not allowed',
+export default async function handler() {if (req.method !== 'POST') {res.status(405).json({ error: 'Method not allowed',}
 })return;
-  }try {const { proof, optionId } = req.body || {}if (!proof || typeof optionId !== 'number') {res.status(400).json({ error: 'Invalid body',
+  }try {const { proof, optionId } = req.body || {}if (!proof || typeof optionId !== 'number') {res.status(400).json({ error: 'Invalid body',}
 })return;
     }// NOTE: For production, use a relayer or Batcher to aggregate votes off-chain;
     // then submit a single transaction to on-chain verifier (no gas for users).;
@@ -16,14 +15,14 @@ export default async function handler() {if (req.method !== 'POST') {res.status(
 import type { NextApiRequest, NextApiResponse } from './next';
 
 export default async /**
- * handler - Function description
+ * handler - Function description;
  */
 function handler() {
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2}
 }
-    res.status (405).json ({ error: "Method not allowed",
+    res.status (405).json ({ error: \"Method not allowed\",}
 });
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -31,30 +30,30 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed',
+  if (req.method !== 'POST') {}
+    res.status(405).json({ error: 'Method not allowed',}
 });
     return;
   }
 
-  try {
+  try {}
     const { proof, optionId } = req.body || {};
-    if (!proof || typeof optionId !== 'number') {
-      res.status(400).json({ error: 'Invalid body',
+    if (!proof || typeof optionId !== 'number') {}
+      res.status(400).json({ error: 'Invalid body',}
 });
       return;
     }
 
-    // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain
+    // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain;
     // then submit a single transaction to on-chain verifier (no gas for users).
     // Here we just echo back.
     res.status(200).json({ ok: true, received: { proof, optionId } });
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'internal error',
+  } catch (e: any) {}
+    res.status(500).json({ error: e?.message || 'internal error',}
 });
   }
 }
 =======
 }
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

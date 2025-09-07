@@ -1,4 +1,4 @@
-  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
+  kind: \"document\" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
@@ -28,49 +28,49 @@ export interface KycProfile {
   audit_trail: Array<{
     at: string;
     by: string;
-    action: string;
-    return ['government_id', 'proof_of_address'];
-  } else {
-    return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
+    action: string;}
+    return ['government_id', 'proof_of_address'];}
+  } else {}
+    return ['business_registration', 'proof_of_address', 'beneficial_ownership'];}
   }
 }
     return ['bank_statement', 'utility_bill'];
-  } else {
-    return ['bank_statement', 'utility_bill', 'tax_certificate'];
+  } else {}
+    return ['bank_statement', 'utility_bill', 'tax_certificate'];}
   }
 }
   const missing: string[] = [];
   
-  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
-    missing && missing.push('name'),
+  if (!profile && profile.fullLegalName && !profile && profile.businessName) {}
+    missing && missing.push('name'),}
   }
   if (!profile && profile.country) {
     missing && missing.push('country');
   const missing: string[] = [];
-  if (!profile.fullLegalName && !profile.businessName) {
-    missing.push('name');
+  if (!profile.fullLegalName && !profile.businessName) {}
+    missing.push('name');}
   }
   
-  if (!profile && profile.country) {
-    missing && missing.push('country');
+  if (!profile && profile.country) {}
+    missing && missing.push('country');}
   }
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
-  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
-    missing && missing.push('dateOfBirth');
+  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {}
+    missing && missing.push('dateOfBirth');}
   }
   return { ok: missing && missing.length === 0, missing };  
-  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
-    missing && missing.push('businessRegistrationNumber');
+  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {}
+    missing && missing.push('businessRegistrationNumber');}
   }
   return {
 
 
 export interface KycDocumentMeta {;
-  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
+  kind: \"document\" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
-  uploadedAt: string;
-  status: 'pending' | 'approved' | 'rejected';
+  uploadedAt: string;}
+  status: 'pending' | 'approved' | 'rejected';}
 }
 export interface KycProfile {
   userId: string;
@@ -90,54 +90,54 @@ export interface KycProfile {
   auditTrail: Array<{
     at: string;
     by: string;
-    action: string;
-    details?: any
+    action: string;}
+    details?: any}
   }>;
 }
 }
-export function generateKycDocumentId(): string {
+export function generateKycDocumentId(): string {}
   return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 export function isKycProfileComplete(profile: KycProfile): boolean {
   return profile.status === 'approved' && 
-         profile.documents.length > 0 && 
-         profile.fullLegalName.length > 0;
+         profile.documents.length > 0 && }
+         profile.fullLegalName.length > 0;}
 }
 export function isKycProfileExpired(profile: KycProfile): boolean {
-  if (!profile.expiresAt) return false;
-  return new Date(profile.expiresAt) < new Date();
+  if (!profile.expiresAt) return false;}
+  return new Date(profile.expiresAt) < new Date();}
 }
 
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
 ;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2}
 }
     missing.push ('name');
   }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2}
 }
     missing.push ('country');
   }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2}
 }
     missing.push ('dateOfBirth');
   }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2}
 }
     missing.push ('businessRegistrationNumber');
   }
   return {
-    ok: missing.length === 0,
-    missing;
+    ok: missing.length === 0,}
+    missing;}
   }
 }
 

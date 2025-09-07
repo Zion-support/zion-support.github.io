@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion'  interface ModernLoadingSpinnerProps {
-  "";
-   size?: 'sm' | 'md' | 'lg' | 'xl';"";
+  \"\";
+   size?: 'sm' | 'md' | 'lg' | 'xl';\"\";
    variant?: 'default' | 'futuristic' | 'ai' | 'cyber' | 'quantum';
    text?: string;
    showProgress?: boolean;
    progress?: number;
-   duration?: number;
-   onComplete?: () => void
+   duration?: number;}
+   onComplete?: () => void}
 }
 
-const loadingVariants = { hidden: { opacity: 0, scale: 0.8,
-}, visible: { opacity: 1, scale: 1,
+const loadingVariants = { hidden: { opacity: 0, scale: 0.8,}
+}, visible: { opacity: 1, scale: 1,}
 }, exit: { opacity: 0, scale: 0.8 },
 }
 
@@ -29,8 +29,12 @@ export const ModernLoadingSpinner: React.FC < ModernLoadingSpinnerProps> = ({ si
 
 
  const [currentProgress, setCurrentProgress] = useState (0)  const [isComplete, setIsComplete] =;
-  useState (false)   const sizeClasses = { sm: 'w - 8 h - 8', md: 'w - 12 h - 12', lg: 'w - 16 h - 16', xl: 'w - 24 h - 24',
+  useState (false)   const sizeClasses = { sm: 'w - 8 h - 8',
+  md: 'w - 12 h - 12', lg: 'w - 16 h - 16',}
+  xl: 'w - 24 h - 24',}
 }
 ;
-  const textSizes = { sm: 'text - sm', md: 'text - base', lg: 'text - lg', xl: 'text - xl',
-} ';"'";
+  const textSizes = { sm: 'text - sm',
+  md: 'text - base', lg: 'text - lg',}
+  xl: 'text - xl',}
+} ';\"'\";

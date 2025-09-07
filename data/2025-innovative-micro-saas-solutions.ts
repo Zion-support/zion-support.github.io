@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-
+<<<<<<< HEAD;
 export const innovativeMicroSaasSolutions2025 = [
   {
 
@@ -7,27 +6,27 @@ export const innovativeMicroSaasSolutions2025 = [
 =======
 export const innovativeMicroSaasSolutions2025 = [
   {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-    pricing: {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+pricing: {
       starter: {
         price: 49;
-    period: "period",
+    period: \"period\",
     features: [
           'Up to 1,000 feedback items/month'
           'Basic sentiment analysis'
           'Email support'
-          'Standard reports'
-        ]
+          'Standard reports'}
+        ]}
       }
       professional: {
-        price: 149
-        period: 'month'
-        features: [
+        price: 149;
+period: 'month',
+  features: [
           'Up to 10,000 feedback items/month'
           'Advanced AI analysis'
           'Priority support'
-          'Custom dashboards'
-        ]
+          'Custom dashboards'}
+        ]}
       }
       enterprise: {
       'AI',
@@ -37,8 +36,8 @@ export const innovativeMicroSaasSolutions2025 = [
       'Business Intelligence',
     ],
     contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      phone: '+1 302 464 0950',}
+  email: 'kleber@ziontechgroup && ziontechgroup.com',}
     },
       'Automated reorder point calculations',
       'Seasonal trend analysis and prediction',
@@ -69,55 +68,54 @@ export const innovativeMicroSaasSolutions2025 = [
     ]
     pricing: {
       starter: {
-        price: 79
-        period: 'month'
-        features: [
+        price: 79;
+period: 'month',
+  features: [
           'Up to 1,000 SKUs'
           'Basic forecasting'
           'Email support'
-          'Standard reports'
-        ]
+          'Standard reports'}
+        ]}
       }
       professional: {
-        price: 199
-        period: 'month'
-        features: [
+        price: 199;
+period: 'month',
+  features: [
           'Up to 10,000 SKUs'
           'Advanced AI forecasting'
           'Priority support'
-          'Custom analytics'
-        ]
+          'Custom analytics'}
+        ]}
       }
       enterprise: {
-        price: 499
-        period: 'month'
-        features: [
+        price: 499;
+period: 'month',
+  features: [
           'Unlimited SKUs'
           'Custom AI training'
           'Dedicated support'
-          'White-label solution'
-        ]
+          'White-label solution'}
+        ]}
       }
     }
-    category: 'Supply Chain'
-    tags: [
+    category: 'Supply Chain',
+  tags: [
       'Inventory Management'
       'AI'
       'Demand Forecasting'
       'Supply Chain'
       'Cost Optimization'
     ]
-    website: 'https://ziontechgroup.com/intelligent-inventory-optimization'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
+    website: 'https://ziontechgroup.com/intelligent-inventory-optimization',
+  contact: {
+      phone: '+1 302 464 0950',}
+  email: 'kleber@ziontechgroup.com'}
     }
-    marketSize: '$12.3B'
-    targetAudience:
+    marketSize: '$12.3B',
+  targetAudience:
       'Retail companies, e-commerce businesses, manufacturers, distributors, logistics companies'
-    competitiveAdvantage:
-      'AI-powered demand forecasting, comprehensive inventory optimization, and cost reduction capabilities'
-    useCases: [
+    competitiveAdvantage: 'AI-powered demand forecasting, comprehensive inventory optimization, and cost reduction capabilities',
+  useCases: [
       'Retail inventory management'
       'E-commerce stock optimization'
       'Manufacturing inventory control'
@@ -134,11 +132,10 @@ export const innovativeMicroSaasSolutions2025 = [
     compliance: ['SOC2', 'ISO 27001', 'Industry-specific regulations']
   }
   {
-    id: 'smart-expense-management-automation'
-    name: 'Smart Expense Management Automation'
-    description:
-      'Intelligent expense management platform that automates expense tracking, approval workflows, and financial reporting using AI and machine learning.'
-    features: [
+    id: 'smart-expense-management-automation',
+  name: 'Smart Expense Management Automation'
+    description: 'Intelligent expense management platform that automates expense tracking, approval workflows, and financial reporting using AI and machine learning.',
+  features: [
     pricing: {
       starter: {
       'Expense Management',
@@ -148,12 +145,11 @@ export const innovativeMicroSaasSolutions2025 = [
       'Compliance',
     ],
     contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      phone: '+1 302 464 0950',}
+  email: 'kleber@ziontechgroup && ziontechgroup.com',}
     },
-    targetAudience:
-      'Small to medium businesses, enterprise companies, accounting firms, financial departments'
-    competitiveAdvantage:
+    targetAudience: 'Small to medium businesses, enterprise companies, accounting firms, financial departments',
+  competitiveAdvantage:
       'AI-powered automation, comprehensive expense management, and policy compliance enforcement'
     useCases: [
       'Employee expense tracking'
@@ -177,11 +173,10 @@ export const innovativeMicroSaasSolutions2025 = [
     ]
   }
   {
-    id: 'ai-powered-social-media-scheduler'
-    name: 'AI-Powered Social Media Scheduler'
-    description:
-      'Intelligent social media management platform that uses AI to optimize posting times, generate engaging content, and maximize engagement across multiple platforms.'
-    features: [
+    id: 'ai-powered-social-media-scheduler',
+  name: 'AI-Powered Social Media Scheduler'
+    description: 'Intelligent social media management platform that uses AI to optimize posting times, generate engaging content, and maximize engagement across multiple platforms.',
+  features: [
       'AI-powered optimal posting time prediction'
       'Automated content generation and curation'
       'Multi-platform social media management'
@@ -200,12 +195,11 @@ export const innovativeMicroSaasSolutions2025 = [
       'Conversion Optimization',
     ],
     contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      phone: '+1 302 464 0950',}
+  email: 'kleber@ziontechgroup && ziontechgroup.com',}
     },
-    targetAudience:
-      'E-commerce businesses, marketing agencies, SaaS companies, retail companies, service providers'
-    competitiveAdvantage:
+    targetAudience: 'E-commerce businesses, marketing agencies, SaaS companies, retail companies, service providers',
+  competitiveAdvantage:
       'AI-powered personalization, optimal send time prediction, and comprehensive automation capabilities'
     useCases: [
       'Email campaign automation'
@@ -224,13 +218,14 @@ export const innovativeMicroSaasSolutions2025 = [
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
   }
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
-    id: 'ai-powered-customer-feedback-analyzer', name: 'AI-Powered Customer Feedback Analyzer',
+    id: 'ai-powered-customer-feedback-analyzer',
+  name: 'AI-Powered Customer Feedback Analyzer',
     description: 'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
-    features: [
+  features: [
       'Multi-channel feedback collection (email, social media, surveys, reviews)AI-powered sentiment analysis with 95.8% accuracyReal-time feedback processing and alertsAutomated insight generation and recommendationsCustomer satisfaction trend analysisCompetitor feedback monitoringCustom dashboard and reportingIntegration with CRM and support systems';
       'Multi-language supportAPI access for custom integrations'
     market_size: '$22.1B',
-    target_audience:;
+  target_audience:;
       'E - commerce businesses, marketing agencies, SaaS companies, retail companies, service providers',
     competitive_advantage:;
       'AI - powered personalization, optimal send time prediction, and comprehensive automation capabilities',
@@ -273,26 +268,26 @@ export const innovativeMicroSaasSolutions2025 = [;
     pricing: {;
       starter: {;
         price: 49,;
-        period: 'month',;
-        features: ['Up to 1,000 feedback items/monthBasic sentiment analysisEmail supportStandard reports'];
+        period: 'month',;}
+        features: ['Up to 1,000 feedback items/monthBasic sentiment analysisEmail supportStandard reports'];}
       },;
       professional: {;
         price: 149,;
-        period: 'month',;
-        features: ['Up to 10,000 feedback items/monthAdvanced AI analysisPriority supportCustom dashboards'];
+        period: 'month',;}
+        features: ['Up to 10,000 feedback items/monthAdvanced AI analysisPriority supportCustom dashboards'];}
       },;
       enterprise: {;
         price: 399,;
-        period: 'month',;
-        features: ['Unlimited feedback itemsCustom AI trainingDedicated supportWhite-label solution'];
+        period: 'month',;}
+        features: ['Unlimited feedback itemsCustom AI trainingDedicated supportWhite-label solution'];}
       }
     },;
     category: 'Customer Experience',;
     tags: ['AICustomer FeedbackSentiment AnalysisCustomer ExperienceBusiness Intelligence'],;
     website: 'https://ziontechgroup.com/ai-powered-customer-feedback-analyzer',;
     contact: {;
-      phone: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950',;}
+      email: 'kleber@ziontechgroup.com';}
     },;
     marketSize: '$8.9B',;
     targetAudience: 'E-commerce companies, SaaS businesses, retail companies, service providers, marketing agencies',;
@@ -314,26 +309,26 @@ export const innovativeMicroSaasSolutions2025 = [;
     pricing: {;
       starter: {;
         price: 79,;
-        period: 'month',;
-        features: ['Up to 1,000 SKUsBasic forecastingEmail supportStandard reports'];
+        period: 'month',;}
+        features: ['Up to 1,000 SKUsBasic forecastingEmail supportStandard reports'];}
       },;
       professional: {;
         price: 199,;
-        period: 'month',;
-        features: ['Up to 10,000 SKUsAdvanced AI forecastingPriority supportCustom analytics'];
+        period: 'month',;}
+        features: ['Up to 10,000 SKUsAdvanced AI forecastingPriority supportCustom analytics'];}
       },;
       enterprise: {;
         price: 499,;
-        period: 'month',;
-        features: ['Unlimited SKUsCustom AI trainingDedicated supportWhite-label solution'];
+        period: 'month',;}
+        features: ['Unlimited SKUsCustom AI trainingDedicated supportWhite-label solution'];}
       }
     },;
     category: 'Supply Chain',;
     tags: ['Inventory ManagementAIDemand ForecastingSupply ChainCost Optimization'],;
     website: 'https://ziontechgroup.com/intelligent-inventory-optimization',;
     contact: {;
-      phone: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950',;}
+      email: 'kleber@ziontechgroup.com';}
     },;
     marketSize: '$12.3B',;
     targetAudience: 'Retail companies, e-commerce businesses, manufacturers, distributors, logistics companies',;
@@ -355,26 +350,26 @@ export const innovativeMicroSaasSolutions2025 = [;
     pricing: {;
       starter: {;
         price: 39,;
-        period: 'month',;
-        features: ['Up to 10 usersBasic automationEmail supportStandard reports'];
+        period: 'month',;}
+        features: ['Up to 10 usersBasic automationEmail supportStandard reports'];}
       },;
       professional: {;
         price: 99,;
-        period: 'month',;
-        features: ['Up to 50 usersAdvanced AI automationPriority supportCustom workflows'];
+        period: 'month',;}
+        features: ['Up to 50 usersAdvanced AI automationPriority supportCustom workflows'];}
       },;
       enterprise: {;
         price: 249,;
-        period: 'month',;
-        features: ['Unlimited usersCustom AI trainingDedicated supportWhite-label solution'];
+        period: 'month',;}
+        features: ['Unlimited usersCustom AI trainingDedicated supportWhite-label solution'];}
       }
     },;
     category: 'Financial Management',;
     tags: ['Expense ManagementAI AutomationFinancial ReportingWorkflow AutomationCompliance'],;
     website: 'https://ziontechgroup.com/smart-expense-management-automation',;
     contact: {;
-      phone: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950',;}
+      email: 'kleber@ziontechgroup.com';}
     },;
     marketSize: '$6.7B',;
     targetAudience: 'Small to medium businesses, enterprise companies, accounting firms, financial departments',;
@@ -396,26 +391,26 @@ export const innovativeMicroSaasSolutions2025 = [;
     pricing: {;
       starter: {;
         price: 29,;
-        period: 'month',;
-        features: ['Up to 3 social accountsBasic AI schedulingEmail supportStandard analytics'];
+        period: 'month',;}
+        features: ['Up to 3 social accountsBasic AI schedulingEmail supportStandard analytics'];}
       },;
       professional: {;
         price: 79,;
-        period: 'month',;
-        features: ['Up to 10 social accountsAdvanced AI featuresPriority supportCustom analytics'];
+        period: 'month',;}
+        features: ['Up to 10 social accountsAdvanced AI featuresPriority supportCustom analytics'];}
       },;
       enterprise: {;
         price: 199,;
-        period: 'month',;
-        features: ['Unlimited social accountsCustom AI trainingDedicated supportWhite-label solution'];
+        period: 'month',;}
+        features: ['Unlimited social accountsCustom AI trainingDedicated supportWhite-label solution'];}
       }
     },;
     category: 'Marketing & Social Media',;
     tags: ['Social MediaAIContent MarketingSocial Media ManagementEngagement Optimization'],;
     website: 'https://ziontechgroup.com/ai-powered-social-media-scheduler',;
     contact: {;
-      phone: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950',;}
+      email: 'kleber@ziontechgroup.com';}
     },;
     marketSize: '$15.8B',;
     targetAudience: 'Marketing agencies, social media managers, businesses, influencers, content creators',;
@@ -437,26 +432,26 @@ export const innovativeMicroSaasSolutions2025 = [;
     pricing: {;
       starter: {;
         price: 59,;
-        period: 'month',;
-        features: ['Up to 5,000 subscribersBasic AI personalizationEmail supportStandard reports'];
+        period: 'month',;}
+        features: ['Up to 5,000 subscribersBasic AI personalizationEmail supportStandard reports'];}
       },;
       professional: {;
         price: 149,;
-        period: 'month',;
-        features: ['Up to 25,000 subscribersAdvanced AI featuresPriority supportCustom analytics'];
+        period: 'month',;}
+        features: ['Up to 25,000 subscribersAdvanced AI featuresPriority supportCustom analytics'];}
       },;
       enterprise: {;
         price: 399,;
-        period: 'month',;
-        features: ['Unlimited subscribersCustom AI trainingDedicated supportWhite-label solution'];
+        period: 'month',;}
+        features: ['Unlimited subscribersCustom AI trainingDedicated supportWhite-label solution'];}
       }
     },;
     category: 'Marketing & Email',;
     tags: ['Email MarketingAIMarketing AutomationPersonalizationConversion Optimization'],;
     website: 'https://ziontechgroup.com/intelligent-email-marketing-automation',;
     contact: {;
-      phone: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950',;}
+      email: 'kleber@ziontechgroup.com';}
     },;
     marketSize: '$22.1B',;
     targetAudience: 'E-commerce businesses, marketing agencies, SaaS companies, retail companies, service providers',;

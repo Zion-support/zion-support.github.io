@@ -1,7 +1,7 @@
 export interface ProfileSkill {
   name: string;
-  level: number; // 1-5
-  endorsements?: number;
+  level: number; // 1-5;}
+endorsements?: number;}
 }
 }
   id: string;
@@ -23,8 +23,8 @@ export interface ProfileExperience {
   company: string,
   description: string;
   status: 'available' | 'limited' | 'unavailable';
-  next_available?: string;
-  message?: string,
+  next_available?: string;}
+  message?: string,}
   available_hours?: { day: string, hours: string }[];
 }
 export interface ProfileData {
@@ -34,19 +34,17 @@ export interface ProfileData {
   avatar_url: string;
   startDate: string;
 
-  endDate?: string
-
-  current?: boolean
+  endDate?: string;}
+current?: boolean}
 }
 export interface Availability {
 
 export interface Availability {;
   status: 'available' | 'limited' | 'unavailable';
   nextAvailable?: string;
-
-  message?: string
-
-  availableHours?: { day: string, hours: string }[]
+}
+  message?: string;}
+availableHours?: { day: string, hours: string }[]
 }
 export interface ProfileData {
 
@@ -61,13 +59,13 @@ export interface ProfileData {;
   rating?: number;
   reviewCount?: number;
   aiScore?: number;
-  profileType: "service" | "talent";
+  profileType: \"service\" | \"talent\";
   skills: ProfileSkill[];
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
-  hourlyRate?: number;
-  contactEmail?: string
+  hourlyRate?: number;}
+  contactEmail?: string}
 };
 export interface ProfileProject {;
   id: string,;
@@ -75,8 +73,8 @@ export interface ProfileProject {;
   description: string,;
   imageUrl?: string,;
   tags?: string[],;
-  url?: string,;
-  date: string;
+  url?: string,;}
+  date: string;}
 }
 ;
 export interface ProfileExperience {;
@@ -85,14 +83,14 @@ export interface ProfileExperience {;
   company: string,,
   description: string,;
   startDate: string,;
-  endDate?: string,;
-  current?: boolean;
+  endDate?: string,;}
+  current?: boolean;}
 }
 ;
 export interface Availability {;
   status: 'available' | 'limited' | 'unavailable',;
-  nextAvailable?: string,;
-  message?: string,;
+  nextAvailable?: string,;}
+  message?: string,;}
   availableHours?: { day: string, hours: string }[];
 }
 ;
@@ -112,7 +110,7 @@ export interface ProfileData {;
   projects: ProfileProject[],;
   experience: ProfileExperience[],;
   availability: Availability,;
-  hourlyRate?: number;
-  contactEmail?: string;
+  hourlyRate?: number;}
+  contactEmail?: string;}
 }
 }

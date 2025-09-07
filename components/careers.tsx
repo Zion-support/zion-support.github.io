@@ -1,11 +1,11 @@
 
 
 import React, { useState } from 'react',
-import Head from 'next/head',
+import Head from 'next/head';,
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-import { Users, Rocket, Brain, Globe, Award, Zap;
-  Heart, Star, ArrowRight, CheckCircle, Briefcase
+import { Users, Rocket, Brain, Globe, Award, Zap;}
+  Heart, Star, ArrowRight, CheckCircle, Briefcase}
  } from 'lucide-react';
 
 export default function Careers() {
@@ -14,4 +14,5 @@ export default function Careers() {
 const departments = null;
 
 export default CareersPage;
-
+}
+}

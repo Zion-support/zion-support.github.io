@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+<<<<<<< HEAD;
 import {useState, useEffect} from 'react';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -9,56 +9,64 @@ import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {;  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
 =======
-import { useState, useEffect } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FilePlus, Loader2 } from "lucide-react";
-import { ProjectCard } from "./ProjectCard";
-import { ProjectForm } from "./ProjectForm";
-import { PortfolioProject } from "@/types/resume";
-import { usePortfolio } from "@/hooks/usePortfolio";
-export function PortfolioBuilder() {
+import { useState, useEffect } from \"react\";
+import { Card, CardContent } from \"@/components/ui/card\";
+import { Button } from \"@/components/ui/button\";
+import { FilePlus, Loader2 } from \"lucide-react\";
+import { ProjectCard } from \"./ProjectCard\";
+import { ProjectForm } from \"./ProjectForm\";
+import { PortfolioProject } from \"@/types/resume\";
+import { usePortfolio } from \"@/hooks/usePortfolio\";
+export function PortfolioBuilder() {}
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-  const [showAddProject, setShowAddProject] = useState(false);
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+const [showAddProject, setShowAddProject] = useState(false);
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null />(
     null,
   );
-<<<<<<< HEAD
-  useEffect(() => {
-    fetchProjects();
+<<<<<<< HEAD;
+useEffect(() => {}
+    fetchProjects();}
   }, [fetchProjects]);
-  const handleAddSuccess = () => {
+  const handleAddSuccess = (
     setShowAddProject(false);
-    fetchProjects()
+    fetchProjects()) => {
+  return $3;}
+}
 };
-  const handleEditSuccess = () => {
+  const handleEditSuccess = (
     setEditingProject(null);
-    fetchProjects()
+    fetchProjects()) => {
+  return $3;}
+}
 };
 =======
 
-  useEffect(() => {
-    fetchProjects();
+  useEffect(() => {}
+    fetchProjects();}
   }, [fetchProjects]);
 
-  const handleAddSuccess = () => {
+  const handleAddSuccess = (
     setShowAddProject(false);
-    fetchProjects();
+    fetchProjects();) => {
+  return $3;}
+}
   };
 
-  const handleEditSuccess = () => {
+  const handleEditSuccess = (
     setEditingProject(null);
-    fetchProjects();
+    fetchProjects();) => {
+  return $3;}
+}
   };
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-  const handleDeleteProject = async (projectId: string) => {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+const handleDeleteProject = async (projectId: string) => {
     const success = await deleteProject(projectId);
-    if (success) {
-      fetchProjects();
+    if (success) {}
+      fetchProjects();}
     }
-<<<<<<< HEAD
+<<<<<<< HEAD;
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button',;
@@ -67,85 +75,89 @@ import { ProjectCard } from './ProjectCard',;
 import { ProjectForm } from './ProjectForm',;
 import { PortfolioProject } from '@/types/resume',;
 import { usePortfolio } from '@/hooks/usePortfolio',;
-export function PortfolioBuilder() {;
+export function PortfolioBuilder() {;}
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),;
   const [showAddProject, setShowAddProject] = useState(false),;
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),;
-  useEffect(() => {;
-    fetchProjects();
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null />(null),;
+  useEffect(() => {;}
+    fetchProjects();}
   }, [fetchProjects]),;
-  const handleAddSuccess = () => {;
+  const handleAddSuccess = (;
     setShowAddProject(false),;
-    fetchProjects();
+    fetchProjects();) => {
+  return $3;}
+}
   },;
-  const handleEditSuccess = () => {;
+  const handleEditSuccess = (;
     setEditingProject(null),;
-    fetchProjects();
+    fetchProjects();) => {
+  return $3;}
+}
   },;
   const handleDeleteProject = async (projectId: string) => {;
     const success = await deleteProject(projectId),;
-    if (success) {;
-      fetchProjects();
+    if (success) {;}
+      fetchProjects();}
     }
   },
-    if (isLoading) {
-=======
+    if (isLoading) {}
+=======}
   };
 
   if (isLoading) {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-    return (
-      <div className="flex justify-center items-center h-64">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
-      </div>
-    );
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+return (
+      <div className=\"flex justify-center items-center h-64\" />
+        <Loader2 className=\"h-8 w-8 animate-spin text-primary\" />
+      </div>}
+    );}
   }
-<<<<<<< HEAD
+<<<<<<< HEAD;
 =======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-  return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-        <div>
-          <h1 className="text-2xl font-bold">Portfolio Projects</h1>
-          <p className="text-muted-foreground">
-            Showcase your best work and projects
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+return (
+    <div className=\"space-y-6\" />
+      <div className=\"flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6\" />
+        <div />
+          <h1 className=\"text-2xl font-bold\" />Portfolio Projects</h1>
+          <p className=\"text-muted-foreground\" />
+            Showcase your best work and projects;
           </p>
         </div>
-        <Button
-          onClick={() => setShowAddProject(true)}
-          className="gap-2"
-<<<<<<< HEAD
-          disabled={showAddProject |!!editingProject}
+        <Button;
+onClick={() = /> setShowAddProject(true)}
+          className=\"gap-2\"
+<<<<<<< HEAD;
+disabled={showAddProject |!!editingProject}
 =======
           disabled={showAddProject || !!editingProject}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
         >
-          <FilePlus className="h-4 w-4" />
-          Add Project
+          <FilePlus className=\"h-4 w-4\" />
+          Add Project;
         </Button>
       </div>
-<<<<<<< HEAD
+<<<<<<< HEAD;
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
-=======
-
+=======}
+}
       {/* Edit or Add Form */}
       {(showAddProject || editingProject) && (
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-        <Card>
-          <CardContent className="pt-6">
-            <h2 className="text-xl font-semibold mb-6">
-              {editingProject ? "Edit Project" : "Add New Project"}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+        <Card />
+          <CardContent className=\"pt-6\" />}
+            <h2 className=\"text-xl font-semibold mb-6\" />}
+              {editingProject ? \"Edit Project\" : \"Add New Project\"}
             </h2>
-<<<<<<< HEAD
-            <ProjectForm
-              project={editingProject || undefined}
+<<<<<<< HEAD;
+            <ProjectForm;
+project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {;
-                setShowAddProject(false);
-                setEditingProject(null);
+              onCancel={() = /> {;
+                setShowAddProject(false);}
+                setEditingProject(null);}
               }}
             />;
           </CardContent>;
@@ -153,22 +165,22 @@ export function PortfolioBuilder() {;
       )}
       {/* Projects List */}
       {projects && projects.length > 0 ? (;
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {projects && projects.map((project) => (;
-            <ProjectCard
-              key={project && project.id}
+        <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />;
+          {projects && projects.map((project) => (;}
+            <ProjectCard;}
+key={project && project.id}
               project={project}
-              onEdit={() => setEditingProject(project)}
+              onEdit={() = /> setEditingProject(project)}
               onDelete={handleDeleteProject}
             />;
 =======
 
-            <ProjectForm
-              project={editingProject || undefined}
+            <ProjectForm;
+project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {
-                setShowAddProject(false);
-                setEditingProject(null);
+              onCancel={() = /> {
+                setShowAddProject(false);}
+                setEditingProject(null);}
               }}
             />
           </CardContent>
@@ -177,37 +189,37 @@ export function PortfolioBuilder() {;
 
       {/* Projects List */}
       {projects.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.id}
+        <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />
+          {projects.map((project) => (}
+            <ProjectCard;}
+key={project.id}
               project={project}
-              onEdit={() => setEditingProject(project)}
+              onEdit={() = /> setEditingProject(project)}
               onDelete={handleDeleteProject}
             />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
           ))}
         </div>
       ) : (
         !showAddProject && (
-          <Card className="text-center py-12">
-            <CardContent>
-              <div className="flex flex-col items-center gap-4">
-                <div className="bg-muted/50 p-6 rounded-full">
-                  <FilePlus className="h-12 w-12 text-muted-foreground" />
+          <Card className=\"text-center py-12\" />
+            <CardContent />
+              <div className=\"flex flex-col items-center gap-4\" />
+                <div className=\"bg-muted/50 p-6 rounded-full\" />
+                  <FilePlus className=\"h-12 w-12 text-muted-foreground\" />
                 </div>
-                <h3 className="text-xl font-medium">
-                  No portfolio projects yet
+                <h3 className=\"text-xl font-medium\" />
+                  No portfolio projects yet;
                 </h3>
-                <p className="text-muted-foreground max-w-md mx-auto">
-                  Add your best work to showcase your skills and experience to
-                  potential employers.
+                <p className=\"text-muted-foreground max-w-md mx-auto\" />
+                  Add your best work to showcase your skills and experience to;
+potential employers.
                 </p>
-                <Button
-                  onClick={() => setShowAddProject(true)}
-                  className="mt-2"
+                <Button;
+onClick={() = /> setShowAddProject(true)}
+                  className=\"mt-2\"
                 >
-                  Add Your First Project
+                  Add Your First Project;
                 </Button>
               </div>
             </CardContent>
@@ -217,82 +229,82 @@ export function PortfolioBuilder() {;
     </div>
   );
 }
-<<<<<<< HEAD
-      fetch_projects ();
+<<<<<<< HEAD;
+fetch_projects ();
     }
   }
 ;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2}
 }
     return (
-      <div className="flex justify - center items - center h-64">;
-        <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;
+      <div className=\"flex justify - center items - center h-64\" />;
+        <Loader2 className=\"h - 8 w - 8 animate - spin text-primary\" />;
       </div>);
   }
   return (
-    <div className="space-y-6">;
-      <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb-6">;
-        <div>;
-          <h1 className="text - 2xl font-bold">Portfolio Projects</h1>;
-          <p className="text - muted-foreground">;
+    <div className=\"space-y-6\" />;
+      <div className=\"flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb-6\" />;
+        <div />;
+          <h1 className=\"text - 2xl font-bold\" />Portfolio Projects</h1>;
+          <p className=\"text - muted-foreground\" />;
             Showcase your best work and projects;
           </p>;
         </div>;
         <Button;
-          on_click={() => setShowAddProject (true)}
-          className="gap-2";
+          on_click={() = /> setShowAddProject (true)}
+          className=\"gap-2\";
           disabled={showAddProject || !!editing_project}
         >;
-          <FilePlus className="h - 4 w-4" />;
+          <FilePlus className=\"h - 4 w-4\" />;
           Add Project;
         </Button>;
       </div>;
       {/* Edit or Add Form */}
       {(showAddProject || editing_project) && (
-        <Card>;
-          <CardContent className="pt-6">;
-            <h2 className="text - xl font - semibold mb-6">;
-              {editing_project ? "Edit Project" : "Add New Project"}
+        <Card />;
+          <CardContent className=\"pt-6\" />;}
+            <h2 className=\"text - xl font - semibold mb-6\" />;}
+              {editing_project ? \"Edit Project\" : \"Add New Project\"}
             </h2>;
             <ProjectForm;
               project={editing_project || undefined}
               on_success={editing_project ? handleEditSuccess : handleAddSuccess}
-              on_cancel={() => {
-                setShowAddProject (false);
-                setEditingProject (null);
+              on_cancel={() = /> {
+                setShowAddProject (false);}
+                setEditingProject (null);}
               }}
             />;
           </CardContent>;
         </Card>)}
       {/* Projects List */}
       {projects.length > 0 ? (
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">;
-          {projects.map ((project) => (
-            <ProjectCard;
+        <div className=\"grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6\" />;
+          {projects.map ((project) => (}
+            <ProjectCard;}
               key={project.id}
               project={project}
-              on_edit={() => setEditingProject (project)}
+              on_edit={() = /> setEditingProject (project)}
               on_delete={handleDeleteProject}
             />))}
         </div>) : (
         !showAddProject && (
-          <Card className="text - center py-12">;
-            <CardContent>;
-              <div className="flex flex - col items - center gap-4">;
-                <div className="bg - muted / 50 p - 6 rounded-full">;
-                  <FilePlus className="h - 12 w - 12 text - muted-foreground" />;
+          <Card className=\"text - center py-12\" />;
+            <CardContent />;
+              <div className=\"flex flex - col items - center gap-4\" />;
+                <div className=\"bg - muted / 50 p - 6 rounded-full\" />;
+                  <FilePlus className=\"h - 12 w - 12 text - muted-foreground\" />;
                 </div>;
-                <h3 className="text - xl font-medium">;
+                <h3 className=\"text - xl font-medium\" />;
                   No portfolio projects yet;
                 </h3>;
-                <p className="text - muted - foreground max - w-md mx-auto">;
+                <p className=\"text - muted - foreground max - w-md mx-auto\" />;
                   Add your best work to showcase your skills and experience to;
                   potential employers.;
                 </p>;
                 <Button;
-                  on_click={() => setShowAddProject (true)}
-                  className="mt-2";
+                  on_click={() = /> setShowAddProject (true)}
+                  className=\"mt-2\";
 =======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;

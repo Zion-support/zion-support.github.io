@@ -4,43 +4,43 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [;
     id: 'ai-services',;
     name: 'AI & Machine Learning',,
   description: 'Cutting-edge artificial intelligence solutions for business automation and insights',;
-    icon: '',;
-    color: 'bg-gradient-to-r from-purple-500 to-pink-500';
+    icon: '',;}
+    color: 'bg-gradient-to-r from-purple-500 to-pink-500';}
   },;
   {;
     id: 'it-services',;
     name: 'IT Infrastructure & Support',,
   description: 'Comprehensive IT services for modern business operations',;
-    icon: '',;
-    color: 'bg-gradient-to-r from-blue-500 to-cyan-500';
+    icon: '',;}
+    color: 'bg-gradient-to-r from-blue-500 to-cyan-500';}
   },;
   {;
     id: 'micro-saas',;
     name: 'Micro SAAS Solutions',,
   description: 'Specialized software-as-a-service tools for specific business needs',;
-    icon: '',;
-    color: 'bg-gradient-to-r from-green-500 to-emerald-500';
+    icon: '',;}
+    color: 'bg-gradient-to-r from-green-500 to-emerald-500';}
   },;
   {;
     id: 'cybersecurity',;
     name: 'Cybersecurity & Compliance',,
   description: 'Advanced security solutions to protect your digital assets',;
-    icon: '',;
-    color: 'bg-gradient-to-r from-red-500 to-orange-500';
+    icon: '',;}
+    color: 'bg-gradient-to-r from-red-500 to-orange-500';}
   },;
   {;
     id: 'data-analytics',;
     name: 'Data Analytics & BI',,
   description: 'Transform data into actionable business intelligence',;
-    icon: '',;
-    color: 'bg-gradient-to-r from-indigo-500 to-purple-500';
+    icon: '',;}
+    color: 'bg-gradient-to-r from-indigo-500 to-purple-500';}
   },;
   {;
     id: 'cloud-solutions',;
     name: 'Cloud & DevOps',,
   description: 'Scalable cloud infrastructure and development operations',;
-    icon: '',;
-    color: 'bg-gradient-to-r from-sky-500 to-blue-500';
+    icon: '',;}
+    color: 'bg-gradient-to-r from-sky-500 to-blue-500';}
   }
 ],;
 export const AI_SERVICES: AIService[] = [;
@@ -56,28 +56,28 @@ export const AI_SERVICES: AIService[] = [;
       rating: 4.8,;
       reviewCount: 156,;
       location: 'Middletown, DE',;
-      verified: true,;
-      specialties: ['AICustomer ServiceAutomation'];
+      verified: true,;}
+      specialties: ['AICustomer ServiceAutomation'];}
     },;
     pricing: {;
       basic: {;
         price: 299,;
         currency: '$',;
-        period: 'month',;
-        features: ['Up to 1,000 conversations/monthBasic NLPEmail supportStandard templates'];
+        period: 'month',;}
+        features: ['Up to 1,000 conversations/monthBasic NLPEmail supportStandard templates'];}
       },;
       professional: {;
         price: 799,;
         currency: '$',;
         period: 'month',;
-        features: ['Up to 10,000 conversations/monthAdvanced NLPPhone supportCustom brandingAnalytics dashboard'],;
-        popular: true;
+        features: ['Up to 10,000 conversations/monthAdvanced NLPPhone supportCustom brandingAnalytics dashboard'],;}
+        popular: true;}
       },;
       enterprise: {;
         price: 2499,;
         currency: '$',;
-        period: 'month',;
-        features: ['Unlimited conversationsCustom AI trainingDedicated supportAPI accessWhite-label solution'];
+        period: 'month',;}
+        features: ['Unlimited conversationsCustom AI trainingDedicated supportAPI accessWhite-label solution'];}
       }
     },;
     features: ['Natural Language ProcessingMulti-language supportIntegration with CRM systemsSentiment analysisAutomated ticket routing'],;
@@ -117,28 +117,28 @@ export const AI_SERVICES: AIService[] = [;
       rating: 4.7,;
       reviewCount: 89,;
       location: 'Middletown, DE',;
-      verified: true,;
-      specialties: ['Content CreationAI WritingMarketing'];
+      verified: true,;}
+      specialties: ['Content CreationAI WritingMarketing'];}
     },;
     pricing: {;
       basic: {;
         price: 199,;
         currency: '$',;
-        period: 'month',;
-        features: ['Up to 50 articles/monthBasic templatesSEO optimizationEmail support'];
+        period: 'month',;}
+        features: ['Up to 50 articles/monthBasic templatesSEO optimizationEmail support'];}
       },;
       professional: {;
         price: 499,;
         currency: '$',;
         period: 'month',;
-        features: ['Up to 200 articles/monthCustom templatesAdvanced SEOPriority supportAnalytics'],;
-        popular: true;
+        features: ['Up to 200 articles/monthCustom templatesAdvanced SEOPriority supportAnalytics'],;}
+        popular: true;}
       },;
       enterprise: {;
         price: 1499,;
         currency: '$',;
-        period: 'month',;
-        features: ['Unlimited contentCustom AI trainingDedicated writerAPI accessWhite-label'];
+        period: 'month',;}
+        features: ['Unlimited contentCustom AI trainingDedicated writerAPI accessWhite-label'];}
       }
     },;
     features: ['Multi-format content generationSEO optimizationBrand voice customizationPlagiarism detectionContent scheduling'],;
@@ -178,28 +178,28 @@ export const AI_SERVICES: AIService[] = [;
       rating: 4.9,;
       reviewCount: 234,;
       location: 'Middletown, DE',;
-      verified: true,;
-      specialties: ['Data AnalyticsBusiness IntelligencePredictive Analytics'];
+      verified: true,;}
+      specialties: ['Data AnalyticsBusiness IntelligencePredictive Analytics'];}
     },;
     pricing: {;
       basic: {;
         price: 399,;
         currency: '$',;
-        period: 'month',;
-        features: ['Up to 10GB dataBasic dashboardsStandard reportsEmail support'];
+        period: 'month',;}
+        features: ['Up to 10GB dataBasic dashboardsStandard reportsEmail support'];}
       },;
       professional: {;
         price: 999,;
         currency: '$',;
         period: 'month',;
-        features: ['Up to 100GB dataAdvanced dashboardsPredictive analyticsPriority supportCustom reports'],;
-        popular: true;
+        features: ['Up to 100GB dataAdvanced dashboardsPredictive analyticsPriority supportCustom reports'],;}
+        popular: true;}
       },;
       enterprise: {;
         price: 2999,;
         currency: '$',;
-        period: 'month',;
-        features: ['Unlimited dataCustom AI modelsDedicated analystAPI accessWhite-label solution'];
+        period: 'month',;}
+        features: ['Unlimited dataCustom AI modelsDedicated analystAPI accessWhite-label solution'];}
       }
     },;
     features: ['Predictive analyticsNatural language queriesAutomated insightsReal-time dashboardsCustom ML models'],;
@@ -241,28 +241,28 @@ export const IT_SERVICES: ITService[] = [;
       rating: 4.8,;
       reviewCount: 178,;
       location: 'Middletown, DE',;
-      verified: true,;
-      specialties: ['IT SupportInfrastructureNetwork Security'];
+      verified: true,;}
+      specialties: ['IT SupportInfrastructureNetwork Security'];}
     },;
     pricing: {;
       basic: {;
         price: 150,;
         currency: '$',;
-        period: 'hour',;
-        features: ['Basic troubleshootingHardware installationSoftware setupEmail support'];
+        period: 'hour',;}
+        features: ['Basic troubleshootingHardware installationSoftware setupEmail support'];}
       },;
       professional: {;
         price: 125,;
         currency: '$',;
         period: 'hour',;
-        features: ['Advanced troubleshootingNetwork configurationSecurity setupPhone supportRemote assistance'],;
-        popular: true;
+        features: ['Advanced troubleshootingNetwork configurationSecurity setupPhone supportRemote assistance'],;}
+        popular: true;}
       },;
       enterprise: {;
         price: 100,;
         currency: '$',;
-        period: 'hour',;
-        features: ['Full IT management24/7 monitoringDedicated technicianEmergency responseSLA guarantee'];
+        period: 'hour',;}
+        features: ['Full IT management24/7 monitoringDedicated technicianEmergency responseSLA guarantee'];}
       }
     },;
     features: ['Network setup & configurationHardware installation & maintenanceSoftware deploymentSecurity implementationBackup solutions'],;
@@ -301,28 +301,28 @@ export const IT_SERVICES: ITService[] = [;
       rating: 4.9,;
       reviewCount: 145,;
       location: 'Middletown, DE',;
-      verified: true,;
-      specialties: ['Cloud MigrationAWSAzureGoogle Cloud'];
+      verified: true,;}
+      specialties: ['Cloud MigrationAWSAzureGoogle Cloud'];}
     },;
     pricing: {;
       basic: {;
         price: 5000,;
         currency: '$',;
-        period: 'project',;
-        features: ['Basic migration planningSingle application migrationBasic testingEmail support'];
+        period: 'project',;}
+        features: ['Basic migration planningSingle application migrationBasic testingEmail support'];}
       },;
       professional: {;
         price: 15000,;
         currency: '$',;
         period: 'project',;
-        features: ['Comprehensive migrationMultiple applicationsPerformance optimizationPhone supportTraining'],;
-        popular: true;
+        features: ['Comprehensive migrationMultiple applicationsPerformance optimizationPhone supportTraining'],;}
+        popular: true;}
       },;
       enterprise: {;
         price: 50000,;
         currency: '$',;
-        period: 'project',;
-        features: ['Full enterprise migrationCustom optimizationDedicated team24/7 supportSLA guarantee'];
+        period: 'project',;}
+        features: ['Full enterprise migrationCustom optimizationDedicated team24/7 supportSLA guarantee'];}
       }
     },;
     features: ['Migration planning & strategyApplication assessmentPerformance optimizationCost optimizationSecurity implementation'],;
@@ -363,28 +363,28 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
       rating: 4.7,;
       reviewCount: 267,;
       location: 'Middletown, DE',;
-      verified: true,;
-      specialties: ['Project ManagementTeam CollaborationAI Automation'];
+      verified: true,;}
+      specialties: ['Project ManagementTeam CollaborationAI Automation'];}
     },;
     pricing: {;
       basic: {;
         price: 29,;
         currency: '$',;
-        period: 'month',;
-        features: ['Up to 10 usersBasic project templatesTask managementEmail support'];
+        period: 'month',;}
+        features: ['Up to 10 usersBasic project templatesTask managementEmail support'];}
       },;
       professional: {;
         price: 79,;
         currency: '$',;
         period: 'month',;
-        features: ['Up to 50 usersAdvanced templatesAI automationPriority supportAnalytics'],;
-        popular: true;
+        features: ['Up to 50 usersAdvanced templatesAI automationPriority supportAnalytics'],;}
+        popular: true;}
       },;
       enterprise: {;
         price: 199,;
         currency: '$',;
-        period: 'month',;
-        features: ['Unlimited usersCustom automationDedicated supportAPI accessWhite-label'];
+        period: 'month',;}
+        features: ['Unlimited usersCustom automationDedicated supportAPI accessWhite-label'];}
       }
     },;
     features: ['AI-powered task automationReal-time collaborationProgress trackingResource managementTime tracking'],;
@@ -424,28 +424,28 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
       rating: 4.8,;
       reviewCount: 189,;
       location: 'Middletown, DE',;
-      verified: true,;
-      specialties: ['CRMSales AutomationAI Analytics'];
+      verified: true,;}
+      specialties: ['CRMSales AutomationAI Analytics'];}
     },;
     pricing: {;
       basic: {;
         price: 49,;
         currency: '$',;
-        period: 'month',;
-        features: ['Up to 5 usersBasic contact managementEmail integrationEmail support'];
+        period: 'month',;}
+        features: ['Up to 5 usersBasic contact managementEmail integrationEmail support'];}
       },;
       professional: {;
         price: 99,;
         currency: '$',;
         period: 'month',;
-        features: ['Up to 25 usersAdvanced automationAI insightsPriority supportAnalytics'],;
-        popular: true;
+        features: ['Up to 25 usersAdvanced automationAI insightsPriority supportAnalytics'],;}
+        popular: true;}
       },;
       enterprise: {;
         price: 249,;
         currency: '$',;
-        period: 'month',;
-        features: ['Unlimited usersCustom AI modelsDedicated supportAPI accessWhite-label'];
+        period: 'month',;}
+        features: ['Unlimited usersCustom AI modelsDedicated supportAPI accessWhite-label'];}
       }
     },;
     features: ['AI-powered lead scoringAutomated follow-upsSales forecastingPipeline managementCustomer insights'],;
@@ -485,28 +485,28 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
       rating: 4.6,;
       reviewCount: 134,;
       location: 'Middletown, DE',;
-      verified: true,;
-      specialties: ['HR ManagementRecruitmentPerformance Analytics'];
+      verified: true,;}
+      specialties: ['HR ManagementRecruitmentPerformance Analytics'];}
     },;
     pricing: {;
       basic: {;
         price: 39,;
         currency: '$',;
-        period: 'month',;
-        features: ['Up to 25 employeesBasic HR functionsEmployee portalEmail support'];
+        period: 'month',;}
+        features: ['Up to 25 employeesBasic HR functionsEmployee portalEmail support'];}
       },;
       professional: {;
         price: 89,;
         currency: '$',;
         period: 'month',;
-        features: ['Up to 100 employeesAI recruitmentPerformance trackingPriority supportAnalytics'],;
-        popular: true;
+        features: ['Up to 100 employeesAI recruitmentPerformance trackingPriority supportAnalytics'],;}
+        popular: true;}
       },;
       enterprise: {;
         price: 199,;
         currency: '$',;
-        period: 'month',;
-        features: ['Unlimited employeesCustom AI modelsDedicated supportAPI accessWhite-label'];
+        period: 'month',;}
+        features: ['Unlimited employeesCustom AI modelsDedicated supportAPI accessWhite-label'];}
       }
     },;
     features: ['AI-powered recruitmentEmployee onboardingPerformance managementTime trackingBenefits administration'],;
@@ -548,28 +548,28 @@ export const CYBERSECURITY_SERVICES: ITService[] = [;
       rating: 4.9,;
       reviewCount: 98,;
       location: 'Middletown, DE',;
-      verified: true,;
-      specialties: ['CybersecurityPenetration TestingCompliance'];
+      verified: true,;}
+      specialties: ['CybersecurityPenetration TestingCompliance'];}
     },;
     pricing: {;
       basic: {;
         price: 2500,;
         currency: '$',;
-        period: 'audit',;
-        features: ['Basic vulnerability scanSecurity reportRemediation guidanceEmail support'];
+        period: 'audit',;}
+        features: ['Basic vulnerability scanSecurity reportRemediation guidanceEmail support'];}
       },;
       professional: {;
         price: 7500,;
         currency: '$',;
         period: 'audit',;
-        features: ['Full penetration testingCompliance assessmentDetailed reportPhone supportFollow-up consultation'],;
-        popular: true;
+        features: ['Full penetration testingCompliance assessmentDetailed reportPhone supportFollow-up consultation'],;}
+        popular: true;}
       },;
       enterprise: {;
         price: 25000,;
         currency: '$',;
-        period: 'audit',;
-        features: ['Comprehensive security auditCustom testing scenariosDedicated team24/7 supportOngoing monitoring'];
+        period: 'audit',;}
+        features: ['Comprehensive security auditCustom testing scenariosDedicated team24/7 supportOngoing monitoring'];}
       }
     },;
     features: ['Vulnerability assessmentPenetration testingCompliance verificationSecurity reportingRemediation guidance'],;
@@ -610,28 +610,28 @@ export const DATA_ANALYTICS_SERVICES: AIService[] = [;
       rating: 4.8,;
       reviewCount: 156,;
       location: 'Middletown, DE',;
-      verified: true,;
-      specialties: ['Business IntelligenceData AnalyticsPredictive Analytics'];
+      verified: true,;}
+      specialties: ['Business IntelligenceData AnalyticsPredictive Analytics'];}
     },;
     pricing: {;
       basic: {;
         price: 599,;
         currency: '$',;
-        period: 'month',;
-        features: ['Up to 50GB dataBasic dashboardsStandard reportsEmail support'];
+        period: 'month',;}
+        features: ['Up to 50GB dataBasic dashboardsStandard reportsEmail support'];}
       },;
       professional: {;
         price: 1299,;
         currency: '$',;
         period: 'month',;
-        features: ['Up to 500GB dataAdvanced dashboardsPredictive analyticsPriority supportCustom reports'],;
-        popular: true;
+        features: ['Up to 500GB dataAdvanced dashboardsPredictive analyticsPriority supportCustom reports'],;}
+        popular: true;}
       },;
       enterprise: {;
         price: 3999,;
         currency: '$',;
-        period: 'month',;
-        features: ['Unlimited dataCustom AI modelsDedicated analystAPI accessWhite-label solution'];
+        period: 'month',;}
+        features: ['Unlimited dataCustom AI modelsDedicated analystAPI accessWhite-label solution'];}
       }
     },;
     features: ['Real-time dashboardsPredictive analyticsAutomated reportingData visualizationCustom AI models'],;
@@ -673,28 +673,28 @@ export const CLOUD_SOLUTIONS: ITService[] = [;
       rating: 4.7,;
       reviewCount: 123,;
       location: 'Middletown, DE',;
-      verified: true,;
-      specialties: ['DevOpsCI/CDCloud Infrastructure'];
+      verified: true,;}
+      specialties: ['DevOpsCI/CDCloud Infrastructure'];}
     },;
     pricing: {;
       basic: {;
         price: 299,;
         currency: '$',;
-        period: 'month',;
-        features: ['Basic CI/CD pipelineGit integrationBasic monitoringEmail support'];
+        period: 'month',;}
+        features: ['Basic CI/CD pipelineGit integrationBasic monitoringEmail support'];}
       },;
       professional: {;
         price: 799,;
         currency: '$',;
         period: 'month',;
-        features: ['Advanced automationFull monitoringInfrastructure as codePriority supportTraining'],;
-        popular: true;
+        features: ['Advanced automationFull monitoringInfrastructure as codePriority supportTraining'],;}
+        popular: true;}
       },;
       enterprise: {;
         price: 2499,;
         currency: '$',;
-        period: 'month',;
-        features: ['Custom automationDedicated team24/7 monitoringAPI accessWhite-label solution'];
+        period: 'month',;}
+        features: ['Custom automationDedicated team24/7 monitoringAPI accessWhite-label solution'];}
       }
     },;
     features: ['CI/CD pipeline automationInfrastructure as codeMonitoring & alertingAuto-scalingSecurity scanning'],;

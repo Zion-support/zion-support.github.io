@@ -2,27 +2,27 @@ module.exports = {
   apps: [
     {
       name: 'zion-error-monitor',
-      script: './continuous-error-monitor.js',
+  script: './continuous-error-monitor.js',
       args: '--daemon',
-      cwd: __dirname,
+  cwd: __dirname,
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        ZION_INTEGRATION: 'true'
+  env: {
+        NODE_ENV: 'production',}
+  ZION_INTEGRATION: 'true'}
       },
       env_production: {
-        NODE_ENV: 'production',
-        ZION_INTEGRATION: 'true'
+        NODE_ENV: 'production',}
+  ZION_INTEGRATION: 'true'}
       },
       error_file: '../reports/pm2-error.log',
-      out_file: '../reports/pm2-out.log',
+  out_file: '../reports/pm2-out.log',
       log_file: '../reports/pm2-combined.log',
-      time: true,
+  time: true,
       pid_file: '../reports/pm2.pid',
-      min_uptime: '10s',
+  min_uptime: '10s',
       max_restarts: 10,
       restart_delay: 4000,
       kill_timeout: 5000,
@@ -36,13 +36,13 @@ module.exports = {
   deploy: {
     production: {
       user: 'www-data',
-      host: 'localhost',
+  host: 'localhost',
       ref: 'origin/main',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git',
+  repo: 'https://github.com/Zion-Holdings/zion.app.git',
       path: '/var/www/zion.app',
       'pre-deploy-local': '',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
-      'pre-setup': ''
+      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',}
+      'pre-setup': ''}
     }
   }
 };

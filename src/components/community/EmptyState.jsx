@@ -1,6 +1,8 @@
-const EmptyState = ({ title, subtitle, cta, href, hasSession    }) => {
+const EmptyState = (
 
-
+) => {
+  return $3;}
+}
 }
  ;
-  return()"";
+  return()\"\";

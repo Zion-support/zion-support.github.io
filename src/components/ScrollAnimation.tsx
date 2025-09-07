@@ -6,23 +6,23 @@ interface ScrollAnimationProps {
   delay?: number;
   duration?: number;
   threshold?: number;
-  className?: string;
-
+  className?: string;}
+}
 }
 
-const ScrollAnimation: React.FC<ScrollAnimationProps> = ({ children,animation = 'fadeIn',delay = 0,duration = 0.6,threshold = 0.1,className = '',   }) => {
+const ScrollAnimation: React.FC<ScrollAnimationProps /> = ({ children,animation = 'fadeIn',delay = 0,duration = 0.6,threshold = 0.1,className = '',   }) => {
 
 
 const elementRef =;
-  useRef<HTMLDivElement>(null)const [isVisible, setIsVisible]  =;
-  useState(false;
-  useEffect(() => {
+  useRef<HTMLDivElement />(null)const [isVisible, setIsVisible]  =;
+  useState(false;}
+  useEffect(() => {}
 const observer = new IntersectionObserver(([entry]) => {if (entry.isIntersecting) {setTimeout(() => {setIsVisible(true)}, delay)}
       },{ threshold }
-    )if (elementRef.current) {observer.observe(elementRef.current);
+    )if (elementRef.current) {observer.observe(elementRef.current);}
   return () => {if (elementRef.current) {observer.unobserve(elementRef.current)}
     }}, [delay, threshold];
-  const getAnimationClass = () => {if (!isVisible) {switch (animation) {case 'fadeIn':;
+  const getAnimationClass = (if (!isVisible) {switch (animation) {case 'fadeIn':;
           return 'opacity-0';
         case 'slideUp':;
           return 'opacity-0 translate-y-8';
@@ -35,7 +35,9 @@ const observer = new IntersectionObserver(([entry]) => {if (entry.isIntersecting
         case 'scale':;
           return 'opacity-0 scale-95';
         default:;
-          return 'opacity-0';
+          return 'opacity-0';) => {
+  return $3;}
+}
       }
     }switch (animation) {case 'fadeIn':;
         return 'opacity-100';
@@ -49,12 +51,12 @@ const observer = new IntersectionObserver(([entry]) => {if (entry.isIntersecting
         return 'opacity-100 translate-x-0';
       case 'scale':;
         return 'opacity-100 scale-100';
-      default:;
-        return 'opacity-100';
+      default:;}
+        return 'opacity-100';}
     }
   }return (<div;
       ref={elementRef}
-      className={`transition-all duration-${Math.round(duration * 1000)} ease-out ${getAnimationClass()} ${className}`}>
+      className={`transition-all duration-${Math.round(duration * 1000)} ease-out ${getAnimationClass()} ${className}`} />
 
       {children}
     </div>;
