@@ -1,14 +1,35 @@
 
 ;
-id?: string,title: string,description: string,images?: string[],category: string,tags?: string[],author?: { name: string, id?: string, avatarUrl?: string, email?: string },className?: string,profileType?: 'service' | 'talent';
-}interface ListingCardProps  {id?: string;
+id?: string,
+title: string,
+description: string,
+images?: string[],
+category: string,
+tags?: string[],
+author?: { name: string, id?: string, avatarUrl?: string, email?: string },
+className?: string,
+profileType?: 'service' | 'talent';
+}
+interface ListingCardProps {
+id?: string;
   title: string;
   description: string;
   images?: string[];
   category: string;
   tags?: string[];
-  author?: { name: string; id?: string; avatarUrl?: string; email?: string }className?: string;
-  profileType?: 'service' | 'talent';export function ListingCard(): any ({id,title,description,images,category,tags,author,className,profileType = 'service'}: ListingCardProps) {// Generate a profile ID based on the listing data;
+  author?: { name: string; id?: string; avatarUrl?: string; email?: string
+}
+className?: string;
+  profileType?: 'service' | 'talent';
+export function ListingCard(): any ({id,
+title,
+description,
+images,
+category,
+tags,
+author,
+className,
+profileType = 'service'}: ListingCardProps) {// Generate a profile ID based on the listing data;
   // In a real app, this would be a proper ID from the database;
   const profileId =;
     id || (profileType === 'service' ? 'service-provider-1' : 'talent-1')>;
@@ -36,16 +57,19 @@ id?: string,title: string,description: string,images?: string[],category: string
                 variant='outline';
                 className='border-zion-slate-dark text-zion-slate-light'>                {tag}              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
           <div className="flex flex-wrap gap-2 mb-4">;
-            {tags && tags.map((tag, i) => (<Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;const profileId  = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1')return (<Link;
+            {tags && tags.map((tag, i) => (<Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
+const profileId  = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1')return (<Link;
       href = {`/profile/${profileId}`}
       tabIndex={0}
-      className={cn("flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",className;
+      className={cn("flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
+className;
       )}
     >;
       {images && images.length > 0 && images[0] && (<div className="h-48 w-full overflow-hidden relative">;
           <Image;
             src={images[0]}
-            alt={title}className="object-cover transition-transform duration-300 group-hover:scale-105";
+            alt={title}
+className="object-cover transition-transform duration-300 group-hover:scale-105";
             loading="lazy";
           />;
         </div>;
@@ -87,30 +111,57 @@ id?: string,title: string,description: string,images?: string[],category: string
         )}</div>;
     </Link>;
   )}"}) })";
-  )}import React from 'react';
+  )}
+import React from 'react';
 import { cn  } from '@/lib / utils';
 import { Badge  } from '@/components / ui / badge';
 import Link from 'next / link';
-import Image from 'next / image';interface ListingCardProps  {id?: string,title: string,description: string,images?: string[],category: string,tags?: string[],author?: { name: string, id?: string, avatar_url?: string, email?: string },class_name?: string,profile_type?: 'service' | 'talent';
-}import React from "react",import { cn } from "@/lib/utils",import { Badge } from "@/components/ui/badge",import Link from 'next/link';
+import Image from 'next / image';
+interface ListingCardProps {
+id?: string,
+title: string,
+description: string,
+images?: string[],
+category: string,
+tags?: string[],
+author?: { name: string,
+id?: string,
+avatar_url?: string,
+email?: string
+},
+class_name?: string,
+profile_type?: 'service' | 'talent';
+}
+import React from "react",
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import Link from 'next/link';
 import Image from 'next/image';
-interface ListingCardProps  {id?: string;
+interface ListingCardProps {
+id?: string;
   title: string;
   description: string;
   images?: string[];
   category: string;
-  tags?: string[];author?: { name: string; id?: string; avatar_url?: string; email?: string }
+  tags?: string[];
+author?: { name: string; id?: string; avatar_url?: string; email?: string
+}
   class_name?: string;
   profile_type?: 'service' | 'talent';
 export /**;
  * ListingCard - Function description;
  */;
-function ListingCard() {// Generate a profile ID based on the listing data;
+function ListingCard() {
+// Generate a profile ID based on the listing data;
   // In a real app, this would be a proper ID from the database;
   const profile_id =;
-    id || (profile_type === 'service' ? 'service - provider - 1' : 'talent - 1')>;author?: { name: string, id?: string, avatarUrl?: string, email?: string },className?: string;
+    id || (profile_type === 'service' ? 'service - provider - 1' : 'talent - 1')>;
+author?: { name: string, id?: string, avatarUrl?: string, email?: string 
+},
+className?: string;
   profileType?: 'service' | 'talent';
-}export function ListingCard({id;
+}
+export function ListingCard({id;
   title;
   description;
   images;
@@ -124,32 +175,42 @@ function ListingCard() {// Generate a profile ID based on the listing data;
     >;
 import { cn  } from '@/lib/utils';
 import { Badge  } from '@/components/ui/badge';
-import Image from 'next/image';interface ListingCardProps  {id?: string;
+import Image from 'next/image';
+interface ListingCardProps {
+id?: string;
   title: string;
   description: string;
   images?: string[];
   category: string;
   tags?: string[];
-  author?: { name: string, id?: string, avatarUrl?: string, email?: string }
+  author?: { name: string,
+id?: string,
+avatarUrl?: string,
+email?: string
+}
   className?: string;
   profileType?: 'service' | 'talent';
 }
-interface ListingCardProps  {id?: string;
+interface ListingCardProps {
+id?: string;
   title: string;
   description: string;
   images?: string[];
   category: string;
   tags?: string[];
-  author?: { name: string; id?: string; avatarUrl?: string; email?: string }
+  author?: { name: string; id?: string; avatarUrl?: string; email?: string
+}
   className?: string;
   profileType?: 'service' | 'talent';
-export function ListingCard() {// Generate a profile ID based on the listing data;
+export function ListingCard() {
+// Generate a profile ID based on the listing data;
   // In a real app, this would be a proper ID from the database;
   const profileId =;
     id |(profileType === 'service' ? 'service-provider-1' : 'talent-1')>;
       {images && images.length > 0 && images[0] && (<div className='h - 48 w - full overflow - hidden relative'>;
           <Image;
-            src={images[0]}
+            src={images[0]
+}
             alt={title}
             className='object - cover transition - transform duration - 300 group - hover:scale - 105';
             loading='lazy'          />;
@@ -169,7 +230,8 @@ export function ListingCard() {// Generate a profile ID based on the listing dat
         <p className='text - zion - slate mb - 4 flex - grow'>{description}</p>;
         {tags && tags.length > 0 && (<div className='flex flex - wrap gap - 2 mb - 4'>;
             {tags.map ((tag, i) => (<Badge;
-                key={i}variant='outline';
+                key={i}
+variant='outline';
                 className='border - zion - slate - dark text - zion - slate - light';
               >                {tag}              <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light">;
           <div className="flex flex - wrap gap - 2 mb - 4">;

@@ -1,4 +1,11 @@
- export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ', lastName: ', email: ', phone: ', comp: ', projectType: ', budget: ', timeline: ', description: ', urgency: 'medium'}) const [submissionStatus, setSubmissionStatus] = useState('idle') const projectTypes = [ { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications'}, { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications'}, { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics'}, { value: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions'}, { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation'}, { value: 'data-analytics', label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting'}, { value: 'ui-ux-design', label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design'}, { value: 'software-development', label: 'Custom Software', icon: Code, description: 'Enterprise software solutions'}, { value: 'devops', label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines'}, { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup'}, { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization'}, { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance'}] const budgetRanges = [ { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs'}, { value: '10k-25k', label: '$10,000 - $25, 000', description: 'Medium-sized applications'}, { value: '25k-50k', label: '$25, 000 - $50,000', description: 'Complex applications'}, { value: '50k-100k', label: '$50,000 - $100, 000', description: 'Enterprise solutions'}, { value: '100k-plus', label: '$100, 000+', description: 'Large-scale projects'}, { value: 'custom', label: 'Custom Pricing', description: 'Let&quots discuss your needs'}] const timelineOptions = [' { value: 'asap', label: 'ASAP', description: 'Immediate start required' }, { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed'}, { value: '1-month', label: '1 Month', description: 'Standard project timeline'}, { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline'}, { value: '3-plus-months', label: '3+ Months', description: 'Long-term project'}, { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed'}] const urgencyLevels = [ { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400'}, { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400'}, { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400'}, { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400'}] const handleInputChange = e => { const { name, value } = e.target setFormData(prev => ({ ...prev, [name]: value})) } const handleSubmit = async e => { e.preventDefault() setSubmissionStatus('submitting')';''';import { useState } from 'react''';
+ export default function RequestQuote() {
+ const [formData, setFormData] = useState({ firstName: ', lastName: ', email: ', phone: ', comp: ', projectType: ', budget: ', timeline: ', description: ', urgency: 'medium'
+}) const [submissionStatus, setSubmissionStatus] = useState('idle') const projectTypes = [ { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications'}, { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications'}, { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics'}, { value: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions'}, { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation'}, { value: 'data-analytics', label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting'}, { value: 'ui-ux-design', label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design'}, { value: 'software-development', label: 'Custom Software', icon: Code, description: 'Enterprise software solutions'}, { value: 'devops', label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines'}, { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup'}, { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization'}, { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance'}] const budgetRanges = [ { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs'}, { value: '10k-25k', label: '$10,000 - $25, 000', description: 'Medium-sized applications'}, { value: '25k-50k', label: '$25, 000 - $50,000', description: 'Complex applications'}, { value: '50k-100k', label: '$50,000 - $100, 000', description: 'Enterprise solutions'}, { value: '100k-plus', label: '$100, 000+', description: 'Large-scale projects'}, { value: 'custom', label: 'Custom Pricing', description: 'Let&quots discuss your needs'}] const timelineOptions = [' { value: 'asap', label: 'ASAP', description: 'Immediate start required' }, { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed'}, { value: '1-month', label: '1 Month', description: 'Standard project timeline'}, { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline'}, { value: '3-plus-months', label: '3+ Months', description: 'Long-term project'}, { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed'}] const urgencyLevels = [ { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400'}, { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400'}, { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400'}, { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400'}] const handleInputChange = e  => {
+ const { name, value 
+} = e.target setFormData(prev => ({ ...prev, [name]: value})) } const handleSubmit = async e  => {
+ e.preventDefault() setSubmissionStatus('submitting')';''';
+import { useState 
+} from 'react''';
 import { motion  } from 'framer-motion';
 import {}
   Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code,'';
@@ -138,7 +145,8 @@ import {}
 '';
       value: 'custom','';
       label: 'Custom Pricing', '';
-      description: 'Let&apos;s discuss your needs'}'';
+      description: 'Let&apos;
+s discuss your needs'}'';
   ]'';
   const timelineOptions = ['';
     { value: 'asap', label: 'ASAP', description: 'Immediate start required' }, {}
@@ -263,7 +271,7 @@ import {}
                 className='flex items-center justify-center space-x-3 text-white/80''''';
               >'''';
                 <Clock className='w-5 h-5 text-cyan-400' />;
-                <span>24-Hour Response</span>;
+                <span > 24-Hour Response</span>;
               </motion.div>;
               <motion.div;
                 initial={{ opacity: 0, y: 20 }}
@@ -272,7 +280,7 @@ import {}
                 className='flex items-center justify-center space-x-3 text-white/80''''';
               >'''';
                 <CheckCircle className='w-5 h-5 text-green-400' />;
-                <span>Free Consultation</span>;
+                <span > Free Consultation</span>;
               </motion.div>;
               <motion.div;
                 initial={{ opacity: 0, y: 20 }}
@@ -281,7 +289,7 @@ import {}
                 className='flex items-center justify-center space-x-3 text-white/80''''';
               >'''';
                 <Calculator className='w-5 h-5 text-purple-400' />;
-                <span>Detailed Estimate</span>;
+                <span > Detailed Estimate</span>;
               </motion.div>;
             </div>;
           </motion.div>;
@@ -523,17 +531,17 @@ import {}
                     {submissionStatus === 'submitting' ? ('''';
                       <>'''';
                         <div className='w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin'></div>;
-                        <span>Submitting...</span>;
+                        <span > Submitting...</span>;
 </>'';
                     ) : submissionStatus === 'success' ? ('''';
                       <>'''';
                         <CheckCircle className='w-5 h-5' />;
-                        <span>Quote Requested!</span>;
+                        <span > Quote Requested!</span>;
 </>;
                     ) : ('''';
                       <>'''';
                         <Send className='w-5 h-5' />;
-                        <span>Request Quote</span>;
+                        <span > Request Quote</span>;
 </>;
                     )}
                   </button>;
@@ -545,7 +553,8 @@ import {}
                     >'''';
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3' />'''';
                       <span className='text-green-400'>'';
-                        Thank you! We&apos;ve received your quote request and will'';
+                        Thank you! We&apos;
+ve received your quote request and will'';
                         respond within 24 hours.</span>;
                     </motion.div>;
                   )}
@@ -595,7 +604,7 @@ import {}
                   </a>'''';
                   <div className='flex items-start text-white/80'>'''';
                     <MapPin className='w-5 h-5 mr-3 text-green-400 mt-1' />;
-                    <span>Delaware, United States</span>;
+                    <span > Delaware, United States</span>;
                   </div>;
                 </div>;
               </motion.div>;
@@ -723,4 +732,9 @@ import {}
           </div>;
         </div>;
       </section>;
-    </div>)}export { RequestQuote }export { RequestQuote }export { RequestQuote }export { RequestQuote }export { RequestQuote }
+    </div>)}
+export { RequestQuote }
+export { RequestQuote }
+export { RequestQuote }
+export { RequestQuote }
+export { RequestQuote }

@@ -10,16 +10,20 @@ import { Card;
   CardTitle;
  } from '@/components/ui/card';
 import { FileText, ShieldCheck  } from 'lucide-react';
-interface ContractTypeCardsProps  {onStandardClick: () => void;
+interface ContractTypeCardsProps {
+onStandardClick: () => void;
   onSmartClick: () => void;
-export function ContractTypeCards() {return (<div className='grid md:grid-cols-2 gap-6 mb-10'>;
+export function ContractTypeCards() {
+return (<div className='grid md:grid-cols-2 gap-6 mb-10'>;
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
   onStandardClick: () => void;
   onSmartClick: () => void;
+
 }
-export function ContractTypeCards() {return (<div className="grid md:grid-cols-2 gap-6 mb-10">;
+export function ContractTypeCards() {
+return (<div className="grid md:grid-cols-2 gap-6 mb-10">;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -27,7 +31,7 @@ export function ContractTypeCards() {return (<div className="grid md:grid-cols-2
             <FileText className="h-5 w-5" />;
             Standard Contracts;
           </CardTitle>;
-          <CardDescription>Generate traditional legal agreements for your projects;
+          <CardDescription > Generate traditional legal agreements for your projects;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
@@ -39,7 +43,8 @@ export function ContractTypeCards() {return (<div className="grid md:grid-cols-2
           </ul>;
         </CardContent>;
         <CardFooter>;
-          <Button variant="outline" onClick={onStandardClick}>;
+          <Button variant="outline" onClick={onStandardClick
+}>;
           <Button variant="outline" onClick={onStandardClick}>;
 <ul className='space-y-2'>;
             <li className='text-sm'>✓ Legally binding templates</li>;
@@ -73,7 +78,7 @@ export function ContractTypeCards() {return (<div className="grid md:grid-cols-2
               Blockchain Powered;
             </span>;
           </div>;
-          <CardDescription>Deploy agreements on Ethereum or Polygon with escrow capabilities;
+          <CardDescription > Deploy agreements on Ethereum or Polygon with escrow capabilities;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
@@ -105,47 +110,74 @@ export function ContractTypeCards() {return (<div className="grid md:grid-cols-2
         </CardFooter>;
       </Card>;
     </div>;
-import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
+import {Card,
+CardContent,
+CardDescription,
+CardFooter,
+CardHeader,
+CardTitle} from '@/components/ui/card';
           <Button;
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600";
-import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",interface ContractTypeCardsProps  {onStandardClick: () => void;
-  onSmartClick: () => void;export function ContractTypeCards(): any ({onStandardClick,onSmartClick}: ContractTypeCardsProps) {return (<div className='grid md:grid-cols-2 gap-6 mb-10'>;
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+interface ContractTypeCardsProps {
+onStandardClick: () => void;
+  onSmartClick: () => void;
+export function ContractTypeCards(): any ({onStandardClick,
+onSmartClick
+}: ContractTypeCardsProps) {return (<div className='grid md:grid-cols-2 gap-6 mb-10'>;
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
             <FileText className='h-5 w-5' />            Standard Contracts;
           <CardTitle className="flex items-center gap-2">;
-            <FileText className="h-5 w-5" />;interface ContractTypeCardsProps  {onStandardClick: () => void,onSmartClick: () => void;
-}export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {return (<div className="grid md:grid-cols-2 gap-6 mb-10">;
+            <FileText className="h-5 w-5" />;
+interface ContractTypeCardsProps {
+onStandardClick: () => void,
+onSmartClick: () => void;
+}
+export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {return (<div className="grid md:grid-cols-2 gap-6 mb-10">;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
-            <FileText className="h-5 w-5" />;import { Button  } from '@/components / ui / button';
-import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
-interface ContractTypeCardsProps  {onStandardClick: () => void;
+            <FileText className="h-5 w-5" />;
+import { Button  } from '@/components / ui / button';
+import { Card,
+CardContent,
+CardDescription,
+CardFooter,
+CardHeader,
+CardTitle} from '@/components / ui / card';
+interface ContractTypeCardsProps {
+onStandardClick: () => void;
   onSmartClick: () => void;
 export /**;
  * ContractTypeCards - Function description;
  */;
-function ContractTypeCards() {return (<div className='grid md:grid - cols - 2 gap - 6 mb - 10'>;
+function ContractTypeCards() {
+return (<div className='grid md:grid - cols - 2 gap - 6 mb - 10'>;
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items - center gap - 2'>;
             <FileText className='h - 5 w - 5' />            Standard Contracts;
           <CardTitle className="flex items - center gap - 2">;
             <FileText className="h - 5 w - 5" />;
-interface ContractTypeCardsProps  {onStandardClick: () => void,onSmartClick: () => void;
+interface ContractTypeCardsProps  {onStandardClick: () => void,
+onSmartClick: () => void;
+
 }
 export /**;
  * ContractTypeCards - Function description;
  */;
-function ContractTypeCards() {return (<div className="grid md:grid - cols - 2 gap - 6 mb - 10">;
+function ContractTypeCards() {
+return (<div className="grid md:grid - cols - 2 gap - 6 mb - 10">;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items - center gap - 2">;
-            <FileText className="h - 5 w - 5" />;Standard Contracts;
+            <FileText className="h - 5 w - 5" />;
+Standard Contracts;
           </CardTitle>;
-          <CardDescription>Generate traditional legal agreements for your projects;
+          <CardDescription > Generate traditional legal agreements for your projects;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;<ul className='space - y-2'>;
@@ -156,7 +188,8 @@ function ContractTypeCards() {return (<div className="grid md:grid - cols - 2 ga
           </ul>;
         </CardContent>;
         <CardFooter>;
-          <Button variant='outline' on_click={onStandardClick}>            Create Standard Contract;
+          <Button variant='outline' on_click={onStandardClick
+}>            Create Standard Contract;
           </Button>;
         </CardFooter>;
       </Card>;
@@ -186,10 +219,11 @@ function ContractTypeCards() {return (<div className="grid md:grid - cols - 2 ga
               <ShieldCheck className="h - 5 w - 5 text - primary" />;
               Smart Contracts;
             </CardTitle>;
-            <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full">;Blockchain Powered;
+            <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full">;
+Blockchain Powered;
             </span>;
           </div>;
-          <CardDescription>Deploy agreements on Ethereum or Polygon with escrow capabilities;
+          <CardDescription > Deploy agreements on Ethereum or Polygon with escrow capabilities;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;<ul className='space - y-2'>;
@@ -214,7 +248,8 @@ function ContractTypeCards() {return (<div className="grid md:grid - cols - 2 ga
           <Button;
             className="w - full bg - gradient - to - r from - blue - 600 to - indigo - 600";
             on_click = {onSmartClick }
-          >;Create Smart Contract;
+          >;
+Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;</div>;

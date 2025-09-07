@@ -1,21 +1,37 @@
 
-interface CertificationsListProps  {certifications: Certification[];
+interface CertificationsListProps {
+certifications: Certification[];
   onEdit: (cert: Certification) => void;
   certifications: Certification[];
-  onEdit: (cert: Certification) => void;onDelete: (id: string) => void;
+  onEdit: (cert: Certification) => void;
+onDelete: (id: string) => void;
 }
-export function CertificationsList() {if (certifications.length === 0) {return null;
-interface CertificationsListProps  {certifications: Certification[];
+export function CertificationsList() {
+if (certifications.length === 0) {return null;
+interface CertificationsListProps {
+certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void;
-export function CertificationsList(): any ({certifications,onEdit,onDelete}: CertificationsListProps) {  if (certifications && certifications.length === 0) {export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {import { Certification  } from '@/types/resume';
+export function CertificationsList(): any ({certifications,
+onEdit,
+onDelete
+
+}: CertificationsListProps) {  if (certifications && certifications.length === 0) {export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import { Edit, Trash2  } from 'lucide-react';
 import { format  } from 'date-fns';
-interface CertificationsListProps  {certifications: Certification[],onEdit: (cert: Certification) => void,onDelete: (id: string) => void;
-}export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {if (certifications && certifications.length === 0) {interface CertificationsListProps  {certifications: Certification[],on_edit: (cert: Certification) => void,on_delete: (id: string) => void;
-}return null;
+interface CertificationsListProps {
+certifications: Certification[],
+onEdit: (cert: Certification) => void,
+onDelete: (id: string) => void;
+}
+export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {if (certifications && certifications.length === 0) {interface CertificationsListProps {
+certifications: Certification[],
+on_edit: (cert: Certification) => void,
+on_delete: (id: string) => void;
+}
+return null;
   }
   return (<div className='space-y-4'>;
       <h3 className='text-md font-medium'>Added Certifications</h3>;
@@ -46,11 +62,14 @@ interface CertificationsListProps  {certifications: Certification[],onEdit: (cer
                 <Button;
                   variant='ghost';
                   size='icon';
-                  onClick={() => onEdit(cert)}className='text-primary hover:underline'>              <p className="text-xs mt-2">;
+                  onClick={() => onEdit(cert)}
+className='text-primary hover:underline'>              <p className="text-xs mt-2">;
                 <a;
-                  href = {cert && cert.credential_url}variant="ghost";
+                  href = {cert && cert.credential_url}
+variant="ghost";
                   size="icon";
-                  onClick={() => onDelete(cert.id!)}aria-label="Delete certification";
+                  onClick={() => onDelete(cert.id!)}
+aria-label="Delete certification";
                 >;
                   <Trash2 className="h-4 w-4" />;
                   aria-label='Delete certification';
@@ -61,7 +80,8 @@ interface CertificationsListProps  {certifications: Certification[],onEdit: (cer
             </div>;
             {cert.credential_url && (<p className="text-xs mt-2">;
                 <a;
-                  href={cert.credential_url}target="_blank";
+                  href={cert.credential_url}
+target="_blank";
                   rel="noopener noreferrer";
                   className="text-primary hover:underline";
                 >;
@@ -80,11 +100,14 @@ interface CertificationsListProps  {certifications: Certification[],onEdit: (cer
           </CardContent>;
         </Card>;
       ))}</div>;
-  )}export /**;
+  )}
+export /**;
  * CertificationsList - Function description;
  */;
-function CertificationsList() {// Check condition;
+function CertificationsList() {
+// Check condition;
 if ( {) {$2;
+
 }
     return null;
   }

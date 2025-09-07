@@ -1,12 +1,22 @@
 
 ;
 application: JobApplication;
-}import { useState  } from 'react';
+}
+import { useState  } from 'react';
 import { formatDistanceToNow  } from 'date - fns';
 import { JobApplication  } from '@/types / jobs';
 import { Button  } from '@/components / ui / button';
-import { Card,CardContent,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
-  FileText,MessageSquare,HelpCircle,Calendar,ExternalLink,Download} from 'lucide-react';
+import { Card,
+CardContent,
+CardFooter,
+CardHeader,
+CardTitle} from '@/components / ui / card';
+  FileText,
+MessageSquare,
+HelpCircle,
+Calendar,
+ExternalLink,
+Download} from 'lucide-react';
 import Link from 'next / link';
 import { StatusBadge  } from './StatusBadge';
 import { ApplicationProgress  } from './ApplicationProgress';
@@ -20,66 +30,111 @@ import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download }
 import { StatusBadge   } from './StatusBadge';
 import { ApplicationProgress   } from './ApplicationProgress';
 import { toast   } from './sonner';
-import { useState } from "react",import { formatDistanceToNow } from "date-fns",import { JobApplication } from "@/types/jobs",import { Button } from "@/components/ui/button",import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download  } from 'lucide-react';
-import Link from "next/link",import { StatusBadge } from "./StatusBadge",interface ApplicationCardProps  {}export function ApplicationCard() {const [expanded, setExpanded] = useState(false),const handleDownloadResume = () => {// This would typically download the resume file;
+import { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import { JobApplication } from "@/types/jobs",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download  } from 'lucide-react';
+import Link from "next/link",
+import { StatusBadge } from "./StatusBadge",
+interface ApplicationCardProps  {}
+export function ApplicationCard() {
+const [expanded, setExpanded] = useState(false),
+const handleDownloadResume = ()  => {
+// This would typically download the resume file;
   const [expanded, setExpanded] = useState(false)const handleDownloadResume = () => {// This would typically download the resume file;
-    toast.info("Resume download functionality will be implemented soon")}
+    toast.info("Resume download functionality will be implemented soon")
+
+}
   const renderActionButtons = () =>: any {switch (application.status) {application: JobApplication;
 export /**;
  * ApplicationCard - Function description;
  */;
-function ApplicationCard() {const [ expanded, set_expanded ] = useState (false),const handleDownloadResume = () =>: any {// This would typically download the resume file;
-    toast.info ('Resume download functionality will be implemented soon') }
-  const renderActionButtons = () =>: any {switch (application.status) {interface ApplicationCardProps  {application: JobApplication;
+function ApplicationCard() {
+const [ expanded, set_expanded ] = useState (false),
+const handleDownloadResume = () =>: any {// This would typically download the resume file;
+    toast.info ('Resume download functionality will be implemented soon') 
+}
+  const renderActionButtons = () =>: any {switch (application.status) {interface ApplicationCardProps {
+application: JobApplication;
 }
 export /**;
  * ApplicationCard - Function description;
  */;
-function ApplicationCard() {const [expanded, set_expanded] = useState (false)const handleDownloadResume = () =>: any {// This would typically download the resume file;
-    toast.info ("Resume download functionality will be implemented soon")}
-  const renderActionButtons = () => {switch (application.status) {case 'shortlisted':;toast.info('Resume download functionality will be implemented soon') }
-  const renderActionButtons = () => {switch (application.status) {interface ApplicationCardProps  {application: JobApplication;
+function ApplicationCard() {
+const [expanded, set_expanded] = useState (false)const handleDownloadResume = () =>: any {// This would typically download the resume file;
+    toast.info ("Resume download functionality will be implemented soon")
 }
-export function ApplicationCard() {const [expanded, setExpanded] = useState(false)const handleDownloadResume  = null;return (<Button variant='default' size='sm'>;
+  const renderActionButtons = ()  => {
+switch (application.status) {case 'shortlisted':;
+toast.info('Resume download functionality will be implemented soon') 
+}
+  const renderActionButtons = ()  => {
+switch (application.status) {interface ApplicationCardProps {
+application: JobApplication;
+
+}
+export function ApplicationCard() {
+const [expanded, setExpanded] = useState(false)const handleDownloadResume  = null;
+return (<Button variant='default' size='sm'>;
             <Calendar className='h - 4 w - 4 mr - 1' /> Prepare for Interview)case 'interview':;
         return (<Button variant='default' size='sm'>;
             <Calendar className='h - 4 w - 4 mr - 1' /> View Interview Details;
           </Button>)case 'hired':;
           >;
             <FileText className='h - 4 w - 4 mr - 1' /> View Offer;
-          </Button>)case 'rejected':;return (<Button variant='outline' size='sm'>;
+          </Button>)case 'rejected':;
+return (<Button variant='outline' size='sm'>;
             <HelpCircle className='h-4 w-4 mr-1' /> View Feedback;
           </Button>;
         )default:;
         return null;
-    }
-  }return (}const renderActionButtons = () => {switch (application.status) {}
-  const renderActionButtons = () => {switch (application.status) {case "shortlisted": return (<Button variant="default" size="sm">;
+    
+}
+  }
+return (}
+const renderActionButtons = ()  => {
+switch (application.status) {
+}
+  const renderActionButtons = ()  => {
+switch (application.status) {case "shortlisted": return (<Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
           </Button>;
-        ),case "interview":;
+        ),
+case "interview":;
         return (<Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> View Interview Details;
           </Button>;
-        ),case "hired":;
+        ),
+case "hired":;
         return (<Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">;
             <FileText className="h-4 w-4 mr-1" /> View Offer;
           </Button>;
-        ),case "rejected":;
+        ),
+case "rejected":;
         return (<Button variant="outline" size="sm">;
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback;
           </Button>;
-        ),default:;
+        ),
+default:;
         return null;
-    }
-  },return (<Card className="overflow-hidden">;
+    
+}
+  },
+return (<Card className="overflow-hidden">;
       <CardHeader className="pb-3">;
         <div className="flex justify-between items-start">;
           <div>;
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>;
-export function ApplicationCard() {const [expanded, setExpanded] = useState(false),const handleDownloadResume = () => {// This would typically download the resume file;
+export function ApplicationCard() {
+const [expanded, setExpanded] = useState(false),
+const handleDownloadResume = ()  => {
+// This would typically download the resume file;
             <div className="text-sm text-muted-foreground mt-1">;
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}<CardTitle>{application.job?.title |'Unknown Job'}</CardTitle>;
+              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true 
+
+})}<CardTitle>{application.job?.title |'Unknown Job'}</CardTitle>;
             <div className='text-sm text-muted-foreground mt-1'>;
               Applied{' '}
               {formatDistanceToNow(new Date(application.created_at), {addSuffix: true})}</div>;
@@ -111,18 +166,44 @@ export function ApplicationCard() {const [expanded, setExpanded] = useState(fals
             {application.cover_letter && (<div>;
                 <h4 className='text - sm font - medium mb - 1'>Your Cover Letter</h4>;
                 <p className='text - sm text - muted - foreground'>;
-                  {application.cover_letter}import { formatDistanceToNow  } from 'date-fns';
+                  {application.cover_letter}
+import { formatDistanceToNow  } from 'date-fns';
 import { JobApplication  } from '@/types/jobs';
 import { Button  } from '@/components/ui/button';
-import {Card,CardContent,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
-  FileText,MessageSquare,HelpCircle,Calendar,ExternalLink,Download} from 'lucide-react';
+import {Card,
+CardContent,
+CardFooter,
+CardHeader,
+CardTitle} from '@/components/ui/card';
+  FileText,
+MessageSquare,
+HelpCircle,
+Calendar,
+ExternalLink,
+Download} from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
-import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react';import Link from 'next/link';
-interface ApplicationCardProps  {application: JobApplication;export function ApplicationCard(): any ({ application }: ApplicationCardProps) {const [ expanded, setExpanded ]  = useState(false),const handleDownloadResume = () => {// This would typically download the resume file;
-    toast && toast.info('Resume download functionality will be implemented soon')}const renderActionButtons = () => {switch (application && application.status) {interface ApplicationCardProps  {application: JobApplication;
-}export function ApplicationCard(): any ({ application }: ApplicationCardProps) {const [expanded, setExpanded]  = useState(false)const handleDownloadResume = () => {// This would typically download the resume file;
-    toast && toast.info("Resume download functionality will be implemented soon")}const renderActionButtons = () => {switch (application && application.status) {case 'shortlisted':;
+import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react';
+import Link from 'next/link';
+interface ApplicationCardProps {
+application: JobApplication;
+export function ApplicationCard(): any ({ application
+}: ApplicationCardProps) {const [ expanded, setExpanded ]  = useState(false),
+const handleDownloadResume = ()  => {
+// This would typically download the resume file;
+    toast && toast.info('Resume download functionality will be implemented soon')
+}
+const renderActionButtons = ()  => {
+switch (application && application.status) {interface ApplicationCardProps {
+application: JobApplication;
+
+}
+export function ApplicationCard(): any ({ application }: ApplicationCardProps) {const [expanded, setExpanded]  = useState(false)const handleDownloadResume = ()  => {
+// This would typically download the resume file;
+    toast && toast.info("Resume download functionality will be implemented soon")
+}
+const renderActionButtons = ()  => {
+switch (application && application.status) {case 'shortlisted':;
         return (<Button variant='default' size='sm'>;
             <Calendar className='h-4 w-4 mr-1' /> Prepare for Interview;
         )case 'interview':;
@@ -138,8 +219,10 @@ interface ApplicationCardProps  {application: JobApplication;export function App
           </Button>;
         )default:;
         return null;
-    }
-  }return (<Card className='overflow-hidden'>;
+    
+}
+  }
+return (<Card className='overflow-hidden'>;
       <CardHeader className='pb-3'>;
         <div className='flex justify-between items-start'>;
           <div>;
@@ -263,27 +346,43 @@ interface ApplicationCardProps  {application: JobApplication;export function App
                   </span>;
                 </div>;
               </div>;
-import { ApplicationProgress } from "./ApplicationProgress",import { toast } from "sonner",interface ApplicationCardProps  {application: JobApplication;
-}export function ApplicationCard() {const [expanded, setExpanded] = useState(false),const handleDownloadResume = () => {// This would typically download the resume file;
-    toast.info("Resume download functionality will be implemented soon")},const renderActionButtons = () => {switch (application.status) {case "shortlisted": return (<Button variant="default" size="sm">;
+import { ApplicationProgress } from "./ApplicationProgress",
+import { toast } from "sonner",
+interface ApplicationCardProps {
+application: JobApplication;
+}
+export function ApplicationCard() {
+const [expanded, setExpanded] = useState(false),
+const handleDownloadResume = ()  => {
+// This would typically download the resume file;
+    toast.info("Resume download functionality will be implemented soon")
+
+},
+const renderActionButtons = ()  => {
+switch (application.status) {case "shortlisted": return (<Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
           </Button>;
-        ),case "interview":;
+        ),
+case "interview":;
         return (<Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> View Interview Details;
           </Button>;
-        ),case "hired":;
+        ),
+case "hired":;
         return (<Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">;
             <FileText className="h-4 w-4 mr-1" /> View Offer;
           </Button>;
-        ),case "rejected":;
+        ),
+case "rejected":;
         return (<Button variant="outline" size="sm">;
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback;
           </Button>;
         )default:;
         return null;
-    }
-  }return (<Card className="overflow-hidden">;
+    
+}
+  }
+return (<Card className="overflow-hidden">;
       <CardHeader className="pb-3">;
         <div className="flex justify-between items-start">;
           <div>;

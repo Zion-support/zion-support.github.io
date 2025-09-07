@@ -1,4 +1,5 @@
-export interface ZionService  {id: string;
+export interface ZionService {
+id: string;
    title: string;
    description: string;
    category: 'Micro SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech';
@@ -11,4 +12,5 @@ export interface ZionService  {id: string;
    contactInfo: {mobile: string;
    email: string;
    address: string;
-   website: string} ctaLabel: string href: string external?: boolean } export const zionTechGroup2025Services: ZionService[] = [';';;
+   website: string
+} ctaLabel: string href: string external?: boolean } export const zionTechGroup2025Services: ZionService[] = [';';;

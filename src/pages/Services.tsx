@@ -6,7 +6,8 @@ import Footer from '../components/Footer';
 import Button from '../components/Button';
 import Card from '../components/Card';
 
-const Services: React.FC = () => {
+const Services: React.FC = ()  => {
+
   const services = [
     {
       icon: Zap,
@@ -14,7 +15,8 @@ const Services: React.FC = () => {
       description: 'Leverage artificial intelligence to automate processes and gain insights from your data.',
       features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       href: '/services/ai-services'
-    },
+    
+},
     {
       icon: Cloud,
       title: 'Cloud Solutions',

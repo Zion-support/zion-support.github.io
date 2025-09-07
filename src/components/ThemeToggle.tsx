@@ -2,8 +2,10 @@ import React from 'react';
 import { Sun, Moon, Monitor } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 
-const ThemeToggle: React.FC = () => {
-  const { theme, setTheme } = useTheme();
+const ThemeToggle: React.FC = ()  => {
+
+  const { theme, setTheme 
+} = useTheme();
   
   const themes = [
     { name: 'light', icon: Sun, label: 'Light' },
@@ -14,11 +16,13 @@ const ThemeToggle: React.FC = () => {
   return (
     <div className="relative">
       <div className="flex items-center space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
-        {themes.map((themeOption) => {
+        {themes.map((themeOption)  => {
+
           const Icon = themeOption.icon;
           return (
             <button
-              key={themeOption.name}
+              key={themeOption.name
+}
               onClick={() => setTheme(themeOption.name as 'light' | 'dark' | 'system')}
               className={`p-2 rounded-md transition-colors ${
                 theme === themeOption.name

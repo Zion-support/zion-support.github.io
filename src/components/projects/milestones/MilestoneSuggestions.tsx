@@ -1,7 +1,10 @@
 
-interface MilestoneSuggestionsProps  {project_name: string;
+interface MilestoneSuggestionsProps {
+project_name: string;
   scope_summary: string;
-  start_date: Date; import React, { useState } from 'react';
+  start_date: Date; import React,
+{ useState
+} from 'react';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks / useMilestoneGenerator';
 import { Loader2, Sparkles, Check  } from 'lucide-react';
 import { Badge  } from '@/components / ui / badge';
@@ -10,48 +13,106 @@ import { Badge  } from '@/components / ui / badge';
   startDate: Date; import React, { useState } from 'react';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
 import { Badge  } from '@/components/ui/badge';
-interface MilestoneSuggestionsProps  {endDate?: Date;
+interface MilestoneSuggestionsProps {
+endDate?: Date;
   projectType: string;
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string,onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void;
-import React, { useState } from 'react';
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string,
+onMilestonesGenerated?: (milestones: GeneratedMilestone[],
+) => void;
+import React,
+{ useState
+} from 'react';
 import { Button   } from '@/components/ui/button';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator   } from '@/hooks/useMilestoneGenerator';
 import { Card, CardContent, CardHeader, CardTitle   } from '@/components/ui/card';
 import { Badge   } from '@/components/ui/badge';
 import { format, parseISO  } from 'date-fns';
-interface MilestoneSuggestionsProps  {projectName: string;
+interface MilestoneSuggestionsProps {
+projectName: string;
   scopeSummary: string;
   startDate: Date;
   endDate?: Date;
   projectType: string;
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;export function MilestoneSuggestions() {const { generateMilestones, generatedMilestones, isGenerating } =;
-    useMilestoneGenerator()const [showSuggestions, setShowSuggestions]  = useState(false)const handleGenerateMilestones = async () => {const input: MilestoneInput = {scope: `${projectName}: ${scopeSummary}`,startDate: startDate.toISOString(),endDate: endDate ? endDate.toISOString() : null,projectType: projectType || 'Other'}const milestones  = await generateMilestones(input)if (milestones.length > 0) {setShowSuggestions(true)if (onMilestonesGenerated) {onMilestonesGenerated(milestones)export function MilestoneSuggestions({import { Button  } from '@/components/ui/button';
-import {GeneratedMilestone,MilestoneInput,useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+export function MilestoneSuggestions() {
+const { generateMilestones,
+generatedMilestones,
+isGenerating
+
+} =;
+    useMilestoneGenerator()const [showSuggestions, setShowSuggestions]  = useState(false)const handleGenerateMilestones = async ()  => {
+const input: MilestoneInput = {scope: `${projectName
+}: ${scopeSummary}`,
+startDate: startDate.toISOString(),
+endDate: endDate ? endDate.toISOString() : null,
+projectType: projectType || 'Other'}
+const milestones  = await generateMilestones(input)if (milestones.length > 0) {setShowSuggestions(true)if (onMilestonesGenerated) {onMilestonesGenerated(milestones)export function MilestoneSuggestions({import { Button  } from '@/components/ui/button';
+import {GeneratedMilestone,
+MilestoneInput,
+useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Loader2, Sparkles, Check } from 'lucide-react';import { Badge  } from '@/components/ui/badge';
-interface MilestoneSuggestionsProps  {projectName: string;
+import { Loader2, Sparkles, Check } from 'lucide-react';
+import { Badge  } from '@/components/ui/badge';
+interface MilestoneSuggestionsProps {
+projectName: string;
   scopeSummary: string;
-  startDate: Date;import React, { useState } from 'react';
-}export function MilestoneSuggestions(): any ({projectName,scopeSummary,startDate,endDate,projectType,onMilestonesGenerated}: MilestoneSuggestionsProps) {const { generateMilestones, generatedMilestones, isGenerating } =;
-    useMilestoneGenerator()const [showSuggestions, setShowSuggestions] = useState(false)const handleGenerateMilestones = async () => {const input: MilestoneInput = {scope: `${projectName}: ${scopeSummary}`,startDate: startDate && startDate.toISOString(),endDate: endDate ? endDate && endDate.toISOString() : null,projectType: projectType || 'Other'}const milestones  = await generateMilestones(input)if (milestones && milestones.length > 0) {setShowSuggestions(true)if (onMilestonesGenerated) {onMilestonesGenerated(milestones)}  projectName: string,scopeSummary: string,startDate: Date,endDate?: Date;
-  projectType: string,onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
-}export function MilestoneSuggestions(): any ({projectName;
+  startDate: Date;
+import React,
+{ useState
+} from 'react';
+}
+export function MilestoneSuggestions(): any ({projectName,
+scopeSummary,
+startDate,
+endDate,
+projectType,
+onMilestonesGenerated}: MilestoneSuggestionsProps) {const { generateMilestones, generatedMilestones, isGenerating } =;
+    useMilestoneGenerator()const [showSuggestions, setShowSuggestions] = useState(false)const handleGenerateMilestones = async ()  => {
+const input: MilestoneInput = {scope: `${projectName
+}: ${scopeSummary}`,
+startDate: startDate && startDate.toISOString(),
+endDate: endDate ? endDate && endDate.toISOString() : null,
+projectType: projectType || 'Other'}
+const milestones  = await generateMilestones(input)if (milestones && milestones.length > 0) {setShowSuggestions(true)if (onMilestonesGenerated) {onMilestonesGenerated(milestones)}  projectName: string,
+scopeSummary: string,
+startDate: Date,
+endDate?: Date;
+  projectType: string,
+onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+}
+export function MilestoneSuggestions(): any ({projectName;
   scopeSummary;
   startDate;
   endDate;
-  projectType;}: MilestoneSuggestionsProps) { const { generateMilestones, generatedMilestones, isGenerating  } = useMilestoneGenerator(),const [ showSuggestions, setShowSuggestions ] = useState(false),onMilestonesGenerated;
+  projectType;}: MilestoneSuggestionsProps) { const { generateMilestones, generatedMilestones, isGenerating  } = useMilestoneGenerator(),
+const [ showSuggestions, setShowSuggestions ] = useState(false),
+onMilestonesGenerated;
 }: MilestoneSuggestionsProps) {const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator()const [showSuggestions, setShowSuggestions] = useState(false)const handleGenerateMilestones  = null;}
     }
-  }return format (parseISO (date_string), 'MMM dd, yyyy')return date_string;
-    }}},return (const formatDate = (dateString: string) => {try {return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) {return dateString;
+  }
+return format (parseISO (date_string), 'MMM dd, yyyy')return date_string;
+    }}},
+return (const formatDate = (dateString: string)  => {
+try {return format(parseISO(dateString), 'MMM dd, yyyy')
+} catch (error) {return dateString;
     }
-  }}export function MilestoneSuggestions() {const handleGenerateMilestones = async () => {const input: MilestoneInput = {scope: `${projectName}: ${scopeSummary}`,startDate: startDate.toISOString(),endDate: endDate ? endDate.toISOString() : null,return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) {return dateString;
+  }}
+export function MilestoneSuggestions() {
+const handleGenerateMilestones = async ()  => {
+const input: MilestoneInput = {scope: `${projectName
+
+}: ${scopeSummary}`,
+startDate: startDate.toISOString(),
+endDate: endDate ? endDate.toISOString() : null,
+return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) {return dateString;
     }
-  }return (<div className="space-y-4">;
+  }
+return (<div className="space-y-4">;
       {!showSuggestions && (<Button;
           variant="outline";
           onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scopeSummary || !startDate}className="w-full";
+          disabled={isGenerating || !scopeSummary || !startDate}
+className="w-full";
         >;
           {isGenerating ? (<>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
@@ -134,7 +195,7 @@ interface MilestoneSuggestionsProps  {projectName: string;
                     {milestone.description}
                   </p>;
                   <div className='flex justify-between items-center mt-2 text-sm'>;
-                    <span>Estimated: {milestone.estimatedHours} hours</span>;
+                    <span > Estimated: {milestone.estimatedHours} hours</span>;
                   </div>;
                 </div>;
               ))}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">;
@@ -175,7 +236,7 @@ interface MilestoneSuggestionsProps  {projectName: string;
                   <p className='text-sm text-muted-foreground'>;
                     {milestone && milestone.description}
                   </p>;
-                  <div className='flex justify-between items-center mt-2 text-sm'>                    <span>Estimated: {milestone && milestone.estimatedHours} hours</span>;
+                  <div className='flex justify-between items-center mt-2 text-sm'>                    <span > Estimated: {milestone && milestone.estimatedHours} hours</span>;
                   <p className="text-sm text-muted-foreground">{milestone && milestone.description}</p>;
                   <div className="flex justify-between items-center mt-2 text-sm">;
               {generatedMilestones && generatedMilestones.map((milestone, index) => (<div key={index} className="p-3 border rounded-lg bg-muted/10">;
@@ -192,7 +253,7 @@ interface MilestoneSuggestionsProps  {projectName: string;
                   </div>;
                   <p className="text-sm text-muted-foreground">{milestone && milestone.description}</p>;
                   <div className="flex justify-between items-center mt-2 text-sm">;
-                    <span>Estimated: {milestone && milestone.estimatedHours} hours</span>;
+                    <span > Estimated: {milestone && milestone.estimatedHours} hours</span>;
                   </div>;
                 </div>;
               ))}<div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>;
@@ -289,10 +350,12 @@ interface MilestoneSuggestionsProps  {projectName: string;
     </div>)}
 <Button variant="outline" on_click={handleGenerateMilestones;
 }> {";
-  is_generating ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Generating milestones... </>) : (<> <Sparkles className="mr - 2 h - 4 w - 4" /> Suggest Project Milestones with AI </>)}</Button>)}AI - Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) ";
+  is_generating ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Generating milestones... </>) : (<> <Sparkles className="mr - 2 h - 4 w - 4" /> Suggest Project Milestones with AI </>)}</Button>)}
+AI - Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) ";
 }<div className="flex items - center justify - center mt - 4 text - sm text - muted - foreground" > <Check className="h - 4 w - 4 mr - 1 text - green - 500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)}</div>)}"}}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)}</div>)}"}</div>;
   )}</div>;
   )}<Button variant="outline" onClick={handleGenerateMilestones ;
 }> {";
-  isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>)}</Button>)}AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) ";
+  isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>)}</Button>)}
+AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) ";
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)}</div>)}";

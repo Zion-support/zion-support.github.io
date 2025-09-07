@@ -1,7 +1,9 @@
 import { useState, useEffect, useCallback  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building  } from 'lucide-react';
-export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics, enableUserBehaviorTracking: true;
+export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true })  => {
+const { trackEvent, trackConversion 
+} = useAnalytics({        enableTracking: enableAnalytics, enableUserBehaviorTracking: true;
     })const [formData, setFormData] = useState({})const [validation, setValidation] = useState({})const [isSubmitting, setIsSubmitting] = useState(false)const [isSubmitted, setIsSubmitted] = useState(false)const [showPassword, setShowPassword] = useState({})const [progress, setProgress] = useState(0)// Initialize form data and validation;
     useEffect(() => {}
         const initialValidation = {}
@@ -104,7 +106,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             // Track validation error;
             if (enableAnalytics) {}
 '';
-                trackEvent('form', validation_error',form_submission_failed', null, {}
+                trackEvent('form', validation_error',
+form_submission_failed', null, {}
                     errors: Object.values(validation).filter(v => !v.isValid).length;
                 })}
             return}
@@ -114,13 +117,15 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 '';
 '';
 '''';
-                trackEvent('form', submission_started',form_submitted')}
+                trackEvent('form', submission_started',
+form_submitted')}
             await onSubmit(formData)// Track successful submission;
             if (enableAnalytics) {}
 '';
 '';
 '''';
-                trackEvent('form', submission_success',form_completed')';';
+                trackEvent('form', submission_success',
+form_completed')';';
                 trackConversion('form_submission', 1, { formType: title })}
             setIsSubmitted(true)// Reset form after successful submission;
             setTimeout(() => {}
@@ -129,7 +134,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             // Track submission error;
             if (enableAnalytics) {}
 '';
-                trackEvent('form', submission_error',form_failed', null, {}
+                trackEvent('form', submission_error',
+form_failed', null, {}
 '';
 '';
 '''';
@@ -238,7 +244,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           Thank You!'''';
         </h3>'''';
         <p className='text-green-600 dark:text-green-300'>'';
-          Your message has been sent successfully. We&apos;ll get back to you soon!'';
+          Your message has been sent successfully. We&apos;
+ll get back to you soon!'';
         </p>;
       </motion.div>)}
     return (<motion.div initial = {}
@@ -256,7 +263,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
       {/* Progress Bar */}'''';
       {showProgressBar && (<div className='px-6 pt-4'>'''';
           <div className='flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2'>;
-            <span>Form Progress</span>;
+            <span > Form Progress</span>;
             <span>{Math.round(progress)}%</span>'''';
           </div>''`;
           <div className='w-full bg-gray-200 dark: bg-gray-700 rounded-full h-2'>'`'`;

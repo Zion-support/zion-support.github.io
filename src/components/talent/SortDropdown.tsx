@@ -1,10 +1,13 @@
 import {DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",interface SortDropdownProps  {sortOption: string;
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+interface SortDropdownProps {
+sortOption: string;
   setSortOption: (option: string) => void;
 }
-export function SortDropdown() {return (<DropdownMenu>;
+export function SortDropdown() {
+return (<DropdownMenu>;
       <DropdownMenuTrigger asChild>;
 <Button;
           variant='outline';
@@ -13,7 +16,8 @@ export function SortDropdown() {return (<DropdownMenu>;
           <div className='flex items-center gap-2'>;
             <SortDesc className='h-4 w-4 text-zion-purple' />;
             {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label |;
-              'Sort by'}
+              'Sort by'
+}
           </div>;
           <ChevronDown className='h-4 w-4 ml-2 opacity-50' />;
         </Button>;

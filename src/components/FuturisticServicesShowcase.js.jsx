@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react''';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { ADVANCED_MICRO_SERVICES  } from '../data/advancedMicroServices.jsx';
-const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false)return (<motion.div initial = {}
+const ServiceCard = ({ service, index, isVisible })  => {
+    const [isHovered, setIsHovered] = useState(false)return (<motion.div initial = {
+}
   { opacity: 0, y: 50, scale: 0.9;
 }} animate = {}
   isVisible ? { opacity: 1, y: 0, scale: 1;
@@ -157,8 +159,10 @@ export const FuturisticServicesShowcase = () => {}
 ``;
                 left: `${Math.random() * 100}%`, ``;
                 top: `${Math.random() * 100}%`, ``;
-                animationDelay: `${Math.random() * 5}s`, ``;
-                animationDuration: `${3 + Math.random() * 4}s`}}/>))}
+                animationDelay: `${Math.random() * 5}
+s`, ``;
+                animationDuration: `${3 + Math.random() * 4}
+s`}}/>))}
       </div>'''';
 '''';
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>;

@@ -3,16 +3,21 @@
 import Image from 'next/image';
 import { Loader2  } from 'lucide-react';
 import { useState  } from 'react';
-interface YoutubeEmbedProps  {videoId: string;
+interface YoutubeEmbedProps {
+videoId: string;
   title: string;
   poster: string;
-}export default function YoutubeEmbed() {const [loaded, setLoaded] = useState(false)const src  = null;return (<div className="relative aspect-video max-w-3xl mx-auto">;
+}
+export default function YoutubeEmbed() {
+const [loaded, setLoaded] = useState(false)const src  = null;
+return (<div className="relative aspect-video max-w-3xl mx-auto">;
       {!loaded && (<>;
           <div className="absolute inset-0 flex items-center justify-center bg-black/30">;
 <div className="absolute inset-0 flex items-center justify-center bg-black/30">;
             <Loader2 className="h-8 w-8 animate-spin text-white" />;
           <Image;
-            src={poster}
+            src={poster
+}
             alt={`${title} poster`}
             fill;
             className='object-cover rounded';
@@ -23,7 +28,8 @@ interface YoutubeEmbedProps  {videoId: string;
         </>;
       )}
       <iframe;
-        className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'        allowFullScreen;
+        className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
+allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'        allowFullScreen;
       />;
     </div>;
   )}        loading="lazy";
@@ -41,21 +47,30 @@ interface YoutubeEmbedProps  {videoId: string;
       />;
     </div>;
   )loading="lazy";
-        onLoad={() => setLoaded(true)}onLoad={() => setLoaded(true)}allowFullScreen;
+        onLoad={() => setLoaded(true)}
+onLoad={() => setLoaded(true)}
+allowFullScreen;
       />;
     </div>;;
         loading="lazy";
-        onLoad={() => setLoaded(true)}allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
+        onLoad={() => setLoaded(true)}
+allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         allowFullScreen;
       />;
     </div>;
-  )})}interface YoutubeEmbedProps  {video_id: string;
+  )})}
+interface YoutubeEmbedProps {
+video_id: string;
   title: string;
   poster: string;
 export default /**;
  * YoutubeEmbed - Function description;
  */;
-function YoutubeEmbed() {const [loaded, set_loaded] = useState (false)const src = `https://www.youtube.com / embed/${video_id}?mute = 1&controls = 1`;
+function YoutubeEmbed() {
+const [loaded,
+set_loaded] = useState (false)const src = `https://www.youtube.com / embed/${video_id
+
+}?mute = 1&controls = 1`;
   return (<div className='relative aspect - video max - w-3xl mx - auto'>;
       {!loaded && (<>;
           <Image;
@@ -86,7 +101,8 @@ function YoutubeEmbed() {const [loaded, set_loaded] = useState (false)const src 
         allow="accelerometer, autoplay, clipboard - write, encrypted - media, gyroscope, picture - in - picture";
         allowFullScreen;
       />;
-    </div>)}src={src}
+    </div>)}
+src={src}
         title={title}
 loading='lazy';
         onLoad={() => setLoaded(true)}

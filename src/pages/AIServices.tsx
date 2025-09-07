@@ -8,13 +8,15 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import ScrollAnimation from '../components/ScrollAnimation';
 
-const AIServices: React.FC = () => {
+const AIServices: React.FC = ()  => {
+
   const services = [
     {
       icon: <Brain className="w-8 h-8" />,
       title: 'Machine Learning Models',
       description: 'Custom ML models tailored to your specific business needs and data patterns.'
-    },
+    
+},
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Natural Language Processing',

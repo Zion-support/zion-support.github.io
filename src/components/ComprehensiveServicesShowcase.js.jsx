@@ -38,7 +38,8 @@ export function ComprehensiveServicesShowcase() {}
         staggerChildren: 0.1, delayChildren: 0.2;
       }
     }
-  }const itemVariants = {}
+  }
+const itemVariants = {}
   hidden: { y: 20, opacity: 0;
 }, visible: {}
       y: 0, opacity: 1, transition: {}
@@ -47,7 +48,8 @@ export function ComprehensiveServicesShowcase() {}
         ease: 'easeOut''';
       }
     }
-  }const cardVariants = {}
+  }
+const cardVariants = {}
   hidden: { scale: 0.95, opacity: 0;
 }, visible: {}
       scale: 1, opacity: 1, transition: {}
@@ -98,7 +100,7 @@ export function ComprehensiveServicesShowcase() {}
             </div>'''';
             <div className='mt-4 text-center'>'''';
               <p className='text-zion-cyan-light'>;
-                <strong>Contact:</strong> +1 302 464 0950 | kleber@ziontechgroup.com'''';
+                <strong > Contact:</strong> +1 302 464 0950 | kleber@ziontechgroup.com'''';
               </p>'''';
               <p className='text-zion-cyan-light text-sm'>;
                 364 E Main St STE 1008 Middletown DE 19709;
@@ -223,7 +225,7 @@ export function ComprehensiveServicesShowcase() {}
                   <Link'''';
                     to={service.link}'''';
                     className='flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300 group-hover:scale-105 '>'''';
-                    <span>Learn More</span>'''';
+                    <span > Learn More</span>'''';
                     <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />'''';
                   </Link>'''';
                   <div className='text-xs text-zion-cyan-light'>;

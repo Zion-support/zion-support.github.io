@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function CybersecuritySuitePage() {
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-12">
@@ -25,16 +26,19 @@ export default function CybersecuritySuitePage() {
       </div>
     </div>
   );
+
 }
 
 function SecurityServicesSection() {
+
   const services = [
     {
       title: "Security Assessment",
       description: "Comprehensive evaluation of your current security posture",
       duration: "2-4 weeks",
       price: "Starting at $15,000"
-    },
+    
+},
     {
       title: "Penetration Testing",
       description: "Simulated cyber attacks to identify vulnerabilities",
@@ -76,7 +80,7 @@ function SecurityServicesSection() {
             <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
             <p className="text-gray-600 mb-4">{service.description}</p>
             <div className="flex justify-between items-center text-sm text-gray-500 mb-4">
-              <span>Duration: {service.duration}</span>
+              <span > Duration: {service.duration}</span>
             </div>
             <div className="text-lg font-semibold text-red-600">{service.price}</div>
           </div>
@@ -87,6 +91,7 @@ function SecurityServicesSection() {
 }
 
 function PricingSection() {
+
   return (
     <div className="bg-white rounded-2xl p-8 mb-16">
       <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Security Packages</h2>
@@ -96,7 +101,8 @@ function PricingSection() {
           price="$2,500"
           period="month"
           description="Basic security monitoring for small businesses"
-          features={["24/7 monitoring", "Basic threat detection", "Monthly reports", "Email support", "Up to 50 users"]}
+          features={["24/7 monitoring", "Basic threat detection", "Monthly reports", "Email support", "Up to 50 users"]
+}
           popular={false}
         />
         <PricingCard
@@ -123,8 +129,10 @@ function PricingSection() {
 function PricingCard({ name, price, period, description, features, popular }: { 
   name: string; price: string; period: string; description: string; features: string[]; popular: boolean 
 }) {
+
   return (
-    <div className={`relative border-2 rounded-xl p-8 ${popular ? 'border-red-500 bg-red-50' : 'border-gray-200'}`}>
+    <div className={`relative border-2 rounded-xl p-8 ${popular ? 'border-red-500 bg-red-50' : 'border-gray-200'
+}`}>
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
@@ -161,6 +169,7 @@ function PricingCard({ name, price, period, description, features, popular }: {
 }
 
 function ContactSection() {
+
   return (
     <div className="bg-gradient-to-r from-red-600 to-pink-600 p-8 rounded-2xl text-center">
       <h2 className="text-3xl font-bold text-white mb-4">Ready to Secure Your Business?</h2>
@@ -187,4 +196,5 @@ function ContactSection() {
       </div>
     </div>
   );
+
 }

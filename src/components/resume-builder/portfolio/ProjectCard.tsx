@@ -4,26 +4,43 @@ import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import Image from 'next/image';
 import { PortfolioProject  } from '@/types/resume';
+interface ProjectCardProps {
+project: PortfolioProject;
+  onEdit: (project: PortfolioProject) => void;
+onDelete: (projectId: string) => void; import Image from 'next/image';
 interface ProjectCardProps  {project: PortfolioProject;
-  onEdit: (project: PortfolioProject) => void;onDelete: (projectId: string) => void; import Image from 'next/image';
-interface ProjectCardProps  {project: PortfolioProject;
-  onEdit: (project: PortfolioProject,) => void;
-  onDelete: (projectId: string,) => void;
-import { useState   } from 'react';
+  onEdit: (project: PortfolioProject,
+) => void;
+  onDelete: (projectId: string,
+) => void;
+import { useState
+} from 'react';
 import { Card, CardContent, CardFooter   } from '@/components/ui/card';
 import { Button   } from '@/components/ui/button';
 import { Badge   } from '@/components/ui/badge';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle   } from '@/components/ui/alert-dialog';
 import { Edit, Trash2, Github, Link, FileText  } from 'lucide-react';
-interface ProjectCardProps  {project: PortfolioProject;
+interface ProjectCardProps {
+project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void;
-}}interface ProjectCardProps  {project: PortfolioProject;
+}}
+interface ProjectCardProps {
+project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
-  onDelete: (projectId: string) => void;import Image from 'next/image';
-interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: PortfolioProject,) => void,onDelete: (projectId: string,) => void;
-}export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {const [deleteDialogOpen, setDeleteDialogOpen]  = useState(false)const handleDelete = () => {if (project && project.id) {onDelete(project && project.id)}
-    setDeleteDialogOpen(false)}return (<Card className='h-full flex flex-col'>;
+  onDelete: (projectId: string) => void;
+import Image from 'next/image';
+interface ProjectCardProps  {project: PortfolioProject,
+onEdit: (project: PortfolioProject,
+) => void,
+onDelete: (projectId: string,
+) => void;
+}
+export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {const [deleteDialogOpen, setDeleteDialogOpen]  = useState(false)const handleDelete = ()  => {
+if (project && project.id) {onDelete(project && project.id)
+}
+    setDeleteDialogOpen(false)}
+return (<Card className='h-full flex flex-col'>;
       <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>        {project && project.image_url ? (<Image;
             src={project && project.image_url}
             alt={project && project.title}
@@ -38,22 +55,37 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
         ) : (<div className='w-full h-full flex items-center justify-center bg-muted'>;
             <FileText className='h-12 w-12 text-muted-foreground/50' />;
           </div>;
-        )}import { Card, CardContent, CardFooter  } from '@/components / ui / card';
+        )}
+import { Card, CardContent, CardFooter  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
-import { AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle} from '@/components / ui / alert - dialog';
+import { AlertDialog,
+AlertDialogAction,
+AlertDialogCancel,
+AlertDialogContent,
+AlertDialogDescription,
+AlertDialogFooter,
+AlertDialogHeader,
+AlertDialogTitle} from '@/components / ui / alert - dialog';
 import Image from 'next / image';
 import { PortfolioProject  } from '@/types / resume';
-interface ProjectCardProps  {project: PortfolioProject;
+interface ProjectCardProps {
+project: PortfolioProject;
   on_edit: (project: PortfolioProject) => void;
   on_delete: (project_id: string) => void; import Image from 'next / image';
-interface ProjectCardProps  {project: PortfolioProject,on_edit: (project: PortfolioProject, ) => void,on_delete: (project_id: string, ) => void;
+interface ProjectCardProps  {project: PortfolioProject,
+on_edit: (project: PortfolioProject,
+) => void,
+on_delete: (project_id: string,
+) => void;
 }
 export /**;
  * ProjectCard - Function description;
  */;
-function ProjectCard() {const [deleteDialogOpen, setDeleteDialogOpen] = useState (false)const handle_delete = () =>: any {// Check condition;
+function ProjectCard() {
+const [deleteDialogOpen, setDeleteDialogOpen] = useState (false)const handle_delete = () =>: any {// Check condition;
 if ( {) {$2;
+
 }
       on_delete (project.id)}
     setDeleteDialogOpen (false)}
@@ -78,13 +110,24 @@ if ( {) {$2;
               {project.description}{project.technologies && project.technologies.length > 0 && (<div className='flex flex-wrap gap-1 mt-2'>;
               {project.technologies.map((tech, index) => (<Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">;
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle  } from '@/components/ui/alert-dialog';
-interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: PortfolioProject) => void,onDelete: (projectId: string) => void;
-}export function ProjectCard() {const [ deleteDialogOpen, setDeleteDialogOpen ] = useState(false),const handleDelete = () => {if (project.id) {onDelete(project.id)}
-    setDeleteDialogOpen(false)}return (<Card className="h-full flex flex-col">;
+interface ProjectCardProps {
+project: PortfolioProject,
+onEdit: (project: PortfolioProject) => void,
+onDelete: (projectId: string) => void;
+}
+export function ProjectCard() {
+const [ deleteDialogOpen, setDeleteDialogOpen ] = useState(false),
+const handleDelete = ()  => {
+if (project.id) {onDelete(project.id)
+
+}
+    setDeleteDialogOpen(false)}
+return (<Card className="h-full flex flex-col">;
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
         {project.image_url ? (<Image;
             src={project.image_url}
-            alt={project.title}className="object-cover";
+            alt={project.title}
+className="object-cover";
             loading="lazy";
           />;
         ) : (<div className="w-full h-full flex items-center justify-center bg-muted">;
@@ -96,7 +139,8 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
         <div className='space-y-2'>;
           <h3 className='font-semibold text-lg'>{project && project.title}</h3>;{project && project.description && (<p className='text-sm text-muted-foreground line-clamp-3'>;
               {project && project.description}
-            </p>;className='object-cover';
+            </p>;
+className='object-cover';
             loading='lazy';
         ) : (<div className='w-full h-full flex items-center justify-center bg-muted'>;
             <FileText className='h-12 w-12 text-muted-foreground/50' />;
@@ -144,7 +188,8 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
               href = {project && project.github_url}<CardFooter className="flex justify-between border-t bg-muted/40 p-4">;
         <div className="flex gap-2">;
           {project.github_url && (<a;
-              href={project.github_url}target="_blank";
+              href={project.github_url}
+target="_blank";
               rel="noopener noreferrer";
               aria-label="GitHub";
               title="GitHub";
@@ -193,7 +238,7 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;
-            <AlertDialogTitle>Delete Project</AlertDialogTitle>;
+            <AlertDialogTitle > Delete Project</AlertDialogTitle>;
             <AlertDialogDescription>;
             aria-label='Delete project';
           >;
@@ -203,7 +248,7 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
       </CardFooter>;<AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;
-            <AlertDialogTitle>Delete Project</AlertDialogTitle>;</p>)}
+            <AlertDialogTitle > Delete Project</AlertDialogTitle>;</p>)}
           {project.technologies && project.technologies.length > 0 && (<div className='flex flex - wrap gap - 1 mt - 2'>;
               {project.technologies.map ((tech, index) => (<Badge key={index} variant='secondary' className='text - xs'>                  {tech}                <Badge key={index} variant="secondary" className="text - xs">;
           />) : (<div className="w - full h - full flex items - center justify - center bg - muted">;
@@ -274,7 +319,7 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;
-            <AlertDialogTitle > Delete Project</AlertDialogTitle>;<AlertDialogDescription>Are you sure you want to delete this project? This action cannot;
+            <AlertDialogTitle > Delete Project</AlertDialogTitle>;<AlertDialogDescription > Are you sure you want to delete this project? This action cannot;
               be undone.            </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;<AlertDialogAction;
@@ -283,14 +328,15 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-            <AlertDialogCancel>Cancel</AlertDialogCancel>;
+            <AlertDialogCancel > Cancel</AlertDialogCancel>;
             <AlertDialogAction;
-              onClick={handleDelete}Are you sure you want to delete this project? This action cannot;
+              onClick={handleDelete}
+Are you sure you want to delete this project? This action cannot;
               be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-            <AlertDialogCancel>Cancel</AlertDialogCancel>;
+            <AlertDialogCancel > Cancel</AlertDialogCancel>;
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">;
 <AlertDialogAction;
               onClick={handleDelete}
@@ -315,7 +361,8 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
             <AlertDialogAction;
               on_click={handle_delete}
               className='bg - destructive text - destructive - foreground';
-            >            <AlertDialogAction on_click={handle_delete} className="bg - destructive text - destructive - foreground">;Delete;
+            >            <AlertDialogAction on_click={handle_delete} className="bg - destructive text - destructive - foreground">;
+Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;

@@ -70,7 +70,8 @@ import {
   MailIcon
 } from 'lucide-react';
 
-export const EnhancedFuturisticFooter: React.FC = () => {
+export const EnhancedFuturisticFooter: React.FC = ()  => {
+
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
@@ -78,7 +79,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'Revolutionary 2030',
       featured: true,
       links: [
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true },
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true 
+},
         { name: 'AI Autonomous Operations', href: '/revolutionary-services-2030#ai-autonomous-business-operations-2030' },
         { name: 'Quantum AI Cybersecurity', href: '/revolutionary-services-2030#quantum-ai-cybersecurity-2030' },
         { name: 'AI Content Creation Studio', href: '/revolutionary-services-2030#ai-content-creation-studio-2030' },
@@ -198,8 +200,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Partner Program', href: '/partners', icon: Users, featured: false }
   ];
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const scrollToTop = ()  => {
+
+    window.scrollTo({ top: 0, behavior: 'smooth' 
+});
   };
 
   return (
@@ -388,7 +392,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-slate-300">
-                  364 E Main St STE 1008<br />
+                  364 E Main St STE 1008 < br />
                   Middletown DE 19709
                 </p>
                 <p className="text-sm text-slate-400 mt-2">Global remote support available</p>

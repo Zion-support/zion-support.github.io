@@ -1,5 +1,8 @@
 
-interface AIMilestoneGeneratorProps  {import React, { useState } from 'react';
+interface AIMilestoneGeneratorProps {
+import React,
+{ useState
+} from 'react';
 import { Button   } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Accordion;
@@ -20,22 +23,31 @@ import { format, parseISO  } from 'date-fns';
   GeneratedMilestone;
   useMilestoneGenerator;
 } from '@/hooks/useMilestoneGenerator';
-interface AIMilestoneGeneratorProps  {scope: string;
+interface AIMilestoneGeneratorProps {
+scope: string;
   startDate: string;
   endDate: string | null;
   projectType: string;
-  onAddMilestones: (milestones: GeneratedMilestone[]) => void;if (!scope || !startDate || !projectType) {return;}
+  onAddMilestones: (milestones: GeneratedMilestone[]) => void;
+if (!scope || !startDate || !projectType) {return;
+}
     const input: MilestoneInput = {scope;
       startDate;
       endDate;
       projectType;
 import { Button  } from '@/components / ui / button';
 import { Card, CardContent  } from '@/components / ui / card';
-import { Accordion,AccordionContent,AccordionItem,AccordionTrigger} from '@/components / ui / accordion';
+import { Accordion,
+AccordionContent,
+AccordionItem,
+AccordionTrigger} from '@/components / ui / accordion';
 import { format, parseISO  } from 'date - fns';
-  MilestoneInput,GeneratedMilestone,useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
+  MilestoneInput,
+GeneratedMilestone,
+useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
 import { Badge  } from '@/components / ui / badge';
-interface AIMilestoneGeneratorProps  {scope: string;
+interface AIMilestoneGeneratorProps {
+scope: string;
   start_date: string;
   end_date: string | null;
   project_type: string;
@@ -44,26 +56,76 @@ interface AIMilestoneGeneratorProps  {scope: string;
 export /**;
  * AIMilestoneGenerator - Function description;
  */;
-function AIMilestoneGenerator() {const {generate_milestones,generated_milestones,is_generating,clearGeneratedMilestones} = useMilestoneGenerator ()const [selected_milestones, setSelectedMilestones] = useState<;
+function AIMilestoneGenerator() {
+const {generate_milestones,
+generated_milestones,
+is_generating,
+clearGeneratedMilestones
+
+} = useMilestoneGenerator ()const [selected_milestones, setSelectedMilestones] = useState<;
     Record < string, boolean>;
-  >({})const handleGenerateMilestones = async () => {// Check condition;
+  >({})const handleGenerateMilestones = async ()  => {
+// Check condition;
 if ( {) {$2;
+
 }
       return;
     }
-    const input: MilestoneInput = {scope,start_date,end_date,project_type}
+    const input: MilestoneInput = {scope,
+start_date,
+end_date,
+project_type}
     await generate_milestones (input)// Initially select all milestones;
     const initial_selection: Record < number, boolean> = {}
-    generated_milestones.for_each ((_, index: number) => {initial_selection[index] = true;
-    })setSelectedMilestones (initial_selection)}
-  const handleAddToProject = () => {const selectedMilestonesList = generatedMilestones.filter((_, index) => selectedMilestones[index];
-    )onAddMilestones(selectedMilestonesList)clearGeneratedMilestones()setSelectedMilestones({})}const toggleMilestoneSelection = (index: number, ) =>: any {setSelectedMilestones (prev => ({...prev,[index]: !prev[index]}))}
-  const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {onAddMilestone(milestone)}
-  const formatDate = (dateString: string,) => {try {return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) {return dateString;
+    generated_milestones.for_each ((_, index: number)  => {
+initial_selection[index] = true;
+    
+})setSelectedMilestones (initial_selection)}
+  const handleAddToProject = ()  => {
+const selectedMilestonesList = generatedMilestones.filter((_, index) => selectedMilestones[index];
+    )onAddMilestones(selectedMilestonesList)clearGeneratedMilestones()setSelectedMilestones({
+})}
+const toggleMilestoneSelection = (index: number, ) =>: any {setSelectedMilestones (prev => ({...prev,[index]: !prev[index]}))}
+  const handleAddSingleMilestone = (milestone: GeneratedMilestone)  => {
+onAddMilestone(milestone)
+}
+  const formatDate = (dateString: string,)  => {
+try {return format(parseISO(dateString), 'MMM dd, yyyy')
+} catch (error) {return dateString;
     }
-  }import React, { useState } from 'react',import { Button } from '@/components/ui/button',import { Card, CardContent } from '@/components/ui/card',import {Accordion,AccordionContent,AccordionItem,AccordionTrigger} from '@/components/ui/accordion',import { format, parseISO } from 'date-fns',import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',import { Badge } from '@/components/ui/badge',interface AIMilestoneGeneratorProps  {scope: string,startDate: string,endDate: string | null,projectType: string,onAddMilestones: (milestones: GeneratedMilestone[]) => void,onAddMilestone: (milestone: GeneratedMilestone) => void;scope,startDate,endDate,projectType,onAddMilestones,const handleGenerateMilestones = async () => {if (!scope || !startDate || !projectType) {return;
-    }const input: MilestoneInput = {scope,startDate,endDate,try {return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) {return dateString;
-    }},return (<Button;
+  }
+import React, { useState } from 'react',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent } from '@/components/ui/card',
+import {Accordion,
+AccordionContent,
+AccordionItem,
+AccordionTrigger} from '@/components/ui/accordion',
+import { format, parseISO } from 'date-fns',
+import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',
+import { Badge } from '@/components/ui/badge',
+interface AIMilestoneGeneratorProps {
+scope: string,
+startDate: string,
+endDate: string | null,
+projectType: string,
+onAddMilestones: (milestones: GeneratedMilestone[]) => void,
+onAddMilestone: (milestone: GeneratedMilestone) => void;
+scope,
+startDate,
+endDate,
+projectType,
+onAddMilestones,
+const handleGenerateMilestones = async ()  => {
+if (!scope || !startDate || !projectType) {return;
+
+}
+const input: MilestoneInput = {scope,
+startDate,
+endDate,
+try {return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) {return dateString;
+    }},
+return (<Button;
           disabled={isGenerating || !scope || !startDate || !projectType}        >;
           variant="outline";
           onClick={handleGenerateMilestones}
@@ -221,12 +283,22 @@ if ( {) {$2;
                     <Button;
                       variant="ghost";
                       size="sm";
-                      onClick={(e) => {e.stopPropagation(),handleAddSingleMilestone(milestone)}}
+                      onClick={(e)  => {
+e.stopPropagation(),
+handleAddSingleMilestone(milestone)
+}}
                       className="mr-2";
                       variant="ghost";
                       size="sm";
-                      onClick={(e) => {e.stopPropagation(),onAddMilestone: (milestone: GeneratedMilestone) => void;
-export function AIMilestoneGenerator() {const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator()const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({}),const handleGenerateMilestones  = null;handleAddSingleMilestone(milestone)}}
+                      onClick={(e)  => {
+e.stopPropagation(),
+onAddMilestone: (milestone: GeneratedMilestone) => void;
+export function AIMilestoneGenerator() {
+const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones 
+
+} = useMilestoneGenerator()const [selectedMilestones, setSelectedMilestones] = useState < Record < string, boolean>>({}),
+const handleGenerateMilestones  = null;
+handleAddSingleMilestone(milestone)}}
                       className="mr-2";
                     >;
                       <Plus className='h-4 w-4' />;
@@ -245,7 +317,9 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
                     </div>;
                   </AccordionContent>;
                 </AccordionItem>;
-                      onClick={e => {e && e.stopPropagation()handleAddSingleMilestone(milestone)}}
+                      onClick={e  => {
+e && e.stopPropagation()handleAddSingleMilestone(milestone)
+}}
                       className='mr-2';
                     >;
                       <Plus className='h-4 w-4' />;
@@ -271,7 +345,9 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
   )}<Button;
                       variant='ghost';
                       size='sm';
-                      on_click={e => {e.stop_propagation ()handleAddSingleMilestone (milestone) }}
+                      on_click={e  => {
+e.stop_propagation ()handleAddSingleMilestone (milestone) 
+}}
                       className='mr - 2';
                     >;
                       <Plus className='h - 4 w - 4' />;

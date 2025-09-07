@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
-const Terms: React.FC = () => {
+const Terms: React.FC = ()  => {
+
   return (
     <>
       <SEO title="Terms of Service" description="Terms of Service page" url="/terms" />
@@ -19,6 +20,7 @@ const Terms: React.FC = () => {
       </div>
     </>
   );
+
 };
 
 export default Terms;

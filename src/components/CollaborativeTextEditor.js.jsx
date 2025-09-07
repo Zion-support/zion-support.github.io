@@ -1,7 +1,9 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 import { Users, MessageSquare, Sparkles, Save, Download, Loader2  } from 'lucide-react';
-export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
+export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport })  => {
+const { trackEvent 
+} = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
     })const [editorState, setEditorState] = useState({}
         content: initialContent, '';
         selection: { start: 0, end: 0, text: '' }, version: 0, changes[], suggestions[], conflicts[];
@@ -30,7 +32,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 type: 'text_change', content: newContent, selection: { start: selectionStart, end: selectionEnd }, version: editorState.version + 1;
             })}'';
         // Track text change'';
-        trackEvent('editor', text_changed',content_modified', newContent.length)}, [enableCollaboration, collaboration, editorState.version, trackEvent])// Handle selection change;
+        trackEvent('editor', text_changed',
+content_modified', newContent.length)}, [enableCollaboration, collaboration, editorState.version, trackEvent])// Handle selection change;
     const handleSelectionChange = useCallback((event) => {}
         const target = event.target;
         const start = target.selectionStart;
@@ -46,7 +49,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         const rect = event.currentTarget.getBoundingClientRect()'';
         const x = event.clientX - rect.left'';
         const y = event.clientY - rect.top';';
-        collaboration.updateCursor(x, y,editor')}, [enableCollaboration, collaboration])';
+        collaboration.updateCursor(x, y,
+editor')}, [enableCollaboration, collaboration])';
     // Generate AI suggestions;
     const generateAISuggestions = useCallback(async () => {}
         if(!enableAI || !editorState.content.trim () ) return;
@@ -60,11 +64,14 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 ``;
                     id: `suggestion_${Date.now()}_1`, '''';
                     type: 'grammar','''''';
-                    text: 'it&apos;s', confidence: 0.95,'';
+                    text: 'it&apos;
+s', confidence: 0.95,'';
                     position: editorState.content.indexOf('its'), '''';
                     length: 3,'''''';
-                    reason: 'Consider using 'it&apos;s' (contraction of 'it is') instead of 'its' (possessive)', '''''';
-                    alternatives['it&apos;s', 'it is']'';
+                    reason: 'Consider using 'it&apos;
+s' (contraction of 'it is') instead of 'its' (possessive)', '''''';
+                    alternatives['it&apos;
+s', 'it is']'';
                 })}'';
             // Style suggestions'';
             if (editorState.content.includes('very')) {}
@@ -98,11 +105,13 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             setEditorState(prev => ({}
                 ...prev, suggestions[...prev.suggestions, ...suggestions];
             }))'';
-            trackEvent('editor', ai_suggestions_generated',suggestions_created', suggestions.length)}
+            trackEvent('editor', ai_suggestions_generated',
+suggestions_created', suggestions.length)}
         catch (error) {}
 '';
             // console.error('Failed to generate AI suggestions: ', error)'';
-            trackEvent('editor', ai_suggestions_failed',generation_error', null, {}
+            trackEvent('editor', ai_suggestions_failed',
+generation_error', null, {}
 '';
 '';
 '''';
@@ -128,13 +137,14 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     // Save content;
     const handleSave = useCallback(() => {}
         onSave?.(editorState.content)setLastSaved(new Date())'';
-        trackEvent('editor', content_saved',save_completed')}, [editorState.content, onSave, trackEvent])// Export content;
+        trackEvent('editor', content_saved',
+save_completed')}, [editorState.content, onSave, trackEvent])// Export content;
     const handleExport = useCallback((format) => {}
         let exportContent = editorState.content'';
         if (format === 'html') {}
 `;
 ``;
-            exportContent = `<html><body><pre>${editorState.content}</pre></body></html>`}'';
+            exportContent = `<html >< body >< pre>${editorState.content}</pre></body></html>`}'';
         else if (format === 'md') {}
 `;
 ``;
@@ -166,7 +176,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     // Simple merge strategy - in production, this would use operational transformation;
                     return {}
                         ...prev, content: message.payload.content, version: Math.max(prev.version, message.payload.version)}})'';
-                trackEvent('editor', collaboration_sync',text_synced', null, {}
+                trackEvent('editor', collaboration_sync',
+text_synced', null, {}
                     userId: message.userId, version: message.payload.version;
                 })}
         }'';

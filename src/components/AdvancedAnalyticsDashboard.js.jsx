@@ -267,7 +267,8 @@ const AdvancedAnalyticsDashboard = () => {}
                       </td>'''';
                       <td className='py-3 px-4'>'''';
                         <span className='font-medium'>;
-                          ${(service.revenue / 1000).toFixed(0)}K;
+                          ${(service.revenue / 1000).toFixed(0)}
+K;
                         </span>'''';
                       </td>'''';
                       <td className='py-3 px-4'>'''';
@@ -402,7 +403,7 @@ const AdvancedAnalyticsDashboard = () => {}
               className='bg-white text-zion-purple hover:bg-zion-slate-light''';
               onClick={() =>'';
                 window.open('';
-                  'mailto: kleber@ziontechgroup.com?subject=Analytics Dashboard Access', _blank'';
+                  'mailto: kleber@ziontechgroup.com?subject = Analytics Dashboard Access', _blank'';
                 )}'''';
             >'''';
               <Rocket className='w-5 h-5 mr-2' />;
@@ -421,4 +422,8 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>;
     </div>)}
 export default AdvancedAnalyticsDashboard;
-export { AdvancedAnalyticsDashboard }export { AdvancedAnalyticsDashboard }export { AdvancedAnalyticsDashboard }export { AdvancedAnalyticsDashboard }export { AdvancedAnalyticsDashboard }
+export { AdvancedAnalyticsDashboard }
+export { AdvancedAnalyticsDashboard }
+export { AdvancedAnalyticsDashboard }
+export { AdvancedAnalyticsDashboard }
+export { AdvancedAnalyticsDashboard }

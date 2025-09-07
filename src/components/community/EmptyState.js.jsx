@@ -21,9 +21,13 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
             ) : (<Button disabled>{cta}</Button>;
             )}
           </TooltipTrigger>;
-          {!hasSession && <TooltipContent>Login required</TooltipContent>}
+          {!hasSession && <TooltipContent > Login required</TooltipContent>}
         </Tooltip>;
       </TooltipProvider>;
     </div>)}
 export default EmptyState;
-export { EmptyState }export { EmptyState }export { EmptyState }export { EmptyState }export { EmptyState }
+export { EmptyState }
+export { EmptyState }
+export { EmptyState }
+export { EmptyState }
+export { EmptyState }

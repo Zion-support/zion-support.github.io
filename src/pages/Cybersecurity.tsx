@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
-const Cybersecurity: React.FC = () => {
+const Cybersecurity: React.FC = ()  => {
+
   return (
     <>
       <SEO title="Cybersecurity" description="Cybersecurity page" url="/services/cybersecurity" />
@@ -19,6 +20,7 @@ const Cybersecurity: React.FC = () => {
       </div>
     </>
   );
+
 };
 
 export default Cybersecurity;

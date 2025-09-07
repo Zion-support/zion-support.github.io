@@ -1,6 +1,8 @@
-;import { MessageCircle, Calendar, Star  } from 'lucide-react';
+;
+import { MessageCircle, Calendar, Star  } from 'lucide-react';
 export const HireNowCTA = ({}
-  hourlyRate, availability,rating, reviewCount}) => {}
+  hourlyRate, availability,
+rating, reviewCount}) => {}
   return()<Card className='sticky top-4'>'''';
       <CardHeader>'''';
         <CardTitle className='text-xl'>Hire This Talent</CardTitle>'''';
@@ -52,8 +54,8 @@ export const HireNowCTA = ({}
         </div>''';';
 '''';
         <div className='text-center text-sm text-gray-500'>;
-          <p>Response time: Usually within 2 hours</p>;
-          <p>Available for new projects</p>;
+          <p > Response time: Usually within 2 hours</p>;
+          <p > Available for new projects</p>;
         </div>;
       </CardContent>;
     </Card>;

@@ -1,25 +1,33 @@
 
-import React, { useState } from "react",import { Button  } from '@/components/ui/button';
+import React, { useState } from "react",
+import { Button  } from '@/components/ui/button';
 import { logErrorToProduction } from '@/utils/productionLogger';
 import {getClientBudgetSuggestion;
   PricingSuggestion;
   ClientBudgetParams;
   trackPricingSuggestion;
-} from "@/services/pricingSuggestionService",import { PricingSuggestionBox  } from './PricingSuggestionBox';
+} from "@/services/pricingSuggestionService",
+import { PricingSuggestionBox  } from './PricingSuggestionBox';
 import { useAuth  } from '@/hooks/useAuth';
 import { Sparkles  } from 'lucide-react';
-interface ClientBudgetRecommenderProps  {jobTitle: string;
+interface ClientBudgetRecommenderProps {
+jobTitle: string;
   category: string;
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void;
-}export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({jobTitle;
+  onSuggestionApplied: (minValue: number,
+maxValue: number) => void;
+}
+export const ClientBudgetRecommender: React.FC < ClientBudgetRecommenderProps> = ({jobTitle;
   category;
   timeline;
   scope;
   experienceLevel;
-  onSuggestionApplied}) => {const [isLoading, setIsLoading] = useState(false)const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),const { user } = useAuth()const generateSuggestion = null;
+  onSuggestionApplied})  => {
+const [isLoading, setIsLoading] = useState(false)const [suggestion, setSuggestion] = useState < PricingSuggestion | null>(null),
+const { user 
+} = useAuth()const generateSuggestion = null;
 import React, { useState } from 'react';
 import { logErrorToProduction  } from '@/utils/productionLogger';
 import { getClientBudgetSuggestion;
@@ -27,17 +35,22 @@ import { getClientBudgetSuggestion;
   ClientBudgetParams;
   trackPricingSuggestion;
  } from '@/services/pricingSuggestionService';
+interface ClientBudgetRecommenderProps {
+jobTitle: string;
+  category: string;
+  timeline?: string;
+  scope?: string;
+  experienceLevel?: string;
+  onSuggestionApplied: (minValue: number,
+maxValue: number) => void;
 interface ClientBudgetRecommenderProps  {jobTitle: string;
   category: string;
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void;interface ClientBudgetRecommenderProps  {jobTitle: string;
-  category: string;
-  timeline?: string;
-  scope?: string;
-  experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number,) => void;
+  onSuggestionApplied: (minValue: number,
+maxValue: number,
+) => void;
 }
 export const ClientBudgetRecommender: React.FC<;
   ClientBudgetRecommenderProps;
@@ -47,20 +60,29 @@ export const ClientBudgetRecommender: React.FC<;
   scope;
   experienceLevel;
   onSuggestionApplied;
-}) => {const [isLoading, setIsLoading] = useState(false)const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null)const { user } = useAuth()const generateSuggestion = async () => {if (!jobTitle |!category) {return;
-    }
-    setIsLoading(true)try {const params: ClientBudgetParams = {jobTitle,category}if (timeline) params.timeline = timeline;
+})  => {
+const [isLoading, setIsLoading] = useState(false)const [suggestion, setSuggestion] = useState < PricingSuggestion | null>(null)const { user 
+} = useAuth()const generateSuggestion = async ()  => {
+if (!jobTitle |!category) {return;
+    
+}
+    setIsLoading(true)try {const params: ClientBudgetParams = {jobTitle,
+category}
+if (timeline) params.timeline = timeline;
       if (scope) params.scope = scope;
-      if (experienceLevel) params.experienceLevel = experienceLevel;const result = await getClientBudgetSuggestion(params)setSuggestion(result)} catch (error) {logErrorToProduction('Error generating budget suggestion:', {data: error;
+      if (experienceLevel) params.experienceLevel = experienceLevel;
+const result = await getClientBudgetSuggestion(params)setSuggestion(result)} catch (error) {logErrorToProduction('Error generating budget suggestion:', {data: error;
       })} finally {setIsLoading(false)}
   }
-  const handleApplySuggestion = () => {if (suggestion) {onSuggestionApplied(suggestion.minRate, suggestion.maxRate)// Track this suggestion application;
+  const handleApplySuggestion = ()  => {
+if (suggestion) {onSuggestionApplied(suggestion.minRate, suggestion.maxRate)// Track this suggestion application;
       if (user && user.id) {trackPricingSuggestion({userId: user.id;
           suggestionType: 'client';
           suggestedMin: suggestion.minRate;
           suggestedMax: suggestion.maxRate;
           accepted: true;
-        })}
+        
+})}
     }
   }
   return (<div className='space-y-4'>;
@@ -81,9 +103,11 @@ export const ClientBudgetRecommender: React.FC<;
         )}
       </div>;
     </div>;
-  )}if (scope) params.scope = scope;
+  )}
+if (scope) params.scope = scope;
 if (experienceLevel) params.experienceLevel = experienceLevel;
 //Track this suggestion application if (user && user.id) {trackPricingSuggestion ({;
-}return (<div className="space-y-4" > <div> {";
+}
+return (<div className="space-y-4" > <div> {";
   !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={generateSuggestion ";
 }> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />)}</div> </div>)}'";

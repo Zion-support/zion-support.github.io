@@ -1,14 +1,18 @@
 
-interface AIMatchingResultsProps  {matches: MatchResultItem[];
+interface AIMatchingResultsProps {
+matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean;
   projectDescription?: string;
-  serviceType?: string;interface AIMatchingResultsProps  {matches: MatchResultItem[];
-  onSelectMatch?: (match: MatchResultItem,) => void;
+  serviceType?: string;
+interface AIMatchingResultsProps  {matches: MatchResultItem[];
+  onSelectMatch?: (match: MatchResultItem,
+) => void;
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
-}import { useState  } from 'react';
+}
+import { useState  } from 'react';
 import { MatchResultItem  } from '@/lib / ai - matchmaking';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
@@ -17,19 +21,32 @@ import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / t
 import { BarChart3, BriefcaseIcon, Monitor, User  } from 'lucide-react';
 import Skeleton from '@/components / ui / skeleton';
 import { cn  } from '@/lib / utils';
-interface AIMatchingResultsProps  {matches: MatchResultItem[];
+interface AIMatchingResultsProps {
+matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
   is_loading?: boolean;
   project_description?: string;
-  service_type?: string;interface AIMatchingResultsProps  {matches: MatchResultItem[],onSelectMatch?: (match: MatchResultItem, ) => void,is_loading?: boolean,project_description?: string,service_type?: string;
+  service_type?: string;
+interface AIMatchingResultsProps  {matches: MatchResultItem[],
+onSelectMatch?: (match: MatchResultItem,
+) => void,
+is_loading?: boolean,
+project_description?: string,
+service_type?: string;
 }
 export /**;
  * AIMatchingResults - Function description;
  */;
-function AIMatchingResults() {const [active_tab, setActiveTab] = useState ('all')// Group matches by category;const categories = {all: matches,talent: matches.filter (match =>;
-      match.category.toLowerCase ().includes ('talent')),services: matches.filter (match =>;
-      match.category.toLowerCase ().includes ('service')),equipment: matches.filter (match =>;
-      match.category.toLowerCase ().includes ('equipment'))}
+function AIMatchingResults() {
+const [active_tab, setActiveTab] = useState ('all')// Group matches by category;
+const categories = {all: matches,
+talent: matches.filter (match =>;
+      match.category.toLowerCase ().includes ('talent')),
+services: matches.filter (match =>;
+      match.category.toLowerCase ().includes ('service')),
+equipment: matches.filter (match =>;
+      match.category.toLowerCase ().includes ('equipment'))
+}
   // Get the icon for a category;
   const getCategoryIcon = (category: string) =>: any {const lower_category = category.toLowerCase ()if () return User) {$2;
 }
@@ -47,27 +64,46 @@ if ( {) {$2;
           <Skeleton className='h-[120px] w - full' />;
           <Skeleton className='h-[120px] w - full' />;
         </div>;
-      </div>)}import { MatchResultItem  } from '@/lib/ai-matchmaking';
+      </div>)}
+import { MatchResultItem  } from '@/lib/ai-matchmaking';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
 import Skeleton from '@/components/ui/skeleton';
 import { cn  } from '@/lib/utils';
-interface AIMatchingResultsProps  {matches: MatchResultItem[];
+interface AIMatchingResultsProps {
+matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean;
   projectDescription?: string;
-  serviceType?: string;interface AIMatchingResultsProps  {matches: MatchResultItem[],onSelectMatch?: (match: MatchResultItem,) => void,isLoading?: boolean,projectDescription?: string,serviceType?: string;
-}export function AIMatchingResults(): any ({matches,onSelectMatch,isLoading = false,projectDescription = '',serviceType: _serviceType = ''}: AIMatchingResultsProps) {const [activeTab, setActiveTab]  = useState('all')// Group matches by category;
-  const categories = {all: matches,talent: matches && matches.filter(match =>;
-      match && match.category.toLowerCase().includes('talent')),services: matches && matches.filter(match =>;
-      match && match.category.toLowerCase().includes('service')),equipment: matches && matches.filter(match =>;
+  serviceType?: string;
+interface AIMatchingResultsProps  {matches: MatchResultItem[],
+onSelectMatch?: (match: MatchResultItem,
+) => void,
+isLoading?: boolean,
+projectDescription?: string,
+serviceType?: string;
+}
+export function AIMatchingResults(): any ({matches,
+onSelectMatch,
+isLoading = false,
+projectDescription = '',
+serviceType: _serviceType = ''}: AIMatchingResultsProps) {const [activeTab, setActiveTab]  = useState('all')// Group matches by category;
+  const categories = {all: matches,
+talent: matches && matches.filter(match =>;
+      match && match.category.toLowerCase().includes('talent')),
+services: matches && matches.filter(match =>;
+      match && match.category.toLowerCase().includes('service')),
+equipment: matches && matches.filter(match =>;
       match && match.category.toLowerCase().includes('equipment'))}// Get the icon for a category;
-  const getCategoryIcon = (category: string) => {const lowerCategory = category && category.toLowerCase()if (lowerCategory && lowerCategory.includes('talent')) return User;
+  const getCategoryIcon = (category: string)  => {
+const lowerCategory = category && category.toLowerCase()if (lowerCategory && lowerCategory.includes('talent')) return User;
     if (lowerCategory && lowerCategory.includes('equipment')) return Monitor;
     return BriefcaseIcon;
-  }if (isLoading) {return (<div className='space-y-4'>;
+  
+}
+if (isLoading) {return (<div className='space-y-4'>;
         <Skeleton className='h-10 w-full' />;
         <div className='space-y-3'>;
           <Skeleton className='h-[120px] w-full' />;
@@ -75,7 +111,8 @@ interface AIMatchingResultsProps  {matches: MatchResultItem[];
           <Skeleton className='h-[120px] w-full' />;
         </div>;
       </div>;
-    )}if (matches && matches.length === 0) {return (<Card className='bg-zion-blue-dark border-zion-blue-light text-center p-6'>;
+    )}
+if (matches && matches.length === 0) {return (<Card className='bg-zion-blue-dark border-zion-blue-light text-center p-6'>;
         <CardContent className='pt-6'>;
           <BarChart3 className='h-12 w-12 mx-auto text-zion-slate-light mb-3' />;
           <p className='text-white font-medium mb-2'>No matches found</p>;
@@ -94,36 +131,41 @@ interface AIMatchingResultsProps  {matches: MatchResultItem[];
       <Tabs;
         defaultValue='all';
         value={activeTab}
-        onValueChange={setActiveTab}className='w-full'>;
+        onValueChange={setActiveTab}
+className='w-full'>;
         <TabsList className='bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full'>;
           <TabsTrigger;
             value='all';
-            className='data-[state=active]:bg-zion-purple/20'>;
+            className='data-[state = active]:bg-zion-purple/20'>;
             All ({categories && categories.all.length})</TabsTrigger>;
           <TabsTrigger;
             value='talent';
-            className='data-[state=active]:bg-zion-purple/20'>;
+            className='data-[state = active]:bg-zion-purple/20'>;
             Talent ({categories && categories.talent.length})</TabsTrigger>;
           <TabsTrigger;
             value='services';
-            className='data-[state=active]:bg-zion-purple/20'>;
+            className='data-[state = active]:bg-zion-purple/20'>;
             Services ({categories && categories.services.length})</TabsTrigger>;
           <TabsTrigger;
             value='equipment';
-            className='data-[state=active]:bg-zion-purple/20'>;
+            className='data-[state = active]:bg-zion-purple/20'>;
             Equipment ({categories && categories.equipment.length})</TabsTrigger>;
         </TabsList>;{Object && Object.entries(categories).map(([tab, items]) => (<TabsContent key={tab} value={tab} className='mt-4 space-y-3'>;
-            {items && items.length > 0 ? (items && items.map(match => {const CategoryIcon  = getCategoryIcon(match && match.category)onClick={() => onSelectMatch && onSelectMatch(match)}                  >;
+            {items && items.length > 0 ? (items && items.map(match  => {
+const CategoryIcon  = getCategoryIcon(match && match.category)onClick={() => onSelectMatch && onSelectMatch(match)
+}                  >;
                     <div className='flex'>;
                       <div;
-                        className={cn('w-2',match && match.category.toLowerCase().includes('talent')? 'bg-zion-cyan';
+                        className={cn('w-2',
+match && match.category.toLowerCase().includes('talent')? 'bg-zion-cyan';
                             : match && match.category.toLowerCase().includes('service')? 'bg-zion-purple';
                               : 'bg-green-500';
                         )}/>;
                       <div className='flex-1 p-4'>;
                         <div className='flex items-start gap-4'>;
                           <Avatar className='h-12 w-12 border border-zion-blue-light'>;
-                            {match && match.image ? (interface AIMatchingResultsProps  {matches: MatchResultItem[];
+                            {match && match.image ? (interface AIMatchingResultsProps {
+matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean;
   projectDescription?: string;
@@ -193,10 +235,13 @@ if ( {) {$2;
             Equipment ({categories.equipment.length})</TabsTrigger>;
         </TabsList>;
         {Object.entries (categories).map (([tab, items]) => (<TabsContent key={tab} value={tab} className='mt - 4 space - y-3'>;
-            {items.length > 0 ? (items.map (match => {const CategoryIcon = getCategoryIcon (match.category)on_click={() => onSelectMatch && onSelectMatch (match)}                  >;
+            {items.length > 0 ? (items.map (match  => {
+const CategoryIcon = getCategoryIcon (match.category)on_click={() => onSelectMatch && onSelectMatch (match)
+}                  >;
                     <div className='flex'>;
                       <div;
-                        className={cn ('w - 2',match.category.toLowerCase ().includes ('talent')? 'bg - zion - cyan';
+                        className={cn ('w - 2',
+match.category.toLowerCase ().includes ('talent')? 'bg - zion - cyan';
                             : match.category.toLowerCase ().includes ('service')? 'bg - zion - purple';
                               : 'bg - green - 500')}
                       />;

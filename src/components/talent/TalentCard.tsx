@@ -1,5 +1,10 @@
-import { Badge } from "@/components/ui/badge",import { Button } from "@/components/ui/button",import { Card, CardContent, CardFooter } from "@/components/ui/card",import { MapPin, Clock, ArrowRight, CheckCircle2  } from 'lucide-react';
-import { FavoriteButton } from "@/components/FavoriteButton",export const TalentCard = React && React.memo(TalentCardComponent)TalentCard && TalentCard.displayName = 'TalentCard';import React from 'react';
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { MapPin, Clock, ArrowRight, CheckCircle2  } from 'lucide-react';
+import { FavoriteButton } from "@/components/FavoriteButton",
+export const TalentCard = React && React.memo(TalentCardComponent)TalentCard && TalentCard.displayName = 'TalentCard';
+import React from 'react';
 import { useRouter  } from 'next/router';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
@@ -9,27 +14,65 @@ import { TalentProfile  } from '@/types/talent';
 import { RatingStars   } from '@/components/RatingStars';
 import { useAuth   } from '@/context/auth/AuthProvider';
 import { useCart  } from '@/context/CartContext';
-import { TalentProfile } from "@/types/talent",import { RatingStars } from '@/components/RatingStars',import { useAuth } from '@/context/auth/AuthProvider',import { useCart } from '@/context/CartContext',export interface TalentCardProps  {talent: TalentProfile;
-  onViewProfile: (id: string,) => void;
-  onRequestHire: (talent: TalentProfile,) => void;
+import { TalentProfile } from "@/types/talent",
+import { RatingStars } from '@/components/RatingStars',
+import { useAuth } from '@/context/auth/AuthProvider',
+import { useCart } from '@/context/CartContext',
+export interface TalentCardProps {
+talent: TalentProfile;
+  onViewProfile: (id: string,
+) => void;
+  onRequestHire: (talent: TalentProfile,
+) => void;
   isAuthenticated: boolean;
-import React from 'react',import { useRouter } from 'next/router',export interface TalentCardProps  {talent: TalentProfile,onViewProfile: (id: string) => void,onRequestHire: (talent: TalentProfile) => void,isAuthenticated: boolean;}
+import React from 'react',
+import { useRouter
+} from 'next/router',
+export interface TalentCardProps {
+talent: TalentProfile,
+onViewProfile: (id: string) => void,
+onRequestHire: (talent: TalentProfile) => void,
+isAuthenticated: boolean;
+}
 const TalentCardComponent = ({talent;
   onViewProfile;
   onRequestHire;
   isAuthenticated;
-}: TalentCardProps,) => {const router = useRouter()const handleViewProfile = () => {// Navigate directly to the talent profile;
-    router.push(`/talent/${talent.id}`)// Also call the onViewProfile callback if provided;
-    if (onViewProfile) {onViewProfile(talent.id)}const handleRequestHire = (e: React.MouseEvent,) => {e.preventDefault()e.stopPropagation()if (onRequestHire) {onRequestHire(talent)}},// Extract skills - limit to 5 for display;
+}: TalentCardProps,)  => {
+const router = useRouter()const handleViewProfile = () => {// Navigate directly to the talent profile;
+    router.push(`/talent/${talent.id
+}`)// Also call the onViewProfile callback if provided;
+    if (onViewProfile) {onViewProfile(talent.id)}
+const handleRequestHire = (e: React.MouseEvent,)  => {
+e.preventDefault()e.stopPropagation()if (onRequestHire) {onRequestHire(talent)
+}},// Extract skills - limit to 5 for display;
   const skills = talent.skills?.slice(0, 5) |[];
-export interface TalentCardProps  {talent: TalentProfile,onViewProfile: (id: string,) => void,onRequestHire: (talent: TalentProfile,) => void,isAuthenticated: boolean;
-}const TalentCardComponent = ({talent,onViewProfile,onRequestHire,isAuthenticated;
-}: TalentCardProps,) => {const router  = useRouter(),const handleViewProfile = () => {// Navigate directly to the talent profile;
-    router && router.push(`/talent/${talent && talent.id}`),// Also call the onViewProfile callback if provided;
+export interface TalentCardProps {
+talent: TalentProfile,
+onViewProfile: (id: string,
+) => void,
+onRequestHire: (talent: TalentProfile,
+) => void,
+isAuthenticated: boolean;
+}
+const TalentCardComponent = ({talent,
+onViewProfile,
+onRequestHire,
+isAuthenticated;
+}: TalentCardProps,)  => {
+const router  = useRouter(),
+const handleViewProfile = () => {// Navigate directly to the talent profile;
+    router && router.push(`/talent/${talent && talent.id
+}`),// Also call the onViewProfile callback if provided;
     if (onViewProfile) {onViewProfile(talent && talent.id)}
-  },if (onRequestHire) {onRequestHire(talent)}
-  },const handleRequestHire = (e: React.MouseEvent,) => {e.preventDefault()e.stopPropagation()if (onRequestHire) {onRequestHire(talent)}
-  },return (<Card;
+  },
+if (onRequestHire) {onRequestHire(talent)}
+  },
+const handleRequestHire = (e: React.MouseEvent,)  => {
+e.preventDefault()e.stopPropagation()if (onRequestHire) {onRequestHire(talent)
+}
+  },
+return (<Card;
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple";
       onClick={handleViewProfile}
       tabIndex={0}>;
@@ -37,7 +80,8 @@ export interface TalentCardProps  {talent: TalentProfile,onViewProfile: (id: str
         <div className="flex items-start">;
           {/* Avatar */}<img;
                   src={talent.profile_picture_url}
-                  alt={talent.full_name}className="w-full h-full object-cover";
+                  alt={talent.full_name}
+className="w-full h-full object-cover";
                   loading="lazy";
                   {talent.full_name?.charAt(0) || "T"}</div>;
                 />;
@@ -69,7 +113,8 @@ export interface TalentCardProps  {talent: TalentProfile,onViewProfile: (id: str
               {skills && skills.map((skill, index,) => (<span;
                   key = {index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;{skills.map((skill, index) => (<span;
-                  key={index}className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
+                  key={index}
+className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
                 >;
                   {skill}
                 </span>;
@@ -88,7 +133,8 @@ export interface TalentCardProps  {talent: TalentProfile,onViewProfile: (id: str
             {isAuthenticated && (<Button;
                 size="sm";
                 variant="secondary";
-                onClick={handleRequestHire}className="bg-zion-purple hover:bg-zion-purple-light text-white";
+                onClick={handleRequestHire}
+className="bg-zion-purple hover:bg-zion-purple-light text-white";
               >;
                 Hire;
               </Button>;
@@ -96,7 +142,10 @@ export interface TalentCardProps  {talent: TalentProfile,onViewProfile: (id: str
             <Button;
               size="sm";
               variant="ghost";
-              onClick={(e) => {onClick={(e) => {e.stopPropagation(),handleViewProfile()}}
+              onClick={(e)  => {
+onClick={(e) => {e.stopPropagation(),
+handleViewProfile()
+}}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
@@ -105,7 +154,10 @@ export interface TalentCardProps  {talent: TalentProfile,onViewProfile: (id: str
         </div>;
       </div>;
     </Card>;
-  )onClick={(e,) => {e && e.stopPropagation(),handleViewProfile()}}
+  )onClick={(e,)  => {
+e && e.stopPropagation(),
+handleViewProfile()
+}}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
@@ -119,21 +171,34 @@ import { TalentProfile   } from '@/types / talent';
 import { RatingStars  } from '@/components / RatingStars';
 import { use_auth  } from '@/context / auth / AuthProvider';
 import { use_cart  } from '@/context / CartContext';
-export interface TalentCardProps  {talent: TalentProfile,onViewProfile: (id: string, ) => void,onRequestHire: (talent: TalentProfile, ) => void,is_authenticated: boolean;
+export interface TalentCardProps {
+talent: TalentProfile,
+onViewProfile: (id: string,
+) => void,
+onRequestHire: (talent: TalentProfile,
+) => void,
+is_authenticated: boolean;
 }
-const TalentCardComponent = ({talent,onViewProfile,onRequestHire,is_authenticated;
-}: TalentCardProps, ) =>: any {const router = use_router (),const handleViewProfile = () =>: any {// Navigate directly to the talent profile;
+const TalentCardComponent = ({talent,
+onViewProfile,
+onRequestHire,
+is_authenticated;
+}: TalentCardProps, ) =>: any {const router = use_router (),
+const handleViewProfile = () =>: any {// Navigate directly to the talent profile;
     router.push (`/talent/${talent.id}`),// Also call the onViewProfile callback if provided;
     // Check condition;
 if ( {) {$2;
 }
       onViewProfile (talent.id)}
-  },const handleRequestHire = (e: React.MouseEvent, ) =>: any {e.prevent_default (),e.stop_propagation (),// Check condition;
+  },
+const handleRequestHire = (e: React.MouseEvent, ) =>: any {e.prevent_default (),
+e.stop_propagation (),// Check condition;
 if ( {) {$2;
 }
       onRequestHire (talent)}
   },// Extract skills - limit to 5 for display;
-  const skills = talent.skills?.slice (0, 5) || [],return (<Card;
+  const skills = talent.skills?.slice (0, 5) || [],
+return (<Card;
       className="overflow - hidden transition - all hover:shadow - lg border - zion - blue - light bg - zion - blue cursor - pointer focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - zion - purple";
       on_click = {handleViewProfile }
       tab_index = {0 }
@@ -210,10 +275,23 @@ if ( {) {$2;
             <Button;
               size="sm";
               variant="ghost";
-              on_click={(e, ) => {e.stop_propagation (),handleViewProfile ()}}
+              on_click={(e, )  => {
+e.stop_propagation (),
+handleViewProfile ()
+}}
               className="text - zion - cyan hover: text - white hover:bg - zion - blue - light";
             >;
               View <ArrowRight className="ml - 1 h - 4 w - 4" />;</Button>;
           </div>;
         </div>;
-      </div>;</Card>)},export const TalentCard = React.memo (TalentCardComponent),TalentCard.display_name = 'TalentCard',export const TalentCard = React.memo (TalentCardComponent)TalentCard.display_name = 'TalentCard';export const TalentCard = React.memo(TalentCardComponent),TalentCard.displayName = 'TalentCard'},export const TalentCard = React.memo(TalentCardComponent),TalentCard.displayName = 'TalentCard',export interface TalentCardProps  {)}";
+      </div>;</Card>)},
+export const TalentCard = React.memo (TalentCardComponent),
+TalentCard.display_name = 'TalentCard',
+export const TalentCard = React.memo (TalentCardComponent)TalentCard.display_name = 'TalentCard';
+export const TalentCard = React.memo(TalentCardComponent),
+TalentCard.displayName = 'TalentCard'},
+export const TalentCard = React.memo(TalentCardComponent),
+TalentCard.displayName = 'TalentCard',
+export interface TalentCardProps {
+)
+}";

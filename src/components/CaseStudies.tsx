@@ -1,11 +1,13 @@
 import { motion     } from 'framer-motion';"";
 import { CheckCircle, TrendingUp, Users, DollarSign      } from 'lucide-react';
 import { motion      } from 'framer-motion';
-interface CaseStudy  {id: string title: string description: string industry: string results: { metric: string value: string icon: React.ReactNode;
+interface CaseStudy {
+id: string title: string description: string industry: string results: { metric: string value: string icon: React.ReactNode;
 }[];
   technologies: string[];
   duration: string;
-}const caseStudies: CaseStudy[] = [{ id: '1', title: 'AI-Powered Customer Service Automation', description: 'Implemented multi-agent AI system for enterprise customer service, reducing response time and improving satisfaction.', industry: 'E-commerce', results: [;
+}
+const caseStudies: CaseStudy[] = [{ id: '1', title: 'AI-Powered Customer Service Automation', description: 'Implemented multi-agent AI system for enterprise customer service, reducing response time and improving satisfaction.', industry: 'E-commerce', results: [;
       { metric: 'Response Time', value: '85% faster', icon: <TrendingUp className='w-5 h-5' /> }, { metric: 'Customer Satisfaction', value: '+32%', icon: <CheckCircle className='w-5 h-5' /> }, { metric: 'Cost Reduction', value: '40%', icon: <DollarSign className='w-5 h-5' /> }
     ], technologies: ['OpenAI GPT-4', 'LangChain', 'React', 'Node.js', 'PostgreSQL'], duration: '3 months';
   }, { id: '2', title: 'Cloud-Native Data Platform Migration', description: 'Migrated legacy data infrastructure to modern cloud-native platform with real-time analytics capabilities.', industry: 'Financial Services', results: [{ metric: 'Processing Speed', value: '10x faster', icon: <TrendingUp className='w-5 h-5' /> }, { metric: 'Scalability', value: 'Unlimited', icon: <Users className='w-5 h-5' /> }, { metric: 'Infrastructure Cost', value: '-60%', icon: <DollarSign className='w-5 h-5' /> }
@@ -14,9 +16,11 @@ interface CaseStudy  {id: string title: string description: string industry: str
     ], technologies: ['Okta', 'CrowdStrike', 'Splunk', 'AWS GuardDuty', 'Python'], duration: '4 months';
   }
 ];
-export default function CaseStudies() {return (<section className='py-24 sm: py-32 bg-gradient-to-br from-slate-50 to-blue-50'>;
+export default function CaseStudies() {
+return (<section className='py-24 sm: py-32 bg-gradient-to-br from-slate-50 to-blue-50'>;
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>;
-        {/* Header */}
+        {/* Header */
+}
         <div className='mx-auto max-w-2xl lg:text-center mb-16'>;
           <motion.h2;
             className='text-base font-semibold leading-7 text-blue-600';
@@ -69,7 +73,7 @@ export default function CaseStudies() {return (<section className='py-24 sm: py-
                       <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full'>;
                         {study.industry}
                       </span>;
-                      <span>Duration: {study.duration}</span>;
+                      <span > Duration: {study.duration}</span>;
                     </div>;
                   </div>;
                 </div>;

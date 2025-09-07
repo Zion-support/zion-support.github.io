@@ -13,8 +13,10 @@ import TalentProfilePage from '../pages/TalentProfilePage';
 import SavedTalentsPage from '../pages/SavedTalentsPage';
 import CreateTalentProfile from '../pages/CreateTalentProfile';
 import ProfilePage from '../pages/ProfilePage';
-export default function TalentRoutes() {return (<Routes>;
-      <Route path="directory" element={<TalentDirectory />} />;
+export default function TalentRoutes() {
+return (<Routes>;
+      <Route path="directory" element={<TalentDirectory />
+} />;
       <Route path="list" element={<TalentsPage />} />;
       <Route path="profile/: id" element={<TalentProfilePage />} />;
       <Route path="saved" element={<SavedTalentsPage />} />;

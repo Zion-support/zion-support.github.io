@@ -6,8 +6,13 @@ import { Button  } from '@/components/ui/button';
 import { Web3Login  } from './Web3Login';
 import { useState  } from 'react';
 import { openAuthPopup  } from '@/api/authSocial';
-export function SocialLogin() {const [isLoading, setIsLoading]  = useState(false)const handleGoogle = () => {setIsLoading(true)window.location.href = "/auth/google";
-  }return (<div className="mt-6">;
+export function SocialLogin() {
+const [isLoading, setIsLoading]  = useState(false)const handleGoogle = ()  => {
+setIsLoading(true)window.location.href = "/auth/google";
+  
+
+}
+return (<div className="mt-6">;
       <div className="relative">;
         <div className="absolute inset-0 flex items-center">;
           <div className="w-full border-t border-zion-blue-light" />;
@@ -34,8 +39,13 @@ return (<div className='mt-6'>;
           </span>;
         </div>;
       </div>;
-export function SocialLogin() {const [isLoading, setIsLoading]  = useState(false)const handleGoogle = () => {setIsLoading(true)window && window.location.href = '/auth/google';
-  }return (<div className='mt-6'>;
+export function SocialLogin() {
+const [isLoading, setIsLoading]  = useState(false)const handleGoogle = ()  => {
+setIsLoading(true)window && window.location.href = '/auth/google';
+  
+
+}
+return (<div className='mt-6'>;
       <div className='relative'>;
         <div className='absolute inset-0 flex items-center'>;
           <div className='w-full border-t border-zion-blue-light' />;
@@ -47,8 +57,10 @@ import { openAuthPopup  } from '@/api / auth_social';
 export /**;
  * SocialLogin - Function description;
  */;
-function SocialLogin() {const [is_loading, setIsLoading] = useState (false)const handle_google = () =>: any {setIsLoading (true)window.location.href = '/auth / google';
-  }
+function SocialLogin() {
+const [is_loading, setIsLoading] = useState (false)const handle_google = () =>: any {setIsLoading (true)window.location.href = '/auth / google';
+  
+}
   return (<div className='mt - 6'>;
       <div className='relative'>;
         <div className='absolute inset - 0 flex items - center'>;
@@ -59,7 +71,8 @@ function SocialLogin() {const [is_loading, setIsLoading] = useState (false)const
             Or continue with;
           </span>;
         </div>;
-      </div>;ursor/automate-test-improve-and-merge-code-646c;
+      </div>;
+ursor/automate-test-improve-and-merge-code-646c;
       <div className="mt-6 grid grid-cols-4 gap-3">;
         <Button;
           type="button";
@@ -116,10 +129,12 @@ ursor/automate-test-improve-and-merge-code-646c;
         <Web3Login />;
       </div>;
     </div>;
-  )}type="button";
+  )}
+type="button";
           variant="outline";
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
-          onClick={() => openAuthPopup('facebook')}ursor/automate-test-improve-and-merge-code-646c;
+          onClick={() => openAuthPopup('facebook')}
+ursor/automate-test-improve-and-merge-code-646c;
           disabled={isLoading}
         >;
           <span className="sr-only">Sign in with Facebook</span>;
@@ -129,12 +144,15 @@ ursor/automate-test-improve-and-merge-code-646c;
           type="button";
           variant="outline";
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
-          onClick={() => openAuthPopup("twitter")}onClick={() => openAuthPopup("twitter")}
           onClick={() => openAuthPopup("twitter")}
-          onClick={() => openAuthPopup('twitter')}ursor/automate-test-improve-and-merge-code-646c;
+onClick={() => openAuthPopup("twitter")}
+          onClick={() => openAuthPopup("twitter")}
+          onClick={() => openAuthPopup('twitter')}
+ursor/automate-test-improve-and-merge-code-646c;
           onClick={() => openAuthPopup("twitter")}
           onClick={() => openAuthPopup("twitter")}
-          onClick={() => openAuthPopup('twitter')}disabled={isLoading}
+          onClick={() => openAuthPopup('twitter')}
+disabled={isLoading}
         >;
           <span className="sr-only">Sign in with Twitter</span>;
           <Twitter className="h-5 w-5" />;
@@ -145,8 +163,19 @@ ursor/automate-test-improve-and-merge-code-646c;
     </div>;
   )disabled={isLoading}        >;
           <span className='sr-only'>Sign in with Twitter</span>;
-          <Twitter className='h-5 w-5' />;import { Button } from "@/components/ui/button",import { Web3Login } from "./Web3Login",import { useState } from "react",import { openAuthPopup } from "@/api/authSocial",export function SocialLogin() {const [isLoading, setIsLoading] = useState(false),const handleGoogle = () => {setIsLoading(true)window.location.href = '/auth/google';
-  }return (<div className="mt-6">;
+          <Twitter className='h-5 w-5' />;
+import { Button } from "@/components/ui/button",
+import { Web3Login } from "./Web3Login",
+import { useState } from "react",
+import { openAuthPopup } from "@/api/authSocial",
+export function SocialLogin() {
+const [isLoading, setIsLoading] = useState(false),
+const handleGoogle = ()  => {
+setIsLoading(true)window.location.href = '/auth/google';
+  
+
+}
+return (<div className="mt-6">;
       <div className="relative">;
         <div className="absolute inset-0 flex items-center">;
           <div className="w-full border-t border-zion-blue-light" />;

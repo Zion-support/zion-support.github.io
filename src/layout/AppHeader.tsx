@@ -19,22 +19,39 @@ import type { RootState } from '@/store';
 import { cn } from '@/lib/utils'; // Import cn utility
 import { useRouter  } from 'next/router';
 export function AppHeader() {
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
   const isMobile = null;
   const showTagline = router.pathname === '/';
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)const [loginOpen, setLoginOpen] = useState(false)const isMobile = useIsMobile()const { t } = useTranslation()const { user } = useAuth()const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn)const router = useRouter()const showTagline = router.pathname === '/';
-  // Messaging context (unread message count)const { unreadCount } = useMessaging()const openLoginModal = (returnToPath?: string,) => {// The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router.push with shallow:true before this function is called.;
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)const [loginOpen, setLoginOpen] = useState(false)const isMobile = useIsMobile()const { t 
+} = useTranslation()const { user } = useAuth()const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn)const router = useRouter()const showTagline = router.pathname === '/';
+  // Messaging context (unread message count)const { unreadCount } = useMessaging()const openLoginModal = (returnToPath?: string,)  => {
+// The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router.push with shallow:true before this function is called.;
     // This function's main job is just to open the modal.;
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.;
-    setLoginOpen(true)}
+    setLoginOpen(true)
+}
 import React from 'react';
-  const showTagline  = router && router.pathname === '/';const [mobileMenuOpen, setMobileMenuOpen] = useState(false),const [loginOpen, setLoginOpen] = useState(false),const isMobile = useIsMobile(),const { t } = useTranslation(),const { user } = useAuth(),const isLoggedIn = useSelector((state: RootState,) => state && state.auth.isLoggedIn),const router = useRouter(),const showTagline  = router && router.pathname === '/',// Messaging context (unread message count)const { unreadCount }  = useMessaging(),const openLoginModal = (returnToPath?: string,) => {// The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router && router.push with shallow:true before this function is called.;
+  const showTagline  = router && router.pathname === '/';
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
+const [loginOpen, setLoginOpen] = useState(false),
+const isMobile = useIsMobile(),
+const { t } = useTranslation(),
+const { user } = useAuth(),
+const isLoggedIn = useSelector((state: RootState,) => state && state.auth.isLoggedIn),
+const router = useRouter(),
+const showTagline  = router && router.pathname === '/',// Messaging context (unread message count)const { unreadCount }  = useMessaging(),
+const openLoginModal = (returnToPath?: string,)  => {
+// The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router && router.push with shallow:true before this function is called.;
     // This function's main job is just to open the modal.;
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.;
-    setLoginOpen(true)},return (<>;
+    setLoginOpen(true)
+},
+return (<>;
       <header;
-        style={{ "--nav-height": "64px" } as React.CSSProperties}className={cn("sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",{ "bg-red-500": mobileMenuOpen })}
+        style={{ "--nav-height": "64px" } as React.CSSProperties}
+className={cn("sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",{ "bg-red-500": mobileMenuOpen })}
       >;
         <div className="container flex h-16 items-center px-4 sm:px-6">;
           <Logo />;
@@ -62,18 +79,24 @@ import React from 'react';
                 className="text-sm font-medium text-foreground/70 hover:text-foreground";
                 aria-label={t('auth.login')}
                 data-testid="login-link";
-                onClick={(e) => {e.preventDefault(),// For the main login link, we might not have a specific returnTo beyond current page,// or we could default to dashboard.;
+                onClick={(e)  => {
+e.preventDefault(),// For the main login link, we might not have a specific returnTo beyond current page,// or we could default to dashboard.;
                   // For consistency with how sub-menus now set it:;
-                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })openLoginModal(router.asPath)onClick={(e,) => {e && e.preventDefault(),// For the main login link, we might not have a specific returnTo beyond current page,// or we could default to dashboard.;
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath 
+} }, undefined, { shallow: true })openLoginModal(router.asPath)onClick={(e,)  => {
+e && e.preventDefault(),// For the main login link, we might not have a specific returnTo beyond current page,// or we could default to dashboard.;
                   // For consistency with how sub-menus now set it:;
-                  router && router.push({ pathname: '/auth/login', query: { returnTo: router && router.asPath } }, undefined, { shallow: true }),openLoginModal(router && router.asPath)}}
+                  router && router.push({ pathname: '/auth/login', query: { returnTo: router && router.asPath 
+} }, undefined, { shallow: true }),
+openLoginModal(router && router.asPath)}}
               >;
                 {t('auth.login')}
               </Link>;
               <Link;
                 href="/signup";
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground";
-                aria-label={t('auth.signup')}data-testid="signup-nav-link";
+                aria-label={t('auth.signup')}
+data-testid="signup-nav-link";
               >;
                 {t('auth.signup')}
               </Link>;
@@ -103,18 +126,29 @@ import React from 'react';
             />;
           </div>;
         </div>;
-              unreadCount={unreadCount}onClose={() => setMobileMenuOpen(false)}
+              unreadCount={unreadCount}
+onClose={() => setMobileMenuOpen(false)}
               openLoginModal={openLoginModal}
             />;
           </div>;
         </div>;
       )}
       {/* Mobile Bottom Navigation */}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}const show_tagline = router.pathname === '/';
-  const [mobileMenuOpen, setMobileMenuOpen] = useState (false),const [login_open, setLoginOpen] = useState (false),const is_mobile = useIsMobile (),const { t } = use_translation (),const { user } = use_auth (),const isLoggedIn = use_selector ((state: RootState, ) => state.auth.isLoggedIn),const router = use_router (),const show_tagline = router.pathname === '/',// Messaging context (unread message count)const { unread_count } = use_messaging (),const openLoginModal = (returnToPath?: string, ) =>: any {// The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router.push with shallow:true before this function is called.;
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+const show_tagline = router.pathname === '/';
+  const [mobileMenuOpen, setMobileMenuOpen] = useState (false),
+const [login_open, setLoginOpen] = useState (false),
+const is_mobile = useIsMobile (),
+const { t } = use_translation (),
+const { user } = use_auth (),
+const isLoggedIn = use_selector ((state: RootState, ) => state.auth.isLoggedIn),
+const router = use_router (),
+const show_tagline = router.pathname === '/',// Messaging context (unread message count)const { unread_count } = use_messaging (),
+const openLoginModal = (returnToPath?: string, ) =>: any {// The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router.push with shallow:true before this function is called.;
     // This function's main job is just to open the modal.;
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.;
-    setLoginOpen (true)},return (<>;
+    setLoginOpen (true)},
+return (<>;
       <header;
         style={{ "--nav - height": "64px" } as React.CSSProperties}
         class_name = {cn ("sticky top - 0 z - 50 w - full border - b border - border bg - background / 90 backdrop - blur - md text - foreground",{ "bg - red - 500": mobileMenuOpen  }
@@ -149,9 +183,12 @@ import React from 'react';
                 className="text - sm font - medium text - foreground / 70 hover:text - foreground";
                 aria - label = {t ('auth.login') }
                 data - testid="login - link";
-                on_click={(e, ) => {e.prevent_default (),// For the main login link, we might not have a specific return_to beyond current page,// or we could default to dashboard.;
+                on_click={(e, )  => {
+e.prevent_default (),// For the main login link, we might not have a specific return_to beyond current page,// or we could default to dashboard.;
                   // For consistency with how sub - menus now set it:;
-                  router.push ({ pathname: '/auth / login', query: { return_to: router.as_path } }, undefined, { shallow: true }),openLoginModal (router.as_path)}}
+                  router.push ({ pathname: '/auth / login', query: { return_to: router.as_path 
+} }, undefined, { shallow: true }),
+openLoginModal (router.as_path)}}
               >;
                 {t ('auth.login')}
               </Link>;
@@ -190,7 +227,9 @@ import React from 'react';
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>;
       setActiveNav (null)setServicesDropdownOpen (false)setSolutionsDropdownOpen (false)setCompanyDropdownOpen (false)setResourcesDropdownOpen (false)}}
-  const closeAllDropdowns = (...args: unknown[]): unknown => {setServicesDropdownOpen(false)setSolutionsDropdownOpen(false)setCompanyDropdownOpen(false)setResourcesDropdownOpen(false)setActiveNav(null)}
+  const closeAllDropdowns = (...args: unknown[]): unknown  => {
+setServicesDropdownOpen(false)setSolutionsDropdownOpen(false)setCompanyDropdownOpen(false)setResourcesDropdownOpen(false)setActiveNav(null)
+}
   return ()<>`;
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled;
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10';
@@ -221,9 +260,11 @@ import React from 'react';
                   {item.hasDropdown ? (";
                     <div className="relative">;
                       <button;
-                        onClick={() => {<AnimatePresence>;
+                        onClick={()  => {
+<AnimatePresence>;
                 {activeDropdown === 'services' && (<motion.div;
-                    initial={{ opacity: 0, y: -10 }}
+                    initial={{ opacity: 0, y: -10 
+}}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
@@ -246,7 +287,11 @@ import React from 'react';
                                 {service.description}<LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
       setActiveNav(null)setServicesDropdownOpen(false)setSolutionsDropdownOpen(false)setCompanyDropdownOpen(false)setResourcesDropdownOpen(false)}
-  }const closeAllDropdowns = (...args: unknown[]): unknown => {setServicesDropdownOpen(false)setSolutionsDropdownOpen(false)setCompanyDropdownOpen(false)setResourcesDropdownOpen(false)setActiveNav(null)}return ()<>`;
+  }
+const closeAllDropdowns = (...args: unknown[]): unknown  => {
+setServicesDropdownOpen(false)setSolutionsDropdownOpen(false)setCompanyDropdownOpen(false)setResourcesDropdownOpen(false)setActiveNav(null)
+}
+return ()<>`;
       <headerclassName={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled;
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10';
           : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>;
@@ -275,9 +320,11 @@ import React from 'react';
                   {item && item.hasDropdown ? (";
                     <div className="relative">;
                       <button;
-                        onClick={() => {<AnimatePresence>;
+                        onClick={()  => {
+<AnimatePresence>;
                 {activeDropdown === 'services' && (<motion&& motion.div;
-                    initial={{ opacity: 0, y: -10 }}
+                    initial={{ opacity: 0, y: -10 
+}}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0 && 0.2 }}
@@ -332,7 +379,8 @@ import React from 'react';
                 {active_dropdown === 'solutions' && (<motion.div;
                     initial={{ opacity: 0, coordinate_y: -10 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: -10 }}transition={{ duration: 0.2 }}
+                    exit={{ opacity: 0, coordinate_y: -10 }}
+transition={{ duration: 0.2 }}
                     className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
                     <div className="p-4">;
                       <div className="grid grid-cols-1 gap-2">;
@@ -349,7 +397,8 @@ import React from 'react';
                                 {solution.name}
                               </div>;
                               <div className="text-sm text-zion-slate-light">;
-                                {solution.description}aria-haspopup="true">;
+                                {solution.description}
+aria-haspopup="true">;
                 Solutions;
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />;
               </button>;<AnimatePresence>;
@@ -409,7 +458,8 @@ import React from 'react';
                 {active_dropdown === 'resources' && (<motion.div;
                     initial={{ opacity: 0, coordinate_y: -10 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: -10 }}transition={{ duration: 0.2 }}
+                    exit={{ opacity: 0, coordinate_y: -10 }}
+transition={{ duration: 0.2 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
                     <div className="p-4">;
                       <div className="grid grid-cols-1 gap-2">;
@@ -420,7 +470,8 @@ import React from 'react';
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
                             <resource.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform" />;
                             <span className="text-white group-hover:text-zion-cyan transition-colors">;
-                              {resource.name}aria-haspopup="true">;
+                              {resource.name}
+aria-haspopup="true">;
                 Resources;
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />;
               </button>;<AnimatePresence>;
@@ -472,7 +523,8 @@ import React from 'react';
                 {active_dropdown === 'company' && (<motion.div;
                     initial={{ opacity: 0, coordinate_y: -10 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: -10 }}transition={{ duration: 0.2 }}
+                    exit={{ opacity: 0, coordinate_y: -10 }}
+transition={{ duration: 0.2 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
                     <div className="p-4">;
                       <div className="grid grid-cols-1 gap-2">;
@@ -483,7 +535,8 @@ import React from 'react';
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
                             <item.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform" />;
                             <span className="text-white group-hover:text-zion-cyan transition-colors">;
-                              {item.name}aria-haspopup="true">;
+                              {item.name}
+aria-haspopup="true">;
                 Company;
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />;
               </button>;<AnimatePresence>;
@@ -565,7 +618,8 @@ import React from 'react';
                   {active_dropdown === 'user' && (<motion.div;
                       initial={{ opacity: 0, coordinate_y: -10 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: -10 }}transition={{ duration: 0.2 }}
+                      exit={{ opacity: 0, coordinate_y: -10 }}
+transition={{ duration: 0.2 }}
                       className="absolute top-full right-0 mt-2 w-48 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
                       <div className="p-2">;
                         <Link;
@@ -591,7 +645,10 @@ import React from 'react';
                         </Link>;
                         <hr className="border-zion-slate/20 my-2" />;
                         <button;
-                          onClick={() => {logout()setActiveDropdown(null)}}aria-haspopup="true">;
+                          onClick={()  => {
+logout()setActiveDropdown(null)
+}}
+aria-haspopup="true">;
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
                     <User className="w-4 h-4 text-white" />;
                   </div>;
@@ -628,7 +685,9 @@ import React from 'react';
                         </Link>;
                         <hr className="border-zion-slate/20 my-2" />;
                         <button;
-                          onClick={() => {logout()setActiveDropdown(null)}}
+                          onClick={()  => {
+logout()setActiveDropdown(null)
+}}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">;
                           <LogOut className="w-4 h-4 mr-3" />;
                           Logout;
@@ -653,7 +712,8 @@ import React from 'react';
             {/* Search */}<form on_submit={handle_search} className="hidden md:flex relative">  const navigation = [;
     { name: 'Home', href: '/', current: true },{ name: 'About', href: '/about', current: false },{ name: 'Contact', href: '/contact', current: false }];
   const services = [;
-    { name: 'AI Solutions', href: '/services / ai', description: 'Machine Learning & NLP' },{ name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },{ name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },{ name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },{ name: 'Cybersecurity', href: '/services / cybersecurity', description: 'Security & Compliance' },{ name: 'Cloud Services', href: '/services / cloud', description: 'DevOps & Infrastructure' }];return (<>;
+    { name: 'AI Solutions', href: '/services / ai', description: 'Machine Learning & NLP' },{ name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },{ name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },{ name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },{ name: 'Cybersecurity', href: '/services / cybersecurity', description: 'Security & Compliance' },{ name: 'Cloud Services', href: '/services / cloud', description: 'DevOps & Infrastructure' }];
+return (<>;
       <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">;
         <div className="container flex h-16 items-center px-4 sm:px-6">;
           {/* Logo */}<form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [;
@@ -669,7 +729,8 @@ import React from 'react';
               <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
           <div className="flex items - center">;
             <Link to="/" className="flex - shrink - 0">;
-              <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">;Zion Tech Group;
+              <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">;
+Zion Tech Group;
               </h1>;
             </Link>;
           </div>;{/* Desktop Navigation */}
@@ -678,14 +739,16 @@ import React from 'react';
                 key={item.name}<div className="relative">;<button;
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                 onMouseEnter={() => setServicesDropdownOpen(true)}
-                onMouseLeave={() => setServicesDropdownOpen(false)}className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">;
+                onMouseLeave={() => setServicesDropdownOpen(false)}
+className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">;
                 Services;
                 <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />;
               </button>;
               {servicesDropdownOpen && (<div;
                   className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 border border-slate-700/50 rounded-lg shadow-xl backdrop-blur-md";
                   onMouseEnter={() => setServicesDropdownOpen(true)}
-                  onMouseLeave={() => setServicesDropdownOpen(false)}to={item.href}
+                  onMouseLeave={() => setServicesDropdownOpen(false)}
+to={item.href}
                 className="text - slate - 300 hover:text - cyan - 400 px - 3 py - 2 text - sm font - medium transition - colors duration - 200">;
                 {item.name}
               </Link>))}
@@ -743,7 +806,8 @@ import React from 'react';
                     <div className="mt - 4 pt - 4 border - t border - slate - 700 / 50">;
                       <Link;
                         to="/services";
-                        className="block text - center text - cyan - 400 hover:text - cyan - 300 text - sm font - medium transition - colors">;View All Services →;
+                        className="block text - center text - cyan - 400 hover:text - cyan - 300 text - sm font - medium transition - colors">;
+View All Services →;
                       </Link>;
                     </div>;
                   </div>;<div className="hidden md:flex ml-6 flex-1 max-w-md">;
@@ -988,7 +1052,9 @@ import React from 'react';
                       Dashboard;
                     </Link>;
                     <button;
-                      onClick={() => {logout()closeMobileMenu()}}
+                      onClick={()  => {
+logout()closeMobileMenu()
+}}
                       className="block w-full px-4 py-2 text-center text-zion-cyan border border-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-colors">;
                       Logout;
                     </button>;
@@ -997,7 +1063,8 @@ import React from 'react';
               )}
             </div>;
           </motion && motion.div>;)}</AnimatePresence>;
-    </header>  )}to={item.href}
+    </header>  )}
+to={item.href}
                   className="text - slate - 300 hover:text - cyan - 400 block px - 3 py - 2 text - base font - medium transition - colors duration - 200";
                   on_click={() => setMobileMenuOpen (false)}
                 >;
@@ -1095,7 +1162,9 @@ import React from 'react';
                       Dashboard;
                     </Link>;
                     <button;
-                      on_click={() => {logout ()closeMobileMenu ()}}
+                      on_click={()  => {
+logout ()closeMobileMenu ()
+}}
                       className="block w - full px - 4 py - 2 text - center text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition - colors">;
                       Logout;
                     </button>;
@@ -1119,12 +1188,16 @@ import React from 'react';
 }<UserMenu /> </div>) ";";
 }</div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={";
   () => setMobileMenuOpen (false) ";";
-}aria-hidden="true" /> <div className="relative bg-background border-t border-border h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {unreadCount ;
-}onClose= {() => setMobileMenuOpen (false)}openLoginModal= {openLoginModal ;
+}
+aria-hidden="true" /> <div className="relative bg-background border-t border-border h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {unreadCount ;
+}
+onClose= {() => setMobileMenuOpen (false)}
+openLoginModal= {openLoginModal ;
 }/> </div> </div>)}{/* Mobile Bottom Navigation */ ;
 }{isMobile && <MobileBottomNav unreadCount= {unreadCount ;
 }/> ;
 }<LoginModal isOpen= {loginOpen ;
-}onOpenChange= {setLoginOpen ;
+}
+onOpenChange= {setLoginOpen ;
 }/> </>)'";
 }'"'";

@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
-const MobileDevelopment: React.FC = () => {
+const MobileDevelopment: React.FC = ()  => {
+
   return (
     <>
       <SEO title="Mobile Development" description="Mobile Development page" url="/services/mobile-development" />
@@ -19,6 +20,7 @@ const MobileDevelopment: React.FC = () => {
       </div>
     </>
   );
+
 };
 
 export default MobileDevelopment;

@@ -4,39 +4,65 @@
       // Check condition;
 if ( {) {$2;
 }
-        await supabase;.from('model_versions').update({ active: false }).eq('purpose', purpose)}// Update this model;import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle  } from 'lucide-react';
+        await supabase;.from('model_versions').update({ active: false }).eq('purpose', purpose)}// Update this model;
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle  } from 'lucide-react';
 import { supabase   } from '@/integrations/supabase/client';
 import { ModelConfig   } from '@/utils/zion-gpt';
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { useState, useEffect  } from 'react';
 import { Button  } from '@/components/ui/button';
-import { Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components/ui/card';
-import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
+import { Card,
+CardContent,
+CardDescription,
+CardHeader,
+CardTitle} from '@/components/ui/card';
+import { Table,
+TableBody,
+TableCell,
+TableHead,
+TableHeader,
+TableRow} from '@/components/ui/table';
 import { Badge  } from '@/components/ui/badge';
-import { Loader2,RefreshCw,Play,CheckCircle,AlertCircle} from 'lucide-react';
+import { Loader2,
+RefreshCw,
+Play,
+CheckCircle,
+AlertCircle} from 'lucide-react';
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig  } from '@/utils/zion-gpt';
 import { logErrorToProduction  } from '@/utils/productionLogger';
 interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string;
-}await supabase;
+}
+await supabase;
         .from ('model_versions').update ({ active: !current_active }).eq ('id', model_id),// Refresh the model list;
       fetch_models ()}
       // Update this model;
       await supabase;
         .from('model_versions').update({ active: !currentActive }).eq('id', modelId)// Refresh the model list;
-      fetchModels()} catch (error) {logErrorToProduction('Error toggling model active state:', { data: error })}} catch (error) {logErrorToProduction ('Error toggling model active state:', { data: error })}.order('createdAt', { ascending: false }),const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {try {// If activating, deactivate all other models with the same purpose;
+      fetchModels()} catch (error) {logErrorToProduction('Error toggling model active state:', { data: error })}} catch (error) {logErrorToProduction ('Error toggling model active state:', { data: error })}.order('createdAt', { ascending: false }),
+const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,)  => {
+try {// If activating, deactivate all other models with the same purpose;
       if (!currentActive) {await supabase;
-          .from('model_versions').update({ active: false }).eq('purpose', purpose)}// Update this model;
+          .from('model_versions').update({ active: false 
+}).eq('purpose', purpose)}// Update this model;
       await supabase;
         .from('model_versions').update({ active: !currentActive }).eq('id', modelId),// Refresh the model list;
       fetchModels()} catch (error) {logErrorToProduction('Error toggling model active state:', { data: error })}
-  }},export function ZionGPTModelManager() {const [models, setModels] = useState<ModelVersionData[]>([]),const [isLoading, setIsLoading] = useState(true)const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),// Fetch model data on component mount;
-  useEffect(() => {fetchModels()}, []),const fetchModels  = null;return (<Card className="w-full">;
+  }},
+export function ZionGPTModelManager() {
+const [models, setModels] = useState < ModelVersionData[]>([]),
+const [isLoading, setIsLoading] = useState(true)const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean
+}>({}),// Fetch model data on component mount;
+  useEffect(()  => {
+fetchModels()
+}, []),
+const fetchModels  = null;
+return (<Card className="w-full">;
       <CardHeader className="flex flex-row items-center justify-between">;
         <div>;
-          <CardTitle>ZionGPT Models</CardTitle>;
-          <CardDescription>Manage fine-tuned AI models for different platform features;
+          <CardTitle > ZionGPT Models</CardTitle>;
+          <CardDescription > Manage fine-tuned AI models for different platform features;
           </CardDescription>;
         </div>;
         <Button onClick={fetchModels} variant="outline" size="sm">;
@@ -50,19 +76,19 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
         ) : (<Table>;
             <TableHeader>;
               <TableRow>;
-                <TableHead>Model ID</TableHead>;
-                <TableHead>Version</TableHead>;
-                <TableHead>Purpose</TableHead>;
-                <TableHead>Base Model</TableHead>;
-                <TableHead>Status</TableHead>;
-                <TableHead>Created</TableHead>;
+                <TableHead > Model ID</TableHead>;
+                <TableHead > Version</TableHead>;
+                <TableHead > Purpose</TableHead>;
+                <TableHead > Base Model</TableHead>;
+                <TableHead > Status</TableHead>;
+                <TableHead > Created</TableHead>;
                 <TableHead className="text-right">Actions</TableHead>;
               </TableRow>;
             </TableHeader>;
             <TableBody>;
               {models && models.map((model,) => (<TableRow key={model && model.id}>;
                   <TableCell className="font-medium">{model && model.id}</TableCell>;
-                  <TableCell>v{model && model.version}</TableCell>;
+                  <TableCell > v{model && model.version}</TableCell>;
                   <TableCell>{model && model.purpose}</TableCell>;
                   <TableCell>{model && model.baseModel}</TableCell>;
                   <TableCell>;
@@ -109,7 +135,9 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
                       </Button>;)}
                   </TableCell>;
-                </TableRow>;title={model.errorMessage || "Training failed"}title = {model.errorMessage || "Training failed"}
+                </TableRow>;
+title={model.errorMessage || "Training failed"}
+title = {model.errorMessage || "Training failed"}
                         title={model.errorMessage || "Training failed"}
                       >;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
@@ -120,11 +148,12 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
           </Table>;
         )}</CardContent>;
     </Card>;
-  )}}},return (<Card className="w - full">;
+  )}}},
+return (<Card className="w - full">;
       <CardHeader className="flex flex - row items - center justify - between">;
         <div>;
           <CardTitle > ZionGPT Models</CardTitle>;
-          <CardDescription>Manage fine - tuned AI models for different platform features;
+          <CardDescription > Manage fine - tuned AI models for different platform features;
           </CardDescription>;
         </div>;
         <Button on_click={fetch_models} variant="outline" size="sm">;
@@ -191,8 +220,11 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
       </CardContent>;
     </Card>)}}</CardContent>;
     </Card>;
-  )}return (<Card className="w-full" > <CardHeader className="flex flex-row items-center justify-between" > <div> <CardTitle>ZionGPT Models</CardTitle> <CardDescription> Manage fine-tuned AI models for different platform features </CardDescription> </div> </div>) : (<Table> <TableHeader> <TableRow> <TableHead>Model ID</TableHead> <TableHead>Version</TableHead> <TableHead>Purpose</TableHead> <TableHead>Base Model</TableHead> <TableHead>Status</TableHead> <TableHead>Created</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {models.map ( (model) => (<TableRow key= {model.id '";
-}>) : model.trainingStatus === 'failed' ? (<Badge className="bg-red-500" >Failed</Badge>) : model.trainingStatus === 'running' ? (<Badge className="bg-blue-500" >Training</Badge>) : (<Badge className="bg-yellow-500" >Queued</Badge>)}onClick={() => checkTrainingStatus (model.id)}disabled= {activeJobs[model.id] ";
+  )}
+return (<Card className="w-full" > <CardHeader className="flex flex-row items-center justify-between" > <div> <CardTitle > ZionGPT Models</CardTitle> <CardDescription> Manage fine-tuned AI models for different platform features </CardDescription> </div> </div>) : (<Table> <TableHeader> <TableRow> <TableHead > Model ID</TableHead> <TableHead > Version</TableHead> <TableHead > Purpose</TableHead> <TableHead > Base Model</TableHead> <TableHead > Status</TableHead> <TableHead > Created</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {models.map ( (model) => (<TableRow key= {model.id '";
+}>) : model.trainingStatus === 'failed' ? (<Badge className="bg-red-500" >Failed</Badge>) : model.trainingStatus === 'running' ? (<Badge className="bg-blue-500" >Training</Badge>) : (<Badge className="bg-yellow-500" >Queued</Badge>)}
+onClick={() => checkTrainingStatus (model.id)}
+disabled= {activeJobs[model.id] ";
 }>) : (<RefreshCw className="h-4 w-4" />) ";
 }<span className="ml-1" >Check</span> </Button> > {";
   model.active ? (<> <CheckCircle className="h-4 w-4 mr-1" /> Active </>) : (<> <Play className="h-4 w-4 mr-1" /> Activate </>) ";

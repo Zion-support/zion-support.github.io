@@ -1,4 +1,7 @@
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';'';import React, { useState, useEffect, createContext, useContext } from 'react''';
+ const AccessibilityContext = createContext (null)  export const useAccessibility = ()  => {
+ const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  
+} return context }';'';
+import React, { useState, useEffect, createContext, useContext } from 'react''';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X  } from 'lucide-react';
 const AccessibilityContext = createContext(null)export const useAccessibility = () => {}
@@ -206,7 +209,8 @@ export const AccessibilityPanel = () => {}
                 <div>'''';
                   <h3 className='text-white font-medium mb-3'>Font Size</h3>'''';
                   <div className='flex gap-2'>'';
-                    {['small', medium',large'].map(size => (<Button;
+                    {['small', medium',
+large'].map(size => (<Button;
                         key={size}'''';
                         variant={fontSize === size ? 'default' : 'outline'}'''';
                         size='sm''';
@@ -231,7 +235,8 @@ export const AccessibilityPanel = () => {}
                     Color Blind Support'''';
                   </h3>'''';
                   <div className='grid grid-cols-2 gap-2'>'';
-                    {['none', protanopia',deuteranopia', tritanopia'].map()';
+                    {['none', protanopia',
+deuteranopia', tritanopia'].map()';
                       mode => (<Button;
                           key={mode}
                           variant={}
@@ -263,19 +268,19 @@ export const AccessibilityPanel = () => {}
                   </h3>'''';
                   <div className='space-y-2 text-sm text-zion-slate-light'>'''';
                     <div className='flex justify-between'>'''';
-                      <span>Open Panel: </span>'''';
+                      <span > Open Panel: </span>'''';
                       <kbd className='px-2 py-1 bg-zion-blue-light/20 rounded text-xs'>;
                         Ctrl/Cmd + Shift + A;
                       </kbd>'''';
                     </div>'''';
                     <div className='flex justify-between'>'''';
-                      <span>High Contrast:</span>'''';
+                      <span > High Contrast:</span>'''';
                       <kbd className='px-2 py-1 bg-zion-blue-light/20 rounded text-xs'>;
                         Ctrl/Cmd + Shift + H;
                       </kbd>'''';
                     </div>'''';
                     <div className='flex justify-between'>'''';
-                      <span>Reduced Motion:</span>'''';
+                      <span > Reduced Motion:</span>'''';
                       <kbd className='px-2 py-1 bg-zion-blue-light/20 rounded text-xs'>;
                         Ctrl/Cmd + Shift + M;
                       </kbd>;

@@ -1,6 +1,13 @@
 
-id: string;import React from "react",import { Card, CardContent } from "@/components/ui/card",import { Button } from "@/components/ui/button",import { Badge } from "@/components/ui/badge",import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",import { CheckCircle, ChevronRight, FileText, MessageSquare, Video  } from 'lucide-react';
-import { Progress } from "@/components/ui/progress",import { SeverityIndicator  } from '../common/SeverityIndicator';
+id: string;
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { CheckCircle, ChevronRight, FileText, MessageSquare, Video  } from 'lucide-react';
+import { Progress } from "@/components/ui/progress",
+import { SeverityIndicator  } from '../common/SeverityIndicator';
 import { useRouter   } from 'next/router';
 import { toast  } from 'sonner';
 import React from 'react';
@@ -16,28 +23,40 @@ import { CheckCircle;
  } from 'lucide-react';
 import { Progress  } from '@/components/ui/progress';
 import { useRouter  } from 'next/router';
-interface Milestone  {id: string;
+interface Milestone {
+id: string;
   title: string;
   dueDate: string;
   status: "completed" | "in_progress" | "pending";
   paymentStatus: "paid" | "pending" | "overdue";
   amount: string;
-interface ProjectViewProps  {project: {id: string;title: string;
+interface ProjectViewProps  {project: {id: string;
+title: string;
     client: {name: string;
       avatar?: string;
-    },startDate: string;
+},
+startDate: string;
     endDate?: string;
     status: string;
     totalAmount: string;
-    progress: number;import { Card, CardContent  } from '@/components / ui / card';
+    progress: number;
+import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
 import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
-import { CheckCircle,ChevronRight,FileText,MessageSquare,Video} from 'lucide-react';
+import { CheckCircle,
+ChevronRight,
+FileText,
+MessageSquare,
+Video} from 'lucide-react';
 import { Progress  } from '@/components / ui / progress';
 import { SeverityIndicator  } from '../common / SeverityIndicator';
 import { use_router  } from 'next / router';
-import { SeverityIndicator } from "../common/SeverityIndicator",import { useRouter } from 'next/router',import { toast } from "sonner",interface Milestone  {id: string;
+import { SeverityIndicator } from "../common/SeverityIndicator",
+import { useRouter } from 'next/router',
+import { toast } from "sonner",
+interface Milestone {
+id: string;
   title: string;
   due_date: string;
   status: 'completed' | 'in_progress' | 'pending';
@@ -47,30 +66,77 @@ interface ProjectViewProps  {project: {id: string;
     title: string;
     client: {name: string;
       avatar?: string;
-    }
+}
     start_date: string;
     end_date?: string;
     status: string;
     total_amount: string;
     progress: number;
     description: string;
-  }id: string,title: string,dueDate: string,status: "completed" | "in_progress" | "pending",paymentStatus: "paid" | "pending" | "overdue",amount: string;
-interface Milestone  {id: string,title: string,dueDate: string,status: "completed" | "in_progress" | "pending",paymentStatus: "paid" | "pending" | "overdue",amount: string;
-}interface ProjectViewProps  {project: {id: string,title: string,client: {name: string,avatar?: string;
-    },startDate: string,endDate?: string,status: string,totalAmount: string,progress: number,description: string;
-  },milestones: Milestone[];description: string;
-  }milestones: Milestone[];export function MobileProjectView(): any ({ project, milestones }: ProjectViewProps) {const router  = useRouter()const startProjectCall = () => {const roomId = `project-${project && project.id}`;
-    toast && toast.success('Starting project call', {description: 'Initializing video connection...'})router && router.push(`/call/${roomId}`)}const messageClient = () => {toast && toast.info('Opening message thread with client', {description: `Messaging ${project && project.client.name}...`})// Navigate to messaging with this client;
-  }}export function MobileProjectView() {const router = useRouter(),const startProjectCall = () => {const roomId = `project-${project.id}`,toast.success("Starting project call", {description: "Initializing video connection...";
-    }),router.push(`/call/${roomId}`)},const messageClient = () => {toast.info("Opening message thread with client", {description: `Messaging ${project.client.name}...`;
+  }
+id: string,
+title: string,
+dueDate: string,
+status: "completed" | "in_progress" | "pending",
+paymentStatus: "paid" | "pending" | "overdue",
+amount: string;
+interface Milestone {
+id: string,
+title: string,
+dueDate: string,
+status: "completed" | "in_progress" | "pending",
+paymentStatus: "paid" | "pending" | "overdue",
+amount: string;
+}
+interface ProjectViewProps {
+project: {id: string,
+title: string,
+client: {name: string,
+avatar?: string;
+},
+startDate: string,
+endDate?: string,
+status: string,
+totalAmount: string,
+progress: number,
+description: string;
+  },
+milestones: Milestone[];
+description: string;
+  }
+milestones: Milestone[];
+export function MobileProjectView(): any ({ project, milestones }: ProjectViewProps) {const router  = useRouter()const startProjectCall = ()  => {
+const roomId = `project-${project && project.id
+}`;
+    toast && toast.success('Starting project call', {description: 'Initializing video connection...'})router && router.push(`/call/${roomId}`)}
+const messageClient = ()  => {
+toast && toast.info('Opening message thread with client', {description: `Messaging ${project && project.client.name
+}...`})// Navigate to messaging with this client;
+  }}
+export function MobileProjectView() {
+const router = useRouter(),
+const startProjectCall = ()  => {
+const roomId = `project-${project.id
+
+}`,
+toast.success("Starting project call", {description: "Initializing video connection...";
+    }),
+router.push(`/call/${roomId}`)},
+const messageClient = ()  => {
+toast.info("Opening message thread with client", {description: `Messaging ${project.client.name
+}...`;
     }),// Navigate to messaging with this client;
-  },description: string;
+  },
+description: string;
   }
   milestones: Milestone[];
-export function MobileProjectView() {const router  = null;return (<div className="space-y-1">;
+export function MobileProjectView() {
+const router  = null;
+return (<div className="space-y-1">;
               <div className="flex justify-between items-center text-sm">;
-                <span>Progress</span>;
-                <span className='font-medium'>{project.progress}%</span>;
+                <span > Progress</span>;
+                <span className='font-medium'>{project.progress
+}%</span>;
               </div>;
               <Progress value={project.progress} className='h-2' />;
                 <span className="font-medium">{project.progress}%</span>;
@@ -112,7 +178,7 @@ export function MobileProjectView() {const router  = null;return (<div className
               <Badge>{project && project.status}</Badge>;
             </div>;<div className='space-y-1'>;
               <div className='flex justify-between items-center text-sm'>;
-                <span>Progress</span>;
+                <span > Progress</span>;
                 <span className='font-medium'>{project && project.progress}%</span>;
               </div>;
               <Progress value={project && project.progress} className='h-2' />;
@@ -230,10 +296,22 @@ export function MobileProjectView() {const router  = null;return (<div className
                   </div>;
                   <Badge;
                     variant={milestone.paymentStatus === "paid" ? "default" :;
-                      milestone.paymentStatus === "overdue" ? "destructive" : "outline";export function MobileProjectView() {const router = useRouter(),const startProjectCall = () => {const roomId = `project-${project.id}`,toast.success("Starting project call", {description: "Initializing video connection...";
-    }),router.push(`/call/${roomId}`)},const messageClient = () => {toast.info("Opening message thread with client", {description: `Messaging ${project.client.name}...`;
+                      milestone.paymentStatus === "overdue" ? "destructive" : "outline";
+export function MobileProjectView() {
+const router = useRouter(),
+const startProjectCall = ()  => {
+const roomId = `project-${project.id
+
+}`,
+toast.success("Starting project call", {description: "Initializing video connection...";
+    }),
+router.push(`/call/${roomId}`)},
+const messageClient = ()  => {
+toast.info("Opening message thread with client", {description: `Messaging ${project.client.name
+}...`;
     })// Navigate to messaging with this client;
-  }return (<div className="space-y-6 px-4 pb-24">;
+  }
+return (<div className="space-y-6 px-4 pb-24">;
       <Card>;<CardContent className='p - 4'>;
           <div className='space - y-4'>;
             <div className='flex items - center justify - between'>;
@@ -306,7 +384,7 @@ export function MobileProjectView() {const router  = null;return (<div className
                 on_click={startProjectCall}              >;
                 <Video className='h - 4 w - 4' /> Call;<div className="space-y-1">;
               <div className="flex justify-between items-center text-sm">;
-                <span>Progress</span>;
+                <span > Progress</span>;
                 <span className="font-medium">{project.progress}%</span>;
               </div>;
               <Progress value={project.progress} className="h-2" />;
@@ -372,7 +450,8 @@ export function MobileProjectView() {const router  = null;return (<div className
                     ) : (<div className="h-5 w-5 rounded-full border-2 border-muted-foreground"></div>;
                     )}
                     <h3 className="font-medium">{milestone.title}</h3>;</div>;
-                  <Badge;variant={milestone.paymentStatus === "paid" ? "default" :;
+                  <Badge;
+variant={milestone.paymentStatus === "paid" ? "default" :;
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline";
                     }
                   >;

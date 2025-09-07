@@ -1,6 +1,7 @@
 import { Badge  } from './ui/badge';
 import { Button  } from './ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';import { Check, X, Star, Clock, Phone, Mail  } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { Check, X, Star, Clock, Phone, Mail  } from 'lucide-react';
 import {}
   COMPREHENSIVE_SERVICES,'';
   CONTACT_INFO} from '@/data/comprehensiveServices';
@@ -8,7 +9,8 @@ export function ServicesComparisonTable() {}
 '';
 '';
 '''';
-  const serviceCategories = ['AI Services', IT Services',Micro SAAS'];
+  const serviceCategories = ['AI Services', IT Services',
+Micro SAAS'];
   const getFeatureIcon = hasFeature => {}
     return hasFeature ? (<Check className='w-4 h-4 text-green-500' />'''';
     ) : ('''';

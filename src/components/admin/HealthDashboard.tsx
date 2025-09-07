@@ -1,14 +1,31 @@
 
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }return this.props.children;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+static getDerivedStateFromError(error) {return { hasError: true }}
+componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+render() {if (this.state.hasError) {return <div > Something went wrong.</div>;
+    }
+return this.props.children;
   }
-}import React, { useState, useEffect } from 'react';
+}
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-import {AlertTriangle,CheckCircle,XCircle,Clock,TrendingUp,Activity} from 'lucide-react';
-interface HealthData  {import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity  } from 'lucide-react';
+import {AlertTriangle,
+CheckCircle,
+XCircle,
+Clock,
+TrendingUp,
+Activity} from 'lucide-react';
+interface HealthData {
+import { AlertTriangle,
+CheckCircle,
+XCircle,
+Clock,
+TrendingUp,
+Activity
+} from 'lucide-react';
 import { AlertTriangle;
   CheckCircle;
   XCircle;
@@ -20,34 +37,48 @@ import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / c
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
-import { AlertTriangle,CheckCircle,XCircle,Clock,TrendingUp,Activity} from 'lucide-react';
-interface HealthData  {status: 'healthy' | 'warning' | 'critical';
+import { AlertTriangle,
+CheckCircle,
+XCircle,
+Clock,
+TrendingUp,
+Activity} from 'lucide-react';
+interface HealthData {
+status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
   uptime: number;
   version: string;
-  environment: string;metrics: {error_rate: number;
+  environment: string;
+metrics: {error_rate: number;
     critical_errors: number;
     response_time: number;
-    memory_usage: number;}
+    memory_usage: number;
+}
   health: {status: string;
     score: number;
-    issues: string[];memoryUsage: number;
-  }health: {status: string;
+    issues: string[];
+memoryUsage: number;
+  }
+health: {status: string;
     score: number;
     issues: string[];
     recommendations: string[];
-  }errors: {summary: {recommendations: string[];}
+  }
+errors: {summary: {recommendations: string[];}
   errors: {summary: {total: number;
       critical: number;
       high: number;
-      medium: number;low: number;
-    }topErrors: Array<{patternId: string;
+      medium: number;
+low: number;
+    }
+topErrors: Array<{patternId: string;
       description: string;
       occurrences: number;
       severity: string;
       solution?: string;
     }>;
-    byCategory: { [category: string]: number }low: number;
+    byCategory: { [category: string]: number }
+low: number;
     }
     top_errors: Array<{pattern_id: string;
       description: string;
@@ -56,29 +87,95 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
       solution?: string;
     }>;
     by_category: { [category: string]: number }
-  }import React, { useState, useEffect } from 'react',import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',import { Badge } from '@/components/ui/badge',import { Button } from '@/components/ui/button',import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',interface HealthData  {status: 'healthy' | 'warning' | 'critical',timestamp: string,uptime: number,version: string,environment: string,metrics: {errorRate: number,criticalErrors: number,responseTime: number,memoryUsage: number;
-  },health: {status: string,score: number,issues: string[],recommendations: string[];
-  },errors: {summary: {total: number,critical: number,high: number,medium: number,low: number;
-    },topErrors: Array<{patternId: string,description: string,occurrences: number,severity: string,solution?: string;
-    }>,byCategory: { [category: string]: number }
   }
-}const HealthDashboard: React.FC = () => {const [healthData, setHealthData] = useState<HealthData | null>(null),const [loading, setLoading] = useState(true),const [error, setError] = useState<string | null>(null),const [autoRefresh, setAutoRefresh] = useState(true),const fetchHealthData = async () => {try {const response = await fetch('/api/admin/health'),if (!response.ok) {throw new Error(`HTTP ${response.status}`)}
-      const data = await response.json(),setHealthData(data),setError(null)} catch (err) {setError(err instanceof Error ? err.message : 'Failed to fetch health data')} finally {setLoading(false)}
-  },useEffect(() => {fetchHealthData(),if (autoRefresh) {const interval = setInterval(fetchHealthData, 30000), // Refresh every 30 seconds;
-      return () => clearInterval(interval)}return undefined;
-  }, [autoRefresh]),const getStatusIcon = (status: string) => {switch (status) {case 'healthy':;
-        return <CheckCircle className="w-5 h-5 text-green-500" />,case 'warning':;
-        return <AlertTriangle className="w-5 h-5 text-yellow-500" />,case 'critical':;
-        return <XCircle className="w-5 h-5 text-red-500" />,default:;
+import React, { useState, useEffect } from 'react',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
+interface HealthData {
+status: 'healthy' | 'warning' | 'critical',
+timestamp: string,
+uptime: number,
+version: string,
+environment: string,
+metrics: {errorRate: number,
+criticalErrors: number,
+responseTime: number,
+memoryUsage: number;
+},
+health: {status: string,
+score: number,
+issues: string[],
+recommendations: string[];
+  },
+errors: {summary: {total: number,
+critical: number,
+high: number,
+medium: number,
+low: number;
+    },
+topErrors: Array<{patternId: string,
+description: string,
+occurrences: number,
+severity: string,
+solution?: string;
+    }>,
+byCategory: { [category: string]: number }
+  }
+}
+const HealthDashboard: React.FC = ()  => {
+const [healthData, setHealthData] = useState < HealthData | null>(null),
+const [loading, setLoading] = useState(true),
+const [error, setError] = useState < string | null>(null),
+const [autoRefresh, setAutoRefresh] = useState(true),
+const fetchHealthData = async () => {try {const response = await fetch('/api/admin/health'),
+if (!response.ok) {throw new Error(`HTTP ${response.status
+}`)}
+      const data = await response.json(),
+setHealthData(data),
+setError(null)} catch (err) {setError(err instanceof Error ? err.message : 'Failed to fetch health data')} finally {setLoading(false)}
+  },
+useEffect(()  => {
+fetchHealthData(),
+if (autoRefresh) {const interval = setInterval(fetchHealthData, 30000), // Refresh every 30 seconds;
+      return () => clearInterval(interval)
+}
+return undefined;
+  }, [autoRefresh]),
+const getStatusIcon = (status: string)  => {
+switch (status) {case 'healthy':;
+        return <CheckCircle className="w-5 h-5 text-green-500" />,
+case 'warning':;
+        return <AlertTriangle className="w-5 h-5 text-yellow-500" />,
+case 'critical':;
+        return <XCircle className="w-5 h-5 text-red-500" />,
+default:;
         return <Activity className="w-5 h-5 text-gray-500" />;
-    }
-  },const getStatusBadge = (status: string) => {const variant = status === 'healthy' ? 'default' :;
-                   status === 'warning' ? 'secondary' : 'destructive',return (<Badge variant={variant} className="ml-2">;
+    
+}
+  },
+const getStatusBadge = (status: string)  => {
+const variant = status === 'healthy' ? 'default' :;
+                   status === 'warning' ? 'secondary' : 'destructive',
+return (<Badge variant={variant
+} className="ml-2">;
         {status.toUpperCase()}
       </Badge>;
-    )},const formatUptime = (seconds: number) => {const hours = Math.floor(seconds / 3600),const minutes = Math.floor((seconds % 3600) / 60),return `${hours}h ${minutes}m`;
-  },const formatBytes = (bytes: number) => {return `${bytes.toFixed(1)} MB`;
-  },if (loading) {return (<div className='flex items-center justify-center p-8'>;
+    )},
+const formatUptime = (seconds: number)  => {
+const hours = Math.floor(seconds / 3600),
+const minutes = Math.floor((seconds % 3600) / 60),
+return `${hours
+}
+h ${minutes}
+m`;
+  },
+const formatBytes = (bytes: number)  => {
+return `${bytes.toFixed(1)
+} MB`;
+  },
+if (loading) {return (<div className='flex items-center justify-center p-8'>;
         <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>;
       </div>;
     )}
@@ -86,18 +183,26 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
         <CardContent className='p-6'>;
           <div className='flex items-center text-red-600'>;
             <XCircle className='w-5 h-5 mr-2' />;
-            <span>Failed to load health data: {error}</span>;
+            <span > Failed to load health data: {error}</span>;
           </div>;
           <Button onClick={fetchHealthData} className='mt-4'>;
             Retry;
           </Button>;
         </CardContent>;
       </Card>;
-    )const HealthDashboard: React.FC = () => {const [healthData, setHealthData] = useState<HealthData | null>(null)const [loading, setLoading] = useState(true)const [error, setError] = useState<string | null>(null)const [autoRefresh, setAutoRefresh] = useState(true)}const fetchHealthData = async () => {try {const response = await fetch('/api/admin/health')if (!response && response.ok) {throw new Error(`HTTP ${response && response.status}`)}
+    )const HealthDashboard: React.FC = ()  => {
+const [healthData, setHealthData] = useState < HealthData | null>(null)const [loading, setLoading] = useState(true)const [error, setError] = useState < string | null>(null)const [autoRefresh, setAutoRefresh] = useState(true)
+}
+const fetchHealthData = async ()  => {
+try {const response = await fetch('/api/admin/health')if (!response && response.ok) {throw new Error(`HTTP ${response && response.status
+}`)}
       const data = await response && response.json()setHealthData(data)setError(null)} catch (err) {setError(err instanceof Error ? err && err.message : 'Failed to fetch health data';
       )} finally {setLoading(false)}
-  }if (!healthData) return null,if (!healthData) return null;
-  if (!healthData) return null,return (<div className="space-y-6">;
+  }
+if (!healthData) return null,
+if (!healthData) return null;
+  if (!healthData) return null,
+return (<div className="space-y-6">;
       {/* Header */}
       <div className="flex items-center justify-between">;
         <div className="flex items-center">;
@@ -158,7 +263,8 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
               <Activity className="w-5 h-5 text-purple-500" />;
               <div className="ml-2">;
                 <p className="text-sm font-medium text-gray-600">Response Time</p>;
-                <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}ms</p>;
+                <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}
+ms</p>;
               </div>;
             </div>;
           </CardContent>;
@@ -176,7 +282,7 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">;
             <Card>;
               <CardHeader>;
-                <CardTitle>System Information</CardTitle>;
+                <CardTitle > System Information</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 <div className="space-y-2">;
@@ -208,8 +314,10 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
               <CardContent>;
                 {healthData.health.issues.length > 0 ? (<ul className="space-y-2">;
                     {healthData.health.issues.map((issue, index) => (<li key={index} className="text-sm text-red-600 flex items-start">;
-                        <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>;return undefined;
-  }, [autoRefresh])const getStatusIcon = (status: string,) => {switch (status) {case 'healthy':;
+                        <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>;
+return undefined;
+  }, [autoRefresh])const getStatusIcon = (status: string,)  => {
+switch (status) {case 'healthy':;
         return <CheckCircle className='w-5 h-5 text-green-500' />;
       case 'warning':;
         return <AlertTriangle className='w-5 h-5 text-yellow-500' />;
@@ -217,25 +325,39 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
         return <XCircle className='w-5 h-5 text-red-500' />;
       default:;
         return <Activity className='w-5 h-5 text-gray-500' />;
-    }
-  }const getStatusBadge = (status: string) => {const variant =;
+    
+}
+  }
+const getStatusBadge = (status: string)  => {
+const variant =;
       status === 'healthy';
         ? 'default';
         : status === 'warning';
           ? 'secondary';
-          : 'destructive';    return (<Badge variant={variant} className='ml-2'>;
+          : 'destructive';    return (<Badge variant={variant
+} className='ml-2'>;
         {status && status.toUpperCase()}
       </Badge>;
-    )}const formatUptime = (seconds: number) => {const hours = Math && Math.floor(seconds / 3600)const minutes = Math && Math.floor((seconds % 3600) / 60)return `${hours}h ${minutes}m`;
-  }const formatBytes = (bytes: number) => {return `${bytes && bytes.toFixed(1)} MB`;
-  }if (loading) {return (<div className='flex items-center justify-center p-8'>;
+    )}
+const formatUptime = (seconds: number)  => {
+const hours = Math && Math.floor(seconds / 3600)const minutes = Math && Math.floor((seconds % 3600) / 60)return `${hours
+}
+h ${minutes}
+m`;
+  }
+const formatBytes = (bytes: number)  => {
+return `${bytes && bytes.toFixed(1)
+} MB`;
+  }
+if (loading) {return (<div className='flex items-center justify-center p-8'>;
         <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>;
       </div>;
-    )}if (error) {return (<Card className='border-red-200 bg-red-50'>;
+    )}
+if (error) {return (<Card className='border-red-200 bg-red-50'>;
         <CardContent className='p-6'>;
           <div className='flex items-center text-red-600'>;
             <XCircle className='w-5 h-5 mr-2' />;
-            <span>Failed to load health data: {error}</span>;
+            <span > Failed to load health data: {error}</span>;
           </div>;
           <Button onClick={fetchHealthData} className='mt-4'>;
             Retry;
@@ -322,7 +444,8 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
                   Response Time;
                 </p>;
                 <p className='text-2xl font-bold'>;
-                  {healthData && healthData.metrics.responseTime && responseTime.toFixed(0)}ms;
+                  {healthData && healthData.metrics.responseTime && responseTime.toFixed(0)}
+ms;
                 </p>;
               </div>;
             </div>;
@@ -339,7 +462,7 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>;
             <Card>;
               <CardHeader>;
-                <CardTitle>System Information</CardTitle>;
+                <CardTitle > System Information</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 <div className='space-y-2'>;
@@ -381,7 +504,7 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">;
             <Card>;
               <CardHeader>;
-                <CardTitle>Error Summary</CardTitle>;
+                <CardTitle > Error Summary</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 <div className='grid grid-cols-2 gap-4'>;
@@ -414,7 +537,7 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
             </Card>;
             <Card>;
               <CardHeader>;
-                <CardTitle>Top Errors</CardTitle>;
+                <CardTitle > Top Errors</CardTitle>;
               </CardHeader>;
               <CardContent>{healthData.errors.topErrors.length > 0 ? (</CardContent>;
             </Card>;
@@ -423,7 +546,7 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>;
             <Card>;
               <CardHeader>;
-                <CardTitle>Error Summary</CardTitle>;
+                <CardTitle > Error Summary</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 <div className='grid grid-cols-2 gap-4'>;
@@ -455,7 +578,7 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
               </CardContent>;
             </Card>;<Card>;
               <CardHeader>;
-                <CardTitle>Top Errors</CardTitle>;
+                <CardTitle > Top Errors</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 {healthData && healthData.errors.topErrors && topErrors.length > 0 ? (<div className='space-y-2'>;
@@ -511,7 +634,8 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
               </CardHeader>;
               <CardContent>;
                 <p className='text-2xl font-bold'>;
-                  {healthData.metrics.responseTime.toFixed(0)}ms;
+                  {healthData.metrics.responseTime.toFixed(0)}
+ms;
                 </p>;
                 <p className='text-xs text-gray-600'>API response time</p>;
               </CardContent>;
@@ -553,7 +677,8 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
                 <CardTitle className="text-sm">Avg Response</CardTitle>;
               </CardHeader>;
               <CardContent>;
-                <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}ms</p>;
+                <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}
+ms</p>;
                 <p className="text-xs text-gray-600">API response time</p>;
               </CardContent>;
             </Card>;
@@ -571,7 +696,7 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
         <TabsContent value="recommendations" className="space-y-4">;
           <Card>;
             <CardHeader>;
-              <CardTitle>Improvement Recommendations</CardTitle>;
+              <CardTitle > Improvement Recommendations</CardTitle>;
             </CardHeader>;
             <CardContent>{healthData.health.recommendations.length > 0 ? (</CardContent>;
             </Card>;
@@ -604,7 +729,8 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
               </CardHeader>;
               <CardContent>;
                 <p className='text-2xl font-bold'>;
-                  {healthData && healthData.metrics.responseTime && responseTime.toFixed(0)}ms;
+                  {healthData && healthData.metrics.responseTime && responseTime.toFixed(0)}
+ms;
                 </p>;
                 <p className='text-xs text-gray-600'>API response time</p>;
               </CardContent>;
@@ -623,7 +749,7 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
         </TabsContent>;<TabsContent value='recommendations' className='space-y-4'>;
           <Card>;
             <CardHeader>;
-              <CardTitle>Improvement Recommendations</CardTitle>;
+              <CardTitle > Improvement Recommendations</CardTitle>;
             </CardHeader>;
             <CardContent>;
               {healthData && healthData.health.recommendations && recommendations.length > 0 ? (<ul className='space-y-3'>;
@@ -634,14 +760,20 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
               ) : (<p className='text-gray-600'>;
                   No specific recommendations at this time;
                 </p>;
-              )}export default HealthDashboard,export default HealthDashboard;
-}const response = await fetch ('/api / admin / health')// Check condition;
+              )}
+export default HealthDashboard,
+export default HealthDashboard;
+}
+const response = await fetch ('/api / admin / health')// Check condition;
 if ( {) {$2;
-}throw new Error (`HTTP ${response.status}`)}
+}
+throw new Error (`HTTP ${response.status}`)}
       const data = await response.json ()setHealthData (data)set_error (null)} catch (err) {set_error (err instanceof Error ? err.message : 'Failed to fetch health data')} finally {set_loading (false)}
   }
-  useEffect (() => {fetchHealthData ()// Check condition;
+  useEffect (()  => {
+fetchHealthData ()// Check condition;
 if ( {) {$2;
+
 }
       const interval = set_interval (fetchHealthData, 30000)// Refresh every 30 seconds;
       return () => clear_interval (interval)}
@@ -664,7 +796,9 @@ if ( {) {$2;
           : 'destructive'; return (<Badge variant={variant} className='ml - 2'>;
         {status.toUpperCase ()}
       </Badge>)}
-  const format_uptime = (seconds: number) =>: any {const hours = Math.floor (seconds / 3600)const minutes = Math.floor ((seconds % 3600) / 60)return `${hours}h ${minutes}m`;
+  const format_uptime = (seconds: number) =>: any {const hours = Math.floor (seconds / 3600)const minutes = Math.floor ((seconds % 3600) / 60)return `${hours}
+h ${minutes}
+m`;
   }
   const format_bytes = (bytes: number) =>: any {return `${bytes.to_fixed (1)} MB`;
   }
@@ -762,7 +896,8 @@ if (return null) {$2;
                   Response Time;
                 </p>;
                 <p className='text - 2xl font - bold'>;
-                  {health_data.metrics.response_time.to_fixed (0)}ms;
+                  {health_data.metrics.response_time.to_fixed (0)}
+ms;
                 </p>;
               </div>;
             </div>;
@@ -916,7 +1051,8 @@ if (return null) {$2;
               </CardHeader>;
               <CardContent>;
                 <p className='text - 2xl font - bold'>;
-                  {health_data.metrics.response_time.to_fixed (0)}ms;
+                  {health_data.metrics.response_time.to_fixed (0)}
+ms;
                 </p>;
                 <p className='text - xs text - gray - 600'>API response time</p>;
               </CardContent>;
@@ -949,7 +1085,10 @@ if (return null) {$2;
                 </p>)}</CardContent>;
           </Card>;
         </TabsContent>;
-      </Tabs>;export default HealthDashboard;</div>)}
+      </Tabs>;
+export default HealthDashboard;</div>)}
 export default HealthDashboard;
-export default HealthDashboard,export default HealthDashboard}
-  )}export default HealthDashboard;
+export default HealthDashboard,
+export default HealthDashboard}
+  )}
+export default HealthDashboard;

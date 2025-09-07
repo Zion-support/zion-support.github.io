@@ -1,9 +1,28 @@
 import React, { useState } from 'react';
 import { MessageCircle, X, Send  } from 'lucide-react';
-const ChatAssistant: React.FC = () => {const [isOpen, setIsOpen] = useState(false)const [message, setMessage] = useState('')const [messages, setMessages] = useState([;
-    {id: 1,text: "Hello! I'm your AI assistant. How can I help you today?",isBot: true,timestamp: new Date()}
-  ])const handleSendMessage = (e: React.FormEvent) => {e.preventDefault()if (!message.trim()) return;const newMessage = {id: messages.length + 1,text: message,isBot: false,timestamp: new Date()}setMessages([...messages, newMessage])setMessage('')// Simulate bot response;
-    setTimeout(() => {const botResponse = {id: messages.length + 2,text: "Thank you for your message! Our team will get back to you soon. In the meantime, feel free to explore our services or contact us directly.",isBot: true,timestamp: new Date()}setMessages(prev => [...prev, botResponse])}, 1000)}return (<>;
+const ChatAssistant: React.FC = ()  => {
+const [isOpen, setIsOpen] = useState(false)const [message, setMessage] = useState('')const [messages, setMessages] = useState([;
+    {id: 1,
+text: "Hello! I'm your AI assistant. How can I help you today?",
+isBot: true,
+timestamp: new Date()
+}
+  ])const handleSendMessage = (e: React.FormEvent)  => {
+e.preventDefault()if (!message.trim()) return;
+const newMessage = {id: messages.length + 1,
+text: message,
+isBot: false,
+timestamp: new Date()
+}
+setMessages([...messages, newMessage])setMessage('')// Simulate bot response;
+    setTimeout(()  => {
+const botResponse = {id: messages.length + 2,
+text: "Thank you for your message! Our team will get back to you soon. In the meantime, feel free to explore our services or contact us directly.",
+isBot: true,
+timestamp: new Date()
+}
+setMessages(prev => [...prev, botResponse])}, 1000)}
+return (<>;
       {/* Chat Button */}
       <button;
         onClick={() => setIsOpen(!isOpen)}
@@ -41,7 +60,8 @@ const ChatAssistant: React.FC = () => {const [isOpen, setIsOpen] = useState(fals
                 >;
                   <p className="text-sm">{msg.text}</p>;
                   <p className="text-xs opacity-70 mt-1">;
-                    {msg.timestamp.toLocaleTimeString([], {hour: '2-digit',minute: '2-digit';
+                    {msg.timestamp.toLocaleTimeString([], {hour: '2-digit',
+minute: '2-digit';
                     })}
                   </p>;
                 </div>;
@@ -69,4 +89,5 @@ const ChatAssistant: React.FC = () => {const [isOpen, setIsOpen] = useState(fals
         </div>;
       )}
     </>;
-  )}export default ChatAssistant;
+  )}
+export default ChatAssistant;

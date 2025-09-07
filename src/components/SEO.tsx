@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 interface SEOProps {
-  title: string;
+title: string;
   description: string;
   keywords?: string;
   image?: string;
@@ -10,16 +10,18 @@ interface SEOProps {
   type?: string;
 }
 
-const SEO: React.FC<SEOProps> = ({
+const SEO: React.FC < SEOProps> = ({
   title,
   description,
   keywords = '',
   image = '/og-image.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website'
-}) => {
+})  => {
+
   const siteName = 'Zion Tech Group';
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullTitle = title.includes(siteName) ? title : `${title
+} | ${siteName}`;
   const fullUrl = url ? `https://ziontechgroup.com${url}` : 'https://ziontechgroup.com';
 
   return (

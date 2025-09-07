@@ -20,9 +20,11 @@ import { NotificationProvider  } from './context/notifications/NotificationConte
 import { AnalyticsProvider  } from './context/AnalyticsContext';
 import { ViewModeProvider  } from './context/ViewModeContext';
 // Initialize a React Query client with global error handling;
-const queryClient = new QueryClient({defaultOptions: {queries: {retry: 1, refetchOnWindowFocus: false} }})const rootElement  = document.getElementById('root')const renderApp = () => {const app = (<React.StrictMode>;
+const queryClient = new QueryClient({defaultOptions: {queries: {retry: 1, refetchOnWindowFocus: false} }})const rootElement  = document.getElementById('root')const renderApp = ()  => {
+const app = (<React.StrictMode>;
             <HelmetProvider>;
-                <QueryClientProvider client={queryClient}>;
+                <QueryClientProvider client={queryClient
+}>;
                     <WhitelabelProvider>;
                         <Router>;
                             <AuthProvider>;
@@ -46,10 +48,19 @@ const queryClient = new QueryClient({defaultOptions: {queries: {retry: 1, refetc
             </HelmetProvider>;
         </React.StrictMode>;
     )if (rootElement?.hasChildNodes()) {hydrateRoot(rootElement, app)} else if (rootElement) {createRoot(rootElement).render(app)}
-}function displayFatalError() {if (rootElement) {rootElement.innerHTML = `;
-            <div style="padding: 20px;text-align: center;font-family: sans-serif;">;
-                <h1>Application Error</h1>;
-                <p>${message}</p>;
+}
+function displayFatalError() {
+if (rootElement) {rootElement.innerHTML = `;
+            <div style="padding: 20px;
+text-align: center;
+font-family: sans-serif;">;
+                <h1 > Application Error</h1>;
+                <p>${message
+}</p>;
             </div>`;
     }
-}try {renderApp()} catch (error) {console.error('Global error caught in main.jsx: ', error)displayFatalError(error.message)}window.addEventListener('error', (e) => {console.error('Unhandled error: ', e.error || e.message)displayFatalError(e.message)})
+}
+try {renderApp()} catch (error) {console.error('Global error caught in main.jsx: ', error)displayFatalError(error.message)}
+window.addEventListener('error', (e)  => {
+console.error('Unhandled error: ', e.error || e.message)displayFatalError(e.message)
+})

@@ -8,7 +8,9 @@ import { ChatBotPanel  } from './ChatBotPanel';
 import { MessageSquare, Info, X  } from 'lucide-react';
 import { cn  } from '@/lib/utils';
 import { useTheme  } from '@/hooks/useTheme';
-export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)const { theme } = useTheme()const router  = useRouter()return (<>;
+export function SupportWidget() {
+const [isOpen, setIsOpen] = useState(false)const { theme 
+} = useTheme()const router  = useRouter()return (<>;
       {/* Fixed button in the bottom right */}
       {!isOpen && (<Button;
           onClick={() => setIsOpen(true)}
@@ -21,7 +23,8 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)cons
       )}
       {/* Support panel */}
       {isOpen && (<div;
-          className={cn("fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",theme === "dark";
+          className={cn("fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
+theme === "dark";
               ? "bg-zion-blue-dark border border-zion-blue-light";
               : "bg-white border border-gray-200",)}
           style={{ height: "600px", maxHeight: "80vh" }}
@@ -30,7 +33,10 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)cons
             <div className="flex items-center">;
               <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;
               <h3;
-                className={cn("font-semibold",theme === "dark" ? "text-white" : "text-gray-800","font-semibold",theme === "dark" ? "text-white" : "text-gray-800",const [isOpen, setIsOpen] = useState(false)const { theme } = useTheme()const router = useRouter()return (<>;
+                className={cn("font-semibold",
+theme === "dark" ? "text-white" : "text-gray-800","font-semibold",
+theme === "dark" ? "text-white" : "text-gray-800",
+const [isOpen, setIsOpen] = useState(false)const { theme } = useTheme()const router = useRouter()return (<>;
       {/* Fixed button in the bottom right */}
       {!isOpen && (<Button;
           onClick={() => setIsOpen(true)}
@@ -46,7 +52,9 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)cons
             theme === 'dark';
               ? 'bg-zion-blue-dark border border-zion-blue-light';
               : 'bg-white border border-gray-200';
-export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)const { theme } = useTheme()const router = null;
+export function SupportWidget() {
+const [isOpen, setIsOpen] = useState(false)const { theme 
+} = useTheme()const router = null;
             theme === "dark";
               ? "bg-zion-blue-dark border border-zion-blue-light";
               : "bg-white border border-gray-200";
@@ -59,10 +67,26 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)cons
                 className={cn('font-semibold';
                   theme === 'dark' ? 'text-white' : 'text-gray-800';
 ursor/automate-test-improve-and-merge-code-646c;
-                  "font-semibold",theme === "dark" ? "text-white" : "text-gray-800",)}
+                  "font-semibold",
+theme === "dark" ? "text-white" : "text-gray-800",)}
               >;
-import React, { useState } from "react",import { useRouter } from "next/router",import { Button } from "@/components/ui/button",import { ChatBotPanel } from "./ChatBotPanel",import { cn } from "@/lib/utils",import { useTheme } from "@/hooks/useTheme",export function SupportWidget() {const [isOpen, setIsOpen] = useState(false),const { theme } = useTheme(),const router = useRouter(),return (<>;
-export function SupportWidget() {const [isOpen, setIsOpen] = useState(false),const { theme } = useTheme(),const router = useRouter()return (<>;
+import React, { useState } from "react",
+import { useRouter } from "next/router",
+import { Button } from "@/components/ui/button",
+import { ChatBotPanel } from "./ChatBotPanel",
+import { cn } from "@/lib/utils",
+import { useTheme } from "@/hooks/useTheme",
+export function SupportWidget() {
+const [isOpen, setIsOpen] = useState(false),
+const { theme 
+} = useTheme(),
+const router = useRouter(),
+return (<>;
+export function SupportWidget() {
+const [isOpen, setIsOpen] = useState(false),
+const { theme 
+} = useTheme(),
+const router = useRouter()return (<>;
       {/* Fixed button in the bottom right */}
       {!isOpen && (<Button;
           onClick={() => setIsOpen(true)}
@@ -74,7 +98,8 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false),con
         </Button>;
       )}{/* Support panel */}
       {isOpen && (<div;
-          className={cn("fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",theme === "dark";
+          className={cn("fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
+theme === "dark";
               ? "bg-zion-blue-dark border border-zion-blue-light";
               : "bg-white border border-gray-200";
           )}

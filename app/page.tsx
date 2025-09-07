@@ -2,7 +2,7 @@
 import Link from 'next/link';
 
 interface CardProps {
-  title: string;
+title: string;
   href: string;
   description: string;
   bullets?: string[];
@@ -16,9 +16,11 @@ function ServiceCard({
   bullets = [],
   icon,
 }: CardProps) {
+
   return (
     <Link
-      href={href}
+      href={href
+}
       className="group block p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transform hover:-translate-y-2 hover:scale-105"
       aria-label={`Learn more about ${title} services`}
     >
@@ -45,9 +47,11 @@ function ServiceCard({
 }
 
 export default function HomePage() {
+
   return (
     <div className="space-y-16">
-      {/* Hero Section */}
+      {/* Hero Section */
+}
       <section className="text-center py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl relative overflow-hidden" role="banner">
         {/* Enhanced animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -287,7 +291,9 @@ export default function HomePage() {
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-slide-up">
-            Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
+            Don&apos;
+t just take our word for it. Here&apos;
+s what our clients have to say about working with us.
           </p>
         </div>
         
@@ -295,11 +301,14 @@ export default function HomePage() {
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group border border-blue-100 animate-stagger-1">
             <div className="flex items-center mb-4">
               {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-yellow-400 text-xl group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: `${i * 0.1}s` }}>⭐</span>
+                <span key={i} className="text-yellow-400 text-xl group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: `${i * 0.1}
+s` }}>⭐</span>
               ))}
             </div>
             <p className="text-gray-700 mb-6 italic text-lg leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
-              &ldquo;Zion Tech Group transformed our business with their AI-powered solutions. The team&apos;s expertise and dedication exceeded our expectations.&rdquo;
+              &ldquo;
+Zion Tech Group transformed our business with their AI-powered solutions. The team&apos;
+s expertise and dedication exceeded our expectations.&rdquo;
             </p>
             <div className="flex items-center">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -315,11 +324,13 @@ export default function HomePage() {
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group border border-purple-100 animate-stagger-2">
             <div className="flex items-center mb-4">
               {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-yellow-400 text-xl group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: `${i * 0.1}s` }}>⭐</span>
+                <span key={i} className="text-yellow-400 text-xl group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: `${i * 0.1}
+s` }}>⭐</span>
               ))}
             </div>
             <p className="text-gray-700 mb-6 italic text-lg leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
-              &ldquo;Outstanding micro SaaS development! They delivered exactly what we needed, on time and within budget. Highly recommended!&rdquo;
+              &ldquo;
+Outstanding micro SaaS development! They delivered exactly what we needed, on time and within budget. Highly recommended!&rdquo;
             </p>
             <div className="flex items-center">
               <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -335,11 +346,13 @@ export default function HomePage() {
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group border border-green-100 animate-stagger-3">
             <div className="flex items-center mb-4">
               {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-yellow-400 text-xl group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: `${i * 0.1}s` }}>⭐</span>
+                <span key={i} className="text-yellow-400 text-xl group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: `${i * 0.1}
+s` }}>⭐</span>
               ))}
             </div>
             <p className="text-gray-700 mb-6 italic text-lg leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
-              &ldquo;The blockchain solutions they developed for us are cutting-edge. Their technical knowledge and attention to detail are exceptional.&rdquo;
+              &ldquo;
+The blockchain solutions they developed for us are cutting-edge. Their technical knowledge and attention to detail are exceptional.&rdquo;
             </p>
             <div className="flex items-center">
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -383,7 +396,8 @@ export default function HomePage() {
             <div 
               key={tech.name}
               className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group animate-stagger-1"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ animationDelay: `${index * 0.1}
+s` }}
             >
               <div className={`w-16 h-16 bg-gradient-to-br ${tech.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                 <span className="text-2xl">{tech.icon}</span>
@@ -451,7 +465,8 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-2xl text-blue-100 mb-4 max-w-4xl mx-auto animate-slide-up font-medium">
-            Let&apos;s discuss your project and create a custom solution that drives
+            Let&apos;
+s discuss your project and create a custom solution that drives
             real business value.
           </p>
           <p className="text-lg text-blue-200 mb-12 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s' }}>

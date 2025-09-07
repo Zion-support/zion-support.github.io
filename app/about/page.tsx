@@ -2,16 +2,12 @@ import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export const metadata = {
-<<<<<<< HEAD
   title: 'About Us - Zion Tech Group',
   description: 'Learn about Zion Tech Group, a leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
-=======
-  title: 'About | Zion Tech Group',
-  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.'
->>>>>>> 70a7e91307b7b137e58209a8df72dcd2ceb02acb
 };
 
 export default function AboutPage() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
@@ -26,7 +22,8 @@ export default function AboutPage() {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          {/* Company Overview */}
+          {/* Company Overview */
+}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>

@@ -2,7 +2,8 @@
 ;
 import { GradientHeading  } from '@/components/GradientHeading';
 import { Clock, Map, DollarSign  } from 'lucide-react';
-export function PageHero() {return (<div className='text-center mb-12'>;
+export function PageHero() {
+return (<div className='text-center mb-12'>;
       <GradientHeading className='mb-4'>;
         Global IT Onsite Services;
       </GradientHeading>;
@@ -96,8 +97,10 @@ export function PageHero() {return (<div className='text-center mb-12'>;
           </p>        </div>;
       </div>;
     </div>;
-  )}</div>;
-  )export function PageHero() {return (<div className="text-center mb-12">;
+  )
+}</div>;
+  )export function PageHero() {
+return (<div className="text-center mb-12">;
       <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>;
       <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
         Professional IT onsite support services with transparent pricing across 190+ countries worldwide;
@@ -126,13 +129,15 @@ export function PageHero() {return (<div className='text-center mb-12'>;
         </div>;
       </div>;
     </div>;
-  )}
+  )
+}
   )}
 import { GradientHeading  } from '@/components / GradientHeading';
 export /**;
  * PageHero - Function description;
  */;
-function PageHero() {return (<div className='text - center mb - 12'>;
+function PageHero() {
+return (<div className='text - center mb - 12'>;
       <GradientHeading className='mb - 4'>;
         Global IT Onsite Services;
       </GradientHeading>;
@@ -173,13 +178,15 @@ function PageHero() {return (<div className='text - center mb - 12'>;
             onsite;
           </p>        </div>;
       </div>;
-    </div>)}
+    </div>)
+}
           <h3 className="text - xl font - bold text - white mb-2">Transparent Pricing</h3>;
           <p className="text - zion - slate-light">Clear per - incident pricing includes transportation and first hour onsite</p>;
 export /**;
  * PageHero - Function description;
  */;
-function PageHero() {return (<div className="text - center mb-12">;
+function PageHero() {
+return (<div className="text - center mb-12">;
       <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>;
       <p className="text - xl text - zion - slate - light max - w-3xl mx-auto">;
         Professional IT onsite support services with transparent pricing across 190+ countries worldwide;
@@ -207,7 +214,8 @@ function PageHero() {return (<div className="text - center mb-12">;
           <p className="text - zion - slate-light">Clear per - incident pricing includes transportation and first hour onsite</p>;
         </div>;
       </div>;
-    </div>)}<div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>;
+    </div>)
+}<div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>;
           <div className='bg-zion-purple/20 p-3 rounded-full mb-4'>;
             <DollarSign className='h-8 w-8 text-zion-cyan' />;
           </div>;

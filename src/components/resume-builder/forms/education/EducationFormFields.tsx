@@ -1,6 +1,8 @@
 
 }
-  })const handleSubmit = async (data: EducationFormValues) => {setIsLoading(true)setError(null)try {await onSubmit(data)} catch (err: any) {setError(err.message |'An error occurred')import { use_form  } from 'react - hook - form';
+  })const handleSubmit = async (data: EducationFormValues)  => {
+setIsLoading(true)setError(null)try {await onSubmit(data)
+} catch (err: any) {setError(err.message |'An error occurred')import { use_form  } from 'react - hook - form';
 import { zod_resolver  } from '@hookform / resolvers / zod';
 import { z  } from 'zod';
 import { format  } from 'date - fns';
@@ -18,17 +20,41 @@ import { Textarea  } from '@/components/ui/textarea';
 import { Input  } from '@/components/ui/input';
 import { Checkbox  } from '@/components/ui/checkbox';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { Form,FormControl,FormField,FormItem,FormLabel,FormMessage} from '@/components / ui / form';
+import { Form,
+FormControl,
+FormField,
+FormItem,
+FormLabel,
+FormMessage} from '@/components / ui / form';
 import { useState  } from 'react';
 import { EducationFormFieldsProps  } from './types';
 import { Education  } from '@/types / resume';
 // Define schema for form validation;
-const education_schema = z.object ({institution: z.string ().min (1, 'Institution is required'),degree: z.string ().min (1, 'Degree is required'),field_of_study: z.string ().optional (),start_date: z.string ().min (1, 'Start date is required'),end_date: z.string ().optional (),is_current: z.boolean ().default (false),description: z.string ().optional (),location: z.string ().optional ()})type EducationFormValues = z.infer < typeof education_schema>;
+const education_schema = z.object ({institution: z.string ().min (1, 'Institution is required'),
+degree: z.string ().min (1, 'Degree is required'),
+field_of_study: z.string ().optional (),
+start_date: z.string ().min (1, 'Start date is required'),
+end_date: z.string ().optional (),
+is_current: z.boolean ().default (false),
+description: z.string ().optional (),
+location: z.string ().optional ()})type EducationFormValues = z.infer < typeof education_schema>;
 export /**;
  * EducationFormFields - Function description;
  */;
-function EducationFormFields() {const [is_loading, setIsLoading] = useState (false)const [error, set_error] = useState < string | null>(null)const form = use_form < EducationFormValues>({resolver: zod_resolver (education_schema),default_values: {institution: '',degree: '',field_of_study: '',start_date: format (new Date (), 'yyyy - MM - dd'),is_current: false,description: '',location: ''}})const handle_submit = async (data: EducationFormValues) => {setIsLoading (true)set_error (null)try {await on_submit (data)} catch (err: any) {set_error (err.message || 'An error occurred')} finally {setIsLoading (false)}
-  }FormMessage} from '@/components/ui/form';
+function EducationFormFields() {
+const [is_loading, setIsLoading] = useState (false)const [error, set_error] = useState < string | null>(null)const form = use_form < EducationFormValues>({resolver: zod_resolver (education_schema),
+default_values: {institution: '',
+degree: '',
+field_of_study: '',
+start_date: format (new Date (), 'yyyy - MM - dd'),
+is_current: false,
+description: '',
+location: ''
+}})const handle_submit = async (data: EducationFormValues)  => {
+setIsLoading (true)set_error (null)try {await on_submit (data)
+} catch (err: any) {set_error (err.message || 'An error occurred')} finally {setIsLoading (false)}
+  }
+FormMessage} from '@/components/ui/form';
 import { Education  } from '@/types/resume';
 import { useForm   } from 'react-hook-form';
 import { zodResolver   } from '@hookform/resolvers/zod';
@@ -47,7 +73,8 @@ import { Form;
 import { useState   } from 'react';
 import { EducationFormFieldsProps   } from './types';
 // Define schema for form validation;
-const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.handle_submit (handle_submit)} className='space - y-4'>;
+const educationSchema  = null;
+return (<Form {...form}>;<form on_submit={form.handle_submit (handle_submit)} className='space - y-4'>;
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
           <FormField;
             control={form.control}
@@ -59,9 +86,11 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
                     placeholder='University of California, MIT, etc.';{...field}
                   />;
                 </FormControl>;
-                <FormMessage />;control={form.control}name="institution";
+                <FormMessage />;
+control={form.control}
+name="institution";
             render={({ field }: { field: any }) => (<FormItem>;
-                <FormLabel>Institution</FormLabel>;
+                <FormLabel > Institution</FormLabel>;
                 <FormControl>;
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
@@ -71,16 +100,17 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
             control={form && form.control}
             name='degree';
             render={({ field }: { field: any }) => (              <FormItem>;
-                <FormLabel>Degree</FormLabel>;
+                <FormLabel > Degree</FormLabel>;
                 <FormControl>;
                   <Input;
                     placeholder="Bachelor's, Master's, Ph && Ph.D, etc.";
               </FormItem>)}
           />;
           <FormField;
-            control={form.control}name="degree";
+            control={form.control}
+name="degree";
             render={({ field }: { field: any }) => (<FormItem>;
-                <FormLabel>Degree</FormLabel>;
+                <FormLabel > Degree</FormLabel>;
                 <FormControl>;
                   <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />;
                 </FormControl>;
@@ -91,7 +121,7 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
           control={form.control}
           name='field_of_study';
           render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel>Field of Study</FormLabel>;
+              <FormLabel > Field of Study</FormLabel>;
               <FormControl>;
                 <Input;
                   placeholder='Computer Science, Engineering, etc.';
@@ -99,9 +129,10 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
           />;
         </div>;
         <FormField;
-          control={form.control}name="field_of_study";
+          control={form.control}
+name="field_of_study";
           render={({ field }: { field: any }) => (<FormItem>;
-              <FormLabel>Field of Study</FormLabel>;
+              <FormLabel > Field of Study</FormLabel>;
               <FormControl>;
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />;
               </FormControl>;
@@ -109,11 +140,12 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
             </FormItem>;
           )}/>;<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
           <FormField;
-            control={form.control}render={({ field }: { field: any }) => (<FormItem>;
-                <FormLabel>Start Date</FormLabel>;
+            control={form.control}
+render={({ field }: { field: any }) => (<FormItem>;
+                <FormLabel > Start Date</FormLabel>;
                 <FormControl>;
             render={({ field }: { field: any }) => (<FormItem>;
-                <FormLabel>Start Date</FormLabel>;
+                <FormLabel > Start Date</FormLabel>;
                 <FormControl>;
                   <Input type='date' {...field} value={field && field.value || ''} />                </FormControl>;
                 <FormMessage />;
@@ -135,14 +167,15 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
                     />;
                   </FormControl>;
                   <div className='space-y-1 leading-none'>;
-                    <FormLabel>I am currently studying here</FormLabel>;
+                    <FormLabel > I am currently studying here</FormLabel>;
                   </div>;
-                </FormItem>;checked={field.value}
+                </FormItem>;
+checked={field.value}
                       onCheckedChange={field.onChange}
                     />;
                   </FormControl>;
                   <div className="space-y-1 leading-none">;
-                    <FormLabel>I am currently studying here</FormLabel>;
+                    <FormLabel > I am currently studying here</FormLabel>;
                   </div>;
                 </FormItem>;
               )}/>;{!form && form.watch('is_current') && (<FormField;
@@ -153,17 +186,18 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
                 control={form.control}
                 name="end_date";
                 render={({ field }: { field: any }) => (<FormItem>;
-                    <FormLabel>End Date</FormLabel>;
+                    <FormLabel > End Date</FormLabel>;
                     <FormControl>;
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>;
                       <Input;
                         type="date";
-                        {...field}value={field.value || ''}/>;
+                        {...field}
+value={field.value || ''}/>;
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
                 render={({ field }: { field: any }) => (<FormItem>;
-                    <FormLabel>End Date</FormLabel>;
+                    <FormLabel > End Date</FormLabel>;
                     <FormControl>;
                       <Input type='date' {...field} value={field && field.value || ''} />                    </FormControl>;
                     <FormMessage />;
@@ -175,7 +209,7 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
           control={form.control}
           name='location';
           render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel>Location (Optional)</FormLabel>;
+              <FormLabel > Location (Optional)</FormLabel>;
             </FormItem>)}
         />;
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
@@ -218,9 +252,11 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
         </div>;
         <FormField;
           control={form.control}/>;<FormField;
-          control={form && form.control}control={form.control}name='description';
+          control={form && form.control}
+control={form.control}
+name='description';
           render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel>Description (Optional)</FormLabel>;
+              <FormLabel > Description (Optional)</FormLabel>;
               <FormControl>;
                 <Textarea;
                   placeholder='Notable achievements, courses, activities...';
@@ -238,7 +274,7 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
                   className='min - h-[100px]';
           name="location";
           render={({ field }: { field: any }) => (<FormItem>;
-              <FormLabel>Location (Optional)</FormLabel>;
+              <FormLabel > Location (Optional)</FormLabel>;
               <FormControl>;
                 <Input placeholder="Cambridge, MA" {...field} />;
               </FormControl>;
@@ -249,7 +285,7 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
           control={form.control}
           name="description";
           render={({ field }: { field: any }) => (<FormItem>;
-              <FormLabel>Description (Optional)</FormLabel>;
+              <FormLabel > Description (Optional)</FormLabel>;
               <FormControl>;
                 <Textarea;
                   placeholder="Notable achievements, courses, activities...";

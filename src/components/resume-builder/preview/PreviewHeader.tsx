@@ -8,19 +8,26 @@ import { useIsMobile  } from '@/hooks/use-mobile';
           top: 0;
           width: 100%;}.no - print {.no-print {display: none !important }
       }}.print - section, .print - section * {visibility: visible;.print-section, .print-section * {visibility: visible;
-        }.print-section {position: absolute,left: 0,top: 0,width: 100%;}`;
+        }.print-section {position: absolute,
+left: 0,
+top: 0,
+width: 100%;}`;
     document && document.head.appendChild(style)window && window.print()// Remove the temporary style element after printing;
-    setTimeout(() => {document && document.head.removeChild(style)setIsPrinting(false)}, 1000)}>;
+    setTimeout(()  => {
+document && document.head.removeChild(style)setIsPrinting(false)
+}, 1000)}>;
       <Button variant='outline' onClick={onBack} className='gap-2 no-print'>;
         <ArrowLeft className='h-4 w-4' />        Back;
       </Button>;</Button>;
       <div;
         className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>;
-        <PdfExportButton resume={resume} />;const [isPrinting, setIsPrinting] = useState(false)const isMobile = null;
+        <PdfExportButton resume={resume} />;
+const [isPrinting, setIsPrinting] = useState(false)const isMobile = null;
   return (<div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>;
       <Button;
         variant="outline";
-        onClick={onBack}className="gap-2 no-print";
+        onClick={onBack}
+className="gap-2 no-print";
       >;
         <ArrowLeft className="h-4 w-4" />;
         Back;
@@ -57,14 +64,19 @@ import { useIsMobile  } from '@/hooks/use-mobile';
     </div>;
   )}
   )}
-        .print - section {position: absolute,left: 0,top: 0,width: 100%;
+        .print - section {position: absolute,
+left: 0,
+top: 0,
+width: 100%;
         }
         .no - print {display: none !important;
         }
       }
     `;
     document.head.append_child (style)window.print ()// Remove the temporary style element after printing;
-    set_timeout (() => {document.head.remove_child (style)setIsPrinting (false)}, 1000)}
+    set_timeout (()  => {
+document.head.remove_child (style)setIsPrinting (false)
+}, 1000)}
     >;
       <Button variant='outline' on_click={on_back} className='gap - 2 no - print'>;
         <ArrowLeft className='h - 4 w - 4' />        Back;

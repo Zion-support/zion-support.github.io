@@ -2,22 +2,44 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { motion, AnimatePresence  } from 'framer-motion';
-import { Menu, X,ChevronDown, Globe,Brain, Cloud,Shield, Zap,Users, Phone,Mail, MapPin,BookOpen, Code,Award, HelpCircle,Briefcase, FileText;
+import { Menu, X,
+ChevronDown, Globe,
+Brain, Cloud,
+Shield, Zap,
+Users, Phone,
+Mail, MapPin,
+BookOpen, Code,
+Award, HelpCircle,
+Briefcase, FileText;
  } from 'lucide-react';
-const ModernNavigation = () => {const [isOpen, setIsOpen] = useState(false)const [isScrolled, setIsScrolled] = useState(false)const [activeDropdown, setActiveDropdown] = useState<string | null>(null)const router  = useRouter()useEffect(() => {const handleScroll = () => {setIsScrolled(window.scrollY > 20)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const navigationItems = [;
-    { name: 'Home', href: '/' },{name: 'Services', href: '/services',dropdown: [;
+const ModernNavigation = ()  => {
+const [isOpen, setIsOpen] = useState(false)const [isScrolled, setIsScrolled] = useState(false)const [activeDropdown, setActiveDropdown] = useState < string | null>(null)const router  = useRouter()useEffect(() => {const handleScroll = () => {setIsScrolled(window.scrollY > 20)
+}
+window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const navigationItems = [;
+    { name: 'Home', href: '/' },{name: 'Services', href: '/services',
+dropdown: [;
         { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI services' },{ name: 'IT Services', href: '/it-services', icon: Cloud, description: 'Enterprise IT solutions' },{ name: 'Micro SaaS', href: '/micro-saas', icon: Zap, description: 'Specialized software solutions' },{ name: 'Web Development', href: '/services/web-development', icon: Code, description: 'Custom web applications' },{ name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud, description: 'Scalable cloud infrastructure' },{ name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'Custom AI solutions' }
       ];
-    }, {name: 'Resources',href: '#', dropdown: [;
+    }, {name: 'Resources',
+href: '#', dropdown: [;
         { name: 'Documentation', href: '/docs', icon: BookOpen, description: 'API docs and guides' }, { name: 'API Reference', href: '/api', icon: Code, description: 'Complete API documentation' }, { name: 'Developer Portal', href: '/developer', icon: Users, description: 'Developer tools and resources' }, { name: 'Training', href: '/training', icon: Award, description: 'Professional training programs' }, { name: 'Support', href: '/support', icon: HelpCircle, description: 'Get help and support' }, { name: 'Case Studies', href: '/case-studies', icon: FileText, description: 'Success stories and examples' }
       ];
-    }, {name: 'Company',href: '#', dropdown: [;
+    }, {name: 'Company',
+href: '#', dropdown: [;
         { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our company' }, { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' }, { name: 'Partners', href: '/partners', icon: Users, description: 'Partner with us' }, { name: 'Press', href: '/press', icon: FileText, description: 'News and media' }, { name: 'Pricing Guide', href: '/pricing-guide', icon: Award, description: 'Transparent pricing' }
       ];
     }, { name: 'Contact', href: '/contact' }
-  ];const contactInfo = [;
+  ];
+const contactInfo = [;
     { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' }, { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },{ icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
-  ];const toggleDropdown = (name: string) => {setActiveDropdown(activeDropdown === name ? null : name)}const closeMobileMenu = () => {setIsOpen(false)setActiveDropdown(null)}return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent';
+  ];
+const toggleDropdown = (name: string)  => {
+setActiveDropdown(activeDropdown === name ? null : name)
+}
+const closeMobileMenu = ()  => {
+setIsOpen(false)setActiveDropdown(null)
+}
+return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent';
     }`}>;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex items-center justify-between h-16 lg:h-20">;
@@ -195,4 +217,5 @@ const ModernNavigation = () => {const [isOpen, setIsOpen] = useState(false)const
         )}
       </AnimatePresence>;
     </nav>;
-  )}export default ModernNavigation;
+  )}
+export default ModernNavigation;

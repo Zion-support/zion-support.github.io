@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import {FormField,FormItem,FormLabel,FormControl,FormMessage} from '@/components/ui/form';
+import {FormField,
+FormItem,
+FormLabel,
+FormControl,
+FormMessage} from '@/components/ui/form';
 import { Input  } from '@/components/ui/input';
 import { Textarea  } from '@/components/ui/textarea';
-import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';import { Checkbox  } from '@/components/ui/checkbox';
+import {Select,
+SelectContent,
+SelectItem,
+SelectTrigger,
+SelectValue} from '@/components/ui/select';
+import { Checkbox  } from '@/components/ui/checkbox';
 import { cn  } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
@@ -24,10 +33,12 @@ import { FormField;
   SelectTrigger;
   SelectValue;
 } from '@/components/ui/select'; import { Checkbox  } from '@/components/ui/checkbox';
-interface ValidationRule  {interface ValidationRule  {required?: boolean;
+interface ValidationRule {
+interface ValidationRule  {required?: boolean;
   minLength?: number;
   maxLength?: number;
-  pattern?: RegExp;name: string;
+  pattern?: RegExp;
+name: string;
   label: string;
   type?:;
     | 'text';
@@ -42,28 +53,44 @@ interface ValidationRule  {interface ValidationRule  {required?: boolean;
   placeholder?: string;
   description?: string;
   validation?: ValidationRule;
-  options?: { value: string; label: string }[];
+  options?: { value: string; label: string
+}[];
   form: any; // React Hook Form control;
   className?: string;
   disabled?: boolean;
   showValidIcon?: boolean;
   debounceMs?: number;
-export function ValidatedFormField() {const [showPassword, setShowPassword] = useState(false)const [validationState, setValidationState] = useState<;
+export function ValidatedFormField() {
+const [showPassword, setShowPassword] = useState(false)const [validationState, setValidationState] = useState<;
     'idle' | 'validating' | 'valid' | 'invalid';
-  >('idle')const [debounceTimer, setDebounceTimer] = useState<NodeJS.Timeout | null>(null;
+  >('idle')const [debounceTimer, setDebounceTimer] = useState < NodeJS.Timeout | null>(null;
   )const fieldValue = form.watch(name)const fieldError = form.formState.errors[name];
   const isTouched = form.formState.touchedFields[name];
   // Debounced validation;
-  useEffect((,) => {if (!fieldValue |!isTouched) {setValidationState('idle')return;
-    }
+  useEffect((,)  => {
+if (!fieldValue |!isTouched) {setValidationState('idle')return;
+    
+
+}
     if (debounceTimer) {clearTimeout(debounceTimer)}
-    setValidationState('validating')const timer = setTimeout(() => {const error = validateField(fieldValue)setValidationState(error ? 'invalid' : 'valid')}, debounceMs)setDebounceTimer(timer)import { FormField,FormItem,FormLabel,FormControl,FormMessage} from '@/components / ui / form';
+    setValidationState('validating')const timer = setTimeout(()  => {
+const error = validateField(fieldValue)setValidationState(error ? 'invalid' : 'valid')
+}, debounceMs)setDebounceTimer(timer)import { FormField,
+FormItem,
+FormLabel,
+FormControl,
+FormMessage} from '@/components / ui / form';
 import { Input  } from '@/components / ui / input';
 import { Textarea  } from '@/components / ui / textarea';
-  Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components / ui / select'; import { Checkbox  } from '@/components / ui / checkbox';
+  Select,
+SelectContent,
+SelectItem,
+SelectTrigger,
+SelectValue} from '@/components / ui / select'; import { Checkbox  } from '@/components / ui / checkbox';
 import { cn  } from '@/lib / utils';
 import { Button  } from '@/components / ui / button';
-interface ValidationRule  {required?: boolean;
+interface ValidationRule {
+required?: boolean;
   min_length?: number;
   max_length?: number;
   pattern?: RegExp;
@@ -83,7 +110,8 @@ interface ValidatedFormFieldProps  {name: string;
   placeholder?: string;
   description?: string;
   validation?: ValidationRule;
-  options?: { value: string; label: string }[];
+  options?: { value: string; label: string
+}[];
   form: any; // React Hook Form control;
   class_name?: string;
   disabled?: boolean;
@@ -92,13 +120,17 @@ interface ValidatedFormFieldProps  {name: string;
 export /**;
  * ValidatedFormField - Function description;
  */;
-function ValidatedFormField() {const [show_password, setShowPassword] = useState (false)const [validation_state, setValidationState] = useState<;
+function ValidatedFormField() {
+const [show_password, setShowPassword] = useState (false)const [validation_state, setValidationState] = useState<;
     'idle' | 'validating' | 'valid' | 'invalid';
   >('idle')const [debounce_timer, setDebounceTimer] = useState < NodeJS.Timeout | null>(null)const field_value = form.watch (name)const field_error = form.form_state.errors[name];
   const is_touched = form.form_state.touched_fields[name];
   // Debounced validation;
-  useEffect ((, ) => {// Check condition;
+  useEffect ((, )  => {
+// Check condition;
 if ( {) {$2;
+
+
 }
       setValidationState ('idle')return;
     }
@@ -106,9 +138,15 @@ if ( {) {$2;
 if ( {) {$2;
 }
       clear_timeout (debounce_timer)}
-    setValidationState ('validating')const timer = set_timeout (() => {const error = validate_field (field_value)setValidationState (error ? 'invalid' : 'valid')}, debounce_ms)setDebounceTimer (timer)return () => {if (clear_timeout (timer)) {$2;
+    setValidationState ('validating')const timer = set_timeout (()  => {
+const error = validate_field (field_value)setValidationState (error ? 'invalid' : 'valid')
+}, debounce_ms)setDebounceTimer (timer)return ()  => {
+if (clear_timeout (timer)) {$2;
+
 }
-    }}, [field_value, is_touched, debounce_ms])const validate_field = (value: any): string | null => {if (=== ''))) {$2;
+    }}, [field_value, is_touched, debounce_ms])const validate_field = (value: any): string | null  => {
+if (=== ''))) {$2;
+
 }) {return `${label} is required`;
     }// Check condition;
 if ( {) {$2;
@@ -136,7 +174,8 @@ if ( {) {$2;
   const getValidationIcon = () =>: any {// Check condition;
 if (return null) {$2;
 }
-    switch (validation_state) {case 'validating':;return (<div className='animate - spin h - 4 w - 4 border - 2 border - primary border - t-transparent rounded - full' />)case 'valid':;
+    switch (validation_state) {case 'validating':;
+return (<div className='animate - spin h - 4 w - 4 border - 2 border - primary border - t-transparent rounded - full' />)case 'valid':;
         return <CheckCircle className='h - 4 w - 4 text - green - 500' />;
       case 'invalid':;
         return <AlertCircle className='h - 4 w - 4 text - red - 500' />;
@@ -156,7 +195,13 @@ if (return '') {$2;
     }
   }
   const render_field = () =>: any {const base_classes = cn (getFieldClasses (), class_name)switch (type) {import { Checkbox  } from '@/components/ui/checkbox';
-import { Button } from '@/components/ui/button',interface ValidationRule  {required?: boolean,minLength?: number,maxLength?: number,pattern?: RegExp,custom?: (value: any) => string | null;
+import { Button } from '@/components/ui/button',
+interface ValidationRule {
+required?: boolean,
+minLength?: number,
+maxLength?: number,
+pattern?: RegExp,
+custom?: (value: any) => string | null;
 interface ValidatedFormFieldProps  {name: string;
   label: string;
   type?:;
@@ -172,28 +217,59 @@ interface ValidatedFormFieldProps  {name: string;
   placeholder?: string;
   description?: string;
   validation?: ValidationRule;
-  options?: { value: string; label: string }[];
+  options?: { value: string; label: string
+}[];
   form: any; // React Hook Form control;
   className?: string;
   disabled?: boolean;
   showValidIcon?: boolean;
-  debounceMs?: number;export function ValidatedFormField(): any ({name,label,type = 'text',placeholder,description,validation = {},options = [],form,className,disabled = false,showValidIcon = true,debounceMs = 300}: ValidatedFormFieldProps) {const [showPassword, setShowPassword] = useState(false)const [validationState, setValidationState] = useState<;
+  debounceMs?: number;
+export function ValidatedFormField(): any ({name,
+label,
+type = 'text',
+placeholder,
+description,
+validation = {},
+options = [],
+form,
+className,
+disabled = false,
+showValidIcon = true,
+debounceMs = 300}: ValidatedFormFieldProps) {const [showPassword, setShowPassword] = useState(false)const [validationState, setValidationState] = useState<;
     'idle' | 'validating' | 'valid' | 'invalid';
-  >('idle')const [debounceTimer, setDebounceTimer] = useState<NodeJS && NodeJS.Timeout | null>(null;
+  >('idle')const [debounceTimer, setDebounceTimer] = useState < NodeJS && NodeJS.Timeout | null>(null;
   )const fieldValue = form && form.watch(name)const fieldError = form && form.formState.errors[name];
   const isTouched  = form && form.formState.touchedFields[name];// Debounced validation;
-  useEffect((,) => {if (!fieldValue || !isTouched) {setValidationState('idle')return;
-    }if (debounceTimer) {clearTimeout(debounceTimer)}setValidationState('validating')const timer = setTimeout(() => {const error = validateField(fieldValue)setValidationState(error ? 'invalid' : 'valid')}, debounceMs)setDebounceTimer(timer)return () => {if (timer) clearTimeout(timer)}}, [fieldValue, isTouched, debounceMs])const validateField = (value: any): string | null => {if (validation && validation.required &&;
-      (!value || (typeof value === 'string' && value && value.trim() === ''))) {return `${label} is required`;
-    }if (typeof value === 'string') {if (validation && validation.minLength && value && value.length < validation && validation.minLength) {return `${label} must be at least ${validation && validation.minLength} characters`;
-      }if (validation && validation.maxLength && value && value.length > validation && validation.maxLength) {return `${label} must not exceed ${validation && validation.maxLength} characters`;
-      }if (validation && validation.pattern && !validation && validation.pattern.test(value)) {return `${label} format is invalid`;
+  useEffect((,)  => {
+if (!fieldValue || !isTouched) {setValidationState('idle')return;
+    
+}
+if (debounceTimer) {clearTimeout(debounceTimer)}
+setValidationState('validating')const timer = setTimeout(()  => {
+const error = validateField(fieldValue)setValidationState(error ? 'invalid' : 'valid')
+}, debounceMs)setDebounceTimer(timer)return ()  => {
+if (timer) clearTimeout(timer)
+}}, [fieldValue, isTouched, debounceMs])const validateField = (value: any): string | null  => {
+if (validation && validation.required &&;
+      (!value || (typeof value === 'string' && value && value.trim() === ''))) {return `${label
+} is required`;
+    }
+if (typeof value === 'string') {if (validation && validation.minLength && value && value.length < validation && validation.minLength) {return `${label} must be at least ${validation && validation.minLength} characters`;
       }
-    }if (validation && validation.custom) {return validation && validation.custom(value)}return null;
-  },const getValidationIcon = () => {switch (type) {case 'textarea':;
+if (validation && validation.maxLength && value && value.length > validation && validation.maxLength) {return `${label} must not exceed ${validation && validation.maxLength} characters`;
+      }
+if (validation && validation.pattern && !validation && validation.pattern.test(value)) {return `${label} format is invalid`;
+      }
+    }
+if (validation && validation.custom) {return validation && validation.custom(value)}
+return null;
+  },
+const getValidationIcon = ()  => {
+switch (type) {case 'textarea':;
         return (<div className='relative'>;
             <Textarea;
-              disabled={disabled}
+              disabled={disabled
+}
               className={baseClasses}
               rows={4}{...form.register(name)}
             />;
@@ -203,7 +279,8 @@ interface ValidatedFormFieldProps  {name: string;
             />;
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>;
           </div>;
-        )),case 'select':;
+        )),
+case 'select':;
         return (<div className="relative">;
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>;
               <SelectTrigger className={baseClasses}>;
@@ -213,13 +290,16 @@ interface ValidatedFormFieldProps  {name: string;
                 {options.map((option) => (<SelectItem key={option.value} value={option.value}>;
                     {option.label}
                   </SelectItem>;
-                ))}case 'checkbox':;
-        ),case 'checkbox':;
+                ))}
+case 'checkbox':;
+        ),
+case 'checkbox':;
               </SelectContent>;
             </Select>;
             <div className='absolute top-2 right-8'>{getValidationIcon()}</div>;
           </div>;
-        )case 'checkbox':;return (<div className='flex items-center space-x-2'>;
+        )case 'checkbox':;
+return (<div className='flex items-center space-x-2'>;
             <Checkbox;
               id={name}
               checked={fieldValue}
@@ -227,14 +307,18 @@ interface ValidatedFormFieldProps  {name: string;
               disabled={disabled}
             />;
             <label;
-              htmlFor={name}className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70";
+              htmlFor={name}
+className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70";
             >;
               {label}
             </label>;
-            {getValidationIcon()}case 'password':;
-        ),case 'password':;
+            {getValidationIcon()}
+case 'password':;
+        ),
+case 'password':;
           </div>;
-        )case 'password':;return (<div className='relative'>;
+        )case 'password':;
+return (<div className='relative'>;
             <Input;
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
@@ -252,12 +336,15 @@ interface ValidatedFormFieldProps  {name: string;
               >;
                 {showPassword ? (<EyeOff className="h-4 w-4" />;
                 ) : (<Eye className="h-4 w-4" />;
-                )}default:;
-        ),default:;
+                )}
+default:;
+        ),
+default:;
               </Button>;
             </div>;
           </div>;
-        )default:;return (<div className='relative'>;
+        )default:;
+return (<div className='relative'>;
             <Input;
               type={type}
               disabled={disabled}
@@ -268,7 +355,8 @@ interface ValidatedFormFieldProps  {name: string;
               {getValidationIcon()}</div>;
           </div>;
         )}
-  }if (type === 'checkbox') {return (<FormField;
+  }
+if (type === 'checkbox') {return (<FormField;
         control={form.control}
         name={name}
         render={() => (<FormItem className="flex flex-row items-start space-x-3 space-y-0">;
@@ -284,7 +372,8 @@ interface ValidatedFormFieldProps  {name: string;
               </div>;
             )}
           </FormItem>;
-        )}case 'textarea':;
+        )}
+case 'textarea':;
         return (<div className='relative'>;
             <Textarea;
               disabled = {disabled }
@@ -371,7 +460,8 @@ if ( {) {$2;
           <FormLabel className='text - sm font - medium'>;
             {label}
             {validation.required && (/>;
-    )}render={() => (<FormItem>;
+    )}
+render={() => (<FormItem>;
           <FormLabel className='text-sm font-medium'>;
             {label}{validation.required && <span className="text-red-500 ml-1">*</span>}
           </FormLabel>;
@@ -399,20 +489,37 @@ if ( {) {$2;
             </div>)}
         </FormItem>)}
     />)// Validation helpers for common patterns;
-export const validation_patterns = {email: /^[a - z_a - Z0 - 9._%+-]+@[a - z_a - Z0 - 9.-]+\.[a - z_a - Z]{2}$/,phone: /^[\+]?[1 - 9][\d]{0, 15}$/,url: /^https?:\/\/.+/,strong_password:;
+export const validation_patterns = {email: /^[a - z_a - Z0 - 9._%+-]+@[a - z_a - Z0 - 9.-]+\.[a - z_a - Z]{2}$/,
+phone: /^[\+]?[1 - 9][\d]{0, 15}$/,
+url: /^https?:\/\/.+/,
+strong_password:;
     /^(?=.*[a - z])(?=.*[A - Z])(?=.*\d)(?=.*[@$!%*?&])[A - Za - z\d@$!%*?&]{8}$/}
 // Pre - configured validation rules;
-export const common_validations = {required: { required: true },email: {required: true,pattern: validation_patterns.email,custom: (value: string, ) => {if () {) {$2;
+export const common_validations = {required: { required: true },
+email: {required: true,
+pattern: validation_patterns.email,
+custom: (value: string, )  => {
+if () {) {$2;
+
 }
         return 'Please enter a valid email address';
       }
       return null;
-    }},password: {required: true,min_length: 8,custom: (value: string, ) => {if () {) {$2;
+    }},
+password: {required: true,
+min_length: 8,
+custom: (value: string, )  => {
+if () {) {$2;
+
 }
         return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
       }
       return null;
-    }},phone: {pattern: validation_patterns.phone,custom: (value: string, ) => {if () {) {$2;
+    }},
+phone: {pattern: validation_patterns.phone,
+custom: (value: string, )  => {
+if () {) {$2;
+
 }
         return 'Please enter a valid phone number';
       }
@@ -422,16 +529,34 @@ export const common_validations = {required: { required: true },email: {required
   }}
     }}}}}}/>;
   )// Validation helpers for common patterns;
-export const validationPatterns = {email: /^[a-zA-Z0-9 && 9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,phone: /^[\+]?[1-9][\d]{0,15}$/,url: /^https?:\/\/.+/,strongPassword:;
+export const validationPatterns = {email: /^[a-zA-Z0-9 && 9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
+phone: /^[\+]?[1-9][\d]{0,15}$/,
+url: /^https?:\/\/.+/,
+strongPassword:;
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/}// Pre-configured validation rules;
-export const commonValidations = {required: { required: true },email: {required: true,pattern: validationPatterns && validationPatterns.email,custom: (value: string,) => {if (value && !validationPatterns && validationPatterns.email.test(value)) {return 'Please enter a valid email address';
-      }
+export const commonValidations = {required: { required: true },
+email: {required: true,
+pattern: validationPatterns && validationPatterns.email,
+custom: (value: string,)  => {
+if (value && !validationPatterns && validationPatterns.email.test(value)) {return 'Please enter a valid email address';
+      
+}
       return null;
-    }},password: {required: true,minLength: 8,custom: (value: string,) => {if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
-      }
+    }},
+password: {required: true,
+minLength: 8,
+custom: (value: string,)  => {
+if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
+      
+}
       return null;
-    }},phone: {pattern: validationPatterns && validationPatterns.phone,custom: (value: string,) => {if (value && !validationPatterns && validationPatterns.phone.test(value)) {return 'Please enter a valid phone number';
-      }
+    }},
+phone: {pattern: validationPatterns && validationPatterns.phone,
+custom: (value: string,)  => {
+if (value && !validationPatterns && validationPatterns.phone.test(value)) {return 'Please enter a valid phone number';
+      
+}
       return null;}}}
-  }}return null;
+  }}
+return null;
     }}}

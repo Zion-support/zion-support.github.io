@@ -1,17 +1,42 @@
 
 ;
-  Dialog,Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,Table;
+  Dialog,
+Dialog,
+DialogContent,
+DialogDescription,
+DialogFooter,
+DialogHeader,
+Table;
   TableBody;
   TableCell;
   TableHead;
   TableHeader;
-  TableRow} from "@/components/ui/table",import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
+  TableRow} from "@/components/ui/table",
+import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
 import {Dialog;
   DialogContent;
   DialogDescription;
   DialogFooter;
-  DialogHeader;DialogTitle} from "@/components/ui/dialog",DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from "@/components/ui/dropdown-menu",import { Badge } from "@/components/ui/badge",import { Button } from "@/components/ui/button",interface ReviewsModerationTableProps  {reviews: Review[],isLoading: boolean,onRefresh: () => void;
-}export function ReviewsModerationTable() {const [selectedReview, setSelectedReview] = useState<Review | null>(null),const [viewDetailsOpen, setViewDetailsOpen] = useState(false),const { mutate: updateReviewStatus, isPending } = useMutation({mutationFn: async ({reviewId,status}: {reviewId: string,reviewId: string;
+  DialogHeader;
+DialogTitle} from "@/components/ui/dialog",
+DropdownMenu,
+DropdownMenuContent,
+DropdownMenuItem,
+DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+interface ReviewsModerationTableProps {
+reviews: Review[],
+isLoading: boolean,
+onRefresh: () => void;
+}
+export function ReviewsModerationTable() {
+const [selectedReview, setSelectedReview] = useState < Review | null>(null),
+const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
+const { mutate: updateReviewStatus, isPending 
+} = useMutation({mutationFn: async ({reviewId,
+status}: {reviewId: string,
+reviewId: string;
   Table;
   TableBody;
   TableCell;
@@ -33,118 +58,224 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'; im
 } from '@/components/ui/dropdown-menu';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
-interface ReviewsModerationTableProps  {reviews: Review[];
+interface ReviewsModerationTableProps {
+reviews: Review[];
 isLoading: boolean;
 onRefresh: () => void;
-}export function ReviewsModerationTable () {const [selectedReview, setSelectedReview] = useState<Review | null> (null)const [viewDetailsOpen,  setViewDetailsOpen] = useState (false)const {mutate: updateReviewStatus, isPending;
+}
+export function ReviewsModerationTable() {
+const [selectedReview, setSelectedReview] = useState < Review | null> (null)const [viewDetailsOpen,  setViewDetailsOpen] = useState (false)const {mutate: updateReviewStatus, isPending;
+
 }= useMutation ({mutationFn: async ({reviewId;
 status;
 }: {reviewId: string;
 status: ReviewStatus;
-}) => {const {error;
+})  => {
+const {error;
+
 }= await supabase .from ("reviews") .update ({status;
 }) if (error) throw error;
 return {reviewId, status;
-export function ReviewsModerationTable() {const [selectedReview, setSelectedReview] = useState<Review | null>(null)const [viewDetailsOpen, setViewDetailsOpen] = useState(false)const { mutate: updateReviewStatus, isPending } = useMutation({mutationFn: async ({reviewId;
+export function ReviewsModerationTable() {
+const [selectedReview, setSelectedReview] = useState < Review | null>(null)const [viewDetailsOpen, setViewDetailsOpen] = useState(false)const { mutate: updateReviewStatus, isPending 
+} = useMutation({mutationFn: async ({reviewId;
       status;
     }: {reviewId: string;
       status: ReviewStatus;
-    }) => {const { error } = await supabase;
-        .from("reviews").update({ status }).eq("id", reviewId),if (error) throw error,return { reviewId, status }},onSuccess: (data) => {toast({title: "Review updated",description: `Review has been ${data.status}.`}),onRefresh()}onSuccess: (data) => {toast({title: "Review updated";
-        description: `Review has been ${data.status}.`})onRefresh()setViewDetailsOpen(false)}
-    onError: (error: Error,) => {toast({title: "Error",title: "Error";description: `Failed to update review: ${error.message}`,variant: "destructive"})}}),const getInitials = (name: string) => {return name;
-      .split(" ").map((n) => n[0]).join("").toUpperCase()},if (isLoading) {return (<div className="space-y-4">;
+    })  => {
+const { error 
+} = await supabase;
+        .from("reviews").update({ status }).eq("id", reviewId),
+if (error) throw error,
+return { reviewId, status }},
+onSuccess: (data)  => {
+toast({title: "Review updated",
+description: `Review has been ${data.status
+}.`}),
+onRefresh()}
+onSuccess: (data)  => {
+toast({title: "Review updated";
+        description: `Review has been ${data.status
+}.`})onRefresh()setViewDetailsOpen(false)}
+    onError: (error: Error,)  => {
+toast({title: "Error",
+title: "Error";
+description: `Failed to update review: ${error.message
+}`,
+variant: "destructive"})}}),
+const getInitials = (name: string)  => {
+return name;
+      .split(" ").map((n) => n[0]).join("").toUpperCase()
+},
+if (isLoading) {return (<div className="space-y-4">;
         <div className="h-12 w-full bg-muted rounded animate-pulse" />;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
       </div>;
     )}
-  if (reviews.length === 0) {setViewDetailsOpen(false)},onError: (error: Error) => {toast({title: "Error",description: `Failed to update review: ${error.message}`,if (isLoading) {return (<div className='space - y-4'>;
+  if (reviews.length === 0) {setViewDetailsOpen(false)},
+onError: (error: Error)  => {
+toast({title: "Error",
+description: `Failed to update review: ${error.message
+}`,
+if (isLoading) {return (<div className='space - y-4'>;
         <div className='h - 12 w - full bg - muted rounded animate - pulse' />;
         <div className='h - 16 w - full bg - muted rounded animate - pulse' />;
         <div className='h - 16 w - full bg - muted rounded animate - pulse' />;
         <div className='h - 16 w - full bg - muted rounded animate - pulse' />;
       </div>)}// Check condition;
 if ( {) {$2;
-}return (<div className='py - 10 text - center'>;
+}
+return (<div className='py - 10 text - center'>;
         <h3 className='text - lg font - medium mb - 2'>No reviews to moderate</h3>;
         <p className='text - muted - foreground'>;
           All reviews have been processed. Check back later for new submissions.;
         </p>;
-      </div>)}const handle_approve = (review_id: string) =>: any {updateReviewStatus ({ review_id, status: 'approved' })}
+      </div>)}
+const handle_approve = (review_id: string) =>: any {updateReviewStatus ({ review_id, status: 'approved' })}
   const handle_reject = (review_id: string) =>: any {updateReviewStatus ({ review_id, status: 'rejected' })}
-  const handleViewDetails = (review: Review) =>: any {setSelectedReview (review)setViewDetailsOpen (true)}import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';import {Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle} from '@/components/ui/dialog';
-  DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-interface ReviewsModerationTableProps  {reviews: Review[];
+  const handleViewDetails = (review: Review) =>: any {setSelectedReview (review)setViewDetailsOpen (true)}
+import {Table,
+TableBody,
+TableCell,
+TableHead,
+TableHeader,
+TableRow} from '@/components/ui/table';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import {Dialog,
+DialogContent,
+DialogDescription,
+DialogFooter,
+DialogHeader,
+DialogTitle} from '@/components/ui/dialog';
+  DropdownMenu,
+DropdownMenuContent,
+DropdownMenuItem,
+DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
+interface ReviewsModerationTableProps {
+reviews: Review[];
 isLoading: boolean;
 onRefresh: () => void ;
-}export function ReviewsModerationTable(): any ({reviews;
+}
+export function ReviewsModerationTable(): any ({reviews;
 isLoading;
 onRefresh ;
-}: ReviewsModerationTableProps) {const [selectedReview, setSelectedReview] = useState<Review | null> (null)const [viewDetailsOpen,  setViewDetailsOpen] = useState (false)const {mutate: updateReviewStatus, isPending ;
+}: ReviewsModerationTableProps) {const [selectedReview, setSelectedReview] = useState < Review | null> (null)const [viewDetailsOpen,  setViewDetailsOpen] = useState (false)const {mutate: updateReviewStatus, isPending ;
 }= useMutation ({mutationFn: async ({reviewId;
 status ;
 }: {reviewId: string;
 status: ReviewStatus ;
-}) => {const {error ;
+})  => {
+const {error ;
+
 }= await supabase .from ("reviews") .update ({status ;
 }) if (error) throw error;
-return {reviewId, status ;export function ReviewsModerationTable(): any ({reviews,isLoading,onRefresh}: ReviewsModerationTableProps) {const [selectedReview, setSelectedReview] = useState<Review | null>(null)const [viewDetailsOpen, setViewDetailsOpen]  = useState(false)const { mutate: updateReviewStatus, isPending } = useMutation({mutationFn: async ({reviewId,status}: {reviewId: string;
+return {reviewId, status ;
+export function ReviewsModerationTable(): any ({reviews,
+isLoading,
+onRefresh}: ReviewsModerationTableProps) {const [selectedReview, setSelectedReview] = useState < Review | null>(null)const [viewDetailsOpen, setViewDetailsOpen]  = useState(false)const { mutate: updateReviewStatus, isPending } = useMutation({mutationFn: async ({reviewId,
+status}: {reviewId: string;
       status: ReviewStatus;
-    }) => {      const { error } = await supabase;
+    })  => {
+      const { error 
+} = await supabase;
         .from('reviews').update({ status }).eq('id', reviewId)if (error) throw error;
-      return { reviewId, status }},onSuccess: data => {      toast({title: 'Review updated',description: `Review has been ${data && data.status}.`})onRefresh()setViewDetailsOpen(false)},onError: (error: Error,) => {toast({title: 'Error',description: `Failed to update review: ${error && error.message}`,variant: 'destructive'})}})const getInitials = (name: string,) => {return name;
-      .split(' ').map(n => n[0]).join('').toUpperCase()}if (isLoading) {return (<div className='space-y-4'>;
+      return { reviewId, status }},
+onSuccess: data  => {
+      toast({title: 'Review updated',
+description: `Review has been ${data && data.status
+}.`})onRefresh()setViewDetailsOpen(false)},
+onError: (error: Error,)  => {
+toast({title: 'Error',
+description: `Failed to update review: ${error && error.message
+}`,
+variant: 'destructive'})}})const getInitials = (name: string,)  => {
+return name;
+      .split(' ').map(n => n[0]).join('').toUpperCase()
+}
+if (isLoading) {return (<div className='space-y-4'>;
         <div className='h-12 w-full bg-muted rounded animate-pulse' />;
         <div className='h-16 w-full bg-muted rounded animate-pulse' />;
         <div className='h-16 w-full bg-muted rounded animate-pulse' />;
         <div className='h-16 w-full bg-muted rounded animate-pulse' />;
       </div>;
-    )}if (reviews && reviews.length === 0) {return (<div className='py-10 text-center'>;
+    )}
+if (reviews && reviews.length === 0) {return (<div className='py-10 text-center'>;
         <h3 className='text-lg font-medium mb-2'>No reviews to moderate</h3>;
         <p className='text-muted-foreground'>;
           All reviews have been processed. Check back later for new submissions.;
         </p>;
       </div>;
-    )}const handleApprove = (reviewId: string) => {updateReviewStatus({ reviewId, status: 'approved' })}const handleReject = (reviewId: string) => {updateReviewStatus({ reviewId, status: 'rejected' })}const handleViewDetails = (review: Review) => {setSelectedReview(review)setViewDetailsOpen(true)}const renderStars  = (rating: number,) => {return (<div className='flex'>;
+    )}
+const handleApprove = (reviewId: string)  => {
+updateReviewStatus({ reviewId, status: 'approved' 
+})}
+const handleReject = (reviewId: string)  => {
+updateReviewStatus({ reviewId, status: 'rejected' 
+})}
+const handleViewDetails = (review: Review)  => {
+setSelectedReview(review)setViewDetailsOpen(true)
+}
+const renderStars  = (rating: number,)  => {
+return (<div className='flex'>;
         {[1, 2, 3, 4, 5].map(star => (<Star;
-            key={star}
+            key={star
+}
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}          />;
-        ))}const render_stars = (rating: number, ) =>: any {return (<div className='flex'>;
+        ))}
+const render_stars = (rating: number, ) =>: any {return (<div className='flex'>;
         {[1, 2, 3, 4, 5].map (star => (<Star;
             key={star}
             className={`h - 4 w - 4 ${star <= rating ? 'fill - yellow - 400 text - yellow - 400' : 'text - gray - 300'}`}          />))}
       </div>)}
       </div>;
-    )}return (<>;
+    )}
+return (<>;
       <Table>;
         <TableHeader>;
-          <TableRow>;return (<div className="py-10 text-center">;
+          <TableRow>;
+return (<div className="py-10 text-center">;
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>;
         <p className="text-muted-foreground">;
           All reviews have been processed. Check back later for new submissions.;
         </p>;
       </div>;
     )updateReviewStatus({ reviewId, status: 'approved' })}
-  const handleReject = (reviewId: string) => {updateReviewStatus({ reviewId, status: 'rejected' })}
-  const handleViewDetails = (review: Review) => {setSelectedReview(review)setViewDetailsOpen(true)}
-  const renderStars = (rating: number,) => {return (<div className='flex'>;
+  const handleReject = (reviewId: string)  => {
+updateReviewStatus({ reviewId, status: 'rejected' 
+})}
+  const handleViewDetails = (review: Review)  => {
+setSelectedReview(review)setViewDetailsOpen(true)
+}
+  const renderStars = (rating: number,)  => {
+return (<div className='flex'>;
         {[1, 2, 3, 4, 5].map(star => (<Star;
-            key={star}
+            key={star
+}
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}          />;
-        ))}const handleApprove = (reviewId: string) => {alt={review.reviewer_profile.display_name || ''}                      />;
-    updateReviewStatus({ reviewId, status: "approved" })updateReviewStatus({ reviewId, status: "approved" })},const handleReject = (reviewId: string) => {updateReviewStatus({ reviewId, status: "rejected" })},const handleViewDetails = (review: Review) => {setSelectedReview(review),setViewDetailsOpen(true)},const getInitials = null;
+        ))}
+const handleApprove = (reviewId: string)  => {
+alt={review.reviewer_profile.display_name || ''
+}                      />;
+    updateReviewStatus({ reviewId, status: "approved" })updateReviewStatus({ reviewId, status: "approved" })},
+const handleReject = (reviewId: string)  => {
+updateReviewStatus({ reviewId, status: "rejected" 
+})},
+const handleViewDetails = (review: Review)  => {
+setSelectedReview(review),
+setViewDetailsOpen(true)
+},
+const getInitials = null;
   return (<>;
       <Table>;
         <TableHeader>;
           <TableRow>;
-            <TableHead>Reviewer</TableHead>;
-            <TableHead>Rating</TableHead>;
-            <TableHead>Date</TableHead>;
-            <TableHead>Status</TableHead>;
-            <TableHead>Reports</TableHead>;
+            <TableHead > Reviewer</TableHead>;
+            <TableHead > Rating</TableHead>;
+            <TableHead > Date</TableHead>;
+            <TableHead > Status</TableHead>;
+            <TableHead > Reports</TableHead>;
             <TableHead className='text-right'>Actions</TableHead>;
           </TableRow>;
         </TableHeader>;
@@ -174,7 +305,8 @@ return {reviewId, status ;export function ReviewsModerationTable(): any ({review
                       </span>;)}
                   </div>;
                 </div>;
-              </TableCell>;updateReviewStatus({ reviewId, status: "approved" })},<TableCell>{renderStars(review && review.rating)}</TableCell>;
+              </TableCell>;
+updateReviewStatus({ reviewId, status: "approved" })},<TableCell>{renderStars(review && review.rating)}</TableCell>;
               <TableCell>{format(new Date(review && review.created_at), 'MMM d, yyyy')}
               </TableCell>;
               <TableCell>;
@@ -186,15 +318,18 @@ return {reviewId, status ;export function ReviewsModerationTable(): any ({review
               <TableCell>;
                 {review && review.report_count > 0 ? (<Badge variant='destructive'>{review && review.report_count}</Badge>;
                 ) : ('None';
-                )}onClick={() =>;
-                            updateReviewStatus({reviewId: review && review.id,status: 'rejected'})}
+                )}
+onClick={() =>;
+                            updateReviewStatus({reviewId: review && review.id,
+status: 'rejected'})}
                         >;
                           Mark as rejected;
                         </DropdownMenuItem>;
                       )}
                       {review && review.status === 'rejected' && (<DropdownMenuItem;
                           onClick={() =>;
-                            updateReviewStatus({reviewId: review && review.id,status: 'approved'})}
+                            updateReviewStatus({reviewId: review && review.id,
+status: 'approved'})}
                         >                          Mark as approved;
                         </DropdownMenuItem>;
                       )}
@@ -306,13 +441,15 @@ return {reviewId, status ;export function ReviewsModerationTable(): any ({review
                       </DropdownMenuItem>;
                       {review.status === 'approved' && (<DropdownMenuItem;
                           on_click={() =>;
-                            updateReviewStatus ({review_id: review.id,status: 'rejected'})}
+                            updateReviewStatus ({review_id: review.id,
+status: 'rejected'})}
                         >;
                           Mark as rejected;
                         </DropdownMenuItem>)}
                       {review.status === 'rejected' && (<DropdownMenuItem;
                           on_click={() =>;
-                            updateReviewStatus ({review_id: review.id,status: 'approved'})}
+                            updateReviewStatus ({review_id: review.id,
+status: 'approved'})}
                         >                          Mark as approved;
                         </DropdownMenuItem>)}
                     </DropdownMenuContent>;
@@ -374,7 +511,8 @@ return {reviewId, status ;export function ReviewsModerationTable(): any ({review
                 <div className="flex items-center gap-2">;
                   <Avatar>;
                     {selectedReview.reviewer_profile?.avatar_url ? (<AvatarImage;
-                        src={selectedReview.reviewer_profile.avatar_url}alt={selectedReview.reviewer_profile.display_name || ''}                      />;
+                        src={selectedReview.reviewer_profile.avatar_url}
+alt={selectedReview.reviewer_profile.display_name || ''}                      />;
                     ) : (<AvatarFallback>;
                         {selectedReview.reviewer_profile?.display_name ? (getInitials(selectedReview.reviewer_profile.display_name;
                           )) : (<User className='h-4 w-4' />;
@@ -382,8 +520,8 @@ return {reviewId, status ;export function ReviewsModerationTable(): any ({review
       </Table>;{selectedReview && (<Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
           <DialogContent className='max-w-lg'>;
             <DialogHeader>;
-              <DialogTitle>Review Details</DialogTitle>;
-              <DialogDescription>Review submitted on{' '}
+              <DialogTitle > Review Details</DialogTitle>;
+              <DialogDescription > Review submitted on{' '}
                 {format(new Date(selectedReview && selectedReview.created_at), 'MMMM d, yyyy')}
               </DialogDescription>;
             </DialogHeader>;<div className='space-y-4'>;
@@ -508,13 +646,16 @@ return {reviewId, status ;export function ReviewsModerationTable(): any ({review
               {selectedReview && selectedReview.status === 'approved' && (<Button;
                   variant='destructive';
                   onClick={() =>;
-                    updateReviewStatus({reviewId: selectedReview && selectedReview.id,status: 'rejected'})}
-                  disabled={isPending}                >;Mark as Rejected;
+                    updateReviewStatus({reviewId: selectedReview && selectedReview.id,
+status: 'rejected'})}
+                  disabled={isPending}                >;
+Mark as Rejected;
                 </Button>;
               )}
               {selectedReview && selectedReview.status === 'rejected' && (<Button;
                   onClick={() =>;
-                    updateReviewStatus({reviewId: selectedReview && selectedReview.id,status: 'approved'})}
+                    updateReviewStatus({reviewId: selectedReview && selectedReview.id,
+status: 'approved'})}
                   disabled={isPending}                >;
                   Mark as Approved;
                 </Button>;)}
@@ -528,22 +669,23 @@ return {reviewId, status ;export function ReviewsModerationTable(): any ({review
   return (<div className="flex"> {[1, 2, 3,  4, 5].map ( (star) => (<Star key= {</>;
   )}})return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> </div> if (reviews.length === 0) {";
   return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div> ;
-}return (<div className="flex"> {[1, 2, 3,  4, 5].map ( (star) => (<Star key= {star ;
+}
+return (<div className="flex"> {[1, 2, 3,  4, 5].map ( (star) => (<Star key= {star ;
 }/>) )}</div>))}
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       )}
 }";
-return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {}";
-return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {</TableRow>))}
+return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <TableHead > Rating</TableHead> <TableHead > Date</TableHead> <TableHead > Status</TableHead> <TableHead > Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {}";
+return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <TableHead > Rating</TableHead> <TableHead > Date</TableHead> <TableHead > Status</TableHead> <TableHead > Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {</TableRow>))}
         </TableBody>;
       </Table>;
       {selected_review && (<Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
           <DialogContent className='max - w-lg'>;
             <DialogHeader>;
               <DialogTitle > Review Details</DialogTitle>;
-              <DialogDescription>Review submitted on{' '}
+              <DialogDescription > Review submitted on{' '}
                 {format (new Date (selected_review.created_at), 'MMMM d, yyyy')}
               </DialogDescription>;
             </DialogHeader>;
@@ -625,13 +767,15 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
               {selected_review.status === 'approved' && (<Button;
                   variant='destructive';
                   on_click={() =>;
-                    updateReviewStatus ({review_id: selected_review.id,status: 'rejected'})}
+                    updateReviewStatus ({review_id: selected_review.id,
+status: 'rejected'})}
                   disabled={is_pending}                >;
                   Mark as Rejected;
                 </Button>)}
               {selected_review.status === 'rejected' && (<Button;
                   on_click={() =>;
-                    updateReviewStatus ({review_id: selected_review.id,status: 'approved'})}
+                    updateReviewStatus ({review_id: selected_review.id,
+status: 'approved'})}
                   disabled={is_pending}                >;
                   Mark as Approved;
                 </Button>)}
@@ -648,7 +792,8 @@ if ( {") {$2;
 }/>) )}</div>)}";
 return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <TableHead > Rating</TableHead> <TableHead > Date</TableHead> <TableHead > Status</TableHead> <TableHead > Reports</TableHead> <TableHead className="text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {reviews.map ( (review) => (<TableRow key= {review.id ";
 }> <TableCell> <div className="flex items - center gap - 2"> <Avatar className="h - 8 w - 8"> {review.reviewer profile?.avatar url ? (<AvatarImage src= {review.reviewer profile.avatar url;
-}alt= {";
+}
+alt= {";
   review.reviewer profile.display name |"";
 }/>) : (<AvatarFallback> {";
   review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : <User className=" h-4 w-4"/>;
@@ -658,16 +803,19 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</span>)}</div> </div> </TableCell> <TableCell> {render_stars (review.rating) ";
 }</TableCell> <TableCell> </TableCell> <TableCell> <Badge variant=" outline"> {review.status.charAt (0) .toUpperCase () + review.status.slice (1) ";
 }</Badge> </TableCell> <TableCell>) : (" None") ";
-}</TableCell> <Button size=" sm"variant=" outline"className=" h-8 w-8 p-0"onClick={() => handleApprove (review.id)}disabled= {isPending ";
+}</TableCell> <Button size=" sm"variant=" outline"className=" h-8 w-8 p-0"onClick={() => handleApprove (review.id)}
+disabled= {isPending ";
 }> <Check className=" h-4 w-4 text-green-500"/> </Button> <Button > <X className=" h-4 w-4 text-red-500"/> </Button> </>) ";
 }<DropdownMenu> <DropdownMenuTrigger asChild> <Button variant=" ghost"size=" sm"className=" h-8 w-8 p-0"> <MoreHorizontal className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> Mark as approved </DropdownMenuItem>)}</DropdownMenuContent> </DropdownMenu> </div> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </DialogDescription> </DialogHeader> <div className=" space-y-4"> <div className=" flex items-center justify-between"> <div className=" flex items-center gap-2"> <Avatar> {selectedReview.reviewer profile?.avatar url ? (<AvatarImage src= {selectedReview.reviewer profile.avatar url;
-}alt= {";
+}
+alt= {";
   selectedReview.reviewer profile.display name |"";
 }/>) : (<AvatarFallback> {";
   selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>;
   review.reviewer profile.avatar url;
-}alt= {";
+}
+alt= {";
   review.reviewer profile.display name || "";
 }/>) : (<AvatarFallback> {";
   review.reviewer profile?.display name ? get_initials (review.reviewer profile.display name) : <User className=" h - 4 w - 4"/>;
@@ -683,16 +831,20 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }> </Badge>)}</div> </div> {";
   selectedReview.report count > 0 && (<div className="bg-red-50 border border-red-200 rounded-md p-3"> <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview.report count ";
 }</h4> <p className="text-sm text-red-700"> This review has been reported by users and may need investigation. </p> </div>) ";
-}</div> <DialogFooter> <Button variant=" destructive" onClick={() => handleReject (selectedReview.id)}disabled= {isPending;
-}> Reject </Button> <Button onClick={() => handleApprove (selectedReview.id)}disabled= {isPending;
+}</div> <DialogFooter> <Button variant=" destructive" onClick={() => handleReject (selectedReview.id)}
+disabled= {isPending;
+}> Reject </Button> <Button onClick={() => handleApprove (selectedReview.id)}
+disabled= {isPending;
 }> Approve </Button> </>)}> Mark as Rejected </Button>)}> Mark as Approved </Button>)}</DialogFooter> </DialogContent> </Dialog>)}</>)}"}</>;
   )review.status.char_at (0) .toUpperCase () + review.status.slice (1) ";
 }</Badge> </TableCell> <TableCell>) : (" None") ";
-}</TableCell> <Button size=" sm"variant=" outline"className=" h - 8 w - 8 p - 0"on_click={() => handle_approve (review.id)}disabled= {is_pending ";
+}</TableCell> <Button size=" sm"variant=" outline"className=" h - 8 w - 8 p - 0"on_click={() => handle_approve (review.id)}
+disabled= {is_pending ";
 }> <Check className=" h - 4 w - 4 text - green - 500"/> </Button> <Button > <X className=" h - 4 w - 4 text - red - 500"/> </Button> </>) ";
 }<DropdownMenu> <DropdownMenuTrigger as_child> <Button variant=" ghost"size=" sm"className=" h - 8 w - 8 p - 0"> <MoreHorizontal className=" h - 4 w - 4"/> </Button> </DropdownMenuTrigger> Mark as approved </DropdownMenuItem>)}</DropdownMenuContent> </DropdownMenu> </div> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </DialogDescription> </DialogHeader> <div className=" space - y-4"> <div className=" flex items - center justify - between"> <div className=" flex items - center gap - 2"> <Avatar> {selected_review.reviewer profile?.avatar url ? (<AvatarImage src= {selected_review.reviewer profile.avatar url;
-}alt= {";
+}
+alt= {";
   selected_review.reviewer profile.display name || "";
 }/>) : (<AvatarFallback> {";
   selected_review.reviewer profile?.display name ? get_initials (selected_review.reviewer profile.display name) : <User className="h - 4 w - 4"/>;
@@ -704,13 +856,16 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }> </Badge>)}</div> </div> {";
   selected_review.report count > 0 && (<div className="bg - red - 50 border border - red - 200 rounded - md p - 3"> <h4 className="text - sm font - medium text - red - 800">Reports: {selected_review.report count ";
 }</h4> <p className="text - sm text - red - 700"> This review has been reported by users and may need investigation. </p> </div>) ";
-}</div> <DialogFooter> <Button variant=" destructive" on_click={() => handle_reject (selected_review.id)}disabled= {is_pending;
-}> Reject </Button> <Button on_click={() => handle_approve (selected_review.id)}disabled= {is_pending;
+}</div> <DialogFooter> <Button variant=" destructive" on_click={() => handle_reject (selected_review.id)}
+disabled= {is_pending;
+}> Reject </Button> <Button on_click={() => handle_approve (selected_review.id)}
+disabled= {is_pending;
 }> Approve </Button> </>)}> Mark as Rejected </Button>)}> Mark as Approved </Button>)}</DialogFooter> </DialogContent> </Dialog>)}</>)}"}
 }}";
-return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {reviews.map ( (review) => (<TableRow key= {review.id ";
+return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <TableHead > Rating</TableHead> <TableHead > Date</TableHead> <TableHead > Status</TableHead> <TableHead > Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {reviews.map ( (review) => (<TableRow key= {review.id ";
 }> <TableCell> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {review.reviewer profile?.avatar url ? (<AvatarImage src= {review.reviewer profile.avatar url ;
-}alt= {";
+}
+alt= {";
   review.reviewer profile.display name || "" ;
 }/>) : (<AvatarFallback> {";
   review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : <User className=" h-4 w-4"/> ;
@@ -720,11 +875,13 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</span>)}</div> </div> </TableCell> <TableCell> {renderStars (review.rating) ";
 }</TableCell> <TableCell> </TableCell> <TableCell> <Badge variant=" outline"> {review.status.charAt (0) .toUpperCase () + review.status.slice (1) ";
 }</Badge> </TableCell> <TableCell>) : (" None") ";
-}</TableCell> <Button size=" sm"variant=" outline"className=" h-8 w-8 p-0"onClick={() => handleApprove (review.id)}disabled= {isPending ";
+}</TableCell> <Button size=" sm"variant=" outline"className=" h-8 w-8 p-0"onClick={() => handleApprove (review.id)}
+disabled= {isPending ";
 }> <Check className=" h-4 w-4 text-green-500"/> </Button> <Button > <X className=" h-4 w-4 text-red-500"/> </Button> </>) ";
 }<DropdownMenu> <DropdownMenuTrigger asChild> <Button variant=" ghost"size=" sm"className=" h-8 w-8 p-0"> <MoreHorizontal className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> Mark as approved </DropdownMenuItem>)}</DropdownMenuContent> </DropdownMenu> </div> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </DialogDescription> </DialogHeader> <div className=" space-y-4"> <div className=" flex items-center justify-between"> <div className=" flex items-center gap-2"> <Avatar> {selectedReview.reviewer profile?.avatar url ? (<AvatarImage src= {selectedReview.reviewer profile.avatar url ;
-}alt= {";
+}
+alt= {";
   selectedReview.reviewer profile.display name || "" ;
 }/>) : (<AvatarFallback> {";
   selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/> ;
@@ -736,6 +893,8 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }> </Badge>)}</div> </div> {";
   selectedReview.report count > 0 && (<div className="bg-red-50 border border-red-200 rounded-md p-3"> <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview.report count ";
 }</h4> <p className="text-sm text-red-700"> This review has been reported by users and may need investigation. </p> </div>) ";
-}</div> <DialogFooter> <Button variant=" destructive" onClick={() => handleReject (selectedReview.id)}disabled= {isPending ;
-}> Reject </Button> <Button onClick={() => handleApprove (selectedReview.id)}disabled= {isPending ;
+}</div> <DialogFooter> <Button variant=" destructive" onClick={() => handleReject (selectedReview.id)}
+disabled= {isPending ;
+}> Reject </Button> <Button onClick={() => handleApprove (selectedReview.id)}
+disabled= {isPending ;
 }> Approve </Button> </>)}> Mark as Rejected </Button>)}> Mark as Approved </Button>)}</DialogFooter> </DialogContent> </Dialog>)}</>)}";

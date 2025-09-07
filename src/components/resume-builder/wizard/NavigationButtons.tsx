@@ -1,7 +1,9 @@
 import { NavigationButtonsProps  } from './types';
 export const NavigationButtons = null;
-}: NavigationButtonsProps) => {return (<div className='flex justify-between'>;
-      {onBack && (<Button variant='outline' onClick={onBack}>;
+}: NavigationButtonsProps)  => {
+return (<div className='flex justify-between'>;
+      {onBack && (<Button variant='outline' onClick={onBack
+}>;
           {backLabel}
         </Button>;
       )}

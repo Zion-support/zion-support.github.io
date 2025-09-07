@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link  } from 'react-router-dom';
-export function Logo() {const logoColor = customColor || '#8B5CF6'; // Default Zion purple;
+export function Logo() {
+const logoColor = customColor || '#8B5CF6'; // Default Zion purple;
   return (<Link to="/" className="flex items-center space-x-2 group">;
       {customLogo ? (<img;
-          src={customLogo}alt="Zion Tech Group";
+          src={customLogo
+}
+alt="Zion Tech Group";
           className="h-8 w-auto";
         />;
       ) : (<div className="flex items-center space-x-2">;
@@ -31,5 +34,9 @@ export function Logo() {const logoColor = customColor || '#8B5CF6'; // Default Z
       )}
     </Link>;
   )}
- import { Link } from 'react-router-dom' import { Zap } from 'lucide-react'  export function Logo({ customLogo, customColor, className = '' }) { if (customLogo) { return ( <Link to="/" className={`flex-shrink-0 group ${className}`}>'; <img'" src={customLogo} "';" alt="Logo"';" className="h-8 w-auto" / / / / / / /> </Link>" )'}'; const logoColor = customColor || '#3b82f6'';"`"'";
- import { Link } from 'react-router-dom' import { Zap } from 'lucide-react'  export function Logo({ customLogo, customColor, className = '' }) { if (customLogo) { return ( <Link to='/' className={`flex-shrink-0 group ${className}`}>'; <img'' src={customLogo} '';' alt='Logo'';' className='h-8 w-auto' / / / / / / /> </Link>' )'}'; const logoColor = customColor || '#3b82f6'';'`"'";
+ import { Link } from 'react-router-dom' import { Zap } from 'lucide-react'  export function Logo({ customLogo, customColor, className = '' }) {
+ if (customLogo) { return ( <Link to="/" className={`flex-shrink-0 group ${className
+}`}>'; <img'" src={customLogo} "';" alt="Logo"';" className="h-8 w-auto" / / / / / / /> </Link>" )'}'; const logoColor = customColor || '#3b82f6'';"`"'";
+ import { Link } from 'react-router-dom' import { Zap } from 'lucide-react'  export function Logo({ customLogo, customColor, className = '' }) {
+ if (customLogo) { return ( <Link to='/' className={`flex-shrink-0 group ${className
+}`}>'; <img'' src={customLogo} '';' alt='Logo'';' className='h-8 w-auto' / / / / / / /> </Link>' )'}'; const logoColor = customColor || '#3b82f6'';'`"'";

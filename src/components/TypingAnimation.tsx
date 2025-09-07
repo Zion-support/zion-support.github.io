@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 interface TypingAnimationProps {
-  text: string;
+text: string;
   speed?: number;
   delay?: number;
   className?: string;
@@ -9,14 +9,15 @@ interface TypingAnimationProps {
   onComplete?: () => void;
 }
 
-const TypingAnimation: React.FC<TypingAnimationProps> = ({
+const TypingAnimation: React.FC < TypingAnimationProps> = ({
   text,
   speed = 100,
   delay = 0,
   className = '',
   showCursor = true,
   onComplete
-}) => {
+})  => {
+
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
@@ -26,7 +27,8 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
       const timeout = setTimeout(() => {
         setDisplayedText(prev => prev + text[currentIndex]);
         setCurrentIndex(prev => prev + 1);
-      }, speed);
+      
+}, speed);
 
       return () => clearTimeout(timeout);
     } else if (currentIndex === text.length && !isComplete) {
@@ -35,11 +37,13 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
     }
   }, [currentIndex, text, speed, onComplete, isComplete]);
 
-  useEffect(() => {
+  useEffect(()  => {
+
     if (delay > 0) {
       const timeout = setTimeout(() => {
         setCurrentIndex(0);
-      }, delay);
+      
+}, delay);
       return () => clearTimeout(timeout);
     } else {
       setCurrentIndex(0);

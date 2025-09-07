@@ -11,11 +11,11 @@ return (<div className='space-y-3'>;
             </SheetTrigger>;
             <SheetContent side='bottom' className='h-[85vh] rounded-t-xl'>;
               <SheetHeader>;
-                <SheetTitle>Filter {type === 'jobs' ? 'Jobs' : 'Talents'}</SheetTitle>;
+                <SheetTitle > Filter {type === 'jobs' ? 'Jobs' : 'Talents'}</SheetTitle>;
               </SheetHeader>;<div className='py-6 space-y-6'>;
                 {type === 'jobs' ? (<>;
                     <div className='space-y-2'>;
-                      <Label>Job Type</Label>;
+                      <Label > Job Type</Label>;
                       <div className='flex gap-2 flex-wrap'>;<Badge;
                           variant='outline';
                           className='cursor-pointer hover:bg-primary/5'>;
@@ -39,16 +39,29 @@ import { Button  } from '@/components / ui / button';
 import { Slider  } from '@/components / ui / slider';
 import { Switch  } from '@/components / ui / switch';
 import { Input  } from '@/components / ui / input';
-import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components / ui / select';
+import { Select,
+SelectContent,
+SelectItem,
+SelectTrigger,
+SelectValue} from '@/components / ui / select';
 import { X, Filter  } from 'lucide-react';
-  Sheet,SheetContent,SheetHeader,SheetTitle,SheetFooter,SheetTrigger} from '@/components / ui / sheet';
+  Sheet,
+SheetContent,
+SheetHeader,
+SheetTitle,
+SheetFooter,
+SheetTrigger} from '@/components / ui / sheet';
 import { Badge  } from '@/components / ui / badge';
 import { Label  } from '@/components / ui / label';
-interface BrowseFiltersProps  {type: 'jobs' | 'talents';
+interface BrowseFiltersProps {
+type: 'jobs' | 'talents';
 export /**;
  * BrowseFilters - Function description;
  */;
-function BrowseFilters() {const [active_filters, setActiveFilters] = useState < string[]>([])const add_filter = (filter: string) =>: any {    if () {) {$2;
+function BrowseFilters() {
+const [active_filters,
+setActiveFilters] = useState < string[]>([])const add_filter = (filter: string) =>: any {    if () {) {$2;
+
 }
       setActiveFilters ([...active_filters, filter])}
   }
@@ -65,7 +78,7 @@ function BrowseFilters() {const [active_filters, setActiveFilters] = useState < 
             </SheetTrigger>;
             <SheetContent side='bottom' className='h-[85vh] rounded - t-xl'>;
               <SheetHeader>;
-                <SheetTitle>Filter {type === 'jobs' ? 'Jobs' : 'Talents'}
+                <SheetTitle > Filter {type === 'jobs' ? 'Jobs' : 'Talents'}
                 </SheetTitle>;
               </SheetHeader>;
               <div className='py - 6 space - y-6'>;
@@ -94,7 +107,8 @@ function BrowseFilters() {const [active_filters, setActiveFilters] = useState < 
                         <Badge;
                           variant='outline';
                           className='cursor - pointer hover:bg - primary / 5';
-                        >;Freelance;
+                        >;
+Freelance;
                         </Badge>;
                       </div>;
                     </div>;<div className='space - y-2'>;
@@ -115,10 +129,12 @@ function BrowseFilters() {const [active_filters, setActiveFilters] = useState < 
                         <Badge;
                           variant='outline';
                           className='cursor - pointer hover:bg - primary / 5';
-                        >;Senior;
+                        >;
+Senior;
                         </Badge>;
                       </div>;
-                    </div>;className='cursor-pointer hover:bg-primary/5'>;
+                    </div>;
+className='cursor-pointer hover:bg-primary/5'>;
                   </>) : (<>;
                     <div className='space - y-2'>;
                       <Label > Specialization</Label>;
@@ -144,11 +160,23 @@ function BrowseFilters() {const [active_filters, setActiveFilters] = useState < 
                         <Badge;
                           variant='outline';
                           className='cursor - pointer hover:bg - primary / 5';
-                        >;Content;
+                        >;
+Content;
                         </Badge>;
                       </div>;
-                    </div>;import React, { useState } from "react",import { Button } from "@/components/ui/button",import { Slider } from "@/components/ui/slider",import { Switch } from "@/components/ui/switch",import { Input } from "@/components/ui/input",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",import { Badge } from "@/components/ui/badge",import { Label } from "@/components/ui/label",import { Label  } from '@/components/ui/label';
-interface BrowseFiltersProps  {return (<div className="space-y-3">;
+                    </div>;
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Slider } from "@/components/ui/slider",
+import { Switch } from "@/components/ui/switch",
+import { Input } from "@/components/ui/input",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
+import { Badge } from "@/components/ui/badge",
+import { Label } from "@/components/ui/label",
+import { Label  } from '@/components/ui/label';
+interface BrowseFiltersProps {
+return (<div className="space-y-3">;
       <div className="flex justify-between items-center px-4">;
         <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">;
           <Sheet>;
@@ -160,12 +188,13 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
             </SheetTrigger>;
             <SheetContent side="bottom" className="h-[85vh] rounded-t-xl">;
               <SheetHeader>;
-                <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>;
+                <SheetTitle > Filter {type === "jobs" ? "Jobs" : "Talents"
+}</SheetTitle>;
               </SheetHeader>;
               <div className="py-6 space-y-6">;
                 {type === "jobs" ? (<>;
                     <div className="space-y-2">;
-                      <Label>Job Type</Label>;
+                      <Label > Job Type</Label>;
                       <div className="flex gap-2 flex-wrap">;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Full Time</Badge>;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Part Time</Badge>;
@@ -174,7 +203,7 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
                       </div>;
                     </div>;
                     <div className="space-y-2">;
-                      <Label>Experience Level</Label>;
+                      <Label > Experience Level</Label>;
                       <div className="flex gap-2 flex-wrap">;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Mid Level</Badge>;
@@ -184,7 +213,7 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
                   </>;
                 ) : (<>;
                     <div className="space-y-2">;
-                      <Label>Specialization</Label>;
+                      <Label > Specialization</Label>;
                       <div className="flex gap-2 flex-wrap">;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Developer</Badge>;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Designer</Badge>;
@@ -193,7 +222,7 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
                       </div>;
                     </div>;
                     <div className="space-y-2">;
-                      <Label>Experience (years)</Label>;
+                      <Label > Experience (years)</Label>;
                       <Slider;
                         aria-label="Years of experience";
                         defaultValue={[0, 10]}
@@ -202,13 +231,13 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
                         className="my-4";
                       />;
                       <div className="flex justify-between text-xs text-muted-foreground">;
-                        <span>0+ years</span>;
-                        <span>20+ years</span>;
+                        <span > 0+ years</span>;
+                        <span > 20+ years</span>;
                       </div>;
                     </div>;
                   </>;
                 )}<div className="space-y-2">;
-                  <Label>Location</Label>;
+                  <Label > Location</Label>;
                   <Select>;
                     <SelectTrigger>;
                       <SelectValue placeholder='Select location' />;
@@ -222,14 +251,14 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
                   </Select>;
                 </div>;
                 <div className="space-y-2">;
-                  <Label>Salary Range</Label>;
+                  <Label > Salary Range</Label>;
                   </div>;
                 </div>;
                 <div className="space-y-2">;
-                  <Label>Skills</Label>;
+                  <Label > Skills</Label>;
                   <div className='grid grid-cols-2 gap-2'>;
                 <div className='space-y-2'>;
-                  <Label>Location</Label>;
+                  <Label > Location</Label>;
                     <div className='space - y-2'>;
                       <Label > Experience (years)</Label>;
                       <Slider;
@@ -258,7 +287,7 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
                     </SelectContent>;
                   </Select>;
                 </div>;<div className="flex items-center justify-between">;
-                  <Label>Only show verified profiles</Label>;
+                  <Label > Only show verified profiles</Label>;
                   <Switch />;
                 </div>;
               </div>;
@@ -290,7 +319,7 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
                     </Badge>;
                   </div>;
                 </div>;<div className='flex items-center justify-between'>;
-                  <Label>Only show verified profiles</Label>;
+                  <Label > Only show verified profiles</Label>;
                   <Switch />;
                 </div>;
               </div>;<SheetFooter>;
@@ -376,7 +405,8 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
           </Select>;</div>;
     </div>;
   )}{activeFilters.map((filter) => (<Badge;
-              key={filter}variant="secondary";
+              key={filter}
+variant="secondary";
               className="flex items-center gap-1";
             >;
               {filter}

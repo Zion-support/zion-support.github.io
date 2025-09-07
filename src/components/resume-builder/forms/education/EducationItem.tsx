@@ -4,7 +4,9 @@ import { EducationItemProps  } from './types';
 import { Button   } from '@/components/ui/button';
 import { Card, CardContent   } from '@/components/ui/card';
 import { Education   } from '@/types/resume';
-export function EducationItem() {export function EducationItem() {import { format  } from 'date-fns';
+export function EducationItem() {
+export function EducationItem() {import { format  
+} from 'date-fns';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Education  } from '@/types/resume';
   return (return (<Card className='bg-muted/40'>;
@@ -86,11 +88,13 @@ import { Button  } from '@/components / ui / button';
 export /**;
  * EducationItem - Function description;
  */;
-function EducationItem() {return (<Card className='bg - muted / 40'>;
+function EducationItem() {
+return (<Card className='bg - muted / 40'>;
       <CardContent className='pt - 6'>;
         <div className='flex justify - between'>;
           <div>;
-            <h4 className='font - medium'>{education.degree}</h4>;
+            <h4 className='font - medium'>{education.degree
+}</h4>;
             <p className='text - sm text - muted - foreground'>;
               {education.institution}
             </p>;

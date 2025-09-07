@@ -1,7 +1,9 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2  } from 'lucide-react';
-export const MachineLearningDashboard = ({ className = '' }) => {const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
+export const MachineLearningDashboard = ({ className = '' })  => {
+const { trackEvent 
+} = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
     })'';
     const [activeTab, setActiveTab] = useState('overview')const [showCreateModel, setShowCreateModel] = useState(false)const [showImportModel, setShowImportModel] = useState(false)const { models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction, exportModel, importModel } = useMachineLearning()const [newModelForm, setNewModelForm] = useState({}
 '';
@@ -22,14 +24,16 @@ export const MachineLearningDashboard = ({ className = '' }) => {const { trackEv
                 name: newModelForm.name, type: newModelForm.type, framework: newModelForm.framework;
             })'';
             setNewModelForm({ name: '', type: 'classification', framework: 'tensorflow' })setShowCreateModel(false)'';
-            trackEvent('ml', dashboard',model_created')}
+            trackEvent('ml', dashboard',
+model_created')}
     }, [newModelForm, createModel, trackEvent])const hyperparameters = {}
   learningRate: 0.001, batchSize: 32, epochs: 100, '';
   optimizer: 'adam';
 }
         try {}
             await startTraining(modelId, hyperparameters)'';
-            trackEvent('ml', dashboard',training_started')}
+            trackEvent('ml', dashboard',
+training_started')}
         catch (error) {}
 '';
 '';
@@ -37,17 +41,21 @@ export const MachineLearningDashboard = ({ className = '' }) => {const { trackEv
             // console.error('Training failed: ', error)}
     }, [startTraining, trackEvent])const handleStopTraining = useCallback((jobId) => {}
         stopTraining(jobId)'';
-        trackEvent('ml', dashboard',training_stopped')}, [stopTraining, trackEvent])const handleDeployModel = useCallback((modelId) => {}
+        trackEvent('ml', dashboard',
+training_stopped')}, [stopTraining, trackEvent])const handleDeployModel = useCallback((modelId) => {}
         deployModel(modelId)'';
-        trackEvent('ml', dashboard',model_deployed')}, [deployModel, trackEvent])const handleArchiveModel = useCallback((modelId) => {}
+        trackEvent('ml', dashboard',
+model_deployed')}, [deployModel, trackEvent])const handleArchiveModel = useCallback((modelId) => {}
         archiveModel(modelId)'';
-        trackEvent('ml', dashboard',model_archived')}, [archiveModel, trackEvent])const handleMakePrediction = useCallback(async () => {}
+        trackEvent('ml', dashboard',
+model_archived')}, [archiveModel, trackEvent])const handleMakePrediction = useCallback(async () => {}
         if(predictionForm.modelId && predictionForm.input.trim()) {}
             try {}
                 const input = JSON.parse(predictionForm.input)const result = await makePrediction(predictionForm.modelId, input)'';
                 // console.log('Prediction result: ', result)'';
                 setPredictionForm({ modelId: '', input: '' })'';
-                trackEvent('ml', dashboard',prediction_made')}
+                trackEvent('ml', dashboard',
+prediction_made')}
             catch (error) {}
 '';
 '';
@@ -57,7 +65,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {const { trackEv
     }, [predictionForm, makePrediction, trackEvent])const handleExportModel = useCallback((modelId) => {}
         try {}
             const modelData = exportModel(modelId)navigator.clipboard.writeText(modelData)'';
-            trackEvent('ml', dashboard',model_exported')}
+            trackEvent('ml', dashboard',
+model_exported')}
         catch (error) {}
 '';
 '';
@@ -70,7 +79,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {const { trackEv
                 try {}
                     const modelData = e.target?.result;
                     importModel(modelData)setShowImportModel(false)'';
-                    trackEvent('ml', dashboard',model_imported')}
+                    trackEvent('ml', dashboard',
+model_imported')}
                 catch (error) {}
 '';
 '';
@@ -132,12 +142,12 @@ export const MachineLearningDashboard = ({ className = '' }) => {const { trackEv
         <div className='flex items-center space-x-2'>'''';
           <button onClick={() => setShowImportModel(!showImportModel)} className='flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 dark: text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700'>'''';
             <Upload className='w-4 h-4'/>;
-            <span>Import</span>;
+            <span > Import</span>;
           </button>'''';
           '''';
           <button onClick={() => setShowCreateModel(!showCreateModel)} className='flex items-center space-x-2 px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700'>'''';
             <Plus className='w-4 h-4'/>;
-            <span>New Model</span>;
+            <span > New Model</span>;
           </button>;
         </div>;
       </div>;
@@ -491,7 +501,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {const { trackEv
                 '''';
                 {trainingJobs.length === 0 && (<div className='text-center py-8 text-gray-500 dark: text-gray-400'>'''';
                     <Activity className='w-12 h-12 mx-auto mb-4 text-gray-400'/>'''';
-                    <p>No training jobs found</p>'''';
+                    <p > No training jobs found</p>'''';
                     <p className='text-sm'>Start training a model to see jobs here</p>;
                   </div>)}
               </div>;
@@ -554,19 +564,20 @@ export const MachineLearningDashboard = ({ className = '' }) => {const { trackEv
                         </div>'''';
                         '''''';
                         {prediction.status === 'completed' && prediction.result && (<div className='text-sm text-gray-700 dark: text-gray-300'>;
-                            <p><strong>Result:</strong> {JSON.stringify(prediction.result)}</p>;
-                            {prediction.confidence && (<p><strong>Confidence: </strong> {(prediction.confidence * 100).toFixed(1)}%</p>)}
-                            {prediction.processingTime && (<p><strong>Processing Time: </strong> {prediction.processingTime}ms</p>)}
+                            <p >< strong > Result:</strong> {JSON.stringify(prediction.result)}</p>;
+                            {prediction.confidence && (<p >< strong > Confidence: </strong> {(prediction.confidence * 100).toFixed(1)}%</p>)}
+                            {prediction.processingTime && (<p >< strong > Processing Time: </strong> {prediction.processingTime}
+ms</p>)}
                           </div>)}'''';
                         '''''';
                         {prediction.status === 'failed' && prediction.error && (<div className='text-sm text-red-600 dark: text-red-400'>;
-                            <strong>Error:</strong> {prediction.error}
+                            <strong > Error:</strong> {prediction.error}
                           </div>)}
                       </div>)})}'''';
                   '''';
                   {predictions.length === 0 && (<div className='text-center py-4 text-gray-500 dark: text-gray-400'>'''';
                       <Target className='w-8 h-8 mx-auto mb-2 text-gray-400'/>;
-                      <p>No predictions yet</p>;
+                      <p > No predictions yet</p>;
                     </div>)}
                 </div>;
               </div>;
@@ -613,7 +624,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {const { trackEv
                     <div className='flex justify-between'>'''';
                       <span className='text-sm text-gray-600 dark:text-gray-400'>Avg Response Time</span>'''';
                       <span className='font-medium text-gray-900 dark:text-white'>;
-                        {metrics.averageResponseTime.toFixed(0)}ms;
+                        {metrics.averageResponseTime.toFixed(0)}
+ms;
                       </span>'''';
                     </div>'''';
                     <div className='flex justify-between'>'''';

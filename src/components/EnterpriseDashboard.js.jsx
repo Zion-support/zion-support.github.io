@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react''';
 import { motion, AnimatePresence } from 'framer-motion''';
 import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2  } from 'lucide-react';
-export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
+export const EnterpriseDashboard = ()  => {
+const { trackEvent 
+} = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
     })'';
     const [activeTab, setActiveTab] = useState('overview')const [refreshInterval, setRefreshInterval] = useState(30000) // 30 seconds;
     const [isRefreshing, setIsRefreshing] = useState(false)'';
@@ -138,13 +140,15 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
             // Simulate API call;
             await new Promise(resolve => setTimeout(resolve, 1000))// Update timestamps (simplified for demo)const now = new Date()'';
             // console.log('Data refreshed at: ', now.toLocaleTimeString())'';
-            trackEvent('enterprise_dashboard', data_refreshed',manual', null, {}
+            trackEvent('enterprise_dashboard', data_refreshed',
+manual', null, {}
                 tab: activeTab, dateRange;
             }) }
         catch (error) {}
 '';
             // console.error('Failed to refresh data: ', error)'';
-            trackEvent('enterprise_dashboard', refresh_failed',error', null, {}
+            trackEvent('enterprise_dashboard', refresh_failed',
+error', null, {}
 '';
 '';
 '''';
@@ -321,7 +325,8 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                       </div>'''';
                       <div className='text-right'>'''';
                         <div className='text-sm font-medium text-gray-900 dark:text-white'>;
-                          {service.responseTime}ms'''';
+                          {service.responseTime}
+ms'''';
                         </div>'''';
                         <div className='text-xs text-gray-500'>;
                           {service.errorRate}% errors;
@@ -397,7 +402,7 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                   <div className='h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center'>'''';
                     <div className='text-center text-gray-500'>'''';
                       <LineChart className='w-12 h-12 mx-auto mb-2'/>;
-                      <p>Performance Chart</p>;
+                      <p > Performance Chart</p>;
                     </div>;
                   </div>;
                 </div>'''';
@@ -407,7 +412,7 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                   <div className='h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center'>'''';
                     <div className='text-center text-gray-500'>'''';
                       <BarChart3 className='w-12 h-12 mx-auto mb-2'/>;
-                      <p>Performance Chart</p>;
+                      <p > Performance Chart</p>;
                     </div>;
                   </div>;
                 </div>;
@@ -480,7 +485,8 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                       <div>'''';
                         <span className='font-medium text-gray-700 dark:text-gray-300'>Time:</span>'''';
                         <span className='ml-2 text-gray-600 dark:text-gray-400'>;
-                          {Math.round((Date.now() - alert.timestamp.getTime()) / (1000 * 60))}m ago;
+                          {Math.round((Date.now() - alert.timestamp.getTime()) / (1000 * 60))}
+m ago;
                         </span>;
                       </div>;
                     </div>;
@@ -601,7 +607,8 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                       <div className='flex justify-between'>'''';
                         <span className='text-gray-600 dark:text-gray-400'>Response Time</span>'''';
                         <span className='font-medium text-gray-900 dark:text-white'>;
-                          {service.responseTime}ms;
+                          {service.responseTime}
+ms;
                         </span>'''';
                       </div>'''';
                       <div className='flex justify-between'>'''';
@@ -649,7 +656,7 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                   <div className='h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center'>'''';
                     <div className='text-center text-gray-500'>'''';
                       <PieChart className='w-12 h-12 mx-auto mb-2'/>;
-                      <p>Analytics Chart</p>;
+                      <p > Analytics Chart</p>;
                     </div>;
                   </div>;
                 </div>'''';
@@ -659,7 +666,7 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                   <div className='h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center'>'''';
                     <div className='text-center text-gray-500'>'''';
                       <LineChart className='w-12 h-12 mx-auto mb-2'/>;
-                      <p>Analytics Chart</p>;
+                      <p > Analytics Chart</p>;
                     </div>;
                   </div>;
                 </div>;

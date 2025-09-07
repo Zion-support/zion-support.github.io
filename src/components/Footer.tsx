@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -37,10 +38,10 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/services" className="text-gray-300 hover:text-white">All Services</Link></li>
-              <li><Link href="/services/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
-              <li><Link href="/services/automation-solutions" className="text-gray-300 hover:text-white">Automation</Link></li>
-              <li><Link href="/services/cloud-services" className="text-gray-300 hover:text-white">Cloud Services</Link></li>
+              <li >< Link href="/services" className="text-gray-300 hover:text-white">All Services</Link></li>
+              <li >< Link href="/services/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
+              <li >< Link href="/services/automation-solutions" className="text-gray-300 hover:text-white">Automation</Link></li>
+              <li >< Link href="/services/cloud-services" className="text-gray-300 hover:text-white">Cloud Services</Link></li>
             </ul>
           </div>
           
@@ -71,4 +72,5 @@ export default function Footer() {
       </div>
     </footer>
   );
+
 }

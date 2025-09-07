@@ -1,6 +1,9 @@
 
 ;
-import React from "react",import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",import { Button } from "@/components/ui/button",import { Badge  } from '@/components/ui/badge';
+import React from "react",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge  } from '@/components/ui/badge';
 import React from 'react';
 import { Card;
   CardContent;
@@ -19,7 +22,8 @@ import { Button  } from '@/components/ui/button';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen  } from 'lucide-react';
-export function TalentDashboard() {return (<div className="space-y-6 px-4 pb-24">;
+export function TalentDashboard() {
+return (<div className="space-y-6 px-4 pb-24">;
       <section>;
         <div className="flex items-center justify-between mb-4">;
           <h2 className="text-lg font-medium">New Job Matches</h2>;
@@ -171,10 +175,20 @@ export function TalentDashboard() {return (<div className="space-y-6 px-4 pb-24"
                     92% match;
                   </div>;
                   <span className='text-xs text-muted-foreground mt-1'>;
-import { Card,CardContent,CardHeader,CardTitle,CardDescription} from '@/components / ui / card';
+import { Card,
+CardContent,
+CardHeader,
+CardTitle,
+CardDescription
+} from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
-  ChevronRight,FileText,Image,Clock,Zap,BookOpen} from 'lucide-react';
+  ChevronRight,
+FileText,
+Image,
+Clock,
+Zap,
+BookOpen} from 'lucide-react';
 import Link from 'next / link';
 import React from './react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription   } from '@/components / ui / card';
@@ -184,7 +198,8 @@ import Link from './next / link';
 export /**;
  * TalentDashboard - Function description;
  */;
-function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>;
+function TalentDashboard() {
+return (<div className='space - y-6 px - 4 pb - 24'>;
       <section>;
         <div className='flex items - center justify - between mb - 4'>;
           <h2 className='text - lg font - medium'>New Job Matches</h2>;
@@ -237,7 +252,8 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
                     <Badge variant='secondary' className='text - xs'>;
                       Hybrid;
                     </Badge>;
-                    <Badge variant='secondary' className='text - xs'>;Contract;
+                    <Badge variant='secondary' className='text - xs'>;
+Contract;
                     </Badge>;
                   </div>;
                 </div>;<div className='flex flex - col items - end'>;
@@ -305,7 +321,8 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
                 <div className="text - xs text - muted - foreground">Jobs Viewed</div>;
               </div>;
             </div>;
-            <Button variant="outline" className="w - full mt - 4">;View All Applications;
+            <Button variant="outline" className="w - full mt - 4">;
+View All Applications;
             </Button>;
           </CardContent>;
         </Card>;
@@ -317,7 +334,7 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             className="h-auto py-4 flex flex-col gap-1";
             aria-label="Update Resume">;
             <FileText className="h-5 w-5 mb-1" aria-hidden="true" />;
-            <span>Update Resume</span>;
+            <span > Update Resume</span>;
           </Button>;<Button;
             variant="outline";
             className="h-auto py-4 flex flex-col gap-1";
@@ -326,7 +343,7 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             className="h-auto py-4 flex flex-col gap-1";
             aria-label="View Portfolio";
           >;<Image className="h-5 w-5 mb-1" aria-hidden="true" />;
-            <span>Portfolio</span>;
+            <span > Portfolio</span>;
           </Button>;
           <Button;
             variant="outline";
@@ -334,7 +351,7 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             aria-label="Set Availability";
           >;
             <Clock className="h-5 w-5 mb-1" aria-hidden="true" />;
-            <span>Availability</span>;
+            <span > Availability</span>;
           </Button>;
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost">;
             <Zap className="h-5 w-5 mb-1" aria-hidden="true" />;
@@ -347,7 +364,7 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             aria-label='Update Resume';
           >;
             <FileText className='h-5 w-5 mb-1' aria-hidden='true' />;
-            <span>Update Resume</span>;
+            <span > Update Resume</span>;
           </Button>;
           <Button;
             variant='outline';
@@ -355,7 +372,7 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             aria-label='View Portfolio';
           >;
             <Image className='h-5 w-5 mb-1' aria-hidden='true' />;
-            <span>Portfolio</span>;
+            <span > Portfolio</span>;
           </Button>;
           <Button;
             variant='outline';
@@ -363,7 +380,7 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             aria-label='Set Availability';
           >;
             <Clock className='h-5 w-5 mb-1' aria-hidden='true' />;
-            <span>Availability</span>;
+            <span > Availability</span>;
           </Button>;
           <Button;
             variant='outline';
@@ -371,7 +388,7 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             aria-label='AI Resume Boost';
           >;
             <Zap className='h-5 w-5 mb-1' aria-hidden='true' />;
-            <span>AI Resume Boost</span>;
+            <span > AI Resume Boost</span>;
           </Button>;
         </div>;
       </section>;
@@ -417,11 +434,11 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
       </section>;
             aria-label="Set Availability">;
             <Clock className="h-5 w-5 mb-1" aria-hidden="true" />;
-            <span>Availability</span>;
+            <span > Availability</span>;
           </Button>;
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost">;
             <Zap className="h-5 w-5 mb-1" aria-hidden="true" />;
-            <span>AI Resume Boost</span>;
+            <span > AI Resume Boost</span>;
           </Button>;
         </div>;
       </section>;
@@ -546,5 +563,6 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             </div>;
           </CardContent>;
         </Card>;
-      </section>;)}</div>)}</div>;
+      </section>;)
+}</div>)}</div>;
   ))}

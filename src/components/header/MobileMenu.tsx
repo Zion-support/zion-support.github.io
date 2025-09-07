@@ -1,5 +1,6 @@
 
-              }}onClose(), // Close mobile menu on any click;
+              }}
+onClose(), // Close mobile menu on any click;
             }}
           >;
             <div className="relative mr-4">;
@@ -18,7 +19,8 @@
       </div>;
     </div>;
   )name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  )}
-  )}name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  )}
+  )}
+name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  )}
   )}})}> {';
   item.badge > 9 ? '9+' : item.badge ;
 }</span>)}</div> {item.name ;

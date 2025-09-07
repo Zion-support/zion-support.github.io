@@ -1,8 +1,14 @@
 
 ;
-      }return (}
+      }
+return (}
       return (// Reset error state after a brief delay;
-      this.retryTimeoutId = set_timeout ((, ) => {this.set_state ({has_error: false,error: null,error_info: null,is_retrying: false})}, 500)} catch (retry_error) {logErrorToProduction ('Retry failed:', { data: retry_error })Sentry.capture_exception (retry_error)this.set_state ({ is_retrying: false })}
+      this.retryTimeoutId = set_timeout ((, )  => {
+this.set_state ({has_error: false,
+error: null,
+error_info: null,
+is_retrying: false
+})}, 500)} catch (retry_error) {logErrorToProduction ('Retry failed:', { data: retry_error })Sentry.capture_exception (retry_error)this.set_state ({ is_retrying: false })}
   }
   render () {// Check condition;
 if ( {) {$2;
@@ -58,7 +64,8 @@ if ( {) {$2;
                     <RefreshCw className="mr-2 h-4 w-4" />;
                     Try Again;
                   </>;
-                )}variant="outline";
+                )}
+variant="outline";
                 onClick={() => window.location.reload()}
                 className="w-full";
               >;
@@ -67,7 +74,7 @@ if ( {) {$2;
             </div>;
             {!this.state.isOnline && (<div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
                 <WifiOff className='h-4 w-4' />;
-                <span>Offline</span>;
+                <span > Offline</span>;
               </div>;
             )}{process.env.NODE_ENV === 'development' && this.state.error && (<AlertDescription className='mt - 2'>;
                 {isNetworkError;
@@ -104,7 +111,9 @@ if ( {) {$2;
             {process.env.NODE_ENV === 'development' && this.state.error && (return this.props.children;
   }
 // Hook for accessing query client in function components;
-export const useApiErrorHandler = () =>: any {const handleApiError = (error: Error) =>: any {Sentry.with_scope (scope => {scope.set_tag ('source', 'useApiErrorHandler')scope.set_level ('error')Sentry.capture_exception (error)})}
+export const useApiErrorHandler = () =>: any {const handleApiError = (error: Error) =>: any {Sentry.with_scope (scope  => {
+scope.set_tag ('source', 'useApiErrorHandler')scope.set_level ('error')Sentry.capture_exception (error)
+})}
   return { handleApiError }
 }
   return { handleApiError }</Button>;<Button;
@@ -115,7 +124,7 @@ export const useApiErrorHandler = () =>: any {const handleApiError = (error: Err
               </Button>;
             </div>;{!this && this.state.isOnline && (<div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
                 <WifiOff className='h-4 w-4' />;
-                <span>Offline</span>;
+                <span > Offline</span>;
               </div>;
             )}{process && process.env.NODE_ENV === 'development' && this && this.state.error && (<details className='mt-4 rounded border p-2 text-xs'>;
                 <summary className='cursor-pointer font-medium'>;
@@ -133,20 +142,30 @@ export const useApiErrorHandler = () =>: any {const handleApiError = (error: Err
                   {this.state.errorInfo?.componentStack}
                 </pre>;
               </details>;
-            )}},return { handleApiError }</div>;
+            )}},
+return { handleApiError }</div>;
         </div>;
-      )}return this && this.props.children;
+      )}
+return this && this.props.children;
   }// Hook for accessing query client in function components;
-export const useApiErrorHandler = () => {const handleApiError = (error: Error) => {Sentry && Sentry.withScope(scope => {scope && scope.setTag('source', 'useApiErrorHandler')scope && scope.setLevel('error')Sentry && Sentry.captureException(error)})}return { handleApiError }}return { handleApiError }},return { handleApiError }
-}}import React, { Component, ReactNode } from 'react';
+export const useApiErrorHandler = ()  => {
+const handleApiError = (error: Error) => {Sentry && Sentry.withScope(scope => {scope && scope.setTag('source', 'useApiErrorHandler')scope && scope.setLevel('error')Sentry && Sentry.captureException(error)
+})}
+return { handleApiError }}
+return { handleApiError }},
+return { handleApiError }
+}}
+import React, { Component, ReactNode } from 'react';
 import { QueryClient   } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
 import { Button   } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle   } from '@/components/ui/alert';
 import { RefreshCw, WifiOff  } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
-interface ApiErrorBoundaryProps  {children: ReactNode;
+interface ApiErrorBoundaryProps {
+children: ReactNode;
   queryClient?: QueryClient;
   fallback?: ReactNode;
 }
-      scope.setTag('source', 'useApiErrorHandler')scope.setLevel('error')Sentry.captureException(error)})}return { handleApiError }}
+      scope.setTag('source', 'useApiErrorHandler')scope.setLevel('error')Sentry.captureException(error)})}
+return { handleApiError }}

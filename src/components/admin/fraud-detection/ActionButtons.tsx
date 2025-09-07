@@ -1,13 +1,19 @@
 
 ;
 import { Eye, Info, AlertTriangle, Ban  } from 'lucide-react';
-interface ActionButtonsProps  {export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {return (<div className="flex space-x-2">;
+interface ActionButtonsProps {
+export const ActionButtons: React.FC < ActionButtonsProps> = ({ flagId,
+status,
+onAction
+})  => {
+return (<div className="flex space-x-2">;
       <Button;
         variant="ghost";
         size="icon";
         title="View Details";
         aria-label="View details";
-        onClick={() => alert("View details (would open a detailed view)")}
+        onClick={() => alert("View details (would open a detailed view)")
+}
       >;
         <Eye className="h-4 w-4" />;
       </Button>;
@@ -16,11 +22,13 @@ interface ActionButtonsProps  {export const ActionButtons: React.FC<ActionButton
         <Eye className="h-4 w-4" />;
       </Button>;
       <Button;
-}'"},)}variant="ghost";
+}'"},)}
+variant="ghost";
         size="icon";
         title="Send Warning";
         aria-label="Send warning";
-        onClick={() => onAction(flagId, 'warning')}disabled={status === 'actioned' || status === 'ignored'}
+        onClick={() => onAction(flagId, 'warning')}
+disabled={status === 'actioned' || status === 'ignored'}
       >;
         <Info className="h-4 w-4" />;
       </Button>;
@@ -49,21 +57,34 @@ interface ActionButtonsProps  {export const ActionButtons: React.FC<ActionButton
           size="sm";
 import React from 'react';
 import { Button  } from '@/components/ui/button';
-interface ActionButtonsProps  {size='sm';
-          onClick={() => onAction(flagId, 'ignore')}
+interface ActionButtonsProps {
+size='sm';
+          onClick={() => onAction(flagId,
+'ignore')
+}
         >;
           Ignore;
         </Button>;
       )}</div>;
-  ))}import { Button  } from '@/components / ui / button';
-import React from "react",import { Button } from "@/components/ui/button",interface ActionButtonsProps  {flagId: string,status: string,onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
-}export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {return (<div className="flex space-x-2">;
+  ))}
+import { Button  } from '@/components / ui / button';
+import React from "react",
+import { Button } from "@/components/ui/button",
+interface ActionButtonsProps {
+flagId: string,
+status: string,
+onAction: (flagId: string,
+action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
+}
+export const ActionButtons: React.FC < ActionButtonsProps> = ({ flagId, status, onAction })  => {
+return (<div className="flex space-x-2">;
       <Button;
         variant="ghost";
         size="icon";
         title="View Details";
         aria-label="View details";
-        onClick={() => alert("View details (would open a detailed view)")}
+        onClick={() => alert("View details (would open a detailed view)")
+}
       >;
         <Eye className="h-4 w-4" />;
       </Button>;
@@ -106,16 +127,24 @@ import React from "react",import { Button } from "@/components/ui/button",interf
         </Button>;
       )}
     </div>;
-  )}interface ActionButtonsProps  {flag_id: string;
+  )}
+interface ActionButtonsProps {
+flag_id: string;
   status: string;
-  on_action: (flag_id: string,action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
-export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on_action}) => {  return (<div className='flex space - x-2'>;
+  on_action: (flag_id: string,
+action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
+export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,
+status,
+on_action
+})  => {
+  return (<div className='flex space - x-2'>;
       <Button;
         variant='ghost';
         size='icon';
         title='View Details';
         aria - label='View details';
-        on_click={() => alert ('View details (would open a detailed view)')}        variant="ghost";
+        on_click={() => alert ('View details (would open a detailed view)')
+}        variant="ghost";
         size="icon";
         title="View Details";
         aria - label="View details";

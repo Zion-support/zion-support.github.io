@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
-const CloudMigration: React.FC = () => {
+const CloudMigration: React.FC = ()  => {
+
   return (
     <>
       <SEO title="Cloud Migration" description="Cloud Migration page" url="/services/cloud-migration" />
@@ -19,6 +20,7 @@ const CloudMigration: React.FC = () => {
       </div>
     </>
   );
+
 };
 
 export default CloudMigration;

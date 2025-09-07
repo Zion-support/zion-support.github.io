@@ -1,22 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw  } from 'lucide-react';
-export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({enableTracking: true, enablePerformanceTracking: true, enableUserBehaviorTracking: true, enableHeatmapTracking: false;
+export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 })  => {
+const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion 
+} = useAnalytics({enableTracking: true, enablePerformanceTracking: true, enableUserBehaviorTracking: true, enableHeatmapTracking: false;
     })const [isExpanded, setIsExpanded] = useState(false)const [selectedTimeRange, setSelectedTimeRange] = useState('24h')const [analyticsSummary, setAnalyticsSummary] = useState(null)// Auto-refresh analytics data;
-    useEffect(() => {if (!showRealTime)return;
-        const interval = setInterval(() => {updateAnalyticsSummary()}, refreshInterval)return () => clearInterval(interval)}, [showRealTime, refreshInterval])// Update analytics summary;
-    const updateAnalyticsSummary = () => {const summary = getAnalyticsSummary()if (summary) {setAnalyticsSummary(summary)}
+    useEffect(()  => {
+if (!showRealTime)return;
+        const interval = setInterval(() => {updateAnalyticsSummary()
+}, refreshInterval)return () => clearInterval(interval)}, [showRealTime, refreshInterval])// Update analytics summary;
+    const updateAnalyticsSummary = ()  => {
+const summary = getAnalyticsSummary()if (summary) {setAnalyticsSummary(summary)
+}
     }
     // Update summary when events change;
-    useEffect(() => {updateAnalyticsSummary()}, [events, currentSession])// Track dashboard interactions;
-    const handleDashboardInteraction = (action, metadata) => {trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)}
+    useEffect(()  => {
+updateAnalyticsSummary()
+}, [events, currentSession])// Track dashboard interactions;
+    const handleDashboardInteraction = (action, metadata)  => {
+trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)
+}
     // Track conversion goal;
-    const handleTrackConversion = () => {trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })}
+    const handleTrackConversion = ()  => {
+trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange 
+})}
     // Get events by category for chart;
-    const getEventsByCategory = () => {if (!analyticsSummary?.eventsByCategory)return [];
+    const getEventsByCategory = ()  => {
+if (!analyticsSummary?.eventsByCategory)return [];
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({category, count: count;
-        }))}
+        
+}))}
     // Get performance score;
-    const getPerformanceScore = () => {if (!performanceMetrics)return 0;
+    const getPerformanceScore = ()  => {
+if (!performanceMetrics)return 0;
         let score = 100;
         // Deduct points for poor performance;
         if (performanceMetrics.pageLoadTime > 3000)score -= 20;
@@ -25,14 +40,24 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         else if (performanceMetrics.firstContentfulPaint > 1000)score -= 5;
         if (performanceMetrics.cumulativeLayoutShift > 0.1)score -= 25;
         else if (performanceMetrics.cumulativeLayoutShift > 0.05)score -= 10;
-        return Math.max(0, score)}
+        return Math.max(0, score)
+}
     // Format duration;
-    const formatDuration = (seconds) => {if (seconds < 60)return `${seconds}s`;
+    const formatDuration = (seconds)  => {
+if (seconds < 60)return `${seconds
+}
+s`;
         const minutes = Math.floor(seconds / 60)const remainingSeconds = seconds % 60;
-        return `${minutes}m ${remainingSeconds}s`}
+        return `${minutes}
+m ${remainingSeconds}
+s`}
     // Format number with K/M suffix;
-    const formatNumber = (num) => {if (num >= 1000000)return `${(num / 1000000).toFixed(1)}M`;
-        if (num >= 1000)return `${(num / 1000).toFixed(1)}K`;
+    const formatNumber = (num)  => {
+if (num >= 1000000)return `${(num / 1000000).toFixed(1)
+}
+M`;
+        if (num >= 1000)return `${(num / 1000).toFixed(1)}
+K`;
         return num.toString()}
     return (<div className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
       <div className='bg-gradient-to-r from-purple-500 to-pink-500 p-4 text-white'>'''';
@@ -208,7 +233,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                     Page Load:'''';
                   </span>'''';
                   <span className='font-medium'>;
-                    {performanceMetrics.pageLoadTime.toFixed(0)}ms;
+                    {performanceMetrics.pageLoadTime.toFixed(0)}
+ms;
                   </span>'''';
                 </div>'''';
                 <div className='flex justify-between'>'''';
@@ -216,7 +242,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                     Time to Interactive:'''';
                   </span>'''';
                   <span className='font-medium'>;
-                    {performanceMetrics.timeToInteractive.toFixed(0)}ms;
+                    {performanceMetrics.timeToInteractive.toFixed(0)}
+ms;
                   </span>'''';
                 </div>'''';
                 <div className='flex justify-between'>'''';
@@ -224,7 +251,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                     First Paint:'''';
                   </span>'''';
                   <span className='font-medium'>;
-                    {performanceMetrics.firstContentfulPaint.toFixed(0)}ms;
+                    {performanceMetrics.firstContentfulPaint.toFixed(0)}
+ms;
                   </span>'''';
                 </div>'''';
                 <div className='flex justify-between'>'''';

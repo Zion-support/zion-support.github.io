@@ -1,4 +1,5 @@
- const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https: '''';import { Helmet } from 'react-helmet-async'';
+ const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https: '''';
+import { Helmet } from 'react-helmet-async'';
 const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https: //ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}
 '';
 '';
@@ -30,7 +31,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
       <meta name='twitter:site' content='@ziontechgroup'/>;
       '''';
       {/* Additional Meta Tags */}'''';
-      <meta name='viewport' content='width=device-width, initial-scale=1.0'/>'''';
+      <meta name='viewport' content='width = device-width, initial-scale = 1.0'/>'''';
       <meta name='theme-color' content='#1e3a8a'/>'''';
       <meta name='msapplication-TileColor' content='#1e3a8a'/>;
       '''';
@@ -120,4 +121,8 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
         </script>)}
     </Helmet>)}
 export default SEOHead;
-export { SEOHead }export { SEOHead }export { SEOHead }export { SEOHead }export { SEOHead }
+export { SEOHead }
+export { SEOHead }
+export { SEOHead }
+export { SEOHead }
+export { SEOHead }

@@ -2,7 +2,9 @@ import { useState, useMemo, useCallback  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown  } from 'lucide-react';
 import { useVirtualScroll  } from '../hooks/useVirtualScroll.jsx';
-export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
+export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport })  => {
+const { trackEvent 
+} = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
     })'';
     // State management'';
     const [searchQuery, setSearchQuery] = useState('')const [sortConfig, setSortConfig] = useState(null)const [filters, setFilters] = useState([])const [selectedItems, setSelectedItems] = useState(new Set())const [currentPage, setCurrentPage] = useState(1)const [showFilters, setShowFilters] = useState(false)// Process data based on search, filters, and sorting;
@@ -92,7 +94,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             // Default CSV export;
             const csvContent = generateCSV(processedData, columns)'';
             downloadCSV(csvContent, table-export.csv')}';
-        trackEvent('table', data_exported',export_completed', processedData.length)}, [processedData, columns, onExport, trackEvent])// Generate CSV content;
+        trackEvent('table', data_exported',
+export_completed', processedData.length)}, [processedData, columns, onExport, trackEvent])// Generate CSV content;
     const generateCSV = (data, columns) => {}
 '';
 '';
@@ -176,7 +179,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     </label>;
                     <select onChange = {}
 '';
-  (e) => handleFilterChange(column.key, e.target.value,contains')''';
+  (e) => handleFilterChange(column.key, e.target.value,
+contains')''';
 '''';
 } className='w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>'''';
                       <option value=''>No filter</option>'''';

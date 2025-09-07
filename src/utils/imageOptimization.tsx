@@ -1,16 +1,20 @@
-const imgRef = useRef<HTMLDivElement>(null);
+const imgRef = useRef < HTMLDivElement>(null);
 
 
 
 
 
- const observer = new IntersectionObserver ( ([entry]) => {
+ const observer = new IntersectionObserver ( ([entry])  => {
+
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
+
 }, [lazy, priority, isInView])
-//Generate WebP-compatible src const getOptimizedSrc = (originalSrc: string) => {
+//Generate WebP-compatible src const getOptimizedSrc = (originalSrc: string)  => {
+
   //If it's already optimized or external,  return as-is if (originalSrc.startsWith ('http') |originalSrc.includes ('/ next/image') ) {
   //For internal images, Next.js will handle optimization return originalSrc
+
 };'
 <defs> <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop-color:#f3f4f6, stop-opacity:1" /> <stop offset="100%" style="stop-color:#e5e7eb, stop-opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .toString ('base64')
 }`
@@ -33,13 +37,15 @@ export function OptimizedImage({
   lazy = true,
   ...props
 }: OptimizedImageProps) {
+
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
   const [isInView, setIsInView] = useState(!lazy || priority)
-  const imgRef = useRef<HTMLDivElement>(null)
+  const imgRef = useRef < HTMLDivElement>(null)
 
   // Intersection Observer for lazy loading
-  useEffect(() => {
+  useEffect(()  => {
+
 
 
     if (!lazy || priority || isInView) return;
@@ -54,6 +60,8 @@ const observer = new IntersectionObserver ( ([entry]) => {
   // Check condition
 if ( {) {
   $2
+
+
 }
   return () => observer.disconnect ();
 }, [lazy, priority, isInView]);
@@ -86,18 +94,23 @@ if (||) {
 
   }
 
-  const handleLoad = () => {
+  const handleLoad = ()  => {
+
     setIsLoading(false)
     onLoad?.()
-  }
+  
+}
 
-  const handleError = () => {
+  const handleError = ()  => {
+
     setHasError(true)
     setIsLoading(false)
     onError?.()
-  }
+  
+}
 
-  useEffect(() => {;
+  useEffect(()  => {
+;
     if (!lazy || priority || isInView) return,;
     const observer = new IntersectionObserver(;
       ([entry]) => {;
@@ -107,17 +120,21 @@ if (||) {
 
 
 
-        }
+        
+}
       }
 
 
     // Generate a simple gray blur placeholder
-    return `data: image/svg+xml,base64,${Buffer.from(
+    return `data: image/svg+xml,
+base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#e5e7eb;stop-opacity:1" />
+            <stop offset="0%" style="stop-color:#f3f4f6;
+stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#e5e7eb;
+stop-opacity:1" />
           </linearGradient>
         </defs>
         <rect width="100%" height="100%" fill="url(#grad)" />
@@ -138,14 +155,16 @@ if (||) {
     >
       {isInView && !hasError && (
   // Intersection Observer for lazy loading;
-  useEffect(() => {;
+  useEffect(()  => {
+;
     if (!lazy || priority || isInView) return;
     const observer = new IntersectionObserver(;
       ([entry],) => {;
         if (entry && entry.isIntersecting) {;
           setIsInView(true);
           observer && observer.disconnect();
-        }
+        
+}
       },;
       {;
         rootMargin: '50px', // Start loading 50px before the image enters viewport;
@@ -160,37 +179,46 @@ if (||) {
   }, [lazy, priority, isInView]);
 
   // Generate WebP-compatible src;
-  const getOptimizedSrc = (originalSrc: string,) => {;
+  const getOptimizedSrc = (originalSrc: string,)  => {
+;
     // If it's already optimized or external, return as-is;
     if (;
       originalSrc && originalSrc.startsWith('http') ||;
       originalSrc && originalSrc.includes('/_next/image');
     ) {;
       return originalSrc;
-    }
+    
+}
 
     // For internal images, Next && Next.js will handle optimization;
     return originalSrc;
   };
 
-  const handleLoad = () => {;
+  const handleLoad = ()  => {
+;
     setIsLoading(false);
     onLoad?.();
-  };
+  
+};
 
-  const handleError = () => {;
+  const handleError = ()  => {
+;
     setHasError(true);
     setIsLoading(false);
     onError?.();
-  };
+  
+};
 
   // Generate blur placeholder;
-  const generateBlurDataURL = () => {;
+  const generateBlurDataURL = ()  => {
+;
     if (blurDataURL) return blurDataURL;
 
     // Generate a simple gray blur placeholder;
-    return `data:image/svg+xml;base64,${Buffer && Buffer.from(;
-      `<svg width="${width || 400}" height="${height || 300}" xmlns="http://www && www.w3.org/2000/svg">;
+    return `data:image/svg+xml;
+base64,${Buffer && Buffer.from(;
+      `<svg width="${width || 400
+}" height="${height || 300}" xmlns="http://www && www.w3.org/2000/svg">;
         <defs>;
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">;
             <stopoffset="0%" style="stop-color:#f3f4f6stop-opacity:1" />;
@@ -217,12 +245,15 @@ if (return blurDataURL) {
   $2
 }
     // Generate a simple gray blur placeholder;
-    return `data:image / svg + xml;base64, ${Buffer.from (
+    return `data:image / svg + xml;
+base64, ${Buffer.from (
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http://www.w3.org / 2000 / svg">;
         <defs>;
           <linear_gradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">;
-            <stop offset="0%" style="stop - color:#f3f4f6;stop - opacity:1" />;
-            <stop offset="100%" style="stop - color:#e5e7eb;stop - opacity:1" />;
+            <stop offset="0%" style="stop - color:#f3f4f6;
+stop - opacity:1" />;
+            <stop offset="100%" style="stop - color:#e5e7eb;
+stop - opacity:1" />;
           </linear_gradient>;
         </defs>;
         <rect width="100%" height="100%" fill="url (#grad)" />;
@@ -325,14 +356,16 @@ if (return blurDataURL) {
   )
 
 // Higher-order component for easy migration from regular img tags
-export function withImageOptimization<P extends { src: string; alt: string }>(
-  Component: React.ComponentType<P>
+export function withImageOptimization < P extends { src: string; alt: string }>(
+  Component: React.ComponentType < P>
 ) {
   return function OptimizedComponent(props: P) {
 
+
 // Higher-order component for easy migration from regular img tags;
-export function withImageOptimization<Pextends { src: string alt: string }>(;
-  Component: React && React.ComponentType<P>;
+export function withImageOptimization < Pextends { src: string alt: string 
+}>(;
+  Component: React && React.ComponentType < P>;
 ) {;
   return function OptimizedComponent(): any (props: P) {;
 
@@ -343,13 +376,15 @@ export function withImageOptimization<Pextends { src: string alt: string }>(;
 }
 
 // Utility to preload critical images;
-export function preloadImage(): any (src: string): Promise<void> {;
-  return new Promise((resolve, reject) => {;
+export function preloadImage(): any (src: string): Promise < void> {;
+  return new Promise((resolve, reject)  => {
+;
     const img = new window && window.Image();
     img && img.onload = () => resolve();
     img && img.onerror = reject;
     img && img.src = src;
-  });
+  
+});
 }
 
 
@@ -359,23 +394,27 @@ export function preloadImage(): any (src: string): Promise<void> {;
 }
 
 // Utility to preload critical images
-export function preloadImage(src: string): Promise<void> {
-  return new Promise((resolve, reject) => {
+export function preloadImage(src: string): Promise < void> {
+  return new Promise((resolve, reject)  => {
+
     const img = new window.Image()
     img.onload = () => resolve()
     img.onerror = reject
     img.src = src
-  })
+  
+})
 
 // Utility to get image dimensions
 export function getImageDimensions(
   src: string
 ): Promise<{ width: number; height: number }> {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject)  => {
+
     const img = new window.Image()
     img.onload = () =>
 
-      resolve({ width: img.naturalWidth, height: img.naturalHeight })
+      resolve({ width: img.naturalWidth, height: img.naturalHeight 
+})
     img.onerror = reject
     img.src = src
   })

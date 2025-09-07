@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { Home, ArrowLeft } from 'lucide-react';
 import Button from '../components/Button';
 
-const NotFound: React.FC = () => {
+const NotFound: React.FC = ()  => {
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 flex items-center justify-center">
       <div className="max-w-md mx-auto text-center px-4">
@@ -14,7 +15,9 @@ const NotFound: React.FC = () => {
           Page Not Found
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mb-8">
-          The page you&apos;re looking for doesn&apos;t exist or has been moved.
+          The page you&apos;
+re looking for doesn&apos;
+t exist or has been moved.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/">
@@ -23,7 +26,8 @@ const NotFound: React.FC = () => {
               Go Home
             </Button>
           </Link>
-          <Button variant="outline" onClick={() => window.history.back()}>
+          <Button variant="outline" onClick={() => window.history.back()
+}>
             <ArrowLeft className="h-4 w-4 mr-2" />
             Go Back
           </Button>

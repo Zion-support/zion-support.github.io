@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+children: React.ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC < AccessibilityEnhancerProps> = ({ children })  => {
+
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('medium');
   const [isReducedMotion, setIsReducedMotion] = useState(false);
@@ -16,13 +17,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     const handleChange = (e: MediaQueryListEvent) => {
       setIsReducedMotion(e.matches);
-    };
+    
+};
 
     mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  useEffect(() => {
+  useEffect(()  => {
+
     // Apply accessibility styles
     const root = document.documentElement;
     
@@ -30,7 +33,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       root.style.setProperty('--text-color', '#ffffff');
       root.style.setProperty('--bg-color', '#000000');
       root.style.setProperty('--border-color', '#ffffff');
-    } else {
+    
+} else {
       root.style.removeProperty('--text-color');
       root.style.removeProperty('--bg-color');
       root.style.removeProperty('--border-color');
@@ -55,13 +59,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }
   }, [isHighContrast, fontSize, isReducedMotion]);
 
-  const toggleHighContrast = () => {
-    setIsHighContrast(!isHighContrast);
-  };
+  const toggleHighContrast = ()  => {
 
-  const changeFontSize = (size: string) => {
+    setIsHighContrast(!isHighContrast);
+  
+};
+
+  const changeFontSize = (size: string)  => {
+
     setFontSize(size);
-  };
+  
+};
 
   return (
     <div className="accessibility-enhancer">

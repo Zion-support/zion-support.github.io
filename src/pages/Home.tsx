@@ -12,13 +12,15 @@ import ParticleBackground from '../components/ParticleBackground';
 import Testimonials from '../components/Testimonials';
 import BlogSection from '../components/BlogSection';
 
-const Home: React.FC = () => {
+const Home: React.FC = ()  => {
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <Header />
       <ParticleBackground />
       
-      {/* Hero Section */}
+      {/* Hero Section */
+}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollAnimation animation="fadeIn" delay={0}>

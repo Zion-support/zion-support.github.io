@@ -4,9 +4,15 @@ import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { Download, Settings  } from 'lucide-react';
 import { useCompanyWorkspace  } from '@/hooks/useCompanyWorkspace';
-import React from "react",export function AdminHeader() {// const { user } = useAuth(), // Unused but available;
-  const { company }  = useCompanyWorkspace()return (export function AdminHeader() { // const { user  } = useAuth(), // Unused but available;
-  const { company  } = useCompanyWorkspace(),return (<div className="space-y-4">;
+import React from "react",
+export function AdminHeader() {
+// const { user 
+} = useAuth(), // Unused but available;
+  const { company }  = useCompanyWorkspace()return (export function AdminHeader() {
+ // const { user  
+} = useAuth(), // Unused but available;
+  const { company  } = useCompanyWorkspace(),
+return (<div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <div>;
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>;
@@ -51,7 +57,8 @@ import React from "react",export function AdminHeader() {// const { user } = use
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">;
             <img;
               src={company?.logoUrl || "/placeholder.svg"}
-              alt={company?.name || "Company"}className="max-h-10 max-w-10";
+              alt={company?.name || "Company"}
+className="max-h-10 max-w-10";
               loading="lazy";
             />;
           </div>;
@@ -75,7 +82,8 @@ import React from "react",export function AdminHeader() {// const { user } = use
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">;
             <img;
               src={company?.logoUrl || "/placeholder.svg"}
-              alt={company?.name || "Company"}className="max-h-10 max-w-10";
+              alt={company?.name || "Company"}
+className="max-h-10 max-w-10";
               loading="lazy";
             />;
           </div>;
@@ -117,11 +125,16 @@ import React from "react",export function AdminHeader() {// const { user } = use
               Workspace URL: {company?.workspaceUrl || 'loading...'}</p>;
           </div>;
         </div>;
-        <Button>Customize Workspace</Button>;
+        <Button > Customize Workspace</Button>;
       </div>;
     </div>;
     <div className='space-y-4'>;
-      <div className='flex items-center justify-between'>;;import { Button } from "@/components/ui/button",import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",export function AdminHeader() {// const { user } = useAuth(), // Unused but available;
+      <div className='flex items-center justify-between'>;;
+import { Button } from "@/components/ui/button",
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+export function AdminHeader() {
+// const { user 
+} = useAuth(), // Unused but available;
   const { company } = useCompanyWorkspace()return (<div className="space-y-4">;
       <div className="flex items-center justify-between">;<div>;
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>;
@@ -151,12 +164,15 @@ import React from "react",export function AdminHeader() {// const { user } = use
             Settings;
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
-            <Download className="h-4 w-4" />;import { Button  } from '@/components / ui / button';
+            <Download className="h-4 w-4" />;
+import { Button  } from '@/components / ui / button';
 import { useCompanyWorkspace  } from '@/hooks / useCompanyWorkspace';
 export /**;
  * AdminHeader - Function description;
  */;
-function AdminHeader() {// const { user } = use_auth ()// Unused but available;
+function AdminHeader() {
+// const { user 
+} = use_auth ()// Unused but available;
   const { company } = useCompanyWorkspace ()return (<div className='space - y-4'>;
       <div className='flex items - center justify - between'>;
         <div>;
@@ -182,7 +198,8 @@ function AdminHeader() {// const { user } = use_auth ()// Unused but available;
             Settings;
           </Button>;
           <Button variant="outline" size="sm" className="gap - 2">;
-            <Download className="h - 4 w - 4" />;Export Data;
+            <Download className="h - 4 w - 4" />;
+Export Data;
           </Button>;
         </div>;
       </div>;<div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
@@ -257,7 +274,8 @@ function AdminHeader() {// const { user } = use_auth ()// Unused but available;
             <img;
               src={company?.logo_url || "/placeholder.svg"}
               alt={company?.name || "Company"}
-              className="max - h-10 max - w-10";loading="lazy";
+              className="max - h-10 max - w-10";
+loading="lazy";
             />;
           </div>;
           <div>;<h2 className="font-medium">{company?.name || "Company Name"}</h2>;
@@ -266,7 +284,7 @@ function AdminHeader() {// const { user } = use_auth ()// Unused but available;
             </p>;
           </div>;
         </div>;
-        <Button>Customize Workspace</Button>;
+        <Button > Customize Workspace</Button>;
       </div>;
     </div>;
   )}<h2 className="font - medium">{company?.name || "Company Name"}</h2>;

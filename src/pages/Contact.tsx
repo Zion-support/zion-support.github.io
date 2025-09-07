@@ -7,7 +7,8 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import ScrollAnimation from '../components/ScrollAnimation';
 
-const Contact: React.FC = () => {
+const Contact: React.FC = ()  => {
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -15,22 +16,27 @@ const Contact: React.FC = () => {
     company: '',
     service: '',
     message: ''
-  });
+  
+});
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
+
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    });
+    
+});
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent)  => {
+
     e.preventDefault();
     // Handle form submission
     // console.log('Form submitted:', formData);
     
     // Create mailto link with form data
-    const subject = `Contact Form Submission - ${formData.service}`;
+    const subject = `Contact Form Submission - ${formData.service
+}`;
     const body = `
 Name: ${formData.firstName} ${formData.lastName}
 Email: ${formData.email}
@@ -79,7 +85,8 @@ ${formData.message}
                     Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Touch</span>
                   </h1>
                   <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                    Ready to transform your business? Let&apos;s discuss your project and discover 
+                    Ready to transform your business? Let&apos;
+s discuss your project and discover 
                     how our solutions can accelerate your growth.
                   </p>
                 </div>
@@ -206,8 +213,10 @@ ${formData.message}
                     <div>
                       <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
                       <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                        We&apos;re here to help you succeed. Reach out to us through any of the channels below, 
-                        and we&apos;ll get back to you within 24 hours.
+                        We&apos;
+re here to help you succeed. Reach out to us through any of the channels below, 
+                        and we&apos;
+ll get back to you within 24 hours.
                       </p>
                     </div>
 
@@ -217,7 +226,8 @@ ${formData.message}
                         <div>
                           <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                           <p className="text-gray-300">kleber@ziontechgroup.com</p>
-                          <p className="text-gray-400 text-sm">We&apos;ll respond within 24 hours</p>
+                          <p className="text-gray-400 text-sm">We&apos;
+ll respond within 24 hours</p>
                         </div>
                       </div>
 
@@ -234,7 +244,7 @@ ${formData.message}
                         <MapPin className="h-6 w-6 text-cyan-400 mr-4 mt-1" />
                         <div>
                           <h3 className="text-lg font-semibold text-white mb-1">Office</h3>
-                          <p className="text-gray-300">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+                          <p className="text-gray-300">364 E Main St STE 1008 < br />Middletown, DE 19709</p>
                           <p className="text-gray-400 text-sm">Visit us by appointment</p>
                         </div>
                       </div>
@@ -332,7 +342,8 @@ ${formData.message}
                 <Card className="p-6 bg-gray-800/50 backdrop-blur-sm border-gray-700/50">
                   <h3 className="text-lg font-semibold text-white mb-2">How quickly can you start my project?</h3>
                   <p className="text-gray-300">
-                    Most projects can begin within 1-2 weeks after initial consultation. We&apos;ll provide a detailed timeline during our free consultation call.
+                    Most projects can begin within 1-2 weeks after initial consultation. We&apos;
+ll provide a detailed timeline during our free consultation call.
                   </p>
                 </Card>
 

@@ -1,18 +1,34 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link  } from 'react-router-dom';
 import { User, Settings, LogOut, Bell, MessageSquare, Shield, CreditCard, HelpCircle  } from 'lucide-react';
-export function UserMenu() {const [isOpen, setIsOpen] = useState(false)const menuRef  = useRef(null)useEffect(() => {const handleClickOutside = (event) => {if (menuRef.current && !menuRef.current.contains(event.target)) {setIsOpen(false)}
-    }document.addEventListener('mousedown', handleClickOutside)return () => document.removeEventListener('mousedown', handleClickOutside)}, [])const handleLogout = () => {// Implement logout logic here;
-    console.log('Logging out...')setIsOpen(false)}const menuItems = [;
-    {name: 'Profile', href: '/profile',icon: User, description: 'Manage your account';
-    },{name: 'Dashboard', href: '/dashboard',icon: Settings, description: 'View your projects';
-    },{name: 'Messages', href: '/messages',icon: MessageSquare, description: 'Check your inbox';
-    },{name: 'Notifications', href: '/notifications',icon: Bell, description: 'Manage alerts';
-    },{name: 'Security', href: '/security',icon: Shield, description: 'Privacy & security';
-    },{name: 'Billing', href: '/billing',icon: CreditCard, description: 'Payment methods';
-    },{name: 'Help', href: '/help',icon: HelpCircle, description: 'Get support';
+export function UserMenu() {
+const [isOpen, setIsOpen] = useState(false)const menuRef  = useRef(null)useEffect(()  => {
+const handleClickOutside = (event) => {if (menuRef.current && !menuRef.current.contains(event.target)) {setIsOpen(false)
+
+}
     }
-  ];return (<div className="relative" ref={menuRef}>;
+document.addEventListener('mousedown', handleClickOutside)return () => document.removeEventListener('mousedown', handleClickOutside)}, [])const handleLogout = ()  => {
+// Implement logout logic here;
+    console.log('Logging out...')setIsOpen(false)
+}
+const menuItems = [;
+    {name: 'Profile', href: '/profile',
+icon: User, description: 'Manage your account';
+    },{name: 'Dashboard', href: '/dashboard',
+icon: Settings, description: 'View your projects';
+    },{name: 'Messages', href: '/messages',
+icon: MessageSquare, description: 'Check your inbox';
+    },{name: 'Notifications', href: '/notifications',
+icon: Bell, description: 'Manage alerts';
+    },{name: 'Security', href: '/security',
+icon: Shield, description: 'Privacy & security';
+    },{name: 'Billing', href: '/billing',
+icon: CreditCard, description: 'Payment methods';
+    },{name: 'Help', href: '/help',
+icon: HelpCircle, description: 'Get support';
+    }
+  ];
+return (<div className="relative" ref={menuRef}>;
       <button;
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors";
@@ -68,7 +84,7 @@ export function UserMenu() {const [isOpen, setIsOpen] = useState(false)const men
               className="flex items-center w-full px-4 py-2 text-red-400 hover: text-red-300 hover:bg-red-500/10 rounded-lg transition-colors";
             >;
               <LogOut className="h-4 w-4 mr-3" />;
-              <span>Sign Out</span>;
+              <span > Sign Out</span>;
             </button>;
           </div>;
         </div>;

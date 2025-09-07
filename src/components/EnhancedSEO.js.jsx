@@ -1,4 +1,5 @@
- export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';import { Helmet } from 'react-helmet-async'';
+ export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';
+import { Helmet } from 'react-helmet-async'';
 '';
 '';
 '''';
@@ -53,8 +54,8 @@
       <meta name='description' content={description}/>'''';
       <meta name='keywords' content={keywords}/>'''';
       <meta name='author' content='Zion Tech Group'/>'''';
-      <meta name='viewport' content='width=device-width, initial-scale=1.0'/>'''';
-      <meta httpEquiv='Content-Type' content='text/html charset=utf-8'/>;
+      <meta name='viewport' content='width = device-width, initial-scale = 1.0'/>'''';
+      <meta httpEquiv='Content-Type' content='text/html charset = utf-8'/>;
       '''';
       {/* Canonical URL */}'''';
       {canonical && <link rel='canonical' href={canonical}/>}
@@ -88,7 +89,7 @@
       <meta name='msapplication-TileColor' content='#1a1a2e'/>'''';
       <meta name='apple-mobile-web-app-capable' content='yes'/>'''';
       <meta name='apple-mobile-web-app-status-bar-style' content='black'/>'''';
-      <meta name='format-detection' content='telephone=no'/>;
+      <meta name='format-detection' content='telephone = no'/>;
       '''';
       {/* Structured Data */}'''';
       <script type='application/ld+json'>;
@@ -107,6 +108,11 @@
       {/* Security Headers */}'''';
       <meta httpEquiv='X-Content-Type-Options' content='nosniff'/>'''';
       <meta httpEquiv='X-Frame-Options' content='DENY'/>'''';
-      <meta httpEquiv='X-XSS-Protection' content='1 mode=block'/>'''';
+      <meta httpEquiv='X-XSS-Protection' content='1 mode = block'/>'''';
       <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin"/>'";
-    </Helmet>)}export { EnhancedSEO }export { EnhancedSEO }export { EnhancedSEO }export { EnhancedSEO }export { EnhancedSEO }
+    </Helmet>)}
+export { EnhancedSEO }
+export { EnhancedSEO }
+export { EnhancedSEO }
+export { EnhancedSEO }
+export { EnhancedSEO }

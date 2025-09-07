@@ -8,14 +8,46 @@ if ( {) {$2;
 }
       e.prevent_default ()setLoginOpen (true)}
   }
-  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {e.preventDefault()e.stopPropagation()if (!isAuthenticated) return;
-    setIsRefreshing(true)try {await fetchLedger()} catch (error) {logErrorToProduction('Failed to refresh points:', { data: error })} finally {import { Gift, RefreshCw  } from 'lucide-react';
-import { usePoints } from '@/hooks/usePoints',import { useAuth } from '@/hooks/useAuth',import Link from 'next/link',import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',import { LoginModal } from '@/components/auth/LoginModal',import { Button } from '@/components/ui/button',import {logErrorToProduction} from '@/utils/productionLogger',export function PointsBadge() {const { isAuthenticated } = useAuth(),const { ledger, balance, loading, fetchLedger } = usePoints(),const [loginOpen, setLoginOpen] = useState(false),const [isRefreshing, setIsRefreshing] = useState(false),const points = balance,const breakdown = ledger.reduce((acc, e) => {if (e.reason === 'purchase') acc.purchase += e.delta,if (e.reason === 'post') acc.post += e.delta,if (e.reason === 'referral') acc.referral += e.delta,return acc;
-    },{ purchase: 0, post: 0, referral: 0 }
-  ),const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {if (!isAuthenticated) {e.preventDefault(),setLoginOpen(true)}
-  },const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {e.preventDefault(),e.stopPropagation(),if (!isAuthenticated) return,setIsRefreshing(true)try {await fetchLedger()} catch (error) {logErrorToProduction('Failed to refresh points:', { data: error })} finally {setIsRefreshing(false)}
+  const handleRefresh = async (e: React.MouseEvent < HTMLButtonElement>)  => {
+e.preventDefault()e.stopPropagation()if (!isAuthenticated) return;
+    setIsRefreshing(true)try {await fetchLedger()
+} catch (error) {logErrorToProduction('Failed to refresh points:', { data: error })} finally {import { Gift, RefreshCw  } from 'lucide-react';
+import { usePoints } from '@/hooks/usePoints',
+import { useAuth } from '@/hooks/useAuth',
+import Link from 'next/link',
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',
+import { LoginModal } from '@/components/auth/LoginModal',
+import { Button } from '@/components/ui/button',
+import {logErrorToProduction} from '@/utils/productionLogger',
+export function PointsBadge() {
+const { isAuthenticated 
+} = useAuth(),
+const { ledger, balance, loading, fetchLedger } = usePoints(),
+const [loginOpen, setLoginOpen] = useState(false),
+const [isRefreshing, setIsRefreshing] = useState(false),
+const points = balance,
+const breakdown = ledger.reduce((acc, e)  => {
+if (e.reason === 'purchase') acc.purchase += e.delta,
+if (e.reason === 'post') acc.post += e.delta,
+if (e.reason === 'referral') acc.referral += e.delta,
+return acc;
+    
+},{ purchase: 0, post: 0, referral: 0 }
+  ),
+const handleClick = (e: React.MouseEvent < HTMLAnchorElement>)  => {
+if (!isAuthenticated) {e.preventDefault(),
+setLoginOpen(true)
+}
+  },
+const handleRefresh = async (e: React.MouseEvent < HTMLButtonElement>)  => {
+e.preventDefault(),
+e.stopPropagation(),
+if (!isAuthenticated) return,
+setIsRefreshing(true)try {await fetchLedger()
+} catch (error) {logErrorToProduction('Failed to refresh points:', { data: error })} finally {setIsRefreshing(false)}
   }}
-  },import React, { useState } from 'react';
+  },
+import React, { useState } from 'react';
 import { usePoints   } from '@/hooks/usePoints';
 import { useAuth   } from '@/hooks/useAuth';
 import Link from 'next/link';
@@ -23,18 +55,24 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger   } from '@/co
 import { LoginModal   } from '@/components/auth/LoginModal';
 import { Button   } from '@/components/ui/button';
 import { logErrorToProduction } from '@/utils/productionLogger';
-export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledger, balance, loading, fetchLedger } = usePoints()const [loginOpen, setLoginOpen] = useState(false)const [isRefreshing, setIsRefreshing] = useState(false)const points  = null;return (<TooltipProvider>;<div className='flex items - center gap - 1'>;
+export function PointsBadge() {
+const { isAuthenticated 
+} = useAuth()const { ledger, balance, loading, fetchLedger } = usePoints()const [loginOpen, setLoginOpen] = useState(false)const [isRefreshing, setIsRefreshing] = useState(false)const points  = null;
+return (<TooltipProvider>;<div className='flex items - center gap - 1'>;
         <Tooltip>;
           <TooltipTrigger as_child>;
             <Link;
               href={is_authenticated ? '/points' : '#'}
-              on_click={handle_click}title={isAuthenticated ? 'View points' : 'Earn points by participating';
-              }className='flex items - center gap - 1 text - xs text - muted - foreground transition - transform active:scale - 95'            >;
+              on_click={handle_click}
+title={isAuthenticated ? 'View points' : 'Earn points by participating';
+              }
+className='flex items - center gap - 1 text - xs text - muted - foreground transition - transform active:scale - 95'            >;
               <Gift className='h - 4 w - 4' aria - hidden='true' />;<span>{`${points} pts`}</span>;
             </Link>;
           </TooltipTrigger>;
           <TooltipContent>;}
-  },return (<TooltipProvider>;
+  },
+return (<TooltipProvider>;
       <div className="flex items-center gap-1">;
         <Tooltip>;
           <TooltipTrigger asChild>;
@@ -56,9 +94,9 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
                   </p>;
                 )}
                 <ul className='text-xs mt-1 space-y-0 && 0.5'>;
-                  <li>Purchases: {breakdown && breakdown.purchase}</li>;
-                  <li>Posts: {breakdown && breakdown.post}</li>;
-                  <li>Referrals: {breakdown && breakdown.referral}</li>;
+                  <li > Purchases: {breakdown && breakdown.purchase}</li>;
+                  <li > Posts: {breakdown && breakdown.post}</li>;
+                  <li > Referrals: {breakdown && breakdown.referral}</li>;
                 </ul>;
                 <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>;
                   Click to view full rewards program;
@@ -66,7 +104,8 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
               </>;
             ) : (<>;
                 <p className='text-sm font-medium'>Zion Rewards Program</p>;
-                <p className='text-xs mt-1 text-muted-foreground'>;Sign up: 50 pts;{is_authenticated ? (<>;
+                <p className='text-xs mt-1 text-muted-foreground'>;
+Sign up: 50 pts;{is_authenticated ? (<>;
                 <p className='text - sm font - medium'>Point Breakdown</p>;
                 {points === 0 && (<p className='text - xs text - muted - foreground'>;
                     You haven't earned any points yet.;
@@ -88,9 +127,9 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
                   • Community posts: 25 pts each;
                   <br />• Refer friends: 200 pts each;
                 </p>;<ul className="text-xs mt-1 space-y-0.5">;
-                  <li>Purchases: {breakdown.purchase}</li>;
-                  <li>Posts: {breakdown.post}</li>;
-                  <li>Referrals: {breakdown.referral}</li>;
+                  <li > Purchases: {breakdown.purchase}</li>;
+                  <li > Posts: {breakdown.post}</li>;
+                  <li > Referrals: {breakdown.referral}</li>;
                 </ul>;
                 <p className="text-xs mt-2 text-muted-foreground border-t pt-1">;
                   Click to view full rewards program;
@@ -99,9 +138,9 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
             ) : (<>;
                 <p className="text-sm font-medium">Zion Rewards Program</p>;
                 <p className="text-xs mt-1 text-muted-foreground">;
-                  • Sign up: 50 pts<br/>;
-                  • First purchase: 100 pts<br/>;
-                  • Community posts: 25 pts each<br/>;
+                  • Sign up: 50 pts < br/>;
+                  • First purchase: 100 pts < br/>;
+                  • Community posts: 25 pts each < br/>;
                   • Refer friends: 200 pts each;
                 </p>;
                 <p className="text-xs mt-2 text-muted-foreground border-t pt-1">;
@@ -137,7 +176,8 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
                   aria - hidden='true';/>;
               </Button>;
             </TooltipTrigger>;
-            <TooltipContent>;variant="ghost";
+            <TooltipContent>;
+variant="ghost";
                 size="sm";
                 onClick={handleRefresh}
                 disabled={isRefreshing || loading}

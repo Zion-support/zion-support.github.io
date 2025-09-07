@@ -13,14 +13,34 @@ import { Button  } from '@/components/ui/button';
 import { DollarSign, Calendar, CheckCircle, XCircle  } from 'lucide-react';
 import { format  } from 'date-fns';
 import { JobMatch  } from '@/types/jobs';
-interface JobMatchCardProps  {import {Card,CardContent,CardHeader,CardTitle,CardDescription,CardFooter} from '@/components/ui/card';
-interface JobMatchCardProps  {match: JobMatch;
-  onApply: (matchId: string, jobId: string) => void;
+interface JobMatchCardProps {
+import {Card,
+CardContent,
+CardHeader,
+CardTitle,
+CardDescription,
+CardFooter
+} from '@/components/ui/card';
+interface JobMatchCardProps {
+match: JobMatch;
+  onApply: (matchId: string,
+jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean;
-export function JobMatchesCard(): any ({match,onApply,onDecline,showApplied = false}: JobMatchCardProps) {const job  = match && match.job;return (<Card className='overflow-hidden border-l-4 border-l-blue-500'>;
+export function JobMatchesCard(): any ({match,
+onApply,
+onDecline,
+showApplied = false
+}: JobMatchCardProps) {const job  = match && match.job;
+return (<Card className='overflow-hidden border-l-4 border-l-blue-500'>;
       <CardHeader className='p-4 pb-2'>;
-        <div className='flex justify-between items-start'>;}export function JobMatchesCard() {const job = match.job,if (!job) return null}export function JobMatchesCard({ match, onApply, onDecline, showApplied;return (<Card className="overflow-hidden border-l-4 border-l-blue-500">;
+        <div className='flex justify-between items-start'>;}
+export function JobMatchesCard() {
+const job = match.job,
+if (!job) return null
+}
+export function JobMatchesCard({ match, onApply, onDecline, showApplied;
+return (<Card className="overflow-hidden border-l-4 border-l-blue-500">;
       <CardHeader className="p-4 pb-2">;
         <div className="flex justify-between items-start">;
           <div>;
@@ -45,14 +65,28 @@ export function JobMatchesCard(): any ({match,onApply,onDecline,showApplied = fa
             <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>;
             <div className="flex flex-wrap gap-1">;
               {match.matched_skills.slice(0, 5).map((skill, i) => (<Badge key={i} variant="secondary" className="text-xs">;
-import { useState } from "react",import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",import { Badge } from "@/components/ui/badge",import { Button } from "@/components/ui/button",import { format } from "date-fns",import { JobMatch } from "@/types/jobs",interface JobMatchCardProps  {match: JobMatch,onApply: (matchId: string, jobId: string) => void,onDecline: (matchId: string) => void,showApplied?: boolean;
-}export function JobMatchesCard() {const job = match.job;
+import { useState } from "react",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { format } from "date-fns",
+import { JobMatch } from "@/types/jobs",
+interface JobMatchCardProps {
+match: JobMatch,
+onApply: (matchId: string,
+jobId: string) => void,
+onDecline: (matchId: string) => void,
+showApplied?: boolean;
+}
+export function JobMatchesCard() {
+const job = match.job;
   if (!job) return null;
   return (<Card className="overflow-hidden border-l-4 border-l-blue-500">;
       <CardHeader className="p-4 pb-2">;
         <div className="flex justify-between items-start">;
           <div>;
-            <CardTitle className='text-lg'>{job && job.title}</CardTitle>;
+            <CardTitle className='text-lg'>{job && job.title
+}</CardTitle>;
             <CardDescription>;
               Posted {format(new Date(job && job.created_at), 'MMM d')}
               {match && match.status === 'viewed' && match && match.viewed_at && (<span className='ml-2 text-xs text-muted-foreground'>;
@@ -152,21 +186,31 @@ import { useState } from "react",import { Card, CardContent, CardHeader, CardTit
           </div>;
         )}</CardFooter>;
     </Card>;
-  )}import { Card,CardContent,CardHeader,CardTitle,CardDescription,CardFooter} from '@/components / ui / card';
+  )}
+import { Card,
+CardContent,
+CardHeader,
+CardTitle,
+CardDescription,
+CardFooter} from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
 import { format  } from 'date - fns';
 import { JobMatch  } from '@/types / jobs';
-interface JobMatchCardProps  {match: JobMatch;
-  on_apply: (match_id: string, job_id: string) => void;
+interface JobMatchCardProps {
+match: JobMatch;
+  on_apply: (match_id: string,
+job_id: string) => void;
   on_decline: (match_id: string) => void;
   show_applied?: boolean;
 export /**;
  * JobMatchesCard - Function description;
  */;
-function JobMatchesCard() {const job = match.job;
+function JobMatchesCard() {
+const job = match.job;
   // Check condition;
 if (return null) {$2;
+
 }
   return (<Card className='overflow - hidden border - l-4 border - l-blue - 500'>;
       <CardHeader className='p - 4 pb - 2'>;

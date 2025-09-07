@@ -1,44 +1,57 @@
 import { Link  } from 'react-router-dom';
 import { Bottom, Center, Cloud, Common, Cookie, File, Info, User  } from 'lucide-react';
 // Common interfaces for better type safety;
-interface ApiResponse<T = unknown>  {data: T;
+interface ApiResponse < T = unknown>  {data: T;
   status: number;
   message?: string;
-}interface User  {id: string;
+}
+interface User {
+id: string;
   email: string;
   name: string;
   role: 'admin' | 'user' | 'guest';
-}interface Service  {id: string;
+}
+interface Service {
+id: string;
   name: string;
   description: string;
   price: number;
   category: string;
-}interface FormData {
-  [key: string]: string | number | boolean | File;
-}interface ComponentProps {
-  className?: string;
+}
+interface FormData {
+[key: string]: string | number | boolean | File;
+}
+interface ComponentProps {
+className?: string;
   children?: React.ReactNode;
   [key: string]: unknown;
-}export default function Footer() {
+}
+export default function Footer() {
+
   const currentYear = new Date().getFullYear();
   const footerSections = [
-    {title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
-      ]}, {title: 'Solutions',links: ["";
+    {title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' 
+}, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
+      ]}, {title: 'Solutions',
+links: ["";
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },"";
         { name: 'Startup Solutions', href: '/solutions/startup' },"";
         { name: 'Space Technology', href: '/solutions/space-tech' },"";
         { name: 'Supply Chain', href: '/solutions/supply-chain' },"";
         { name: 'Industry Solutions', href: '/solutions/industry' }
-      ]}, {title: 'Compunknown',links: [;
+      ]}, {title: 'Compunknown',
+links: [;
         { name: 'About Us', href: '/about' },{ name: 'Our Story', href: '/about/story' },{ name: 'Team', href: '/about/team' },{ name: 'Careers', href: '/careers' },{ name: 'Partners', href: '/partners' },{ name: 'Contact', href: '/contact' }
-      ]}, {title: 'Resources',links: ["";
+      ]}, {title: 'Resources',
+links: ["";
         { name: 'Blog', href: '/blog' },"";
         { name: 'Case Studies', href: '/case-studies' },"";
         { name: 'White Papers', href: '/white-papers' },"";
         { name: 'Webinars', href: '/webinars' },"";
         { name: 'Training', href: '/training' },"";
         { name: 'Documentation', href: '/docs' }
-      ]}, {title: 'Support',links: ["";
+      ]}, {title: 'Support',
+links: ["";
         { name: 'Help Center', href: '/help' },"";
         { name: 'FAQ', href: '/faq' },"";
         { name: 'Support', href: '/support' },"";
@@ -69,7 +82,8 @@ interface ApiResponse<T = unknown>  {data: T;
               </div>;
             </div>"";
             <p className='text-gray-400 mb-6 max-w-md'>;
-              Empowering businesses with cutting-edge technology solutions, AI innovation,and digital transformation expertise to drive growth and competitive advantage.;
+              Empowering businesses with cutting-edge technology solutions, AI innovation,
+and digital transformation expertise to drive growth and competitive advantage.;
             </p>;
             <div className='flex space-x-4'>;
               <a href='#' className='text-gray-400 hover: text-white transition-colors'>;

@@ -1,6 +1,8 @@
 
 ;
-import React from "react",import Link from "next/link",import { ArrowRight, Phone  } from 'lucide-react';
+import React from "react",
+import Link from "next/link",
+import { ArrowRight, Phone  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
 import { AppStoreButtons  } from './AppStoreButtons';
 export const MobileAppHero: React.FC;
@@ -8,7 +10,8 @@ export const MobileAppHero: React.FC;
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Phone } from 'lucide-react'import { Button  } from '@/components/ui/button';
-export const MobileAppHero: React.FC = () => {// These would come from environment variables or a config;
+export const MobileAppHero: React.FC = ()  => {
+// These would come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
   return (<section className="relative bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16 md:py-24">;
@@ -23,7 +26,8 @@ export const MobileAppHero: React.FC = () => {// These would come from environme
             </p>;
             <div className="mb-8">;
               <AppStoreButtons;
-                appStoreUrl={appStoreUrl}
+                appStoreUrl={appStoreUrl
+}
                 googlePlayUrl={googlePlayUrl}
               />;
             </div>;
@@ -74,7 +78,11 @@ export const MobileAppHero: React.FC = () => {// These would come from environme
           </div>;
         </div>;
       </div>;
-    </section>)}})}";import { Button } from "@/components/ui/button",import { AppStoreButtons } from "./AppStoreButtons",export const MobileAppHero: React.FC = () => {// These would come from environment variables or a config;
+    </section>)}})}";
+import { Button } from "@/components/ui/button",
+import { AppStoreButtons } from "./AppStoreButtons",
+export const MobileAppHero: React.FC = ()  => {
+// These would come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
   return (<section className="relative bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16 md:py-24">;
@@ -89,7 +97,8 @@ export const MobileAppHero: React.FC = () => {// These would come from environme
             </p>;
             <div className="mb-8">;
               <AppStoreButtons;
-                appStoreUrl={appStoreUrl}
+                appStoreUrl={appStoreUrl
+}
                 googlePlayUrl={googlePlayUrl}
               />;
             </div>;

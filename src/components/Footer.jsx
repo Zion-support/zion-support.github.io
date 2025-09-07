@@ -1,27 +1,41 @@
 import React from 'react';
 import { Link  } from 'react-router-dom';
-import { Mail, Phone,MapPin, Twitter,Linkedin, Facebook,Instagram, Youtube,ArrowRight, Shield,Zap, Users,Globe;
+import { Mail, Phone,
+MapPin, Twitter,
+Linkedin, Facebook,
+Instagram, Youtube,
+ArrowRight, Shield,
+Zap, Users,
+Globe;
  } from 'lucide-react';
-export function Footer() {const currentYear  = new Date().getFullYear()const footerSections = [;
+export function Footer() {
+const currentYear  = new Date().getFullYear()const footerSections = [;
     {title: 'Services', links: [;
-        { name: 'AI Services', href: '/services/ai' }, { name: 'Cloud Solutions', href: '/services/cloud' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'IT Infrastructure', href: '/services/infrastructure' }, { name: 'Digital Transformation', href: '/services/transformation' }, { name: 'Consulting', href: '/services/consulting' }
+        { name: 'AI Services', href: '/services/ai' 
+}, { name: 'Cloud Solutions', href: '/services/cloud' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'IT Infrastructure', href: '/services/infrastructure' }, { name: 'Digital Transformation', href: '/services/transformation' }, { name: 'Consulting', href: '/services/consulting' }
       ];
-    }, {title: 'Solutions',links: [;
+    }, {title: 'Solutions',
+links: [;
         { name: 'Industry Solutions', href: '/solutions/industry' },{ name: 'Manufacturing', href: '/solutions/manufacturing' },{ name: 'Financial Services', href: '/solutions/financial' },{ name: 'Healthcare', href: '/solutions/healthcare' },{ name: 'Retail', href: '/solutions/retail' },{ name: 'Education', href: '/solutions/education' }
       ];
-    }, {title: 'Company',links: [;
+    }, {title: 'Company',
+links: [;
         { name: 'About Us', href: '/about' },{ name: 'Team', href: '/about/team' },{ name: 'Careers', href: '/careers' },{ name: 'Partners', href: '/partners' },{ name: 'News', href: '/news' },{ name: 'Events', href: '/events' }
       ];
-    }, {title: 'Resources',links: [;
+    }, {title: 'Resources',
+links: [;
         { name: 'Case Studies', href: '/case-studies' },{ name: 'Research & Development', href: '/research-development' },{ name: 'Blog', href: '/blog' },{ name: 'White Papers', href: '/white-papers' },{ name: 'Webinars', href: '/webinars' },{ name: 'Documentation', href: '/docs' }
       ];
-    }, {title: 'Support',links: [;
+    }, {title: 'Support',
+links: [;
         { name: 'Help Center', href: '/support' },{ name: 'Training', href: '/training' },{ name: 'Contact', href: '/contact' },{ name: 'Request Quote', href: '/request-quote' },{ name: 'Status', href: '/status' },{ name: 'API Documentation', href: '/api' }
       ];
     }
-  ];const socialLinks = [;
+  ];
+const socialLinks = [;
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }, { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },{ name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }, { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },{ name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
-  ];return (<footer className="bg-zion-blue-dark border-t border-zion-purple/20">;
+  ];
+return (<footer className="bg-zion-blue-dark border-t border-zion-purple/20">;
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">;
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-6 gap-8">;
@@ -37,13 +51,14 @@ export function Footer() {const currentYear  = new Date().getFullYear()const foo
               </div>;
             </div>;
             <p className="text-zion-slate-light mb-6 leading-relaxed">;
-              Empowering businesses with cutting-edge technology solutions, AI-driven insights,and transformative digital strategies for the future.;
+              Empowering businesses with cutting-edge technology solutions, AI-driven insights,
+and transformative digital strategies for the future.;
             </p>;
             {/* Contact Info */}
             <div className="space-y-3">;
               <div className="flex items-center space-x-3 text-zion-slate-light">;
                 <Mail className="h-4 w-4 text-zion-cyan" />;
-                <span>contact@ziontechgroup.com</span>;
+                <span > contact@ziontechgroup.com</span>;
               </div>;
               <div className="flex items-center space-x-3 text-zion-slate-light">;
                 <Phone className="h-4 w-4 text-zion-cyan" />;
@@ -51,7 +66,7 @@ export function Footer() {const currentYear  = new Date().getFullYear()const foo
               </div>;
               <div className="flex items-center space-x-3 text-zion-slate-light">;
                 <MapPin className="h-4 w-4 text-zion-cyan" />;
-                <span>123 Innovation Drive, Tech City, TC 12345</span>;
+                <span > 123 Innovation Drive, Tech City, TC 12345</span>;
               </div>;
             </div>;
           </div>;
@@ -149,7 +164,6 @@ export function Footer() {const currentYear  = new Date().getFullYear()const foo
                   <social.icon className="h-5 w-5" />;
                 </a>;
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -159,11 +173,4 @@ export function Footer() {const currentYear  = new Date().getFullYear()const foo
 }
 
 export default Footer;
-=======
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </footer>;
-  )}
->>>>>>> cursor/expand-services-advertise-and-build-project-e77d
+ursor/expand-services-advertise-and-build-project-e77d

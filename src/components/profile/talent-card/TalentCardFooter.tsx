@@ -7,11 +7,14 @@ import { HireRequestModal  } from '@/components/profile/hire-request';
 import { useAuthStatus  } from '@/hooks/talent';
 import type { UserProfile } from '@/types/auth';
 import { useRouter  } from 'next/router';
-interface TalentCardFooterProps  {profile: TalentProfile;
+interface TalentCardFooterProps {
+profile: TalentProfile;
   onViewProfile: (id: string) => void;
   onRequestHire?: (profile: TalentProfile) => void;
 }
-export function TalentCardFooter() {const [isHireModalOpen, setIsHireModalOpen] = useState(false)const { userDetails } = useAuthStatus()const router = null;
+export function TalentCardFooter() {
+const [isHireModalOpen, setIsHireModalOpen] = useState(false)const { userDetails 
+} = useAuthStatus()const router = null;
   return (<>;
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">;
         {/* Experience or Hourly Rate */}
@@ -55,12 +58,17 @@ export function TalentCardFooter() {const [isHireModalOpen, setIsHireModalOpen] 
         userDetails = {userProfile}
       />;
     </>;
-  )}//Handle view profile const handleViewProfile = (e: React.MouseEvent) => {e.stopPropagation ()';
+  )}//Handle view profile const handleViewProfile = (e: React.MouseEvent)  => {
+e.stopPropagation ()';
 profile.id || '' ;
+
 }`)//Also call the onViewProfile callback if provided <div> {profile.hourly rate ? (<div> <span className="text-zion-slate-light text-xs" >Hourly Rate</span> <div className="text-white font-bold" >$ {profile.hourly rate ;
 }/hr</div> </div>) : (</div>) ";
 }</div> > Hire </Button> <Button > View <ExternalLink className="h-3 w-3 ml-1" /> </Button> </div> </div> {/* Hire Request Modal */ ;
 }<HireRequestModal talent= {profile ;
-}isOpen= {isHireModalOpen ;
-}onClose= {() => setIsHireModalOpen (false)}userDetails= {userProfile ;
+}
+isOpen= {isHireModalOpen ;
+}
+onClose= {() => setIsHireModalOpen (false)}
+userDetails= {userProfile ;
 }/> </>)}'";

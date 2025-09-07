@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
-const Support: React.FC = () => {
+const Support: React.FC = ()  => {
+
   return (
     <>
       <SEO title="Support" description="Support page" url="/support" />
@@ -19,6 +20,7 @@ const Support: React.FC = () => {
       </div>
     </>
   );
+
 };
 
 export default Support;

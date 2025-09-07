@@ -1,15 +1,31 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock  } from 'lucide-react';
-const ContactSection: React.FC = () => {const [formData, setFormData] = useState({name: '',email: '',company: '',subject: '',message: '';
-  })const [isSubmitting, setIsSubmitting] = useState(false)const [submitted, setSubmitted]  = useState(false)const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }))}const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setIsSubmitting(true)try {const response = await fetch("/api/contact", {method: "POST",headers: { "Content-Type": "application/json" },body: JSON.stringify(formData)})if (!response.ok) {const data = await response.json().catch(() => ({}))throw new Error(data.error || "Failed to send message")}setSubmitted(true)setFormData({ name: '', email: '', company: '', subject: '', message: '' })setTimeout(() => setSubmitted(false), 3000)} catch (error) {console.error('Error submitting form:', error)alert('Failed to send message. Please try again.')} finally {setIsSubmitting(false)}
-  }return (<section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">;
+const ContactSection: React.FC = ()  => {
+const [formData, setFormData] = useState({name: '',
+email: '',
+company: '',
+subject: '',
+message: '';
+  
+})const [isSubmitting, setIsSubmitting] = useState(false)const [submitted, setSubmitted]  = useState(false)const handleChange = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>)  => {
+const { name, value 
+} = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }))}
+const handleSubmit = async (e: React.FormEvent)  => {
+e.preventDefault()setIsSubmitting(true)try {const response = await fetch("/api/contact", {method: "POST",
+headers: { "Content-Type": "application/json" 
+},
+body: JSON.stringify(formData)})if (!response.ok) {const data = await response.json().catch(() => ({}))throw new Error(data.error || "Failed to send message")}
+setSubmitted(true)setFormData({ name: '', email: '', company: '', subject: '', message: '' })setTimeout(() => setSubmitted(false), 3000)} catch (error) {console.error('Error submitting form:', error)alert('Failed to send message. Please try again.')} finally {setIsSubmitting(false)}
+  }
+return (<section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>;
           <p className="text-xl text-blue-200 max-w-2xl mx-auto">;
             Ready to transform your business with cutting-edge technology?;
-            Let&apos;s discuss how we can help you achieve your goals.;
+            Let&apos;
+s discuss how we can help you achieve your goals.;
           </p>;
         </div>;
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">;
@@ -45,8 +61,8 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                   <div>;
                     <h4 className="font-semibold">Office</h4>;
                     <p className="text-blue-200">;
-                      364 E Main St STE 1008<br />;
-                      Middletown, DE 19709<br />;
+                      364 E Main St STE 1008 < br />;
+                      Middletown, DE 19709 < br />;
                       United States;
                     </p>;
                   </div>;
@@ -59,9 +75,9 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                 <h4 className="font-semibold">Business Hours</h4>;
               </div>;
               <div className="space-y-2 text-blue-200">;
-                <p>Monday - Friday: 9:00 AM - 6:00 PM EST</p>;
-                <p>Saturday: 10:00 AM - 4:00 PM EST</p>;
-                <p>Sunday: Closed</p>;
+                <p > Monday - Friday: 9:00 AM - 6:00 PM EST</p>;
+                <p > Saturday: 10:00 AM - 4:00 PM EST</p>;
+                <p > Sunday: Closed</p>;
                 <p className="text-sm text-blue-300 mt-2">;
                   *24/7 emergency support available for critical issues;
                 </p>;
@@ -156,7 +172,8 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>;
               {submitted && (<div className="text-center p-4 bg-green-600/20 border border-green-500 rounded-lg">;
-                  <p className="text-green-300">Thank you! We&apos;ll be in touch soon.</p>;
+                  <p className="text-green-300">Thank you! We&apos;
+ll be in touch soon.</p>;
                 </div>;
               )}
             </form>;
@@ -164,4 +181,5 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
         </div>;
       </div>;
     </section>;
-  )}export default ContactSection;
+  )}
+export default ContactSection;

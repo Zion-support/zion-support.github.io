@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import Card from './Card';
 
-const Testimonials: React.FC = () => {
+const Testimonials: React.FC = ()  => {
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const testimonials = [
     {
@@ -12,7 +13,8 @@ const Testimonials: React.FC = () => {
       content: 'Zion Tech Group transformed our business with their AI solutions. We\'ve seen a 300% increase in efficiency and our team productivity has never been higher.',
       rating: 5,
       avatar: '/testimonials/sarah-johnson.jpg'
-    },
+    
+},
     {
       id: 2,
       name: 'Mike Chen',
@@ -39,22 +41,28 @@ const Testimonials: React.FC = () => {
     }
   ];
 
-  const nextTestimonial = () => {
+  const nextTestimonial = ()  => {
+
     setCurrentIndex((prevIndex) => 
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  
+};
 
-  const prevTestimonial = () => {
+  const prevTestimonial = ()  => {
+
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
-  };
+  
+};
 
-  useEffect(() => {
+  useEffect(()  => {
+
     const interval = setInterval(nextTestimonial, 5000);
     return () => clearInterval(interval);
-  }, []);
+  
+}, []);
 
   const currentTestimonial = testimonials[currentIndex];
 

@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
-const MicroSaaS: React.FC = () => {
+const MicroSaaS: React.FC = ()  => {
+
   return (
     <>
       <SEO title="Micro SaaS" description="Micro SaaS page" url="/services/micro-saas" />
@@ -19,6 +20,7 @@ const MicroSaaS: React.FC = () => {
       </div>
     </>
   );
+
 };
 
 export default MicroSaaS;

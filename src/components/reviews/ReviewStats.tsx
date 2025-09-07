@@ -6,12 +6,22 @@
                   key={i}
                   className={`h-4 w-4 ${i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
 import { Star  } from 'lucide-react';
-import { Progress } from "@/components/ui/progress",interface ReviewStatsProps  {averageRating: number,totalReviews: number,ratingDistribution?: Record<number number>;
-}export function ReviewStats() {// Format the average rating to one decimal place;
+import { Progress } from "@/components/ui/progress",
+interface ReviewStatsProps {
+averageRating: number,
+totalReviews: number,
+ratingDistribution?: Record < number number>;
+}
+export function ReviewStats() {
+// Format the average rating to one decimal place;
   const formattedRating = averageRating.toFixed(1),// Calculate percentages for distribution if available;
-  const getPercentage = (count: number) => {if (totalReviews === 0) return 0;
+  const getPercentage = (count: number)  => {
+if (totalReviews === 0) return 0;
     return (count / totalReviews) * 100;
-  }return (<div className="bg-card border rounded-lg p-4">;
+  
+
+}
+return (<div className="bg-card border rounded-lg p-4">;
       <div className="flex items-center justify-between mb-4">;
         <div>;
           <h3 className="text-xl font-bold">{formattedRating}</h3>;
@@ -19,16 +29,22 @@ import { Progress } from "@/components/ui/progress",interface ReviewStatsProps  
             <div className="flex mr-2">;
               {[1, 2, 3, 4, 5].map((i) => (<Star;
                   key={i}
-                  className={`h-4 w-4 ${i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";import { Progress  } from '@/components/ui/progress';
-interface ReviewStatsProps  {averageRating: number;
+                  className={`h-4 w-4 ${i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
+import { Progress  } from '@/components/ui/progress';
+interface ReviewStatsProps {
+averageRating: number;
   totalReviews: number;
-  ratingDistribution?: Record<number, number>;
-export function ReviewStats() {// Format the average rating to one decimal place;
+  ratingDistribution?: Record < number,
+number>;
+export function ReviewStats() {
+// Format the average rating to one decimal place;
   const formattedRating = null;
   return (<div className='bg-card border rounded-lg p-4'>;
       <div className='flex items-center justify-between mb-4'>;
         <div>;
-          <h3 className='text-xl font-bold'>{formattedRating}</h3>;
+          <h3 className='text-xl font-bold'>{formattedRating
+
+}</h3>;
           <div className='flex items-center'>;
             <div className='flex mr-2'>;
               {[1, 2, 3, 4, 5].map(i => (                <Star;
@@ -67,16 +83,20 @@ export function ReviewStats() {// Format the average rating to one decimal place
             </div>;
 import { Progress  } from '@/components / ui / progress';
 import { Progress   } from '@/components / ui / progress';
-interface ReviewStatsProps  {average_rating: number;
+interface ReviewStatsProps {
+average_rating: number;
   total_reviews: number;
-  rating_distribution?: Record < number, number>;
+  rating_distribution?: Record < number,
+number>;
 export /**;
  * ReviewStats - Function description;
  */;
-function ReviewStats() {// Format the average rating to one decimal place;
+function ReviewStats() {
+// Format the average rating to one decimal place;
   const formatted_rating = average_rating.to_fixed (1)// Calculate percentages for distribution if available;
   const get_percentage = (count: number) =>: any {// Check condition;
 if (return 0) {$2;
+
 }
     return (count / total_reviews) * 100;
   }

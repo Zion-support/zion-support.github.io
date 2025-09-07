@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
-const FAQ: React.FC = () => {
+const FAQ: React.FC = ()  => {
+
   return (
     <>
       <SEO title="FAQ" description="FAQ page" url="/faq" />
@@ -19,6 +20,7 @@ const FAQ: React.FC = () => {
       </div>
     </>
   );
+
 };
 
 export default FAQ;

@@ -6,7 +6,8 @@ import Footer from '../components/Footer';
 import Button from '../components/Button';
 import Card from '../components/Card';
 
-const Pricing: React.FC = () => {
+const Pricing: React.FC = ()  => {
+
   const plans = [
     {
       name: 'Starter',
@@ -21,7 +22,8 @@ const Pricing: React.FC = () => {
         '5GB storage'
       ],
       popular: false
-    },
+    
+},
     {
       name: 'Professional',
       price: '$299',
@@ -68,7 +70,8 @@ const Pricing: React.FC = () => {
               Simple, Transparent Pricing
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that&apos;s right for your business. All plans include our core features with no hidden fees.
+              Choose the plan that&apos;
+s right for your business. All plans include our core features with no hidden fees.
             </p>
           </div>
 
@@ -134,7 +137,8 @@ const Pricing: React.FC = () => {
 
           <div className="text-center mt-16">
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Need a custom solution? We&apos;re here to help.
+              Need a custom solution? We&apos;
+re here to help.
             </p>
             <Link href="/contact">
               <Button variant="outline">

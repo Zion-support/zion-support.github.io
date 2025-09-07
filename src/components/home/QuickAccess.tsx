@@ -1,14 +1,33 @@
 
 ;
   const quickLinks = [;
-    {title: t('home.tool_ai_matcher'),description: t('home.tool_ai_matcher_desc'),icon: <Search className="h-6 w-6 text-zion-cyan" />,link: "/marketplace";
-    },{title: t('home.tool_talent'),description: t('home.tool_talent_desc'),icon: <Users className="h-6 w-6 text-zion-purple" />,link: "/talent";
-    },{title: t('home.tool_services'),description: t('home.tool_services_desc'),icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,link: "/services";
-    },{title: t('home.tool_equipment'),description: t('home.tool_equipment_desc'),icon: <Settings className="h-6 w-6 text-zion-purple" />,link: "/equipment";
-    },{title: t('nav.community'),description: t('home.tool_chat_desc'),icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />,link: "/community";
-    },{title: t('home.tool_mobile_appMobile App'),description: t('home.tool_mobile_app_descZion on the go'),icon: <Smartphone className="h-6 w-6 text-zion-purple" />,link: "/mobile-launch";
+    {title: t('home.tool_ai_matcher'),
+description: t('home.tool_ai_matcher_desc'),
+icon: <Search className="h-6 w-6 text-zion-cyan" />,
+link: "/marketplace";
+    },{title: t('home.tool_talent'),
+description: t('home.tool_talent_desc'),
+icon: <Users className="h-6 w-6 text-zion-purple" />,
+link: "/talent";
+    },{title: t('home.tool_services'),
+description: t('home.tool_services_desc'),
+icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,
+link: "/services";
+    },{title: t('home.tool_equipment'),
+description: t('home.tool_equipment_desc'),
+icon: <Settings className="h-6 w-6 text-zion-purple" />,
+link: "/equipment";
+    },{title: t('nav.community'),
+description: t('home.tool_chat_desc'),
+icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />,
+link: "/community";
+    },{title: t('home.tool_mobile_appMobile App'),
+description: t('home.tool_mobile_app_descZion on the go'),
+icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
+link: "/mobile-launch";
     }
-  ],return (<section className={cn("py-12 bg-zion-blue-dark", className)} style={style}>;
+  ],
+return (<section className={cn("py-12 bg-zion-blue-dark", className)} style={style}>;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-8">;
           <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">;
@@ -32,14 +51,42 @@ import React from 'react';
 import Link from 'next / link';
 import { use_translation  } from 'react - i18next';
 import { cn  } from '@/lib / utils';
-import { ArrowRight,Search,Users,Briefcase,Settings,MessageSquare,Smartphone} from 'lucide-react';
-interface QuickAccessProps  {class_name?: string;
+import { ArrowRight,
+Search,
+Users,
+Briefcase,
+Settings,
+MessageSquare,
+Smartphone} from 'lucide-react';
+interface QuickAccessProps {
+class_name?: string;
   style?: React.CSSProperties;
 export /**;
  * QuickAccess - Function description;
  */;
-function QuickAccess() {const { t } = use_translation ()const quick_links = [;
-    {title: t ('home.tool_ai_matcher'),description: t ('home.tool_ai_matcher_desc'),icon: <Search className='h - 6 w - 6 text - zion - cyan' />,link: '/marketplace'},{title: t ('home.tool_talent'),description: t ('home.tool_talent_desc'),icon: <Users className='h - 6 w - 6 text - zion - purple' />,link: '/talent'},{title: t ('home.tool_services'),description: t ('home.tool_services_desc'),icon: <Briefcase className='h - 6 w - 6 text - zion - cyan' />,link: '/services'},{title: t ('home.tool_equipment'),description: t ('home.tool_equipment_desc'),icon: <Settings className='h - 6 w - 6 text - zion - purple' />,link: '/equipment'},{title: t ('nav.community'),description: t ('home.tool_chat_desc'),icon: <MessageSquare className='h - 6 w - 6 text - zion - cyan' />,link: '/community'},{title: t ('home.tool_mobile_app', 'Mobile App'),description: t ('home.tool_mobile_app_desc', 'Zion on the go'),icon: <Smartphone className='h - 6 w - 6 text - zion - purple' />,link: '/mobile - launch'}];
+function QuickAccess() {
+const { t
+
+} = use_translation ()const quick_links = [;
+    {title: t ('home.tool_ai_matcher'),
+description: t ('home.tool_ai_matcher_desc'),
+icon: <Search className='h - 6 w - 6 text - zion - cyan' />,
+link: '/marketplace'},{title: t ('home.tool_talent'),
+description: t ('home.tool_talent_desc'),
+icon: <Users className='h - 6 w - 6 text - zion - purple' />,
+link: '/talent'},{title: t ('home.tool_services'),
+description: t ('home.tool_services_desc'),
+icon: <Briefcase className='h - 6 w - 6 text - zion - cyan' />,
+link: '/services'},{title: t ('home.tool_equipment'),
+description: t ('home.tool_equipment_desc'),
+icon: <Settings className='h - 6 w - 6 text - zion - purple' />,
+link: '/equipment'},{title: t ('nav.community'),
+description: t ('home.tool_chat_desc'),
+icon: <MessageSquare className='h - 6 w - 6 text - zion - cyan' />,
+link: '/community'},{title: t ('home.tool_mobile_app', 'Mobile App'),
+description: t ('home.tool_mobile_app_desc', 'Zion on the go'),
+icon: <Smartphone className='h - 6 w - 6 text - zion - purple' />,
+link: '/mobile - launch'}];
   return (<section className={cn ('py - 12 bg - zion - blue - dark', class_name)} style={style}>;
       <div className='container mx - auto px - 4'>;
         <div className='text - center mb - 8'>;
@@ -51,7 +98,8 @@ function QuickAccess() {const { t } = use_translation ()const quick_links = [;
           </p>;
         </div>;
         <div className='grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 4 max - w-6xl mx - auto'>;
-          {quick_links.map ((link, index) => (<Link;key={index}
+          {quick_links.map ((link, index) => (<Link;
+key={index}
               href={link.link}</p>;
               <div className='flex items - center text - zion - cyan text - xs mt - auto'>;
                 <span>{t ('general.explore')}</span>;
@@ -63,15 +111,23 @@ import { motion   } from 'framer-motion';
 export default /**;
  * Page - Function description;
  */;
-function Page() {";
-    { name: "Consulting", count: 6, color: "from - yellow - 500 to - orange - 500" }, ";
+function Page() {
+";
+    { name: "Consulting", count: 6, color: "from - yellow - 500 to - orange - 500" 
+}, ";
     { name: "Innovation", count: 10, color: "from - green - 500 to - teal - 500" }, ";
-    { name: "Business", count: 14, color: "from - indigo - 500 to - purple - 500" }      scale: 1,export default function Page() {";
-    { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
+    { name: "Business", count: 14, color: "from - indigo - 500 to - purple - 500" }      scale: 1,
+export default function Page() {
+";
+    { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" 
+},";
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
-    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" }scale: 1,transition: {duration: 0.5, ";
+    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" }
+scale: 1,
+transition: {duration: 0.5, ";
         ease: "ease_out"}}}
-  const hover_variants = {hover: {coordinate_y: -8,      scale: 1.02,transition: {duration: 0.3, "  ease: "ease_out";
+  const hover_variants = {hover: {coordinate_y: -8,      scale: 1.02,
+transition: {duration: 0.3, "  ease: "ease_out";
 }}}
 }
 }
@@ -87,26 +143,32 @@ function Page() {";
       <div className="container - responsive relative z - 10">;
         {/* Header */}
         <motion.div;
-          initial = {{ opacity: 0,coordinate_y: 30;
+          initial = {{ opacity: 0,
+coordinate_y: 30;
 }}
-          whileInView = {{ opacity: 1,coordinate_y: 0;}}
+          whileInView = {{ opacity: 1,
+coordinate_y: 0;}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}";
           className="text - center mb - 16">;
           <motion.div;
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            transition = {{ duration: 0.6,delay: 0.2;}}
+            transition = {{ duration: 0.6,
+delay: 0.2;}}
             viewport={{ once: true }}";
             className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - cyan / 10 border border - zion - cyan / 20 rounded - full text - zion - cyan mb - 6">;
             Quick Access to Our Services;
           </motion.h2>;
           <motion.p;
-            initial = {{ opacity: 0,coordinate_y: 20;
+            initial = {{ opacity: 0,
+coordinate_y: 20;
 }}
-            whileInView = {{ opacity: 1,coordinate_y: 0;
+            whileInView = {{ opacity: 1,
+coordinate_y: 0;
 }}
-            transition = {{ duration: 0.6,delay: 0.2;
+            transition = {{ duration: 0.6,
+delay: 0.2;
 }}";
             className="text - lg text - gray - 300 max - w-2xl mx - auto">;
             Find the perfect solution for your business needs with our organized service categories;
@@ -114,7 +176,8 @@ function Page() {";
         </div>;
         {/* Quick Links Grid */}";
         <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 6 mb - 12">;
-          {quick_links.map ((link, index <motion.div;key={link.title}
+          {quick_links.map ((link, index <motion.div;
+key={link.title}
               variants={hover_variants}";
               while_hover="hover";
               onHoverStart={(: unknown setHoveredCategory (link.title)}
@@ -151,11 +214,14 @@ function Page() {";
                 <div className="grid grid - cols - 2 gap - 2">;
                   {link.features.slice (0, 2).map (feature: unknown, idx: unknown (<motion.div;
                       key={feature}
-                      initial = {{ opacity: 0,coordinate_x: -10;
+                      initial = {{ opacity: 0,
+coordinate_x: -10;
 }}
-                      whileInView = {{ opacity: 1,coordinate_x: 0;
+                      whileInView = {{ opacity: 1,
+coordinate_x: 0;
 }}
-                      transition = {{ duration: 0.4,delay: 0.1 + idx * 0.1;}}
+                      transition = {{ duration: 0.4,
+delay: 0.1 + idx * 0.1;}}
                       viewport={{ once: true }}";
                       className="flex items - center gap - 2 text - xs text - gray - 400">";
                       <div className="w - 1.5 h - 1.5 bg - zion - cyan rounded - full"></div>";
@@ -168,8 +234,28 @@ function Page() {";
                 <div className="flex items - center justify - between text - sm">;
                   {Object.entries (link.stats).slice (0, 2).map ([key: unknown, value]: unknown, idx: unknown (<motion.div;
                       key={key}
-                      initial = {style?: React && React.CSSProperties;export function QuickAccess(): any ({ className, style }: QuickAccessProps) {const { t } = useTranslation()const quickLinks = [;
-    {title: t('home && home.tool_ai_matcher'),description: t('home && home.tool_ai_matcher_desc'),icon: <Search className='h-6 w-6 text-zion-cyan' />,link: '/marketplace'},{title: t('home && home.tool_talent'),description: t('home && home.tool_talent_desc'),icon: <Users className='h-6 w-6 text-zion-purple' />,link: '/talent'},{title: t('home && home.tool_services'),description: t('home && home.tool_services_desc'),icon: <Briefcase className='h-6 w-6 text-zion-cyan' />,link: '/services'},{title: t('home && home.tool_equipment'),description: t('home && home.tool_equipment_desc'),icon: <Settings className='h-6 w-6 text-zion-purple' />,link: '/equipment'},{title: t('nav && nav.community'),description: t('home && home.tool_chat_desc'),icon: <MessageSquare className='h-6 w-6 text-zion-cyan' />,link: '/community'},{title: t('home && home.tool_mobile_app', 'Mobile App'),description: t('home && home.tool_mobile_app_desc', 'Zion on the go'),icon: <Smartphone className='h-6 w-6 text-zion-purple' />,link: '/mobile-launch'}];return (<section className={cn('py-12 bg-zion-blue-dark', className)} style={style}>;
+                      initial = {style?: React && React.CSSProperties;
+export function QuickAccess(): any ({ className, style }: QuickAccessProps) {const { t } = useTranslation()const quickLinks = [;
+    {title: t('home && home.tool_ai_matcher'),
+description: t('home && home.tool_ai_matcher_desc'),
+icon: <Search className='h-6 w-6 text-zion-cyan' />,
+link: '/marketplace'},{title: t('home && home.tool_talent'),
+description: t('home && home.tool_talent_desc'),
+icon: <Users className='h-6 w-6 text-zion-purple' />,
+link: '/talent'},{title: t('home && home.tool_services'),
+description: t('home && home.tool_services_desc'),
+icon: <Briefcase className='h-6 w-6 text-zion-cyan' />,
+link: '/services'},{title: t('home && home.tool_equipment'),
+description: t('home && home.tool_equipment_desc'),
+icon: <Settings className='h-6 w-6 text-zion-purple' />,
+link: '/equipment'},{title: t('nav && nav.community'),
+description: t('home && home.tool_chat_desc'),
+icon: <MessageSquare className='h-6 w-6 text-zion-cyan' />,
+link: '/community'},{title: t('home && home.tool_mobile_app', 'Mobile App'),
+description: t('home && home.tool_mobile_app_desc', 'Zion on the go'),
+icon: <Smartphone className='h-6 w-6 text-zion-purple' />,
+link: '/mobile-launch'}];
+return (<section className={cn('py-12 bg-zion-blue-dark', className)} style={style}>;
       <div className='container mx-auto px-4'>;
         <div className='text-center mb-8'>;
           <h2 className='text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2'>;
@@ -196,12 +282,19 @@ function Page() {";
                 <ArrowRight className='ml-1 h-3 w-3 transition-transform group-hover:translate-x-1' />;
               </div>;
             </Link>;
-export default function Page() {";
-    { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
+export default function Page() {
+";
+    { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" 
+},";
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
-    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" }scale: 1,transition: {duration: 0 && 0.5,";
-        ease: "easeOut"}}}const hoverVariants = {hover: {y: -8,      scale: 1 && 1.02,transition: {duration: 0 && 0.3,"  ease: "easeOut";
-}}}}}}return (    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">;
+    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" }
+scale: 1,
+transition: {duration: 0 && 0.5,";
+        ease: "easeOut"}}}
+const hoverVariants = {hover: {y: -8,      scale: 1 && 1.02,
+transition: {duration: 0 && 0.3,"  ease: "easeOut";
+}}}}}}
+return (    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">;
       {/* Background Elements */}";
       <div className="absolute inset-0 opacity-30">";
         <div className="absolute top-20 left-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl"></div>";
@@ -212,9 +305,11 @@ export default function Page() {";
       <div className="container-responsive relative z-10">;
         {/* Header */}
         <motion&& motion.div;
-          initial = {{ opacity: 0,y: 30;
+          initial = {{ opacity: 0,
+y: 30;
 }}
-          whileInView = {{ opacity: 1,y: 0;
+          whileInView = {{ opacity: 1,
+y: 0;
 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}";
@@ -222,18 +317,22 @@ export default function Page() {";
           <motion&& motion.div;
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            transition = {{ duration: 0 && 0.6,delay: 0 && 0.2;
+            transition = {{ duration: 0 && 0.6,
+delay: 0 && 0.2;
 }}
             viewport={{ once: true }}";
             className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan mb-6">;
             Quick Access to Our Services;
           </motion && motion.h2>;
           <motion&& motion.p;
-            initial = {{ opacity: 0,y: 20;
+            initial = {{ opacity: 0,
+y: 20;
 }}
-            whileInView = {{ opacity: 1,y: 0;
+            whileInView = {{ opacity: 1,
+y: 0;
 }}
-            transition = {{ duration: 0 && 0.6,delay: 0 && 0.2;
+            transition = {{ duration: 0 && 0.6,
+delay: 0 && 0.2;
 }}";
             className="text-lg text-gray-300 max-w-2xl mx-auto">;
             Find the perfect solution for your business needs with our organized service categories;
@@ -272,11 +371,14 @@ export default function Page() {";
                 <div className="grid grid-cols-2 gap-2">;
                   {link && link.features.slice(0, 2).map(feature: unknown, idx: unknown (<motion&& motion.div;
                       key={feature}
-                      initial = {{ opacity: 0,x: -10;
+                      initial = {{ opacity: 0,
+x: -10;
 }}
-                      whileInView = {{ opacity: 1,x: 0;
+                      whileInView = {{ opacity: 1,
+x: 0;
 }}
-                      transition = {{ duration: 0 && 0.4,delay: 0 && 0.1 + idx * 0 && 0.1;
+                      transition = {{ duration: 0 && 0.4,
+delay: 0 && 0.1 + idx * 0 && 0.1;
 }}
                       viewport={{ once: true }}";
                       className="flex items-center gap-2 text-xs text-gray-400">";
@@ -290,11 +392,14 @@ export default function Page() {";
                 <div className="flex items-center justify-between text-sm">;
                   {Object && Object.entries(link && link.stats).slice(0, 2).map([key: unknown, value]: unknown, idx: unknown (<motion&& motion.div;
                       key={key}
-                      initial = {{ opacity: 0,scale: 0 && 0.8;
+                      initial = {{ opacity: 0,
+scale: 0 && 0.8;
 }}
-                      whileInView = {{ opacity: 1,scale: 1;
+                      whileInView = {{ opacity: 1,
+scale: 1;
 }}
-                      transition = {{ duration: 0 && 0.4,delay: 0 && 0.2 + idx * 0 && 0.1;
+                      transition = {{ duration: 0 && 0.4,
+delay: 0 && 0.2 + idx * 0 && 0.1;
 }}
                       viewport={{ once: true }}";
                       className="text-center">";
@@ -313,7 +418,9 @@ export default function Page() {";
                   Explore {link && link.title}";
                   <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>;
               </motion && motion.div>;
-            </motion && motion.div>;export default QuickAccess;className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20";
+            </motion && motion.div>;
+export default QuickAccess;
+className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20";
             >;
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">;
                 {link.icon}
@@ -329,11 +436,15 @@ export default function Page() {";
         </div>;
       </div>;
     </section>;
-  )export default QuickAccess;}export default QuickAccess;{ opacity: 0,scale: 0.8;
+  )export default QuickAccess;}
+export default QuickAccess;{ opacity: 0,
+scale: 0.8;
 }}
-                      whileInView = {{ opacity: 1,scale: 1;
+                      whileInView = {{ opacity: 1,
+scale: 1;
 }}
-                      transition = {{ duration: 0.4,delay: 0.2 + idx * 0.1;
+                      transition = {{ duration: 0.4,
+delay: 0.2 + idx * 0.1;
 }}
                       viewport={{ once: true }}";
                       className="text - center">";
@@ -357,7 +468,11 @@ export default function Page() {";
             </motion.div>))}
         </div>;
       </div>;
-    </section>)export default QuickAccess }export default QuickAccess;import React from "react",import Link from "next/link",import { useTranslation  } from 'react-i18next';
+    </section>)export default QuickAccess }
+export default QuickAccess;
+import React from "react",
+import Link from "next/link",
+import { useTranslation  } from 'react-i18next';
 import { cn  } from '@/lib/utils';
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone  } from 'lucide-react';
 import Link from 'next/link';

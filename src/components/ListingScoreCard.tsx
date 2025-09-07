@@ -12,23 +12,52 @@ import React, { useState } from 'react'; // Import useState;
 import { Star  } from 'lucide-react';
 import Image from 'next / image'; // Import next / image;
 import React, { useState } from 'react'; // Import useStateimport Image from 'next / image'; // Import next / image;
-interface ListingScoreCardProps  {title: string;
+interface ListingScoreCardProps {
+title: string;
   description: string;
   image?: string;
   category: string;
   tags?: string[];
-  author?: string;interface ListingScoreCardProps  {title: string,description: string,image?: string,category: string,tags?: string[],author?: string,authorImage?: string,aiScore?: number,rating?: number,reviewCount?: number,authorImage?: string;
+  author?: string;
+interface ListingScoreCardProps  {title: string,
+description: string,
+image?: string,
+category: string,
+tags?: string[],
+author?: string,
+authorImage?: string,
+aiScore?: number,
+rating?: number,
+reviewCount?: number,
+authorImage?: string;
   aiScore?: number;
   rating?: number;
-  reviewCount?: number;className?: string;
-}export function ListingScoreCard({title,description,image,category,export function ListingScoreCard(): any ({tags,author,authorImage,aiScore,rating = 0,reviewCount = 0,className;
-}: ListingScoreCardProps) {const [mainImageError, setMainImageError] = useState(false),const [authorImageError, setAuthorImageError] = useState(false),return (<div className={cn("flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",className;
+  reviewCount?: number;
+className?: string;
+}
+export function ListingScoreCard({title,
+description,
+image,
+category,
+export function ListingScoreCard(): any ({tags,
+author,
+authorImage,
+aiScore,
+rating = 0,
+reviewCount = 0,
+className;
+}: ListingScoreCardProps) {const [mainImageError, setMainImageError] = useState(false),
+const [authorImageError, setAuthorImageError] = useState(false),
+return (<div className={cn("flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
+className;
     )}>;
       {image && !mainImageError && (<div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
           <Image;
       {image && !mainImageError && (<div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
           <Image;
-            src={image}alt={title}className="object-cover transition-transform duration-300 group-hover:scale-105";
+            src={image}
+alt={title}
+className="object-cover transition-transform duration-300 group-hover:scale-105";
             onError={() => setMainImageError(true)}
             priority={false}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes;
@@ -57,13 +86,40 @@ interface ListingScoreCardProps  {title: string;
             <div className="flex">;
               {[1, 2, 3, 4, 5].map((star) => (<StarIcon;
                   key={star}
-                  className={cn("h-4 w-4",star <= Math.round(rating)? "text-zion-cyan fill-zion-cyan";
+                  className={cn("h-4 w-4",
+star <= Math.round(rating)? "text-zion-cyan fill-zion-cyan";
                       : "text-zion-slate-light";
-import { cn } from "@/lib/utils",import { Badge } from "@/components/ui/badge",import { Button } from "@/components/ui/button",import Image from 'next/image', // Import next/image;
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import Image from 'next/image', // Import next/image;
 import React, { useState } from 'react', // Import useState;
-interface ListingScoreCardProps  {title: string,description: string,image?: string,category: string,tags?: string[],author?: string,authorImage?: string,aiScore?: number,rating?: number,reviewCount?: number,className?: string;
-}export function ListingScoreCard({export function ListingScoreCard(): any ({title,description,image,category,tags,author,authorImage,aiScore,rating = 0,reviewCount = 0,className}: ListingScoreCardProps) {const [mainImageError, setMainImageError] = useState(false)const [authorImageError, setAuthorImageError]  = useState(false)>;
-      {image && !mainImageError && (<div className='h-48 w-full overflow-hidden relative'>;author_image?: string;
+interface ListingScoreCardProps {
+title: string,
+description: string,
+image?: string,
+category: string,
+tags?: string[],
+author?: string,
+authorImage?: string,
+aiScore?: number,
+rating?: number,
+reviewCount?: number,
+className?: string;
+}
+export function ListingScoreCard({export function ListingScoreCard(): any ({title,
+description,
+image,
+category,
+tags,
+author,
+authorImage,
+aiScore,
+rating = 0,
+reviewCount = 0,
+className}: ListingScoreCardProps) {const [mainImageError, setMainImageError] = useState(false)const [authorImageError, setAuthorImageError]  = useState(false)>;
+      {image && !mainImageError && (<div className='h-48 w-full overflow-hidden relative'>;
+author_image?: string;
   ai_score?: number;
   rating?: number;
   review_count?: number;
@@ -71,9 +127,11 @@ interface ListingScoreCardProps  {title: string,description: string,image?: stri
 export /**;
  * ListingScoreCard - Function description;
  */;
-function ListingScoreCard() {const [mainImageError, setMainImageError] = useState (false)const [authorImageError, setAuthorImageError] = useState (false)>;
+function ListingScoreCard() {
+const [mainImageError, setMainImageError] = useState (false)const [authorImageError, setAuthorImageError] = useState (false)>;
       {image && !mainImageError && (<div className='h - 48 w - full overflow - hidden relative'>;
-          {' '}
+          {' '
+}
           {/* Added relative for Image layout fill */}
           <Image;
             src={image}
@@ -102,7 +160,8 @@ function ListingScoreCard() {const [mainImageError, setMainImageError] = useStat
           {title}
         </h3>;
         <p className='text-zion-slate mb-4 flex-grow line-clamp-2'>;
-          {description}sizes='(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw' // General sizes          />;
+          {description}
+sizes='(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw' // General sizes          />;
         </div>)}
       {(!image || mainImageError) && ( // Fallback if no image or error;
         <div className='h - 48 w - full overflow - hidden bg - zion - blue - light / 10 flex items - center justify - center'>;
@@ -131,7 +190,8 @@ function ListingScoreCard() {const [mainImageError, setMainImageError] = useStat
         </p>;{rating > 0 && (<div className='flex items - center gap - 1 mb - 4'>;
             <div className='flex'>;
               {[1, 2, 3, 4, 5].map (star => (<StarIcon;
-                  key={star}</p>;title;
+                  key={star}</p>;
+title;
   description;
   image;
   category;
@@ -169,9 +229,11 @@ function ListingScoreCard() {const [mainImageError, setMainImageError] = useStat
             <div className='flex'>;
               {[1, 2, 3, 4, 5].map(star => (<StarIcon;
                   key={star}
-                  className={cn('h-4 w-4',star <= Math && Math.round(rating)? 'text-zion-cyan fill-zion-cyan';
+                  className={cn('h-4 w-4',
+star <= Math && Math.round(rating)? 'text-zion-cyan fill-zion-cyan';
                       : 'text-zion-slate-light';
-                  )}                />;className={cn("h-4 w-4";
+                  )}                />;
+className={cn("h-4 w-4";
                     star <= Math.round(rating)? "text-zion-cyan fill-zion-cyan";
                       : "text-zion-slate-light";
                   )}
@@ -196,7 +258,8 @@ function ListingScoreCard() {const [mainImageError, setMainImageError] = useStat
           Request Quote;
         </Button>;{author && (<div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>;
             {authorImage && !authorImageError ? (<div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>;
-                  className={cn ('h - 4 w - 4',star <= Math.round (rating)? 'text - zion - cyan fill - zion - cyan';
+                  className={cn ('h - 4 w - 4',
+star <= Math.round (rating)? 'text - zion - cyan fill - zion - cyan';
                       : 'text - zion - slate - light')}                />))}
             </div>;
             <span className='text - sm text - zion - slate - light ml - 1'>;
@@ -221,7 +284,8 @@ function ListingScoreCard() {const [mainImageError, setMainImageError] = useStat
                   src={author_image}
                   alt={author}</div>;
     </div>;
-  )}className='object - cover rounded - full';
+  )}
+className='object - cover rounded - full';
                   on_error={() => setAuthorImageError (true)}
                   priority={false}                />;
               </div>) : (<div className='h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2 flex items - center justify - center text - zion - purple'>;
@@ -230,7 +294,8 @@ function ListingScoreCard() {const [mainImageError, setMainImageError] = useStat
             <span className='text - sm text - zion - slate - light'>{author}</span>;
           </div>)}
       </div>;
-    </div>)}className="object-cover rounded-full";
+    </div>)}
+className="object-cover rounded-full";
                   onError={() => setAuthorImageError(true)}
                   priority={false}
                 />;

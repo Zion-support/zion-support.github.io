@@ -9,47 +9,86 @@ import { GradientHeading  } from '@/components/GradientHeading';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent, CardFooter  } from '@/components/ui/card';
 import Image from 'next/image';
-export interface Benefit  {title: string;
+export interface Benefit {
+title: string;
   description: string;
   icon?: React.ReactNode;
 }
-export interface Testimonial  {name: string;role?: string;
+export interface Testimonial {
+name: string;
+role?: string;
   text: string;
   avatar?: string;
-}interface ServiceLandingTemplateProps  {title: string;
+}
+interface ServiceLandingTemplateProps {
+title: string;
   subtitle: string;
   heroImage?: string;
   description: string;
   benefits: Benefit[];
   testimonials: Testimonial[];
   ctaText: string;
-export interface Benefit  {title: string,description: string,icon?: React.ReactNode;
+export interface Benefit  {title: string,
+description: string,
+icon?: React.ReactNode;
 export interface Benefit  {title: string;
   description: string;
   icon?: React.ReactNode;
 }
-export interface Testimonial  {name: string;
+export interface Testimonial {
+name: string;
   role?: string;
   text: string;
-  avatar?: string;}
-interface ServiceLandingTemplateProps  {title: string;
+  avatar?: string;
+}
+interface ServiceLandingTemplateProps {
+title: string;
   subtitle: string;
   description: string;
   benefits: Benefit[];
-  features?: string[];stats?: Array<{ label: string; value: string }>;
+  features?: string[];
+stats?: Array<{ label: string; value: string
+}>;
   ctaText: string;
   ctaLink: string;
-import React from "react",import { GradientHeading } from "@/components/GradientHeading",import { Button } from "@/components/ui/button",import { Card, CardContent, CardFooter } from "@/components/ui/card",import Image from "next/image",export interface Benefit  {title: string,description: string,icon?: React.ReactNode;
+import React from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import Image from "next/image",
+export interface Benefit {
+title: string,
+description: string,
+icon?: React.ReactNode;
 }
-export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({export interface Benefit  {title: string;
+export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({export interface Benefit {
+title: string;
   description: string;
   icon?: React.ReactNode;
-}export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({title,subtitle,heroImage,heroImage,description,benefits,export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({title,subtitle,description,benefits,features = [],stats = [],ctaText,ctaLink}) => {return (</p>;
-  testimonials,ctaText,return (<div className="bg-background text-white">;
+}
+export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({title,
+subtitle,
+heroImage,
+heroImage,
+description,
+benefits,
+export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({title,
+subtitle,
+description,
+benefits,
+features = [],
+stats = [],
+ctaText,
+ctaLink})  => {
+return (</p>;
+  testimonials,
+ctaText,
+return (<div className="bg-background text-white">;
       <section className="bg-zion-blue py-16 px-4 text-center">;
         <div className="container mx-auto">;
           <GradientHeading level="h1" className="mb-4">;
-            {title}
+            {title
+}
           </GradientHeading>;
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
             {subtitle}
@@ -119,15 +158,18 @@ export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = (
               {benefits && benefits.map((benefit, index) => (<div key={index} className="bg-white p-6 rounded-lg shadow-lg">;
                   {benefit && benefit.icon && (<div className="mb-4 text-blue-600">;
                       {benefit && benefit.icon}
-                    </div>;title;
+                    </div>;
+title;
   subtitle;
   heroImage;
   description;
   benefits;
   testimonials;
   ctaText;
-  ctaLink}) => {return (<div className;
-            {description}
+  ctaLink})  => {
+return (<div className;
+            {description
+}
           </p>;
         </div>;
       </section>;

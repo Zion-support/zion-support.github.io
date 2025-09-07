@@ -1,7 +1,16 @@
 
 ;
-import { useState } from 'react',import { Button } from '@/components/ui/button',import { Input } from '@/components/ui/input',import { Label } from '@/components/ui/label',import { Textarea } from '@/components/ui/textarea',try {on_submit ({ email, address })} finally {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }return this.props.children;
+import { useState } from 'react',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Label } from '@/components/ui/label',
+import { Textarea } from '@/components/ui/textarea',
+try {on_submit ({ email, address })} finally {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+static getDerivedStateFromError(error) {return { hasError: true }}
+componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+render() {if (this.state.hasError) {return <div > Something went wrong.</div>;
+    }
+return this.props.children;
   }
 }
 import React from 'react';
@@ -10,10 +19,17 @@ import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Label  } from '@/components/ui/label';
 import { Textarea  } from '@/components/ui/textarea';
-import {Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle} from '@/components/ui/dialog';
+import {Dialog,
+DialogContent,
+DialogDescription,
+DialogFooter,
+DialogHeader,
+DialogTitle} from '@/components/ui/dialog';
 import { User, Mail, MapPin, CreditCard  } from 'lucide-react';
 import { isProdDomain  } from '@/utils/getStripe';
-interface GuestCheckoutModalProps  {import { useState   } from 'react';
+interface GuestCheckoutModalProps {
+import { useState
+} from 'react';
 import { Button   } from '@/components/ui/button';
 import { Input   } from '@/components/ui/input';
 import { Label   } from '@/components/ui/label';
@@ -29,13 +45,22 @@ import { Dialog;
   DialogHeader;
   DialogTitle;
  } from '@/components/ui/dialog';
-interface GuestCheckoutModalProps  {open: boolean;
+interface GuestCheckoutModalProps {
+open: boolean;
   onOpenChange: (open: boolean) => void;
-  onSubmit: (details: { email: string; address: string }) => void;
-export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}: GuestCheckoutModalProps) {const [email, setEmail] = useState('')const [address, setAddress] = useState('')const [isSubmitting, setIsSubmitting]  = useState(false)const handleSubmit = async (e: React && React.FormEvent) => {e && e.preventDefault()if (!email || !address) {alert('Please fill in all required fields')return;
-    }setIsSubmitting(true)try {onSubmit({ email, address })} finally {setIsSubmitting(false)}
+  onSubmit: (details: { email: string; address: string
+}) => void;
+export default function GuestCheckoutModal(): any ({open,
+onOpenChange,
+onSubmit}: GuestCheckoutModalProps) {const [email, setEmail] = useState('')const [address, setAddress] = useState('')const [isSubmitting, setIsSubmitting]  = useState(false)const handleSubmit = async (e: React && React.FormEvent)  => {
+e && e.preventDefault()if (!email || !address) {alert('Please fill in all required fields')return;
+    
+}
+setIsSubmitting(true)try {onSubmit({ email, address })} finally {setIsSubmitting(false)}
   }}
-  },const handleSubmit  = null;return (<Dialog open={open} onOpenChange={onOpenChange}>;
+  },
+const handleSubmit  = null;
+return (<Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className="bg-zion-blue border-zion-cyan/20 max-w-md">;
         <DialogHeader>;
           <DialogTitle className="text-white flex items-center gap-2">;
@@ -191,7 +216,8 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
                   <CreditCard className='h-4 w-4 mr-2' />;
                   Continue to Payment;
                 </>;
-              )}disabled={isSubmitting || !email || !address}
+              )}
+disabled={isSubmitting || !email || !address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
               {isSubmitting ? ('Processing...';
               ) : (<>;

@@ -1,18 +1,80 @@
 
-const formSchema = z && z.object({title: z && z.string().min(3, "Title must be at least 3 characters")keyFeatures: z && z.string(),targetAudience: z && z.string()}),type FormData = z && z.infer<typeof formSchema>;const description  = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.";}
-  )})}const form_schema = z.object ({title: z.string ().min (3, "Title must be at least 3 characters")key_features: z.string (),target_audience: z.string ()}),type FormData = z.infer < typeof form_schema>;
+const formSchema = z && z.object({title: z && z.string().min(3, "Title must be at least 3 characters")keyFeatures: z && z.string(),
+targetAudience: z && z.string()}),
+type FormData = z && z.infer < typeof formSchema>;
+const description  = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.";}
+  )})}
+const form_schema = z.object ({title: z.string ().min (3, "Title must be at least 3 characters")key_features: z.string (),
+target_audience: z.string ()}),
+type FormData = z.infer < typeof form_schema>;
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high - quality solutions tailored to your specific needs.";
-}export function ServiceDescriptionForm() {const { toast } = useToast(),const [isLoading, setIsLoading] = useState(false),const form = useForm<FormData>({resolver: zodResolver(formSchema),defaultValues: {title: "",keyFeatures: "",targetAudience: ""}}),const handleSubmit = async (data: FormData) => {setIsLoading(true),try {const { data: response, error } = await supabase.functions.invoke('generate-service-description', {body: {title: data.title,keyFeatures: data.keyFeatures,targetAudience: data.targetAudience;
-import React, { useState } from "react",import { useToast } from "@/hooks/use-toast",import { Button } from "@/components/ui/button",import { Input } from "@/components/ui/input",import { Textarea } from "@/components/ui/textarea",import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",import { Loader, Sparkles  } from 'lucide-react';
-import { supabase } from "@/integrations/supabase/client",import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",import { useForm } from "react-hook-form",import z from "zod",import { zodResolver } from "@hookform/resolvers/zod",import {logErrorToProduction} from '@/utils/productionLogger',const formSchema = z.object({title: z.string().min(3, "Title must be at least 3 characters"),keyFeatures: z.string(),targetAudience: z.string()}),type FormData = z.infer<typeof formSchema>,interface ServiceDescriptionFormProps  {onDescriptionGenerated: (description: string) => void;
-}export function ServiceDescriptionForm() {const { toast } = useToast(),const [isLoading, setIsLoading] = useState(false),const form = useForm<FormData>({resolver: zodResolver(formSchema),defaultValues: {title: "",keyFeatures: "",targetAudience: ""}}),const handleSubmit = async (data: FormData) => {setIsLoading(true),try {const { data: response, error } = await supabase.functions.invoke('generate-service-description', {body: {title: data.title,keyFeatures: data.keyFeatures,targetAudience: data.targetAudience;
+}
+export function ServiceDescriptionForm() {
+const { toast 
+} = useToast(),
+const [isLoading, setIsLoading] = useState(false),
+const form = useForm < FormData>({resolver: zodResolver(formSchema),
+defaultValues: {title: "",
+keyFeatures: "",
+targetAudience: ""}}),
+const handleSubmit = async (data: FormData)  => {
+setIsLoading(true),
+try {const { data: response, error 
+} = await supabase.functions.invoke('generate-service-description', {body: {title: data.title,
+keyFeatures: data.keyFeatures,
+targetAudience: data.targetAudience;
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
+import { Loader, Sparkles  } from 'lucide-react';
+import { supabase } from "@/integrations/supabase/client",
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { useForm } from "react-hook-form",
+import z from "zod",
+import { zodResolver } from "@hookform/resolvers/zod",
+import {logErrorToProduction} from '@/utils/productionLogger',
+const formSchema = z.object({title: z.string().min(3, "Title must be at least 3 characters"),
+keyFeatures: z.string(),
+targetAudience: z.string()}),
+type FormData = z.infer < typeof formSchema>,
+interface ServiceDescriptionFormProps {
+onDescriptionGenerated: (description: string) => void;
+}
+export function ServiceDescriptionForm() {
+const { toast 
+} = useToast(),
+const [isLoading, setIsLoading] = useState(false),
+const form = useForm < FormData>({resolver: zodResolver(formSchema),
+defaultValues: {title: "",
+keyFeatures: "",
+targetAudience: ""}}),
+const handleSubmit = async (data: FormData)  => {
+setIsLoading(true),
+try {const { data: response, error 
+} = await supabase.functions.invoke('generate-service-description', {body: {title: data.title,
+keyFeatures: data.keyFeatures,
+targetAudience: data.targetAudience;
         }
-      }),if (error) {throw new Error(error.message)}if (response && (response as any).error) {throw new Error((response as any).error)}const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.",onDescriptionGenerated(description),toast({title: "Description Generated",description: "Your professional service description has been created.";
-      })} catch (error) {logErrorToProduction('Error generating description:', { data: error }),toast({title: "Generation Failed",description: error instanceof Error ? error.message : "Failed to generate description. Please try again.",variant: "destructive";
+      }),
+if (error) {throw new Error(error.message)}
+if (response && (response as any).error) {throw new Error((response as any).error)}
+const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.",
+onDescriptionGenerated(description),
+toast({title: "Description Generated",
+description: "Your professional service description has been created.";
+      })} catch (error) {logErrorToProduction('Error generating description:', { data: error }),
+toast({title: "Generation Failed",
+description: error instanceof Error ? error.message : "Failed to generate description. Please try again.",
+variant: "destructive";
       })} finally {setIsLoading(false)}
-  },import { zodResolver  } from '@hookform/resolvers/zod';
+  },
+import { zodResolver  } from '@hookform/resolvers/zod';
 import { logErrorToProduction } from '@/utils/productionLogger';
-const formSchema  = null;return (<Card className="border border-zion-blue-light bg-zion-blue-dark">;
+const formSchema  = null;
+return (<Card className="border border-zion-blue-light bg-zion-blue-dark">;
       <CardHeader>;
         <CardTitle className="flex items-center text-white">;
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />;
@@ -34,11 +96,18 @@ const formSchema  = null;return (<Card className="border border-zion-blue-light 
                     <Input;
                       {...field}
                       placeholder="e.g. Professional Web Design Services";
-                      className="bg-zion-blue border border-zion-blue-light text-white";const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.",onDescriptionGenerated(description),toast({title: "Description Generated",description: "Your professional service description has been created.";
-      })} catch (error) {logErrorToProduction('Error generating description:', { data: error }),toast({title: "Generation Failed",description: error instanceof Error ? error.message : "Failed to generate description. Please try again.";
+                      className="bg-zion-blue border border-zion-blue-light text-white";
+const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.",
+onDescriptionGenerated(description),
+toast({title: "Description Generated",
+description: "Your professional service description has been created.";
+      })} catch (error) {logErrorToProduction('Error generating description:', { data: error }),
+toast({title: "Generation Failed",
+description: error instanceof Error ? error.message : "Failed to generate description. Please try again.";
         variant: "destructive";
       })} finally {setIsLoading(false)}
-  }return (<Card className="border border-zion-blue-light bg-zion-blue-dark">;
+  }
+return (<Card className="border border-zion-blue-light bg-zion-blue-dark">;
       <CardHeader>;
         <CardTitle className="flex items-center text-white">;
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />;
@@ -124,9 +193,11 @@ const formSchema  = null;return (<Card className="border border-zion-blue-light 
         </Form>;
       </CardContent>;
     </Card>;
-  )}catch (error) {';
+  )}
+catch (error) {';
   logErrorToProduction ('Error generating description:', {data: error ;
-})toast ({}finally {setIsLoading (false)}>Service Title</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";
+})toast ({}
+finally {setIsLoading (false)}>Service Title</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Key Features</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Target Audience</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > {";

@@ -30,11 +30,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en">
       <body>
         <div className="min-h-screen bg-white">
-          {children}
+          {children
+}
         </div>
       </body>
     </html>

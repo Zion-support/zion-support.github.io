@@ -1,14 +1,23 @@
 import React from 'react';
 import { Shield, Award, Users, Clock, CheckCircle, Star  } from 'lucide-react';
-const TrustIndicators: React.FC = () => {const indicators = [;
-    {icon: Shield, title: "Enterprise Security",description: "SOC 2 Type II Certified", color: "text-green-500";
-    },{icon: Award, title: "Industry Recognition",description: "Top 100 Tech Companies 2026", color: "text-blue-500";
-    },{icon: Users, title: "Expert Team",description: "50+ Certified Professionals", color: "text-purple-500";
-    },{icon: Clock, title: "24/7 Support",description: "Round-the-clock assistance", color: "text-orange-500";
-    },{icon: CheckCircle, title: "Quality Assurance",description: "99.9% Uptime Guarantee", color: "text-cyan-500";
-    },{icon: Star, title: "Client Satisfaction",description: "98% Customer Rating", color: "text-yellow-500";
+const TrustIndicators: React.FC = ()  => {
+const indicators = [;
+    {icon: Shield, title: "Enterprise Security",
+description: "SOC 2 Type II Certified", color: "text-green-500";
+    
+},{icon: Award, title: "Industry Recognition",
+description: "Top 100 Tech Companies 2026", color: "text-blue-500";
+    },{icon: Users, title: "Expert Team",
+description: "50+ Certified Professionals", color: "text-purple-500";
+    },{icon: Clock, title: "24/7 Support",
+description: "Round-the-clock assistance", color: "text-orange-500";
+    },{icon: CheckCircle, title: "Quality Assurance",
+description: "99.9% Uptime Guarantee", color: "text-cyan-500";
+    },{icon: Star, title: "Client Satisfaction",
+description: "98% Customer Rating", color: "text-yellow-500";
     }
-  ];return (<section className="py-16 bg-gradient-to-r from-slate-900/50 to-slate-800/50">;
+  ];
+return (<section className="py-16 bg-gradient-to-r from-slate-900/50 to-slate-800/50">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
           <h2 className="text-3xl font-bold text-white mb-4">;
@@ -58,4 +67,5 @@ const TrustIndicators: React.FC = () => {const indicators = [;
         </div>;
       </div>;
     </section>;
-  )}export default TrustIndicators;
+  )}
+export default TrustIndicators;

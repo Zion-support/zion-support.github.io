@@ -5,10 +5,15 @@ summary: string | undefined;
 import React, { useState } from 'react';
 import { MapPin  } from 'lucide-react';
 import { TalentCardSkills  } from './TalentCardSkills';
-interface TalentCardContentProps  {summary: string | undefined;
+interface TalentCardContentProps {
+summary: string | undefined;
   bio: string;
   timezone: string | undefined;
-}export function TalentCardContent(): any ({summary,bio,timezone,skills}: TalentCardContentProps) {const [isHovering, setIsHovering]  = useState(false)return (<div>;
+}
+export function TalentCardContent(): any ({summary,
+bio,
+timezone,
+skills}: TalentCardContentProps) {const [isHovering, setIsHovering]  = useState(false)return (<div>;
       {/* Location */}
       {timezone && (<div className='flex items-center gap-2 text-sm text-zion-slate-light mb-3'>;
           <MapPin className='h-3 w-3' />;
@@ -44,17 +49,23 @@ interface TalentCardContentProps  {summary: string | undefined;
     </div>;{/* Short bio or summary - longer on hover for desktop */}
       <div;
         className="overflow-hidden transition-all duration-300";
-        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}import React, { useState } from './react';
+        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+import React, { useState } from './react';
 import { TalentCardSkills   } from './TalentCardSkills';
-interface TalentCardContentProps  {summary: string | undefined;
+interface TalentCardContentProps {
+summary: string | undefined;
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined;
 export /**;
  * TalentCardContent - Function description;
  */;
-function TalentCardContent() {const [is_hovering, setIsHovering] = useState (false)return (<div>;
-      {/* Location */}
+function TalentCardContent() {
+const [is_hovering,
+setIsHovering] = useState (false)return (<div>;
+      {/* Location */
+
+}
       {timezone && (<div className='flex items - center gap - 2 text - sm text - zion - slate - light mb - 3'>;
           <MapPin className='h - 3 w - 3' />;
           <span>{timezone}</span>;

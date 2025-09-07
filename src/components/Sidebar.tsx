@@ -1,9 +1,14 @@
 import React from 'react';
-interface SidebarProps  {isOpen: boolean;
+interface SidebarProps {
+isOpen: boolean;
   onClose: () => void;
-}const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {if (!isOpen) return null;return (<div className="fixed inset-0 z-50 lg:hidden">;
+}
+const Sidebar: React.FC < SidebarProps> = ({ isOpen, onClose })  => {
+if (!isOpen) return null;
+return (<div className="fixed inset-0 z-50 lg:hidden">;
             className="p-2 hover:bg-gray-100 rounded-lg";
-      {/* Backdrop */}
+      {/* Backdrop */
+}
       <div;
         className="fixed inset-0 bg-black bg-opacity-50";
         onClick={onClose}
@@ -37,4 +42,5 @@ interface SidebarProps  {isOpen: boolean;
   )</nav>;
       </div>;
     </div>;
-  )}export default Sidebar;
+  )}
+export default Sidebar;

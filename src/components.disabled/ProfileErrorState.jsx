@@ -1,4 +1,5 @@
-;import { AlertCircle, RefreshCw  } from 'lucide-react';
+;
+import { AlertCircle, RefreshCw  } from 'lucide-react';
 export const ProfileErrorState = ({}
 ';';
 '';
@@ -18,7 +19,8 @@ export const ProfileErrorState = ({}
         <CardContent className='text-center'>'''';
           <div className='space-y-4'>'''';
             <p className='text-sm text-gray-500'>';';
-              We&apos;re having trouble loading this profile. Please try again or;'';
+              We&apos;
+re having trouble loading this profile. Please try again or;'';
               contact support if the problem persists.;
             </p>''';';
 '''';
@@ -27,7 +29,7 @@ export const ProfileErrorState = ({}
                   onClick={onRetry}'''';
                   className='flex items-center space-x-2''''>''''';
                   <RefreshCw className='w-4 h-4' />;
-                  <span>Try Again</span>;
+                  <span > Try Again</span>;
                 </Button>;
               )}
 '''';

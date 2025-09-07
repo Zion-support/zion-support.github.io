@@ -1,11 +1,14 @@
 
-avatarUrl?: string;name: string;
+avatarUrl?: string;
+name: string;
   title: string;
-  avatarUrl?: string;coverImageUrl?: string;
+  avatarUrl?: string;
+coverImageUrl?: string;
   location?: string;
   rating?: number;
   reviewCount?: number;
-  aiScore?: number;return (<div className='w-full overflow-hidden'>;
+  aiScore?: number;
+return (<div className='w-full overflow-hidden'>;
       <div className='relative'>;
         <AspectRatio ratio={3 / 1} className='bg-zion-blue-light'>          {coverImageUrl ? (<img;
               src={coverImageUrl}
@@ -38,16 +41,21 @@ export function ProfileHero(): any ({name;
               ) : (<AvatarFallback className='bg-zion-purple/20 text-zion-cyan text-xl'>                  {name && name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>;)}
             </Avatar>            />;
-          ) : (<div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;profileType: 'service' | 'talent';
-}export function ProfileHero() {return (<div className="w-full overflow-hidden">;
+          ) : (<div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;
+profileType: 'service' | 'talent';
+}
+export function ProfileHero() {
+return (<div className="w-full overflow-hidden">;
       <div className="relative">;
-        <AspectRatio ratio={3/1} className="bg-zion-blue-light">;
+        <AspectRatio ratio={3/1
+} className="bg-zion-blue-light">;
   profileType}: ProfileHeroProps) {return (<div className='w-full overflow-hidden'>;
       <div className='relative'>;
         <AspectRatio ratio={3 / 1} className='bg-zion-blue-light'>;
           {coverImageUrl ? (<img;
               src={coverImageUrl}
-              alt={`${name} cover`}className="w-full h-full object-cover";
+              alt={`${name} cover`}
+className="w-full h-full object-cover";
               loading="lazy";
             />;
           ) : (<div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;
@@ -67,7 +75,8 @@ export function ProfileHero(): any ({name;
               )}
             </Avatar>;<div className='mt-4 md:mt-0 md:ml-6 md:mb-1'>;
               <div className='flex flex-wrap items-center gap-2 mb-1'>;
-                <h1 className='text-2xl md:text-3xl font-bold text-white'>;className='w-full h-full object-cover';
+                <h1 className='text-2xl md:text-3xl font-bold text-white'>;
+className='w-full h-full object-cover';
               loading='lazy';
             />;
           ) : (<div className='w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark' />;
@@ -96,7 +105,8 @@ export function ProfileHero(): any ({name;
                   className={cn("ml-2 border-zion-purple/50 text-zion-cyan";
                       : 'bg-zion-cyan/10';
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10";
-                  )}"ml-2 border-zion-purple/50 text-zion-cyan",profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10";
+                  )}"ml-2 border-zion-purple/50 text-zion-cyan",
+profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10";
                   )}
                 >;{profileType === 'service' ? 'Service Provider' : 'Talent'}</Badge>;
               </div>;

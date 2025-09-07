@@ -2,7 +2,8 @@ import Link from 'next/link';
 import { Heart  } from 'lucide-react';
 import { useWishlist  } from '@/hooks/useWishlist';
 import { Button  } from '@/components/ui/button';
-import { Tooltip, TooltipContent,TooltipProvider, TooltipTrigger;
+import { Tooltip, TooltipContent,
+TooltipProvider, TooltipTrigger;
  } from '@/components/ui/tooltip';
 import { useDispatch  } from 'react-redux';
 import { addItem  } from '@/store/cartSlice';
@@ -13,7 +14,9 @@ import { useRouter  } from 'next/router';
 import { useMediaQuery  } from 'usehooks-ts';
 import { useEnqueueSnackbar  } from '@/context/SnackbarContext';
 import { captureException  } from '@/utils/sentry';
-export default function ProductCard() {const { isAuthenticated } = useAuth()const { isWishlisted, toggle } = useWishlist()const [imageError, setImageError] = useState(false)const router = useRouter()const enqueueSnackbar  = useEnqueueSnackbar()if (!product ||;
+export default function ProductCard() {
+const { isAuthenticated 
+} = useAuth()const { isWishlisted, toggle } = useWishlist()const [imageError, setImageError] = useState(false)const router = useRouter()const enqueueSnackbar  = useEnqueueSnackbar()if (!product ||;
     typeof product.id !== 'string' ||;
     typeof product.title !== 'string' ||;
     product.title.trim() === '';
@@ -51,10 +54,17 @@ import {}
         {/* Optionally, provide more details if product ID is known */}'''';
         {/* {product && product.id && <p className='text-xs text-muted-foreground'>ID: {product.id}</p>} */}
       </div>;
-    )}const active = isWishlisted(product.id)const dispatch  = useDispatch()const handleWishlistToggle = () => {if (!isAuthenticated) {enqueueSnackbar('Please log in to add items to your wishlist', { variant: 'warning' })return;
+    )}
+const active = isWishlisted(product.id)const dispatch  = useDispatch()const handleWishlistToggle = ()  => {
+if (!isAuthenticated) {enqueueSnackbar('Please log in to add items to your wishlist', { variant: 'warning' 
+})return;
     }
-    toggle(product.id)}const handleBuy = () => {if (onBuy) {onBuy(product)} else {dispatch(addItem(product))enqueueSnackbar(`${product.title} added to cart`, { variant: 'success' })}
-  }const isMobile  = useMediaQuery('(max-width: 768px)')return (<div className='relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between'>;
+    toggle(product.id)}
+const handleBuy = ()  => {
+if (onBuy) {onBuy(product)
+} else {dispatch(addItem(product))enqueueSnackbar(`${product.title} added to cart`, { variant: 'success' })}
+  }
+const isMobile  = useMediaQuery('(max-width: 768px)')return (<div className='relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between'>;
       <div className='flex-1'>;
         <div className='relative mb-4'>;
           <Link href={`/products/${product.id}`}>;

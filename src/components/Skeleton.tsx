@@ -1,10 +1,16 @@
 import { cn  } from '@/lib/utils';
-interface SkeletonProps  {className?: string;
-  lines?: number}export default function Skeleton() {if (lines === 1) {return (<div;
+interface SkeletonProps {
+className?: string;
+  lines?: number
+}
+export default function Skeleton() {
+if (lines === 1) {return (<div;
         className={cn('animate-pulse bg-gray-200 rounded', className;
-        )}
+        )
+}
       /" >";
-    )}return ("";
+    )}
+return ("";
     <div className="space-y-2">;
       {Array.from({ length: lines }).map((_, i) => (<div;
           key={i}

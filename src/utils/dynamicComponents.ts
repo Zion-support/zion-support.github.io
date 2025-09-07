@@ -8,11 +8,16 @@ ursor/automate-test-improve-and-merge-code-646c;
 import React from 'react';
 import dynamic from 'next/dynamic';
 const LoadingSpinner = () =>;
-  React.createElement("div",{ className: "flex items-center justify-center p-8" },React.createElement("div", {className: "animate-spin rounded-full h-8 w-8 border-b-2 border-primary";
+  React.createElement("div",{ className: "flex items-center justify-center p-8" },
+React.createElement("div", {className: "animate-spin rounded-full h-8 w-8 border-b-2 border-primary";
     }),)className: "animate-spin rounded-full h-8 w-8 border-b-2 border-primary";
       className: "animate-spin rounded-full h-8 w-8 border-b-2 border-primary";
     }),)const LoadingSkeleton = () =>;
-  React.createElement("div",{ className: "animate-pulse space-y-4" },React.createElement("div", { className: "h-4 bg-gray-200 rounded w-3/4" }),React.createElement("div", { className: "h-4 bg-gray-200 rounded w-1/2" }),React.createElement("div", { className: "h-32 bg-gray-200 rounded" }),)}() => import('recharts').then(mod => ({ default: mod && mod.BarChart })),)export const DynamicBarChart = dynamic (() => import ('recharts').then (mod => ({ default: mod.BarChart })),{    loading: LoadingSkeleton,ssr: false;
+  React.createElement("div",{ className: "animate-pulse space-y-4" },
+React.createElement("div", { className: "h-4 bg-gray-200 rounded w-3/4" }),
+React.createElement("div", { className: "h-4 bg-gray-200 rounded w-1/2" }),
+React.createElement("div", { className: "h-32 bg-gray-200 rounded" }),)}() => import('recharts').then(mod => ({ default: mod && mod.BarChart })),)export const DynamicBarChart = dynamic (() => import ('recharts').then (mod => ({ default: mod.BarChart })),{    loading: LoadingSkeleton,
+ssr: false;
     ssr: false;
   }() => import('react-window').then(mod => ({ default: mod && mod.FixedSizeList })),)// TODO: Uncomment when these components are available;
 // export const DynamicPDFGenerator = dynamic (//   () => import ('../components / pdf / PDFGenerator'),//   {//     loading: LoadingSpinner,//     ssr: false;
@@ -24,7 +29,8 @@ const LoadingSpinner = () =>;
 // )// export const DynamicRichEditor = dynamic (//   () => import ('../components / editor / RichTextEditor'),//   {//     loading: LoadingSpinner,//     ssr: false;
 //   }
 // )// Virtual list for large datasets;
-export const DynamicVirtualList = dynamic (() => import ('react - window').then (mod => ({ default: mod.FixedSizeList })),{    loading: LoadingSkeleton,ssr: false;
+export const DynamicVirtualList = dynamic (() => import ('react - window').then (mod => ({ default: mod.FixedSizeList })),{    loading: LoadingSkeleton,
+ssr: false;
     ssr: false;
   }// Replace: import Chart from '../components/charts/Chart';// With: import { DynamicChart as Chart  } from '@/utils/dynamicComponents';
 // With: import { DynamicChart as Chart  } from '@/utils/dynamicComponents';
@@ -35,8 +41,15 @@ export const DynamicVirtualList = dynamic (() => import ('react - window').then 
 // With: import { DynamicChart as Chart  } from '@/utils / dynamic_components';
 // Usage examples: // Replace: import Chart from '../components / charts / Chart';
 // With: import { DynamicChart as Chart  } from '@/utils / dynamic_components';
-import React from 'react',import dynamic from 'next/dynamic',const LoadingSpinner = () => React.createElement('div',{ className: "flex items-center justify-center p-8" },React.createElement('div', { className: "animate-spin rounded-full h-8 w-8 border-b-2 border-primary" }))const LoadingSkeleton = () => React.createElement('div',{ className: "animate-pulse space-y-4" },React.createElement('div', { className: "h-4 bg-gray-200 rounded w-3/4" }),React.createElement('div', { className: "h-4 bg-gray-200 rounded w-1/2" }),React.createElement('div', { className: "h-32 bg-gray-200 rounded" }))// Chart components (heavy - only load when needed)// TODO: Uncomment when Chart component is available;
-// export const DynamicChart = dynamic(//   () => import('../components/charts/Chart'),export const DynamicPieChart = dynamic(() => import("recharts").then((mod) => ({ default: mod.PieChart })),{ loading: LoadingSkeleton, ssr: false },)export const DynamicBarChart = dynamic(() => import("recharts").then((mod) => ({ default: mod.BarChart })),{ loading: LoadingSkeleton, ssr: false },)// TODO: Uncomment when these components are available;
+import React from 'react',
+import dynamic from 'next/dynamic',
+const LoadingSpinner = () => React.createElement('div',{ className: "flex items-center justify-center p-8" },
+React.createElement('div', { className: "animate-spin rounded-full h-8 w-8 border-b-2 border-primary" }))const LoadingSkeleton = () => React.createElement('div',{ className: "animate-pulse space-y-4" },
+React.createElement('div', { className: "h-4 bg-gray-200 rounded w-3/4" }),
+React.createElement('div', { className: "h-4 bg-gray-200 rounded w-1/2" }),
+React.createElement('div', { className: "h-32 bg-gray-200 rounded" }))// Chart components (heavy - only load when needed)// TODO: Uncomment when Chart component is available;
+// export const DynamicChart = dynamic(//   () => import('../components/charts/Chart'),
+export const DynamicPieChart = dynamic(() => import("recharts").then((mod) => ({ default: mod.PieChart })),{ loading: LoadingSkeleton, ssr: false },)export const DynamicBarChart = dynamic(() => import("recharts").then((mod) => ({ default: mod.BarChart })),{ loading: LoadingSkeleton, ssr: false },)// TODO: Uncomment when these components are available;
 // export const DynamicPDFGenerator = dynamic(//   () => import('../components/pdf/PDFGenerator'),//   {//     loading: LoadingSpinner,//     ssr: false;
 //   }
 // )// export const DynamicVideoPlayer = dynamic(//   () => import('../components/video/VideoPlayer'),//   {//     loading: LoadingSkeleton,//     ssr: false;
@@ -104,11 +117,13 @@ export const LazyContactForm = React.lazy(() =>
 );
 
 // Higher-order component for error boundaries
-export const withErrorBoundary = (Component: React.ComponentType<any>) => {
+export const withErrorBoundary = (Component: React.ComponentType < any>)  => {
+
   return React.forwardRef((props: any, ref: any) => {
     return React.createElement(
       React.Suspense,
-      { fallback: React.createElement(LoadingSpinner) },
+      { fallback: React.createElement(LoadingSpinner) 
+},
       React.createElement(Component, { ...props, ref })
     );
   });

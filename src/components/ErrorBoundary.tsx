@@ -2,16 +2,16 @@ import React, { Component, ReactNode, ErrorInfo } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
-  children: ReactNode;
+children: ReactNode;
 }
 
 interface State {
-  hasError: boolean;
+hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
 
-class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends Component < Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -29,13 +29,17 @@ class ErrorBoundary extends Component<Props, State> {
     });
   }
 
-  handleReload = () => {
-    window.location.reload();
-  };
+  handleReload = ()  => {
 
-  handleGoHome = () => {
+    window.location.reload();
+  
+};
+
+  handleGoHome = ()  => {
+
     window.location.href = '/';
-  };
+  
+};
 
   render() {
     if (this.state.hasError) {

@@ -1,4 +1,5 @@
- import { Helmet } from 'react - helmet - async' interface SEOEnhancerProps  {title?: string;
+ import { Helmet } from 'react - helmet - async' interface SEOEnhancerProps {
+title?: string;
    description?: string;
    keywords?: string;
    image?: string;

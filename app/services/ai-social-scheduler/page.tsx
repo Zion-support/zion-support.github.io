@@ -8,10 +8,12 @@ export const metadata: Metadata = {
 };
 
 export default function AISocialSchedulerPage() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100">
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */
+}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             AI Social Media Scheduler
@@ -22,7 +24,7 @@ export default function AISocialSchedulerPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:kleber@ziontechgroup.com?subject=AI Social Media Scheduler Inquiry"
+              href="mailto:kleber@ziontechgroup.com?subject = AI Social Media Scheduler Inquiry"
               className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-lg"
             >
               Start Free Trial
@@ -192,7 +194,7 @@ export default function AISocialSchedulerPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:kleber@ziontechgroup.com?subject=AI Social Media Scheduler - Free Trial"
+              href="mailto:kleber@ziontechgroup.com?subject = AI Social Media Scheduler - Free Trial"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
             >
               Start Free Trial
@@ -220,9 +222,11 @@ function FeatureItem({ icon, title, description, benefits }: {
   description: string; 
   benefits: string[] 
 }) {
+
   return (
     <div className="p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
+      <div className="text-4xl mb-4">{icon
+}</div>
       <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <ul className="space-y-2">
@@ -242,9 +246,11 @@ function BenefitCard({ icon, title, description }: {
   title: string; 
   description: string 
 }) {
+
   return (
     <div className="p-6 bg-white rounded-xl shadow-md border border-gray-200">
-      <div className="text-4xl mb-4 text-purple-600">{icon}</div>
+      <div className="text-4xl mb-4 text-purple-600">{icon
+}</div>
       <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
@@ -256,9 +262,11 @@ function PlatformCard({ icon, title, description }: {
   title: string; 
   description: string 
 }) {
+
   return (
     <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-      <div className="text-4xl mb-4">{icon}</div>
+      <div className="text-4xl mb-4">{icon
+}</div>
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-sm text-gray-600">{description}</p>
     </div>
@@ -280,8 +288,10 @@ function PricingCard({
   features: string[]; 
   popular: boolean 
 }) {
+
   return (
-    <div className={`p-8 rounded-xl border-2 ${popular ? 'border-purple-500 bg-purple-50' : 'border-gray-200 bg-white'} relative`}>
+    <div className={`p-8 rounded-xl border-2 ${popular ? 'border-purple-500 bg-purple-50' : 'border-gray-200 bg-white'
+} relative`}>
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -308,7 +318,7 @@ function PricingCard({
         ))}
       </ul>
       <a
-        href="mailto:kleber@ziontechgroup.com?subject=AI Social Media Scheduler - {title} Plan"
+        href="mailto:kleber@ziontechgroup.com?subject = AI Social Media Scheduler - {title} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular 
             ? 'bg-purple-600 text-white hover:bg-purple-700' 

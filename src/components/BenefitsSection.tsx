@@ -1,17 +1,34 @@
 import React from 'react';
 import { CheckCircle, Shield, Zap, Users, Clock, Award, Bot, Globe, TrendingDown  } from 'lucide-react';
-interface Benefit  {title: string;
+interface Benefit {
+title: string;
   description: string;
   icon: React.ReactNode;
-}const BenefitsSection: React.FC = () => {const benefits: Benefit[] = [;
-    {icon: <CheckCircle className="w-8 h-8 text-green-500" />,title: 'Proven Results',description: 'We deliver measurable results with a 98% client satisfaction rate and proven ROI.';
-    },{icon: <Shield className="w-8 h-8 text-blue-500" />,title: 'Enterprise Security',description: 'Bank-level security with SOC 2 compliance and advanced threat protection.';
-    },{icon: <Bot className="w-8 h-8 text-purple-500" />,title: 'AI-Powered Solutions',description: 'Our advanced AI algorithms provide cutting-edge solutions tailored to your specific needs.';
-    },{icon: <Globe className="w-8 h-8 text-indigo-500" />,title: 'Global Reach',description: 'Access a worldwide network of skilled professionals and cutting-edge services.';
-    },{icon: <Clock className="w-8 h-8 text-orange-500" />,title: '24/7 Support',description: 'Round-the-clock assistance from our dedicated team to ensure your success.';
-    },{icon: <TrendingDown className="w-8 h-8 text-red-500" />,title: 'Cost Reduction',description: 'Save up to 40% on your projects through direct connections and competitive pricing.';
+}
+const BenefitsSection: React.FC = ()  => {
+const benefits: Benefit[] = [;
+    {icon: <CheckCircle className="w-8 h-8 text-green-500" />,
+title: 'Proven Results',
+description: 'We deliver measurable results with a 98% client satisfaction rate and proven ROI.';
+    
+},{icon: <Shield className="w-8 h-8 text-blue-500" />,
+title: 'Enterprise Security',
+description: 'Bank-level security with SOC 2 compliance and advanced threat protection.';
+    },{icon: <Bot className="w-8 h-8 text-purple-500" />,
+title: 'AI-Powered Solutions',
+description: 'Our advanced AI algorithms provide cutting-edge solutions tailored to your specific needs.';
+    },{icon: <Globe className="w-8 h-8 text-indigo-500" />,
+title: 'Global Reach',
+description: 'Access a worldwide network of skilled professionals and cutting-edge services.';
+    },{icon: <Clock className="w-8 h-8 text-orange-500" />,
+title: '24/7 Support',
+description: 'Round-the-clock assistance from our dedicated team to ensure your success.';
+    },{icon: <TrendingDown className="w-8 h-8 text-red-500" />,
+title: 'Cost Reduction',
+description: 'Save up to 40% on your projects through direct connections and competitive pricing.';
     }
-  ];return (<section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">;
+  ];
+return (<section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;
           <h2 className="text-4xl font-bold text-gray-900 mb-4">;
@@ -57,4 +74,5 @@ interface Benefit  {title: string;
         </div>;
       </div>;
     </section>;
-  )}export default BenefitsSection;
+  )}
+export default BenefitsSection;

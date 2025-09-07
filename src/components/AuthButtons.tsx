@@ -3,18 +3,45 @@
 import { signIn  } from 'next-auth/react';
 type Provider = any;
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
-interface AuthButtonsProps  {providers?: Provider[];
-export function AuthButtons() {const [loadingProvider, setLoadingProvider] = useState<string | null>(null)const handleSignIn = async (provider: Provider) => {setLoadingProvider(provider)await signIn(provider)}import { useState  } from 'react';
+interface AuthButtonsProps {
+providers?: Provider[];
+export function AuthButtons() {
+const [loadingProvider,
+setLoadingProvider] = useState < string | null>(null)const handleSignIn = async (provider: Provider)  => {
+setLoadingProvider(provider)await signIn(provider)
+
+
+}
+import { useState  } from 'react';
 import { Button  } from '@/components / ui / button';
 import { Facebook  } from 'lucide-react';
 import { sign_in  } from 'next - auth / react';
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
-interface AuthButtonsProps  {providers?: Provider[];
+interface AuthButtonsProps {
+providers?: Provider[];
 export /**;
  * AuthButtons - Function description;
  */;
-function AuthButtons() {const [loading_provider, setLoadingProvider]  = useState < string | null>(null)const handleSignIn = async (provider: Provider) => {setLoadingProvider (provider)await sign_in (provider)}type Provider = 'google' | 'github' | 'facebook' | 'credentials';
-interface AuthButtonsProps  {providers?: Provider[];export function AuthButtons(): any ({providers = ['google', 'github', 'facebook', 'credentials']}: AuthButtonsProps) {const [loadingProvider, setLoadingProvider]  = useState<string | null>(null)const handleSignIn = async (provider: Provider) => {setLoadingProvider(provider)await signIn(provider)}const gridCols  = `grid-cols-${providers && providers.length}`;const gridCols = `grid-cols-${providers.length}`,const gridCols = `grid-cols-${providers.length}`;
+function AuthButtons() {
+const [loading_provider,
+setLoadingProvider]  = useState < string | null>(null)const handleSignIn = async (provider: Provider)  => {
+setLoadingProvider (provider)await sign_in (provider)
+
+
+}
+type Provider = 'google' | 'github' | 'facebook' | 'credentials';
+interface AuthButtonsProps {
+providers?: Provider[];
+export function AuthButtons(): any ({providers = ['google',
+'github',
+'facebook',
+'credentials']
+}: AuthButtonsProps) {const [loadingProvider, setLoadingProvider]  = useState < string | null>(null)const handleSignIn = async (provider: Provider)  => {
+setLoadingProvider(provider)await signIn(provider)
+}
+const gridCols  = `grid-cols-${providers && providers.length}`;
+const gridCols = `grid-cols-${providers.length}`,
+const gridCols = `grid-cols-${providers.length}`;
   return (<div className={`mt-6 grid ${gridCols} gap-3`}>;
       {providers.includes('google') && (<Button;
     <div className={`mt-6 grid ${gridCols} gap-3`}>;
@@ -22,7 +49,8 @@ interface AuthButtonsProps  {providers?: Provider[];export function AuthButtons(
           type="button";
           variant="outline";
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
-          onClick={() => handleSignIn('google')}disabled={loadingProvider !== null}
+          onClick={() => handleSignIn('google')}
+disabled={loadingProvider !== null}
         >;
           <span className="sr-only">Sign in with Google</span>;
           {loadingProvider === 'google' ? (<svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />;
@@ -39,7 +67,8 @@ interface AuthButtonsProps  {providers?: Provider[];export function AuthButtons(
           type="button";
           variant="outline";
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
-          onClick={() => handleSignIn('github')}disabled={loadingProvider !== null}
+          onClick={() => handleSignIn('github')}
+disabled={loadingProvider !== null}
         >;
           <span className="sr-only">Sign in with GitHub</span>;
           {loadingProvider === 'github' ? (<svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />;
@@ -72,7 +101,8 @@ interface AuthButtonsProps  {providers?: Provider[];export function AuthButtons(
       )}
       {providers && providers.includes('credentials') && (<Button;
     </div>;
-  )}const grid_cols = `grid - cols-${providers.length}`;
+  )}
+const grid_cols = `grid - cols-${providers.length}`;
   return (<div className={`mt - 6 grid ${grid_cols} gap - 3`}>;
       {providers.includes ('google') && (<Button;
           type='button';

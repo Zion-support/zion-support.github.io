@@ -43,12 +43,16 @@ import { usePortfolio  } from '@/hooks/usePortfolio';
 // Define schema for form validation;
 const projectSchema = z.object({title: z.string().min(1, 'Project title is required')description: z.string().optional()technologies: z.string().optional()image_url: z.string().optional()github_url: z;
     .union([z.string().url('Please enter a valid URL'), z.literal('')]).optional()demo_url: z;
-    .union([z.string().url('Please enter a valid URL'), z.literal('')]).optional()pdf_url: z.string().optional()})type ProjectFormValues = z.infer<typeof projectSchema>;
-interface ProjectFormProps  {project?: PortfolioProject;
+    .union([z.string().url('Please enter a valid URL'), z.literal('')]).optional()pdf_url: z.string().optional()})type ProjectFormValues = z.infer < typeof projectSchema>;
+interface ProjectFormProps {
+project?: PortfolioProject;
   onSuccess: () => void;
   onCancel: () => void;
-export function ProjectForm() {const { user } = useAuth()const { addProject, updateProject } = usePortfolio()const [isLoading, setIsLoading] = useState(false)const isEditing = !!project;
-  const form = useForm<ProjectFormValues>({resolver: zodResolver(projectSchema)defaultValues: {title: project?.title |'';
+export function ProjectForm() {
+const { user
+
+} = useAuth()const { addProject, updateProject } = usePortfolio()const [isLoading, setIsLoading] = useState(false)const isEditing = !!project;
+  const form = useForm < ProjectFormValues>({resolver: zodResolver(projectSchema)defaultValues: {title: project?.title |'';
       description: project?.description |'';
       technologies: project?.technologies;
         ? project.technologies.join(', '): '';
@@ -57,7 +61,8 @@ export function ProjectForm() {const { user } = useAuth()const { addProject, upd
       demo_url: project?.demo_url |'';
       pdf_url: project?.pdf_url |'';
     }
-  })const onSubmit = async (data: ProjectFormValues) => {if (!user) return;
+  })const onSubmit = async (data: ProjectFormValues)  => {
+if (!user) return;
     setIsLoading(true)try {const projectData: PortfolioProject = {title: data.title;
         description: data.description;
         technologies: data.technologies;
@@ -66,7 +71,8 @@ export function ProjectForm() {const { user } = useAuth()const { addProject, upd
         github_url: data.github_url |undefined;
         demo_url: data.demo_url |undefined;
         pdf_url: data.pdf_url;
-      }
+      
+}
       let success = false;
       if (isEditing && project?.id) {success = await updateProject(project.id, projectData)} else {const projectId = await addProject(projectData)success = !!projectId;
       }// Check condition;
@@ -74,12 +80,30 @@ if ( {) {$2;
 }
         on_success ()form.reset ()}
     } catch (error) {logErrorToProduction('Error saving project:', { data: error })} finally {import React from 'react';
-import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoading(false)}
-  }import { useState } from 'react',import { useForm } from 'react-hook-form',import { zodResolver } from '@hookform/resolvers/zod',import { z } from 'zod',import { Button } from '@/components/ui/button',import { Input } from '@/components/ui/input',import { Textarea } from '@/components/ui/textarea',import {logErrorToProduction} from '@/utils/productionLogger',import {Form,FormControl,FormField,FormItem,FormLabel,const form = useForm<ProjectFormValues>({resolver: zodResolver(projectSchema),defaultValues: {title: project?.title || '',description: project?.description || ''}
-    } catch (error) {logErrorToProduction('Error saving project:', { data: error })} finally {setIsLoading(false)}},return (<FormField />;<FormField;
+import { logErrorToProduction } from '@/utils/productionLogger';
+import {setIsLoading(false)}
+  }
+import { useState } from 'react',
+import { useForm } from 'react-hook-form',
+import { zodResolver } from '@hookform/resolvers/zod',
+import { z } from 'zod',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Textarea } from '@/components/ui/textarea',
+import {logErrorToProduction} from '@/utils/productionLogger',
+import {Form,
+FormControl,
+FormField,
+FormItem,
+FormLabel,
+const form = useForm < ProjectFormValues>({resolver: zodResolver(projectSchema),
+defaultValues: {title: project?.title || '',
+description: project?.description || ''}
+    } catch (error) {logErrorToProduction('Error saving project:', { data: error })} finally {setIsLoading(false)}},
+return (<FormField />;<FormField;
           name='description';
           render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel>Project Description</FormLabel>;
+              <FormLabel > Project Description</FormLabel>;
               <FormControl>;
                 <Textarea;
                   placeholder='Describe what the project does and your role in it...';
@@ -116,7 +140,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
               <FormMessage />;/>;<FormField;
           name='technologies';
           render={({ field }: { field: any }) => (<FormItem>;
-              <FormLabel>Technologies Used</FormLabel>;
+              <FormLabel > Technologies Used</FormLabel>;
               <FormControl>;
                 <Input;
                   placeholder='React, Node && Node.js, MongoDB, etc. (comma separated)';
@@ -125,9 +149,10 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
         <FormField;
           control={form.control}
           name='technologies';
-          control={form.control}name="title";
+          control={form.control}
+name="title";
           render={({ field }: { field: any }) => (<FormItem>;
-              <FormLabel>Project Title</FormLabel>;
+              <FormLabel > Project Title</FormLabel>;
               <FormControl>;
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />;
               </FormControl>;
@@ -138,7 +163,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
           control={form.control}
           name="description";
           render={({ field }: { field: any }) => (<FormItem>;
-              <FormLabel>Project Description</FormLabel>;
+              <FormLabel > Project Description</FormLabel>;
               <FormControl>;
                 <Textarea;
                   placeholder="Describe what the project does and your role in it...";
@@ -220,7 +245,8 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
-            )}GitHub URL;
+            )}
+GitHub URL;
                 </FormLabel>;
                 <FormControl>;
                   <Input placeholder="https://github.com/yourusername/project" {...field} />;
@@ -256,7 +282,8 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
           />;
         </div>;
         <FormField;
-          control={form.control}name="image_url";
+          control={form.control}
+name="image_url";
           render={({ field }: { field: any }) => (<FormItem>;
               <FormLabel className="flex items-center gap-2">;
                 <FileImage className="h-4 w-4" />;

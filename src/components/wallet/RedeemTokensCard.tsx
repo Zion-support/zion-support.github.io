@@ -3,7 +3,8 @@
   DialogDescription;
   DialogHeader;
   DialogTitle;
-  DialogTrigger} from "@/components/ui/dialog",type RewardOption = any;
+  DialogTrigger} from "@/components/ui/dialog",
+type RewardOption = any;
   Card;
   CardContent;
   CardDescription;
@@ -45,14 +46,18 @@ const REWARD_OPTIONS: RewardOption[] = [;
     type: 'credit';
   }
 ];
-export function RedeemTokensCard() {const { wallet, spendTokens } = useWallet()const [open, setOpen] = useState(false)const handleRedeem = async (option: RewardOption) => {if (!wallet |wallet.balance < option.cost) return;
-    await spendTokens(option.cost, `Redeemed: ${option.title}`)setOpen(false)}
+export function RedeemTokensCard() {
+const { wallet, spendTokens 
+} = useWallet()const [open, setOpen] = useState(false)const handleRedeem = async (option: RewardOption)  => {
+if (!wallet |wallet.balance < option.cost) return;
+    await spendTokens(option.cost, `Redeemed: ${option.title
+}`)setOpen(false)}
   return (<Card>;
       <CardHeader>;
         <CardTitle className='flex items-center gap-2'>;
           <Gift className='h-5 w-5' /> Redeem Rewards;
         </CardTitle>;
-        <CardDescription>Exchange your ZION$ for rewards and perks;
+        <CardDescription > Exchange your ZION$ for rewards and perks;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
@@ -62,8 +67,8 @@ export function RedeemTokensCard() {const { wallet, spendTokens } = useWallet()c
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
-              <DialogTitle>Available Rewards</DialogTitle>;
-              <DialogDescription>Exchange your tokens for these rewards. You currently have{' '}
+              <DialogTitle > Available Rewards</DialogTitle>;
+              <DialogDescription > Exchange your tokens for these rewards. You currently have{' '}
                 {wallet?.balance |0} ZION$.;
               </DialogDescription>;
             </DialogHeader>;

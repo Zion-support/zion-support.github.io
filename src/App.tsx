@@ -21,6 +21,7 @@ import Footer from './components/Footer';
 import SEO from './components/SEO';
 
 function App() {
+
   return (
     <HelmetProvider>
       <ThemeProvider>
@@ -34,7 +35,8 @@ function App() {
               <main>
                 <ScrollToTop />
                 <Routes>
-                  <Route path="/" element={<Home />} />
+                  <Route path="/" element={<Home />
+} />
                   <Route path="/about" element={<About />} />
                   <Route path="/services" element={<Services />} />
                   <Route path="/contact" element={<Contact />} />

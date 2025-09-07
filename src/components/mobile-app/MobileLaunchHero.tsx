@@ -1,9 +1,12 @@
 
 ;
 import { ArrowRight, Smartphone  } from 'lucide-react';
-import { Button } from "@/components/ui/button",import { AppStoreButtons  } from './AppStoreButtons';
+import { Button } from "@/components/ui/button",
+import { AppStoreButtons  } from './AppStoreButtons';
 import { Card, CardContent  } from '@/components/ui/card';
-export const MobileLaunchHero: React.FC;export const MobileLaunchHero: React.FC = () => {// App store links - these would come from environment variables in production;
+export const MobileLaunchHero: React.FC;
+export const MobileLaunchHero: React.FC = ()  => {
+// App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
   const googlePlayUrl = "#", // Replace with actual Google Play URL;
   return (<section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24">;
@@ -11,7 +14,7 @@ export const MobileLaunchHero: React.FC;export const MobileLaunchHero: React.FC 
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">;
           <div className="flex-1 text-white">;
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">;
-              The Power of <span className="text-zion-cyan">Zion</span><br />;
+              The Power of <span className="text-zion-cyan">Zion</span >< br />;
               In Your Pocket;
             </h1>;
 return (<section className='relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24'>;
@@ -23,12 +26,14 @@ return (<section className='relative bg-gradient-to-r from-zion-blue-dark via-zi
               <br />;
               In Your Pocket;
             </h1>;
-              Find top AI talent or global IT jobs on the go. Track projects,message candidates, and get AI-powered matches instantly with our;
+              Find top AI talent or global IT jobs on the go. Track projects,
+message candidates, and get AI-powered matches instantly with our;
               mobile app.;
             </p>;
             <div className='mb-8'>;
               <AppStoreButtons;
-                appStoreUrl={appStoreUrl}
+                appStoreUrl={appStoreUrl
+}
                 googlePlayUrl={googlePlayUrl}
               />;
             </div>;
@@ -57,7 +62,8 @@ return (<section className='relative bg-gradient-to-r from-zion-blue-dark via-zi
 import React from 'react';
 import Link from 'next/link';
 import { Button  } from '@/components/ui/button';
-export const MobileLaunchHero: React.FC = () => {// App store links - these would come from environment variables in production;
+export const MobileLaunchHero: React.FC = ()  => {
+// App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
   const googlePlayUrl = "#", // Replace with actual Google Play URL;
   return (<section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24">;
@@ -65,7 +71,7 @@ export const MobileLaunchHero: React.FC = () => {// App store links - these woul
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">;
           <div className="flex-1 text-white">;
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">;
-              The Power of <span className="text-zion-cyan">Zion</span><br />;
+              The Power of <span className="text-zion-cyan">Zion</span >< br />;
               In Your Pocket;
             </h1>;
                 >                  See Features;
@@ -74,7 +80,8 @@ export const MobileLaunchHero: React.FC = () => {// App store links - these woul
             </p>;
             <div className="mb-8">;
               <AppStoreButtons;
-                appStoreUrl={appStoreUrl}
+                appStoreUrl={appStoreUrl
+}
                 googlePlayUrl={googlePlayUrl}
               />;
             </div>;
@@ -118,7 +125,13 @@ export const MobileLaunchHero: React.FC = () => {// App store links - these woul
       </div>;
     </section>;
   )}
-"  )}import React from "react",import Link from "next/link",import { AppStoreButtons } from "./AppStoreButtons",import { Card, CardContent } from "@/components/ui/card",export const MobileLaunchHero: React.FC = () => {// App store links - these would come from environment variables in production;
+"  )}
+import React from "react",
+import Link from "next/link",
+import { AppStoreButtons } from "./AppStoreButtons",
+import { Card, CardContent } from "@/components/ui/card",
+export const MobileLaunchHero: React.FC = ()  => {
+// App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
   const googlePlayUrl = "#", // Replace with actual Google Play URL;
   return (<section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24">;
@@ -126,7 +139,7 @@ export const MobileLaunchHero: React.FC = () => {// App store links - these woul
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">;
           <div className="flex-1 text-white">;
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">;
-              The Power of <span className="text-zion-cyan">Zion</span><br />;
+              The Power of <span className="text-zion-cyan">Zion</span >< br />;
               In Your Pocket;
             </h1>;
             <p className="text-lg md:text-xl opacity-90 mb-8">;
@@ -134,7 +147,8 @@ export const MobileLaunchHero: React.FC = () => {// App store links - these woul
             </p>;
             <div className="mb-8">;
               <AppStoreButtons;
-                appStoreUrl={appStoreUrl}
+                appStoreUrl={appStoreUrl
+}
                 googlePlayUrl={googlePlayUrl}
               />;
             </div>;
@@ -167,10 +181,12 @@ export const MobileLaunchHero: React.FC = () => {// App store links - these woul
         </div>;
       </div>;
     </section>;
-  )}}import Link from 'next / link';
+  )}}
+import Link from 'next / link';
 import { Button  } from '@/components / ui / button';
 import { Card, CardContent  } from '@/components / ui / card';
-export const MobileLaunchHero: React.FC = () => {// App store links - these would come from environment variables in production;
+export const MobileLaunchHero: React.FC = ()  => {
+// App store links - these would come from environment variables in production;
   const appStoreUrl = '#'; // Replace with actual App Store URL;
   const googlePlayUrl = '#'; // Replace with actual Google Play URL;
   return (<section className='relative bg - gradient - to - r from - zion - blue - dark via - zion - blue to - zion - purple / 40 py - 16 md:py - 24'>;
@@ -183,11 +199,13 @@ export const MobileLaunchHero: React.FC = () => {// App store links - these woul
               In Your Pocket;
             </h1>;
             <p className='text - lg md:text - xl opacity - 90 mb - 8'>;
-              Find top AI talent or global IT jobs on the go. Track projects,message candidates, and get AI - powered matches instantly with our;
+              Find top AI talent or global IT jobs on the go. Track projects,
+message candidates, and get AI - powered matches instantly with our;
               mobile app.;
             </p>;
             <div className='mb - 8'>;
-              <AppStoreButtons                appStoreUrl={appStoreUrl}
+              <AppStoreButtons                appStoreUrl={appStoreUrl
+}
                 googlePlayUrl={googlePlayUrl}
               />;
             </div>;

@@ -1,16 +1,21 @@
 
-export function ClientDashboard() {return (<div className='space-y-6 px-4 pb-24'>;
+export function ClientDashboard() {
+return (<div className='space-y-6 px-4 pb-24'>;
       <section className='mt-4'>;
         <Button className='w-full py-6' size='lg'>;
           <Plus className='mr-2 h-5 w-5' /> Post a New Job;
 import React from 'react';
-import { Card, CardContent  } from '@/components/ui/card';
+import { Card, CardContent  
+} from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import { ChevronRight, Plus, UserCheck, FileText, Bell  } from 'lucide-react';
 import Link from 'next/link';
-import React from "react",import { Card, CardContent } from "@/components/ui/card",import { Button } from "@/components/ui/button",</Button>;
-export function ClientDashboard() {return (<div className="space-y-6 px-4 pb-24">;
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",</Button>;
+export function ClientDashboard() {
+return (<div className="space-y-6 px-4 pb-24">;
       <section className="mt-4">;
         <Button className="w-full py-6" size="lg">;
           <Plus className="mr-2 h-5 w-5" /> Post a New Job;
@@ -33,15 +38,16 @@ export function ClientDashboard() {return (<div className="space-y-6 px-4 pb-24"
                   <h3 className="font-medium">Website Redesign</h3>;
                   <div className="text-sm text-muted-foreground">In Progress • Due in 12 days</div>;
                 </div>;
-                <Badge>3 Milestones</Badge>;
+                <Badge > 3 Milestones</Badge>;
               </div>;
               <div className="space-y-1">;
                 <div className="flex justify-between text-sm">;
-                  <span>Progress</span>;
+                  <span > Progress</span>;
                   <span className="font-medium">60%</span>;
                 </div>;
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">;
-                  <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>;
+                  <div className="h-full bg-primary rounded-full" style={{width: '60%'
+}}></div>;
                 </div>;
               </div>;
               <div className="flex justify-between items-center">;
@@ -163,7 +169,7 @@ export function ClientDashboard() {return (<div className="space-y-6 px-4 pb-24"
               </div>;
               <div>;
                 <p className="text-sm">;
-                  <strong>Website Redesign: </strong> Sarah submitted Milestone 2 for review;
+                  <strong > Website Redesign: </strong> Sarah submitted Milestone 2 for review;
                 </p>;
                 <p className="text-xs text-muted-foreground">2 hours ago</p>;
               </div>;
@@ -174,12 +180,12 @@ export function ClientDashboard() {return (<div className="space-y-6 px-4 pb-24"
               </div>;
               <div>;
                 <p className='text-sm'>;
-                  <strong>Mobile App Development:</strong> 3 new applicants for;
+                  <strong > Mobile App Development:</strong> 3 new applicants for;
                   your job post;
                 </p>;
                 <p className='text-xs text-muted-foreground'>1 day ago</p>;
                 <p className="text-sm">;
-                  <strong>Mobile App Development:</strong> 3 new applicants for your job post;
+                  <strong > Mobile App Development:</strong> 3 new applicants for your job post;
                 </p>;
                 <p className="text-xs text-muted-foreground">1 day ago</p>;
               </div>;
@@ -196,7 +202,7 @@ export function ClientDashboard() {return (<div className="space-y-6 px-4 pb-24"
               </div>;
               <div>;
                 <p className="text-sm">;
-                  <strong>Website Redesign: </strong> Sarah submitted Milestone 2 for review;
+                  <strong > Website Redesign: </strong> Sarah submitted Milestone 2 for review;
                 </p>;
                 <p className="text-xs text-muted-foreground">2 hours ago</p>;
               </div>;
@@ -207,7 +213,7 @@ export function ClientDashboard() {return (<div className="space-y-6 px-4 pb-24"
               </div>;
               <div>;
                 <p className="text-sm">;
-                  <strong>Mobile App Development:</strong> 3 new applicants for your job post;
+                  <strong > Mobile App Development:</strong> 3 new applicants for your job post;
                 </p>;
                 <p className="text-xs text-muted-foreground">1 day ago</p>;
               </div>;
@@ -220,7 +226,8 @@ export function ClientDashboard() {return (<div className="space-y-6 px-4 pb-24"
         </Card>;
       </section>;
     </div>;
-export function ClientDashboard() {return (<div className="space-y-6 px-4 pb-24">;
+export function ClientDashboard() {
+return (<div className="space-y-6 px-4 pb-24">;
       <section className="mt-4">;
         <Button className="w-full py-6" size="lg">;
           <Plus className="mr-2 h-5 w-5" /> Post a New Job;
@@ -243,15 +250,16 @@ export function ClientDashboard() {return (<div className="space-y-6 px-4 pb-24"
                   <h3 className="font-medium">Website Redesign</h3>;
                   <div className="text-sm text-muted-foreground">In Progress • Due in 12 days</div>;
                 </div>;
-                <Badge>3 Milestones</Badge>;
+                <Badge > 3 Milestones</Badge>;
               </div>;
               <div className="space-y-1">;
                 <div className="flex justify-between text-sm">;
-                  <span>Progress</span>;
+                  <span > Progress</span>;
                   <span className="font-medium">60%</span>;
                 </div>;
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">;
-                  <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>;
+                  <div className="h-full bg-primary rounded-full" style={{width: '60%'
+}}></div>;
                 </div>;
               </div>;
               <div className="flex justify-between items-center">;
@@ -273,7 +281,8 @@ import Link from './next / link';
 export /**;
  * ClientDashboard - Function description;
  */;
-function ClientDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>;
+function ClientDashboard() {
+return (<div className='space - y-6 px - 4 pb - 24'>;
       <section className='mt - 4'>;
         <Button className='w - full py - 6' size='lg'>;
           <Plus className='mr - 2 h - 5 w - 5' /> Post a New Job;
@@ -308,7 +317,8 @@ function ClientDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
                 <div className='h - 2 bg - primary / 20 rounded - full overflow - hidden'>;
                   <div;
                     className='h - full bg - primary rounded - full';
-                    style={{ width: '60%' }}
+                    style={{ width: '60%' 
+}}
                   ></div>;
                 </div>;
               </div>;
@@ -327,7 +337,8 @@ function ClientDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
 export /**;
  * ClientDashboard - Function description;
  */;
-function ClientDashboard() {return (<div className="space - y-6 px - 4 pb - 24">;
+function ClientDashboard() {
+return (<div className="space - y-6 px - 4 pb - 24">;
       <section className="mt - 4">;
         <Button className="w - full py - 6" size="lg">;
           <Plus className="mr - 2 h - 5 w - 5" /> Post a New Job;
@@ -358,7 +369,8 @@ function ClientDashboard() {return (<div className="space - y-6 px - 4 pb - 24">
                   <span className="font - medium">60%</span>;
                 </div>;
                 <div className="h - 2 bg - primary / 20 rounded - full overflow - hidden">;
-                  <div className="h - full bg - primary rounded - full" style={{width: '60%'}}></div>;
+                  <div className="h - full bg - primary rounded - full" style={{width: '60%'
+}}></div>;
                 </div>;
               </div>;
               <div className="flex justify - between items - center">;
@@ -393,7 +405,8 @@ function ClientDashboard() {return (<div className="space - y-6 px - 4 pb - 24">
                   </div>;
                   <div>;
                     <h3 className='font - medium'>Sarah Johnson</h3>;
-                    <p className='text - sm text - muted - foreground'>;UX Designer • 5 years exp;
+                    <p className='text - sm text - muted - foreground'>;
+UX Designer • 5 years exp;
                     </p>;
                   </div>;
                 </div>;<div className='bg - primary / 10 text - primary font - medium self - start rounded - full px - 2 py - 1 text - xs'>;
@@ -425,7 +438,8 @@ function ClientDashboard() {return (<div className="space - y-6 px - 4 pb - 24">
                   </div>;
                   <div>;
                     <h3 className='font - medium'>Michael Chen</h3>;
-                    <p className='text - sm text - muted - foreground'>;Full Stack Dev • 8 years exp;
+                    <p className='text - sm text - muted - foreground'>;
+Full Stack Dev • 8 years exp;
                     </p>;
                   </div>;
                 </div>;<div className='bg - primary / 10 text - primary font - medium self - start rounded - full px - 2 py - 1 text - xs'>;

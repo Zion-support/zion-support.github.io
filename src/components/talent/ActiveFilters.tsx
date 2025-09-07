@@ -1,27 +1,43 @@
 
 import { X  } from 'lucide-react';
-interface ActiveFiltersProps  {selectedSkills: string[];
+interface ActiveFiltersProps {
+selectedSkills: string[];
   toggleSkill: (skill: string) => void;
   selectedAvailability: string[];
   toggleAvailability: (status: string) => void;
   selectedRegions: string[];
   toggleRegion: (region: string) => void;
-  priceRange: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  experienceRange: [number, number];
-  setExperienceRange: (range: [number, number]) => void;
-  clearFilters: () => void;interface ActiveFiltersProps  {selectedSkills: string[];
-  toggleSkill: (skill: string,) => void;
-  selectedAvailability: string[];
-  toggleAvailability: (status: string,) => void;
-  selectedRegions: string[];
-  toggleRegion: (region: string,) => void;
-  priceRange: [number, number];
-  setPriceRange: (range: [number, number],) => void;
-  experienceRange: [number, number];
-  setExperienceRange: (range: [number, number],) => void;
+  priceRange: [number,
+number];
+  setPriceRange: (range: [number,
+number]) => void;
+  experienceRange: [number,
+number];
+  setExperienceRange: (range: [number,
+number]) => void;
   clearFilters: () => void;
-}const hasActiveFilters = null;
+interface ActiveFiltersProps  {selectedSkills: string[];
+  toggleSkill: (skill: string,
+) => void;
+  selectedAvailability: string[];
+  toggleAvailability: (status: string,
+) => void;
+  selectedRegions: string[];
+  toggleRegion: (region: string,
+) => void;
+  priceRange: [number,
+number];
+  setPriceRange: (range: [number,
+number],
+) => void;
+  experienceRange: [number,
+number];
+  setExperienceRange: (range: [number,
+number],
+) => void;
+  clearFilters: () => void;
+}
+const hasActiveFilters = null;
     selectedSkills.length > 0 ||;
     selectedAvailability.length > 0 ||;
     selectedRegions.length > 0 ||;
@@ -32,7 +48,9 @@ interface ActiveFiltersProps  {selectedSkills: string[];
     experienceRange[0] !== 0 ||;
     experienceRange[1] !== 15 ||;
     priceRange[0] !== 50 ||;
-    priceRange[1] !== 200,if (!hasActiveFilters) return null,const hasActiveFilters = null;
+    priceRange[1] !== 200,
+if (!hasActiveFilters) return null,
+const hasActiveFilters = null;
     selectedSkills.length > 0 ||;
     selectedAvailability.length > 0 ||;
     selectedRegions.length > 0 ||;
@@ -42,28 +60,55 @@ interface ActiveFiltersProps  {selectedSkills: string[];
 import React from 'react';
 import { ClickableBadge  } from '@/components/ui/clickable-badge';
 import { Button  } from '@/components/ui/button';
-import React from "react",interface ActiveFiltersProps  {selectedSkills: string[];
+import React from "react",
+interface ActiveFiltersProps {
+selectedSkills: string[];
   toggleSkill: (skill: string) => void;
   selectedAvailability: string[];
   toggleAvailability: (status: string) => void;
   selectedRegions: string[];
   toggleRegion: (region: string) => void;
-  priceRange: [number, number],setPriceRange: (range: [number, number]) => void;
-  experienceRange: [number, number],setExperienceRange: (range: [number, number]) => void;
+  priceRange: [number,
+number],
+setPriceRange: (range: [number,
+number]) => void;
+  experienceRange: [number,
+number],
+setExperienceRange: (range: [number,
+number]) => void;
   clearFilters: () => void;
 }
-export function ActiveFilters() {// Check if any filters are active;
-  const hasActiveFilters  = null;return (<div className="mb-6 flex flex-wrap gap-2 items-center">;
+export function ActiveFilters() {
+// Check if any filters are active;
+  const hasActiveFilters  = null;
+return (<div className="mb-6 flex flex-wrap gap-2 items-center">;
       <span className="text-zion-slate-light text-sm">Active filters:</span>;
       {selectedSkills.map(skill => (<ClickableBadge;
-          key={skill}
+          key={skill
+}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
-import { ClickableBadge } from "@/components/ui/clickable-badge",import { Button } from "@/components/ui/button",interface ActiveFiltersProps  {selectedSkills,toggleSkill,selectedAvailability,toggleAvailability,selectedRegions,toggleRegion,priceRange,setPriceRange,experienceRange,setExperienceRange,experienceRange[0] !== 0 ||;
+import { ClickableBadge } from "@/components/ui/clickable-badge",
+import { Button } from "@/components/ui/button",
+interface ActiveFiltersProps {
+selectedSkills,
+toggleSkill,
+selectedAvailability,
+toggleAvailability,
+selectedRegions,
+toggleRegion,
+priceRange,
+setPriceRange,
+experienceRange,
+setExperienceRange,
+experienceRange[0] !== 0 ||;
     experienceRange[1] !== 15 ||;
     priceRange[0] !== 50 ||;
-    priceRange[1] !== 200;if (!hasActiveFilters) return null;return (<div className='mb-6 flex flex-wrap gap-2 items-center'>;
+    priceRange[1] !== 200;
+if (!hasActiveFilters) return null;
+return (<div className='mb-6 flex flex-wrap gap-2 items-center'>;
       <span className='text-zion-slate-light text-sm'>Active filters:</span>;{selectedSkills && selectedSkills.map(skill => (<ClickableBadge;
-          key={skill}))}{selectedAvailability && selectedAvailability.map(status => (<ClickableBadge;
+          key={skill
+}))}{selectedAvailability && selectedAvailability.map(status => (<ClickableBadge;
           key={status}))}{selectedRegions && selectedRegions.map(region => (<ClickableBadge;
           key={region}{region}{(priceRange[0] !== 50 || priceRange[1] !== 200) && (<ClickableBadge;
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2';
@@ -97,7 +142,8 @@ import { ClickableBadge } from "@/components/ui/clickable-badge",import { Button
       )}<Button;
         variant='ghost';
         size='sm';
-        onClick={clearFilters}Clear All;
+        onClick={clearFilters}
+Clear All;
       </Button>;
     </div>;
   )}}<Button;
@@ -130,27 +176,55 @@ import { ClickableBadge } from "@/components/ui/clickable-badge",import { Button
         size="sm";
         onClick={clearFilters}
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent";
-      >;Clear All;
+      >;
+Clear All;
       </Button>;
     </div>;
-  )}import { ClickableBadge  } from '@/components / ui / clickable - badge';
+  )}
+import { ClickableBadge  } from '@/components / ui / clickable - badge';
 import { Button  } from '@/components / ui / button';
-interface ActiveFiltersProps  {selected_skills: string[];
+interface ActiveFiltersProps {
+selected_skills: string[];
   toggle_skill: (skill: string) => void;
   selected_availability: string[];
   toggle_availability: (status: string) => void;
   selected_regions: string[];
   toggle_region: (region: string) => void;
-  price_range: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  experience_range: [number, number];
-  setExperienceRange: (range: [number, number]) => void;
-  clear_filters: () => void;interface ActiveFiltersProps  {selected_skills: string[],toggle_skill: (skill: string, ) => void,selected_availability: string[],toggle_availability: (status: string, ) => void,selected_regions: string[],toggle_region: (region: string, ) => void,price_range: [number, number],setPriceRange: (range: [number, number], ) => void,experience_range: [number, number],setExperienceRange: (range: [number, number], ) => void,clear_filters: () => void;
+  price_range: [number,
+number];
+  setPriceRange: (range: [number,
+number]) => void;
+  experience_range: [number,
+number];
+  setExperienceRange: (range: [number,
+number]) => void;
+  clear_filters: () => void;
+interface ActiveFiltersProps  {selected_skills: string[],
+toggle_skill: (skill: string,
+) => void,
+selected_availability: string[],
+toggle_availability: (status: string,
+) => void,
+selected_regions: string[],
+toggle_region: (region: string,
+) => void,
+price_range: [number,
+number],
+setPriceRange: (range: [number,
+number],
+) => void,
+experience_range: [number,
+number],
+setExperienceRange: (range: [number,
+number],
+) => void,
+clear_filters: () => void;
 }
 export /**;
  * ActiveFilters - Function description;
  */;
-function ActiveFilters() {// Check if any filters are active;
+function ActiveFilters() {
+// Check if any filters are active;
   const hasActiveFilters =;
     selected_skills.length > 0 ||;
     selected_availability.length > 0 ||;
@@ -161,6 +235,7 @@ function ActiveFilters() {// Check if any filters are active;
     price_range[1] !== 200;
   // Check condition;
 if (return null) {$2;
+
 }
   return (<div className='mb - 6 flex flex - wrap gap - 2 items - center'>;
       <span className='text - zion - slate - light text - sm'>Active filters:</span>;

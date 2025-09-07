@@ -1,20 +1,36 @@
 
 import { useState, useMemo  } from 'react';
-import {onsiteServicePricing,CountryPricing} from '@/data/onsiteServicePricing';
+import {onsiteServicePricing,
+CountryPricing} from '@/data/onsiteServicePricing';
 import { Input  } from '@/components/ui/input';
-  Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
+  Table,
+TableBody,
+TableCell,
+TableHead,
+TableHeader,
+TableRow} from '@/components/ui/table';
 import { Globe, Search, ArrowUpDown  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
-export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = useState('')const [sortConfig, setSortConfig]  = useState<{import { useState, useMemo } from "react",import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",import { Input } from "@/components/ui/input",import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components/ui/table';
-export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = useState("")const [sortConfig, setSortConfig] = useState<{key: keyof CountryPricing;
+export function ITServicePricingTable() {
+const [searchQuery, setSearchQuery] = useState('')const [sortConfig, setSortConfig]  = useState<{import { useState, useMemo 
+} from "react",
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { Input } from "@/components/ui/input",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components/ui/table';
+export function ITServicePricingTable() {
+const [searchQuery, setSearchQuery] = useState("")const [sortConfig, setSortConfig] = useState<{key: keyof CountryPricing;
     direction: 'ascending' | 'descending';
-  }>({key: 'country',direction: 'ascending'})const sortedData = useMemo(() => {let filteredData = [...onsiteServicePricing];
+  
+}>({key: 'country',
+direction: 'ascending'})const sortedData = useMemo(()  => {
+let filteredData = [...onsiteServicePricing];
     // Filter by search query;
     if (searchQuery) {filteredData = filteredData && filteredData.filter(item =>;
         item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()))const sortedData = null;
 import { onsiteServicePricing;
   CountryPricing;
- } from '@/data/onsiteServicePricing';
+ 
+} from '@/data/onsiteServicePricing';
   Table;
   TableBody;
   TableCell;
@@ -22,36 +38,58 @@ import { onsiteServicePricing;
   TableHeader;
   TableRow;
 } from '@/components/ui/table';
-export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = useState('')const [sortConfig, setSortConfig] = useState<{key: keyof CountryPricing;
+export function ITServicePricingTable() {
+const [searchQuery, setSearchQuery] = useState('')const [sortConfig, setSortConfig] = useState<{key: keyof CountryPricing;
     direction: 'ascending' | 'descending';
-  }>({key: 'country';
+  
+}>({key: 'country';
     direction: 'ascending';
-  })const sortedData = useMemo(() => {let filteredData = [...onsiteServicePricing];
+  })const sortedData = useMemo(()  => {
+let filteredData = [...onsiteServicePricing];
     // Filter by search query;
     if (searchQuery) {filteredData = filteredData.filter(item =>;
-        item.country.toLowerCase().includes(searchQuery.toLowerCase()))}// Sort data;
-    filteredData && filteredData.sort((a, b,) => {if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
-      }const handleSort = (key: keyof CountryPricing) => {setSortConfig({key,direction:;
+        item.country.toLowerCase().includes(searchQuery.toLowerCase()))
+}// Sort data;
+    filteredData && filteredData.sort((a, b,)  => {
+if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
+      
+}
+const handleSort = (key: keyof CountryPricing)  => {
+setSortConfig({key,
+direction:;
         sortConfig.key === key && sortConfig.direction === "ascending";
           ? "descending";
-          : "ascending"})},const handleSort = (key: keyof CountryPricing,) => {setSortConfig({key,direction:;
+          : "ascending"
+})},
+const handleSort = (key: keyof CountryPricing,)  => {
+setSortConfig({key,
+direction:;
         sortConfig && sortConfig.key === key && sortConfig && sortConfig.direction === 'ascending';
           ? 'descending';
-          : 'ascending'})}key;
+          : 'ascending'
+})}
+key;
       direction:;
         sortConfig.key === key && sortConfig.direction === 'ascending';
           ? 'descending';
           : 'ascending';
-    })}return (return sortConfig.direction === "ascending" ? -1 : 1;
+    })}
+return (return sortConfig.direction === "ascending" ? -1 : 1;
       }
       if (a[sortConfig.key] > b[sortConfig.key]) {return sortConfig.direction === "ascending" ? 1 : -1;
       }
       return 0;
-    }),return filteredData;
-  }, [onsiteServicePricing, searchQuery, sortConfig]),const handleSort = (key: keyof CountryPricing) => {setSortConfig({key,direction:;
+    }),
+return filteredData;
+  }, [onsiteServicePricing, searchQuery, sortConfig]),
+const handleSort = (key: keyof CountryPricing)  => {
+setSortConfig({key,
+direction:;
         sortConfig.key === key && sortConfig.direction === "ascending";
           ? "descending";
-          : "ascending"})},return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
+          : "ascending"
+})},
+return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
       <div className="flex items-center mb-6">;
         <div className="relative flex-1">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
@@ -84,7 +122,7 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
                   onClick={() => handleSort("country")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light";
                 >;
-                  <span>Country</span>;
+                  <span > Country</span>;
                   <ArrowUpDown className="h-4 w-4" />;
                 </Button>;
               </TableHead>;
@@ -94,7 +132,7 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
                   variant='ghost';
                   onClick={() => handleSort('pricePerIncident')}
                   className='hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light'                >;
-                  <span>Price Per Incident</span>;
+                  <span > Price Per Incident</span>;
                   <ArrowUpDown className='h-4 w-4' />;
                 </Button>;
               </TableHead>;

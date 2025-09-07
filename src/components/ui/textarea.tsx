@@ -1,11 +1,17 @@
 import React from 'react';
-interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement>  {label?: string;
+interface TextareaProps extends React.TextareaHTMLAttributes < HTMLTextAreaElement>  {label?: string;
   error?: string;
   helperText?: string;
-}const Textarea: React.FC<TextareaProps> = ({label,error,helperText,className = '',...props;
-}) => {return (<div className="w-full">;
+}
+const Textarea: React.FC < TextareaProps> = ({label,
+error,
+helperText,
+className = '',...props;
+})  => {
+return (<div className="w-full">;
       {label && (<label className="block text-sm font-medium text-gray-700 mb-2">;
-          {label}
+          {label
+}
         </label>;
       )}
       <textarea;
@@ -24,4 +30,5 @@ interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement
       {helperText && !error && (<p className="mt-1 text-sm text-gray-500">{helperText}</p>;
       )}
     </div>;
-  )}export default Textarea;
+  )}
+export default Textarea;

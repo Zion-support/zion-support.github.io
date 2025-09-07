@@ -1,14 +1,31 @@
 import React from 'react';
-interface SwitchProps  {checked: boolean;
+interface SwitchProps {
+checked: boolean;
   onChange: (checked: boolean) => void;
   label?: string;
   disabled?: boolean;
   size?: 'sm' | 'md' | 'lg';
-}const Switch: React.FC<SwitchProps> = ({checked,onChange,label,disabled = false,size = 'md';
-}) => {const sizeClasses = {sm: 'w-8 h-4',md: 'w-12 h-6',lg: 'w-16 h-8';
-  }const thumbSizeClasses = {sm: 'w-3 h-3',md: 'w-5 h-5',lg: 'w-7 h-7';
-  }const translateClasses = {sm: checked ? 'translate-x-4' : 'translate-x-0',md: checked ? 'translate-x-6' : 'translate-x-0',lg: checked ? 'translate-x-8' : 'translate-x-0';
-  }return (<div className="flex items-center space-x-3">;
+}
+const Switch: React.FC < SwitchProps> = ({checked,
+onChange,
+label,
+disabled = false,
+size = 'md';
+})  => {
+const sizeClasses = {sm: 'w-8 h-4',
+md: 'w-12 h-6',
+lg: 'w-16 h-8';
+  
+}
+const thumbSizeClasses = {sm: 'w-3 h-3',
+md: 'w-5 h-5',
+lg: 'w-7 h-7';
+  }
+const translateClasses = {sm: checked ? 'translate-x-4' : 'translate-x-0',
+md: checked ? 'translate-x-6' : 'translate-x-0',
+lg: checked ? 'translate-x-8' : 'translate-x-0';
+  }
+return (<div className="flex items-center space-x-3">;
       <button;
         type="button";
         className={`;
@@ -31,4 +48,5 @@ interface SwitchProps  {checked: boolean;
         </label>;
       )}
     </div>;
-  )}export default Switch;
+  )}
+export default Switch;

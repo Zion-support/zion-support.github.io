@@ -3,7 +3,7 @@ import { Search, X, Clock, Star, MapPin, DollarSign } from 'lucide-react';
 import Link from 'next/link';
 
 interface SearchResult {
-  id: string;
+id: string;
   type: 'service' | 'talent' | 'equipment' | 'page';
   title: string;
   description: string;
@@ -16,17 +16,18 @@ interface SearchResult {
 }
 
 interface SearchModalProps {
-  isOpen: boolean;
+isOpen: boolean;
   onClose: () => void;
 }
 
-const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
+const SearchModal: React.FC < SearchModalProps> = ({ isOpen, onClose })  => {
+
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
+  const [results, setResults] = useState < SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
-  const searchInputRef = useRef<HTMLInputElement>(null);
+  const [recentSearches, setRecentSearches] = useState < string[]>([]);
+  const searchInputRef = useRef < HTMLInputElement>(null);
 
   const mockSearchResults: SearchResult[] = [
     {
@@ -39,7 +40,8 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
       tags: ['AI', 'IT', 'Infrastructure', 'Consulting'],
       rating: 4.8,
       price: 'Starting at $5,000'
-    },
+    
+},
     {
       id: '2',
       type: 'talent',
@@ -72,13 +74,16 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     }
   ];
 
-  useEffect(() => {
+  useEffect(()  => {
+
     if (isOpen && searchInputRef.current) {
       searchInputRef.current.focus();
-    }
+    
+}
   }, [isOpen]);
 
-  useEffect(() => {
+  useEffect(()  => {
+
     if (query.length > 2) {
       setIsLoading(true);
       // Simulate API call
@@ -90,23 +95,28 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
         );
         setResults(filteredResults);
         setIsLoading(false);
-      }, 300);
+      
+}, 300);
     } else {
       setResults([]);
     }
   }, [query]);
 
-  const handleSearch = (searchQuery: string) => {
+  const handleSearch = (searchQuery: string)  => {
+
     setQuery(searchQuery);
     if (searchQuery && !recentSearches.includes(searchQuery)) {
       setRecentSearches(prev => [searchQuery, ...prev.slice(0, 4)]);
-    }
+    
+}
   };
 
-  const handleResultClick = (result: SearchResult) => {
+  const handleResultClick = (result: SearchResult)  => {
+
     onClose();
     // Navigate to result URL
-  };
+  
+};
 
   if (!isOpen) return null;
 

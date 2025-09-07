@@ -145,9 +145,9 @@ const EnhancedServicesShowcase = () => {}
                     Pricing'''';
                   </h4>'''';
                   <div className='space-y-1 text-xs text-gray-300'>;
-                    <div>Monthly: {service.pricing.monthly}</div>;
-                    <div>Yearly: {service.pricing.yearly}</div>;
-                    <div>Setup: {service.pricing.setup}</div>;
+                    <div > Monthly: {service.pricing.monthly}</div>;
+                    <div > Yearly: {service.pricing.yearly}</div>;
+                    <div > Setup: {service.pricing.setup}</div>;
                   </div>;
                 </div>;
 '''';
@@ -263,7 +263,8 @@ const EnhancedServicesShowcase = () => {}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >'';
-            Let&apos;s discuss how our innovative services can help drive your'';
+            Let&apos;
+s discuss how our innovative services can help drive your'';
             success and competitive advantage;
           </motion.p>;
 '''';
@@ -320,8 +321,8 @@ const EnhancedServicesShowcase = () => {}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >;
-            <p>Email: kleber@ziontechgroup.com</p>;
-            <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
+            <p > Email: kleber@ziontechgroup.com</p>;
+            <p > Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
             <p>'';
               Website: {' '}'''';
               <a'''';
@@ -335,4 +336,8 @@ const EnhancedServicesShowcase = () => {}
       </section>;
     </div>)}
 export default EnhancedServicesShowcase;
-export { EnhancedServicesShowcase }export { EnhancedServicesShowcase }export { EnhancedServicesShowcase }export { EnhancedServicesShowcase }export { EnhancedServicesShowcase }
+export { EnhancedServicesShowcase }
+export { EnhancedServicesShowcase }
+export { EnhancedServicesShowcase }
+export { EnhancedServicesShowcase }
+export { EnhancedServicesShowcase }

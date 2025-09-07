@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 interface ScrollAnimationProps {
-  children: React.ReactNode;
+children: React.ReactNode;
   animation?: 'fadeIn' | 'slideUp' | 'slideDown' | 'slideLeft' | 'slideRight' | 'scale';
   delay?: number;
   duration?: number;
@@ -9,15 +9,16 @@ interface ScrollAnimationProps {
   className?: string;
 }
 
-const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
+const ScrollAnimation: React.FC < ScrollAnimationProps> = ({
   children,
   animation = 'fadeIn',
   delay = 0,
   duration = 0.6,
   threshold = 0.1,
   className = ''
-}) => {
-  const elementRef = useRef<HTMLDivElement>(null);
+})  => {
+
+  const elementRef = useRef < HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -26,7 +27,8 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
         if (entry.isIntersecting) {
           setTimeout(() => {
             setIsVisible(true);
-          }, delay);
+          
+}, delay);
         }
       },
       { threshold }
@@ -36,16 +38,20 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
       observer.observe(elementRef.current);
     }
 
-    return () => {
+    return ()  => {
+
       if (elementRef.current) {
         observer.unobserve(elementRef.current);
-      }
+      
+}
     };
   }, [delay, threshold]);
 
-  const getAnimationClasses = () => {
+  const getAnimationClasses = ()  => {
+
     const baseClasses = 'transition-all ease-out';
-    const durationClass = `duration-${Math.round(duration * 1000)}`;
+    const durationClass = `duration-${Math.round(duration * 1000)
+}`;
 
     if (!isVisible) {
       switch (animation) {
@@ -73,7 +79,8 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
     <div
       ref={elementRef}
       className={`${getAnimationClasses()} ${className}`}
-      style={{ transitionDuration: `${duration}s` }}
+      style={{ transitionDuration: `${duration}
+s` }}
     >
       {children}
     </div>

@@ -26,9 +26,13 @@ import { Input  } from '@/components/ui/input';
 import { Save, ChevronDown, Plus, Loader2  } from 'lucide-react';
 import { Resume   } from '@/types/resume';
 import { useResume  } from '@/hooks/useResume';
-interface ResumeVersionSelectorProps  {currentResume: Resume;
+interface ResumeVersionSelectorProps {
+currentResume: Resume;
   onResumeChange: (resumeId: string) => void;
-  const handleCreateNewVersion = async () => {if (newResumeTitle.trim()) {setIsLoading(true)const resumeId = await createResume({ title: newResumeTitle.trim() })if (resumeId) {await fetchResume(resumeId)onResumeChange(resumeId)setSaveDialogOpen(false)setNewResumeTitle('')}
+  const handleCreateNewVersion = async ()  => {
+if (newResumeTitle.trim()) {setIsLoading(true)const resumeId = await createResume({ title: newResumeTitle.trim()
+
+})if (resumeId) {await fetchResume(resumeId)onResumeChange(resumeId)setSaveDialogOpen(false)setNewResumeTitle('')}
       setIsLoading(false)}
   }
   return (<div className='flex items-center gap-2'>;
@@ -62,7 +66,7 @@ interface ResumeVersionSelectorProps  {currentResume: Resume;
 <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>;
         <DialogContent className='sm:max-w-md'>;
           <DialogHeader>;
-            <DialogTitle>Save as new resume version</DialogTitle>;
+            <DialogTitle > Save as new resume version</DialogTitle>;
           </DialogHeader>;
           <div className='py-4'>;
             <Input;
@@ -89,4 +93,4 @@ interface ResumeVersionSelectorProps  {currentResume: Resume;
       </Dialog>;
     </div>;
   )}> {resume.basic info.title ;
-}</DropdownMenuItem>) )}<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>)}";
+}</DropdownMenuItem>) )}<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle > Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>)}";

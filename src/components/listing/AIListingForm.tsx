@@ -4,7 +4,8 @@
     category?: string;
     keyFeatures?: string;
     targetAudience?: string;
-  }title: string;
+  }
+title: string;
     category: string;
     keyFeatures: string;
     targetAudience: string;
@@ -21,17 +22,29 @@ import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Textarea  } from '@/components/ui/textarea';
 import { Sparkles  } from 'lucide-react';
-import React, { useState } from "react",import { useToast } from "@/hooks/use-toast",import { Button } from "@/components/ui/button",interface AIListingFormProps  {onSubmit: (formData: {title: string;
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+interface AIListingFormProps {
+onSubmit: (formData: {title: string;
     category: string;
     keyFeatures: string;
     targetAudience: string;
 targetAudience?: string;
-  }export function AIListingForm() {const { toast } = useToast()const [title, setTitle] = useState(initialValues.title || '')const [category, setCategory] = useState(initialValues.category || '')const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || '';
+}
+export function AIListingForm() {
+const { toast 
+} = useToast()const [title, setTitle] = useState(initialValues.title || '')const [category, setCategory] = useState(initialValues.category || '')const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || '';
   )const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || '';
-  )const handleSubmit = () => {if (!title |!category) {toast({return;
-title: 'Missing required fields',description: 'Please provide at least a title and category.',variant: 'destructive';
-      })return;}
-    onSubmit({})}return (<div className='space-y-4'>;
+  )const handleSubmit = ()  => {
+if (!title |!category) {toast({return;
+title: 'Missing required fields',
+description: 'Please provide at least a title and category.',
+variant: 'destructive';
+      
+})return;}
+    onSubmit({})}
+return (<div className='space-y-4'>;
       <div className='space-y-2'>;
         <label;
           htmlFor='title';
@@ -62,7 +75,8 @@ title: 'Missing required fields',description: 'Please provide at least a title a
           className='bg-zion-blue border border-zion-blue-light text-white';
           disabled={isLoading}        />;
       targetAudience;
-    })}return (<div className="space-y-4">;
+    })}
+return (<div className="space-y-4">;
         />;
       </div>;
       <div className="space-y-2">;
@@ -89,21 +103,41 @@ return (disabled={isLoading || !title || !category}
           onChange={(e) => setKeyFeatures(e && e.target.value)}
           placeholder="Briefly describe the main features or benefits";
           className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
-          disabled={isLoading}import { Star  } from 'lucide-react';
-interface AIListingFormProps  {onSubmit: (formData: {title: string,category: string,keyFeatures: string,targetAudience: string;
-  }) => void;
-  isLoading: boolean,initialValues?: {title?: string;
+          disabled={isLoading}
+import { Star  } from 'lucide-react';
+interface AIListingFormProps {
+onSubmit: (formData: {title: string,
+category: string,
+keyFeatures: string,
+targetAudience: string;
+}) => void;
+  isLoading: boolean,
+initialValues?: {title?: string;
     category?: string;
     keyFeatures?: string;
     targetAudience?: string;
   }
-}export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) { const { toast  } = useToast(),const [ title, setTitle ] = useState(initialValues.title || ""),const [ category, setCategory ] = useState(initialValues.category || ""),const [ keyFeatures, setKeyFeatures ] = useState(initialValues.keyFeatures || ""),const [ targetAudience, setTargetAudience ] = useState(initialValues.targetAudience || ""),const handleSubmit = () => {if (!title || !category) {toast({title: "Missing required fields",description: "Please provide at least a title and category.",variant: "destructive";
-      })return;
-    }onSubmit({title;
+}
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
+ const { toast  
+} = useToast(),
+const [ title, setTitle ] = useState(initialValues.title || ""),
+const [ category, setCategory ] = useState(initialValues.category || ""),
+const [ keyFeatures, setKeyFeatures ] = useState(initialValues.keyFeatures || ""),
+const [ targetAudience, setTargetAudience ] = useState(initialValues.targetAudience || ""),
+const handleSubmit = ()  => {
+if (!title || !category) {toast({title: "Missing required fields",
+description: "Please provide at least a title and category.",
+variant: "destructive";
+      
+})return;
+    }
+onSubmit({title;
       category;
       keyFeatures;
       targetAudience;
-    })}return (<div className="space-y-4">;
+    })}
+return (<div className="space-y-4">;
         />;
         />;
       </div>;
@@ -197,23 +231,53 @@ interface AIListingFormProps  {onSubmit: (formData: {title: string,category: str
         <label html_for="category" className="text - sm font - medium text - zion - slate - light" html_for="input - Category">Category</label>;
         <Input;
           id="category";
-          value={category}id="targetAudience";
+          value={category}
+id="targetAudience";
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
           placeholder="e.g. Developers, Marketers, Startups";
           className="bg-zion-blue border border-zion-blue-light text-white";
-import { Input } from "@/components/ui/input",import { Textarea } from "@/components/ui/textarea",interface AIListingFormProps  {onSubmit: (formData: {title: string,category: string,keyFeatures: string,targetAudience: string;
-  }) => void,isLoading: boolean,initialValues?: {title?: string,category?: string,keyFeatures?: string,targetAudience?: string;
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+interface AIListingFormProps {
+onSubmit: (formData: {title: string,
+category: string,
+keyFeatures: string,
+targetAudience: string;
+}) => void,
+isLoading: boolean,
+initialValues?: {title?: string,
+category?: string,
+keyFeatures?: string,
+targetAudience?: string;
   }
-}export function AIListingForm() {const { toast } = useToast(),const [title, setTitle] = useState(initialValues.title || ""),const [category, setCategory] = useState(initialValues.category || ""),const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),const handleSubmit = () => {if (!title || !category) {toast({title: "Missing required fields",description: "Please provide at least a title and category.",variant: "destructive";
-      }),return;
-    }onSubmit({title,category,keyFeatures;
+}
+export function AIListingForm() {
+const { toast 
+} = useToast(),
+const [title, setTitle] = useState(initialValues.title || ""),
+const [category, setCategory] = useState(initialValues.category || ""),
+const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
+const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
+const handleSubmit = ()  => {
+if (!title || !category) {toast({title: "Missing required fields",
+description: "Please provide at least a title and category.",
+variant: "destructive";
+      
+}),
+return;
+    }
+onSubmit({title,
+category,
+keyFeatures;
       targetAudience;
-    })}return (<div className="space-y-4">;
+    })}
+return (<div className="space-y-4">;
       <div className="space-y-2">;
         <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
         <Input;
-          id="title";value={title}
+          id="title";
+value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Enter your product or service title";
           className="bg-zion-blue border border-zion-blue-light text-white";
@@ -247,13 +311,21 @@ import { Input } from "@/components/ui/input",import { Textarea } from "@/compon
         <Input;
           id="targetAudience";
           value={targetAudience}
-          onChange={(e) => setTargetAudience(e.target.value)}placeholder="e.g. Developers, Marketers, Startups";
-          className="bg-zion-blue border border-zion-blue-light text-white";disabled={isLoading}/>;
+          onChange={(e) => setTargetAudience(e.target.value)}
+placeholder="e.g. Developers, Marketers, Startups";
+          className="bg-zion-blue border border-zion-blue-light text-white";
+disabled={isLoading}/>;
       </div>;
-      <Button;onClick={handleSubmit}disabled={isLoading || !title || !category}className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
+      <Button;
+onClick={handleSubmit}
+disabled={isLoading || !title || !category}
+className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
         disabled={isLoading |!title |!category}
-        disabled={isLoading || !title || !category}disabled={isLoading}
-        onClick={handleSubmit}disabled={isLoading || !title || !category}className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
+        disabled={isLoading || !title || !category}
+disabled={isLoading}
+        onClick={handleSubmit}
+disabled={isLoading || !title || !category}
+className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
       <Button;
         onClick={handleSubmit}
         disabled={isLoading || !title || !category}

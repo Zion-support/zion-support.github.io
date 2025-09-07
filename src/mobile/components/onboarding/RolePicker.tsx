@@ -19,8 +19,20 @@ import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Briefcase, Users, Check  } from 'lucide-react';
                 <Check className="h-5 w-5 text-primary" />;
-import React, { useState } from "react",import { Button } from "@/components/ui/button",import { Card, CardContent } from "@/components/ui/card",type UserRole = "talent" | "client" | null,interface RolePickerProps  {onSelect: (role: UserRole) => void;
-}export function RolePicker() {const [selectedRole, setSelectedRole] = useState<UserRole>(null),const handleSelect = (role: UserRole) => {setSelectedRole(role)onSelect(role)}return (<div className='space-y-4 px-4'>;
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+type UserRole = "talent" | "client" | null,
+interface RolePickerProps {
+onSelect: (role: UserRole) => void;
+}
+export function RolePicker() {
+const [selectedRole, setSelectedRole] = useState < UserRole>(null),
+const handleSelect = (role: UserRole)  => {
+setSelectedRole(role)onSelect(role)
+
+}
+return (<div className='space-y-4 px-4'>;
       <h2 className='text-xl font-medium'>What brings you to Zion?</h2>;
       <p className='text-muted-foreground'>;
         Choose how you want to use our platform;
@@ -48,14 +60,20 @@ import React, { useState } from "react",import { Button } from "@/components/ui/
                 </p>;
               </div>;
               {selectedRole === 'client' && (<Check className='h-5 w-5 text-primary' />;
-              )}import { Button  } from '@/components / ui / button';
+              )}
+import { Button  } from '@/components / ui / button';
 import { Card, CardContent  } from '@/components / ui / card';
 type UserRole = 'talent' | 'client' | null;
-interface RolePickerProps  {on_select: (role: UserRole) => void;
+interface RolePickerProps {
+on_select: (role: UserRole) => void;
 export /**;
  * RolePicker - Function description;
  */;
-function RolePicker() {const [selected_role, setSelectedRole] = useState < UserRole>(null)const handle_select = (role: UserRole) =>: any {setSelectedRole (role)on_select (role)}
+function RolePicker() {
+const [selected_role,
+setSelectedRole] = useState < UserRole>(null)const handle_select = (role: UserRole) =>: any {setSelectedRole (role)on_select (role)
+
+}
   return (<div className='space - y-4 px - 4'>;
       <h2 className='text - xl font - medium'>What brings you to Zion?</h2>;
       <p className='text - muted - foreground'>;

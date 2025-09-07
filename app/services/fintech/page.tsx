@@ -4,6 +4,7 @@ export const metadata = {
 };
 
 export default function FinTechPage() {
+
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +16,8 @@ export default function FinTechPage() {
           </p>
         </div>
 
-        {/* FinTech Categories */}
+        {/* FinTech Categories */
+}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <FinTechCategory
             title="Digital Banking"
@@ -241,9 +243,11 @@ function FinTechCategory({
   pricing: string;
   marketSize: string;
 }) {
+
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
+      <div className="text-4xl mb-4">{icon
+}</div>
       <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <ul className="text-gray-600 space-y-2 mb-4">
@@ -276,9 +280,11 @@ function FinTechService({
   pricing: string;
   icon: string;
 }) {
+
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-      <div className="text-3xl mb-3">{icon}</div>
+      <div className="text-3xl mb-3">{icon
+}</div>
       <h4 className="text-xl font-bold text-gray-900 mb-2">{title}</h4>
       <p className="text-gray-600 mb-3">{description}</p>
       <ul className="text-gray-600 space-y-1 mb-3">

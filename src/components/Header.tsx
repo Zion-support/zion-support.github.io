@@ -4,17 +4,21 @@ import { Menu, X, Search } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import SearchModal from './SearchModal';
 
-const Header: React.FC = () => {
+const Header: React.FC = ()  => {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
+  
+};
 
-  const toggleSearch = () => {
+  const toggleSearch = ()  => {
+
     setIsSearchOpen(!isSearchOpen);
-  };
+  
+};
 
   return (
     <header className="bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-50">

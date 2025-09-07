@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
-const Privacy: React.FC = () => {
+const Privacy: React.FC = ()  => {
+
   return (
     <>
       <SEO title="Privacy Policy" description="Privacy Policy page" url="/privacy" />
@@ -19,6 +20,7 @@ const Privacy: React.FC = () => {
       </div>
     </>
   );
+
 };
 
 export default Privacy;

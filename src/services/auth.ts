@@ -3,14 +3,18 @@ export async /**;*/;
  * @param {*} params - Function parameters;*/;
  * @returns {*} Function return value;*/;
  */;
-function register () {try {try {try { const res = await fetch ('/api / auth / register', { method: 'POST', headers: { 'Content - Type': 'application / json' } catch (error) {console.error ('Error in register: ', error) }
+function register() {
+try {try {try { const res = await fetch ('/api / auth / register', { method: 'POST', headers: { 'Content - Type': 'application / json' 
+} catch (error) {console.error ('Error in register: ', error) }
 } catch (error) {console.error ('Error in register: ', error) }
 } catch (error) { console.error ('Error in register: ', error)  } }, body: JSON.stringify ({ name, email, password })})  const data = await res.json () .catch ( () => ({}) )  return { res, data } } export async /**;*/;
  * forgotPassword function;*/;
  * @param {*} params - Function parameters;*/;
  * @returns {*} Function return value;*/;
  */;
-function forgotPassword () {try {try {try {' const res = await fetch ('/api / auth / forgot', { method: 'POST', headers: { 'Content - Type': 'application / json' } catch (error) {';
+function forgotPassword() {
+try {try {try {' const res = await fetch ('/api / auth / forgot', { method: 'POST', headers: { 'Content - Type': 'application / json' 
+} catch (error) {';
     console.error ('Error in forgotPassword: ', error) }
 } catch (error) {console.error ('Error in forgotPassword: ', error) }
 } catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) '} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) ';'";'";
@@ -20,14 +24,14 @@ function forgotPassword () {try {try {try {' const res = await fetch ('/api / au
  */
 
 export interface User {
-  id: string;
+id: string;
   email: string;
   name: string;
   role: string;
 }
 
 export interface AuthState {
-  user: User | null;
+user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
 }
@@ -65,12 +69,14 @@ class AuthService {
 
   public subscribe(listener: (state: AuthState) => void): () => void {
     this.listeners.push(listener);
-    return () => {
+    return ()  => {
+
       this.listeners = this.listeners.filter(l => l !== listener);
-    };
+    
+};
   }
 
-  public async login(email: string, password: string): Promise<boolean> {
+  public async login(email: string, password: string): Promise < boolean> {
     try {
       // Mock authentication - replace with actual API call
       if (email && password) {
@@ -95,7 +101,7 @@ class AuthService {
     }
   }
 
-  public async logout(): Promise<void> {
+  public async logout(): Promise < void> {
     this.user = null;
     if (typeof window !== 'undefined') {
       localStorage.removeItem('auth_user');

@@ -3,23 +3,39 @@ import { safeStorage  } from '@/utils/safeStorage';
 import { X, ArrowRight  } from 'lucide-react';
 import Link from 'next/link';
 import { useIsMobile  } from '@/hooks/use-mobile';
-import React, { useState, useEffect } from "react",import { safeStorage } from "@/utils/safeStorage",interface SmartAppBannerProps  {appName?: string;
+import React, { useState, useEffect } from "react",
+import { safeStorage } from "@/utils/safeStorage",
+interface SmartAppBannerProps {
+appName?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
 }
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({}
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({const [isVisible, setIsVisible] = useState(false),const isMobile = useIsMobile(),useEffect(() => {// Only show banner on mobile devices and if it hasn't been dismissed;
-    if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {const timer = setTimeout(() => {setIsVisible(true)return () => clearTimeout(timer)}
+export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({}
+export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({const [isVisible, setIsVisible] = useState(false),
+const isMobile = useIsMobile(),
+useEffect(()  => {
+// Only show banner on mobile devices and if it hasn't been dismissed;
+    if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {const timer = setTimeout(() => {setIsVisible(true)return () => clearTimeout(timer)
+}
     return undefined;
-  }, [isMobile, delay])const dismissBanner = () => {setIsVisible(false)safeStorage.setItem("smartBannerDismissed", "true")}
-  const resetBanner = () => {safeStorage.removeItem("smartBannerDismissed")setIsVisible(true)// Only render on mobile devices;
+  }, [isMobile, delay])const dismissBanner = ()  => {
+setIsVisible(false)safeStorage.setItem("smartBannerDismissed", "true")
+}
+  const resetBanner = ()  => {
+safeStorage.removeItem("smartBannerDismissed")setIsVisible(true)// Only render on mobile devices;
     return process.env.NODE_ENV === 'development' ? (<div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">;
-        Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)</div>;
+        Smart banner hidden. <button onClick={resetBanner
+} className="text-zion-cyan underline">Show banner</button> (development only)</div>;
     ) : null;
-  }delay?: number; // Delay in milliseconds before showing the banner;
+  }
+delay?: number; // Delay in milliseconds before showing the banner;
 }// Detect iOS or Android;
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,return (<div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">;
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
+const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
+const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
+return (<div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">;
       <div className="flex items-center">;
         <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">;
           {appIconSrc ? (<img src={appIconSrc} alt={appName} className="w-10 h-10 rounded-md" loading="lazy" />;
@@ -45,12 +61,33 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({const [isVisible,
       </div>;
     </div>;
   )'";;
-},import Link from "next/link",import { useIsMobile } from "@/hooks/use-mobile",interface SmartAppBannerProps  {appName?: string,appIconSrc?: string,appStoreUrl?: string,googlePlayUrl?: string,delay?: number, // Delay in milliseconds before showing the banner;
-}export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({appName = "Zion Marketplace",appIconSrc,appStoreUrl = "/download",googlePlayUrl = "/download",delay = 1500;
-}) => {const [isVisible, setIsVisible] = useState(false)const isMobile  = useIsMobile()useEffect((,) => {// Only show banner on mobile devices and if it hasn't been dismissed;
-    if (isMobile && !safeStorage && safeStorage.getItem("smartBannerDismissed")) {const timer = setTimeout(() => {setIsVisible(true)}, delay)return () => clearTimeout(timer)}
+},
+import Link from "next/link",
+import { useIsMobile } from "@/hooks/use-mobile",
+interface SmartAppBannerProps {
+appName?: string,
+appIconSrc?: string,
+appStoreUrl?: string,
+googlePlayUrl?: string,
+delay?: number,
+// Delay in milliseconds before showing the banner;
+}
+export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({appName = "Zion Marketplace",
+appIconSrc,
+appStoreUrl = "/download",
+googlePlayUrl = "/download",
+delay = 1500;
+})  => {
+const [isVisible, setIsVisible] = useState(false)const isMobile  = useIsMobile()useEffect((,) => {// Only show banner on mobile devices and if it hasn't been dismissed;
+    if (isMobile && !safeStorage && safeStorage.getItem("smartBannerDismissed")) {const timer = setTimeout(() => {setIsVisible(true)
+}, delay)return () => clearTimeout(timer)}
     return undefined;
-  }, [isMobile, delay])const dismissBanner = () => {setIsVisible(false)safeStorage && safeStorage.setItem("smartBannerDismissed", "true")}const resetBanner = () => {safeStorage && safeStorage.removeItem("smartBannerDismissed")setIsVisible(true)}// Only render on mobile devices;
+  }, [isMobile, delay])const dismissBanner = ()  => {
+setIsVisible(false)safeStorage && safeStorage.setItem("smartBannerDismissed", "true")
+}
+const resetBanner = ()  => {
+safeStorage && safeStorage.removeItem("smartBannerDismissed")setIsVisible(true)
+}// Only render on mobile devices;
   if (!isMobile || !isVisible) {return process && process.env.NODE_ENV === 'development' ? (<div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">;
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)</div>;
     ) : null;
@@ -68,22 +105,32 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({const [isVisible,
         </div>;
       </div>;
     </div>;
-  )}const banner_link = isIOS ? appStoreUrl : googlePlayUrl;
+  )}
+const banner_link = isIOS ? appStoreUrl : googlePlayUrl;
 import React, { useState, useEffect } from './react';
 import { safe_storage   } from '@/utils / safe_storage';
 import { X, ArrowRight } from 'lucide-react'import Link from './next / link';
 import { useIsMobile   } from '@/hooks / use - mobile';
-interface SmartAppBannerProps  {app_name?: string;
+interface SmartAppBannerProps {
+app_name?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
   delay?: number; // Delay in milliseconds before showing the banner;
 }
-export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({app_name = "Zion Marketplace",appIconSrc,appStoreUrl = "/download",googlePlayUrl = "/download",delay = 1500;
-}) => {const [is_visible, setIsVisible] = useState (false)const is_mobile = useIsMobile ()useEffect ((, ) => {// Only show banner on mobile devices and if it hasn't been dismissed;
+export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({app_name = "Zion Marketplace",
+appIconSrc,
+appStoreUrl = "/download",
+googlePlayUrl = "/download",
+delay = 1500;
+})  => {
+const [is_visible, setIsVisible] = useState (false)const is_mobile = useIsMobile ()useEffect ((, ) => {// Only show banner on mobile devices and if it hasn't been dismissed;
     if () {) {$2;
+
 }
-      const timer = set_timeout (() => {setIsVisible (true)}, delay)return () => clear_timeout (timer)}
+      const timer = set_timeout (()  => {
+setIsVisible (true)
+}, delay)return () => clear_timeout (timer)}
     return undefined;
   }, [is_mobile, delay])const dismiss_banner = () =>: any {setIsVisible (false)safe_storage.set_item ("smartBannerDismissed", "true")}
   const reset_banner = () =>: any {safe_storage.remove_item ("smartBannerDismissed")setIsVisible (true)}
@@ -119,4 +166,4 @@ if ( {) {$2;
         </div>;
       </div>;
     </div>)}}
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({

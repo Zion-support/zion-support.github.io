@@ -1,7 +1,9 @@
 import { useState, useCallback  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2  } from 'lucide-react';
-export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
+export const BlockchainWeb3Dashboard = ({ className = '' })  => {
+const { trackEvent 
+} = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
     })'';
     const [activeTab, setActiveTab] = useState('overview')const [showMintNFT, setShowMintNFT] = useState(false)const [showSendTransaction, setShowSendTransaction] = useState(false)const { wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition } = useBlockchainWeb3()const [nftForm, setNftForm] = useState({}
 '';
@@ -20,7 +22,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
     })const handleConnectWallet = useCallback(async () => {}
         try {}
             await connectWallet()'';
-            trackEvent('blockchain', dashboard',wallet_connected')}
+            trackEvent('blockchain', dashboard',
+wallet_connected')}
         catch (error) {}
 '';
 '';
@@ -37,7 +40,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
                 await mintNFT(contracts[1]?.address || '', metadata)';';
                 setNftForm({ name: '', description: '', image: '' })'';
                 setShowMintNFT(false)';';
-                trackEvent('blockchain', dashboard',nft_minted')}
+                trackEvent('blockchain', dashboard',
+nft_minted')}
             catch (error) {}
 '';
 '';
@@ -49,7 +53,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
             try {}
                 await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null)'';
                 setTransactionForm({ to: '', value: '', data: '' })setShowSendTransaction(false)'';
-                trackEvent('blockchain', dashboard',transaction_sent')}
+                trackEvent('blockchain', dashboard',
+transaction_sent')}
             catch (error) {}
 '';
 '';
@@ -127,12 +132,12 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>'''';
                       <button onClick={() => setShowSendTransaction(true)} className='flex items-center justify-center space-x-2 px-4 py-3 text-white bg-green-600 rounded-lg hover: bg-green-700'>'''';
                         <Send className='w-5 h-5'/>;
-                        <span>Send Transaction</span>;
+                        <span > Send Transaction</span>;
                       </button>'''';
                       '''';
                       <button onClick={() => setShowMintNFT(true)} className='flex items-center justify-center space-x-2 px-4 py-3 text-white bg-purple-600 rounded-lg hover: bg-purple-700'>'''';
                         <Plus className='w-5 h-5'/>;
-                        <span>Mint NFT</span>;
+                        <span > Mint NFT</span>;
                       </button>;
                     </div>;
                   </div>;
@@ -155,7 +160,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
                 name: 'New Contract', '';
                 address: '0x' + Math.random().toString(36).substr(2, 40), '';
                 network: 'ethereum', abi[], '';
-                functions['function1',function2'], ';
+                functions['function1',
+function2'], ';
                 events['Event1','Event2'];
             '''';
 '''';

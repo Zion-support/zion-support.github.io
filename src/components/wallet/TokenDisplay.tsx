@@ -1,5 +1,7 @@
 
-const { wallet, loading } = useWallet()return (import { useWallet } from "@/hooks/useWallet",import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { Button  } from '@/components/ui/button';
+const { wallet, loading } = useWallet()return (import { useWallet } from "@/hooks/useWallet",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button  } from '@/components/ui/button';
 import Skeleton from '@/components/ui/skeleton';
 import { Card;
   CardContent;
@@ -7,11 +9,13 @@ import { Card;
   CardHeader;
   CardTitle;
  } from '@/components/ui/card';
-export function TokenDisplay() {const { wallet, loading }  = useWallet()return (<Card>;
+export function TokenDisplay() {
+const { wallet, loading 
+}  = useWallet()return (<Card>;
       <CardHeader className="flex flex-row items-center justify-between pb-2">;
         <div>;
           <CardTitle className="text-xl">ZION$ Balance</CardTitle>;
-          <CardDescription>Your current token balance</CardDescription>;
+          <CardDescription > Your current token balance</CardDescription>;
         </div>;
         <BadgeDollarSign className="h-6 w-6 text-primary" />;
       </CardHeader>;
@@ -33,11 +37,16 @@ export function TokenDisplay() {const { wallet, loading }  = useWallet()return (
               </Button>;
             </div>;
           </div>;
-import React from "react",import { BadgeDollarSign  } from 'lucide-react';
-import { Button } from "@/components/ui/button",import Skeleton from "@/components/ui/skeleton",export function TokenDisplay() {const { wallet, loading } = useWallet()return (<Card>;<CardHeader className='flex flex-row items-center justify-between pb-2'>;
+import React from "react",
+import { BadgeDollarSign  } from 'lucide-react';
+import { Button } from "@/components/ui/button",
+import Skeleton from "@/components/ui/skeleton",
+export function TokenDisplay() {
+const { wallet, loading 
+} = useWallet()return (<Card>;<CardHeader className='flex flex-row items-center justify-between pb-2'>;
         <div>;
           <CardTitle className='text-xl'>ZION$ Balance</CardTitle>;
-          <CardDescription>Your current token balance</CardDescription>;
+          <CardDescription > Your current token balance</CardDescription>;
         </div>;
         <BadgeDollarSign className='h-6 w-6 text-primary' />;
       </CardHeader>;
@@ -53,7 +62,7 @@ import { Button } from "@/components/ui/button",import Skeleton from "@/componen
               convert to credits.;<CardHeader className="flex flex-row items-center justify-between pb-2">;
         <div>;
           <CardTitle className="text-xl">ZION$ Balance</CardTitle>;
-          <CardDescription>Your current token balance</CardDescription>;
+          <CardDescription > Your current token balance</CardDescription>;
         </div>;
         <BadgeDollarSign className="h-6 w-6 text-primary" />;
       </CardHeader>;
@@ -67,15 +76,22 @@ import { Button } from "@/components/ui/button",import Skeleton from "@/componen
             <p className="text-sm text-muted-foreground">;
               Use your tokens to boost visibility, access premium features, or convert to credits.;</p>;
             <div className='mt-2'>;
-              <Button variant='outline' size='sm'>                View Wallet <div className = "mt-2">;import React from 'react';
+              <Button variant='outline' size='sm'>                View Wallet <div className = "mt-2">;
+import React from 'react';
 import { use_wallet  } from '@/hooks / use_wallet';
-import { Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components / ui / card';
+import { Card,
+CardContent,
+CardDescription,
+CardHeader,
+CardTitle} from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import Skeleton from '@/components / ui / skeleton';
 export /**;
  * TokenDisplay - Function description;
  */;
-function TokenDisplay() {const { wallet, loading } = use_wallet ()return (<Card>;
+function TokenDisplay() {
+const { wallet, loading 
+} = use_wallet ()return (<Card>;
       <CardHeader className='flex flex - row items - center justify - between pb - 2'>;
         <div>;
           <CardTitle className='text - xl'>ZION$ Balance</CardTitle>;

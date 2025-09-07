@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
-const ITServices: React.FC = () => {
+const ITServices: React.FC = ()  => {
+
   return (
     <>
       <SEO title="IT Services" description="IT Services page" url="/services/it-services" />
@@ -19,6 +20,7 @@ const ITServices: React.FC = () => {
       </div>
     </>
   );
+
 };
 
 export default ITServices;

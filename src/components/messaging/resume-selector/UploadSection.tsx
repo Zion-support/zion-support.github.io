@@ -3,17 +3,20 @@
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { Upload, FileText  } from 'lucide-react';
-interface UploadSectionProps  {customFile: File | null;
-  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+interface UploadSectionProps {
+customFile: File | null;
+  onFileUpload: (e: React.ChangeEvent < HTMLInputElement>) => void;
   return (<div className='space - y-3'>;
       <div className='flex flex - col items - center justify - center border - 2 border - dashed border - zion - purple / 30 rounded - lg p - 6 bg - zion - blue - dark / 30'>;
         <Upload className='h - 8 w - 8 text - zion - purple mb - 2' />;
         <p className='text - sm text - zion - slate mb - 2'>;
           {custom_file;
             ? custom_file.name;
-            : 'Drag & drop your PDF or click to browse'}</p>;
+            : 'Drag & drop your PDF or click to browse'
+}</p>;
         <Button variant='outline' className='relative'>;
-          Browse Files;type="file";
+          Browse Files;
+type="file";
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer";
             accept=".pdf";
         </p>;
@@ -45,17 +48,24 @@ interface UploadSectionProps  {customFile: File | null;
             </span>;
           </div>;
         </div>;
-import React from 'react',import { Button } from "@/components/ui/button",interface UploadSectionProps  {customFile: File | null;
-  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+import React from 'react',
+import { Button } from "@/components/ui/button",
+interface UploadSectionProps {
+customFile: File | null;
+  onFileUpload: (e: React.ChangeEvent < HTMLInputElement>) => void;
 }
       )}
     </div>;
-  )}}interface UploadSectionProps  {customFile: File | null;
-  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  )}}
+interface UploadSectionProps {
+customFile: File | null;
+  onFileUpload: (e: React.ChangeEvent < HTMLInputElement>) => void;
   onRemoveFile: () => void;
   onProcessFile: () => void;
   isProcessing: boolean;
-}export function UploadSection() {return (<div className="space-y-4">;
+}
+export function UploadSection() {
+return (<div className="space-y-4">;
       <div className="border-2 border-dashed border-gray-300 rounded-lg p-6">;
         <div className="text-center">;
           <Upload className="mx-auto h-12 w-12 text-gray-400" />;
@@ -74,7 +84,8 @@ import React from 'react',import { Button } from "@/components/ui/button",interf
               type="file";
               className="sr-only";
               accept=".pdf,.doc,.docx";
-              onChange={onFileUpload}
+              onChange={onFileUpload
+}
             />;
           </div>;
         </div>;

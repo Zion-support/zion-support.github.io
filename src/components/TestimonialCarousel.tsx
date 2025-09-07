@@ -1,25 +1,71 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star, Quote  } from 'lucide-react';
-interface Testimonial  {id: number;
+interface Testimonial {
+id: number;
   name: string;
   company: string;
   role: string;
   content: string;
   rating: number;
   avatar?: string;
-}const TestimonialCarousel: React.FC = () => {const [currentIndex, setCurrentIndex]  = useState(0)const testimonials: Testimonial[] = [;
-    {id: 1,name: 'Sarah Johnson',company: 'TechCorp Solutions',role: 'CTO',content: 'Zion Tech transformed our entire infrastructure. Their AI solutions increased our efficiency by 300% and their support team is exceptional.',rating: 5,avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face';
-    },{id: 2,name: 'Michael Chen',company: 'InnovateLabs',role: 'CEO',content: 'The cybersecurity solutions provided by Zion Tech are top-notch. We\'ve had zero security incidents since implementing their systems.',rating: 5,avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face';
-    },{id: 3,name: 'Emily Rodriguez',company: 'DataFlow Inc',role: 'Data Director',content: 'Their cloud migration services were seamless. We saved 40% on infrastructure costs while improving performance significantly.',rating: 5,avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face';
-    },{id: 4,name: 'David Kim',company: 'GlobalTech',role: 'VP of Engineering',content: 'Zion Tech\'s data analytics platform gave us insights we never had before. Our decision-making process is now data-driven and efficient.',rating: 5,avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face';
-    },{id: 5,name: 'Lisa Wang',company: 'FutureSystems',role: 'Operations Director',content: 'The digital transformation services exceeded our expectations. Our processes are now 50% more efficient and our team is more productive.',rating: 5,avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face';
+}
+const TestimonialCarousel: React.FC = ()  => {
+const [currentIndex, setCurrentIndex]  = useState(0)const testimonials: Testimonial[] = [;
+    {id: 1,
+name: 'Sarah Johnson',
+company: 'TechCorp Solutions',
+role: 'CTO',
+content: 'Zion Tech transformed our entire infrastructure. Their AI solutions increased our efficiency by 300% and their support team is exceptional.',
+rating: 5,
+avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w = 150&h = 150&fit = crop&crop = face';
+    
+},{id: 2,
+name: 'Michael Chen',
+company: 'InnovateLabs',
+role: 'CEO',
+content: 'The cybersecurity solutions provided by Zion Tech are top-notch. We\'ve had zero security incidents since implementing their systems.',
+rating: 5,
+avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w = 150&h = 150&fit = crop&crop = face';
+    },{id: 3,
+name: 'Emily Rodriguez',
+company: 'DataFlow Inc',
+role: 'Data Director',
+content: 'Their cloud migration services were seamless. We saved 40% on infrastructure costs while improving performance significantly.',
+rating: 5,
+avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w = 150&h = 150&fit = crop&crop = face';
+    },{id: 4,
+name: 'David Kim',
+company: 'GlobalTech',
+role: 'VP of Engineering',
+content: 'Zion Tech\'s data analytics platform gave us insights we never had before. Our decision-making process is now data-driven and efficient.',
+rating: 5,
+avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w = 150&h = 150&fit = crop&crop = face';
+    },{id: 5,
+name: 'Lisa Wang',
+company: 'FutureSystems',
+role: 'Operations Director',
+content: 'The digital transformation services exceeded our expectations. Our processes are now 50% more efficient and our team is more productive.',
+rating: 5,
+avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w = 150&h = 150&fit = crop&crop = face';
     }
-  ];const nextTestimonial = () => {setCurrentIndex((prevIndex) =>;
+  ];
+const nextTestimonial = ()  => {
+setCurrentIndex((prevIndex) =>;
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1;
-    )}const prevTestimonial = () => {setCurrentIndex((prevIndex) =>;
+    )
+}
+const prevTestimonial = ()  => {
+setCurrentIndex((prevIndex) =>;
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1;
-    )}const goToTestimonial = (index: number) => {setCurrentIndex(index)}// Auto-advance testimonials;
-  useEffect(() => {const interval = setInterval(nextTestimonial, 5000)return () => clearInterval(interval)}, [])const currentTestimonial  = testimonials[currentIndex];return (<div className="relative max-w-4xl mx-auto">;
+    )
+}
+const goToTestimonial = (index: number)  => {
+setCurrentIndex(index)
+}// Auto-advance testimonials;
+  useEffect(()  => {
+const interval = setInterval(nextTestimonial, 5000)return () => clearInterval(interval)
+}, [])const currentTestimonial  = testimonials[currentIndex];
+return (<div className="relative max-w-4xl mx-auto">;
       {/* Main Testimonial */}
       <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative overflow-hidden">;
         {/* Quote Icon */}
@@ -51,9 +97,11 @@ interface Testimonial  {id: number;
                 src={currentTestimonial.avatar}
                 alt={currentTestimonial.name}
                 className="w-full h-full object-cover";
-                onError={(e) => {const target = e.target as HTMLImageElement;
+                onError={(e)  => {
+const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
-                }}
+                
+}}
               />;
             </div>;
             {/* Author Details */}
@@ -119,4 +167,5 @@ interface Testimonial  {id: number;
         </div>;
       </div>;
     </div>;
-  )}export default TestimonialCarousel;
+  )}
+export default TestimonialCarousel;

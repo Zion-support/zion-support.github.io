@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { ArrowRight, Calendar, User } from 'lucide-react';
 import Card from './Card';
 
-const BlogSection: React.FC = () => {
+const BlogSection: React.FC = ()  => {
+
   const blogPosts = [
     {
       id: 1,
@@ -14,7 +15,8 @@ const BlogSection: React.FC = () => {
       readTime: '5 min read',
       image: '/blog/ai-trends-2024.jpg',
       category: 'AI & Technology'
-    },
+    
+},
     {
       id: 2,
       title: 'Micro SaaS Success Stories: How Small Teams Build Big Solutions',

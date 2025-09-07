@@ -4,10 +4,13 @@ import { Textarea  } from '@/components/ui/textarea';
 import { Mail, Send  } from 'lucide-react';
 import { useState  } from 'react';
 import { toast  } from '@/hooks/use-toast';
-interface ProfileContactProps  {email?: string;
+interface ProfileContactProps {
+email?: string;
   profileName: string;
   profileType: 'service' | 'talent';
-}export function ProfileContact() {const [message, setMessage] = useState("")const [subject, setSubject] = useState("")const [isSending, setIsSending] = useState(false)const handleSendMessage = null;
+}
+export function ProfileContact() {
+const [message, setMessage] = useState("")const [subject, setSubject] = useState("")const [isSending, setIsSending] = useState(false)const handleSendMessage = null;
   return (<div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>;
       <h3 className='text-xl font-bold text-white mb-4 flex items-center'>;
         <Mail className='mr-2 h-5 w-5 text-zion-cyan' />;
@@ -16,7 +19,8 @@ interface ProfileContactProps  {email?: string;
       {email && (<div className='mb-4 text-zion-slate-light'>;
           <span className='block'>Email: </span>;
           <a;
-            href={`mailto:${email}`}
+            href={`mailto:${email
+}`}
             className='text-zion-cyan hover:underline truncate block';
           >;
             {email}
@@ -56,4 +60,5 @@ onChange={e => setMessage(e.target.value)}
     </div>;
   )`mailto:$ {email ;
 }` ";
-}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)}'";
+}
+className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)}'";

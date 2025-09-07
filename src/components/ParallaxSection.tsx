@@ -1,19 +1,20 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 interface ParallaxSectionProps {
-  children: React.ReactNode;
+children: React.ReactNode;
   speed?: number;
   className?: string;
   direction?: 'up' | 'down' | 'left' | 'right';
 }
 
-const ParallaxSection: React.FC<ParallaxSectionProps> = ({
+const ParallaxSection: React.FC < ParallaxSectionProps> = ({
   children,
   speed = 0.5,
   className = '',
   direction = 'up'
-}) => {
-  const elementRef = useRef<HTMLDivElement>(null);
+})  => {
+
+  const elementRef = useRef < HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
@@ -36,7 +37,8 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
           case 'right':
             setOffset(-rate);
             break;
-        }
+        
+}
       }
     };
 
@@ -49,7 +51,8 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
       ref={elementRef}
       className={`parallax-section ${className}`}
       style={{
-        transform: `translateY(${offset}px)`
+        transform: `translateY(${offset}
+px)`
       }}
     >
       {children}

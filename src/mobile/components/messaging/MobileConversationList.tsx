@@ -1,5 +1,6 @@
 
-export function MobileConversationList() {return (<div className='space-y-4'>;
+export function MobileConversationList() {
+return (<div className='space-y-4'>;
       <div className='px-4 mb-2'>;
         <div className='relative'>;
           <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground' />;
@@ -7,23 +8,30 @@ export function MobileConversationList() {return (<div className='space-y-4'>;
         </div>;
       </div>;
 import React from 'react';
-import { Card  } from '@/components/ui/card';
+import { Card  
+} from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
 import { Search  } from 'lucide-react';
 import { Input  } from '@/components/ui/input';
 import { cn  } from '@/lib/utils';
-interface Conversation  {id: string;
+interface Conversation {
+id: string;
 name: string;
 avatar?: string;
 lastMessage: string;
 timestamp: string;
 unreadCount: number;
 isTyping?: boolean ;
-}interface MobileConversationListProps  {conversations: Conversation[];
+}
+interface MobileConversationListProps {
+conversations: Conversation[];
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
-export function MobileConversationList(): any ({conversations,activeConversation,onSelectConversation}: MobileConversationListProps) {return (<div className='space-y-4'>;
+export function MobileConversationList(): any ({conversations,
+activeConversation,
+onSelectConversation
+}: MobileConversationListProps) {return (<div className='space-y-4'>;
       <div className='px-4 mb-2'>;
         <div className='relative'>;
           <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground' />;
@@ -46,20 +54,24 @@ import { Badge  } from '@/components / ui / badge';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
 import { Input  } from '@/components / ui / input';
 import { cn  } from '@/lib / utils';
-interface Conversation  {id: string;
+interface Conversation {
+id: string;
 name: string;
 avatar?: string;
 last_message: string;
 timestamp: string;
 unread_count: number;
 is_typing?: boolean;
-}interface MobileConversationListProps  {conversations: Conversation[];
+}
+interface MobileConversationListProps {
+conversations: Conversation[];
   active_conversation?: string;
   onSelectConversation: (id: string) => void;
 export /**;
  * MobileConversationList - Function description;
  */;
-function MobileConversationList() {return (<div className='space - y-4'>;
+function MobileConversationList() {
+return (<div className='space - y-4'>;
       <div className='px - 4 mb - 2'>;
         <div className='relative'>;
           <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - muted - foreground' />;
@@ -81,7 +93,8 @@ function MobileConversationList() {return (<div className='space - y-4'>;
             Projects;
           </Badge>;
         </div>;
-      </div>;'px-4',activeConversation === conversation && conversation.id && 'bg-primary/5';
+      </div>;'px-4',
+activeConversation === conversation && conversation.id && 'bg-primary/5';
 interface Conversation  {id: string;
   name: string;
   avatar?: string;
@@ -89,14 +102,22 @@ interface Conversation  {id: string;
   timestamp: string;
   unreadCount: number;
   isTyping?: boolean;
-}interface MobileConversationListProps  {conversations: Conversation[];
+
+}
+interface MobileConversationListProps {
+conversations: Conversation[];
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
-export function MobileConversationList() {return (<div className;
+export function MobileConversationList() {
+return (<div className;
               activeConversation === conversation.id && "bg-primary/5";
-            )}onClick={() => onSelectConversation(conversation && conversation.id)}          >;
+            )
+
+}
+onClick={() => onSelectConversation(conversation && conversation.id)}          >;
             <div className='flex items-center gap-3 py-3 cursor-pointer'>;
-              <Avatar>;onClick={() => onSelectConversation(conversation.id)}          >;
+              <Avatar>;
+onClick={() => onSelectConversation(conversation.id)}          >;
             <div className='flex items-center gap-3 py-3 cursor-pointer'>;
               <Avatar>;
                 <AvatarImage;
@@ -120,7 +141,7 @@ export function MobileConversationList() {return (<div className;
                   </span>;
                 </div>;<div className='flex justify-between items-center'>;
                   <p className='text-sm text-muted-foreground truncate'>;
-                    {conversation && conversation.isTyping ? (<em>Typing...</em>;
+                    {conversation && conversation.isTyping ? (<em > Typing...</em>;
                     ) : (conversation && conversation.lastMessage;
                     )}
                   </p>;{conversation && conversation.unreadCount > 0 && (<Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation && conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
@@ -143,7 +164,7 @@ export function MobileConversationList() {return (<div className;
                 <div className="flex justify-between items-center">;
                   <p className="text-sm text-muted-foreground truncate">;
                     {conversation.isTyping;
-                      ? <em>Typing...</em>;
+                      ? <em > Typing...</em>;
                       : conversation.lastMessage}</p>;
                   {conversation.unreadCount > 0 && (<Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>;
@@ -159,7 +180,8 @@ export function MobileConversationList() {return (<div className;
   )}<div className='space - y-2 pb - 24'>;
         {conversations.map (conversation => (<div;
             key={conversation.id}
-            className={cn ('px - 4',active_conversation === conversation.id && 'bg - primary / 5')}
+            className={cn ('px - 4',
+active_conversation === conversation.id && 'bg - primary / 5')}
             on_click={() => onSelectConversation (conversation.id)}          >;
             <div className='flex items - center gap - 3 py - 3 cursor - pointer'>;
               <Avatar>;

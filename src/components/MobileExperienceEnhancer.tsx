@@ -1,33 +1,74 @@
 
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-import { Smartphone, Tablet,Monitor, Touch,Gesture, Swipe,Pinch, Rotate,X, Menu,Home, Search,User, Settings,ArrowUp, ArrowDown,ArrowLeft, ArrowRight;
+import { Smartphone, Tablet,
+Monitor, Touch,
+Gesture, Swipe,
+Pinch, Rotate,
+X, Menu,
+Home, Search,
+User, Settings,
+ArrowUp, ArrowDown,
+ArrowLeft, ArrowRight;
  } from 'lucide-react';
-interface TouchGesture  {type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';
+interface TouchGesture {
+type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';
   direction?: 'up' | 'down' | 'left' | 'right';
   distance?: number;
-  duration?: number}interface MobileExperienceEnhancerProps  {enabled?: boolean;
+  duration?: number
+}
+interface MobileExperienceEnhancerProps {
+enabled?: boolean;
   showGestures?: boolean;
-  enableSwipeNavigation?: boolean}export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({enabled = true, showGestures = false,enableSwipeNavigation = true;
-}) => {const [isMobile, setIsMobile] = useState(false)const [isTablet, setIsTablet] = useState(false)"";
-  const [deviceOrientation, setDeviceOrientation] = useState<'portrait' | 'landscape'>('portrait')const [touchStart, setTouchStart] = useState<{ x: number; y: number; time: number } | null>(null)const [touchEnd, setTouchEnd] = useState<{ x: number; y: number; time: number } | null>(null)const [gestureHistory, setGestureHistory] = useState<TouchGesture []" >([])";
+  enableSwipeNavigation?: boolean
+}
+export const MobileExperienceEnhancer: React.FC < MobileExperienceEnhancerProps> = ({enabled = true, showGestures = false,
+enableSwipeNavigation = true;
+})  => {
+const [isMobile, setIsMobile] = useState(false)const [isTablet, setIsTablet] = useState(false)"";
+  const [deviceOrientation, setDeviceOrientation] = useState<'portrait' | 'landscape'>('portrait')const [touchStart, setTouchStart] = useState<{ x: number; y: number; time: number 
+} | null>(null)const [touchEnd, setTouchEnd] = useState<{ x: number; y: number; time: number } | null>(null)const [gestureHistory, setGestureHistory] = useState < TouchGesture []" >([])";
   const [showMobileMenu, setShowMobileMenu] = useState(false)const [showGestureGuide, setShowGestureGuide] = useState(false)// Detect device type and orientation;
-  useEffect(() => {const checkDevice = () => {const userAgent = navigator.userAgent;
+  useEffect(()  => {
+const checkDevice = () => {const userAgent = navigator.userAgent;
       const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)const isTabletDevice = /iPad|Android(?=.*\\bMobile\\b)(?=.*\\bSafari\\b)/i.test(userAgent)setIsMobile(isMobileDevice)setIsTablet(isTabletDevice)// Set orientation;
-      if (window.innerHeight > window.innerWidth) {setDeviceOrientation('portrait')} else {setDeviceOrientation('landscape')}
-    }const handleResize = () => {checkDevice()}const handleOrientationChange = () => {setTimeout(() => {if (window.innerHeight > window.innerWidth) {setDeviceOrientation('portrait')} else {setDeviceOrientation('landscape')}
-      }, 100)}checkDevice()window.addEventListener('resize', handleResize)window.addEventListener('orientationchange', handleOrientationChange)return () => {window.removeEventListener('resize', handleResize)window.removeEventListener('orientationchange', handleOrientationChange)}}, [])// Touch gesture handling;
-  useEffect(() => {if (!enabled || !enableSwipeNavigation) return;
+      if (window.innerHeight > window.innerWidth) {setDeviceOrientation('portrait')
+} else {setDeviceOrientation('landscape')}
+    }
+const handleResize = ()  => {
+checkDevice()
+}
+const handleOrientationChange = ()  => {
+setTimeout(() => {if (window.innerHeight > window.innerWidth) {setDeviceOrientation('portrait')
+} else {setDeviceOrientation('landscape')}
+      }, 100)}
+checkDevice()window.addEventListener('resize', handleResize)window.addEventListener('orientationchange', handleOrientationChange)return ()  => {
+window.removeEventListener('resize', handleResize)window.removeEventListener('orientationchange', handleOrientationChange)
+}}, [])// Touch gesture handling;
+  useEffect(()  => {
+if (!enabled || !enableSwipeNavigation) return;
     const handleTouchStart = (e: TouchEvent) => {const touch = e.touches[0];
-      setTouchStart({x: touch.clientX, y: touch.clientY,time: Date.now()})}const handleTouchMove = (e: TouchEvent) => {e.preventDefault()}const handleTouchEnd = (e: TouchEvent) => {if (!touchStart) return;
+      setTouchStart({x: touch.clientX, y: touch.clientY,
+time: Date.now()
+})}
+const handleTouchMove = (e: TouchEvent)  => {
+e.preventDefault()
+}
+const handleTouchEnd = (e: TouchEvent)  => {
+if (!touchStart) return;
       const touch = e.changedTouches[0];
-      const touchEndData = {x: touch.clientX, y: touch.clientY,time: Date.now()}setTouchEnd(touchEndData)// Calculate gesture;
+      const touchEndData = {x: touch.clientX, y: touch.clientY,
+time: Date.now()
+}
+setTouchEnd(touchEndData)// Calculate gesture;
       const deltaX = touchEndData.x - touchStart.x;
       const deltaY = touchEndData.y - touchStart.y;
       const deltaTime = touchEndData.time - touchStart.time;
       const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY)// Minimum distance and time for gesture recognition;
-      if (distance > 50 && deltaTime < 500) {const gesture: TouchGesture = {type: 'swipe', distance,duration: deltaTime;
-        }if (Math.abs(deltaX) > Math.abs(deltaY)) {// Horizontal swipe"";
+      if (distance > 50 && deltaTime < 500) {const gesture: TouchGesture = {type: 'swipe', distance,
+duration: deltaTime;
+        }
+if (Math.abs(deltaX) > Math.abs(deltaY)) {// Horizontal swipe"";
           gesture.direction = deltaX > 0 ? 'right' : 'left';
           // Handle horizontal navigation;
           if (gesture.direction === 'left') {// Swipe left - go forward;
@@ -43,12 +84,18 @@ interface TouchGesture  {type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
         }// Add to gesture history;
         setGestureHistory(prev => [gesture, ...prev.slice(0, 9)])// Log gesture for debugging;
-      }setTouchStart(null)setTouchEnd(null)}document.addEventListener('touchstart', handleTouchStart, { passive: false })document.addEventListener('touchmove', handleTouchMove, { passive: false })document.addEventListener('touchend', handleTouchEnd, { passive: false })return () => {document.removeEventListener('touchstart', handleTouchStart)document.removeEventListener('touchmove', handleTouchMove)document.removeEventListener('touchend', handleTouchEnd)}}, [enabled, enableSwipeNavigation, touchStart])// Enhanced mobile navigation;
-  const handleMobileNavigation = useCallback((action: string) => {switch (action) {case 'home': window.location.href = '/';
+      }
+setTouchStart(null)setTouchEnd(null)}
+document.addEventListener('touchstart', handleTouchStart, { passive: false })document.addEventListener('touchmove', handleTouchMove, { passive: false })document.addEventListener('touchend', handleTouchEnd, { passive: false })return ()  => {
+document.removeEventListener('touchstart', handleTouchStart)document.removeEventListener('touchmove', handleTouchMove)document.removeEventListener('touchend', handleTouchEnd)
+}}, [enabled, enableSwipeNavigation, touchStart])// Enhanced mobile navigation;
+  const handleMobileNavigation = useCallback((action: string)  => {
+switch (action) {case 'home': window.location.href = '/';
         break;
       case 'search': // Trigger search functionality;
         const searchInput = document.querySelector('input[type="search"]') as HTMLInputElement;
-        if (searchInput) {searchInput.focus()}
+        if (searchInput) {searchInput.focus()
+}
         break;
       case 'menu': setShowMobileMenu(!showMobileMenu)break;
       case 'back': if (window.history.length > 1) {window.history.back()}
@@ -57,17 +104,21 @@ interface TouchGesture  {type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress
         break;
     }
   }, [showMobileMenu])// Mobile-specific optimizations;
-  useEffect(() => {if (!enabled || !isMobile) return;
+  useEffect(()  => {
+if (!enabled || !isMobile) return;
     // Add mobile-specific CSS classes;
     document.documentElement.classList.add('mobile-device')// Optimize viewport for mobile;
     const viewport = document.querySelector('meta[name="viewport"]')if (viewport) {"";
-      viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')}// Add touch-action CSS for better touch handling"";
+      viewport.setAttribute('content', 'width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no')
+}// Add touch-action CSS for better touch handling"";
     const style = document.createElement('style')style.textContent = `;
       .mobile-device * {touch-action: manipulation;
         -webkit-tap-highlight-color: transparent}.mobile-device button, .mobile-device [role="button"] {min-height: 44px;
         min-width: 44px}.mobile-device input, .mobile-device select,.mobile-device textarea {font-size: 16px}`;
     `;
-    document.head.appendChild(style)return () => {document.documentElement.classList.remove('mobile-device')if (style.parentNode) {style.parentNode.removeChild(style)}
+    document.head.appendChild(style)return ()  => {
+document.documentElement.classList.remove('mobile-device')if (style.parentNode) {style.parentNode.removeChild(style)
+}
     }
   }, [enabled, isMobile])if (!enabled) return null;
   return (<>;
@@ -268,11 +319,13 @@ interface TouchGesture  {type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress
             {gestureHistory.slice(0, 5).map((gesture, index) => ("";
               <div key={index} className="flex items-center space-x-2">"";
                 <Touch className="w-3 h-3" /" >";
-                <span>{gesture.type} {gesture.direction} ({gesture.distance}px)</span>;
+                <span>{gesture.type} {gesture.direction} ({gesture.distance}
+px)</span>;
               </div>;
             ))}
           </div>;
         </motion.div>;
       )}
 </>;
-  )}export default MobileExperienceEnhancer;
+  )}
+export default MobileExperienceEnhancer;

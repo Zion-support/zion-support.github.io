@@ -1,7 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowUp  } from 'lucide-react';
-export default function Footer() {const scrollToTop = () => {window.scrollTo({ top: 0, behavior: 'smooth' })}const currentYear  = new Date().getFullYear()const footerLinks = {services: [;
+export default function Footer() {
+const scrollToTop = ()  => {
+window.scrollTo({ top: 0, behavior: 'smooth' 
+
+})}
+const currentYear  = new Date().getFullYear()const footerLinks = {services: [;
       { name: 'AI Services', href: '/services/ai-services' },{ name: 'IT Services', href: '/services/it-services' },{ name: 'Micro SaaS', href: '/services/micro-saas' },{ name: 'Web Development', href: '/services/web-development' },{ name: 'Cloud Services', href: '/services/cloud-services' },{ name: 'AI Development', href: '/services/ai-development' }
     ], solutions: [;
       { name: 'AI Content Creation', href: '/solutions/ai-content-creation' }, { name: 'Customer Support', href: '/solutions/customer-support' }, { name: 'Email Automation', href: '/solutions/email-automation' }, { name: 'Event Management', href: '/solutions/event-management' }, { name: 'Project Management', href: '/solutions/project-management' }, { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
@@ -10,9 +15,11 @@ export default function Footer() {const scrollToTop = () => {window.scrollTo({ t
     ], resources: [;
       { name: 'Blog', href: '/blog' }, { name: 'Help Center', href: '/help' }, { name: 'Pricing Guide', href: '/pricing-guide' }, { name: 'Sitemap', href: '/sitemap' }, { name: 'Cookie Policy', href: '/cookies' }
     ];
-  }const socialLinks = [;
+  }
+const socialLinks = [;
     { name: 'Facebook', icon: Facebook, href: 'https://facebook.com' }, { name: 'Twitter', icon: Twitter, href: 'https://twitter.com' },{ name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' }, { name: 'Instagram', icon: Instagram, href: 'https://instagram.com' }
-  ];return (<footer className="bg-gray-900 text-white">;
+  ];
+return (<footer className="bg-gray-900 text-white">;
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">;
           {/* Company Info */}
@@ -22,9 +29,11 @@ export default function Footer() {const scrollToTop = () => {window.scrollTo({ t
               Leading the future of technology with innovative solutions and cutting-edge services.;
             </p>;
             <div className="flex space-x-4">;
-              {socialLinks.map((social) => {const Icon = social.icon;
+              {socialLinks.map((social)  => {
+const Icon = social.icon;
                 return (<a;
-                    key={social.name}
+                    key={social.name
+}
                     href={social.href}
                     className="text-gray-400 hover: text-white transition-colors";
                     aria-label={social.name}

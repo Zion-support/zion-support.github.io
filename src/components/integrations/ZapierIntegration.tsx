@@ -1,15 +1,34 @@
 
 ;
-import React, { useState } from "react",import { Badge } from "@/components/ui/badge",import { Button } from "@/components/ui/button",import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",import { Input  } from '@/components/ui/input';
+import React, { useState } from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Input  } from '@/components/ui/input';
 import { toast  } from 'sonner';
 import { Check, Copy, ExternalLink  } from 'lucide-react';
-export function ZapierIntegration() {import React, { useState } from 'react';
+export function ZapierIntegration() {
+import React, { useState 
+} from 'react';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
-import {Card,CardContent,CardFooter,CardHeader} from '@/components/ui/card';
-export function ZapierIntegration() {const [copied, setCopied] = useState(false)const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R')const [apiKey]  = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
+import {Card,
+CardContent,
+CardFooter,
+CardHeader} from '@/components/ui/card';
+export function ZapierIntegration() {
+const [copied, setCopied] = useState(false)const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R')const [apiKey]  = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  
+} from '@/components/ui/card';
 import { Zap  } from 'lucide-react';
-export function ZapierIntegration() {const [copied, setCopied] = useState(false)const [apiKey]  = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")const handleCopyApiKey = () => {navigator && navigator.clipboard.writeText(apiKey)setCopied(true)setTimeout(() => setCopied(false), 2000)toast && toast.success('API key copied to clipboard')navigator && navigator.clipboard.writeText(apiKey),setCopied(true),setTimeout((,) => setCopied(false), 2000),toast && toast.success("API key copied to clipboard")},return (<div className='space-y-6'>;
+export function ZapierIntegration() {
+const [copied, setCopied] = useState(false)const [apiKey]  = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")const handleCopyApiKey = ()  => {
+navigator && navigator.clipboard.writeText(apiKey)setCopied(true)setTimeout(() => setCopied(false), 2000)toast && toast.success('API key copied to clipboard')navigator && navigator.clipboard.writeText(apiKey),
+setCopied(true),
+setTimeout((,) => setCopied(false), 2000),
+toast && toast.success("API key copied to clipboard")
+
+},
+return (<div className='space-y-6'>;
       <div className='grid md:grid-cols-3 gap-6'>;
         <Card className='md:col-span-2'>;
           <CardHeader>;
@@ -18,16 +37,27 @@ export function ZapierIntegration() {const [copied, setCopied] = useState(false)
               <Badge variant='outline' className='bg-blue-100 text-blue-800'>;
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
-import { Card,CardContent,CardFooter,CardHeader} from '@/components / ui / card';
+import { Card,
+CardContent,
+CardFooter,
+CardHeader} from '@/components / ui / card';
 import { Input  } from '@/components / ui / input';
 export /**;
  * ZapierIntegration - Function description;
  */;
-function ZapierIntegration() {const [copied, set_copied] = useState (false)const [api_key] = useState ('zap_live_KztCaFieDu4VBnp8eMJZ9x73R')const [api_key] = useState ("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components / ui / card';
+function ZapierIntegration() {
+const [copied, set_copied] = useState (false)const [api_key] = useState ('zap_live_KztCaFieDu4VBnp8eMJZ9x73R')const [api_key] = useState ("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  
+} from '@/components / ui / card';
 export /**;
  * ZapierIntegration - Function description;
  */;
-function ZapierIntegration() {const [copied, set_copied] = useState (false)const [api_key] = useState ("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")const handleCopyApiKey = () =>: any {navigator.clipboard.write_text (api_key)set_copied (true)set_timeout (() => set_copied (false), 2000)toast.success ('API key copied to clipboard')navigator.clipboard.write_text (api_key),set_copied (true),set_timeout ((, ) => set_copied (false), 2000),toast.success ("API key copied to clipboard")},return (<div className='space - y-6'>;
+function ZapierIntegration() {
+const [copied, set_copied] = useState (false)const [api_key] = useState ("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")const handleCopyApiKey = () =>: any {navigator.clipboard.write_text (api_key)set_copied (true)set_timeout (() => set_copied (false), 2000)toast.success ('API key copied to clipboard')navigator.clipboard.write_text (api_key),
+set_copied (true),
+set_timeout ((, ) => set_copied (false), 2000),
+toast.success ("API key copied to clipboard")
+},
+return (<div className='space - y-6'>;
       <div className='grid md:grid - cols - 3 gap - 6'>;
         <Card className='md:col - span - 2'>;
           <CardHeader>;
@@ -38,7 +68,8 @@ function ZapierIntegration() {const [copied, set_copied] = useState (false)const
               </Badge>;
             </div>;
           </CardHeader>;
-          <CardContent>;{copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}const handleCopyApiKey = null;
+          <CardContent>;{copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+const handleCopyApiKey = null;
   return (<div className='space-y-6'>;
       <div className='grid md:grid-cols-3 gap-6'>;
         <Card className='md:col-span-2'>;
@@ -94,21 +125,21 @@ function ZapierIntegration() {const [copied, set_copied] = useState (false)const
             <ul className="space-y-2 text-sm">;
               <li className="flex items-center gap-2">;
                 <Check className="h-4 w-4 text-green-500" />;
-                <span>Add new Zion contacts to Mailchimp</span>;
+                <span > Add new Zion contacts to Mailchimp</span>;
               </li>;
               <li className="flex items-center gap-2">;
                 <Check className="h-4 w-4 text-green-500" />;
-                <span>Create Slack notifications for new jobs</span>;
+                <span > Create Slack notifications for new jobs</span>;
               </li>;
               <li className="flex items-center gap-2">;
                 <Check className="h-4 w-4 text-green-500" />;
-                <span>Sync completed projects to accounting</span>;
+                <span > Sync completed projects to accounting</span>;
               </li>;
               <li className="flex items-center gap-2">;
                 <Check className="h-4 w-4 text-green-500" />;
               <li className='flex items-center gap-2'>;
                 <Check className='h-4 w-4 text-green-500' />;
-                <span>Create calendar events for interviews</span>;
+                <span > Create calendar events for interviews</span>;
               </li>;
             </ul>;
           </CardContent>;
@@ -117,7 +148,7 @@ function ZapierIntegration() {const [copied, set_copied] = useState (false)const
               <ExternalLink className="h-4 w-4" />;
 <Button variant='outline' className='w-full gap-1'>;
               <ExternalLink className='h-4 w-4' />;
-              <span>Explore Zion Zaps</span>;
+              <span > Explore Zion Zaps</span>;
             </Button>;
           </CardFooter>;
         </Card>;
@@ -176,7 +207,19 @@ function ZapierIntegration() {const [copied, set_copied] = useState (false)const
     </div>;
             <p className='text - sm text - muted - foreground mb - 4'>;
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
-              to set up integrations.;import { Input } from "@/components/ui/input",import { toast } from "sonner",export function ZapierIntegration() {const [copied, setCopied] = useState(false),const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),const handleCopyApiKey = () => {navigator.clipboard.writeText(apiKey),setCopied(true),setTimeout(() => setCopied(false), 2000)toast.success("API key copied to clipboard")}return (<div className="space-y-6">;
+              to set up integrations.;
+import { Input } from "@/components/ui/input",
+import { toast } from "sonner",
+export function ZapierIntegration() {
+const [copied, setCopied] = useState(false),
+const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),
+const handleCopyApiKey = ()  => {
+navigator.clipboard.writeText(apiKey),
+setCopied(true),
+setTimeout(() => setCopied(false), 2000)toast.success("API key copied to clipboard")
+
+}
+return (<div className="space-y-6">;
       <div className="grid md:grid-cols-3 gap-6">;
         <Card className="md:col-span-2">;
           <CardHeader>;
@@ -214,7 +257,8 @@ function ZapierIntegration() {const [copied, set_copied] = useState (false)const
         </Card>;
           <CardFooter className="flex flex - col items - start">;
             <Button variant="outline" className="gap - 2">;
-              <ExternalLink className="h - 4 w - 4" />;Open Zapier Dashboard;
+              <ExternalLink className="h - 4 w - 4" />;
+Open Zapier Dashboard;
             </Button>;
           </CardFooter>;
         </Card>;<Card>;
@@ -243,16 +287,19 @@ function ZapierIntegration() {const [copied, set_copied] = useState (false)const
           <CardFooter>;</Button>;
           </CardFooter>;
         </Card>;
-      </div>;Triggers when a new job is published on your account.;
+      </div>;
+Triggers when a new job is published on your account.;
               </p>;
               <Button size='sm' variant='outline'>;
                 Set Up Trigger;
-              </Button>            </div>;Triggers when a talent applies to your job.;
+              </Button>            </div>;
+Triggers when a talent applies to your job.;
               </p>;
               <Button size='sm' variant='outline'>;
                 Set Up Trigger;
               </Button>;
-            </div>;Triggers when a contract is signed by all parties.;
+            </div>;
+Triggers when a contract is signed by all parties.;
               </p>;
               <Button size='sm' variant='outline'>;
                 Set Up Trigger;

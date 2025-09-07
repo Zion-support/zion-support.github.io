@@ -1,12 +1,17 @@
 
 ;
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }return this.props.children;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+static getDerivedStateFromError(error) {return { hasError: true }}
+componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+render() {if (this.state.hasError) {return <div > Something went wrong.</div>;
+    }
+return this.props.children;
   }
 }
 import React from 'react';
   const currentPath = router && router.pathname;
-export default ApiDocsLayout;import { SearchSuggestion  } from '@/types/search';
+export default ApiDocsLayout;
+import { SearchSuggestion  } from '@/types/search';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter   } from 'next/router';
@@ -21,21 +26,60 @@ import { cn   } from '@/lib / utils';
 import { getDocsSearchPath;
 docsSearchSuggestions;
  } from '@/data / docsSearchData';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",import { cn } from "@/lib/utils",import {getDocsSearchPath,docsSearchSuggestions;
-interface ApiDocsLayoutProps  {children: React.ReactNode;
-} from "@/data/docsSearchData",interface ApiDocsLayoutProps  {children: React.ReactNode;}const router = useRouter()const currentPath = router.pathname;
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { cn } from "@/lib/utils",
+import {getDocsSearchPath,
+docsSearchSuggestions;
+interface ApiDocsLayoutProps {
+children: React.ReactNode;
+} from "@/data/docsSearchData",
+interface ApiDocsLayoutProps {
+children: React.ReactNode;
+}
+const router = useRouter()const currentPath = router.pathname;
   const [searchValue, setSearchValue] = useState("")const navigationItems = [;
-   { title: "Getting Started", path: "/developers/docs/getting-started" },{ title: "API Reference", path: "/developers/docs/reference" },const router = useRouter(),const currentPath = router.pathname,const [searchValue, setSearchValue] = useState(""),const navigationItems = [;
-   { title: "Getting Started", path: "/developers/docs/getting-started" },{ title: "API Reference", path: "/developers/docs/reference" },{ title: "Webhooks", path: "/developers/docs/webhooks" },{ title: "Sample Code", path: "/docs/sample-code" },{ title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],const handleSelectSuggestion = (suggestion: SearchSuggestion) => {const path = getDocsSearchPath(suggestion.text),if (path) {router.push(path),setSearchValue("")import { SearchSuggestion } from "@/types/search",import React, { useState } from "react",import Link from 'next/link',import { useRouter } from 'next/router',import {getDocsSearchPath,docsSearchSuggestions;
+   { title: "Getting Started", path: "/developers/docs/getting-started" },{ title: "API Reference", path: "/developers/docs/reference" },
+const router = useRouter(),
+const currentPath = router.pathname,
+const [searchValue, setSearchValue] = useState(""),
+const navigationItems = [;
+   { title: "Getting Started", path: "/developers/docs/getting-started" },{ title: "API Reference", path: "/developers/docs/reference" },{ title: "Webhooks", path: "/developers/docs/webhooks" },{ title: "Sample Code", path: "/docs/sample-code" },{ title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
+const handleSelectSuggestion = (suggestion: SearchSuggestion)  => {
+const path = getDocsSearchPath(suggestion.text),
+if (path) {router.push(path),
+setSearchValue("")import { SearchSuggestion 
+} from "@/types/search",
+import React, { useState } from "react",
+import Link from 'next/link',
+import { useRouter } from 'next/router',
+import {getDocsSearchPath,
+docsSearchSuggestions;
  } from '@/data/docsSearchData';
-interface ApiDocsLayoutProps  {children: React && React.ReactNode;
-}export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {const router = useRouter()const currentPath = router && router.pathname;
+interface ApiDocsLayoutProps {
+children: React && React.ReactNode;
+}
+export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {const router = useRouter()const currentPath = router && router.pathname;
   const [searchValue, setSearchValue]  = useState("")const navigationItems = [;
-   { title: "Getting Started", path: "/developers/docs/getting-started" },{ title: "API Reference", path: "/developers/docs/reference" },{ title: "Webhooks", path: "/developers/docs/webhooks" },{ title: "Sample Code", path: "/docs/sample-code" },{ title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],const handleSelectSuggestion  = (suggestion: SearchSuggestion) => {const path = getDocsSearchPath(suggestion.text)if (path) {router.push(path)setSearchValue("")}
+   { title: "Getting Started", path: "/developers/docs/getting-started" },{ title: "API Reference", path: "/developers/docs/reference" },{ title: "Webhooks", path: "/developers/docs/webhooks" },{ title: "Sample Code", path: "/docs/sample-code" },{ title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
+const handleSelectSuggestion  = (suggestion: SearchSuggestion)  => {
+const path = getDocsSearchPath(suggestion.text)if (path) {router.push(path)setSearchValue("")
+}
   }
-  const handleSubmit = (e: React.FormEvent) => {e.preventDefault()const path = getDocsSearchPath(searchValue)if (path) {router.push(path)setSearchValue("")}const path = getDocsSearchPath(suggestion.text),if (path) {router.push(path),setSearchValue("")}
-  },const handleSubmit = (e: React.FormEvent) => {e.preventDefault(),const path = getDocsSearchPath(searchValue),if (path) {router.push(path),setSearchValue("")}
-  },return (<div className="flex min-h-screen bg-zinc-950">;
+  const handleSubmit = (e: React.FormEvent)  => {
+e.preventDefault()const path = getDocsSearchPath(searchValue)if (path) {router.push(path)setSearchValue("")
+}
+const path = getDocsSearchPath(suggestion.text),
+if (path) {router.push(path),
+setSearchValue("")}
+  },
+const handleSubmit = (e: React.FormEvent)  => {
+e.preventDefault(),
+const path = getDocsSearchPath(searchValue),
+if (path) {router.push(path),
+setSearchValue("")
+}
+  },
+return (<div className="flex min-h-screen bg-zinc-950">;
      {/* Sidebar */}
      <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">;
       <Link href="/developers/docs" className="flex items-center mb-8">;
@@ -68,7 +112,8 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
          value={searchValue}
          onChange={setSearchValue}
          onSelectSuggestion={handleSelectSuggestion}
-         searchSuggestions={docsSearchSuggestions}placeholder="Search documentation";
+         searchSuggestions={docsSearchSuggestions}
+placeholder="Search documentation";
         />;
        </form>;
       </div>;<nav role="navigation" aria-label="Main" className="flex flex-col space-y-1">;
@@ -80,7 +125,8 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
            : "text-zinc-400 hover: text-white hover:bg-zinc-900";
          )}>;
          {item && item.title}
-        </Link>;"block px-3 py-2 rounded-md text-sm",currentPath === item.path;
+        </Link>;"block px-3 py-2 rounded-md text-sm",
+currentPath === item.path;
            ? "bg-zion-purple/20 text-zion-cyan";
            : "text-zinc-400 hover:text-white hover:bg-zinc-900";
          )}
@@ -101,19 +147,25 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
 }<div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto"> <Link href="/developers/docs"className="flex items-center mb-8"> <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center"> <span className="text-white font-bold">Z</span> </div> <span className="font-bold text-white">API Docs</span> </Link> <div className="mb-6"> /> </form> </div>)}> {item.title;
 }</Link>) )}</nav> </div> {/* Main content */ ";
 }<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {children;
-}</div> </div>)}export default ApiDocsLayout;
+}</div> </div>)}
+export default ApiDocsLayout;
 "export default ApiDocsLayout;
 }/* Sidebar */ ";
 }<div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto"> <Link href="/developers/docs"className="flex items-center mb-8"> <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center"> <span className="text-white font-bold">Z</span> </div> <span className="font-bold text-white">API Docs</span> </Link> <div className="mb-6"> /> </form> </div>)}> {item && item.title ;
 }</Link>) )}</nav> </div> {/* Main content */ ";
 }<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {children ;
-}</div> </div>)}export default ApiDocsLayout;
-"export default ApiDocsLayout;export /**;
+}</div> </div>)}
+export default ApiDocsLayout;
+"export default ApiDocsLayout;
+export /**;
  * ApiDocsLayout - Function description;
  */;
-function ApiDocsLayout() {const router = use_router ()const current_path = router.pathname;
+function ApiDocsLayout() {
+const router = use_router ()const current_path = router.pathname;
   const [search_value, setSearchValue] = useState ("")const navigation_items = [;
-  { title: "Getting Started", path: "/developers / docs / getting - started" },{ title: "API Reference", path: "/developers / docs / reference" },{ title: "Webhooks", path: "/developers / docs / webhooks" },{ title: "Sample Code", path: "/docs / sample - code" },{ title: "Error Codes & Rate Limits", path: "/developers / docs / errors" }],const handleSelectSuggestion = (suggestion: SearchSuggestion) =>: any {const path = getDocsSearchPath (suggestion.text)// Check condition;
+  { title: "Getting Started", path: "/developers / docs / getting - started" 
+},{ title: "API Reference", path: "/developers / docs / reference" },{ title: "Webhooks", path: "/developers / docs / webhooks" },{ title: "Sample Code", path: "/docs / sample - code" },{ title: "Error Codes & Rate Limits", path: "/developers / docs / errors" }],
+const handleSelectSuggestion = (suggestion: SearchSuggestion) =>: any {const path = getDocsSearchPath (suggestion.text)// Check condition;
 if ( {) {$2;
 }
       router.push (path)setSearchValue ("")}
@@ -166,10 +218,15 @@ if ( {) {$2;
 }<div className="hidden md:block w - 64 border - r border - zinc - 800 p - 6 sticky top - 0 h - screen overflow - y-auto"> <Link href="/developers / docs"className="flex items - center mb - 8"> <div className="bg - gradient - to - r from - zion - purple to - zion - cyan rounded - md w - 8 h - 8 mr - 3 flex items - center justify - center"> <span className="text - white font - bold">Z</span> </div> <span className="font - bold text - white">API Docs</span> </Link> <div className="mb - 6"> /> </form> </div>)}> {item.title;
 }</Link>) )}</nav> </div> {/* Main content */ ";
 }<div className="flex - grow max - w-5xl mx - auto px - 4 py - 8 md:px - 8 md:py - 12"> {children;
-}</div> </div>)}export default ApiDocsLayout;
-"export default ApiDocsLayout;children;
-}</div> </div>)}export default ApiDocsLayout;
+}</div> </div>)}
+export default ApiDocsLayout;
+"export default ApiDocsLayout;
+children;
+}</div> </div>)}
+export default ApiDocsLayout;
 "export default ApiDocsLayout;</div>;
     </div>;
-  )}export default ApiDocsLayout;export default ApiDocsLayout;}
+  )}
+export default ApiDocsLayout;
+export default ApiDocsLayout;}
 export function ApiDocsLayout() {const router  = null;

@@ -1,7 +1,20 @@
 
 ;
-interface QuotesFilterProps  {import React from "react",import { Calendar, RefreshCw  } from 'lucide-react';
-import { Card, CardContent } from "@/components/ui/card",import { Input } from "@/components/ui/input",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",import { Button } from "@/components/ui/button",import { Calendar as CalendarComponent } from "@/components/ui/calendar",import { format } from "date-fns",import type { DateRange } from "react-day-picker",import type { QuoteStatus } from "@/types/quotes",import { format  } from 'date-fns';
+interface QuotesFilterProps {
+import React from "react",
+import { Calendar,
+RefreshCw
+} from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Button } from "@/components/ui/button",
+import { Calendar as CalendarComponent } from "@/components/ui/calendar",
+import { format } from "date-fns",
+import type { DateRange } from "react-day-picker",
+import type { QuoteStatus } from "@/types/quotes",
+import { format  } from 'date-fns';
 import type { DateRange } from 'react-day-picker';
 import type { QuoteStatus } from '@/types/quotes';
 import { Select;
@@ -16,23 +29,39 @@ import { Select;
 } from '@/components/ui/popover';
 import { Button  } from '@/components/ui/button';
 import { Calendar as CalendarComponent  } from '@/components/ui/calendar';
-interface QuotesFilterProps  {searchQuery: string;
+interface QuotesFilterProps {
+searchQuery: string;
   setSearchQuery: (value: string) => void;
   statusFilter: QuoteStatus | 'all';
   setStatusFilter: (value: QuoteStatus | 'all') => void;
   archiveFilter: 'active' | 'archived' | 'all';
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
-  setDateRange: (range: DateRange | undefined) => void;onReset: () => void;
-export const QuotesFilter: React.FC<QuotesFilterProps> = ({searchQuery,setSearchQuery,statusFilter,setStatusFilter,archiveFilter,setArchiveFilter,dateRange,setDateRange,onReset}) => {onReset;
-},) => {return (<Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>;
+  setDateRange: (range: DateRange | undefined) => void;
+onReset: () => void;
+export const QuotesFilter: React.FC < QuotesFilterProps> = ({searchQuery,
+setSearchQuery,
+statusFilter,
+setStatusFilter,
+archiveFilter,
+setArchiveFilter,
+dateRange,
+setDateRange,
+onReset
+})  => {
+onReset;
+
+},)  => {
+return (<Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>;
       <CardContent className='p-6'>;
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 items-end'>;
           <div className='relative'>;
             <Input;
               placeholder='Search quotes...';
               className='pl-10 bg-zion-blue border-zion-blue-light text-white';
-              value={searchQuery}onChange={e => setSearchQuery(e && e.target.value)}            />;
+              value={searchQuery
+}
+onChange={e => setSearchQuery(e && e.target.value)}            />;
           </div>;<div>;
             <p className='text-zion-slate-light text-sm mb-2'>Status</p>;
             <Select;
@@ -45,14 +74,21 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({searchQuery,setSearch
 import React from 'react';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Input  } from '@/components / ui / input';
-import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components / ui / select';
-  Popover,PopoverContent,PopoverTrigger} from '@/components / ui / popover';
+import { Select,
+SelectContent,
+SelectItem,
+SelectTrigger,
+SelectValue} from '@/components / ui / select';
+  Popover,
+PopoverContent,
+PopoverTrigger} from '@/components / ui / popover';
 import { Button  } from '@/components / ui / button';
 import { Calendar as CalendarComponent  } from '@/components / ui / calendar';
 import { format  } from 'date - fns';
 import type { DateRange } from 'react - day - picker';
 import type { QuoteStatus } from '@/types / quotes';
-interface QuotesFilterProps  {search_query: string;
+interface QuotesFilterProps {
+search_query: string;
   setSearchQuery: (value: string) => void;
   status_filter: QuoteStatus | 'all';
   setStatusFilter: (value: QuoteStatus | 'all') => void;
@@ -61,15 +97,28 @@ interface QuotesFilterProps  {search_query: string;
   date_range: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
   on_reset: () => void;
-export const QuotesFilter: React.FC < QuotesFilterProps> = ({search_query,setSearchQuery,status_filter,setStatusFilter,archive_filter,setArchiveFilter,date_range,setDateRange,on_reset }) => {on_reset;
-}, ) => {return (<Card className='mb - 6 bg - zion - blue - dark border - zion - blue - light'>;
+export const QuotesFilter: React.FC < QuotesFilterProps> = ({search_query,
+setSearchQuery,
+status_filter,
+setStatusFilter,
+archive_filter,
+setArchiveFilter,
+date_range,
+setDateRange,
+on_reset
+})  => {
+on_reset;
+
+}, )  => {
+return (<Card className='mb - 6 bg - zion - blue - dark border - zion - blue - light'>;
       <CardContent className='p - 6'>;
         <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 4 items - end'>;
           <div className='relative'>;
             <Input;
               placeholder='Search quotes...';
               className='pl - 10 bg - zion - blue border - zion - blue - light text - white';
-              value={search_query}
+              value={search_query
+}
               on_change={e => setSearchQuery (e.target.value)}            />;
           </div>;
           <div>;
@@ -101,12 +150,23 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({search_query,setSea
                 <SelectItem value='all'>All Quotes</SelectItem>;
               </SelectContent>;
             </Select>;
-          </div>;import { Card, CardContent  } from '@/components/ui/card';
+          </div>;
+import { Card, CardContent  } from '@/components/ui/card';
 import { Input  } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Popover, PopoverContent, PopoverTrigger  } from '@/components/ui/popover';
-interface QuotesFilterProps  {searchQuery: string,setSearchQuery: (value: string) => void,statusFilter: QuoteStatus | 'all',setStatusFilter: (value: QuoteStatus | 'all') => void,archiveFilter: 'active' | 'archived' | 'all',setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,dateRange: DateRange | undefined,setDateRange: (range: DateRange | undefined) => void,onReset: () => void;
-}}export const QuotesFilter: React.FC<QuotesFilterProps> = ({searchQuery;
+interface QuotesFilterProps {
+searchQuery: string,
+setSearchQuery: (value: string) => void,
+statusFilter: QuoteStatus | 'all',
+setStatusFilter: (value: QuoteStatus | 'all') => void,
+archiveFilter: 'active' | 'archived' | 'all',
+setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,
+dateRange: DateRange | undefined,
+setDateRange: (range: DateRange | undefined) => void,
+onReset: () => void;
+}}
+export const QuotesFilter: React.FC < QuotesFilterProps> = ({searchQuery;
   setSearchQuery;
   statusFilter;
   setStatusFilter;
@@ -115,14 +175,16 @@ interface QuotesFilterProps  {searchQuery: string,setSearchQuery: (value: string
   dateRange;
   setDateRange;
   onReset;
-}) => {return (<Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">;
+})  => {
+return (<Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">;
       <CardContent className="p-6">;
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">;
           <div className="relative">;
             <Input;
               placeholder="Search quotes...";
               className="pl-10 bg-zion-blue border-zion-blue-light text-white";
-              value={searchQuery}
+              value={searchQuery
+}
               onChange={(e) => setSearchQuery(e.target.value)}
             />;
           </div>;
@@ -169,7 +231,7 @@ interface QuotesFilterProps  {searchQuery: string,setSearchQuery: (value: string
                         {format(dateRange.to, "LLL dd, y")}
                       </>;
                     ) : (format(dateRange.from, "LLL dd, y")onReset: () => void;
-export const QuotesFilter: React.FC<QuotesFilterProps> = ({format(dateRange.from, 'LLL dd, y'))) : (<span>Date range</span>;
+export const QuotesFilter: React.FC < QuotesFilterProps> = ({format(dateRange.from, 'LLL dd, y'))) : (<span > Date range</span>;
                   )}
                 </Button>;
               </PopoverTrigger>;
@@ -184,13 +246,15 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({format(dateRange.from
                 <CalendarComponent;
                   initialFocus;
                   mode='range';
-                  defaultMonth={dateRange?.from}selected={dateRange}
+                  defaultMonth={dateRange?.from}
+selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
                   defaultMonth = {dateRange?.from}
                   selected = {dateRange}
                   onSelect = {setDateRange}
-                  numberOfMonths = {2}onReset: () => void;
+                  numberOfMonths = {2}
+onReset: () => void;
 }}<div>;
             <p className='text - zion - slate - light text - sm mb - 2'>Date Range</p>;
             <Popover>;
