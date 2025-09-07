@@ -25,6 +25,8 @@
     "score": 100
   }
 }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -56,6 +58,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     "score": 100
   }
 }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
 
   "timestamp": "2025-09-06T10:56:47.356Z",
@@ -20115,8 +20118,10 @@ ursor/automate-test-improve-and-merge-code-646c
   "bundleAnalysis": {
     "success": true,
     "result": "\n> ziontechgroup-site@1.0.0 build:analyze\n> ANALYZE=true npm run build\n\n\n> ziontechgroup-site@1.0.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup-site@1.0.0 build\n> next build\n\n  ▲ Next.js 14.2.32\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully\n   Collecting page data ...\n   Generating static pages (0/6) ...\n   Generating static pages (1/6) \r\n   Generating static pages (2/6) \r\n   Generating static pages (4/6) \r\n ✓ Generating static pages (6/6)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                             Size     First Load JS\n┌ ○ /                                     2.13 kB        84.6 kB\n├ ○ /404                                  1.9 kB         84.3 kB\n├ ○ /ai-services                          4.12 kB        86.6 kB\n├ ○ /blockchain                           3.48 kB        85.9 kB\n└ ○ /contact                              3.25 kB        85.7 kB\n+ First Load JS shared by all             80 kB\n  ├ chunks/framework-64ad27b21261a9ce.js  44.8 kB\n  ├ chunks/main-dc99c5fa652eb074.js       34.2 kB\n  └ other shared chunks (total)           947 B\n\nƒ Middleware                              25.7 kB\n\n○  (Static)  prerendered as static content\n\n\n> ziontechgroup-site@1.0.0 postbuild\n> echo \"Build completed\"\n\nBuild completed\n"
+>>>>>>> main
   }
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   ]
   },
   "summary": {
@@ -20155,6 +20160,35 @@ ursor/automate-test-improve-and-merge-code-646c
     "Database optimization recommendations created",
     "API optimization recommendations created"
   ],
+<<<<<<< HEAD
+=======
+  "recommendations": [
+    "Consider splitting 448 large components",
+    "Good: Found 8 files with dynamic imports"
+  ],
+  "categories": {
+    "images": [
+      "Use WebP format for images",
+      "Implement lazy loading for images",
+      "Use responsive images with srcset",
+      "Compress images before upload"
+    ],
+    "code": [
+      "Implement React.memo for expensive components",
+      "Optimize bundle size with tree shaking"
+    ],
+    "network": [
+      "Implement service worker for caching",
+      "Use CDN for static assets",
+      "Enable gzip compression"
+    ]
+
+  }
+ursor/fix-website-loading-errors-and-merge-6662
+ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+  "timestamp": "2025-09-06T00:06:24.470Z",
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   "metrics": {
 }
 }
@@ -20165,7 +20199,11 @@ main
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
+
+
+
 }
+<<<<<<< HEAD
     "totalOptimizations": 5,
     "errors": 0,
     "successRate": "100.00%"
@@ -20178,4 +20216,19 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     "Implement API rate limiting and compression",
     "Monitor performance metrics regularly"
   ]
+=======
+
+}
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+  }
+
+  }
+}
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+}
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 }

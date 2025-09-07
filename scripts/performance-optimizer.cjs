@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node
 /**
 <<<<<<< HEAD
@@ -757,6 +763,10 @@ optimizer.run().catch(console.error);
     return files;
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 const fs = require('fs')
 const path = require('path')
     this.reportFile = path.join(__dirname, '../logs/performance-optimization-report.json')

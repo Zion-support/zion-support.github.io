@@ -9,30 +9,43 @@ const fs = require('fs');
 function sh(cmd, opts = {}) {}
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8', ...opts }).trim()};
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 function getRepoFromGit() {}
-  const remoteUrl = sh('git remote get-url origin')
-  const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/)
-  if (!m) throw new Error('Unable to parse owner/repo from origin')
+  const remoteUrl = sh('git remote get-url origin');
+  const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
+  if (!m) throw new Error('Unable to parse owner/repo from origin');
   return { "owner": m[1], "repo": m[2] }};"
 function getToken() {}
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
 
     },
     "body": body ? JSON.stringify(body) : undefined;"
-
-})
+  }
+});
   const text = await res.text();"
 
-  return data}
-async function listOpenPRs(owner, repo) {}`
-  const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`)
-  return prs}
+  return data};
+async function listOpenPRs(owner, repo) {}`;
+  const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
+  return prs};
 function resolveConflictsFiles() {}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  // list conflicted files;"
+
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   // list conflicted files;
   const output = sh('git diff --name-only --diff-filter=U || true');
   const files = output.split('\n').filter(Boolean);
@@ -107,6 +120,7 @@ async function main() {}
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 });
+<<<<<<< HEAD
 // list conflicted files;"
   const prs = await listOpenPRs(owner, repo)
   if($2) { console.log('No open PRs'); return}
@@ -117,3 +131,9 @@ main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
     const base = pr.base.ref;`
     console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`)
     try {}
+=======
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

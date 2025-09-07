@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import './globals.css'
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 import type { Metadata } from 'next';
 <<<<<<< HEAD
 import React from 'react';
@@ -94,6 +100,10 @@ export const metadata: Metadata = {
   },
 };
 
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 export default function RootLayout({
   children,
 }: {
@@ -101,6 +111,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <body>{children}</body>
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 <<<<<<< HEAD
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -128,6 +144,10 @@ export default function RootLayout({
 >>>>>>> main
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       </body>
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     </html>
   );
 }

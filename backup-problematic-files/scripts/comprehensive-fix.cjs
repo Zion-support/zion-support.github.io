@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
 
 console.log('🔧 Comprehensive fix for all files...');
 
@@ -19,6 +23,13 @@ function fixFile(filePath) {
       console.log(`⚠️  File not found: ${filePath}`);
       return false;
     }
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove all merge conflict markers
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/    
+
 
     let content = fs.readFileSync(filePath, 'utf8');
     // Remove all merge conflict markers
@@ -30,7 +41,6 @@ function fixFile(filePath) {
     
     content = content.replace(/\n?/g, '');
     content = content.replace(/\n?/g, '');
-    content = content.replace(/    
     content = content.replace(/    
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');

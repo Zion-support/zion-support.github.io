@@ -10,6 +10,10 @@ import { useRouter } from 'next/router';
 <<<<<<< HEAD
 <<<<<<< HEAD
 'use client';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 "use client";
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
@@ -254,6 +258,16 @@ import {
   Stethoscope,
   Landmark
 } from 'lucide-react';
+<<<<<<< HEAD
+=======
+=======
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown } from 'lucide-react';
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 const servicesDropdown = [
   {
@@ -334,6 +348,10 @@ const navigation = [
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
@@ -453,6 +471,67 @@ export default function Header() {
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
+<<<<<<< HEAD
+=======
+=======
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleDropdown = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);
+  };
+
+  return (
+    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-800 sticky top-0 z-50">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="text-2xl font-bold text-white">
+              Zion Tech Group
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-8">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-slate-300 hover:text-white p-2"
+            >
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         </div>
 <<<<<<< HEAD
         
@@ -466,6 +545,10 @@ export default function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
               className="lg:hidden mt-4 border-t border-gray-200 pt-4"
             >
               {navigation.map((item) => (
@@ -625,6 +708,7 @@ export default function Header() {
                     onClick={closeMenu}
                     className="block text-gray-700 hover:text-blue-600 font-medium"
 =======
+<<<<<<< HEAD
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
@@ -687,6 +771,8 @@ export default function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
               className="md:hidden"
             >
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -834,6 +920,7 @@ export default Header;
                     {item.name}
                   </Link>
                 ))}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               </div>
             </motion.div>
@@ -1319,6 +1406,10 @@ export default Header;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
 =======
+=======
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
               </div>
             </motion.div>
           )}
@@ -1326,5 +1417,16 @@ export default Header;
       </nav>
     </header>
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+=======
+}
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

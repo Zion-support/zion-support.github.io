@@ -20,6 +20,7 @@ export default function handler(req, res) {
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<<<<<<< HEAD
 export: default async function handler(req, res) {
 =======
 =======
@@ -62,6 +63,9 @@ export: default async function handler(req, res) {
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 export: default async function handler(req, res) {
 "export": default async function handler(req, res) {
   if (req.method !==
@@ -296,6 +300,11 @@ export: default async function handler(req,res) { if (req.method !== POST') {'; 
   }
 
 module.exports = withErrorLogging(handler);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 <<<<<<< HEAD
 <<<<<<< HEAD
 <

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -112,8 +116,69 @@ export default AccessibilityProvider
 =======
 import React, { createContext, useContext, useState, ReactNode } from "react";
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 =======
+=======
+  return (
+    <AccessibilityContext.Provider
+      value={{
+        announceToScreenReader,
+        setFocus,
+        highContrast,
+        largeText,
+        reducedMotion,
+        toggleHighContrast,
+        toggleLargeText,
+        toggleReducedMotion,
+      }}
+    >
+      {children}
+    </AccessibilityContext.Provider>
+  )
+}
+    )
+  return context
+}
+export const useAccessibility = () => {
+  const context = useContext(AccessibilityContext)
+  if($2) {
+    throw new Error(
+      "useAccessibility must be used within an AccessibilityProvider",
+    )
+  return context
+}
+export default AccessibilityProvider;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+=======
+'use client';
+
+import React, { createContext, useContext, useEffect, useState } from 'react';
+
+interface AccessibilityContextType {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+  toggleHighContrast: () => void;
+  toggleReducedMotion: () => void;
+  setFontSize: (size: 'small' | 'medium' | 'large') => void;
+}
+
+const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
+
+export function useAccessibility() {
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {
+    throw new Error('useAccessibility must be used within an AccessibilityProvider');
+  }
+  return context;
+}
+
+interface AccessibilityProviderProps {
+  children: React.ReactNode;
+}
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 export default function AccessibilityProvider({ children }: AccessibilityProviderProps) {
   const [highContrast, setHighContrast] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);

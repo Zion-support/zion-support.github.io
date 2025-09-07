@@ -47,10 +47,14 @@
   // Fix common syntax errors
   fixSyntaxErrors(content) {
     let fixed = content;
-    
     // Fix merge conflicts by keeping the HEAD version
+<<<<<<< HEAD
 
     fixed = fixed.replace(/
+=======
+    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
+    // Fix merge conflicts by keeping the HEAD version
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n
     
     // Fix common syntax patterns
@@ -215,7 +219,8 @@ class ComprehensiveSyntaxFixer {
         { pattern: /;\s*,/g, replacement: ';' },
         
         // Fix merge conflict markers
-        { pattern: /^        
+        { pattern: /^<<<<<<< .*$/gm, replacement: '' },
+        
         // Fix malformed object literals
         { pattern: /{\s*;\s*name:/g, replacement: '{ name:' },
         { pattern: /{\s*;\s*script:/g, replacement: '{ script:' },

@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
 <<<<<<< HEAD
 /// <reference types="next" /> /// <reference types="next/image-types/global" /> /// <reference types="next/navigation-types/navigation" /> 
 =======
@@ -74,6 +79,10 @@ declare namespace NodeJS {
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 // Global type declarations for DOM types
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -180,7 +189,15 @@ declare global {interface Window  {performance: Performance;
   interface AbortController  {signal: AbortSignal;
     abort (): void;
   }
+<<<<<<< HEAD
   interface AbortSignal extends EventTarget  {aborted: boolean;
+=======
+<<<<<<< HEAD
+  // Define AbortSignal if not available
+=======
+  interface AbortSignal extends EventTarget {
+    aborted: boolean;
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     onabort: ((this: AbortSignal, ev: Event) => any) | null;
   }
 }export {}// Global type declarations;
@@ -311,11 +328,62 @@ declare global {
 <<<<<<< HEAD
 export {};
 =======
+<<<<<<< HEAD
   namespace NodeJS {
     interface ProcessEnv {
       NODE_ENV: 'development' | 'production' | 'test',
       [key: string]: string | undefined
     }
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  // Define MessageEvent if not available;
+  interface MessageEvent < T = any> extends Event {
+
+    data: T;
+    origin: string;
+    lastEventId: string;
+    source: MessageEventSource | null;
+    ports: ReadonlyArray < MessagePort>;
+  }
+
+  // Define RequestInit if not available;
+
+    ports: ReadonlyArray < MessagePort>;
+  }
+  interface RequestInit {
+    body?: BodyInit | null;
+    cache?: RequestCache;
+    credentials?: RequestCredentials;
+    headers?: HeadersInit;
+    integrity?: string;
+    keepalive?: boolean;
+    method?: string;
+    mode?: RequestMode;
+    redirect?: RequestRedirect;
+    referrer?: string;
+    referrer_policy?: ReferrerPolicy;
+    referrer_policy?: ReferrerPolicy;
+    signal?: AbortSignal | null;
+    window?: any;
+    timeout?: number;
+  }
+
+  // Define AbortController if not available;
+
+  interface AbortController {
+    signal: AbortSignal;
+    abort (): void;
+  }
+
+  // Define AbortSignal if not available;
+
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+  interface AbortSignal extends EventTarget {
+    aborted: boolean;
+    onabort: ((this: AbortSignal, ev: Event) => any) | null;
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   }
 }
 
@@ -345,7 +413,21 @@ declare namespace NodeJS {interface ProcessEnv  {"NODE_ENV": "development" | "pr
     NEXT_PUBLIC_SUPABASE_URL?: string;
     NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
     SUPABASE_SERVICE_ROLE_KEY?: string;
+<<<<<<< HEAD
     NEXT_PUBLIC_GA_TRACKING_ID?: string}
+=======
+    NEXT_PUBLIC_GA_TRACKING_ID?: string;
+<<<<<<< HEAD
+=======
+=======
+// Global type declarations for DOM types;
+declare global {}
+  interface Window {}
+    gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  }
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 }
 <<<<<<< HEAD
 /// <reference types="next" />;
@@ -408,6 +490,7 @@ declare module "*.svg" { const content: string; export default content} declare 
 
 declare global {
   interface Window {
+<<<<<<< HEAD
     gtag?: (..."args": any[]) => void;
     dataLayer?: any[]}
 }export {}ursor/integrate-build-improve-and-re-verify-8f7d;
@@ -442,6 +525,11 @@ declare namespace NodeJS {interface ProcessEnv  {NODE_ENV: "development" | "prod
     NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
     SUPABASE_SERVICE_ROLE_KEY?: string;
     NEXT_PUBLIC_GA_TRACKING_ID?: string;
+=======
+    gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   }
 }export {}export {}export {}ursor/integrate-build-improve-and-re-verify-8f7d;
 // Re-export DOM types that might not be available;

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export default AccessibilityEnhancer;
@@ -42,6 +43,8 @@ interface AccessibilitySettings  {highContrast: boolean;
 import React, { useEffect, useState } from 'react';
 
 =======
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 <<<<<<< HEAD
 import React, { useEffect } from 'react'
 const AccessibilityEnhancer: React.FC = () => {
@@ -704,8 +707,11 @@ if (typeof document !== 'undefined') {;
 =======
 export default AccessibilityEnhancer;
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 'use client';
 

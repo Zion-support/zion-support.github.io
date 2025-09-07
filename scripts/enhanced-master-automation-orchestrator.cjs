@@ -123,6 +123,7 @@ console.log('======')
     const phase5Tasks = [{ name: 'Metrics Generation', "command": 'echo "Generating final metrics..."}]
       { "name": 'Report Generation', "command": 'echo "Generating comprehensive report..."}
       log('info', '"Recommendations")
+<<<<<<< HEAD
 main
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`)
     log('info', `"Successful": ${masterReport.summary.successful}`)
@@ -147,3 +148,9 @@ const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
 const os = require('os')
+=======
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

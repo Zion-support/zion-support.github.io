@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 <<<<<<< HEAD
 =======
@@ -54,6 +57,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node
 
 function createValidReactComponent(filePath) {
@@ -331,6 +338,11 @@ function processDirectory(dirPath) {}
 const fixedCount = processDirectory(path.join(__dirname, "src"));
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -405,6 +417,10 @@ function fixFile(filePath) {
     .join("")
     .replace(/[^a-zA-Z0-9]/g, "");
   return `import React from "react";
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 export default function ${componentName}() {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -437,6 +453,11 @@ function createValidReactComponent() {
 ;
 export default function ${component_name}() {
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -619,6 +640,15 @@ function processDirectory(dirPath) {
       <h1>${component_name}</h1>;
       <p > This is a valid React component.</p>;
     </div>);
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    <div>
+      <h1>${componentName}</h1>
+      <p>This is a valid React component.</p>
+    </div>
+  );
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 }`;
 }
 <<<<<<< HEAD
@@ -632,6 +662,15 @@ console.log(`Fixed ${fixedCount} files`);
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, "utf8");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    // Check if it's a React component file
+    if (filePath.endsWith(".jsx") || filePath.endsWith(".tsx")) {
+      // If file is empty or has syntax errors, create a valid component
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     if (content.trim().length < 20) {
       const newContent = createValidReactComponent(filePath);
       fs.writeFileSync(filePath, newContent);
@@ -730,6 +769,10 @@ console.log(`Fixed ${fixedCount} files`);
 origin/automation-improvements-final
       if (content.trim() === "" || content.includes("") || content.includes("")) {
 ursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         const newContent = createValidReactComponent(filePath);
         fs.writeFileSync(filePath, newContent);
         console.log(`Fixed: ${filePath}`);
@@ -920,6 +963,12 @@ console.log(`Fixed ${fixedCount} files`);
 console.log("Starting aggressive fix...");
 const fixedCount = processDirectory(path.join(__dirname, "src"));
 console.log(`Fixed ${fixedCount} files`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+console.log(`Fixed ${fixedCount} files`);
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 
 =======

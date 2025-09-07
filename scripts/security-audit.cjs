@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 #!/usr/bin/env node
 const fs = require('fs');
@@ -223,7 +228,19 @@ class SecurityAudit {
 =======
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -829,8 +846,18 @@ if (require.main === module) {
   auditor.runAudit().catch(console.error);
 }
 
+<<<<<<< HEAD
 module.exports = SecurityAuditor;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+<<<<<<< HEAD
+module.exports = SecurityAuditor;
+=======
+module.exports = SecurityAuditor;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 >>>>>>> main

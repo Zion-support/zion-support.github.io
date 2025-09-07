@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -25,6 +26,8 @@ interface SEOHeadProps {
       <meta name="twitter:site" content="@ziontechgroup" />;
       <meta name="twitter:creator" content="@ziontechgroup" />;
 =======
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 <<<<<<< HEAD
 }
 
@@ -87,6 +90,25 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
   keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development',
 =======
+<<<<<<< HEAD
+=======
+import React from 'react';
+import Head from 'next/head';
+
+interface SEOHeadProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: any;
+  noindex?: boolean;
+  nofollow?: boolean;
+}
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 export default function SEOHead({
   title = 'Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions',
   description = 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
@@ -422,8 +444,11 @@ export default SEOHead
 =======
 export default SEOHead;
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
     </Head>
   );

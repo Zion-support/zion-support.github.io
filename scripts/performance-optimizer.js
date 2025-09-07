@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+///usr/bin/env node
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node
@@ -119,6 +123,10 @@ console.log('✅ Performance optimization complete!');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 #!/usr/bin/env node
 
@@ -815,6 +823,20 @@ module.exports = PerformanceOptimizer;
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      process.exit(1)})}
+module.exports = PerformanceOptimizer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      process.exit(1)})}
+module.exports = PerformanceOptimizer;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+'"
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       console.error('❌ Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type ContentType = $2;
 export type ModerationStatus = $2;
 export type AiScores = {
@@ -11,6 +12,10 @@ export type AiScores = {
   flagId: string;
   action: ModerationStatus;
   adminNotes?: string;
+=======
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+export interface ModerationAction {
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,6 +100,10 @@ export interface ModerationAction {;
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   id: string;
 <<<<<<< HEAD
   type: "approve" | "remove" | "warn" | "ban";
@@ -108,7 +117,21 @@ export interface ModerationAction {;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   adminId: string;
   reason?: string;
+<<<<<<< HEAD
   createdAt: string;export type ModerationStatus  = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';export interface ModerationAction  {id: string;
+=======
+  createdAt: string;
+<<<<<<< HEAD
+}
+export interface ModerationFlag {
+=======
+
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 ;
 export interface ModerationAction {
@@ -209,6 +232,7 @@ export interface ModerationFlag {;
   reporter_id: string;
   target_id: string;
   target_type: 'post' | 'comment' | 'user';
+<<<<<<< HEAD
   status: ModerationStatus;ursor/fix-website-loading-errors-and-merge-6662;
 ursor/automate-test-improve-and-merge-code-646c;
 export type FlaggedContent = $2;
@@ -226,6 +250,66 @@ export type FlaggedContent = $2;
   adminNotes?: string
 <<<<<<< HEAD
 },
+=======
+  status: ModerationStatus;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  created_at: string;
+  updated_at: string;
+  admin_notes?: string,
+}
+<<<<<<< HEAD
+export type ContentType = 'listing' | 'message' | 'cv' | 'job',;
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned',;
+;
+export type AiScores = {;
+  toxicity:number, // 0-1;
+  nsfw:number, // 0-1;
+  scam:number, // 0-1;
+},;
+;
+export type FlaggedContent = {;
+  id:string,;
+  contentType:ContentType,;
+  contentId:string,;
+  userId:string,;
+  userEmail:string,;
+  reason:string,;
+  status:ModerationStatus,;
+  snippet:string, // small preview of content;
+  metadata?:Record<string any>,;
+  aiScores:AiScores,;
+  createdAt:string,;
+  updatedAt:string,;
+  adminNotes?:string;
+},
+}
+export interface ModerationFlag {
+
+export interface ModerationFlag {;
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+  id: string;
+  type: 'spam' | 'inappropriate' | 'harassment' | 'other';
+  content: string;
+  reporterId: string;
+  targetId: string;
+  targetType: 'post' | 'comment' | 'user';
+  status: ModerationStatus;
+  createdAt: string;
+  updatedAt: string;
+  adminNotes?: string
+<<<<<<< HEAD
+}
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 ursor/fix-syntax-push-and-merge-to-main-7db5
 >>>>>>> main

@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src_disabled_1757239864/index.css
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 @layer base {
 <<<<<<< HEAD
@@ -161,6 +167,9 @@
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 /* Basic styles */
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4:src/index.css
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
@@ -169,7 +178,13 @@ body {
 }
 
 code {
+<<<<<<< HEAD
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+=======
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+<<<<<<< HEAD:src_disabled_1757239864/index.css
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 }
 
 /* Custom components */
@@ -237,6 +252,29 @@ code {
   .backdrop-blur-sm {
     backdrop-filter: blur(4px);
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
+=======
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .content {
+    padding: 1rem;
+  }
+}
+=======
+}
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4:src/index.css
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

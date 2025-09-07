@@ -228,6 +228,14 @@ export default function App(): JSX.Element {
   }
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <main>
+      <h1>Hello App</h1>
+    </main>
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     <AccessibilityProvider>
       <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         <SEOHead 

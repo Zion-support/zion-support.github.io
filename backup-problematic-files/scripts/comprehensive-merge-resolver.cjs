@@ -9,22 +9,28 @@ console.log('🚀 Comprehensive Merge Conflict Resolver');
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
+<<<<<<< HEAD
 
     .replace(/
     .replace(/
     .replace(/
 
     .replace(/
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     .replace(/
     .replace(/
     .replace(/
 }
+<<<<<<< HEAD
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
 
     .replace(/    .replace(//g, '')
     .replace(/}
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {

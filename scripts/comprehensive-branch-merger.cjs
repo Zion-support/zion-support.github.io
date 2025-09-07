@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+#!/usr/bin/env node;
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 
 
@@ -39,9 +56,16 @@ console.log('==')
         execSync('git push origin main', { "stdio"})
         console.error(' Failed to push "changes")
     console.error(' Comprehensive branch merger "failed")
+<<<<<<< HEAD
 ///usr/bin/env node
 ///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log('� Comprehensive Branch Merger')
+=======
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

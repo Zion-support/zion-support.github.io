@@ -58,12 +58,16 @@ const nextConfig = {
   typescript: { 
     ignoreBuildErrors: true 
   },
+<<<<<<< HEAD
   experimental: {
     forceSwcTransforms: false
   },
 <<<<<<< HEAD
 =======
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+=======
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   trailingSlash: true,
   
   // Performance optimizations
@@ -73,23 +77,17 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
   },
   
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
   // Image optimization
-=======
-  // Remove invalid/legacy experimental flags for Next 15
-  // Ensure standard Next.js page extensions are recognized alongside any custom route files
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000, // 1 year
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+    unoptimized: true
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production'
   },
   // Security headers
   async headers() {
@@ -109,18 +107,9 @@ const nextConfig = {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
           },
-<<<<<<< HEAD
         ],
       },
     ];
-=======
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    unoptimized: true
-  },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production'
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   },
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
@@ -150,20 +139,6 @@ const nextConfig = {
       tls: false
     };
 
-    return config;
-  },
-  onDemandEntries: {
-    // period (in ms) where the server will keep pages in the buffer
-    maxInactiveAge: 25 * 1000,
-    // number of pages that should be kept simultaneously without being disposed
-    pagesBufferLength: 2
-  }
-};
-=======
-        },
-      };
-    }
-    
     // Development watch options
     if (dev) {
       config.watchOptions = {
@@ -205,11 +180,22 @@ const nextConfig = {
         aggregateTimeout: 300
       }
     }
-    return config
+
+    return config;
+  },
+  onDemandEntries: {
+    // period (in ms) where the server will keep pages in the buffer
+    maxInactiveAge: 25 * 1000,
+    // number of pages that should be kept simultaneously without being disposed
+    pagesBufferLength: 2
   }
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+};
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 <<<<<<< HEAD
 export default nextConfig;

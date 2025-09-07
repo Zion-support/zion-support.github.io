@@ -1,3 +1,46 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# Comprehensive Automation Report
+
+## Summary
+- **Timestamp**: 2025-09-07T02:33:22.872Z
+- **Duration**: 1285ms
+- **Successful**: 3
+- **Errors**: 14
+- **Warnings**: 3
+
+## Results
+
+### Successful Operations
+- Pre-automation checks passed
+- performance-monitor.cjs (performance-monitoring) completed
+- security-audit.cjs (security-audit) completed
+
+### Errors
+- comprehensive-error-fixer.cjs failed: Command failed: node scripts/comprehensive-error-fixer.cjs
+/workspace/scripts/comprehensive-error-fixer.cjs:10
+  constructor() {}
+                ^
+
+SyntaxError: Unexpected token '{'
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+- auto-fixer.js failed: Command failed: node scripts/auto-fixer.js
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 # Automation Report
 
 <<<<<<< HEAD
@@ -58,6 +101,10 @@ Error fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/
 /workspace/scripts/auto-fixer.js:3
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 file:///workspace/scripts/auto-fixer.js:3
 >>>>>>> main
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';
@@ -76,6 +123,11 @@ SyntaxError: Invalid or unexpected token
 
 Node.js v22.16.0
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 <<<<<<< HEAD
 - syntax-fixer.cjs failed: Command failed: node scripts/syntax-fixer.cjs
 /workspace/scripts/syntax-fixer.cjs:9
@@ -120,6 +172,10 @@ Node.js v22.16.0
 /workspace/scripts/advanced-build-optimizer.js:3
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 file:///workspace/scripts/advanced-build-optimizer.js:3
 >>>>>>> main
 ursor/integrate-build-improve-and-re-verify-8f7d;
@@ -138,6 +194,11 @@ SyntaxError: Invalid or unexpected token
 
 Node.js v22.16.0
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 <<<<<<< HEAD
 - build-optimizer.cjs failed: Command failed: node scripts/build-optimizer.cjs
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
@@ -168,6 +229,10 @@ Node.js v22.16.0
 /workspace/scripts/performance-monitor-enhanced.js:3
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 file:///workspace/scripts/performance-monitor-enhanced.js:3
 >>>>>>> main
 ursor/fix-syntax-push-and-merge-to-main-40de;
@@ -193,6 +258,11 @@ SyntaxError: Invalid or unexpected token
 
 Node.js v22.16.0
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 <<<<<<< HEAD
 - performance-optimizer.js failed: Command failed: node scripts/performance-optimizer.js
 file:///workspace/scripts/performance-optimizer.js:2
@@ -302,6 +372,7 @@ Node.js v22.16.0
 - scripts/advanced-build-optimizer.js: spawnSync /bin/sh ENOBUFS
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 - ESLint: Command failed: npm run lint
+<<<<<<< HEAD
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
@@ -313,6 +384,10 @@ Reparsing as ES module because module syntax was detected. This incurs a perform
 To eliminate this warning, add "type": "module" to /workspace/package.json.
 
 - TypeScript: Command failed: npm run type-check
+=======
+>>>>>>> origin/main
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
@@ -324,10 +399,13 @@ npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
 <<<<<<< HEAD
+<<<<<<< HEAD
  ⚠ Invalid next.config.js options detected: 
  ⚠     Unrecognized key(s) in object: 'swcMinify'
  ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
 Failed to compile.
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 <<<<<<< HEAD
  ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error
@@ -578,8 +656,14 @@ Import trace for requested module:
 >>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 
 ## Warnings
+<<<<<<< HEAD
 - ESLint had issues
 - TypeScript had issues
+=======
+>>>>>>> origin/main
+
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 ## Recommendations
 - Address all errors before deployment

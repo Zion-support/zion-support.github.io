@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 =======
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 <<<<<<< HEAD
 import React, { useEffect } from 'react'
 import Head from 'next/head'
@@ -268,7 +271,10 @@ export default Analytics
 }
 export default Analytics;
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 
       (window as any).dataLayer = (window as any).dataLayer || [];

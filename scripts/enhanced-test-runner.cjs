@@ -19,10 +19,13 @@ const { execSync, spawn } = require('child_process');
 
 
 
+<<<<<<< HEAD
 ///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   "summary": {}"
     total: 0,"
     "passed": 0,
@@ -32,8 +35,21 @@ const { execSync, spawn } = require('child_process')
     "coverage": 0;"
   },"
   "recommendations": [];"
-}
+};
+
 function log(level, message) {}
+<<<<<<< HEAD
+=======
+  const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+<<<<<<< HEAD
+  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message})};
+async function runJestTests() {}"
+
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)};
 async function runJestTests() {}
   log('info', 'Running Jest tests');
@@ -63,6 +79,7 @@ async function runJestTests() {}
     testReport.summary.duration += endTime - startTime;
     
     if (result.coverageMap) {}
+<<<<<<< HEAD
 const timestamp = new Date().toISOString()
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message})}
 async function runJestTests() {}"
@@ -84,10 +101,30 @@ async function runJestTests() {}"
     testReport.summary.failed += result.failed
       "result": { passed: true, output };"
     testReport.summary.passed++
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+    testReport.summary.total += result.total;
+    testReport.summary.passed += result.passed;
+    testReport.summary.failed += result.failed;
+
+
+      "result": { passed: true, output };"
+    testReport.summary.passed++;
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     "
 
       "result": { passed: false, "error": error.message };"
     testReport.summary.failed++;"
+<<<<<<< HEAD
+=======
+
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       testReport.summary.coverage = result.coverageMap.getCoverageSummary().lines.pct};
     log('info', `Jest tests "completed": ${result.numPassedTests}/${result.numTotalTests} passed`)} catch (error) {`}
     log('warn', 'Jest tests failed or not configured', error.message)};
@@ -216,11 +253,28 @@ async function runTypeTests() {}
     testReport.summary.failed++;
     log('warn', 'TypeScript type tests failed', error.message)};
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 function generateRecommendations() {}
-  const recommendations = []
-  const { total, passed, failed, coverage } = testReport.summary
-  if($2) {}
+  const recommendations = [];
+  const { total, passed, failed, coverage } = testReport.summary;
+  
+  if (total === 0) {}
     recommendations.push({})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       "priority": 'high',
       "message": 'No tests found',
       "action": 'Implement comprehensive test suite'
@@ -296,6 +350,7 @@ async function main() {}
     process.exit(1)};
 };
 main();
+<<<<<<< HEAD
 await runJestTests()
     await runPlaywrightTests()
     await runCypressTests()
@@ -307,3 +362,9 @@ await runJestTests()
     process.exit(1)}
 main()
 `
+=======
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
