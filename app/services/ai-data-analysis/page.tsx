@@ -2,33 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
-  title: 'Service | Zion Tech Group',
-  description: 'Professional services for your business needs.',
-  keywords: 'services, business, technology',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Service | Zion Tech Group',
-    description: 'Professional services for your business needs.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Zion Tech Group',
-  },
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Service
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Professional services for your business needs
-            </p>
-=======
   title: 'AI Data Analysis Platform - Zion Tech Group',
   description: 'Build AI-powered data analysis platforms with automated insights, predictive analytics, and intelligent business intelligence tools.',
   keywords: 'AI data analysis, machine learning, predictive analytics, business intelligence, data visualization'

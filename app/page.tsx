@@ -15,13 +15,6 @@ export const metadata: Metadata = {
   },
 };
 
-<<<<<<< HEAD
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Welcome to Zion Tech Group</h1>
-    </main>
-=======
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
