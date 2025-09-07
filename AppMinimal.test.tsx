@@ -1,15 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App.tsx';
+import AppMinimal from './AppMinimal.tsx';
 
-describe('App', () => {
+describe('AppMinimal', () => {
   it('renders without crashing', () => {
-    render(<App />);
+    render(<AppMinimal />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
   it('has correct structure', () => {
-    render(<App />);
+    render(<AppMinimal />);
     // Add more specific tests here
   });
 });

@@ -1,15 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App.tsx';
+import App.test.test from './App.test.test.tsx';
 
-describe('App', () => {
+describe('App.test.test', () => {
   it('renders without crashing', () => {
-    render(<App />);
+    render(<App.test.test />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
   it('has correct structure', () => {
-    render(<App />);
+    render(<App.test.test />);
     // Add more specific tests here
   });
 });
