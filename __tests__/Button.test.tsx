@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('Button', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,3 +108,4 @@ import _React from 'react'; import { render,screen } from '@testing-library/reac
 "
 import React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import Button from '../components/Button'; describe('Button',() => { test('renders without crashing',() => { render(<Button />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<Button />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main

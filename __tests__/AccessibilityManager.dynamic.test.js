@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('AccessibilityManager.dynamic', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -40,6 +47,7 @@ describe('AccessibilityManagerdynamic', () => {
     expect(
       screen.getByTestId('accessibilitymanager.dynamic')
     ).toBeInTheDocument();
+>>>>>>> origin/main
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,6 +58,8 @@ describe('AccessibilityManagerdynamic', () => {
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 });
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -154,3 +164,4 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main

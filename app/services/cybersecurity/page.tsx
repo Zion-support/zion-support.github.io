@@ -1,4 +1,21 @@
 <<<<<<< HEAD
+export const metadata = {
+  title: 'Cybersecurity Solutions | Zion Tech Group',
+  description: 'Advanced cybersecurity solutions for data protection.',
+  keywords: 'cybersecurity, services, business, technology'
+}
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Cybersecurity Solutions
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced cybersecurity solutions for data protection.
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
@@ -140,6 +157,7 @@ export default function CybersecurityPage() {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive cybersecurity solutions to protect your business from evolving threats.
+>>>>>>> origin/main
           </p>
 =======
 
@@ -147,6 +165,14 @@ export default function CybersecurityPage() {
           />
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
         </div>
+<<<<<<< HEAD
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored cybersecurity solutions designed for your specific business requirements.
+=======
       </section>
 
 <<<<<<< HEAD
@@ -317,20 +343,33 @@ export default function CybersecurityPage() {
             <h3 className="text-xl font-bold text-white mb-4">Threat Detection</h3>
             <p className="text-gray-300">
               Advanced threat detection and response systems to identify and neutralize cyber threats.
+>>>>>>> origin/main
             </p>
           </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
+<<<<<<< HEAD
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+=======
             <h3 className="text-xl font-bold text-white mb-4">Security Audits</h3>
             <p className="text-gray-300">
               Comprehensive security assessments to identify vulnerabilities and strengthen your defenses.
+>>>>>>> origin/main
             </p>
           </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
+<<<<<<< HEAD
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your cybersecurity solutions run smoothly.
+=======
             <h3 className="text-xl font-bold text-white mb-4">Compliance Management</h3>
             <p className="text-gray-300">
               Ensure compliance with industry standards and regulations for data protection.
+>>>>>>> origin/main
             </p>
 <<<<<<< HEAD
 =======
@@ -1328,6 +1367,11 @@ function ContactSection() {}
           <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
         </div>
       </div>
+<<<<<<< HEAD
+    </div>
+  )
+}
+=======
     </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1350,3 +1394,4 @@ function ContactSection() {}
   );
 }
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main

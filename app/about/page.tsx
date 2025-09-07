@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+import React from 'react'
+import Link from 'next/link'
+import { ArrowRightIcon } from '@heroicons/react/24/outline'
+export const metadata = {
+  title: 'About Us - Zion Tech Group',
+  description: 'Learn about Zion Tech Group, a leading provider of AI solutions, micro SaaS development, and enterprise IT services.'}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +114,7 @@ export const metadata = {
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 };
 
+>>>>>>> origin/main
 export default function AboutPage() {
   return (
 <<<<<<< HEAD
@@ -983,6 +992,10 @@ function AboutPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+  )
+}
+=======
   );
 <<<<<<< HEAD
 }
@@ -990,3 +1003,4 @@ function AboutPage() {
 =======
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
+>>>>>>> origin/main

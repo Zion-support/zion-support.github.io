@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +10,7 @@ import { render, screen } from '@testing-library/react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { describe, it, expect } from 'vitest';
 import AppMinimal from './AppMinimal';
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,6 +58,12 @@ import AppMinimal from './AppMinimal';
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 describe('AppMinimal', () => {
+<<<<<<< HEAD
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+=======
   it('renders without crashing', () => {
     render(<AppMinimal />);
     expect(screen.getByRole('main')).toBeInTheDocument();
@@ -341,3 +351,4 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main

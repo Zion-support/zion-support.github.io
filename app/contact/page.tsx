@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+'use client'
+import React, { useState } from 'react'
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 'use client';
 
@@ -52,6 +58,7 @@ export const metadata = {
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
+>>>>>>> origin/main
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -60,6 +67,17 @@ export default function ContactPage() {
     phone: '',
     service: '',
     message: ''
+<<<<<<< HEAD
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+=======
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -72,11 +90,18 @@ export default function ContactPage() {
     });
   };
 
+>>>>>>> origin/main
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
+    e.preventDefault()
+    setIsSubmitting(true)
     // Simulate form submission
+<<<<<<< HEAD
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setSubmitStatus('success')
+    setIsSubmitting(false)
+    setFormData({ name: '', email: '', company: '', service: '', message: '' })
+  }
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     try {
@@ -162,6 +187,7 @@ export default function ContactPage() {
   ];
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+>>>>>>> origin/main
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -861,9 +887,14 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+  )
+}
+=======
   );
 }
 <<<<<<< HEAD
 '"
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main

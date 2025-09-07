@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('reviews', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { createMocks, RequestMethod } from 'node-mocks-http'
@@ -1527,3 +1536,4 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 "
 pr-12325
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main

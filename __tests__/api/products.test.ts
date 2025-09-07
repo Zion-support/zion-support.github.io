@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('products', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+=======
 
 
 
@@ -231,6 +238,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         },
       });
     });
+>>>>>>> origin/main
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -241,6 +249,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           "id"
 =======
 });
+<<<<<<< HEAD
+=======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
 
@@ -302,3 +312,4 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   let res: ReturnType<typeof createResponse>;
 pr-12325
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main

@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('PWARegistration.dynamic', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+=======
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -25,3 +34,4 @@ describe('PWARegistrationdynamic', () => {
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/main

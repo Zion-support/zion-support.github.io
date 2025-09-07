@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('App.test', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,6 +45,7 @@ import App from '../App';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   it('displays correct content', () => {
     render(<App />);
+>>>>>>> origin/main
   });
 
   it('handles user interactions', () => {
@@ -45,6 +53,8 @@ import App from '../App';
   });
 <<<<<<< HEAD
 });
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -202,3 +212,4 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 "
 )
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main

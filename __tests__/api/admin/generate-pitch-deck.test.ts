@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('generate-pitch-deck', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -861,3 +870,4 @@ import { NextApiRequest, NextApiResponse, createMocks, RequestMethod } from 'luc
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main

@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('AICodeGenerator', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -215,3 +224,4 @@ import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() 
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/main

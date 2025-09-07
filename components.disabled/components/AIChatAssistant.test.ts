@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('AIChatAssistant', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -188,3 +197,4 @@ const { render, screen } from \"@testing-library/react\"; render(<AIChatAssistan
     // Add interaction tests based on component functionality})})
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main

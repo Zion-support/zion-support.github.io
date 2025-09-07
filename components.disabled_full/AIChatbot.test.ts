@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('AIChatbot', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -215,3 +224,4 @@ import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders 
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/main

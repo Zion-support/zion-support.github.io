@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('trust-score-user', () => {
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,10 +52,13 @@ import { describe, it, expect } from 'vitest';
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 describe('Trust Score User API', () => {
+>>>>>>> origin/main
   it('should work', () => {
     expect(true).toBe(true);
   });
 });
+<<<<<<< HEAD
+=======
 const { describe,it,expect } from "vitest"; describe("Trust Score User API",() => { it("should work",() => { expect(true).toBe(true)})});''"
 import { describe,it,expect } from 'vitest'; describe('Trust Score User API',() => { it('should work',() => { expect(true).toBe(true)})}
 <<<<<<< HEAD
@@ -211,3 +219,4 @@ ursor/add-new-services-and-deploy-updates-0462;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 const { describe,it,expect } from "vitest"; describe('Trust Score User API', () => { it("should work"")"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main
