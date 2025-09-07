@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-07T02:33:22.872Z",
   "duration": "1285ms",
   "summary": {
@@ -10,6 +9,91 @@
   "results": {
     "success": [
       "Pre-automation checks passed",
+      {
+        "script": "scripts/performance-monitor-enhanced.js",
+        "category": "performance-monitoring",
+        "output": "ℹ️ Starting enhanced performance monitoring...\nℹ️ Monitoring build performance...\n❌ Build performance monitoring failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n\n❌ Performance monitoring failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n\n"
+      },
+      {
+        "script": "scripts/auto-fixer.js",
+        "category": "error-fixing",
+        "output": "[INFO] Starting auto-fixer...\n[INFO] Checking for merge conflicts...\n[INFO] No merge conflicts found\n[INFO] Fixing import errors...\n[INFO] Fixing TypeScript errors...\n[ERROR] Failed to fix TypeScript errors\n[INFO] Fixing syntax errors...\n[ERROR] Failed to fix syntax errors\n[INFO] Report saved to /workspace/error-reports/auto-fixer-report.json\n[INFO] Auto-fixer completed. Applied: 1, Failed: 1\n"
+      }
+    ],
+    "errors": [
+      {
+        "script": "scripts/comprehensive-error-fixer.cjs",
+        "category": "error-fixing",
+        "error": "Command failed: node scripts/comprehensive-error-fixer.cjs\nError fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/media/docu-script/requirements.txt'\n    at Object.statSync (node:fs:1740:25)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:86:25)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:91:13)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:91:13)\n    at ComprehensiveErrorFixer.getAllJSFiles (/workspace/scripts/comprehensive-error-fixer.cjs:99:5)\n    at ComprehensiveErrorFixer.fixSyntaxErrors (/workspace/scripts/comprehensive-error-fixer.cjs:26:24)\n    at ComprehensiveErrorFixer.run (/workspace/scripts/comprehensive-error-fixer.cjs:157:18)\n    at Object.<anonymous> (/workspace/scripts/comprehensive-error-fixer.cjs:177:9)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'stat',\n  path: '/workspace/media/docu-script/requirements.txt'\n}\n"
+      },
+      {
+<<<<<<< HEAD
+        "script": "scripts/auto-fixer.js",
+        "category": "error-fixing",
+        "error": "Command failed: node scripts/auto-fixer.js\n/workspace/scripts/auto-fixer.js:3\n#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';\n^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+      },
+      {
+        "script": "scripts/advanced-build-optimizer.js",
+        "category": "build-optimization",
+        "error": "Command failed: node scripts/advanced-build-optimizer.js\n/workspace/scripts/advanced-build-optimizer.js:3\nursor/integrate-build-improve-and-re-verify-8f7d;\n                                            ^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+      },
+      {
+        "script": "scripts/performance-monitor-enhanced.js",
+        "category": "performance-monitoring",
+        "error": "Command failed: node scripts/performance-monitor-enhanced.js\n/workspace/scripts/performance-monitor-enhanced.js:3\nursor/fix-syntax-push-and-merge-to-main-40de;\n                                        ^^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+=======
+        "script": "scripts/advanced-build-optimizer.js",
+        "category": "build-optimization",
+        "error": "spawnSync /bin/sh ENOBUFS"
+      },
+      {
+        "check": "ESLint",
+        "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
+      },
+      {
+        "check": "TypeScript",
+        "error": "spawnSync /bin/sh ENOBUFS"
+<<<<<<< HEAD
+=======
+      },
+      {
+        "check": "Build",
+        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n"
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
+      }
+    ],
+    "warnings": [],
+    "metrics": {
+      "startTime": 1757221718615,
+      "endTime": 1757221756275,
+      "duration": 37660,
+      "memoryUsage": {
+        "start": {
+          "rss": 48332800,
+          "heapTotal": 5570560,
+          "heapUsed": 4468160,
+          "external": 1574360,
+          "arrayBuffers": 10515
+        },
+        "end": {
+          "rss": 54534144,
+          "heapTotal": 7516160,
+          "heapUsed": 5846928,
+          "external": 2623888,
+          "arrayBuffers": 1060003
+        }
+      },
+      "systemInfo": {
+        "platform": "linux",
+        "arch": "x64",
+        "nodeVersion": "v22.16.0",
+        "cpus": 4,
+        "totalMemory": 16795742208,
+        "freeMemory": 14595481600
+      }
+    }
+=======
       "performance-monitor.cjs (performance-monitoring) completed",
       "security-audit.cjs (security-audit) completed"
     ],
@@ -35,6 +119,7 @@
       "Smoke Tests had issues: Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
     ],
     "metrics": {}
+>>>>>>> main
   },
   "recommendations": [
     "Address all errors before deployment",

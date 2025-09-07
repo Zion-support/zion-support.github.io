@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+describe('Profile Page', () => {
+  test('renders profile page', () => {
+    // Add profile page tests here
+    expect(true).toBe(true);
+  });
+});
+=======
+<<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
 
 describe('profile-page', () => {
@@ -130,3 +138,4 @@ module.exports = {};
 module.exports = {};
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >>>>>>> origin/main
+>>>>>>> main

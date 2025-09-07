@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,10 +77,14 @@ describe('smoke', () => { it("true is truthy"
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> main
 describe('smoke', () => {
   it('true is truthy', () => {
     expect(true).toBeTruthy();
   });
+<<<<<<< HEAD
+});
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 });''describe('smoke'
@@ -219,3 +225,4 @@ describe('smoke', () => { it("true is truthy""
 ursor/automate-test-improve-and-merge-code-2480;"
 describe('smoke', () => { it("true is truthy"")"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> main

@@ -409,5 +409,10 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
-  "license": "MIT"
+  "license": "MIT",
+  "nextConfig": {
+    "compress": true,
+    "poweredByHeader": false,
+    "generateEtags": false
+  }
 }

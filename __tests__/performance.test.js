@@ -1,4 +1,29 @@
 <<<<<<< HEAD
+describe('Performance Tests', () => {
+  test('basic performance check', () => {
+    // Test that basic performance APIs are available
+    expect(typeof performance).toBe('object');
+    expect(typeof performance.now).toBe('function');
+  });
+
+  test('memory usage check', () => {
+    // Test that memory APIs are available in test environment
+    if (typeof performance !== 'undefined' && performance.memory) {
+      expect(typeof performance.memory.usedJSHeapSize).toBe('number');
+      expect(typeof performance.memory.totalJSHeapSize).toBe('number');
+      expect(typeof performance.memory.jsHeapSizeLimit).toBe('number');
+    }
+  });
+
+  test('performance timing check', () => {
+    // Test that timing APIs work
+    const start = performance.now();
+    const end = performance.now();
+    expect(end - start).toBeGreaterThanOrEqual(0);
+  });
+});
+=======
+<<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
 
 describe('performance', () => {
@@ -387,3 +412,4 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
 });
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/main
+>>>>>>> main

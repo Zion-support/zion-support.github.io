@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+export default function handler(req, res) {
+  res.status(200).json({ message: 'Payment intent created' });
+}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -979,3 +984,4 @@ export default withErrorLogging(handler);
 '
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> main

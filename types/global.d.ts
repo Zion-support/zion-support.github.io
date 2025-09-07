@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+// Global type declarations for DOM types
+declare global {
+  interface Window {
+    performance: Performance;
+    gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -196,6 +204,7 @@ declare global {
     gtag?: (...args: any[]) => void;
     dataLayer?: any[];
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> main
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -203,6 +212,23 @@ declare global {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 }
+<<<<<<< HEAD
+
+// Environment variables
+declare namespace NodeJS {
+  interface ProcessEnv {
+    NODE_ENV: "development" | "production" | "test";
+    NEXT_PUBLIC_SUPABASE_URL?: string;
+    NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
+    SUPABASE_SERVICE_ROLE_KEY?: string;
+    NEXT_PUBLIC_GA_TRACKING_ID?: string;
+  }
+}
+
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+/// <reference types="next/navigation-types/navigation" />
+=======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
@@ -601,6 +627,7 @@ export {};
 export {};
 export {};
 ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> main
 
 // Re-export DOM types that might not be available
 export {};

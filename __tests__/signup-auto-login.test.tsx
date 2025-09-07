@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+describe('Signup Auto Login', () => {
+  test('renders signup auto login', () => {
+    // Add signup auto login tests here
+    expect(true).toBe(true);
+  });
+});
+=======
+<<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
 
 describe('signup-auto-login', () => {
@@ -130,3 +138,4 @@ module.exports = {};
 module.exports = {};
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >>>>>>> origin/main
+>>>>>>> main

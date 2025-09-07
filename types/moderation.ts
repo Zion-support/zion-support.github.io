@@ -29,6 +29,10 @@ export interface ModerationResult {};
 };
 =======
 
+<<<<<<< HEAD
+export interface ModerationResult {
+  id: string;
+=======
 
 
 export interface ModerationAction {;
@@ -53,14 +57,18 @@ export interface ModerationResult {
   id: string;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+>>>>>>> main
   content: string;
   status: 'approved' | 'rejected' | 'pending';
   reason?: string;
   moderatedBy?: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   moderatedAt: Date;;
 =======
+>>>>>>> main
   moderatedAt: Date;
 =======
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
@@ -74,9 +82,15 @@ export interface ModerationAction {;
 
 
   id: string;
+<<<<<<< HEAD
+  type: "approve" | "remove" | "warn" | "ban";
+  targetId: string;
+  targetType: "post" | "comment" | "user";
+=======
   flagId: string;
   action: ModerationStatus;
   adminNotes?: string;
+>>>>>>> main
   adminId: string;
   reason?: string;
   createdAt: string;
@@ -95,6 +109,8 @@ export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | '
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ModerationAction {
   id: string;
+<<<<<<< HEAD
+=======
   type: "approve" | "remove" | "warn" | "ban";
   targetId: string;
   targetType: "post" | "comment" | "user";
@@ -122,6 +138,7 @@ export interface ModerationFlag {
 
 export interface ModerationFlag {;
   id: string;
+>>>>>>> main
   type: "spam" | "inappropriate" | "harassment" | "other";
   content: string;
   reporterId: string;
@@ -133,9 +150,13 @@ export interface ModerationFlag {;
   adminNotes?: string;
 <<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> main
 
 }
 export interface ModerationFlag {
@@ -144,6 +165,12 @@ export interface ModerationFlag {
 
 export interface ModerationRule {};
   id: string;
+<<<<<<< HEAD
+  name: string;
+  pattern: string;
+  action: 'approve' | 'reject' | 'flag';
+  severity: 'low' | 'medium' | 'high';
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -227,6 +254,7 @@ export interface ModerationFlag {;
   updatedAt: string;
   adminNotes?: string
 ursor/fix-syntax-push-and-merge-to-main-7db5
+>>>>>>> main
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

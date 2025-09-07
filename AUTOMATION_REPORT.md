@@ -38,16 +38,28 @@ Node.js v22.16.0
 =======
 # Automation Report
 
-**Timestamp:** 2025-09-07T02:51:20.034Z
-**Duration:** 9764ms
+<<<<<<< HEAD
+**Timestamp:** 2025-09-07T05:22:55.964Z
+**Duration:** 28320ms
+=======
+**Timestamp:** 2025-09-07T05:09:16.275Z
+**Duration:** NaNms
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 
 ## Summary
-- ✅ Successful: 1
-- ❌ Errors: 8
+- ✅ Successful: 3
+- ❌ Errors: 5
 - ⚠️ Warnings: 0
 
 ## Successful Operations
 - Operation
+<<<<<<< HEAD
+- ESLint
+- Build
+=======
+- scripts/performance-monitor-enhanced.js
+- scripts/auto-fixer.js
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 
 ## Errors
 - scripts/comprehensive-error-fixer.cjs: Command failed: node scripts/comprehensive-error-fixer.cjs
@@ -68,18 +80,27 @@ Error fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/
   path: '/workspace/media/docu-script/requirements.txt'
 }
 
+<<<<<<< HEAD
 - scripts/auto-fixer.js: Command failed: node scripts/auto-fixer.js
+<<<<<<< HEAD
+/workspace/scripts/auto-fixer.js:3
+=======
 >>>>>>> origin/main
 file:///workspace/scripts/auto-fixer.js:3
+>>>>>>> main
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';
 ^
 
 SyntaxError: Invalid or unexpected token
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
 
 Node.js v22.16.0
 
@@ -123,17 +144,25 @@ Node.js v22.16.0
 - advanced-build-optimizer.js failed: Command failed: node scripts/advanced-build-optimizer.js
 =======
 - scripts/advanced-build-optimizer.js: Command failed: node scripts/advanced-build-optimizer.js
+<<<<<<< HEAD
+/workspace/scripts/advanced-build-optimizer.js:3
+=======
 >>>>>>> origin/main
 file:///workspace/scripts/advanced-build-optimizer.js:3
+>>>>>>> main
 ursor/integrate-build-improve-and-re-verify-8f7d;
                                             ^
 
 SyntaxError: Invalid or unexpected token
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
 
 Node.js v22.16.0
 
@@ -163,12 +192,27 @@ Node.js v22.16.0
 - performance-monitor-enhanced.js failed: Command failed: node scripts/performance-monitor-enhanced.js
 =======
 - scripts/performance-monitor-enhanced.js: Command failed: node scripts/performance-monitor-enhanced.js
+<<<<<<< HEAD
+/workspace/scripts/performance-monitor-enhanced.js:3
+=======
 >>>>>>> origin/main
 file:///workspace/scripts/performance-monitor-enhanced.js:3
+>>>>>>> main
 ursor/fix-syntax-push-and-merge-to-main-40de;
                                         ^^
 
 SyntaxError: Invalid or unexpected token
+<<<<<<< HEAD
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+=======
     at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
     at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
     at #translate (node:internal/modules/esm/loader:534:12)
@@ -277,9 +321,13 @@ This file is being treated as an ES module because it has a '.js' file extension
     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+>>>>>>> main
 
 Node.js v22.16.0
 
+- TypeScript: spawnSync /bin/sh ENOBUFS
+=======
+- scripts/advanced-build-optimizer.js: spawnSync /bin/sh ENOBUFS
 - ESLint: Command failed: npm run lint
 >>>>>>> origin/main
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
@@ -317,6 +365,9 @@ npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
 <<<<<<< HEAD
+ ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error
+=======
+<<<<<<< HEAD
 node:internal/modules/cjs/loader:1404
   throw err;
   ^
@@ -344,122 +395,14 @@ npm warn config       Default value does install optional deps unless otherwise 
 sh: 1: jest: not found
 =======
 Failed to compile.
+>>>>>>> main
 
-app/layout.tsx
-An error occurred in `next/font`.
+> Build error occurred
+ReferenceError: module is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at <unknown> (next.config.js:58:1)
 
-SyntaxError: Unexpected token ','
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
-
-./components/Layout.tsx
-Error:   [31mx[0m Expression expected
-   ,-[[36;1;4m/workspace/components/Layout.tsx[0m:2:1]
- [2m1[0m | 
- [2m2[0m | }export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-   : [35;1m^[0m
- [2m3[0m |   static getDerivedStateFromError(error) {return { hasError: true }}
- [2m4[0m |   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
- [2m5[0m |   render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}
-   `----
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./components/Layout.tsx
-./pages/summit.tsx
-
-./pages/ai-services.tsx
-Error:   [31mx[0m Unterminated string constant
-   ,-[[36;1;4m/workspace/pages/ai-services.tsx[0m:1:1]
- [2m1[0m | import React from \"react\";
-   : [35;1m                   ^^^^^^^^^[0m
- [2m2[0m | import Layout from \"../components/Layout\";
- [2m3[0m | export default function AIServices() {
- [2m4[0m |   return (
-   `----
-  [31mx[0m Expected unicode escape
-   ,-[[36;1;4m/workspace/pages/ai-services.tsx[0m:1:1]
- [2m1[0m | import React from \"react\";
-   : [35;1m                  ^[0m
- [2m2[0m | import Layout from \"../components/Layout\";
- [2m3[0m | export default function AIServices() {
- [2m4[0m |   return (
-   `----
-  [31mx[0m Unexpected token `<lexing error: Error { error: (19..19, ExpectedUnicodeEscape) }>`. Expected a string literal
-   ,-[[36;1;4m/workspace/pages/ai-services.tsx[0m:1:1]
- [2m1[0m | import React from \"react\";
-   : [35;1m                  ^[0m
- [2m2[0m | import Layout from \"../components/Layout\";
- [2m3[0m | export default function AIServices() {
- [2m4[0m |   return (
-   `----
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./pages/ai-services.tsx
-
-./pages/deploy/genesis.tsx
-Error:   [31mx[0m Expected unicode escape
-   ,-[[36;1;4m/workspace/pages/deploy/genesis.tsx[0m:1:1]
- [2m1[0m | export { default } from \"../zion/init\";"
-   : [35;1m                        ^[0m
- [2m2[0m | "
-   `----
-  [31mx[0m Unexpected token `<lexing error: Error { error: (25..25, ExpectedUnicodeEscape) }>`. Expected a string literal
-   ,-[[36;1;4m/workspace/pages/deploy/genesis.tsx[0m:1:1]
- [2m1[0m | export { default } from \"../zion/init\";"
-   : [35;1m                        ^[0m
- [2m2[0m | "
-   `----
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./pages/deploy/genesis.tsx
-
-./pages/design-map.tsx
-Error:   [31mx[0m Unterminated string constant
-   ,-[[36;1;4m/workspace/pages/design-map.tsx[0m:1:1]
- [2m1[0m | import React, { useMemo, useState } from \"react\";
-   : [35;1m                                          ^^^^^^^^^[0m
- [2m2[0m | import Head from \"next/head\";
- [2m3[0m | import { getZionDesignMap } from \"../utils/design-map\";
- [2m4[0m | export default function DesignMapPage() {
-   `----
-  [31mx[0m Expected unicode escape
-   ,-[[36;1;4m/workspace/pages/design-map.tsx[0m:1:1]
- [2m1[0m | import React, { useMemo, useState } from \"react\";
-   : [35;1m                                         ^[0m
- [2m2[0m | import Head from \"next/head\";
- [2m3[0m | import { getZionDesignMap } from \"../utils/design-map\";
- [2m4[0m | export default function DesignMapPage() {
-   `----
-  [31mx[0m Unexpected token `<lexing error: Error { error: (42..42, ExpectedUnicodeEscape) }>`. Expected a string literal
-   ,-[[36;1;4m/workspace/pages/design-map.tsx[0m:1:1]
- [2m1[0m | import React, { useMemo, useState } from \"react\";
-   : [35;1m                                         ^[0m
- [2m2[0m | import Head from \"next/head\";
- [2m3[0m | import { getZionDesignMap } from \"../utils/design-map\";
- [2m4[0m | export default function DesignMapPage() {
-   `----
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./pages/design-map.tsx
-
-
-> Build failed because of webpack errors
-
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 
 ## Warnings
 >>>>>>> origin/main
