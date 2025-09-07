@@ -5,29 +5,6 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-  },
-  category: 'technology',
-  classification: 'Business Technology Services',
-  referrer: 'origin-when-cross-origin',
-  colorScheme: 'light',
-  themeColor: '#000000',
-  title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
-  description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.'
-=======
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
   keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
@@ -59,7 +36,6 @@ export const metadata: Metadata = {
   },
   viewport: 'width=device-width, initial-scale=1',
   themeColor: '#000000'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
 };
 
 export default function RootLayout({
@@ -68,19 +44,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-<<<<<<< HEAD
-    <html lang="en">
-      <body>
-        <div className="min-h-screen bg-white">
-          {children}
-        </div>
-=======
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-black text-white antialiased`}>
         <main className="min-h-screen">
           {children}
         </main>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
       </body>
     </html>
   );
