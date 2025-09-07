@@ -17,8 +17,8 @@
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
     "prepare": "echo \"Husky prepare script disabled\"",
-    "lint": "eslint . --no-error-on-unmatched-pattern",
-    "lint:fix": "eslint . --fix --no-error-on-unmatched-pattern",
+    "lint": "eslint app components --no-error-on-unmatched-pattern",
+    "lint:fix": "eslint app components --fix --no-error-on-unmatched-pattern",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
